@@ -118,25 +118,84 @@
   .quotecard .qtext p .it{font-family:"Fraunces";font-weight:300;font-style:italic;color:#9fc3ff}
   .quotecard .qtext .attr{margin-top:26px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7)}
 
-  /* ===== SCROLL MOTION ===== */
-  /* Editorial reveal: fade + soft lift, custom cubic-bezier for an unhurried settle. */
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .95s cubic-bezier(.22,.61,.36,1),transform .95s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
+  /* ===== SCROLL MOTION ===================================================
+     A layered, editorial system: momentum smooth-scroll (Lenis) underneath
+     viewport reveals, masked headline word-rise, image clip-wipes, layered
+     parallax and scroll-scrubbed cinematic bands. Every layer degrades to a
+     static, fully-visible page under prefers-reduced-motion or without JS. */
+
+  /* Lenis smooth-scroll base (author's recommended rules, inlined). */
+  html.lenis,html.lenis body{height:auto}
+  .lenis.lenis-smooth{scroll-behavior:auto!important}
+  .lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+  .lenis.lenis-stopped{overflow:hidden}
+  .lenis.lenis-smooth iframe{pointer-events:none}
+  /* JS sets .motion on <html> once wired; keep native smooth-scroll as fallback. */
+
+  /* Editorial reveal: fade + soft lift, unhurried settle. Directional variants. */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
   .reveal.in{opacity:1;transform:none}
-  /* Staggered children — each direct child lifts a beat after the last (delay set by JS via --i). */
-  [data-stagger]>*{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0)*90ms)}
+  [data-reveal="left"]{transform:translateX(-34px)}
+  [data-reveal="right"]{transform:translateX(34px)}
+  [data-reveal="left"].in,[data-reveal="right"].in{transform:none}
+
+  /* Staggered children — each direct child lifts a beat after the last (--i from JS). */
+  [data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--i,0)*85ms)}
   [data-stagger].in>*{opacity:1;transform:none}
-  /* Parallax — JS drives --py; the image is over-scaled so the drift never reveals an edge. */
+
+  /* Headline word-rise — JS splits a headline into .rw-w > .rw-i units; each inner
+     span rises out of an overflow-clipped word box, staggered by --wi. */
+  .rw-w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.04em;margin-bottom:-.04em}
+  .rw-i{display:inline-block;transform:translateY(115%);transition:transform .9s cubic-bezier(.22,.61,.36,1);transition-delay:calc(var(--wi,0)*55ms)}
+  .rw-ready .rw-i{will-change:transform}
+  .in .rw-i,.rw-w.in .rw-i{transform:none}
+
+  /* Image clip-wipe — container unmasks bottom-up while its image settles from scale.
+     Triggered by the ancestor .reveal gaining .in: a self-clipped element reports
+     zero area to IntersectionObserver, so it can never observe its own way open. */
+  .reveal-media{clip-path:inset(0 0 100% 0 round var(--r));transition:clip-path 1.05s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in .reveal-media,.reveal-media.in{clip-path:inset(0 0 0 0 round var(--r))}
+  .reveal-media img{transform:scale(1.16);transition:transform 1.4s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in .reveal-media img,.reveal-media.in img{transform:scale(1.04)}
+
+  /* Parallax — JS drives --py; images over-scaled so drift never reveals an edge.
+     --pt lets text/foreground drift the opposite way for depth. */
   [data-parallax] img,img[data-parallax]{transform:translate3d(0,var(--py,0),0) scale(1.12);will-change:transform}
+  .reveal-media[data-parallax].in img{transform:translate3d(0,var(--py,0),0) scale(1.08)}
+  [data-parallax-text]{transform:translate3d(0,var(--pt,0),0)}
+
+  /* Cinematic bands — JS sets --sp (0→1 scrub progress) on the section as it
+     crosses the viewport; caption drifts up and the overlay deepens on exit. */
+  .band-surgery .cap,.quotecard .qtext{transform:translateY(calc((.5 - var(--sp,.5))*44px))}
+  .band-surgery .ov{opacity:calc(.72 + var(--sp,.5)*.28)}
+  .quotecard .qov{opacity:calc(.82 + var(--sp,.5)*.18)}
+
+  /* Hero entrance — choreographed on load once JS adds .hero-in to <body>. */
+  .motion .herocard .bg{transform:scale(1.08);transition:transform 1.6s cubic-bezier(.22,.61,.36,1)}
+  .motion.hero-in .herocard .bg{transform:scale(1)}
+  .motion .hname .line,.motion .hname .role,.motion .hname .tag,.motion .hnav,.motion .hbottom{opacity:0;transform:translateY(22px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1)}
+  .motion.hero-in .hname .line{opacity:1;transform:none;transition-delay:.15s}
+  .motion.hero-in .hname .role{opacity:1;transform:none;transition-delay:.34s}
+  .motion.hero-in .hname .tag{opacity:1;transform:none;transition-delay:.46s}
+  .motion.hero-in .hnav{opacity:1;transform:none;transition-delay:.05s}
+  .motion.hero-in .hbottom{opacity:.85;transform:none;transition-delay:.58s}
+
   @media (max-width:880px){
-    
     .path .grid{grid-template-columns:1fr}.path .vis{min-height:420px}
     .expg{grid-template-columns:1fr}.stats{flex-wrap:wrap;gap:32px}
     .galw{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
-    .reveal,[data-stagger]>*{opacity:1;transform:none;transition:none}
+    .reveal,[data-stagger]>*{opacity:1!important;transform:none!important;transition:none}
+    .rw-i{transform:none!important;transition:none}
+    .reveal-media{clip-path:none!important;transition:none}
+    .reveal-media img{transform:scale(1.04)!important;transition:none}
     [data-parallax] img,img[data-parallax]{transform:scale(1.12)}
+    .band-surgery .cap,.quotecard .qtext{transform:none}
+    .motion .herocard .bg{transform:scale(1)}
+    .motion .hname .line,.motion .hname .role,.motion .hname .tag,.motion .hnav,.motion .hbottom{opacity:1;transform:none;transition:none}
+    .motion.hero-in .hbottom{opacity:.85}
   }
 
   /* ===== BIG FOOTER (dramatic, Tomi-style) ===== */
