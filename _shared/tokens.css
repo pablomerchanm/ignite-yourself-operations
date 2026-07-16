@@ -1,0 +1,30 @@
+/* Ignite Yourself — shared design tokens
+   Canonical source of truth for colour + typography across every client site.
+   Client sites are deployed self-contained (Vercel points at the client folder),
+   so these tokens are COPIED into each client's styles.css rather than linked at
+   runtime. Edit here first; propagate to clients when the system evolves. */
+
+:root {
+  /* Surfaces */
+  --bg:    #FBFAF8; /* off-white page */
+  --panel: #EFF2F5; /* tinted section band */
+  --card:  #FFFFFF; /* raised card */
+
+  /* Ink & accent */
+  --ink:      #10243A; /* navy — text / dark base */
+  --ink-soft: #5E6B79; /* secondary text */
+  --blue:     #1C6FE8; /* accent */
+  --blue-deep:#10243A; /* deep accent base */
+
+  /* Lines & mist */
+  --mist: #DCE6EF;
+  --line: #E9EBEE;
+
+  /* Geometry */
+  --r: 22px; /* card radius */
+}
+
+/* Typography — Archivo (grotesque sans, 400–900) + Fraunces (serif italic, 300–400).
+   Load via Google Fonts in each client's <head>:
+   Archivo:wght@400;500;600;700;800;900
+   Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300;1,9..144,400 */

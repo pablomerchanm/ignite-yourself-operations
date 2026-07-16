@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direction Lab — Jorge Arce</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@300;400;500;600&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#141414;color:#EDEBE6;font-family:"Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  img{max-width:100%;display:block}
+
+  /* ---- lab chrome ---- */
+  .intro{max-width:880px;margin:0 auto;padding:72px 28px 56px}
+  .intro .tag{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8B877E;margin-bottom:22px}
+  .intro h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.01em}
+  .intro h1 em{font-style:italic}
+  .intro p{margin-top:20px;color:#B5B1A8;font-size:15.5px;max-width:58ch;line-height:1.65}
+  .divider{max-width:880px;margin:0 auto;padding:0 28px}
+  .divider hr{border:0;border-top:1px solid #2A2A28}
+
+  .dhead{max-width:1280px;margin:0 auto;padding:64px 28px 20px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .dhead .n{font-family:"Instrument Serif",serif;font-style:italic;font-size:20px;color:#8B877E}
+  .dhead .t{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#EDEBE6;font-weight:600}
+  .dhead .sw{display:flex;gap:6px;align-items:center}
+  .dhead .sw i{width:22px;height:22px;border-radius:50%;display:block;border:1px solid rgba(255,255,255,.18)}
+
+  .panel{max-width:1280px;margin:0 auto 12px;padding:0 28px}
+  .canvas{border-radius:4px;overflow:hidden;position:relative}
+
+  .dfoot{max-width:1280px;margin:0 auto 40px;padding:18px 28px 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+  .dfoot .cell .h{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:#8B877E;margin-bottom:10px}
+  .dfoot .cell p{font-size:13.5px;color:#B5B1A8;line-height:1.6}
+  .dfoot .spec{font-size:15px;color:#EDEBE6}
+  .dfoot .spec b{font-weight:600}
+  @media (max-width:820px){.dfoot{grid-template-columns:1fr}}
+
+  /* =====================================================================
+     DIRECCIÓN A — VOGUE / DRAMA EDITORIAL
+     ===================================================================== */
+  .dirA{background:#FFFFFF;color:#0B0B0B;padding:64px 48px 56px;text-align:center}
+  .dirA .rule{border-top:1px solid #0B0B0B;margin:0 0 14px}
+  .dirA .rule.thin{border-top-width:1px;opacity:.25}
+  .dirA .kicker{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;padding:10px 0 26px}
+  .dirA .masthead{font-family:"Bodoni Moda",serif;font-weight:500;font-size:clamp(4.6rem,14vw,12.5rem);line-height:.82;letter-spacing:.01em;text-transform:uppercase}
+  .dirA .over{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:400;font-size:clamp(1.2rem,2.6vw,2rem);margin:26px 0 8px;letter-spacing:.02em}
+  .dirA .photo{margin:44px auto 0;max-width:760px;position:relative}
+  .dirA .photo img{width:100%;height:430px;object-fit:cover;object-position:center 18%;filter:grayscale(1) contrast(1.12)}
+  .dirA .caps{display:flex;justify-content:space-between;max-width:760px;margin:14px auto 0;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#5c5c5c}
+  .dirA .quote{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(1.15rem,2.2vw,1.6rem);max-width:34ch;margin:48px auto 0;line-height:1.4}
+  @media (max-width:640px){.dirA{padding:44px 20px 40px}.dirA .photo img{height:300px}}
+
+  /* =====================================================================
+     DIRECCIÓN B — KINFOLK / CALMA CÁLIDA
+     ===================================================================== */
+  .dirB{background:#F6F1E8;color:#211E19;padding:clamp(48px,7vw,96px) clamp(28px,6vw,88px);font-family:"Hanken Grotesk",sans-serif}
+  .dirB .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,96px);align-items:center}
+  .dirB .lbl{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8A8171;font-weight:500;margin-bottom:34px}
+  .dirB h2{font-family:"Fraunces",serif;font-weight:300;font-size:clamp(2.1rem,4.4vw,3.7rem);line-height:1.14;letter-spacing:-.01em}
+  .dirB h2 em{font-style:italic;font-weight:300}
+  .dirB .body{margin-top:30px;font-size:15.5px;font-weight:300;color:#4A443B;max-width:44ch;line-height:1.8}
+  .dirB .sig{margin-top:34px;font-family:"Fraunces",serif;font-style:italic;font-weight:300;font-size:19px;color:#211E19}
+  .dirB figure{margin:0}
+  .dirB figure img{width:100%;height:520px;object-fit:cover;object-position:center 12%;filter:saturate(.72) sepia(.10) contrast(.94) brightness(1.03)}
+  .dirB figcaption{margin-top:14px;font-size:12.5px;color:#8A8171;font-weight:300;letter-spacing:.02em}
+  @media (max-width:820px){.dirB .grid{grid-template-columns:1fr}.dirB figure img{height:400px}}
+
+  /* =====================================================================
+     DIRECCIÓN C — CLINICAL LUXE / SUIZO CONTEMPORÁNEO
+     ===================================================================== */
+  .dirC{background:#F2F1ED;color:#101315;padding:0;font-family:"Instrument Sans",sans-serif;position:relative}
+  .dirC .cgrid{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+  .dirC .cleft{padding:clamp(36px,5vw,64px);border-right:1px solid #C9C7C0;display:flex;flex-direction:column}
+  .dirC .cright{padding:clamp(36px,5vw,64px);display:flex;flex-direction:column;justify-content:center}
+  .dirC .row{display:flex;justify-content:space-between;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#63615B;padding-bottom:16px;border-bottom:1px solid #C9C7C0;margin-bottom:auto}
+  .dirC h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.02;letter-spacing:-.015em;margin:48px 0 0}
+  .dirC h2 em{font-style:italic}
+  .dirC .meta{margin-top:44px;display:grid;grid-template-columns:auto 1fr;gap:8px 28px;font-size:13px;color:#3A3936}
+  .dirC .meta dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#63615B;padding-top:2px}
+  .dirC .plate{border:1px solid #C9C7C0;padding:14px}
+  .dirC .plate img{width:100%;height:400px;object-fit:cover;object-position:center 20%;filter:grayscale(1) contrast(1.02) brightness(1.02)}
+  .dirC .plate .cap{display:flex;justify-content:space-between;padding-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#63615B}
+  @media (max-width:820px){.dirC .cgrid{grid-template-columns:1fr}.dirC .cleft{border-right:0;border-bottom:1px solid #C9C7C0}}
+
+  /* ---- outro ---- */
+  .outro{max-width:880px;margin:0 auto;padding:64px 28px 96px}
+  .outro h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px}
+  .outro p{color:#B5B1A8;font-size:15px;line-height:1.7;max-width:60ch;margin-bottom:14px}
+  .outro p b{color:#EDEBE6;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <div class="tag">Direction Lab · Jorge Arce · Solo para uso interno</div>
+  <h1>Tres direcciones, el mismo Jorge.<br><em>Reacciona a lo que ves, no a lo que te describo.</em></h1>
+  <p>Mismo contenido, tres mundos: tipografía, paleta, tratamiento fotográfico y actitud de layout distintos en cada uno. Ninguno es la página final — son brújulas. Puedes elegir uno, o mezclar ("la estructura de la C con la calidez de la B"). Las fuentes son versiones libres de las familias editoriales de referencia.</p>
+</div>
+<div class="divider"><hr></div>
+
+<!-- ============ DIRECCIÓN A ============ -->
+<div class="dhead">
+  <span class="n">Dirección A</span>
+  <span class="t">Vogue — Drama Editorial</span>
+  <span class="sw"><i style="background:#FFFFFF"></i><i style="background:#0B0B0B"></i><i style="background:#5c5c5c"></i></span>
+</div>
+<div class="panel"><div class="canvas dirA">
+  <div class="rule"></div>
+  <div class="kicker"><span>The South Bay Edition</span><span>Nº 27 — Est. 2007</span></div>
+  <div class="masthead">Arce</div>
+  <div class="over">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery</div>
+  <div class="photo"><img src="../img/hero.jpg" alt="Dr. Jorge Arce"></div>
+  <div class="caps"><span>Redondo Beach, California</span><span>Twenty-seven years</span></div>
+  <div class="quote">"A surgeon known for the cases others step away from — and the quiet precision it takes."</div>
+</div></div>
+<div class="dfoot">
+  <div class="cell"><div class="h">Tipografía</div><p class="spec"><b>Bodoni Moda</b> (didone display, la de Vogue) + <b>Archivo</b> para labels y cuerpo.</p></div>
+  <div class="cell"><div class="h">Sensación</div><p>Portada de revista. Autoridad que impone, blanco absoluto, B&N de alto contraste, tipografía como imagen. El médico siente que entró a algo importante.</p></div>
+  <div class="cell"><div class="h">Así seguiría</div><p>Secciones como "páginas" con reglas y folios, retratos B&N a sangre, citas enormes en didone itálica, casi cero color.</p></div>
+</div>
+
+<!-- ============ DIRECCIÓN B ============ -->
+<div class="dhead">
+  <span class="n">Dirección B</span>
+  <span class="t">Kinfolk — Calma Cálida</span>
+  <span class="sw"><i style="background:#F6F1E8"></i><i style="background:#211E19"></i><i style="background:#8A8171"></i></span>
+</div>
+<div class="panel"><div class="canvas dirB">
+  <div class="grid">
+    <div>
+      <div class="lbl">The Quiet Work</div>
+      <h2>Twenty-seven years of <em>steady hands,</em> and the patience the work actually needs.</h2>
+      <p class="body">Jorge creció en Colombia y construyó su vida quirúrgica en California. Su práctica se sostiene sobre un principio poco glamoroso: darle a cada caso el tiempo que de verdad necesita.</p>
+      <div class="sig">— Jorge Arce, D.D.S.</div>
+    </div>
+    <figure>
+      <img src="../img/clinic.jpg" alt="Dr. Jorge Arce en su clínica">
+      <figcaption>Dr. Arce en su clínica de Redondo Beach, South Bay.</figcaption>
+    </figure>
+  </div>
+</div></div>
+<div class="dfoot">
+  <div class="cell"><div class="h">Tipografía</div><p class="spec"><b>Fraunces Light</b> (serif suave, vibra Canela) + <b>Hanken Grotesk</b> ligera para cuerpo.</p></div>
+  <div class="cell"><div class="h">Sensación</div><p>Papel crema, luz natural, color film apagado, pesos ligeros, silencio visual. Lujo discreto que susurra. El lector baja las pulsaciones.</p></div>
+  <div class="cell"><div class="h">Así seguiría</div><p>Márgenes enormes, fotos con pie de foto como revista impresa, ritmo lento, testimonios como cartas personales, calidez en cada texto.</p></div>
+</div>
+
+<!-- ============ DIRECCIÓN C ============ -->
+<div class="dhead">
+  <span class="n">Dirección C</span>
+  <span class="t">Clinical Luxe — Suizo Contemporáneo</span>
+  <span class="sw"><i style="background:#F2F1ED"></i><i style="background:#101315"></i><i style="background:#C9C7C0"></i></span>
+</div>
+<div class="panel"><div class="canvas dirC">
+  <div class="cgrid">
+    <div class="cleft">
+      <div class="row"><span>Index Nº 01 — The Surgeon</span><span>33.84° N, 118.38° W</span></div>
+      <h2>The cases others <em>step away from.</em></h2>
+      <dl class="meta">
+        <dt>Práctica</dt><dd>Oral &amp; Maxillofacial Surgery — Implantology</dd>
+        <dt>Formación</dt><dd>Colombia → California</dd>
+        <dt>Trayectoria</dt><dd>27 años de ejercicio</dd>
+        <dt>Fundó</dt><dd>Dental Implants Center of South Bay, 2007</dd>
+      </dl>
+    </div>
+    <div class="cright">
+      <div class="plate">
+        <img src="../img/operating.jpg" alt="Dr. Jorge Arce operando">
+        <div class="cap"><span>Fig. 01 — The surgeon at work</span><span>South Bay, CA</span></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+<div class="dfoot">
+  <div class="cell"><div class="h">Tipografía</div><p class="spec"><b>Instrument Serif</b> (editorial contemporánea) + <b>Instrument Sans</b> para todo lo demás.</p></div>
+  <div class="cell"><div class="h">Sensación</div><p>Precisión médica elevada a lujo: grid visible, líneas de regla, fichas y coordenadas, B&N suave enmarcado como lámina de journal. Una clínica diseñada por un estudio de arquitectura.</p></div>
+  <div class="cell"><div class="h">Así seguiría</div><p>Todo indexado (Nº 01, Fig. 02…), expertise como fichas técnicas, datos como especificaciones, detalle quirúrgico en cada margen.</p></div>
+</div>
+
+<div class="divider"><hr></div>
+<div class="outro">
+  <h3>Cómo reaccionar</h3>
+  <p><b>1.</b> Dime cuál dirección te vibra más — o qué mezcla ("la estructura de la C con la fotografía de la A").</p>
+  <p><b>2.</b> Dime qué elemento concreto te gusta o te estorba de cada una: la tipografía, el trato de la foto, las líneas, los márgenes.</p>
+  <p><b>3.</b> Trae tus referencias (links, screenshots, spreads de revistas físicas) y tus anti-referencias — lo que te huela a "AI made".</p>
+  <p>Con eso construyo el sistema de diseño definitivo y empezamos a subir la página de Jorge sección por sección.</p>
+</div>
+
+</body>
+</html>
