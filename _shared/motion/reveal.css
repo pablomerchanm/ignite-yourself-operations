@@ -1,0 +1,33 @@
+/* Ignite Yourself — shared scroll-motion primitives (canonical copy)
+   Pair with reveal.js. Copied into each client's styles.css at build time so the
+   deployed site stays self-contained. Three behaviours, all reduced-motion safe:
+
+     .reveal          fade + soft lift when the element enters the viewport
+     [data-stagger]   direct children reveal in sequence (JS sets --i per child)
+     [data-parallax]  image drifts against the scroll (JS sets --py)
+
+   Requires markup hooks: add class="reveal" and/or data-stagger / data-parallax="0.1". */
+
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .95s cubic-bezier(.22,.61,.36,1),transform .95s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity,transform;
+}
+.reveal.in{opacity:1;transform:none}
+
+[data-stagger]>*{
+  opacity:0;transform:translateY(22px);
+  transition:opacity .85s cubic-bezier(.22,.61,.36,1),transform .85s cubic-bezier(.22,.61,.36,1);
+  transition-delay:calc(var(--i,0)*90ms);
+}
+[data-stagger].in>*{opacity:1;transform:none}
+
+[data-parallax] img,img[data-parallax]{
+  transform:translate3d(0,var(--py,0),0) scale(1.12);
+  will-change:transform;
+}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal,[data-stagger]>*{opacity:1;transform:none;transition:none}
+  [data-parallax] img,img[data-parallax]{transform:scale(1.12)}
+}
