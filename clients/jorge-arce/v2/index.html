@@ -78,6 +78,61 @@
   .stamps .s p b{color:var(--white);font-weight:500}
   @media (max-width:760px){.stamps .row{grid-template-columns:1fr}.stamps .s{padding-top:16px}}
 
+  /* ---------- (03) THE PATH ---------- */
+  .path{max-width:1180px;margin:0 auto;padding:clamp(40px,7vh,90px) 32px clamp(90px,14vh,170px)}
+  .kick{margin-bottom:44px;display:flex;gap:10px;align-items:baseline}
+  .kick .no{font-family:"Instrument Serif",serif;font-style:italic;color:var(--blue);font-size:15px}
+  .path h2{font-weight:600;font-size:clamp(1.9rem,4.6vw,4rem);line-height:1.1;letter-spacing:-.025em;max-width:16ch}
+  .path h2 .ital{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--blue-soft);font-size:1.05em}
+  /* route map */
+  .route{position:relative;margin:clamp(48px,7vw,86px) 0 clamp(40px,6vw,70px);height:190px}
+  .route svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .route .node{position:absolute;transform:translate(-50%,-50%)}
+  .route .node .dot{width:9px;height:9px;border-radius:50%;background:var(--white);margin:0 auto}
+  .route .node.dest .dot{background:var(--blue);box-shadow:0 0 0 5px rgba(59,130,240,.18)}
+  .route .node .lbl{margin-top:16px;text-align:center;white-space:nowrap}
+  .route .node .city{font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(1.3rem,2.4vw,2rem);line-height:1;color:var(--white)}
+  .route .node.dest .city{color:var(--blue-soft)}
+  .route .node .co{display:block;margin-top:9px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .route .node.orig{left:12%;top:64%}
+  .route .node.dest{left:86%;top:34%}
+  .route .yrs{position:absolute;left:50%;top:-6%;transform:translateX(-50%);text-align:center}
+  .route .yrs .n{font-weight:700;font-size:clamp(2.4rem,5vw,4.2rem);letter-spacing:-.03em;line-height:.9}
+  .route .yrs .u{display:block;margin-top:8px;font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+  .path .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;border-top:1px solid var(--hair);padding-top:26px}
+  .path .cols .c{max-width:34ch}
+  .path .cols .c .h{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  .path .cols .c p{font-size:15px;color:#B9BEC8;line-height:1.62}
+  .path .cols .c p b{color:var(--white);font-weight:600}
+  @media (max-width:760px){
+    .route{height:360px}
+    .route .node .lbl{white-space:normal;width:min(48vw,190px)}
+    .route .node .city{font-size:1.5rem}
+    .route .node .co{font-size:8.5px;letter-spacing:.07em;line-height:1.4}
+    .route .node.orig{left:30%;top:84%}.route .node.dest{left:70%;top:20%}
+    .route .yrs{top:44%}
+    .path .cols{grid-template-columns:1fr;gap:22px}
+  }
+
+  /* ---------- (04) EXPERTISE INDEX ---------- */
+  .exp{max-width:1180px;margin:0 auto;padding:0 32px clamp(90px,14vh,170px)}
+  .exp .lead{max-width:40ch;margin-bottom:clamp(40px,6vw,64px)}
+  .exp .lead h2{font-weight:600;font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.1;letter-spacing:-.02em}
+  .exp .lead h2 .ital{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--blue-soft)}
+  .exp .idx{border-top:1px solid var(--hair)}
+  .exp .row{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:baseline;
+    padding:clamp(22px,3vw,34px) 0;border-bottom:1px solid var(--hair);transition:padding-left .5s cubic-bezier(.22,.61,.36,1)}
+  .exp .row .num{font-family:"Instrument Serif",serif;font-style:italic;font-size:17px;color:var(--dim);transition:color .4s}
+  .exp .row .ttl{font-weight:600;font-size:clamp(1.5rem,3vw,2.4rem);letter-spacing:-.02em;line-height:1}
+  .exp .row .dsc{font-size:14.5px;color:#9BA1AC;line-height:1.6;max-width:44ch}
+  .exp .row:hover{padding-left:18px}
+  .exp .row:hover .num{color:var(--blue)}
+  .exp .row:hover .ttl{color:var(--blue-soft)}
+  @media (max-width:760px){
+    .exp .row{grid-template-columns:40px 1fr;row-gap:10px}
+    .exp .row .dsc{grid-column:2}
+  }
+
   /* ---------- TO BE CONTINUED ---------- */
   .tbc{border-top:1px solid var(--hair);padding:26px 32px 30px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
@@ -139,9 +194,54 @@
   </div>
 </div>
 
+<!-- (03) THE PATH -->
+<section class="path">
+  <div class="kick rv"><span class="no">( 03 )</span><span class="mono">The Path</span></div>
+  <h2 class="rv" style="--d:.1s">From <span class="ital">Colombia</span> to the <span class="ital">South&nbsp;Bay.</span></h2>
+
+  <div class="route rv" style="--d:.15s">
+    <svg viewBox="0 0 1000 190" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M120,122 C360,122 480,58 860,58" fill="none" stroke="var(--hair-blue)" stroke-width="1.4" stroke-dasharray="2 6" stroke-linecap="round"/>
+    </svg>
+    <div class="yrs">
+      <div class="n">27</div>
+      <span class="u">Years of practice</span>
+    </div>
+    <div class="node orig">
+      <span class="dot"></span>
+      <span class="lbl"><span class="city">Colombia</span><span class="co">04.7110° N · 74.0721° W — trained</span></span>
+    </div>
+    <div class="node dest">
+      <span class="dot"></span>
+      <span class="lbl"><span class="city">South Bay</span><span class="co">33.8492° N · 118.3880° W — built</span></span>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="c rv" style="--d:.05s"><div class="h">Where he trained</div><p>Dr. Arce trained in Colombia, then devoted his career entirely to oral &amp; maxillofacial surgery and dental implantology.</p></div>
+    <div class="c rv" style="--d:.13s"><div class="h">Where he built</div><p>He built his life's work in California — <b>the procedures most surgeons refer out:</b> complex extractions, reconstruction, full-arch cases.</p></div>
+    <div class="c rv" style="--d:.21s"><div class="h">One conviction</div><p><b>Difficult work, done with care, gives people their lives back.</b> In 2007 he founded the Dental Implants Center of South Bay on it.</p></div>
+  </div>
+</section>
+
+<!-- (04) EXPERTISE INDEX -->
+<section class="exp">
+  <div class="lead rv">
+    <h2>The work of a career spent on the <span class="ital">difficult cases.</span></h2>
+  </div>
+  <div class="idx">
+    <div class="row rv" style="--d:.02s"><span class="num">01</span><span class="ttl">Dental Implants</span><span class="dsc">From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</span></div>
+    <div class="row rv" style="--d:.06s"><span class="num">02</span><span class="ttl">Reconstruction</span><span class="dsc">Rebuilding function and structure where bone and tissue have been lost.</span></div>
+    <div class="row rv" style="--d:.10s"><span class="num">03</span><span class="ttl">Complex Cases</span><span class="dsc">The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</span></div>
+    <div class="row rv" style="--d:.14s"><span class="num">04</span><span class="ttl">Implant Maintenance</span><span class="dsc">Long-term care that protects the work of a restored smile.</span></div>
+    <div class="row rv" style="--d:.18s"><span class="num">05</span><span class="ttl">Pathology</span><span class="dsc">Identifying and addressing conditions affecting teeth, gums, and bone.</span></div>
+    <div class="row rv" style="--d:.22s"><span class="num">06</span><span class="ttl">Second Opinions</span><span class="dsc">Clarity and direction for patients facing complex decisions.</span></div>
+  </div>
+</section>
+
 <footer class="tbc">
   <span class="mono">© 2026 — Dr. Jorge Arce, D.D.S.</span>
-  <span class="mono">( Chapter 02 — in progress )</span>
+  <span class="mono">( Chapter 05 — in progress )</span>
 </footer>
 
 <script>
