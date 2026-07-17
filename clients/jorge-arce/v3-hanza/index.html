@@ -3,486 +3,548 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery</title>
+<title>Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery · v3 Hanza</title>
+<meta name="description" content="Board-certified oral & maxillofacial surgeon. Twenty-seven years between Colombia and California on the reconstructions other surgeons refer out.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,400;0,500;0,600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --greige:#D8D6D1;         /* light canvas */
-    --greige-2:#DFDDD8;       /* raised cell */
-    --dark:#171512;           /* warm near-black canvas */
-    --dark-2:#1E1C18;         /* raised cell on dark */
-    --ink:#161412;            /* text on light */
-    --ink-mute:#7C7871;       /* muted on light */
-    --bone:#EAE7E1;           /* text on dark */
-    --bone-mute:#96928A;      /* muted on dark */
-    --blue:#2F6FE8;           /* accent — Jorge blue in Hanza's accent role */
-    --hl:rgba(22,20,18,.18);  /* hairline on light */
-    --hd:rgba(234,231,225,.14)/* hairline on dark */
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--greige);color:var(--ink);font-family:"Geist",system-ui,sans-serif;font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{max-width:100%;display:block}
-  ::selection{background:var(--blue);color:#fff}
+:root{
+  --ink:#121212;
+  --dark:#161616;
+  --white:#FFFFFF;
+  --off:#FCFCFC;
+  --gray:#F3F3F3;
+  --line:#E8E8E8;
+  --coral:#FF6044;
+  --dim:rgba(18,18,18,.6);
+  --dimw:rgba(255,255,255,.6);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--off);color:var(--ink);
+  font-family:'Zalando Sans',sans-serif;font-weight:500;
+  font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--coral);color:#fff}
+.wrap{max-width:1392px;margin:0 auto;padding:0 48px}
+.mono{font-family:'Geist Mono',monospace;font-weight:400;font-size:13px;letter-spacing:.02em;text-transform:uppercase}
 
-  /* ---- primitives ---- */
-  .mono{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
-  .sq{display:inline-block;width:6px;height:6px;background:var(--blue);flex:none}
-  .sl{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
-  .sl .n{color:var(--ink-mute)}
-  .dark .sl .n{color:var(--bone-mute)}
-  .disp{font-family:"Zalando Sans","Inter",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:-.02em;line-height:.92}
-  .disp .lo{opacity:.42}
-  .wrap{max-width:1440px;margin:0 auto;padding:0 40px}
-  @media (max-width:760px){.wrap{padding:0 20px}}
-  .dark{background:var(--dark);color:var(--bone)}
+/* film-grain overlay for dark sections */
+.grain{position:relative}
+.grain::after{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
 
-  /* CTA button: black bar + blue arrow block */
-  .cta{display:inline-flex;align-items:stretch;text-decoration:none}
-  .cta .t{background:#111;color:#fff;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:17px 22px;display:flex;align-items:center;gap:8px}
-  .cta .t em{font-style:normal;color:#8f8b84}
-  .cta .a{width:52px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:15px;transition:background .25s}
-  .cta:hover .a{background:#1f5bd0}
+/* ---------- type ---------- */
+.disp{font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.94}
+h2.disp{font-size:clamp(44px,5.6vw,80px)}
+h2.disp .dim{color:var(--dim)}
+.dark h2.disp .dim,.darksec h2.disp .dim{color:var(--dimw)}
+.lede-u{font-weight:500;text-transform:uppercase;font-size:16px;line-height:1.3;letter-spacing:-.02em}
+.lede-u b{font-weight:600}
+.sq{display:inline-block;width:7px;height:7px;background:var(--coral);flex:0 0 7px}
+.seclab{display:flex;align-items:center;gap:10px;margin-bottom:56px}
+.seclab .mono{color:inherit}
+.seclab .num{color:var(--coral);font-family:'Geist Mono',monospace;font-size:13px}
 
-  /* ---------- NAV ---------- */
-  nav{position:fixed;inset:0 0 auto 0;z-index:30;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 40px;pointer-events:none}
-  nav>*{pointer-events:auto}
-  /* difference blend keeps brand/clock legible over both the dark hero photo and greige sections */
-  nav .brand{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.08em;color:#fff;mix-blend-mode:difference}
-  nav .time{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.8;text-align:center;mix-blend-mode:difference}
-  nav .time b{color:#fff;font-weight:500}
-  nav .right{display:flex;justify-content:flex-end}
-  nav.on-dark .time{color:var(--bone-mute)} nav.on-dark .time b,{color:var(--bone)}
-  @media (max-width:900px){nav{grid-template-columns:1fr auto}.time{display:none}}
-  @media (max-width:600px){nav{padding:12px 20px}nav .brand .bt{display:none}.cta .t{padding:14px 14px;font-size:9.5px}.cta .a{width:42px}}
+/* ---------- buttons ---------- */
+.hbtn{display:inline-flex;align-items:stretch;cursor:pointer}
+.hbtn .t{background:var(--ink);color:#fff;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:15px 22px;display:flex;align-items:center;gap:8px}
+.hbtn .t span{color:rgba(255,255,255,.55)}
+.hbtn .a{background:var(--coral);width:46px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;transition:transform .3s}
+.hbtn:hover .a{transform:translateX(3px)}
 
-  /* ---------- HERO (dark, photographic) ---------- */
-  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:96px;position:relative;overflow:hidden;background:var(--dark);color:var(--bone)}
-  .hero .photo{position:absolute;inset:0}
-  .hero .photo img{width:100%;height:100%;object-fit:cover;object-position:center 16%;filter:contrast(1.04) brightness(.95)}
-  .hero .photo::after{content:"";position:absolute;inset:0;background:
-    linear-gradient(180deg,rgba(23,21,18,.52) 0%,rgba(23,21,18,.06) 30%,rgba(23,21,18,.1) 58%,rgba(23,21,18,.82) 92%,rgba(23,21,18,.92) 100%),
-    linear-gradient(90deg,rgba(23,21,18,.28),rgba(23,21,18,0) 30%,rgba(23,21,18,0) 68%,rgba(23,21,18,.34))}
-  .hero .mid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,370px) 1fr minmax(0,330px);gap:40px;align-items:start}
-  .hero .statement{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1rem,1.35vw,1.25rem);line-height:1.42;text-transform:uppercase;letter-spacing:.01em;color:var(--bone)}
-  .hero .statement .lo{color:var(--bone-mute)}
-  .hero .svc{display:flex;flex-direction:column}
-  .hero .svc .r{display:flex;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--hd)}
-  .hero .svc .r:first-child{border-top:1px solid var(--hd)}
-  .hero .svc .no{font-family:"Geist Mono",monospace;font-size:10px;color:var(--bone-mute)}
-  .hero .svc .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.01em;color:var(--bone)}
-  .hero .bottom{position:relative;z-index:2}
-  .hero .trust{display:flex;align-items:center;gap:14px;padding-bottom:26px}
-  .hero .trust .avs{display:flex}
-  .hero .trust .av{width:34px;height:34px;border-radius:50%;background:#0E0D0B;color:var(--bone);display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;border:1px solid rgba(234,231,225,.35);margin-left:-8px}
-  .hero .trust .av:first-child{margin-left:0}
-  .hero .trust .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);line-height:1.6}
-  .hero .trust .tx b{color:var(--bone);font-weight:500}
-  /* full name, never clipped: SVG text; natural glyphs, tracking stretched to the exact width */
-  .giantwrap{position:relative;width:100%;line-height:0;padding:16px 40px 0;border-top:1px solid rgba(234,231,225,.22)}
-  .giant-svg{display:block;width:100%;height:auto}
-  .giant-svg text{font-family:"Zalando Sans",sans-serif;font-weight:700;fill:var(--bone)}
-  .hero .folio{position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;padding:14px 40px 20px}
-  .hero .folio span{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-mute)}
-  @media (max-width:900px){.hero .mid{grid-template-columns:1fr}.hero{padding-top:120px}.giantwrap{padding:14px 20px 0}.hero .folio{padding:12px 20px 16px}}
+/* ---------- nav ---------- */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;background:transparent;mix-blend-mode:normal}
+.navin{display:flex;justify-content:space-between;align-items:center;padding:18px 48px}
+.navl{display:flex;align-items:center;gap:38px}
+.menu-g{display:grid;grid-template-columns:4px 4px;gap:3px}
+.menu-g i{width:4px;height:4px;background:currentColor}
+.nbrand{font-weight:600;text-transform:uppercase;letter-spacing:-.01em;font-size:19px}
+.ntime{color:inherit;opacity:.75}
+nav.onlight{color:var(--ink)}
+nav .avatar{width:44px;height:44px;object-fit:cover}
+.navr{display:flex;align-items:center}
+.navr .hbtn .t{padding:15px 18px}
 
-  /* ---------- (01) PROFILE + STATS (greige, grid lines) ---------- */
-  .grid-sec{border-top:1px solid var(--hl)}
-  .profile{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:0;align-items:stretch}
-  .pcard{border-right:1px solid var(--hl);padding:40px 40px 40px 0}
-  .pcard .photo{position:relative;border-top:3px solid var(--blue)}
-  .pcard .photo img{width:100%;height:430px;object-fit:cover;object-position:center 18%}
-  .pcard .ctabar{display:flex;align-items:stretch;margin-top:-56px;position:relative;z-index:2;width:calc(100% - 44px)}
-  .pcard .ctabar .t{flex:1;background:#111;color:#fff;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:17px 20px}
-  .pcard .ctabar .t em{font-style:normal;color:#8f8b84}
-  .pcard .ctabar .a{width:52px;background:var(--blue);color:#fff;display:grid;place-items:center}
-  .pcard .id{display:flex;align-items:center;gap:9px;margin:22px 0 14px;font-family:"Zalando Sans",sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
-  .pcard .spec{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;border-top:1px solid var(--hl);padding-top:14px}
-  .pcard .spec dt{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);padding-top:3px}
-  .pcard .spec dd{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;text-align:right}
-  .pright{display:flex;flex-direction:column}
-  .pright .cells{display:grid;grid-template-columns:1fr 1fr 1fr}
-  .pright .cell{border-right:1px solid var(--hl);border-bottom:1px solid var(--hl);padding:34px 34px 44px}
-  .pright .cell:last-child{border-right:0}
-  .pright .cell .n{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(2.6rem,4.6vw,4.6rem);letter-spacing:-.03em;line-height:1}
-  .pright .cell p{font-size:13.5px;color:#4A463F;margin-top:14px;max-width:24ch;line-height:1.55}
-  .pright .bio{padding:40px 0 46px 40px;max-width:70ch}
-  .pright .bio .sl{margin-bottom:26px}
-  .pright .bio p{font-size:15.5px;line-height:1.7;color:#3A362F;margin-bottom:14px;max-width:62ch}
-  .pright .bio p b{color:var(--ink);font-weight:600}
-  .pright .bio .sig{font-family:"Zalando Sans",sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px}
-  @media (max-width:1000px){.profile{grid-template-columns:1fr}.pcard{border-right:0;padding-right:0}.pright .bio{padding-left:0}}
-  @media (max-width:760px){.pright .cells{grid-template-columns:1fr}.pright .cell{border-right:0}}
+/* ---------- hero (approved dark photo composition, reference chrome) ---------- */
+.hero{position:relative;min-height:100vh;background:var(--dark);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;opacity:.92;filter:grayscale(.15) contrast(1.04)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.42) 0%,rgba(10,10,10,.06) 38%,rgba(10,10,10,.66) 100%)}
+.hero .mid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 340px 300px;gap:40px;align-items:end;padding:0 48px;margin-bottom:34px}
+.hero .lede-u .dim2{color:var(--dimw)}
+.hlist{display:flex;flex-direction:column;gap:14px}
+.hlist .row{display:flex;gap:14px;align-items:baseline}
+.hlist .row .mono{color:var(--dimw)}
+.hlist .row .nm{font-size:22px;font-weight:500;text-transform:uppercase;letter-spacing:-.02em}
+.hero .markrow{position:relative;z-index:2;padding:0 24px;margin-bottom:-1.5vw}
+.hero .mark{
+  font-weight:500;text-transform:uppercase;letter-spacing:-.02em;line-height:.78;
+  font-size:clamp(120px,19.5vw,280px);white-space:nowrap;color:#fff;
+}
+.hero .trust{position:absolute;left:48px;bottom:calc(16.5vw + 30px);z-index:3;display:flex;align-items:center;gap:14px}
+.hero .trust .mono{color:var(--dimw)}
+.hero .trust .n{font-size:19px;font-weight:600}
+.hero .sqs{display:flex;gap:3px}
 
-  /* ---------- (02) THE PATH (dark) ---------- */
-  .path{padding:clamp(80px,12vh,150px) 0 0}
-  .path .head{display:grid;grid-template-columns:1fr minmax(0,380px);gap:40px;align-items:end;margin-bottom:clamp(44px,6vw,80px)}
-  .path .disp{font-size:clamp(2.6rem,7vw,6.4rem)}
-  .path .side{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:13.5px;line-height:1.5;text-transform:uppercase;letter-spacing:.01em}
-  .path .side .lo{color:var(--bone-mute)}
-  .path .blocks{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--hd)}
-  .path .b{border-right:1px solid var(--hd);padding:30px 34px 44px 0}
-  .path .b:last-child{border-right:0}
-  .path .b+ .b{padding-left:34px}
-  .path .b .h{display:flex;gap:9px;align-items:center;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);margin-bottom:16px}
-  .path .b p{font-size:14.5px;line-height:1.65;color:#C9C5BE}
-  .path .b p b{color:var(--bone);font-weight:600}
-  .plates{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:16px;padding:clamp(44px,6vw,80px) 0 clamp(80px,12vh,150px)}
-  .plate{border-top:3px solid var(--blue);background:var(--dark-2)}
-  .plate .ph{overflow:hidden}
-  .plate img{width:100%;height:340px;object-fit:cover}
-  .plate .cap{display:flex;justify-content:space-between;padding:13px 14px;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute)}
-  @media (max-width:900px){.path .head{grid-template-columns:1fr}.path .blocks{grid-template-columns:1fr}.path .b{border-right:0;border-bottom:1px solid var(--hd);padding-left:0}.plates{grid-template-columns:1fr}}
+/* ---------- sections scaffolding ---------- */
+section{padding:130px 0}
+.darksec{background:var(--dark);color:#fff}
 
-  /* ---------- (03) EXPERTISE (dark) ---------- */
-  .exp{padding-bottom:clamp(80px,12vh,150px)}
-  .exp .disp{font-size:clamp(2.6rem,7vw,6.4rem);margin:18px 0 clamp(36px,5vw,60px)}
-  .exp .idx{border-top:1px solid var(--hd)}
-  .exp .row{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--hd);transition:padding-left .45s cubic-bezier(.22,.61,.36,1)}
-  .exp .row .no{font-family:"Geist Mono",monospace;font-size:10.5px;color:var(--bone-mute)}
-  .exp .row .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1.3rem,2.6vw,2.1rem);letter-spacing:-.01em;text-transform:uppercase;line-height:1}
-  .exp .row .d{font-size:13.5px;color:#A5A199;line-height:1.6;max-width:48ch}
-  .exp .row:hover{padding-left:16px}
-  .exp .row:hover .no{color:var(--blue)}
-  @media (max-width:760px){.exp .row{grid-template-columns:44px 1fr}.exp .row .d{grid-column:2}}
+/* ---------- path / intro ---------- */
+.intro .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start}
+.intro .photo{overflow:hidden}
+.intro .photo img{width:100%;height:100%;min-height:520px;object-fit:cover;filter:grayscale(.2)}
+.intro h2{margin-bottom:28px}
+.intro p{font-size:16px;font-weight:400;color:var(--dim);max-width:54ch;margin-bottom:16px;line-height:1.65}
+.intro p b{color:var(--ink);font-weight:600}
+.factrows{margin-top:36px;border-top:1px solid var(--line)}
+.factrow{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.factrow .mono{color:var(--dim)}
+.factrow .v{font-size:15px;font-weight:500;text-transform:uppercase;letter-spacing:-.01em}
 
-  /* ---------- (04) PATIENT JOURNEY (dark) ---------- */
-  .steps{padding-bottom:clamp(90px,13vh,160px)}
-  .steps .head{display:grid;grid-template-columns:1fr minmax(0,380px);gap:40px;align-items:end;margin-bottom:clamp(44px,6vw,70px)}
-  .steps .disp{font-size:clamp(2.6rem,7vw,6.4rem)}
-  .steps .side{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:13.5px;line-height:1.5;text-transform:uppercase}
-  .steps .side .lo{color:var(--bone-mute)}
-  .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:start}
-  .scard{background:var(--dark-2);border-top:3px solid var(--blue);padding:22px 20px 30px;min-height:300px;display:flex;flex-direction:column}
-  .scard:nth-child(2){margin-top:34px}.scard:nth-child(3){margin-top:68px}.scard:nth-child(4){margin-top:102px}.scard:nth-child(5){margin-top:136px}
-  .scard .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:auto}
-  .scard .num{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:30px;letter-spacing:-.02em}
-  .scard .dots{display:flex;gap:4px}
-  .scard .dots i{width:5px;height:5px;background:#3A3630}
-  .scard .dots i.on{background:var(--blue)}
-  .scard .lab{display:flex;gap:8px;align-items:center;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);margin:26px 0 8px}
-  .scard .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:19px;letter-spacing:-.01em;line-height:1.1;margin-bottom:10px}
-  .scard p{font-size:12.5px;line-height:1.6;color:#A5A199}
-  @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.scard{margin-top:0!important;min-height:0}}
-  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+/* ---------- expertise ---------- */
+.exp .head{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;margin-bottom:70px}
+.exp .egrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.ecell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 30px 40px;min-height:280px;display:flex;flex-direction:column;background:var(--off);transition:background .35s}
+.ecell:hover{background:var(--gray)}
+.ecell .mono{color:var(--coral)}
+.ecell h3{font-size:24px;font-weight:500;text-transform:uppercase;letter-spacing:-.02em;margin:44px 0 12px}
+.ecell p{font-size:14.5px;font-weight:400;color:var(--dim);line-height:1.6}
+.ecell .ico{margin-top:auto;align-self:flex-end;color:var(--coral);font-size:18px;opacity:0;transform:translateX(-6px);transition:opacity .3s,transform .3s}
+.ecell:hover .ico{opacity:1;transform:none}
 
-  /* ---------- (05) APPRECIATION (greige) ---------- */
-  .light-sec{background:var(--greige);color:var(--ink)}
-  .apre{padding:clamp(80px,12vh,150px) 0}
-  .apre .disp{font-size:clamp(2.6rem,7vw,6.4rem);margin:18px 0 clamp(36px,5vw,60px)}
-  .twall{columns:3 270px;column-gap:14px}
-  .tcard{break-inside:avoid;background:#E6E4DF;padding:24px 22px;margin-bottom:14px}
-  .tcard .who{display:flex;justify-content:space-between;gap:10px;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:14px}
-  .tcard .q{font-size:14px;line-height:1.62;color:#33302A}
-  .tcard.doc{background:var(--dark);border-top:3px solid var(--blue)}
-  .tcard.doc .who{color:var(--bone-mute)}
-  .tcard.doc .q{color:var(--bone);font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:16.5px;line-height:1.4;text-transform:uppercase;letter-spacing:.01em}
+/* ---------- dark case band (surgery) ---------- */
+.caseband{position:relative;min-height:96vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.caseband .ph{position:absolute;inset:0}
+.caseband .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3) brightness(.6) contrast(1.05)}
+.caseband .inner{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr 360px 260px;gap:40px;align-items:end;padding:0 48px 54px}
+.caseband .logo{font-size:26px;font-weight:600;text-transform:uppercase;letter-spacing:-.02em;margin-bottom:18px}
+.caseband .desc{max-width:36ch}
+.caseband .cat{display:flex;flex-direction:column;gap:8px;font-size:15px;text-transform:uppercase;color:var(--dimw)}
+.caseband .btncol{display:flex;justify-content:flex-start}
 
-  /* ---------- (06) FOR PATIENTS + GUIDE (greige) ---------- */
-  .pats{padding-bottom:clamp(90px,13vh,160px)}
-  .pats .disp{font-size:clamp(2rem,5vw,4.2rem);margin:18px 0 clamp(30px,4vw,46px)}
-  .arts{border-top:1px solid var(--hl);margin-bottom:clamp(44px,6vw,72px)}
-  .arow{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--hl);transition:padding-left .45s cubic-bezier(.22,.61,.36,1)}
-  .arow .no{font-family:"Geist Mono",monospace;font-size:10.5px;color:var(--ink-mute)}
-  .arow .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1.15rem,2.2vw,1.7rem);text-transform:uppercase;letter-spacing:-.01em}
-  .arow .tag{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
-  .arow:hover{padding-left:16px}
-  .arow:hover .no{color:var(--blue)}
-  .guide{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .guide .pitch{background:var(--dark);color:var(--bone);border-top:3px solid var(--blue);padding:clamp(28px,4vw,46px);display:flex;flex-direction:column;justify-content:center}
-  .guide .pitch h3{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1.3rem,2.4vw,1.9rem);text-transform:uppercase;letter-spacing:-.01em;line-height:1.15;margin:16px 0 22px}
-  .guide .pitch .li{display:flex;gap:10px;align-items:baseline;font-size:13.5px;color:#C9C5BE;margin-bottom:10px}
-  .guide .pitch .li .sq{width:5px;height:5px;margin-top:5px}
-  .guide .form{background:#E6E4DF;padding:clamp(28px,4vw,46px)}
-  .guide .form h3{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:1.2rem;text-transform:uppercase;margin-bottom:6px}
-  .guide .form .sub{font-size:13px;color:#5A564F;margin-bottom:24px}
-  .guide .form label{display:flex;align-items:center;gap:8px;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px}
-  .guide .form input{width:100%;border:0;border-bottom:1px solid var(--hl);background:transparent;padding:10px 2px 12px;font-family:"Geist",sans-serif;font-size:14.5px;color:var(--ink);margin-bottom:22px}
-  .guide .form input:focus{outline:none;border-bottom-color:var(--blue)}
-  .guide .form .cta{border:0;cursor:pointer;background:none;padding:0}
-  .guide .fine{font-size:10.5px;color:var(--ink-mute);margin-top:16px;line-height:1.6}
-  @media (max-width:860px){.guide{grid-template-columns:1fr}}
+/* ---------- case study (quote + stats) ---------- */
+.case{background:var(--dark);color:#fff}
+.case .qgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:70px;align-items:start}
+.case .q{font-size:clamp(24px,2.4vw,34px);font-weight:500;line-height:1.25;letter-spacing:-.01em;max-width:24ch}
+.case .q .dim{color:var(--dimw)}
+.case .qmarks{color:var(--coral);font-size:64px;line-height:.5;margin-top:38px;font-weight:600}
+.case .who{display:flex;align-items:center;gap:14px;margin-top:56px}
+.case .who .av{width:44px;height:44px;border-radius:50%;background:#2A2A2A;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600}
+.case .who .rl{color:var(--dimw)}
+.case .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.case .cs .bar{width:7px;height:7px;background:var(--coral);margin-bottom:22px}
+.case .cs .n{font-size:clamp(40px,4.4vw,64px);font-weight:500;letter-spacing:-.03em;line-height:1}
+.case .cs .lab{margin-top:10px;color:var(--dimw)}
+.case .cs p{margin-top:16px;font-size:14.5px;font-weight:400;color:var(--dimw);line-height:1.6;max-width:30ch}
 
-  /* ---------- (07) SPEAKING (dark) ---------- */
-  .speak{padding:clamp(80px,12vh,150px) 0 clamp(90px,13vh,160px)}
-  .speak .grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:clamp(32px,4vw,64px);align-items:start;margin-top:clamp(36px,5vw,60px)}
-  .speak .plate img{height:480px;object-position:center 18%}
-  .speak .disp{font-size:clamp(2.2rem,5.4vw,4.6rem)}
-  .speak .lead{font-size:14.5px;line-height:1.68;color:#C9C5BE;max-width:52ch;margin:22px 0 34px}
-  .topics{border-top:1px solid var(--hd)}
-  .topics .r{display:grid;grid-template-columns:70px 1fr;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hd)}
-  .topics .no{font-family:"Geist Mono",monospace;font-size:10px;color:var(--bone-mute)}
-  .topics .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1.1rem,2vw,1.5rem);text-transform:uppercase;letter-spacing:-.01em}
-  .speak .invite{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:34px}
-  .speak .invite .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute)}
-  @media (max-width:900px){.speak .grid{grid-template-columns:1fr}.speak .plate img{height:380px}}
+/* ---------- voices ---------- */
+.voices .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.vcell{background:var(--off);padding:32px 28px;display:flex;flex-direction:column;gap:22px;min-height:250px;transition:background .3s}
+.vcell:hover{background:var(--gray)}
+.vcell .q2{font-size:16.5px;font-weight:400;color:var(--ink);line-height:1.55}
+.vcell .q2 b{font-weight:600}
+.vcell .who2{margin-top:auto;display:flex;flex-direction:column;gap:3px}
+.vcell .who2 .nm{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:-.01em}
+.vcell .who2 .mono{color:var(--dim)}
+.vcell.coral{background:var(--coral);color:#fff}
+.vcell.coral .q2{color:#fff;font-weight:500;font-size:19px}
+.vcell.coral .who2 .mono{color:rgba(255,255,255,.75)}
+.vcell.dark2{background:var(--dark);color:#fff}
+.vcell.dark2 .q2{color:#fff}
+.vcell.dark2 .who2 .mono{color:var(--dimw)}
 
-  /* ---------- (08) CONTACT + FOOTER (dark) ---------- */
-  .contact{border-top:1px solid var(--hd);padding:clamp(80px,12vh,150px) 0 clamp(60px,8vh,90px)}
-  .contact .grid{display:grid;grid-template-columns:1.2fr minmax(0,460px);gap:clamp(40px,6vw,90px);align-items:start;margin-top:clamp(36px,5vw,60px)}
-  .contact .disp{font-size:clamp(2.6rem,6.4vw,5.8rem)}
-  .contact .sub{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:13.5px;text-transform:uppercase;line-height:1.5;margin-top:26px;max-width:40ch}
-  .contact .sub .lo{color:var(--bone-mute)}
-  .contact .meta{margin-top:30px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);line-height:2.1}
-  .contact .meta b{color:var(--bone);font-weight:500}
-  .cform label{display:flex;align-items:center;gap:8px;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);margin-bottom:8px}
-  .cform input,.cform textarea{width:100%;border:0;border-bottom:1px solid var(--hd);background:transparent;padding:10px 2px 14px;font-family:"Geist",sans-serif;font-size:15px;color:var(--bone);margin-bottom:26px;resize:vertical}
-  .cform input:focus,.cform textarea:focus{outline:none;border-bottom-color:var(--blue)}
-  .cform .cta{border:0;cursor:pointer;background:none;padding:0}
-  @media (max-width:900px){.contact .grid{grid-template-columns:1fr}}
-  .foot{border-top:1px solid var(--hd);margin-top:clamp(60px,8vh,90px)}
-  .foot .giantwrap{padding-top:30px}
-  .foot .giant{font-size:24vw;opacity:.14}
-  .foot .bar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:22px 0 26px;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute)}
+/* ---------- journal ---------- */
+.journal .jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.jcard{border:1px solid var(--line);background:var(--off);display:flex;flex-direction:column;transition:background .3s}
+.jcard:hover{background:var(--gray)}
+.jcard .ph{aspect-ratio:16/10;overflow:hidden}
+.jcard .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s}
+.jcard:hover .ph img{filter:grayscale(0);transform:scale(1.03)}
+.jcard .bd{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1}
+.jcard .top{display:flex;justify-content:space-between;margin-bottom:20px}
+.jcard .top .mono{color:var(--dim)}
+.jcard .top .num{color:var(--coral);font-family:'Geist Mono',monospace;font-size:13px}
+.jcard h3{font-size:22px;font-weight:500;text-transform:uppercase;letter-spacing:-.02em;line-height:1.1}
+.jcard p{margin-top:12px;font-size:14.5px;font-weight:400;color:var(--dim);line-height:1.6}
+.jcard .rd{margin-top:auto;padding-top:22px;font-family:'Geist Mono',monospace;font-size:13px;text-transform:uppercase;color:var(--ink);display:flex;align-items:center;gap:8px}
+.jcard .rd i{color:var(--coral);font-style:normal;transition:transform .3s}
+.jcard:hover .rd i{transform:translateX(4px)}
 
-  /* ---------- motion ---------- */
-  .rv{opacity:0;transform:translateY(16px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0s)}
-  .rv.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}}
+/* ---------- speaking ---------- */
+.speak .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.speak .photo img{width:100%;min-height:480px;object-fit:cover;filter:grayscale(.2)}
+.speak .lead{font-size:16px;font-weight:400;color:var(--dim);max-width:52ch;margin:26px 0 44px;line-height:1.65}
+.srow{display:grid;grid-template-columns:64px 1fr auto;gap:22px;align-items:center;padding:20px 0;border-top:1px solid var(--line)}
+.srow:last-of-type{border-bottom:1px solid var(--line)}
+.srow .yr{font-family:'Geist Mono',monospace;font-size:13px;color:var(--coral)}
+.srow .nm{font-size:17px;font-weight:500;text-transform:uppercase;letter-spacing:-.01em}
+.srow .pl{font-size:13.5px;font-weight:400;color:var(--dim);margin-top:3px}
+.srow .tp{font-family:'Geist Mono',monospace;font-size:12px;text-transform:uppercase;border:1px solid var(--line);padding:7px 13px}
+.speak .invite{margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--gray);padding:24px 26px;flex-wrap:wrap}
+.speak .invite b{font-size:15px;text-transform:uppercase;letter-spacing:-.01em}
+.speak .invite p{font-size:13.5px;font-weight:400;color:var(--dim);margin-top:4px;max-width:44ch}
+
+/* ---------- contact (reference pattern) ---------- */
+.contact{background:var(--dark);color:#fff;padding:130px 0 110px}
+.contact .grid{display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:start}
+.pcard{background:#1D1D1D;border-top:3px solid var(--coral)}
+.pcard .photo{position:relative}
+.pcard .photo img{width:100%;height:420px;object-fit:cover;object-position:50% 18%}
+.pcard .photo .hbtn{position:absolute;left:0;bottom:0}
+.pcard .meta{padding:24px 26px 30px}
+.pcard .meta .nmrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.pcard .meta .nm{font-size:17px;font-weight:600;text-transform:uppercase}
+.pcard .mrow{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:9px 0;border-top:1px solid rgba(255,255,255,.08)}
+.pcard .mrow .mono{color:var(--dimw)}
+.pcard .mrow .v{font-size:13.5px;font-weight:500;text-transform:uppercase;text-align:right}
+.contact h2.disp{margin:26px 0 40px}
+.contact .subrow{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:start;margin-bottom:56px}
+.contact .sub{font-size:17px;text-transform:uppercase;font-weight:500;line-height:1.4;color:var(--dimw)}
+.contact .sub b{color:#fff;font-weight:600}
+.slots .sqs{display:flex;gap:4px;margin-bottom:10px}
+.slots .sqs i{width:8px;height:8px;background:var(--coral)}
+.slots .sqs i.off{background:rgba(255,255,255,.2)}
+.slots .mono{color:#fff}
+.slots .mono.dim{color:var(--dimw);margin-top:4px}
+.cform{display:flex;flex-direction:column;gap:26px;max-width:680px}
+.cform .f label{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.cform .f label .mono{color:var(--dimw)}
+.cform input,.cform textarea{
+  width:100%;background:#1D1D1D;border:1px solid rgba(255,255,255,.08);color:#fff;
+  font-family:'Zalando Sans',sans-serif;font-weight:400;font-size:15px;padding:17px 18px;outline:none;resize:none;
+}
+.cform input:focus,.cform textarea:focus{border-color:var(--coral)}
+.cform ::placeholder{color:rgba(255,255,255,.35)}
+.cform .fine{font-size:13px;font-weight:400;color:var(--dimw)}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark);color:#fff;padding:0 0 34px}
+.fmarkwrap{overflow:hidden;padding:0 24px}
+.fmark{font-weight:500;text-transform:uppercase;letter-spacing:-.02em;line-height:.8;font-size:clamp(100px,17vw,250px);white-space:nowrap;color:rgba(255,255,255,.14);text-align:center}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:30px 48px 0;border-top:1px solid rgba(255,255,255,.08);margin-top:40px}
+.fbot .mono{color:var(--dimw)}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+[data-stagger]>*{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+[data-stagger].in>*{opacity:1;transform:none}
+[data-stagger].in>*:nth-child(1){transition-delay:.04s}
+[data-stagger].in>*:nth-child(2){transition-delay:.1s}
+[data-stagger].in>*:nth-child(3){transition-delay:.16s}
+[data-stagger].in>*:nth-child(4){transition-delay:.22s}
+[data-stagger].in>*:nth-child(5){transition-delay:.28s}
+[data-stagger].in>*:nth-child(6){transition-delay:.34s}
+[data-stagger].in>*:nth-child(7){transition-delay:.4s}
+[data-stagger].in>*:nth-child(8){transition-delay:.46s}
+[data-stagger].in>*:nth-child(9){transition-delay:.52s}
+@media (prefers-reduced-motion:reduce){.reveal,[data-stagger]>*{opacity:1;transform:none;transition:none}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .hero .mid{grid-template-columns:1fr 1fr;gap:28px}
+  .hero .mid>.lede-u{grid-column:1/-1}
+  .exp .egrid{grid-template-columns:1fr 1fr}
+  .voices .vgrid{grid-template-columns:1fr 1fr}
+  .journal .jgrid{grid-template-columns:1fr}
+  .caseband .inner{grid-template-columns:1fr;gap:24px}
+  .contact .grid{grid-template-columns:1fr;gap:50px}
+  .pcard{max-width:420px}
+}
+@media (max-width:860px){
+  .wrap{padding:0 22px}
+  section{padding:90px 0}
+  .navin{padding:14px 22px}
+  .ntime{display:none}
+  .navl{gap:20px}
+  .hero .mid{grid-template-columns:1fr;padding:0 22px}
+  .hero .trust{left:22px;bottom:26px}
+  .exp .egrid,.voices .vgrid{grid-template-columns:1fr}
+  .intro .grid,.speak .grid{grid-template-columns:1fr;gap:40px}
+  .case .qgrid{grid-template-columns:1fr;gap:50px}
+  .case .statgrid{grid-template-columns:1fr;gap:40px}
+  .exp .head{grid-template-columns:1fr}
+  .contact .subrow{grid-template-columns:1fr;gap:30px}
+  .srow{grid-template-columns:48px 1fr;row-gap:6px}
+  .srow .tp{grid-column:2;justify-self:start}
+}
 </style>
 </head>
 <body>
 
-<nav id="nav">
-  <span class="brand"><span class="sq"></span><span class="bt">DR. JORGE ARCE</span></span>
-  <span class="time"><b id="clock">—:—</b>&nbsp; LOCAL TIME — SOUTH BAY, CA</span>
-  <span class="right"><a class="cta" href="#contact"><span class="t">REQUEST CONSULTATION <em>/ARCE</em></span><span class="a">→</span></a></span>
+<nav class="onlight" id="nav" style="color:#fff">
+  <div class="navin">
+    <div class="navl">
+      <span class="menu-g"><i></i><i></i><i></i><i></i></span>
+      <span class="mono" style="font-size:12px">Menu</span>
+      <span class="nbrand">Arce®</span>
+    </div>
+    <div class="mono ntime"><span id="clock">—</span> · South Bay, CA</div>
+    <div class="navr">
+      <img class="avatar" src="../img/portrait.jpg" alt="">
+      <a class="hbtn" href="#contact"><span class="t">Request Consult <span>/Arce</span></span><span class="a">→</span></a>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="photo"><img src="../img/quote.jpg" alt="Dr. Jorge Arce"></div>
-  <div class="mid wrap" style="padding-top:10vh">
-    <p class="statement rv" style="--d:.1s">A surgeon known for the cases others step away from — <span class="lo">and the quiet precision it takes.</span></p>
+<header class="hero grain">
+  <div class="ph"><img src="../img/hero.jpg" alt="Dr. Jorge Arce"></div>
+  <div class="shade"></div>
+  <div class="mid">
     <div></div>
-    <div class="svc rv" style="--d:.25s">
-      <div class="r"><span class="no">/01</span><span class="t">Dental Implants</span></div>
-      <div class="r"><span class="no">/02</span><span class="t">Reconstruction</span></div>
-      <div class="r"><span class="no">/03</span><span class="t">Complex Cases</span></div>
+    <div class="lede-u reveal" data-hero><b>I help patients other surgeons turn away</b> <span class="dim2">get their function, structure, and confidence back.</span></div>
+    <div class="hlist reveal" data-hero>
+      <div class="row"><span class="mono">/01</span><span class="nm">Dental Implants</span></div>
+      <div class="row"><span class="mono">/02</span><span class="nm">Reconstruction</span></div>
+      <div class="row"><span class="mono">/03</span><span class="nm">Complex Cases</span></div>
     </div>
   </div>
-  <div class="bottom">
-    <div class="trust wrap rv" style="--d:.4s">
-      <div class="avs"><span class="av">DK</span><span class="av">LS</span><span class="av">JM</span></div>
-      <p class="tx"><b>Referred by the surgeons</b><br>other surgeons trust</p>
-    </div>
-    <div class="giantwrap rv" style="--d:.15s">
-      <svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
-        <text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">ARCE</text>
-      </svg>
-    </div>
-    <div class="folio">
-      <span>South Bay, California</span>
-      <span>(01 — The Surgeon)</span>
-    </div>
+  <div class="markrow"><div class="mark reveal" data-hero>Arce®</div></div>
+  <div class="trust reveal" data-hero>
+    <span class="n">27<span style="color:var(--coral)">+</span></span>
+    <span class="sqs"><span class="sq"></span><span class="sq"></span><span class="sq"></span><span class="sq"></span></span>
+    <span class="mono">Years · Trusted by referring doctors across the South Bay</span>
   </div>
 </header>
 
-<!-- (01) THE SURGEON -->
-<section class="grid-sec wrap" id="about" style="padding-top:40px;padding-bottom:70px">
-  <div class="profile">
-    <aside class="pcard rv">
-      <div class="photo"><img src="../img/clinic.jpg" alt="Dr. Jorge Arce in his clinic"></div>
-      <div class="ctabar"><span class="t">GET IN TOUCH <em>/ARCE</em></span><span class="a">→</span></div>
-      <div class="id"><span class="sq"></span>DR. JORGE ARCE</div>
-      <dl class="spec">
-        <dt>Profession</dt><dd>Oral &amp; Maxillofacial Surgeon</dd>
-        <dt>Focus</dt><dd>Dental Implantology</dd>
-        <dt>Location</dt><dd>South Bay, California</dd>
-        <dt>Certification</dt><dd>Board-Certified — Implantology</dd>
-      </dl>
-    </aside>
-    <div class="pright">
-      <div class="cells">
-        <div class="cell rv" style="--d:.05s"><div class="n">27+</div><p>Years devoted to oral &amp; maxillofacial surgery.</p></div>
-        <div class="cell rv" style="--d:.12s"><div class="n">2007</div><p>Founded the Dental Implants Center of South Bay.</p></div>
-        <div class="cell rv" style="--d:.19s"><div class="n">02</div><p>Medical systems — trained in Colombia, built in California.</p></div>
-      </div>
-      <div class="bio">
-        <div class="sl rv"><span class="sq"></span><span class="n">01</span> THE SURGEON</div>
-        <p class="rv" style="--d:.05s">Jorge grew up in Colombia, the son of a family that valued precision and patience long before he ever held a scalpel. Medicine was not a career choice so much as a calling — a way to use his hands to give something back.</p>
-        <p class="rv" style="--d:.12s">He moved to California to specialize, and never left. Over twenty-seven years he built a practice on a single, unglamorous principle: <b>take the time the case actually needs.</b></p>
-        <p class="rv" style="--d:.19s">Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft — still treating every patient as the person they are before the procedure they need.</p>
-        <div class="sig rv" style="--d:.26s">— Jorge Arce, D.D.S.</div>
+<!-- PATH / INTRO -->
+<section class="intro">
+  <div class="wrap">
+    <div class="seclab reveal"><span class="sq"></span><span class="num">01</span><span class="mono">The Path</span></div>
+    <div class="grid">
+      <div class="photo reveal"><img src="../img/clinic.jpg" alt="Dr. Jorge Arce in his clinic"></div>
+      <div class="reveal">
+        <h2 class="disp">From Colombia<br><span class="dim">to the South Bay.</span></h2>
+        <p>Dr. Arce trained in Colombia and built his life's work in California, devoting his career entirely to oral and maxillofacial surgery and dental implantology.</p>
+        <p>Board certified in implantology, he has spent <b>twenty-seven years</b> on the procedures most surgeons refer out — complex extractions, reconstruction, and full-arch implant cases.</p>
+        <p>In 2007 he founded the Dental Implants Center of South Bay, guided by one conviction: <b>difficult work, done with care, gives people their lives back.</b> Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft.</p>
+        <div class="factrows">
+          <div class="factrow"><span class="mono">Profession</span><span class="v">Oral &amp; Maxillofacial Surgeon</span></div>
+          <div class="factrow"><span class="mono">Certification</span><span class="v">Board Certified · Implantology</span></div>
+          <div class="factrow"><span class="mono">Practice</span><span class="v">Dental Implants Center of South Bay</span></div>
+          <div class="factrow"><span class="mono">Location</span><span class="v">Redondo Beach · Torrance, CA</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- (02) THE PATH — dark -->
-<div class="dark">
-<section class="path wrap">
-  <div class="head">
-    <div>
-      <div class="sl rv"><span class="sq"></span><span class="n">02</span> THE PATH</div>
-      <h2 class="disp rv" style="--d:.08s;margin-top:18px"><span class="lo">FROM COLOMBIA</span><br>TO THE SOUTH BAY.</h2>
+<!-- EXPERTISE -->
+<section class="exp" id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="seclab reveal"><span class="sq"></span><span class="num">02</span><span class="mono">What I Do</span></div>
+    <div class="head reveal">
+      <h2 class="disp">The work of a career<br><span class="dim">spent on difficult cases.</span></h2>
+      <div class="lede-u" style="max-width:300px"><b>Not a list of services</b> <span style="color:var(--dim)">— the disciplines refined over nearly three decades.</span></div>
     </div>
-    <p class="side rv" style="--d:.16s"><span class="lo">TWENTY-SEVEN YEARS ON THE PROCEDURES</span> MOST SURGEONS REFER OUT.</p>
-  </div>
-  <div class="blocks">
-    <div class="b rv" style="--d:.04s"><div class="h"><span class="sq"></span>WHERE HE TRAINED</div><p>Dr. Arce trained in Colombia, then devoted his career entirely to oral &amp; maxillofacial surgery and dental implantology.</p></div>
-    <div class="b rv" style="--d:.1s"><div class="h"><span class="sq"></span>WHERE HE BUILT</div><p>He built his life's work in California — <b>the procedures most surgeons refer out:</b> complex extractions, reconstruction, full-arch cases.</p></div>
-    <div class="b rv" style="--d:.16s"><div class="h"><span class="sq"></span>ONE CONVICTION</div><p><b>Difficult work, done with care, gives people their lives back.</b> In 2007 he founded the Dental Implants Center of South Bay on it.</p></div>
-  </div>
-  <div class="plates">
-    <figure class="plate rv" style="--d:.05s"><div class="ph"><img src="../img/surgery.jpg" alt="Dr. Arce in surgery"></div><figcaption class="cap"><span>FIG. 01 — THE THEATRE</span><span>SOUTH BAY, CA</span></figcaption></figure>
-    <figure class="plate rv" style="--d:.12s"><div class="ph"><img src="../img/operating.jpg" alt="Dr. Arce operating" style="object-position:center 30%"></div><figcaption class="cap"><span>FIG. 02 — PRECISION</span><span>—</span></figcaption></figure>
-    <figure class="plate rv" style="--d:.19s"><div class="ph"><img src="../img/operating.jpg" alt="Detail — instruments" style="object-position:82% 88%;transform:scale(1.7)"></div><figcaption class="cap"><span>FIG. 03 — DETAIL</span><span>INSTRUMENTS</span></figcaption></figure>
-  </div>
-</section>
-
-<!-- (03) EXPERTISE — dark -->
-<section class="exp wrap" id="expertise">
-  <div class="sl rv"><span class="sq"></span><span class="n">03</span> EXPERTISE</div>
-  <h2 class="disp rv" style="--d:.08s"><span class="lo">A CAREER SPENT ON</span><br>THE DIFFICULT CASES.</h2>
-  <div class="idx rv" style="--d:.14s">
-    <div class="row"><span class="no">/01</span><span class="t">Dental Implants</span><span class="d">From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</span></div>
-    <div class="row"><span class="no">/02</span><span class="t">Reconstruction</span><span class="d">Rebuilding function and structure where bone and tissue have been lost.</span></div>
-    <div class="row"><span class="no">/03</span><span class="t">Complex Cases</span><span class="d">The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</span></div>
-    <div class="row"><span class="no">/04</span><span class="t">Implant Maintenance</span><span class="d">Long-term care that protects the work of a restored smile.</span></div>
-    <div class="row"><span class="no">/05</span><span class="t">Pathology</span><span class="d">Identifying and addressing conditions affecting teeth, gums, and bone.</span></div>
-    <div class="row"><span class="no">/06</span><span class="t">Second Opinions</span><span class="d">Clarity and direction for patients facing complex decisions.</span></div>
-  </div>
-</section>
-
-<!-- (04) PATIENT JOURNEY — dark -->
-<section class="steps wrap">
-  <div class="head">
-    <div>
-      <div class="sl rv"><span class="sq"></span><span class="n">04</span> PROCESS</div>
-      <h2 class="disp rv" style="--d:.08s;margin-top:18px"><span class="lo">FIVE STEPS,</span><br>ONE STEADY HAND.</h2>
+    <div class="egrid" data-stagger>
+      <div class="ecell"><span class="mono">/01</span><h3>Dental Implants</h3><p>From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</p><span class="ico">→</span></div>
+      <div class="ecell"><span class="mono">/02</span><h3>Reconstruction</h3><p>Rebuilding function and structure where bone and tissue have been lost.</p><span class="ico">→</span></div>
+      <div class="ecell"><span class="mono">/03</span><h3>Complex Cases</h3><p>The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</p><span class="ico">→</span></div>
+      <div class="ecell"><span class="mono">/04</span><h3>Implant Maintenance</h3><p>Long-term care that protects the work of a restored smile.</p><span class="ico">→</span></div>
+      <div class="ecell"><span class="mono">/05</span><h3>Pathology</h3><p>Identifying and addressing conditions affecting teeth, gums, and bone.</p><span class="ico">→</span></div>
+      <div class="ecell"><span class="mono">/06</span><h3>Second Opinions</h3><p>Clarity and direction for patients facing complex decisions.</p><span class="ico">→</span></div>
     </div>
-    <p class="side rv" style="--d:.16s"><span class="lo">FROM THE FIRST CONSULTATION TO LONG-TERM CARE,</span> THE PROCESS STAYS SIMPLE AND CLEAR.</p>
-  </div>
-  <div class="cards">
-    <div class="scard rv" style="--d:.02s"><div class="top"><span class="num">01</span><span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span></div><div class="lab"><span class="sq"></span>LISTEN</div><div class="t">Consultation</div><p>Your history, your concerns, your goals — heard before anything is proposed.</p></div>
-    <div class="scard rv" style="--d:.08s"><div class="top"><span class="num">02</span><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div><div class="lab"><span class="sq"></span>PLAN</div><div class="t">Diagnosis &amp; Plan</div><p>Imaging and evaluation, then a treatment pathway explained in plain language.</p></div>
-    <div class="scard rv" style="--d:.14s"><div class="top"><span class="num">03</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div><div class="lab"><span class="sq"></span>OPERATE</div><div class="t">Surgery</div><p>Unhurried, precise work — with the time the case actually needs.</p></div>
-    <div class="scard rv" style="--d:.2s"><div class="top"><span class="num">04</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div><div class="lab"><span class="sq"></span>HEAL</div><div class="t">Recovery</div><p>Clear guidance and close follow-up while function and comfort return.</p></div>
-    <div class="scard rv" style="--d:.26s"><div class="top"><span class="num">05</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div><div class="lab"><span class="sq"></span>PROTECT</div><div class="t">Maintenance</div><p>Long-term care that protects the work — for years, not months.</p></div>
   </div>
 </section>
-</div>
 
-<!-- (05) APPRECIATION — greige -->
-<section class="light-sec" id="appreciation">
-<div class="apre wrap">
-  <div class="sl rv"><span class="sq"></span><span class="n">05</span> APPRECIATION</div>
-  <h2 class="disp rv" style="--d:.08s"><span class="lo">THE PEOPLE WHO</span><br>WERE THERE.</h2>
-  <div class="twall">
-    <div class="tcard rv"><div class="who"><span>MARIA R.</span><span>FULL-ARCH</span></div><p class="q">I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.</p></div>
-    <div class="tcard doc rv" style="--d:.06s"><div class="who"><span>DR. DAVID KIM, D.D.S.</span><span>REFERRING</span></div><p class="q">"When a case is beyond what I can handle, Jorge is the first call I make."</p></div>
-    <div class="tcard rv" style="--d:.1s"><div class="who"><span>ROBERT T.</span><span>IMPLANTS</span></div><p class="q">Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself.</p></div>
-    <div class="tcard rv" style="--d:.13s"><div class="who"><span>ANABELLA C.</span><span>FAMILY</span></div><p class="q">The most thorough and honest surgeon I have ever met. He treated my father like family.</p></div>
-    <div class="tcard doc rv" style="--d:.16s"><div class="who"><span>DR. LINA SOTO</span><span>PERIODONTIST</span></div><p class="q">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</p></div>
-    <div class="tcard rv" style="--d:.19s"><div class="who"><span>CARLOS S.</span><span>BONE GRAFT</span></div><p class="q">I was terrified of the procedure. He never rushed me. Best decision I have made for my health.</p></div>
-    <div class="tcard rv" style="--d:.22s"><div class="who"><span>ELENA P.</span><span>TMJ</span></div><p class="q">Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know.</p></div>
-    <div class="tcard doc rv" style="--d:.25s"><div class="who"><span>DR. JEFF MALONE</span><span>REFERRING</span></div><p class="q">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time."</p></div>
+<!-- DARK CASE BAND -->
+<div class="caseband grain reveal">
+  <div class="ph"><img src="../img/surgery.jpg" alt="Dr. Jorge Arce in surgery"></div>
+  <div class="inner">
+    <div>
+      <div class="logo">The Operating Room</div>
+      <div class="lede-u desc"><span style="color:var(--dimw)">Twenty-seven years of steady hands on the cases with</span> <b>no room for error.</b></div>
+    </div>
+    <div class="cat">
+      <span>Surgery</span>
+      <span style="color:#fff">Precision</span>
+    </div>
+    <div class="btncol"><a class="hbtn" href="#contact"><span class="t">View the work</span><span class="a">→</span></a></div>
   </div>
 </div>
 
-<!-- (06) FOR PATIENTS + GUIDE — greige -->
-<div class="pats wrap">
-  <div class="sl rv"><span class="sq"></span><span class="n">06</span> FOR PATIENTS</div>
-  <h2 class="disp rv" style="--d:.08s"><span class="lo">UNDERSTANDING YOUR CARE,</span><br>BEFORE THE CHAIR.</h2>
-  <div class="arts rv" style="--d:.12s">
-    <div class="arow"><span class="no">/01</span><span class="t">All-On-X, explained simply</span><span class="tag">IMPLANTS — READ →</span></div>
-    <div class="arow"><span class="no">/02</span><span class="t">How to know if you need an implant</span><span class="tag">BEFORE SURGERY — READ →</span></div>
-    <div class="arow"><span class="no">/03</span><span class="t">Five myths about oral surgery</span><span class="tag">MYTHS — READ →</span></div>
-  </div>
-  <div class="guide">
-    <div class="pitch rv" style="--d:.08s">
-      <div class="sl"><span class="sq"></span>FREE PATIENT GUIDE</div>
-      <h3>What to expect from your first implant consultation.</h3>
-      <div class="li"><span class="sq"></span><span>A plain-language walkthrough of the process</span></div>
-      <div class="li"><span class="sq"></span><span>The questions worth asking any surgeon</span></div>
-      <div class="li"><span class="sq"></span><span>How to know if you're a candidate</span></div>
-    </div>
-    <div class="form rv" style="--d:.16s">
-      <h3>Get the guide</h3>
-      <p class="sub">Enter your details and we'll send it to your inbox. No spam — just one helpful guide.</p>
-      <label><span class="sq"></span>FULL NAME</label><input type="text" placeholder="Your name">
-      <label><span class="sq"></span>EMAIL ADDRESS</label><input type="email" placeholder="you@email.com">
-      <button class="cta"><span class="t">SEND ME THE GUIDE</span><span class="a">→</span></button>
-      <p class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.</p>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- (07) SPEAKING — dark -->
-<div class="dark">
-<section class="speak wrap" id="speaking">
-  <div class="sl rv"><span class="sq"></span><span class="n">07</span> SPEAKING &amp; EDUCATION</div>
-  <div class="grid">
-    <figure class="plate rv" style="--d:.08s"><div class="ph"><img src="../img/speaking.jpg" alt="Dr. Arce lecturing"></div><figcaption class="cap"><span>FIG. 04 — THE LECTURE</span><span>—</span></figcaption></figure>
-    <div>
-      <h2 class="disp rv" style="--d:.05s"><span class="lo">SHARING THE CRAFT</span><br>WITH THE PROFESSION.</h2>
-      <p class="lead rv" style="--d:.12s">Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction.</p>
-      <div class="topics rv" style="--d:.18s">
-        <div class="r"><span class="no">/01</span><span class="t">Full-Arch Reconstruction</span></div>
-        <div class="r"><span class="no">/02</span><span class="t">Complex Extractions</span></div>
-        <div class="r"><span class="no">/03</span><span class="t">Judgment in Oral Surgery</span></div>
+<!-- CASE STUDY -->
+<section class="case grain">
+  <div class="wrap">
+    <div class="seclab reveal" style="color:#fff"><span class="sq"></span><span class="num">03</span><span class="mono">Case Study</span></div>
+    <div class="qgrid">
+      <div class="reveal">
+        <div class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <span class="dim">I can eat, smile, and speak again."</span></div>
+        <div class="qmarks">"</div>
+        <div class="who">
+          <span class="av">MR</span>
+          <div><div style="font-size:15px;font-weight:600;text-transform:uppercase">Maria R.</div><div class="mono rl">Patient · Full-arch reconstruction</div></div>
+        </div>
       </div>
-      <div class="invite rv" style="--d:.24s">
-        <span class="tx">AVAILABLE FOR CONFERENCES, STUDY CLUBS &amp; RESIDENT TRAINING</span>
-        <a class="cta" href="#contact"><span class="t">REQUEST AS SPEAKER</span><span class="a">→</span></a>
+      <div class="statgrid" data-stagger>
+        <div class="cs"><div class="bar"></div><div class="n">27 YRS</div><div class="mono lab">Surgical practice</div><p>A career devoted entirely to oral and maxillofacial surgery and implantology.</p></div>
+        <div class="cs"><div class="bar"></div><div class="n">EST. 2007</div><div class="mono lab">South Bay</div><p>Founder of the Dental Implants Center of South Bay — by referral and by word of mouth.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- (08) CONTACT — dark -->
-<section class="contact wrap" id="contact">
-  <div class="sl rv"><span class="sq"></span><span class="n">08</span> CONTACT</div>
-  <div class="grid">
-    <div>
-      <h2 class="disp rv" style="--d:.06s"><span class="lo">FOR THE PATIENTS</span><br><span class="lo">WHO WERE TOLD IT</span><br>COULDN'T BE DONE.</h2>
-      <p class="sub rv" style="--d:.14s"><span class="lo">FROM THE FIRST CONVERSATION TO LONG-TERM CARE,</span> THE WORK IS PRECISE — THE REASON BEHIND IT IS HUMAN.</p>
-      <p class="meta rv" style="--d:.2s"><b>DENTAL IMPLANTS CENTER OF SOUTH BAY</b><br>REDONDO BEACH · TORRANCE, CALIFORNIA<br>(310) 327-4166 — BY APPOINTMENT</p>
-    </div>
-    <form class="cform rv" style="--d:.14s" onsubmit="return false">
-      <label><span class="sq"></span>YOUR NAME</label><input type="text" placeholder="Jane Smith">
-      <label><span class="sq"></span>EMAIL ADDRESS</label><input type="email" placeholder="you@email.com">
-      <label><span class="sq"></span>HOW CAN WE HELP?</label><textarea rows="3" placeholder="A few words about your situation ..."></textarea>
-      <button class="cta"><span class="t">REQUEST CONSULTATION <em>/ARCE</em></span><span class="a">→</span></button>
-    </form>
-  </div>
-  <div class="foot">
-    <div class="giantwrap"><div class="giant">Arce®</div></div>
-    <div class="bar">
-      <span>© 2026 — DR. JORGE ARCE, D.D.S.</span>
-      <span>ORAL &amp; MAXILLOFACIAL SURGERY</span>
-      <span>SOUTH BAY, CALIFORNIA</span>
+<!-- VOICES -->
+<section class="voices">
+  <div class="wrap">
+    <div class="seclab reveal"><span class="sq"></span><span class="num">04</span><span class="mono">Trusted Voices</span></div>
+    <h2 class="disp reveal" style="margin-bottom:64px">The people<br><span class="dim">who were there.</span></h2>
+    <div class="vgrid" data-stagger>
+      <div class="vcell"><div class="q2">"When a case is beyond what I can handle, Jorge is the first call I make. <b>My patients always come back grateful — and so do I."</b></div><div class="who2"><span class="nm">Dr. David Kim, D.D.S.</span><span class="mono">Referring General Dentist · Torrance</span></div></div>
+      <div class="vcell coral"><div class="q2">"The most thorough and honest surgeon I have ever met. He treated my father like family."</div><div class="who2"><span class="nm">Anabella C.</span><span class="mono">Daughter of patient</span></div></div>
+      <div class="vcell"><div class="q2">"Calm, precise, and genuinely kind. He explained every step until I understood. <b>The result speaks for itself."</b></div><div class="who2"><span class="nm">Robert T.</span><span class="mono">Patient · Dental implants</span></div></div>
+      <div class="vcell dark2"><div class="q2">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</div><div class="who2"><span class="nm">Dr. Lina Soto</span><span class="mono">Periodontist</span></div></div>
+      <div class="vcell"><div class="q2">"I was terrified of the procedure. He never rushed me. <b>Best decision I have made for my health."</b></div><div class="who2"><span class="nm">Carlos S.</span><span class="mono">Patient · Bone graft + implants</span></div></div>
+      <div class="vcell"><div class="q2">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time."</div><div class="who2"><span class="nm">Dr. Jeff Malone</span><span class="mono">Referring Dentist · South Bay</span></div></div>
+      <div class="vcell"><div class="q2">"Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know."</div><div class="who2"><span class="nm">Elena P.</span><span class="mono">Patient · TMJ treatment</span></div></div>
+      <div class="vcell dark2"><div class="q2">"The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice."</div><div class="who2"><span class="nm">Dr. Mark Ellison</span><span class="mono">Referring General Dentist</span></div></div>
+      <div class="vcell"><div class="q2">"He never rushed me, never talked down to me, and the work is <b>flawless."</b></div><div class="who2"><span class="nm">Maria R.</span><span class="mono">Patient · Full-arch reconstruction</span></div></div>
     </div>
   </div>
 </section>
-</div>
+
+<!-- JOURNAL -->
+<section class="journal" style="padding-top:0">
+  <div class="wrap">
+    <div class="seclab reveal"><span class="sq"></span><span class="num">05</span><span class="mono">For Patients</span></div>
+    <h2 class="disp reveal" style="margin-bottom:64px">Understand your care<br><span class="dim">before the chair.</span></h2>
+    <div class="jgrid" data-stagger>
+      <article class="jcard">
+        <div class="ph"><img src="../img/operating.jpg" alt=""></div>
+        <div class="bd">
+          <div class="top"><span class="mono">Implants</span><span class="num">/01</span></div>
+          <h3>All-On-X, explained simply</h3>
+          <p>What full-arch restoration actually involves, who it's for, and what to expect at each stage.</p>
+          <span class="rd">Read Article <i>→</i></span>
+        </div>
+      </article>
+      <article class="jcard">
+        <div class="ph"><img src="../img/clinic.jpg" alt=""></div>
+        <div class="bd">
+          <div class="top"><span class="mono">Before Surgery</span><span class="num">/02</span></div>
+          <h3>How to know if you need an implant</h3>
+          <p>The signs worth paying attention to — and why timing often matters more than the procedure itself.</p>
+          <span class="rd">Read Article <i>→</i></span>
+        </div>
+      </article>
+      <article class="jcard">
+        <div class="ph"><img src="../img/quote.jpg" alt=""></div>
+        <div class="bd">
+          <div class="top"><span class="mono">Myths</span><span class="num">/03</span></div>
+          <h3>Five myths about oral surgery</h3>
+          <p>Separating fear from fact, so you can make a calm, informed decision about your health.</p>
+          <span class="rd">Read Article <i>→</i></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section class="speak" style="padding-top:0">
+  <div class="wrap">
+    <div class="seclab reveal"><span class="sq"></span><span class="num">06</span><span class="mono">Speaking &amp; Education</span></div>
+    <div class="grid">
+      <div class="photo reveal"><img src="../img/speaking.jpg" alt="Dr. Jorge Arce speaking at a conference"></div>
+      <div class="reveal">
+        <h2 class="disp">Sharing the craft<br><span class="dim">with the profession.</span></h2>
+        <p class="lead">Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction.</p>
+        <div class="srow"><span class="yr">2025</span><div><div class="nm">Advances in Full-Arch Implant Reconstruction</div><div class="pl">California Dental Association · Annual Session</div></div><span class="tp">Keynote</span></div>
+        <div class="srow"><span class="yr">2024</span><div><div class="nm">Managing the Complex Extraction</div><div class="pl">South Bay Dental Study Club</div></div><span class="tp">Lecture</span></div>
+        <div class="srow"><span class="yr">2024</span><div><div class="nm">Mentorship in Surgical Implantology</div><div class="pl">Resident training program · Guest faculty</div></div><span class="tp">Workshop</span></div>
+        <div class="srow"><span class="yr">2023</span><div><div class="nm">When Not to Operate: Judgment in Oral Surgery</div><div class="pl">Continuing Education Symposium</div></div><span class="tp">Panel</span></div>
+        <div class="invite">
+          <div><b>Inviting Dr. Arce to speak</b><p>Available for conferences, study clubs, and resident training on implantology and complex cases.</p></div>
+          <a class="hbtn" href="#contact"><span class="t">Request Speaker</span><span class="a">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact grain" id="contact">
+  <div class="wrap">
+    <div class="seclab reveal" style="color:#fff"><span class="sq"></span><span class="num">07</span><span class="mono">Contact</span></div>
+    <div class="grid">
+      <div class="pcard reveal">
+        <div class="photo">
+          <img src="../img/portrait.jpg" alt="Dr. Jorge Arce">
+          <a class="hbtn" href="tel:+13103274166"><span class="t">Get in touch <span>/Arce</span></span><span class="a">→</span></a>
+        </div>
+        <div class="meta">
+          <div class="nmrow"><span class="sq"></span><span class="nm">Dr. Jorge Arce, D.D.S.</span></div>
+          <div class="mrow"><span class="mono">Profession</span><span class="v">Oral &amp; Maxillofacial Surgeon</span></div>
+          <div class="mrow"><span class="mono">Certification</span><span class="v">Board Certified</span></div>
+          <div class="mrow"><span class="mono">Location</span><span class="v">Redondo Beach · Torrance</span></div>
+          <div class="mrow"><span class="mono">Phone</span><span class="v">(310) 327-4166</span></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="disp reveal"><span class="dim">For the patients told</span><br>it couldn't<br>be done.</h2>
+        <div class="subrow reveal">
+          <div class="sub"><span style="color:var(--dimw)">From first consultation to final restoration,</span> <b>every case starts with an honest conversation</b> — and a free guide to your first implant visit.</div>
+          <div class="slots">
+            <div class="sqs"><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
+            <div class="mono">Consultations by appointment</div>
+            <div class="mono dim">Redondo Beach · Torrance, CA</div>
+          </div>
+        </div>
+        <div class="cform reveal">
+          <div class="f"><label><span class="sq"></span><span class="mono">Your Name</span></label><input type="text" placeholder="Full name"></div>
+          <div class="f"><label><span class="sq"></span><span class="mono">Email Address</span></label><input type="email" placeholder="you@email.com"></div>
+          <div class="f"><label><span class="sq"></span><span class="mono">How can we help?</span></label><textarea rows="3" placeholder="A few words about your situation — or ask for the free guide: What to expect from your first implant consultation."></textarea></div>
+          <a class="hbtn" style="align-self:flex-start"><span class="t">Send Message</span><span class="a">→</span></a>
+          <div class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="grain">
+  <div class="fmarkwrap"><div class="fmark">Arce®</div></div>
+  <div class="fbot">
+    <span class="mono">© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.</span>
+    <span class="mono">Oral &amp; Maxillofacial Surgery · South Bay, California</span>
+  </div>
+</footer>
 
 <script>
-  (function(){
-    // clock — South Bay local time
-    function tick(){
-      try{
-        var t=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'America/Los_Angeles'}).format(new Date());
-        document.getElementById('clock').textContent=t;
-      }catch(e){}
-    }
-    tick(); setInterval(tick,30000);
-    // reveals
-    var els=document.querySelectorAll('.rv');
-    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver'in window)){
-      els.forEach(function(e){e.classList.add('in')});
-    }else{
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){
-        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
-      })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-      els.forEach(function(e){io.observe(e)});
-    }
-  })();
+document.addEventListener('DOMContentLoaded', () => {
+  // local time clock like the reference
+  const clock = document.getElementById('clock');
+  const tick = () => { clock.textContent = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Los_Angeles' }); };
+  tick(); setInterval(tick, 30000);
+
+  // nav color swap over light sections
+  const nav = document.getElementById('nav');
+  const darks = [...document.querySelectorAll('.hero,.caseband,.case,.contact,footer')];
+  const onScroll = () => {
+    const y = 40;
+    const overDark = darks.some(d => { const r = d.getBoundingClientRect(); return r.top <= y && r.bottom >= y; });
+    nav.style.color = overDark ? '#fff' : 'var(--ink)';
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  document.querySelectorAll('[data-hero]').forEach(el => el.classList.add('in'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal:not([data-hero]),[data-stagger]').forEach(el => io.observe(el));
+});
 </script>
 </body>
 </html>
