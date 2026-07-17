@@ -66,7 +66,7 @@
   .hero .photo::after{content:"";position:absolute;inset:0;background:
     linear-gradient(180deg,rgba(23,21,18,.52) 0%,rgba(23,21,18,.06) 30%,rgba(23,21,18,.1) 58%,rgba(23,21,18,.82) 92%,rgba(23,21,18,.92) 100%),
     linear-gradient(90deg,rgba(23,21,18,.28),rgba(23,21,18,0) 30%,rgba(23,21,18,0) 68%,rgba(23,21,18,.34))}
-  .hero .mid{position:relative;z-index:2;display:grid;grid-template-columns:1fr minmax(0,420px) minmax(0,330px);gap:40px;align-items:start}
+  .hero .mid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,370px) 1fr minmax(0,330px);gap:40px;align-items:start}
   .hero .statement{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1rem,1.35vw,1.25rem);line-height:1.42;text-transform:uppercase;letter-spacing:.01em;color:var(--bone)}
   .hero .statement .lo{color:var(--bone-mute)}
   .hero .svc{display:flex;flex-direction:column}
@@ -81,11 +81,13 @@
   .hero .trust .av:first-child{margin-left:0}
   .hero .trust .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);line-height:1.6}
   .hero .trust .tx b{color:var(--bone);font-weight:500}
-  /* full name, never clipped: SVG text stretched to the exact viewport width */
-  .giantwrap{position:relative;width:100%;line-height:0;padding:0 14px 6px}
+  /* full name, never clipped: SVG text; natural glyphs, tracking stretched to the exact width */
+  .giantwrap{position:relative;width:100%;line-height:0;padding:16px 40px 0;border-top:1px solid rgba(234,231,225,.22)}
   .giant-svg{display:block;width:100%;height:auto}
   .giant-svg text{font-family:"Zalando Sans",sans-serif;font-weight:700;fill:var(--bone)}
-  @media (max-width:900px){.hero .mid{grid-template-columns:1fr}.hero{padding-top:120px}}
+  .hero .folio{position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;padding:14px 40px 20px}
+  .hero .folio span{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone-mute)}
+  @media (max-width:900px){.hero .mid{grid-template-columns:1fr}.hero{padding-top:120px}.giantwrap{padding:14px 20px 0}.hero .folio{padding:12px 20px 16px}}
 
   /* ---------- (01) PROFILE + STATS (greige, grid lines) ---------- */
   .grid-sec{border-top:1px solid var(--hl)}
@@ -253,9 +255,9 @@
 <!-- HERO -->
 <header class="hero">
   <div class="photo"><img src="../img/quote.jpg" alt="Dr. Jorge Arce"></div>
-  <div class="mid wrap" style="padding-top:7vh">
-    <div></div>
+  <div class="mid wrap" style="padding-top:10vh">
     <p class="statement rv" style="--d:.1s">A surgeon known for the cases others step away from — <span class="lo">and the quiet precision it takes.</span></p>
+    <div></div>
     <div class="svc rv" style="--d:.25s">
       <div class="r"><span class="no">/01</span><span class="t">Dental Implants</span></div>
       <div class="r"><span class="no">/02</span><span class="t">Reconstruction</span></div>
@@ -268,9 +270,13 @@
       <p class="tx"><b>Referred by the surgeons</b><br>other surgeons trust</p>
     </div>
     <div class="giantwrap rv" style="--d:.15s">
-      <svg class="giant-svg" viewBox="0 0 1200 216" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
-        <text x="0" y="211" font-size="292" textLength="1200" lengthAdjust="spacingAndGlyphs">ARCE</text>
+      <svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
+        <text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">ARCE</text>
       </svg>
+    </div>
+    <div class="folio">
+      <span>South Bay, California</span>
+      <span>(01 — The Surgeon)</span>
     </div>
   </div>
 </header>
