@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1C6FE8;         /* Jorge blue */
+    --blue-hi:#2E71EE;      /* electric top */
+    --blue-deep:#1250B8;    /* electric bottom */
+    --navy:#10243A;         /* Jorge navy — dark act */
+    --navy-2:#16304C;
+    --ink:#0E1116;
+    --paper:#FBFAF8;        /* Jorge off-white */
+    --paper-2:#F1F2F4;
+    --mute:#5E6B79;
+    --bone:#F2F3F6;
+    --bone-mute:#93A0B4;
+    --hair:rgba(14,17,22,.12);
+    --hair-b:rgba(242,243,246,.16)
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--blue);color:#fff}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 36px}
+  @media (max-width:760px){.wrap{padding:0 20px}}
+  .mono{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
+  .disp{font-family:"Inter Tight",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02}
+  .disp .it{font-style:italic}
+  .disp .lo{opacity:.5}
+  .kick{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+  .kick .sq{width:6px;height:6px;background:var(--blue);flex:none}
+  .kick .n{opacity:.6}
+  .cta{display:inline-flex;align-items:stretch;text-decoration:none;border:0;cursor:pointer;background:none;padding:0}
+  .cta .t{background:var(--ink);color:#fff;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:16px 22px;display:flex;align-items:center;gap:8px}
+  .cta .t em{font-style:normal;color:#8b93a1}
+  .cta .a{width:50px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:15px;transition:background .25s}
+  .cta:hover .a{background:var(--blue-deep)}
+
+  /* ---------- NAV ---------- */
+  nav{position:fixed;inset:0 0 auto 0;z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 36px;pointer-events:none}
+  nav>*{pointer-events:auto}
+  nav .brand{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.08em;color:#fff;mix-blend-mode:difference}
+  nav .brand i{width:6px;height:6px;background:var(--blue);flex:none}
+  nav .time{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.8;text-align:center;mix-blend-mode:difference}
+  nav .time b{font-weight:500}
+  nav .right{display:flex;justify-content:flex-end}
+  @media (max-width:900px){nav{grid-template-columns:1fr auto}.time{display:none}}
+  @media (max-width:600px){nav{padding:12px 20px}nav .brand .bt{display:none}.cta .t{padding:13px 13px;font-size:9.5px}.cta .a{width:40px}}
+
+  /* ---------- HERO (hybrid: Hanza composition × Zentro blue duotone) ---------- */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:96px;overflow:hidden;
+    background:linear-gradient(180deg,var(--blue-hi) 0%,#1C5FD6 58%,var(--blue-deep) 100%);color:#fff}
+  .hero .duo{position:absolute;inset:0}
+  .hero .duo img{width:100%;height:112%;object-fit:cover;object-position:center 0%;filter:grayscale(1) contrast(1.18) brightness(1.06);mix-blend-mode:multiply;opacity:.92;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+  .hero .duo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,80,184,.14) 55%,rgba(18,80,184,.5) 90%)}
+  .hero .mid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,400px) 1fr minmax(0,330px);gap:40px;align-items:start}
+  .hero .statement{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(1.15rem,1.6vw,1.5rem);line-height:1.28;text-transform:uppercase;letter-spacing:-.01em}
+  .hero .statement .it{font-style:italic}
+  .hero .statement .lo{color:rgba(255,255,255,.62)}
+  .hero .svc{display:flex;flex-direction:column}
+  .hero .svc .r{display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.28)}
+  .hero .svc .r:first-child{border-top:1px solid rgba(255,255,255,.28)}
+  .hero .svc .no{font-family:"Geist Mono",monospace;font-size:10px;color:rgba(255,255,255,.65)}
+  .hero .svc .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:15.5px;text-transform:uppercase;letter-spacing:.01em}
+  .hero .bottom{position:relative;z-index:2}
+  .hero .trust{display:flex;align-items:center;gap:14px;padding-bottom:24px}
+  .hero .trust .avs{display:flex}
+  .hero .trust .av{width:34px;height:34px;border-radius:50%;background:rgba(9,20,40,.85);color:#fff;display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;border:1px solid rgba(255,255,255,.4);margin-left:-8px}
+  .hero .trust .av:first-child{margin-left:0}
+  .hero .trust .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);line-height:1.6}
+  .hero .trust .tx b{color:#fff;font-weight:500}
+  .giantwrap{position:relative;width:100%;line-height:0;padding:16px 36px 0;border-top:1px solid rgba(255,255,255,.3)}
+  .giant-svg{display:block;width:100%;height:auto}
+  .giant-svg text{font-family:"Inter Tight",sans-serif;font-weight:800;fill:#fff;letter-spacing:-.02em}
+  .hero .folio{display:flex;justify-content:space-between;gap:12px;padding:14px 36px 20px}
+  .hero .folio span{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+  @media (max-width:900px){.hero .mid{grid-template-columns:1fr}.hero{padding-top:120px}.giantwrap{padding:14px 20px 0}.hero .folio{padding:12px 20px 16px}}
+
+  /* ---------- (01) PROFILE + STATS (paper, Hanza structure) ---------- */
+  .profile-sec{padding:clamp(50px,7vh,90px) 0 clamp(80px,11vh,140px)}
+  .profile{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:0}
+  .pcard{border-right:1px solid var(--hair);padding:0 40px 0 0}
+  .pcard .photo{border-top:3px solid var(--blue)}
+  .pcard .photo img{width:100%;height:430px;object-fit:cover;object-position:center 18%}
+  .pcard .ctabar{display:flex;align-items:stretch;margin-top:-56px;position:relative;z-index:2;width:calc(100% - 44px)}
+  .pcard .ctabar .t{flex:1;background:var(--ink);color:#fff;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:17px 20px}
+  .pcard .ctabar .t em{font-style:normal;color:#8b93a1}
+  .pcard .ctabar .a{width:50px;background:var(--blue);color:#fff;display:grid;place-items:center}
+  .pcard .id{display:flex;align-items:center;gap:9px;margin:22px 0 14px;font-family:"Inter Tight",sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
+  .pcard .id i{width:6px;height:6px;background:var(--blue)}
+  .pcard .spec{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;border-top:1px solid var(--hair);padding-top:14px}
+  .pcard .spec dt{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+  .pcard .spec dd{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;text-align:right}
+  .pright{display:flex;flex-direction:column}
+  .pright .cells{display:grid;grid-template-columns:1fr 1fr 1fr}
+  .pright .cell{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:34px 34px 44px}
+  .pright .cell:last-child{border-right:0}
+  .pright .cell .n{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(2.6rem,4.6vw,4.6rem);letter-spacing:-.03em;line-height:1}
+  .pright .cell p{font-size:13.5px;color:var(--mute);margin-top:14px;max-width:24ch;line-height:1.55}
+  .pright .bio{padding:40px 0 0 40px;max-width:72ch}
+  .pright .bio .kick{margin-bottom:24px}
+  .pright .bio p{font-size:15.5px;font-weight:300;line-height:1.75;color:#39424e;margin-bottom:14px;max-width:62ch}
+  .pright .bio p b{color:var(--ink);font-weight:600}
+  .pright .bio .sig{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px}
+  @media (max-width:1000px){.profile{grid-template-columns:1fr}.pcard{border-right:0;padding-right:0}.pright .bio{padding-left:0}}
+  @media (max-width:760px){.pright .cells{grid-template-columns:1fr}.pright .cell{border-right:0}}
+
+  /* ---------- (02) CHAPTER full-bleed (Zentro project pattern + Hanza meta) ---------- */
+  .chapter{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+  .chapter .bg{position:absolute;inset:0}
+  .chapter .bg img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(.9) brightness(.72)}
+  .chapter .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,26,.45),rgba(10,17,26,.16) 40%,rgba(10,17,26,.55))}
+  .chapter .meta{position:absolute;z-index:2;top:24px;left:36px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+  .chapter .meta.r{left:auto;right:36px}
+  .chapter .meta.bl{top:auto;bottom:22px}
+  .chapter .meta.br{top:auto;bottom:22px;left:auto;right:36px}
+  .chapter .inner{position:relative;z-index:2;padding:60px 24px}
+  .chapter .tag{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+  .chapter h2{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(2.4rem,5.6vw,4.8rem);letter-spacing:-.025em;line-height:1;text-transform:uppercase;margin:16px 0 18px}
+  .chapter h2 .it{font-style:italic}
+  .chapter p.s{font-size:15.5px;font-weight:300;color:rgba(255,255,255,.92);max-width:52ch;margin:0 auto}
+
+  /* ---------- (03) EXPERTISE (paper, Hanza index) ---------- */
+  .exp{padding:clamp(80px,12vh,150px) 0}
+  .exp h2.disp{font-size:clamp(2.2rem,5.4vw,4.4rem);margin:18px 0 clamp(34px,5vw,54px)}
+  .exp .idx{border-top:1px solid var(--hair)}
+  .exp .row{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--hair);transition:padding-left .45s cubic-bezier(.22,.61,.36,1)}
+  .exp .row .no{font-family:"Geist Mono",monospace;font-size:10.5px;color:var(--mute)}
+  .exp .row .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:clamp(1.3rem,2.6vw,2.1rem);letter-spacing:-.015em;text-transform:uppercase;line-height:1}
+  .exp .row .d{font-size:13.5px;font-weight:300;color:var(--mute);line-height:1.6;max-width:48ch}
+  .exp .row:hover{padding-left:16px}
+  .exp .row:hover .no,.exp .row:hover .t{color:var(--blue)}
+  @media (max-width:760px){.exp .row{grid-template-columns:44px 1fr}.exp .row .d{grid-column:2}}
+
+  /* ---------- (04) JOURNEY (navy act, Hanza staircase) ---------- */
+  .dark{background:var(--navy);color:var(--bone)}
+  .dark .kick{color:var(--bone-mute)}
+  .steps{padding:clamp(80px,12vh,150px) 0}
+  .steps .head{display:grid;grid-template-columns:1fr minmax(0,380px);gap:40px;align-items:end;margin-bottom:clamp(44px,6vw,70px)}
+  .steps h2.disp{font-size:clamp(2.2rem,5.4vw,4.4rem);margin-top:18px}
+  .steps .side{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:13.5px;line-height:1.5;text-transform:uppercase}
+  .steps .side .lo{color:var(--bone-mute)}
+  .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:start}
+  .scard{background:var(--navy-2);border-top:3px solid var(--blue);padding:22px 20px 30px;min-height:300px;display:flex;flex-direction:column}
+  .scard:nth-child(2){margin-top:34px}.scard:nth-child(3){margin-top:68px}.scard:nth-child(4){margin-top:102px}.scard:nth-child(5){margin-top:136px}
+  .scard .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:auto}
+  .scard .num{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:30px;letter-spacing:-.02em}
+  .scard .dots{display:flex;gap:4px}
+  .scard .dots i{width:5px;height:5px;background:#2A4467}
+  .scard .dots i.on{background:var(--blue)}
+  .scard .lab{display:flex;gap:8px;align-items:center;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-mute);margin:26px 0 8px}
+  .scard .lab i{width:5px;height:5px;background:var(--blue)}
+  .scard .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:19px;letter-spacing:-.01em;line-height:1.1;margin-bottom:10px}
+  .scard p{font-size:12.5px;font-weight:300;line-height:1.6;color:#AEB9C9}
+  @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.scard{margin-top:0!important;min-height:0}}
+  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+
+  /* ---------- (05) APPRECIATION (paper-2, Zentro cards) ---------- */
+  .stories{background:var(--paper-2);padding:clamp(80px,12vh,150px) 0}
+  .stories h2.disp{font-size:clamp(2.2rem,5.4vw,4.4rem);margin:18px 0 clamp(34px,5vw,54px)}
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tcard{background:#fff;border-radius:0;padding:28px 26px;display:flex;flex-direction:column;gap:18px;min-height:230px}
+  .tcard .q{font-size:14.5px;font-weight:300;line-height:1.65;color:#26303c}
+  .tcard .who{margin-top:auto;display:flex;align-items:center;gap:11px}
+  .tcard .who .av{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;flex:none}
+  .tcard .who .n{font-size:13.5px;font-weight:600}
+  .tcard .who .r{font-size:12px;color:var(--mute)}
+  .tcard.blue{background:var(--blue);color:#fff;align-items:flex-start;justify-content:center}
+  .tcard.blue .big{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(1.3rem,2.2vw,1.8rem);letter-spacing:-.015em;line-height:1.15;text-transform:uppercase}
+  .tcard.blue .big .it{font-style:italic}
+  .tcard.blue .s{font-size:13px;color:rgba(255,255,255,.85);margin-top:12px}
+  @media (max-width:900px){.sgrid{grid-template-columns:1fr}}
+
+  /* ---------- (06) FOR PATIENTS + GUIDE (paper) ---------- */
+  .pats{padding:clamp(80px,12vh,150px) 0}
+  .pats h2.disp{font-size:clamp(1.9rem,4.4vw,3.4rem);margin:18px 0 clamp(28px,4vw,44px)}
+  .pats .idx{border-top:1px solid var(--hair);margin-bottom:clamp(44px,6vw,64px)}
+  .pats .row{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--hair);transition:padding-left .45s cubic-bezier(.22,.61,.36,1)}
+  .pats .row .no{font-family:"Geist Mono",monospace;font-size:10.5px;color:var(--mute)}
+  .pats .row .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:clamp(1.15rem,2.2vw,1.7rem);letter-spacing:-.01em;text-transform:uppercase}
+  .pats .row .tag{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+  .pats .row:hover{padding-left:16px}
+  .pats .row:hover .t{color:var(--blue)}
+  .guide{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .guide .pitch{background:var(--navy);color:var(--bone);border-top:3px solid var(--blue);padding:clamp(28px,4vw,46px);display:flex;flex-direction:column;justify-content:center}
+  .guide .pitch .kick{color:var(--bone-mute)}
+  .guide .pitch h3{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(1.35rem,2.5vw,2rem);text-transform:uppercase;letter-spacing:-.015em;line-height:1.12;margin:16px 0 22px}
+  .guide .pitch h3 .it{font-style:italic;color:#8FB6F5}
+  .guide .pitch .li{display:flex;gap:10px;align-items:baseline;font-size:13.5px;font-weight:300;color:#C4CDDA;margin-bottom:10px}
+  .guide .pitch .li i{width:5px;height:5px;background:var(--blue);flex:none;transform:translateY(-2px)}
+  .guide .form{background:#fff;border:1px solid var(--hair);padding:clamp(28px,4vw,46px)}
+  .guide .form h3{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:1.25rem;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:6px}
+  .guide .form .sub{font-size:13.5px;font-weight:300;color:var(--mute);margin-bottom:24px}
+  .guide .form label{display:block;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:7px}
+  .guide .form input{width:100%;border:0;border-bottom:1px solid var(--hair);background:transparent;padding:10px 2px 13px;font-family:"Inter",sans-serif;font-size:14.5px;color:var(--ink);margin-bottom:22px}
+  .guide .form input:focus{outline:none;border-bottom-color:var(--blue)}
+  .guide .fine{font-size:11px;color:var(--mute);margin-top:14px;line-height:1.6}
+  @media (max-width:860px){.guide{grid-template-columns:1fr}}
+
+  /* ---------- (07) SPEAKING (navy act) ---------- */
+  .speak{padding:clamp(80px,12vh,150px) 0}
+  .speak .grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:clamp(32px,4vw,64px);align-items:center;margin-top:clamp(34px,5vw,54px)}
+  .plate{border:1px solid var(--hair-b);padding:12px;background:rgba(242,243,246,.03)}
+  .plate .ph{overflow:hidden}
+  .plate img{width:100%;height:480px;object-fit:cover;object-position:center 18%}
+  .plate .cap{display:flex;justify-content:space-between;gap:10px;padding-top:11px;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone-mute)}
+  .speak h2.disp{font-size:clamp(2rem,4.6vw,3.8rem)}
+  .speak .lead{font-size:14.5px;font-weight:300;line-height:1.7;color:#AEB9C9;max-width:52ch;margin:20px 0 30px}
+  .topics{border-top:1px solid var(--hair-b)}
+  .topics .r{display:grid;grid-template-columns:70px 1fr;gap:24px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--hair-b)}
+  .topics .no{font-family:"Geist Mono",monospace;font-size:10px;color:var(--bone-mute)}
+  .topics .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:clamp(1.05rem,1.9vw,1.4rem);text-transform:uppercase;letter-spacing:-.01em}
+  .speak .invite{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:30px}
+  .speak .invite .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-mute)}
+  @media (max-width:900px){.speak .grid{grid-template-columns:1fr}.plate img{height:380px}}
+
+  /* ---------- (08) FINALE (electric blue bookend) ---------- */
+  .finale{position:relative;background:linear-gradient(180deg,var(--blue-hi),var(--blue-deep));color:#fff;padding:clamp(90px,13vh,160px) 0 0;text-align:center;overflow:hidden}
+  .finale .kick{justify-content:center;color:rgba(255,255,255,.8)}
+  .finale .kick .sq{background:#fff}
+  .finale h2{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:-.025em;line-height:1.02;text-transform:uppercase;max-width:20ch;margin:18px auto 0}
+  .finale h2 .it{font-style:italic}
+  .finale p.s{font-size:15px;font-weight:300;color:rgba(255,255,255,.92);max-width:46ch;margin:18px auto 30px}
+  .finale .pill{display:inline-block;background:#fff;color:var(--ink);text-decoration:none;border-radius:100px;padding:16px 34px;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;transition:background .25s}
+  .finale .pill:hover{background:#dbe6f8}
+  .finale .meta{margin-top:26px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);line-height:2.1}
+  .finale .meta b{font-weight:500;color:#fff}
+  .finale .giantwrap{border-top:1px solid rgba(255,255,255,.3);margin-top:56px;padding:16px 36px 0}
+  .finale .giant-svg text{opacity:.24}
+  .finale .bar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 36px 24px;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+  /* ---------- motion ---------- */
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .95s cubic-bezier(.22,.61,.36,1),transform .95s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0s)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="brand"><i></i><span class="bt">DR. JORGE ARCE</span></span>
+  <span class="time"><b id="clock">—:—</b>&nbsp; LOCAL TIME — SOUTH BAY, CA</span>
+  <span class="right"><a class="cta" href="#contact"><span class="t">REQUEST CONSULTATION <em>/ARCE</em></span><span class="a">→</span></a></span>
+</nav>
+
+<!-- HERO — hybrid -->
+<header class="hero">
+  <div class="duo"><img src="../img/quote.jpg" alt="Dr. Jorge Arce"></div>
+  <div class="mid wrap" style="padding-top:9vh">
+    <p class="statement rv" style="--d:.1s">A surgeon known for the cases <span class="it">others step away from</span> — <span class="lo">and the quiet precision it takes.</span></p>
+    <div></div>
+    <div class="svc rv" style="--d:.25s">
+      <div class="r"><span class="no">/01</span><span class="t">Dental Implants</span></div>
+      <div class="r"><span class="no">/02</span><span class="t">Reconstruction</span></div>
+      <div class="r"><span class="no">/03</span><span class="t">Complex Cases</span></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="trust wrap rv" style="--d:.4s">
+      <div class="avs"><span class="av">DK</span><span class="av">LS</span><span class="av">JM</span></div>
+      <p class="tx"><b>Referred by the surgeons</b><br>other surgeons trust</p>
+    </div>
+    <div class="giantwrap rv" style="--d:.15s">
+      <svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
+        <text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">ARCE</text>
+      </svg>
+    </div>
+    <div class="folio">
+      <span>South Bay, California</span>
+      <span>(01 — The Surgeon)</span>
+    </div>
+  </div>
+</header>
+
+<!-- (01) PROFILE + STATS -->
+<section class="profile-sec wrap" id="about">
+  <div class="profile">
+    <aside class="pcard rv">
+      <div class="photo"><img src="../img/clinic.jpg" alt="Dr. Jorge Arce in his clinic" style="object-position:center 18%"></div>
+      <div class="ctabar"><span class="t">GET IN TOUCH <em>/ARCE</em></span><span class="a">→</span></div>
+      <div class="id"><i></i>DR. JORGE ARCE</div>
+      <dl class="spec">
+        <dt>Profession</dt><dd>Oral &amp; Maxillofacial Surgeon</dd>
+        <dt>Focus</dt><dd>Dental Implantology</dd>
+        <dt>Location</dt><dd>South Bay, California</dd>
+        <dt>Certification</dt><dd>Board-Certified — Implantology</dd>
+      </dl>
+    </aside>
+    <div class="pright">
+      <div class="cells">
+        <div class="cell rv" style="--d:.05s"><div class="n">27+</div><p>Years devoted to oral &amp; maxillofacial surgery.</p></div>
+        <div class="cell rv" style="--d:.12s"><div class="n">2007</div><p>Founded the Dental Implants Center of South Bay.</p></div>
+        <div class="cell rv" style="--d:.19s"><div class="n">02</div><p>Medical systems — trained in Colombia, built in California.</p></div>
+      </div>
+      <div class="bio">
+        <div class="kick rv"><span class="sq"></span><span class="n">01</span> THE SURGEON</div>
+        <p class="rv" style="--d:.05s">Jorge grew up in Colombia, the son of a family that valued precision and patience long before he ever held a scalpel. Medicine was not a career choice so much as a calling — a way to use his hands to give something back.</p>
+        <p class="rv" style="--d:.12s">He moved to California to specialize, and never left. Over twenty-seven years he built a practice on a single, unglamorous principle: <b>take the time the case actually needs.</b></p>
+        <p class="rv" style="--d:.19s">Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft — still treating every patient as the person they are before the procedure they need.</p>
+        <div class="sig rv" style="--d:.26s">— Jorge Arce, D.D.S.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (02) CHAPTER -->
+<section class="chapter">
+  <div class="bg"><img src="../img/surgery.jpg" alt=""></div>
+  <span class="meta">Fig. 01 — The theatre</span>
+  <span class="meta r">Est. 2007</span>
+  <span class="meta bl">(02 — The Work)</span>
+  <span class="meta br">South Bay, CA</span>
+  <div class="inner">
+    <p class="tag rv">In the operating room</p>
+    <h2 class="rv" style="--d:.1s">Twenty-seven years<br>of <span class="it">steady hands</span></h2>
+    <p class="s rv" style="--d:.2s">Complex extractions, reconstruction and full-arch cases — the procedures most practices refer out, done unhurried and done with care.</p>
+  </div>
+</section>
+
+<!-- (03) EXPERTISE -->
+<section class="exp wrap" id="expertise">
+  <div class="kick rv"><span class="sq"></span><span class="n">03</span> EXPERTISE</div>
+  <h2 class="disp rv" style="--d:.08s"><span class="lo">A CAREER SPENT ON</span><br>THE <span class="it">DIFFICULT</span> CASES</h2>
+  <div class="idx rv" style="--d:.14s">
+    <div class="row"><span class="no">/01</span><span class="t">Dental Implants</span><span class="d">From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</span></div>
+    <div class="row"><span class="no">/02</span><span class="t">Reconstruction</span><span class="d">Rebuilding function and structure where bone and tissue have been lost.</span></div>
+    <div class="row"><span class="no">/03</span><span class="t">Complex Cases</span><span class="d">The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</span></div>
+    <div class="row"><span class="no">/04</span><span class="t">Implant Maintenance</span><span class="d">Long-term care that protects the work of a restored smile.</span></div>
+    <div class="row"><span class="no">/05</span><span class="t">Pathology</span><span class="d">Identifying and addressing conditions affecting teeth, gums, and bone.</span></div>
+    <div class="row"><span class="no">/06</span><span class="t">Second Opinions</span><span class="d">Clarity and direction for patients facing complex decisions.</span></div>
+  </div>
+</section>
+
+<!-- (04) JOURNEY -->
+<div class="dark">
+<section class="steps wrap">
+  <div class="head">
+    <div>
+      <div class="kick rv"><span class="sq"></span><span class="n">04</span> PROCESS</div>
+      <h2 class="disp rv" style="--d:.08s;margin-top:18px"><span class="lo">FIVE STEPS,</span><br>ONE <span class="it">STEADY</span> HAND</h2>
+    </div>
+    <p class="side rv" style="--d:.16s"><span class="lo">FROM THE FIRST CONSULTATION TO LONG-TERM CARE,</span> THE PROCESS STAYS SIMPLE AND CLEAR.</p>
+  </div>
+  <div class="cards">
+    <div class="scard rv" style="--d:.02s"><div class="top"><span class="num">01</span><span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span></div><div class="lab"><i></i>LISTEN</div><div class="t">Consultation</div><p>Your history, your concerns, your goals — heard before anything is proposed.</p></div>
+    <div class="scard rv" style="--d:.08s"><div class="top"><span class="num">02</span><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div><div class="lab"><i></i>PLAN</div><div class="t">Diagnosis &amp; Plan</div><p>Imaging and evaluation, then a treatment pathway explained in plain language.</p></div>
+    <div class="scard rv" style="--d:.14s"><div class="top"><span class="num">03</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div><div class="lab"><i></i>OPERATE</div><div class="t">Surgery</div><p>Unhurried, precise work — with the time the case actually needs.</p></div>
+    <div class="scard rv" style="--d:.2s"><div class="top"><span class="num">04</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div><div class="lab"><i></i>HEAL</div><div class="t">Recovery</div><p>Clear guidance and close follow-up while function and comfort return.</p></div>
+    <div class="scard rv" style="--d:.26s"><div class="top"><span class="num">05</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div><div class="lab"><i></i>PROTECT</div><div class="t">Maintenance</div><p>Long-term care that protects the work — for years, not months.</p></div>
+  </div>
+</section>
+</div>
+
+<!-- (05) APPRECIATION -->
+<section class="stories" id="appreciation">
+  <div class="wrap">
+    <div class="kick rv"><span class="sq"></span><span class="n">05</span> APPRECIATION</div>
+    <h2 class="disp rv" style="--d:.08s"><span class="lo">THE PEOPLE WHO</span><br><span class="it">WERE THERE</span></h2>
+    <div class="sgrid">
+      <div class="tcard blue rv"><p class="big">Referred by the surgeons <span class="it">other surgeons trust</span></p><p class="s">Complex cases arrive here by referral from general dentists, periodontists and colleagues across the South Bay.</p></div>
+      <div class="tcard rv" style="--d:.07s"><p class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</p><div class="who"><span class="av">DK</span><div><div class="n">Dr. David Kim, D.D.S.</div><div class="r">Referring general dentist</div></div></div></div>
+      <div class="tcard rv" style="--d:.14s"><p class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</p><div class="who"><span class="av">MR</span><div><div class="n">Maria R.</div><div class="r">Full-arch reconstruction</div></div></div></div>
+      <div class="tcard rv" style="--d:.1s"><p class="q">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</p><div class="who"><span class="av">LS</span><div><div class="n">Dr. Lina Soto</div><div class="r">Periodontist</div></div></div></div>
+      <div class="tcard rv" style="--d:.17s"><p class="q">"Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself."</p><div class="who"><span class="av">RT</span><div><div class="n">Robert T.</div><div class="r">Dental implants</div></div></div></div>
+      <div class="tcard rv" style="--d:.24s"><p class="q">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time."</p><div class="who"><span class="av">JM</span><div><div class="n">Dr. Jeff Malone</div><div class="r">Referring dentist</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- (06) FOR PATIENTS -->
+<section class="pats wrap">
+  <div class="kick rv"><span class="sq"></span><span class="n">06</span> FOR PATIENTS</div>
+  <h2 class="disp rv" style="--d:.08s">UNDERSTANDING YOUR CARE, <span class="it">BEFORE THE CHAIR</span></h2>
+  <div class="idx rv" style="--d:.12s">
+    <div class="row"><span class="no">/01</span><span class="t">All-On-X, explained simply</span><span class="tag">Implants — Read ↳</span></div>
+    <div class="row"><span class="no">/02</span><span class="t">How to know if you need an implant</span><span class="tag">Before surgery — Read ↳</span></div>
+    <div class="row"><span class="no">/03</span><span class="t">Five myths about oral surgery</span><span class="tag">Myths — Read ↳</span></div>
+  </div>
+  <div class="guide">
+    <div class="pitch rv" style="--d:.1s">
+      <div class="kick"><span class="sq"></span>FREE PATIENT GUIDE</div>
+      <h3>What to expect from your first <span class="it">implant consultation</span></h3>
+      <div class="li"><i></i><span>A plain-language walkthrough of the process</span></div>
+      <div class="li"><i></i><span>The questions worth asking any surgeon</span></div>
+      <div class="li"><i></i><span>How to know if you're a candidate</span></div>
+    </div>
+    <div class="form rv" style="--d:.18s">
+      <h3>Get the guide</h3>
+      <p class="sub">Enter your details and we'll send it to your inbox. No spam — just one helpful guide.</p>
+      <label>Full name</label><input type="text" placeholder="Your name">
+      <label>Email</label><input type="email" placeholder="you@email.com">
+      <button class="cta"><span class="t">SEND ME THE GUIDE</span><span class="a">→</span></button>
+      <p class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- (07) SPEAKING -->
+<div class="dark">
+<section class="speak wrap" id="speaking">
+  <div class="kick rv"><span class="sq"></span><span class="n">07</span> SPEAKING &amp; EDUCATION</div>
+  <div class="grid">
+    <figure class="plate rv" style="--d:.08s">
+      <div class="ph"><img src="../img/speaking.jpg" alt="Dr. Arce lecturing"></div>
+      <figcaption class="cap"><span>Fig. 02 — Sharing the craft</span><span>Lecture</span></figcaption>
+    </figure>
+    <div>
+      <h2 class="disp rv" style="--d:.05s"><span class="lo">SHARING THE CRAFT</span><br>WITH <span class="it">THE PROFESSION</span></h2>
+      <p class="lead rv" style="--d:.12s">Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction.</p>
+      <div class="topics rv" style="--d:.18s">
+        <div class="r"><span class="no">/01</span><span class="t">Full-Arch Reconstruction</span></div>
+        <div class="r"><span class="no">/02</span><span class="t">Complex Extractions</span></div>
+        <div class="r"><span class="no">/03</span><span class="t">Judgment in Oral Surgery</span></div>
+      </div>
+      <div class="invite rv" style="--d:.24s">
+        <span class="tx">AVAILABLE FOR CONFERENCES, STUDY CLUBS &amp; RESIDENT TRAINING</span>
+        <a href="#contact" class="cta"><span class="t">REQUEST AS SPEAKER</span><span class="a">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- (08) FINALE -->
+<section class="finale" id="contact">
+  <div class="wrap">
+    <div class="kick rv"><span class="sq"></span><span class="n">08</span> DENTAL IMPLANTS CENTER OF SOUTH BAY</div>
+    <h2 class="rv" style="--d:.08s">For the patients who were told it <span class="it">couldn't be done</span></h2>
+    <p class="s rv" style="--d:.16s">Care starts with a simple conversation — at your own pace, with the time your case actually needs.</p>
+    <a class="pill rv" style="--d:.22s" href="tel:+13103274166">Request a consultation</a>
+    <p class="meta rv" style="--d:.3s"><b>Redondo Beach · Torrance, California</b><br>(310) 327-4166 — by appointment</p>
+  </div>
+  <div class="giantwrap">
+    <svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">ARCE</text>
+    </svg>
+  </div>
+  <div class="bar">
+    <span>© 2026 — Dr. Jorge Arce, D.D.S.</span>
+    <span>Oral &amp; Maxillofacial Surgery</span>
+    <span>South Bay, California</span>
+  </div>
+</section>
+
+<script>
+  (function(){
+    function tick(){
+      try{
+        var t=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'America/Los_Angeles'}).format(new Date());
+        document.getElementById('clock').textContent=t;
+      }catch(e){}
+    }
+    tick(); setInterval(tick,30000);
+    var els=document.querySelectorAll('.rv');
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver'in window)){
+      els.forEach(function(e){e.classList.add('in')});return;
+    }
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
