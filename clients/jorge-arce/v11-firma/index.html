@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@500;600&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --ink:#101418;
+    --gray:#69727D;
+    --line:#E9E9E9;
+    --blue:#1C6FE8;
+    --blue-soft:#7FA8EE;
+    --navy:#10243A
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--white);color:var(--ink);font-family:"Geist",system-ui,sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--blue);color:#fff}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  @media (max-width:760px){.wrap{padding:0 20px}}
+  .pf{font-family:"Playfair Display",serif;font-weight:500}
+  .hand{font-family:"Caveat",cursive;font-weight:600}
+  .btn{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;border-radius:4px;padding:15px 30px;font-size:14.5px;font-weight:500;transition:background .3s;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--blue)}
+
+  /* ---------- CHROME ---------- */
+  .top{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:22px 40px;background:rgba(255,255,255,.85);backdrop-filter:blur(10px)}
+  .top .logo{font-weight:600;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+  .top .burger{display:flex;flex-direction:column;gap:5px;cursor:pointer}
+  .top .burger i{width:26px;height:2px;background:var(--ink)}
+  .sidenav{position:fixed;left:40px;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;gap:34px}
+  .sidenav a{writing-mode:vertical-rl;transform:rotate(180deg);text-decoration:none;color:var(--gray);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:color .3s}
+  .sidenav a:hover{color:var(--ink)}
+  @media (max-width:900px){.sidenav{display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding-top:80px}
+  .hero .line1{text-align:center;font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2.4rem,5.6vw,4.6rem);line-height:1.06;letter-spacing:-.01em}
+  .hero .rotwrap{display:inline-block;position:relative;min-width:5.2em;text-align:left;vertical-align:baseline}
+  .hero .rot{position:absolute;left:0;top:0;white-space:nowrap;opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s;font-style:italic}
+  .hero .rot.on{position:relative;opacity:1;transform:none}
+  .hero .rot.c1{color:var(--blue)}
+  .hero .rot.c2{color:#5B93F5}
+  .hero .rot.c3{color:var(--navy)}
+  .hero .line2{text-align:center;font-family:"Caveat",cursive;font-weight:600;font-size:clamp(3.4rem,8vw,7rem);line-height:.9;margin-top:6px}
+  .hero .sub{text-align:center;font-size:15.5px;color:var(--gray);max-width:52ch;margin:26px auto 0;line-height:1.7}
+  .hero .sub b{color:var(--ink);font-weight:600}
+  .hero .giantwrap{width:100%;overflow:hidden;line-height:0;margin-top:clamp(40px,7vh,80px)}
+  .hero .giant-svg{display:block;width:100%;height:auto}
+  .hero .giant-svg text{font-family:"Geist",sans-serif;font-weight:600;fill:var(--ink);letter-spacing:-.02em}
+
+  /* ---------- ABOUT + SIGNATURE ---------- */
+  .about{padding:clamp(90px,13vh,160px) 0}
+  .about .grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,100px);align-items:center}
+  .about .ph{position:relative}
+  .about .ph img{width:100%;height:560px;object-fit:cover;object-position:center 14%;border-radius:6px}
+  .about .ph .hand{position:absolute;right:-10px;bottom:-24px;font-size:clamp(2.6rem,4vw,3.6rem);color:var(--blue);transform:rotate(-6deg)}
+  .about h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2rem,4vw,3.2rem);line-height:1.12;letter-spacing:-.01em;margin-bottom:22px}
+  .about h2 em{font-style:italic;color:var(--blue)}
+  .about p{font-size:15.5px;font-weight:300;color:#3A4450;line-height:1.75;margin-bottom:14px;max-width:56ch}
+  .about p b{color:var(--ink);font-weight:600}
+  .about .hand.sig{display:block;font-size:44px;color:var(--ink);margin-top:22px;transform:rotate(-3deg)}
+  @media (max-width:900px){.about .grid{grid-template-columns:1fr}.about .ph img{height:420px}}
+
+  /* ---------- EXPERTISE (elegant serif list) ---------- */
+  .exp{padding-bottom:clamp(90px,13vh,160px)}
+  .exp .head{text-align:center;margin-bottom:clamp(30px,4vw,50px)}
+  .exp .kick{font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+  .exp h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2rem,4.4vw,3.4rem);letter-spacing:-.01em;margin-top:14px}
+  .exp h2 em{font-style:italic;color:var(--blue)}
+  .exp .rows{max-width:900px;margin:0 auto}
+  .exp .r{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--line);transition:padding-left .4s cubic-bezier(.22,.61,.36,1)}
+  .exp .r:first-child{border-top:1px solid var(--line)}
+  .exp .no{font-family:"Playfair Display",serif;font-style:italic;font-size:15px;color:var(--gray)}
+  .exp .t{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.01em}
+  .exp .tag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+  .exp .r:hover{padding-left:14px}
+  .exp .r:hover .t{color:var(--blue)}
+  .exp .r:hover .no{color:var(--blue)}
+
+  /* ---------- QUOTE (handwritten accent) ---------- */
+  .quote{background:var(--navy);color:#fff;padding:clamp(90px,13vh,160px) 0;text-align:center;position:relative;overflow:hidden}
+  .quote p.q{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.2;max-width:24ch;margin:0 auto}
+  .quote p.q .hand{color:var(--blue-soft);font-size:1.25em;vertical-align:-.08em;padding:0 .08em}
+  .quote .attr{margin-top:24px;font-size:13px;color:#9FB0C4}
+
+  /* ---------- STORIES ---------- */
+  .st{padding:clamp(90px,13vh,160px) 0}
+  .st .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .stc{border:1px solid var(--line);border-radius:6px;padding:30px 28px;display:flex;flex-direction:column;gap:18px;min-height:240px}
+  .stc .q{font-family:"Playfair Display",serif;font-size:17.5px;line-height:1.5;color:#20272F}
+  .stc .who{margin-top:auto;font-size:13px;color:var(--gray)}
+  .stc .who b{display:block;color:var(--ink);font-weight:600;font-size:14px;font-family:"Geist",sans-serif}
+  .stc .hand{font-size:30px;color:var(--blue);line-height:1}
+  @media (max-width:900px){.st .grid{grid-template-columns:1fr}}
+
+  /* ---------- FINALE ---------- */
+  .fin{border-top:1px solid var(--line);padding:clamp(90px,13vh,160px) 0 0;text-align:center}
+  .fin h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;max-width:20ch;margin:0 auto}
+  .fin h2 .hand{color:var(--blue);font-size:1.2em;vertical-align:-.06em}
+  .fin p.s{font-size:15px;color:var(--gray);max-width:46ch;margin:20px auto 30px}
+  .fin .meta{margin-top:26px;font-size:13px;color:var(--gray);line-height:1.9}
+  .fin .meta b{color:var(--ink);font-weight:600}
+  .fin .sig{font-family:"Caveat",cursive;font-weight:600;font-size:clamp(4rem,9vw,7.5rem);color:var(--ink);margin:clamp(40px,7vh,80px) 0 0;transform:rotate(-3deg)}
+  .fin .bar{border-top:1px solid var(--line);margin-top:40px;padding:20px 40px 26px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--gray)}
+
+  /* ---------- motion ---------- */
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .95s cubic-bezier(.22,.61,.36,1),transform .95s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0s)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}.hero .rot{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <span class="logo">Dr. Jorge Arce</span>
+  <div class="burger"><i></i><i></i></div>
+</div>
+<nav class="sidenav">
+  <a href="#expertise">Expertise (6)</a>
+  <a href="#about">The Surgeon</a>
+  <a href="#stories">Stories</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <h1 class="line1 rv">Let's bring back
+      <span class="rotwrap">
+        <span class="rot c1 on">your smile</span>
+        <span class="rot c2">your function</span>
+        <span class="rot c3">your confidence</span>
+      </span>
+    </h1>
+    <div class="line2 rv" style="--d:.15s">together.</div>
+    <p class="sub rv" style="--d:.3s">We help patients reclaim their function, their comfort, and their lives — the complex cases other practices refer out. <b>Less waiting. More craft.</b></p>
+  </div>
+  <div class="giantwrap rv" style="--d:.4s">
+    <svg class="giant-svg" viewBox="0 0 1200 190" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
+      <text x="0" y="183" font-size="240" textLength="1194" lengthAdjust="spacingAndGlyphs">ARCE</text>
+    </svg>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about wrap" id="about">
+  <div class="grid">
+    <div class="ph rv">
+      <img src="../img/clinic.jpg" alt="Dr. Jorge Arce">
+      <span class="hand">27 years of steady hands</span>
+    </div>
+    <div>
+      <h2 class="rv">The man behind <em>the work.</em></h2>
+      <p class="rv" style="--d:.06s">Jorge grew up in Colombia, the son of a family that valued precision and patience long before he ever held a scalpel. Medicine was not a career choice so much as a calling — a way to use his hands to give something back.</p>
+      <p class="rv" style="--d:.12s">He moved to California to specialize, and never left. Over twenty-seven years he built a practice on a single, unglamorous principle: <b>take the time the case actually needs.</b> In 2007, that principle became the Dental Implants Center of South Bay.</p>
+      <p class="rv" style="--d:.18s">Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft.</p>
+      <span class="hand sig rv" style="--d:.24s">Jorge Arce, D.D.S.</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="exp wrap" id="expertise">
+  <div class="head">
+    <span class="kick rv">Expertise</span>
+    <h2 class="rv" style="--d:.08s">A career on the <em>difficult cases.</em></h2>
+  </div>
+  <div class="rows rv" style="--d:.12s">
+    <div class="r"><span class="no">i.</span><span class="t">Dental Implants</span><span class="tag">Single → Full-arch</span></div>
+    <div class="r"><span class="no">ii.</span><span class="t">Reconstruction</span><span class="tag">Function &amp; structure</span></div>
+    <div class="r"><span class="no">iii.</span><span class="t">Complex Cases</span><span class="tag">The referrals</span></div>
+    <div class="r"><span class="no">iv.</span><span class="t">Implant Maintenance</span><span class="tag">Long-term</span></div>
+    <div class="r"><span class="no">v.</span><span class="t">Pathology</span><span class="tag">Diagnosis</span></div>
+    <div class="r"><span class="no">vi.</span><span class="t">Second Opinions</span><span class="tag">Clarity</span></div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+  <div class="wrap">
+    <p class="q rv">"The work is precise. The reason behind it is <span class="hand">human.</span>"</p>
+    <p class="attr rv" style="--d:.1s">— Dr. Jorge Arce · Board-certified, dental implantology</p>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section class="st wrap" id="stories">
+  <div class="grid">
+    <div class="stc rv"><span class="hand">"</span><p class="q">When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.</p><p class="who"><b>Dr. David Kim, D.D.S.</b>Referring general dentist</p></div>
+    <div class="stc rv" style="--d:.08s"><span class="hand">"</span><p class="q">I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.</p><p class="who"><b>Maria R.</b>Full-arch reconstruction</p></div>
+    <div class="stc rv" style="--d:.16s"><span class="hand">"</span><p class="q">I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows.</p><p class="who"><b>Dr. Lina Soto</b>Periodontist</p></div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="fin" id="contact">
+  <div class="wrap">
+    <h2 class="rv">It starts with a <span class="hand">conversation.</span></h2>
+    <p class="s rv" style="--d:.1s">For the patients who were told it couldn't be done — at your own pace, with the time your case actually needs.</p>
+    <a class="btn rv" style="--d:.16s" href="tel:+13103274166">Request a consultation</a>
+    <p class="meta rv" style="--d:.24s"><b>Dental Implants Center of South Bay</b><br>Redondo Beach · Torrance, California — (310) 327-4166, by appointment</p>
+    <div class="sig rv" style="--d:.3s">Jorge Arce</div>
+  </div>
+  <div class="bar">
+    <span>© 2026 — Dr. Jorge Arce, D.D.S.</span>
+    <span>Oral &amp; Maxillofacial Surgery</span>
+    <span>South Bay, California</span>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.rv');
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(reduce||!('IntersectionObserver'in window)){
+      els.forEach(function(e){e.classList.add('in')});
+    }else{
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+      })},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+      els.forEach(function(e){io.observe(e)});
+      document.querySelectorAll('.hero .rv').forEach(function(e){e.classList.add('in')});
+    }
+    // rotating words
+    if(!reduce){
+      var rots=document.querySelectorAll('.hero .rot');var i=0;
+      setInterval(function(){
+        rots[i].classList.remove('on');
+        i=(i+1)%rots.length;
+        rots[i].classList.add('on');
+      },2600);
+    }
+  })();
+</script>
+</body>
+</html>
