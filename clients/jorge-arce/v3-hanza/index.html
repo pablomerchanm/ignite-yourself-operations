@@ -50,32 +50,41 @@
   /* ---------- NAV ---------- */
   nav{position:fixed;inset:0 0 auto 0;z-index:30;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 40px;pointer-events:none}
   nav>*{pointer-events:auto}
-  nav .brand{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.08em}
-  nav .time{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);text-align:center}
-  nav .time b{color:var(--ink);font-weight:500}
+  /* difference blend keeps brand/clock legible over both the dark hero photo and greige sections */
+  nav .brand{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.08em;color:#fff;mix-blend-mode:difference}
+  nav .time{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.8;text-align:center;mix-blend-mode:difference}
+  nav .time b{color:#fff;font-weight:500}
   nav .right{display:flex;justify-content:flex-end}
   nav.on-dark .time{color:var(--bone-mute)} nav.on-dark .time b,{color:var(--bone)}
   @media (max-width:900px){nav{grid-template-columns:1fr auto}.time{display:none}}
   @media (max-width:600px){nav{padding:12px 20px}nav .brand .bt{display:none}.cta .t{padding:14px 14px;font-size:9.5px}.cta .a{width:42px}}
 
-  /* ---------- HERO (greige) ---------- */
-  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:96px;position:relative;overflow:hidden}
-  .hero .mid{display:grid;grid-template-columns:1fr minmax(0,420px) minmax(0,330px);gap:40px;align-items:start}
-  .hero .statement{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1rem,1.35vw,1.25rem);line-height:1.42;text-transform:uppercase;letter-spacing:.01em}
-  .hero .statement .lo{color:var(--ink-mute)}
+  /* ---------- HERO (dark, photographic) ---------- */
+  .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:96px;position:relative;overflow:hidden;background:var(--dark);color:var(--bone)}
+  .hero .photo{position:absolute;inset:0}
+  .hero .photo img{width:100%;height:100%;object-fit:cover;object-position:center 16%;filter:contrast(1.04) brightness(.95)}
+  .hero .photo::after{content:"";position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(23,21,18,.52) 0%,rgba(23,21,18,.06) 30%,rgba(23,21,18,.1) 58%,rgba(23,21,18,.82) 92%,rgba(23,21,18,.92) 100%),
+    linear-gradient(90deg,rgba(23,21,18,.28),rgba(23,21,18,0) 30%,rgba(23,21,18,0) 68%,rgba(23,21,18,.34))}
+  .hero .mid{position:relative;z-index:2;display:grid;grid-template-columns:1fr minmax(0,420px) minmax(0,330px);gap:40px;align-items:start}
+  .hero .statement{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:clamp(1rem,1.35vw,1.25rem);line-height:1.42;text-transform:uppercase;letter-spacing:.01em;color:var(--bone)}
+  .hero .statement .lo{color:var(--bone-mute)}
   .hero .svc{display:flex;flex-direction:column}
-  .hero .svc .r{display:flex;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--hl)}
-  .hero .svc .r:first-child{border-top:1px solid var(--hl)}
-  .hero .svc .no{font-family:"Geist Mono",monospace;font-size:10px;color:var(--ink-mute)}
-  .hero .svc .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.01em}
+  .hero .svc .r{display:flex;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--hd)}
+  .hero .svc .r:first-child{border-top:1px solid var(--hd)}
+  .hero .svc .no{font-family:"Geist Mono",monospace;font-size:10px;color:var(--bone-mute)}
+  .hero .svc .t{font-family:"Zalando Sans",sans-serif;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.01em;color:var(--bone)}
+  .hero .bottom{position:relative;z-index:2}
   .hero .trust{display:flex;align-items:center;gap:14px;padding-bottom:26px}
   .hero .trust .avs{display:flex}
-  .hero .trust .av{width:34px;height:34px;border-radius:50%;background:var(--dark);color:var(--bone);display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;border:2px solid var(--greige);margin-left:-8px}
+  .hero .trust .av{width:34px;height:34px;border-radius:50%;background:#0E0D0B;color:var(--bone);display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;border:1px solid rgba(234,231,225,.35);margin-left:-8px}
   .hero .trust .av:first-child{margin-left:0}
-  .hero .trust .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);line-height:1.6}
-  .hero .trust .tx b{color:var(--ink);font-weight:500}
-  .giantwrap{position:relative;width:100%;overflow:hidden;line-height:0}
-  .giant{font-family:"Zalando Sans",sans-serif;font-weight:700;font-size:36vw;line-height:.76;letter-spacing:-.045em;text-transform:uppercase;white-space:nowrap;margin-left:-.02em}
+  .hero .trust .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bone-mute);line-height:1.6}
+  .hero .trust .tx b{color:var(--bone);font-weight:500}
+  /* full name, never clipped: SVG text stretched to the exact viewport width */
+  .giantwrap{position:relative;width:100%;line-height:0;padding:0 14px 6px}
+  .giant-svg{display:block;width:100%;height:auto}
+  .giant-svg text{font-family:"Zalando Sans",sans-serif;font-weight:700;fill:var(--bone)}
   @media (max-width:900px){.hero .mid{grid-template-columns:1fr}.hero{padding-top:120px}}
 
   /* ---------- (01) PROFILE + STATS (greige, grid lines) ---------- */
@@ -242,8 +251,9 @@
 </nav>
 
 <!-- HERO -->
-<header class="hero wrap">
-  <div class="mid" style="padding-top:9vh">
+<header class="hero">
+  <div class="photo"><img src="../img/quote.jpg" alt="Dr. Jorge Arce"></div>
+  <div class="mid wrap" style="padding-top:7vh">
     <div></div>
     <p class="statement rv" style="--d:.1s">A surgeon known for the cases others step away from — <span class="lo">and the quiet precision it takes.</span></p>
     <div class="svc rv" style="--d:.25s">
@@ -252,12 +262,16 @@
       <div class="r"><span class="no">/03</span><span class="t">Complex Cases</span></div>
     </div>
   </div>
-  <div>
-    <div class="trust rv" style="--d:.4s">
+  <div class="bottom">
+    <div class="trust wrap rv" style="--d:.4s">
       <div class="avs"><span class="av">DK</span><span class="av">LS</span><span class="av">JM</span></div>
       <p class="tx"><b>Referred by the surgeons</b><br>other surgeons trust</p>
     </div>
-    <div class="giantwrap"><div class="giant rv" style="--d:.15s">Arce®</div></div>
+    <div class="giantwrap rv" style="--d:.15s">
+      <svg class="giant-svg" viewBox="0 0 1200 216" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
+        <text x="0" y="211" font-size="292" textLength="1200" lengthAdjust="spacingAndGlyphs">ARCE</text>
+      </svg>
+    </div>
   </div>
 </header>
 
