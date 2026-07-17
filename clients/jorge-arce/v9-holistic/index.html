@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBFAF8;        /* Jorge off-white (already warm) */
+    --cream-2:#F3F0EA;      /* soft panel */
+    --ink:#152435;          /* warm navy ink */
+    --soft:#66707C;
+    --blue:#2563CF;         /* Jorge blue, calmed (terracotta's role) */
+    --blue-ghost:#E7EEFA;   /* pale blue chip */
+    --r:22px
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--ink);font-family:"Figtree",system-ui,sans-serif;font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--blue);color:#fff}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+  @media (max-width:760px){.wrap{padding:0 20px}}
+  .pill{display:inline-block;border-radius:100px;padding:14px 28px;font-size:15px;font-weight:500;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background .3s,color .3s,transform .3s}
+  .pill:hover{transform:translateY(-1px)}
+  .pill.blue{background:var(--blue);color:#fff}
+  .pill.blue:hover{background:#1c4fae}
+  .pill.soft{background:var(--cream-2);color:var(--ink)}
+  .pill.soft:hover{background:#e9e4da}
+  .badge{display:inline-block;background:var(--blue-ghost);color:var(--blue);border-radius:100px;padding:8px 16px;font-size:13px;font-weight:600}
+
+  /* ---------- NAV ---------- */
+  nav{position:fixed;inset:0 0 auto 0;z-index:30;background:rgba(251,250,248,.8);backdrop-filter:blur(12px)}
+  nav .in{max-width:1280px;margin:0 auto;padding:16px 32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+  nav .links{display:flex;gap:26px}
+  nav .links a{color:var(--soft);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .3s}
+  nav .links a:hover{color:var(--ink)}
+  nav .logo{text-align:center;font-weight:700;font-size:16px;letter-spacing:.01em}
+  nav .logo span{display:block;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+  nav .right{display:flex;justify-content:flex-end}
+  @media (max-width:860px){nav .links{display:none}nav .in{grid-template-columns:1fr auto}}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:150px 0 40px;text-align:center}
+  .hero h1{font-weight:600;font-size:clamp(2.3rem,5vw,4.1rem);line-height:1.08;letter-spacing:-.025em;max-width:20ch;margin:22px auto 0}
+  .hero h1 .ac{color:var(--blue)}
+  .hero p.s{font-size:17px;font-weight:400;color:var(--soft);max-width:52ch;margin:20px auto 0;line-height:1.65}
+  .hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:30px 0 46px}
+  .hero .photo{border-radius:calc(var(--r) + 8px);overflow:hidden;max-height:600px}
+  .hero .photo img{width:100%;height:600px;object-fit:cover;object-position:center 22%}
+  .statsrow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:38px 0 20px}
+  .statsrow .s{text-align:center}
+  .statsrow .n{font-weight:700;font-size:clamp(1.9rem,3.4vw,2.9rem);letter-spacing:-.02em}
+  .statsrow .n span{color:var(--blue)}
+  .statsrow .l{font-size:14px;color:var(--soft);margin-top:4px}
+  @media (max-width:760px){.hero .photo img{height:380px}.statsrow{grid-template-columns:1fr;gap:18px}}
+
+  /* ---------- HOW I CAN HELP ---------- */
+  .help{padding:clamp(70px,10vh,120px) 0}
+  .help .head{text-align:center;margin-bottom:clamp(34px,5vw,54px)}
+  .help h2{font-weight:600;font-size:clamp(1.9rem,4vw,3.1rem);letter-spacing:-.02em;line-height:1.1;margin-top:18px}
+  .help h2 .ac{color:var(--blue)}
+  .help p.s{font-size:15.5px;color:var(--soft);max-width:50ch;margin:14px auto 0}
+  .hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .hcard{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 2px rgba(21,36,53,.05)}
+  .hcard .ph{height:210px;overflow:hidden}
+  .hcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .hcard:hover .ph img{transform:scale(1.04)}
+  .hcard .b{padding:24px 24px 28px}
+  .hcard h3{font-weight:600;font-size:19px;letter-spacing:-.01em;margin-bottom:8px}
+  .hcard p{font-size:14px;color:var(--soft);line-height:1.6}
+  .hlist{max-width:760px;margin:22px auto 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .hlist .c{background:var(--cream-2);border-radius:14px;padding:14px 18px;font-size:14px;font-weight:500;text-align:center}
+  @media (max-width:900px){.hgrid{grid-template-columns:1fr}.hlist{grid-template-columns:1fr}}
+
+  /* ---------- JOURNEY (soft steps) ---------- */
+  .journey{background:var(--cream-2);border-radius:calc(var(--r) + 10px);padding:clamp(40px,6vw,70px);margin:0 auto;max-width:1280px}
+  .journey .head{text-align:center;margin-bottom:clamp(30px,4vw,46px)}
+  .journey h2{font-weight:600;font-size:clamp(1.8rem,3.6vw,2.8rem);letter-spacing:-.02em}
+  .journey h2 .ac{color:var(--blue)}
+  .jgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .jcard{background:#fff;border-radius:18px;padding:22px 20px 26px}
+  .jcard .n{width:34px;height:34px;border-radius:50%;background:var(--blue-ghost);color:var(--blue);display:grid;place-items:center;font-weight:700;font-size:14px;margin-bottom:14px}
+  .jcard h3{font-weight:600;font-size:16px;margin-bottom:6px}
+  .jcard p{font-size:12.5px;color:var(--soft);line-height:1.55}
+  @media (max-width:1000px){.jgrid{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.jgrid{grid-template-columns:1fr}}
+
+  /* ---------- QUOTE ---------- */
+  .quote{padding:clamp(80px,12vh,140px) 0;text-align:center}
+  .quote p.q{font-weight:500;font-size:clamp(1.6rem,3.4vw,2.7rem);line-height:1.25;letter-spacing:-.015em;max-width:26ch;margin:0 auto}
+  .quote p.q .ac{color:var(--blue)}
+  .quote .attr{margin-top:20px;font-size:14px;color:var(--soft)}
+
+  /* ---------- STORIES ---------- */
+  .stories{padding-bottom:clamp(70px,10vh,120px)}
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .scard{background:#fff;border-radius:var(--r);padding:26px 24px;display:flex;flex-direction:column;gap:16px;box-shadow:0 1px 2px rgba(21,36,53,.05)}
+  .scard .stars{color:#E9A63C;font-size:14px;letter-spacing:2px}
+  .scard .q{font-size:14.5px;color:#3A4552;line-height:1.65}
+  .scard .who{margin-top:auto;font-size:13px;color:var(--soft)}
+  .scard .who b{color:var(--ink);font-weight:600;display:block;font-size:14px}
+  .scard.doc{background:var(--ink);}
+  .scard.doc .q{color:#EDF1F6;font-size:16px;font-weight:500}
+  .scard.doc .who{color:#96A2B2}
+  .scard.doc .who b{color:#fff}
+  @media (max-width:900px){.sgrid{grid-template-columns:1fr}}
+
+  /* ---------- GUIDE (the Free Resource pattern, inline) ---------- */
+  .guide{padding-bottom:clamp(80px,12vh,140px)}
+  .gcard{display:grid;grid-template-columns:1.05fr .95fr;border-radius:calc(var(--r) + 8px);overflow:hidden;background:#fff;box-shadow:0 20px 60px rgba(21,36,53,.1)}
+  .gcard .l{padding:clamp(30px,4.5vw,56px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  .gcard h2{font-weight:600;font-size:clamp(1.7rem,3.2vw,2.6rem);line-height:1.14;letter-spacing:-.02em;margin:18px 0 12px}
+  .gcard h2 .ac{color:var(--blue)}
+  .gcard p.s{font-size:15px;color:var(--soft);max-width:44ch;margin-bottom:24px}
+  .gcard .row{display:flex;gap:10px;width:100%;max-width:440px;flex-wrap:wrap}
+  .gcard input{flex:1;min-width:200px;border:1px solid #E5E0D6;background:var(--cream);border-radius:100px;padding:14px 22px;font-family:inherit;font-size:14.5px;color:var(--ink)}
+  .gcard input:focus{outline:none;border-color:var(--blue)}
+  .gcard .ph{min-height:380px}
+  .gcard .ph img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+  .gcard .fine{font-size:11.5px;color:var(--soft);margin-top:14px}
+  @media (max-width:860px){.gcard{grid-template-columns:1fr}.gcard .ph{min-height:280px;order:-1}}
+
+  /* ---------- FINALE ---------- */
+  .finale{background:var(--ink);color:#fff;border-radius:calc(var(--r) + 10px) calc(var(--r) + 10px) 0 0;padding:clamp(70px,11vh,130px) 0 0;text-align:center}
+  .finale h2{font-weight:600;font-size:clamp(2rem,4.4vw,3.4rem);letter-spacing:-.02em;line-height:1.08;max-width:20ch;margin:18px auto 0}
+  .finale h2 .ac{color:#7FA8EE}
+  .finale p.s{font-size:15.5px;color:#96A2B2;max-width:46ch;margin:18px auto 30px}
+  .finale .meta{margin-top:28px;font-size:13.5px;color:#96A2B2;line-height:1.9}
+  .finale .meta b{color:#fff;font-weight:600}
+  .finale .bar{border-top:1px solid rgba(255,255,255,.14);margin-top:clamp(50px,8vh,90px);padding:22px 32px 26px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#96A2B2}
+
+  /* ---------- motion ---------- */
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .95s cubic-bezier(.22,.61,.36,1),transform .95s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0s)}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav><div class="in">
+  <div class="links"><a href="#help">How I can help</a><a href="#journey">The process</a><a href="#stories">Stories</a></div>
+  <div class="logo">DR. JORGE ARCE<span>Oral &amp; Maxillofacial Surgery</span></div>
+  <div class="right"><a class="pill blue" href="#contact">Begin with a conversation</a></div>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero wrap">
+  <span class="badge rv">South Bay, California · Est. 2007</span>
+  <h1 class="rv" style="--d:.08s">Compassionate, precise surgical care for <span class="ac">the cases others step away from.</span></h1>
+  <p class="s rv" style="--d:.16s">Board-certified oral &amp; maxillofacial surgeon. Twenty-seven years between Colombia and California, giving patients back their function, their comfort — their lives.</p>
+  <div class="ctas rv" style="--d:.24s">
+    <a class="pill blue" href="#contact">Begin your journey</a>
+    <a class="pill soft" href="#help">How I can help</a>
+  </div>
+  <div class="photo rv" style="--d:.3s"><img src="../img/clinic.jpg" alt="Dr. Jorge Arce in his clinic"></div>
+  <div class="statsrow rv" style="--d:.1s">
+    <div class="s"><div class="n">27<span>+</span></div><div class="l">Years of surgical practice</div></div>
+    <div class="s"><div class="n">2007</div><div class="l">Founded the Dental Implants Center of South Bay</div></div>
+    <div class="s"><div class="n">02</div><div class="l">Countries — trained in Colombia, built in California</div></div>
+  </div>
+</header>
+
+<!-- HOW I CAN HELP -->
+<section class="help wrap" id="help">
+  <div class="head">
+    <span class="badge rv">How I can help</span>
+    <h2 class="rv" style="--d:.08s">Care built around <span class="ac">your case.</span></h2>
+    <p class="s rv" style="--d:.14s">Not a list of services — the disciplines refined over nearly three decades.</p>
+  </div>
+  <div class="hgrid">
+    <div class="hcard rv"><div class="ph"><img src="../img/operating.jpg" alt="" style="object-position:center 30%"></div><div class="b"><h3>Dental Implants</h3><p>From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</p></div></div>
+    <div class="hcard rv" style="--d:.08s"><div class="ph"><img src="../img/surgery.jpg" alt=""></div><div class="b"><h3>Reconstruction &amp; Complex Cases</h3><p>Rebuilding function and structure — the difficult surgeries other clinicians prefer to refer elsewhere.</p></div></div>
+    <div class="hcard rv" style="--d:.16s"><div class="ph"><img src="../img/hero.jpg" alt="" style="object-position:center 12%"></div><div class="b"><h3>Second Opinions</h3><p>Clarity and direction for patients facing complex decisions — no pressure attached.</p></div></div>
+  </div>
+  <div class="hlist rv" style="--d:.2s">
+    <div class="c">Implant maintenance</div>
+    <div class="c">Pathology — teeth, gums &amp; bone</div>
+    <div class="c">Referring-dentist collaboration</div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section class="wrap" id="journey" style="padding-bottom:clamp(80px,12vh,140px)">
+  <div class="journey">
+    <div class="head">
+      <span class="badge rv">The process</span>
+      <h2 class="rv" style="--d:.08s">Simple, supportive, <span class="ac">at your pace.</span></h2>
+    </div>
+    <div class="jgrid">
+      <div class="jcard rv"><div class="n">1</div><h3>Consultation</h3><p>Your history, your concerns, your goals — heard before anything is proposed.</p></div>
+      <div class="jcard rv" style="--d:.06s"><div class="n">2</div><h3>Diagnosis &amp; plan</h3><p>Imaging and evaluation, then a pathway explained in plain language.</p></div>
+      <div class="jcard rv" style="--d:.12s"><div class="n">3</div><h3>Surgery</h3><p>Unhurried, precise work — with the time the case actually needs.</p></div>
+      <div class="jcard rv" style="--d:.18s"><div class="n">4</div><h3>Recovery</h3><p>Clear guidance and close follow-up while function and comfort return.</p></div>
+      <div class="jcard rv" style="--d:.24s"><div class="n">5</div><h3>Long-term care</h3><p>Maintenance that protects the work — for years, not months.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote wrap">
+  <p class="q rv">"The work is precise. The reason behind it is <span class="ac">human."</span></p>
+  <p class="attr rv" style="--d:.1s">— Dr. Jorge Arce, D.D.S.</p>
+</section>
+
+<!-- STORIES -->
+<section class="stories wrap" id="stories">
+  <div class="sgrid">
+    <div class="scard doc rv"><p class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</p><p class="who"><b>Dr. David Kim, D.D.S.</b>Referring general dentist</p></div>
+    <div class="scard rv" style="--d:.08s"><div class="stars">★★★★★</div><p class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</p><p class="who"><b>Maria R.</b>Full-arch reconstruction</p></div>
+    <div class="scard rv" style="--d:.16s"><div class="stars">★★★★★</div><p class="q">"I was terrified of the procedure. He never rushed me. Best decision I have made for my health."</p><p class="who"><b>Carlos S.</b>Bone graft + implants</p></div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="guide wrap">
+  <div class="gcard rv">
+    <div class="l">
+      <span class="badge">Free patient guide</span>
+      <h2>Feel ready for your first consultation — <span class="ac">before you sit in the chair.</span></h2>
+      <p class="s">A plain-language walkthrough of the implant process, the questions worth asking any surgeon, and how to know if you're a candidate.</p>
+      <div class="row">
+        <input type="email" placeholder="Your email">
+        <button class="pill blue">Get the free guide</button>
+      </div>
+      <p class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.</p>
+    </div>
+    <div class="ph"><img src="../img/hero.jpg" alt="Dr. Jorge Arce"></div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="finale" id="contact">
+  <div class="wrap">
+    <span class="badge" style="background:rgba(127,168,238,.16);color:#7FA8EE">Dental Implants Center of South Bay</span>
+    <h2 class="rv">For the patients who were told it <span class="ac">couldn't be done.</span></h2>
+    <p class="s rv" style="--d:.1s">Care starts with a simple conversation — at your own pace, with the time your case actually needs.</p>
+    <a class="pill blue rv" style="--d:.16s" href="tel:+13103274166">Request a consultation</a>
+    <p class="meta rv" style="--d:.24s"><b>Redondo Beach · Torrance, California</b><br>(310) 327-4166 — by appointment</p>
+  </div>
+  <div class="bar">
+    <span>© 2026 — Dr. Jorge Arce, D.D.S.</span>
+    <span>Oral &amp; Maxillofacial Surgery</span>
+    <span>South Bay, California</span>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var els=document.querySelectorAll('.rv');
+    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver'in window)){
+      els.forEach(function(e){e.classList.add('in')});return;
+    }
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+    })},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    document.querySelectorAll('.hero .rv').forEach(function(e){e.classList.add('in')});
+  })();
+</script>
+</body>
+</html>
