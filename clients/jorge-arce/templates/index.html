@@ -3,211 +3,411 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ignite Yourself — Catálogo de Plantillas · Médicos &amp; Odontólogos</title>
+<title>La Colección — Ignite Yourself · 10 plantillas para médicos</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0D0E12;
-  --panel:#14161C;
-  --fg:#F2F3F5;
-  --dim:#8B93A1;
-  --line:rgba(242,243,245,.09);
+  --bg:#0B0B0D;
+  --panel:#111114;
+  --panel2:#16161A;
+  --fg:#F4F3F0;
+  --dim:#8E8C86;
+  --line:rgba(244,243,240,.08);
   --flame:#FF6A3D;
+  --r:14px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:'Inter Tight',sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--fg);
+  font-family:'Inter Tight',sans-serif;font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
 a{color:inherit;text-decoration:none}
-.mono{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
-header{padding:80px 0 60px}
-header .mono{color:var(--flame)}
-h1{font-size:clamp(36px,5vw,64px);font-weight:600;letter-spacing:-.03em;line-height:1.02;margin:18px 0 20px;max-width:18ch}
-h1 em{font-style:italic;font-weight:400;color:var(--flame)}
-.sub{color:var(--dim);max-width:62ch;font-size:16.5px}
-.legend{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding:18px 22px;border:1px solid var(--line);border-radius:12px}
-.legend .it{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--dim)}
-.legend .dot{width:8px;height:8px;border-radius:50%}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding-bottom:100px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:30px 32px 28px;display:flex;flex-direction:column;gap:16px;transition:border-color .3s,transform .3s}
-.card:hover{border-color:rgba(242,243,245,.22);transform:translateY(-3px)}
-.card .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
-.card h2{font-size:24px;font-weight:600;letter-spacing:-.02em}
-.card h2 span{color:var(--dim);font-weight:400}
-.card .chips{display:flex;gap:6px}
-.chip{width:22px;height:22px;border-radius:6px;border:1px solid rgba(255,255,255,.14)}
-.card .vibe{font-size:15px;color:var(--dim)}
-.card .vibe b{color:var(--fg);font-weight:500}
-.specs{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;border-top:1px solid var(--line);padding-top:16px}
-.spec .k{font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.spec .v{font-size:13.5px;margin-top:3px}
-.spec .v .lvl{color:var(--flame)}
-.card .foot{display:flex;gap:12px;margin-top:6px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:11px 22px;font-size:14px;font-weight:600;transition:background .3s,transform .3s}
-.btn.solid{background:var(--fg);color:var(--bg)}
-.btn.solid:hover{background:#fff;transform:translateY(-2px)}
-.btn.ghost{border:1px solid var(--line);color:var(--dim)}
-.btn.ghost:hover{color:var(--fg);border-color:rgba(242,243,245,.3)}
-.tagrow{display:flex;gap:8px;flex-wrap:wrap}
-.tag{font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:100px;padding:5px 12px;color:var(--dim)}
-.tag.hot{border-color:rgba(255,106,61,.5);color:var(--flame)}
-footer{border-top:1px solid var(--line);padding:34px 0 44px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--dim);font-size:13px}
-@media (max-width:900px){.grid{grid-template-columns:1fr}.wrap{padding:0 20px}}
+::selection{background:var(--flame);color:#0B0B0D}
+.wrap{max-width:1360px;margin:0 auto;padding:0 40px}
+.mono{font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.mono.d{color:var(--dim)}
+.ser{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+
+/* faint grain for the whole canvas */
+body::after{
+  content:'';position:fixed;inset:0;pointer-events:none;opacity:.3;mix-blend-mode:overlay;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+}
+main{position:relative;z-index:2}
+
+/* ---------- header ---------- */
+header{padding:110px 0 70px;border-bottom:1px solid var(--line)}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+.eyebrow .fdot{width:8px;height:8px;background:var(--flame);border-radius:50%}
+.eyebrow .mono{color:var(--flame)}
+h1{font-weight:600;letter-spacing:-.045em;line-height:.98;font-size:clamp(52px,7.4vw,108px);max-width:14ch}
+h1 .ser{color:var(--flame);font-weight:400;font-size:1.02em}
+.headrow{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:end;margin-top:44px}
+.sub{color:var(--dim);font-size:16.5px;max-width:56ch;line-height:1.65}
+.sub b{color:var(--fg);font-weight:500}
+.hstats{display:flex;gap:44px;justify-content:flex-end}
+.hstat .n{font-weight:600;letter-spacing:-.03em;font-size:40px;line-height:1}
+.hstat .n i{font-style:normal;color:var(--flame)}
+.hstat .l{margin-top:6px;color:var(--dim);font-size:12.5px}
+
+/* ---------- filter bar ---------- */
+.filters{position:sticky;top:0;z-index:40;background:rgba(11,11,13,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.filters .in{display:flex;align-items:center;gap:10px;padding:16px 40px;max-width:1360px;margin:0 auto;flex-wrap:wrap}
+.filters .lbl{margin-right:8px}
+.fchip{
+  font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:100px;padding:8px 16px;color:var(--dim);cursor:pointer;
+  transition:color .25s,border-color .25s,background .25s;background:transparent;
+}
+.fchip:hover{color:var(--fg);border-color:rgba(244,243,240,.25)}
+.fchip.on{background:var(--flame);border-color:var(--flame);color:#0B0B0D}
+.fcount{margin-left:auto}
+
+/* ---------- grid ---------- */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:56px 0 90px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;display:flex;flex-direction:column;position:relative;
+  transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .4s,box-shadow .5s,opacity .4s;
+}
+.card:hover{transform:translateY(-6px);border-color:rgba(244,243,240,.2);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.card.hide{display:none}
+
+/* browser frame + scrolling shot */
+.frame{position:relative;background:var(--panel2);border-bottom:1px solid var(--line)}
+.chrome{display:flex;align-items:center;gap:7px;padding:12px 16px}
+.chrome i{width:9px;height:9px;border-radius:50%;background:#2A2A2E;font-style:normal}
+.card:hover .chrome i:nth-child(1){background:#FF5F57}
+.card:hover .chrome i:nth-child(2){background:#FEBC2E}
+.card:hover .chrome i:nth-child(3){background:#28C840}
+.chrome .url{margin-left:10px;font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.04em;color:var(--dim)}
+.shot{height:400px;overflow:hidden;position:relative}
+.shot img{width:100%;display:block;transform:translateY(0);transition:transform .5s ease}
+.card:hover .shot img{transition:transform 9s cubic-bezier(.25,.1,.25,1);transform:translateY(calc(-100% + 400px))}
+.shot::after{content:'';position:absolute;inset:auto 0 0 0;height:70px;background:linear-gradient(180deg,transparent,rgba(11,11,13,.55));pointer-events:none;opacity:1;transition:opacity .4s}
+.card:hover .shot::after{opacity:0}
+.shot .hint{
+  position:absolute;right:14px;bottom:14px;z-index:3;
+  font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  background:rgba(11,11,13,.72);backdrop-filter:blur(6px);border:1px solid var(--line);
+  border-radius:100px;padding:7px 13px;color:var(--dim);
+  transition:opacity .4s;
+}
+.card:hover .shot .hint{opacity:0}
+
+/* card body */
+.bd{padding:26px 28px 26px;display:flex;flex-direction:column;gap:16px;flex:1}
+.rowtop{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+.rowtop .nm{display:flex;align-items:baseline;gap:12px}
+.rowtop .num{font-family:'Geist Mono',monospace;font-size:12px;color:var(--flame)}
+.rowtop h2{font-weight:600;letter-spacing:-.03em;font-size:26px}
+.rowtop h2 span{color:var(--dim);font-weight:400;font-size:.72em;margin-left:8px}
+.pal{display:flex;gap:5px}
+.pal i{width:18px;height:18px;border-radius:5px;border:1px solid rgba(255,255,255,.12);font-style:normal}
+.vibe{color:var(--dim);font-size:14.5px;line-height:1.6}
+.vibe b{color:var(--fg);font-weight:500}
+.vibe .ser{color:var(--flame);font-size:1.06em}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;border-top:1px solid var(--line);padding-top:16px}
+.m .k{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.m .v{font-size:13px;margin-top:4px;line-height:1.45}
+.dots{display:inline-flex;gap:3px;margin-right:7px;vertical-align:1px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--flame);font-style:normal}
+.dots i.off{background:#2E2E33}
+.foot2{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:6px}
+.open{display:inline-flex;align-items:center;gap:10px;font-size:14.5px;font-weight:600;letter-spacing:-.01em}
+.open .ar{color:var(--flame);transition:transform .35s}
+.card:hover .open .ar{transform:translate(3px,-3px)}
+.tags{display:flex;gap:7px}
+.tg{font-family:'Geist Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:100px;padding:4px 10px}
+.tg.hot{color:var(--flame);border-color:rgba(255,106,61,.4)}
+.card>a.cover{position:absolute;inset:0;z-index:5}
+.card .bd,.card .frame{position:relative}
+.card:focus-within{border-color:var(--flame)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0 54px}
+.fin{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.fin .ser{font-size:22px;color:var(--dim)}
+.fin .ser b{color:var(--fg);font-weight:400}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .card:hover .shot img{transition:transform .5s;transform:translateY(0)}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .grid{grid-template-columns:1fr}
+  .headrow{grid-template-columns:1fr;gap:34px}
+  .hstats{justify-content:flex-start}
+  .wrap{padding:0 20px}
+  .filters .in{padding:12px 20px}
+  .fcount{display:none}
+  .shot{height:330px}
+  .card:hover .shot img{transform:translateY(calc(-100% + 330px))}
+}
 </style>
 </head>
 <body>
+<main>
 
 <div class="wrap">
 <header>
-  <div class="mono">Ignite Yourself · Sistema de plantillas v1.0</div>
-  <h1>Diez direcciones de arte, <em>listas para vender.</em></h1>
-  <p class="sub">Cada plantilla nació de la autopsia de un referente de clase mundial y está probada con el caso piloto (Dr. Jorge Arce). Para producir un sitio nuevo: elige la plantilla según el perfil del médico, trae el intake completo (ver playbook), y la información se vierte en los slots ya definidos. Todas incluyen: hero, historia/about, especialidades, testimonios, journal, speaking, lead-magnet con formulario y CTA final.</p>
-  <div class="legend">
-    <div class="it"><span class="mono" style="color:var(--flame)">Fotos</span> = exigencia fotográfica mínima para que la plantilla luzca</div>
-    <div class="it"><span class="mono" style="color:var(--flame)">Tono</span> = personalidad del médico que mejor le calza</div>
+  <div class="eyebrow reveal in"><span class="fdot"></span><span class="mono">Ignite Yourself — La Colección · /10</span></div>
+  <h1 class="reveal in">Diez lentes.<br>Una <span class="ser">obsesión.</span></h1>
+  <div class="headrow reveal in">
+    <p class="sub">Cada plantilla nació de la autopsia de un referente de clase mundial — tipografía computada, paleta exacta, microinteracciones — y está probada en producción con el caso piloto. <b>Pasa el cursor sobre cada card para recorrer la página.</b> Elige 2–3 según el perfil del médico y las fotos disponibles; el playbook de intake hace el resto.</p>
+    <div class="hstats">
+      <div class="hstat"><div class="n">10</div><div class="l">Plantillas listas</div></div>
+      <div class="hstat"><div class="n">8</div><div class="l">Referentes decodificados</div></div>
+      <div class="hstat"><div class="n">1<i>+</i></div><div class="l">Piloto en producción</div></div>
+    </div>
   </div>
 </header>
+</div>
 
-<div class="grid">
+<div class="filters">
+  <div class="in">
+    <span class="mono d lbl">Filtrar</span>
+    <button class="fchip on" data-f="all">Todas</button>
+    <button class="fchip" data-f="clara">Claras</button>
+    <button class="fchip" data-f="oscura">Oscuras</button>
+    <button class="fchip" data-f="pocas-fotos">Pocas fotos</button>
+    <button class="fchip" data-f="premium">Premium</button>
+    <button class="fchip" data-f="calma">Calma</button>
+    <span class="mono d fcount"><span id="cnt">10</span> / 10</span>
+  </div>
+</div>
 
-  <div class="card">
-    <div class="top"><h2>Monograph <span>/ v2</span></h2><div class="chips"><span class="chip" style="background:#10243A"></span><span class="chip" style="background:#F7F5F1"></span><span class="chip" style="background:#C8A96A"></span></div></div>
-    <div class="vibe"><b>Editorial de lujo por capítulos.</b> Navy profundo, serif clásica, ritmo de libro. Autoridad silenciosa — el especialista que no necesita gritar.</div>
-    <div class="tagrow"><span class="tag hot">Premium</span><span class="tag">Editorial</span><span class="tag">Oscura</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Alta</span> · 6–8 retratos de calidad</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Cirujano senior, trayectoria larga</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Maxilofacial, implantología compleja</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Mucho — historia rica</div></div>
+<div class="wrap">
+<div class="grid" id="grid">
+
+  <div class="card reveal" data-tags="oscura premium">
+    <a class="cover" href="/v2" aria-label="Abrir demo Monograph"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v2 — monograph</span></div>
+      <div class="shot"><img src="previews/v2.jpg" alt="Preview Monograph" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v2">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">01</span><h2>Monograph<span>/ v2</span></h2></div><div class="pal"><i style="background:#10243A"></i><i style="background:#F7F5F1"></i><i style="background:#C8A96A"></i></div></div>
+      <p class="vibe"><b>Editorial de lujo por capítulos.</b> Navy profundo, serif clásica, ritmo de libro — <span class="ser">autoridad silenciosa.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i></i></span>6–8 retratos de calidad</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Cirujano senior · maxilofacial · trayectoria larga</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Premium</span><span class="tg">Editorial</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Hanza <span>/ v3</span></h2><div class="chips"><span class="chip" style="background:#121212"></span><span class="chip" style="background:#FF6044"></span><span class="chip" style="background:#F3F3F3"></span></div></div>
-    <div class="vibe"><b>Studio contemporáneo con grano de película.</b> Display uppercase, marcadores coral, labels mono, reloj en vivo. El favorito del piloto.</div>
-    <div class="tagrow"><span class="tag hot">Favorita</span><span class="tag">Bold</span><span class="tag">Oscura + clara</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Alta</span> · 1 retrato hero potente + 5</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Moderno, seguro de sí mismo</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Especialista 35–50, marca personal fuerte</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Medio — frases cortas</div></div>
+  <div class="card reveal" data-tags="oscura clara">
+    <a class="cover" href="/v3-hanza" aria-label="Abrir demo Hanza"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v3-hanza</span></div>
+      <div class="shot"><img src="previews/v3.jpg" alt="Preview Hanza" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v3-hanza">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">02</span><h2>Hanza<span>/ v3</span></h2></div><div class="pal"><i style="background:#121212"></i><i style="background:#FF6044"></i><i style="background:#F3F3F3"></i></div></div>
+      <p class="vibe"><b>Studio contemporáneo con grano de película.</b> Display uppercase, marcadores coral, reloj en vivo — <span class="ser">la favorita del piloto.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i></i></span>1 hero potente + 5</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Especialista 35–50 · marca personal fuerte</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Favorita</span><span class="tg">Bold</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>ClearPath <span>/ v4</span></h2><div class="chips"><span class="chip" style="background:#7FA69B"></span><span class="chip" style="background:#FFFFFF"></span><span class="chip" style="background:#2E3231"></span></div></div>
-    <div class="vibe"><b>Calma terapéutica.</b> Sage + serif Crimson, numerales gigantes, elipses dibujadas a mano. Para pacientes con miedo — reduce la ansiedad desde el diseño.</div>
-    <div class="tagrow"><span class="tag">Serena</span><span class="tag">Clara</span><span class="tag">Journey</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Media</span> · 4–5, tolera stock cálido</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Empático, pedagógico</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Odontología general, ortodoncia, pacientes nerviosos</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Medio — proceso por pasos</div></div>
+  <div class="card reveal" data-tags="clara calma">
+    <a class="cover" href="/v4-clearpath" aria-label="Abrir demo ClearPath"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v4-clearpath</span></div>
+      <div class="shot"><img src="previews/v4.jpg" alt="Preview ClearPath" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v4-clearpath">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">03</span><h2>ClearPath<span>/ v4</span></h2></div><div class="pal"><i style="background:#7FA69B"></i><i style="background:#FFFFFF"></i><i style="background:#2E3231"></i></div></div>
+      <p class="vibe"><b>Calma terapéutica.</b> Sage + serif, numerales gigantes, elipses a mano — <span class="ser">reduce la ansiedad desde el diseño.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i class="off"></i></span>4–5 · tolera stock cálido</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">General · ortodoncia · pacientes nerviosos</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg">Serena</span><span class="tg">Journey</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Zentro <span>/ v5</span></h2><div class="chips"><span class="chip" style="background:#1B48E2"></span><span class="chip" style="background:#FFFFFF"></span><span class="chip" style="background:#0C0F14"></span></div></div>
-    <div class="vibe"><b>Agencia audaz en un solo color.</b> Campo azul con silueta en duotono, display uppercase con itálicas, ticker, corchetes. Tipografía que se ve "wow".</div>
-    <div class="tagrow"><span class="tag hot">Impacto</span><span class="tag">Color de marca</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Media</span> · 1 silueta limpia + 4 (el duotono perdona)</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Ambicioso, directo</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Clínicas con color de marca definido</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Poco — titulares</div></div>
+  <div class="card reveal" data-tags="oscura pocas-fotos">
+    <a class="cover" href="/v5-zentro" aria-label="Abrir demo Zentro"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v5-zentro</span></div>
+      <div class="shot"><img src="previews/v5.jpg" alt="Preview Zentro" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v5-zentro">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">04</span><h2>Zentro<span>/ v5</span></h2></div><div class="pal"><i style="background:#1B48E2"></i><i style="background:#FFFFFF"></i><i style="background:#0C0F14"></i></div></div>
+      <p class="vibe"><b>Agencia audaz en un solo color.</b> Campo azul, silueta en duotono, ticker, corchetes — <span class="ser">tipografía que se ve wow.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i class="off"></i></span>1 silueta limpia + 4 · el duotono perdona</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Clínica con color de marca definido</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Impacto</span><span class="tg">Monocolor</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Definitiva <span>/ v6</span></h2><div class="chips"><span class="chip" style="background:#10243A"></span><span class="chip" style="background:#1B48E2"></span><span class="chip" style="background:#F7F5F1"></span></div></div>
-    <div class="vibe"><b>Fusión Hanza × Zentro.</b> Bookends azules, anotaciones mono, lo mejor de las dos favoritas del piloto en una sola pieza equilibrada.</div>
-    <div class="tagrow"><span class="tag">Híbrida</span><span class="tag">Balanceada</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Alta</span> · 6+</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Profesional completo</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Cliente indeciso — gusta a todos</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Completo</div></div>
+  <div class="card reveal" data-tags="oscura">
+    <a class="cover" href="/v6-final" aria-label="Abrir demo Definitiva"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v6-final</span></div>
+      <div class="shot"><img src="previews/v6.jpg" alt="Preview Definitiva" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v6-final">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">05</span><h2>Definitiva<span>/ v6</span></h2></div><div class="pal"><i style="background:#10243A"></i><i style="background:#1B48E2"></i><i style="background:#F7F5F1"></i></div></div>
+      <p class="vibe"><b>Fusión Hanza × Zentro.</b> Bookends azules, anotaciones mono — <span class="ser">lo mejor de las dos favoritas.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i></i></span>6+</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Cliente indeciso — gusta a todos</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg">Híbrida</span><span class="tg">Balanceada</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Noon <span>/ v7</span></h2><div class="chips"><span class="chip" style="background:#191919"></span><span class="chip" style="background:#FEFFF5"></span><span class="chip" style="background:#994412"></span></div></div>
-    <div class="vibe"><b>Boutique sin adornos.</b> Tinta + crema + óxido, mono labels, stats honestas ("0 shortcuts"). El anti-marketing: perfecto para el médico que odia venderse.</div>
-    <div class="tagrow"><span class="tag">Honesta</span><span class="tag">Minimal</span><span class="tag">Oscura</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Media</span> · 3–4 con tinte cálido</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Práctico, sin humo</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Consultorio independiente, por remisión</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Poco y filoso</div></div>
+  <div class="card reveal" data-tags="oscura calma">
+    <a class="cover" href="/v7-noon" aria-label="Abrir demo Noon"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v7-noon</span></div>
+      <div class="shot"><img src="previews/v7.jpg" alt="Preview Noon" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v7-noon">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">06</span><h2>Noon<span>/ v7</span></h2></div><div class="pal"><i style="background:#191919"></i><i style="background:#FEFFF5"></i><i style="background:#994412"></i></div></div>
+      <p class="vibe"><b>Boutique sin adornos.</b> Tinta + crema + óxido, labels mono, stats honestas — <span class="ser">el anti-marketing.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i class="off"></i></span>3–4 con tinte cálido</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Independiente · por remisión · odia venderse</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg">Honesta</span><span class="tg">Minimal</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Luke <span>/ v8</span></h2><div class="chips"><span class="chip" style="background:#0A0A0A"></span><span class="chip" style="background:#C22B1E"></span><span class="chip" style="background:#9ADFD2"></span></div></div>
-    <div class="vibe"><b>Portafolio de artista.</b> Aurora roja sobre negro, nombre gigante en dos fuentes con gradiente teal, lista de trabajos con hover. La más "industria del arte".</div>
-    <div class="tagrow"><span class="tag hot">Artística</span><span class="tag">Oscura</span><span class="tag">Motion</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Baja</span> · 4–6 (viven en previews pequeños)</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Creativo, distinto</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Estética dental, diseño de sonrisa</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Mínimo</div></div>
+  <div class="card reveal" data-tags="oscura pocas-fotos">
+    <a class="cover" href="/v8-luke" aria-label="Abrir demo Luke"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v8-luke</span></div>
+      <div class="shot"><img src="previews/v8.jpg" alt="Preview Luke" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v8-luke">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">07</span><h2>Luke<span>/ v8</span></h2></div><div class="pal"><i style="background:#0A0A0A"></i><i style="background:#C22B1E"></i><i style="background:#9ADFD2"></i></div></div>
+      <p class="vibe"><b>Portafolio de artista.</b> Aurora roja, nombre en dos fuentes con gradiente teal, hover previews — <span class="ser">la más industria del arte.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i class="off"></i><i class="off"></i></span>4–6 · viven en previews pequeños</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Estética dental · diseño de sonrisa</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Artística</span><span class="tg">Motion</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Holistic <span>/ v9</span></h2><div class="chips"><span class="chip" style="background:#FEF9EF"></span><span class="chip" style="background:#99582A"></span><span class="chip" style="background:#2A2B2F"></span></div></div>
-    <div class="vibe"><b>Bienestar cálido.</b> Crema + terracota, serif Instrument en el hero, tarjetas dispersas de "señales", firma manuscrita. La más humana y acogedora.</div>
-    <div class="tagrow"><span class="tag">Cálida</span><span class="tag">Clara</span><span class="tag">Wellness</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Media</span> · 5–6 (el grade cálido unifica)</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Cercano, de confianza</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Médico familiar, pediatría dental, TMJ/dolor</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Medio — cercano</div></div>
+  <div class="card reveal" data-tags="clara calma">
+    <a class="cover" href="/v9-holistic" aria-label="Abrir demo Holistic"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v9-holistic</span></div>
+      <div class="shot"><img src="previews/v9.jpg" alt="Preview Holistic" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v9-holistic">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">08</span><h2>Holistic<span>/ v9</span></h2></div><div class="pal"><i style="background:#FEF9EF"></i><i style="background:#99582A"></i><i style="background:#2A2B2F"></i></div></div>
+      <p class="vibe"><b>Bienestar cálido.</b> Crema + terracota, serif en el hero, firma manuscrita — <span class="ser">la más humana del set.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i class="off"></i></span>5–6 · el grade cálido unifica</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Familiar · pediatría dental · TMJ y dolor</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg">Cálida</span><span class="tg">Wellness</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Möbius <span>/ v10</span></h2><div class="chips"><span class="chip" style="background:#000000"></span><span class="chip" style="background:#EEEEEE"></span><span class="chip" style="background:#FF0000"></span></div></div>
-    <div class="vibe"><b>Suizo brutalista.</b> Blanco/negro + rojo puro, wordmark de 240px, stats gigantes, tablas con hairlines. Máxima autoridad tipográfica.</div>
-    <div class="tagrow"><span class="tag hot">Statement</span><span class="tag">Clara</span><span class="tag">Tipográfica</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Baja</span> · 3–4 en B/N funcionan</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Autoridad, precisión</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Cirujano de referencia, académico</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Estructurado — procesos, récord</div></div>
+  <div class="card reveal" data-tags="clara pocas-fotos premium">
+    <a class="cover" href="/v10-mobius" aria-label="Abrir demo Möbius"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v10-mobius</span></div>
+      <div class="shot"><img src="previews/v10.jpg" alt="Preview Möbius" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v10-mobius">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">09</span><h2>Möbius<span>/ v10</span></h2></div><div class="pal"><i style="background:#000000"></i><i style="background:#EEEEEE"></i><i style="background:#FF0000"></i></div></div>
+      <p class="vibe"><b>Suizo brutalista.</b> Blanco/negro + rojo puro, wordmark de 240px, tablas con hairlines — <span class="ser">máxima autoridad tipográfica.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i class="off"></i><i class="off"></i></span>3–4 · el B/N funciona</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Cirujano de referencia · académico</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Statement</span><span class="tg">Tipográfica</span></div></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="top"><h2>Firma <span>/ v11</span></h2><div class="chips"><span class="chip" style="background:#FFFFFF"></span><span class="chip" style="background:#FF7A6E"></span><span class="chip" style="background:#0E0E0E"></span></div></div>
-    <div class="vibe"><b>Scroll lateral elegante.</b> Playfair + Caveat + coral, paneles horizontales con easing, palabra rotativa, ARCE gigante inclinado al final. La experiencia más memorable del set.</div>
-    <div class="tagrow"><span class="tag hot">Experiencia</span><span class="tag">Horizontal</span><span class="tag">Premium</span></div>
-    <div class="specs">
-      <div class="spec"><div class="k">Fotos</div><div class="v"><span class="lvl">Alta</span> · 5–6 verticales de calidad</div></div>
-      <div class="spec"><div class="k">Tono</div><div class="v">Sofisticado, boutique</div></div>
-      <div class="spec"><div class="k">Ideal para</div><div class="v">Práctica premium, cierre de ventas high-ticket</div></div>
-      <div class="spec"><div class="k">Texto</div><div class="v">Medio — por paneles</div></div>
+  <div class="card reveal" data-tags="clara premium">
+    <a class="cover" href="/v11-firma" aria-label="Abrir demo Firma"></a>
+    <div class="frame">
+      <div class="chrome"><i></i><i></i><i></i><span class="url">/v11-firma — scroll lateral</span></div>
+      <div class="shot"><img src="previews/v11.jpg" alt="Preview Firma" loading="lazy"><span class="hint">Hover para recorrer</span></div>
     </div>
-    <div class="foot"><a class="btn solid" href="/v11-firma">Ver demo →</a></div>
+    <div class="bd">
+      <div class="rowtop"><div class="nm"><span class="num">10</span><h2>Firma<span>/ v11</span></h2></div><div class="pal"><i style="background:#FFFFFF"></i><i style="background:#FF7A6E"></i><i style="background:#0E0E0E"></i></div></div>
+      <p class="vibe"><b>Scroll lateral elegante.</b> Playfair + Caveat + coral, paneles horizontales con easing — <span class="ser">la experiencia más memorable.</span></p>
+      <div class="meta">
+        <div class="m"><div class="k">Fotos</div><div class="v"><span class="dots"><i></i><i></i><i></i></span>5–6 verticales de calidad</div></div>
+        <div class="m"><div class="k">Ideal para</div><div class="v">Práctica premium · cierre high-ticket</div></div>
+      </div>
+      <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Experiencia</span><span class="tg">Horizontal</span></div></div>
+    </div>
   </div>
 
 </div>
+</div>
 
+<div class="wrap">
 <footer>
-  <span>Ignite Yourself · Sistema de plantillas para médicos — caso piloto: Dr. Jorge Arce</span>
-  <span class="mono">Playbook de intake: TEMPLATES.md en el repo</span>
+  <div class="fin">
+    <span class="ser">Ignite Yourself — <b>sistema de plantillas para médicos.</b> Piloto: Dr. Jorge Arce.</span>
+    <span class="mono d">Playbook de intake → TEMPLATES.md</span>
+  </div>
 </footer>
 </div>
+
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // reveals
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+  document.querySelectorAll('.card.reveal').forEach(el => io.observe(el));
+
+  // filters
+  const chips = [...document.querySelectorAll('.fchip')];
+  const cards = [...document.querySelectorAll('.card')];
+  const cnt = document.getElementById('cnt');
+  chips.forEach(ch => ch.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('on'));
+    ch.classList.add('on');
+    const f = ch.dataset.f;
+    let n = 0;
+    cards.forEach(card => {
+      const show = f === 'all' || (card.dataset.tags || '').split(' ').includes(f);
+      card.classList.toggle('hide', !show);
+      if (show) { n++; card.classList.add('in'); }
+    });
+    cnt.textContent = n;
+  }));
+
+  // touch devices: tap starts the scroll preview
+  if (matchMedia('(hover: none)').matches) {
+    document.querySelectorAll('.shot').forEach(s => {
+      s.closest('.frame').addEventListener('click', (ev) => {
+        ev.preventDefault(); ev.stopPropagation();
+        s.closest('.card').classList.toggle('hover');
+      }, { capture: true });
+    });
+  }
+});
+</script>
 </body>
 </html>
