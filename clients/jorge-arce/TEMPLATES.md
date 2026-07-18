@@ -122,6 +122,9 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 3. Crear carpeta `clients/<nombre-doctor>/` clonando la plantilla elegida.
 4. Verter contenido en los slots (§4), subir fotos con crops anotados (§3).
 5. Verificación headless (desktop + móvil) — cero overflow, fotos bien posicionadas.
+   **Regla dura:** rutas de assets SIEMPRE absolutas (`/p/<slug>/img/foto.jpg`, nunca
+   `img/foto.jpg`) — Vercel sirve sin barra final (`trailingSlash:false`) y las rutas
+   relativas se rompen en producción aunque funcionen en local.
 6. Deploy en Vercel + dominio del cliente.
 7. Entregar standalone HTML de respaldo al cliente.
 
