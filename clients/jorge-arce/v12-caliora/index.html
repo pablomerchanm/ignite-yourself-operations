@@ -342,10 +342,18 @@ fetch('/v12-caliora/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   document.querySelectorAll('[data-r1]').forEach(function(el){
@@ -397,7 +405,7 @@ function init(){
     cards.forEach(function(c,i){
       if(i>=cards.length-1)return;
       var next=cards[i+1];
-      ScrollTrigger.create({trigger:next,start:'top bottom',end:'top '+(96+i*26+40)+'px',scrub:1.2,
+      ScrollTrigger.create({trigger:next,start:'top bottom',end:'top '+(96+i*26+40)+'px',scrub:.6,
         onUpdate:function(self){var k=self.progress;
           c.style.transform='scale('+(1-.045*k)+')';
           c.style.filter='brightness('+(1-.1*k)+')';

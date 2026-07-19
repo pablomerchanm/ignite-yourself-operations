@@ -233,10 +233,18 @@ fetch('/v35-astramaven/content.json').then(function(r){if(!r.ok)throw new Error(
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   document.querySelectorAll('[data-r1]').forEach(function(el){
@@ -263,7 +271,7 @@ function init(){
   /* R5 profundidad de cartel: retrato y wordmark se separan al salir */
   var ph=document.querySelector('[data-depth="ph"]'),wm=document.querySelector('[data-depth="wm"]');
   if(ph&&wm){
-    ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:1.2,
+    ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:.6,
       onUpdate:function(self){var p=self.progress;
         ph.style.transform='translateY('+(p*10)+'%)';
         wm.style.transform='translateY('+(6-p*10)+'%)';
@@ -273,7 +281,7 @@ function init(){
   document.querySelectorAll('[data-mq]').forEach(function(mq){
     var dir=mq.getAttribute('data-mq')==='r'?1:-1;
     var sec=mq.closest('section');
-    ScrollTrigger.create({trigger:sec,start:'top bottom',end:'bottom top',scrub:1.2,
+    ScrollTrigger.create({trigger:sec,start:'top bottom',end:'bottom top',scrub:.6,
       onUpdate:function(self){mq.style.transform='translateX('+(dir*self.progress*18-9*dir)+'%)'}});
   });
 }

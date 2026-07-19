@@ -241,10 +241,18 @@ fetch('/v32-alora/content.json').then(function(r){if(!r.ok)throw new Error(r.sta
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   document.querySelectorAll('[data-r1]').forEach(function(el){
@@ -271,7 +279,7 @@ function init(){
   /* R5 la bruma se levanta: el velo de cada slot se disipa con el scrub */
   document.querySelectorAll('[data-veil]').forEach(function(v){
     var sec=v.closest('header,section')||v.parentElement;
-    ScrollTrigger.create({trigger:sec,start:'top 92%',end:'top 25%',scrub:1.2,
+    ScrollTrigger.create({trigger:sec,start:'top 92%',end:'top 25%',scrub:.6,
       onUpdate:function(self){var p=self.progress;
         v.style.opacity=(1-p*.92);
         v.style.transform='translateY('+(-p*14)+'%)';

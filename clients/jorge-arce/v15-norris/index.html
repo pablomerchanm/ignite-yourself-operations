@@ -281,10 +281,18 @@ fetch('/v15-norris/content.json').then(function(r){if(!r.ok)throw new Error(r.st
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   /* preloader */
@@ -329,7 +337,7 @@ function init(){
   /* marquee mapeado al paso del viewport */
   var mq=document.getElementById('mq');
   if(mq){
-    ScrollTrigger.create({trigger:'.marq',start:'top bottom',end:'bottom top',scrub:1.2,
+    ScrollTrigger.create({trigger:'.marq',start:'top bottom',end:'bottom top',scrub:.6,
       onUpdate:function(self){mq.style.transform='translateX('+(-self.progress*30)+'%)'}});
   }
   /* R5 odómetro */
@@ -340,7 +348,7 @@ function init(){
       n.querySelectorAll('.dig').forEach(function(dg){dg.innerHTML=reelHTML});
     });
     var STEP=100/11;
-    ScrollTrigger.create({trigger:'.stats',start:'top 80%',end:'top 35%',scrub:1.2,
+    ScrollTrigger.create({trigger:'.stats',start:'top 80%',end:'top 35%',scrub:.6,
       onUpdate:function(self){var p=self.progress;
         odos.forEach(function(n){
           var target=parseFloat(n.getAttribute('data-odo'))||0;

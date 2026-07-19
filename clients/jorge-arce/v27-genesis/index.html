@@ -210,10 +210,18 @@ fetch('/v27-genesis/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   /* preloader determinista */
@@ -252,13 +260,13 @@ function init(){
   /* R5a el verso se ilumina: wipe de background-position */
   var verse=document.getElementById('verse');
   if(verse){
-    ScrollTrigger.create({trigger:'.verse',start:'top 78%',end:'center 45%',scrub:1.2,
+    ScrollTrigger.create({trigger:'.verse',start:'top 78%',end:'center 45%',scrub:.6,
       onUpdate:function(self){verse.style.backgroundPosition=((1-self.progress)*100)+'% 0'}});
   }
   /* R5b numerales que amanecen + halo global */
   document.querySelectorAll('[data-num]').forEach(function(num){
     var sec=num.closest('.chap');
-    ScrollTrigger.create({trigger:sec,start:'top 80%',end:'center 45%',scrub:1.2,
+    ScrollTrigger.create({trigger:sec,start:'top 80%',end:'center 45%',scrub:.6,
       onUpdate:function(self){var k=self.progress;
         var r=Math.round(201-48*k),g=Math.round(154+50*k),bl=Math.round(142+40*k);
         num.style.color='rgb('+Math.round(153+48*k)+','+g+','+bl+')';

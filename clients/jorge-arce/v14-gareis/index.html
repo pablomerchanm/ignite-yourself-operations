@@ -225,10 +225,18 @@ function init(){
   });
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   /* preloader contador determinista */
@@ -275,7 +283,7 @@ function init(){
       .map(function(el){return{el:el.querySelector('.ph'),k:parseFloat(el.getAttribute('data-par'))||0}})
       .filter(function(p){return p.k!==0&&p.el});
     if(pieces.length){
-      ScrollTrigger.create({trigger:'.gal',start:'top 80%',end:'bottom 20%',scrub:1.2,
+      ScrollTrigger.create({trigger:'.gal',start:'top 80%',end:'bottom 20%',scrub:.6,
         onUpdate:function(self){var c=(self.progress-.5)*2;
           pieces.forEach(function(p){p.el.style.transform='translateY('+(p.k*36*c)+'px)'})}});
     }
