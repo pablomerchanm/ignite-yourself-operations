@@ -70,11 +70,30 @@ template-base/
    bloque `@media` de `template.css`); prueba `prefers-reduced-motion`
    (todo visible, sin animación) y que ninguna sección eliminada deje hueco.
 
+## Sistema de tratamientos (rediseño — ver PRINCIPLES-JENNA.md)
+
+Cinco tratamientos de sección que se alternan (dos consecutivas jamás repiten,
+y solo `splash` y `newsletter` son centradas — nunca adyacentes):
+
+- **T1 RAIL** — cabecera asimétrica 7/5 con hairline: paths, featured, offers, about.
+- **T2 ROWS** — índice editorial numerado sin cajas: articles.
+- **T3 BAND** — banda compacta (padding ×0.7): credentials.
+- **T4 MONUMENT** — statement a escala 10:1 vs body, recorte deliberado: splash,
+  cita líder de testimonials, wordmark del footer.
+- **T5 CENTERED** — statement centrado: newsletter (única).
+
+El ritmo vertical no es uniforme: cada sección multiplica `--space-section`
+(×0.7 banda · ×1 normal · ×1.15–1.4 aire) — varianza ±30% como el referente.
+
 ## Sistema de motion (del audit, no imitación)
 
 - **Una sola entrada**: fade + rise de 8px, 0.56s, por **grupo de sección** —
   nunca elemento a elemento.
 - **Stagger solo en el hero** (0.12s), como excepción jerárquica.
+- **Hairlines** se dibujan al entrar (scaleX 0→1, 0.6s): motion que refuerza
+  la estructura editorial.
+- **Una sola animación lenta por página**: la imagen del splash asienta de
+  1.05→1 en 1.4s (espejo del crossfade de 1.5s medido en el referente).
 - **Hover**: solo color/opacidad a 240ms; cero layout shift, cero zoom.
 - **Lenis** da la suavidad de scroll premium; sin parallax ni scroll-jacking.
 - `prefers-reduced-motion: reduce` → sin Lenis, sin reveals, contenido visible

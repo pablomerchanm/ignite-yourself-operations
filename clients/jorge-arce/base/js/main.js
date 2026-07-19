@@ -52,12 +52,16 @@
       esc(cta.text) + '</a>';
   }
 
-  function lede(s) {
-    return '<div class="lede">' +
-      (s.eyebrow ? '<p class="eyebrow">' + esc(s.eyebrow) + '</p>' : '') +
-      (s.title ? '<h2 class="display">' + esc(s.title) + '</h2>' : '') +
-      (s.lede ? '<p class="sub prose" style="margin-top:var(--space-3)">' + esc(s.lede) + '</p>' : '') +
-      '</div>';
+  /* T1 RAIL: cabecera asimétrica — hairline + display izq. + lede der. */
+  function shead(s) {
+    return '<header class="shead">' +
+      '<hr class="rule" data-rule>' +
+      '<div>' +
+        (s.eyebrow ? '<span class="eyebrow">' + esc(s.eyebrow) + '</span>' : '') +
+        (s.title ? '<h2 class="display">' + esc(s.title) + '</h2>' : '') +
+      '</div>' +
+      (s.lede ? '<div class="shead-r"><p class="sub">' + esc(s.lede) + '</p></div>' : '<div class="shead-r"></div>') +
+      '</header>';
   }
 
   function surfaceClass(name) {
@@ -94,14 +98,15 @@
     },
 
     paths: function (s) {
-      var cards = (s.cards || []).map(function (c) {
+      var cards = (s.cards || []).map(function (c, i) {
         return '<div class="card">' +
+          '<span class="idx">' + ('0' + (i + 1)).slice(-2) + '</span>' +
           '<h3 class="head">' + esc(c.title) + '</h3>' +
           '<p>' + esc(c.text) + '</p>' +
           (c.link ? '<a class="textlink" href="' + esc(c.link.href || '#') + '">' + esc(c.link.text) + '</a>' : '') +
           '</div>';
       }).join('');
-      return '<div class="wrap will-reveal" data-reveal>' + lede(s) +
+      return '<div class="wrap will-reveal" data-reveal>' + shead(s) +
         '<div class="cards" style="--cols:' + Math.min((s.cards || []).length || 3, 4) + '">' +
         cards + '</div></div>';
     },
@@ -114,7 +119,7 @@
           (it.link ? '<a class="textlink" href="' + esc(it.link.href || '#') + '">' + esc(it.link.text) + '</a>' : '') +
           '</div>';
       }).join('');
-      return '<div class="wrap will-reveal" data-reveal>' + lede(s) +
+      return '<div class="wrap will-reveal" data-reveal>' + shead(s) +
         '<div class="grid">' + items + '</div>' +
         (s.cta ? '<div class="after">' + btn(s.cta, true) + '</div>' : '') +
         '</div>';
@@ -145,33 +150,43 @@
     },
 
     articles: function (s) {
-      var items = (s.items || []).map(function (it) {
-        return '<a class="item" href="' + esc(it.href || '#') + '">' + ph(it.image) +
+      /* T2 ROWS: índice editorial numerado, sin cajas */
+      var items = (s.items || []).map(function (it, i) {
+        return '<a class="item" href="' + esc(it.href || '#') + '">' +
+          '<span class="idx">' + ('0' + (i + 1)).slice(-2) + '</span>' +
+          '<h3 class="head">' + esc(it.title) + '</h3>' +
           '<div class="meta"><span class="micro">' + esc(it.category) + '</span>' +
           '<span class="micro" style="opacity:.55">' + esc(it.date) + '</span></div>' +
-          '<h3 class="head">' + esc(it.title) + '</h3></a>';
+          ph(it.image) + '</a>';
       }).join('');
-      return '<div class="wrap will-reveal" data-reveal>' + lede(s) +
-        '<div class="grid">' + items + '</div>' +
+      return '<div class="wrap will-reveal" data-reveal>' + shead(s) +
+        '<div class="rows">' + items + '</div>' +
         (s.cta ? '<div class="after">' + btn(s.cta, true) + '</div>' : '') +
         '</div>';
     },
 
     credentials: function (s) {
+      /* T3 BAND: display izquierda + sellos derecha */
       var badges = (s.badges || []).map(function (b) {
         return '<div class="badge micro">' + esc(b) + '</div>';
       }).join('');
-      return '<div class="wrap inner will-reveal" data-reveal>' +
-        (s.eyebrow ? '<p class="eyebrow">' + esc(s.eyebrow) + '</p>' : '') +
-        '<h2 class="display">' + esc(s.title) + '</h2>' +
-        '<div class="badges">' + badges + '</div></div>';
+      return '<div class="wrap will-reveal" data-reveal><div class="band">' +
+        '<div class="band-l">' +
+          (s.eyebrow ? '<p class="eyebrow">' + esc(s.eyebrow) + '</p>' : '') +
+          '<h2 class="display">' + esc(s.title) + '</h2>' +
+        '</div>' +
+        '<div class="badges">' + badges + '</div>' +
+        '</div></div>';
     },
 
     offers: function (s) {
       /* cada card de la escalera es su propio grupo de reveal (cadencia) */
       var items = (s.items || []).map(function (o) {
         return '<article class="offer will-reveal" data-reveal>' +
-          '<div class="media framed">' + ph(o.image) + '</div>' +
+          '<div class="media">' +
+            '<span class="ghost" aria-hidden="true">' + esc(o.num) + '</span>' +
+            '<div class="framed">' + ph(o.image) + '</div>' +
+          '</div>' +
           '<div class="txt">' +
             '<p class="num">' + esc(o.num) + '</p>' +
             '<h3 class="display">' + esc(o.title) + '</h3>' +
@@ -181,7 +196,7 @@
           '</div></article>';
       }).join('');
       return '<div class="wrap">' +
-        '<div class="will-reveal" data-reveal>' + lede(s) + '</div>' +
+        '<div class="will-reveal" data-reveal>' + shead(s) + '</div>' +
         '<div class="ladder">' + items + '</div></div>';
     },
 
@@ -206,7 +221,7 @@
           (s.eyebrow ? '<p class="eyebrow" style="margin-bottom:var(--space-3)">' + esc(s.eyebrow) + '</p>' : '') +
           '<p class="display">&ldquo;' + esc(s.lead.quote) + '&rdquo;</p>' +
           '<footer class="who micro">' + esc(s.lead.who) + '</footer>' +
-        '</blockquote>' : lede(s);
+        '</blockquote>' : shead(s);
       var items = (s.items || []).map(function (q) {
         return '<blockquote class="q"><p>&ldquo;' + esc(q.quote) + '&rdquo;</p>' +
           '<footer class="micro">' + esc(q.who) + '</footer></blockquote>';
@@ -349,6 +364,24 @@
         { opacity: 1, y: 0, duration: 0.56, ease: 'power2.out',
           clearProps: 'transform',
           scrollTrigger: { trigger: group, start: 'top 85%', once: true } });
+    });
+
+    /* Hairlines: se DIBUJAN al entrar (scaleX 0→1) — motion que refuerza la
+       estructura editorial, no decora */
+    gsap.utils.toArray('[data-rule]').forEach(function (rule) {
+      gsap.fromTo(rule,
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.6, ease: 'power2.out',
+          scrollTrigger: { trigger: rule, start: 'top 88%', once: true } });
+    });
+
+    /* Splash: LA única animación lenta de la página (--dur-slow ≈ crossfade
+       1.5s medido) — la imagen asienta de 1.05 a 1 dentro de su marco */
+    gsap.utils.toArray('.s-splash .ph').forEach(function (img) {
+      gsap.fromTo(img,
+        { scale: 1.05 },
+        { scale: 1, duration: 1.4, ease: 'power1.out',
+          scrollTrigger: { trigger: img, start: 'top 75%', once: true } });
     });
   }
 
