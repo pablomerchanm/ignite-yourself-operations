@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARCE — Surgical Cinema · Oral &amp; Maxillofacial Surgery 2.0</title>
+<meta name="description" content="The practice of Dr. Jorge Arce, frame by frame. Twenty-seven years of complex oral & maxillofacial surgery in the South Bay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000000; --ink:#0A0A0A; --red:#D60001; --white:#F2F2F2; --dim:rgba(242,242,242,.55);
+  --serif:'Instrument Serif',Georgia,serif; --mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--black);color:var(--white);font-family:'Inter',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--red);color:#fff}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;
+  align-items:center;padding:22px 36px;mix-blend-mode:difference}
+.nav .lg{font-family:var(--serif);font-size:22px;letter-spacing:.02em}
+.nav .r{display:flex;gap:26px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.nav .r a{opacity:.8;transition:opacity .3s}
+.nav .r a:hover{opacity:1}
+
+/* ---------- hero frame ---------- */
+.frame{position:relative;height:100vh;overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame .bars::before,.frame .bars::after{content:"";position:absolute;left:0;right:0;height:7vh;background:var(--black);z-index:3}
+.frame .bars::before{top:0}
+.frame .bars::after{bottom:0}
+.frame .redline{position:absolute;left:0;right:0;bottom:7vh;height:2px;background:var(--red);z-index:4}
+.frame .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%,rgba(0,0,0,.5));z-index:2}
+.frame .cap{position:absolute;z-index:5;left:36px;bottom:calc(7vh + 26px)}
+.frame .cap .t{font-family:var(--serif);font-size:clamp(40px,6.6vw,96px);line-height:.98;letter-spacing:.005em}
+.frame .cap .t em{font-style:italic;color:var(--red)}
+.frame .cap .s{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.frame .idx{position:absolute;z-index:5;right:36px;bottom:calc(7vh + 26px);font-family:var(--mono);
+  font-size:12px;letter-spacing:.08em;color:var(--dim);text-align:right}
+.frame .idx b{display:block;color:var(--white);font-weight:500;font-size:13px}
+.hero .cap .t{font-size:clamp(52px,8.6vw,128px)}
+
+/* parallax inner */
+.frame .pw{position:absolute;inset:-8% 0;z-index:1}
+.frame .pw img{height:116%}
+
+/* ---------- interstice (text between frames) ---------- */
+.inter{padding:130px 36px;max-width:1100px;margin:0 auto}
+.inter .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--red);margin-bottom:30px;display:flex;align-items:center;gap:12px}
+.inter .k::before{content:"";width:26px;height:2px;background:var(--red)}
+.inter p.big{font-family:var(--serif);font-size:clamp(26px,3.4vw,46px);line-height:1.3;max-width:900px}
+.inter p.big em{font-style:italic;color:var(--red)}
+.inter .cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:44px}
+.inter .cols p{font-size:15px;line-height:1.75;color:var(--dim)}
+.inter .cols p strong{color:var(--white);font-weight:500}
+
+/* ---------- discipline reel ---------- */
+.reel{border-top:2px solid var(--red);padding:120px 36px}
+.reel .head{max-width:1100px;margin:0 auto 70px}
+.reel h2{font-family:var(--serif);font-size:clamp(34px,4.6vw,62px);line-height:1.05}
+.reel h2 em{font-style:italic;color:var(--red)}
+.rrow{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:90px 1fr 1.4fr;gap:30px;
+  align-items:baseline;padding:26px 0;border-top:1px solid rgba(242,242,242,.14);transition:background .25s,padding-left .25s}
+.rrow:last-child{border-bottom:1px solid rgba(242,242,242,.14)}
+.rrow:hover{background:rgba(214,0,1,.06);padding-left:12px}
+.rrow .n{font-family:var(--mono);font-size:12px;color:var(--red)}
+.rrow .t{font-family:var(--serif);font-size:clamp(21px,2.4vw,30px)}
+.rrow .d{font-size:14px;line-height:1.65;color:var(--dim)}
+
+/* ---------- stats band ---------- */
+.stats{padding:120px 36px;border-top:2px solid var(--red)}
+.stats .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
+.stats .n{font-family:var(--serif);font-size:clamp(52px,6.6vw,96px);line-height:.9}
+.stats .n em{font-style:italic;font-size:.55em;color:var(--red)}
+.stats .l{margin-top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--dim);line-height:1.8;max-width:240px}
+
+/* ---------- quote frame ---------- */
+.qframe{position:relative;padding:150px 36px;text-align:center;overflow:hidden}
+.qframe::before,.qframe::after{content:"";position:absolute;left:0;right:0;height:2px;background:var(--red)}
+.qframe::before{top:0}
+.qframe::after{bottom:0}
+.qframe p{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.4vw,44px);line-height:1.4;max-width:900px;margin:0 auto}
+.qframe .who{margin-top:28px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- close ---------- */
+.close{padding:150px 36px 50px;text-align:center}
+.close .t{font-family:var(--serif);font-size:clamp(44px,7.4vw,110px);line-height:.98}
+.close .t em{font-style:italic;color:var(--red)}
+.close .cta{display:inline-block;margin-top:46px;font-family:var(--mono);font-size:12.5px;
+  letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--red);color:var(--white);
+  padding:16px 34px;transition:background .3s,color .3s}
+.close .cta:hover{background:var(--red)}
+.close .fine{margin-top:130px;padding-top:24px;border-top:1px solid rgba(242,242,242,.14);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);
+  font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+[data-stagger]>*{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
+[data-stagger].in>*{opacity:1;transform:none}
+[data-stagger].in>*:nth-child(2){transition-delay:.1s}
+[data-stagger].in>*:nth-child(3){transition-delay:.2s}
+[data-hero]{opacity:0;animation:hin 1.4s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero="2"]{animation-delay:.3s}
+@keyframes hin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,[data-stagger]>*,[data-hero]{opacity:1!important;transform:none!important}
+}
+
+/* ---------- mobile ---------- */
+@media (max-width:880px){
+  .nav{padding:18px 20px}
+  .nav .r{gap:16px}
+  .frame .cap{left:20px;right:20px}
+  .frame .idx{display:none}
+  .inter{padding:90px 20px}
+  .inter .cols{grid-template-columns:1fr;gap:24px}
+  .reel,.stats{padding:90px 20px}
+  .rrow{grid-template-columns:44px 1fr;gap:10px 16px}
+  .rrow .d{grid-column:2}
+  .stats .in{grid-template-columns:1fr;gap:40px}
+  .qframe{padding:100px 20px}
+  .close{padding:110px 20px 40px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="lg">Arce</span>
+  <div class="r"><a href="#reel">The Work</a><a href="#contact">Contacts</a></div>
+</nav>
+
+<!-- FRAME 01 — HERO -->
+<header class="frame hero">
+  <div class="pw"><img src="../img/surgery.jpg" alt="Dr. Arce in surgery" data-plx></div>
+  <div class="ov"></div>
+  <div class="bars"></div>
+  <div class="redline"></div>
+  <div class="cap" data-hero>
+    <div class="t">Surgical <em>Cinema.</em></div>
+    <div class="s">Oral &amp; maxillofacial surgery 2.0 — South Bay, California</div>
+  </div>
+  <div class="idx" data-hero="2"><b>Frame 01</b>The operating room</div>
+</header>
+
+<!-- INTERSTICE -->
+<section class="inter">
+  <div class="k reveal">The production</div>
+  <p class="big reveal">Twenty-seven years of complex cases, shot in one take — <em>no shortcuts, no retakes, no volume medicine.</em></p>
+  <div class="cols reveal">
+    <p>Dr. Jorge Arce trained in Colombia and built his life's work in California, devoting his career entirely to <strong>oral and maxillofacial surgery and dental implantology</strong>. Board certified in implantology.</p>
+    <p>In 2007 he founded the <strong>Dental Implants Center of South Bay</strong> — Redondo Beach and Torrance — a referral destination for the difficult extractions, reconstructions, and full-arch cases other surgeons step away from.</p>
+  </div>
+</section>
+
+<!-- FRAME 02 -->
+<section class="frame">
+  <div class="pw"><img src="../img/operating.jpg" alt="Precision work" data-plx></div>
+  <div class="ov"></div>
+  <div class="bars"></div>
+  <div class="redline"></div>
+  <div class="cap reveal">
+    <div class="t">Every frame, <em>deliberate.</em></div>
+    <div class="s">Planning before anyone operates — implants, grafting, sequencing, restoration</div>
+  </div>
+  <div class="idx"><b>Frame 02</b>Precision work</div>
+</section>
+
+<!-- REEL -->
+<section class="reel" id="reel">
+  <div class="head reveal"><h2>The reel — <em>six disciplines.</em></h2></div>
+  <div data-stagger>
+    <div class="rrow"><span class="n">SC-01</span><span class="t">Dental Implants</span><span class="d">From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</span></div>
+    <div class="rrow"><span class="n">SC-02</span><span class="t">Reconstruction</span><span class="d">Rebuilding function and structure where bone and tissue have been lost.</span></div>
+    <div class="rrow"><span class="n">SC-03</span><span class="t">Complex Cases</span><span class="d">The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</span></div>
+    <div class="rrow"><span class="n">SC-04</span><span class="t">Implant Maintenance</span><span class="d">Long-term care that protects the work of a restored smile.</span></div>
+    <div class="rrow"><span class="n">SC-05</span><span class="t">Pathology</span><span class="d">Identifying and addressing conditions affecting teeth, gums, and bone.</span></div>
+    <div class="rrow"><span class="n">SC-06</span><span class="t">Second Opinions</span><span class="d">Clarity and direction for patients facing complex decisions.</span></div>
+  </div>
+</section>
+
+<!-- FRAME 03 -->
+<section class="frame">
+  <div class="pw"><img src="../img/clinic.jpg" alt="The Center" data-plx></div>
+  <div class="ov"></div>
+  <div class="bars"></div>
+  <div class="redline"></div>
+  <div class="cap reveal">
+    <div class="t">The set, <em>est. 2007.</em></div>
+    <div class="s">Dental Implants Center of South Bay — Redondo Beach &amp; Torrance</div>
+  </div>
+  <div class="idx"><b>Frame 03</b>The Center</div>
+</section>
+
+<!-- STATS -->
+<section class="stats"><div class="in" data-stagger>
+  <div><div class="n">27<em>yrs</em></div><div class="l">Dedicated to oral &amp; maxillofacial surgery</div></div>
+  <div><div class="n">2007</div><div class="l">Founder — Dental Implants Center of South Bay</div></div>
+  <div><div class="n">Board<em>cert.</em></div><div class="l">Certified in dental implantology</div></div>
+</div></section>
+
+<!-- QUOTE -->
+<section class="qframe">
+  <p class="reveal">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</p>
+  <div class="who reveal">Maria R. — Patient, full-arch reconstruction</div>
+</section>
+
+<!-- CLOSE -->
+<section class="close" id="contact">
+  <div class="t reveal">Roll your <em>case.</em></div>
+  <a class="cta reveal" href="tel:+13103274166">Contacts — (310) 327-4166</a>
+  <div class="fine">
+    <span>© Dr. Jorge Arce, D.D.S.</span>
+    <span>Redondo Beach · Torrance, CA</span>
+    <span>By appointment</span>
+  </div>
+</section>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal,[data-stagger]').forEach(function(el){io.observe(el)});
+  if(!rm){
+    var imgs=[].slice.call(document.querySelectorAll('[data-plx]'));
+    addEventListener('scroll',function(){
+      var vh=innerHeight;
+      imgs.forEach(function(im){
+        var r=im.closest('.frame').getBoundingClientRect();
+        if(r.bottom<0||r.top>vh)return;
+        var p=(r.top+r.height/2-vh/2)/vh;
+        im.style.transform='translateY('+(p*-40).toFixed(1)+'px)';
+      });
+    },{passive:true});
+  }
+})();
+</script>
+</body>
+</html>
