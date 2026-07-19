@@ -1,0 +1,118 @@
+{
+ "_schema": "v29-heritage · Provenance, estudio sereno · Archivo + serif. Slots de foto nativos: cada slot lleva tag descriptivo (o src real para sustituirlo). rich() admite <em><b><br>. work.cards 2-4 · journal.cards 0-3 · foot.links 3-5. Fetch absoluto /v29-heritage/content.json.",
+ "meta": {
+  "title": "Provenance — A Considered Creator Studio · v29 Heritage",
+  "description": "Original, unhurried content for brands that value the quiet details. Template concept.",
+  "lang": "en"
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "wm": "Provenance",
+   "slotTag": "slot foto — textil / lino en primer plano",
+   "lbl": "Lifestyle · Home · Fashion · Travel & everything in between",
+   "p": "Provenance is a considered creator studio, devoted to original, unhurried content for brands that value the quiet details."
+  },
+  {
+   "type": "intro",
+   "h": "We are a small studio of <em>storytellers and stylists</em> who believe beautiful things deserve a beautiful telling.",
+   "cats": "content · interiors · fashion · travel"
+  },
+  {
+   "type": "work",
+   "head": "Signature Work",
+   "cards": [
+    {
+     "tag": "slot — campaña editorial",
+     "t": "The Linen Series",
+     "cat": "Campaign · placeholder"
+    },
+    {
+     "tag": "slot — interiores",
+     "t": "A House in the Hills",
+     "cat": "Interiors · placeholder"
+    },
+    {
+     "tag": "slot — viaje",
+     "t": "Slow Mornings, Lisbon",
+     "cat": "Travel · placeholder"
+    }
+   ],
+   "cta": {
+    "t": "View the full portfolio",
+    "h": "#top"
+   }
+  },
+  {
+   "type": "meet",
+   "slotTag": "slot foto — retrato fundadora",
+   "h": "Meet Wren — founder, stylist, <em>collector of quiet moments.</em>",
+   "body": "Placeholder bio: after a decade styling homes and shoots for others, Wren opened Provenance to tell slower stories — the kind that hold up years later. She still irons the linens herself.",
+   "sig": "Wren"
+  },
+  {
+   "type": "belief",
+   "h": "We believe in crafting a curated life — <em>not a crowded one.</em> Fewer things, chosen well, photographed honestly.",
+   "lbl": "the studio philosophy"
+  },
+  {
+   "type": "kind",
+   "lbl": "Kind Words",
+   "q": "Working with Provenance felt like handing our brand to someone who loved it as much as we do. Every frame came back better than the brief.",
+   "who": "Placeholder client — home goods brand"
+  },
+  {
+   "type": "journal",
+   "head": "The Latest on the Journal",
+   "cards": [
+    {
+     "tag": "slot — nota 1",
+     "cat": "Interiors",
+     "t": "On arranging a room around the morning light"
+    },
+    {
+     "tag": "slot — nota 2",
+     "cat": "Fashion",
+     "t": "A quiet wardrobe: ten pieces, one season"
+    },
+    {
+     "tag": "slot — nota 3",
+     "cat": "Travel",
+     "t": "The unhurried guide to a weekend away"
+    }
+   ]
+  },
+  {
+   "type": "freebie",
+   "title": "Get the <em>Freebie</em>",
+   "body": "Our placeholder style guide: the checklist we run before every shoot — light, layers, and the details worth the extra hour.",
+   "form": {
+    "field": "Your email",
+    "btn": "Send it"
+   }
+  },
+  {
+   "type": "foot",
+   "wm": "Provenance",
+   "links": [
+    {
+     "t": "Portfolio",
+     "h": "#top"
+    },
+    {
+     "t": "About",
+     "h": "#top"
+    },
+    {
+     "t": "Journal",
+     "h": "#top"
+    },
+    {
+     "t": "Contact",
+     "h": "#top"
+    }
+   ],
+   "legal": "© Provenance Studio — template concept · placeholder content"
+  }
+ ]
+}

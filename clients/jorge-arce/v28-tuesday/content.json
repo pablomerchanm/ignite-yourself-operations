@@ -1,0 +1,139 @@
+{
+ "_schema": "v28-tuesday · Marlow marketing co. (concepto) · Archivo + display + script. rich() admite <b><br>, <v>…</v> violeta. svc.rows 3-6 (números script del array) · vip.steps EXACTO 3 · nav 3-6. src vacío = placeholder. Fetch absoluto /v28-tuesday/content.json.",
+ "meta": {
+  "title": "Marlow Marketing Co. — Template Concept · v28 Tuesday",
+  "description": "Boutique brand studio template concept — strategy, image, and words, aligned until they convert.",
+  "lang": "en"
+ },
+ "nav": {
+  "logo": "MARLOW",
+  "links": [
+   {
+    "t": "Services",
+    "h": "#services"
+   },
+   {
+    "t": "VIP Day",
+    "h": "#vip"
+   },
+   {
+    "t": "About",
+    "h": "#about"
+   },
+   {
+    "t": "Voices",
+    "h": "#voices"
+   },
+   {
+    "t": "Contact",
+    "h": "#contact"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "img": {
+    "src": "/img/quote.jpg",
+    "alt": "Editorial portrait — placeholder",
+    "label": "FOTO — hero 16:10"
+   },
+   "wm": "Marlow",
+   "sub": "marketing co."
+  },
+  {
+   "type": "state",
+   "id": "about",
+   "title": "Because building a brand shouldn't feel like <v>guesswork</v>",
+   "script": "let's make it unmistakable",
+   "body": "Marlow is a boutique studio for founders who want their brand to walk into the room first. Strategy, image, and words — aligned until they convert. (Template concept — placeholder copy.)"
+  },
+  {
+   "type": "svc",
+   "id": "services",
+   "title": "The Services",
+   "lbl": "choose your lane",
+   "rows": [
+    {
+     "n": "one",
+     "t": "Brand Strategy",
+     "d": "Positioning, voice, and the plan that makes decisions easy."
+    },
+    {
+     "n": "two",
+     "t": "Creative Direction",
+     "d": "Shoots, styling, and a visual world that looks like no one else."
+    },
+    {
+     "n": "three",
+     "t": "Website Management",
+     "d": "Your site, kept sharp — updates, pages, and launches handled."
+    },
+    {
+     "n": "four",
+     "t": "Social Presence",
+     "d": "A feed with a spine: planned, produced, and posted with intent."
+    }
+   ]
+  },
+  {
+   "type": "split",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "",
+    "label": "FOTO — estudio 3:4"
+   },
+   "lbl": "Meet the studio behind the confidence",
+   "script": "hi, we're Marlow",
+   "body": "A small team with sharp taste and zero appetite for generic. We take on a handful of brands at a time, so every project gets the obsession it deserves. Placeholder bio copy for the template concept.",
+   "cta": {
+    "t": "Work with us",
+    "h": "#contact"
+   }
+  },
+  {
+   "type": "vip",
+   "id": "vip",
+   "lbl": "Time to step it up",
+   "ghost": "The VIP Day",
+   "title": "One focused day. <b>One leveled-up brand.</b>",
+   "body": "Skip the six-week timeline. Bring us your brand at 9am and leave with a sharpened identity, refreshed pages, and a plan you can run with.",
+   "steps": [
+    {
+     "t": "The Audit",
+     "d": "We tear down what's not working — kindly, but honestly."
+    },
+    {
+     "t": "The Sprint",
+     "d": "Design, copy, and strategy rebuilt in real time, together."
+    },
+    {
+     "t": "The Handoff",
+     "d": "You leave with files, pages, and a 30-day action plan."
+    }
+   ]
+  },
+  {
+   "type": "voices",
+   "id": "voices",
+   "lbl": "kind words",
+   "q": "Working with this studio felt like hiring a whole creative department — one that actually answers the phone.",
+   "who": "Placeholder client — boutique founder"
+  },
+  {
+   "type": "close",
+   "id": "contact",
+   "script": "ready when you are",
+   "title": "Let's do this",
+   "cta": {
+    "t": "Book a discovery call",
+    "h": "#contact"
+   },
+   "fine": [
+    "© Marlow Marketing Co. — template concept",
+    "hello@placeholder.com",
+    "Est. anywhere with wifi"
+   ]
+  }
+ ]
+}

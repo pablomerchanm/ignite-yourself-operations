@@ -874,3 +874,164 @@ robust22: REDUCED nm, 0 ocultos, mapas visibles · R5 9 capas en cascada
 1/1/1/.82/0…, plx translateY 30px scale 1.12 en ticker · STRESS record
 fuera, poems 2 sin fotos → phx, mapsteps 2, título ×2, ovf 0, 0
 errores · MOBILE ovf 0.
+
+## 26 · v25-gecko — CERRADA
+
+**Diagnóstico inicial:** 6 páginas generadas por script, la más
+productiva ya — pero cada página con su IO binario inline, `.reveal`
+de transición única, sello `spin 14s infinite` y cero tokens.
+
+**Qué cambié:**
+- Runtime compartido `/v25-gecko/motion.js`: catálogo cerrado (R1 rise
+  para todo `.reveal`, stagger decreciente para `[data-stagger]`, R5
+  sello) + Lenis/GSAP un ticker + anchors + no-motion. Las 6 páginas
+  cargan vendor+motion.js; sus scripts IO murieron.
+- R5 el sello: el stamp circular gira 0→720° mapeado al progreso
+  global (scrub .8) — la firma de la casa registra el avance del
+  lector en vez de girar en bucle. Presente en index/about (donde vive
+  el stamp).
+- Tokens inyectados en las 6 páginas; spin keyframes eliminado en
+  todas; hovers tokenizados. Parches con assert de balance de llaves
+  (lección de v22 aplicada).
+- **Decisión de alcance** (## Bloqueos): el copy queda en el HTML —
+  esta plantilla ES la salida de un generador; su content-system es el
+  script, no un JSON por página. Documentado en V25-GECKO.md con ruta
+  de migración al patrón loader si el equipo lo quiere.
+
+**Qué elevé:** de 6 páginas con motion copy-pasteado a un sistema: un
+solo runtime, una firma scroll-driven, tokens uniformes.
+
+**Verificación:** batchcheck en LAS SEIS (index/about/services/
+stories/contact/blog) 1440+390: ovf 0, 0 errores. robust25: REDUCED
+nm, 0 ocultos, sello quieto · runtime activo en las 6 (ScrollTriggers
+2-13 por página), sellos rotando 175°/316°, reveals disparando.
+
+## 27 · v28-tuesday — CERRADA
+
+**Diagnóstico inicial:** Marlow (ronda 5) fiel y fresca; le faltaba
+disciplina de easing (un cubic sin token + defaults), robustez de
+contenido (copy en HTML, sin placeholders) y el hover de filas animaba
+padding-left.
+
+**Qué cambié:**
+- R5 nada llega recto: filas de servicios y pasos del VIP entran
+  rotados ±4° alternando lado y se ENDEREZAN con el scrub continuo
+  (`rotate(dir·4°·(1−k)) + translateY(26·(1−k))`) — la personalidad de
+  la página (juguetona → orden) hecha motion. Reduced: sin transform.
+- Hover de filas: padding-left → translateX del título (transform).
+- Tokens, ritmo --sec variado (split ×0.9, vip ×1.15), keyframes hin
+  fuera, parche de reduced-motion balanceado (assert de llaves).
+- Shell+loader: 7 secciones opcionales, numeración de steps 0N
+  automática, `<v>` violeta en rich, `.phx`, focus-visible.
+
+**Qué elevé:** la disciplina que pedía: 2 easings tokenizados, motion
+con identidad propia (tilt-settle, mecanismo no repetido) y template
+productivo con placeholders probados.
+
+**Paso 4:** memorable sí (todo se endereza); wordmark hero / state
+rosa / svc paper / split rojo / vip violeta — la paleta ya alternaba,
+ahora el ritmo también; motion continuo; 2 easings; solo transform;
+robusto.
+
+**Verificación:** batchcheck W28 ovf 0 d+m. robust28: REDUCED nm, 0
+ocultos, tilts sin transform · R5 filas rotate −1.9°/+3.4° +
+translateY en scrub · STRESS voices fuera, rows 3, hero/split sin
+fotos → 2 phx, wordmark ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 28 · v29-heritage — CERRADA
+
+**Diagnóstico inicial:** Provenance con el wordmark hairline gigante
+como momento real pero motion genérico para la elegancia que aparenta:
+`.reveal` IO de 1.1s, keyframes hin, un easing sin token, colisión de
+clase `.foot` (hero vs footer), copy en HTML.
+
+**Qué cambié:**
+- R5 la firma bajo la cortina (desktop): el footer pasa a fixed detrás
+  del main (spacer medido dinámicamente); al llegar al final, el
+  contenido se levanta como telón y revela el wordmark gigante, que
+  aterriza con scrub (translateY 40→0, scale .92→1, opacidad .4→1).
+  Mecanismo cortina — no usado en el catálogo. Mobile (<701) y
+  reduced: flujo normal estático.
+- Footer renombrado `.sitefoot` (colisión de .foot con el hero
+  resuelta).
+- Tokens, ritmo --sec (intro estándar, freebie ×0.95), hin fuera,
+  parches balanceados.
+- Shell+loader: slots de foto nativos (tag descriptivo o src real),
+  journal 0-3, focus-visible.
+
+**Qué elevé:** el momento real de la página (el wordmark) por fin tiene
+la puesta en escena que merecía: es el telón final, no un footer más.
+
+**Paso 4:** memorable sí (cortina); hero full / intro centrada / work
+grid desfasado / meet split / belief / kind / journal — ritmo variado;
+ratio 186/13.5 = 13.8:1; motion continuo; 2 easings; solo transform;
+robusto.
+
+**Verificación:** batchcheck W29 ovf 0 d+m. robust29: REDUCED nm, 0
+ocultos, footer static · R5 footer fixed + spacer 375px, wm aterriza
+translateY(0) scale(1) op 1, visible al fondo · STRESS journal fuera,
+work 2, wordmark alargado, ovf 0, 0 errores · MOBILE ovf 0 footer
+static.
+
+## 29 · v30-capri — CERRADA
+
+**Diagnóstico inicial:** Azure & Co. con composición que ya alternaba
+bien pero sin catálogo cerrado de reveals: `.reveal` IO único de 1.1s,
+keyframes hin, un easing sin token, copy en HTML.
+
+**Qué cambié:**
+- R5 la marea tipográfica: el script del hero ("Unforgettable") se
+  divide en letras y cada una ondea `translateY(sin(p·2π+i·.55)·6px)`
+  mapeada al scroll del hero — el rótulo se mece como agua, amplitud
+  decreciente al salir. Accesible (aria-label con el texto completo,
+  spans aria-hidden). Reduced: texto plano sin split.
+- Catálogo cerrado completo: R1/R2 stagger decreciente/R3 hairlines en
+  svc/R4 cards con steps; tokens y 2 easings; ritmo --sec variado
+  (quote ×0.9, guide ×1.1).
+- Shell+loader: slots nativos, press 3-6, svc i.-iv. desde JSON,
+  focus-visible.
+
+**Qué elevé:** la disciplina de motion que pedía, más un momento propio
+marino que ninguna otra página usa (onda posicional por letra).
+
+**Paso 4:** memorable sí (marea); hero mar / intro clara / dest grid /
+svc navy / journey split / quote royal — alternancia ya buena,
+respetada; motion continuo; 2 easings; solo transform; robusto.
+
+**Verificación:** batchcheck W30 ovf 0 d+m. robust30: REDUCED nm, 0
+ocultos, sin split (texto plano) · R5 13 letras, t0 +3.3px t3 −4.1px
+(fase senoidal), aria "Unforgettable" · STRESS press fuera, svc 3,
+script alargado, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 30 · v32-alora — CERRADA
+
+**Diagnóstico inicial:** Elowen brumosa y consistente pero con robustez
+de contenido sin probar (los titulares dobles la rompían), `.reveal` IO
+único, keyframes hin, un easing sin token, copy en HTML.
+
+**Qué cambié:**
+- R5 la bruma se levanta: cada slot fotográfico full-bleed lleva un
+  velo de lino (gradiente #F5F4EF) que se disipa con el scrub de su
+  sección — opacidad 1→.08 + deriva translateY −14% — la niebla de la
+  identidad hecha mecanismo. Elemento real (no filter), reduced: sin
+  velo.
+- Robustez POR FIN probada: titulares ×2 en los tres bloques de líneas
+  (hero/close) → ovf 0; steps 3-5; kind opcional. Bug propio corregido
+  en verificación: inline opacity:0 que habría dejado los titulares
+  invisibles en no-motion.
+- Tokens, ritmo --sec variado, catálogo cerrado R1/R2/R4, parches
+  balanceados, focus-visible.
+- Shell+loader con slots nativos y 9 secciones opcionales.
+
+**Qué elevé:** la consistencia ganó su momento propio (el velo) y la
+robustez que la cola señalaba como deuda quedó demostrada con tests.
+
+**Paso 4:** memorable sí (velos); hero full / press / intro centrada /
+svc grid / band full / exp split / kind — alternancia respetada;
+motion continuo; 2 easings; solo transform+opacity; robusto (titular
+×2 verificado).
+
+**Verificación:** batchcheck W32 ovf 0 d+m. robust32: REDUCED nm, 0
+ocultos, velos ausentes · R5 velo hero op .08 tY −14%, velo band .27
+mid-scrub · STRESS titulares ×2 ovf 0, kind fuera, steps 3, 0
+errores · MOBILE ovf 0.
