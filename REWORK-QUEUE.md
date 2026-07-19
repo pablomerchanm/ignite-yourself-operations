@@ -26,7 +26,7 @@
 | 11 | `v13-bennett` | ✅ | Sólida de estructura, muerta de motion: composición correcta que nunca sorprende ni una vez. |
 | 12 | `v14-gareis` | ✅ | Portfolio oscuro competente con secciones intercambiables entre sí — le falta un solo lugar donde el grid se rompa. |
 | 13 | `v15-norris` | ✅ | Deportiva con energía en paleta pero no en composición; typography scale corta para lo que pide el género. |
-| 14 | `v16-handx` | ☐ | Artesanal con buenos detalles pero ritmo constante; el momento del referente (proceso) quedó decorativo. |
+| 14 | `v16-handx` | ✅ | Artesanal con buenos detalles pero ritmo constante; el momento del referente (proceso) quedó decorativo. |
 | 15 | `v17-everswap` | ☐ | El grade cinematográfico perdona mucho, y esta página lo usa como muleta: quita las fotos y no queda sistema. |
 | 16 | `v18-mindmarket` | ☐ | Ilustrada simpática; composición de bloques 1-columna repetidos, la ilustración merece layout más valiente. |
 | 17 | `v19-cunliffe` | ☐ | El rail lateral fue arreglo, no diseño: convive incómodo con el contenido y el scroll no cuenta nada. |

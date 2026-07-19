@@ -442,3 +442,44 @@ ocultos, pre fuera, stat plano "27" · ODO aterriza exacto 27/06/02
 (reels -2/-7, 0/-6, 0/-2 × STEP) · MQ -30% · STRESS qband fuera, hero
 sin foto → phx, statement ×2, career 3, disc 3, stats 2, ovf 0, 0
 errores · MOBILE ovf 0.
+
+## 14 · v16-handx — CERRADA
+
+**Diagnóstico inicial:** "La Experiencia Arce" con buenos detalles serif
+(Cormorant + grain) pero ritmo constante: el momento del referente — el
+journey de 4 días — era una lista estática con bordes; FAQ animaba
+max-height (layout); un solo `.reveal` IO; sheads centrados en cadena;
+copy en HTML.
+
+**Qué cambié:**
+- R5 libro de días pinneado (desktop): la sección se pinnea `n·80%` y
+  los 4 días se convierten en paneles absolutos que crossfadean por
+  cuartos — `f=clamp(p·n−.5)`, opacidad campana `1−d/.55`, deriva
+  translateY ±18px, rail con fill scaleX continuo y contador "Day One…
+  Four" (Cormorant Infant). Mobile (<901) y reduced: lista apilada
+  original con reveals — degradación diseñada (verificado sin
+  pin-spacer en mobile).
+- FAQ: max-height muere → display-swap + fade 300ms transform;
+  accesible (tabindex, role=button, aria-expanded, Enter/Espacio).
+- Tokens (--sec, 2 easings), `html{overflow-x:clip}`, focus-visible
+  global, `.phx` en hero/method, R3 hairline en method rows.
+- Shell+loader: content.json con `<t>` = itálica tenue; journey.days
+  EXACTO 3-5; access/voices/faq/method opcionales.
+- Bug propio detectado en verificación visual: el parche de tokens
+  rompió el selector `:root{` (página quedó clara) — reparado y
+  re-verificado.
+
+**Qué elevé:** el proceso dejó de ser decorativo: el journey es ahora
+el tramo narrativo central con pin+progreso, un panel a la vez, como
+pasar las páginas de un itinerario.
+
+**Paso 4:** memorable sí (libro de días); mission centrada / journey
+pinneado asimétrico / method split — no hay dos centrados seguidos con
+el mismo tratamiento; ratio 97/18 = 5.4:1; motion continuo; 2 easings;
+nada anima layout; robusto.
+
+**Verificación:** batchcheck W16 ovf 0 d+m (×2, tras fix :root).
+robust16: REDUCED nm, 0 ocultos, 4 días apilados visibles, rail fuera ·
+BOOK Day One→Day Four crossfade (ops campana), fill scaleX .80 · FAQ
+display-swap ok · STRESS faq fuera, days 3, hero/method sin foto → 2
+phx, titular ×2, ovf 0, 0 errores · MOBILE ovf 0 sin pin.
