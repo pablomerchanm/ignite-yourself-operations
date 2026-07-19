@@ -241,7 +241,7 @@ html.no-motion .will-reveal { opacity: 1; }
 .s-hero .portrait {
   position: relative;
   z-index: 2;
-  width: min(360px, 58vw);
+  width: min(310px, 50vw);
 }
 .s-hero .name {
   position: absolute;
@@ -256,8 +256,8 @@ html.no-motion .will-reveal { opacity: 1; }
   line-height: var(--leading-tight);
   pointer-events: none;
 }
-.s-hero .name .line-back { position: relative; z-index: 1; }
-.s-hero .name .line-front { position: relative; z-index: 3; }
+.s-hero .name .line-back { position: relative; z-index: 1; transform: translateX(-5%); }
+.s-hero .name .line-front { position: relative; z-index: 3; transform: translateX(6%); }
 .s-hero .hero-eyebrow { text-align: center; margin-bottom: var(--space-3); }
 .s-hero .hero-sub {
   position: relative;
@@ -559,6 +559,7 @@ html.no-motion .will-reveal { opacity: 1; }
     margin-top: var(--space-4);
     font-size: clamp(2.6rem, 13vw, 4rem);
   }
+  .s-hero .name .line-back, .s-hero .name .line-front { transform: none; }
   .s-hero .hero-sub { padding-bottom: var(--space-5); }
 
   /* paths: columna única */

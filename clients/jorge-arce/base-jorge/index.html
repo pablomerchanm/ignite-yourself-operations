@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- El título y la descripción reales se inyectan desde content.json (meta.*) -->
+<title>Personal Brand — Template Base</title>
+<meta name="description" content="">
+
+<!-- FUENTES: única línea que se toca junto con tokens.css al cambiar de marca.
+     Deben corresponder a --font-serif / --font-sans / --font-mono de tokens.css. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..500;1,6..72,200..500&family=Archivo:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/base-jorge/css/tokens.css">
+<link rel="stylesheet" href="/base-jorge/css/template.css">
+</head>
+<body>
+
+<!-- Nav flotante pill + overlay (se puebla desde content.json → nav) -->
+<button id="navpill" class="navpill" hidden aria-expanded="false" aria-controls="menu">
+  <span class="bars" aria-hidden="true"><i></i><i></i></span>
+  <span class="navlabel">Menú</span>
+</button>
+<div id="menu" class="menu" role="dialog" aria-label="Menú de navegación">
+  <div>
+    <nav></nav>
+    <div class="menu-meta"></div>
+  </div>
+</div>
+
+<!-- Todo el contenido se renderiza aquí desde content.json -->
+<main id="site"></main>
+
+<noscript>
+  <div class="load-error">
+    <p>Este template renderiza su contenido desde content.json y requiere JavaScript.</p>
+  </div>
+</noscript>
+
+<script src="/base-jorge/js/vendor/gsap.min.js"></script>
+<script src="/base-jorge/js/vendor/ScrollTrigger.min.js"></script>
+<script src="/base-jorge/js/vendor/lenis.min.js"></script>
+<script src="/base-jorge/js/main.js"></script>
+</body>
+</html>
