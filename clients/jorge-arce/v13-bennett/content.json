@@ -1,0 +1,101 @@
+{
+  "_schema": "v13-bennett · Swiss ledger B/N · Inter Tight variable. Secciones opcionales: quita un objeto de `sections` y desaparece. rich() admite <b>, <br>, <t>…</t> (peso fino). Límites probados: stackL/stackR EXACTO 3-4 palabras · workroll.rows 4-8 · inter.imgs 0-3 (src vacío = placeholder etiquetado) · voices.cols EXACTO 2-3 columnas de 2-4 quotes · record.rows 2-6 · lets.meta 3-5 pares. Fetch absoluto /v13-bennett/content.json.",
+  "meta": {
+    "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery · v13 Bennett",
+    "description": "Board-certified oral & maxillofacial surgeon. Twenty-seven years between Colombia and California on the reconstructions other surgeons refer out.",
+    "lang": "en"
+  },
+  "nav": [
+    { "t": "Home", "h": "#top" },
+    { "t": "Work", "h": "#work" },
+    { "t": "About", "h": "#about" },
+    { "t": "Contact", "h": "#contact" }
+  ],
+  "sections": [
+    {
+      "type": "hero",
+      "stackL": ["Implants", "All-On-X", "Extractions"],
+      "stackR": ["Reconstruction", "Pathology", "TMJ Care"],
+      "name": ["Jorge", "&", "Arce"]
+    },
+    {
+      "type": "statement",
+      "id": "about",
+      "eyebrow": "Oral & maxillofacial surgery for the patients and practices of the South Bay",
+      "title": "Global rigor.<br>Local hands.",
+      "body": "Dr. Jorge Arce trained in Colombia and built his life's work in California — twenty-seven years devoted entirely to oral and maxillofacial surgery and dental implantology. Board certified. Founder of the Dental Implants Center of South Bay, est. 2007. Difficult work, done with care, gives people their lives back."
+    },
+    {
+      "type": "workroll",
+      "id": "work",
+      "label": "The Work",
+      "rows": [
+        { "nm": "Dental Implants", "cat": "Single → Full-Arch" },
+        { "nm": "All-On-X", "cat": "Complete Restoration" },
+        { "nm": "Reconstruction", "cat": "Bone & Tissue" },
+        { "nm": "Complex Extractions", "cat": "By Referral" },
+        { "nm": "Pathology & TMJ", "cat": "Diagnosis" },
+        { "nm": "Second Opinions", "cat": "Judgment" }
+      ]
+    },
+    {
+      "type": "inter",
+      "imgs": [
+        { "src": "/img/surgery.jpg", "alt": "", "label": "FOTO — quirófano · B/N · horizontal" },
+        { "src": "/img/portrait.jpg", "alt": "Dr. Jorge Arce", "label": "FOTO — retrato Dr. Arce · B/N" },
+        { "src": "/img/operating.jpg", "alt": "", "label": "FOTO — detalle manos · B/N" }
+      ]
+    },
+    {
+      "type": "voices",
+      "title": "The <t>people.</t>",
+      "cols": [
+        [
+          { "q": "I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <b>I can eat, smile, and speak again.</b>", "n": "Maria R.", "r": "Patient · Full-arch reconstruction" },
+          { "q": "Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself.", "n": "Robert T.", "r": "Patient · Dental implants" },
+          { "q": "Years of pain, gone. I only wish I had found him sooner.", "n": "Elena P.", "r": "Patient · TMJ treatment" }
+        ],
+        [
+          { "q": "When a case is beyond what I can handle, Jorge is the first call I make. <b>My patients always come back grateful — and so do I.</b>", "n": "Dr. David Kim", "r": "Referring General Dentist · Torrance" },
+          { "q": "I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows.", "n": "Dr. Lina Soto", "r": "Periodontist" },
+          { "q": "Reliable, communicative, and surgically excellent. A full report back, every time.", "n": "Dr. Jeff Malone", "r": "Referring Dentist · South Bay" }
+        ],
+        [
+          { "q": "The most thorough and honest surgeon I have ever met. <b>He treated my father like family.</b>", "n": "Anabella C.", "r": "Daughter of patient" },
+          { "q": "I was terrified of the procedure. He never rushed me. Best decision I have made for my health.", "n": "Carlos S.", "r": "Patient · Bone graft + implants" },
+          { "q": "The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice.", "n": "Dr. Mark Ellison", "r": "Referring General Dentist" }
+        ]
+      ]
+    },
+    {
+      "type": "record",
+      "label": "Speaking & Education",
+      "rows": [
+        { "yr": "2025", "nm": "Advances in Full-Arch Implant Reconstruction", "tp": "Keynote" },
+        { "yr": "2024", "nm": "Managing the Complex Extraction", "tp": "Lecture" },
+        { "yr": "2024", "nm": "Mentorship in Surgical Implantology", "tp": "Workshop" },
+        { "yr": "2023", "nm": "When Not to Operate: Judgment in Oral Surgery", "tp": "Panel" }
+      ]
+    },
+    {
+      "type": "lets",
+      "id": "contact",
+      "title": "Let's <t>restore.</t>",
+      "meta": [
+        { "k": "Call", "v": "(310) 327-4166" },
+        { "k": "Visit", "v": "Redondo Beach · Torrance, CA" },
+        { "k": "Practice", "v": "Dental Implants Center of South Bay" },
+        { "k": "Hours", "v": "By appointment" }
+      ],
+      "form": {
+        "fields": ["Name", "Email", "Phone"],
+        "msg": "Tell us about your case",
+        "btn": "Send"
+      },
+      "foot": [
+        "© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.",
+        "Oral & Maxillofacial Surgery — South Bay, California"
+      ]
+    }
+  ]
+}

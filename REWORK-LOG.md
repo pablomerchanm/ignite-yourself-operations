@@ -327,3 +327,41 @@ REDUCED no-motion ok, 0 `.wr` ocultos, rotador en 3/3, track sin
 transform · PIN track -3982px + progress 23% tras wheel · STRESS journal
 fuera → 0 nodos, stories→3, 4 `.phx`, track 14861px, 0 errores ·
 MOBILE ovf 0.
+
+## 11 · v13-bennett — CERRADA
+
+**Diagnóstico inicial:** brutalista B/N sólida de estructura, muerta de
+motion: rollzones con `@keyframes rollup 14s infinite` desacoplados del
+scroll, hover que animaba `padding-left` (layout), `transition:
+font-weight` que saltaba entre instancias estáticas, un solo `.reveal`
+IO, todas las secciones a 130px, copy 100% en HTML.
+
+**Qué cambié:**
+- R5a contra-rotación del ledger: los dos stacks del hero mapeados al
+  progreso del hero en direcciones opuestas (izq sube, der baja, scrub
+  1.2) — el infinito murió, el scroll ES el que gira los diales.
+- R5b onda de peso: Inter Tight cargada como variable (wght 100..900);
+  scrub del workroll recorre las filas con `wght = 400+320·campana(d)`
+  vía `--w` por fila — la negrita viaja como cursor contable.
+- Hover de filas: `translateX(22px)` en `.rin` interno (transform) +
+  wght 700 con interpolación real de la variable.
+- R3 hairline-draw: bordes de filas workroll/record dibujados con scaleX
+  (`.ruled` + `.rline` inyectada); no-motion conserva el borde estático.
+- Alturas tokenizadas: `--sec clamp(104,14vh,168)` · voices ×1.25 ·
+  lets ×0.9 · inter 0. Mega de contacto sangra -3vw en desktop.
+- Shell+loader: content.json con 7 secciones opcionales, label del
+  workroll con contador automático "(0N)", `.phx` etiquetados,
+  focus-visible en filas/botón/inputs.
+
+**Qué elevé:** el momento del hero ahora pertenece al scroll y la lista
+de disciplinas tiene el único efecto del catálogo basado en fuente
+variable — identidad de libro mayor: diales + cursor de peso.
+
+**Paso 4:** memorable sí (dial + onda); dark/light alternando con 3
+alturas de sección; ratio 13.7:1; motion continuo en ambos R5; 2
+easings; nada anima layout (translateX + font-variation); robusto.
+
+**Verificación:** batchcheck W13 ovf 0 d+m. robust13: REDUCED nm ok,
+0 ocultos, bordes estáticos intactos (6) · R5 stacks L -38.6% / R
+-11.4% (opuestos), onda --w 400→674 · STRESS record fuera, rows 4 →
+label "(04)", 3 phx, 2 cols, titular ×2, ovf 0, 0 errores · MOBILE ovf 0.
