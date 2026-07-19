@@ -1,0 +1,260 @@
+{
+ "_schema": "v16-handx · La Experiencia Arce · Cormorant Garamond/Infant + Inter. rich() admite <b><i><br> y <t>…</t> = itálica tenue (.it). Secciones opcionales por array. Límites probados: journey.days EXACTO 3-5 (el libro pinneado reparte el progreso) · method.rows 3-5 · voices 3-9 · access.cards EXACTO 2-3 · faq 2-6 · tags 2-4 por día. Fotos: src vacío = placeholder etiquetado. Fetch absoluto /v16-handx/content.json.",
+ "meta": {
+  "title": "Dr. Jorge Arce — The Arce Experience · v16 HandX",
+  "description": "The Arce Experience — oral & maxillofacial surgery as a guided journey. Dental Implants Center of South Bay.",
+  "lang": "en"
+ },
+ "logo": "arce.",
+ "nav": [
+  {
+   "t": "Mission",
+   "h": "#mission"
+  },
+  {
+   "t": "The Journey",
+   "h": "#journey"
+  },
+  {
+   "t": "Method",
+   "h": "#method"
+  },
+  {
+   "t": "Consultation",
+   "h": "#access"
+  },
+  {
+   "t": "FAQ",
+   "h": "#faq"
+  }
+ ],
+ "sections": [
+  {
+   "type": "hero",
+   "img": {
+    "src": "/img/surgery.jpg",
+    "alt": "",
+    "label": "FOTO — quirófano oscuro · full-bleed"
+   },
+   "date": "Dental Implants Center of South Bay<br>Consultations by appointment",
+   "title": "The Arce <t>Experience</t>",
+   "cta": {
+    "t": "Reserve Your Consultation",
+    "h": "#reserve"
+   },
+   "loc": "Redondo Beach, California"
+  },
+  {
+   "type": "mission",
+   "id": "mission",
+   "label": "The Mission",
+   "quote": "“Before the procedure, the person. <t>Difficult work, done with care,</t> gives people their lives back — that conviction has guided twenty-seven years of surgery.”",
+   "who": "Dr. Jorge Arce — Board-Certified Oral & Maxillofacial Surgeon"
+  },
+  {
+   "type": "journey",
+   "id": "journey",
+   "label": "The Journey",
+   "title": "Four days that <t>change everything.</t>",
+   "days": [
+    {
+     "num": "One",
+     "cap": "Consultation",
+     "title": "An honest <t>conversation.</t>",
+     "body": "A long, unhurried first visit. Your history, your scans, your questions — and an honest read of what is possible. If the right answer is not to operate, you will hear that plainly.",
+     "tags": [
+      "History & imaging",
+      "Candidacy",
+      "Plain-language plan"
+     ]
+    },
+    {
+     "num": "Two",
+     "cap": "Planning",
+     "title": "The case, <t>mapped.</t>",
+     "body": "Every case is planned before anyone operates — the time the case actually needs, not the time the schedule allows. Twenty-seven years of judgment applied to your anatomy.",
+     "tags": [
+      "Case design",
+      "Sequencing",
+      "Referring-dentist report"
+     ]
+    },
+    {
+     "num": "Three",
+     "cap": "Surgery",
+     "title": "Steady <t>hands.</t>",
+     "body": "Precision in the operating room, calm around it. From single implants to full-arch All-On-X reconstruction — built on structural, reconstructive rigor.",
+     "tags": [
+      "Implants & All-On-X",
+      "Reconstruction",
+      "Complex extractions"
+     ]
+    },
+    {
+     "num": "Four",
+     "cap": "The Return",
+     "title": "Function, structure, <t>confidence.</t>",
+     "body": "Restoration and long-term maintenance that protect the work — and a full report back to your referring dentist, every time. The smile is the last step, not the first promise.",
+     "tags": [
+      "Restoration",
+      "Maintenance",
+      "Follow-up"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "method",
+   "id": "method",
+   "label": "The Method",
+   "title": "Dr. Arce & <t>his method</t>",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Dr. Jorge Arce",
+    "label": "FOTO — retrato Dr. Arce · vertical"
+   },
+   "rows": [
+    {
+     "t": "Reconstructive <t>foundations</t>",
+     "d": "Trained in Colombia, built in California — a career devoted entirely to oral & maxillofacial surgery and implantology."
+    },
+    {
+     "t": "Time as an <t>instrument</t>",
+     "d": "Take the time the case actually needs — the unglamorous principle behind twenty-seven years of results."
+    },
+    {
+     "t": "Transparency <t>first</t>",
+     "d": "Every step explained until it is understood. Patients consistently describe feeling calm, informed, and heard."
+    },
+    {
+     "t": "Partnership with <t>your dentist</t>",
+     "d": "Much of the practice arrives by referral — and goes back with a full surgical report, every time."
+    }
+   ]
+  },
+  {
+   "type": "voices",
+   "label": "In Their Words",
+   "cards": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <t>I can eat, smile, and speak again.”</t>",
+     "who": "Maria R. — Full-arch reconstruction"
+    },
+    {
+     "q": "“When a case is beyond what I can handle, Jorge is the first call I make.”",
+     "who": "Dr. David Kim — Referring Dentist"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. <t>He treated my father like family.”</t>",
+     "who": "Anabella C. — Daughter of patient"
+    },
+    {
+     "q": "“Calm, precise, and genuinely kind. He explained every step until I understood.”",
+     "who": "Robert T. — Dental implants"
+    },
+    {
+     "q": "“I refer my most complex cases to Dr. Arce without hesitation. <t>Twenty-seven years shows.”</t>",
+     "who": "Dr. Lina Soto — Periodontist"
+    },
+    {
+     "q": "“Years of pain, gone. I only wish I had found him sooner.”",
+     "who": "Elena P. — TMJ treatment"
+    }
+   ]
+  },
+  {
+   "type": "access",
+   "id": "access",
+   "label": "Ways to Begin",
+   "title": "Choose your <t>path.</t>",
+   "cards": [
+    {
+     "lv": "Path 01",
+     "title": "First <t>Consultation</t>",
+     "for": "For patients beginning their journey",
+     "items": [
+      "Unhurried review of history and imaging",
+      "An honest read of what is possible",
+      "A clear plan, in plain language",
+      "The free first-consultation guide"
+     ],
+     "go": {
+      "t": "Reserve",
+      "h": "#reserve"
+     }
+    },
+    {
+     "lv": "Path 02",
+     "title": "Second <t>Opinion</t>",
+     "for": "For patients told it can't be done",
+     "items": [
+      "A fresh look at a complex diagnosis",
+      "Twenty-seven years of surgical judgment",
+      "Including, when right, the advice not to operate"
+     ],
+     "go": {
+      "t": "Reserve",
+      "h": "#reserve"
+     }
+    },
+    {
+     "lv": "Path 03",
+     "title": "By <t>Referral</t>",
+     "for": "For referring dentists & their patients",
+     "items": [
+      "The complex cases you'd rather not carry alone",
+      "A full surgical report back, every time",
+      "Restorative work stays with your practice"
+     ],
+     "go": {
+      "t": "Refer",
+      "h": "#reserve"
+     }
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "id": "faq",
+   "label": "Questions",
+   "title": "Asked & <t>answered.</t>",
+   "rows": [
+    {
+     "q": "What happens at a first consultation?",
+     "a": "A long, unhurried conversation. Dr. Arce reviews your history and imaging, examines the site, and gives you an honest read of what is possible — including, when it is the right answer, the recommendation not to operate."
+    },
+    {
+     "q": "I was told my case is impossible. Is it?",
+     "a": "Sometimes it is — and you deserve to hear that plainly. But many of the cases in this practice arrived with that exact sentence. Complex cases are not a detour from this work; they are the work."
+    },
+    {
+     "q": "How do I know if I'm a candidate?",
+     "a": "Bone volume, gum health, medical history, and timing all matter. The free patient guide covers the signs — and a consultation settles it definitively with imaging."
+    },
+    {
+     "q": "Do you work with referring dentists?",
+     "a": "Constantly — much of this practice arrives by referral. Every referred patient goes back with a full surgical report, and the restorative work stays with your general dentist."
+    }
+   ]
+  },
+  {
+   "type": "reserve",
+   "id": "reserve",
+   "label": "Reservations",
+   "title": "Begin your <t>experience.</t>",
+   "form": {
+    "fields": [
+     "Name",
+     "Email",
+     "Phone"
+    ],
+    "btn": "Reserve Now",
+    "fine": "(310) 327-4166 · Redondo Beach & Torrance, CA · By submitting, you agree to be contacted by Dental Implants Center of South Bay."
+   },
+   "foot": [
+    "© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.",
+    "The Arce Experience — Oral & Maxillofacial Surgery"
+   ]
+  }
+ ]
+}

@@ -327,3 +327,193 @@ REDUCED no-motion ok, 0 `.wr` ocultos, rotador en 3/3, track sin
 transform · PIN track -3982px + progress 23% tras wheel · STRESS journal
 fuera → 0 nodos, stories→3, 4 `.phx`, track 14861px, 0 errores ·
 MOBILE ovf 0.
+
+## 11 · v13-bennett — CERRADA
+
+**Diagnóstico inicial:** brutalista B/N sólida de estructura, muerta de
+motion: rollzones con `@keyframes rollup 14s infinite` desacoplados del
+scroll, hover que animaba `padding-left` (layout), `transition:
+font-weight` que saltaba entre instancias estáticas, un solo `.reveal`
+IO, todas las secciones a 130px, copy 100% en HTML.
+
+**Qué cambié:**
+- R5a contra-rotación del ledger: los dos stacks del hero mapeados al
+  progreso del hero en direcciones opuestas (izq sube, der baja, scrub
+  1.2) — el infinito murió, el scroll ES el que gira los diales.
+- R5b onda de peso: Inter Tight cargada como variable (wght 100..900);
+  scrub del workroll recorre las filas con `wght = 400+320·campana(d)`
+  vía `--w` por fila — la negrita viaja como cursor contable.
+- Hover de filas: `translateX(22px)` en `.rin` interno (transform) +
+  wght 700 con interpolación real de la variable.
+- R3 hairline-draw: bordes de filas workroll/record dibujados con scaleX
+  (`.ruled` + `.rline` inyectada); no-motion conserva el borde estático.
+- Alturas tokenizadas: `--sec clamp(104,14vh,168)` · voices ×1.25 ·
+  lets ×0.9 · inter 0. Mega de contacto sangra -3vw en desktop.
+- Shell+loader: content.json con 7 secciones opcionales, label del
+  workroll con contador automático "(0N)", `.phx` etiquetados,
+  focus-visible en filas/botón/inputs.
+
+**Qué elevé:** el momento del hero ahora pertenece al scroll y la lista
+de disciplinas tiene el único efecto del catálogo basado en fuente
+variable — identidad de libro mayor: diales + cursor de peso.
+
+**Paso 4:** memorable sí (dial + onda); dark/light alternando con 3
+alturas de sección; ratio 13.7:1; motion continuo en ambos R5; 2
+easings; nada anima layout (translateX + font-variation); robusto.
+
+**Verificación:** batchcheck W13 ovf 0 d+m. robust13: REDUCED nm ok,
+0 ocultos, bordes estáticos intactos (6) · R5 stacks L -38.6% / R
+-11.4% (opuestos), onda --w 400→674 · STRESS record fuera, rows 4 →
+label "(04)", 3 phx, 2 cols, titular ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 12 · v14-gareis — CERRADA
+
+**Diagnóstico inicial:** portfolio gris competente pero intercambiable:
+masonry ESTÁTICO (los push eran márgenes fijos), preloader con
+setInterval como único gesto, `menuchip:hover` animando padding
+(layout), dot de disponibilidad con blink infinito, 4 easings, copy en
+HTML.
+
+**Qué cambié:**
+- R5 parallax a dos tiempos: cada pieza declara `par` (−1/0/+1) en
+  content.json; scrub de la galería mapea `translateY = par·36px·(p−.5)·2`
+  sobre el `.ph` interno (no pisa el settle del figure) — centrado en 0
+  a mitad de galería. Los qrow van a par 0: citas estables entre fotos
+  que derivan. Mobile y reduced: apagado (verificado).
+- Preloader determinista: gsap 0→100 en 900ms expo.out + fade 400ms;
+  no-motion → display:none.
+- Blink infinito eliminado (dot estático); menuchip hover →
+  translateY(-2px)+fondo (transform+paint); panel ya era transform.
+- R3 hairline-draw en facts/record (bottom, + top de la primera fila).
+- Alturas tokenizadas `--sec clamp(96,13vh,152)` · gal top ×0.4 · fin
+  ×1.15. 2 easings.
+- Shell+loader: galería declarativa {src,label,size,span,push,par} con
+  numeración (0N) automática, qrows intercalables, `.phx` etiquetados,
+  focus-visible, aria-expanded en el menú.
+
+**Qué elevé:** el masonry dejó de ser maquetación y ganó profundidad —
+las fotos derivan a contravelocidad mientras texto y captions quedan
+estables; primer parallax del catálogo (mecanismo no repetido).
+
+**Paso 4:** memorable sí (deriva diferencial); centrado solo en
+hero/fin, galería y about asimétricos; ratio 12.6:1; motion continuo;
+2 easings; nada anima layout; robusto.
+
+**Verificación:** batchcheck W14 ovf 0 d+m. robust14: REDUCED nm, 0
+ocultos, preloader ausente · PRE done n=100 · R5 ±0.17px en centro →
+±19.9 → ±36px full en bordes (signos opuestos) · STRESS record fuera,
+galería 4 sin fotos → 4 phx numerados (01)-(04), facts 3, lead ×2,
+ovf 0, 0 errores · MOBILE ovf 0 + parallax off.
+
+## 13 · v15-norris — CERRADA
+
+**Diagnóstico inicial:** deportiva con energía en paleta (volt/olive +
+Alfa Slab) pero no en movimiento: marquee `@keyframes 22s infinite`,
+stats estáticos que pedían ser el golpe, `career .row:hover` animando
+padding-left, preloader por setTimeout, hovers sin easing declarado,
+copy en HTML.
+
+**Qué cambié:**
+- R5 odómetro: los stats renderizan cada dígito como carrete vertical
+  `0-9+0` (11 celdas) en overflow hidden; scrub de la banda volt mapea
+  el valor continuo — unidades giran rápido, decenas ceden solo cuando
+  las unidades cruzan el 9 (matemática de cuentakilómetros real).
+  Reduced/no-motion: dígitos planos en valor final.
+- Marquee: keyframes muere → translateX −30% mapeado al paso del
+  viewport (scrub 1.2).
+- Career hover → translateX(16px) en `.rin`; R3 hairline-draw en filas
+  (top + bottom de la última).
+- Preloader volt determinista (gsap.delayedCall 900ms, expo.out);
+  no-motion fuera.
+- Tokens + 2 easings; alturas `--sec` estándar · stats ×0.85 · qband
+  88vh. dcard focus-within = hover; botón active scale .97.
+- Shell+loader: content.json con `<s>` para slab mixto, numeración de
+  dcards automática, stats {val,pad,label}, `.phx` en hero/qband.
+
+**Qué elevé:** los números por fin son el momento — la página acelera
+hacia su telemetría con un mecanismo que ningún otro template usa.
+
+**Paso 4:** memorable sí (odómetro); hero foto / banda volt / dark ink /
+paper alternan; ratio 7.5:1; motion continuo; 2 easings; nada anima
+layout; robusto.
+
+**Verificación:** batchcheck W15 ovf 0 d+m. robust15: REDUCED nm, 0
+ocultos, pre fuera, stat plano "27" · ODO aterriza exacto 27/06/02
+(reels -2/-7, 0/-6, 0/-2 × STEP) · MQ -30% · STRESS qband fuera, hero
+sin foto → phx, statement ×2, career 3, disc 3, stats 2, ovf 0, 0
+errores · MOBILE ovf 0.
+
+## 14 · v16-handx — CERRADA
+
+**Diagnóstico inicial:** "La Experiencia Arce" con buenos detalles serif
+(Cormorant + grain) pero ritmo constante: el momento del referente — el
+journey de 4 días — era una lista estática con bordes; FAQ animaba
+max-height (layout); un solo `.reveal` IO; sheads centrados en cadena;
+copy en HTML.
+
+**Qué cambié:**
+- R5 libro de días pinneado (desktop): la sección se pinnea `n·80%` y
+  los 4 días se convierten en paneles absolutos que crossfadean por
+  cuartos — `f=clamp(p·n−.5)`, opacidad campana `1−d/.55`, deriva
+  translateY ±18px, rail con fill scaleX continuo y contador "Day One…
+  Four" (Cormorant Infant). Mobile (<901) y reduced: lista apilada
+  original con reveals — degradación diseñada (verificado sin
+  pin-spacer en mobile).
+- FAQ: max-height muere → display-swap + fade 300ms transform;
+  accesible (tabindex, role=button, aria-expanded, Enter/Espacio).
+- Tokens (--sec, 2 easings), `html{overflow-x:clip}`, focus-visible
+  global, `.phx` en hero/method, R3 hairline en method rows.
+- Shell+loader: content.json con `<t>` = itálica tenue; journey.days
+  EXACTO 3-5; access/voices/faq/method opcionales.
+- Bug propio detectado en verificación visual: el parche de tokens
+  rompió el selector `:root{` (página quedó clara) — reparado y
+  re-verificado.
+
+**Qué elevé:** el proceso dejó de ser decorativo: el journey es ahora
+el tramo narrativo central con pin+progreso, un panel a la vez, como
+pasar las páginas de un itinerario.
+
+**Paso 4:** memorable sí (libro de días); mission centrada / journey
+pinneado asimétrico / method split — no hay dos centrados seguidos con
+el mismo tratamiento; ratio 97/18 = 5.4:1; motion continuo; 2 easings;
+nada anima layout; robusto.
+
+**Verificación:** batchcheck W16 ovf 0 d+m (×2, tras fix :root).
+robust16: REDUCED nm, 0 ocultos, 4 días apilados visibles, rail fuera ·
+BOOK Day One→Day Four crossfade (ops campana), fill scaleX .80 · FAQ
+display-swap ok · STRESS faq fuera, days 3, hero/method sin foto → 2
+phx, titular ×2, ovf 0, 0 errores · MOBILE ovf 0 sin pin.
+
+## 15 · v17-everswap — CERRADA
+
+**Diagnóstico inicial:** el grade cinematográfico como muleta: verdes
+profundos que perdonaban todo, orbes con `float 18s infinite`, keywords
+del hero rotando por `setInterval`, word-split custom, padding 130
+clónico, centrados en cadena, copy en HTML.
+
+**Qué cambié:**
+- R5 escena-luz: cada sección declara `scene:#hex` en content.json; un
+  ScrollTrigger global (0→max, scrub .6) interpola RGB por tramos entre
+  los puntos medios de sección — la página atraviesa escenas de
+  iluminación continuas. Los 3 orbes derivan mapeados al mismo progreso
+  (o1 baja 26vh, o2 cruza, o3 escala 1→1.28). El grade dejó de ser
+  estático: es el sistema, y funciona SIN fotos (probado con panel en
+  placeholder).
+- float infinito y setInterval muertos; kws = tríptico estático con R2.
+- Tokens, `--sec` con stats ×0.8, 2 easings, focus-visible, btn active.
+- R3 hairlines en journey; R4 en cells/stats/vcards.
+- Shell+loader con secciones opcionales y `.phx`.
+
+**Qué elevé:** de "quita las fotos y no queda sistema" a "la luz ES el
+sistema" — mecanismo de catálogo nuevo (interpolación de color por
+escenas), cero repetido.
+
+**Paso 4:** memorable sí (el fondo respira al recorrer); centrados
+rotos por panel full-bleed y journey asimétrico; ratio 12:1; motion
+continuo; 2 easings; solo transform+paint (backgroundColor); robusto.
+
+**Verificación:** batchcheck W17 ovf 0 d+m. robust17: REDUCED nm, 0
+ocultos, bg escena 1 fija, orbes estáticos · SCENE rgb(13,32,24)→
+(16,38,27)→vuelta a deep al final, o1 +13vh o3 ×1.14 · STRESS journey
+fuera, panel sin foto → phx (la escena sigue), cells 2, voices 3,
+título ×2, ovf 0, 0 errores · MOBILE ovf 0.
