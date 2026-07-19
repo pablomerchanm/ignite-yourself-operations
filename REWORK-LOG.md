@@ -73,3 +73,43 @@ err 0; reduced ok. Schema de contenido documentado en principles/V6-BLUEWIRE.md
 (§Robustez = contrato de largos y ratios).
 
 ---
+
+## 2 · v2 — "Monograph" — CERRADA
+
+**Diagnóstico inicial:** hero name 15rem bueno pero la RUTA Colombia→South Bay
+(el corazón narrativo) estática; 6 secciones con la misma familia de padding y
+cabecera; reveal único de 1100ms + retrato 1600ms con curva `ease` (fuera de
+rango y de sistema); 4+ easings; hover de filas con padding-left; portabilidad
+cero.
+
+**Qué cambié:**
+- EL momento: la ruta ahora es scrollytelling pinneado (+120vh, scrub 1.2) —
+  el path SVG se dibuja en continuo (strokeDashoffset), los años cuentan
+  00→27 (tabular-nums), origen entra en p<.15 y destino en p>.8. Mobile: sin
+  pin, ruta dibujada 1.1s + contador directo a 27. Reduced: estado final.
+- Catálogo cerrado: R1 rise 750ms grupo · R2 hero-stagger decreciente
+  120/80/60 · R3 rule-draw · R4 img-settle (plates) · R5 route-scrub.
+  2 easings (expo.out / quick). Retrato: solo opacity 900ms.
+- Hover filas: translateX(14px). Plates: scale 1.03 en contenedor overflow
+  hidden. Focus-visible azure.
+- Ritmo: sec estándar 128 / manifesto respiro ×1.5 (192) / stamps banda
+  ×0.5 (64) — tres alturas declaradas.
+- Team-ready: tokens completos, /v2/content.json (todo el contenido, rich
+  i/d/b/br + &nbsp;), secciones opcionales, acto claro AUTOCONTENIDO por
+  sección (quitar about/press/patients no rompe), placeholders por slot.
+
+**Qué elevé:** el único germen narrativo de la página ahora ES la página;
+consistencia de easing total; aspect-ratios en vez de alturas px (robustez).
+
+**Paso 4:** momento = ruta que se dibuja ✓ · 3 alturas de padding + variedad
+compositiva real (mapa/índice/masonry/splits) ✓ · display 64/15=4.3:1, hero
+16:1 ✓ · respira en manifesto, densifica en press-wall ✓ · motion por rol ✓ ·
+easings 2 ✓ · robustez: statement ×2, sin fotos (8 labels), rows 3, cards 3,
+articles 0 — ovf 0 err 0 ✓ · reduced ok (años=27, ruta dibujada) ✓ ·
+solo transform/opacity (dashoffset es paint SVG, no layout) ✓.
+
+**Verificación:** batchcheck W2 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok. Bug cazado en autocrítica: &nbsp; escapado por rich() — corregido
+(whitelist de entidad).
+
+---
