@@ -734,3 +734,36 @@ transform+opacity; robusto.
 ocultos, timeline oculta · R5 phead translateX 1164px, tc FILM 03,
 2 ticks, opacidades .70/.70/.83 · STRESS voices fuera, films 2 sin
 vídeos → phx, l1 ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 22 · v24-ilcapo — CERRADA
+
+**Diagnóstico inicial:** cine rojo/negro que el showreel elevó, pero el
+resto seguía centrado en serie con motion que no distinguía jerarquías:
+frames full-bleed estáticos (data-plx muerto), keyframes hin, IO
+binario, padding 110-150 casi clónico, copy en HTML.
+
+**Qué cambié:**
+- R5 el dolly: cada frame full-bleed hace un movimiento de cámara —
+  la imagen escala 1.14→1.0 y deriva ±12px mapeada a su travesía
+  completa del viewport (scrub 1.2), como un dolly-out lento. Los
+  frames se numeran solos (Frame 0N). Reduced: sin transform.
+- Ritmo: inter var(--sec) · showreel ×1.1 · prods ×0.9 · stats ×0.85 —
+  el clon de padding muerto.
+- hin fuera; easing consolidado a expo.out+quick; motor un ticker; R3
+  hairlines en rrows/prows; focus-visible rojo.
+- Shell+loader: frames 2-4 declarativos, reel SC-0N y prods SC-A..D
+  automáticos, `.phx` etiquetados.
+
+**Qué elevé:** los frames ya no son fotos con texto: son planos con
+movimiento de cámara — el motion por fin distingue jerarquías (los
+frames respiran, las listas revelan, el showreel es el clímax).
+
+**Paso 4:** memorable sí (dolly); frame/inter/reel/frame/showreel
+alternan full-bleed oscuro y texto; ratio close 110/15.5 = 7:1; motion
+continuo; 2 easings; solo transform; robusto.
+
+**Verificación:** batchcheck W24 ovf 0 d+m. robust24: REDUCED nm, 0
+ocultos, dolly sin transform · R5 scale 1.07→1.028 + translateY 7.2px
+al avanzar, Frames 01-03 auto · STRESS prods fuera, reel 4 → SC-01..04,
+frames y showreel sin fotos → 4 phx, título ×2, ovf 0, 0 errores ·
+MOBILE ovf 0.

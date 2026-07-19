@@ -34,7 +34,7 @@
 | 19 | `v21-getty` | ✅ | Narrativa museo bien escrita; visualmente estable hasta el punto de monotonía — pide un tramo pinneado. |
 | 20 | `v12-caliora` | ✅ | La más lista para clínicas y por eso exige más: buena base, le falta el 10% de acabado que separa plantilla de estudio. |
 | 21 | `v23-pacifica` | ✅ | Ya recibió profundidad (footage strip); aún hay padding clónico entre secciones medias y easing mezclado. |
-| 22 | `v24-ilcapo` | ☐ | El showreel la elevó; el resto de secciones siguen centradas en serie y el motion no distingue jerarquías. |
+| 22 | `v24-ilcapo` | ✅ | El showreel la elevó; el resto de secciones siguen centradas en serie y el motion no distingue jerarquías. |
 | 23 | `v27-genesis` | ☐ | Chapter-grid arreglado tras el bug: funcional y con carácter, pero el scrollytelling del referente quedó en insinuación. |
 | 24 | `v26-wolverine` | ☐ | Heritage timeline potente; los valores B/N piden un pin con progreso que hoy no existe. |
 | 25 | `v22-sacred` | ☐ | Poética con mapa ilustrado — de las más personales; el case-map merece scrub real en vez de reveals sueltos. |

@@ -1,0 +1,167 @@
+{
+ "_schema": "v24-ilcapo · cine de producción rojo/negro · Inter + serif. rich() admite <b><br><em> (itálica, roja en títulos). frames 2-4 (dolly automático, Frame 0N) · reel.rows 4-8 (SC-0N auto) · prods 2-6 · stats EXACTO 2-3. src vacío = placeholder etiquetado. Fetch absoluto /v24-ilcapo/content.json.",
+ "meta": {
+  "title": "Arce — Surgical Cinema · v24 Il Capo",
+  "description": "Surgical cinema: twenty-seven years of complex oral & maxillofacial cases, shot in one take. Dr. Jorge Arce, South Bay.",
+  "lang": "en"
+ },
+ "nav": {
+  "logo": "Arce",
+  "links": [
+   {
+    "t": "The Work",
+    "h": "#reel"
+   },
+   {
+    "t": "Contacts",
+    "h": "#close"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "frame",
+   "hero": true,
+   "img": {
+    "src": "/img/surgery.jpg",
+    "alt": "Dr. Arce in surgery",
+    "label": "FOTO — quirófano full-bleed"
+   },
+   "title": "Surgical <em>Cinema.</em>",
+   "sub": "Oral & maxillofacial surgery 2.0 — South Bay, California",
+   "cap": "The operating room"
+  },
+  {
+   "type": "inter",
+   "k": "The production",
+   "big": "Twenty-seven years of complex cases, shot in one take — <em>no shortcuts, no retakes, no volume medicine.</em>",
+   "cols": [
+    "Dr. Jorge Arce trained in Colombia and built his life's work in California, devoting his career entirely to <b>oral and maxillofacial surgery and dental implantology</b>. Board certified in implantology.",
+    "In 2007 he founded the <b>Dental Implants Center of South Bay</b> — Redondo Beach and Torrance — a referral destination for the difficult extractions, reconstructions, and full-arch cases other surgeons step away from."
+   ]
+  },
+  {
+   "type": "frame",
+   "img": {
+    "src": "/img/operating.jpg",
+    "alt": "",
+    "label": "FOTO — precisión full-bleed"
+   },
+   "title": "Every frame, <em>deliberate.</em>",
+   "sub": "Planning before anyone operates — implants, grafting, sequencing, restoration",
+   "cap": "Precision work"
+  },
+  {
+   "type": "reel",
+   "id": "reel",
+   "title": "The reel — <em>six disciplines.</em>",
+   "rows": [
+    {
+     "nm": "Dental Implants",
+     "ds": "From single implants to full-arch All-On-X reconstruction, planned and placed with precision."
+    },
+    {
+     "nm": "Reconstruction",
+     "ds": "Rebuilding function and structure where bone and tissue have been lost."
+    },
+    {
+     "nm": "Complex Cases",
+     "ds": "The difficult extractions and surgeries other clinicians prefer to refer elsewhere."
+    },
+    {
+     "nm": "Implant Maintenance",
+     "ds": "Long-term care that protects the work of a restored smile."
+    },
+    {
+     "nm": "Pathology",
+     "ds": "Identifying and addressing conditions affecting teeth, gums, and bone."
+    },
+    {
+     "nm": "Second Opinions",
+     "ds": "Clarity and direction for patients facing complex decisions."
+    }
+   ]
+  },
+  {
+   "type": "frame",
+   "img": {
+    "src": "/img/clinic.jpg",
+    "alt": "",
+    "label": "FOTO — el centro full-bleed"
+   },
+   "title": "The set, <em>est. 2007.</em>",
+   "sub": "Dental Implants Center of South Bay — Redondo Beach & Torrance",
+   "cap": "The Center"
+  },
+  {
+   "type": "showreel",
+   "k": "The showreel",
+   "img": {
+    "src": "/img/speaking.jpg",
+    "label": "VIDEO — showreel 21:9"
+   },
+   "dur": "SLOT VIDEO — 01:24",
+   "note": "slot de video — reel de la práctica en producción real"
+  },
+  {
+   "type": "prods",
+   "title": "Selected <em>productions.</em>",
+   "rows": [
+    {
+     "nm": "The Full-Arch Sessions",
+     "tp": "Case film · slot"
+    },
+    {
+     "nm": "Anatomy of a Rescue",
+     "tp": "Case film · slot"
+    },
+    {
+     "nm": "The Referral",
+     "tp": "Short doc · slot"
+    },
+    {
+     "nm": "Twenty-Seven Years",
+     "tp": "Portrait · slot"
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "cells": [
+    {
+     "n": "27",
+     "u": "yrs",
+     "l": "Dedicated to oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Founder — Dental Implants Center of South Bay"
+    },
+    {
+     "n": "Board",
+     "u": "cert.",
+     "l": "Certified in dental implantology"
+    }
+   ]
+  },
+  {
+   "type": "qframe",
+   "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.”",
+   "who": "Maria R. — Patient, full-arch reconstruction"
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "title": "Roll your <em>case.</em>",
+   "cta": {
+    "t": "Contacts — (310) 327-4166",
+    "h": "tel:+13103274166"
+   },
+   "fine": [
+    "© Dr. Jorge Arce, D.D.S.",
+    "Redondo Beach · Torrance, CA",
+    "By appointment"
+   ]
+  }
+ ]
+}
