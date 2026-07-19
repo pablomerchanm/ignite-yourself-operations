@@ -589,3 +589,39 @@ ocultos, ghost fijo α.06, reloj sin % · R5 ghost α.063 + translateY
 -15px mid-approach, espina scaleY .45, rail on=Story tick 26px ·
 STRESS record fuera, capítulos 3 renumerados 01/03-03/03, 4 phx,
 statement ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 18 · v20-vast — CERRADA
+
+**Diagnóstico inicial:** premium espacial con el mejor ratio del
+catálogo (ghost 383px = 25:1) pero motion uniforme: todo `.reveal` con
+la misma curva a la vez, anillo `spin 90s infinite`, dot `blink
+infinite`, hero con keyframes hin, y la mesa de disciplinas — la
+sección con más carácter — estática con "Active" impreso.
+
+**Qué cambié:**
+- R5a dial orbital: el anillo dashed rota `p_global·360°` con el
+  progreso de TODA la página (scrub .6) — un instrumento que registra
+  el viaje.
+- R5b boot sequence: las filas de sistemas arrancan en Standby al 35%
+  de opacidad; el scrub de la sección enciende fila a fila
+  (k=clamp(p·n−i)): opacidad continua, dot naranja con scaleX, idx en
+  naranja y estado cruza a Active en k=.5 — chained states con
+  transición clara. Reduced/no-JS: todo Active estático.
+- spin/blink/hin muertos. Idx A-0N y numeración automáticos.
+- Tokens, ritmo --sec diferenciado por sección, 2 easings,
+  focus-visible naranja, `.phx` (círculo de estación incluido).
+- Shell+loader: content.json con nav/hero/station/mission/systems/
+  metrics/updates(0-3)/consult/foot.
+
+**Qué elevé:** la metáfora de mission-control por fin se ejecuta: la
+página se enciende con el scroll en vez de estar ya encendida.
+
+**Paso 4:** memorable sí (boot sequence); hero foto / station bone /
+metrics grafito / consult alternan fondo y tratamiento; ratio 25:1;
+motion continuo; 2 easings; solo transform+paint; robusto.
+
+**Verificación:** batchcheck W20 ovf 0 d+m. robust20: REDUCED nm, 0
+ocultos, 6/6 Active, anillo quieto · R5 anillo 159° mid-page, estados
+AAAASS con opacidades 1,1,1,1,.3,.3 → AAAAAA al final · STRESS updates
+fuera, rows 4 → A-01..A-04, hero/station sin foto → 2 phx, título ×2,
+ovf 0, 0 errores · MOBILE ovf 0.

@@ -1,0 +1,288 @@
+{
+ "_schema": "v20-vast · mission control quirúrgico · Archivo + mono. rich() admite <b><i><br>. systems.rows EXACTO 4-8 (idx A-0N y boot-sequence automáticos) · metrics EXACTO 2-3 · updates.cards 0-3 · readout/specs 3-6 pares. src vacío = placeholder etiquetado. Fetch absoluto /v20-vast/content.json.",
+ "meta": {
+  "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery · v20 Vast",
+  "description": "Building next-generation surgical care. Dr. Jorge Arce — board-certified oral & maxillofacial surgeon, South Bay.",
+  "lang": "en"
+ },
+ "nav": {
+  "wordmark": "Arce",
+  "links": [
+   {
+    "t": "Practice",
+    "h": "#practice"
+   },
+   {
+    "t": "Disciplines",
+    "h": "#systems"
+   },
+   {
+    "t": "Guides",
+    "h": "#updates"
+   },
+   {
+    "t": "About us",
+    "h": "#mission"
+   }
+  ],
+  "cta": {
+   "t": "Book a consultation",
+   "h": "#consult"
+  }
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "id": "top",
+   "img": {
+    "src": "/img/surgery.jpg",
+    "alt": "Dr. Jorge Arce in surgery",
+    "label": "FOTO — quirófano · full-bleed"
+   },
+   "tag": {
+    "t1": "Arce — South Bay",
+    "t2": "Serving since 2007"
+   },
+   "readout": [
+    {
+     "k": "Surgeon:",
+     "v": "J. Arce, D.D.S."
+    },
+    {
+     "k": "Experience:",
+     "v": "27 yrs"
+    },
+    {
+     "k": "Board:",
+     "v": "Certified"
+    },
+    {
+     "k": "Disciplines:",
+     "v": "6"
+    },
+    {
+     "k": "Locations:",
+     "v": "2"
+    }
+   ],
+   "title": "Building next-generation surgical&nbsp;care.",
+   "learn": {
+    "t": "Explore the practice",
+    "h": "#practice"
+   }
+  },
+  {
+   "type": "station",
+   "id": "practice",
+   "ghost": "Arce",
+   "idplate": {
+    "t1": "Dr. Jorge Arce",
+    "t2": "Accepting referrals"
+   },
+   "specs": [
+    {
+     "k": "Founded:",
+     "v": "2007"
+    },
+    {
+     "k": "Focus:",
+     "v": "Oral & maxillofacial"
+    },
+    {
+     "k": "Implantology:",
+     "v": "Board certified"
+    },
+    {
+     "k": "Full-arch:",
+     "v": "All-On-X"
+    },
+    {
+     "k": "Region:",
+     "v": "South Bay, CA"
+    }
+   ],
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Dr. Jorge Arce",
+    "label": "FOTO — retrato circular"
+   },
+   "caption": "The South Bay's referral destination for the complex cases.",
+   "learn": {
+    "t": "Learn more",
+    "h": "#mission"
+   }
+  },
+  {
+   "type": "mission",
+   "id": "mission",
+   "quote": "Difficult work, done with care, <i>gives people their lives back.</i>",
+   "sub": "Dr. Arce trained in Colombia and built his life's work in California — twenty-seven years devoted entirely to oral and maxillofacial surgery, and to the procedures most surgeons refer out."
+  },
+  {
+   "type": "systems",
+   "id": "systems",
+   "lab": "Disciplines",
+   "title": "Six systems — all operational",
+   "cols": {
+    "idx": "Idx",
+    "name": "Discipline",
+    "desc": "Scope",
+    "st": "Status"
+   },
+   "rows": [
+    {
+     "name": "Dental Implants",
+     "desc": "From single implants to full-arch All-On-X reconstruction, planned and placed with precision."
+    },
+    {
+     "name": "Reconstruction",
+     "desc": "Rebuilding function and structure where bone and tissue have been lost."
+    },
+    {
+     "name": "Complex Cases",
+     "desc": "The difficult extractions and surgeries other clinicians prefer to refer elsewhere."
+    },
+    {
+     "name": "Implant Maintenance",
+     "desc": "Long-term care that protects the work of a restored smile."
+    },
+    {
+     "name": "Pathology",
+     "desc": "Identifying and addressing conditions affecting teeth, gums, and bone."
+    },
+    {
+     "name": "Second Opinions",
+     "desc": "Clarity and direction for patients facing complex decisions."
+    }
+   ]
+  },
+  {
+   "type": "metrics",
+   "cells": [
+    {
+     "lab": "Experience",
+     "n": "27",
+     "u": "yrs",
+     "d": "Dedicated to oral & maxillofacial surgery and dental implantology."
+    },
+    {
+     "lab": "Founded",
+     "n": "2007",
+     "d": "Dental Implants Center of South Bay — Redondo Beach & Torrance."
+    },
+    {
+     "lab": "Certification",
+     "n": "Board",
+     "d": "Board certified in dental implantology."
+    }
+   ],
+   "quote": {
+    "q": "\"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows.\"",
+    "who": "Dr. Lina Soto",
+    "rl": " — Periodontist"
+   }
+  },
+  {
+   "type": "updates",
+   "id": "updates",
+   "title": "Patient guides",
+   "cards": [
+    {
+     "img": {
+      "src": "/img/operating.jpg",
+      "alt": "Full-arch reconstruction",
+      "label": "FOTO — guía 01 · 16:11"
+     },
+     "meta": "Patient guide — 01",
+     "t": "What full-arch All-On-X reconstruction actually involves, step by step",
+     "h": "#consult"
+    },
+    {
+     "img": {
+      "src": "/img/clinic.jpg",
+      "alt": "Preparing for surgery",
+      "label": "FOTO — guía 02 · 16:11"
+     },
+     "meta": "Patient guide — 02",
+     "t": "How to prepare for a complex extraction — and what recovery looks like",
+     "h": "#consult"
+    },
+    {
+     "img": {
+      "src": "/img/speaking.jpg",
+      "alt": "Second opinions",
+      "label": "FOTO — guía 03 · 16:11"
+     },
+     "meta": "Patient guide — 03",
+     "t": "When a second opinion is worth it: questions to ask any surgeon",
+     "h": "#consult"
+    }
+   ]
+  },
+  {
+   "type": "consult",
+   "id": "consult",
+   "title": "Create your treatment plan.",
+   "body": "Every case starts the same way: a conversation, imaging, and an honest assessment of what the case actually needs. No volume medicine — a plan built for you.",
+   "cta": {
+    "t": "Book a consultation",
+    "h": "tel:+13103274166"
+   },
+   "meta": [
+    {
+     "k": "Front desk:",
+     "v": "(310) 327-4166"
+    },
+    {
+     "k": "Locations:",
+     "v": "Redondo Beach · Torrance, CA"
+    },
+    {
+     "k": "Hours:",
+     "v": "By appointment"
+    }
+   ]
+  },
+  {
+   "type": "foot",
+   "megamark": "Arce",
+   "status": "Accepting referrals",
+   "cols": [
+    {
+     "h": "Practice",
+     "items": [
+      "Dental Implants Center of South Bay",
+      "Dr. Jorge Arce, D.D.S."
+     ]
+    },
+    {
+     "h": "Explore",
+     "items": [
+      "The practice",
+      "Disciplines",
+      "Patient guides",
+      "Consultation"
+     ],
+     "links": [
+      "#practice",
+      "#systems",
+      "#updates",
+      "#consult"
+     ]
+    },
+    {
+     "h": "Visit",
+     "items": [
+      "Redondo Beach, California",
+      "Torrance, California",
+      "(310) 327-4166"
+     ]
+    }
+   ],
+   "legal": [
+    "© Dr. Jorge Arce, D.D.S.",
+    "Est. 2007 — South Bay, CA"
+   ]
+  }
+ ]
+}
