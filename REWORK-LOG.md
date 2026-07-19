@@ -625,3 +625,42 @@ ocultos, 6/6 Active, anillo quieto · R5 anillo 159° mid-page, estados
 AAAASS con opacidades 1,1,1,1,.3,.3 → AAAAAA al final · STRESS updates
 fuera, rows 4 → A-01..A-04, hero/station sin foto → 2 phx, título ×2,
 ovf 0, 0 errores · MOBILE ovf 0.
+
+## 19 · v21-getty — CERRADA
+
+**Diagnóstico inicial:** narrativa museo bien escrita, visualmente
+estable hasta la monotonía: todo `.reveal` idéntico, keyframes hin,
+píldora de progreso animando `height:%` (layout), stack con data-depth
+muerto, sin tramo pinneado, copy en HTML.
+
+**Qué cambié:**
+- R5a revelado de placas: cada imagen `[data-dev]` (placas del stack,
+  figs del ensayo, coll) entra sobreexpuesta y desenfocada y se revela
+  con el scrub — `grayscale(1−.85k) brightness(1.35−.35k)
+  blur((1−k)·6px)` — como papel fotográfico. Mecanismo de catálogo
+  nuevo (filter-scrub). Mobile blur máx 4px; reduced: reveladas fijas.
+- R5b la sala del nombre: `.giant` pinneado `+=55%` con el name
+  escalando .96→1 y el sub apareciendo — el tramo pinneado que la
+  página pedía. Conflicto R2/pin evitado sacando name/sub del grupo
+  stagger (aprendizaje de v14 aplicado).
+- Píldora de progreso: height% → scaleY transform (fill scaleY=p
+  global, scrub .6); oculta en no-motion.
+- hin muerto; tokens; ritmo --sec con dark ×1.2; R3 hairlines en miles.
+- Shell+loader: essay como `flow` tipado (párrafos y figs intercalados
+  libremente — el equipo compone el ensayo desde JSON), tombstones
+  conservados en placeholders.
+
+**Qué elevé:** el museo por fin revela sus placas — la monotonía se
+rompió con un mecanismo propio de la identidad (fotografía) y el pin
+que pedía el diagnóstico de cola.
+
+**Paso 4:** memorable sí (revelado); plate centrado / essay asimétrico
+figs alternadas / dark invertido / coll 2col — varía; ratio 13:1;
+motion continuo; 2 easings; height% eliminado, filter es paint;
+robusto.
+
+**Verificación:** batchcheck W21 ovf 0 d+m. robust21: REDUCED nm, 0
+ocultos, filter fijo revelado, píldora oculta · DEV grayscale .62 +
+blur 3.3px → revelada 0px · GIANT scale(1) sub 1 con 1 pin-spacer,
+fill scaleY .47 · STRESS voices fuera, stack 2 sin fotos, miles 2,
+3 phx, título ×2, ovf 0, 0 errores · MOBILE ovf 0 sin pin.

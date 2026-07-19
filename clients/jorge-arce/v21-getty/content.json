@@ -1,0 +1,171 @@
+{
+ "_schema": "v21-getty · ensayo museo B/N · Fraunces + Inter. rich() admite <b><br><em> (itálica serif). essay.flow = array tipado: {p:'lede'|'para',t:...} o {fig:{img,side:'left'|'right',t1,t2}} intercalados. stack EXACTO 2-3 · miles EXACTO 2-4 · list 4-8 · voices 2-4. src vacío = placeholder con tombstone. Fetch absoluto /v21-getty/content.json.",
+ "meta": {
+  "title": "Tracing a Surgeon — Dr. Jorge Arce · v21 Getty",
+  "description": "A provenance essay: how the South Bay's difficult cases found their surgeon. Dr. Jorge Arce, D.D.S.",
+  "lang": "en"
+ },
+ "logo": "Arce",
+ "sections": [
+  {
+   "type": "hero",
+   "cap": "Twenty-Seven Years, Two Countries, One Craft",
+   "title": "Here's how the South Bay's <em>difficult cases</em> found their surgeon — and why the story is worth tracing.",
+   "dn": "Scroll to begin the essay ↓"
+  },
+  {
+   "type": "plate",
+   "title": "<em>Tracing</em> a Surgeon<r>— <em>the work of</em> Dr. Arce</r>",
+   "stack": [
+    {
+     "src": "/img/clinic.jpg",
+     "alt": "Dr. Arce in his clinic",
+     "label": "PLACA 1 — clínica 4:5"
+    },
+    {
+     "src": "/img/portrait.jpg",
+     "alt": "Dr. Jorge Arce",
+     "label": "PLACA 2 — retrato 4:5"
+    },
+    {
+     "src": "/img/operating.jpg",
+     "alt": "Dr. Arce operating",
+     "label": "PLACA 3 — quirófano 4:5"
+    }
+   ]
+  },
+  {
+   "type": "essay",
+   "flow": [
+    {
+     "p": "lede",
+     "t": "Every restored smile has a provenance. Trace it back far enough and you arrive at a household in <em>Colombia</em>, where careful work was treated as a form of respect — long before Jorge Arce ever held a scalpel."
+    },
+    {
+     "p": "para",
+     "t": "He trained as a dentist in Colombia and found the discipline that would hold his attention for a lifetime: surgery of the mouth, face, and jaw. Medicine was not a career choice so much as a calling — a way to use his hands to give something back."
+    },
+    {
+     "fig": {
+      "img": {
+       "src": "/img/surgery.jpg",
+       "alt": "The surgeon at work",
+       "label": "FOTO — quirófano 4:3"
+      },
+      "side": "right",
+      "ratio": "r43",
+      "t1": "The Surgeon at Work",
+      "t2": "Operating room, South Bay, California. Collection of the practice."
+     }
+    },
+    {
+     "p": "lede",
+     "t": "He moved to California to specialize, <em>and never left.</em> The cases that followed him were the ones other clinicians preferred to send elsewhere."
+    },
+    {
+     "p": "para",
+     "t": "Complex extractions. Reconstruction where bone and tissue have been lost. Full-arch implant restorations for patients who had been told, sometimes more than once, that nothing could be done. Board certified in implantology, he made the difficult cases his ordinary day."
+    }
+   ]
+  },
+  {
+   "type": "giant",
+   "cap": "The subject of this essay",
+   "name": "Jorge <em>Arce</em>",
+   "sub": "D.D.S. — Oral & Maxillofacial Surgeon · b. Colombia, works in California"
+  },
+  {
+   "type": "dark",
+   "k": "Provenance — three dates that hold the story",
+   "miles": [
+    {
+     "yr": "1999",
+     "p": "The craft begins. A young surgeon devotes himself entirely to <em>oral and maxillofacial surgery</em> — and to nothing else, for the next twenty-seven years.",
+     "sm": "One discipline, refined across two countries. The specialization would become the throughline of everything that followed."
+    },
+    {
+     "yr": "2007",
+     "p": "The Dental Implants Center of South Bay opens its doors, guided by one conviction: <em>difficult work, done with care, gives people their lives back.</em>",
+     "sm": "Redondo Beach and Torrance, California. Not a volume clinic — a referral destination for the cases that need a surgeon willing to slow down."
+    },
+    {
+     "yr": "To<em>day</em>",
+     "p": "A father, a mentor to younger surgeons, and a quiet student of his own craft — <em>still reading, still refining,</em> still treating every patient as a person first.",
+     "sm": "The record: twenty-seven years, board certification in implantology, six disciplines, two locations."
+    }
+   ]
+  },
+  {
+   "type": "coll",
+   "lede": "The work itself reads like a catalogue — six disciplines, each one held to the <em>same standard.</em>",
+   "list": [
+    {
+     "t1": "Dental Implants",
+     "t2": "Single implants to full-arch All-On-X"
+    },
+    {
+     "t1": "Reconstruction",
+     "t2": "Rebuilding function where bone and tissue are lost"
+    },
+    {
+     "t1": "Complex Cases",
+     "t2": "The extractions and surgeries others refer out"
+    },
+    {
+     "t1": "Implant Maintenance",
+     "t2": "Long-term care for restored smiles"
+    },
+    {
+     "t1": "Pathology",
+     "t2": "Conditions of teeth, gums, and bone"
+    },
+    {
+     "t1": "Second Opinions",
+     "t2": "Clarity for patients facing hard decisions"
+    }
+   ],
+   "fig": {
+    "img": {
+     "src": "/img/hero.jpg",
+     "alt": "The Center",
+     "label": "FOTO — el centro 4:3"
+    },
+    "t1": "The Center",
+    "t2": "Dental Implants Center of South Bay, est. 2007. Redondo Beach & Torrance, California."
+   }
+  },
+  {
+   "type": "voices",
+   "quotes": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.”",
+     "who": "Maria R.",
+     "rl": " — Patient, full-arch reconstruction"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. He treated my father like family.”",
+     "who": "Anabella C.",
+     "rl": " — Daughter of patient"
+    },
+    {
+     "q": "“When a case is beyond what I can handle, Jorge is the first call I make.”",
+     "who": "Dr. David Kim, D.D.S.",
+     "rl": " — Referring General Dentist, Torrance"
+    }
+   ]
+  },
+  {
+   "type": "close",
+   "cap": "The essay ends. The work continues.",
+   "title": "Add your case to <em>the record.</em>",
+   "cta": {
+    "t": "Request a consultation — (310) 327-4166",
+    "h": "tel:+13103274166"
+   },
+   "fine": [
+    "Tracing a Surgeon — a provenance essay",
+    "© Dr. Jorge Arce, D.D.S. · Redondo Beach & Torrance, CA"
+   ]
+  }
+ ]
+}
