@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Jorge Arce · Sacred Work</title>
+<meta name="description" content="Frequently asked questions about consultations, implants, full-arch reconstruction, and referrals at the practice of Dr. Jorge Arce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Figtree:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#16281B; --deep:#101E14; --cream:#F5F0E7; --sand:#E5D3B2; --rust:#B4532D; --inkc:#2A3A2D;
+  --serif:'Playfair Display',Georgia,serif; --mono:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--inkc);font-family:'Figtree',system-ui,sans-serif;
+  font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--sand);color:var(--forest)}
+.wrap{max-width:980px;margin:0 auto;padding:0 40px}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;
+  align-items:center;padding:26px 40px;color:var(--inkc)}
+.nav .lg{font-family:var(--serif);font-size:19px;letter-spacing:.04em;line-height:1.1}
+.nav .lg small{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;opacity:.7;margin-top:3px}
+.nav .menu{font-family:var(--mono);font-size:13px;cursor:pointer;border-bottom:1px solid rgba(42,58,45,.5);padding-bottom:2px}
+.ovl{position:fixed;inset:0;z-index:70;background:var(--deep);display:flex;align-items:center;
+  justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.ovl.open{opacity:1;visibility:visible}
+.ovl .links{text-align:center}
+.ovl .links a{display:block;font-family:var(--serif);font-size:clamp(30px,4.6vw,52px);padding:12px 0;color:var(--cream);transition:color .3s}
+.ovl .links a:hover{color:var(--sand)}
+.ovl .links .sm{font-family:var(--mono);font-size:12px;color:rgba(245,240,231,.5);margin-top:34px}
+.ovl .x{position:absolute;top:26px;right:40px;font-family:var(--mono);font-size:13px;cursor:pointer;color:var(--cream);border-bottom:1px solid rgba(245,240,231,.5);padding-bottom:2px}
+
+.head{padding:190px 0 90px;text-align:center}
+.head h1{font-weight:400;font-size:clamp(30px,4vw,46px);letter-spacing:-.01em}
+
+.list{padding-bottom:120px}
+details{border-top:1px solid rgba(42,58,45,.18)}
+details:last-of-type{border-bottom:1px solid rgba(42,58,45,.18)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  gap:20px;padding:26px 4px;font-size:clamp(17px,2vw,21px);font-weight:400;transition:color .3s}
+summary::-webkit-details-marker{display:none}
+summary .ar{flex:0 0 auto;font-family:var(--mono);color:var(--rust);transition:transform .35s}
+details[open] summary .ar{transform:rotate(45deg)}
+summary:hover{color:var(--rust)}
+details .a{padding:0 4px 30px;max-width:720px;font-size:15.5px;line-height:1.75;color:#4A564C}
+details .a strong{color:var(--inkc);font-weight:500}
+
+.cta{background:var(--deep);color:var(--cream);padding:110px 0;text-align:center}
+.cta p{font-family:var(--serif);font-size:clamp(21px,2.6vw,30px);font-style:italic;max-width:700px;margin:0 auto;line-height:1.5}
+.cta .pill{display:inline-block;margin-top:38px;font-family:var(--mono);font-size:12.5px;
+  border:1.5px solid var(--sand);color:var(--sand);border-radius:99px;padding:13px 28px;transition:background .3s,color .3s}
+.cta .pill:hover{background:var(--sand);color:var(--forest)}
+
+.foot{background:var(--cream);color:var(--inkc);padding:80px 0 60px}
+.foot .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:44px}
+.foot .mission{font-size:16px;line-height:1.6;color:#4A564C;max-width:280px}
+.foot .h{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#8B8272;margin-bottom:18px}
+.foot a,.foot .col span{display:block;font-size:14px;color:#4A564C;line-height:2.2}
+.foot .col a:hover{color:var(--rust)}
+.foot .lgf{margin-top:70px;font-family:var(--serif);font-size:22px}
+.foot .lgf small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:#8B8272;margin-top:4px}
+
+@media (max-width:900px){
+  .wrap{padding:0 22px}
+  .nav{padding:20px 22px}
+  .foot .grid{grid-template-columns:1fr 1fr;gap:34px}
+  .head{padding:150px 0 60px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="lg" href="index.html">Jorge Arce<small>restore function · restore lives</small></a>
+  <span class="menu" id="menuBtn">menu</span>
+</nav>
+<div class="ovl" id="ovl">
+  <span class="x" id="menuX">close</span>
+  <div class="links">
+    <a href="index.html">The Craft Speaks</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="tel:+13103274166">Contact</a>
+    <div class="sm">(310) 327-4166 · redondo beach &amp; torrance, ca</div>
+  </div>
+</div>
+
+<header class="head"><h1>Frequently Asked Questions</h1></header>
+
+<section class="list"><div class="wrap">
+  <details>
+    <summary>What is the practice in a nutshell? <span class="ar">↗</span></summary>
+    <div class="a">The Dental Implants Center of South Bay is the practice of Dr. Jorge Arce — a board-certified oral &amp; maxillofacial surgeon who has spent <strong>twenty-seven years</strong> on the complex extractions, reconstructions, and full-arch implant cases other surgeons refer out. Founded in 2007, with offices in Redondo Beach and Torrance, California.</div>
+  </details>
+  <details>
+    <summary>What happens at a first consultation? <span class="ar">↗</span></summary>
+    <div class="a">A long, unhurried conversation: your history, your imaging, your questions — and an honest read of what is possible, in plain language. <strong>No sales script, no pressure.</strong> You leave understanding your options, whether or not you choose to treat with us.</div>
+  </details>
+  <details>
+    <summary>Am I a candidate for dental implants? <span class="ar">↗</span></summary>
+    <div class="a">Most people are — including many who were told they were not. Bone loss, failed prior work, and long-standing missing teeth complicate a case; they rarely close it. Candidacy is assessed honestly from imaging and history, never assumed.</div>
+  </details>
+  <details>
+    <summary>What is full-arch (All-On-X) reconstruction? <span class="ar">↗</span></summary>
+    <div class="a">Replacing a full arch of failing or missing teeth with a fixed bridge anchored on implants. It restores <strong>function first</strong> — eating, speaking, confidence — and is planned end to end: implants, grafting where needed, sequencing, and the final restoration.</div>
+  </details>
+  <details>
+    <summary>Who is behind the practice? <span class="ar">↗</span></summary>
+    <div class="a">Dr. Jorge Arce, D.D.S. — trained in Colombia, specialized in California, board certified in dental implantology. Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft.</div>
+  </details>
+  <details>
+    <summary>Why do difficult cases end up here? <span class="ar">↗</span></summary>
+    <div class="a">Because the practice was built for them. The conviction since 2007: <strong>difficult work, done with care, gives people their lives back.</strong> Referring dentists send the cases that need a surgeon willing to slow down.</div>
+  </details>
+  <details>
+    <summary>Do you accept referrals from other dentists? <span class="ar">↗</span></summary>
+    <div class="a">Yes — referrals are the backbone of the practice. Every referred patient returns to their general dentist with a full surgical report, every time.</div>
+  </details>
+  <details>
+    <summary>How is a treatment plan built? <span class="ar">↗</span></summary>
+    <div class="a">The whole case is mapped before anyone operates — implants, grafting, sequencing, restoration, maintenance. The time the case actually needs, not the time the schedule allows.</div>
+  </details>
+  <details>
+    <summary>What about long-term maintenance? <span class="ar">↗</span></summary>
+    <div class="a">Restored work is protected work. Implant maintenance visits guard the investment — and the person it belongs to — for the long run.</div>
+  </details>
+  <details>
+    <summary>Where are you located, and how do I reach the team? <span class="ar">↗</span></summary>
+    <div class="a">Redondo Beach and Torrance, California — serving the South Bay. Call <strong>(310) 327-4166</strong>. Visits are by appointment.</div>
+  </details>
+</div></section>
+
+<section class="cta">
+  <p>"Still have a question? Ask it the old-fashioned way — we answer in plain language."</p>
+  <a class="pill" href="tel:+13103274166">Contact the team</a>
+</section>
+
+<footer class="foot"><div class="wrap">
+  <div class="grid">
+    <div class="mission">Restoring the most precious function a person has — together with the people who trust us.</div>
+    <div class="col"><div class="h">Menu</div>
+      <a href="index.html">The Craft Speaks</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+    </div>
+    <div class="col"><div class="h">Support</div>
+      <a href="tel:+13103274166">Contact</a><a href="faq.html">FAQ</a><span>By appointment</span>
+    </div>
+    <div class="col"><div class="h">Get in touch</div>
+      <span>Redondo Beach, California</span><span>Torrance, California</span>
+      <a href="tel:+13103274166">(310) 327-4166</a>
+    </div>
+  </div>
+  <div class="lgf">Jorge Arce<small>restore function · restore lives — © dr. jorge arce, d.d.s.</small></div>
+</div></footer>
+
+<script>
+(function(){
+  var ovl=document.getElementById('ovl');
+  document.getElementById('menuBtn').addEventListener('click',function(){ovl.classList.add('open')});
+  document.getElementById('menuX').addEventListener('click',function(){ovl.classList.remove('open')});
+  ovl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ovl.classList.remove('open')})});
+})();
+</script>
+</body>
+</html>

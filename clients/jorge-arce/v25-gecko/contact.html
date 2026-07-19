@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Dr. Jorge Arce</title>
+<meta name="description" content="Have questions or ready to move forward? Call (310) 327-4166 or send the form — honest answers within 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4F2E9; --peri:#D5DBF2; --peri2:#C7CEF0; --ink:#111111; --dim:#6E6C64; --brown:#8B7355;
+  --serif:'Instrument Serif',Georgia,serif; --script:'Caveat',cursive; --r:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--peri);color:var(--ink)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 40px}
+.mx{font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.mx em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.005em;font-size:1.06em}
+.hl{background:var(--peri);padding:0 8px;border-radius:8px}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,242,233,.92);backdrop-filter:blur(10px);
+  display:flex;justify-content:space-between;align-items:center;padding:18px 40px}
+.nav .lg{font-weight:700;font-size:19px;letter-spacing:-.03em}
+.nav .links{display:flex;gap:24px;font-size:14.5px;font-weight:500}
+.nav .links a{position:relative;padding-bottom:3px}
+.nav .links a.on{border-bottom:1.5px solid var(--ink)}
+.nav .links a:not(.on)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--ink);transition:right .3s}
+.nav .links a:not(.on):hover::after{right:0}
+.ovalbtn{display:inline-block;background:var(--peri);color:var(--ink);font-weight:600;font-size:15px;
+  padding:18px 40px;border-radius:50%/60%;transform:rotate(-2deg);transition:transform .3s,box-shadow .3s}
+.ovalbtn:hover{transform:rotate(0) scale(1.04);box-shadow:0 16px 36px rgba(17,17,17,.18)}
+.ovalbtn.dark{background:var(--ink);color:var(--cream)}
+.stamp{width:92px;height:92px;position:relative;flex:0 0 auto}
+.stamp svg{width:100%;height:100%;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stamp .cc{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:30px;font-style:italic}
+.pressbar{background:var(--peri);padding:34px 0}
+.pressbar .row{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;align-items:center}
+.pressbar .b{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#3A3D4E}
+.pressbar .b.ser{font-family:var(--serif);font-weight:400;letter-spacing:.06em;font-size:19px;text-transform:none}
+.foot{padding:0}
+.newsl{background:var(--cream);text-align:center;padding:110px 0}
+.newsl h3{font-weight:700;letter-spacing:-.03em;font-size:clamp(24px,3vw,38px)}
+.newsl h3 em{font-family:var(--serif);font-style:italic;font-weight:400}
+.newsl form{margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.newsl input{border:1px solid rgba(17,17,17,.3);background:#FCFBF6;border-radius:99px;
+  padding:14px 22px;font-family:'Archivo';font-size:14px;width:min(320px,80vw);outline:none}
+.newsl button{border:0;cursor:pointer;font-family:'Archivo'}
+.newsl .priv{margin-top:16px;font-size:11.5px;color:var(--dim)}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:24px 40px 28px;
+  font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
+  border-top:1px solid rgba(17,17,17,.1)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
+@media (max-width:920px){
+  .wrap{padding:0 22px}
+  .nav{padding:14px 22px}
+  .nav .links{display:none}
+}
+
+.chero{display:grid;grid-template-columns:1fr 1.2fr;gap:0;align-items:center}
+.chero .ph{height:100%;min-height:420px}
+.chero .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15)}
+.chero .tx{padding:70px 60px}
+.chero h1{font-size:clamp(32px,4.4vw,58px)}
+.chero p{margin-top:22px;font-size:15px;line-height:1.75;color:#3C3A33;max-width:460px}
+.formsec{padding:100px 0 120px}
+.formsec h2{font-size:clamp(24px,3vw,40px);text-align:center;max-width:640px;margin:0 auto 60px}
+.formx{max-width:640px;margin:0 auto}
+.formx label{display:block;font-size:13px;font-weight:600;margin:26px 0 8px}
+.formx label small{font-weight:500;color:var(--dim)}
+.formx input[type=text],.formx input[type=email],.formx select,.formx textarea{
+  width:100%;border:1px solid rgba(17,17,17,.35);background:#FCFBF6;border-radius:10px;
+  padding:13px 16px;font-family:'Archivo';font-size:14.5px;outline:none;transition:border-color .3s}
+.formx input:focus,.formx textarea:focus{border-color:var(--ink)}
+.formx .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.formx .chk{display:flex;align-items:center;gap:10px;font-size:14px;margin:10px 0;font-weight:500}
+.formx .chk input{width:16px;height:16px;accent-color:var(--ink)}
+.formx textarea{min-height:130px;resize:vertical}
+.formx .sub{margin-top:34px}
+@media (max-width:920px){.chero{grid-template-columns:1fr}.chero .tx{padding:44px 22px}.formx .row2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="lg" href="index.html">Dr. Jorge Arce</a><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="stories.html">Stories</a><a href="contact.html" class="on">Contact</a><a href="blog.html">Journal</a></div></nav>
+
+<header class="chero">
+  <div class="ph reveal"><img src="../img/portrait.jpg" alt="Dr. Jorge Arce"></div>
+  <div class="tx reveal">
+    <div class="lbl">Contact us</div>
+    <h1 class="mx">Have <em>Questions</em> or Ready to Move <em>Forward?</em></h1>
+    <p>Call <b>(310) 327-4166</b> or use the form — either way you will get an honest read of your case, in plain language. Offices in Redondo Beach and Torrance, by appointment.</p>
+  </div>
+</header>
+<div class="pressbar"><div class="row">
+  <span class="b">Board Certified</span><span class="b ser">Est. 2007</span>
+  <span class="b">27 Years</span><span class="b ser">South Bay</span><span class="b">By Referral</span>
+</div></div>
+<section class="formsec"><div class="wrap">
+  <h2 class="mx reveal">Fill Out the <em>Form</em> and We'll Get Back Within 48 Hours</h2>
+  <form class="formx reveal" onsubmit="return false">
+    <div class="row2">
+      <div><label>First Name <small>(required)</small></label><input type="text" required></div>
+      <div><label>Last Name <small>(required)</small></label><input type="text" required></div>
+    </div>
+    <label>Email <small>(required)</small></label><input type="email" required>
+    <div class="chk"><input type="checkbox" id="n1"><label for="n1" style="margin:0">Send me the free first-consultation guide</label></div>
+    <label>What are you interested in?</label>
+    <div class="chk"><input type="checkbox" id="o1"><label for="o1" style="margin:0">Dental implants / All-On-X</label></div>
+    <div class="chk"><input type="checkbox" id="o2"><label for="o2" style="margin:0">A complex case or second opinion</label></div>
+    <div class="chk"><input type="checkbox" id="o3"><label for="o3" style="margin:0">I'm a dentist referring a patient</label></div>
+    <label>How did you hear about us?</label>
+    <select><option>Select an option</option><option>My dentist referred me</option><option>A friend or family member</option><option>Online search</option><option>Other</option></select>
+    <label>Message <small>(required)</small></label><textarea required placeholder="Tell us briefly about your case…"></textarea>
+    <div class="sub"><button class="ovalbtn dark" type="submit">Submit</button></div>
+  </form>
+</div></section>
+
+<section class="newsl"><div class="wrap reveal">
+  <h3>Get the <em>free guide:</em> what to expect from your first consultation</h3>
+  <form onsubmit="return false"><input type="email" placeholder="Email Address" aria-label="Email">
+  <button class="ovalbtn dark" type="submit">Send it over</button></form>
+  <div class="priv">We respect your privacy. No spam — just honest answers.</div>
+</div></section>
+<div class="legal"><span>© Dr. Jorge Arce, D.D.S.</span><span>(310) 327-4166</span><span>Redondo Beach · Torrance, CA</span></div>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
