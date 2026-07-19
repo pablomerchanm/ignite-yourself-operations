@@ -1,0 +1,118 @@
+/* ============================================================================
+   tokens.css — ÚNICA superficie de branding del template.
+   Cambiar la marca de un cliente = editar SOLO este archivo.
+   Ningún otro CSS declara colores, fuentes, tamaños, duraciones ni radios.
+   Basado en SYSTEM-AUDIT.md (valores medidos de la referencia).
+   ========================================================================== */
+
+:root {
+
+  /* --------------------------------------------------------------------------
+     1 · TIPOGRAFÍA — 3 voces (deliberadamente una menos que la referencia:
+     sobriedad médica). Ver justificación en README.md.
+     ------------------------------------------------------------------------ */
+
+  /* Voz 1 — serif editorial (display, títulos, prosa destacada) */
+  --font-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  /* Voz 2 — grotesca clínica (body, UI, botones, énfasis) */
+  --font-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  /* Voz 3 — mono de sistema (eyebrows, micro-labels, datos) */
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+
+  /* Escala tipográfica.
+     Auditoría: ratio ≈1.35–1.55 entre niveles + SALTO deliberado de ~6×
+     body→wordmark ("conversacional + monumental"). */
+  --text-micro:   0.6875rem;                        /* 11px — micro-labels mono */
+  --text-eyebrow: 0.75rem;                          /* 12px — eyebrows uppercase */
+  --text-body-s:  0.875rem;                         /* 14px — captions, meta */
+  --text-body:    1.0625rem;                        /* 17px — prosa base */
+  --text-sub:     clamp(1.25rem, 1.6vw, 1.4375rem); /* 20–23px — subheads */
+  --text-head:    clamp(1.75rem, 2.6vw, 2.125rem);  /* 28–34px — títulos de card */
+  --text-display: clamp(2.5rem, 4.2vw, 3.375rem);   /* 40–54px — títulos de sección */
+  --text-xl:      clamp(3.5rem, 9.5vw, 8.5rem);     /* 56–136px — wordmark del hero */
+
+  /* Line-height por rol (medido: 1.2 títulos · 1.8 body) */
+  --leading-tight: 1.08;   /* wordmark / display XL */
+  --leading-head:  1.2;    /* títulos */
+  --leading-sub:   1.4;    /* subheads */
+  --leading-body:  1.8;    /* prosa — la voz relajada de la referencia */
+
+  /* Escalera de tracking para uppercase (medido: más pequeño = más tracking) */
+  --track-head:    0.05em;
+  --track-button:  0.1em;
+  --track-eyebrow: 0.16em;
+  --track-micro:   0.22em;
+
+  /* Pesos */
+  --weight-display: 300;   /* serif light: elegancia sin gritar */
+  --weight-serif:   400;
+  --weight-body:    400;
+  --weight-medium:  500;
+  --weight-bold:    640;   /* Archivo variable; cae a 600 si no */
+
+  /* --------------------------------------------------------------------------
+     2 · COLOR — roles semánticos, no receta.
+     Sistema de la auditoría: SIN color de acento; rotación seccional full-bleed
+     de 3 tonos de marca + oscuro + papel. El CTA de una superficie usa la
+     superficie "vecina" (--cta-* se resuelven por superficie en template.css).
+     Paleta default: autoridad médica — salvia, piedra azul, arcilla cálida.
+     ------------------------------------------------------------------------ */
+
+  --ink:       #22241f;   /* tinta: texto sobre claros */
+  --paper:     #f4f1ea;   /* papel cálido: superficie de lectura */
+  --white:     #fdfcf9;   /* blanco roto: marcos de foto, cards */
+
+  --surface-a: #ccd5c4;   /* salvia — calma clínica */
+  --surface-b: #a8b8cd;   /* piedra azul — confianza */
+  --surface-c: #d9a184;   /* arcilla — calidez humana */
+  --dark:      #26312b;   /* verde-carbón — capítulos de contraste */
+
+  --on-dark:   #f0ede4;   /* texto sobre --dark */
+
+  /* Derivados para placeholders de foto (bloque sólido + label) */
+  --ph-tone-1: #b9c2ae;
+  --ph-tone-2: #93a5b9;
+  --ph-tone-3: #c48f70;
+
+  /* --------------------------------------------------------------------------
+     3 · ESPACIADO — base 8px. La “escala” real de la referencia es la
+     distribución de alturas de sección (mediana ≈0.9 viewport).
+     ------------------------------------------------------------------------ */
+
+  --space-1: 0.5rem;    /*  8px */
+  --space-2: 1rem;      /* 16px */
+  --space-3: 1.5rem;    /* 24px */
+  --space-4: 2rem;      /* 32px */
+  --space-5: 3rem;      /* 48px */
+  --space-6: 4.5rem;    /* 72px */
+  --space-7: 6rem;      /* 96px */
+
+  /* Padding vertical de sección + variante respiro (≈40%, medido) */
+  --space-section:  clamp(96px, 14vh, 160px);
+  --space-breather: clamp(40px, 6vh, 64px);
+
+  /* Anchos */
+  --width-content: 1200px;   /* lienzo de la referencia */
+  --width-prose:   68ch;
+  --gutter:        40px;     /* 22px en mobile, ver template.css */
+
+  /* --------------------------------------------------------------------------
+     4 · MOTION — presupuesto mínimo y uniforme (hallazgo #1 de la auditoría:
+     el sitio vive por color y composición; el motion susurra).
+     ------------------------------------------------------------------------ */
+
+  --dur-reveal:  0.56s;                          /* entrada única, ≤600ms */
+  --dur-hover:   0.24s;                          /* hovers 200–300ms */
+  --ease-reveal: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-hover:  ease-in-out;
+  --rise-reveal: 8px;                            /* rise máximo permitido */
+  --stagger-hero: 0.12s;                         /* stagger SOLO en hero */
+
+  /* --------------------------------------------------------------------------
+     5 · RADIOS — esquinas rectas, botones pill (medido)
+     ------------------------------------------------------------------------ */
+
+  --radius-none: 0;
+  --radius-soft: 2px;      /* cards: casi recto */
+  --radius-pill: 999px;    /* botones y nav flotante */
+}
