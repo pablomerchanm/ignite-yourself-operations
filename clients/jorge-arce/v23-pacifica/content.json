@@ -1,0 +1,203 @@
+{
+ "_schema": "v23-pacifica · case-study fílmico · Kumbh Sans + serif itálica (<s>…</s>). Secciones opcionales por array. films.slots 2-5 (timeline reparte segmentos) · meta.cells 3-5 · results EXACTO 2-3 · voices 2-4 · credits.rows 3-6 · blocks con duo opcional. src vacío = placeholder etiquetado. Fetch absoluto /v23-pacifica/content.json.",
+ "meta": {
+  "title": "Arce — A Case Study in Surgical Care · v23 Pacifica",
+  "description": "The case study: twenty-seven years of oral & maxillofacial surgery in the South Bay. Dr. Jorge Arce, D.D.S.",
+  "lang": "en"
+ },
+ "nav": {
+  "logo": "arce",
+  "menu": "Menu"
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "l1": "Jorge",
+   "l3": "Arce",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Dr. Jorge Arce",
+    "label": "FOTO — retrato 1:1"
+   },
+   "label": "The Case Study",
+   "foot": [
+    "Oral & Maxillofacial Surgery",
+    "South Bay, California",
+    "Est. 2007"
+   ]
+  },
+  {
+   "type": "caseMeta",
+   "cells": [
+    {
+     "k": "Subject",
+     "v": "Dr. Jorge Arce, D.D.S. — board-certified implantologist"
+    },
+    {
+     "k": "Field",
+     "v": "Oral & maxillofacial surgery, complex reconstruction"
+    },
+    {
+     "k": "Practice",
+     "v": "Dental Implants Center of South Bay — Redondo Beach & Torrance"
+    },
+    {
+     "k": "Running time",
+     "v": "Twenty-seven years, ongoing"
+    }
+   ]
+  },
+  {
+   "type": "full",
+   "img": {
+    "src": "/img/surgery.jpg",
+    "alt": "",
+    "label": "FOTO — plano general 21:10"
+   },
+   "cap": "Frame 01 — the operating room, where the case actually gets decided."
+  },
+  {
+   "type": "block",
+   "lbl": "The brief",
+   "title": "Take the cases <s>everyone else</s> refers out.",
+   "paras": [
+    "Complex extractions. Reconstruction where bone and tissue have been lost. Full-arch implant restorations for patients told — sometimes more than once — that nothing could be done.",
+    "The brief never changes: <b>difficult work, done with care, gives people their lives back.</b>"
+   ]
+  },
+  {
+   "type": "block",
+   "lbl": "The approach",
+   "title": "Precision first. <s>Patience</s> always.",
+   "paras": [
+    "Trained in Colombia, specialized in California. Every case is mapped before anyone operates — implants, grafting, sequencing, restoration. The time the case actually needs, not the time the schedule allows."
+   ],
+   "duo": [
+    {
+     "img": {
+      "src": "/img/operating.jpg",
+      "label": "FOTO — precisión 4:3"
+     },
+     "cap": "Frame 02 — precision work."
+    },
+    {
+     "img": {
+      "src": "/img/clinic.jpg",
+      "label": "FOTO — el centro 4:3"
+     },
+     "cap": "Frame 03 — the Center, est. 2007."
+    }
+   ]
+  },
+  {
+   "type": "films",
+   "title": "The <s>footage.</s>",
+   "lbl": "slots de video — el caso en movimiento",
+   "slots": [
+    {
+     "img": {
+      "src": "/img/surgery.jpg",
+      "label": "VIDEO — quirófano 21:9"
+     },
+     "cap": "Film 01 — The operating room, real time",
+     "wide": true
+    },
+    {
+     "img": {
+      "src": "/img/operating.jpg",
+      "label": "VIDEO — planificación"
+     },
+     "cap": "Film 02 — Planning session"
+    },
+    {
+     "img": {
+      "src": "/img/speaking.jpg",
+      "label": "VIDEO — consulta"
+     },
+     "cap": "Film 03 — The consultation"
+    }
+   ]
+  },
+  {
+   "type": "results",
+   "cells": [
+    {
+     "n": "27",
+     "u": "yrs",
+     "l": "Devoted entirely to oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Dental Implants Center of South Bay founded"
+    },
+    {
+     "n": "Board",
+     "u": "cert.",
+     "l": "Certified in dental implantology"
+    }
+   ]
+  },
+  {
+   "type": "voices",
+   "cards": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did.”",
+     "who": "Maria R. — Patient"
+    },
+    {
+     "q": "“When a case is beyond what I can handle, Jorge is the first call I make.”",
+     "who": "Dr. David Kim — Referring Dentist"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. He treated my father like family.”",
+     "who": "Anabella C. — Daughter of patient"
+    }
+   ]
+  },
+  {
+   "type": "credits",
+   "title": "The <s>credits.</s>",
+   "rows": [
+    {
+     "k": "Surgeon",
+     "v": "Dr. Jorge Arce, D.D.S."
+    },
+    {
+     "k": "Certification",
+     "v": "Board Certified — Dental Implantology"
+    },
+    {
+     "k": "Disciplines",
+     "v": "Dental Implants · Reconstruction · Complex Cases · Implant Maintenance · Pathology · Second Opinions"
+    },
+    {
+     "k": "Locations",
+     "v": "Redondo Beach · Torrance, California"
+    },
+    {
+     "k": "Contact",
+     "v": "(310) 327-4166 · By appointment"
+    }
+   ]
+  },
+  {
+   "type": "close",
+   "title": "Your case, <s>next.</s>",
+   "cta": {
+    "t": "Request a consultation",
+    "h": "tel:+13103274166"
+   },
+   "fine": [
+    "© Dr. Jorge Arce, D.D.S.",
+    "A case study in surgical care",
+    "South Bay, CA"
+   ]
+  },
+  {
+   "type": "nextcase",
+   "lbl": "Next case study",
+   "title": "Full-Arch, <s>restored.</s> →",
+   "h": "#top"
+  }
+ ]
+}

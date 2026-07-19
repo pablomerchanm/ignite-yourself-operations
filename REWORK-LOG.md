@@ -700,3 +700,37 @@ ocultos, tgrid grid, sin ★, 9 etiquetas de rol · STACK sticky tops
 96/122/148/174, cubiertas scale .955/.976 + brightness · STRESS blog
 fuera, fichas 3 sin fotos → phx, h1 ×2, ovf 0, 0 errores · MOBILE ovf
 0 cards static.
+
+## 21 · v23-pacifica — CERRADA
+
+**Diagnóstico inicial:** case-study fílmico que ya recibió profundidad
+(footage strip) pero con padding clónico de 110px en las secciones
+medias, keyframes hin, un easing sin token, cero gsap/lenis (solo IO
+binario) y copy en HTML.
+
+**Qué cambié:**
+- R5 la línea de tiempo del montaje: bajo la tira de films aparece un
+  ruler de editor con ticks por corte, un playhead que recorre la
+  regla (translateX mapeado al scrub de la sección) y un timecode
+  "FILM 0N"; cada slot se enciende continuamente (opacidad de imagen y
+  caption en campana) al paso del playhead — metáfora de NLE, mecanismo
+  no repetido en el catálogo. Reduced: timeline oculta, todo visible.
+- Ritmo: blocks var(--sec) · films ×1.15 · results ×0.85 (padding
+  clónico eliminado).
+- hin muerto; easing consolidado; motor Lenis+GSAP un ticker; R3
+  hairlines en credits; focus-visible.
+- Shell+loader: 11 secciones opcionales (films.slots 2-5 con timeline
+  auto-repartida, duo opcional en blocks), `.phx` etiquetados.
+
+**Qué elevé:** la tira de footage pasó de decorado a instrumento: el
+scroll "reproduce" el montaje con playhead y timecode.
+
+**Paso 4:** memorable sí (playhead); hero tipográfico / meta 4col /
+full-bleed / blocks asimétricos .55/1.45 / films oscuras — varía;
+ratio 156/16 = 9.7:1; motion continuo; 2 easings; solo
+transform+opacity; robusto.
+
+**Verificación:** batchcheck W23 ovf 0 d+m. robust23: REDUCED nm, 0
+ocultos, timeline oculta · R5 phead translateX 1164px, tc FILM 03,
+2 ticks, opacidades .70/.70/.83 · STRESS voices fuera, films 2 sin
+vídeos → phx, l1 ×2, ovf 0, 0 errores · MOBILE ovf 0.
