@@ -1,0 +1,136 @@
+{
+ "_schema": "v33-valenna · Voyenne, The Travel Edit · Lato + serif + script. Conservar y pulir (favorita de Pablo). Slots nativos (tag o src). rich() admite <em><b><br>. edits.cards EXACTO 3 · phil.rows EXACTO 3 · nav 4-6. Fetch absoluto /v33-valenna/content.json.",
+ "meta": {
+  "title": "Voyenne — The Travel Edit · v33 Valenna",
+  "description": "Personalized travel for the modern explorer. Template concept.",
+  "lang": "en"
+ },
+ "nav": {
+  "links": [
+   {
+    "t": "Home",
+    "h": "#top"
+   },
+   {
+    "t": "About",
+    "h": "#about"
+   },
+   {
+    "t": "Edits",
+    "h": "#edits"
+   },
+   {
+    "t": "Philosophy",
+    "h": "#phil"
+   },
+   {
+    "t": "Contact",
+    "h": "#close"
+   }
+  ],
+  "logo": "VOYENNE",
+  "tag": "luxury travel<br>planner & curator"
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "left": {
+    "tag": "slot foto — lago alpino, clavado al agua",
+    "cls": "fjord"
+   },
+   "right": {
+    "tag": "slot foto — acantilado con dos siluetas",
+    "cls": "dusklight"
+   },
+   "wm": "The Travel Edit.",
+   "script": "personalized travel for the modern explorer"
+  },
+  {
+   "type": "ribbon",
+   "t": "Meaningful journeys · with care · clarity · and taste"
+  },
+  {
+   "type": "intro",
+   "id": "about",
+   "h": "Your next chapter starts <em>with the journey.</em>",
+   "script": "not the itinerary",
+   "p": "Voyenne is a one-woman travel atelier for people who collect places the way others collect things. A handful of clients, a long conversation, and a trip edited down to only what matters. Placeholder copy for the template concept."
+  },
+  {
+   "type": "edits",
+   "id": "edits",
+   "h": "The <em>Edits</em>",
+   "cards": [
+    {
+     "tag": "slot — norte",
+     "t": "The North Edit",
+     "n": "10 days",
+     "d": "Fjords, quiet hotels, and light that never quite leaves. For travelers who like their drama geological."
+    },
+    {
+     "tag": "slot — mediterráneo",
+     "t": "The Slow Coast",
+     "n": "8 days",
+     "d": "One stretch of sea, three towns, zero rushing. Long lunches as a discipline."
+    },
+    {
+     "tag": "slot — desierto",
+     "t": "The Desert Cut",
+     "n": "6 days",
+     "d": "Big skies, small lodges, and the kind of silence you bring home with you."
+    }
+   ]
+  },
+  {
+   "type": "planner",
+   "slotTag": "slot foto — retrato de la curadora",
+   "h": "Meet your <em>travel planner.</em>",
+   "script": "the eyes behind the edit",
+   "p": "Placeholder bio: twelve years, forty countries, and one conviction — a great trip is edited, not stuffed. Sofía plans every journey herself, from the first call to the welcome note waiting in your room.",
+   "sig": "Sofía"
+  },
+  {
+   "type": "phil",
+   "id": "phil",
+   "h": "The <em>philosophy</em>",
+   "rows": [
+    {
+     "n": "I.",
+     "t": "Fewer places, deeper stays",
+     "d": "Three nights minimum anywhere worth going. Unpacking is part of the luxury."
+    },
+    {
+     "n": "II.",
+     "t": "The whole experience, felt intentional",
+     "d": "Every transfer, table, and view chosen on purpose — nothing left to default settings."
+    },
+    {
+     "n": "III.",
+     "t": "Care, clarity, and taste",
+     "d": "One point of contact, zero surprises, and recommendations you couldn't have googled."
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "slotTag": "slot foto — carretera al anochecer",
+   "q": "The whole experience felt so intentional — like the trip had been written just for us, because it had.",
+   "who": "— a placeholder traveler"
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "h": "Your next chapter starts <em>with the journey.</em>",
+   "script": "let's plan",
+   "cta": {
+    "t": "Begin the conversation",
+    "h": "#top"
+   },
+   "fine": [
+    "© Voyenne — template concept",
+    "hello@placeholder.com",
+    "Placeholder content"
+   ]
+  }
+ ]
+}

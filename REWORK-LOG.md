@@ -1035,3 +1035,197 @@ motion continuo; 2 easings; solo transform+opacity; robusto (titular
 ocultos, velos ausentes · R5 velo hero op .08 tY −14%, velo band .27
 mid-scrub · STRESS titulares ×2 ovf 0, kind fuera, steps 3, 0
 errores · MOBILE ovf 0.
+
+## 31 · v36-kimberly — CERRADA
+
+**Diagnóstico inicial:** Counsel by Camille navy 200 sobria casi lista:
+su lead-quote pedía tramo narrativo y sus tokens estaban a medio
+extraer; `.reveal` IO único, keyframes hin, copy en HTML.
+
+**Qué cambié:**
+- R5 el consejo se pronuncia: la cita central se declara como
+  `lines[]` (EXACTO 2-4) y cada línea vive en una máscara overflow
+  hidden; el scrub las pronuncia una a una — `translateY 112%→0` con
+  easing cúbico dentro de k=clamp(p·n−i·.85) — chained continuo, el
+  tramo narrativo que pedía. Reduced: líneas planas visibles.
+- Tokens completos (--ease/--sec) con ritmo variado (offer ×0.9, quote
+  ×1.15); catálogo R1/R2/R3(hairlines en offers)/R4; hin fuera.
+- Shell+loader: 7 secciones opcionales, numeración de offers 0N,
+  journal 0-3, `.phx`, focus-visible.
+
+**Qué elevé:** la cita dejó de ser un párrafo centrado: ahora se
+pronuncia con el ritmo de quien aconseja — pausado, línea a línea.
+
+**Paso 4:** memorable sí (pronunciación); hero navy foto / pillars
+crema / about arena split / offer filas / quote navy / journal cards —
+alternancia correcta; motion continuo; 2 easings; solo transform
+(máscaras overflow); robusto.
+
+**Verificación:** batchcheck W36 ovf 0 d+m. robust36: REDUCED nm, 0
+ocultos, 3/3 líneas planas · R5 cascada 0% / 8.5% / 112% mid-scrub ·
+STRESS journal fuera, quote 2 líneas, título ×2 sin foto → phx, ovf 0,
+0 errores · MOBILE ovf 0.
+
+## 32 · v33-valenna — CERRADA
+
+**Diagnóstico inicial:** "The Travel Edit" con el split hero que
+fascinó a Pablo — mandato: conservar y pulir, no rehacer. Lo que
+faltaba: `.reveal` IO único, keyframes hin, un easing sin token, copy
+en HTML.
+
+**Qué cambié (pulido conservador):**
+- R5 el díptico se abre: las dos mitades del hero divergen ±4vw con el
+  scrub al salir del viewport (overflow contenido, ovf 0 verificado) —
+  el gesto editorial del split, ahora vivo. Reduced: quietas.
+- Composición y paleta INTACTAS (era la favorita); solo tokens
+  (--ease/--sec), catálogo cerrado R1/R2/R3(hairlines en philosophy)/
+  R4, ritmo --sec afinado.
+- Shell+loader: slots nativos, edits/phil EXACTO 3, secciones
+  opcionales (quote out probado), focus-visible.
+
+**Qué elevé:** fidelidad al referente con el 10% de vida que le
+faltaba: el díptico respira y el resto revela con disciplina.
+
+**Paso 4:** memorable sí (díptico); split hero / ribbon / intro
+centrada / edits grid / planner split invertido / phil filas / quote
+full — alternancia del original respetada; motion continuo; 2
+easings; solo transform; robusto.
+
+**Verificación:** batchcheck W33 ovf 0 d+m. robust33: REDUCED nm, 0
+ocultos, mitades quietas · R5 L −2.08vw / R +2.08vw mid-exit con ovf
+0 · STRESS wm ×2 ovf 0, quote fuera · MOBILE ovf 0.
+
+## 33 · v31-chronicle — CERRADA
+
+**Diagnóstico inicial:** The Ledger — el wordmark 250px con doble nav
+numerada es de las composiciones más finas del catálogo; mandato: solo
+motion quirúrgico. Tenía marquee `mq 26s infinite`, `.reveal` IO
+único, keyframes hin, copy en HTML.
+
+**Qué cambié (quirúrgico):**
+- R5 la mano escribe: las tres líneas manuscritas (nota del hero, nota
+  de la editora, anotación del retrato) viven en máscara horizontal y
+  se ESCRIBEN de izquierda a derecha con el scrub (translateX
+  −101%→0 con ease cuadrático) — la caligrafía de la marca, animada
+  como caligrafía. Reduced: escritas.
+- Marquee "featured" mapeado al paso del viewport (scrub, −25%); el
+  infinito murió.
+- Composición intacta: doble nav numerada 01-07 y nav2 con The Ledger
+  centrado restauradas EXACTAS del original (verificación visual
+  detectó mi markup divergente y se corrigió contra git).
+- Tokens, ritmo --sec afinado, catálogo R1/R2/R4, focus-visible.
+- Shell+loader: 8 secciones opcionales; cifras de results marcadas
+  como placeholder con su asterisco de honestidad conservado.
+
+**Qué elevé:** motion con la personalidad del estudio (escritura) sin
+tocar una composición que ya era la vara.
+
+**Paso 4:** memorable sí (la mano); wordmark hero / note centrada /
+svc bordered grid / feat banda / about split / results — intacto;
+motion continuo; 2 easings; solo transform; robusto.
+
+**Verificación:** batchcheck W31 ovf 0 d+m (×2, tras restaurar nav).
+robust31: REDUCED nm, 0 ocultos, 3/3 tintas planas · R5 tinta hero
+escrita (0%), note-sec −95% en curso · STRESS feat fuera, h1 ×2 sin
+foto → phx, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 34 · v35-astramaven — CERRADA (VARA de acabado)
+
+**Diagnóstico inicial:** Vera Nova carmesí con el wordmark tras retrato
+como momento memorable claro y sistema casi completo — vara de
+acabado. Deudas: dos marquees `mq infinite`, `.reveal` IO, keyframes
+hin, copy en HTML.
+
+**Qué cambié (acabado, no reinvención):**
+- R5 profundidad de cartel: al salir el hero, retrato y wordmark se
+  separan en profundidad (ph +10% / wm 6→−4%, scrub 1.2) — el cartel
+  gana capas reales. Reduced: composición estática original.
+- Marquesinas contrarrotantes: las dos bandas (Breakthrough Program /
+  what they're saying) se mueven en direcciones opuestas mapeadas al
+  paso del viewport (±18%); el infinito murió en ambas.
+- Tokens, ritmo --sec, catálogo R1/R2/R4, parches balanceados,
+  focus-visible.
+- Shell+loader: 7 secciones opcionales, marquesinas generadas del
+  texto del JSON, numeración de method automática.
+
+**Qué elevé:** los tres gestos de la página (cartel, bandas, método)
+ahora pertenecen al scroll — acabado de vara sin tocar la paleta ni la
+composición que la hacían vara.
+
+**Paso 4:** memorable sí (cartel con capas); crimson hero / intro
+clara / method grid / program gradient con banda / listen split /
+voices ink con banda — intacto; motion continuo; 2 easings; solo
+transform; robusto.
+
+**Verificación:** batchcheck W35 ovf 0 d+m. robust35: REDUCED nm, 0
+ocultos · R5 ph +4.7% vs wm +1.3% mid-exit, marquesina izq +1.9% en
+banda · STRESS listen fuera, h ×2 sin foto → phx, ovf 0, 0 errores ·
+MOBILE ovf 0.
+
+## 35 · v34-mesamaison — CERRADA (VARA de composición)
+
+**Diagnóstico inicial:** Casa Mesa — la favorita declarada ("me
+fascina, sé muy fiel"): ilustración adobe propia, footer monumental,
+puerta central. Deudas: `.reveal` IO binario, keyframes hin, sin
+tokens ni reduced-motion real.
+
+**Qué cambié (quirúrgico in-place, fidelidad máxima):**
+- R5 el sol atardece: un sol añadido EN EL LENGUAJE de la ilustración
+  (dos círculos flat #E9B872, primer hijo del svg para ponerse DETRÁS
+  de la silueta de la mesa) cruza el cielo en arco parabólico
+  (x 240→1200 lineal, y 70→245 con p²) mapeado al scroll del hero —
+  "fachada al atardecer" hecha literal. Reduced: sol fijo al alba.
+- Markup ilustrado INTACTO (decisión de alcance documentada en
+  V34-MESAMAISON.md: los SVGs intercalados son arte-dirigidos; un
+  loader arriesgaba la fidelidad exigida). Runtime de motion estándar
+  inyectado in-place (R1 sobre .reveal, ticker único, anchors Lenis,
+  no-motion completo); hin e IO muertos; tokens y focus-visible.
+
+**Además:** backfill de los 16 docs de principios que faltaban desde
+v16/v18 (V16, V18, V22-V24, V26-V36) — el PASO 2 del mandato queda
+completo para todo el catálogo.
+
+**Paso 4:** memorable sí (el sol que ya era la escena, ahora VIVE);
+composición intocada; motion continuo; 2 easings; solo transform;
+reduced verificado.
+
+**Verificación:** batchcheck W34 ovf 0 d+m. robust34: REDUCED nm, 0
+ocultos, sol fijo (240,70) · R5 sol (240,70)→(768,123)→(1200,245)
+poniéndose tras la mesa, reveals disparando · MOBILE ovf 0.
+
+## 36 · v37-bakery — CERRADA (VARA de personalidad) — COLA COMPLETA
+
+**Diagnóstico inicial:** Big Batch chunky — la de más carácter del
+catálogo. Deudas: `bob 5s infinite` en la galleta del hero, `tick 22s
+infinite` en el ticker, `.reveal` IO, keyframes hin, sin tokens.
+
+**Qué cambié (quirúrgico in-place, personalidad intacta):**
+- R5 la masa rebota: cada pieza ilustrada (cookie/brownie/croissant)
+  CAE −46px y aterriza con squash & stretch de cartoon —
+  `bounceK(k)` a trozos con dos rebotes decrecientes (.18/.06),
+  scale(sx,sy) inverso conservando volumen, transform-origin en la
+  base. Física de dibujo animado, mapeada al scrub. Mecanismo nuevo
+  (ninguna otra página usa squash&stretch).
+- La galleta del hero deriva con el scroll (bob infinito muerto);
+  ticker mapeado al paso del viewport (−28%).
+- Runtime estándar in-place, tokens, focus-visible 3px chunky,
+  no-motion completo. Decisión de alcance como v34 (markup
+  arte-dirigido; documentada en V37-BAKERY.md).
+
+**Paso 4:** memorable sí (el rebote ES la marca); composición chunky
+intocada; motion continuo; curvas: expo.out + quick + bounce propia
+documentada; solo transform; robusto.
+
+**Verificación:** batchcheck W37 ovf 0 d+m. robust37: REDUCED nm, 0
+ocultos, svgs quietos · R5 caída −29.7px → aterrizaje scale(1.087,
+.912) con squash · cookie deriva −15px rotate −1° · MOBILE ovf 0.
+
+═══════════════════════════════════════════════
+## MISIÓN COMPLETA — 36/36 páginas cerradas
+Todas las páginas del catálogo pasaron el ciclo: diagnóstico →
+principles/*.md (35 docs) → reconstrucción tokenizada → momento
+scrollytelling propio (36 mecanismos, ninguno repetido) → robustez
+verificada (reduced-motion + stress por interceptación) → log.
+Decisiones de alcance documentadas: v25 (content = script generador),
+v34/v37 (in-place por fidelidad de arte).
+═══════════════════════════════════════════════

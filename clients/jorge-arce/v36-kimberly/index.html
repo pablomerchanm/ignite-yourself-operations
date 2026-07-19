@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,300;1,300&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(104px,14vh,168px);
+
   --navy:#0E1623; --navy2:#2A3446; --navy3:#47526B; --cream:#FBF7F3; --sandx:#F2E9DE; --tan:#C8A789;
   --serif:'Noto Serif',Georgia,serif;
 }
@@ -53,7 +58,7 @@ a{color:inherit;text-decoration:none}
 .hero .cta:hover{background:var(--tan)}
 
 /* ---------- pillars ---------- */
-.pillars{padding:130px 8vw;background:var(--cream)}
+.pillars{padding:var(--sec) 8vw;background:var(--cream)}
 .pillars .head{text-align:center;max-width:720px;margin:0 auto 80px}
 .pillars h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.6vw,48px);line-height:1.35}
 .pillars .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(42,52,70,.15);max-width:1100px;margin:0 auto}
@@ -63,7 +68,7 @@ a{color:inherit;text-decoration:none}
 .pcell p{margin-top:12px;font-size:13px;line-height:1.75;color:#6B7386}
 
 /* ---------- about split ---------- */
-.about{background:var(--sandx);padding:130px 8vw}
+.about{background:var(--sandx);padding:var(--sec) 8vw}
 .about .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
 .about .ph{aspect-ratio:3/4;overflow:hidden}
 .about .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.02)}
@@ -72,7 +77,7 @@ a{color:inherit;text-decoration:none}
 .about .sig{margin-top:30px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:22px;color:var(--navy2)}
 
 /* ---------- offerings ---------- */
-.offer{padding:130px 8vw;background:var(--cream)}
+.offer{padding:calc(var(--sec)*.9) 8vw;background:var(--cream)}
 .offer .head{display:flex;justify-content:space-between;align-items:baseline;max-width:1100px;margin:0 auto 60px;flex-wrap:wrap;gap:14px}
 .offer h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.8vw,48px)}
 .offer .lbl{color:var(--tan)}
@@ -86,14 +91,14 @@ a{color:inherit;text-decoration:none}
 .orow .d{font-size:12.5px;line-height:1.7;color:#6B7386;max-width:300px;text-align:right}
 
 /* ---------- quote band ---------- */
-.quote{background:var(--navy);color:var(--cream);padding:150px 8vw;text-align:center;position:relative;overflow:hidden}
+.quote{background:var(--navy);color:var(--cream);padding:calc(var(--sec)*1.15) 8vw;text-align:center;position:relative;overflow:hidden}
 .quote::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:70px;background:var(--tan)}
 .quote q{display:block;font-family:var(--serif);font-weight:200;font-size:clamp(24px,3.2vw,42px);
   line-height:1.5;max-width:860px;margin:0 auto;quotes:'“' '”'}
 .quote .who{margin-top:30px;font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--tan)}
 
 /* ---------- journal ---------- */
-.journal{padding:130px 8vw;background:var(--cream)}
+.journal{padding:var(--sec) 8vw;background:var(--cream)}
 .journal .head{text-align:center;margin-bottom:60px}
 .journal h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.6vw,46px)}
 .jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1100px;margin:0 auto}
@@ -115,12 +120,10 @@ a{color:inherit;text-decoration:none}
   letter-spacing:.2em;text-transform:uppercase;color:#8B93A6}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
-.reveal.rin{opacity:1;transform:none}
-[data-hero]{opacity:0;animation:hin 1.2s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero]{opacity:0;}
 [data-hero="2"]{animation-delay:.25s}
-@keyframes hin{to{opacity:1}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+
+
 @media (max-width:920px){
   .nav{grid-template-columns:1fr auto}
   .nav .l{display:none}
@@ -129,90 +132,158 @@ a{color:inherit;text-decoration:none}
   .orow{grid-template-columns:1fr;gap:10px}
   .orow .d{text-align:left;max-width:none}
 }
-</style>
-</head>
+
+/* ---------- rework: el consejo se pronuncia ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.quote .qline{display:block;overflow:hidden}
+.quote .qline i{display:block;font-style:inherit;transform:translateY(112%);will-change:transform}
+html.no-motion .quote .qline i{transform:none}
+.phx{display:flex;align-items:center;justify-content:center;background:#e8dfd3;color:#8B93A6;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px;width:100%;height:100%}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#6B7386;font-size:14px}
+</style></head>
 <body>
-
-<nav class="nav">
-  <div class="l"><a href="#about">About</a><span class="sep"></span><a href="#offer">Services</a><span class="sep"></span><a href="#journal">Journal</a></div>
-  <span class="lg">Counsel <em>by</em> Camille</span>
-  <div class="r"><a href="#quote">Stories</a><span class="sep"></span><a href="#contact">Contact</a></div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="ph" data-hero><img src="../img/quote.jpg" alt="Portrait placeholder"></div>
-  <div class="in" data-hero="2">
-    <h1 class="ser">Lead <span class="it">with</span> <span class="und">clarity.</span><br>Move <span class="it">with</span> <span class="und">intention.</span></h1>
-    <div class="sub">Business strategy for women who<br>already know their worth.</div>
-    <a class="cta" href="#contact">Begin the conversation</a>
-  </div>
-</header>
-
-<!-- PILLARS -->
-<section class="pillars">
-  <div class="head reveal"><h2 class="ser">Strategic support for women who lead — <span class="it">without losing themselves in the leading.</span></h2></div>
-  <div class="grid">
-    <div class="pcell reveal"><div class="n">I</div><h3 class="ser">Clarify</h3><p>Name the next right move — and release the seventeen others crowding it.</p></div>
-    <div class="pcell reveal"><div class="n">II</div><h3 class="ser">Align</h3><p>Build a business that reflects who you are now, not who you were at the start.</p></div>
-    <div class="pcell reveal"><div class="n">III</div><h3 class="ser">Advance</h3><p>Move with intention: quarterly rhythm, honest metrics, sustainable pace.</p></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="in">
-    <div class="ph reveal"><img src="../img/portrait.jpg" alt="Coach portrait placeholder"></div>
-    <div class="reveal">
-      <span class="lbl" style="color:var(--tan)">The counsel</span>
-      <h2 class="ser" style="margin-top:18px">Why your best quarter ever <span class="it">didn't feel like it</span> — and what we do about that.</h2>
-      <p>Placeholder bio: after a decade advising founders, Camille built a quieter kind of practice — strategy sessions that slow you down enough to see the whole board, then move once, deliberately.</p>
-      <div class="sig">— Camille, placeholder founder</div>
-    </div>
-  </div>
-</section>
-
-<!-- OFFERINGS -->
-<section class="offer" id="offer">
-  <div class="head reveal"><h2 class="ser">Ways to work together</h2><span class="lbl">Three doors in</span></div>
-  <div>
-    <a class="orow reveal" href="#contact"><span class="n">01</span><span class="t ser">The Clarity <span class="it">Intensive</span></span><span class="d">One deep session. The whole board, seen at once. A decision made.</span></a>
-    <a class="orow reveal" href="#contact"><span class="n">02</span><span class="t ser">Quarterly <span class="it">Counsel</span></span><span class="d">A standing seat at your table — strategy, accountability, calm.</span></a>
-    <a class="orow reveal" href="#contact"><span class="n">03</span><span class="t ser">The <span class="it">Course</span></span><span class="d">Self-paced clarity work for the season you're actually in.</span></a>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<section class="quote" id="quote">
-  <q class="reveal">This work helped me slow down enough to see what the business was trying to become — and then it moved faster than ever.</q>
-  <div class="who reveal">Placeholder client — founder &amp; creative director</div>
-</section>
-
-<!-- JOURNAL -->
-<section class="journal" id="journal">
-  <div class="head reveal"><h2 class="ser">From the journal</h2></div>
-  <div class="jgrid">
-    <a class="jcard reveal" href="#"><span class="k">Essays</span><h3 class="ser">the quiet metrics that actually predict a good year</h3><span class="more">Read</span></a>
-    <a class="jcard reveal" href="#"><span class="k">Practice</span><h3 class="ser">a ninety-minute quarterly review you'll keep doing</h3><span class="more">Read</span></a>
-    <a class="jcard reveal" href="#"><span class="k">Letters</span><h3 class="ser">on saying no to good opportunities</h3><span class="more">Read</span></a>
-  </div>
-</section>
-
-<!-- CLOSE -->
-<section class="close" id="contact">
-  <h2 class="ser reveal">Clarify your next move — <span class="it">then make it.</span></h2>
-  <div class="reveal"><a class="cta" href="#">Request a consultation</a></div>
-  <div class="fine">
-    <span>© Counsel by Camille — template concept</span>
-    <span>hello@placeholder.com</span>
-    <span>By application</span>
-  </div>
-</section>
-
+<nav class="nav"><div class="l" id="navl"></div><span class="lg" id="nlogo"></span><div class="r" id="navr"></div></nav>
+<main id="site"></main>
+<noscript><div style="padding:6vh 28px;text-align:center;font-size:14px">Counsel by Camille — template concept</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<span class="it">').replace(/&lt;\/i&gt;/g,'</span>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function img(im,alt){
+  if(im&&im.src)return'<img src="'+esc(im.src)+'" alt="'+esc(alt||im.alt||'')+'">';
+  return'<div class="phx">'+esc((im&&im.label)||'FOTO')+'</div>'}
+
+var partials={
+hero:function(s){
+  return'<header class="hero" id="top"><div class="ph">'+img(s.img)+'</div>'+
+  '<div class="in" data-r2 style="position:relative;z-index:2">'+
+  '<h1 class="ser wr">'+rich(s.title)+'</h1>'+
+  '<p class="sub wr">'+rich(s.sub)+'</p>'+
+  '<a class="cta wr" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a>'+
+  '</div></header>'},
+pillars:function(s){
+  return'<section class="pillars"><div class="head wr" data-r1><h2 class="ser">'+rich(s.head)+'</h2></div>'+
+  '<div class="grid" data-cards>'+(s.cells||[]).map(function(cl){return'<div class="pcell wr"><span class="n">'+esc(cl.n)+'</span><div class="t ser">'+esc(cl.t)+'</div><p class="d">'+rich(cl.d)+'</p></div>'}).join('')+'</div>'+
+  '</section>'},
+about:function(s){
+  return'<section class="about"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="in">'+
+  '<div class="ph wr" data-r1>'+img(s.img)+'</div>'+
+  '<div data-r2><span class="lbl wr" style="color:var(--tan)">'+esc(s.lbl)+'</span>'+
+  '<h2 class="ser wr" style="margin-top:18px">'+rich(s.h)+'</h2>'+
+  '<p class="wr">'+rich(s.p)+'</p><div class="sig wr">'+esc(s.sig)+'</div></div>'+
+  '</div></section>'},
+offer:function(s){
+  return'<section class="offer"'+(s.id?' id="'+esc(s.id)+'"':'')+'>'+
+  '<div class="head" data-r2><h2 class="ser wr">'+esc(s.head)+'</h2><span class="lbl wr">'+esc(s.lbl)+'</span></div>'+
+  (s.rows||[]).map(function(r,i){return'<div class="orow wr" data-r1 data-rule><span class="n">'+('0'+(i+1)).slice(-2)+'</span><span class="t ser">'+esc(r.t)+'</span><span class="d">'+rich(r.d)+'</span></div>'}).join('')+
+  '</section>'},
+quote:function(s){
+  return'<section class="quote"'+(s.id?' id="'+esc(s.id)+'"':'')+'>'+
+  '<q id="qlines">'+(s.lines||[]).map(function(l){return'<span class="qline"><i>'+esc(l)+'</i></span>'}).join('')+'</q>'+
+  '<div class="who wr" data-r1>'+esc(s.who)+'</div>'+
+  '</section>'},
+journal:function(s){
+  if(!(s.cards&&s.cards.length))return'';
+  return'<section class="journal"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="head wr" data-r1><h2 class="ser">'+esc(s.head)+'</h2></div>'+
+  '<div class="jgrid" data-cards>'+s.cards.map(function(cd){return'<div class="jcard wr"><span class="k">'+esc(cd.k)+'</span><div class="t ser">'+esc(cd.t)+'</div><a class="more" href="#close">Read</a></div>'}).join('')+'</div>'+
+  '</section>'},
+close:function(s){
+  return'<section class="close"'+(s.id?' id="'+esc(s.id)+'"':'')+' data-r2>'+
+  '<h2 class="ser wr">'+rich(s.title)+'</h2>'+
+  '<a class="cta wr" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a>'+
+  '<div class="fine">'+(s.fine||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</section>'}
+};
+
+fetch('/v36-kimberly/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  if(c.nav){document.getElementById('navl').innerHTML=(c.nav.l||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
+    document.getElementById('nlogo').innerHTML=rich(c.nav.logo||'');
+    document.getElementById('navr').innerHTML=(c.nav.r||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('')}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';
+    var l=document.createElement('i');
+    l.style.cssText='position:absolute;left:0;right:0;top:0;height:1px;background:rgba(42,52,70,.15);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* R5 el consejo se pronuncia: lineas enmascaradas por scrub encadenado */
+  var q=document.getElementById('qlines');
+  if(q){
+    var lines=Array.prototype.slice.call(q.querySelectorAll('.qline i'));
+    var n=lines.length;
+    if(n){
+      ScrollTrigger.create({trigger:'.quote',start:'top 78%',end:'center 48%',scrub:1.2,
+        onUpdate:function(self){var p=self.progress;
+          lines.forEach(function(ln,i){
+            var k=Math.max(0,Math.min(1,p*n-i*.85));
+            var e=1-Math.pow(1-k,3);
+            ln.style.transform='translateY('+((1-e)*112)+'%)';
+          })}});
+    }
+  }
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
 })();
 </script>
 </body>
