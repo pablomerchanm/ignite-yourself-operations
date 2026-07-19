@@ -113,3 +113,44 @@ reduced ok. Bug cazado en autocrítica: &nbsp; escapado por rich() — corregido
 (whitelist de entidad).
 
 ---
+
+## 3 · v4-clearpath — "ClearPath" — CERRADA
+
+**Diagnóstico inicial:** 12 usos de centerhead (5 secciones centradas
+seguidas); `padding:140px 0` uniforme en todo; displays de sección 3:1;
+CERO curvas de easing declaradas (todo `ease` default, .35–.8s mezclados);
+FAQ animando max-height (layout); bignums 227px estáticos ×4; curvas SVG
+decorativas; portabilidad cero.
+
+**Qué cambié:**
+- EL momento: el journey ahora es "el sendero" — path SVG vertical que
+  serpentea entre los 4 pasos y se dibuja con el scroll (scrub 1.2, sin pin),
+  con cada bignum encendiéndose (op .18→1) en su cuarto del progreso.
+  La metáfora del nombre hecha scrollytelling. Mobile: sendero oculto,
+  pasos con R1. Reduced: dibujado completo + bignums encendidos.
+- Composición desclonada: services/stories/journal pasan a cabecera
+  IZQUIERDA asimétrica (lhead/shead 1.2fr/.8fr con lede a la derecha);
+  centrados quedan solo about, begin y finale (no adyacentes). Tres alturas
+  de sección: --sec / banda ×0.85 / about ×1.3-top.
+- Catálogo cerrado: R1 rise 750 · R2 hero-stagger 110/75/55 · R3
+  ellipse-draw (las elipses anotadas ahora GSAP dashoffset 900ms) · R4
+  card-settle con stagger DECRECIENTE 90/70/55/45/40 máx 6 · R5 sendero.
+  2 easings. FAQ sin max-height: display swap + fade transform 300ms.
+- Displays de sección subidos a clamp(40,4.2vw,64) → 4:1.
+- Team-ready: tokens completos, content.json íntegro (rich s/em/e/br donde
+  <e> = elipse anotada dibujable), secciones opcionales (journal quitado en
+  test sin romper), guide con foto slot, footer estructurado.
+
+**Qué elevé:** un solo lenguaje de easing; el ornamento (curvas) pasó de
+decoración a narrativa; jerarquía tipográfica real en secciones.
+
+**Paso 4:** momento = sendero ✓ · centradas no adyacentes ✓ · 4:1 ✓ ·
+respira en about/journey, densifica en begin/stories ✓ · motion por rol
+con stagger decreciente ✓ · easings 2 ✓ · robustez: titular ×2, sin fotos
+(3 labels), services 3, stories 3, journal REMOVIDO — ovf 0 err 0 ✓ ·
+reduced ok ✓ · cero layout animado (FAQ arreglado) ✓.
+
+**Verificación:** batchcheck W4 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---

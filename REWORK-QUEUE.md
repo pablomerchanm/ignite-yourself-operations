@@ -15,7 +15,7 @@
 |---|--------|--------|-------------------|
 | 1 | `v6-final` | ✅ | La única sin referente propio: fusión Hanza×Zentro que hereda decisiones ajenas — cero momento memorable propio, la más plantilla de todas. |
 | 2 | `v2` | ✅ | La primera construida: editorial de capítulos correcta pero con el motion más primitivo del catálogo y ritmo de padding uniforme. |
-| 3 | `v4-clearpath` | ☐ | Salvia tranquila que confunde calma con vacío: secciones centradas en cadena y jerarquía tipográfica corta. |
+| 3 | `v4-clearpath` | ✅ | Salvia tranquila que confunde calma con vacío: secciones centradas en cadena y jerarquía tipográfica corta. |
 | 4 | `v7-noon` | ☐ | El anti-marketing se pasó de frenada: honesta pero sin un solo golpe visual; el minimalismo aquí es ausencia, no intención. |
 | 5 | `v3-hanza` | ☐ | Paleta coral potente pero one-note: todas las secciones cantan igual de fuerte y el grano es el único recurso. |
 | 6 | `v5-zentro` | ☐ | Póster tipográfico con marquee de gimmick: el display es el momento y lo repite hasta gastarlo; espaciado tosco. |

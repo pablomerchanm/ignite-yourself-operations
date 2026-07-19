@@ -1,0 +1,411 @@
+{
+ "meta": {
+  "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery · v4 ClearPath",
+  "description": "Board-certified oral & maxillofacial surgeon. Twenty-seven years between Colombia and California on the reconstructions other surgeons refer out.",
+  "lang": "en"
+ },
+ "brand": {
+  "logo": "arce—south bay"
+ },
+ "nav": {
+  "links": [
+   {
+    "text": "About",
+    "href": "#about"
+   },
+   {
+    "text": "Expertise",
+    "href": "#services"
+   },
+   {
+    "text": "Stories",
+    "href": "#stories"
+   },
+   {
+    "text": "Journal",
+    "href": "#journal"
+   }
+  ],
+  "cta": {
+   "text": "Book a Consultation",
+   "href": "#contact"
+  }
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "title": "A path back to eating, smiling, living.",
+   "text": "Dr. Jorge Arce is a board-certified oral & maxillofacial surgeon. For twenty-seven years he has walked the difficult path with his patients — the complex extractions, reconstructions, and full-arch implant cases other surgeons refer out — with confidence and care.",
+   "cta": {
+    "text": "Start Your Path",
+    "href": "#contact"
+   },
+   "image": {
+    "src": "/img/hero.jpg",
+    "alt": "Dr. Jorge Arce",
+    "label": "retrato ambiental 16:9, tinte sage",
+    "ratio": "16:9"
+   }
+  },
+  {
+   "type": "about",
+   "id": "about",
+   "lab": "Dr. Jorge Arce · Est. 2007",
+   "title": "From Colombia to the South Bay — a career spent on <e>the difficult cases</e>.",
+   "text": "Trained in Colombia, built in California. Board certified in implantology, guided by one conviction: difficult work, done with care, gives people their lives back."
+  },
+  {
+   "type": "journey",
+   "steps": [
+    {
+     "t": "Reach Out",
+     "ink": false,
+     "text": "Start with a long, unhurried first consultation. Your history, your scans, your questions — and an honest read of what is possible. No pressure, just clarity. If the right answer is not to operate, you will hear that plainly."
+    },
+    {
+     "t": "Define Direction",
+     "ink": true,
+     "text": "Every case is mapped before anyone operates. Twenty-seven years on complex extractions, reconstruction, and full-arch cases taught Dr. Arce one unglamorous principle: take the time the case actually needs."
+    },
+    {
+     "t": "Walk the Path",
+     "ink": false,
+     "text": "Surgery with steady hands, then restoration — function first, then structure, then confidence. The smile is the last step, not the first promise."
+    },
+    {
+     "t": "Stay Supported",
+     "ink": true,
+     "text": "Long-term maintenance that protects the work — and a full report back to your referring dentist, every time. A restored smile is a relationship, not a transaction."
+    }
+   ]
+  },
+  {
+   "type": "services",
+   "id": "services",
+   "lab": "Expertise",
+   "title": "The disciplines of nearly three decades.",
+   "text": "Not a list of services — the work refined across twenty-seven years of practice.",
+   "cards": [
+    {
+     "t": "Dental Implants",
+     "d": "From single implants to full-arch All-On-X reconstruction, planned and placed with precision."
+    },
+    {
+     "t": "Reconstruction",
+     "d": "Rebuilding function and structure where bone and tissue have been lost."
+    },
+    {
+     "t": "Complex Cases",
+     "d": "The difficult extractions and surgeries other clinicians prefer to refer elsewhere."
+    },
+    {
+     "t": "Implant Maintenance",
+     "d": "Long-term care that protects the work of a restored smile."
+    },
+    {
+     "t": "Pathology",
+     "d": "Identifying and addressing conditions affecting teeth, gums, and bone."
+    },
+    {
+     "t": "Second Opinions",
+     "d": "Clarity and direction for patients facing complex decisions."
+    }
+   ]
+  },
+  {
+   "type": "impact",
+   "statement": "From the first consultation to the final restoration, these numbers reflect a career spent <s>walking the path together.</s>",
+   "side": "Not milestones for their own sake — each one stands for patients who were told it couldn't be done, and the work, dedication, and care behind every step.",
+   "stats": [
+    {
+     "n": "27+",
+     "l": "Years of oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Dental Implants Center of South Bay founded"
+    },
+    {
+     "n": "2",
+     "l": "Locations — Redondo Beach & Torrance"
+    },
+    {
+     "n": "6",
+     "l": "Disciplines refined across a career"
+    }
+   ]
+  },
+  {
+   "type": "begin",
+   "lab": "Getting Started",
+   "title": "Support that fits <e>your case</e>.",
+   "text": "A first visit is often just a conversation — a starting point. From there, you choose the pace that feels right.",
+   "cards": [
+    {
+     "t": "First Consultation",
+     "sub": "For patients beginning their journey.",
+     "items": [
+      "Unhurried review of your history and imaging",
+      "An honest read of what is possible",
+      "A clear plan — in plain language"
+     ],
+     "cta": {
+      "text": "Book a visit",
+      "href": "#contact"
+     },
+     "feature": false
+    },
+    {
+     "t": "Second Opinion",
+     "sub": "For patients told it can't be done.",
+     "items": [
+      "A fresh look at a complex diagnosis",
+      "Twenty-seven years of surgical judgment",
+      "Including, when right, the advice not to operate"
+     ],
+     "cta": {
+      "text": "Bring your case",
+      "href": "#contact"
+     },
+     "feature": true
+    },
+    {
+     "t": "By Referral",
+     "sub": "For referring dentists and their patients.",
+     "items": [
+      "The complex cases you'd rather not carry alone",
+      "A full surgical report back, every time",
+      "Restorative work stays with your practice"
+     ],
+     "cta": {
+      "text": "Refer a patient",
+      "href": "#contact"
+     },
+     "feature": false
+    }
+   ]
+  },
+  {
+   "type": "stories",
+   "id": "stories",
+   "lab": "Real Stories",
+   "title": "The people who walked it.",
+   "text": "Patients and referring doctors, on twenty-seven years of quiet precision.",
+   "cards": [
+    {
+     "q": "I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <em>I can eat, smile, and speak again.</em>",
+     "nm": "Maria R.",
+     "rl": "Patient · Full-arch reconstruction"
+    },
+    {
+     "q": "When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.",
+     "nm": "Dr. David Kim, D.D.S.",
+     "rl": "Referring Dentist · Torrance"
+    },
+    {
+     "q": "The most thorough and honest surgeon I have ever met. He treated my father like family.",
+     "nm": "Anabella C.",
+     "rl": "Daughter of patient",
+     "pull": true
+    },
+    {
+     "q": "Calm, precise, and genuinely kind. He explained every step until I understood. <em>The result speaks for itself.</em>",
+     "nm": "Robert T.",
+     "rl": "Patient · Dental implants"
+    },
+    {
+     "q": "I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows.",
+     "nm": "Dr. Lina Soto",
+     "rl": "Periodontist",
+     "pull": true
+    },
+    {
+     "q": "I was terrified of the procedure. He never rushed me. <em>Best decision I have made for my health.</em>",
+     "nm": "Carlos S.",
+     "rl": "Patient · Bone graft + implants"
+    },
+    {
+     "q": "Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time.",
+     "nm": "Dr. Jeff Malone",
+     "rl": "Referring Dentist · South Bay"
+    },
+    {
+     "q": "Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know.",
+     "nm": "Elena P.",
+     "rl": "Patient · TMJ treatment"
+    },
+    {
+     "q": "The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice.",
+     "nm": "Dr. Mark Ellison",
+     "rl": "Referring General Dentist"
+    }
+   ]
+  },
+  {
+   "type": "faq",
+   "title": "Your questions.<br><s>Answered.</s>",
+   "text": "Not sure what to expect? These answers might help you feel more confident as you begin.",
+   "items": [
+    {
+     "q": "What happens at a first consultation?",
+     "a": "A long, unhurried conversation. Dr. Arce reviews your history and imaging, examines the site, and gives you an honest read of what is possible — including, when it is the right answer, the recommendation not to operate."
+    },
+    {
+     "q": "I was told my case is impossible. Is it?",
+     "a": "Sometimes it is — and you deserve to hear that plainly. But many of the cases in this practice arrived with that exact sentence. Complex cases are not a detour from this work; they are the work."
+    },
+    {
+     "q": "How do I know if I'm a candidate for implants?",
+     "a": "Bone volume, gum health, medical history, and timing all matter. The free patient guide below covers the signs — and a consultation settles it definitively with imaging."
+    },
+    {
+     "q": "Do you work with referring dentists?",
+     "a": "Constantly — much of this practice arrives by referral. Every referred patient goes back with a full surgical report, and the restorative work stays with your general dentist."
+    }
+   ]
+  },
+  {
+   "type": "journal",
+   "id": "journal",
+   "lab": "Journal",
+   "title": "Understanding your care, before the chair.",
+   "text": "Plain-language answers to the questions patients actually ask.",
+   "posts": [
+    {
+     "img": {
+      "src": "/img/operating.jpg",
+      "alt": "",
+      "label": "foto editorial 16:10",
+      "ratio": "16:10"
+     },
+     "lab": "Implants",
+     "t": "All-On-X, explained simply",
+     "d": "What full-arch restoration actually involves, who it's for, and what to expect at each stage."
+    },
+    {
+     "img": {
+      "src": "/img/clinic.jpg",
+      "alt": "",
+      "label": "foto editorial 16:10",
+      "ratio": "16:10"
+     },
+     "lab": "Before Surgery",
+     "t": "How to know if you need an implant",
+     "d": "The signs worth paying attention to — and why timing often matters more than the procedure itself."
+    },
+    {
+     "img": {
+      "src": "/img/quote.jpg",
+      "alt": "",
+      "label": "foto editorial 16:10",
+      "ratio": "16:10"
+     },
+     "lab": "Myths",
+     "t": "Five myths about oral surgery",
+     "d": "Separating fear from fact, so you can make a calm, informed decision about your health."
+    }
+   ]
+  },
+  {
+   "type": "speak",
+   "lab": "Speaking & Education",
+   "title": "Sharing the craft with the profession.",
+   "text": "Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction.",
+   "photo": {
+    "src": "/img/speaking.jpg",
+    "alt": "Dr. Arce speaking",
+    "label": "conferencia vertical 4:5",
+    "ratio": "4:5"
+   },
+   "rows": [
+    {
+     "y": "2025",
+     "t": "Advances in Full-Arch Implant Reconstruction",
+     "w": "California Dental Association · Annual Session",
+     "tp": "Keynote"
+    },
+    {
+     "y": "2024",
+     "t": "Managing the Complex Extraction",
+     "w": "South Bay Dental Study Club",
+     "tp": "Lecture"
+    },
+    {
+     "y": "2024",
+     "t": "Mentorship in Surgical Implantology",
+     "w": "Resident training program · Guest faculty",
+     "tp": "Workshop"
+    },
+    {
+     "y": "2023",
+     "t": "When Not to Operate: Judgment in Oral Surgery",
+     "w": "Continuing Education Symposium",
+     "tp": "Panel"
+    }
+   ]
+  },
+  {
+   "type": "guide",
+   "lab": "Free Patient Guide",
+   "title": "What to expect from your first <e>implant consultation</e>.",
+   "items": [
+    "A plain-language walkthrough of the process",
+    "The questions worth asking any surgeon",
+    "How to know if you're a candidate"
+   ],
+   "submit": "Send me the guide",
+   "fine": "By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.",
+   "photo": {
+    "src": "/img/clinic.jpg",
+    "alt": "",
+    "label": "foto clínica cálida",
+    "ratio": "4:5"
+   }
+  },
+  {
+   "type": "finale",
+   "id": "contact",
+   "title": "For the patients who were told it <s>couldn't be done.</s>",
+   "text": "Redondo Beach · Torrance, California — consultations by appointment.",
+   "cta": {
+    "text": "Book a consultation",
+    "href": "tel:+13103274166"
+   },
+   "phone": "(310) 327-4166",
+   "footer": {
+    "logo": "arce—south bay",
+    "about": "Oral & maxillofacial surgeon. Twenty-seven years restoring function, structure, and confidence.",
+    "cols": [
+     {
+      "h": "Navigate",
+      "links": [
+       "About",
+       "Expertise",
+       "Stories",
+       "Journal"
+      ]
+     },
+     {
+      "h": "Connect",
+      "links": [
+       "Book a consultation",
+       "(310) 327-4166",
+       "Redondo Beach · Torrance"
+      ]
+     },
+     {
+      "h": "Practice",
+      "links": [
+       "Dental Implants Center of South Bay",
+       "By appointment"
+      ]
+     }
+    ],
+    "legal": [
+     "© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.",
+     "South Bay, California"
+    ]
+   }
+  }
+ ]
+}
