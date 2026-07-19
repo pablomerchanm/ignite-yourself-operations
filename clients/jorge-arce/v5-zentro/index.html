@@ -10,7 +10,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+/* v5 ZENTRO rework — tokens: cambiar identidad = solo :root.
+   Contenido: /v5-zentro/content.json · principles/V5-ZENTRO.md */
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(95px,12vh,130px);
   --blue:#1B48E2;
   --blue-deep:#0F2FA8;
   --blue-soft:#EFF3FE;
@@ -22,7 +28,7 @@
   --r:18px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{
   background:var(--white);color:var(--ink);
   font-family:'Inter',sans-serif;font-weight:400;
@@ -79,13 +85,13 @@ nav:not(.darktext) .bracket i{color:inherit}
 
 /* ---------- ticker ---------- */
 .ticker{background:var(--ink);color:#fff;overflow:hidden;padding:18px 0}
-.ticker .track{display:flex;gap:44px;white-space:nowrap;width:max-content;animation:tick 28s linear infinite}
+.ticker .track{display:flex;gap:44px;white-space:nowrap;width:max-content;}
 .ticker span{font-family:'Inter Tight',sans-serif;font-size:16px;font-weight:500;display:flex;gap:44px;align-items:center}
 .ticker .g{color:var(--blue)}
-@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+to{transform:translateX(-50%)}}
 
 /* ---------- sections ---------- */
-section{padding:130px 0}
+section{padding:var(--sec) 0}
 .seclab{display:flex;align-items:center;gap:10px;margin-bottom:50px;font-size:14px;font-weight:500}
 .seclab i{font-style:normal;color:var(--blue)}
 
@@ -126,7 +132,7 @@ section{padding:130px 0}
 .scard .row .nm{font-weight:500}
 
 /* ---------- statement band ---------- */
-.band{background:var(--blue);color:#fff;padding:130px 0}
+.band{background:var(--blue);color:#fff;padding:var(--sec) 0}
 .band .state{max-width:26ch}
 .band .state em{font-style:italic}
 
@@ -179,8 +185,8 @@ section{padding:130px 0}
 .fitem .qq{display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:16px}
 .fitem .qq .tg{color:var(--ink);font-size:20px;font-weight:400;transition:transform .4s}
 .fitem.open .qq .tg{transform:rotate(45deg)}
-.fitem .ans{max-height:0;overflow:hidden;color:var(--gray);font-size:14.5px;transition:max-height .5s,margin .5s}
-.fitem.open .ans{max-height:240px;margin-top:12px}
+.fitem .ans{display:none;color:var(--gray);font-size:14.5px;margin-top:14px;line-height:1.65}
+.fitem.open .ans{display:block}
 
 /* ---------- contact ---------- */
 .contact{background:var(--blue);color:#fff;overflow:hidden;padding-bottom:0}
@@ -200,20 +206,8 @@ section{padding:130px 0}
 .contact .fbot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.18);padding:26px 32px;font-size:13.5px;color:rgba(255,255,255,.8)}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-[data-stagger].in>*{opacity:1;transform:none}
-[data-stagger].in>*:nth-child(1){transition-delay:.05s}
-[data-stagger].in>*:nth-child(2){transition-delay:.12s}
-[data-stagger].in>*:nth-child(3){transition-delay:.19s}
-[data-stagger].in>*:nth-child(4){transition-delay:.26s}
-[data-stagger].in>*:nth-child(5){transition-delay:.33s}
-[data-stagger].in>*:nth-child(6){transition-delay:.4s}
-[data-stagger].in>*:nth-child(7){transition-delay:.47s}
-[data-stagger].in>*:nth-child(8){transition-delay:.54s}
-[data-stagger].in>*:nth-child(9){transition-delay:.61s}
-@media (prefers-reduced-motion:reduce){.reveal,[data-stagger]>*{opacity:1;transform:none;transition:none}.ticker .track{animation:none}}
+
+
 
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
@@ -223,7 +217,7 @@ section{padding:130px 0}
   .services .sticky img{height:44vh}
 }
 @media (max-width:860px){
-  section{padding:95px 0}
+  section{padding:calc(var(--sec)*.73) 0}
   .navin{padding:16px 20px}
   .hero .head{left:20px;top:14%}
   .hero .socials{display:none}
@@ -236,259 +230,186 @@ section{padding:130px 0}
   .srow .tp{grid-column:2;justify-self:start}
   .contact .fbot{padding:22px 20px}
 }
-</style>
-</head>
+
+/* estados GSAP + placeholders */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.phx{position:relative;width:100%;background:#12235e;display:grid;place-items:center;overflow:hidden}
+.phx::after{content:attr(data-label);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);text-align:center;padding:12px;line-height:1.7}
+.phx>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.light .phx{background:#E7EBF6}
+.light .phx::after{color:rgba(12,15,20,.4)}
+/* abanico del strip (R5): estado inicial apilado, GSAP lo abre con scroll */
+.hero .strip .fan{will-change:transform}
+html.no-motion .hero .strip .fan{transform:none!important}
+
+/* adaptadores de contenedores nuevos (rework) */
+.case .bgw{position:absolute;inset:0}
+.case .bgw .phx{position:absolute;inset:0;height:100%;aspect-ratio:auto!important}
+.case .bgw img{filter:grayscale(.25) contrast(1.05) brightness(.72)}
+.scard .top .phx.thumbx{width:80px;height:56px;aspect-ratio:auto!important;border-radius:8px;flex:0 0 auto}
+.jcard .ph2{position:relative;border-radius:var(--r);overflow:hidden}
+.jcard .ph2 .ttl{position:absolute;left:18px;bottom:16px;right:18px;z-index:2;color:#fff;font-weight:600;font-size:clamp(18px,1.8vw,24px);letter-spacing:-.02em;text-shadow:0 1px 18px rgba(0,0,0,.4)}
+.jcard .ph2::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(12,15,20,.62));z-index:1;border-radius:var(--r)}
+.hero .duo .phx{position:absolute;inset:0;height:100%;aspect-ratio:auto!important;background:transparent}
+.hero .strip .fan{display:inline-flex}
+.hero .strip .fan img{width:130px;height:86px;object-fit:cover;border-radius:8px}
+</style></head>
 <body>
 
 <nav id="nav">
   <div class="navin">
-    <div class="left"><span class="glyph">⚹</span> South Bay Based</div>
-    <div class="bracket">©2026 · Dr. Jorge Arce</div>
-    <a class="bracket" href="#contact">[ <i>Contact</i> ]</a>
+    <div class="left"><span class="glyph">⚹</span> <span id="navLeft"></span></div>
+    <div class="bracket" id="navCenter"></div>
+    <a class="bracket" href="#contact">[ <i id="navCtaText"></i> ]</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="duo"><img src="../img/portrait.jpg" alt="Dr. Jorge Arce"></div>
-  <div class="head reveal" data-hero>
-    <h1>The surgeon other surgeons <em>trust</em></h1>
-    <div class="disciplines">
-      <span>⚹ Dental Implants</span>
-      <span>⚹ Reconstruction</span>
-      <span>⚹ Complex Cases</span>
-    </div>
-  </div>
-  <div class="socials reveal" data-hero><a href="#">In</a><a href="#">Fb</a><a href="tel:+13103274166">Tel</a></div>
-  <div class="markrow">
-    <div class="mark reveal" data-hero>Arce</div>
-    <div class="strip reveal" data-hero>
-      <img src="../img/portrait.jpg" alt="">
-      <img src="../img/surgery.jpg" alt="">
-      <img src="../img/operating.jpg" alt="">
-      <img src="../img/clinic.jpg" alt="">
-    </div>
-  </div>
-</header>
+<main id="site"></main>
+<noscript><div style="min-height:60vh;display:grid;place-items:center;font-family:monospace">Este template requiere JavaScript (contenido en content.json).</div></noscript>
 
-<!-- TICKER -->
-<div class="ticker"><div class="track" id="tick">
-  <span>Dental Implants <i class="g">⚹</i> All-On-X Full Arch <i class="g">⚹</i> Complex Extractions <i class="g">⚹</i> Reconstruction <i class="g">⚹</i> Board Certified <i class="g">⚹</i> Est. 2007 <i class="g">⚹</i> South Bay, California <i class="g">⚹</i></span>
-</div></div>
-
-<!-- CASES -->
-<div class="cases">
-  <div class="case reveal">
-    <img class="bg" src="../img/surgery.jpg" alt="">
-    <div class="tint"></div>
-    <div class="meta">Since 1999</div>
-    <div class="meta2">The Operating Room</div>
-    <div class="cbody">
-      <div class="cat">The work</div>
-      <div class="ttl">Full-Arch Reconstruction</div>
-    </div>
-  </div>
-  <div class="case reveal">
-    <img class="bg" src="../img/clinic.jpg" alt="">
-    <div class="tint"></div>
-    <div class="meta">Est. 2007</div>
-    <div class="meta2">Redondo Beach · Torrance</div>
-    <div class="cbody">
-      <div class="cat">The practice</div>
-      <div class="ttl">Dental Implants Center of South Bay</div>
-    </div>
-  </div>
-</div>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="wrap">
-    <div class="grid">
-      <div class="state reveal">Twenty-seven years restoring <em>function, structure, and confidence</em> — on the cases other surgeons refer out.</div>
-      <p class="side reveal">Dr. Arce trained in Colombia and built his life's work in California, devoting his career entirely to oral and maxillofacial surgery and dental implantology. In 2007 he founded the Dental Implants Center of South Bay, guided by one conviction: difficult work, done with care, gives people their lives back.</p>
-    </div>
-    <div class="statrow" data-stagger>
-      <div class="stat"><div class="n">27<i>+</i></div><div class="l">Years dedicated to oral &amp; maxillofacial surgery</div></div>
-      <div class="stat"><div class="n">2007</div><div class="l">Founded the Dental Implants Center of South Bay</div></div>
-      <div class="stat"><div class="n">Board <i>Certified</i></div><div class="l">In dental implantology</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="seclab reveal"><span class="bracket">[ <i>Expertise</i> ]</span></div>
-    <div class="lay">
-      <div class="sticky reveal"><img src="../img/operating.jpg" alt="Dr. Jorge Arce operating"></div>
-      <div>
-        <div class="scard reveal">
-          <div class="top"><span class="num">01</span><img class="thumb" src="../img/surgery.jpg" alt=""></div>
-          <h3>Surgical Disciplines</h3>
-          <p class="desc">The difficult work refined over twenty-seven years — from a single implant to the cases with no room for error.</p>
-          <div class="rows">
-            <div class="row"><span class="no">/01</span><span class="nm">Dental Implants &amp; All-On-X Full Arch</span></div>
-            <div class="row"><span class="no">/02</span><span class="nm">Bone &amp; Tissue Reconstruction</span></div>
-            <div class="row"><span class="no">/03</span><span class="nm">Complex Extractions</span></div>
-            <div class="row"><span class="no">/04</span><span class="nm">Oral Pathology</span></div>
-          </div>
-        </div>
-        <div class="scard reveal">
-          <div class="top"><span class="num">02</span><img class="thumb" src="../img/clinic.jpg" alt=""></div>
-          <h3>Patient Care</h3>
-          <p class="desc">Because the person always comes before the procedure — clarity first, surgery second.</p>
-          <div class="rows">
-            <div class="row"><span class="no">/01</span><span class="nm">Second Opinions on Complex Diagnoses</span></div>
-            <div class="row"><span class="no">/02</span><span class="nm">Long-Term Implant Maintenance</span></div>
-            <div class="row"><span class="no">/03</span><span class="nm">TMJ Treatment</span></div>
-            <div class="row"><span class="no">/04</span><span class="nm">Referring-Dentist Partnership &amp; Full Reports</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATEMENT BAND -->
-<section class="band">
-  <div class="wrap">
-    <div class="state reveal">"The work is precise. The reason behind it is <em>human."</em><div style="margin-top:26px;font-size:15px;font-weight:500;color:rgba(255,255,255,.8)">— Dr. Jorge Arce, D.D.S. · Founder, Dental Implants Center of South Bay</div></div>
-  </div>
-</section>
-
-<!-- VOICES -->
-<section class="voices" id="stories">
-  <div class="wrap">
-    <div class="seclab reveal"><span class="bracket">[ <i>Real Stories</i> ]</span></div>
-    <h2 class="mega reveal" style="font-size:clamp(40px,5.4vw,76px);margin-bottom:60px">The people<br>who were <em>there</em></h2>
-    <div class="vgrid" data-stagger>
-      <div class="vcard"><div class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <b>I can eat, smile, and speak again."</b></div><div class="who"><span class="av">MR</span><div><div class="nm">Maria R.</div><div class="rl">Patient · Full-arch reconstruction</div></div></div></div>
-      <div class="vcard"><div class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</div><div class="who"><span class="av ink">DK</span><div><div class="nm">Dr. David Kim, D.D.S.</div><div class="rl">Referring General Dentist · Torrance</div></div></div></div>
-      <div class="vcard blue"><div class="q">"The most thorough and honest surgeon I have ever met. He treated my father like family."</div><div class="who"><span class="av">AC</span><div><div class="nm">Anabella C.</div><div class="rl">Daughter of patient</div></div></div></div>
-      <div class="vcard"><div class="q">"Calm, precise, and genuinely kind. He explained every step until I understood. <b>The result speaks for itself."</b></div><div class="who"><span class="av">RT</span><div><div class="nm">Robert T.</div><div class="rl">Patient · Dental implants</div></div></div></div>
-      <div class="vcard blue"><div class="q">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</div><div class="who"><span class="av">LS</span><div><div class="nm">Dr. Lina Soto</div><div class="rl">Periodontist</div></div></div></div>
-      <div class="vcard"><div class="q">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time. A true professional."</div><div class="who"><span class="av ink">JM</span><div><div class="nm">Dr. Jeff Malone</div><div class="rl">Referring Dentist · South Bay</div></div></div></div>
-      <div class="vcard"><div class="q">"I was terrified of the procedure. He never rushed me. <b>Best decision I have made for my health."</b></div><div class="who"><span class="av">CS</span><div><div class="nm">Carlos S.</div><div class="rl">Patient · Bone graft + implants</div></div></div></div>
-      <div class="vcard"><div class="q">"Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know."</div><div class="who"><span class="av">EP</span><div><div class="nm">Elena P.</div><div class="rl">Patient · TMJ treatment</div></div></div></div>
-      <div class="vcard"><div class="q">"The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice."</div><div class="who"><span class="av ink">ME</span><div><div class="nm">Dr. Mark Ellison</div><div class="rl">Referring General Dentist</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- JOURNAL -->
-<section class="journal" id="journal" style="padding-top:0">
-  <div class="wrap">
-    <div class="seclab reveal"><span class="bracket">[ <i>For Patients</i> ]</span></div>
-    <div class="jgrid" data-stagger>
-      <a class="jcard" href="#contact">
-        <div class="ph"><img src="../img/operating.jpg" alt=""><div class="ttl">All-On-X, explained simply</div></div>
-        <div class="datebar">Implants · What full-arch restoration actually involves</div>
-      </a>
-      <a class="jcard" href="#contact">
-        <div class="ph"><img src="../img/clinic.jpg" alt=""><div class="ttl">How to know if you need an implant</div></div>
-        <div class="datebar">Before Surgery · The signs worth paying attention to</div>
-      </a>
-      <a class="jcard" href="#contact">
-        <div class="ph"><img src="../img/quote.jpg" alt=""><div class="ttl">Five myths about oral surgery</div></div>
-        <div class="datebar">Myths · Separating fear from fact</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- SPEAKING -->
-<section class="speak" style="padding-top:0">
-  <div class="wrap">
-    <div class="seclab reveal"><span class="bracket">[ <i>Speaking &amp; Education</i> ]</span></div>
-    <div class="lay">
-      <div class="photo reveal"><img src="../img/speaking.jpg" alt="Dr. Jorge Arce speaking at a conference"></div>
-      <div class="reveal">
-        <h2>Sharing the craft with the profession.</h2>
-        <p class="lead">Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction. Available for conferences, study clubs, and resident training.</p>
-        <div class="srow"><span class="yr">2025</span><div><div class="nm">Advances in Full-Arch Implant Reconstruction</div><div class="pl">California Dental Association · Annual Session</div></div><span class="tp">Keynote</span></div>
-        <div class="srow"><span class="yr">2024</span><div><div class="nm">Managing the Complex Extraction</div><div class="pl">South Bay Dental Study Club</div></div><span class="tp">Lecture</span></div>
-        <div class="srow"><span class="yr">2024</span><div><div class="nm">Mentorship in Surgical Implantology</div><div class="pl">Resident training program · Guest faculty</div></div><span class="tp">Workshop</span></div>
-        <div class="srow"><span class="yr">2023</span><div><div class="nm">When Not to Operate: Judgment in Oral Surgery</div><div class="pl">Continuing Education Symposium</div></div><span class="tp">Panel</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="wrap">
-    <div class="lay">
-      <div class="left reveal">
-        <h2 class="mega">Your<br>Questions</h2>
-        <p>Not sure what to expect? These answers might help you feel more confident as you begin — the way Dr. Arce answers in person: plainly.</p>
-      </div>
-      <div class="reveal">
-        <div class="fitem"><div class="qq">What happens at a first consultation? <span class="tg">+</span></div><div class="ans">A long, unhurried conversation. Dr. Arce reviews your history and imaging, examines the site, and gives you an honest read of what is possible — including, when it is the right answer, the recommendation not to operate.</div></div>
-        <div class="fitem"><div class="qq">I was told my case is impossible. Is it? <span class="tg">+</span></div><div class="ans">Sometimes it is — and you deserve to hear that plainly. But many of the cases in this practice arrived with that exact sentence. Complex cases are not a detour from this work; they are the work.</div></div>
-        <div class="fitem"><div class="qq">How do I know if I'm a candidate for implants? <span class="tg">+</span></div><div class="ans">Bone volume, gum health, medical history, and timing all matter. The free patient guide covers the signs — and a consultation settles it definitively with imaging.</div></div>
-        <div class="fitem"><div class="qq">Do you work with referring dentists? <span class="tg">+</span></div><div class="ans">Constantly — much of this practice arrives by referral. Every referred patient goes back with a full surgical report, and the restorative work stays with your general dentist.</div></div>
-        <div class="fitem"><div class="qq">What is All-On-X? <span class="tg">+</span></div><div class="ans">A full-arch restoration supported by implants — a complete new set of teeth for patients who have lost most or all of theirs. The journal article above walks through it in plain language.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="lay">
-      <div class="reveal">
-        <h2 class="mega">Told it can't be <em>done?</em></h2>
-        <p class="sub">Every case starts with an honest conversation. Request a consultation, ask for a second opinion, or get the free guide — <i>What to expect from your first implant consultation.</i></p>
-        <div class="meta">
-          <div><div class="h">Visit</div><div class="v">Redondo Beach · Torrance, CA</div></div>
-          <div><div class="h">Call</div><div class="v">(310) 327-4166</div></div>
-          <div><div class="h">Hours</div><div class="v">By appointment</div></div>
-        </div>
-      </div>
-      <div class="cform reveal">
-        <h3>Request a consultation</h3>
-        <div class="s">Or ask for the free patient guide — no spam, just help.</div>
-        <input type="text" placeholder="Full name">
-        <input type="email" placeholder="you@email.com">
-        <textarea rows="3" placeholder="What brings you in? (optional)"></textarea>
-        <button class="btn blue" style="width:100%;justify-content:center">Send <span class="ar">→</span></button>
-        <div class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.</div>
-      </div>
-    </div>
-    <div class="fmark">Arce</div>
-  </div>
-  <div class="fbot">
-    <span>© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.</span>
-    <span>⚹ South Bay, California</span>
-    <span>Oral &amp; Maxillofacial Surgery</span>
-  </div>
-</section>
-
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // duplicate ticker content for seamless loop
-  const t = document.getElementById('tick');
-  t.innerHTML += t.innerHTML;
+(function(){
+'use strict';
+var REDUCED=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&!!(window.gsap&&window.ScrollTrigger&&window.Lenis);
+if(!MOTION)document.documentElement.classList.add('no-motion');
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function rich(s){return esc(s)
+  .replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>')
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<i>').replace(/&lt;\/i&gt;/g,'</i>')
+  .replace(/&lt;br&gt;/g,'<br>').replace(/&amp;nbsp;/g,'&nbsp;')}
+function ph(img,ratio,cls){if(!img)return'';var r=(img.ratio||ratio||'4:5').replace(':',' / ');
+  return'<div class="phx '+(cls||'')+'" style="aspect-ratio:'+r+'" data-label="'+esc(img.src?'':img.label||'')+'">'+(img.src?'<img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'">':'')+'</div>'}
+function seclab(k){return'<div class="seclab wr" data-r1><span class="bracket">[ <i>'+esc(k)+'</i> ]</span></div>'}
 
-  document.querySelectorAll('[data-hero]').forEach(el => el.classList.add('in'));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.reveal:not([data-hero]),[data-stagger]').forEach(el => io.observe(el));
+var partials={
+hero:function(s){return'<header class="hero" id="heroFan"><div class="duo">'+ph(s.image,'16:9')+'</div>'+
+'<div class="head wr" data-hero><h1>'+rich(s.title)+'</h1><div class="disciplines">'+(s.disciplines||[]).map(function(t){return'<span>⚹ '+esc(t)+'</span>'}).join('')+'</div></div>'+
+'<div class="socials wr" data-hero>'+(s.socials||[]).map(function(x){return'<a href="'+esc(x[1])+'">'+esc(x[0])+'</a>'}).join('')+'</div>'+
+'<div class="markrow"><div class="mark wr" data-hero>'+esc(window.__B.mark)+'</div>'+
+'<div class="strip wr" data-hero>'+(s.strip||[]).map(function(im,i){return'<span class="fan" data-fan="'+i+'">'+(im.src?'<img src="'+esc(im.src)+'" alt="">':'<span class="phx" style="width:130px;height:86px" data-label="'+esc(im.label||'')+'"></span>')+'</span>'}).join('')+'</div></div></header>'},
+ticker:function(s){return'<div class="ticker"><div class="track" id="tick"><span>'+
+(s.items||[]).map(function(t){return esc(t)+' <i class="g">⚹</i> '}).join('')+'</span></div></div>'},
+cases:function(s){return'<div class="cases">'+(s.items||[]).map(function(c){return'<div class="case wr" data-caseband><div class="bgw">'+ph(c.img,'16:9')+'</div><div class="tint"></div>'+
+'<div class="meta">'+esc(c.meta)+'</div><div class="meta2">'+esc(c.meta2)+'</div>'+
+'<div class="cbody"><div class="cat">'+esc(c.cat)+'</div><div class="ttl">'+esc(c.ttl)+'</div></div></div>'}).join('')+'</div>'},
+stats:function(s){return'<section class="stats"><div class="wrap">'+
+'<div class="grid"><div class="state wr" data-r1>'+rich(s.statement)+'</div><p class="side wr" data-r1>'+esc(s.side)+'</p></div>'+
+'<div class="statrow" data-cards>'+(s.stats||[]).map(function(x){return'<div class="stat wr"><div class="n">'+esc(x.n)+(x.i?'<i>'+esc(x.i)+'</i>':'')+'</div><div class="l">'+esc(x.l)+'</div></div>'}).join('')+'</div></div></section>'},
+services:function(s){return'<section class="services light"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap">'+seclab(s.kick)+
+'<div class="lay"><div class="sticky wr" data-img>'+ph(s.sticky,'3:4')+'</div><div>'+
+(s.cards||[]).map(function(c){return'<div class="scard wr" data-r1><div class="top"><span class="num">'+esc(c.num)+'</span>'+ph(c.thumb,'16:10','thumbx')+'</div><h3>'+esc(c.t)+'</h3><p class="desc">'+esc(c.d)+'</p>'+
+'<div class="rows" data-rule>'+(c.rows||[]).map(function(r,i){return'<div class="row"><span class="no">/'+('0'+(i+1)).slice(-2)+'</span><span class="nm">'+esc(r)+'</span></div>'}).join('')+'</div></div>'}).join('')+
+'</div></div></div></section>'},
+band:function(s){return'<section class="band"><div class="wrap"><div class="state wr" data-r1>'+rich(s.quote)+'<div style="margin-top:26px;font-size:15px;font-weight:500;color:rgba(255,255,255,.8)">'+esc(s.who)+'</div></div></div></section>'},
+voices:function(s){return'<section class="voices"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap">'+seclab(s.kick)+
+'<h2 class="mega wr" data-r1 style="font-size:clamp(40px,5.4vw,76px);margin-bottom:60px">'+rich(s.title)+'</h2>'+
+'<div class="vgrid" data-cards>'+(s.cards||[]).map(function(c){return'<div class="vcard '+(c.tone||'')+' wr"><div class="q">&ldquo;'+rich(c.q)+'&rdquo;</div><div class="who"><span class="av'+(c.ink?' ink':'')+'">'+esc(c.ini)+'</span><div><div class="nm">'+esc(c.n)+'</div><div class="rl">'+esc(c.r)+'</div></div></div></div>'}).join('')+'</div></div></section>'},
+journal:function(s){return'<section class="journal light"'+(s.id?' id="'+esc(s.id)+'"':'')+' style="padding-top:0"><div class="wrap">'+seclab(s.kick)+
+'<div class="jgrid" data-cards>'+(s.posts||[]).map(function(p){return'<a class="jcard wr" href="#contact"><div class="ph2">'+ph(p.img,'16:10')+'<div class="ttl">'+esc(p.t)+'</div></div><div class="datebar">'+esc(p.bar)+'</div></a>'}).join('')+'</div></div></section>'},
+speak:function(s){return'<section class="speak light" style="padding-top:0"><div class="wrap">'+seclab(s.kick)+
+'<div class="lay"><div class="photo wr" data-img>'+ph(s.photo,'4:5')+'</div>'+
+'<div class="wr" data-r1><h2>'+esc(s.title)+'</h2><p class="lead">'+esc(s.lead)+'</p>'+
+'<div data-rule>'+(s.rows||[]).map(function(r){return'<div class="srow"><span class="yr">'+esc(r[0])+'</span><div><div class="nm">'+esc(r[1])+'</div><div class="pl">'+esc(r[2])+'</div></div><span class="tp">'+esc(r[3])+'</span></div>'}).join('')+'</div></div></div></div></section>'},
+faq:function(s){return'<section class="faq"><div class="wrap"><div class="lay">'+
+'<div class="left wr" data-r1><h2 class="mega">'+rich(s.title)+'</h2><p>'+esc(s.text)+'</p></div>'+
+'<div class="wr" data-r1>'+(s.items||[]).map(function(f){return'<div class="fitem" data-faq><div class="qq">'+esc(f[0])+' <span class="tg">+</span></div><div class="ans">'+esc(f[1])+'</div></div>'}).join('')+'</div></div></div></section>'},
+contact:function(s){return'<section class="contact"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap"><div class="lay">'+
+'<div class="wr" data-r1><h2 class="mega">'+rich(s.title)+'</h2><p class="sub">'+rich(s.sub)+'</p>'+
+'<div class="meta">'+(s.meta||[]).map(function(m){return'<div><div class="h">'+esc(m[0])+'</div><div class="v">'+esc(m[1])+'</div></div>'}).join('')+'</div></div>'+
+'<div class="cform wr" data-r1><h3>'+esc(s.formTitle)+'</h3><div class="s">'+esc(s.formSub)+'</div>'+
+(s.fields||[]).map(function(f){return f[0]==='textarea'?'<textarea rows="3" placeholder="'+esc(f[1])+'"></textarea>':'<input type="'+esc(f[0])+'" placeholder="'+esc(f[1])+'">'}).join('')+
+'<button class="btn blue" style="width:100%;justify-content:center">'+esc(s.submit)+' <span class="ar">→</span></button>'+
+'<div class="fine">'+esc(s.fine)+'</div></div></div>'+
+'<div class="fmark">'+esc(window.__B.mark)+'</div></div>'+
+'<div class="fbot">'+(s.legal||[]).map(function(l){return'<span>'+esc(l)+'</span>'}).join('')+'</div></section>'}
+};
 
-  document.querySelectorAll('.fitem').forEach(f => f.addEventListener('click', () => f.classList.toggle('open')));
+function boot(data){
+  window.__B=data.brand||{};
+  if(data.meta){document.title=data.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(!md){md=document.createElement('meta');md.name='description';document.head.appendChild(md)}
+    md.content=data.meta.description||''}
+  var nv=data.nav||{};
+  document.getElementById('navLeft').textContent=nv.left||'';
+  document.getElementById('navCenter').textContent=nv.center||'';
+  document.getElementById('navCtaText').textContent=(nv.cta||{}).text||'';
+  var html='';(data.sections||[]).forEach(function(s){var fn=partials[s.type];if(fn)html+=fn(s)});
+  document.getElementById('site').innerHTML=html;
+  document.querySelectorAll('[data-faq]').forEach(function(el){
+    el.addEventListener('click',function(){var open=el.classList.toggle('open');
+      if(open&&MOTION){var a=el.querySelector('.ans');
+        gsap.fromTo(a,{opacity:0,y:6},{opacity:1,y:0,duration:.3,ease:'expo.out',clearProps:'transform'})}})});
+  initMotion();
+}
 
-  const nav = document.getElementById('nav');
-  const onScroll = () => {
-    const heroH = document.querySelector('.hero').offsetHeight;
-    const darkZones = [...document.querySelectorAll('.case,.band,.contact,.ticker')];
-    const y = 40;
-    const overDark = scrollY < heroH - 80 || darkZones.some(d => { const r = d.getBoundingClientRect(); return r.top <= y && r.bottom >= y; });
-    nav.classList.toggle('darktext', !overDark);
-  };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
-});
+function initMotion(){
+  var tick=document.getElementById('tick');
+  if(tick)tick.innerHTML+=tick.innerHTML;
+  if(!MOTION)return;
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();lenis.scrollTo(t)}});
+  var acc=0;gsap.utils.toArray('[data-hero]').forEach(function(el,i){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.75,ease:'expo.out',delay:.15+acc/1000,clearProps:'transform'});
+    acc+=[120,80,60][Math.min(i,2)]});
+  gsap.utils.toArray('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.75,ease:'expo.out',clearProps:'transform',
+      scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
+  gsap.utils.toArray('[data-cards]').forEach(function(grid){
+    var cards=grid.querySelectorAll('.wr');var d=0,steps=[90,70,55,45,40,40];
+    cards.forEach(function(c,i){
+      gsap.fromTo(c,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:d/1000,clearProps:'transform',
+        scrollTrigger:{trigger:grid,start:'top 84%',once:true}});
+      d+=steps[Math.min(i,5)]})});
+  gsap.utils.toArray('[data-rule]').forEach(function(el){
+    var line=document.createElement('div');
+    line.style.cssText='height:1px;background:currentColor;opacity:.15;transform-origin:left center;transform:scaleX(0)';
+    el.insertBefore(line,el.firstChild);
+    gsap.to(line,{scaleX:1,duration:.8,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
+  gsap.utils.toArray('[data-img]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,scale:1.03},{opacity:1,scale:1,duration:.9,ease:'expo.out',clearProps:'transform',
+      scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
+  /* bandas full-bleed: la imagen asienta 1.12→1 mapeada al progreso (scrub) */
+  gsap.utils.toArray('[data-caseband] .bgw img,[data-caseband] .bgw .phx').forEach(function(im){
+    gsap.fromTo(im,{scale:1.12},{scale:1,ease:'none',
+      scrollTrigger:{trigger:im.closest('[data-caseband]'),start:'top bottom',end:'bottom top',scrub:1.2}})});
+  gsap.utils.toArray('[data-caseband]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0},{opacity:1,duration:.9,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
+  /* R5 ABANICO: el strip se abre con el primer scroll (progreso del hero) */
+  var fans=gsap.utils.toArray('[data-fan]');
+  if(fans.length&&matchMedia('(min-width:761px)').matches){
+    gsap.set(fans,function(){return{}});
+    ScrollTrigger.create({trigger:'#heroFan',start:'top top',end:'bottom 60%',scrub:1.2,
+      onUpdate:function(self){var p=self.progress;
+        fans.forEach(function(f,i){var k=(i-(fans.length-1)/2);
+          f.style.transform='translateX('+(k*18*p)+'px) translateY('+(-14*p*Math.abs(k))+'px) rotate('+(k*4*p)+'deg)'})}});
+  }
+  /* ticker scroll-driven: se mueve al ritmo del scroll, no en loop */
+  if(tick){var tx=0,last=0;
+    lenis.on('scroll',function(e){var dy=e.scroll-last;last=e.scroll;tx-=dy*.45;
+      var w=tick.scrollWidth/2;if(w>0){tx=((tx%w)+w)%w*-1}
+      tick.style.transform='translateX('+tx+'px)'})}
+}
+
+fetch('/v5-zentro/content.json')
+  .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+  .then(boot)
+  .catch(function(err){document.documentElement.classList.add('no-motion');
+    document.getElementById('site').innerHTML='<div style="min-height:60vh;display:grid;place-items:center;font-family:monospace">No se pudo cargar content.json ('+esc(err.message)+')</div>'});
+})();
 </script>
 </body>
 </html>

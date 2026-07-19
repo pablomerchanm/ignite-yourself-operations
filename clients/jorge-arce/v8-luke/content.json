@@ -1,0 +1,329 @@
+{
+ "meta": {
+  "title": "Jorge Arce — Oral Surgeon · v8 Luke",
+  "description": "Quiet surgeon, restoring what matters, through precision, patience and care. South Bay, CA.",
+  "lang": "en"
+ },
+ "brand": {
+  "n1": "Jorge",
+  "n2": "Arce."
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "intro": "Quiet surgeon, <s>restoring what matters,</s><br>through precision, patience and care.",
+   "tag": "South Bay, CA — Est. 2007",
+   "years": "27 yrs",
+   "mid": [
+    "Implants",
+    "Reconstruction",
+    "Complex Cases"
+   ],
+   "links": [
+    [
+     "Work",
+     "#work"
+    ],
+    [
+     "Info",
+     "#info"
+    ],
+    [
+     "Contact",
+     "#contact"
+    ]
+   ]
+  },
+  {
+   "type": "statement",
+   "text": "As an <s>oral surgeon</s>, I craft tailor-made <s>reconstructions</s> for the patients who were told it couldn't be done.",
+   "cred": "Dr. Jorge Arce — Board certified, trained in Colombia, built in California"
+  },
+  {
+   "type": "work",
+   "id": "work",
+   "cnt": "(06)",
+   "title": "The <s>work</s>",
+   "rows": [
+    {
+     "t": "Full-arch reconstruction",
+     "s": "All-On-X — a complete new set of teeth, planned and placed with precision.",
+     "img": {
+      "src": "/img/surgery.jpg",
+      "label": "cirugía"
+     }
+    },
+    {
+     "t": "Complex extractions",
+     "s": "The difficult surgeries other clinicians prefer to refer elsewhere.",
+     "img": {
+      "src": "/img/operating.jpg",
+      "label": "detalle"
+     }
+    },
+    {
+     "t": "Dental implants",
+     "s": "From a single implant to a full arch — twenty-seven years of placement.",
+     "img": {
+      "src": "/img/clinic.jpg",
+      "label": "clínica"
+     }
+    },
+    {
+     "t": "Bone & tissue grafting",
+     "s": "Rebuilding the foundation where bone and tissue have been lost.",
+     "img": {
+      "src": "/img/quote.jpg",
+      "label": "retrato"
+     }
+    },
+    {
+     "t": "Second opinions",
+     "s": "Clarity for complex decisions — including, when right, the advice not to operate.",
+     "img": {
+      "src": "/img/portrait.jpg",
+      "label": "retrato"
+     }
+    },
+    {
+     "t": "Pathology & TMJ",
+     "s": "Diagnosis and treatment for conditions of teeth, gums, bone, and joints.",
+     "img": {
+      "src": "/img/hero.jpg",
+      "label": "ambiente"
+     }
+    }
+   ],
+   "labels": [
+    "Since 1999",
+    "Preview"
+   ]
+  },
+  {
+   "type": "skills",
+   "id": "info",
+   "cnt": "(03)",
+   "title": "The <s>craft</s>",
+   "cols": [
+    {
+     "h": "Surgical",
+     "items": [
+      [
+       "Implantology",
+       "Board certified"
+      ],
+      [
+       "Full-arch All-On-X"
+      ],
+      [
+       "Complex extraction"
+      ],
+      [
+       "Reconstruction"
+      ]
+     ]
+    },
+    {
+     "h": "Clinical <s>judgment</s>",
+     "items": [
+      [
+       "Second opinions"
+      ],
+      [
+       "When not to operate"
+      ],
+      [
+       "Treatment sequencing"
+      ],
+      [
+       "Referring-dentist reports"
+      ]
+     ]
+    },
+    {
+     "h": "Care",
+     "items": [
+      [
+       "Unhurried consultations"
+      ],
+      [
+       "Plain-language plans"
+      ],
+      [
+       "Long-term maintenance"
+      ],
+      [
+       "Mentorship & teaching"
+      ]
+     ]
+    }
+   ],
+   "cloud": [
+    "All-On-X",
+    "Bone Grafting",
+    "CBCT Planning",
+    "Sinus Lift",
+    "TMJ",
+    "Oral Pathology",
+    "Implant Maintenance",
+    "Sedation",
+    "Complex Extractions",
+    "Full-Arch Restoration",
+    "Peer Referrals",
+    "Resident Training"
+   ]
+  },
+  {
+   "type": "voices",
+   "cnt": "(09)",
+   "title": "The people <s>who were there</s>",
+   "rows": [
+    {
+     "q": "I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <s>I can eat, smile, and speak again.</s>",
+     "n": "Maria R.",
+     "r": "Patient · Full-arch"
+    },
+    {
+     "q": "When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.",
+     "n": "Dr. David Kim, D.D.S.",
+     "r": "Referring Dentist"
+    },
+    {
+     "q": "The most thorough and honest surgeon I have ever met. He treated my father <s>like family.</s>",
+     "n": "Anabella C.",
+     "r": "Daughter of patient"
+    },
+    {
+     "q": "Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself.",
+     "n": "Robert T.",
+     "r": "Patient · Implants"
+    },
+    {
+     "q": "I refer my most complex cases to Dr. Arce without hesitation. <s>Twenty-seven years shows.</s>",
+     "n": "Dr. Lina Soto",
+     "r": "Periodontist"
+    },
+    {
+     "q": "Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time.",
+     "n": "Dr. Jeff Malone",
+     "r": "Referring Dentist"
+    },
+    {
+     "q": "I was terrified of the procedure. He never rushed me. <s>Best decision I have made for my health.</s>",
+     "n": "Carlos S.",
+     "r": "Patient · Bone graft"
+    },
+    {
+     "q": "Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know.",
+     "n": "Elena P.",
+     "r": "Patient · TMJ"
+    }
+   ]
+  },
+  {
+   "type": "misc",
+   "cnt": "(04)",
+   "title": "Speaking <s>& misc</s>",
+   "rows": [
+    [
+     "2025",
+     "Advances in Full-Arch Implant Reconstruction",
+     "California Dental Association · Annual Session",
+     "Keynote"
+    ],
+    [
+     "2024",
+     "Managing the Complex Extraction",
+     "South Bay Dental Study Club",
+     "Lecture"
+    ],
+    [
+     "2024",
+     "Mentorship in Surgical Implantology",
+     "Resident training program · Guest faculty",
+     "Workshop"
+    ],
+    [
+     "2023",
+     "When Not to Operate: Judgment in Oral Surgery",
+     "Continuing Education Symposium",
+     "Panel"
+    ]
+   ]
+  },
+  {
+   "type": "journal",
+   "cnt": "(03)",
+   "title": "For <s>patients</s>",
+   "posts": [
+    {
+     "img": {
+      "src": "/img/operating.jpg",
+      "label": "editorial 16:10"
+     },
+     "lab": "Implants / 01",
+     "t": "All-On-X, explained simply",
+     "d": "What full-arch restoration actually involves, who it's for, and what to expect at each stage."
+    },
+    {
+     "img": {
+      "src": "/img/clinic.jpg",
+      "label": "editorial 16:10"
+     },
+     "lab": "Before Surgery / 02",
+     "t": "How to know if you need an implant",
+     "d": "The signs worth paying attention to — and why timing often matters more than the procedure itself."
+    },
+    {
+     "img": {
+      "src": "/img/quote.jpg",
+      "label": "editorial 16:10"
+     },
+     "lab": "Myths / 03",
+     "t": "Five myths about oral surgery",
+     "d": "Separating fear from fact, so you can make a calm, informed decision about your health."
+    }
+   ]
+  },
+  {
+   "type": "contact",
+   "id": "contact",
+   "note": "Taking new patients and referrals — <s>consultations by appointment.</s> Each case is a chance to restore something that matters: bring your scans, your referral letter, or just your questions.",
+   "meta": [
+    [
+     "Call",
+     "(310) 327-4166"
+    ],
+    [
+     "Visit",
+     "Redondo Beach · Torrance, CA"
+    ],
+    [
+     "Practice",
+     "Dental Implants Center of South Bay"
+    ]
+   ],
+   "fields": [
+    [
+     "text",
+     "Full name"
+    ],
+    [
+     "email",
+     "you@email.com"
+    ],
+    [
+     "textarea",
+     "What brings you in? Ask for the free first-consultation guide."
+    ]
+   ],
+   "submit": "Send message",
+   "fine": "By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.",
+   "mega": "Contact",
+   "legal": [
+    "© 2026 Dr. Jorge Arce, D.D.S.",
+    "Oral & Maxillofacial Surgery — South Bay, CA"
+   ]
+  }
+ ]
+}

@@ -206,3 +206,124 @@ reduced ok ✓ · transform/opacity only ✓.
 err 0 · reduced ok.
 
 ---
+
+## 6 · v5-zentro — "Zentro" — CERRADA
+
+**Diagnóstico inicial:** display gastado por repetición; ticker en loop
+infinito (decorativo); strip del hero desaprovechado; FAQ con max-height;
+portabilidad cero.
+
+**Qué cambié:** abanico del strip como momento (scroll-driven, sin pin);
+ticker convertido a scroll-driven (velocity del scroll, wrap modular) —
+de gimmick a interacción; bandas full-bleed con settle 1.12→1 scrubbed;
+catálogo cerrado 5/2; FAQ display-swap; tokens + content.json + phx +
+adaptadores de contenedor.
+
+**Paso 4:** momento = abanico + ticker reactivo ✓ · composición variada
+(hero póster / ticker / bandas / stats split / services sticky / voices
+grid / journal cards / faq split / contact form) ✓ · mark ~19vw vs body 16
+≈ 17:1 ✓ · easings 2 ✓ · robustez: title ×2, sin fotos (11 labels), voices
+3, journal REMOVIDO — ovf 0 err 0 ✓ · reduced ok ✓ · transform/opacity ✓.
+
+**Verificación:** batchcheck W5 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
+
+## 7 · v8-luke — "Luke" — CERRADA
+
+**Diagnóstico inicial:** un solo momento (nombre 245px); lista con hover
+estática; aurora en loop 16s; 7 paddings sin sistema; portabilidad cero.
+
+**Qué cambié:** tour guiado por scroll de la lista de trabajo (progreso →
+fila activa + crossfade de preview, hover con prioridad manual 2.5s);
+aurora ligada al scroll del hero; catálogo cerrado 5/2; tokens +
+content.json + placeholders.
+
+**Paso 4:** momento = tour guiado ✓ · aurora con propósito ✓ · nombre
+245px/16 ≈ 15:1 ✓ · easings 2 ✓ · robustez: intro ×2, sin fotos, voices 3,
+journal REMOVIDO, tour avanza (fila 5 al final del scroll) — ovf 0 err 0 ✓ ·
+reduced ok ✓ · transform/opacity ✓.
+
+**Verificación:** batchcheck W8 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok · tour verificado programáticamente.
+
+---
+
+## 8 · v9-holistic — "Holistic" — CERRADA
+
+**Diagnóstico inicial:** referente animado replicado sin motion; signs
+estáticas con data-float muerto; 8 paddings sin sistema; portabilidad cero.
+
+**Qué cambié:** reparto de cartas como momento (pin +130vh, deltas medidos
+en runtime, cada señal en su quinto del progreso); catálogo cerrado 5/2;
+tokens + content.json + placeholders.
+
+**Paso 4:** momento = reparto ✓ · composición cálida ya variada (herocard /
+deck / split about / grid expertise / qband / masonry stories / journal /
+guide split / closing) ✓ · giant display vs body 16 > 4:1 ✓ · easings 2 ✓ ·
+robustez: título ×2, sin fotos (16 labels), stories 3, journal REMOVIDO,
+deal=5 — ovf 0 err 0 ✓ · reduced ok ✓ · transform/opacity ✓.
+
+**Verificación:** batchcheck W9 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
+
+## 9 · v10-mobius — "Möbius" — CERRADA
+
+**Diagnóstico inicial:** ritmo plano con 8 paddings sin sistema; banda foto
+estática; cards clónicas; portabilidad cero.
+
+**Qué cambié:** banda-expand con clip-path scrubbed como momento único;
+catálogo cerrado 5/2 con staggers decrecientes; tokens + content.json +
+placeholders + overflow clip.
+
+**Paso 4:** momento = banda que se abre ✓ · composición ya variada (stack
+hero / split expertise / bignums / band / record split2 / timeline / quote /
+voices grid / faq split / guide lay / talk) ✓ · mark hero enorme + display
+mega > 4:1 ✓ · easings 2 ✓ · robustez: intro ×2, sin fotos (labels), voices
+3, journal REMOVIDO — ovf 0 err 0 ✓ · reduced: clip inset(0) ✓ ·
+transform/paint only ✓.
+
+**Verificación:** batchcheck W10 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
+
+## 10 · v11-firma — CERRADA
+
+**Diagnóstico inicial:** el scroll horizontal era novedad frágil: lerp
+custom con body-height hack, rotador por `setInterval` infinito, reveals
+por IntersectionObserver — tres sistemas de motion desincronizados y una
+degradación mobile que dependía de un hack de altura. Copy 100% en HTML.
+
+**Qué cambié:**
+- Reescritura del mecanismo: pin GSAP de página completa
+  (`gsap.to(track,{x:-max})` + `pin:'#hwrap'` + `scrub:1.2` +
+  `invalidateOnRefresh`) — el travelling ES el R5 y corre en el ticker
+  único Lenis→GSAP.
+- Rotador scroll-driven: `setWord(floor(clamp(progress*4)*n))` en el
+  `onUpdate` del pin — mapeo continuo, murió el interval.
+- Reveals de panel vía `containerAnimation:hTween` con start 'left 88%'.
+- Rail nav mapea `offsetLeft/maxX` al rango del ScrollTrigger vía
+  `lenis.scrollTo`.
+- Mobile (<901px) y reduced-motion: columna vertical con reveals
+  normales, rotador fijo en última palabra — degradación diseñada.
+- content.json con 10 paneles (phero/pcase×2/pstate/pexp/pstats/
+  pstories/pjournal/pspeak/pfin), todos opcionales; tokens en `:root`;
+  `.phx` placeholders; `will-change:transform` solo en `.track` ≥901px.
+
+**Qué elevé:** el truco pasó de frágil a firme: un solo sistema de motion
+con progreso compartido (track+progress+rotador), y la página vertical
+mobile dejó de ser un dump.
+
+**Paso 4:** momento memorable sí (todo el sitio es el pin); paneles con
+anchos 48–92vw rompen el ritmo clónico; ratio 7.5:1; motion continuo en
+R5, 2 easings, nada anima layout; robusto con titular ×2 y sin fotos.
+
+**Verificación:** batchcheck W11 ovf 0 desktop+mobile. robust11:
+REDUCED no-motion ok, 0 `.wr` ocultos, rotador en 3/3, track sin
+transform · PIN track -3982px + progress 23% tras wheel · STRESS journal
+fuera → 0 nodos, stories→3, 4 `.phx`, track 14861px, 0 errores ·
+MOBILE ovf 0.
