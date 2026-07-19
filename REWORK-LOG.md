@@ -972,3 +972,33 @@ ocultos, footer static · R5 footer fixed + spacer 375px, wm aterriza
 translateY(0) scale(1) op 1, visible al fondo · STRESS journal fuera,
 work 2, wordmark alargado, ovf 0, 0 errores · MOBILE ovf 0 footer
 static.
+
+## 29 · v30-capri — CERRADA
+
+**Diagnóstico inicial:** Azure & Co. con composición que ya alternaba
+bien pero sin catálogo cerrado de reveals: `.reveal` IO único de 1.1s,
+keyframes hin, un easing sin token, copy en HTML.
+
+**Qué cambié:**
+- R5 la marea tipográfica: el script del hero ("Unforgettable") se
+  divide en letras y cada una ondea `translateY(sin(p·2π+i·.55)·6px)`
+  mapeada al scroll del hero — el rótulo se mece como agua, amplitud
+  decreciente al salir. Accesible (aria-label con el texto completo,
+  spans aria-hidden). Reduced: texto plano sin split.
+- Catálogo cerrado completo: R1/R2 stagger decreciente/R3 hairlines en
+  svc/R4 cards con steps; tokens y 2 easings; ritmo --sec variado
+  (quote ×0.9, guide ×1.1).
+- Shell+loader: slots nativos, press 3-6, svc i.-iv. desde JSON,
+  focus-visible.
+
+**Qué elevé:** la disciplina de motion que pedía, más un momento propio
+marino que ninguna otra página usa (onda posicional por letra).
+
+**Paso 4:** memorable sí (marea); hero mar / intro clara / dest grid /
+svc navy / journey split / quote royal — alternancia ya buena,
+respetada; motion continuo; 2 easings; solo transform; robusto.
+
+**Verificación:** batchcheck W30 ovf 0 d+m. robust30: REDUCED nm, 0
+ocultos, sin split (texto plano) · R5 13 letras, t0 +3.3px t3 −4.1px
+(fase senoidal), aria "Unforgettable" · STRESS press fuera, svc 3,
+script alargado, ovf 0, 0 errores · MOBILE ovf 0.

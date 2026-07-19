@@ -1,0 +1,188 @@
+{
+ "_schema": "v30-capri · Azure & Co. viajes de lujo · Archivo + serif + script. Slots nativos (tag o src). rich() admite <b><br><em>, <u>…</u> subrayado ola. dest.cards EXACTO 3 · svc.rows 3-6 · journey.steps 3-5 · press 3-6. Fetch absoluto /v30-capri/content.json.",
+ "meta": {
+  "title": "Azure & Co. — Luxury Travel Planning · v30 Capri",
+  "description": "Luxury travel planning for unforgettable experiences. Template concept.",
+  "lang": "en"
+ },
+ "nav": {
+  "l": [
+   {
+    "t": "Services",
+    "h": "#svc"
+   },
+   {
+    "t": "Destinations",
+    "h": "#dest"
+   },
+   {
+    "t": "How it works",
+    "h": "#journey"
+   }
+  ],
+  "logo": "AZURE & CO.",
+  "r": [
+   {
+    "t": "Free guide",
+    "h": "#guide"
+   },
+   {
+    "t": "Journal",
+    "h": "#guide"
+   },
+   {
+    "t": "Inquire",
+    "h": "#guide"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "slotTag": "slot foto/video — mar abierto desde la cubierta",
+   "k": "Luxury travel planning for",
+   "script": "Unforgettable",
+   "h1": "Experiences",
+   "cta": {
+    "t": "Begin planning",
+    "h": "#guide"
+   }
+  },
+  {
+   "type": "intro",
+   "script": "travel planning with heart, soul & style",
+   "h": "From <u>Mediterranean coastlines</u> to fun family escapes — designed to feel effortless.",
+   "p": "Azure & Co. creates elevated itineraries with insider access and zero logistics left to you. Placeholder copy for the template concept — every trip fully custom."
+  },
+  {
+   "type": "dest",
+   "id": "dest",
+   "head": "Signature Destinations",
+   "cards": [
+    {
+     "tag": "slot — costa",
+     "k": "The classic",
+     "t": "Amalfi Coast"
+    },
+    {
+     "tag": "slot — islas",
+     "k": "The escape",
+     "t": "The Islands"
+    },
+    {
+     "tag": "slot — ciudad",
+     "k": "The weekend",
+     "t": "Paris, France"
+    }
+   ]
+  },
+  {
+   "type": "svc",
+   "id": "svc",
+   "script": "what we plan",
+   "head": "The Services",
+   "rows": [
+    {
+     "n": "i.",
+     "t": "Bespoke Itineraries",
+     "d": "Door-to-door plans built around your pace, your people, your palate."
+    },
+    {
+     "n": "ii.",
+     "t": "Honeymoons",
+     "d": "The once-in-a-lifetime trip, handled like it matters — because it does."
+    },
+    {
+     "n": "iii.",
+     "t": "Family Escapes",
+     "d": "Multi-generational logistics smoothed into pure vacation."
+    },
+    {
+     "n": "iv.",
+     "t": "Group Celebrations",
+     "d": "Milestones abroad — villas, tables, and toasts arranged."
+    }
+   ]
+  },
+  {
+   "type": "press",
+   "label": "As seen in",
+   "brands": [
+    "Placeholder Press",
+    "Travel Weekly*",
+    "The Voyager*",
+    "Coastal Living*"
+   ]
+  },
+  {
+   "type": "journey",
+   "id": "journey",
+   "script": "how it works",
+   "head": "Planning that feels like part of the vacation.",
+   "steps": [
+    {
+     "t": "The discovery call.",
+     "d": "Your dates, your dreams, your dealbreakers — thirty unhurried minutes."
+    },
+    {
+     "t": "The proposal.",
+     "d": "A tailored itinerary with insider options you won't find searching alone."
+    },
+    {
+     "t": "The polish.",
+     "d": "We refine until it's exactly right — then book, confirm, and brief you."
+    },
+    {
+     "t": "The trip.",
+     "d": "You travel; we stay on call. Every detail already handled."
+    }
+   ],
+   "slotTag": "slot foto — piscina del hotel al mediodía"
+  },
+  {
+   "type": "quote",
+   "q": "Every restaurant, every transfer, every view — it all just worked. We didn't open a single logistics app for ten days.",
+   "who": "Placeholder clients — anniversary trip"
+  },
+  {
+   "type": "guide",
+   "id": "guide",
+   "ghost": "Free guide",
+   "script": "yours, on the house",
+   "head": "Free Guide",
+   "p": "The placeholder packing-and-planning checklist we send every client before takeoff — timing, tipping, and the one thing everyone forgets.",
+   "form": {
+    "field": "Your email",
+    "btn": "Send it"
+   }
+  },
+  {
+   "type": "foot",
+   "script": "plan the unforgettable",
+   "wm": "Azure & Co.",
+   "links": [
+    {
+     "t": "Services",
+     "h": "#svc"
+    },
+    {
+     "t": "Destinations",
+     "h": "#dest"
+    },
+    {
+     "t": "Free guide",
+     "h": "#guide"
+    },
+    {
+     "t": "Journal",
+     "h": "#guide"
+    },
+    {
+     "t": "Inquire",
+     "h": "#guide"
+    }
+   ],
+   "legal": "© Azure & Co. — template concept · placeholder content & press names"
+  }
+ ]
+}

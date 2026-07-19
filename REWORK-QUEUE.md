@@ -41,7 +41,7 @@
 | 26 | `v25-gecko` | ✅ | 6 páginas generadas por script: la más productiva ya; el rework es sistematizar su motion y tokenizarla de verdad. |
 | 27 | `v28-tuesday` | ✅ | Ronda 5 fiel y fresca; le falta solo disciplina de easing y robustez de contenido para ser productiva. |
 | 28 | `v29-heritage` | ✅ | El wordmark hairline gigante es momento real; motion aún genérico para la elegancia que aparenta. |
-| 29 | `v30-capri` | ☐ | Azul marino con script permite mucho; composición ya alterna bien, pide catálogo cerrado de reveals. |
+| 29 | `v30-capri` | ✅ | Azul marino con script permite mucho; composición ya alterna bien, pide catálogo cerrado de reveals. |
 | 30 | `v32-alora` | ☐ | Brumosa y consistente; robustez de contenido sin probar (titulares dobles la rompen hoy). |
 | 31 | `v36-kimberly` | ☐ | Navy 200 sobria casi lista; su lead-quote pide tramo narrativo y sus tokens están a medio extraer. |
 | 32 | `v33-valenna` | ☐ | "The Travel Edit" con split potente — a Pablo le fascinó el referente; conservar y pulir, no rehacer. |

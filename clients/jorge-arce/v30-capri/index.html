@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Great+Vibes&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(110px,15vh,170px);
+
   --navy:#1F2438; --royal:#253474; --blue:#4C72C2; --paper:#F3F3ED; --stone:#DEDBD3;
   --serif:'Instrument Serif',Georgia,serif; --script:'Great Vibes',cursive;
 }
@@ -72,7 +77,7 @@ a{color:inherit;text-decoration:none}
   font-size:clamp(34px,5.4vw,80px);color:var(--navy)}
 .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1240px;margin:0 auto}
 .dcard{position:relative;overflow:hidden}
-.dcard .slot{aspect-ratio:3/4;transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.dcard .slot{aspect-ratio:3/4;transition:transform .6s var(--ease-out)}
 .dcard:hover .slot{transform:scale(1.04)}
 .dcard .nm{position:absolute;left:0;right:0;bottom:26px;z-index:3;text-align:center;
   font-family:var(--serif);text-transform:uppercase;letter-spacing:-.03em;color:#fff;
@@ -80,7 +85,7 @@ a{color:inherit;text-decoration:none}
 .dcard .k{position:absolute;top:18px;left:0;right:0;z-index:3;text-align:center;color:rgba(255,255,255,.85)}
 
 /* ---------- services ---------- -*/
-.svc{background:var(--navy);color:var(--paper);padding:150px 6vw}
+.svc{background:var(--navy);color:var(--paper);padding:var(--sec) 6vw}
 .svc .head{text-align:center;margin-bottom:80px}
 .svc .script{font-family:var(--script);font-size:clamp(36px,4.6vw,64px);color:var(--blue)}
 .svc h2{font-family:var(--serif);text-transform:uppercase;letter-spacing:-.03em;font-size:clamp(32px,4.8vw,72px);margin-top:8px}
@@ -101,7 +106,7 @@ a{color:inherit;text-decoration:none}
 .press .b.ser{font-family:var(--serif);font-size:18px;letter-spacing:.04em;text-transform:none}
 
 /* ---------- journey ---------- */
-.journey{padding:150px 6vw}
+.journey{padding:var(--sec) 6vw}
 .journey .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .journey .slot{aspect-ratio:3/4}
 .journey .script{font-family:var(--script);font-size:clamp(32px,4vw,54px);color:var(--royal)}
@@ -114,13 +119,13 @@ a{color:inherit;text-decoration:none}
 .journey li b{color:var(--navy);font-weight:600}
 
 /* ---------- quote ---------- */
-.quote{background:var(--royal);color:var(--paper);padding:150px 6vw;text-align:center}
+.quote{background:var(--royal);color:var(--paper);padding:calc(var(--sec)*.9) 6vw;text-align:center}
 .quote q{display:block;font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.4vw,44px);
   line-height:1.45;max-width:900px;margin:0 auto;quotes:'“' '”'}
 .quote .who{margin-top:28px;font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#A9B4DC}
 
 /* ---------- free guide ---------- */
-.guide{padding:150px 6vw;text-align:center;position:relative;overflow:hidden}
+.guide{padding:calc(var(--sec)*1.1) 6vw;text-align:center;position:relative;overflow:hidden}
 .guide .ghost{position:absolute;inset:auto 0 -3vw 0;font-family:var(--serif);text-transform:uppercase;
   font-size:clamp(80px,15.5vw,220px);letter-spacing:-.05em;line-height:.8;color:rgba(37,52,116,.08);
   white-space:nowrap;pointer-events:none}
@@ -148,12 +153,10 @@ a{color:inherit;text-decoration:none}
 .foot .fine{margin-top:70px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#7A81A0}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
-.reveal.rin{opacity:1;transform:none}
-[data-hero]{opacity:0;animation:hin 1.3s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero]{opacity:0;}
 [data-hero="2"]{animation-delay:.3s}
-@keyframes hin{to{opacity:1}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+
+
 @media (max-width:920px){
   .nav{grid-template-columns:1fr auto}
   .nav .l{display:none}
@@ -162,121 +165,162 @@ a{color:inherit;text-decoration:none}
   .srow{grid-template-columns:1fr;gap:8px}
   .srow .d{text-align:left;max-width:none}
 }
-</style>
-</head>
+
+/* ---------- rework: marea + placeholders ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.script .ch{display:inline-block;will-change:transform}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#7A81A0;font-size:14px}
+</style></head>
 <body>
-
-<nav class="nav">
-  <div class="l"><a href="#svc">Services</a><a href="#dest">Destinations</a><a href="#journey">How it works</a></div>
-  <span class="lg">AZURE &amp; CO.</span>
-  <div class="r"><a href="#guide">Free guide</a><a href="#">Journal</a><a class="inq" href="#contact">Inquire</a><span class="star">✳</span></div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="slot dusk">
-    <span class="tag">slot foto/video — mar abierto desde la cubierta</span>
-    <svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0 90 Q180 60 360 90 T720 90 T1080 90 T1440 90 V200 H0 Z" fill="rgba(31,36,56,.45)"/>
-      <path d="M0 130 Q240 100 480 130 T960 130 T1440 130 V200 H0 Z" fill="rgba(31,36,56,.6)"/>
-    </svg>
-  </div>
-  <div class="in">
-    <div class="k lbl" data-hero>Luxury travel planning for</div>
-    <div class="script" data-hero>Unforgettable</div>
-    <h1 data-hero="2">Experiences</h1>
-    <a class="cta" href="#contact" data-hero="2">Begin planning</a>
-  </div>
-</header>
-
-<!-- INTRO -->
-<section class="intro">
-  <div class="script reveal">travel planning with heart, soul &amp; style</div>
-  <h2 class="reveal">From <span class="up">Mediterranean coastlines</span> to fun family escapes — designed to feel effortless.</h2>
-  <p class="reveal">Azure &amp; Co. creates elevated itineraries with insider access and zero logistics left to you. Placeholder copy for the template concept — every trip fully custom.</p>
-</section>
-
-<!-- DESTINATIONS -->
-<section class="dest" id="dest">
-  <div class="head reveal"><h2>Signature Destinations</h2></div>
-  <div class="dgrid">
-    <div class="dcard reveal"><div class="slot sun"><span class="tag">slot — costa</span></div>
-      <span class="k lbl">The classic</span><div class="nm">Amalfi Coast</div></div>
-    <div class="dcard reveal"><div class="slot"><span class="tag">slot — islas</span></div>
-      <span class="k lbl">The escape</span><div class="nm">The Islands</div></div>
-    <div class="dcard reveal"><div class="slot dusk"><span class="tag">slot — ciudad</span></div>
-      <span class="k lbl">The weekend</span><div class="nm">Paris, France</div></div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="svc" id="svc">
-  <div class="head">
-    <div class="script reveal">what we plan</div>
-    <h2 class="reveal">The Services</h2>
-  </div>
-  <div class="rows">
-    <a class="srow reveal" href="#contact"><span class="n">i.</span><span class="t">Bespoke <em>Itineraries</em></span><span class="d">Door-to-door plans built around your pace, your people, your palate.</span></a>
-    <a class="srow reveal" href="#contact"><span class="n">ii.</span><span class="t">Honeymoons</span><span class="d">The once-in-a-lifetime trip, handled like it matters — because it does.</span></a>
-    <a class="srow reveal" href="#contact"><span class="n">iii.</span><span class="t">Family <em>Escapes</em></span><span class="d">Multi-generational logistics smoothed into pure vacation.</span></a>
-    <a class="srow reveal" href="#contact"><span class="n">iv.</span><span class="t">Group <em>Celebrations</em></span><span class="d">Milestones abroad — villas, tables, and toasts arranged.</span></a>
-  </div>
-</section>
-
-<!-- PRESS -->
-<div class="press"><div class="row reveal">
-  <span class="b">As seen in</span><span class="b ser">Placeholder Press</span><span class="b">Travel Weekly*</span><span class="b ser">The Voyager*</span><span class="b">Coastal Living*</span>
-</div></div>
-
-<!-- JOURNEY -->
-<section class="journey" id="journey">
-  <div class="in">
-    <div class="reveal">
-      <div class="script">how it works</div>
-      <h2>Planning that feels like part of the vacation.</h2>
-      <ol>
-        <li><div><b>The discovery call.</b> Your dates, your dreams, your dealbreakers — thirty unhurried minutes.</div></li>
-        <li><div><b>The proposal.</b> A tailored itinerary with insider options you won't find searching alone.</div></li>
-        <li><div><b>The polish.</b> We refine until it's exactly right — then book, confirm, and brief you.</div></li>
-        <li><div><b>The trip.</b> You travel; we stay on call. Every detail already handled.</div></li>
-      </ol>
-    </div>
-    <div class="slot sun reveal"><span class="tag">slot foto — piscina del hotel al mediodía</span></div>
-  </div>
-</section>
-
-<!-- QUOTE -->
-<section class="quote">
-  <q class="reveal">Every restaurant, every transfer, every view — it all just worked. We didn't open a single logistics app for ten days.</q>
-  <div class="who reveal">Placeholder clients — anniversary trip</div>
-</section>
-
-<!-- FREE GUIDE -->
-<section class="guide" id="guide">
-  <div class="ghost" aria-hidden="true">Free guide</div>
-  <div class="script reveal">yours, on the house</div>
-  <h2 class="reveal">Free Guide</h2>
-  <p class="reveal">The placeholder packing-and-planning checklist we send every client before takeoff — timing, tipping, and the one thing everyone forgets.</p>
-  <form class="reveal" onsubmit="return false">
-    <input type="email" placeholder="Your email address" aria-label="Email">
-    <button type="submit">Send it</button>
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer class="foot" id="contact">
-  <div class="script reveal">plan the unforgettable</div>
-  <div class="wm reveal">Azure &amp; Co.</div>
-  <div class="links">
-    <a href="#svc">Services</a><a href="#dest">Destinations</a><a href="#guide">Free guide</a><a href="#">Journal</a><a href="#">Inquire</a>
-  </div>
-  <div class="fine">© Azure &amp; Co. — template concept · placeholder content &amp; press names</div>
-</footer>
-
+<nav class="nav"><div class="links" id="navl"></div><span class="lg" id="nlogo"></span><div class="links" id="navr"></div></nav>
+<main id="site"></main>
+<noscript><div style="padding:6vh 28px;text-align:center;font-size:14px">Azure &amp; Co. — template concept</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+var WAVE='<svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90 Q180 60 360 90 T720 90 T1080 90 T1440 90 V200 H0 Z" fill="rgba(31,36,56,.45)"/><path d="M0 130 Q240 100 480 130 T960 130 T1440 130 V200 H0 Z" fill="rgba(31,36,56,.6)"/></svg>';
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>')
+  .replace(/&lt;u&gt;/g,'<span class="up">').replace(/&lt;\/u&gt;/g,'</span>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function slot(s,cls,tag){
+  if(s&&s.src)return'<div class="slot '+(cls||'')+'"><img src="'+esc(s.src)+'" alt="'+esc(s.alt||'')+'" style="width:100%;height:100%;object-fit:cover"></div>';
+  return'<div class="slot '+(cls||'')+'"><span class="tag">'+esc(tag||(s&&s.tag)||'slot')+'</span></div>'}
+
+var partials={
+hero:function(s){
+  return'<header class="hero" id="top"><div class="slot dusk"><span class="tag">'+esc(s.slotTag)+'</span>'+WAVE+'</div>'+
+  '<div class="in" data-r2>'+
+  '<div class="k lbl wr">'+esc(s.k)+'</div>'+
+  '<div class="script wr" data-tide>'+esc(s.script)+'</div>'+
+  '<h1 class="wr">'+esc(s.h1)+'</h1>'+
+  '<a class="cta wr" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a>'+
+  '</div></header>'},
+intro:function(s){
+  return'<section class="intro" data-r2>'+
+  '<div class="script wr">'+esc(s.script)+'</div>'+
+  '<h2 class="wr">'+rich(s.h)+'</h2>'+
+  '<p class="wr">'+rich(s.p)+'</p></section>'},
+dest:function(s){
+  return'<section class="dest"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="head wr" data-r1><h2>'+esc(s.head)+'</h2></div>'+
+  '<div class="dgrid" data-cards>'+(s.cards||[]).map(function(cd){return'<div class="dcard wr">'+slot(cd.img,'',cd.tag)+
+  '<div class="k">'+esc(cd.k)+'</div><div class="t">'+esc(cd.t)+'</div></div>'}).join('')+'</div>'+
+  '</section>'},
+svc:function(s){
+  return'<section class="svc"'+(s.id?' id="'+esc(s.id)+'"':'')+'>'+
+  '<div class="head" data-r2><div class="script wr">'+esc(s.script)+'</div><h2 class="wr">'+esc(s.head)+'</h2></div>'+
+  '<div class="rows">'+(s.rows||[]).map(function(r){return'<div class="srow wr" data-r1 data-rule><span class="n">'+esc(r.n)+'</span><span class="t">'+esc(r.t)+'</span><span class="d">'+rich(r.d)+'</span></div>'}).join('')+'</div>'+
+  '</section>'},
+press:function(s){
+  return'<section class="press"><div class="row wr" data-r1><span class="b">'+esc(s.label)+'</span>'+
+  (s.brands||[]).map(function(bd){return'<span class="b ser">'+esc(bd)+'</span>'}).join('')+'</div></section>'},
+journey:function(s){
+  return'<section class="journey"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="in">'+
+  '<div data-r2><div class="script wr">'+esc(s.script)+'</div><h2 class="wr">'+esc(s.head)+'</h2>'+
+  '<div class="rows">'+(s.steps||[]).map(function(st){return'<p class="r wr"><b>'+esc(st.t)+'</b> '+rich(st.d)+'</p>'}).join('')+'</div></div>'+
+  '<div class="wr" data-r1>'+slot(s.img,'sun',s.slotTag)+'</div>'+
+  '</div></section>'},
+quote:function(s){
+  return'<section class="quote" data-r2><q class="wr">'+esc(s.q)+'</q><div class="who wr">'+esc(s.who)+'</div></section>'},
+guide:function(s){
+  var f=s.form||{};
+  return'<section class="guide"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="ghost" aria-hidden="true">'+esc(s.ghost)+'</div>'+
+  '<div data-r2><div class="script wr">'+esc(s.script)+'</div><h2 class="wr">'+esc(s.head)+'</h2>'+
+  '<p class="wr">'+rich(s.p)+'</p>'+
+  '<form class="wr" onsubmit="return false"><input type="email" placeholder="'+esc(f.field||'Email')+'" aria-label="'+esc(f.field||'Email')+'"><button type="submit">'+esc(f.btn||'Send')+'</button></form></div>'+
+  '</section>'},
+foot:function(s){
+  return'<footer class="foot"><div class="script">'+esc(s.script)+'</div>'+
+  '<div class="wm">'+esc(s.wm)+'</div>'+
+  '<div class="links">'+(s.links||[]).map(function(l){return'<a href="'+esc(l.h)+'">'+esc(l.t)+'</a>'}).join('')+'</div>'+
+  '<div class="fine">'+esc(s.legal)+'</div></footer>'}
+};
+
+fetch('/v30-capri/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  if(c.nav){document.getElementById('navl').innerHTML=(c.nav.l||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
+    document.getElementById('nlogo').textContent=c.nav.logo||'';
+    document.getElementById('navr').innerHTML=(c.nav.r||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('')+'<span class="star">✳</span>'}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';
+    var l=document.createElement('i');
+    l.style.cssText='position:absolute;left:0;right:0;top:0;height:1px;background:rgba(255,255,255,.18);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* R5 la marea tipografica: las letras del script ondean con el scroll */
+  document.querySelectorAll('[data-tide]').forEach(function(el){
+    var text=el.textContent;
+    el.setAttribute('aria-label',text);
+    el.innerHTML=text.split('').map(function(ch){
+      return ch===' '?' ':'<span class="ch" aria-hidden="true">'+ch.replace('&','&amp;').replace('<','&lt;')+'</span>'}).join('');
+    var chs=el.querySelectorAll('.ch');
+    ScrollTrigger.create({trigger:el.closest('header,section')||el,start:'top top',end:'bottom top',scrub:.8,
+      onUpdate:function(self){var p=self.progress;
+        chs.forEach(function(cn,i){
+          cn.style.transform='translateY('+(Math.sin(p*6.283+i*.55)*6*(1-p*.4))+'px)';
+        })}});
+  });
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
 })();
 </script>
 </body>
