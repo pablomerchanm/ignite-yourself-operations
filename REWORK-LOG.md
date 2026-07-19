@@ -1192,3 +1192,40 @@ reduced verificado.
 **Verificación:** batchcheck W34 ovf 0 d+m. robust34: REDUCED nm, 0
 ocultos, sol fijo (240,70) · R5 sol (240,70)→(768,123)→(1200,245)
 poniéndose tras la mesa, reveals disparando · MOBILE ovf 0.
+
+## 36 · v37-bakery — CERRADA (VARA de personalidad) — COLA COMPLETA
+
+**Diagnóstico inicial:** Big Batch chunky — la de más carácter del
+catálogo. Deudas: `bob 5s infinite` en la galleta del hero, `tick 22s
+infinite` en el ticker, `.reveal` IO, keyframes hin, sin tokens.
+
+**Qué cambié (quirúrgico in-place, personalidad intacta):**
+- R5 la masa rebota: cada pieza ilustrada (cookie/brownie/croissant)
+  CAE −46px y aterriza con squash & stretch de cartoon —
+  `bounceK(k)` a trozos con dos rebotes decrecientes (.18/.06),
+  scale(sx,sy) inverso conservando volumen, transform-origin en la
+  base. Física de dibujo animado, mapeada al scrub. Mecanismo nuevo
+  (ninguna otra página usa squash&stretch).
+- La galleta del hero deriva con el scroll (bob infinito muerto);
+  ticker mapeado al paso del viewport (−28%).
+- Runtime estándar in-place, tokens, focus-visible 3px chunky,
+  no-motion completo. Decisión de alcance como v34 (markup
+  arte-dirigido; documentada en V37-BAKERY.md).
+
+**Paso 4:** memorable sí (el rebote ES la marca); composición chunky
+intocada; motion continuo; curvas: expo.out + quick + bounce propia
+documentada; solo transform; robusto.
+
+**Verificación:** batchcheck W37 ovf 0 d+m. robust37: REDUCED nm, 0
+ocultos, svgs quietos · R5 caída −29.7px → aterrizaje scale(1.087,
+.912) con squash · cookie deriva −15px rotate −1° · MOBILE ovf 0.
+
+═══════════════════════════════════════════════
+## MISIÓN COMPLETA — 36/36 páginas cerradas
+Todas las páginas del catálogo pasaron el ciclo: diagnóstico →
+principles/*.md (35 docs) → reconstrucción tokenizada → momento
+scrollytelling propio (36 mecanismos, ninguno repetido) → robustez
+verificada (reduced-motion + stress por interceptación) → log.
+Decisiones de alcance documentadas: v25 (content = script generador),
+v34/v37 (in-place por fidelidad de arte).
+═══════════════════════════════════════════════
