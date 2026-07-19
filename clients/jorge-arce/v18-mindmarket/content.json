@@ -1,0 +1,201 @@
+{
+ "_schema": "v18-mindmarket · ilustrada pastel · Inter Tight. Ilustraciones = plantilla (claves illo: hero/chat/plan/life/wave — el arte vive en el loader, el texto aquí). rich() admite <b><i><br>. Límites probados: moments EXACTO 2-4 · stats EXACTO 2-3 · voices 3-9 · svc.chips 4-12 · pts 2-4 por moment · ctas 1-2. Fetch absoluto /v18-mindmarket/content.json.",
+ "meta": {
+  "title": "Dr. Jorge Arce — Oral Surgery, Made Human · v18 MindMarket",
+  "description": "One case, one surgeon. Dr. Jorge Arce leads implants, reconstruction, and long-term care from a single South Bay practice.",
+  "lang": "en"
+ },
+ "logo": "Dr. Arce",
+ "nav": [
+  {
+   "t": "The Care",
+   "h": "#care"
+  },
+  {
+   "t": "Stories",
+   "h": "#voices"
+  },
+  {
+   "t": "Services",
+   "h": "#svc"
+  }
+ ],
+ "navCta": {
+  "t": "Book a visit",
+  "h": "#close"
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "illo": "hero",
+   "title": "One case. One surgeon.",
+   "sub": "You come once and we take it from there. From planning and surgery to restoration and long-term care, everything is led by a single board-certified surgeon who carries your case from start to finish — with clear updates and honest answers.",
+   "ctas": [
+    {
+     "t": "The Care →",
+     "h": "#care",
+     "primary": true
+    },
+    {
+     "t": "Book a visit",
+     "h": "#close",
+     "primary": false
+    }
+   ]
+  },
+  {
+   "type": "care",
+   "id": "care",
+   "kick": "No more chaos.",
+   "title": "Real human <c>care.</c>",
+   "moments": [
+    {
+     "illo": "chat",
+     "title": "First, we listen.",
+     "body": "A long, unhurried consultation. Your history, your scans, your questions — and an honest read of what is possible, in plain language.",
+     "pts": [
+      "Unhurried review of history & imaging",
+      "Honest candidacy assessment",
+      "The free first-consultation guide"
+     ]
+    },
+    {
+     "illo": "plan",
+     "title": "Then, we plan the whole case.",
+     "body": "Every case is mapped before anyone operates — implants, grafting, sequencing, restoration. The time the case actually needs, not the time the schedule allows.",
+     "pts": [
+      "Full-arch & single-implant planning",
+      "Structural, reconstructive approach",
+      "A report your dentist can act on"
+     ]
+    },
+    {
+     "illo": "life",
+     "title": "Then, life gets better.",
+     "body": "Surgery with steady hands, restoration that looks structural and natural, and long-term maintenance that protects the work — eating, smiling, and speaking again.",
+     "pts": [
+      "Twenty-seven years of surgical judgment",
+      "Function first, then confidence",
+      "Long-term follow-up"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "head": "A few numbers behind the care we deliver",
+   "items": [
+    {
+     "n": "27+",
+     "l": "years devoted to oral & maxillofacial surgery",
+     "c": "c-blue"
+    },
+    {
+     "n": "2007",
+     "l": "the year the Dental Implants Center of South Bay opened",
+     "c": "c-coral"
+    },
+    {
+     "n": "6",
+     "l": "surgical disciplines refined across a career",
+     "c": "c-green"
+    }
+   ]
+  },
+  {
+   "type": "voices",
+   "id": "voices",
+   "kick": "Real stories",
+   "title": "People who choose <c>Dr. Arce</c>",
+   "cards": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.”",
+     "init": "MR",
+     "n": "Maria R.",
+     "r": "Full-arch reconstruction"
+    },
+    {
+     "q": "“When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.”",
+     "init": "DK",
+     "n": "Dr. David Kim, D.D.S.",
+     "r": "Referring Dentist · Torrance"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. He treated my father like family.”",
+     "init": "AC",
+     "n": "Anabella C.",
+     "r": "Daughter of patient"
+    },
+    {
+     "q": "“Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself.”",
+     "init": "RT",
+     "n": "Robert T.",
+     "r": "Dental implants"
+    },
+    {
+     "q": "“I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows.”",
+     "init": "LS",
+     "n": "Dr. Lina Soto",
+     "r": "Periodontist"
+    },
+    {
+     "q": "“I was terrified of the procedure. He never rushed me. Best decision I have made for my health.”",
+     "init": "CS",
+     "n": "Carlos S.",
+     "r": "Bone graft + implants"
+    },
+    {
+     "q": "“Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know.”",
+     "init": "EP",
+     "n": "Elena P.",
+     "r": "TMJ treatment"
+    },
+    {
+     "q": "“Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time.”",
+     "init": "JM",
+     "n": "Dr. Jeff Malone",
+     "r": "Referring Dentist"
+    },
+    {
+     "q": "“The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice.”",
+     "init": "ME",
+     "n": "Dr. Mark Ellison",
+     "r": "Referring Dentist"
+    }
+   ]
+  },
+  {
+   "type": "svc",
+   "id": "svc",
+   "kick": "Services",
+   "title": "Everything your case may need",
+   "chips": [
+    "Dental Implants",
+    "All-On-X Full Arch",
+    "Bone Grafting",
+    "Complex Extractions",
+    "Reconstruction",
+    "Oral Pathology",
+    "TMJ Treatment",
+    "Implant Maintenance",
+    "Second Opinions",
+    "Referring-Dentist Reports"
+   ]
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "title": "Told it couldn't be done? Let's talk.",
+   "sub": "Request a consultation or get the free guide — What to expect from your first implant consultation.",
+   "form": {
+    "field": "Your email",
+    "btn": "Get the free guide →"
+   },
+   "phone": "(310) 327-4166",
+   "foot": [
+    "© 2026 Dr. Jorge Arce, D.D.S. — Dental Implants Center of South Bay",
+    "Redondo Beach · Torrance, California · By appointment"
+   ]
+  }
+ ]
+}

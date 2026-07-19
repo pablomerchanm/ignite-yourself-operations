@@ -11,6 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);
+  --dur-hover:.2s;
+  --sec:clamp(96px,13vh,152px);
+
   --cream:#F5F1E4;
   --white:#FFFFFF;
   --ink:#2C2E2A;
@@ -68,13 +74,13 @@ nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:60;width
 .hero .card .ctas{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
 
 /* ---------- sections ---------- */
-section{padding:120px 0;position:relative}
+section{padding:var(--sec) 0;position:relative}
 .shead{text-align:center;max-width:760px;margin:0 auto 70px}
 .shead .chip{display:inline-flex;background:var(--white);border-radius:100px;padding:8px 18px;font-size:13.5px;font-weight:600;box-shadow:0 2px 12px rgba(44,46,42,.06);margin-bottom:20px}
 
 /* ---------- journey with unfolding illustrations ---------- */
 .moment{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:70px 0}
-.moment:nth-child(even) .illobox{order:2}
+.moment:nth-child(even) 
 .moment .illobox{border-radius:var(--r);overflow:hidden;position:relative;min-height:340px;display:flex;align-items:center;justify-content:center}
 .moment .illobox svg{width:100%;height:auto}
 .moment h3{font-size:clamp(28px,3vw,40px);font-weight:500;letter-spacing:-.05em;line-height:1.06}
@@ -92,7 +98,7 @@ section{padding:120px 0;position:relative}
 
 /* ---------- voices ---------- */
 .voices .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:64px}
-.vcard{background:var(--white);border-radius:var(--r);padding:32px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 2px 16px rgba(44,46,42,.05);transition:transform .4s}
+.vcard{background:var(--white);border-radius:var(--r);padding:32px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 2px 16px rgba(44,46,42,.05);transition:transform .35s var(--ease-spring)}
 .vcard:hover{transform:translateY(-5px) rotate(-.5deg)}
 .vcard .q{font-size:15px;line-height:1.6;color:#494C45}
 .vcard .who{margin-top:auto;display:flex;align-items:center;gap:12px}
@@ -108,7 +114,7 @@ section{padding:120px 0;position:relative}
 
 /* ---------- services chips ---------- */
 .svc .cloud{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:900px;margin:0 auto}
-.svc .chip2{background:var(--white);border-radius:100px;padding:14px 26px;font-size:16px;font-weight:600;box-shadow:0 2px 12px rgba(44,46,42,.05);transition:transform .3s,background .3s;cursor:default}
+.svc .chip2{background:var(--white);border-radius:100px;padding:14px 26px;font-size:16px;font-weight:600;box-shadow:0 2px 12px rgba(44,46,42,.05);transition:transform .35s var(--ease-spring),background var(--dur-hover) var(--ease-quick);cursor:default}
 .svc .chip2:hover{transform:translateY(-3px)}
 .svc .chip2:nth-child(5n+1):hover{background:var(--yellow)}
 .svc .chip2:nth-child(5n+2):hover{background:var(--lilac)}
@@ -127,27 +133,11 @@ section{padding:120px 0;position:relative}
 .close input:focus{border-color:var(--blue)}
 .fbot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:44px 32px 30px;font-size:13px;color:#8A8D84;max-width:1280px;margin:0 auto}
 
-/* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-[data-stagger].in>*{opacity:1;transform:none}
-[data-stagger].in>*:nth-child(1){transition-delay:.05s}
-[data-stagger].in>*:nth-child(2){transition-delay:.12s}
-[data-stagger].in>*:nth-child(3){transition-delay:.19s}
-[data-stagger].in>*:nth-child(4){transition-delay:.26s}
-[data-stagger].in>*:nth-child(5){transition-delay:.33s}
-[data-stagger].in>*:nth-child(6){transition-delay:.4s}
-[data-stagger].in>*:nth-child(7){transition-delay:.47s}
-[data-stagger].in>*:nth-child(8){transition-delay:.54s}
-[data-stagger].in>*:nth-child(9){transition-delay:.61s}
+
 /* illustration draw-in */
-.illobox svg .pop{transform-origin:center;transform:scale(0);transition:transform .8s cubic-bezier(.34,1.56,.64,1)}
-.moment.in .illobox svg .pop{transform:scale(1)}
-.moment.in .illobox svg .pop.p2{transition-delay:.15s}
-.moment.in .illobox svg .pop.p3{transition-delay:.3s}
-.moment.in .illobox svg .pop.p4{transition-delay:.45s}
-@media (prefers-reduced-motion:reduce){.reveal,[data-stagger]>*,.illobox svg .pop{opacity:1;transform:none;transition:none}}
+.illobox svg .pop{transform-origin:center;transform:scale(0)}
+html.no-motion .pop{transform:scale(1)}
+
 
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
@@ -157,7 +147,7 @@ section{padding:120px 0;position:relative}
 }
 @media (max-width:860px){
   .wrap{padding:0 20px}
-  section{padding:90px 0}
+  section{padding:var(--sec) 0}
   .nlinks a:not(.cta){display:none}
   .hero .card{margin:0 20px;padding:36px 28px}
   .voices .grid{grid-template-columns:1fr}
@@ -166,253 +156,159 @@ section{padding:120px 0;position:relative}
   .close .card{padding:60px 24px}
   .close input{min-width:0;width:100%}
 }
-</style>
-</head>
+
+/* ---------- rework ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#8A8D84;font-size:14px}
+</style></head>
 <body>
-
-<nav>
-  <div class="navin">
-    <div class="nlogo"><span class="mark"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13 C2 8, 4 3, 8 3 C12 3, 14 8, 13 13 C12.5 14.5, 11 14, 10.5 12.5 C10 11, 9 10, 8 10 C7 10, 6 11, 5.5 12.5 C5 14, 3.5 14.5, 3 13 Z" fill="#fff"/></svg></span>Dr. Arce</div>
-    <div class="nlinks">
-      <a href="#care">The Care</a>
-      <a href="#stories">Stories</a>
-      <a href="#services">Services</a>
-      <a class="cta" href="#begin">Book a visit <span class="dot">→</span></a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="illo">
-    <!-- custom mindmarket-style illustration: rolling green hill, happy teeth characters, hands, confetti -->
-    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
-      <rect width="1440" height="900" fill="#F5F1E4"/>
-      <!-- rolling hill -->
-      <path d="M600 900 C 700 560, 900 380, 1160 300 C 1300 260, 1400 270, 1440 290 L1440 900 Z" fill="#8ED462"/>
-      <path d="M600 900 C 700 560, 900 380, 1160 300" stroke="#2C2E2A" stroke-width="2.5"/>
-      <!-- sun -->
-      <circle cx="1240" cy="140" r="52" fill="#F5E211" stroke="#2C2E2A" stroke-width="2.5"/>
-      <g stroke="#2C2E2A" stroke-width="2.5"><path d="M1240 66 L1240 46"/><path d="M1240 214 L1240 234"/><path d="M1166 140 L1146 140"/><path d="M1314 140 L1334 140"/></g>
-      <!-- happy tooth big -->
-      <g transform="translate(950,430) scale(2.1)">
-        <path d="M6 40 C2 24, 8 8, 24 8 C40 8, 46 24, 42 40 C40 46, 34 45, 32.5 39 C31 33, 28 30, 24 30 C20 30, 17 33, 15.5 39 C14 45, 8 46, 6 40 Z" fill="#fff" stroke="#2C2E2A" stroke-width="2"/>
-        <circle cx="17" cy="20" r="1.8" fill="#2C2E2A"/>
-        <circle cx="31" cy="20" r="1.8" fill="#2C2E2A"/>
-        <path d="M18 25 C21 28, 27 28, 30 25" stroke="#2C2E2A" stroke-width="1.8" stroke-linecap="round"/>
-      </g>
-      <!-- small tooth w/ flag -->
-      <g transform="translate(1140,540) scale(1.2)">
-        <path d="M6 40 C2 24, 8 8, 24 8 C40 8, 46 24, 42 40 C40 46, 34 45, 32.5 39 C31 33, 28 30, 24 30 C20 30, 17 33, 15.5 39 C14 45, 8 46, 6 40 Z" fill="#EBC1FF" stroke="#2C2E2A" stroke-width="2"/>
-        <circle cx="17" cy="20" r="1.8" fill="#2C2E2A"/><circle cx="31" cy="20" r="1.8" fill="#2C2E2A"/>
-        <path d="M18 24 C21 27, 27 27, 30 24" stroke="#2C2E2A" stroke-width="1.8" stroke-linecap="round"/>
-      </g>
-      <!-- chunky hand pointing -->
-      <g transform="translate(700,120) rotate(18)">
-        <path d="M0 60 C0 30, 14 12, 34 10 L80 6 C88 5, 90 16, 82 19 L52 28 L96 24 C105 23, 106 34, 97 37 L56 44 L92 44 C100 44, 100 54, 92 56 L54 60 L82 64 C89 66, 87 76, 80 75 L30 70 C12 68, 0 78, 0 60 Z" fill="#2BA0FF" stroke="#2C2E2A" stroke-width="2.5"/>
-      </g>
-      <!-- confetti -->
-      <g class="conf">
-        <circle cx="240" cy="140" r="10" fill="#FF705D"/>
-        <circle cx="1080" cy="90" r="8" fill="#8ED462"/>
-        <rect x="880" y="180" width="16" height="16" rx="4" fill="#EBC1FF" transform="rotate(20 888 188)"/>
-        <path d="M330 700 q10 -22 20 0 q-10 22 -20 0" fill="#F5E211"/>
-        <circle cx="150" cy="620" r="12" fill="#2BA0FF"/>
-        <rect x="440" y="80" width="14" height="14" rx="4" fill="#8ED462" transform="rotate(-14 447 87)"/>
-      </g>
-      <!-- little smiling face bottom-left -->
-      <g transform="translate(120,740)">
-        <circle cx="40" cy="40" r="40" fill="#FF705D" stroke="#2C2E2A" stroke-width="2.5"/>
-        <circle cx="28" cy="34" r="3" fill="#2C2E2A"/><circle cx="52" cy="34" r="3" fill="#2C2E2A"/>
-        <path d="M26 48 C33 56, 47 56, 54 48" stroke="#2C2E2A" stroke-width="2.5" stroke-linecap="round"/>
-      </g>
-    </svg>
-  </div>
-  <div class="wrap">
-    <div class="card reveal" data-hero>
-      <h1>One case. One surgeon.</h1>
-      <p>You come once and we take it from there. From planning and surgery to restoration and long-term care, everything is led by a single board-certified surgeon who carries your case from start to finish — with clear updates and honest answers.</p>
-      <div class="ctas">
-        <a class="cta" href="#care">The Care <span class="dot">→</span></a>
-        <a class="cta" style="background:var(--cream)" href="#begin">Book a visit</a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- CARE JOURNEY -->
-<section id="care">
-  <div class="wrap">
-    <div class="shead reveal">
-      <span class="chip">No more chaos.</span>
-      <h2 class="d81">Real human <span class="c-green">care.</span></h2>
-    </div>
-
-    <div class="moment reveal">
-      <div class="illobox" style="background:#EAF4FF">
-        <svg viewBox="0 0 520 340" fill="none">
-          <rect width="520" height="340" fill="#EAF4FF"/>
-          <g class="pop"><circle cx="150" cy="170" r="90" fill="#2BA0FF" stroke="#2C2E2A" stroke-width="2.5"/>
-          <circle cx="122" cy="150" r="6" fill="#2C2E2A"/><circle cx="178" cy="150" r="6" fill="#2C2E2A"/>
-          <path d="M120 195 C135 212, 165 212, 180 195" stroke="#2C2E2A" stroke-width="3" stroke-linecap="round"/></g>
-          <g class="pop p2"><rect x="300" y="90" width="160" height="46" rx="23" fill="#fff" stroke="#2C2E2A" stroke-width="2.5"/>
-          <text x="380" y="119" text-anchor="middle" font-family="Inter Tight" font-size="18" font-weight="600" fill="#2C2E2A">Hello!</text></g>
-          <g class="pop p3"><rect x="330" y="160" width="150" height="46" rx="23" fill="#F5E211" stroke="#2C2E2A" stroke-width="2.5"/>
-          <text x="405" y="189" text-anchor="middle" font-family="Inter Tight" font-size="15" font-weight="600" fill="#2C2E2A">Tell me all</text></g>
-          <g class="pop p4"><path d="M70 300 q14 -30 28 0 q-14 30 -28 0" fill="#8ED462"/><circle cx="460" cy="280" r="10" fill="#FF705D"/></g>
-        </svg>
-      </div>
-      <div>
-        <h3>First, we listen.</h3>
-        <p>A long, unhurried consultation. Your history, your scans, your questions — and an honest read of what is possible, in plain language.</p>
-        <div class="pts">
-          <div><i>✓</i> Unhurried review of history &amp; imaging</div>
-          <div><i>✓</i> Honest candidacy assessment</div>
-          <div><i>✓</i> The free first-consultation guide</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="moment reveal">
-      <div class="illobox" style="background:#FFEFEA">
-        <svg viewBox="0 0 520 340" fill="none">
-          <rect width="520" height="340" fill="#FFEFEA"/>
-          <g class="pop"><path d="M100 250 C90 190, 110 130, 170 130 C230 130, 250 190, 240 250 C235 272, 210 270, 204 248 C198 226, 186 214, 170 214 C154 214, 142 226, 136 248 C130 270, 105 272, 100 250 Z" fill="#fff" stroke="#2C2E2A" stroke-width="3"/></g>
-          <g class="pop p2"><path d="M320 120 L390 120 M355 85 L355 155" stroke="#FF705D" stroke-width="14" stroke-linecap="round"/></g>
-          <g class="pop p3"><rect x="300" y="190" width="170" height="20" rx="10" fill="#8ED462" stroke="#2C2E2A" stroke-width="2"/>
-          <rect x="300" y="222" width="120" height="20" rx="10" fill="#EBC1FF" stroke="#2C2E2A" stroke-width="2"/>
-          <rect x="300" y="254" width="88" height="20" rx="10" fill="#2BA0FF" stroke="#2C2E2A" stroke-width="2"/></g>
-        </svg>
-      </div>
-      <div>
-        <h3>Then, we plan the whole case.</h3>
-        <p>Every case is mapped before anyone operates — implants, grafting, sequencing, restoration. The time the case actually needs, not the time the schedule allows.</p>
-        <div class="pts">
-          <div><i>✓</i> Full-arch &amp; single-implant planning</div>
-          <div><i>✓</i> Structural, reconstructive approach</div>
-          <div><i>✓</i> A report your dentist can act on</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="moment reveal">
-      <div class="illobox" style="background:#EDFAE4">
-        <svg viewBox="0 0 520 340" fill="none">
-          <rect width="520" height="340" fill="#EDFAE4"/>
-          <g class="pop"><circle cx="260" cy="170" r="100" fill="#8ED462" stroke="#2C2E2A" stroke-width="3"/>
-          <circle cx="228" cy="150" r="7" fill="#2C2E2A"/><circle cx="292" cy="150" r="7" fill="#2C2E2A"/>
-          <path d="M222 196 C240 218, 280 218, 298 196" stroke="#2C2E2A" stroke-width="3.5" stroke-linecap="round"/></g>
-          <g class="pop p2"><path d="M120 80 q12 -26 24 0 q-12 26 -24 0" fill="#F5E211"/><circle cx="420" cy="70" r="12" fill="#FF705D"/></g>
-          <g class="pop p3"><rect x="80" y="250" width="16" height="16" rx="4" fill="#2BA0FF" transform="rotate(18 88 258)"/><circle cx="430" cy="270" r="9" fill="#EBC1FF"/></g>
-        </svg>
-      </div>
-      <div>
-        <h3>Then, life gets better.</h3>
-        <p>Surgery with steady hands, restoration that looks structural and natural, and long-term maintenance that protects the work — eating, smiling, and speaking again.</p>
-        <div class="pts">
-          <div><i>✓</i> Twenty-seven years of surgical judgment</div>
-          <div><i>✓</i> Function first, then confidence</div>
-          <div><i>✓</i> Long-term follow-up</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section style="padding-top:0">
-  <div class="stats">
-    <div class="wrap">
-      <div class="shead reveal" style="margin-bottom:0">
-        <h2 class="d40">A few numbers behind the care we deliver</h2>
-      </div>
-      <div class="grid" data-stagger>
-        <div class="stat"><div class="statnum c-blue">27+</div><div class="l">years devoted to oral &amp; maxillofacial surgery</div></div>
-        <div class="stat"><div class="statnum c-coral">2007</div><div class="l">the year the Dental Implants Center of South Bay opened</div></div>
-        <div class="stat"><div class="statnum c-green">6</div><div class="l">surgical disciplines refined across a career</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VOICES -->
-<section id="stories" style="padding-top:110px">
-  <div class="wrap">
-    <div class="shead reveal">
-      <span class="chip">Real stories</span>
-      <h2 class="d81">People who choose <span class="c-blue">Dr. Arce</span></h2>
-    </div>
-    <div class="grid voices-grid" data-stagger style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
-      <div class="vcard"><div class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</div><div class="who"><span class="av">MR</span><div><div class="nm">Maria R.</div><div class="rl">Full-arch reconstruction</div></div></div></div>
-      <div class="vcard"><div class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</div><div class="who"><span class="av">DK</span><div><div class="nm">Dr. David Kim, D.D.S.</div><div class="rl">Referring Dentist · Torrance</div></div></div></div>
-      <div class="vcard"><div class="q">"The most thorough and honest surgeon I have ever met. He treated my father like family."</div><div class="who"><span class="av">AC</span><div><div class="nm">Anabella C.</div><div class="rl">Daughter of patient</div></div></div></div>
-      <div class="vcard"><div class="q">"Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself."</div><div class="who"><span class="av">RT</span><div><div class="nm">Robert T.</div><div class="rl">Dental implants</div></div></div></div>
-      <div class="vcard"><div class="q">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</div><div class="who"><span class="av">LS</span><div><div class="nm">Dr. Lina Soto</div><div class="rl">Periodontist</div></div></div></div>
-      <div class="vcard"><div class="q">"I was terrified of the procedure. He never rushed me. Best decision I have made for my health."</div><div class="who"><span class="av">CS</span><div><div class="nm">Carlos S.</div><div class="rl">Bone graft + implants</div></div></div></div>
-      <div class="vcard"><div class="q">"Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know."</div><div class="who"><span class="av">EP</span><div><div class="nm">Elena P.</div><div class="rl">TMJ treatment</div></div></div></div>
-      <div class="vcard"><div class="q">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time."</div><div class="who"><span class="av">JM</span><div><div class="nm">Dr. Jeff Malone</div><div class="rl">Referring Dentist</div></div></div></div>
-      <div class="vcard"><div class="q">"The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice."</div><div class="who"><span class="av">ME</span><div><div class="nm">Dr. Mark Ellison</div><div class="rl">Referring Dentist</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="svc" id="services" style="padding-top:0">
-  <div class="wrap">
-    <div class="shead reveal">
-      <span class="chip">Services</span>
-      <h2 class="d40">Everything your case may need</h2>
-    </div>
-    <div class="cloud reveal">
-      <span class="chip2">Dental Implants</span>
-      <span class="chip2">All-On-X Full Arch</span>
-      <span class="chip2">Bone Grafting</span>
-      <span class="chip2">Complex Extractions</span>
-      <span class="chip2">Reconstruction</span>
-      <span class="chip2">Oral Pathology</span>
-      <span class="chip2">TMJ Treatment</span>
-      <span class="chip2">Implant Maintenance</span>
-      <span class="chip2">Second Opinions</span>
-      <span class="chip2">Referring-Dentist Reports</span>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSE -->
-<section class="close" id="begin" style="padding-top:0">
-  <div class="wrap">
-    <div class="card reveal">
-      <h2 class="d40">Told it couldn't be done? Let's talk.</h2>
-      <p class="sub">Request a consultation or get the free guide — What to expect from your first implant consultation.</p>
-      <div class="form">
-        <input type="email" placeholder="you@email.com">
-        <a class="cta" href="#">Get the free guide <span class="dot">→</span></a>
-      </div>
-      <div class="ctas">
-        <a class="cta" style="background:var(--cream)" href="tel:+13103274166">(310) 327-4166</a>
-      </div>
-      <svg class="bgillo" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMax slice" fill="none">
-        <path d="M0 150 C200 80, 400 120, 600 100 C800 80, 1000 120, 1200 90 L1200 150 Z" fill="#8ED462"/>
-        <circle cx="180" cy="70" r="9" fill="#FF705D"/><circle cx="1020" cy="60" r="8" fill="#2BA0FF"/>
-        <rect x="600" y="40" width="14" height="14" rx="4" fill="#EBC1FF" transform="rotate(16 607 47)"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<div class="fbot">
-  <span>© 2026 Dr. Jorge Arce, D.D.S. — Dental Implants Center of South Bay</span>
-  <span>Redondo Beach · Torrance, California · By appointment</span>
-</div>
-
+<nav><div class="navin"><a class="nlogo" href="#top" id="nlogo"></a><div class="nlinks" id="nlinks"></div></div></nav>
+<main id="site"></main>
+<noscript><div style="padding:40vh 28px;text-align:center;font-size:15px">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-hero]').forEach(el => el.classList.add('in'));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.reveal:not([data-hero]),[data-stagger],.moment').forEach(el => io.observe(el));
+(function(){
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+var ILLOS={"mark": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 13 C2 8, 4 3, 8 3 C12 3, 14 8, 13 13 C12.5 14.5, 11 14, 10.5 12.5 C10 11, 9 10, 8 10 C7 10, 6 11, 5.5 12.5 C5 14, 3.5 14.5, 3 13 Z\" fill=\"#fff\"/></svg>", "hero": "<svg viewBox=\"0 0 1440 900\" preserveAspectRatio=\"xMidYMid slice\" fill=\"none\">\n      <rect width=\"1440\" height=\"900\" fill=\"#F5F1E4\"/>\n      <!-- rolling hill -->\n      <path d=\"M600 900 C 700 560, 900 380, 1160 300 C 1300 260, 1400 270, 1440 290 L1440 900 Z\" fill=\"#8ED462\"/>\n      <path d=\"M600 900 C 700 560, 900 380, 1160 300\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n      <!-- sun -->\n      <circle cx=\"1240\" cy=\"140\" r=\"52\" fill=\"#F5E211\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n      <g stroke=\"#2C2E2A\" stroke-width=\"2.5\"><path d=\"M1240 66 L1240 46\"/><path d=\"M1240 214 L1240 234\"/><path d=\"M1166 140 L1146 140\"/><path d=\"M1314 140 L1334 140\"/></g>\n      <!-- happy tooth big -->\n      <g transform=\"translate(950,430) scale(2.1)\">\n        <path d=\"M6 40 C2 24, 8 8, 24 8 C40 8, 46 24, 42 40 C40 46, 34 45, 32.5 39 C31 33, 28 30, 24 30 C20 30, 17 33, 15.5 39 C14 45, 8 46, 6 40 Z\" fill=\"#fff\" stroke=\"#2C2E2A\" stroke-width=\"2\"/>\n        <circle cx=\"17\" cy=\"20\" r=\"1.8\" fill=\"#2C2E2A\"/>\n        <circle cx=\"31\" cy=\"20\" r=\"1.8\" fill=\"#2C2E2A\"/>\n        <path d=\"M18 25 C21 28, 27 28, 30 25\" stroke=\"#2C2E2A\" stroke-width=\"1.8\" stroke-linecap=\"round\"/>\n      </g>\n      <!-- small tooth w/ flag -->\n      <g transform=\"translate(1140,540) scale(1.2)\">\n        <path d=\"M6 40 C2 24, 8 8, 24 8 C40 8, 46 24, 42 40 C40 46, 34 45, 32.5 39 C31 33, 28 30, 24 30 C20 30, 17 33, 15.5 39 C14 45, 8 46, 6 40 Z\" fill=\"#EBC1FF\" stroke=\"#2C2E2A\" stroke-width=\"2\"/>\n        <circle cx=\"17\" cy=\"20\" r=\"1.8\" fill=\"#2C2E2A\"/><circle cx=\"31\" cy=\"20\" r=\"1.8\" fill=\"#2C2E2A\"/>\n        <path d=\"M18 24 C21 27, 27 27, 30 24\" stroke=\"#2C2E2A\" stroke-width=\"1.8\" stroke-linecap=\"round\"/>\n      </g>\n      <!-- chunky hand pointing -->\n      <g transform=\"translate(700,120) rotate(18)\">\n        <path d=\"M0 60 C0 30, 14 12, 34 10 L80 6 C88 5, 90 16, 82 19 L52 28 L96 24 C105 23, 106 34, 97 37 L56 44 L92 44 C100 44, 100 54, 92 56 L54 60 L82 64 C89 66, 87 76, 80 75 L30 70 C12 68, 0 78, 0 60 Z\" fill=\"#2BA0FF\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n      </g>\n      <!-- confetti -->\n      <g class=\"conf\">\n        <circle cx=\"240\" cy=\"140\" r=\"10\" fill=\"#FF705D\"/>\n        <circle cx=\"1080\" cy=\"90\" r=\"8\" fill=\"#8ED462\"/>\n        <rect x=\"880\" y=\"180\" width=\"16\" height=\"16\" rx=\"4\" fill=\"#EBC1FF\" transform=\"rotate(20 888 188)\"/>\n        <path d=\"M330 700 q10 -22 20 0 q-10 22 -20 0\" fill=\"#F5E211\"/>\n        <circle cx=\"150\" cy=\"620\" r=\"12\" fill=\"#2BA0FF\"/>\n        <rect x=\"440\" y=\"80\" width=\"14\" height=\"14\" rx=\"4\" fill=\"#8ED462\" transform=\"rotate(-14 447 87)\"/>\n      </g>\n      <!-- little smiling face bottom-left -->\n      <g transform=\"translate(120,740)\">\n        <circle cx=\"40\" cy=\"40\" r=\"40\" fill=\"#FF705D\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n        <circle cx=\"28\" cy=\"34\" r=\"3\" fill=\"#2C2E2A\"/><circle cx=\"52\" cy=\"34\" r=\"3\" fill=\"#2C2E2A\"/>\n        <path d=\"M26 48 C33 56, 47 56, 54 48\" stroke=\"#2C2E2A\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n      </g>\n    </svg>", "chat": "<svg viewBox=\"0 0 520 340\" fill=\"none\">\n          <rect width=\"520\" height=\"340\" fill=\"#EAF4FF\"/>\n          <g class=\"pop\"><circle cx=\"150\" cy=\"170\" r=\"90\" fill=\"#2BA0FF\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n          <circle cx=\"122\" cy=\"150\" r=\"6\" fill=\"#2C2E2A\"/><circle cx=\"178\" cy=\"150\" r=\"6\" fill=\"#2C2E2A\"/>\n          <path d=\"M120 195 C135 212, 165 212, 180 195\" stroke=\"#2C2E2A\" stroke-width=\"3\" stroke-linecap=\"round\"/></g>\n          <g class=\"pop p2\"><rect x=\"300\" y=\"90\" width=\"160\" height=\"46\" rx=\"23\" fill=\"#fff\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n          <text x=\"380\" y=\"119\" text-anchor=\"middle\" font-family=\"Inter Tight\" font-size=\"18\" font-weight=\"600\" fill=\"#2C2E2A\">Hello!</text></g>\n          <g class=\"pop p3\"><rect x=\"330\" y=\"160\" width=\"150\" height=\"46\" rx=\"23\" fill=\"#F5E211\" stroke=\"#2C2E2A\" stroke-width=\"2.5\"/>\n          <text x=\"405\" y=\"189\" text-anchor=\"middle\" font-family=\"Inter Tight\" font-size=\"15\" font-weight=\"600\" fill=\"#2C2E2A\">Tell me all</text></g>\n          <g class=\"pop p4\"><path d=\"M70 300 q14 -30 28 0 q-14 30 -28 0\" fill=\"#8ED462\"/><circle cx=\"460\" cy=\"280\" r=\"10\" fill=\"#FF705D\"/></g>\n        </svg>", "plan": "<svg viewBox=\"0 0 520 340\" fill=\"none\">\n          <rect width=\"520\" height=\"340\" fill=\"#FFEFEA\"/>\n          <g class=\"pop\"><path d=\"M100 250 C90 190, 110 130, 170 130 C230 130, 250 190, 240 250 C235 272, 210 270, 204 248 C198 226, 186 214, 170 214 C154 214, 142 226, 136 248 C130 270, 105 272, 100 250 Z\" fill=\"#fff\" stroke=\"#2C2E2A\" stroke-width=\"3\"/></g>\n          <g class=\"pop p2\"><path d=\"M320 120 L390 120 M355 85 L355 155\" stroke=\"#FF705D\" stroke-width=\"14\" stroke-linecap=\"round\"/></g>\n          <g class=\"pop p3\"><rect x=\"300\" y=\"190\" width=\"170\" height=\"20\" rx=\"10\" fill=\"#8ED462\" stroke=\"#2C2E2A\" stroke-width=\"2\"/>\n          <rect x=\"300\" y=\"222\" width=\"120\" height=\"20\" rx=\"10\" fill=\"#EBC1FF\" stroke=\"#2C2E2A\" stroke-width=\"2\"/>\n          <rect x=\"300\" y=\"254\" width=\"88\" height=\"20\" rx=\"10\" fill=\"#2BA0FF\" stroke=\"#2C2E2A\" stroke-width=\"2\"/></g>\n        </svg>", "life": "<svg viewBox=\"0 0 520 340\" fill=\"none\">\n          <rect width=\"520\" height=\"340\" fill=\"#EDFAE4\"/>\n          <g class=\"pop\"><circle cx=\"260\" cy=\"170\" r=\"100\" fill=\"#8ED462\" stroke=\"#2C2E2A\" stroke-width=\"3\"/>\n          <circle cx=\"228\" cy=\"150\" r=\"7\" fill=\"#2C2E2A\"/><circle cx=\"292\" cy=\"150\" r=\"7\" fill=\"#2C2E2A\"/>\n          <path d=\"M222 196 C240 218, 280 218, 298 196\" stroke=\"#2C2E2A\" stroke-width=\"3.5\" stroke-linecap=\"round\"/></g>\n          <g class=\"pop p2\"><path d=\"M120 80 q12 -26 24 0 q-12 26 -24 0\" fill=\"#F5E211\"/><circle cx=\"420\" cy=\"70\" r=\"12\" fill=\"#FF705D\"/></g>\n          <g class=\"pop p3\"><rect x=\"80\" y=\"250\" width=\"16\" height=\"16\" rx=\"4\" fill=\"#2BA0FF\" transform=\"rotate(18 88 258)\"/><circle cx=\"430\" cy=\"270\" r=\"9\" fill=\"#EBC1FF\"/></g>\n        </svg>", "wave": "<svg class=\"bgillo\" viewBox=\"0 0 1200 150\" preserveAspectRatio=\"xMidYMax slice\" fill=\"none\">\n        <path d=\"M0 150 C200 80, 400 120, 600 100 C800 80, 1000 120, 1200 90 L1200 150 Z\" fill=\"#8ED462\"/>\n        <circle cx=\"180\" cy=\"70\" r=\"9\" fill=\"#FF705D\"/><circle cx=\"1020\" cy=\"60\" r=\"8\" fill=\"#2BA0FF\"/>\n        <rect x=\"600\" y=\"40\" width=\"14\" height=\"14\" rx=\"4\" fill=\"#EBC1FF\" transform=\"rotate(16 607 47)\"/>\n      </svg>"};
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<i>').replace(/&lt;\/i&gt;/g,'</i>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&lt;c&gt;/g,'<span class="c-blue">').replace(/&lt;\/c&gt;/g,'</span>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function illo(k){return ILLOS[k]||''}
+
+var partials={
+hero:function(s){
+  return'<section class="hero" id="top"><div class="illo" aria-hidden="true">'+illo(s.illo)+'</div>'+
+  '<div class="wrap" style="width:100%"><div class="card" data-r2>'+
+  '<h1 class="wr">'+rich(s.title)+'</h1>'+
+  '<p class="wr">'+rich(s.sub)+'</p>'+
+  '<div class="ctas wr">'+(s.ctas||[]).map(function(c){return'<a class="cta'+(c.primary?'':' conf')+'" href="'+esc(c.h)+'">'+esc(c.t)+'</a>'}).join('')+'</div>'+
+  '</div></div></section>'},
+care:function(s){
+  return'<section id="'+esc(s.id||'care')+'"><div class="wrap">'+
+  '<div class="shead" data-r2><span class="chip wr">'+esc(s.kick)+'</span><h2 class="d81 wr">'+rich(s.title)+'</h2></div>'+
+  (s.moments||[]).map(function(m,i){return'<div class="moment"'+(i%2?' style="direction:rtl"':'')+'>'+
+    '<div class="illobox wr" data-r1'+(i%2?' style="direction:ltr"':'')+' data-pops>'+illo(m.illo)+'</div>'+
+    '<div'+(i%2?' style="direction:ltr"':'')+' data-r2><h3 class="wr">'+rich(m.title)+'</h3><p class="wr">'+rich(m.body)+'</p>'+
+    '<div class="pts wr">'+(m.pts||[]).map(function(t){return'<div><i>&check;</i> '+esc(t)+'</div>'}).join('')+'</div></div>'+
+  '</div>'}).join('')+
+  '</div></section>'},
+stats:function(s){
+  return'<section class="stats"><div class="wrap">'+
+  '<div class="shead" data-r1><h2 class="d40 wr">'+rich(s.head)+'</h2></div>'+
+  '<div class="grid" data-cards>'+(s.items||[]).map(function(st){return'<div class="stat wr"><div class="statnum '+esc(st.c||'c-blue')+'">'+esc(st.n)+'</div><div class="l">'+esc(st.l)+'</div></div>'}).join('')+'</div>'+
+  '</div></section>'},
+voices:function(s){
+  return'<section id="'+esc(s.id||'voices')+'" class="voices"><div class="wrap">'+
+  '<div class="shead" data-r2><span class="chip wr">'+esc(s.kick)+'</span><h2 class="d81 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="grid voices-grid" data-cards>'+(s.cards||[]).map(function(v){return'<div class="vcard wr"><p class="q">'+rich(v.q)+'</p>'+
+    '<div class="who"><span class="av">'+esc(v.init)+'</span><div><div class="nm">'+esc(v.n)+'</div><div class="rl">'+esc(v.r)+'</div></div></div></div>'}).join('')+'</div>'+
+  '</div></section>'},
+svc:function(s){
+  return'<section id="'+esc(s.id||'svc')+'" class="svc"><div class="wrap">'+
+  '<div class="shead" data-r2><span class="chip wr">'+esc(s.kick)+'</span><h2 class="d40 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="cloud" data-cards>'+(s.chips||[]).map(function(t){return'<span class="chip2 wr">'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</div></section>'},
+close:function(s){
+  var f=s.form||{};
+  return'<section class="close" id="'+esc(s.id||'close')+'">'+illo('wave')+
+  '<div class="wrap" data-r2>'+
+  '<h2 class="d81 wr" style="max-width:16ch;margin:0 auto">'+rich(s.title)+'</h2>'+
+  '<p class="sub wr">'+rich(s.sub)+'</p>'+
+  '<div class="form wr"><input type="email" placeholder="'+esc(f.field||'Email')+'" aria-label="'+esc(f.field||'Email')+'"><button class="cta" type="button">'+esc(f.btn||'Send')+'</button></div>'+
+  '<div class="ctas wr"><a class="cta conf" href="tel:+13103274166">'+esc(s.phone)+'</a></div>'+
+  '</div>'+
+  '<div class="fbot">'+(s.foot||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</section>'}
+};
+
+fetch('/v18-mindmarket/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  document.getElementById('nlogo').innerHTML='<span class="mark">'+illo('mark')+'</span>'+esc(c.logo||'Dr. Arce');
+  var links=(c.nav||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
+  if(c.navCta)links+='<a class="cta" href="'+esc(c.navCta.h)+'">'+esc(c.navCta.t)+' →</a>';
+  document.getElementById('nlinks').innerHTML=links;
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
 });
+
+function backOut(k){var c1=1.70158,c3=c1+1;k=Math.max(0,Math.min(1,k));return 1+c3*Math.pow(k-1,3)+c1*Math.pow(k-1,2)}
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* hero: pops entran con muelle al cargar (R2 spring) */
+  var heroPops=document.querySelectorAll('.hero .illo .pop');
+  if(heroPops.length){
+    gsap.fromTo(heroPops,{scale:0},{scale:1,duration:.7,ease:'back.out(1.7)',
+      transformOrigin:'center',stagger:{each:.09,from:'random'},delay:.15});
+  }
+
+  /* R5 estallido de viñetas: pops de cada illobox con backout mapeado al scrub */
+  document.querySelectorAll('[data-pops]').forEach(function(box){
+    var pops=Array.prototype.slice.call(box.querySelectorAll('.pop'));
+    if(!pops.length)return;
+    var n=pops.length;
+    ScrollTrigger.create({trigger:box,start:'top 85%',end:'center 45%',scrub:1.2,
+      onUpdate:function(self){var p=self.progress;
+        pops.forEach(function(el,j){
+          var k=Math.max(0,Math.min(1,p*(n+.6)-j*.8));
+          el.style.transform='scale('+backOut(k)+')';
+        })}});
+  });
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+})();
 </script>
 </body>
 </html>

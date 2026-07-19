@@ -517,3 +517,39 @@ ocultos, bg escena 1 fija, orbes estáticos · SCENE rgb(13,32,24)→
 (16,38,27)→vuelta a deep al final, o1 +13vh o3 ×1.14 · STRESS journey
 fuera, panel sin foto → phx (la escena sigue), cells 2, voices 3,
 título ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 16 · v18-mindmarket — CERRADA
+
+**Diagnóstico inicial:** ilustrada simpática con bloques 1-columna
+repetidos: los pops de las ilustraciones eran transitions con
+transition-delay disparadas por IO (binario), 2 easings mezclados sin
+tokens, stats estáticos, copy e ilustraciones enredados en el HTML.
+
+**Qué cambié:**
+- R5 estallido de viñetas: los `.pop` de cada illobox se escalan con
+  backOut(k) calculado (overshoot real) mapeado al scrub del bloque —
+  cada viñeta estalla secuencialmente `k=clamp(p·(n+.6)−j·.8)`,
+  continuo, nunca binario. Reduced: todos a scale(1) por CSS.
+- Ilustraciones extraídas a plantilla: el arte SVG vive en el loader
+  (claves hero/chat/plan/life/wave/mark) y el TEXTO en content.json —
+  el equipo cambia copy sin tocar arte, o añade momentos reutilizando
+  claves de illo.
+- Momentos alternan por dirección rtl del grid (izq/der) sin depender
+  de nth-child; reglas de order eliminadas.
+- 3 easings documentados: expo.out + quick + spring(.34,1.56,.64,1)
+  (los chips botan con muelle en hover — personalidad de la página).
+- Tokens --sec, focus-visible, `.err`.
+
+**Qué elevé:** la ilustración por fin tiene layout valiente (alternado
++ estallido secuencial scrub-driven) y la página es template real:
+moments 2-4 con arte de catálogo.
+
+**Paso 4:** memorable sí (viñetas que estallan al pasar); hero card
+sobre colina / momentos alternados / stats centrados / cloud — varía;
+ratio 144/16 = 9:1; motion continuo; 3 easings (cerrado); solo
+transform; robusto.
+
+**Verificación:** batchcheck W18 ovf 0 d+m. robust18+dbg: REDUCED nm,
+0 ocultos, 10/10 pops visibles · R5 verificado a progress .48 →
+scale(1)|1|1.09(overshoot)|0 secuencial · STRESS svc fuera, moments 2,
+stats 2, título ×2, ovf 0, 0 errores · MOBILE ovf 0.
