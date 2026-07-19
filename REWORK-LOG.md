@@ -517,3 +517,186 @@ ocultos, bg escena 1 fija, orbes estáticos · SCENE rgb(13,32,24)→
 (16,38,27)→vuelta a deep al final, o1 +13vh o3 ×1.14 · STRESS journey
 fuera, panel sin foto → phx (la escena sigue), cells 2, voices 3,
 título ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 16 · v18-mindmarket — CERRADA
+
+**Diagnóstico inicial:** ilustrada simpática con bloques 1-columna
+repetidos: los pops de las ilustraciones eran transitions con
+transition-delay disparadas por IO (binario), 2 easings mezclados sin
+tokens, stats estáticos, copy e ilustraciones enredados en el HTML.
+
+**Qué cambié:**
+- R5 estallido de viñetas: los `.pop` de cada illobox se escalan con
+  backOut(k) calculado (overshoot real) mapeado al scrub del bloque —
+  cada viñeta estalla secuencialmente `k=clamp(p·(n+.6)−j·.8)`,
+  continuo, nunca binario. Reduced: todos a scale(1) por CSS.
+- Ilustraciones extraídas a plantilla: el arte SVG vive en el loader
+  (claves hero/chat/plan/life/wave/mark) y el TEXTO en content.json —
+  el equipo cambia copy sin tocar arte, o añade momentos reutilizando
+  claves de illo.
+- Momentos alternan por dirección rtl del grid (izq/der) sin depender
+  de nth-child; reglas de order eliminadas.
+- 3 easings documentados: expo.out + quick + spring(.34,1.56,.64,1)
+  (los chips botan con muelle en hover — personalidad de la página).
+- Tokens --sec, focus-visible, `.err`.
+
+**Qué elevé:** la ilustración por fin tiene layout valiente (alternado
++ estallido secuencial scrub-driven) y la página es template real:
+moments 2-4 con arte de catálogo.
+
+**Paso 4:** memorable sí (viñetas que estallan al pasar); hero card
+sobre colina / momentos alternados / stats centrados / cloud — varía;
+ratio 144/16 = 9:1; motion continuo; 3 easings (cerrado); solo
+transform; robusto.
+
+**Verificación:** batchcheck W18 ovf 0 d+m. robust18+dbg: REDUCED nm,
+0 ocultos, 10/10 pops visibles · R5 verificado a progress .48 →
+scale(1)|1|1.09(overshoot)|0 secuencial · STRESS svc fuera, moments 2,
+stats 2, título ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 17 · v19-cunliffe — CERRADA
+
+**Diagnóstico inicial:** el rail lateral era arreglo, no diseño: spy IO
+binario que saltaba de golpe, ghost numerals con addEventListener
+('scroll') crudo fuera del ticker, `.sky` con drift infinito, hero con
+keyframes heroin, alternancia frágil por nth-child, copy en HTML.
+
+**Qué cambié:**
+- R5a tinta fantasma: cada ghost numeral interpola su fill
+  `rgba(244,244,245,α)` con α = campana(progreso)·.10 — el contorno se
+  llena de tinta cuando su capítulo está en foco — más paralaje
+  translateY ±40px, todo por scrub en el ticker único.
+- R5b espina: el rail gana línea vertical con fill scaleY = progreso
+  global; el link activo y el ancho del tick (14→26px) se derivan del
+  progreso CONTINUO por distancia, no de un IO binario. El reloj real
+  del bar ahora muestra "HH:MM · NN%" de lectura.
+- Sky: drift infinito muere → translateY -220px mapeado al progreso.
+- Capítulos alternan por clase `.alt` explícita (nth-child eliminado);
+  numeración 0N/0M automática del array.
+- Tokens, 2 easings, R3 hairlines en border-top de capítulos/record,
+  `.phx` etiquetados, focus-visible.
+
+**Qué elevé:** el scroll por fin cuenta la historia: tinta que se
+enciende por capítulo + espina que avanza + porcentaje de lectura — el
+rail pasó de arreglo a instrumento narrativo.
+
+**Paso 4:** memorable sí (tinta fantasma); capítulos alternados + ghost
+±lado; ratio 14:1; motion continuo; 2 easings; nada anima layout;
+robusto.
+
+**Verificación:** batchcheck W19 ovf 0 d+m. robust19: REDUCED nm, 0
+ocultos, ghost fijo α.06, reloj sin % · R5 ghost α.063 + translateY
+-15px mid-approach, espina scaleY .45, rail on=Story tick 26px ·
+STRESS record fuera, capítulos 3 renumerados 01/03-03/03, 4 phx,
+statement ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 18 · v20-vast — CERRADA
+
+**Diagnóstico inicial:** premium espacial con el mejor ratio del
+catálogo (ghost 383px = 25:1) pero motion uniforme: todo `.reveal` con
+la misma curva a la vez, anillo `spin 90s infinite`, dot `blink
+infinite`, hero con keyframes hin, y la mesa de disciplinas — la
+sección con más carácter — estática con "Active" impreso.
+
+**Qué cambié:**
+- R5a dial orbital: el anillo dashed rota `p_global·360°` con el
+  progreso de TODA la página (scrub .6) — un instrumento que registra
+  el viaje.
+- R5b boot sequence: las filas de sistemas arrancan en Standby al 35%
+  de opacidad; el scrub de la sección enciende fila a fila
+  (k=clamp(p·n−i)): opacidad continua, dot naranja con scaleX, idx en
+  naranja y estado cruza a Active en k=.5 — chained states con
+  transición clara. Reduced/no-JS: todo Active estático.
+- spin/blink/hin muertos. Idx A-0N y numeración automáticos.
+- Tokens, ritmo --sec diferenciado por sección, 2 easings,
+  focus-visible naranja, `.phx` (círculo de estación incluido).
+- Shell+loader: content.json con nav/hero/station/mission/systems/
+  metrics/updates(0-3)/consult/foot.
+
+**Qué elevé:** la metáfora de mission-control por fin se ejecuta: la
+página se enciende con el scroll en vez de estar ya encendida.
+
+**Paso 4:** memorable sí (boot sequence); hero foto / station bone /
+metrics grafito / consult alternan fondo y tratamiento; ratio 25:1;
+motion continuo; 2 easings; solo transform+paint; robusto.
+
+**Verificación:** batchcheck W20 ovf 0 d+m. robust20: REDUCED nm, 0
+ocultos, 6/6 Active, anillo quieto · R5 anillo 159° mid-page, estados
+AAAASS con opacidades 1,1,1,1,.3,.3 → AAAAAA al final · STRESS updates
+fuera, rows 4 → A-01..A-04, hero/station sin foto → 2 phx, título ×2,
+ovf 0, 0 errores · MOBILE ovf 0.
+
+## 19 · v21-getty — CERRADA
+
+**Diagnóstico inicial:** narrativa museo bien escrita, visualmente
+estable hasta la monotonía: todo `.reveal` idéntico, keyframes hin,
+píldora de progreso animando `height:%` (layout), stack con data-depth
+muerto, sin tramo pinneado, copy en HTML.
+
+**Qué cambié:**
+- R5a revelado de placas: cada imagen `[data-dev]` (placas del stack,
+  figs del ensayo, coll) entra sobreexpuesta y desenfocada y se revela
+  con el scrub — `grayscale(1−.85k) brightness(1.35−.35k)
+  blur((1−k)·6px)` — como papel fotográfico. Mecanismo de catálogo
+  nuevo (filter-scrub). Mobile blur máx 4px; reduced: reveladas fijas.
+- R5b la sala del nombre: `.giant` pinneado `+=55%` con el name
+  escalando .96→1 y el sub apareciendo — el tramo pinneado que la
+  página pedía. Conflicto R2/pin evitado sacando name/sub del grupo
+  stagger (aprendizaje de v14 aplicado).
+- Píldora de progreso: height% → scaleY transform (fill scaleY=p
+  global, scrub .6); oculta en no-motion.
+- hin muerto; tokens; ritmo --sec con dark ×1.2; R3 hairlines en miles.
+- Shell+loader: essay como `flow` tipado (párrafos y figs intercalados
+  libremente — el equipo compone el ensayo desde JSON), tombstones
+  conservados en placeholders.
+
+**Qué elevé:** el museo por fin revela sus placas — la monotonía se
+rompió con un mecanismo propio de la identidad (fotografía) y el pin
+que pedía el diagnóstico de cola.
+
+**Paso 4:** memorable sí (revelado); plate centrado / essay asimétrico
+figs alternadas / dark invertido / coll 2col — varía; ratio 13:1;
+motion continuo; 2 easings; height% eliminado, filter es paint;
+robusto.
+
+**Verificación:** batchcheck W21 ovf 0 d+m. robust21: REDUCED nm, 0
+ocultos, filter fijo revelado, píldora oculta · DEV grayscale .62 +
+blur 3.3px → revelada 0px · GIANT scale(1) sub 1 con 1 pin-spacer,
+fill scaleY .47 · STRESS voices fuera, stack 2 sin fotos, miles 2,
+3 phx, título ×2, ovf 0, 0 errores · MOBILE ovf 0 sin pin.
+
+## 20 · v12-caliora — CERRADA
+
+**Diagnóstico inicial:** la más lista para clínicas y por eso la más
+exigente: estructura correcta (herocard, fichas k/v, navy stats, book
+card) pero `.reveal` genérico, dos easings sin tokens, cero
+scrollytelling y — problema de honestidad — vcards con ★★★★★
+inventadas. Copy en HTML.
+
+**Qué cambié:**
+- HONESTIDAD: estrellas fuera; cada testimonio lleva etiqueta mono del
+  rol verificable (Patient story / Referring doctor / Family of
+  patient) derivada de `role` en el JSON.
+- R5 baraja de tratamientos (desktop): el grid 2×2 pasa a pila sticky
+  de fichas horizontales (`top 96+i·26px`, z creciente); cada ficha
+  nueva cubre a la anterior mientras la cubierta cede escala
+  (1−.045k) y luz (brightness 1−.1k) por scrub continuo. Los tcards
+  revelan con fade sin transform (la baraja es dueña del transform —
+  patrón anti-conflicto de v14/v21). Mobile/reduced: grid original.
+- Tokens; easings consolidados a expo.out+quick; pills con active .97
+  y focus-visible; `.phx`; R3 hairlines en rows del blog.
+- Shell+loader completo (9 secciones opcionales, brand SVG plantilla).
+
+**Qué elevé:** el 10% que faltaba: un momento propio (la baraja),
+tokens de verdad, y honestidad médica en los testimonios.
+
+**Paso 4:** memorable sí (baraja); herocard foto / baraja blanca /
+statement taupe / stats navy / book blanca — alternancia real; ratio
+5.5:1 (género clínica, aceptable); motion continuo; 2 easings; solo
+transform+paint; robusto.
+
+**Verificación:** batchcheck W12 ovf 0 d+m. robust12: REDUCED nm, 0
+ocultos, tgrid grid, sin ★, 9 etiquetas de rol · STACK sticky tops
+96/122/148/174, cubiertas scale .955/.976 + brightness · STRESS blog
+fuera, fichas 3 sin fotos → phx, h1 ×2, ovf 0, 0 errores · MOBILE ovf
+0 cards static.

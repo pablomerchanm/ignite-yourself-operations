@@ -28,11 +28,11 @@
 | 13 | `v15-norris` | ✅ | Deportiva con energía en paleta pero no en composición; typography scale corta para lo que pide el género. |
 | 14 | `v16-handx` | ✅ | Artesanal con buenos detalles pero ritmo constante; el momento del referente (proceso) quedó decorativo. |
 | 15 | `v17-everswap` | ✅ | El grade cinematográfico perdona mucho, y esta página lo usa como muleta: quita las fotos y no queda sistema. |
-| 16 | `v18-mindmarket` | ☐ | Ilustrada simpática; composición de bloques 1-columna repetidos, la ilustración merece layout más valiente. |
-| 17 | `v19-cunliffe` | ☐ | El rail lateral fue arreglo, no diseño: convive incómodo con el contenido y el scroll no cuenta nada. |
-| 18 | `v20-vast` | ☐ | Premium espacial con buen aire pero motion uniforme: todo hace fade-up al mismo tiempo con la misma curva. |
-| 19 | `v21-getty` | ☐ | Narrativa museo bien escrita; visualmente estable hasta el punto de monotonía — pide un tramo pinneado. |
-| 20 | `v12-caliora` | ☐ | La más lista para clínicas y por eso exige más: buena base, le falta el 10% de acabado que separa plantilla de estudio. |
+| 16 | `v18-mindmarket` | ✅ | Ilustrada simpática; composición de bloques 1-columna repetidos, la ilustración merece layout más valiente. |
+| 17 | `v19-cunliffe` | ✅ | El rail lateral fue arreglo, no diseño: convive incómodo con el contenido y el scroll no cuenta nada. |
+| 18 | `v20-vast` | ✅ | Premium espacial con buen aire pero motion uniforme: todo hace fade-up al mismo tiempo con la misma curva. |
+| 19 | `v21-getty` | ✅ | Narrativa museo bien escrita; visualmente estable hasta el punto de monotonía — pide un tramo pinneado. |
+| 20 | `v12-caliora` | ✅ | La más lista para clínicas y por eso exige más: buena base, le falta el 10% de acabado que separa plantilla de estudio. |
 | 21 | `v23-pacifica` | ☐ | Ya recibió profundidad (footage strip); aún hay padding clónico entre secciones medias y easing mezclado. |
 | 22 | `v24-ilcapo` | ☐ | El showreel la elevó; el resto de secciones siguen centradas en serie y el motion no distingue jerarquías. |
 | 23 | `v27-genesis` | ☐ | Chapter-grid arreglado tras el bug: funcional y con carácter, pero el scrollytelling del referente quedó en insinuación. |
