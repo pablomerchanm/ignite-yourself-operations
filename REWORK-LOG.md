@@ -365,3 +365,42 @@ easings; nada anima layout (translateX + font-variation); robusto.
 0 ocultos, bordes estáticos intactos (6) · R5 stacks L -38.6% / R
 -11.4% (opuestos), onda --w 400→674 · STRESS record fuera, rows 4 →
 label "(04)", 3 phx, 2 cols, titular ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 12 · v14-gareis — CERRADA
+
+**Diagnóstico inicial:** portfolio gris competente pero intercambiable:
+masonry ESTÁTICO (los push eran márgenes fijos), preloader con
+setInterval como único gesto, `menuchip:hover` animando padding
+(layout), dot de disponibilidad con blink infinito, 4 easings, copy en
+HTML.
+
+**Qué cambié:**
+- R5 parallax a dos tiempos: cada pieza declara `par` (−1/0/+1) en
+  content.json; scrub de la galería mapea `translateY = par·36px·(p−.5)·2`
+  sobre el `.ph` interno (no pisa el settle del figure) — centrado en 0
+  a mitad de galería. Los qrow van a par 0: citas estables entre fotos
+  que derivan. Mobile y reduced: apagado (verificado).
+- Preloader determinista: gsap 0→100 en 900ms expo.out + fade 400ms;
+  no-motion → display:none.
+- Blink infinito eliminado (dot estático); menuchip hover →
+  translateY(-2px)+fondo (transform+paint); panel ya era transform.
+- R3 hairline-draw en facts/record (bottom, + top de la primera fila).
+- Alturas tokenizadas `--sec clamp(96,13vh,152)` · gal top ×0.4 · fin
+  ×1.15. 2 easings.
+- Shell+loader: galería declarativa {src,label,size,span,push,par} con
+  numeración (0N) automática, qrows intercalables, `.phx` etiquetados,
+  focus-visible, aria-expanded en el menú.
+
+**Qué elevé:** el masonry dejó de ser maquetación y ganó profundidad —
+las fotos derivan a contravelocidad mientras texto y captions quedan
+estables; primer parallax del catálogo (mecanismo no repetido).
+
+**Paso 4:** memorable sí (deriva diferencial); centrado solo en
+hero/fin, galería y about asimétricos; ratio 12.6:1; motion continuo;
+2 easings; nada anima layout; robusto.
+
+**Verificación:** batchcheck W14 ovf 0 d+m. robust14: REDUCED nm, 0
+ocultos, preloader ausente · PRE done n=100 · R5 ±0.17px en centro →
+±19.9 → ±36px full en bordes (signos opuestos) · STRESS record fuera,
+galería 4 sin fotos → 4 phx numerados (01)-(04), facts 3, lead ×2,
+ovf 0, 0 errores · MOBILE ovf 0 + parallax off.
