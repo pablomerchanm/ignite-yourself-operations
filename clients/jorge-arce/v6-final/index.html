@@ -9,466 +9,531 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --blue:#1C6FE8;         /* Jorge blue */
-    --blue-hi:#2E71EE;      /* electric top */
-    --blue-deep:#1250B8;    /* electric bottom */
-    --navy:#10243A;         /* Jorge navy — dark act */
-    --navy-2:#16304C;
-    --ink:#0E1116;
-    --paper:#FBFAF8;        /* Jorge off-white */
-    --paper-2:#F1F2F4;
-    --mute:#5E6B79;
-    --bone:#F2F3F6;
-    --bone-mute:#93A0B4;
-    --hair:rgba(14,17,22,.12);
-    --hair-b:rgba(242,243,246,.16)
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--paper);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  img{max-width:100%;display:block}
-  ::selection{background:var(--blue);color:#fff}
-  .wrap{max-width:1400px;margin:0 auto;padding:0 36px}
-  @media (max-width:760px){.wrap{padding:0 20px}}
-  .mono{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase}
-  .disp{font-family:"Inter Tight",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02}
-  .disp .it{font-style:italic}
-  .disp .lo{opacity:.5}
-  .kick{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
-  .kick .sq{width:6px;height:6px;background:var(--blue);flex:none}
-  .kick .n{opacity:.6}
-  .cta{display:inline-flex;align-items:stretch;text-decoration:none;border:0;cursor:pointer;background:none;padding:0}
-  .cta .t{background:var(--ink);color:#fff;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:16px 22px;display:flex;align-items:center;gap:8px}
-  .cta .t em{font-style:normal;color:#8b93a1}
-  .cta .a{width:50px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:15px;transition:background .25s}
-  .cta:hover .a{background:var(--blue-deep)}
+/* ============================================================
+   v6 "BLUEWIRE" — expediente quirúrgico suizo.
+   TOKENS: cambiar la identidad del cliente = editar SOLO este bloque.
+   Contenido: /v6-final/content.json (cero texto en este HTML).
+   Principios numéricos: principles/V6-BLUEWIRE.md
+   ============================================================ */
+:root{
+  /* color */
+  --c-blue:#1C6FE8; --c-blue-hi:#2E71EE; --c-blue-deep:#1250B8;
+  --c-navy:#10243A; --c-navy-2:#16304C;
+  --c-ink:#0E1116; --c-paper:#FBFAF8; --c-paper-2:#F1F2F4;
+  --c-mute:#5E6B79; --c-bone:#F2F3F6; --c-bone-mute:#93A0B4;
+  --hair:rgba(14,17,22,.12); --hair-b:rgba(242,243,246,.16);
+  /* tipografía — escala ratio 1.333, base 17px */
+  --f-sans:"Inter",system-ui,sans-serif;
+  --f-disp:"Inter Tight",sans-serif;
+  --f-mono:"Geist Mono",monospace;
+  --t-micro:.60rem; --t-eyebrow:.80rem; --t-body:1.0625rem;
+  --t-sub:1.4165rem; --t-head:1.889rem; --t-big:2.518rem;
+  --t-display:clamp(2.75rem,6.4vw,5.5rem);
+  --lh-display:1.0; --lh-head:1.1; --lh-sub:1.35; --lh-body:1.6;
+  --ls-display:-.025em; --ls-head:-.015em; --ls-eyebrow:.12em; --ls-micro:.14em;
+  /* espacio — base 8px */
+  --s-1:8px; --s-2:16px; --s-3:24px; --s-4:32px; --s-5:48px;
+  --s-6:64px; --s-7:96px; --s-8:128px; --s-9:176px;
+  --sec-pad:clamp(72px,10vw,128px);        /* padding sección densa */
+  --gut:clamp(20px,3vw,40px);
+  --maxw:1360px;
+  /* motion — 2 easings, catálogo cerrado */
+  --ease-out:cubic-bezier(.16,1,.3,1);     /* reveals */
+  --ease-quick:cubic-bezier(.33,1,.68,1);  /* hovers */
+  --dur-rise:.7s; --dur-rule:.8s; --dur-img:.9s; --dur-hover:.2s; --dur-nav:.35s;
+  --rise:20px;
+  /* radios */
+  --r-0:0; --r-pill:100px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--c-paper);color:var(--c-ink);font-family:var(--f-sans);font-size:var(--t-body);line-height:var(--lh-body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+::selection{background:var(--c-blue);color:#fff}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--c-blue);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-micro);text-transform:uppercase;line-height:1.5}
+.disp{font-family:var(--f-disp);font-weight:700;text-transform:uppercase;letter-spacing:var(--ls-display);line-height:var(--lh-display);font-size:var(--t-display)}
+.it{font-style:italic}
+.lo{opacity:.5}
+.kick{display:flex;align-items:center;gap:9px;font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--c-mute)}
+.kick .sq{width:6px;height:6px;background:var(--c-blue);flex:none}
+.kick .n{opacity:.6}
+.cta{display:inline-flex;align-items:stretch;text-decoration:none;border:0;cursor:pointer;background:none;padding:0}
+.cta .t{background:var(--c-ink);color:#fff;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:16px 22px;display:flex;align-items:center;gap:8px}
+.cta .t em{font-style:normal;color:#8b93a1}
+.cta .a{width:50px;background:var(--c-blue);color:#fff;display:grid;place-items:center;font-size:15px;transition:background var(--dur-hover) var(--ease-quick)}
+.cta .a span{display:inline-block;transition:transform var(--dur-hover) var(--ease-quick)}
+.cta:hover .a{background:var(--c-blue-deep)}
+.cta:hover .a span{transform:translateX(4px)}
+.cta:active{opacity:.75}
 
-  /* ---------- NAV ---------- */
-  nav{position:fixed;inset:0 0 auto 0;z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px 36px;pointer-events:none}
-  nav>*{pointer-events:auto}
-  nav .brand{display:flex;align-items:center;gap:9px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.08em;color:#fff;mix-blend-mode:difference}
-  nav .brand i{width:6px;height:6px;background:var(--blue);flex:none}
-  nav .time{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.8;text-align:center;mix-blend-mode:difference}
-  nav .time b{font-weight:500}
-  nav .right{display:flex;justify-content:flex-end}
-  @media (max-width:900px){nav{grid-template-columns:1fr auto}.time{display:none}}
-  @media (max-width:600px){nav{padding:12px 20px}nav .brand .bt{display:none}.cta .t{padding:13px 13px;font-size:9.5px}.cta .a{width:40px}}
+/* placeholder de foto: bloque + label mono si no hay src */
+.ph{position:relative;width:100%;background:#22364E;display:grid;place-items:center;overflow:hidden}
+.ph::after{content:attr(data-label);font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-micro);text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center;padding:var(--s-2);line-height:1.7}
+.ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
-  /* ---------- HERO (hybrid: Hanza composition × Zentro blue duotone) ---------- */
-  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:96px;overflow:hidden;
-    background:linear-gradient(180deg,var(--blue-hi) 0%,#1C5FD6 58%,var(--blue-deep) 100%);color:#fff}
-  .hero .duo{position:absolute;inset:0}
-  .hero .duo img{width:100%;height:112%;object-fit:cover;object-position:center 0%;filter:grayscale(1) contrast(1.18) brightness(1.06);mix-blend-mode:multiply;opacity:.92;
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
-  .hero .duo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,80,184,.14) 55%,rgba(18,80,184,.5) 90%)}
-  .hero .mid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,400px) 1fr minmax(0,330px);gap:40px;align-items:start}
-  .hero .statement{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(1.15rem,1.6vw,1.5rem);line-height:1.28;text-transform:uppercase;letter-spacing:-.01em}
-  .hero .statement .it{font-style:italic}
-  .hero .statement .lo{color:rgba(255,255,255,.62)}
-  .hero .svc{display:flex;flex-direction:column}
-  .hero .svc .r{display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.28)}
-  .hero .svc .r:first-child{border-top:1px solid rgba(255,255,255,.28)}
-  .hero .svc .no{font-family:"Geist Mono",monospace;font-size:10px;color:rgba(255,255,255,.65)}
-  .hero .svc .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:15.5px;text-transform:uppercase;letter-spacing:.01em}
-  .hero .bottom{position:relative;z-index:2}
-  .hero .trust{display:flex;align-items:center;gap:14px;padding-bottom:24px}
-  .hero .trust .avs{display:flex}
-  .hero .trust .av{width:34px;height:34px;border-radius:50%;background:rgba(9,20,40,.85);color:#fff;display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;border:1px solid rgba(255,255,255,.4);margin-left:-8px}
-  .hero .trust .av:first-child{margin-left:0}
-  .hero .trust .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);line-height:1.6}
-  .hero .trust .tx b{color:#fff;font-weight:500}
-  .giantwrap{position:relative;width:100%;line-height:0;padding:16px 36px 0;border-top:1px solid rgba(255,255,255,.3)}
-  .giant-svg{display:block;width:100%;height:auto}
-  .giant-svg text{font-family:"Inter Tight",sans-serif;font-weight:800;fill:#fff;letter-spacing:-.02em}
-  .hero .folio{display:flex;justify-content:space-between;gap:12px;padding:14px 36px 20px}
-  .hero .folio span{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
-  @media (max-width:900px){.hero .mid{grid-template-columns:1fr}.hero{padding-top:120px}.giantwrap{padding:14px 20px 0}.hero .folio{padding:12px 20px 16px}}
+/* estados de reveal (JS los anima; sin motion todo visible) */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
 
-  /* ---------- (01) PROFILE + STATS (paper, Hanza structure) ---------- */
-  .profile-sec{padding:clamp(50px,7vh,90px) 0 clamp(80px,11vh,140px)}
-  .profile{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:0}
-  .pcard{border-right:1px solid var(--hair);padding:0 40px 0 0}
-  .pcard .photo{border-top:3px solid var(--blue)}
-  .pcard .photo img{width:100%;height:430px;object-fit:cover;object-position:center 18%}
-  .pcard .ctabar{display:flex;align-items:stretch;margin-top:-56px;position:relative;z-index:2;width:calc(100% - 44px)}
-  .pcard .ctabar .t{flex:1;background:var(--ink);color:#fff;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:17px 20px}
-  .pcard .ctabar .t em{font-style:normal;color:#8b93a1}
-  .pcard .ctabar .a{width:50px;background:var(--blue);color:#fff;display:grid;place-items:center}
-  .pcard .id{display:flex;align-items:center;gap:9px;margin:22px 0 14px;font-family:"Inter Tight",sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
-  .pcard .id i{width:6px;height:6px;background:var(--blue)}
-  .pcard .spec{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;border-top:1px solid var(--hair);padding-top:14px}
-  .pcard .spec dt{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-top:3px}
-  .pcard .spec dd{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;text-align:right}
-  .pright{display:flex;flex-direction:column}
-  .pright .cells{display:grid;grid-template-columns:1fr 1fr 1fr}
-  .pright .cell{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:34px 34px 44px}
-  .pright .cell:last-child{border-right:0}
-  .pright .cell .n{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(2.6rem,4.6vw,4.6rem);letter-spacing:-.03em;line-height:1}
-  .pright .cell p{font-size:13.5px;color:var(--mute);margin-top:14px;max-width:24ch;line-height:1.55}
-  .pright .bio{padding:40px 0 0 40px;max-width:72ch}
-  .pright .bio .kick{margin-bottom:24px}
-  .pright .bio p{font-size:15.5px;font-weight:300;line-height:1.75;color:#39424e;margin-bottom:14px;max-width:62ch}
-  .pright .bio p b{color:var(--ink);font-weight:600}
-  .pright .bio .sig{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-top:20px}
-  @media (max-width:1000px){.profile{grid-template-columns:1fr}.pcard{border-right:0;padding-right:0}.pright .bio{padding-left:0}}
-  @media (max-width:760px){.pright .cells{grid-template-columns:1fr}.pright .cell{border-right:0}}
+/* ---------- NAV (nunca se anima su contenido) ---------- */
+nav{position:fixed;inset:0 0 auto 0;z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:14px var(--gut);transition:background var(--dur-nav) var(--ease-quick)}
+nav .brand{display:flex;align-items:center;gap:9px;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;color:#fff;mix-blend-mode:difference}
+nav .brand i{width:6px;height:6px;background:var(--c-blue);flex:none}
+nav .time{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:.8;text-align:center;mix-blend-mode:difference}
+nav .time b{font-weight:500}
+nav .right{display:flex;justify-content:flex-end}
+nav.scrolled{background:rgba(251,250,248,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--hair)}
+nav.scrolled .brand,nav.scrolled .time{color:var(--c-ink);mix-blend-mode:normal}
+@media (max-width:1000px){nav{grid-template-columns:1fr auto}nav .time{display:none}}
+@media (max-width:760px){nav .brand .bt{display:none}.cta .t{padding:13px 13px;font-size:.6rem}.cta .a{width:40px}}
 
-  /* ---------- (02) CHAPTER full-bleed (Zentro project pattern + Hanza meta) ---------- */
-  .chapter{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-  .chapter .bg{position:absolute;inset:0}
-  .chapter .bg img{width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(.9) brightness(.72)}
-  .chapter .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,26,.45),rgba(10,17,26,.16) 40%,rgba(10,17,26,.55))}
-  .chapter .meta{position:absolute;z-index:2;top:24px;left:36px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-  .chapter .meta.r{left:auto;right:36px}
-  .chapter .meta.bl{top:auto;bottom:22px}
-  .chapter .meta.br{top:auto;bottom:22px;left:auto;right:36px}
-  .chapter .inner{position:relative;z-index:2;padding:60px 24px}
-  .chapter .tag{font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-  .chapter h2{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(2.4rem,5.6vw,4.8rem);letter-spacing:-.025em;line-height:1;text-transform:uppercase;margin:16px 0 18px}
-  .chapter h2 .it{font-style:italic}
-  .chapter p.s{font-size:15.5px;font-weight:300;color:rgba(255,255,255,.92);max-width:52ch;margin:0 auto}
+/* ============================================================
+   T1 · HERO — duotono azul; statement izq + servicios der;
+   wordmark UNA vez, en straddle sobre la sección siguiente
+   ============================================================ */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding-top:96px;overflow:visible;background:linear-gradient(180deg,var(--c-blue-hi) 0%,#1C5FD6 58%,var(--c-blue-deep) 100%);color:#fff}
+.hero .duo{position:absolute;inset:0;overflow:hidden}
+.hero .duo .ph{position:absolute;inset:0;height:100%;background:transparent}
+.hero .duo img{width:100%;height:112%;object-fit:cover;object-position:center 0;filter:grayscale(1) contrast(1.18) brightness(1.06);mix-blend-mode:multiply;opacity:.92;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.hero .duo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,80,184,.14) 55%,rgba(18,80,184,.5) 90%)}
+.hero .mid{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,420px) 1fr minmax(0,330px);gap:var(--s-5);align-items:start;padding-top:9vh}
+.hero .statement{font-family:var(--f-disp);font-weight:700;font-size:clamp(1.15rem,1.6vw,1.5rem);line-height:1.28;text-transform:uppercase;letter-spacing:-.01em;max-width:24ch}
+.hero .statement .lo{color:rgba(255,255,255,.62);opacity:1}
+.hero .svc{display:flex;flex-direction:column}
+.hero .svc .r{display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.28)}
+.hero .svc .r:first-child{border-top:1px solid rgba(255,255,255,.28)}
+.hero .svc .no{font-family:var(--f-mono);font-size:var(--t-micro);color:rgba(255,255,255,.65)}
+.hero .svc .t{font-family:var(--f-disp);font-weight:600;font-size:.97rem;text-transform:uppercase;letter-spacing:.01em}
+.hero .bottom{position:relative;z-index:2}
+.hero .trust{display:flex;align-items:center;gap:14px;padding-bottom:var(--s-3)}
+.hero .trust .avs{display:flex}
+.hero .trust .av{width:34px;height:34px;border-radius:50%;background:rgba(9,20,40,.85);color:#fff;display:grid;place-items:center;font-family:var(--f-mono);font-size:var(--t-micro);border:1px solid rgba(255,255,255,.4);margin-left:-8px}
+.hero .trust .av:first-child{margin-left:0}
+.hero .trust .tx{font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.75);line-height:1.6}
+.hero .trust .tx b{color:#fff;font-weight:500}
+.hero .folio{display:flex;justify-content:space-between;gap:12px;padding:14px var(--gut) 20px}
+.hero .folio span{font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-micro);text-transform:uppercase;color:rgba(255,255,255,.75)}
+/* wordmark: LA ruptura de retícula — cruza al papel de la sección siguiente */
+.giantwrap{position:relative;z-index:3;width:100%;line-height:0;padding:16px var(--gut) 0;border-top:1px solid rgba(255,255,255,.3);margin-bottom:calc(-1 * var(--s-7))}
+.giant-svg{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 30px rgba(10,24,50,.35))}
+.giant-svg text{font-family:var(--f-disp);font-weight:800;fill:#fff;letter-spacing:-.02em}
+@media (max-width:1000px){.hero .mid{grid-template-columns:1fr;gap:var(--s-4)}.hero{padding-top:120px}}
+@media (max-width:760px){.giantwrap{margin-bottom:calc(-1 * var(--s-5))}}
 
-  /* ---------- (03) EXPERTISE (paper, Hanza index) ---------- */
-  .exp{padding:clamp(80px,12vh,150px) 0}
-  .exp h2.disp{font-size:clamp(2.2rem,5.4vw,4.4rem);margin:18px 0 clamp(34px,5vw,54px)}
-  .exp .idx{border-top:1px solid var(--hair)}
-  .exp .row{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--hair);transition:padding-left .45s cubic-bezier(.22,.61,.36,1)}
-  .exp .row .no{font-family:"Geist Mono",monospace;font-size:10.5px;color:var(--mute)}
-  .exp .row .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:clamp(1.3rem,2.6vw,2.1rem);letter-spacing:-.015em;text-transform:uppercase;line-height:1}
-  .exp .row .d{font-size:13.5px;font-weight:300;color:var(--mute);line-height:1.6;max-width:48ch}
-  .exp .row:hover{padding-left:16px}
-  .exp .row:hover .no,.exp .row:hover .t{color:var(--blue)}
-  @media (max-width:760px){.exp .row{grid-template-columns:44px 1fr}.exp .row .d{grid-column:2}}
+/* ============================================================
+   T2 · PROFILE — split asimétrico 5/7, borde-columna, celdas stat
+   (compensa el straddle del wordmark con padding-top extra)
+   ============================================================ */
+.profile-sec{padding:calc(var(--s-7) + var(--s-6)) 0 var(--sec-pad)}
+.profile{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:0}
+.pcard{border-right:1px solid var(--hair);padding-right:var(--s-5)}
+.pcard .photo{border-top:3px solid var(--c-blue);overflow:hidden}
+.pcard .photo .ph{aspect-ratio:4/5}
+.pcard .photo img{transition:transform .4s var(--ease-quick)}
+.pcard .photo:hover img{transform:scale(1.03)}
+.pcard .ctabar{display:flex;align-items:stretch;margin-top:-56px;position:relative;z-index:2;width:calc(100% - 44px)}
+.pcard .ctabar .t{flex:1;background:var(--c-ink);color:#fff;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:17px 20px}
+.pcard .ctabar .t em{font-style:normal;color:#8b93a1}
+.pcard .ctabar .a{width:50px;background:var(--c-blue);color:#fff;display:grid;place-items:center}
+.pcard .id{display:flex;align-items:center;gap:9px;margin:22px 0 14px;font-family:var(--f-disp);font-weight:700;font-size:.94rem;letter-spacing:.02em;text-transform:uppercase}
+.pcard .id i{width:6px;height:6px;background:var(--c-blue)}
+.pcard .spec{display:grid;grid-template-columns:auto 1fr;gap:8px 24px;border-top:1px solid var(--hair);padding-top:14px}
+.pcard .spec dt{font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:.08em;text-transform:uppercase;color:var(--c-mute);padding-top:3px}
+.pcard .spec dd{font-family:var(--f-disp);font-weight:600;font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;text-align:right}
+.pright{display:flex;flex-direction:column}
+.pright .cells{display:grid;grid-template-columns:repeat(3,1fr)}
+.pright .cell{border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:var(--s-4) var(--s-4) var(--s-5)}
+.pright .cell:last-child{border-right:0}
+.pright .cell .n{font-family:var(--f-disp);font-weight:700;font-size:clamp(2.6rem,4.6vw,4.6rem);letter-spacing:-.03em;line-height:1}
+.pright .cell p{font-size:.84rem;color:var(--c-mute);margin-top:14px;max-width:24ch;line-height:1.55}
+.pright .bio{padding:var(--s-5) 0 0 var(--s-5);max-width:72ch}
+.pright .bio .kick{margin-bottom:var(--s-3)}
+.pright .bio p{font-size:.97rem;font-weight:300;line-height:1.75;color:#39424e;margin-bottom:14px;max-width:64ch}
+.pright .bio p b{color:var(--c-ink);font-weight:600}
+.pright .bio .sig{font-family:var(--f-disp);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-top:20px}
+@media (max-width:1000px){.profile{grid-template-columns:1fr}.pcard{border-right:0;padding-right:0}.pright .bio{padding-left:0}.profile-sec{padding-top:calc(var(--s-6) + var(--s-5))}}
+@media (max-width:760px){.pright .cells{grid-template-columns:1fr}.pright .cell{border-right:0}}
 
-  /* ---------- (04) JOURNEY (navy act, Hanza staircase) ---------- */
-  .dark{background:var(--navy);color:var(--bone)}
-  .dark .kick{color:var(--bone-mute)}
-  .steps{padding:clamp(80px,12vh,150px) 0}
-  .steps .head{display:grid;grid-template-columns:1fr minmax(0,380px);gap:40px;align-items:end;margin-bottom:clamp(44px,6vw,70px)}
-  .steps h2.disp{font-size:clamp(2.2rem,5.4vw,4.4rem);margin-top:18px}
-  .steps .side{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:13.5px;line-height:1.5;text-transform:uppercase}
-  .steps .side .lo{color:var(--bone-mute)}
-  .cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:start}
-  .scard{background:var(--navy-2);border-top:3px solid var(--blue);padding:22px 20px 30px;min-height:300px;display:flex;flex-direction:column}
-  .scard:nth-child(2){margin-top:34px}.scard:nth-child(3){margin-top:68px}.scard:nth-child(4){margin-top:102px}.scard:nth-child(5){margin-top:136px}
-  .scard .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:auto}
-  .scard .num{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:30px;letter-spacing:-.02em}
-  .scard .dots{display:flex;gap:4px}
-  .scard .dots i{width:5px;height:5px;background:#2A4467}
-  .scard .dots i.on{background:var(--blue)}
-  .scard .lab{display:flex;gap:8px;align-items:center;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-mute);margin:26px 0 8px}
-  .scard .lab i{width:5px;height:5px;background:var(--blue)}
-  .scard .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:19px;letter-spacing:-.01em;line-height:1.1;margin-bottom:10px}
-  .scard p{font-size:12.5px;font-weight:300;line-height:1.6;color:#AEB9C9}
-  @media (max-width:1100px){.cards{grid-template-columns:repeat(2,1fr)}.scard{margin-top:0!important;min-height:0}}
-  @media (max-width:640px){.cards{grid-template-columns:1fr}}
+/* ============================================================
+   T3 · CHAPTER — respiro full-bleed centrado (única centrada junto
+   al finale; nunca adyacentes)
+   ============================================================ */
+.chapter{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.chapter .bg{position:absolute;inset:0}
+.chapter .bg .ph{position:absolute;inset:0;height:100%}
+.chapter .bg img{filter:saturate(.9) brightness(.72)}
+.chapter .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,17,26,.45),rgba(10,17,26,.16) 40%,rgba(10,17,26,.55))}
+.chapter .meta{position:absolute;z-index:2;top:24px;left:var(--gut);font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-micro);text-transform:uppercase;color:rgba(255,255,255,.85)}
+.chapter .meta.r{left:auto;right:var(--gut)}
+.chapter .meta.bl{top:auto;bottom:22px}
+.chapter .meta.br{top:auto;bottom:22px;left:auto;right:var(--gut)}
+.chapter .inner{position:relative;z-index:2;padding:60px 24px}
+.chapter .tag{font-family:var(--f-mono);font-size:.66rem;letter-spacing:var(--ls-micro);text-transform:uppercase;color:rgba(255,255,255,.85)}
+.chapter h2{font-family:var(--f-disp);font-weight:700;font-size:var(--t-display);letter-spacing:var(--ls-display);line-height:var(--lh-display);text-transform:uppercase;margin:16px 0 18px}
+.chapter p.s{font-size:.97rem;font-weight:300;color:rgba(255,255,255,.92);max-width:52ch;margin:0 auto}
 
-  /* ---------- (05) APPRECIATION (paper-2, Zentro cards) ---------- */
-  .stories{background:var(--paper-2);padding:clamp(80px,12vh,150px) 0}
-  .stories h2.disp{font-size:clamp(2.2rem,5.4vw,4.4rem);margin:18px 0 clamp(34px,5vw,54px)}
-  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .tcard{background:#fff;border-radius:0;padding:28px 26px;display:flex;flex-direction:column;gap:18px;min-height:230px}
-  .tcard .q{font-size:14.5px;font-weight:300;line-height:1.65;color:#26303c}
-  .tcard .who{margin-top:auto;display:flex;align-items:center;gap:11px}
-  .tcard .who .av{width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Geist Mono",monospace;font-size:10px;flex:none}
-  .tcard .who .n{font-size:13.5px;font-weight:600}
-  .tcard .who .r{font-size:12px;color:var(--mute)}
-  .tcard.blue{background:var(--blue);color:#fff;align-items:flex-start;justify-content:center}
-  .tcard.blue .big{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(1.3rem,2.2vw,1.8rem);letter-spacing:-.015em;line-height:1.15;text-transform:uppercase}
-  .tcard.blue .big .it{font-style:italic}
-  .tcard.blue .s{font-size:13px;color:rgba(255,255,255,.85);margin-top:12px}
-  @media (max-width:900px){.sgrid{grid-template-columns:1fr}}
+/* ============================================================
+   T4 · EXPERTISE — índice de filas (izquierda); hover con transform
+   ============================================================ */
+.exp{padding:var(--sec-pad) 0}
+.exp h2.disp{margin:18px 0 clamp(34px,5vw,54px)}
+.idx{border-top:1px solid var(--hair)}
+.idx .row{display:grid;grid-template-columns:70px minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--hair)}
+.idx .row>*{transition:transform var(--dur-hover) var(--ease-quick),color var(--dur-hover) var(--ease-quick)}
+.idx .row .no{font-family:var(--f-mono);font-size:var(--t-micro);color:var(--c-mute)}
+.idx .row .t{font-family:var(--f-disp);font-weight:600;font-size:clamp(1.3rem,2.6vw,2.1rem);letter-spacing:var(--ls-head);text-transform:uppercase;line-height:1}
+.idx .row .d{font-size:.84rem;font-weight:300;color:var(--c-mute);line-height:1.6;max-width:48ch}
+.idx .row:hover>*{transform:translateX(12px)}
+.idx .row:hover .no,.idx .row:hover .t{color:var(--c-blue)}
+@media (max-width:760px){.idx .row{grid-template-columns:44px 1fr}.idx .row .d{grid-column:2}}
 
-  /* ---------- (06) FOR PATIENTS + GUIDE (paper) ---------- */
-  .pats{padding:clamp(80px,12vh,150px) 0}
-  .pats h2.disp{font-size:clamp(1.9rem,4.4vw,3.4rem);margin:18px 0 clamp(28px,4vw,44px)}
-  .pats .idx{border-top:1px solid var(--hair);margin-bottom:clamp(44px,6vw,64px)}
-  .pats .row{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:24px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--hair);transition:padding-left .45s cubic-bezier(.22,.61,.36,1)}
-  .pats .row .no{font-family:"Geist Mono",monospace;font-size:10.5px;color:var(--mute)}
-  .pats .row .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:clamp(1.15rem,2.2vw,1.7rem);letter-spacing:-.01em;text-transform:uppercase}
-  .pats .row .tag{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-  .pats .row:hover{padding-left:16px}
-  .pats .row:hover .t{color:var(--blue)}
-  .guide{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .guide .pitch{background:var(--navy);color:var(--bone);border-top:3px solid var(--blue);padding:clamp(28px,4vw,46px);display:flex;flex-direction:column;justify-content:center}
-  .guide .pitch .kick{color:var(--bone-mute)}
-  .guide .pitch h3{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(1.35rem,2.5vw,2rem);text-transform:uppercase;letter-spacing:-.015em;line-height:1.12;margin:16px 0 22px}
-  .guide .pitch h3 .it{font-style:italic;color:#8FB6F5}
-  .guide .pitch .li{display:flex;gap:10px;align-items:baseline;font-size:13.5px;font-weight:300;color:#C4CDDA;margin-bottom:10px}
-  .guide .pitch .li i{width:5px;height:5px;background:var(--blue);flex:none;transform:translateY(-2px)}
-  .guide .form{background:#fff;border:1px solid var(--hair);padding:clamp(28px,4vw,46px)}
-  .guide .form h3{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:1.25rem;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:6px}
-  .guide .form .sub{font-size:13.5px;font-weight:300;color:var(--mute);margin-bottom:24px}
-  .guide .form label{display:block;font-family:"Geist Mono",monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:7px}
-  .guide .form input{width:100%;border:0;border-bottom:1px solid var(--hair);background:transparent;padding:10px 2px 13px;font-family:"Inter",sans-serif;font-size:14.5px;color:var(--ink);margin-bottom:22px}
-  .guide .form input:focus{outline:none;border-bottom-color:var(--blue)}
-  .guide .fine{font-size:11px;color:var(--mute);margin-top:14px;line-height:1.6}
-  @media (max-width:860px){.guide{grid-template-columns:1fr}}
+/* ============================================================
+   T5 · PROCESS — EXPEDIENTE PINNEADO (scrollytelling R5)
+   línea central que se dibuja + contador + 5 pasos alternados
+   ============================================================ */
+.dark{background:var(--c-navy);color:var(--c-bone)}
+.dark .kick{color:var(--c-bone-mute)}
+.process{padding:var(--sec-pad) 0}
+.process .head{display:grid;grid-template-columns:1fr minmax(0,380px);gap:var(--s-5);align-items:end;margin-bottom:clamp(44px,6vw,70px)}
+.process h2.disp{margin-top:18px}
+.process .side{font-family:var(--f-disp);font-weight:600;font-size:.84rem;line-height:1.5;text-transform:uppercase}
+.process .side .lo{color:var(--c-bone-mute);opacity:1}
+.file{position:relative;display:grid;grid-template-columns:1fr 90px 1fr;gap:0 var(--s-4)}
+.file .spine{position:relative;grid-column:2;grid-row:1 / span 5;display:flex;justify-content:center}
+.file .spine .track{width:2px;background:rgba(242,243,246,.14);height:100%}
+.file .spine .fill{position:absolute;top:0;width:2px;background:var(--c-blue);height:100%;transform-origin:top center;transform:scaleY(0);will-change:transform}
+.file .counter{position:sticky;display:none}
+.file .fnum{position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--c-navy);padding:6px 0;font-family:var(--f-disp);font-weight:700;font-size:2rem;letter-spacing:-.02em;color:var(--c-bone)}
+.fstep{padding:var(--s-4) 0 var(--s-6);opacity:.25;will-change:transform,opacity}
+.fstep.fs-l{grid-column:1;text-align:right;transform:translateX(12px)}
+.fstep.fs-r{grid-column:3;text-align:left;transform:translateX(-12px)}
+html.no-motion .fstep{opacity:1;transform:none}
+.fstep .lab{display:inline-flex;gap:8px;align-items:center;font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:var(--c-bone-mute);margin-bottom:8px}
+.fstep .lab i{width:5px;height:5px;background:var(--c-blue)}
+.fstep .t{font-family:var(--f-disp);font-weight:600;font-size:var(--t-sub);letter-spacing:-.01em;line-height:1.1;margin-bottom:10px}
+.fstep p{font-size:.8rem;font-weight:300;line-height:1.6;color:#AEB9C9;max-width:34ch;display:inline-block}
+.fstep .stepno{font-family:var(--f-disp);font-weight:700;font-size:2.4rem;letter-spacing:-.02em;color:rgba(242,243,246,.25);display:block;margin-bottom:6px}
+@media (max-width:900px){
+  .file{grid-template-columns:24px 1fr}
+  .file .spine{grid-column:1;grid-row:1 / span 5;justify-content:flex-start}
+  .fstep.fs-l,.fstep.fs-r{grid-column:2;text-align:left;transform:none;opacity:1}
+  .fstep p{max-width:52ch}
+}
+/* R3: hairline que se dibuja (sustituye el border-top estático) */
+.rline{height:1px;background:var(--hair);transform-origin:left center;transform:scaleX(0)}
+.dark .rline{background:var(--hair-b)}
+html.no-motion .rline{transform:scaleX(1)}
+/* sin motion no se inyecta .rline: el border-top estático se conserva */
+html:not(.no-motion) .idx[data-rule],html:not(.no-motion) .topics[data-rule]{border-top:0}
 
-  /* ---------- (07) SPEAKING (navy act) ---------- */
-  .speak{padding:clamp(80px,12vh,150px) 0}
-  .speak .grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:clamp(32px,4vw,64px);align-items:center;margin-top:clamp(34px,5vw,54px)}
-  .plate{border:1px solid var(--hair-b);padding:12px;background:rgba(242,243,246,.03)}
-  .plate .ph{overflow:hidden}
-  .plate img{width:100%;height:480px;object-fit:cover;object-position:center 18%}
-  .plate .cap{display:flex;justify-content:space-between;gap:10px;padding-top:11px;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--bone-mute)}
-  .speak h2.disp{font-size:clamp(2rem,4.6vw,3.8rem)}
-  .speak .lead{font-size:14.5px;font-weight:300;line-height:1.7;color:#AEB9C9;max-width:52ch;margin:20px 0 30px}
-  .topics{border-top:1px solid var(--hair-b)}
-  .topics .r{display:grid;grid-template-columns:70px 1fr;gap:24px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--hair-b)}
-  .topics .no{font-family:"Geist Mono",monospace;font-size:10px;color:var(--bone-mute)}
-  .topics .t{font-family:"Inter Tight",sans-serif;font-weight:600;font-size:clamp(1.05rem,1.9vw,1.4rem);text-transform:uppercase;letter-spacing:-.01em}
-  .speak .invite{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:30px}
-  .speak .invite .tx{font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bone-mute)}
-  @media (max-width:900px){.speak .grid{grid-template-columns:1fr}.plate img{height:380px}}
+/* ============================================================
+   T6 · TESTIMONIALS — grid con lead azul (cabecera izquierda)
+   ============================================================ */
+.stories{background:var(--c-paper-2);padding:var(--sec-pad) 0}
+.stories h2.disp{margin:18px 0 clamp(34px,5vw,54px)}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tcard{background:#fff;padding:28px 26px;display:flex;flex-direction:column;gap:18px;min-height:230px}
+.tcard .q{font-size:.9rem;font-weight:300;line-height:1.65;color:#26303c}
+.tcard .who{margin-top:auto;display:flex;align-items:center;gap:11px}
+.tcard .who .av{width:36px;height:36px;border-radius:50%;background:var(--c-navy);color:#fff;display:grid;place-items:center;font-family:var(--f-mono);font-size:var(--t-micro);flex:none}
+.tcard .who .n{font-size:.84rem;font-weight:600}
+.tcard .who .r{font-size:.75rem;color:var(--c-mute)}
+.tcard.blue{background:var(--c-blue);color:#fff;align-items:flex-start;justify-content:center}
+.tcard.blue .big{font-family:var(--f-disp);font-weight:700;font-size:clamp(1.3rem,2.2vw,1.8rem);letter-spacing:var(--ls-head);line-height:1.15;text-transform:uppercase}
+.tcard.blue .s{font-size:.8rem;color:rgba(255,255,255,.85);margin-top:12px}
+@media (max-width:900px){.sgrid{grid-template-columns:1fr}}
 
-  /* ---------- (08) FINALE (electric blue bookend) ---------- */
-  .finale{position:relative;background:linear-gradient(180deg,var(--blue-hi),var(--blue-deep));color:#fff;padding:clamp(90px,13vh,160px) 0 0;text-align:center;overflow:hidden}
-  .finale .kick{justify-content:center;color:rgba(255,255,255,.8)}
-  .finale .kick .sq{background:#fff}
-  .finale h2{font-family:"Inter Tight",sans-serif;font-weight:700;font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:-.025em;line-height:1.02;text-transform:uppercase;max-width:20ch;margin:18px auto 0}
-  .finale h2 .it{font-style:italic}
-  .finale p.s{font-size:15px;font-weight:300;color:rgba(255,255,255,.92);max-width:46ch;margin:18px auto 30px}
-  .finale .pill{display:inline-block;background:#fff;color:var(--ink);text-decoration:none;border-radius:100px;padding:16px 34px;font-family:"Geist Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;transition:background .25s}
-  .finale .pill:hover{background:#dbe6f8}
-  .finale .meta{margin-top:26px;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);line-height:2.1}
-  .finale .meta b{font-weight:500;color:#fff}
-  .finale .giantwrap{border-top:1px solid rgba(255,255,255,.3);margin-top:56px;padding:16px 36px 0}
-  .finale .giant-svg text{opacity:.24}
-  .finale .bar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:6px 36px 24px;font-family:"Geist Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+/* ============================================================
+   T7 · PATIENTS — índice + guía split
+   ============================================================ */
+.pats{padding:var(--sec-pad) 0}
+.pats h2.disp{font-size:clamp(1.9rem,4.4vw,3.4rem);margin:18px 0 clamp(28px,4vw,44px)}
+.pats .idx{margin-bottom:clamp(44px,6vw,64px)}
+.pats .row{grid-template-columns:70px minmax(0,1fr) auto;padding:20px 0}
+.pats .row .t{font-size:clamp(1.15rem,2.2vw,1.7rem)}
+.pats .row .tag{font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:.12em;text-transform:uppercase;color:var(--c-mute)}
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.guide .pitch{background:var(--c-navy);color:var(--c-bone);border-top:3px solid var(--c-blue);padding:clamp(28px,4vw,46px);display:flex;flex-direction:column;justify-content:center}
+.guide .pitch .kick{color:var(--c-bone-mute)}
+.guide .pitch h3{font-family:var(--f-disp);font-weight:700;font-size:clamp(1.35rem,2.5vw,2rem);text-transform:uppercase;letter-spacing:var(--ls-head);line-height:1.12;margin:16px 0 22px}
+.guide .pitch h3 .it{color:#8FB6F5}
+.guide .pitch .li{display:flex;gap:10px;align-items:baseline;font-size:.84rem;font-weight:300;color:#C4CDDA;margin-bottom:10px}
+.guide .pitch .li i{width:5px;height:5px;background:var(--c-blue);flex:none;transform:translateY(-2px)}
+.guide .form{background:#fff;border:1px solid var(--hair);padding:clamp(28px,4vw,46px)}
+.guide .form h3{font-family:var(--f-disp);font-weight:700;font-size:1.25rem;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:6px}
+.guide .form .sub{font-size:.84rem;font-weight:300;color:var(--c-mute);margin-bottom:24px}
+.guide .form label{display:block;font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-micro);text-transform:uppercase;color:var(--c-mute);margin-bottom:7px}
+.guide .form input{width:100%;border:0;border-bottom:1px solid var(--hair);background:transparent;padding:10px 2px 13px;font-family:var(--f-sans);font-size:.9rem;color:var(--c-ink);margin-bottom:22px}
+.guide .form input:focus{outline:none;border-bottom-color:var(--c-blue)}
+.guide .fine{font-size:.69rem;color:var(--c-mute);margin-top:14px;line-height:1.6}
+@media (max-width:860px){.guide{grid-template-columns:1fr}}
 
-  /* ---------- motion ---------- */
-  .rv{opacity:0;transform:translateY(16px);transition:opacity .95s cubic-bezier(.22,.61,.36,1),transform .95s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0s)}
-  .rv.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important;transition:none!important}}
+/* ============================================================
+   T8 · SPEAKING — split 5/7 oscuro
+   ============================================================ */
+.speak{padding:var(--sec-pad) 0}
+.speak .grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:clamp(32px,4vw,64px);align-items:center;margin-top:clamp(34px,5vw,54px)}
+.plate{border:1px solid var(--hair-b);padding:12px;background:rgba(242,243,246,.03)}
+.plate .phw{overflow:hidden}
+.plate .ph{aspect-ratio:4/5}
+.plate img{transition:transform .4s var(--ease-quick)}
+.plate:hover img{transform:scale(1.03)}
+.plate .cap{display:flex;justify-content:space-between;gap:10px;padding-top:11px;font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:var(--ls-micro);text-transform:uppercase;color:var(--c-bone-mute)}
+.speak h2.disp{font-size:clamp(2rem,4.6vw,3.8rem)}
+.speak .lead{font-size:.9rem;font-weight:300;line-height:1.7;color:#AEB9C9;max-width:52ch;margin:20px 0 30px}
+.topics{border-top:1px solid var(--hair-b)}
+.topics .r{display:grid;grid-template-columns:70px 1fr;gap:24px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--hair-b)}
+.topics .no{font-family:var(--f-mono);font-size:var(--t-micro);color:var(--c-bone-mute)}
+.topics .t{font-family:var(--f-disp);font-weight:600;font-size:clamp(1.05rem,1.9vw,1.4rem);text-transform:uppercase;letter-spacing:-.01em}
+.speak .invite{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:30px}
+.speak .invite .tx{font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:.1em;text-transform:uppercase;color:var(--c-bone-mute)}
+@media (max-width:900px){.speak .grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   T9 · FINALE — cierre centrado (2ª centrada, no adyacente a T3)
+   ============================================================ */
+.finale{position:relative;background:linear-gradient(180deg,var(--c-blue-hi),var(--c-blue-deep));color:#fff;padding:var(--sec-pad) 0 0;text-align:center;overflow:hidden}
+.finale .kick{justify-content:center;color:rgba(255,255,255,.8)}
+.finale .kick .sq{background:#fff}
+.finale h2{font-family:var(--f-disp);font-weight:700;font-size:clamp(2.2rem,5vw,4.2rem);letter-spacing:var(--ls-display);line-height:1.02;text-transform:uppercase;max-width:20ch;margin:18px auto 0}
+.finale p.s{font-size:.94rem;font-weight:300;color:rgba(255,255,255,.92);max-width:46ch;margin:18px auto 30px}
+.finale .pill{display:inline-block;background:#fff;color:var(--c-ink);text-decoration:none;border-radius:var(--r-pill);padding:16px 34px;font-family:var(--f-mono);font-size:.66rem;letter-spacing:var(--ls-micro);text-transform:uppercase;transition:background var(--dur-hover) var(--ease-quick)}
+.finale .pill:hover{background:#dbe6f8}
+.finale .meta{margin-top:26px;font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);line-height:2.1}
+.finale .meta b{font-weight:500;color:#fff}
+.finale .bar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:var(--s-6) var(--gut) 24px;font-family:var(--f-mono);font-size:var(--t-micro);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+.load-error{min-height:60vh;display:grid;place-items:center;text-align:center;padding:var(--gut);font-family:var(--f-mono);font-size:.8rem;line-height:1.8}
 </style>
 </head>
 <body>
 
-<nav>
-  <span class="brand"><i></i><span class="bt">DR. JORGE ARCE</span></span>
-  <span class="time"><b id="clock">—:—</b>&nbsp; LOCAL TIME — SOUTH BAY, CA</span>
-  <span class="right"><a class="cta" href="#contact"><span class="t">REQUEST CONSULTATION <em>/ARCE</em></span><span class="a">→</span></a></span>
+<nav id="nav">
+  <span class="brand"><i></i><span class="bt" id="brandName"></span></span>
+  <span class="time"><b id="clock">—:—</b>&nbsp; <span id="clockLabel"></span></span>
+  <span class="right" id="navCta"></span>
 </nav>
 
-<!-- HERO — hybrid -->
-<header class="hero">
-  <div class="duo"><img src="../img/quote.jpg" alt="Dr. Jorge Arce"></div>
-  <div class="mid wrap" style="padding-top:9vh">
-    <p class="statement rv" style="--d:.1s">A surgeon known for the cases <span class="it">others step away from</span> — <span class="lo">and the quiet precision it takes.</span></p>
-    <div></div>
-    <div class="svc rv" style="--d:.25s">
-      <div class="r"><span class="no">/01</span><span class="t">Dental Implants</span></div>
-      <div class="r"><span class="no">/02</span><span class="t">Reconstruction</span></div>
-      <div class="r"><span class="no">/03</span><span class="t">Complex Cases</span></div>
-    </div>
-  </div>
-  <div class="bottom">
-    <div class="trust wrap rv" style="--d:.4s">
-      <div class="avs"><span class="av">DK</span><span class="av">LS</span><span class="av">JM</span></div>
-      <p class="tx"><b>Referred by the surgeons</b><br>other surgeons trust</p>
-    </div>
-    <div class="giantwrap rv" style="--d:.15s">
-      <svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" role="img" aria-label="ARCE">
-        <text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">ARCE</text>
-      </svg>
-    </div>
-    <div class="folio">
-      <span>South Bay, California</span>
-      <span>(01 — The Surgeon)</span>
-    </div>
-  </div>
-</header>
+<main id="site"></main>
 
-<!-- (01) PROFILE + STATS -->
-<section class="profile-sec wrap" id="about">
-  <div class="profile">
-    <aside class="pcard rv">
-      <div class="photo"><img src="../img/clinic.jpg" alt="Dr. Jorge Arce in his clinic" style="object-position:center 18%"></div>
-      <div class="ctabar"><span class="t">GET IN TOUCH <em>/ARCE</em></span><span class="a">→</span></div>
-      <div class="id"><i></i>DR. JORGE ARCE</div>
-      <dl class="spec">
-        <dt>Profession</dt><dd>Oral &amp; Maxillofacial Surgeon</dd>
-        <dt>Focus</dt><dd>Dental Implantology</dd>
-        <dt>Location</dt><dd>South Bay, California</dd>
-        <dt>Certification</dt><dd>Board-Certified — Implantology</dd>
-      </dl>
-    </aside>
-    <div class="pright">
-      <div class="cells">
-        <div class="cell rv" style="--d:.05s"><div class="n">27+</div><p>Years devoted to oral &amp; maxillofacial surgery.</p></div>
-        <div class="cell rv" style="--d:.12s"><div class="n">2007</div><p>Founded the Dental Implants Center of South Bay.</p></div>
-        <div class="cell rv" style="--d:.19s"><div class="n">02</div><p>Medical systems — trained in Colombia, built in California.</p></div>
-      </div>
-      <div class="bio">
-        <div class="kick rv"><span class="sq"></span><span class="n">01</span> THE SURGEON</div>
-        <p class="rv" style="--d:.05s">Jorge grew up in Colombia, the son of a family that valued precision and patience long before he ever held a scalpel. Medicine was not a career choice so much as a calling — a way to use his hands to give something back.</p>
-        <p class="rv" style="--d:.12s">He moved to California to specialize, and never left. Over twenty-seven years he built a practice on a single, unglamorous principle: <b>take the time the case actually needs.</b></p>
-        <p class="rv" style="--d:.19s">Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft — still treating every patient as the person they are before the procedure they need.</p>
-        <div class="sig rv" style="--d:.26s">— Jorge Arce, D.D.S.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<noscript><div class="load-error"><p>Este template renderiza su contenido desde content.json y requiere JavaScript.</p></div></noscript>
 
-<!-- (02) CHAPTER -->
-<section class="chapter">
-  <div class="bg"><img src="../img/surgery.jpg" alt=""></div>
-  <span class="meta">Fig. 01 — The theatre</span>
-  <span class="meta r">Est. 2007</span>
-  <span class="meta bl">(02 — The Work)</span>
-  <span class="meta br">South Bay, CA</span>
-  <div class="inner">
-    <p class="tag rv">In the operating room</p>
-    <h2 class="rv" style="--d:.1s">Twenty-seven years<br>of <span class="it">steady hands</span></h2>
-    <p class="s rv" style="--d:.2s">Complex extractions, reconstruction and full-arch cases — the procedures most practices refer out, done unhurried and done with care.</p>
-  </div>
-</section>
-
-<!-- (03) EXPERTISE -->
-<section class="exp wrap" id="expertise">
-  <div class="kick rv"><span class="sq"></span><span class="n">03</span> EXPERTISE</div>
-  <h2 class="disp rv" style="--d:.08s"><span class="lo">A CAREER SPENT ON</span><br>THE <span class="it">DIFFICULT</span> CASES</h2>
-  <div class="idx rv" style="--d:.14s">
-    <div class="row"><span class="no">/01</span><span class="t">Dental Implants</span><span class="d">From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</span></div>
-    <div class="row"><span class="no">/02</span><span class="t">Reconstruction</span><span class="d">Rebuilding function and structure where bone and tissue have been lost.</span></div>
-    <div class="row"><span class="no">/03</span><span class="t">Complex Cases</span><span class="d">The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</span></div>
-    <div class="row"><span class="no">/04</span><span class="t">Implant Maintenance</span><span class="d">Long-term care that protects the work of a restored smile.</span></div>
-    <div class="row"><span class="no">/05</span><span class="t">Pathology</span><span class="d">Identifying and addressing conditions affecting teeth, gums, and bone.</span></div>
-    <div class="row"><span class="no">/06</span><span class="t">Second Opinions</span><span class="d">Clarity and direction for patients facing complex decisions.</span></div>
-  </div>
-</section>
-
-<!-- (04) JOURNEY -->
-<div class="dark">
-<section class="steps wrap">
-  <div class="head">
-    <div>
-      <div class="kick rv"><span class="sq"></span><span class="n">04</span> PROCESS</div>
-      <h2 class="disp rv" style="--d:.08s;margin-top:18px"><span class="lo">FIVE STEPS,</span><br>ONE <span class="it">STEADY</span> HAND</h2>
-    </div>
-    <p class="side rv" style="--d:.16s"><span class="lo">FROM THE FIRST CONSULTATION TO LONG-TERM CARE,</span> THE PROCESS STAYS SIMPLE AND CLEAR.</p>
-  </div>
-  <div class="cards">
-    <div class="scard rv" style="--d:.02s"><div class="top"><span class="num">01</span><span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i></span></div><div class="lab"><i></i>LISTEN</div><div class="t">Consultation</div><p>Your history, your concerns, your goals — heard before anything is proposed.</p></div>
-    <div class="scard rv" style="--d:.08s"><div class="top"><span class="num">02</span><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div><div class="lab"><i></i>PLAN</div><div class="t">Diagnosis &amp; Plan</div><p>Imaging and evaluation, then a treatment pathway explained in plain language.</p></div>
-    <div class="scard rv" style="--d:.14s"><div class="top"><span class="num">03</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div><div class="lab"><i></i>OPERATE</div><div class="t">Surgery</div><p>Unhurried, precise work — with the time the case actually needs.</p></div>
-    <div class="scard rv" style="--d:.2s"><div class="top"><span class="num">04</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></div><div class="lab"><i></i>HEAL</div><div class="t">Recovery</div><p>Clear guidance and close follow-up while function and comfort return.</p></div>
-    <div class="scard rv" style="--d:.26s"><div class="top"><span class="num">05</span><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></div><div class="lab"><i></i>PROTECT</div><div class="t">Maintenance</div><p>Long-term care that protects the work — for years, not months.</p></div>
-  </div>
-</section>
-</div>
-
-<!-- (05) APPRECIATION -->
-<section class="stories" id="appreciation">
-  <div class="wrap">
-    <div class="kick rv"><span class="sq"></span><span class="n">05</span> APPRECIATION</div>
-    <h2 class="disp rv" style="--d:.08s"><span class="lo">THE PEOPLE WHO</span><br><span class="it">WERE THERE</span></h2>
-    <div class="sgrid">
-      <div class="tcard blue rv"><p class="big">Referred by the surgeons <span class="it">other surgeons trust</span></p><p class="s">Complex cases arrive here by referral from general dentists, periodontists and colleagues across the South Bay.</p></div>
-      <div class="tcard rv" style="--d:.07s"><p class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</p><div class="who"><span class="av">DK</span><div><div class="n">Dr. David Kim, D.D.S.</div><div class="r">Referring general dentist</div></div></div></div>
-      <div class="tcard rv" style="--d:.14s"><p class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</p><div class="who"><span class="av">MR</span><div><div class="n">Maria R.</div><div class="r">Full-arch reconstruction</div></div></div></div>
-      <div class="tcard rv" style="--d:.1s"><p class="q">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</p><div class="who"><span class="av">LS</span><div><div class="n">Dr. Lina Soto</div><div class="r">Periodontist</div></div></div></div>
-      <div class="tcard rv" style="--d:.17s"><p class="q">"Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself."</p><div class="who"><span class="av">RT</span><div><div class="n">Robert T.</div><div class="r">Dental implants</div></div></div></div>
-      <div class="tcard rv" style="--d:.24s"><p class="q">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time."</p><div class="who"><span class="av">JM</span><div><div class="n">Dr. Jeff Malone</div><div class="r">Referring dentist</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- (06) FOR PATIENTS -->
-<section class="pats wrap">
-  <div class="kick rv"><span class="sq"></span><span class="n">06</span> FOR PATIENTS</div>
-  <h2 class="disp rv" style="--d:.08s">UNDERSTANDING YOUR CARE, <span class="it">BEFORE THE CHAIR</span></h2>
-  <div class="idx rv" style="--d:.12s">
-    <div class="row"><span class="no">/01</span><span class="t">All-On-X, explained simply</span><span class="tag">Implants — Read ↳</span></div>
-    <div class="row"><span class="no">/02</span><span class="t">How to know if you need an implant</span><span class="tag">Before surgery — Read ↳</span></div>
-    <div class="row"><span class="no">/03</span><span class="t">Five myths about oral surgery</span><span class="tag">Myths — Read ↳</span></div>
-  </div>
-  <div class="guide">
-    <div class="pitch rv" style="--d:.1s">
-      <div class="kick"><span class="sq"></span>FREE PATIENT GUIDE</div>
-      <h3>What to expect from your first <span class="it">implant consultation</span></h3>
-      <div class="li"><i></i><span>A plain-language walkthrough of the process</span></div>
-      <div class="li"><i></i><span>The questions worth asking any surgeon</span></div>
-      <div class="li"><i></i><span>How to know if you're a candidate</span></div>
-    </div>
-    <div class="form rv" style="--d:.18s">
-      <h3>Get the guide</h3>
-      <p class="sub">Enter your details and we'll send it to your inbox. No spam — just one helpful guide.</p>
-      <label>Full name</label><input type="text" placeholder="Your name">
-      <label>Email</label><input type="email" placeholder="you@email.com">
-      <button class="cta"><span class="t">SEND ME THE GUIDE</span><span class="a">→</span></button>
-      <p class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared.</p>
-    </div>
-  </div>
-</section>
-
-<!-- (07) SPEAKING -->
-<div class="dark">
-<section class="speak wrap" id="speaking">
-  <div class="kick rv"><span class="sq"></span><span class="n">07</span> SPEAKING &amp; EDUCATION</div>
-  <div class="grid">
-    <figure class="plate rv" style="--d:.08s">
-      <div class="ph"><img src="../img/speaking.jpg" alt="Dr. Arce lecturing"></div>
-      <figcaption class="cap"><span>Fig. 02 — Sharing the craft</span><span>Lecture</span></figcaption>
-    </figure>
-    <div>
-      <h2 class="disp rv" style="--d:.05s"><span class="lo">SHARING THE CRAFT</span><br>WITH <span class="it">THE PROFESSION</span></h2>
-      <p class="lead rv" style="--d:.12s">Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction.</p>
-      <div class="topics rv" style="--d:.18s">
-        <div class="r"><span class="no">/01</span><span class="t">Full-Arch Reconstruction</span></div>
-        <div class="r"><span class="no">/02</span><span class="t">Complex Extractions</span></div>
-        <div class="r"><span class="no">/03</span><span class="t">Judgment in Oral Surgery</span></div>
-      </div>
-      <div class="invite rv" style="--d:.24s">
-        <span class="tx">AVAILABLE FOR CONFERENCES, STUDY CLUBS &amp; RESIDENT TRAINING</span>
-        <a href="#contact" class="cta"><span class="t">REQUEST AS SPEAKER</span><span class="a">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-
-<!-- (08) FINALE -->
-<section class="finale" id="contact">
-  <div class="wrap">
-    <div class="kick rv"><span class="sq"></span><span class="n">08</span> DENTAL IMPLANTS CENTER OF SOUTH BAY</div>
-    <h2 class="rv" style="--d:.08s">For the patients who were told it <span class="it">couldn't be done</span></h2>
-    <p class="s rv" style="--d:.16s">Care starts with a simple conversation — at your own pace, with the time your case actually needs.</p>
-    <a class="pill rv" style="--d:.22s" href="tel:+13103274166">Request a consultation</a>
-    <p class="meta rv" style="--d:.3s"><b>Redondo Beach · Torrance, California</b><br>(310) 327-4166 — by appointment</p>
-  </div>
-  <div class="giantwrap">
-    <svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-      <text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">ARCE</text>
-    </svg>
-  </div>
-  <div class="bar">
-    <span>© 2026 — Dr. Jorge Arce, D.D.S.</span>
-    <span>Oral &amp; Maxillofacial Surgery</span>
-    <span>South Bay, California</span>
-  </div>
-</section>
-
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
-  (function(){
-    function tick(){
-      try{
-        var t=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'America/Los_Angeles'}).format(new Date());
-        document.getElementById('clock').textContent=t;
-      }catch(e){}
+(function(){
+'use strict';
+var REDUCED=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&!!(window.gsap&&window.ScrollTrigger&&window.Lenis);
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+/* rich(): escapa todo y reactiva SOLO <i> <o> <b> <br> del JSON */
+function rich(s){return esc(s)
+  .replace(/&lt;i&gt;/g,'<em class="it">').replace(/&lt;\/i&gt;/g,'</em>')
+  .replace(/&lt;o&gt;/g,'<span class="lo">').replace(/&lt;\/o&gt;/g,'</span>')
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;br&gt;/g,'<br>')}
+function ph(img,ratio){if(!img)return'';var r=(img.ratio||ratio||'4:5').replace(':',' / ');
+  return'<div class="ph" style="aspect-ratio:'+r+'" data-label="'+esc(img.src?'':img.label||'')+'">'+(img.src?'<img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'">':'')+'</div>'}
+function kick(s){return'<div class="kick wr" data-r1><span class="sq"></span>'+(s.num?'<span class="n">'+esc(s.num)+'</span> ':'')+esc(s.kick)+'</div>'}
+function cta(c,em){if(!c)return'';return'<a class="cta" href="'+esc(c.href||'#')+'"><span class="t">'+esc(c.text)+(em?' <em>'+esc(em)+'</em>':'')+'</span><span class="a"><span>→</span></span></a>'}
+function pad2(i){return('0'+(i+1)).slice(-2)}
+
+var W;/* brand, para wordmark/sufijos */
+
+var partials={
+  hero:function(s){
+    return'<header class="hero">'+
+      '<div class="duo">'+ph(s.image,'16:9')+'</div>'+
+      '<div class="mid wrap">'+
+        '<p class="statement wr" data-hero>'+rich(s.statement)+'</p><div></div>'+
+        '<div class="svc wr" data-hero>'+(s.services||[]).map(function(t,i){return'<div class="r"><span class="no">/'+pad2(i)+'</span><span class="t">'+esc(t)+'</span></div>'}).join('')+'</div>'+
+      '</div>'+
+      '<div class="bottom">'+
+        (s.trust?'<div class="trust wrap wr" data-hero><div class="avs">'+(s.trust.initials||[]).map(function(a){return'<span class="av">'+esc(a)+'</span>'}).join('')+'</div><p class="tx">'+rich(s.trust.text)+'</p></div>':'')+
+        '<div class="folio">'+(s.folio||[]).map(function(f){return'<span>'+esc(f)+'</span>'}).join('')+'</div>'+
+        '<div class="giantwrap wr" data-hero><svg class="giant-svg" viewBox="0 0 1200 182" preserveAspectRatio="xMidYMax meet" role="img" aria-label="'+esc(W.wordmark)+'"><text x="0" y="177" font-size="245" textLength="1194" lengthAdjust="spacing">'+esc(W.wordmark)+'</text></svg></div>'+
+      '</div></header>'},
+
+  profile:function(s){
+    return'<section class="profile-sec wrap"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="profile">'+
+      '<aside class="pcard wr" data-r1>'+
+        '<div class="photo">'+ph(s.photo,'4:5')+'</div>'+
+        (s.photoCta?'<div class="ctabar"><span class="t">'+esc(s.photoCta.text)+' <em>'+esc(W.tagSuffix)+'</em></span><span class="a">→</span></div>':'')+
+        '<div class="id"><i></i>'+esc(s.identity)+'</div>'+
+        '<dl class="spec">'+(s.specs||[]).map(function(x){return'<dt>'+esc(x.k)+'</dt><dd>'+esc(x.v)+'</dd>'}).join('')+'</dl>'+
+      '</aside>'+
+      '<div class="pright">'+
+        '<div class="cells wr" data-r1>'+(s.stats||[]).map(function(c){return'<div class="cell"><div class="n">'+esc(c.n)+'</div><p>'+esc(c.text)+'</p></div>'}).join('')+'</div>'+
+        '<div class="bio wr" data-r1>'+kick(s)+(s.bio||[]).map(function(p){return'<p>'+rich(p)+'</p>'}).join('')+(s.signature?'<div class="sig">'+esc(s.signature)+'</div>':'')+'</div>'+
+      '</div></div></section>'},
+
+  chapter:function(s){
+    var c=s.corners||[];
+    return'<section class="chapter"><div class="bg">'+ph(s.image,'16:9')+'</div>'+
+      (c[0]?'<span class="meta">'+esc(c[0])+'</span>':'')+(c[1]?'<span class="meta r">'+esc(c[1])+'</span>':'')+
+      (c[2]?'<span class="meta bl">'+esc(c[2])+'</span>':'')+(c[3]?'<span class="meta br">'+esc(c[3])+'</span>':'')+
+      '<div class="inner wr" data-r1><p class="tag">'+esc(s.tag)+'</p><h2>'+rich(s.title)+'</h2><p class="s">'+esc(s.text)+'</p></div></section>'},
+
+  expertise:function(s){
+    return'<section class="exp wrap"'+(s.id?' id="'+esc(s.id)+'"':'')+'>'+kick(s)+
+      '<h2 class="disp wr" data-r1>'+rich(s.title)+'</h2>'+
+      '<div class="idx wr" data-r1 data-rule>'+(s.rows||[]).map(function(r,i){return'<div class="row"><span class="no">/'+pad2(i)+'</span><span class="t">'+esc(r.t)+'</span><span class="d">'+esc(r.d)+'</span></div>'}).join('')+'</div></section>'},
+
+  process:function(s){
+    return'<div class="dark"><section class="process wrap" id="process">'+
+      '<div class="head"><div>'+kick(s)+'<h2 class="disp wr" data-r1 style="margin-top:18px">'+rich(s.title)+'</h2></div>'+
+      '<p class="side wr" data-r1>'+rich(s.side)+'</p></div>'+
+      '<div class="file" id="fileScrolly">'+
+        '<div class="spine"><div class="track"></div><div class="fill" id="fileFill"></div><div class="fnum" id="fileNum">01</div></div>'+
+        (s.steps||[]).map(function(st,i){return'<div class="fstep '+(i%2===0?'fs-l':'fs-r')+'" data-step="'+i+'" style="grid-row:'+(i+1)+'"><span class="stepno">'+pad2(i)+'</span><span class="lab"><i></i>'+esc(st.lab)+'</span><div class="t">'+esc(st.t)+'</div><p>'+esc(st.text)+'</p></div>'}).join('')+
+      '</div></section></div>'},
+
+  testimonials:function(s){
+    return'<section class="stories"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap">'+kick(s)+
+      '<h2 class="disp wr" data-r1>'+rich(s.title)+'</h2>'+
+      '<div class="sgrid wr" data-r1>'+
+        (s.lead?'<div class="tcard blue"><p class="big">'+rich(s.lead.big)+'</p><p class="s">'+esc(s.lead.text)+'</p></div>':'')+
+        (s.items||[]).map(function(t){return'<div class="tcard"><p class="q">&ldquo;'+esc(t.q)+'&rdquo;</p><div class="who"><span class="av">'+esc(t.initials)+'</span><div><div class="n">'+esc(t.n)+'</div><div class="r">'+esc(t.r)+'</div></div></div></div>'}).join('')+
+      '</div></div></section>'},
+
+  patients:function(s){
+    var g=s.guide;
+    return'<section class="pats wrap">'+kick(s)+
+      '<h2 class="disp wr" data-r1>'+rich(s.title)+'</h2>'+
+      ((s.articles&&s.articles.length)?'<div class="idx wr" data-r1 data-rule>'+(s.articles).map(function(a,i){return'<a class="row" href="'+esc(a.href||'#')+'"><span class="no">/'+pad2(i)+'</span><span class="t">'+esc(a.t)+'</span><span class="tag">'+esc(a.tag)+'</span></a>'}).join('')+'</div>':'')+
+      (g?'<div class="guide">'+
+        '<div class="pitch wr" data-r1><div class="kick"><span class="sq"></span>'+esc(g.kick)+'</div><h3>'+rich(g.title)+'</h3>'+(g.bullets||[]).map(function(b){return'<div class="li"><i></i><span>'+esc(b)+'</span></div>'}).join('')+'</div>'+
+        '<div class="form wr" data-r1><h3>'+esc(g.formTitle)+'</h3><p class="sub">'+esc(g.formSub)+'</p>'+
+          (g.fields||[]).map(function(f){return'<label>'+esc(f.label)+'</label><input type="'+esc(f.type||'text')+'" placeholder="'+esc(f.placeholder||'')+'">'}).join('')+
+          '<button class="cta"><span class="t">'+esc(g.submit)+'</span><span class="a"><span>→</span></span></button>'+
+          '<p class="fine">'+esc(g.fine)+'</p></div>'+
+      '</div>':'')+'</section>'},
+
+  speaking:function(s){
+    return'<div class="dark"><section class="speak wrap"'+(s.id?' id="'+esc(s.id)+'"':'')+'>'+kick(s)+
+      '<div class="grid">'+
+        '<figure class="plate wr" data-img><div class="phw">'+ph(s.photo,'4:5')+'</div><figcaption class="cap">'+(s.caption||[]).map(function(c){return'<span>'+esc(c)+'</span>'}).join('')+'</figcaption></figure>'+
+        '<div><h2 class="disp wr" data-r1>'+rich(s.title)+'</h2><p class="lead wr" data-r1>'+esc(s.lead)+'</p>'+
+        '<div class="topics wr" data-r1 data-rule>'+(s.topics||[]).map(function(t,i){return'<div class="r"><span class="no">/'+pad2(i)+'</span><span class="t">'+esc(t)+'</span></div>'}).join('')+'</div>'+
+        '<div class="invite wr" data-r1><span class="tx">'+esc(s.invite)+'</span>'+cta(s.cta)+'</div>'+
+        '</div></div></section></div>'},
+
+  finale:function(s){
+    return'<section class="finale"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap">'+
+      '<div class="kick wr" data-r1><span class="sq"></span>'+(s.num?'<span class="n">'+esc(s.num)+'</span> ':'')+esc(s.kick)+'</div>'+
+      '<h2 class="wr" data-r1>'+rich(s.title)+'</h2><p class="s wr" data-r1>'+esc(s.text)+'</p>'+
+      (s.cta?'<a class="pill wr" data-r1 href="'+esc(s.cta.href)+'">'+esc(s.cta.text)+'</a>':'')+
+      '<p class="meta wr" data-r1>'+rich(s.meta)+'</p></div>'+
+      '<div class="bar">'+(s.bar||[]).map(function(b){return'<span>'+esc(b)+'</span>'}).join('')+'</div></section>'}
+};
+
+function boot(data){
+  W=data.brand||{};
+  if(data.meta){document.title=data.meta.title||document.title;
+    if(data.meta.lang)document.documentElement.lang=data.meta.lang;
+    var md=document.querySelector('meta[name="description"]');
+    if(!md){md=document.createElement('meta');md.name='description';document.head.appendChild(md)}
+    md.content=data.meta.description||''}
+  document.getElementById('brandName').textContent=W.name||'';
+  document.getElementById('clockLabel').textContent=W.clockLabel||'';
+  if(data.nav&&data.nav.cta)document.getElementById('navCta').innerHTML=cta(data.nav.cta,W.tagSuffix);
+
+  var site=document.getElementById('site');site.innerHTML='';
+  (data.sections||[]).forEach(function(s){var fn=partials[s.type];if(!fn)return;
+    var host=document.createElement('div');host.innerHTML=fn(s);
+    while(host.firstChild)site.appendChild(host.firstChild)});
+
+  /* reloj (nunca animado) */
+  function tick(){try{document.getElementById('clock').textContent=new Intl.DateTimeFormat('en-US',{hour:'2-digit',minute:'2-digit',hour12:true,timeZone:W.clockTZ||'America/Los_Angeles'}).format(new Date())}catch(e){}}
+  tick();setInterval(tick,30000);
+
+  initMotion();
+}
+
+function initMotion(){
+  var nav=document.getElementById('nav');
+  var onScrollNav=function(y){nav.classList.toggle('scrolled',y>innerHeight*.9)};
+
+  if(!MOTION){
+    /* estado final del scrolly sin motion */
+    var f=document.getElementById('fileFill');if(f)f.style.transform='scaleY(1)';
+    var n=document.getElementById('fileNum');if(n)n.textContent='05';
+    addEventListener('scroll',function(){onScrollNav(scrollY)},{passive:true});
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',function(e){ScrollTrigger.update();onScrollNav(e.scroll)});
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();lenis.scrollTo(t)}});
+
+  /* R2 hero-stagger: decreciente 110/70/50ms */
+  var heroEls=gsap.utils.toArray('[data-hero]');
+  if(heroEls.length){var acc=0,delays=heroEls.map(function(_,i){var d=acc;acc+=[110,70,50][Math.min(i,2)];return d/1000});
+    heroEls.forEach(function(el,i){gsap.fromTo(el,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:.1+delays[i],clearProps:'transform'})})}
+
+  /* R1 rise: por grupo */
+  gsap.utils.toArray('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'expo.out',clearProps:'transform',
+      scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
+
+  /* R3 rule-draw: hairline real que se dibuja sobre cada índice */
+  gsap.utils.toArray('[data-rule]').forEach(function(el){
+    var line=document.createElement('div');line.className='rline';
+    el.insertBefore(line,el.firstChild);
+    gsap.to(line,{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
+
+  /* R4 img-settle: imágenes enmarcadas */
+  gsap.utils.toArray('[data-img]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.9,ease:'expo.out',clearProps:'transform',
+      scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
+
+  /* R5 file-scrub: expediente pinneado (desktop) */
+  var file=document.getElementById('fileScrolly');
+  if(file){
+    var fill=document.getElementById('fileFill'),num=document.getElementById('fileNum');
+    var steps=gsap.utils.toArray('.fstep');
+    if(matchMedia('(min-width:901px)').matches){
+      gsap.set(fill,{scaleY:0});
+      ScrollTrigger.create({trigger:file,start:'top 62%',end:'bottom 45%',scrub:1.2,
+        onUpdate:function(self){var p=self.progress;
+          fill.style.transform='scaleY('+p+')';
+          num.textContent=('0'+Math.min(5,Math.max(1,Math.ceil(p*5)||1))).slice(-2);
+          steps.forEach(function(st,i){
+            var lo=i/steps.length,hi=(i+1)/steps.length;
+            var k=gsap.utils.clamp(0,1,(p-lo)/(hi-lo));
+            var dir=(i%2===0)?1:-1;
+            st.style.opacity=(.25+.75*k).toFixed(3);
+            st.style.transform='translateX('+(12*(1-k)*dir)+'px)';
+          });
+        }});
+    }else{
+      /* mobile: sin pin — línea con trigger normal, pasos con R1 */
+      gsap.fromTo(fill,{scaleY:0},{scaleY:1,duration:1.1,ease:'expo.out',
+        scrollTrigger:{trigger:file,start:'top 75%',once:true}});
+      num.textContent='05';
+      steps.forEach(function(st){st.style.opacity=1;st.style.transform='none';
+        gsap.fromTo(st,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'expo.out',
+          scrollTrigger:{trigger:st,start:'top 88%',once:true}})});
     }
-    tick(); setInterval(tick,30000);
-    var els=document.querySelectorAll('.rv');
-    if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver'in window)){
-      els.forEach(function(e){e.classList.add('in')});return;
-    }
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
-    })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-    els.forEach(function(e){io.observe(e)});
-  })();
+  }
+}
+
+fetch('/v6-final/content.json')
+  .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+  .then(boot)
+  .catch(function(err){document.documentElement.classList.add('no-motion');
+    document.getElementById('site').innerHTML='<div class="load-error"><p>No se pudo cargar content.json ('+esc(err.message)+').</p></div>'});
+})();
 </script>
 </body>
 </html>
