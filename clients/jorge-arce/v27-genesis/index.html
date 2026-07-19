@@ -52,8 +52,8 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- chapters ---------- */
 .chap{padding:140px 0;border-top:1px solid var(--line)}
-.chap .in{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
-.chap:nth-of-type(even) .in .tx{order:2}
+.chap .inr{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.chap:nth-of-type(even) .inr .tx{order:2}
 .chap .num{font-family:var(--serif);font-size:clamp(60px,7vw,104px);line-height:1;color:var(--rose)}
 .chap h2{font-family:var(--serif);font-size:clamp(30px,3.8vw,52px);line-height:1.12;margin:20px 0 22px}
 .chap h2 em{font-style:normal;color:var(--rose)}
@@ -75,7 +75,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- record ---------- */
 .record{padding:140px 0;border-top:1px solid var(--line)}
-.record .in{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;text-align:center}
+.record .inr{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;text-align:center}
 .record .n{font-family:var(--serif);font-size:clamp(48px,6vw,88px);line-height:.95}
 .record .n span{font-size:.5em;color:var(--rose)}
 .record .l{margin-top:16px;font-size:13.5px;color:var(--lemon-dim);line-height:1.65;max-width:250px;margin-left:auto;margin-right:auto}
@@ -122,9 +122,9 @@ a{color:inherit;text-decoration:none}
 @media (max-width:900px){
   .wrap{padding:0 22px}
   .nav{padding:20px 22px}
-  .chap .in{grid-template-columns:1fr;gap:40px}
-  .chap:nth-of-type(even) .in .tx{order:0}
-  .record .in{grid-template-columns:1fr;gap:44px}
+  .chap .inr{grid-template-columns:1fr;gap:40px}
+  .chap:nth-of-type(even) .inr .tx{order:0}
+  .record .inr{grid-template-columns:1fr;gap:44px}
   .chap,.record,.voices{padding:95px 0}
   .verse{padding:110px 0}
   .close{padding:120px 0 40px}
@@ -150,7 +150,7 @@ a{color:inherit;text-decoration:none}
 </header>
 
 <!-- CHAPTER I -->
-<section class="chap"><div class="wrap"><div class="in">
+<section class="chap"><div class="wrap"><div class="inr">
   <div class="tx reveal">
     <div class="num">I.</div>
     <div class="k2 lbl">First — the honest read</div>
@@ -162,7 +162,7 @@ a{color:inherit;text-decoration:none}
 </div></div></section>
 
 <!-- CHAPTER II -->
-<section class="chap"><div class="wrap"><div class="in">
+<section class="chap"><div class="wrap"><div class="inr">
   <div class="tx reveal">
     <div class="num">II.</div>
     <div class="k2 lbl">Then — the plan</div>
@@ -174,7 +174,7 @@ a{color:inherit;text-decoration:none}
 </div></div></section>
 
 <!-- CHAPTER III -->
-<section class="chap"><div class="wrap"><div class="in">
+<section class="chap"><div class="wrap"><div class="inr">
   <div class="tx reveal">
     <div class="num">III.</div>
     <div class="k2 lbl">Then — the work</div>
@@ -186,7 +186,7 @@ a{color:inherit;text-decoration:none}
 </div></div></section>
 
 <!-- CHAPTER IV -->
-<section class="chap"><div class="wrap"><div class="in">
+<section class="chap"><div class="wrap"><div class="inr">
   <div class="tx reveal">
     <div class="num">IV.</div>
     <div class="k2 lbl">Finally — the beginning</div>
@@ -204,7 +204,7 @@ a{color:inherit;text-decoration:none}
 </div></section>
 
 <!-- RECORD -->
-<section class="record"><div class="wrap"><div class="in" data-stagger>
+<section class="record"><div class="wrap"><div class="inr" data-stagger>
   <div><div class="n">27<span>yrs</span></div><div class="l">Dedicated to oral &amp; maxillofacial surgery</div></div>
   <div><div class="n">2007</div><div class="l">Founder, Dental Implants Center of South Bay</div></div>
   <div><div class="n">Board<span>cert.</span></div><div class="l">Certified in dental implantology</div></div>
