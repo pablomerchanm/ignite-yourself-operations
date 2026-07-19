@@ -767,3 +767,38 @@ ocultos, dolly sin transform · R5 scale 1.07→1.028 + translateY 7.2px
 al avanzar, Frames 01-03 auto · STRESS prods fuera, reel 4 → SC-01..04,
 frames y showreel sin fotos → 4 phx, título ×2, ovf 0, 0 errores ·
 MOBILE ovf 0.
+
+## 23 · v27-genesis — CERRADA
+
+**Diagnóstico inicial:** chapter-grid funcional y con carácter
+(ciruela/rosa, capítulos I-IV) pero el scrollytelling del referente
+quedó en insinuación: halo estático, preloader con Math.random +
+setInterval, keyframes hin, IO binario, nth-of-type frágil, copy en
+HTML.
+
+**Qué cambié:**
+- R5a el verso se ilumina: la cita central usa background-clip:text
+  con wipe de background-position 100%→0% mapeado al scrub — la luz
+  recorre el verso letra a letra de forma continua. Reduced: color
+  sólido con acento rosa.
+- R5b numerales que amanecen: cada numeral romano interpola su color
+  de ceniza a limón (rgb continuo + opacidad .45→1) con el progreso de
+  su capítulo; el halo del hero escala 1→1.35 y rota 40° con el
+  progreso global — el génesis avanza con la lectura.
+- Preloader determinista (gsap 0→100% en 900ms); hin muerto;
+  alternancia por `.alt`; numerales romanos automáticos del array.
+- Ritmo --sec: chap estándar · verse ×1.2 · record ×0.85. Tokens, 2
+  easings, focus-visible rosa, `.phx` 4:3.
+
+**Qué elevé:** la insinuación se volvió ejecución: luz que recorre el
+verso, numerales que amanecen y un halo vivo — todo scroll-driven.
+
+**Paso 4:** memorable sí (verso iluminado); capítulos alternados /
+verse centrado / record grid; ratio 104/15.5 = 6.7:1; motion continuo;
+2 easings; wipe es paint, resto transform; robusto.
+
+**Verificación:** batchcheck W27 ovf 0 d+m. robust27: REDUCED nm, 0
+ocultos, pre fuera, verso color sólido · PRE 100%, verso 62.5% mid,
+num I encendido rgb(201,204,182), halo scale 1.22 rotate 25° · STRESS
+voices fuera, capítulos 3 → I.,II.,III. sin fotos → phx, título ×2,
+ovf 0, 0 errores · MOBILE ovf 0.
