@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Mesa — Desert Stays &amp; Private Gatherings</title>
+<meta name="description" content="A design-forward desert property for slow mornings, wide horizons, and evenings under the desert sky. Template concept with placeholder content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Nanum+Myeongjo:wght@400;700&family=Special+Gothic+Expanded+One&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bone:#F2EBDB; --bone2:#F9F5ED; --ox:#832B2A; --oxdim:#AE5D59; --choc:#2A0D03; --ink:#191919;
+  --display:'Boldonse',sans-serif; --serif:'Nanum Myeongjo',serif; --gothic:'Special Gothic Expanded One',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bone2);color:var(--ink);font-family:'Open Sans',sans-serif;font-size:14px;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ox);color:var(--bone)}
+.gothic{font-family:var(--gothic);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+
+/* photo placeholders (desert art-direction slots) */
+.slot{position:relative;overflow:hidden;background:linear-gradient(160deg,#C99B72 0%,#B27E55 45%,#8F5D3B 100%)}
+.slot.sky{background:linear-gradient(180deg,#C9D3D5 0%,#D9C9AE 55%,#B27E55 100%)}
+.slot.dusk{background:linear-gradient(180deg,#8F5D3B 0%,#5C3A28 60%,#3A2015 100%)}
+.slot.pool{background:linear-gradient(180deg,#A9C1BC 0%,#7FA69B 60%,#57776E 100%)}
+.slot::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E")}
+.slot .tag{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--gothic);font-size:9px;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(249,245,237,.9);
+  background:rgba(42,13,3,.45);padding:6px 10px}
+.slot .mesa{position:absolute;inset:auto 0 0 0;height:46%;}
+.slot .mesa svg{width:100%;height:100%}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;
+  justify-content:space-between;background:var(--ox);color:var(--bone);padding:0 14px;height:52px}
+.nav .burger{display:flex;flex-direction:column;gap:4px;cursor:pointer;padding:8px}
+.nav .burger span{width:20px;height:2px;background:var(--bone)}
+.nav .wordmark{font-family:var(--display);font-size:26px;letter-spacing:-.02em;text-transform:uppercase;line-height:1}
+.nav .book{font-family:'Open Sans';font-weight:600;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid rgba(249,245,237,.55);padding:9px 16px;transition:background .3s,color .3s}
+.nav .book:hover{background:var(--bone);color:var(--ox)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100vh;min-height:560px;overflow:hidden}
+.hero .slot{position:absolute;inset:0}
+.hero .door{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.hero .door svg{height:78%;width:auto}
+.hero .wm{position:absolute;left:0;right:0;bottom:-1.5vw;display:flex;justify-content:space-between;
+  padding:0 1vw;z-index:3;pointer-events:none}
+.hero .wm span{font-family:var(--display);font-size:clamp(64px,12.4vw,178px);line-height:.9;
+  letter-spacing:-.02em;text-transform:uppercase;color:var(--bone)}
+.hero .sub{position:absolute;top:70px;left:0;right:0;text-align:center;z-index:3;
+  font-family:var(--gothic);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone2);
+  text-shadow:0 1px 10px rgba(42,13,3,.5)}
+
+/* ---------- intro serif ---------- */
+.intro{background:var(--bone2);padding:140px 0 110px;text-align:center}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+.intro h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,48px);
+  letter-spacing:-.02em;line-height:1.35;max-width:900px;margin:0 auto}
+.intro .sub{margin-top:26px;font-family:var(--serif);font-size:19px;color:var(--oxdim)}
+.intro .k{font-family:var(--gothic);font-size:11px;letter-spacing:.16em;color:var(--ink);
+  text-transform:uppercase;margin-bottom:30px;display:block}
+
+/* ---------- two-up cards ---------- */
+.duo{background:var(--bone2);padding:40px 0 130px}
+.duo .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.duo .card .slot{aspect-ratio:4/3}
+.duo .card .arr{width:34px;height:34px;border:1px solid var(--ink);display:flex;align-items:center;
+  justify-content:center;margin:18px 0 12px;transition:background .3s,color .3s}
+.duo .card:hover .arr{background:var(--ink);color:var(--bone2)}
+.duo .card .t{font-family:var(--gothic);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.duo .card p{margin-top:8px;font-size:13px;line-height:1.7;color:#54504A;max-width:320px}
+
+/* ---------- property band ---------- */
+.property{background:var(--bone);padding:120px 0}
+.property .in{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.property .tx .k{font-family:var(--gothic);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px;display:block}
+.property .tx h3{font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.6vw,34px);line-height:1.4;letter-spacing:-.02em}
+.property .tx .chip{display:inline-block;margin-top:30px;font-family:var(--gothic);font-size:10px;
+  letter-spacing:.14em;text-transform:uppercase;background:var(--ox);color:var(--bone);padding:10px 16px}
+.property .slot{aspect-ratio:16/10}
+
+/* ---------- stays grid ---------- */
+.stays{background:var(--bone2);padding:130px 0}
+.stays .head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px;margin-bottom:50px}
+.stays h2{font-family:var(--display);font-size:clamp(30px,4.4vw,60px);letter-spacing:-.02em;text-transform:uppercase}
+.stays .gothic{color:var(--oxdim)}
+.stays .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.stay .slot{aspect-ratio:3/4}
+.stay .nm{margin-top:14px;font-family:var(--gothic);font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.stay .nm span:last-child{color:var(--oxdim)}
+.stay p{margin-top:6px;font-size:12.5px;line-height:1.65;color:#54504A}
+
+/* ---------- guest notes (oxblood) ---------- */
+.notes{background:var(--choc);color:var(--bone);padding:130px 0}
+.notes .in{display:grid;grid-template-columns:180px 1fr 60px;gap:40px;align-items:center}
+.notes .side{aspect-ratio:3/4;background:linear-gradient(180deg,#5C1F1B,#832B2A);position:relative;overflow:hidden}
+.notes .side svg{position:absolute;inset:0;width:100%;height:100%}
+.notes .k{font-family:var(--gothic);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px;display:block;color:var(--oxdim)}
+.notes q{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(19px,2.3vw,30px);line-height:1.55;letter-spacing:-.01em;quotes:'"' '"'}
+.notes .who{margin-top:20px;font-family:var(--gothic);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxdim)}
+.notes .next{width:44px;height:44px;border:1px solid rgba(249,245,237,.4);display:flex;align-items:center;
+  justify-content:center;cursor:pointer;transition:background .3s}
+.notes .next:hover{background:var(--ox)}
+
+/* ---------- events split ---------- */
+.events{background:var(--bone);padding:0}
+.events .in{display:grid;grid-template-columns:1fr 1.2fr;min-height:70vh}
+.events .tx{padding:90px 60px;display:flex;flex-direction:column;justify-content:center}
+.events .tx .k{font-family:var(--gothic);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:26px}
+.events .tx h3{font-family:var(--serif);font-weight:700;font-size:clamp(22px,2.6vw,34px);line-height:1.45;letter-spacing:-.02em;max-width:440px}
+.events .tx p{margin-top:20px;font-size:13.5px;line-height:1.75;color:#54504A;max-width:420px}
+.events .btns{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+.events .btn{font-family:var(--gothic);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--ink);padding:11px 18px;transition:background .3s,color .3s}
+.events .btn:hover{background:var(--ink);color:var(--bone)}
+.events .slot{min-height:420px}
+
+/* ---------- footer ---------- */
+.foot{background:var(--choc);color:var(--bone);padding:90px 0 0;overflow:hidden}
+.foot .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr .9fr;gap:44px;padding-bottom:80px}
+.foot .brand .t{font-family:var(--gothic);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.foot .brand p{font-family:var(--serif);font-size:15px;line-height:1.7;color:var(--oxdim);max-width:280px}
+.foot .brand .cta{display:inline-block;margin-top:26px;font-family:var(--gothic);font-size:10px;
+  letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(249,245,237,.5);padding:10px 16px;
+  transition:background .3s,color .3s}
+.foot .brand .cta:hover{background:var(--bone);color:var(--choc)}
+.foot .h{font-family:var(--gothic);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:20px;color:var(--oxdim)}
+.foot a.l,.foot span.l{display:block;font-size:12.5px;line-height:2.3;color:rgba(249,245,237,.85)}
+.foot a.l:hover{color:#fff}
+.foot .fine{font-size:11px;color:rgba(249,245,237,.5);line-height:2}
+.foot .wmrow{display:flex;justify-content:space-between;padding:0 1vw;transform:translateY(24%)}
+.foot .wmrow span{font-family:var(--display);font-size:clamp(70px,13.5vw,196px);line-height:.82;
+  letter-spacing:-.02em;text-transform:uppercase;color:var(--ox)}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+[data-hero]{opacity:0;animation:hin 1.2s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero="2"]{animation-delay:.25s}
+@keyframes hin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+
+@media (max-width:920px){
+  .wrap{padding:0 22px}
+  .duo .grid,.property .in,.stays .grid{grid-template-columns:1fr}
+  .events .in{grid-template-columns:1fr}
+  .notes .in{grid-template-columns:1fr;gap:26px}
+  .notes .side{display:none}
+  .foot .grid{grid-template-columns:1fr 1fr;gap:30px}
+  .intro{padding:100px 0 80px}
+  .property,.stays,.notes{padding:90px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="burger" aria-hidden="true"><span></span><span></span><span></span></div>
+  <span class="wordmark">Casa Mesa</span>
+  <a class="book" href="#book">Book your stay</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="slot sky" data-hero>
+    <div class="mesa"><svg viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none">
+      <path d="M0 210 H210 L250 130 H400 L430 210 H600 L640 96 H860 L900 210 H1080 L1110 150 H1260 L1290 210 H1440 V300 H0 Z" fill="#8F5D3B"/>
+      <path d="M0 240 H1440 V300 H0 Z" fill="#6E4227"/>
+      <g fill="#5C3A28"><path d="M180 240 q4 -26 10 0 M186 226 h-12 M186 232 h-12"/><path d="M1180 240 q4 -22 9 0"/></g>
+    </svg></div>
+    <span class="tag">Slot foto — fachada al atardecer</span>
+  </div>
+  <div class="door" data-hero="2">
+    <svg viewBox="0 0 300 460" fill="none">
+      <rect x="0" y="0" width="300" height="460" fill="#C99B72"/>
+      <rect x="60" y="70" width="180" height="390" fill="#B27E55"/>
+      <rect x="78" y="96" width="118" height="364" fill="#7A4A2B"/>
+      <rect x="82" y="100" width="110" height="356" fill="#8F5732"/>
+      <g stroke="#6E3F22" stroke-width="3"><path d="M96 100 V456 M118 100 V456 M140 100 V456 M162 100 V456 M184 100 V456"/></g>
+      <rect x="171" y="256" width="5" height="34" fill="#2A0D03"/>
+      <rect x="196" y="120" width="104" height="336" fill="#C9D3D5"/>
+      <path d="M196 456 H300 V330 Q250 310 196 330 Z" fill="#B27E55"/>
+      <path d="M196 340 H300 V300 L270 280 L240 300 L215 288 L196 300 Z" fill="#8F5D3B"/>
+    </svg>
+  </div>
+  <div class="sub" data-hero>Desert stays &amp; private gatherings — Template concept</div>
+  <div class="wm"><span>Casa</span><span>Mesa</span></div>
+</header>
+
+<!-- INTRO -->
+<section class="intro"><div class="wrap">
+  <span class="k reveal">Welcome to the high desert</span>
+  <h2 class="reveal">A small desert compound with several stays and one long table — built for slow mornings, wide horizons, and evenings spent under the desert sky.</h2>
+  <div class="sub reveal">A design-forward property in the heart of red-rock country.</div>
+</div></section>
+
+<!-- TWO-UP -->
+<section class="duo"><div class="wrap"><div class="grid">
+  <a class="card reveal" href="#stays">
+    <div class="slot"><span class="tag">Slot foto — habitación con ventana panorámica</span></div>
+    <div class="arr">↗</div>
+    <div class="t">Explore the stays</div>
+    <p>A small collection of private guest houses, each with its own rhythm, light, and sense of quiet.</p>
+  </a>
+  <a class="card reveal" href="#events">
+    <div class="slot dusk"><span class="tag">Slot foto — sombras de una cena al atardecer</span></div>
+    <div class="arr">↗</div>
+    <div class="t">Host an event</div>
+    <p>A full desert property for retreats, private dinners, wedding weekends, and gatherings with room to settle in.</p>
+  </a>
+</div></div></section>
+
+<!-- PROPERTY -->
+<section class="property"><div class="wrap"><div class="in">
+  <div class="tx reveal">
+    <span class="k">About the property</span>
+    <h3>Casa Mesa is a design-forward desert property shaped by adobe walls, deep shade, and the long line of the horizon — a place designed to hold both stillness and celebration.</h3>
+    <a class="chip" href="#about">About the property</a>
+  </div>
+  <div class="slot pool reveal"><span class="tag">Slot foto — patio central con alberca</span></div>
+</div></div></section>
+
+<!-- STAYS -->
+<section class="stays" id="stays"><div class="wrap">
+  <div class="head reveal">
+    <h2>The Stays</h2>
+    <span class="gothic">Seven houses · sleeps 2–12</span>
+  </div>
+  <div class="grid">
+    <div class="stay reveal"><div class="slot"><span class="tag">Slot foto — casita juniper</span></div>
+      <div class="nm"><span>Juniper Casita</span><span>Sleeps 2</span></div>
+      <p>A one-room hideout with a deep tub and a private patio facing the sunrise.</p></div>
+    <div class="stay reveal"><div class="slot dusk"><span class="tag">Slot foto — casa mesa</span></div>
+      <div class="nm"><span>Mesa House</span><span>Sleeps 6</span></div>
+      <p>The main house — long table, longer views, and the best light on the property.</p></div>
+    <div class="stay reveal"><div class="slot sky"><span class="tag">Slot foto — casita ocotillo</span></div>
+      <div class="nm"><span>Ocotillo Casita</span><span>Sleeps 4</span></div>
+      <p>Two rooms wrapped around a shaded courtyard, made for slow breakfasts.</p></div>
+  </div>
+</div></section>
+
+<!-- GUEST NOTES -->
+<section class="notes"><div class="wrap"><div class="in">
+  <div class="side reveal" aria-hidden="true">
+    <svg viewBox="0 0 180 240" fill="none">
+      <rect width="180" height="240" fill="#5C1F1B"/>
+      <g stroke="#B4715F" stroke-width="4" stroke-linecap="round">
+        <path d="M60 220 V120 M60 150 q-22 -8 -24 -34 M60 160 q22 -8 24 -34"/>
+        <path d="M120 220 V100 M120 136 q-18 -6 -20 -28 M120 150 q18 -6 20 -28"/>
+      </g>
+    </svg>
+  </div>
+  <div class="reveal">
+    <span class="k">Guest notes</span>
+    <q>I came alone for a creative reset and felt completely at ease. The casita was simple, warm, and peaceful — the perfect place to hear myself think again.</q>
+    <div class="who">Placeholder guest — solo stay, three nights</div>
+  </div>
+  <div class="next reveal" role="button" aria-label="Next note">→</div>
+</div></div></section>
+
+<!-- EVENTS -->
+<section class="events" id="events"><div class="in">
+  <div class="tx reveal">
+    <span class="k">Gatherings</span>
+    <h3>One property, yours entirely — retreats, wedding weekends, and dinners that stretch past midnight.</h3>
+    <p>Buy out the compound and the desert comes with it: seven stays, the long table, fire pits, and staff who know when to appear and when to disappear.</p>
+    <div class="btns">
+      <a class="btn" href="#stays">Explore the stays</a>
+      <a class="btn" href="#book">Get in touch</a>
+    </div>
+  </div>
+  <div class="slot dusk reveal"><span class="tag">Slot foto — lounge exterior de noche</span></div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="foot" id="book">
+  <div class="wrap">
+    <div class="grid">
+      <div class="brand reveal">
+        <div class="t">Casa Mesa</div>
+        <p>A design-forward desert property in the heart of red-rock country, designed for adventurous romantics, wellness retreats, and intimate gatherings.</p>
+        <a class="cta" href="#">Contact us</a>
+        <div class="fine" style="margin-top:26px">1 Placeholder Road · Somewhere, UT<br>Call — (555) 555-5555 · Email — hello@placeholder.com<br>© Casa Mesa — template concept</div>
+      </div>
+      <div><div class="h">Explore</div>
+        <a class="l" href="#">Home</a><a class="l" href="#about">About</a><a class="l" href="#stays">Stays</a><a class="l" href="#events">Events</a><a class="l" href="#">Journal</a>
+      </div>
+      <div><div class="h">Stays</div>
+        <a class="l" href="#stays">Juniper Casita</a><a class="l" href="#stays">Ocotillo Casita</a><a class="l" href="#stays">Mesa House</a><a class="l" href="#stays">Arroyo House</a><a class="l" href="#stays">Sol House</a>
+      </div>
+      <div>
+        <div class="h">Postcard</div>
+        <div class="slot dusk" style="aspect-ratio:3/4;max-width:150px"><span class="tag">cactus</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="wmrow" aria-hidden="true"><span>Casa</span><span>Mesa</span></div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

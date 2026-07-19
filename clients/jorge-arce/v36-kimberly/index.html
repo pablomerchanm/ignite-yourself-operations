@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Counsel by Camille — Lead with Clarity</title>
+<meta name="description" content="Quiet-luxury coaching template concept: deep navy, extra-light serif, tan accents. Placeholder content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;0,300;1,300&family=Archivo:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1623; --navy2:#2A3446; --navy3:#47526B; --cream:#FBF7F3; --sandx:#F2E9DE; --tan:#C8A789;
+  --serif:'Noto Serif',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--navy2);font-family:'Archivo',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--tan);color:var(--navy)}
+.lbl{font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase}
+.ser{font-family:var(--serif);font-weight:200}
+.it{font-style:italic;font-weight:300}
+.und{border-bottom:1px solid var(--tan);padding-bottom:2px}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:60;background:rgba(14,22,35,.96);backdrop-filter:blur(8px);
+  color:var(--cream);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:16px 28px;gap:20px}
+.nav .l,.nav .r{display:flex;gap:24px;align-items:center}
+.nav .r{justify-content:flex-end}
+.nav a{font-size:9.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;opacity:.85;transition:opacity .3s}
+.nav a:hover{opacity:1}
+.nav .lg{font-family:var(--serif);font-weight:200;font-size:19px;text-align:center}
+.nav .lg em{font-style:italic;font-weight:300}
+.nav .sep{width:1px;height:12px;background:rgba(251,247,243,.3)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:92vh;background:var(--navy);color:var(--cream);overflow:hidden;display:flex;align-items:center}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:70% 20%;
+  filter:grayscale(.3) brightness(.6) contrast(1.05)}
+.hero .ph::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(14,22,35,.88) 0%,rgba(14,22,35,.4) 55%,rgba(14,22,35,.15) 100%)}
+.hero .in{position:relative;z-index:2;padding:0 8vw;max-width:760px}
+.hero h1{font-family:var(--serif);font-weight:200;font-size:clamp(34px,4.6vw,64px);line-height:1.35}
+.hero h1 .it{font-weight:300}
+.hero .sub{margin-top:30px;font-size:10.5px;font-weight:600;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tan);line-height:2.1}
+.hero .cta{display:inline-block;margin-top:36px;font-size:10px;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--navy);background:var(--cream);padding:16px 30px;transition:background .3s}
+.hero .cta:hover{background:var(--tan)}
+
+/* ---------- pillars ---------- */
+.pillars{padding:130px 8vw;background:var(--cream)}
+.pillars .head{text-align:center;max-width:720px;margin:0 auto 80px}
+.pillars h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.6vw,48px);line-height:1.35}
+.pillars .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(42,52,70,.15);max-width:1100px;margin:0 auto}
+.pcell{background:var(--cream);padding:44px 36px 50px;text-align:center}
+.pcell .n{font-family:var(--serif);font-weight:200;font-size:40px;color:var(--tan)}
+.pcell h3{font-family:var(--serif);font-weight:300;font-size:21px;margin-top:16px}
+.pcell p{margin-top:12px;font-size:13px;line-height:1.75;color:#6B7386}
+
+/* ---------- about split ---------- */
+.about{background:var(--sandx);padding:130px 8vw}
+.about .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+.about .ph{aspect-ratio:3/4;overflow:hidden}
+.about .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.02)}
+.about h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.6vw,46px);line-height:1.3}
+.about p{margin-top:24px;font-size:14.5px;line-height:1.85;color:#5E5548}
+.about .sig{margin-top:30px;font-family:var(--serif);font-style:italic;font-weight:300;font-size:22px;color:var(--navy2)}
+
+/* ---------- offerings ---------- */
+.offer{padding:130px 8vw;background:var(--cream)}
+.offer .head{display:flex;justify-content:space-between;align-items:baseline;max-width:1100px;margin:0 auto 60px;flex-wrap:wrap;gap:14px}
+.offer h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.8vw,48px)}
+.offer .lbl{color:var(--tan)}
+.orow{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;gap:30px;
+  align-items:center;padding:34px 6px;border-top:1px solid rgba(42,52,70,.18);transition:background .25s}
+.orow:last-of-type{border-bottom:1px solid rgba(42,52,70,.18)}
+.orow:hover{background:#F6F0E9}
+.orow .n{font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--tan)}
+.orow .t{font-family:var(--serif);font-weight:200;font-size:clamp(22px,2.8vw,34px)}
+.orow .t .it{font-weight:300}
+.orow .d{font-size:12.5px;line-height:1.7;color:#6B7386;max-width:300px;text-align:right}
+
+/* ---------- quote band ---------- */
+.quote{background:var(--navy);color:var(--cream);padding:150px 8vw;text-align:center;position:relative;overflow:hidden}
+.quote::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:70px;background:var(--tan)}
+.quote q{display:block;font-family:var(--serif);font-weight:200;font-size:clamp(24px,3.2vw,42px);
+  line-height:1.5;max-width:860px;margin:0 auto;quotes:'“' '”'}
+.quote .who{margin-top:30px;font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--tan)}
+
+/* ---------- journal ---------- */
+.journal{padding:130px 8vw;background:var(--cream)}
+.journal .head{text-align:center;margin-bottom:60px}
+.journal h2{font-family:var(--serif);font-weight:200;font-size:clamp(28px,3.6vw,46px)}
+.jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1100px;margin:0 auto}
+.jcard{background:#fff;border:1px solid rgba(42,52,70,.12);padding:36px 32px 40px;transition:transform .35s,box-shadow .35s}
+.jcard:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(14,22,35,.1)}
+.jcard .k{font-size:9.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--tan)}
+.jcard h3{font-family:var(--serif);font-weight:300;font-size:20px;line-height:1.45;margin-top:14px;text-transform:capitalize}
+.jcard .more{display:inline-block;margin-top:22px;font-size:10px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;border-bottom:1px solid var(--tan);padding-bottom:3px}
+
+/* ---------- close ---------- */
+.close{background:var(--navy);color:var(--cream);padding:150px 8vw 60px;text-align:center}
+.close h2{font-family:var(--serif);font-weight:200;font-size:clamp(30px,4.4vw,58px);line-height:1.3;max-width:760px;margin:0 auto}
+.close .cta{display:inline-block;margin-top:44px;font-size:10px;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--navy);background:var(--cream);padding:17px 34px;transition:background .3s}
+.close .cta:hover{background:var(--tan)}
+.close .fine{margin-top:120px;padding-top:24px;border-top:1px solid rgba(251,247,243,.15);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:9.5px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:#8B93A6}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+[data-hero]{opacity:0;animation:hin 1.2s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero="2"]{animation-delay:.25s}
+@keyframes hin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+@media (max-width:920px){
+  .nav{grid-template-columns:1fr auto}
+  .nav .l{display:none}
+  .pillars .grid,.jgrid{grid-template-columns:1fr}
+  .about .in{grid-template-columns:1fr;gap:44px}
+  .orow{grid-template-columns:1fr;gap:10px}
+  .orow .d{text-align:left;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="l"><a href="#about">About</a><span class="sep"></span><a href="#offer">Services</a><span class="sep"></span><a href="#journal">Journal</a></div>
+  <span class="lg">Counsel <em>by</em> Camille</span>
+  <div class="r"><a href="#quote">Stories</a><span class="sep"></span><a href="#contact">Contact</a></div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="ph" data-hero><img src="../img/quote.jpg" alt="Portrait placeholder"></div>
+  <div class="in" data-hero="2">
+    <h1 class="ser">Lead <span class="it">with</span> <span class="und">clarity.</span><br>Move <span class="it">with</span> <span class="und">intention.</span></h1>
+    <div class="sub">Business strategy for women who<br>already know their worth.</div>
+    <a class="cta" href="#contact">Begin the conversation</a>
+  </div>
+</header>
+
+<!-- PILLARS -->
+<section class="pillars">
+  <div class="head reveal"><h2 class="ser">Strategic support for women who lead — <span class="it">without losing themselves in the leading.</span></h2></div>
+  <div class="grid">
+    <div class="pcell reveal"><div class="n">I</div><h3 class="ser">Clarify</h3><p>Name the next right move — and release the seventeen others crowding it.</p></div>
+    <div class="pcell reveal"><div class="n">II</div><h3 class="ser">Align</h3><p>Build a business that reflects who you are now, not who you were at the start.</p></div>
+    <div class="pcell reveal"><div class="n">III</div><h3 class="ser">Advance</h3><p>Move with intention: quarterly rhythm, honest metrics, sustainable pace.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="in">
+    <div class="ph reveal"><img src="../img/portrait.jpg" alt="Coach portrait placeholder"></div>
+    <div class="reveal">
+      <span class="lbl" style="color:var(--tan)">The counsel</span>
+      <h2 class="ser" style="margin-top:18px">Why your best quarter ever <span class="it">didn't feel like it</span> — and what we do about that.</h2>
+      <p>Placeholder bio: after a decade advising founders, Camille built a quieter kind of practice — strategy sessions that slow you down enough to see the whole board, then move once, deliberately.</p>
+      <div class="sig">— Camille, placeholder founder</div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<section class="offer" id="offer">
+  <div class="head reveal"><h2 class="ser">Ways to work together</h2><span class="lbl">Three doors in</span></div>
+  <div>
+    <a class="orow reveal" href="#contact"><span class="n">01</span><span class="t ser">The Clarity <span class="it">Intensive</span></span><span class="d">One deep session. The whole board, seen at once. A decision made.</span></a>
+    <a class="orow reveal" href="#contact"><span class="n">02</span><span class="t ser">Quarterly <span class="it">Counsel</span></span><span class="d">A standing seat at your table — strategy, accountability, calm.</span></a>
+    <a class="orow reveal" href="#contact"><span class="n">03</span><span class="t ser">The <span class="it">Course</span></span><span class="d">Self-paced clarity work for the season you're actually in.</span></a>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote" id="quote">
+  <q class="reveal">This work helped me slow down enough to see what the business was trying to become — and then it moved faster than ever.</q>
+  <div class="who reveal">Placeholder client — founder &amp; creative director</div>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="head reveal"><h2 class="ser">From the journal</h2></div>
+  <div class="jgrid">
+    <a class="jcard reveal" href="#"><span class="k">Essays</span><h3 class="ser">the quiet metrics that actually predict a good year</h3><span class="more">Read</span></a>
+    <a class="jcard reveal" href="#"><span class="k">Practice</span><h3 class="ser">a ninety-minute quarterly review you'll keep doing</h3><span class="more">Read</span></a>
+    <a class="jcard reveal" href="#"><span class="k">Letters</span><h3 class="ser">on saying no to good opportunities</h3><span class="more">Read</span></a>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close" id="contact">
+  <h2 class="ser reveal">Clarify your next move — <span class="it">then make it.</span></h2>
+  <div class="reveal"><a class="cta" href="#">Request a consultation</a></div>
+  <div class="fine">
+    <span>© Counsel by Camille — template concept</span>
+    <span>hello@placeholder.com</span>
+    <span>By application</span>
+  </div>
+</section>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
