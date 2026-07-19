@@ -70,6 +70,21 @@ rediseño.
 | **Cobalt v25** | `/v25-gecko` | Práctica familiar moderna, millennials | Alta (5–6 en polaroids) | Medio | Crema + periwinkle #D5DBF2 |
 | **Wolverine v26** | `/v26-wolverine` | Grupo médico, multi-sede, institucional | Media (1 héroe panorámica) | Medio | Blanco/negro + foto |
 | **Genesis v27** | `/v27-genesis` | Transformaciones, narrativa de renacer | Media (4, duotono unifica) | Medio | Cocoa + crema-limón |
+| **Marlow v28** | `/v28-tuesday` | Agencia creativa, marca personal bold | Baja (2–3 editoriales) | Medio | Rojo eléctrico + rosa + violeta |
+| **Provenance v29** | `/v29-heritage` | Estudio creator, lifestyle, interiores | Slots dirigidos | Poco | Blanco + carbón + lino |
+| **Azure v30** | `/v30-capri` | Travel planner, hospitality, concierge | Slots de mar/costa | Medio | Navy + crema + azul |
+| **Ledger v31** | `/v31-chronicle` | Copywriters, consultores, educadores | Baja (1–2 B/N) | Mucho | Marfil + tinta + óxido |
+| **Elowen v32** | `/v32-alora` | Wedding planners, eventos, fotografía | Slots románticos | Poco | Crema + taupe + niebla |
+| **Voyenne v33** | `/v33-valenna` | Curador de viajes, marca personal dark | Slots de paisaje | Medio | Chocolate + off-white |
+| **Casa Mesa v34** | `/v34-mesamaison` | Hotel boutique, airbnb, venue | Slots cálidos (o ilustración) | Medio | Bone + oxblood + choc |
+| **Vera Nova v35** | `/v35-astramaven` | Coach/mentora, marca personal femenina | Baja (2–3 con actitud) | Medio | Carmesí degradado + crema |
+| **Camille v36** | `/v36-kimberly` | Coach ejecutiva, consultora, finanzas | Baja (2–3 sobrios) | Medio | Navy profundo + tan |
+| **Big Batch v37** | `/v37-bakery` | Food brand, panadería, marca juguetona | Cero (todo ilustrado) | Poco | Chocolate + rosa + colores |
+
+> Ronda 5 (v28–v37): plantillas construidas con marcas ficticias y contenido
+> placeholder original — el diseño emula el sistema del referente (tipos, paleta,
+> layout) y los slots de foto están dirigidos por arte. Sirven para cualquier
+> industria: se adaptan cambiando contenido y fotos, no el diseño.
 
 **Atajos de decisión:**
 - Fotos malas o pocas → **Mindmarket v18** (ilustración), **Bennett v13** / **Möbius v10** / **Luke v8** (tipografía) o **Zentro v5** / **Everswap v17** (el grade perdona).
@@ -154,9 +169,11 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 
 ---
 
-*Última actualización: ronda 4 completada — 26 plantillas (v2–v27) verificadas en
-producción con el contenido del piloto. Rondas 3–4 nacen de: caliora (clínicas),
-bennettandclive, olivergareis, landonorris, designxhand/experience, everswap,
-mindmarket, andrewcunliffe, vastspace, getty.edu/tracingart, sacredforests.earth,
-adcker/pacifica-beauty, ilcapoproduction, Cobalt Creative (Squarespace),
-wolverineworldwide y reimaginegenesis.*
+*Última actualización: ronda 5 completada — 37 plantillas (v2–v37) verificadas en
+producción. Rondas 3–4 nacen de referentes premium (caliora, bennettandclive,
+olivergareis, landonorris, designxhand, everswap, mindmarket, andrewcunliffe,
+vastspace, getty/tracingart, sacredforests, adcker, ilcapo, Cobalt, wolverine,
+genesis). Ronda 5 emula los sistemas de diseño de 10 templates Showit
+(hospitality, coaches, bodas, viajes, food) con contenido original — el book
+ya cubre industrias más allá de médicos. Profundización: v22 y v25 son sitios
+multi-página completos (v22: home+about+faq · v25: 6 páginas).*
