@@ -553,3 +553,39 @@ transform; robusto.
 0 ocultos, 10/10 pops visibles · R5 verificado a progress .48 →
 scale(1)|1|1.09(overshoot)|0 secuencial · STRESS svc fuera, moments 2,
 stats 2, título ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 17 · v19-cunliffe — CERRADA
+
+**Diagnóstico inicial:** el rail lateral era arreglo, no diseño: spy IO
+binario que saltaba de golpe, ghost numerals con addEventListener
+('scroll') crudo fuera del ticker, `.sky` con drift infinito, hero con
+keyframes heroin, alternancia frágil por nth-child, copy en HTML.
+
+**Qué cambié:**
+- R5a tinta fantasma: cada ghost numeral interpola su fill
+  `rgba(244,244,245,α)` con α = campana(progreso)·.10 — el contorno se
+  llena de tinta cuando su capítulo está en foco — más paralaje
+  translateY ±40px, todo por scrub en el ticker único.
+- R5b espina: el rail gana línea vertical con fill scaleY = progreso
+  global; el link activo y el ancho del tick (14→26px) se derivan del
+  progreso CONTINUO por distancia, no de un IO binario. El reloj real
+  del bar ahora muestra "HH:MM · NN%" de lectura.
+- Sky: drift infinito muere → translateY -220px mapeado al progreso.
+- Capítulos alternan por clase `.alt` explícita (nth-child eliminado);
+  numeración 0N/0M automática del array.
+- Tokens, 2 easings, R3 hairlines en border-top de capítulos/record,
+  `.phx` etiquetados, focus-visible.
+
+**Qué elevé:** el scroll por fin cuenta la historia: tinta que se
+enciende por capítulo + espina que avanza + porcentaje de lectura — el
+rail pasó de arreglo a instrumento narrativo.
+
+**Paso 4:** memorable sí (tinta fantasma); capítulos alternados + ghost
+±lado; ratio 14:1; motion continuo; 2 easings; nada anima layout;
+robusto.
+
+**Verificación:** batchcheck W19 ovf 0 d+m. robust19: REDUCED nm, 0
+ocultos, ghost fijo α.06, reloj sin % · R5 ghost α.063 + translateY
+-15px mid-approach, espina scaleY .45, rail on=Story tick 26px ·
+STRESS record fuera, capítulos 3 renumerados 01/03-03/03, 4 phx,
+statement ×2, ovf 0, 0 errores · MOBILE ovf 0.

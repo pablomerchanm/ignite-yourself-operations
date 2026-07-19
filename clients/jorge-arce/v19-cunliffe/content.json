@@ -1,0 +1,182 @@
+{
+ "_schema": "v19-cunliffe · novela nocturna por capítulos · Inter + serif. rich() admite <b><i><br>, <g>…</g> = gris realce, <h>…</h> = highlight blanco, <em> itálica serif. Capítulos EXACTO 3-6 (numeración y alternancia automáticas). Límites probados: record.cells EXACTO 2-3 · tags 3-6 · meta 2-4. src vacío = placeholder etiquetado. Fetch absoluto /v19-cunliffe/content.json.",
+ "meta": {
+  "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery · v19 Cunliffe",
+  "description": "Five chapters, two countries, one discipline. The story of Dr. Jorge Arce, board-certified oral & maxillofacial surgeon in the South Bay.",
+  "lang": "en"
+ },
+ "bar": {
+  "logo": "ARCE",
+  "loc": "South Bay",
+  "kbd": "Est. 2007"
+ },
+ "rail": [
+  {
+   "t": "Intro",
+   "h": "#intro"
+  },
+  {
+   "t": "About",
+   "h": "#about"
+  },
+  {
+   "t": "Story",
+   "h": "#story"
+  },
+  {
+   "t": "Contact",
+   "h": "#contact"
+  }
+ ],
+ "sections": [
+  {
+   "type": "hero",
+   "id": "intro",
+   "l1": "Jorge",
+   "l2": "Arce",
+   "since": "Since — 1999",
+   "statement": "Oral & maxillofacial surgeon taking the cases <g>other surgeons refer out.</g> <h>Board certified in implantology.</h> Patients keep their lives. <g>He keeps the craft.</g>",
+   "note": "“Above the fold” was never the point. The work is below — twenty-seven years of it. Scroll for the story.",
+   "scroll": "Scroll"
+  },
+  {
+   "type": "interlude",
+   "quote": "I never fit the mold of a <i>quick-fix</i> surgeon. Difficult work, done with care, <i>gives people their lives back.</i>",
+   "who": "Jorge Arce, D.D.S."
+  },
+  {
+   "type": "about",
+   "id": "about",
+   "k": "About",
+   "title": "The man behind <g>the work.</g>",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Dr. Jorge Arce",
+    "label": "FOTO — retrato editorial B/N"
+   },
+   "paras": [
+    "Jorge grew up in Colombia, the son of a family that valued precision and patience long before he ever held a scalpel. Medicine was not a career choice so much as a calling.",
+    "He moved to California to specialize and never left. Over <b>twenty-seven years</b> he built a practice on a single, unglamorous principle: <b>take the time the case actually needs.</b>"
+   ],
+   "tags": [
+    "Board Certified",
+    "Implantology",
+    "Full-Arch",
+    "Reconstruction",
+    "South Bay, CA"
+   ]
+  },
+  {
+   "type": "workhead",
+   "id": "story",
+   "title": "Story<g>.</g>",
+   "sub": "Five chapters. Two countries. One discipline, refined for nearly three decades."
+  },
+  {
+   "type": "chapters",
+   "items": [
+    {
+     "meta": "Colombia — where it began",
+     "title": "Precision was the <g>family trade.</g>",
+     "body": "Before the operating room there was a household that treated careful work as a form of respect. Jorge trained as a dentist in Colombia and found the discipline that would hold his attention for a lifetime: surgery of the mouth, face, and jaw.",
+     "serif": "Medicine was a way to use his hands to give something back.",
+     "img": {
+      "src": "/img/clinic.jpg",
+      "alt": "Dr. Arce in his clinic",
+      "cap": "Chapter 01 — Origins"
+     }
+    },
+    {
+     "meta": "California — the specialization",
+     "title": "He came to specialize. <g>He never left.</g>",
+     "body": "California offered the depth he was looking for: advanced implantology, complex extractions, reconstruction. He devoted his career entirely to oral and maxillofacial surgery — and to the cases most clinicians prefer to send elsewhere.",
+     "serif": "Board certified in implantology, he made the difficult cases his ordinary day.",
+     "img": {
+      "src": "/img/operating.jpg",
+      "alt": "",
+      "cap": "Chapter 02 — California"
+     }
+    },
+    {
+     "meta": "2007 — the Center",
+     "title": "A practice built on <g>one conviction.</g>",
+     "body": "In 2007 he founded the <b>Dental Implants Center of South Bay</b> — Redondo Beach and Torrance — guided by the belief that difficult work, done with care, gives people their lives back.",
+     "serif": "Not a volume clinic. A referral destination for the cases that need a surgeon willing to slow down.",
+     "img": {
+      "src": "/img/hero.jpg",
+      "alt": "",
+      "cap": "Chapter 03 — Est. 2007"
+     }
+    },
+    {
+     "meta": "The craft — six disciplines",
+     "title": "The work others <g>step away from.</g>",
+     "body": "Dental implants through full-arch All-On-X. Reconstruction where bone and tissue have been lost. Complex extractions, implant maintenance, pathology, and second opinions for patients facing hard decisions.",
+     "serif": "Not a list of services — the disciplines refined over nearly three decades.",
+     "img": {
+      "src": "/img/surgery.jpg",
+      "alt": "",
+      "cap": "Chapter 04 — The Craft"
+     }
+    },
+    {
+     "meta": "Today — South Bay, California",
+     "title": "Still reading. Still refining. <g>Still here.</g>",
+     "body": "Twenty-seven years in, he is a father, a mentor to younger surgeons, and a quiet student of his own craft — treating every patient as the person they are before the procedure they need.",
+     "cta": {
+      "t": "Tell me about your case →",
+      "h": "#contact"
+     },
+     "img": {
+      "src": "/img/speaking.jpg",
+      "alt": "",
+      "cap": "Chapter 05 — Today"
+     }
+    }
+   ]
+  },
+  {
+   "type": "record",
+   "cells": [
+    {
+     "n": "27 <em>yrs</em>",
+     "l": "Dedicated to oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Founder, Dental Implants Center of South Bay"
+    },
+    {
+     "n": "Board <em>certified</em>",
+     "l": "In dental implantology"
+    }
+   ]
+  },
+  {
+   "type": "contact",
+   "id": "contact",
+   "k": "Contact",
+   "title": "Have a case? <g>Let's talk.</g>",
+   "meta": [
+    {
+     "k": "Front desk",
+     "v": "(310) 327-4166",
+     "tel": true
+    },
+    {
+     "k": "Locations",
+     "v": "Redondo Beach · Torrance, CA"
+    },
+    {
+     "k": "Hours",
+     "v": "By appointment"
+    }
+   ],
+   "foot": [
+    "© Dr. Jorge Arce, D.D.S.",
+    "Dental Implants Center of South Bay",
+    "Since — 1999"
+   ]
+  }
+ ]
+}
