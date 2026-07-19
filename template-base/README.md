@@ -44,6 +44,9 @@ template-base/
 > placeholder — útil para ver el sistema completo antes de poblar.
 > La fuente de verdad es esta carpeta (`template-base/`); si editas el
 > template, re-copia `index.html`, `content.json`, `css/` y `js/` a esa ruta.
+> Nota: la copia desplegada usa paths absolutos `/base/...` en `index.html`
+> (Vercel canonicaliza `/base/` → `/base` y los paths relativos romperían);
+> `main.js` ya resuelve `content.json` desde su propia URL, sin cambios.
 
 ## Flujo de poblado en 5 pasos
 
