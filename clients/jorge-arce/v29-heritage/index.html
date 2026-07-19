@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provenance — A Creator Studio for the Considered Life</title>
+<meta name="description" content="Ethereal creator-agency template concept: giant hairline serif over textile photography, charcoal on white, script accents. Placeholder content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@400&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF; --linen:#EFECE6; --char:#303030; --dim:#8A8580;
+  --serif:'Cormorant',Georgia,serif; --script:'Dancing Script',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--white);color:var(--char);font-family:'Archivo',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--char);color:var(--white)}
+.lbl{font-size:9.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+
+/* linen photo slots */
+.slot{position:relative;overflow:hidden;background:linear-gradient(150deg,#E3DED6 0%,#D6CFC4 50%,#C9C0B2 100%)}
+.slot::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.14'/%3E%3C/svg%3E")}
+.slot .tag{position:absolute;left:12px;bottom:10px;z-index:2;font-size:8.5px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:rgba(48,48,48,.55)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden}
+.hero .slot{position:absolute;inset:0}
+.hero h1{position:relative;z-index:2;font-family:var(--serif);font-weight:300;text-transform:uppercase;
+  font-size:clamp(64px,12.6vw,186px);letter-spacing:.06em;line-height:.9;text-align:center;
+  margin-top:2vw;color:var(--char)}
+.hero .foot{position:relative;z-index:2;margin-top:auto;padding:0 5vw 44px;max-width:640px}
+.hero .foot .lbl{display:block;margin-bottom:12px}
+.hero .foot p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;line-height:1.6;color:var(--char)}
+
+/* ---------- intro ---------- */
+.intro{padding:150px 5vw;text-align:center}
+.intro h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.4vw,62px);line-height:1.25;max-width:980px;margin:0 auto}
+.intro h2 em{font-style:italic}
+.intro .cats{margin-top:40px;font-family:var(--serif);font-weight:300;text-transform:uppercase;
+  letter-spacing:.24em;font-size:clamp(14px,1.8vw,24px);color:var(--dim)}
+
+/* ---------- signature work ---------- */
+.work{padding:40px 5vw 140px}
+.work .head{text-align:center;margin-bottom:70px}
+.work .head h2{font-family:var(--serif);font-weight:300;text-transform:uppercase;
+  letter-spacing:.14em;font-size:clamp(30px,4.6vw,70px)}
+.wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto}
+.wcard .slot{aspect-ratio:3/4}
+.wcard:nth-child(2){transform:translateY(50px)}
+.wcard .t{margin-top:16px;font-family:var(--serif);font-weight:400;font-size:22px;text-align:center}
+.wcard .k{margin-top:4px;text-align:center}
+.work .cta{display:block;text-align:center;margin-top:110px}
+.work .cta a{font-size:10px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+  border-bottom:1px solid var(--char);padding-bottom:4px;transition:color .3s,border-color .3s}
+.work .cta a:hover{color:var(--dim);border-color:var(--dim)}
+
+/* ---------- meet band ---------- */
+.meet{background:var(--linen);padding:140px 5vw}
+.meet .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:center}
+.meet .slot{aspect-ratio:3/4}
+.meet h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4vw,56px);line-height:1.25}
+.meet h2 em{font-style:italic}
+.meet p{margin-top:26px;font-size:13.5px;line-height:1.9;color:#5C5751;max-width:460px}
+.meet .script{margin-top:30px;font-family:var(--script);font-size:34px;color:var(--char)}
+
+/* ---------- belief ---------- */
+.belief{padding:160px 5vw;text-align:center}
+.belief p{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3.6vw,48px);line-height:1.4;max-width:900px;margin:0 auto}
+.belief p em{font-style:italic}
+.belief .lbl{display:block;margin-top:36px}
+
+/* ---------- kind words ---------- */
+.kind{background:var(--char);color:var(--white);padding:150px 5vw;text-align:center}
+.kind .script{font-family:var(--script);font-size:clamp(40px,6vw,80px);line-height:1}
+.kind q{display:block;font-family:var(--serif);font-weight:300;font-style:italic;
+  font-size:clamp(22px,3vw,38px);line-height:1.5;max-width:860px;margin:40px auto 0;quotes:'“' '”'}
+.kind .who{margin-top:30px;font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:#B9B4AE}
+
+/* ---------- journal ---------- */
+.journal{padding:150px 5vw}
+.journal .head{text-align:center;margin-bottom:70px}
+.journal h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,4.4vw,60px)}
+.jgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto}
+.jcard .slot{aspect-ratio:4/3}
+.jcard .k{margin-top:16px}
+.jcard .t{margin-top:8px;font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.4}
+.jcard .more{display:inline-block;margin-top:14px;font-size:9.5px;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;border-bottom:1px solid var(--char);padding-bottom:3px}
+
+/* ---------- freebie ---------- */
+.freebie{background:var(--linen);padding:140px 5vw;text-align:center}
+.freebie h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,5vw,69px);line-height:1.1}
+.freebie h2 em{font-style:italic}
+.freebie p{margin-top:24px;font-size:13.5px;line-height:1.8;color:#5C5751;max-width:460px;margin-left:auto;margin-right:auto}
+.freebie form{margin-top:40px;display:flex;justify-content:center;gap:0;flex-wrap:wrap}
+.freebie input{border:1px solid var(--char);border-right:0;background:#fff;padding:15px 20px;
+  font-family:'Archivo';font-size:13px;width:min(300px,70vw);outline:none}
+.freebie button{border:1px solid var(--char);background:var(--char);color:#fff;padding:15px 26px;
+  font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;
+  font-family:'Archivo';transition:background .3s}
+.freebie button:hover{background:#4A4A4A}
+
+/* ---------- footer ---------- */
+.foot{padding:100px 5vw 40px;text-align:center}
+.foot .wm{font-family:var(--serif);font-weight:300;text-transform:uppercase;letter-spacing:.08em;
+  font-size:clamp(40px,7.5vw,110px);line-height:1}
+.foot .links{margin-top:36px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap}
+.foot .links a{font-size:9.5px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);transition:color .3s}
+.foot .links a:hover{color:var(--char)}
+.foot .fine{margin-top:70px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#B9B4AE}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1.1s cubic-bezier(.2,.6,.2,1),transform 1.1s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+[data-hero]{opacity:0;animation:hin 1.4s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero="2"]{animation-delay:.3s}
+@keyframes hin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+@media (max-width:920px){
+  .wgrid,.jgrid{grid-template-columns:1fr}
+  .wcard:nth-child(2){transform:none}
+  .meet .in{grid-template-columns:1fr;gap:44px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="slot"><span class="tag">slot foto — textil / lino en primer plano</span></div>
+  <h1 data-hero>Provenance</h1>
+  <div class="foot" data-hero="2">
+    <span class="lbl">Lifestyle · Home · Fashion · Travel &amp; everything in between</span>
+    <p>Provenance is a considered creator studio, devoted to original, unhurried content for brands that value the quiet details.</p>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="intro">
+  <h2 class="reveal">We are a small studio of <em>storytellers and stylists</em> who believe beautiful things deserve a beautiful telling.</h2>
+  <div class="cats reveal">content · interiors · fashion · travel</div>
+</section>
+
+<!-- SIGNATURE WORK -->
+<section class="work">
+  <div class="head reveal"><h2>Signature Work</h2></div>
+  <div class="wgrid">
+    <div class="wcard reveal"><div class="slot"><span class="tag">slot — campaña editorial</span></div>
+      <div class="t">The Linen Series</div><div class="k lbl">Campaign · placeholder</div></div>
+    <div class="wcard reveal"><div class="slot"><span class="tag">slot — interiores</span></div>
+      <div class="t">A House in the Hills</div><div class="k lbl">Interiors · placeholder</div></div>
+    <div class="wcard reveal"><div class="slot"><span class="tag">slot — viaje</span></div>
+      <div class="t">Slow Mornings, Lisbon</div><div class="k lbl">Travel · placeholder</div></div>
+  </div>
+  <div class="cta reveal"><a href="#">View the full portfolio</a></div>
+</section>
+
+<!-- MEET -->
+<section class="meet">
+  <div class="in">
+    <div class="slot reveal"><span class="tag">slot foto — retrato fundadora</span></div>
+    <div class="reveal">
+      <h2>Meet Wren — founder, stylist, <em>collector of quiet moments.</em></h2>
+      <p>Placeholder bio: after a decade styling homes and shoots for others, Wren opened Provenance to tell slower stories — the kind that hold up years later. She still irons the linens herself.</p>
+      <div class="script">Wren</div>
+    </div>
+  </div>
+</section>
+
+<!-- BELIEF -->
+<section class="belief">
+  <p class="reveal">We believe in crafting a curated life — <em>not a crowded one.</em> Fewer things, chosen well, photographed honestly.</p>
+  <span class="lbl reveal">the studio philosophy</span>
+</section>
+
+<!-- KIND WORDS -->
+<section class="kind">
+  <div class="script reveal">Kind Words</div>
+  <q class="reveal">Working with Provenance felt like handing our brand to someone who loved it as much as we do. Every frame came back better than the brief.</q>
+  <div class="who reveal">Placeholder client — home goods brand</div>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal">
+  <div class="head reveal"><h2>The Latest on the Journal</h2></div>
+  <div class="jgrid">
+    <div class="jcard reveal"><div class="slot"><span class="tag">slot — nota 1</span></div>
+      <div class="k lbl">Interiors</div><div class="t">On arranging a room around the morning light</div>
+      <a class="more" href="#">Read</a></div>
+    <div class="jcard reveal"><div class="slot"><span class="tag">slot — nota 2</span></div>
+      <div class="k lbl">Fashion</div><div class="t">A quiet wardrobe: ten pieces, one season</div>
+      <a class="more" href="#">Read</a></div>
+    <div class="jcard reveal"><div class="slot"><span class="tag">slot — nota 3</span></div>
+      <div class="k lbl">Travel</div><div class="t">The unhurried guide to a weekend away</div>
+      <a class="more" href="#">Read</a></div>
+  </div>
+</section>
+
+<!-- FREEBIE -->
+<section class="freebie">
+  <h2 class="reveal">Get the <em>Freebie</em></h2>
+  <p class="reveal">Our placeholder style guide: the checklist we run before every shoot — light, layers, and the details worth the extra hour.</p>
+  <form class="reveal" onsubmit="return false">
+    <input type="email" placeholder="Your email address" aria-label="Email">
+    <button type="submit">Send it</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wm reveal">Provenance</div>
+  <div class="links">
+    <a href="#">Portfolio</a><a href="#">About</a><a href="#">Journal</a><a href="#">Contact</a>
+  </div>
+  <div class="fine">© Provenance Studio — template concept · placeholder content</div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
