@@ -1094,3 +1094,37 @@ easings; solo transform; robusto.
 **Verificación:** batchcheck W33 ovf 0 d+m. robust33: REDUCED nm, 0
 ocultos, mitades quietas · R5 L −2.08vw / R +2.08vw mid-exit con ovf
 0 · STRESS wm ×2 ovf 0, quote fuera · MOBILE ovf 0.
+
+## 33 · v31-chronicle — CERRADA
+
+**Diagnóstico inicial:** The Ledger — el wordmark 250px con doble nav
+numerada es de las composiciones más finas del catálogo; mandato: solo
+motion quirúrgico. Tenía marquee `mq 26s infinite`, `.reveal` IO
+único, keyframes hin, copy en HTML.
+
+**Qué cambié (quirúrgico):**
+- R5 la mano escribe: las tres líneas manuscritas (nota del hero, nota
+  de la editora, anotación del retrato) viven en máscara horizontal y
+  se ESCRIBEN de izquierda a derecha con el scrub (translateX
+  −101%→0 con ease cuadrático) — la caligrafía de la marca, animada
+  como caligrafía. Reduced: escritas.
+- Marquee "featured" mapeado al paso del viewport (scrub, −25%); el
+  infinito murió.
+- Composición intacta: doble nav numerada 01-07 y nav2 con The Ledger
+  centrado restauradas EXACTAS del original (verificación visual
+  detectó mi markup divergente y se corrigió contra git).
+- Tokens, ritmo --sec afinado, catálogo R1/R2/R4, focus-visible.
+- Shell+loader: 8 secciones opcionales; cifras de results marcadas
+  como placeholder con su asterisco de honestidad conservado.
+
+**Qué elevé:** motion con la personalidad del estudio (escritura) sin
+tocar una composición que ya era la vara.
+
+**Paso 4:** memorable sí (la mano); wordmark hero / note centrada /
+svc bordered grid / feat banda / about split / results — intacto;
+motion continuo; 2 easings; solo transform; robusto.
+
+**Verificación:** batchcheck W31 ovf 0 d+m (×2, tras restaurar nav).
+robust31: REDUCED nm, 0 ocultos, 3/3 tintas planas · R5 tinta hero
+escrita (0%), note-sec −95% en curso · STRESS feat fuera, h1 ×2 sin
+foto → phx, ovf 0, 0 errores · MOBILE ovf 0.

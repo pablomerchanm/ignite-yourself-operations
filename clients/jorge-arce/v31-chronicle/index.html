@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Caveat:wght@500&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(104px,14vh,168px);
+
   --ivory:#FAF8F5; --ink:#131313; --stone:#CDC7BE; --rust:#B35F33;
   --serif:'Playfair Display',Georgia,serif; --hand:'Caveat',cursive;
 }
@@ -65,7 +70,7 @@ a{color:inherit;text-decoration:none}
   transform:rotate(4deg);max-width:200px;line-height:1.2}
 
 /* ---------- editor's note ---------- */
-.note-sec{padding:140px 6vw;text-align:center;border-top:1px solid var(--ink)}
+.note-sec{padding:calc(var(--sec)*1.05) 6vw;text-align:center;border-top:1px solid var(--ink)}
 .note-sec .lbl{color:var(--rust)}
 .note-sec h2{font-family:var(--serif);font-size:clamp(28px,4vw,54px);line-height:1.25;max-width:920px;margin:20px auto 0}
 .note-sec h2 em{font-style:italic}
@@ -86,14 +91,14 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- featured band ---------- */
 .feat{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:34px 6vw;overflow:hidden}
-.feat .in{display:flex;gap:60px;white-space:nowrap;animation:mq 26s linear infinite;width:max-content}
+.feat .in{display:flex;gap:60px;white-space:nowrap;will-change:transform;width:max-content}
 .feat span{font-family:var(--serif);font-size:20px}
 .feat span i{font-style:italic}
-@keyframes mq{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.feat .in{animation:none}}
+
+
 
 /* ---------- about ---------- */
-.about{padding:150px 6vw}
+.about{padding:var(--sec) 6vw}
 .about .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
 .about .phwrap{position:relative}
 .about .slot{aspect-ratio:3/4}
@@ -107,7 +112,7 @@ a{color:inherit;text-decoration:none}
 .about .cta:hover{background:#3A3A3A}
 
 /* ---------- results ---------- */
-.results{border-top:1px solid var(--ink);padding:130px 6vw;text-align:center}
+.results{border-top:1px solid var(--ink);padding:calc(var(--sec)*.9) 6vw;text-align:center}
 .results h2{font-family:var(--serif);font-size:clamp(28px,4vw,54px);line-height:1.15;max-width:860px;margin:0 auto}
 .results h2 em{font-style:italic}
 .rrow{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);
@@ -118,7 +123,7 @@ a{color:inherit;text-decoration:none}
 .results .fn{margin-top:22px;font-size:10px;color:#8A857E;letter-spacing:.06em}
 
 /* ---------- newsletter ---------- */
-.newsl{border-top:1px solid var(--ink);padding:130px 6vw;text-align:center}
+.newsl{border-top:1px solid var(--ink);padding:var(--sec) 6vw;text-align:center}
 .newsl .lbl{color:var(--rust)}
 .newsl h2{font-family:var(--serif);font-size:clamp(30px,4.6vw,64px);margin-top:14px}
 .newsl h2 em{font-style:italic}
@@ -139,12 +144,10 @@ a{color:inherit;text-decoration:none}
 .foot .fine{margin-top:60px;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A756D}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
-.reveal.rin{opacity:1;transform:none}
-[data-hero]{opacity:0;animation:hin 1.2s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero]{opacity:0;}
 [data-hero="2"]{animation-delay:.25s}
-@keyframes hin{to{opacity:1}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+
+
 @media (max-width:960px){
   .nav1 .links.r2{display:none}
   .hero .stage{grid-template-columns:1fr;gap:34px}
@@ -156,127 +159,162 @@ a{color:inherit;text-decoration:none}
   .about .in{grid-template-columns:1fr;gap:44px}
   .rrow{grid-template-columns:1fr}
 }
-</style>
-</head>
+
+/* ---------- rework: la mano escribe ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.hand .hmask{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hand .hmask i{display:inline-block;font-style:inherit;transform:translateX(-101%);will-change:transform}
+html.no-motion .hand .hmask i{transform:none}
+.phx{display:flex;align-items:center;justify-content:center;background:#e9e4da;color:#8a8478;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px;width:100%;height:100%}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#8a8478;font-size:14px}
+</style></head>
 <body>
-
-<nav class="nav1">
-  <div class="links">
-    <a href="#"><b>01</b>Home</a><a href="#about"><b>02</b>About</a><a href="#svc"><b>03</b>Services</a><a href="#results"><b>04</b>Portfolio</a>
-  </div>
-  <div class="links r2">
-    <a href="#"><b>05</b>Journal</a><a href="#"><b>06</b>Inquire</a><a href="#"><b>07</b>Shop</a>
-  </div>
-</nav>
-<div class="nav2">
-  <span class="side">Copywriting Services</span>
-  <span class="lg">The Ledger</span>
-  <span class="side r">Courses &amp; Templates</span>
-</div>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="wm" data-hero>LEDGER</div>
-  <div class="stage">
-    <div class="left" data-hero="2">
-      <h1>Conversion-based copy <em>for the</em> MODERN brand</h1>
-    </div>
-    <div class="midph" data-hero><div class="slot"><img src="../img/portrait.jpg" alt="Editorial portrait placeholder"></div></div>
-    <div class="right" data-hero="2">
-      <a href="#svc">Copywriting services <span>→</span></a>
-      <a href="#svc">Site copy that converts <span>→</span></a>
-      <a href="#svc">Education &amp; guides <span>→</span></a>
-    </div>
-    <span class="note">refined word nerd, at your service</span>
-  </div>
-</header>
-
-<!-- EDITOR'S NOTE -->
-<section class="note-sec">
-  <span class="lbl reveal">The Editor's Note</span>
-  <h2 class="reveal">Ready to get booked with words that sound like you — <em>on your best day?</em></h2>
-  <div class="hand reveal">you don't need louder. you need truer.</div>
-</section>
-
-<!-- SERVICES -->
-<section class="svc" id="svc">
-  <div class="sgrid">
-    <div class="scard reveal">
-      <div class="n">01</div>
-      <h3>Website Copy, <em>Signed &amp; Sealed</em></h3>
-      <p>Every page written to carry its weight — from the headline that stops the scroll to the button that gets clicked. Placeholder service copy.</p>
-      <div class="more"><span>Inquire</span></div>
-    </div>
-    <div class="scard reveal">
-      <div class="n">02</div>
-      <h3>Launch <em>Chronicles</em></h3>
-      <p>Email sequences and sales pages for launches that read like stories and close like clockwork.</p>
-      <div class="more"><span>Inquire</span></div>
-    </div>
-    <div class="scard reveal">
-      <div class="n">03</div>
-      <h3>The <em>Self-Serve</em> Shelf</h3>
-      <p>Templates and mini-courses for founders who write their own — with an editor looking over their shoulder.</p>
-      <div class="more"><span>Browse</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURED MARQUEE -->
-<div class="feat"><div class="in" aria-hidden="true">
-  <span>We've been featured in <i>Placeholder Weekly</i></span><span>·</span><span><i>The Copy Review*</i></span><span>·</span><span>Studio Notes*</span><span>·</span>
-  <span>We've been featured in <i>Placeholder Weekly</i></span><span>·</span><span><i>The Copy Review*</i></span><span>·</span><span>Studio Notes*</span><span>·</span>
-</div></div>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="in">
-    <div class="phwrap reveal">
-      <div class="slot"><img src="../img/quote.jpg" alt="Founder portrait placeholder"></div>
-      <span class="hand">enneagram 9w8 · chronic rewriter · your copy's best friend</span>
-    </div>
-    <div class="reveal">
-      <h2>The chronicle behind <em>The Ledger.</em></h2>
-      <p>Placeholder bio: a former journalist who fell for conversion copy, our founder built The Ledger on one belief — you don't need to sacrifice quality to sell well. Every sentence earns its place, or it goes.</p>
-      <a class="cta" href="#">Work together</a>
-    </div>
-  </div>
-</section>
-
-<!-- RESULTS -->
-<section class="results" id="results">
-  <h2 class="reveal">Quality that reads beautifully — <em>and converts anyway.</em></h2>
-  <div class="rrow">
-    <div class="rcell reveal"><div class="n">9+</div><div class="l">Years writing*</div></div>
-    <div class="rcell reveal"><div class="n">120</div><div class="l">Launches shipped*</div></div>
-    <div class="rcell reveal"><div class="n">∞</div><div class="l">Drafts, happily</div></div>
-  </div>
-  <div class="fn reveal">* placeholder figures — replaced with the client's real, verifiable numbers at launch.</div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsl">
-  <span class="lbl reveal">Stay in the know</span>
-  <h2 class="reveal">SEO &amp; website words, <em>weekly-ish.</em></h2>
-  <form class="reveal" onsubmit="return false">
-    <input type="email" placeholder="Your email address" aria-label="Email">
-    <button type="submit">Subscribe</button>
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer class="foot">
-  <div class="wm reveal">THE LEDGER</div>
-  <div class="links">
-    <a href="#">Home</a><a href="#about">About</a><a href="#svc">Services</a><a href="#results">Portfolio</a><a href="#">Journal</a><a href="#">Inquire</a>
-  </div>
-  <div class="fine">© The Ledger Studio — template concept · placeholder content</div>
-</footer>
-
+<nav class="nav1"><div class="links" id="nav1"></div><div class="links r2" id="nav1b"></div></nav>
+<div class="nav2" id="nav2"></div>
+<main id="site"></main>
+<noscript><div style="padding:6vh 28px;text-align:center;font-size:14px">The Ledger — template concept</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function img(im,alt){
+  if(im&&im.src)return'<img src="'+esc(im.src)+'" alt="'+esc(alt||im.alt||'')+'">';
+  return'<div class="phx">'+esc((im&&im.label)||'FOTO')+'</div>'}
+function hand(t){return'<span class="hmask"><i>'+esc(t)+'</i></span>'}
+
+var partials={
+hero:function(s){
+  return'<header class="hero" id="top" data-r2>'+
+  '<div class="wm wr">'+esc(s.wm)+'</div>'+
+  '<div class="stage">'+
+  '<div class="left wr"><h1>'+rich(s.h1)+'</h1></div>'+
+  '<div class="midph wr"><div class="slot">'+img(s.img)+'</div></div>'+
+  '<div class="right wr">'+(s.links||[]).map(function(l){return'<a href="'+esc(l.h)+'">'+esc(l.t)+' <span>→</span></a>'}).join('')+'</div>'+
+  '<span class="note hand" data-write>'+hand(s.note)+'</span>'+
+  '</div></header>'},
+noteSec:function(s){
+  return'<section class="note-sec" data-r2>'+
+  '<span class="lbl wr">'+esc(s.lbl)+'</span>'+
+  '<h2 class="wr">'+rich(s.h)+'</h2>'+
+  '<div class="hand wr" data-write>'+hand(s.hand)+'</div>'+
+  '</section>'},
+svc:function(s){
+  return'<section class="svc"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="sgrid" data-cards>'+
+  (s.cards||[]).map(function(cd,i){return'<div class="scard wr"><span class="n">'+('0'+(i+1)).slice(-2)+'</span>'+
+  '<h3>'+rich(cd.t)+'</h3><p>'+rich(cd.d)+'</p><a class="more" href="#newsl">'+esc(cd.cta)+'</a></div>'}).join('')+
+  '</div></section>'},
+feat:function(s){
+  var chunk=(s.items||[]).map(function(t,i){return'<span>'+(i===0?esc(t):'<i>'+esc(t)+'</i>')+'</span><span>·</span>'}).join('');
+  return'<section class="feat"><div class="in" id="featin">'+chunk+chunk+'</div></section>'},
+about:function(s){
+  return'<section class="about"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="in">'+
+  '<div class="phwrap wr" data-r1>'+img(s.img)+'<div class="hand" data-write>'+hand(s.hand)+'</div></div>'+
+  '<div data-r2><h2 class="wr">'+rich(s.h)+'</h2><p class="wr">'+rich(s.p)+'</p>'+
+  '<p class="wr" style="margin-top:26px"><a class="cta" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a></p></div>'+
+  '</div></section>'},
+results:function(s){
+  return'<section class="results"><h2 class="wr" data-r1>'+rich(s.h)+'</h2>'+
+  '<div class="rrow" data-cards>'+(s.cells||[]).map(function(cl){return'<div class="rcell wr"><div class="n">'+esc(cl.n)+'</div><div class="l">'+esc(cl.l)+'</div></div>'}).join('')+'</div>'+
+  '<div class="fn wr" data-r1>'+esc(s.fn)+'</div>'+
+  '</section>'},
+newsl:function(s){
+  var f=s.form||{};
+  return'<section class="newsl"'+(s.id?' id="'+esc(s.id)+'"':'')+' data-r2>'+
+  '<span class="lbl wr">'+esc(s.lbl)+'</span>'+
+  '<h2 class="wr">'+rich(s.h)+'</h2>'+
+  '<form class="wr" onsubmit="return false"><input type="email" placeholder="'+esc(f.field||'Email')+'" aria-label="'+esc(f.field||'Email')+'"><button type="submit">'+esc(f.btn||'Subscribe')+'</button></form>'+
+  '</section>'},
+foot:function(s){
+  return'<footer class="foot"><div class="wm">'+esc(s.wm)+'</div>'+
+  '<div class="links">'+(s.links||[]).map(function(l){return'<a href="'+esc(l.h)+'">'+esc(l.t)+'</a>'}).join('')+'</div>'+
+  '<div class="fine">'+esc(s.legal)+'</div></footer>'}
+};
+
+fetch('/v31-chronicle/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  if(c.nav){
+    document.getElementById('nav1').innerHTML=(c.nav.n1||[]).map(function(n){return'<a href="'+esc(n[2])+'"><b>'+esc(n[0])+'</b>'+esc(n[1])+'</a>'}).join('');
+    document.getElementById('nav1b').innerHTML=(c.nav.n2||[]).map(function(n){return'<a href="'+esc(n[2])+'"><b>'+esc(n[0])+'</b>'+esc(n[1])+'</a>'}).join('');
+    var subs=c.nav.subs||[];
+    document.getElementById('nav2').innerHTML='<span class="side">'+esc(subs[0]||'')+'</span><span class="lg">'+esc(subs[1]||'')+'</span><span class="side r">'+esc(subs[2]||'')+'</span>';
+  }
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* marquee featured mapeado al viewport */
+  var mq=document.getElementById('featin');
+  if(mq){
+    ScrollTrigger.create({trigger:'.feat',start:'top bottom',end:'bottom top',scrub:1.2,
+      onUpdate:function(self){mq.style.transform='translateX('+(-self.progress*25)+'%)'}});
+  }
+  /* R5 la mano escribe: las lineas manuscritas se escriben con el scrub */
+  document.querySelectorAll('[data-write]').forEach(function(el){
+    var ink=el.querySelector('.hmask i');
+    if(!ink)return;
+    ScrollTrigger.create({trigger:el,start:'top 90%',end:'top 55%',scrub:1.2,
+      onUpdate:function(self){var p=self.progress;
+        var e=1-Math.pow(1-p,2);
+        ink.style.transform='translateX('+(-(1-e)*101)+'%)';
+      }});
+  });
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
 })();
 </script>
 </body>

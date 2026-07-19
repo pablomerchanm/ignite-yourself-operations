@@ -1,0 +1,193 @@
+{
+ "_schema": "v31-chronicle · The Ledger, copy studio · Archivo + serif + hand. Motion quirúrgico: composición intacta. rich() admite <em><b><br>. svc.cards EXACTO 3 · results EXACTO 3 (cifras placeholder marcadas) · feat 3-6. src vacío = placeholder. Fetch absoluto /v31-chronicle/content.json.",
+ "meta": {
+  "title": "The Ledger — Conversion Copy Studio · v31 Chronicle",
+  "description": "Conversion-based copy for the modern brand. Template concept.",
+  "lang": "en"
+ },
+ "nav": {
+  "n1": [
+   [
+    "01",
+    "Home",
+    "#top"
+   ],
+   [
+    "02",
+    "About",
+    "#about"
+   ],
+   [
+    "03",
+    "Services",
+    "#svc"
+   ],
+   [
+    "04",
+    "Portfolio",
+    "#svc"
+   ]
+  ],
+  "n2": [
+   [
+    "05",
+    "Journal",
+    "#newsl"
+   ],
+   [
+    "06",
+    "Inquire",
+    "#newsl"
+   ],
+   [
+    "07",
+    "Shop",
+    "#svc"
+   ]
+  ],
+  "subs": [
+   "Copywriting Services",
+   "The Ledger",
+   "Courses & Templates"
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "wm": "LEDGER",
+   "h1": "Conversion-based copy <em>for the</em> MODERN brand",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Editorial portrait placeholder",
+    "label": "FOTO — retrato editorial"
+   },
+   "links": [
+    {
+     "t": "Copywriting services",
+     "h": "#svc"
+    },
+    {
+     "t": "Site copy that converts",
+     "h": "#svc"
+    },
+    {
+     "t": "Education & guides",
+     "h": "#svc"
+    }
+   ],
+   "note": "refined word nerd, at your service"
+  },
+  {
+   "type": "noteSec",
+   "lbl": "The Editor's Note",
+   "h": "Ready to get booked with words that sound like you — <em>on your best day?</em>",
+   "hand": "you don't need louder. you need truer."
+  },
+  {
+   "type": "svc",
+   "id": "svc",
+   "cards": [
+    {
+     "t": "Website Copy, <em>Signed & Sealed</em>",
+     "d": "Every page written to carry its weight — from the headline that stops the scroll to the button that gets clicked. Placeholder service copy.",
+     "cta": "Inquire"
+    },
+    {
+     "t": "Launch <em>Chronicles</em>",
+     "d": "Email sequences and sales pages for launches that read like stories and close like clockwork.",
+     "cta": "Inquire"
+    },
+    {
+     "t": "The <em>Self-Serve</em> Shelf",
+     "d": "Templates and mini-courses for founders who write their own — with an editor looking over their shoulder.",
+     "cta": "Browse"
+    }
+   ]
+  },
+  {
+   "type": "feat",
+   "items": [
+    "We've been featured in",
+    "Placeholder Weekly",
+    "The Copy Review*",
+    "Studio Notes*"
+   ]
+  },
+  {
+   "type": "about",
+   "id": "about",
+   "img": {
+    "src": "/img/quote.jpg",
+    "alt": "",
+    "label": "FOTO — la editora"
+   },
+   "hand": "enneagram 9w8 · chronic rewriter · your copy's best friend",
+   "h": "The chronicle behind <em>The Ledger.</em>",
+   "p": "Placeholder bio: a former journalist who fell for conversion copy, our founder built The Ledger on one belief — you don't need to sacrifice quality to sell well. Every sentence earns its place, or it goes.",
+   "cta": {
+    "t": "Work together",
+    "h": "#newsl"
+   }
+  },
+  {
+   "type": "results",
+   "h": "Quality that reads beautifully — <em>and converts anyway.</em>",
+   "cells": [
+    {
+     "n": "9+",
+     "l": "Years writing*"
+    },
+    {
+     "n": "120",
+     "l": "Launches shipped*"
+    },
+    {
+     "n": "∞",
+     "l": "Drafts, happily"
+    }
+   ],
+   "fn": "* placeholder figures — replaced with the client's real, verifiable numbers at launch."
+  },
+  {
+   "type": "newsl",
+   "id": "newsl",
+   "lbl": "Stay in the know",
+   "h": "SEO & website words, <em>weekly-ish.</em>",
+   "form": {
+    "field": "Your email",
+    "btn": "Subscribe"
+   }
+  },
+  {
+   "type": "foot",
+   "wm": "THE LEDGER",
+   "links": [
+    {
+     "t": "Home",
+     "h": "#top"
+    },
+    {
+     "t": "About",
+     "h": "#about"
+    },
+    {
+     "t": "Services",
+     "h": "#svc"
+    },
+    {
+     "t": "Portfolio",
+     "h": "#svc"
+    },
+    {
+     "t": "Journal",
+     "h": "#newsl"
+    },
+    {
+     "t": "Inquire",
+     "h": "#newsl"
+    }
+   ],
+   "legal": "© The Ledger Studio — template concept · placeholder content"
+  }
+ ]
+}
