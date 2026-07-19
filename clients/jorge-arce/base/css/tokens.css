@@ -29,7 +29,7 @@
   --text-sub:     clamp(1.25rem, 1.6vw, 1.4375rem); /* 20–23px — subheads */
   --text-head:    clamp(1.75rem, 2.6vw, 2.125rem);  /* 28–34px — títulos de card */
   --text-display: clamp(2.5rem, 4.2vw, 3.375rem);   /* 40–54px — títulos de sección */
-  --text-xl:      clamp(3.5rem, 9.5vw, 8.5rem);     /* 56–136px — wordmark del hero */
+  --text-xl:      clamp(3.5rem, 10.5vw, 10.5rem);   /* 56–168px — wordmark del hero */
 
   /* Line-height por rol (medido: 1.2 títulos · 1.8 body) */
   --leading-tight: 1.08;   /* wordmark / display XL */

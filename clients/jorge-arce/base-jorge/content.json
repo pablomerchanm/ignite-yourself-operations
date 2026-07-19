@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery, South Bay CA",
+    "description": "Board-certified implantology and oral surgery in Redondo Beach & Torrance. Twenty-seven years restoring function and rebuilding smiles. By appointment.",
+    "lang": "en"
+  },
+
+  "brand": {
+    "name": "Dr. Jorge Arce",
+    "shortName": "J.A.",
+    "wordmarkLines": ["Jorge", "Arce"]
+  },
+
+  "nav": {
+    "label": "Menu",
+    "links": [
+      { "text": "Home", "href": "#hero" },
+      { "text": "Disciplines", "href": "#disciplines" },
+      { "text": "Treatments", "href": "#treatments" },
+      { "text": "About", "href": "#about" },
+      { "text": "Contact", "href": "#footer" }
+    ],
+    "meta": [
+      "(310) 327-4166",
+      "Redondo Beach · Torrance — by appointment"
+    ]
+  },
+
+  "sections": [
+    {
+      "type": "announcement",
+      "surface": "dark",
+      "text": "New patient? Get the free guide: what to expect from your first consultation.",
+      "cta": { "text": "Send it over", "href": "#guide" }
+    },
+
+    {
+      "type": "hero",
+      "id": "hero",
+      "surface": "paper",
+      "eyebrow": "Oral & Maxillofacial Surgery · South Bay, California",
+      "portrait": { "src": "/img/portrait.jpg", "alt": "Dr. Jorge Arce, oral and maxillofacial surgeon", "ratio": "3:4", "tone": 1 },
+      "sub": "Restoring function and rebuilding smiles for twenty-seven years — dental implants, reconstruction, and the complex cases other clinicians refer out.",
+      "cta": { "text": "Book a consultation", "href": "#footer" }
+    },
+
+    {
+      "type": "paths",
+      "surface": "a",
+      "eyebrow": "Let's start with you",
+      "title": "What brings you in today?",
+      "cards": [
+        {
+          "title": "I'm missing one or more teeth",
+          "text": "From a single implant to full-arch All-On-X, we rebuild what was lost — function first, so you can eat, smile, and speak with confidence.",
+          "link": { "text": "That's me", "href": "#treatments" }
+        },
+        {
+          "title": "My dentist referred me",
+          "text": "You're in the right hands. We handle the extractions, pathology, and surgical cases general practices refer out — and report back every step.",
+          "link": { "text": "That's me", "href": "#disciplines" }
+        },
+        {
+          "title": "I want a second opinion",
+          "text": "Facing a complex decision? Bring your case. You'll leave with an honest, unhurried assessment of every option — including doing nothing.",
+          "link": { "text": "That's me", "href": "#footer" }
+        }
+      ]
+    },
+
+    {
+      "type": "featured",
+      "id": "disciplines",
+      "surface": "paper",
+      "eyebrow": "The practice",
+      "title": "Six disciplines. One standard.",
+      "lede": "Every case at the practice — routine or referred — is held to the same surgical standard, built over twenty-seven years in the South Bay.",
+      "items": [
+        {
+          "image": { "src": "/img/operating.jpg", "alt": "Dr. Arce placing a dental implant", "ratio": "4:5", "tone": 1 },
+          "title": "Dental Implants",
+          "text": "Single implants to full-arch All-On-X, placed with precision.",
+          "link": { "text": "Learn more", "href": "#treatments" }
+        },
+        {
+          "image": { "src": "/img/surgery.jpg", "alt": "Reconstructive oral surgery in progress", "ratio": "4:5", "tone": 2 },
+          "title": "Reconstruction",
+          "text": "Rebuilding function where bone and tissue have been lost.",
+          "link": { "text": "Learn more", "href": "#treatments" }
+        },
+        {
+          "image": { "src": "/img/clinic.jpg", "alt": "The clinic in Redondo Beach", "ratio": "4:5", "tone": 3 },
+          "title": "Complex Cases",
+          "text": "The extractions and surgeries other clinicians refer out.",
+          "link": { "text": "Learn more", "href": "#treatments" }
+        },
+        {
+          "image": { "src": "/img/hero.jpg", "alt": "Patient consultation at the practice", "ratio": "4:5", "tone": 1 },
+          "title": "Implant Maintenance",
+          "text": "Long-term care that protects restored smiles.",
+          "link": { "text": "Learn more", "href": "#treatments" }
+        },
+        {
+          "image": { "src": "/img/quote.jpg", "alt": "Clinical examination room", "ratio": "4:5", "tone": 2 },
+          "title": "Pathology",
+          "text": "Conditions of teeth, gums, and bone — diagnosed early.",
+          "link": { "text": "Learn more", "href": "#treatments" }
+        },
+        {
+          "image": { "src": "/img/speaking.jpg", "alt": "Dr. Arce speaking with a patient", "ratio": "4:5", "tone": 3 },
+          "title": "Second Opinions",
+          "text": "Clarity for patients facing complex decisions.",
+          "link": { "text": "Learn more", "href": "#footer" }
+        }
+      ]
+    },
+
+    {
+      "type": "splash",
+      "surface": "dark",
+      "eyebrow": "The work",
+      "statement": "Restoring function, rebuilding smiles, returning lives.",
+      "image": { "src": "/img/footer.jpg", "alt": "Surgical instruments prepared for a procedure", "ratio": "16:9", "tone": 2 }
+    },
+
+    {
+      "type": "credentials",
+      "surface": "c",
+      "eyebrow": "Credentials",
+      "title": "Twenty-seven years of board-certified practice in the South Bay.",
+      "badges": [
+        "Board Certified — Implantology",
+        "Est. 2007",
+        "27 Years of Practice",
+        "6 Surgical Disciplines",
+        "By Referral & Appointment"
+      ]
+    },
+
+    {
+      "type": "offers",
+      "id": "treatments",
+      "surface": "paper",
+      "eyebrow": "Treatments",
+      "title": "How I can help.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Dental Implants & All-On-X",
+          "tagline": "For missing teeth — from one implant to a full arch.",
+          "text": "Titanium implants placed with surgical precision, from a single tooth to full-arch All-On-X reconstruction. We plan every case on your anatomy, walk you through each step, and stay with you through healing and beyond.",
+          "image": { "src": "/img/operating.jpg", "alt": "Implant placement procedure", "ratio": "4:5", "tone": 1 },
+          "cta": { "text": "Book a consultation", "href": "#footer" }
+        },
+        {
+          "num": "02",
+          "title": "Reconstruction",
+          "tagline": "When bone and tissue have been lost — we rebuild.",
+          "text": "Grafting and reconstructive surgery that restores the foundation before the smile: bone, tissue, and bite. The cases that look impossible are often the ones with the most to gain — bring yours and let's look together.",
+          "image": { "src": "/img/surgery.jpg", "alt": "Reconstructive surgery", "ratio": "4:5", "tone": 2 },
+          "cta": { "text": "Book a consultation", "href": "#footer" }
+        },
+        {
+          "num": "03",
+          "title": "Complex Extractions & Referrals",
+          "tagline": "The cases general practices refer out — handled here.",
+          "text": "Impacted teeth, surgical extractions, and pathology, managed with the calm of twenty-seven years of doing exactly this. Referring dentists receive a full report at every stage — your patient comes back to you, grateful.",
+          "image": { "src": "/img/clinic.jpg", "alt": "The surgical suite", "ratio": "4:5", "tone": 3 },
+          "cta": { "text": "Refer a patient", "href": "#footer" }
+        }
+      ]
+    },
+
+    {
+      "type": "about",
+      "id": "about",
+      "surface": "a",
+      "eyebrow": "The man behind the work",
+      "title": "Function first. Beauty follows.",
+      "text": "I came to surgery the long way — trained in Colombia, licensed again from zero in California, and settled in the South Bay, where I opened this practice in 2007. Every step taught me the same lesson: shortcuts show up later, in someone's mouth.\n\nToday my work is simple to describe and demanding to do: restore what was lost, protect what remains, and tell every patient the truth about both. That standard doesn't bend — not for difficulty, and not for convenience.",
+      "images": [
+        { "src": "/img/speaking.jpg", "alt": "Dr. Arce in conversation", "ratio": "3:4", "tone": 2 },
+        { "src": "/img/clinic.jpg", "alt": "The Redondo Beach clinic", "ratio": "3:4", "tone": 3 }
+      ],
+      "cta": { "text": "Book a consultation", "href": "#footer" }
+    },
+
+    {
+      "type": "testimonials",
+      "surface": "b",
+      "eyebrow": "Patient stories",
+      "lead": {
+        "quote": "I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.",
+        "who": "Full-arch reconstruction patient — concept story, shared with permission"
+      },
+      "items": [
+        {
+          "quote": "When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.",
+          "who": "Dr. David Kim, D.D.S. — Referring Dentist, Torrance"
+        },
+        {
+          "quote": "The most thorough and honest surgeon I have ever met. He treated my father like family.",
+          "who": "Anabella C. — Daughter of patient"
+        },
+        {
+          "quote": "Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself.",
+          "who": "Robert T. — Patient"
+        }
+      ]
+    },
+
+    {
+      "type": "newsletter",
+      "id": "guide",
+      "surface": "paper",
+      "eyebrow": "Before your first visit",
+      "title": "Get the free guide: what to expect from your first consultation.",
+      "text": "Plain answers to the questions every new patient asks — sent straight to your inbox before you ever sit in the chair.",
+      "placeholder": "Your email address",
+      "cta": "Send it over",
+      "privacy": "We respect your privacy. No spam — just honest answers."
+    },
+
+    {
+      "type": "footer",
+      "id": "footer",
+      "surface": "dark",
+      "about": "Oral & maxillofacial surgery in the South Bay — implants, reconstruction, and complex cases, by referral and appointment since 2007.",
+      "columns": [
+        {
+          "label": "Navigation",
+          "links": [
+            { "text": "Home", "href": "#hero" },
+            { "text": "Disciplines", "href": "#disciplines" },
+            { "text": "Treatments", "href": "#treatments" },
+            { "text": "About", "href": "#about" }
+          ]
+        },
+        {
+          "label": "Contact",
+          "links": [
+            { "text": "(310) 327-4166", "href": "tel:+13103274166" },
+            { "text": "Redondo Beach · Torrance, CA", "href": "#" }
+          ]
+        },
+        {
+          "label": "Visits",
+          "links": [
+            { "text": "By appointment only", "href": "#" },
+            { "text": "Referring dentists welcome", "href": "#" }
+          ]
+        }
+      ],
+      "legal": [
+        "© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.",
+        "Est. 2007 — South Bay, California"
+      ]
+    }
+  ]
+}
