@@ -290,3 +290,40 @@ transform/paint only ✓.
 reduced ok.
 
 ---
+
+## 10 · v11-firma — CERRADA
+
+**Diagnóstico inicial:** el scroll horizontal era novedad frágil: lerp
+custom con body-height hack, rotador por `setInterval` infinito, reveals
+por IntersectionObserver — tres sistemas de motion desincronizados y una
+degradación mobile que dependía de un hack de altura. Copy 100% en HTML.
+
+**Qué cambié:**
+- Reescritura del mecanismo: pin GSAP de página completa
+  (`gsap.to(track,{x:-max})` + `pin:'#hwrap'` + `scrub:1.2` +
+  `invalidateOnRefresh`) — el travelling ES el R5 y corre en el ticker
+  único Lenis→GSAP.
+- Rotador scroll-driven: `setWord(floor(clamp(progress*4)*n))` en el
+  `onUpdate` del pin — mapeo continuo, murió el interval.
+- Reveals de panel vía `containerAnimation:hTween` con start 'left 88%'.
+- Rail nav mapea `offsetLeft/maxX` al rango del ScrollTrigger vía
+  `lenis.scrollTo`.
+- Mobile (<901px) y reduced-motion: columna vertical con reveals
+  normales, rotador fijo en última palabra — degradación diseñada.
+- content.json con 10 paneles (phero/pcase×2/pstate/pexp/pstats/
+  pstories/pjournal/pspeak/pfin), todos opcionales; tokens en `:root`;
+  `.phx` placeholders; `will-change:transform` solo en `.track` ≥901px.
+
+**Qué elevé:** el truco pasó de frágil a firme: un solo sistema de motion
+con progreso compartido (track+progress+rotador), y la página vertical
+mobile dejó de ser un dump.
+
+**Paso 4:** momento memorable sí (todo el sitio es el pin); paneles con
+anchos 48–92vw rompen el ritmo clónico; ratio 7.5:1; motion continuo en
+R5, 2 easings, nada anima layout; robusto con titular ×2 y sin fotos.
+
+**Verificación:** batchcheck W11 ovf 0 desktop+mobile. robust11:
+REDUCED no-motion ok, 0 `.wr` ocultos, rotador en 3/3, track sin
+transform · PIN track -3982px + progress 23% tras wheel · STRESS journal
+fuera → 0 nodos, stories→3, 4 `.phx`, track 14861px, 0 errores ·
+MOBILE ovf 0.
