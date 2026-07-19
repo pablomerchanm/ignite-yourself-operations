@@ -1,9 +1,26 @@
 /* ============================================================================
-   template.css — estructura del template. NO tocar para cambiar de marca:
-   todo color/fuente/tamaño/duración viene de tokens.css.
-   Cada sección es un partial opcional; su comportamiento mobile está definido
-   explícitamente en el bloque @media del final (breakpoint único: 768px,
-   como la referencia).
+   template.css — estructura del template (rediseño con carácter).
+   NO tocar para cambiar de marca: todo color/fuente/tamaño/duración viene
+   de tokens.css.
+
+   SISTEMA DE TRATAMIENTOS (regla dura: dos secciones consecutivas jamás
+   repiten tratamiento; solo splash y newsletter son centradas y nunca
+   se tocan):
+     T1 RAIL      — cabecera asimétrica 7/5: display izquierda, lede derecha
+                    alineada abajo, hairline superior. (paths, featured,
+                    offers, about)
+     T2 ROWS      — índice editorial: filas numeradas con hairline, sin
+                    cajas. (articles)
+     T3 BAND      — banda compacta full-width: display izquierda + objetos
+                    a la derecha, padding ×0.7. (credentials)
+     T4 MONUMENT  — statement a escala --text-xl, izquierda, lh compacto,
+                    recorte inferior deliberado. (splash, testimonials lead)
+     T5 CENTERED  — statement centrado clásico. (newsletter, único junto a
+                    splash; nunca adyacentes)
+   El ritmo vertical NO es uniforme: cada sección multiplica --space-section
+   (×0.7 banda · ×1 normal · ×1.25–1.4 aire). Varianza ±30% = referente.
+
+   Comportamiento mobile de cada sección: bloque @media al final.
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -25,9 +42,9 @@ a { color: inherit; }
 button { font: inherit; cursor: pointer; }
 
 /* ----------------------------------------------------------------------------
-   Superficies — rotación seccional full-bleed.
-   Regla del CTA vecino (auditoría §4): cada superficie resuelve --cta-bg
-   con OTRO tono del mismo set, nunca un acento externo.
+   Superficies — rotación seccional full-bleed (≈60% del área es saturada).
+   Regla del CTA vecino: cada superficie resuelve --cta-bg con OTRO tono
+   del set, nunca un acento externo.
    -------------------------------------------------------------------------- */
 
 .surface-paper { background: var(--paper); color: var(--ink);
@@ -42,7 +59,7 @@ button { font: inherit; cursor: pointer; }
   --cta-bg: var(--surface-a); --cta-ink: var(--ink); --frame: var(--on-dark); }
 
 /* ----------------------------------------------------------------------------
-   Primitivas compartidas
+   Primitivas
    -------------------------------------------------------------------------- */
 
 .section { padding-block: var(--space-section); }
@@ -73,7 +90,7 @@ button { font: inherit; cursor: pointer; }
   font-family: var(--font-serif);
   font-weight: var(--weight-display);
   font-size: var(--text-display);
-  line-height: var(--leading-head);
+  line-height: 1.04;
 }
 
 .head {
@@ -87,7 +104,30 @@ button { font: inherit; cursor: pointer; }
 .prose { max-width: var(--width-prose); }
 .prose p + p { margin-top: var(--space-2); }
 
-/* Botones — pill, hover solo color/opacidad a 200–300ms, cero layout shift */
+/* Hairline — la línea editorial del sistema. [data-rule] se dibuja al
+   entrar (scaleX 0→1) reforzando la estructura, no decorando. */
+.rule {
+  border: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.28;
+  transform-origin: left center;
+}
+
+/* T1 RAIL — cabecera asimétrica de sección: display izq. + lede der. abajo */
+.shead {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-4) var(--space-7);
+  align-items: end;
+  margin-bottom: var(--space-8);
+}
+.shead .rule { grid-column: 1 / -1; margin-bottom: var(--space-5); }
+.shead .display { max-width: 14ch; }
+.shead .shead-r { max-width: 44ch; justify-self: start; padding-bottom: 0.5em; }
+.shead .eyebrow { display: block; margin-bottom: var(--space-3); }
+
+/* Botones — pill, hover solo color/opacidad, cero layout shift */
 .btn {
   display: inline-block;
   font-family: var(--font-sans);
@@ -125,8 +165,7 @@ button { font: inherit; cursor: pointer; }
 }
 .textlink:hover { opacity: 0.75; }
 
-/* Placeholder de foto — bloque de color sólido con aspect ratio correcto
-   y label mono del tipo de foto requerida. Sustituir: poner "src" en content.json. */
+/* Placeholder de foto — bloque sólido + ratio + label mono */
 .ph {
   position: relative;
   width: 100%;
@@ -149,16 +188,13 @@ button { font: inherit; cursor: pointer; }
 }
 .ph > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
-/* Marco blanco tipo polaroid (retratos 3:4 / 4:5, auditoría §5) */
 .framed { background: var(--frame, var(--white)); padding: 12px; }
 
-/* Estado de reveal (JS). Grupo por sección; nunca por elemento suelto. */
 .will-reveal { opacity: 0; }
 html.no-motion .will-reveal { opacity: 1; }
 
 /* ----------------------------------------------------------------------------
-   NAV — hamburguesa pill flotante fija + overlay a pantalla completa
-   Mobile: idéntico (el patrón ya es mobile-first por naturaleza).
+   NAV — pill flotante + overlay. Mobile: idéntico.
    -------------------------------------------------------------------------- */
 
 .navpill {
@@ -211,30 +247,29 @@ html.no-motion .will-reveal { opacity: 1; }
 .menu .menu-meta { margin-top: var(--space-5); display: grid; gap: var(--space-1); justify-items: center; }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · announcement — bar de anuncio con CTA pill
-   Mobile: texto y CTA en columna centrada.
+   SECCIÓN · announcement — bar utilitaria, texto izq. + CTA der.
+   Mobile: columna centrada.
    -------------------------------------------------------------------------- */
 
 .s-announcement .inner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
+  justify-content: space-between;
+  gap: var(--space-4);
   flex-wrap: wrap;
-  text-align: center;
 }
 .s-announcement p { font-size: var(--text-body-s); font-weight: var(--weight-medium); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · hero — identidad: wordmark gigante ENTRELAZADO con el retrato
-   (línea 1 del nombre detrás de la figura, línea 2 delante — auditoría §5).
-   Mobile: se DESCOMPONE, no se escala: nombre → retrato → eyebrow → sub.
+   SECCIÓN · hero — identidad: wordmark entrelazado con el retrato.
+   Un viewport entero para dos palabras y una cara: el aire ES el lujo.
+   Mobile: nombre → retrato → eyebrow → sub, recompuesto.
    -------------------------------------------------------------------------- */
 
 .s-hero { position: relative; padding-block: var(--space-breather) 0; }
 .s-hero .stage {
   position: relative;
-  min-height: 82vh;
+  min-height: 92vh;
   display: grid;
   place-items: center;
 }
@@ -264,125 +299,150 @@ html.no-motion .will-reveal { opacity: 1; }
   z-index: 4;
   text-align: center;
   max-width: 46ch;
-  margin: var(--space-4) auto 0;
-  padding-bottom: var(--space-6);
+  margin: var(--space-6) auto 0;
+  padding-bottom: var(--space-8);
 }
-.s-hero .hero-cta { margin-top: var(--space-3); text-align: center; }
+.s-hero .hero-cta { margin-top: var(--space-4); text-align: center; }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · paths — segmentación por objetivo del visitante (2–4 rutas)
-   Mobile: columna única, cards a ancho completo.
+   SECCIÓN · paths — T1 RAIL + columnas hairline (sin cajas): cada ruta es
+   una columna con regla superior e índice mono, escalonadas en Y.
+   Mobile: columna única, sin escalón.
    -------------------------------------------------------------------------- */
 
-.s-paths .lede { text-align: center; margin-bottom: var(--space-6); }
-.s-paths .lede .display { margin-top: var(--space-2); }
 .s-paths .cards {
   display: grid;
   grid-template-columns: repeat(var(--cols, 3), 1fr);
-  gap: var(--space-4);
+  gap: var(--space-7) var(--space-6);
 }
 .s-paths .card {
-  background: var(--frame);
-  border-radius: var(--radius-soft);
-  padding: var(--space-5) var(--space-4);
+  border-top: 1px solid color-mix(in srgb, currentColor 34%, transparent);
+  padding-top: var(--space-4);
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-3);
   align-content: start;
-  text-align: center;
 }
-.s-paths .card .head { font-size: var(--text-sub); }
-.s-paths .card p { font-size: var(--text-body-s); }
-.s-paths .card .textlink { justify-self: center; }
+.s-paths .card:nth-child(2) { transform: translateY(var(--space-6)); }
+.s-paths .card:nth-child(3) { transform: translateY(calc(var(--space-6) * 2)); }
+.s-paths .cards { padding-bottom: calc(var(--space-6) * 2); } /* aire del escalón */
+.s-paths .card .idx { font-family: var(--font-mono); font-size: var(--text-eyebrow); letter-spacing: var(--track-eyebrow); opacity: 0.6; }
+.s-paths .card .head { font-size: var(--text-head); max-width: 14ch; }
+.s-paths .card p { font-size: var(--text-body-s); max-width: 34ch; }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · featured — galería densa (pico de densidad; el arquetipo que la
-   referencia reserva para su objetivo #1 de negocio).
-   Mobile: 1 columna; el grid de 3 se apila.
+   SECCIÓN · featured — T1 RAIL + grid 3 con escalón vertical central.
+   Padding ×1.15: es el pico de densidad y necesita marco de aire.
+   Mobile: 1 columna sin escalón.
    -------------------------------------------------------------------------- */
 
-.s-featured .lede { max-width: 62ch; margin-bottom: var(--space-6); }
-.s-featured .lede .display { margin-top: var(--space-2); }
+.s-featured { padding-block: calc(var(--space-section) * 1.15); }
 .s-featured .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  gap: var(--space-6) var(--space-5);
 }
-.s-featured .item {
-  display: grid;
-  gap: var(--space-2);
-  align-content: start;
-}
+.s-featured .item { display: grid; gap: var(--space-3); align-content: start; }
+.s-featured .item:nth-child(2) { transform: translateY(var(--space-7)); }
+.s-featured .grid { padding-bottom: var(--space-7); }
 .s-featured .item .head { font-size: var(--text-sub); }
 .s-featured .item p { font-size: var(--text-body-s); }
-.s-featured .after { margin-top: var(--space-6); text-align: center; }
+.s-featured .after { margin-top: var(--space-7); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · splash — banda narrativa full-bleed con un statement
-   Mobile: min-height menor; el statement baja de cuerpo.
+   SECCIÓN · splash — T4 MONUMENT: EL momento. Banda full-bleed con statement
+   a escala --text-xl, alineado abajo-izquierda, lh compacto y última línea
+   ROZANDO el borde inferior (recorte deliberado, como el wordmark del footer).
+   La imagen respira 1.4s (la única animación lenta de la página).
+   Mobile: escala por vw, mismo recorte.
    -------------------------------------------------------------------------- */
 
-.s-splash { display: grid; padding: 0; }
-.s-splash .ph { grid-area: 1 / 1; aspect-ratio: auto; min-height: 74vh; height: 100%; }
+.s-splash { display: grid; padding: 0; overflow: hidden; }
+.s-splash .ph { grid-area: 1 / 1; aspect-ratio: auto; min-height: 88vh; height: 100%; }
+.s-splash .ph > img, .s-splash .ph { will-change: transform; }
 .s-splash .statement {
   grid-area: 1 / 1;
   z-index: 2;
   display: grid;
-  place-items: center;
-  text-align: center;
-  padding: calc(var(--gutter) * 2) var(--gutter);
+  align-content: end;
+  padding: calc(var(--gutter) * 2) var(--gutter) 0;
 }
-.s-splash .statement .display { max-width: 22ch; color: var(--white); text-shadow: 0 1px 24px rgba(0,0,0,0.25); }
-.s-splash .statement .eyebrow { color: var(--white); margin-bottom: var(--space-2); }
-.s-splash .statement > div { display: grid; justify-items: center; }
+.s-splash .statement .eyebrow { color: var(--white); margin-bottom: var(--space-4); }
+.s-splash .statement .display {
+  font-size: clamp(3rem, 8.6vw, 8.25rem);
+  line-height: var(--leading-tight);
+  max-width: 100%;
+  color: var(--white);
+  text-shadow: 0 1px 28px rgba(0, 0, 0, 0.28);
+  margin-bottom: -0.12em;   /* la última línea se recorta contra el borde */
+}
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · media — autoridad por medio propio / straddle interno:
-   fondo dividido en dos tonos DENTRO de la sección y la imagen cruza el límite.
-   Mobile: fondo simple, imagen arriba, texto abajo.
+   SECCIÓN · media — split asimétrico 5/7 con straddle interno: la imagen
+   cruza el límite entre los dos fondos de la propia sección.
+   Mobile: fondo simple, imagen primero.
    -------------------------------------------------------------------------- */
 
 .s-media { background: linear-gradient(to bottom, var(--media-top, var(--paper)) 55%, var(--media-bottom, var(--surface-b)) 55%); }
 .s-media .split {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: var(--space-7);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--space-8);
   align-items: center;
 }
+.s-media .media { transform: translateY(var(--space-5)); }
 .s-media .txt { display: grid; gap: var(--space-3); justify-items: start; }
-.s-media .stats { display: flex; gap: var(--space-5); margin-top: var(--space-2); }
+.s-media .stats { display: flex; gap: var(--space-6); margin-top: var(--space-3); }
 .s-media .stats .num { font-family: var(--font-serif); font-size: var(--text-head); line-height: 1; }
 .s-media .stats .lbl { margin-top: 0.5em; }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · articles — grid de contenido (blog / recursos)
-   Mobile: 1 columna.
+   SECCIÓN · articles — T2 ROWS: índice editorial. Filas numeradas con
+   hairline, thumb pequeño a la derecha. Sin cajas, sin grid de cards.
+   Mobile: fila = columna (num+meta arriba, título, thumb oculto).
    -------------------------------------------------------------------------- */
 
-.s-articles .lede { text-align: center; margin-bottom: var(--space-6); }
-.s-articles .lede .display { margin-top: var(--space-2); }
-.s-articles .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
-.s-articles .item { display: grid; gap: var(--space-2); align-content: start; text-decoration: none; }
-.s-articles .item .head { font-size: var(--text-sub); transition: opacity var(--dur-hover) var(--ease-hover); }
-.s-articles .item:hover .head { opacity: 0.65; }
-.s-articles .item .meta { display: flex; gap: var(--space-2); }
-.s-articles .after { margin-top: var(--space-6); text-align: center; }
+.s-articles .rows { display: grid; }
+.s-articles .item {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto 96px;
+  gap: var(--space-5);
+  align-items: center;
+  padding-block: var(--space-5);
+  border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  text-decoration: none;
+  transition: opacity var(--dur-hover) var(--ease-hover);
+}
+.s-articles .item:last-child { border-bottom: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
+.s-articles .item:hover { opacity: 0.6; }
+.s-articles .item .idx { font-family: var(--font-mono); font-size: var(--text-eyebrow); letter-spacing: var(--track-eyebrow); opacity: 0.6; }
+.s-articles .item .head { font-size: var(--text-head); max-width: 26ch; }
+.s-articles .item .meta { display: grid; gap: var(--space-1); justify-items: end; text-align: right; }
+.s-articles .item .ph { width: 96px; }
+.s-articles .after { margin-top: var(--space-7); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · credentials — sellos/badges de autoridad en fila + statement
-   Mobile: badges en fila de 2, se envuelven.
+   SECCIÓN · credentials — T3 BAND: banda compacta (padding ×0.7), display
+   a la izquierda (máx 16ch) + sellos alineados a la derecha en fila.
+   Mobile: columna, sellos en fila envolvente.
    -------------------------------------------------------------------------- */
 
-.s-credentials .inner { text-align: center; }
-.s-credentials .display { max-width: 26ch; margin: var(--space-2) auto 0; }
+.s-credentials { padding-block: calc(var(--space-section) * 0.7); }
+.s-credentials .band {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: var(--space-6) var(--space-7);
+  align-items: center;
+}
+.s-credentials .band-l { display: grid; gap: var(--space-3); justify-items: start; }
+.s-credentials .display { max-width: 20ch; font-size: clamp(2rem, 3.2vw, 2.875rem); }
 .s-credentials .badges {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  gap: var(--space-5);
-  margin-top: var(--space-6);
+  gap: var(--space-4);
 }
 .s-credentials .badge {
-  width: 132px;
+  width: 128px;
   aspect-ratio: 1;
   border: 1px solid currentColor;
   border-radius: 50%;
@@ -392,85 +452,112 @@ html.no-motion .will-reveal { opacity: 1; }
   text-align: center;
   line-height: 1.5;
 }
+.s-credentials .badge:nth-child(even) { transform: translateY(var(--space-4)); }
+.s-credentials .badges { padding-bottom: var(--space-4); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · offers — escalera de N cards con CADENCIA UNIFORME (mismo alto de
-   ritmo, split alternado). Numeradas: previsibilidad = confianza (auditoría §7).
-   Mobile: cada card se apila (media arriba, texto abajo), sin alternancia.
+   SECCIÓN · offers — T1 RAIL + escalera de splits 6/6 alternados con numeral
+   fantasma a escala monumental asomando tras la imagen. Cadencia uniforme.
+   Padding ×1.25 y gap ×8: donde se pide dinero, el aire da confianza.
+   Mobile: apilado, numeral reducido, sin alternancia.
    -------------------------------------------------------------------------- */
 
-.s-offers .lede { text-align: center; margin-bottom: var(--space-7); }
-.s-offers .lede .display { margin-top: var(--space-2); }
-.s-offers .ladder { display: grid; gap: var(--space-7); }
+.s-offers { padding-block: calc(var(--space-section) * 1.25); }
+.s-offers .ladder { display: grid; gap: calc(var(--space-8) * 1.25); }
 .s-offers .offer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-7);
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: var(--space-8);
   align-items: center;
-  min-height: 480px;      /* cadencia: todas heredan el mismo alto de ritmo */
+  min-height: 520px;
 }
 .s-offers .offer:nth-child(even) .media { order: 2; }
+.s-offers .offer .media { position: relative; }
+.s-offers .offer .ghost {
+  position: absolute;
+  z-index: 0;
+  top: -0.28em;
+  left: -0.22em;
+  font-family: var(--font-serif);
+  font-weight: var(--weight-display);
+  font-size: var(--text-xl);
+  line-height: 1;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.s-offers .offer:nth-child(even) .ghost { left: auto; right: -0.22em; }
+.s-offers .offer .framed { position: relative; z-index: 1; }
 .s-offers .offer .txt { display: grid; gap: var(--space-3); justify-items: start; }
 .s-offers .offer .num {
   font-family: var(--font-mono);
   font-size: var(--text-eyebrow);
   letter-spacing: var(--track-eyebrow);
 }
+.s-offers .offer .display { font-size: clamp(2.25rem, 3.4vw, 3rem); }
 .s-offers .offer .tagline { font-weight: var(--weight-medium); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · about — la persona detrás (split + collage de retratos enmarcados)
-   Mobile: texto primero, collage después en fila horizontal scrolleable.
+   SECCIÓN · about — split 7/5, collage con offset vertical.
+   Mobile: texto primero, collage en fila scrolleable.
    -------------------------------------------------------------------------- */
 
 .s-about .split {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: var(--space-7);
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--space-8);
   align-items: center;
 }
 .s-about .txt { display: grid; gap: var(--space-3); justify-items: start; }
+.s-about .txt .display { max-width: 14ch; }
 .s-about .collage {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-3);
 }
-.s-about .collage .framed:nth-child(2) { transform: translateY(var(--space-5)); }
+.s-about .collage .framed:nth-child(2) { transform: translateY(var(--space-6)); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · testimonials — 1 cita grande + grid de citas cortas
-   Mobile: todo en columna.
+   SECCIÓN · testimonials — T4: cita líder monumental a la IZQUIERDA con
+   comilla colgante fuera del margen; citas cortas como columnas hairline.
+   Padding ×1.15. Mobile: columna; comilla dentro del margen.
    -------------------------------------------------------------------------- */
 
-.s-testimonials .lead-quote { text-align: center; max-width: 34ch; margin-inline: auto; }
-.s-testimonials .lead-quote .display { font-style: italic; }
-.s-testimonials .lead-quote .who { margin-top: var(--space-3); }
+.s-testimonials { padding-block: calc(var(--space-section) * 1.15); }
+.s-testimonials .lead-quote { position: relative; }
+.s-testimonials .lead-quote .eyebrow { display: block; margin-bottom: var(--space-5); }
+.s-testimonials .lead-quote .display {
+  font-style: italic;
+  max-width: 19ch;         /* ch del propio display, no del contenedor */
+  text-indent: -0.38em;    /* comilla colgante fuera de la caja de texto */
+}
+.s-testimonials .lead-quote .who { margin-top: var(--space-4); }
 .s-testimonials .grid {
   display: grid;
   grid-template-columns: repeat(var(--cols, 3), 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-7);
+  gap: var(--space-6) var(--space-6);
+  margin-top: calc(var(--space-8) * 1.1);
 }
 .s-testimonials .q {
-  background: var(--frame);
-  border-radius: var(--radius-soft);
-  padding: var(--space-4);
+  border-top: 1px solid color-mix(in srgb, currentColor 34%, transparent);
+  padding-top: var(--space-4);
   display: grid;
   gap: var(--space-3);
-  align-content: space-between;
+  align-content: start;
 }
 .s-testimonials .q p { font-size: var(--text-body-s); }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · newsletter — captura relacional (encuadre íntimo, no transaccional)
-   Mobile: input y botón apilados a ancho completo.
+   SECCIÓN · newsletter — T5 CENTERED (la única, junto a splash) con aire
+   incómodo: padding ×1.4. El cierre desacelera.
+   Mobile: form apilado.
    -------------------------------------------------------------------------- */
 
-.s-newsletter .inner { text-align: center; max-width: 54ch; margin-inline: auto; }
-.s-newsletter .display { margin-top: var(--space-2); }
-.s-newsletter p { margin-top: var(--space-3); }
+.s-newsletter { padding-block: calc(var(--space-section) * 1.4); }
+.s-newsletter .inner { text-align: center; max-width: 56ch; margin-inline: auto; }
+.s-newsletter .display { margin-top: var(--space-3); }
+.s-newsletter p { margin-top: var(--space-4); }
 .s-newsletter form {
-  margin-top: var(--space-5);
+  margin-top: var(--space-6);
   display: flex;
   gap: var(--space-2);
   justify-content: center;
@@ -486,11 +573,11 @@ html.no-motion .will-reveal { opacity: 1; }
   min-width: 280px;
 }
 .s-newsletter input::placeholder { color: inherit; opacity: 0.55; }
-.s-newsletter .privacy { margin-top: var(--space-3); opacity: 0.7; }
+.s-newsletter .privacy { margin-top: var(--space-4); opacity: 0.7; }
 
 /* ----------------------------------------------------------------------------
-   SECCIÓN · footer — sitemap + contacto + wordmark gigante recortado
-   Mobile: columnas apiladas; wordmark escala por vw y sigue recortado.
+   SECCIÓN · footer — sitemap + wordmark gigante recortado.
+   Mobile: columnas apiladas.
    -------------------------------------------------------------------------- */
 
 .s-footer { padding-bottom: 0; }
@@ -498,7 +585,7 @@ html.no-motion .will-reveal { opacity: 1; }
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: var(--space-5);
-  padding-bottom: var(--space-7);
+  padding-bottom: var(--space-8);
 }
 .s-footer .col { display: grid; gap: var(--space-2); align-content: start; justify-items: start; }
 .s-footer .col .micro { opacity: 0.6; margin-bottom: var(--space-1); }
@@ -521,13 +608,13 @@ html.no-motion .will-reveal { opacity: 1; }
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: -0.06em;   /* recorte inferior deliberado */
+  margin-bottom: -0.06em;
   opacity: 0.9;
   pointer-events: none;
 }
 
 /* ----------------------------------------------------------------------------
-   Estados de error del loader (content.json ausente / inválido)
+   Estados de error del loader
    -------------------------------------------------------------------------- */
 
 .load-error {
@@ -542,8 +629,7 @@ html.no-motion .will-reveal { opacity: 1; }
 }
 
 /* ============================================================================
-   MOBILE — breakpoint único 768px (como la referencia).
-   Cada sección se RECOMPONE, no se escala (auditoría §2).
+   MOBILE — breakpoint único 768px. Cada sección se RECOMPONE, no se escala.
    ========================================================================== */
 
 @media (max-width: 768px) {
@@ -551,7 +637,15 @@ html.no-motion .will-reveal { opacity: 1; }
 
   .navpill { top: 14px; right: 14px; }
 
-  /* hero: descomposición total — nombre, retrato, eyebrow, sub */
+  /* cabecera rail: columna, lede debajo del display */
+  .shead { grid-template-columns: 1fr; align-items: start; margin-bottom: var(--space-6); }
+  .shead .rule { margin-bottom: var(--space-4); }
+  .shead .shead-r { padding-bottom: 0; }
+
+  /* announcement: columna centrada */
+  .s-announcement .inner { flex-direction: column; text-align: center; }
+
+  /* hero: nombre → retrato → eyebrow → sub */
   .s-hero .stage { min-height: 0; display: grid; place-items: initial; }
   .s-hero .portrait { width: min(78vw, 340px); margin-inline: auto; }
   .s-hero .name {
@@ -560,38 +654,54 @@ html.no-motion .will-reveal { opacity: 1; }
     font-size: clamp(2.6rem, 13vw, 4rem);
   }
   .s-hero .name .line-back, .s-hero .name .line-front { transform: none; }
-  .s-hero .hero-sub { padding-bottom: var(--space-5); }
+  .s-hero .hero-sub { margin-top: var(--space-5); padding-bottom: var(--space-6); }
 
-  /* paths: columna única */
-  .s-paths .cards { grid-template-columns: 1fr; }
+  /* paths: columna única, sin escalón */
+  .s-paths .cards { grid-template-columns: 1fr; gap: var(--space-6); padding-bottom: 0; }
+  .s-paths .card:nth-child(2), .s-paths .card:nth-child(3) { transform: none; }
 
-  /* featured: columna única */
-  .s-featured .grid { grid-template-columns: 1fr; gap: var(--space-6); }
+  /* featured: 1 columna, sin escalón */
+  .s-featured { padding-block: var(--space-section); }
+  .s-featured .grid { grid-template-columns: 1fr; gap: var(--space-6); padding-bottom: 0; }
+  .s-featured .item:nth-child(2) { transform: none; }
 
-  /* splash: banda más corta */
-  .s-splash .ph { min-height: 58vh; }
+  /* splash: banda más corta, statement escala por vw (mismo recorte) */
+  .s-splash .ph { min-height: 62vh; }
+  .s-splash .statement .display { font-size: clamp(2.4rem, 11vw, 4rem); }
 
-  /* media: fondo simple (el straddle desaparece), imagen primero */
+  /* media: fondo simple, imagen primero, sin straddle */
   .s-media { background: var(--media-bottom, var(--surface-b)); }
   .s-media .split { grid-template-columns: 1fr; gap: var(--space-5); }
-  .s-media .split .media { order: -1; }
+  .s-media .split .media { order: -1; transform: none; }
   .s-media .stats { gap: var(--space-4); flex-wrap: wrap; }
 
-  /* articles: columna única */
-  .s-articles .grid { grid-template-columns: 1fr; gap: var(--space-6); }
+  /* articles: fila → columna; thumb oculto, meta bajo el título */
+  .s-articles .item {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    padding-block: var(--space-4);
+  }
+  .s-articles .item .meta { justify-items: start; text-align: left; display: flex; gap: var(--space-3); }
+  .s-articles .item .ph { display: none; }
 
-  /* credentials: badges más pequeños, 2 por fila aprox */
-  .s-credentials .badges { gap: var(--space-3); }
-  .s-credentials .badge { width: 112px; }
+  /* credentials: columna, sellos envolventes sin offset */
+  .s-credentials { padding-block: var(--space-section); }
+  .s-credentials .band { grid-template-columns: 1fr; }
+  .s-credentials .badges { justify-content: flex-start; gap: var(--space-3); padding-bottom: 0; }
+  .s-credentials .badge { width: 108px; }
+  .s-credentials .badge:nth-child(even) { transform: none; }
 
-  /* offers: apilado, media arriba SIEMPRE (sin alternancia), sin alto mínimo */
+  /* offers: apilado, media arriba, numeral fantasma contenido */
+  .s-offers { padding-block: var(--space-section); }
   .s-offers .offer { grid-template-columns: 1fr; gap: var(--space-4); min-height: 0; }
   .s-offers .offer:nth-child(even) .media { order: 0; }
   .s-offers .offer .media { order: 0; }
   .s-offers .offer .txt { order: 1; }
-  .s-offers .ladder { gap: var(--space-7); }
+  .s-offers .offer .ghost { font-size: clamp(3.5rem, 18vw, 5.5rem); top: -0.2em; left: -0.08em; }
+  .s-offers .offer:nth-child(even) .ghost { right: -0.08em; }
+  .s-offers .ladder { gap: var(--space-8); }
 
-  /* about: texto primero; collage en fila scrolleable horizontal */
+  /* about: texto primero; collage scrolleable horizontal */
   .s-about .split { grid-template-columns: 1fr; gap: var(--space-5); }
   .s-about .collage {
     grid-template-columns: none;
@@ -603,10 +713,14 @@ html.no-motion .will-reveal { opacity: 1; }
   }
   .s-about .collage .framed:nth-child(2) { transform: none; }
 
-  /* testimonials: columna */
-  .s-testimonials .grid { grid-template-columns: 1fr; }
+  /* testimonials: columna; comilla dentro del margen */
+  .s-testimonials { padding-block: var(--space-section); }
+  .s-testimonials .lead-quote { max-width: none; }
+  .s-testimonials .lead-quote .display { text-indent: 0; }
+  .s-testimonials .grid { grid-template-columns: 1fr; margin-top: var(--space-7); }
 
-  /* newsletter: form apilado a ancho completo */
+  /* newsletter: form apilado */
+  .s-newsletter { padding-block: calc(var(--space-section) * 1.1); }
   .s-newsletter form { flex-direction: column; align-items: stretch; }
   .s-newsletter input { min-width: 0; }
   .s-newsletter .btn { text-align: center; }
