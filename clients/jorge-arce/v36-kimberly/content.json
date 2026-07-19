@@ -1,0 +1,148 @@
+{
+ "_schema": "v36-kimberly · Counsel by Camille, navy sobria · Archivo + serif 200. rich() admite <b><br>, <i>…</i> itálica tan. quote.lines EXACTO 2-4 (el consejo se pronuncia línea a línea). pillars EXACTO 3 · offers 2-4 · journal 0-3. src vacío = placeholder. Fetch absoluto /v36-kimberly/content.json.",
+ "meta": {
+  "title": "Counsel by Camille — Business Strategy · v36 Kimberly",
+  "description": "Business strategy for women who already know their worth. Template concept.",
+  "lang": "en"
+ },
+ "nav": {
+  "l": [
+   {
+    "t": "About",
+    "h": "#about"
+   },
+   {
+    "t": "Services",
+    "h": "#offer"
+   },
+   {
+    "t": "Journal",
+    "h": "#journal"
+   }
+  ],
+  "logo": "Counsel <i>by</i> Camille",
+  "r": [
+   {
+    "t": "Stories",
+    "h": "#quote"
+   },
+   {
+    "t": "Contact",
+    "h": "#close"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Founder portrait placeholder",
+    "label": "FOTO — retrato hero"
+   },
+   "title": "Lead <i>with</i> clarity.<br>Move <i>with</i> intention.",
+   "sub": "Business strategy for women who already know their worth.",
+   "cta": {
+    "t": "Begin the conversation",
+    "h": "#close"
+   }
+  },
+  {
+   "type": "pillars",
+   "head": "Strategic support for women who lead — <i>without losing themselves in the leading.</i>",
+   "cells": [
+    {
+     "n": "I",
+     "t": "Clarify",
+     "d": "Name the next right move — and release the seventeen others crowding it."
+    },
+    {
+     "n": "II",
+     "t": "Align",
+     "d": "Build a business that reflects who you are now, not who you were at the start."
+    },
+    {
+     "n": "III",
+     "t": "Advance",
+     "d": "Move with intention: quarterly rhythm, honest metrics, sustainable pace."
+    }
+   ]
+  },
+  {
+   "type": "about",
+   "id": "about",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Coach portrait placeholder",
+    "label": "FOTO — retrato 3:4"
+   },
+   "lbl": "The counsel",
+   "h": "Why your best quarter ever <i>didn't feel like it</i> — and what we do about that.",
+   "p": "Placeholder bio: after a decade advising founders, Camille built a quieter kind of practice — strategy sessions that slow you down enough to see the whole board, then move once, deliberately.",
+   "sig": "— Camille, placeholder founder"
+  },
+  {
+   "type": "offer",
+   "id": "offer",
+   "head": "Ways to work together",
+   "lbl": "Three doors in",
+   "rows": [
+    {
+     "t": "The Clarity Intensive",
+     "d": "One deep session. The whole board, seen at once. A decision made."
+    },
+    {
+     "t": "Quarterly Counsel",
+     "d": "A standing seat at your table — strategy, accountability, calm."
+    },
+    {
+     "t": "The Course",
+     "d": "Self-paced clarity work for the season you're actually in."
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "id": "quote",
+   "lines": [
+    "This work helped me slow down enough",
+    "to see what the business was trying to become —",
+    "and then it moved faster than ever."
+   ],
+   "who": "Placeholder client — founder & creative director"
+  },
+  {
+   "type": "journal",
+   "id": "journal",
+   "head": "From the journal",
+   "cards": [
+    {
+     "k": "Essays",
+     "t": "the quiet metrics that actually predict a good year"
+    },
+    {
+     "k": "Practice",
+     "t": "a ninety-minute quarterly review you'll keep doing"
+    },
+    {
+     "k": "Letters",
+     "t": "on saying no to good opportunities"
+    }
+   ]
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "title": "Clarify your next move — <i>then make it.</i>",
+   "cta": {
+    "t": "Request a consultation",
+    "h": "#top"
+   },
+   "fine": [
+    "© Counsel by Camille — template concept",
+    "hello@placeholder.com",
+    "By application"
+   ]
+  }
+ ]
+}

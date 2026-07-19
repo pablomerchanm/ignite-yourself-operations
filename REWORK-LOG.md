@@ -1035,3 +1035,33 @@ motion continuo; 2 easings; solo transform+opacity; robusto (titular
 ocultos, velos ausentes · R5 velo hero op .08 tY −14%, velo band .27
 mid-scrub · STRESS titulares ×2 ovf 0, kind fuera, steps 3, 0
 errores · MOBILE ovf 0.
+
+## 31 · v36-kimberly — CERRADA
+
+**Diagnóstico inicial:** Counsel by Camille navy 200 sobria casi lista:
+su lead-quote pedía tramo narrativo y sus tokens estaban a medio
+extraer; `.reveal` IO único, keyframes hin, copy en HTML.
+
+**Qué cambié:**
+- R5 el consejo se pronuncia: la cita central se declara como
+  `lines[]` (EXACTO 2-4) y cada línea vive en una máscara overflow
+  hidden; el scrub las pronuncia una a una — `translateY 112%→0` con
+  easing cúbico dentro de k=clamp(p·n−i·.85) — chained continuo, el
+  tramo narrativo que pedía. Reduced: líneas planas visibles.
+- Tokens completos (--ease/--sec) con ritmo variado (offer ×0.9, quote
+  ×1.15); catálogo R1/R2/R3(hairlines en offers)/R4; hin fuera.
+- Shell+loader: 7 secciones opcionales, numeración de offers 0N,
+  journal 0-3, `.phx`, focus-visible.
+
+**Qué elevé:** la cita dejó de ser un párrafo centrado: ahora se
+pronuncia con el ritmo de quien aconseja — pausado, línea a línea.
+
+**Paso 4:** memorable sí (pronunciación); hero navy foto / pillars
+crema / about arena split / offer filas / quote navy / journal cards —
+alternancia correcta; motion continuo; 2 easings; solo transform
+(máscaras overflow); robusto.
+
+**Verificación:** batchcheck W36 ovf 0 d+m. robust36: REDUCED nm, 0
+ocultos, 3/3 líneas planas · R5 cascada 0% / 8.5% / 112% mid-scrub ·
+STRESS journal fuera, quote 2 líneas, título ×2 sin foto → phx, ovf 0,
+0 errores · MOBILE ovf 0.
