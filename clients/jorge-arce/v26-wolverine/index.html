@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(104px,14vh,168px);
+
   --white:#FFFFFF; --paper:#F5F5F3; --ink:#101010; --dim:#6F6F6C; --line:rgba(16,16,16,.12);
   --mono:'Space Mono',monospace; --r:20px;
 }
@@ -51,7 +56,7 @@ a{color:inherit;text-decoration:none}
 .newscard .t .ar{opacity:.7}
 
 /* ---------- statement 2col ---------- */
-.state{padding:150px 0}
+.state{padding:var(--sec) 0}
 .state .inr{display:grid;grid-template-columns:1fr 1.35fr;gap:80px;align-items:start}
 .state h2{font-weight:600;letter-spacing:-.035em;line-height:1.06;font-size:clamp(30px,3.6vw,50px)}
 .state .r p{font-weight:500;letter-spacing:-.025em;line-height:1.25;font-size:clamp(22px,2.6vw,36px);color:var(--ink)}
@@ -74,11 +79,11 @@ a{color:inherit;text-decoration:none}
 .band .pdf .t{font-size:20px;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:14px}
 
 /* ---------- disciplines grid ---------- */
-.brands{padding:150px 0}
+.brands{padding:var(--sec) 0}
 .brands .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:60px}
 .brands h2{font-weight:600;letter-spacing:-.04em;line-height:1;font-size:clamp(36px,4.6vw,64px)}
 .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.bcell{background:var(--paper);border-radius:var(--r);padding:34px 32px 40px;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.bcell{background:var(--paper);border-radius:var(--r);padding:34px 32px 40px;transition:transform .35s var(--ease-out),box-shadow .35s}
 .bcell:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(16,16,16,.1)}
 .bcell .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
 .bcell h3{font-weight:600;letter-spacing:-.025em;font-size:21px;margin-bottom:12px}
@@ -91,7 +96,7 @@ a{color:inherit;text-decoration:none}
 .strip .cap{position:absolute;left:30px;bottom:24px;color:#fff;font-family:var(--mono);font-size:11px;
   letter-spacing:.12em;text-transform:uppercase;background:rgba(16,16,16,.55);backdrop-filter:blur(6px);
   padding:9px 14px;border-radius:99px}
-.stats{padding:130px 0}
+.stats{padding:calc(var(--sec)*.85) 0}
 .stats .inr{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
 .stats .cell{border-top:1px solid var(--line);padding-top:26px}
 .stats .n{font-weight:600;letter-spacing:-.045em;font-size:clamp(52px,6.6vw,96px);line-height:.9}
@@ -99,12 +104,12 @@ a{color:inherit;text-decoration:none}
 .stats .l{margin-top:14px;font-size:14px;color:var(--dim);line-height:1.6;max-width:260px}
 
 /* ---------- quote ---------- */
-.quote{background:var(--paper);padding:140px 0}
+.quote{background:var(--paper);padding:calc(var(--sec)*1.1) 0}
 .quote p{font-weight:500;letter-spacing:-.03em;line-height:1.2;font-size:clamp(26px,3.6vw,48px);max-width:1000px}
 .quote .who{margin-top:30px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 
 /* ---------- close ---------- */
-.close{padding:150px 0 40px}
+.close{padding:var(--sec) 0 40px}
 .close h2{font-weight:600;letter-spacing:-.045em;line-height:.94;font-size:clamp(48px,8vw,116px)}
 .close .row{margin-top:50px;display:flex;gap:16px;flex-wrap:wrap}
 .btn{display:inline-block;background:var(--ink);color:#fff;font-size:15px;font-weight:500;
@@ -116,142 +121,163 @@ a{color:inherit;text-decoration:none}
   letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
-.reveal.in{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
-[data-stagger].in>*{opacity:1;transform:none}
-[data-stagger].in>*:nth-child(2){transition-delay:.09s}
-[data-stagger].in>*:nth-child(3){transition-delay:.18s}
-[data-stagger].in>*:nth-child(4){transition-delay:.27s}
-[data-stagger].in>*:nth-child(5){transition-delay:.36s}
-[data-stagger].in>*:nth-child(6){transition-delay:.45s}
-[data-hero]{opacity:0;transform:translateY(26px);animation:hin 1s cubic-bezier(.2,.6,.2,1) forwards}
-[data-hero="2"]{animation-delay:.2s}
-@keyframes hin{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal,[data-stagger]>*,[data-hero]{opacity:1!important;transform:none!important}
 }
 
-/* ---------- mobile ---------- */
-@media (max-width:940px){
-  .wrap{padding:0 22px}
-  .nav{padding:16px 22px}
-  .nav .links{display:none}
-  .hero .inr{padding:0 22px}
-  .newscard{width:100%}
-  .state .inr{grid-template-columns:1fr;gap:34px}
-  .band{padding:60px 20px}
-  .band .card{grid-template-columns:1fr}
-  .band .ph{min-height:280px}
-  .band .tx{padding:36px 28px}
-  .bgrid{grid-template-columns:1fr}
-  .stats .inr{grid-template-columns:1fr;gap:38px}
-  .state,.brands,.stats,.quote{padding:90px 0}
-  .close{padding:100px 0 32px}
-  .strip{padding:0 20px}
-}
-</style>
-</head>
+
+/* ---------- rework: manifiesto + placeholders ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink,#101010);outline-offset:3px}
+.state h2 .ln{display:block;will-change:transform,opacity}
+html:not(.no-motion) .state h2 .ln{opacity:.15}
+.phx{display:flex;align-items:center;justify-content:center;background:#e7e7e4;color:#6F6F6C;font-family:var(--mono,ui-monospace);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.hero .bg .phx{width:100%;height:100%}
+.strip .inr .phx{aspect-ratio:21/9;width:100%}
+.band .ph .phx{position:absolute;inset:0}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#6F6F6C;font-size:14px}
+</style></head>
 <body>
-
-<nav class="nav" id="nav">
-  <span class="lg">Arce <span>| South Bay</span></span>
-  <div class="links"><a href="about.html">About</a><a href="#disciplines">Disciplines</a><a href="commitment.html">Commitment</a><a href="#contact">Contact</a></div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="bg"><img src="../img/surgery.jpg" alt="Dr. Arce in surgery"></div>
-  <div class="inr">
-    <h1 data-hero>Restore.<br>Every Case.<br>Fully.</h1>
-    <a class="newscard" href="#about" data-hero="2">
-      <img src="../img/speaking.jpg" alt="From the practice">
-      <div class="bd">
-        <div class="k">From the practice</div>
-        <div class="t">Twenty-seven years of surgical judgment <span class="ar">↗</span></div>
-      </div>
-    </a>
-  </div>
-</header>
-
-<!-- STATEMENT -->
-<section class="state" id="about"><div class="wrap"><div class="inr">
-  <h2 class="reveal">One surgeon,<br>one standard,<br>limitless care.</h2>
-  <div class="r reveal">
-    <p>Our practice runs on precision, patience, and honest answers. Across every case — from a single implant to full-arch reconstruction — Dr. Arce shapes the future of each patient's function and confidence.</p>
-    <p class="sub">Trained in Colombia, specialized in California. Board certified in dental implantology. Founder of the Dental Implants Center of South Bay, est. 2007 — Redondo Beach &amp; Torrance.</p>
-  </div>
-</div></div></section>
-
-<!-- BLACK BAND / GUIDE -->
-<section class="band"><div class="card reveal">
-  <div class="ph"><img src="../img/operating.jpg" alt="Precision work"></div>
-  <div class="tx">
-    <h2>Patient Guide</h2>
-    <p>What to expect from your first implant consultation — imaging, candidacy, planning, and the questions worth asking any surgeon.</p>
-    <div class="pdf"><a class="box" href="#contact">
-      <span class="k">Free guide</span>
-      <span class="t">Ask for the Guide <span>↗</span></span>
-    </a></div>
-  </div>
-</div></section>
-
-<!-- DISCIPLINES -->
-<section class="brands" id="disciplines"><div class="wrap">
-  <div class="head reveal">
-    <h2>Many disciplines,<br>one shared standard.</h2>
-    <span class="mono" style="color:var(--dim)">Six systems — active</span>
-  </div>
-  <div class="bgrid" data-stagger>
-    <div class="bcell"><div class="k">A-01</div><h3>Dental Implants</h3><p>From single implants to full-arch All-On-X reconstruction, planned and placed with precision.</p></div>
-    <div class="bcell"><div class="k">A-02</div><h3>Reconstruction</h3><p>Rebuilding function and structure where bone and tissue have been lost.</p></div>
-    <div class="bcell"><div class="k">A-03</div><h3>Complex Cases</h3><p>The difficult extractions and surgeries other clinicians prefer to refer elsewhere.</p></div>
-    <div class="bcell"><div class="k">A-04</div><h3>Implant Maintenance</h3><p>Long-term care that protects the work of a restored smile.</p></div>
-    <div class="bcell"><div class="k">A-05</div><h3>Pathology</h3><p>Identifying and addressing conditions affecting teeth, gums, and bone.</p></div>
-    <div class="bcell"><div class="k">A-06</div><h3>Second Opinions</h3><p>Clarity and direction for patients facing complex decisions.</p></div>
-  </div>
-</div></section>
-
-<!-- PHOTO STRIP -->
-<div class="strip reveal"><div class="inr">
-  <img src="../img/clinic.jpg" alt="Dental Implants Center of South Bay">
-  <span class="cap">The Center — Est. 2007</span>
-</div></div>
-
-<!-- STATS -->
-<section class="stats" id="record"><div class="wrap"><div class="inr" data-stagger>
-  <div class="cell"><div class="n">27<span>yrs</span></div><div class="l">Dedicated to oral &amp; maxillofacial surgery</div></div>
-  <div class="cell"><div class="n">2007</div><div class="l">Founder, Dental Implants Center of South Bay</div></div>
-  <div class="cell"><div class="n">Board<span>cert.</span></div><div class="l">Certified in dental implantology</div></div>
-</div></div></section>
-
-<!-- QUOTE -->
-<section class="quote"><div class="wrap">
-  <p class="reveal">"Our culture fuels precision, patience, and honesty. Difficult work, done with care, gives people their lives back."</p>
-  <div class="who reveal">Dr. Jorge Arce, D.D.S.</div>
-</div></section>
-
-<!-- CLOSE -->
-<section class="close" id="contact"><div class="wrap">
-  <h2 class="reveal">Make it better.<br>Starting today.</h2>
-  <div class="row reveal">
-    <a class="btn" href="tel:+13103274166">Book a consultation</a>
-    <a class="btn ghost" href="tel:+13103274166">(310) 327-4166</a>
-  </div>
-  <div class="fine">
-    <span>© Dr. Jorge Arce, D.D.S.</span>
-    <span>Redondo Beach · Torrance, California</span>
-    <span>By appointment</span>
-  </div>
-</div></section>
-
+<nav class="nav" id="topnav"><span class="lg" id="nlogo"></span><div class="links" id="nlinks"></div></nav>
+<main id="site"></main>
+<noscript><div style="padding:40vh 28px;text-align:center;font-size:15px">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  var nav=document.getElementById('nav');
-  addEventListener('scroll',function(){nav.classList.toggle('solid',scrollY>innerHeight*.8)},{passive:true});
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal,[data-stagger]').forEach(function(el){io.observe(el)});
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&lt;span&gt;/g,'<span>').replace(/&lt;\/span&gt;/g,'</span>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function img(im,alt){
+  if(im&&im.src)return'<img src="'+esc(im.src)+'" alt="'+esc(alt||im.alt||'')+'">';
+  return'<div class="phx">'+esc((im&&im.label)||'FOTO')+'</div>'}
+
+var partials={
+hero:function(s){
+  var n=s.news||{};
+  return'<header class="hero" id="top"><div class="bg">'+img(s.img)+'</div>'+
+  '<div class="inr" data-r2>'+
+  '<h1 class="wr">'+rich(s.title)+'</h1>'+
+  '<a class="newscard wr" href="'+esc(n.h||'#')+'">'+img(n.img,'')+
+  '<div class="bd"><div class="k">'+esc(n.k)+'</div><div class="t">'+esc(n.t)+' <span class="ar">↗</span></div></div></a>'+
+  '</div></header>'},
+state:function(s){
+  return'<section class="state"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap"><div class="inr">'+
+  '<h2 id="manif">'+(s.lines||[]).map(function(l){return'<span class="ln">'+esc(l)+'</span>'}).join('')+'</h2>'+
+  '<div class="r" data-r2><p class="wr">'+rich(s.lead)+'</p><p class="sub wr">'+rich(s.sub)+'</p></div>'+
+  '</div></div></section>'},
+band:function(s){
+  return'<section class="band"><div class="card wr" data-r4>'+
+  '<div class="ph">'+img(s.img)+'</div>'+
+  '<div class="tx"><h2>'+esc(s.k)+'</h2><p>'+rich(s.t)+'</p>'+
+  '<div class="pdf"><a class="box" href="'+esc(s.cta.h)+'"><span class="k">'+esc(s.tag)+'</span><span class="t">'+esc(s.cta.t)+' <span>↗</span></span></a></div>'+
+  '</div></div></section>'},
+brands:function(s){
+  return'<section class="brands"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap">'+
+  '<div class="head" data-r2><h2 class="wr">'+rich(s.title)+'</h2><span class="mono wr" style="color:var(--dim)">'+esc(s.sub)+'</span></div>'+
+  '<div class="bgrid" data-cards>'+(s.rows||[]).map(function(r,i){return'<div class="bcell wr"><div class="k">A-'+('0'+(i+1)).slice(-2)+'</div><h3>'+esc(r.nm)+'</h3><p>'+rich(r.ds)+'</p></div>'}).join('')+'</div>'+
+  '</div></section>'},
+bandimg:function(s){
+  return'<div class="strip wr" data-r4><div class="inr">'+img(s.img)+'<span class="cap">'+esc(s.cap)+'</span></div></div>'},
+stats:function(s){
+  return'<section class="stats"><div class="wrap"><div class="inr" data-cards>'+
+  (s.cells||[]).map(function(cl){return'<div class="cell wr"><div class="n">'+esc(cl.n)+(cl.u?'<span>'+esc(cl.u)+'</span>':'')+'</div><div class="l">'+rich(cl.l)+'</div></div>'}).join('')+
+  '</div></div></section>'},
+quote:function(s){
+  return'<section class="quote" data-r2><div class="wrap"><p class="wr">'+esc(s.q)+'</p><div class="who wr">'+esc(s.who)+'</div></div></section>'},
+close:function(s){
+  return'<section class="close"'+(s.id?' id="'+esc(s.id)+'"':'')+' data-r2><div class="wrap">'+
+  '<h2 class="wr">'+rich(s.title)+'</h2>'+
+  '<div class="row wr">'+(s.ctas||[]).map(function(cta){return'<a class="btn'+(cta.ghost?' ghost':'')+'" href="'+esc(cta.h)+'">'+esc(cta.t)+'</a>'}).join('')+'</div>'+
+  '<div class="fine">'+(s.fine||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</div></section>'}
+};
+
+fetch('/v26-wolverine/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  if(c.nav){document.getElementById('nlogo').innerHTML=rich(c.nav.logo||'');
+    document.getElementById('nlinks').innerHTML=(c.nav.links||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('')}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+function init(){
+  /* nav solid al scroll */
+  var nav=document.getElementById('topnav');
+  function onScroll(y){nav.classList.toggle('solid',y>window.innerHeight*.8)}
+  if(!MOTION){
+    addEventListener('scroll',function(){onScroll(window.scrollY)},{passive:true});
+    wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',function(e){ScrollTrigger.update();onScroll(e.scroll)});
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-r4]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* R5 el manifiesto se estampa (pin, solo desktop) */
+  var manif=document.getElementById('manif');
+  if(manif){
+    var lines=Array.prototype.slice.call(manif.querySelectorAll('.ln'));
+    var n=lines.length;
+    if(n>1&&window.innerWidth>900){
+      ScrollTrigger.create({trigger:'.state',start:'top 22%',end:'+='+(n*45)+'%',pin:true,scrub:1.2,
+        onUpdate:function(self){var p=self.progress;
+          lines.forEach(function(ln,i){
+            var k=Math.max(0,Math.min(1,p*n-i));
+            ln.style.opacity=(.15+.85*k);
+            ln.style.transform='translateY('+((1-k)*14)+'px)';
+          })}});
+    } else {
+      lines.forEach(function(ln){ln.style.opacity=1});
+    }
+  }
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
 })();
 </script>
 </body>

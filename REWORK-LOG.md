@@ -802,3 +802,38 @@ ocultos, pre fuera, verso color sólido · PRE 100%, verso 62.5% mid,
 num I encendido rgb(201,204,182), halo scale 1.22 rotate 25° · STRESS
 voices fuera, capítulos 3 → I.,II.,III. sin fotos → phx, título ×2,
 ovf 0, 0 errores · MOBILE ovf 0.
+
+## 24 · v26-wolverine — CERRADA
+
+**Diagnóstico inicial:** heritage corporativa B/N potente pero los
+valores pedían un pin con progreso que no existía: statement de 3
+líneas estático, `.reveal` IO, keyframes hin, dos easings sin token,
+nav .solid por scroll listener crudo, copy en HTML. (Subpáginas
+about/commitment se conservan tal cual — fuera del alcance de esta
+pasada, anotado.)
+
+**Qué cambié:**
+- R5 el manifiesto se estampa: `.state` se pinnea `n·45%` y las líneas
+  del credo ("One surgeon / one standard / limitless care") pasan de
+  fantasma (.15) a tinta plena una a una con el scrub —
+  `k=clamp(p·n−i)`, opacidad .15+.85k + translateY 14→0 — y SE QUEDAN
+  (acumulación, no crossfade: distinto del libro de v16). Mobile y
+  reduced: sin pin, líneas visibles.
+- Nav .solid integrada al evento de Lenis (muere el listener suelto).
+- hin fuera; easings consolidados; ritmo --sec (brands estándar, stats
+  ×0.85, quote ×1.1); A-0N automáticos; `.phx`; focus-visible.
+- Shell+loader con 8 secciones opcionales.
+
+**Qué elevé:** los valores por fin tienen el pin que pedían — el credo
+corporativo se compone ante el lector como tipografía que se estampa.
+
+**Paso 4:** memorable sí (manifiesto); hero foto / state pinneado /
+band negra / bgrid paper / strip full — alternancia real; ratio close
+116/16 = 7.25:1; motion continuo; 2 easings; solo transform+opacity;
+robusto.
+
+**Verificación:** batchcheck W26 ovf 0 d+m. robust26: REDUCED nm, 0
+ocultos, 3/3 líneas visibles sin pin · R5 cascada 1.00/0.56/0.15 con 1
+pin-spacer, nav solid activa · STRESS quote fuera, state 2 líneas,
+brands 4, hero sin foto → phx, título ×2, ovf 0, 0 errores · MOBILE
+ovf 0 sin pin, líneas visibles.
