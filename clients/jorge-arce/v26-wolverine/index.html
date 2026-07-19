@@ -38,7 +38,7 @@ a{color:inherit;text-decoration:none}
 .hero .bg{position:absolute;inset:0}
 .hero .bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
 .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),transparent 40%,rgba(0,0,0,.45))}
-.hero .in{position:relative;z-index:2;width:100%;padding:0 36px;color:#fff;display:flex;
+.hero .inr{position:relative;z-index:2;width:100%;padding:0 36px;color:#fff;display:flex;
   justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
 .hero h1{font-weight:600;letter-spacing:-.045em;line-height:.94;font-size:clamp(56px,9vw,132px)}
 .newscard{background:rgba(16,16,16,.85);backdrop-filter:blur(8px);border-radius:14px;overflow:hidden;
@@ -52,7 +52,7 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- statement 2col ---------- */
 .state{padding:150px 0}
-.state .in{display:grid;grid-template-columns:1fr 1.35fr;gap:80px;align-items:start}
+.state .inr{display:grid;grid-template-columns:1fr 1.35fr;gap:80px;align-items:start}
 .state h2{font-weight:600;letter-spacing:-.035em;line-height:1.06;font-size:clamp(30px,3.6vw,50px)}
 .state .r p{font-weight:500;letter-spacing:-.025em;line-height:1.25;font-size:clamp(22px,2.6vw,36px);color:var(--ink)}
 .state .r .sub{margin-top:28px;font-weight:400;letter-spacing:-.01em;font-size:16px;line-height:1.7;color:var(--dim);max-width:520px}
@@ -86,13 +86,13 @@ a{color:inherit;text-decoration:none}
 
 /* ---------- photo strip + stats ---------- */
 .strip{padding:0 36px}
-.strip .in{max-width:1330px;margin:0 auto;border-radius:var(--r);overflow:hidden;position:relative}
+.strip .inr{max-width:1330px;margin:0 auto;border-radius:var(--r);overflow:hidden;position:relative}
 .strip img{width:100%;aspect-ratio:21/9;object-fit:cover}
 .strip .cap{position:absolute;left:30px;bottom:24px;color:#fff;font-family:var(--mono);font-size:11px;
   letter-spacing:.12em;text-transform:uppercase;background:rgba(16,16,16,.55);backdrop-filter:blur(6px);
   padding:9px 14px;border-radius:99px}
 .stats{padding:130px 0}
-.stats .in{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
+.stats .inr{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
 .stats .cell{border-top:1px solid var(--line);padding-top:26px}
 .stats .n{font-weight:600;letter-spacing:-.045em;font-size:clamp(52px,6.6vw,96px);line-height:.9}
 .stats .n span{font-size:.42em;color:var(--dim);font-weight:500}
@@ -138,15 +138,15 @@ a{color:inherit;text-decoration:none}
   .wrap{padding:0 22px}
   .nav{padding:16px 22px}
   .nav .links{display:none}
-  .hero .in{padding:0 22px}
+  .hero .inr{padding:0 22px}
   .newscard{width:100%}
-  .state .in{grid-template-columns:1fr;gap:34px}
+  .state .inr{grid-template-columns:1fr;gap:34px}
   .band{padding:60px 20px}
   .band .card{grid-template-columns:1fr}
   .band .ph{min-height:280px}
   .band .tx{padding:36px 28px}
   .bgrid{grid-template-columns:1fr}
-  .stats .in{grid-template-columns:1fr;gap:38px}
+  .stats .inr{grid-template-columns:1fr;gap:38px}
   .state,.brands,.stats,.quote{padding:90px 0}
   .close{padding:100px 0 32px}
   .strip{padding:0 20px}
@@ -163,7 +163,7 @@ a{color:inherit;text-decoration:none}
 <!-- HERO -->
 <header class="hero">
   <div class="bg"><img src="../img/surgery.jpg" alt="Dr. Arce in surgery"></div>
-  <div class="in">
+  <div class="inr">
     <h1 data-hero>Restore.<br>Every Case.<br>Fully.</h1>
     <a class="newscard" href="#about" data-hero="2">
       <img src="../img/speaking.jpg" alt="From the practice">
@@ -176,7 +176,7 @@ a{color:inherit;text-decoration:none}
 </header>
 
 <!-- STATEMENT -->
-<section class="state" id="about"><div class="wrap"><div class="in">
+<section class="state" id="about"><div class="wrap"><div class="inr">
   <h2 class="reveal">One surgeon,<br>one standard,<br>limitless care.</h2>
   <div class="r reveal">
     <p>Our practice runs on precision, patience, and honest answers. Across every case — from a single implant to full-arch reconstruction — Dr. Arce shapes the future of each patient's function and confidence.</p>
@@ -214,13 +214,13 @@ a{color:inherit;text-decoration:none}
 </div></section>
 
 <!-- PHOTO STRIP -->
-<div class="strip reveal"><div class="in">
+<div class="strip reveal"><div class="inr">
   <img src="../img/clinic.jpg" alt="Dental Implants Center of South Bay">
   <span class="cap">The Center — Est. 2007</span>
 </div></div>
 
 <!-- STATS -->
-<section class="stats" id="record"><div class="wrap"><div class="in" data-stagger>
+<section class="stats" id="record"><div class="wrap"><div class="inr" data-stagger>
   <div class="cell"><div class="n">27<span>yrs</span></div><div class="l">Dedicated to oral &amp; maxillofacial surgery</div></div>
   <div class="cell"><div class="n">2007</div><div class="l">Founder, Dental Implants Center of South Bay</div></div>
   <div class="cell"><div class="n">Board<span>cert.</span></div><div class="l">Certified in dental implantology</div></div>

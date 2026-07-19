@@ -64,6 +64,12 @@ rediseño.
 | **Cunliffe v19** | `/v19-cunliffe` | Trayectoria larga, narrativa por capítulos | Media (4–5, una por capítulo) | Mucho | Negro estelar + grises |
 | **Vast v20** | `/v20-vast` | Cirujano técnico, clínica de referencia | Media (3–4, quirófano oscuro) | Estructurado | Grafito + bone + naranja |
 | **Getty v21** | `/v21-getty` | Perfil artístico, storytelling profundo | Media (4–6 como obras) | Muchísimo | B/N museo + Fraunces |
+| **Sacred v22** | `/v22-sacred` | Práctica consciente, bienestar narrativo | Media (1 potente p/ máscara) | Medio | Verde bosque + crema + óxido |
+| **Pacifica v23** | `/v23-pacifica` | Perfil editorial, presentar resultados | Media (1 cuadrada p/ slot) | Estructurado | Paper cálido + ink |
+| **Il Capo v24** | `/v24-ilcapo` | Perfil dramático, video-first | Media (3–4 cinematográficas) | Poco | Negro + rojo #D60001 |
+| **Cobalt v25** | `/v25-gecko` | Práctica familiar moderna, millennials | Alta (5–6 en polaroids) | Medio | Crema + periwinkle #D5DBF2 |
+| **Wolverine v26** | `/v26-wolverine` | Grupo médico, multi-sede, institucional | Media (1 héroe panorámica) | Medio | Blanco/negro + foto |
+| **Genesis v27** | `/v27-genesis` | Transformaciones, narrativa de renacer | Media (4, duotono unifica) | Medio | Cocoa + crema-limón |
 
 **Atajos de decisión:**
 - Fotos malas o pocas → **Mindmarket v18** (ilustración), **Bennett v13** / **Möbius v10** / **Luke v8** (tipografía) o **Zentro v5** / **Everswap v17** (el grade perdona).
@@ -71,7 +77,10 @@ rediseño.
 - Quiere impresionar/cerrar caro → **Firma v11**, **Monograph v2**, **HandX v16** o **Vast v20**.
 - Público = pacientes asustados → **ClearPath v4**, **Holistic v9** o **Mindmarket v18**.
 - Historia de vida fuerte (migración, décadas, capítulos) → **Cunliffe v19** o **Getty v21**.
-- Clínica (no persona) como marca → **Caliora v12** o **Vast v20**.
+- Clínica (no persona) como marca → **Caliora v12**, **Vast v20** o **Wolverine v26**.
+- Vibra cálida/familiar sin infantilizar → **Cobalt v25** (script + polaroids).
+- Caso dramático o video-first → **Il Capo v24**; transformaciones antes/después → **Genesis v27**.
+- Bienestar/consciente → **Sacred v22** o **Everswap v17**.
 - Sin tiempo de decidir → **Hanza v3** (favorita del piloto) o **Definitiva v6**.
 
 ---
@@ -133,7 +142,7 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 
 1. Pablo cierra cliente y llena el intake (§1) — sin intake completo no se empieza.
 2. Elegir plantilla con la matriz (§2) — enseñar el catálogo `/templates` al cliente y
-   dejar que reaccione a 2–3 opciones preseleccionadas, no a las 20.
+   dejar que reaccione a 2–3 opciones preseleccionadas, no a las 26.
 3. Crear carpeta `clients/<nombre-doctor>/` clonando la plantilla elegida.
 4. Verter contenido en los slots (§4), subir fotos con crops anotados (§3).
 5. Verificación headless (desktop + móvil) — cero overflow, fotos bien posicionadas.
@@ -145,7 +154,9 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 
 ---
 
-*Última actualización: ronda 3 completada — 20 plantillas (v2–v21) verificadas en
-producción con el contenido del piloto. Las 10 nuevas nacen de: caliora (clínicas),
+*Última actualización: ronda 4 completada — 26 plantillas (v2–v27) verificadas en
+producción con el contenido del piloto. Rondas 3–4 nacen de: caliora (clínicas),
 bennettandclive, olivergareis, landonorris, designxhand/experience, everswap,
-mindmarket, andrewcunliffe, vastspace y getty.edu/tracingart.*
+mindmarket, andrewcunliffe, vastspace, getty.edu/tracingart, sacredforests.earth,
+adcker/pacifica-beauty, ilcapoproduction, Cobalt Creative (Squarespace),
+wolverineworldwide y reimaginegenesis.*
