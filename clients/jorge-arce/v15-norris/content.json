@@ -1,0 +1,108 @@
+{
+  "_schema": "v15-norris · ficha de piloto volt/olive · Hanken Grotesk + Alfa Slab One. rich() admite <b><i><br> y <s>…</s> = palabra en slab. Secciones opcionales por array. Límites probados: career.rows 3-6 · disc.cards EXACTO 3-6 · voices.cards 3-9 · stats.items EXACTO 2-3 (val 0-999, el odómetro rueda hasta ahí) · marq.items 4-10 · fmeta 2-4. Fotos: src vacío = placeholder etiquetado. Fetch absoluto /v15-norris/content.json.",
+  "meta": {
+    "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery · v15 Norris",
+    "description": "Board-certified oral & maxillofacial surgeon. Twenty-seven years of verified surgical work in the South Bay.",
+    "lang": "en"
+  },
+  "brand": { "t": "Arce", "accent": "/27" },
+  "nav": [
+    { "t": "Career", "h": "#career" },
+    { "t": "Disciplines", "h": "#disc" },
+    { "t": "Voices", "h": "#voices" },
+    { "t": "Contact", "h": "#contact" }
+  ],
+  "pre": "Load Arce",
+  "sections": [
+    {
+      "type": "hero",
+      "img": { "src": "/img/hero.jpg", "alt": "Dr. Jorge Arce", "label": "FOTO — retrato hero · full-bleed" },
+      "chip": "Board-Certified Oral Surgeon",
+      "loc": "South Bay · California",
+      "statement": "Restoring what matters most",
+      "line": "Always <s>bringing</s> the <s>care.</s>",
+      "sub": "Twenty-seven years on the complex extractions, reconstructions, and full-arch implant cases other surgeons refer out."
+    },
+    {
+      "type": "marq",
+      "items": ["Dental Implants", "All-On-X", "Reconstruction", "Complex Extractions", "Pathology", "TMJ", "Second Opinions", "Est. 2007"]
+    },
+    {
+      "type": "career",
+      "id": "career",
+      "label": "The Career — every step verifiable",
+      "rows": [
+        { "yr": "'70s", "nm": "Born in Colombia", "ds": "A family that valued precision and patience long before the scalpel." },
+        { "yr": "'90s", "nm": "Surgical Training", "ds": "Trained in Colombia; moved to California to specialize — and never left." },
+        { "yr": "1999", "nm": "Full-Time Surgery", "ds": "Career devoted entirely to oral & maxillofacial surgery and implantology." },
+        { "yr": "2007", "nm": "The Center", "ds": "Founds the Dental Implants Center of South Bay — Redondo Beach & Torrance." },
+        { "yr": "Now", "nm": "The Referral Surgeon", "ds": "The first call for referring dentists across the South Bay." }
+      ]
+    },
+    {
+      "type": "disc",
+      "id": "disc",
+      "title": "The <s>Disciplines</s>",
+      "label": "Six — refined over 27 years",
+      "cards": [
+        { "tag": "Core", "nm": "Dental Implants", "ds": "From single implants to full-arch All-On-X reconstruction, planned and placed with precision." },
+        { "tag": "Full-Arch", "nm": "All-On-X", "ds": "A complete new set of teeth for patients who were told nothing more could be done." },
+        { "tag": "Structural", "nm": "Reconstruction", "ds": "Rebuilding function and structure where bone and tissue have been lost." },
+        { "tag": "Referral", "nm": "Complex Extractions", "ds": "The difficult surgeries other clinicians prefer to refer elsewhere." },
+        { "tag": "Diagnosis", "nm": "Pathology & TMJ", "ds": "Identifying and addressing conditions affecting teeth, gums, bone, and joints." },
+        { "tag": "Judgment", "nm": "Second Opinions", "ds": "Clarity for complex decisions — including, when right, the advice not to operate." }
+      ]
+    },
+    {
+      "type": "qband",
+      "img": { "src": "/img/surgery.jpg", "alt": "", "label": "FOTO — quirófano · full-bleed oscuro" },
+      "line": "The work is <s>precise.</s><br>The reason is <s>human.</s>",
+      "attr": "Dr. Jorge Arce — Founder, Dental Implants Center of South Bay"
+    },
+    {
+      "type": "voices",
+      "id": "voices",
+      "title": "In their <s>words</s>",
+      "cards": [
+        { "q": "I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <b>I can eat, smile, and speak again.</b>", "n": "Maria R.", "r": "Full-arch reconstruction" },
+        { "q": "When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.", "n": "Dr. David Kim, D.D.S.", "r": "Referring Dentist · Torrance" },
+        { "q": "The most thorough and honest surgeon I have ever met. <b>He treated my father like family.</b>", "n": "Anabella C.", "r": "Daughter of patient" },
+        { "q": "Calm, precise, and genuinely kind. He explained every step until I understood.", "n": "Robert T.", "r": "Dental implants" },
+        { "q": "I refer my most complex cases to Dr. Arce without hesitation. <b>Twenty-seven years shows.</b>", "n": "Dr. Lina Soto", "r": "Periodontist" },
+        { "q": "I was terrified of the procedure. He never rushed me. Best decision I have made for my health.", "n": "Carlos S.", "r": "Bone graft + implants" },
+        { "q": "Years of pain, gone. I only wish I had found him sooner.", "n": "Elena P.", "r": "TMJ treatment" },
+        { "q": "Reliable, communicative, and surgically excellent. <b>A full report back, every time.</b>", "n": "Dr. Jeff Malone", "r": "Referring Dentist" },
+        { "q": "The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice.", "n": "Dr. Mark Ellison", "r": "Referring Dentist" }
+      ]
+    },
+    {
+      "type": "stats",
+      "items": [
+        { "val": 27, "pad": 2, "label": "Years of oral & maxillofacial surgery" },
+        { "val": 6, "pad": 2, "label": "Disciplines refined across a career" },
+        { "val": 2, "pad": 2, "label": "Locations — Redondo Beach & Torrance" }
+      ]
+    },
+    {
+      "type": "contact",
+      "id": "contact",
+      "title": "Get on the <s>schedule.</s>",
+      "body": "Bring your scans, your referral letter, or just your questions — every case starts with an honest conversation. Ask for the free guide: What to expect from your first implant consultation.",
+      "meta": [
+        { "k": "Call", "v": "(310) 327-4166" },
+        { "k": "Visit", "v": "Redondo Beach · Torrance, CA" },
+        { "k": "Hours", "v": "By appointment" }
+      ],
+      "form": {
+        "fields": ["Name", "Email", "Phone"],
+        "msg": "Tell us about your case",
+        "btn": "Request consultation",
+        "fine": "By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared."
+      },
+      "foot": [
+        "© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.",
+        "Oral & Maxillofacial Surgery — South Bay, CA"
+      ]
+    }
+  ]
+}

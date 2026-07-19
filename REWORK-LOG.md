@@ -404,3 +404,41 @@ ocultos, preloader ausente · PRE done n=100 · R5 ±0.17px en centro →
 ±19.9 → ±36px full en bordes (signos opuestos) · STRESS record fuera,
 galería 4 sin fotos → 4 phx numerados (01)-(04), facts 3, lead ×2,
 ovf 0, 0 errores · MOBILE ovf 0 + parallax off.
+
+## 13 · v15-norris — CERRADA
+
+**Diagnóstico inicial:** deportiva con energía en paleta (volt/olive +
+Alfa Slab) pero no en movimiento: marquee `@keyframes 22s infinite`,
+stats estáticos que pedían ser el golpe, `career .row:hover` animando
+padding-left, preloader por setTimeout, hovers sin easing declarado,
+copy en HTML.
+
+**Qué cambié:**
+- R5 odómetro: los stats renderizan cada dígito como carrete vertical
+  `0-9+0` (11 celdas) en overflow hidden; scrub de la banda volt mapea
+  el valor continuo — unidades giran rápido, decenas ceden solo cuando
+  las unidades cruzan el 9 (matemática de cuentakilómetros real).
+  Reduced/no-motion: dígitos planos en valor final.
+- Marquee: keyframes muere → translateX −30% mapeado al paso del
+  viewport (scrub 1.2).
+- Career hover → translateX(16px) en `.rin`; R3 hairline-draw en filas
+  (top + bottom de la última).
+- Preloader volt determinista (gsap.delayedCall 900ms, expo.out);
+  no-motion fuera.
+- Tokens + 2 easings; alturas `--sec` estándar · stats ×0.85 · qband
+  88vh. dcard focus-within = hover; botón active scale .97.
+- Shell+loader: content.json con `<s>` para slab mixto, numeración de
+  dcards automática, stats {val,pad,label}, `.phx` en hero/qband.
+
+**Qué elevé:** los números por fin son el momento — la página acelera
+hacia su telemetría con un mecanismo que ningún otro template usa.
+
+**Paso 4:** memorable sí (odómetro); hero foto / banda volt / dark ink /
+paper alternan; ratio 7.5:1; motion continuo; 2 easings; nada anima
+layout; robusto.
+
+**Verificación:** batchcheck W15 ovf 0 d+m. robust15: REDUCED nm, 0
+ocultos, pre fuera, stat plano "27" · ODO aterriza exacto 27/06/02
+(reels -2/-7, 0/-6, 0/-2 × STEP) · MQ -30% · STRESS qband fuera, hero
+sin foto → phx, statement ×2, career 3, disc 3, stats 2, ovf 0, 0
+errores · MOBILE ovf 0.
