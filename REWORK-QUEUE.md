@@ -39,7 +39,7 @@
 | 24 | `v26-wolverine` | ✅ | Heritage timeline potente; los valores B/N piden un pin con progreso que hoy no existe. |
 | 25 | `v22-sacred` | ✅ | Poética con mapa ilustrado — de las más personales; el case-map merece scrub real en vez de reveals sueltos. |
 | 26 | `v25-gecko` | ✅ | 6 páginas generadas por script: la más productiva ya; el rework es sistematizar su motion y tokenizarla de verdad. |
-| 27 | `v28-tuesday` | ☐ | Ronda 5 fiel y fresca; le falta solo disciplina de easing y robustez de contenido para ser productiva. |
+| 27 | `v28-tuesday` | ✅ | Ronda 5 fiel y fresca; le falta solo disciplina de easing y robustez de contenido para ser productiva. |
 | 28 | `v29-heritage` | ☐ | El wordmark hairline gigante es momento real; motion aún genérico para la elegancia que aparenta. |
 | 29 | `v30-capri` | ☐ | Azul marino con script permite mucho; composición ya alterna bien, pide catálogo cerrado de reveals. |
 | 30 | `v32-alora` | ☐ | Brumosa y consistente; robustez de contenido sin probar (titulares dobles la rompen hoy). |

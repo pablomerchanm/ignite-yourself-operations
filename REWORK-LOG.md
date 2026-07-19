@@ -905,3 +905,35 @@ solo runtime, una firma scroll-driven, tokens uniformes.
 stories/contact/blog) 1440+390: ovf 0, 0 errores. robust25: REDUCED
 nm, 0 ocultos, sello quieto · runtime activo en las 6 (ScrollTriggers
 2-13 por página), sellos rotando 175°/316°, reveals disparando.
+
+## 27 · v28-tuesday — CERRADA
+
+**Diagnóstico inicial:** Marlow (ronda 5) fiel y fresca; le faltaba
+disciplina de easing (un cubic sin token + defaults), robustez de
+contenido (copy en HTML, sin placeholders) y el hover de filas animaba
+padding-left.
+
+**Qué cambié:**
+- R5 nada llega recto: filas de servicios y pasos del VIP entran
+  rotados ±4° alternando lado y se ENDEREZAN con el scrub continuo
+  (`rotate(dir·4°·(1−k)) + translateY(26·(1−k))`) — la personalidad de
+  la página (juguetona → orden) hecha motion. Reduced: sin transform.
+- Hover de filas: padding-left → translateX del título (transform).
+- Tokens, ritmo --sec variado (split ×0.9, vip ×1.15), keyframes hin
+  fuera, parche de reduced-motion balanceado (assert de llaves).
+- Shell+loader: 7 secciones opcionales, numeración de steps 0N
+  automática, `<v>` violeta en rich, `.phx`, focus-visible.
+
+**Qué elevé:** la disciplina que pedía: 2 easings tokenizados, motion
+con identidad propia (tilt-settle, mecanismo no repetido) y template
+productivo con placeholders probados.
+
+**Paso 4:** memorable sí (todo se endereza); wordmark hero / state
+rosa / svc paper / split rojo / vip violeta — la paleta ya alternaba,
+ahora el ritmo también; motion continuo; 2 easings; solo transform;
+robusto.
+
+**Verificación:** batchcheck W28 ovf 0 d+m. robust28: REDUCED nm, 0
+ocultos, tilts sin transform · R5 filas rotate −1.9°/+3.4° +
+translateY en scrub · STRESS voices fuera, rows 3, hero/split sin
+fotos → 2 phx, wordmark ×2, ovf 0, 0 errores · MOBILE ovf 0.
