@@ -154,3 +154,29 @@ reduced ok ✓ · cero layout animado (FAQ arreglado) ✓.
 reduced ok.
 
 ---
+
+## 4 · v7-noon — "Noon" — CERRADA
+
+**Diagnóstico inicial:** sin momento (markline recortado no cuenta);
+padding 120px uniforme; hover filas con padding-left; easings `ease`
+default mezclados; cero portabilidad.
+
+**Qué cambié:** identidad anti-marketing elevada — retrato del hero
+sangrado al borde derecho (ruptura única); "la cuenta honesta" como
+scrollytelling (contadores con scrub y el 0 de shortcuts inmóvil con
+subrayado rust al 85% — el chiste visual honesto de la marca); cabecera
+de cases a la DERECHA (variación compositiva); cards con settle
+decreciente; catálogo cerrado 5 reveals / 2 easings; tokens completos +
+content.json íntegro + secciones opcionales + placeholders.
+
+**Paso 4:** momento = cuenta honesta ✓ · composición: hero split sangrado /
+services izq / cases der / stats banda / about-speak splits / journal grid /
+finale centrado único ✓ · d1 140/17 = 8.2:1 ✓ · banda stats ×0.7 respira
+distinto ✓ · easings 2 ✓ · robustez: titular ×2, sin fotos (4 labels),
+services 3, cases 2, journal REMOVIDO — ovf 0 err 0 ✓ · reduced: todo
+visible, 0 en 0, subrayado completo ✓ · solo transform/opacity ✓.
+
+**Verificación:** batchcheck W7 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
