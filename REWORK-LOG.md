@@ -206,3 +206,26 @@ reduced ok ✓ · transform/opacity only ✓.
 err 0 · reduced ok.
 
 ---
+
+## 6 · v5-zentro — "Zentro" — CERRADA
+
+**Diagnóstico inicial:** display gastado por repetición; ticker en loop
+infinito (decorativo); strip del hero desaprovechado; FAQ con max-height;
+portabilidad cero.
+
+**Qué cambié:** abanico del strip como momento (scroll-driven, sin pin);
+ticker convertido a scroll-driven (velocity del scroll, wrap modular) —
+de gimmick a interacción; bandas full-bleed con settle 1.12→1 scrubbed;
+catálogo cerrado 5/2; FAQ display-swap; tokens + content.json + phx +
+adaptadores de contenedor.
+
+**Paso 4:** momento = abanico + ticker reactivo ✓ · composición variada
+(hero póster / ticker / bandas / stats split / services sticky / voices
+grid / journal cards / faq split / contact form) ✓ · mark ~19vw vs body 16
+≈ 17:1 ✓ · easings 2 ✓ · robustez: title ×2, sin fotos (11 labels), voices
+3, journal REMOVIDO — ovf 0 err 0 ✓ · reduced ok ✓ · transform/opacity ✓.
+
+**Verificación:** batchcheck W5 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
