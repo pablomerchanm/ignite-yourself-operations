@@ -937,3 +937,38 @@ robusto.
 ocultos, tilts sin transform · R5 filas rotate −1.9°/+3.4° +
 translateY en scrub · STRESS voices fuera, rows 3, hero/split sin
 fotos → 2 phx, wordmark ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 28 · v29-heritage — CERRADA
+
+**Diagnóstico inicial:** Provenance con el wordmark hairline gigante
+como momento real pero motion genérico para la elegancia que aparenta:
+`.reveal` IO de 1.1s, keyframes hin, un easing sin token, colisión de
+clase `.foot` (hero vs footer), copy en HTML.
+
+**Qué cambié:**
+- R5 la firma bajo la cortina (desktop): el footer pasa a fixed detrás
+  del main (spacer medido dinámicamente); al llegar al final, el
+  contenido se levanta como telón y revela el wordmark gigante, que
+  aterriza con scrub (translateY 40→0, scale .92→1, opacidad .4→1).
+  Mecanismo cortina — no usado en el catálogo. Mobile (<701) y
+  reduced: flujo normal estático.
+- Footer renombrado `.sitefoot` (colisión de .foot con el hero
+  resuelta).
+- Tokens, ritmo --sec (intro estándar, freebie ×0.95), hin fuera,
+  parches balanceados.
+- Shell+loader: slots de foto nativos (tag descriptivo o src real),
+  journal 0-3, focus-visible.
+
+**Qué elevé:** el momento real de la página (el wordmark) por fin tiene
+la puesta en escena que merecía: es el telón final, no un footer más.
+
+**Paso 4:** memorable sí (cortina); hero full / intro centrada / work
+grid desfasado / meet split / belief / kind / journal — ritmo variado;
+ratio 186/13.5 = 13.8:1; motion continuo; 2 easings; solo transform;
+robusto.
+
+**Verificación:** batchcheck W29 ovf 0 d+m. robust29: REDUCED nm, 0
+ocultos, footer static · R5 footer fixed + spacer 375px, wm aterriza
+translateY(0) scale(1) op 1, visible al fondo · STRESS journal fuera,
+work 2, wordmark alargado, ovf 0, 0 errores · MOBILE ovf 0 footer
+static.
