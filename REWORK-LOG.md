@@ -180,3 +180,29 @@ visible, 0 en 0, subrayado completo ✓ · solo transform/opacity ✓.
 reduced ok.
 
 ---
+
+## 5 · v3-hanza — "Hanza" — CERRADA
+
+**Diagnóstico inicial:** one-note (todo al mismo volumen), cita del case
+study plana siendo el candidato natural a momento, stagger nth-child
+creciente lineal, hovers .3s ease default, portabilidad cero, y un BUG real:
+caseband sin responsive → 326px de overflow mobile tapado por
+overflow-x:hidden.
+
+**Qué cambié:** quote-scrub palabra a palabra como momento narrativo (scrub
+1.2); mark del hero cruzando a la sección siguiente como ruptura única;
+catálogo cerrado 5 reveals / 2 easings con staggers DECRECIENTES; tokens en
+:root; content.json íntegro con placeholders; bug de overflow arreglado de
+raíz (html clip + regla responsive del caseband y contact).
+
+**Paso 4:** momento = cita que se enciende ✓ · composición ya variada
+(intro split / grid celdas / band full-bleed / masonry voices / contact
+form) con volumen ahora modulado por el scrub oscuro al centro ✓ ·
+mark 280px vs body 16 = 17:1, displays 80px = 5:1 ✓ · easings 2 ✓ ·
+robustez: lede ×2, sin fotos (labels), celdas 3, voices 3 — ovf 0 err 0 ✓ ·
+reduced ok ✓ · transform/opacity only ✓.
+
+**Verificación:** batchcheck W3 d+m ovf 0 err 0 (tras fix) · stress ovf 0
+err 0 · reduced ok.
+
+---
