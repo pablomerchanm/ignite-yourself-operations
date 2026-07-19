@@ -376,7 +376,12 @@
     initMotion();
   }
 
-  fetch('content.json')
+  /* Resolver content.json desde la URL de ESTE script (js/main.js → ../content.json):
+     inmune a redirects de trailing-slash / cleanUrls del hosting. */
+  var scriptSrc = document.currentScript && document.currentScript.src;
+  var contentURL = scriptSrc ? new URL('../content.json', scriptSrc).href : 'content.json';
+
+  fetch(contentURL)
     .then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
