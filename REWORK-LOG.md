@@ -1065,3 +1065,32 @@ alternancia correcta; motion continuo; 2 easings; solo transform
 ocultos, 3/3 líneas planas · R5 cascada 0% / 8.5% / 112% mid-scrub ·
 STRESS journal fuera, quote 2 líneas, título ×2 sin foto → phx, ovf 0,
 0 errores · MOBILE ovf 0.
+
+## 32 · v33-valenna — CERRADA
+
+**Diagnóstico inicial:** "The Travel Edit" con el split hero que
+fascinó a Pablo — mandato: conservar y pulir, no rehacer. Lo que
+faltaba: `.reveal` IO único, keyframes hin, un easing sin token, copy
+en HTML.
+
+**Qué cambié (pulido conservador):**
+- R5 el díptico se abre: las dos mitades del hero divergen ±4vw con el
+  scrub al salir del viewport (overflow contenido, ovf 0 verificado) —
+  el gesto editorial del split, ahora vivo. Reduced: quietas.
+- Composición y paleta INTACTAS (era la favorita); solo tokens
+  (--ease/--sec), catálogo cerrado R1/R2/R3(hairlines en philosophy)/
+  R4, ritmo --sec afinado.
+- Shell+loader: slots nativos, edits/phil EXACTO 3, secciones
+  opcionales (quote out probado), focus-visible.
+
+**Qué elevé:** fidelidad al referente con el 10% de vida que le
+faltaba: el díptico respira y el resto revela con disciplina.
+
+**Paso 4:** memorable sí (díptico); split hero / ribbon / intro
+centrada / edits grid / planner split invertido / phil filas / quote
+full — alternancia del original respetada; motion continuo; 2
+easings; solo transform; robusto.
+
+**Verificación:** batchcheck W33 ovf 0 d+m. robust33: REDUCED nm, 0
+ocultos, mitades quietas · R5 L −2.08vw / R +2.08vw mid-exit con ovf
+0 · STRESS wm ×2 ovf 0, quote fuera · MOBILE ovf 0.
