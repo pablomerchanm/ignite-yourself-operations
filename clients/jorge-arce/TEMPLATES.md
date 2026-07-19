@@ -54,12 +54,24 @@ rediseño.
 | **Holistic v9** | `/v9-holistic` | Familiar, cercano, dolor/TMJ, pediatría | Media (grade unifica) | Medio | Crema + terracota |
 | **Möbius v10** | `/v10-mobius` | Referencia académica, máxima autoridad | Baja (B/N sirve) | Estructurado | B/N + rojo |
 | **Firma v11** | `/v11-firma` | Práctica premium, high-ticket | Alta (verticales) | Medio | Blanco + coral + script |
+| **Caliora v12** | `/v12-caliora` | Clínica boutique, rebrand completo | Alta (6–8, interior + equipo) | Medio | Cream + navy + mocha |
+| **Bennett v13** | `/v13-bennett` | Marca personal audaz, statement tipográfico | Baja (2–3) | Mínimo | B/N puro |
+| **Gareis v14** | `/v14-gareis` | Perfil visual / creative director | Muy alta (8+, crops variados) | Mínimo | Gris galería #F7F7F7 |
+| **Norris v15** | `/v15-norris` | Joven de alto impacto, vibra deportiva | Alta (5–6 acción) | Medio | Volt #D2FF00 + olivo |
+| **HandX v16** | `/v16-handx` | Experiencia premium, eventos/cursos | Media (3–4 atmósfera) | Medio | Negro + papel + grano |
+| **Everswap v17** | `/v17-everswap` | Boutique serena, wellness high-end | Baja (2–3, grade verde) | Poco | Verde profundo + crema |
+| **Mindmarket v18** | `/v18-mindmarket` | Pediatría, familiar, marcas con humor | Muy baja (0–2, ilustración) | Medio | Crema + 5 acentos vivos |
+| **Cunliffe v19** | `/v19-cunliffe` | Trayectoria larga, narrativa por capítulos | Media (4–5, una por capítulo) | Mucho | Negro estelar + grises |
+| **Vast v20** | `/v20-vast` | Cirujano técnico, clínica de referencia | Media (3–4, quirófano oscuro) | Estructurado | Grafito + bone + naranja |
+| **Getty v21** | `/v21-getty` | Perfil artístico, storytelling profundo | Media (4–6 como obras) | Muchísimo | B/N museo + Fraunces |
 
 **Atajos de decisión:**
-- Fotos malas o pocas → **Möbius v10** o **Luke v8** (viven de tipografía) o **Zentro v5** (duotono).
-- Médico con miedo a "verse vendedor" → **Noon v7**.
-- Quiere impresionar/cerrar caro → **Firma v11** o **Monograph v2**.
-- Público = pacientes asustados → **ClearPath v4** o **Holistic v9**.
+- Fotos malas o pocas → **Mindmarket v18** (ilustración), **Bennett v13** / **Möbius v10** / **Luke v8** (tipografía) o **Zentro v5** / **Everswap v17** (el grade perdona).
+- Médico con miedo a "verse vendedor" → **Noon v7** o **Getty v21** (cuenta, no vende).
+- Quiere impresionar/cerrar caro → **Firma v11**, **Monograph v2**, **HandX v16** o **Vast v20**.
+- Público = pacientes asustados → **ClearPath v4**, **Holistic v9** o **Mindmarket v18**.
+- Historia de vida fuerte (migración, décadas, capítulos) → **Cunliffe v19** o **Getty v21**.
+- Clínica (no persona) como marca → **Caliora v12** o **Vast v20**.
 - Sin tiempo de decidir → **Hanza v3** (favorita del piloto) o **Definitiva v6**.
 
 ---
@@ -84,8 +96,11 @@ Tratamientos por plantilla (ya implementados en CSS, clase → filtro):
 - v9 Holistic: `.warm` sepia(.3) — unifica B/N con paleta cálida.
 - v7 Noon: sepia(.4–.5) saturate(1.3+) — tinte óxido.
 - v5 Zentro: grayscale + multiply sobre azul (duotono).
-- v10 Möbius / v3 Hanza: grayscale con contraste alto.
+- v10 Möbius / v3 Hanza / v13 Bennett / v14 Gareis: grayscale con contraste alto.
 - v4 ClearPath: tinte sage vía overlay gradiente.
+- v17 Everswap: grade verde (`hue-rotate` + saturación baja) — unifica cualquier foto.
+- v19 Cunliffe / v20 Vast: grayscale parcial (.15–.35) + contraste, sombra profunda.
+- v21 Getty: grayscale suave (.1) — las fotos se tratan como obras con ficha.
 
 ---
 
@@ -118,7 +133,7 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 
 1. Pablo cierra cliente y llena el intake (§1) — sin intake completo no se empieza.
 2. Elegir plantilla con la matriz (§2) — enseñar el catálogo `/templates` al cliente y
-   dejar que reaccione a 2–3 opciones preseleccionadas, no a las 10.
+   dejar que reaccione a 2–3 opciones preseleccionadas, no a las 20.
 3. Crear carpeta `clients/<nombre-doctor>/` clonando la plantilla elegida.
 4. Verter contenido en los slots (§4), subir fotos con crops anotados (§3).
 5. Verificación headless (desktop + móvil) — cero overflow, fotos bien posicionadas.
@@ -130,5 +145,7 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 
 ---
 
-*Última actualización: ronda de fidelidad de referentes completada — las 10 plantillas
-verificadas en producción con el contenido del piloto.*
+*Última actualización: ronda 3 completada — 20 plantillas (v2–v21) verificadas en
+producción con el contenido del piloto. Las 10 nuevas nacen de: caliora (clínicas),
+bennettandclive, olivergareis, landonorris, designxhand/experience, everswap,
+mindmarket, andrewcunliffe, vastspace y getty.edu/tracingart.*
