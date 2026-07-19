@@ -229,3 +229,23 @@ grid / journal cards / faq split / contact form) ✓ · mark ~19vw vs body 16
 reduced ok.
 
 ---
+
+## 7 · v8-luke — "Luke" — CERRADA
+
+**Diagnóstico inicial:** un solo momento (nombre 245px); lista con hover
+estática; aurora en loop 16s; 7 paddings sin sistema; portabilidad cero.
+
+**Qué cambié:** tour guiado por scroll de la lista de trabajo (progreso →
+fila activa + crossfade de preview, hover con prioridad manual 2.5s);
+aurora ligada al scroll del hero; catálogo cerrado 5/2; tokens +
+content.json + placeholders.
+
+**Paso 4:** momento = tour guiado ✓ · aurora con propósito ✓ · nombre
+245px/16 ≈ 15:1 ✓ · easings 2 ✓ · robustez: intro ×2, sin fotos, voices 3,
+journal REMOVIDO, tour avanza (fila 5 al final del scroll) — ovf 0 err 0 ✓ ·
+reduced ok ✓ · transform/opacity ✓.
+
+**Verificación:** batchcheck W8 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok · tour verificado programáticamente.
+
+---
