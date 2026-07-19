@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elowen — Curating Beautiful Weddings</title>
+<meta name="description" content="Ethereal wedding-planner template concept: tracked light caps, calligraphic script overlays, misty photography. Placeholder content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Monsieur+La+Doulaise&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5F4EF; --char:#272727; --taupe:#8C8477; --mist:#B8B4AB;
+  --caps:'Julius Sans One',sans-serif; --script:'Monsieur La Doulaise',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--char);font-family:'Lato',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--char);color:var(--cream)}
+.lbl{font-size:10px;font-weight:400;letter-spacing:.3em;text-transform:uppercase}
+
+/* misty photo slots */
+.slot{position:relative;overflow:hidden;background:linear-gradient(170deg,#A8A49B 0%,#8F8B81 50%,#75726A 100%)}
+.slot.light{background:linear-gradient(170deg,#DCD9D1 0%,#C6C2B8 55%,#ABA79C 100%)}
+.slot::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='130' height='130'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='130' height='130' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E")}
+.slot .tag{position:absolute;left:12px;bottom:10px;z-index:2;font-size:8.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:rgba(245,244,239,.75)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:60;background:var(--cream);display:grid;
+  grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:24px 34px}
+.nav .l,.nav .r{display:flex;gap:30px}
+.nav .r{justify-content:flex-end}
+.nav a{font-family:'Lato';font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--char);transition:color .3s}
+.nav a:hover{color:var(--taupe)}
+.nav .lg{font-family:var(--caps);font-size:26px;letter-spacing:.3em;text-align:center;padding-left:.3em}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:94vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;overflow:hidden;color:#fff;padding:80px 20px}
+.hero .slot{position:absolute;inset:0}
+.hero .in{position:relative;z-index:2}
+.hero .k{color:rgba(255,255,255,.85);margin-bottom:34px;text-shadow:0 1px 10px rgba(39,39,39,.4)}
+.hero h1{font-family:var(--caps);font-size:clamp(34px,5.4vw,74px);letter-spacing:.14em;
+  line-height:1.3;text-shadow:0 2px 18px rgba(39,39,39,.35)}
+.hero .script{font-family:var(--script);font-size:clamp(30px,4vw,56px);margin-top:14px;
+  color:rgba(255,255,255,.95);text-shadow:0 2px 14px rgba(39,39,39,.4)}
+.hero .bar{width:1px;height:60px;background:rgba(255,255,255,.7);margin:40px auto 0}
+.hero p{margin-top:36px;font-size:12.5px;line-height:2;max-width:440px;margin-left:auto;margin-right:auto;
+  color:rgba(255,255,255,.92);text-shadow:0 1px 8px rgba(39,39,39,.45)}
+.hero .cta{display:inline-block;margin-top:36px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  background:rgba(245,244,239,.92);color:var(--char);padding:15px 30px;transition:background .3s}
+.hero .cta:hover{background:#fff}
+
+/* ---------- featured in ---------- */
+.featbar{padding:36px 6vw;border-bottom:1px solid rgba(39,39,39,.15);text-align:center}
+.featbar .k{color:var(--taupe);margin-bottom:16px}
+.featbar .row{display:flex;justify-content:center;gap:50px;flex-wrap:wrap}
+.featbar .b{font-family:var(--caps);font-size:14px;letter-spacing:.22em;color:var(--taupe)}
+
+/* ---------- intro ---------- */
+.intro{padding:150px 6vw;text-align:center}
+.intro .script{font-family:var(--script);font-size:clamp(36px,5vw,64px);color:var(--taupe);line-height:.9}
+.intro h2{font-family:var(--caps);font-size:clamp(22px,3vw,40px);letter-spacing:.16em;line-height:1.5;
+  max-width:860px;margin:20px auto 0}
+.intro p{margin-top:30px;font-size:13px;line-height:2.1;color:#5E5B54;max-width:520px;margin-left:auto;margin-right:auto}
+
+/* ---------- services ---------- */
+.svc{padding:0 4vw 150px}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:1200px;margin:0 auto}
+.scard{text-align:center}
+.scard .slot{aspect-ratio:3/4}
+.scard h3{font-family:var(--caps);font-size:17px;letter-spacing:.22em;margin-top:24px}
+.scard .script{font-family:var(--script);font-size:26px;color:var(--taupe);margin-top:6px}
+.scard p{margin-top:12px;font-size:12px;line-height:1.95;color:#5E5B54;max-width:280px;margin-left:auto;margin-right:auto}
+.scard .more{display:inline-block;margin-top:18px;font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  border-bottom:1px solid var(--char);padding-bottom:3px}
+
+/* ---------- statement band ---------- */
+.band{position:relative;min-height:66vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;overflow:hidden;color:#fff;padding:90px 20px}
+.band .slot{position:absolute;inset:0}
+.band .in{position:relative;z-index:2}
+.band h2{font-family:var(--caps);font-size:clamp(22px,3.4vw,44px);letter-spacing:.18em;line-height:1.5;
+  max-width:840px;text-shadow:0 2px 16px rgba(39,39,39,.4)}
+.band .script{font-family:var(--script);font-size:clamp(28px,3.6vw,50px);margin-top:16px;
+  text-shadow:0 2px 12px rgba(39,39,39,.45)}
+
+/* ---------- experience ---------- */
+.exp{padding:150px 6vw}
+.exp .in{max-width:1050px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+.exp .slot{aspect-ratio:3/4}
+.exp .script{font-family:var(--script);font-size:clamp(32px,4vw,52px);color:var(--taupe);line-height:.9}
+.exp h2{font-family:var(--caps);font-size:clamp(20px,2.8vw,34px);letter-spacing:.18em;line-height:1.55;margin-top:14px}
+.exp ol{margin-top:36px;list-style:none;counter-reset:s}
+.exp li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:baseline;
+  padding:20px 0;border-top:1px solid rgba(39,39,39,.15);font-size:12.5px;line-height:1.9;color:#5E5B54}
+.exp li::before{content:counter(s,decimal-leading-zero);font-family:var(--caps);font-size:20px;letter-spacing:.1em;color:var(--taupe)}
+.exp li b{font-weight:700;color:var(--char);letter-spacing:.04em}
+
+/* ---------- kind words ---------- */
+.kind{background:#EDEBE4;padding:150px 6vw;text-align:center}
+.kind .script{font-family:var(--script);font-size:clamp(36px,5vw,64px);color:var(--taupe)}
+.kind q{display:block;font-family:var(--caps);font-size:clamp(17px,2.4vw,28px);letter-spacing:.14em;
+  line-height:1.8;max-width:840px;margin:34px auto 0;quotes:'“' '”'}
+.kind .who{margin-top:30px;font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--taupe)}
+
+/* ---------- close ---------- */
+.close{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;overflow:hidden;color:#fff;padding:100px 20px}
+.close .slot{position:absolute;inset:0}
+.close .in{position:relative;z-index:2}
+.close .script{font-family:var(--script);font-size:clamp(38px,6vw,76px);text-shadow:0 2px 16px rgba(39,39,39,.4)}
+.close h2{font-family:var(--caps);font-size:clamp(26px,4vw,54px);letter-spacing:.18em;line-height:1.35;
+  margin-top:10px;text-shadow:0 2px 18px rgba(39,39,39,.4)}
+.close .cta{display:inline-block;margin-top:42px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  background:rgba(245,244,239,.94);color:var(--char);padding:16px 34px;transition:background .3s}
+.close .cta:hover{background:#fff}
+
+/* ---------- footer ---------- */
+.foot{padding:80px 6vw 36px;text-align:center}
+.foot .lg{font-family:var(--caps);font-size:clamp(28px,4.6vw,54px);letter-spacing:.32em;padding-left:.32em}
+.foot .script{font-family:var(--script);font-size:24px;color:var(--taupe);margin-top:8px}
+.foot .links{margin-top:34px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.foot .links a{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--taupe);transition:color .3s}
+.foot .links a:hover{color:var(--char)}
+.foot .fine{margin-top:60px;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist)}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 1.1s cubic-bezier(.2,.6,.2,1),transform 1.1s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+[data-hero]{opacity:0;animation:hin 1.4s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero="2"]{animation-delay:.35s}
+@keyframes hin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+@media (max-width:920px){
+  .nav{grid-template-columns:1fr auto}
+  .nav .l{display:none}
+  .sgrid{grid-template-columns:1fr}
+  .exp .in{grid-template-columns:1fr;gap:44px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="l"><a href="#about">About</a><a href="#svc">Services</a></div>
+  <span class="lg">ELOWEN</span>
+  <div class="r"><a href="#exp">Experience</a><a href="#contact">Contact</a></div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="slot"><span class="tag">slot foto — pareja entre niebla de montaña</span></div>
+  <div class="in">
+    <div class="k lbl" data-hero>Beyond exquisite · your vision · seamlessly realised</div>
+    <h1 data-hero>CURATING<br>BEAUTIFUL<br>WEDDINGS</h1>
+    <div class="script" data-hero="2">for the discerning couple</div>
+    <div class="bar" data-hero="2"></div>
+    <p data-hero="2">Your wedding day deserves to be a masterpiece — a reflection of your story, imbued with unhurried elegance and flawless execution. We don't just plan weddings; we orchestrate memories. Placeholder copy.</p>
+    <a class="cta" href="#contact" data-hero="2">Book a clarity call</a>
+  </div>
+</header>
+
+<!-- FEATURED -->
+<div class="featbar reveal">
+  <div class="k lbl">Featured in</div>
+  <div class="row"><span class="b">VOWS*</span><span class="b">THE AISLE*</span><span class="b">EVER AFTER*</span><span class="b">PLACEHOLDER MAG*</span></div>
+</div>
+
+<!-- INTRO -->
+<section class="intro" id="about">
+  <div class="script reveal">Let's start your journey</div>
+  <h2 class="reveal">AN ATELIER FOR WEDDINGS OF QUIET GRANDEUR</h2>
+  <p class="reveal">Elowen is a full-service planning studio taking a handful of celebrations each year. Fewer weddings, deeper attention — from the first sketch of the day to the last dance. Placeholder studio copy.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="svc" id="svc">
+  <div class="sgrid">
+    <div class="scard reveal">
+      <div class="slot light"><span class="tag">slot — planeación completa</span></div>
+      <h3>FULL PLANNING</h3>
+      <div class="script">the whole story</div>
+      <p>From venue to vows — every vendor, timeline, and detail carried by the studio.</p>
+      <a class="more" href="#contact">Inquire</a>
+    </div>
+    <div class="scard reveal">
+      <div class="slot"><span class="tag">slot — diseño de evento</span></div>
+      <h3>EVENT DESIGN</h3>
+      <div class="script">the look &amp; feel</div>
+      <p>Palettes, florals, tablescapes, and light — composed like a single photograph.</p>
+      <a class="more" href="#contact">Inquire</a>
+    </div>
+    <div class="scard reveal">
+      <div class="slot light"><span class="tag">slot — coordinación del día</span></div>
+      <h3>THE FINAL MILE</h3>
+      <div class="script">the day itself</div>
+      <p>Month-of coordination for couples who planned beautifully and want to hand off the reins.</p>
+      <a class="more" href="#contact">Inquire</a>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band">
+  <div class="slot"><span class="tag">slot foto — ceremonia al atardecer</span></div>
+  <div class="in reveal">
+    <h2>WE ARE ETERNALLY GRATEFUL FOR THE CALM SHE CARRIED INTO EVERY ROOM</h2>
+    <div class="script">— a placeholder couple</div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp" id="exp">
+  <div class="in">
+    <div class="slot light reveal"><span class="tag">slot foto — detalle de mesa</span></div>
+    <div class="reveal">
+      <div class="script">the experience</div>
+      <h2>A MASTERPIECE, COMPOSED IN FOUR MOVEMENTS</h2>
+      <ol>
+        <li><div><b>THE CLARITY CALL.</b> Your story, your vision, your non-negotiables — heard fully before anything is planned.</div></li>
+        <li><div><b>THE COMPOSITION.</b> Design, venues, and vendors curated into one coherent, breathtaking whole.</div></li>
+        <li><div><b>THE REHEARSAL.</b> Timelines tightened, contingencies staged, families briefed — quietly.</div></li>
+        <li><div><b>THE DAY.</b> You are guests at your own wedding. We conduct from the wings.</div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- KIND WORDS -->
+<section class="kind">
+  <div class="script reveal">kind words</div>
+  <q class="reveal">EVERY DECISION FELT LIGHTER WITH ELOWEN BESIDE US. THE DAY ITSELF WAS, SIMPLY, THE BEST OF OUR LIVES.</q>
+  <div class="who reveal">A placeholder couple — garden ceremony</div>
+</section>
+
+<!-- CLOSE -->
+<section class="close" id="contact">
+  <div class="slot"><span class="tag">slot foto — pareja caminando al valle</span></div>
+  <div class="in reveal">
+    <div class="script">shall we begin?</div>
+    <h2>YOUR STORY DESERVES<br>A BEAUTIFUL TELLING</h2>
+    <a class="cta" href="#">Book a clarity call</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="lg reveal">ELOWEN</div>
+  <div class="script reveal">weddings, curated</div>
+  <div class="links">
+    <a href="#about">About</a><a href="#svc">Services</a><a href="#exp">Experience</a><a href="#contact">Contact</a>
+  </div>
+  <div class="fine">© Elowen Atelier — template concept · placeholder content &amp; press names</div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

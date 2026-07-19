@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ledger — Conversion Copy for the Modern Brand</title>
+<meta name="description" content="Editorial copywriting-studio template concept: warm ivory, high-fashion serif, numbered nav, hand-written annotations. Placeholder content.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Caveat:wght@500&family=Archivo:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FAF8F5; --ink:#131313; --stone:#CDC7BE; --rust:#B35F33;
+  --serif:'Playfair Display',Georgia,serif; --hand:'Caveat',cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--ivory);color:var(--ink);font-family:'Archivo',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--ivory)}
+.lbl{font-size:10px;font-weight:500;letter-spacing:.26em;text-transform:uppercase}
+
+/* photo slots (b/w editorial) */
+.slot{position:relative;overflow:hidden;background:linear-gradient(160deg,#E8E4DE 0%,#D6D1C9 55%,#C4BEB4 100%)}
+.slot::after{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E")}
+.slot .tag{position:absolute;left:12px;bottom:10px;z-index:2;font-size:8.5px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:rgba(19,19,19,.5)}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+
+/* ---------- top double nav ---------- */
+.nav1{display:flex;justify-content:space-between;align-items:center;background:var(--ink);
+  color:var(--ivory);padding:10px 22px;position:sticky;top:0;z-index:60}
+.nav1 .links{display:flex;gap:24px}
+.nav1 a{font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;opacity:.9}
+.nav1 a b{opacity:.5;margin-right:5px;font-weight:500}
+.nav1 a:hover{opacity:.6}
+.nav2{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;
+  padding:16px 22px;border-bottom:1px solid var(--ink)}
+.nav2 .side{font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
+.nav2 .side.r{text-align:right}
+.nav2 .lg{font-family:var(--serif);font-size:24px;text-align:center;padding:0 26px;
+  border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:60px 0 90px;overflow:hidden}
+.hero .wm{font-family:var(--serif);font-size:clamp(80px,17vw,250px);letter-spacing:.18em;
+  line-height:.9;white-space:nowrap;color:var(--ink);text-align:center;
+  margin-left:-.4em;user-select:none}
+.hero .stage{position:relative;max-width:1100px;margin:-6vw auto 0;display:grid;
+  grid-template-columns:1fr 340px 1fr;gap:40px;align-items:start;padding:0 4vw}
+.hero .midph{position:relative;z-index:2}
+.hero .midph .slot{aspect-ratio:3/4}
+.hero .left{padding-top:16vw}
+.hero .left h1{font-family:var(--serif);font-size:clamp(24px,3vw,42px);line-height:1.2;text-transform:uppercase;letter-spacing:.02em}
+.hero .left h1 em{font-style:italic;text-transform:none;letter-spacing:0}
+.hero .right{padding-top:17vw}
+.hero .right a{display:flex;justify-content:space-between;gap:14px;font-size:10px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;padding:16px 2px;border-top:1px solid var(--ink);transition:letter-spacing .3s}
+.hero .right a:last-child{border-bottom:1px solid var(--ink)}
+.hero .right a:hover{letter-spacing:.26em}
+.hero .note{position:absolute;right:6%;top:4%;font-family:var(--hand);font-size:24px;color:var(--rust);
+  transform:rotate(4deg);max-width:200px;line-height:1.2}
+
+/* ---------- editor's note ---------- */
+.note-sec{padding:140px 6vw;text-align:center;border-top:1px solid var(--ink)}
+.note-sec .lbl{color:var(--rust)}
+.note-sec h2{font-family:var(--serif);font-size:clamp(28px,4vw,54px);line-height:1.25;max-width:920px;margin:20px auto 0}
+.note-sec h2 em{font-style:italic}
+.note-sec .hand{margin-top:26px;font-family:var(--hand);font-size:26px;color:var(--rust)}
+
+/* ---------- services cards ---------- */
+.svc{padding:0 4vw 150px}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:1240px;margin:0 auto;border:1px solid var(--ink)}
+.scard{padding:44px 36px 50px;border-right:1px solid var(--ink);display:flex;flex-direction:column;min-height:380px;transition:background .3s}
+.scard:last-child{border-right:0}
+.scard:hover{background:#F2EFE9}
+.scard .n{font-family:var(--serif);font-size:44px}
+.scard h3{font-family:var(--serif);font-size:clamp(22px,2.4vw,32px);line-height:1.15;margin-top:20px}
+.scard h3 em{font-style:italic}
+.scard p{margin-top:14px;font-size:13px;line-height:1.75;color:#54504A}
+.scard .more{margin-top:auto;padding-top:26px;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
+.scard .more span{border-bottom:1px solid var(--ink);padding-bottom:3px}
+
+/* ---------- featured band ---------- */
+.feat{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:34px 6vw;overflow:hidden}
+.feat .in{display:flex;gap:60px;white-space:nowrap;animation:mq 26s linear infinite;width:max-content}
+.feat span{font-family:var(--serif);font-size:20px}
+.feat span i{font-style:italic}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.feat .in{animation:none}}
+
+/* ---------- about ---------- */
+.about{padding:150px 6vw}
+.about .in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+.about .phwrap{position:relative}
+.about .slot{aspect-ratio:3/4}
+.about .hand{position:absolute;right:-10px;bottom:-16px;font-family:var(--hand);font-size:22px;
+  color:var(--rust);transform:rotate(-5deg);max-width:230px;line-height:1.25;text-align:right}
+.about h2{font-family:var(--serif);font-size:clamp(28px,3.8vw,52px);line-height:1.2}
+.about h2 em{font-style:italic}
+.about p{margin-top:24px;font-size:14px;line-height:1.85;color:#54504A;max-width:480px}
+.about .cta{display:inline-block;margin-top:34px;font-size:10px;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;background:var(--ink);color:var(--ivory);padding:16px 30px;transition:background .3s}
+.about .cta:hover{background:#3A3A3A}
+
+/* ---------- results ---------- */
+.results{border-top:1px solid var(--ink);padding:130px 6vw;text-align:center}
+.results h2{font-family:var(--serif);font-size:clamp(28px,4vw,54px);line-height:1.15;max-width:860px;margin:0 auto}
+.results h2 em{font-style:italic}
+.rrow{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);
+  border:1px solid var(--ink);max-width:1000px;margin:70px auto 0}
+.rcell{background:var(--ivory);padding:44px 30px}
+.rcell .n{font-family:var(--serif);font-size:clamp(40px,5vw,68px)}
+.rcell .l{margin-top:10px;font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#54504A}
+.results .fn{margin-top:22px;font-size:10px;color:#8A857E;letter-spacing:.06em}
+
+/* ---------- newsletter ---------- */
+.newsl{border-top:1px solid var(--ink);padding:130px 6vw;text-align:center}
+.newsl .lbl{color:var(--rust)}
+.newsl h2{font-family:var(--serif);font-size:clamp(30px,4.6vw,64px);margin-top:14px}
+.newsl h2 em{font-style:italic}
+.newsl form{margin-top:40px;display:flex;justify-content:center;flex-wrap:wrap;gap:0}
+.newsl input{border:1px solid var(--ink);border-right:0;background:#fff;padding:15px 20px;
+  font-family:'Archivo';font-size:13px;width:min(320px,70vw);outline:none}
+.newsl button{border:1px solid var(--ink);background:var(--ink);color:var(--ivory);padding:15px 28px;
+  font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;
+  font-family:'Archivo';transition:background .3s}
+.newsl button:hover{background:#3A3A3A}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--ivory);padding:80px 6vw 34px;text-align:center}
+.foot .wm{font-family:var(--serif);font-size:clamp(34px,6vw,84px);letter-spacing:.14em;line-height:1}
+.foot .links{margin-top:36px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.foot .links a{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#B9B4AC;transition:color .3s}
+.foot .links a:hover{color:var(--ivory)}
+.foot .fine{margin-top:60px;font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:#7A756D}
+
+/* ---------- reveals ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+[data-hero]{opacity:0;animation:hin 1.2s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero="2"]{animation-delay:.25s}
+@keyframes hin{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,[data-hero]{opacity:1!important;transform:none!important}}
+@media (max-width:960px){
+  .nav1 .links.r2{display:none}
+  .hero .stage{grid-template-columns:1fr;gap:34px}
+  .hero .left,.hero .right{padding-top:0}
+  .hero .note{display:none}
+  .sgrid{grid-template-columns:1fr}
+  .scard{border-right:0;border-bottom:1px solid var(--ink);min-height:0}
+  .scard:last-child{border-bottom:0}
+  .about .in{grid-template-columns:1fr;gap:44px}
+  .rrow{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav1">
+  <div class="links">
+    <a href="#"><b>01</b>Home</a><a href="#about"><b>02</b>About</a><a href="#svc"><b>03</b>Services</a><a href="#results"><b>04</b>Portfolio</a>
+  </div>
+  <div class="links r2">
+    <a href="#"><b>05</b>Journal</a><a href="#"><b>06</b>Inquire</a><a href="#"><b>07</b>Shop</a>
+  </div>
+</nav>
+<div class="nav2">
+  <span class="side">Copywriting Services</span>
+  <span class="lg">The Ledger</span>
+  <span class="side r">Courses &amp; Templates</span>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wm" data-hero>LEDGER</div>
+  <div class="stage">
+    <div class="left" data-hero="2">
+      <h1>Conversion-based copy <em>for the</em> MODERN brand</h1>
+    </div>
+    <div class="midph" data-hero><div class="slot"><img src="../img/portrait.jpg" alt="Editorial portrait placeholder"></div></div>
+    <div class="right" data-hero="2">
+      <a href="#svc">Copywriting services <span>→</span></a>
+      <a href="#svc">Site copy that converts <span>→</span></a>
+      <a href="#svc">Education &amp; guides <span>→</span></a>
+    </div>
+    <span class="note">refined word nerd, at your service</span>
+  </div>
+</header>
+
+<!-- EDITOR'S NOTE -->
+<section class="note-sec">
+  <span class="lbl reveal">The Editor's Note</span>
+  <h2 class="reveal">Ready to get booked with words that sound like you — <em>on your best day?</em></h2>
+  <div class="hand reveal">you don't need louder. you need truer.</div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc" id="svc">
+  <div class="sgrid">
+    <div class="scard reveal">
+      <div class="n">01</div>
+      <h3>Website Copy, <em>Signed &amp; Sealed</em></h3>
+      <p>Every page written to carry its weight — from the headline that stops the scroll to the button that gets clicked. Placeholder service copy.</p>
+      <div class="more"><span>Inquire</span></div>
+    </div>
+    <div class="scard reveal">
+      <div class="n">02</div>
+      <h3>Launch <em>Chronicles</em></h3>
+      <p>Email sequences and sales pages for launches that read like stories and close like clockwork.</p>
+      <div class="more"><span>Inquire</span></div>
+    </div>
+    <div class="scard reveal">
+      <div class="n">03</div>
+      <h3>The <em>Self-Serve</em> Shelf</h3>
+      <p>Templates and mini-courses for founders who write their own — with an editor looking over their shoulder.</p>
+      <div class="more"><span>Browse</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED MARQUEE -->
+<div class="feat"><div class="in" aria-hidden="true">
+  <span>We've been featured in <i>Placeholder Weekly</i></span><span>·</span><span><i>The Copy Review*</i></span><span>·</span><span>Studio Notes*</span><span>·</span>
+  <span>We've been featured in <i>Placeholder Weekly</i></span><span>·</span><span><i>The Copy Review*</i></span><span>·</span><span>Studio Notes*</span><span>·</span>
+</div></div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="in">
+    <div class="phwrap reveal">
+      <div class="slot"><img src="../img/quote.jpg" alt="Founder portrait placeholder"></div>
+      <span class="hand">enneagram 9w8 · chronic rewriter · your copy's best friend</span>
+    </div>
+    <div class="reveal">
+      <h2>The chronicle behind <em>The Ledger.</em></h2>
+      <p>Placeholder bio: a former journalist who fell for conversion copy, our founder built The Ledger on one belief — you don't need to sacrifice quality to sell well. Every sentence earns its place, or it goes.</p>
+      <a class="cta" href="#">Work together</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+  <h2 class="reveal">Quality that reads beautifully — <em>and converts anyway.</em></h2>
+  <div class="rrow">
+    <div class="rcell reveal"><div class="n">9+</div><div class="l">Years writing*</div></div>
+    <div class="rcell reveal"><div class="n">120</div><div class="l">Launches shipped*</div></div>
+    <div class="rcell reveal"><div class="n">∞</div><div class="l">Drafts, happily</div></div>
+  </div>
+  <div class="fn reveal">* placeholder figures — replaced with the client's real, verifiable numbers at launch.</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsl">
+  <span class="lbl reveal">Stay in the know</span>
+  <h2 class="reveal">SEO &amp; website words, <em>weekly-ish.</em></h2>
+  <form class="reveal" onsubmit="return false">
+    <input type="email" placeholder="Your email address" aria-label="Email">
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wm reveal">THE LEDGER</div>
+  <div class="links">
+    <a href="#">Home</a><a href="#about">About</a><a href="#svc">Services</a><a href="#results">Portfolio</a><a href="#">Journal</a><a href="#">Inquire</a>
+  </div>
+  <div class="fine">© The Ledger Studio — template concept · placeholder content</div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
