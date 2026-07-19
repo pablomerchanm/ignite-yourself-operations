@@ -78,6 +78,20 @@ h1 .ser{color:var(--flame);font-weight:400;font-size:1.02em}
 .card:hover{transform:translateY(-6px);border-color:rgba(244,243,240,.2);box-shadow:0 30px 70px rgba(0,0,0,.5)}
 .card.hide{display:none}
 
+/* featured: el sistema base (Fase 2) */
+.basefeat{
+  border:1px solid rgba(255,106,61,.35);border-radius:var(--r);
+  background:linear-gradient(160deg,rgba(255,106,61,.07),var(--panel) 45%);
+  padding:34px 34px 34px;margin:8px 0 46px;
+}
+.bfhead{max-width:760px;margin-bottom:26px}
+.bfhead .bft{font-weight:600;letter-spacing:-.03em;font-size:34px;margin:10px 0 12px}
+.bfhead .bft .ser{font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;letter-spacing:0}
+.bfgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.bfnote{margin-top:18px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--dim)}
+.bfnote b{color:var(--flame);font-weight:500}
+@media(max-width:900px){.bfgrid{grid-template-columns:1fr}.basefeat{padding:22px}}
+
 /* browser frame + scrolling shot */
 .frame{position:relative;background:var(--panel2);border-bottom:1px solid var(--line)}
 .chrome{display:flex;align-items:center;gap:7px;padding:12px 16px}
@@ -168,10 +182,46 @@ footer{border-top:1px solid var(--line);padding:44px 0 54px}
     <div class="hstats">
       <div class="hstat"><div class="n">36</div><div class="l">Plantillas listas</div></div>
       <div class="hstat"><div class="n">34</div><div class="l">Referentes decodificados</div></div>
+      <div class="hstat"><div class="n">1</div><div class="l">Sistema base propio</div></div>
       <div class="hstat"><div class="n">1<i>+</i></div><div class="l">Piloto en producción</div></div>
     </div>
   </div>
 </header>
+
+<section class="basefeat reveal in" id="sistema-base">
+  <div class="bfhead">
+    <div class="eyebrow"><span class="fdot"></span><span class="mono">Nuevo · Fase 2 — sistema propio</span></div>
+    <h2 class="bft">Y un <span class="ser">sistema base.</span></h2>
+    <p class="sub">De las 36 autopsias salió un template <b>original y reutilizable</b>: todo tokenizado, todo el contenido en un solo <span class="mono" style="font-size:.85em">content.json</span>, 13 secciones opcionales, 5 tratamientos de composición y motion medido del referente. Un cliente nuevo se puebla en minutos. Abajo: el mismo sistema vacío (con shot-list de fotos impresa en cada slot) y poblado con el piloto.</p>
+  </div>
+  <div class="bfgrid">
+    <div class="card">
+      <a class="cover" href="/base" aria-label="Abrir demo del sistema base con placeholders"></a>
+      <div class="frame">
+        <div class="chrome"><i></i><i></i><i></i><span class="url">/base — sistema con placeholders</span></div>
+        <div class="shot"><img src="/templates/previews/base.jpg" alt="Preview sistema base placeholder" loading="lazy"><span class="hint">Hover para recorrer</span></div>
+      </div>
+      <div class="bd">
+        <div class="rowtop"><div class="nm"><span class="num">BASE</span><h2>El sistema<span>/ base</span></h2></div><div class="pal"><i style="background:#F4F1EA"></i><i style="background:#CCD5C4"></i><i style="background:#A8B8CD"></i><i style="background:#D9A184"></i></div></div>
+        <p class="vibe"><b>El showroom.</b> Copy placeholder que mide los largos reales y slots de foto con su label de shot-list — <span class="ser">así se ve antes de poblar.</span></p>
+        <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Sistema</span><span class="tg">Tokens</span></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <a class="cover" href="/base-jorge" aria-label="Abrir sistema base poblado con Jorge Arce"></a>
+      <div class="frame">
+        <div class="chrome"><i></i><i></i><i></i><span class="url">/base-jorge — poblado con el piloto</span></div>
+        <div class="shot"><img src="/templates/previews/base-jorge.jpg" alt="Preview sistema base poblado con Jorge Arce" loading="lazy"><span class="hint">Hover para recorrer</span></div>
+      </div>
+      <div class="bd">
+        <div class="rowtop"><div class="nm"><span class="num">BASE</span><h2>Dr. Jorge Arce<span>/ base-jorge</span></h2></div><div class="pal"><i style="background:#F4F1EA"></i><i style="background:#CCD5C4"></i><i style="background:#26312B"></i></div></div>
+        <p class="vibe"><b>La prueba del flujo.</b> Solo se escribió un content.json: contenido verificado, fotos reales, secciones sin datos desaparecen solas — <span class="ser">poblado en minutos.</span></p>
+        <div class="foot2"><span class="open">Abrir demo <span class="ar">↗</span></span><div class="tags"><span class="tg hot">Piloto</span><span class="tg">content.json</span></div></div>
+      </div>
+    </div>
+  </div>
+  <p class="bfnote"><b>Cómo se usa:</b> template-base/ en el repo es la fuente de verdad — README con flujo de 5 pasos · content.schema.md con largos y ratios · PRINCIPLES-JENNA.md con los valores medidos del referente.</p>
+</section>
 </div>
 
 <div class="filters">
@@ -825,7 +875,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // filters
   const chips = [...document.querySelectorAll('.fchip')];
-  const cards = [...document.querySelectorAll('.card')];
+  const cards = [...document.querySelectorAll('#grid .card')];
   const cnt = document.getElementById('cnt');
   chips.forEach(ch => ch.addEventListener('click', () => {
     chips.forEach(c => c.classList.remove('on'));
