@@ -169,7 +169,7 @@ Tiempo estimado de adaptación por sitio una vez está el intake completo: **una
 
 ---
 
-*Última actualización: ronda 5 completada — 37 plantillas (v2–v37) verificadas en
+*Última actualización: ronda 5 completada — 36 plantillas (v2–v37) verificadas en
 producción. Rondas 3–4 nacen de referentes premium (caliora, bennettandclive,
 olivergareis, landonorris, designxhand, everswap, mindmarket, andrewcunliffe,
 vastspace, getty/tracingart, sacredforests, adcker, ilcapo, Cobalt, wolverine,
