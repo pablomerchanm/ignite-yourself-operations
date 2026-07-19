@@ -8,10 +8,18 @@ var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').ma
 var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
 if(!MOTION){document.documentElement.classList.add('no-motion');return}
 gsap.registerPlugin(ScrollTrigger);
-var lenis=new Lenis({duration:1.05});
+var lenis=new Lenis({duration:.8});
 lenis.on('scroll',ScrollTrigger.update);
 gsap.ticker.add(function(t){lenis.raf(t*1000)});
 gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
 
 document.querySelectorAll('.reveal:not([data-stagger])').forEach(function(el){
   gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
@@ -27,7 +35,7 @@ document.querySelectorAll('[data-stagger]').forEach(function(g){
 });
 /* R5 el sello gira con el scroll */
 document.querySelectorAll('[data-seal]').forEach(function(sv){
-  ScrollTrigger.create({start:0,end:'max',scrub:.8,
+  ScrollTrigger.create({start:0,end:'max',scrub:.5,
     onUpdate:function(self){sv.style.transform='rotate('+(self.progress*720)+'deg)'}});
 });
 document.querySelectorAll('a[href^="#"]').forEach(function(a){

@@ -238,10 +238,18 @@ fetch('/v13-bennett/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   /* R1 rise */
@@ -280,7 +288,7 @@ function init(){
   if(stL&&stR){
     var f=window.innerWidth<861?25:50;
     stR.style.transform='translateY(-50%)';
-    ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:1.2,
+    ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:.6,
       onUpdate:function(self){var p=self.progress;
         stL.style.transform='translateY('+(-p*f)+'%)';
         stR.style.transform='translateY('+(-50+p*f)+'%)'}});
@@ -288,7 +296,7 @@ function init(){
   /* R5b onda de peso (workroll) */
   var rows=Array.prototype.slice.call(document.querySelectorAll('.workroll .row'));
   if(rows.length){
-    ScrollTrigger.create({trigger:'.workroll',start:'top 70%',end:'bottom 55%',scrub:1.2,
+    ScrollTrigger.create({trigger:'.workroll',start:'top 70%',end:'bottom 55%',scrub:.6,
       onUpdate:function(self){var p=self.progress,n=rows.length;
         rows.forEach(function(r,i){
           var d=Math.abs(p*(n-1)-i),k=Math.max(0,1-d/1.2);

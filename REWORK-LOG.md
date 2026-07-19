@@ -1229,3 +1229,27 @@ verificada (reduced-motion + stress por interceptación) → log.
 Decisiones de alcance documentadas: v25 (content = script generador),
 v34/v37 (in-place por fidelidad de arte).
 ═══════════════════════════════════════════════
+
+## FIX GLOBAL · respuesta del scrollytelling (reporte de Pablo)
+
+**Síntoma:** el scrollytelling se sentía "super lento, casi pegado",
+sobre todo en las primeras secciones, en casi todos los templates.
+
+**Diagnóstico (medido):** doble suavizado encadenado — Lenis con
+duration 1.05s Y scrub 1.2 sobre esa señal ya suavizada ⇒ el efecto
+visual llegaba ~2s después del gesto (un golpe de rueda tardaba
+0.5–1.3s solo en asentar el scroll). Hallazgo secundario: sin
+ScrollTrigger.refresh() tras cargar fuentes/imágenes (v12 tenía un
+trigger desfasado 367px).
+
+**Corrección aplicada a los 36 archivos (v2–v37 + motion.js de v25 +
+subpáginas):**
+- Lenis duration 1.05 → 0.8 (suave pero con respuesta).
+- scrub 1.2 → 0.6 y 0.8 → 0.5 en todos los mapeos (los pins incluidos).
+- Snippet "anti-desfase": ScrollTrigger.refresh() al resolver
+  document.fonts.ready y al terminar de cargar las imágenes.
+
+**Verificación:** lagtest 500→400ms de asentado (v24 1300→1100 — esa
+página además decodifica 3 JPG full-viewport); batchcheck ovf 0 en
+muestra de 6 (v11/v12/v13/v16/v24/v34); pins sanos: libro v16 "Day
+Three" con 1 pin-spacer, v11 track −3000px prog 17% — 0 errores.

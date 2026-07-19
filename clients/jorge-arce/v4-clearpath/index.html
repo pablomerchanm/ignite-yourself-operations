@@ -374,10 +374,18 @@ function initMotion(){
     document.querySelectorAll('.ellipse-note svg path').forEach(function(p){p.style.strokeDasharray='none'});
     return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',function(e){ScrollTrigger.update();onScroll(e.scroll)});
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;
     var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();lenis.scrollTo(t)}});
 
@@ -416,7 +424,7 @@ function initMotion(){
     var len=trail.getTotalLength();
     trail.style.strokeDasharray=len;trail.style.strokeDashoffset=len;
     var nums=gsap.utils.toArray('[data-bignum]');
-    ScrollTrigger.create({trigger:'#trail',start:'top 65%',end:'bottom 70%',scrub:1.2,
+    ScrollTrigger.create({trigger:'#trail',start:'top 65%',end:'bottom 70%',scrub:.6,
       onUpdate:function(self){var p=self.progress;
         trail.style.strokeDashoffset=String(len*(1-p));
         nums.forEach(function(n,i){

@@ -224,10 +224,18 @@ fetch('/v36-kimberly/content.json').then(function(r){if(!r.ok)throw new Error(r.
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
   wireAnchors(lenis);
 
   document.querySelectorAll('[data-r1]').forEach(function(el){
@@ -265,7 +273,7 @@ function init(){
     var lines=Array.prototype.slice.call(q.querySelectorAll('.qline i'));
     var n=lines.length;
     if(n){
-      ScrollTrigger.create({trigger:'.quote',start:'top 78%',end:'center 48%',scrub:1.2,
+      ScrollTrigger.create({trigger:'.quote',start:'top 78%',end:'center 48%',scrub:.6,
         onUpdate:function(self){var p=self.progress;
           lines.forEach(function(ln,i){
             var k=Math.max(0,Math.min(1,p*n-i*.85));

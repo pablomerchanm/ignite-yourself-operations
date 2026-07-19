@@ -362,17 +362,25 @@ function initMotion(){
   if(!MOTION){if(words.length)setWord(words.length-1);return}
 
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:1.05});
+  var lenis=new Lenis({duration:.8});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
 
   var hTween=null;
   if(horizontal){
     var max=function(){return track.scrollWidth-innerWidth};
     hTween=gsap.to(track,{x:function(){return -max()},ease:'none',
       scrollTrigger:{trigger:'#hwrap',start:'top top',end:function(){return'+='+max()},
-        pin:true,scrub:1.2,invalidateOnRefresh:true,
+        pin:true,scrub:.6,invalidateOnRefresh:true,
         onUpdate:function(self){if(progress)progress.style.width=(self.progress*100)+'%';
           /* rotador ligado al primer tramo del recorrido */
           if(words.length){var p=gsap.utils.clamp(0,1,self.progress*4);
