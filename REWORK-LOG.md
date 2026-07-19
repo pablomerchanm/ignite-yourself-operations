@@ -1128,3 +1128,36 @@ motion continuo; 2 easings; solo transform; robusto.
 robust31: REDUCED nm, 0 ocultos, 3/3 tintas planas · R5 tinta hero
 escrita (0%), note-sec −95% en curso · STRESS feat fuera, h1 ×2 sin
 foto → phx, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 34 · v35-astramaven — CERRADA (VARA de acabado)
+
+**Diagnóstico inicial:** Vera Nova carmesí con el wordmark tras retrato
+como momento memorable claro y sistema casi completo — vara de
+acabado. Deudas: dos marquees `mq infinite`, `.reveal` IO, keyframes
+hin, copy en HTML.
+
+**Qué cambié (acabado, no reinvención):**
+- R5 profundidad de cartel: al salir el hero, retrato y wordmark se
+  separan en profundidad (ph +10% / wm 6→−4%, scrub 1.2) — el cartel
+  gana capas reales. Reduced: composición estática original.
+- Marquesinas contrarrotantes: las dos bandas (Breakthrough Program /
+  what they're saying) se mueven en direcciones opuestas mapeadas al
+  paso del viewport (±18%); el infinito murió en ambas.
+- Tokens, ritmo --sec, catálogo R1/R2/R4, parches balanceados,
+  focus-visible.
+- Shell+loader: 7 secciones opcionales, marquesinas generadas del
+  texto del JSON, numeración de method automática.
+
+**Qué elevé:** los tres gestos de la página (cartel, bandas, método)
+ahora pertenecen al scroll — acabado de vara sin tocar la paleta ni la
+composición que la hacían vara.
+
+**Paso 4:** memorable sí (cartel con capas); crimson hero / intro
+clara / method grid / program gradient con banda / listen split /
+voices ink con banda — intacto; motion continuo; 2 easings; solo
+transform; robusto.
+
+**Verificación:** batchcheck W35 ovf 0 d+m. robust35: REDUCED nm, 0
+ocultos · R5 ph +4.7% vs wm +1.3% mid-exit, marquesina izq +1.9% en
+banda · STRESS listen fuera, h ×2 sin foto → phx, ovf 0, 0 errores ·
+MOBILE ovf 0.

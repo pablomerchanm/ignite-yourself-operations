@@ -1,0 +1,143 @@
+{
+ "_schema": "v35-astramaven · Vera Nova, carmesí degradado — VARA de acabado · Archivo + serif + script. rich() admite <em><b><br>, <w>…</w> itálica 'with'. method.rows EXACTO 3 · listen.eps 2-4 · marquesinas del array. src vacío = placeholder. Fetch absoluto /v35-astramaven/content.json.",
+ "meta": {
+  "title": "Vera Nova — Business Mentorship · v35 Astra Maven",
+  "description": "Grow your business with confidence. Template concept.",
+  "lang": "en"
+ },
+ "nav": {
+  "l": [
+   {
+    "t": "Method",
+    "h": "#method"
+   },
+   {
+    "t": "Program",
+    "h": "#program"
+   },
+   {
+    "t": "Podcast",
+    "h": "#listen"
+   }
+  ],
+  "logo": "VERA NOVA",
+  "r": [
+   {
+    "t": "Results",
+    "h": "#voices"
+   },
+   {
+    "t": "About",
+    "h": "#about"
+   },
+   {
+    "t": "Contact",
+    "h": "#contact"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "img": {
+    "src": "/img/portrait.jpg",
+    "alt": "Portrait placeholder",
+    "label": "FOTO — retrato recortado"
+   },
+   "h": "Grow your business<br><w>with</w> CONFIDENCE",
+   "kicker": "and stop leaving<br>momentum on the table",
+   "cta": {
+    "t": "Get started",
+    "h": "#contact"
+   },
+   "wm": "VERA NOVA"
+  },
+  {
+   "type": "intro",
+   "id": "about",
+   "script": "for the women",
+   "h": "who are building something real.",
+   "p": "Vera Nova is a boutique mentorship studio for founders who are done winging it. Strategy without the fluff, accountability without the guilt — and a plan that fits the life you actually want. Placeholder copy for the template concept."
+  },
+  {
+   "type": "method",
+   "id": "method",
+   "h": "My approach",
+   "rows": [
+    {
+     "t": "Clarity before speed",
+     "d": "We name the real goal first — revenue, freedom, reach — and cut everything that doesn't serve it."
+    },
+    {
+     "t": "Offers that carry weight",
+     "d": "Your best work, packaged so the right clients recognize it instantly — and pay accordingly."
+    },
+    {
+     "t": "Momentum you can keep",
+     "d": "Systems and rhythms that survive busy seasons, not just good weeks."
+    }
+   ]
+  },
+  {
+   "type": "program",
+   "id": "program",
+   "marq": "The Breakthrough Program ·",
+   "lbl": "The signature offer",
+   "h": "the Business <em>Breakthrough</em> Program",
+   "p": "Twelve weeks, one focused cohort, and a mentor in your corner. Build the offer, the pricing, and the pipeline — with feedback on everything you ship.",
+   "cta": {
+    "t": "Join the waitlist",
+    "h": "#contact"
+   }
+  },
+  {
+   "type": "listen",
+   "id": "listen",
+   "script": "listen now",
+   "h": "The Vera Nova Show",
+   "p": "Short, honest episodes on pricing, positioning, and the mindset it takes to charge like you mean it. Placeholder episode list.",
+   "eps": [
+    {
+     "t": "Why your best month didn't feel like it",
+     "n": "ep. 42"
+    },
+    {
+     "t": "Pricing without apologizing",
+     "n": "ep. 41"
+    },
+    {
+     "t": "The offer only you can make",
+     "n": "ep. 40"
+    }
+   ],
+   "img": {
+    "src": "/img/quote.jpg",
+    "alt": "",
+    "label": "FOTO — la mentora 3:4"
+   }
+  },
+  {
+   "type": "voices",
+   "id": "voices",
+   "marq": "what they're saying •",
+   "script": "real talk",
+   "q": "I stopped discounting, raised my rates, and booked out the quarter. Mostly, I stopped second-guessing every decision.",
+   "who": "Placeholder client — studio founder"
+  },
+  {
+   "type": "close",
+   "id": "contact",
+   "script": "your move",
+   "h": "Build it with confidence.",
+   "cta": {
+    "t": "Book a fit call",
+    "h": "#top"
+   },
+   "fine": [
+    "© Vera Nova — template concept",
+    "hello@placeholder.com",
+    "Everywhere via zoom"
+   ]
+  }
+ ]
+}
