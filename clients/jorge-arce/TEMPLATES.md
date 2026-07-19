@@ -80,6 +80,17 @@ rediseño.
 | **Vera Nova v35** | `/v35-astramaven` | Coach/mentora, marca personal femenina | Baja (2–3 con actitud) | Medio | Carmesí degradado + crema |
 | **Camille v36** | `/v36-kimberly` | Coach ejecutiva, consultora, finanzas | Baja (2–3 sobrios) | Medio | Navy profundo + tan |
 | **Big Batch v37** | `/v37-bakery` | Food brand, panadería, marca juguetona | Cero (todo ilustrado) | Poco | Chocolate + rosa + colores |
+| **SISTEMA BASE** | `/base` · `/base-jorge` | **Cualquier profesional — el reutilizable por defecto** | Shot-list impresa en cada slot (3:4, 4:5, 1:1, 16:9) | Mínimo: solo `content.json` | Tokens: salvia + piedra + arcilla (cambiables en 1 archivo) |
+
+> **Sistema base (Fase 2):** no es un lente más — es el template ORIGINAL
+> reutilizable destilado de las 36 autopsias. Fuente de verdad en
+> `template-base/` (repo raíz): README con flujo de poblado en 5 pasos,
+> `content.schema.md` con largos máximos y ratios, `PRINCIPLES-JENNA.md` con
+> los valores numéricos del referente. 13 secciones opcionales (las que no
+> tienen datos desaparecen sin romper el ritmo), 5 tratamientos de composición
+> alternados, motion medido (fadeIn 0.56s por grupo, stagger solo hero,
+> 1 sola animación lenta). `/base` = demo con placeholders · `/base-jorge` =
+> poblado con el piloto escribiendo únicamente su content.json.
 
 > Ronda 5 (v28–v37): plantillas construidas con marcas ficticias y contenido
 > placeholder original — el diseño emula el sistema del referente (tipos, paleta,
