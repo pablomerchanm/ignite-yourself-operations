@@ -47,7 +47,7 @@
 | 32 | `v33-valenna` | ✅ | "The Travel Edit" con split potente — a Pablo le fascinó el referente; conservar y pulir, no rehacer. |
 | 33 | `v31-chronicle` | ✅ | El wordmark 250px con doble nav numerada es de las composiciones más finas del catálogo; solo motion quirúrgico. |
 | 34 | `v35-astramaven` | ✅ VARA | Carmesí degradado con wordmark tras retrato: momento memorable claro, sistema casi completo — vara de acabado. |
-| 35 | `v34-mesamaison` | ☐ VARA | La favorita declarada ("me fascina, sé muy fiel"): fonts exactas, ilustración adobe, footer monumental — vara de composición. |
+| 35 | `v34-mesamaison` | ✅ VARA | La favorita declarada ("me fascina, sé muy fiel"): fonts exactas, ilustración adobe, footer monumental — vara de composición. |
 | 36 | `v37-bakery` | ☐ VARA | "AMO EL ESTILO CHUNKY": ilustración SVG propia, ticker, menú punteado — la de más carácter; vara de personalidad. |
 
 ## Nota de alcance
