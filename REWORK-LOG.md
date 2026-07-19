@@ -837,3 +837,40 @@ ocultos, 3/3 líneas visibles sin pin · R5 cascada 1.00/0.56/0.15 con 1
 pin-spacer, nav solid activa · STRESS quote fuera, state 2 líneas,
 brands 4, hero sin foto → phx, título ×2, ovf 0, 0 errores · MOBILE
 ovf 0 sin pin, líneas visibles.
+
+## 25 · v22-sacred — CERRADA
+
+**Diagnóstico inicial:** poética ilustrada — de las más personales — con
+el case-map en reveals sueltos: los tres mapas SVG aparecían de golpe,
+parallax por scroll-listener crudo, keyframes wheel infinito en el
+mouse, hin en hero, copy y arte enredados.
+
+**Qué cambié:**
+- R5 cartografía por capas: cada mapa SVG se dibuja capa a capa con el
+  scrub de su paso (`k=clamp(p·n−j)` sobre los hijos directos del svg,
+  opacidad continua en cascada) — el caso se CARTOGRAFÍA ante el lector
+  en tres estados: charted → compromised → restored. Reduced: mapas
+  completos.
+- Los mapas y los critters del footer son plantilla del loader (claves
+  map1/map2/map3/frog/leafy); el texto vive en content.json.
+- Parallax de poemas/banda al ticker único de ScrollTrigger (scrub 1.2,
+  translateY ±30 + scale 1.12 con overflow clip); wheel y hin muertos.
+- BUG PROPIO detectado y corregido: los regex de limpieza de CSS
+  desequilibraron llaves y se comieron los @media (overflow 86px) —
+  reconstruido el CSS desde git con parches balanceados (escaneo de
+  profundidad para @media, keyframes anidados con patrón exacto) y
+  asserts de balance. Lección anotada para el resto de la cola.
+- Tokens, 2 easings, focus-visible verde, `.phx`, overlay accesible.
+
+**Qué elevé:** el case-map por fin tiene el scrub real que merecía — la
+metáfora del territorio se ejecuta dibujándose.
+
+**Paso 4:** memorable sí (cartografía); hero centrado / poemas full /
+intro asimétrica / mapsteps alternando texto-mapa; ratio ok; motion
+continuo; 2 easings; solo opacity/transform; robusto.
+
+**Verificación:** batchcheck W22 ovf 0 d+m (tras fix de llaves).
+robust22: REDUCED nm, 0 ocultos, mapas visibles · R5 9 capas en cascada
+1/1/1/.82/0…, plx translateY 30px scale 1.12 en ticker · STRESS record
+fuera, poems 2 sin fotos → phx, mapsteps 2, título ×2, ovf 0, 0
+errores · MOBILE ovf 0.

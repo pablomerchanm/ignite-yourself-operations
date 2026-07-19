@@ -1,0 +1,230 @@
+{
+ "_schema": "v22-sacred · poética ilustrada con mapa · Figtree + serif + Space Mono. Los mapas SVG son plantilla (claves map1/map2/map3) y se cartografían por capas con el scrub. rich() admite <b><br><em>, <g>…</g> verde, <r>…</r> arcilla. poems 2-4 · mapsteps EXACTO 2-3 · record EXACTO 2-3 · voices 2-4. src vacío = placeholder. Fetch absoluto /v22-sacred/content.json.",
+ "meta": {
+  "title": "Jorge Arce — Restore Function. Restore Lives. · v22 Sacred",
+  "description": "Careful surgery for the most precious function a person has. Dr. Jorge Arce — oral & maxillofacial surgery, South Bay.",
+  "lang": "en"
+ },
+ "nav": {
+  "logo": "Jorge Arce",
+  "tag": "restore function · restore lives",
+  "menu": "menu"
+ },
+ "overlay": {
+  "links": [
+   {
+    "t": "The Craft Speaks",
+    "h": "#poems"
+   },
+   {
+    "t": "About",
+    "h": "about.html"
+   },
+   {
+    "t": "FAQ",
+    "h": "faq.html"
+   },
+   {
+    "t": "Contact",
+    "h": "tel:+13103274166"
+   }
+  ],
+  "fine": "(310) 327-4166 · redondo beach & torrance, ca"
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "l1": "Jorge",
+   "l2": "Arce",
+   "title": "Restore Function. Restore Lives.",
+   "sub": "careful surgery for the most precious function a person has",
+   "scr": "Scroll to continue"
+  },
+  {
+   "type": "poems",
+   "id": "poems",
+   "items": [
+    {
+     "img": {
+      "src": "/img/surgery.jpg",
+      "label": "FOTO — poema i"
+     },
+     "line": "I rebuild what was lost.",
+     "who": "the craft speaks — i"
+    },
+    {
+     "img": {
+      "src": "/img/operating.jpg",
+      "label": "FOTO — poema ii"
+     },
+     "line": "I return the bite, the smile, the voice.",
+     "who": "the craft speaks — ii"
+    },
+    {
+     "img": {
+      "src": "/img/quote.jpg",
+      "label": "FOTO — poema iii"
+     },
+     "line": "I take the cases others turn away.",
+     "who": "the craft speaks — iii"
+    }
+   ]
+  },
+  {
+   "type": "intro",
+   "big": "<b>Dr. Jorge Arce</b> is a Colombia-born, California-forged oral & maxillofacial surgeon at the forefront of an old yet radical way to practice: <g>unhurried surgical care.</g> Twenty-seven years. One discipline. <em>Every case given the time it actually needs.</em>",
+   "fn": "not the pace one would normally expect from modern medicine — and exactly the point.",
+   "cols": [
+    "He grew up in Colombia, in a family that treated careful work as a form of respect. Medicine was not a career choice so much as a calling — a way to use his hands to give something back. He moved to California to specialize, and never left.",
+    "Board certified in implantology, he believes in direct action and plain language: honest diagnosis, meticulous planning, and surgery done once, done right. In 2007 he founded the <b>Dental Implants Center of South Bay</b>."
+   ]
+  },
+  {
+   "type": "mapscroll",
+   "steps": [
+    {
+     "title": "<g>Map out the territory.*</g><br>Identify what can be saved.",
+     "fn": "* every case begins with imaging, history, and an honest read — in plain language.",
+     "map": "map1"
+    },
+    {
+     "title": "Then highlight what we must <r>reclaim</r> and <r>rebuild</r> to protect function and <em>quality of life.</em>",
+     "fn": "bone loss, failing teeth, and past work that never held — nothing is judged, everything is mapped.",
+     "map": "map2"
+    },
+    {
+     "title": "Partnering with patients* to <g>restore territory</g> and give it back — <em>for good:</em>",
+     "steps": [
+      {
+       "pill": "Step 01",
+       "p": "Diagnose fully — imaging, history, honest candidacy, in plain language."
+      },
+      {
+       "pill": "Step 02",
+       "p": "Plan the whole case before anyone operates — implants, grafting, sequencing."
+      },
+      {
+       "pill": "Step 03",
+       "p": "Restore & maintain for life — full-arch All-On-X down to a single implant."
+      }
+     ],
+     "partners": {
+      "t": "* joining the restoration party with the best of them:",
+      "badges": [
+       "Board<br>Certified",
+       "Est.<br>2007",
+       "South Bay<br>California"
+      ]
+     },
+     "link": {
+      "t": "Want to learn how far the work has already come?",
+      "h": "about.html"
+     },
+     "map": "map3"
+    }
+   ]
+  },
+  {
+   "type": "record",
+   "cells": [
+    {
+     "n": "27",
+     "u": "yrs",
+     "l": "Dedicated to oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Founder, Dental Implants Center of South Bay"
+    },
+    {
+     "n": "Board",
+     "u": "Cert.",
+     "l": "In dental implantology"
+    }
+   ]
+  },
+  {
+   "type": "voices",
+   "cards": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.”",
+     "who": "maria r. — patient, full-arch reconstruction"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. He treated my father like family.”",
+     "who": "anabella c. — daughter of patient"
+    },
+    {
+     "q": "“When a case is beyond what I can handle, Jorge is the first call I make.”",
+     "who": "dr. david kim, d.d.s. — referring dentist, torrance"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "img": {
+    "src": "/img/clinic.jpg",
+    "label": "FOTO — banda contacto"
+   },
+   "cta": {
+    "t": "Contact us",
+    "h": "tel:+13103274166"
+   }
+  },
+  {
+   "type": "foot",
+   "mission": "Restoring the most precious function a person has — together with the people who trust us.",
+   "cols": [
+    {
+     "h": "Menu",
+     "items": [
+      {
+       "t": "The Craft Speaks",
+       "h": "index.html"
+      },
+      {
+       "t": "About",
+       "h": "about.html"
+      },
+      {
+       "t": "FAQ",
+       "h": "faq.html"
+      }
+     ]
+    },
+    {
+     "h": "Support",
+     "items": [
+      {
+       "t": "Contact",
+       "h": "tel:+13103274166"
+      },
+      {
+       "t": "FAQ",
+       "h": "faq.html"
+      },
+      {
+       "t": "By appointment"
+      }
+     ]
+    },
+    {
+     "h": "Get in touch",
+     "items": [
+      {
+       "t": "Redondo Beach, California"
+      },
+      {
+       "t": "Torrance, California"
+      },
+      {
+       "t": "(310) 327-4166",
+       "h": "tel:+13103274166"
+      }
+     ]
+    }
+   ],
+   "legal": "Jorge Arce — restore function · restore lives — © dr. jorge arce, d.d.s."
+  }
+ ]
+}
