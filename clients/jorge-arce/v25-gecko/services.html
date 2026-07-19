@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Dr. Jorge Arce</title>
+<meta name="description" content="Implants, full-arch All-On-X, complex extractions, reconstruction, maintenance, and second opinions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4F2E9; --peri:#D5DBF2; --peri2:#C7CEF0; --ink:#111111; --dim:#6E6C64; --brown:#8B7355;
+  --serif:'Instrument Serif',Georgia,serif; --script:'Caveat',cursive; --r:22px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--peri);color:var(--ink)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 40px}
+.mx{font-weight:700;letter-spacing:-.03em;line-height:1.05}
+.mx em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.005em;font-size:1.06em}
+.hl{background:var(--peri);padding:0 8px;border-radius:8px}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,242,233,.92);backdrop-filter:blur(10px);
+  display:flex;justify-content:space-between;align-items:center;padding:18px 40px}
+.nav .lg{font-weight:700;font-size:19px;letter-spacing:-.03em}
+.nav .links{display:flex;gap:24px;font-size:14.5px;font-weight:500}
+.nav .links a{position:relative;padding-bottom:3px}
+.nav .links a.on{border-bottom:1.5px solid var(--ink)}
+.nav .links a:not(.on)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--ink);transition:right .3s}
+.nav .links a:not(.on):hover::after{right:0}
+.ovalbtn{display:inline-block;background:var(--peri);color:var(--ink);font-weight:600;font-size:15px;
+  padding:18px 40px;border-radius:50%/60%;transform:rotate(-2deg);transition:transform .3s,box-shadow .3s}
+.ovalbtn:hover{transform:rotate(0) scale(1.04);box-shadow:0 16px 36px rgba(17,17,17,.18)}
+.ovalbtn.dark{background:var(--ink);color:var(--cream)}
+.stamp{width:92px;height:92px;position:relative;flex:0 0 auto}
+.stamp svg{width:100%;height:100%;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stamp .cc{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:30px;font-style:italic}
+.pressbar{background:var(--peri);padding:34px 0}
+.pressbar .row{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;align-items:center}
+.pressbar .b{font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#3A3D4E}
+.pressbar .b.ser{font-family:var(--serif);font-weight:400;letter-spacing:.06em;font-size:19px;text-transform:none}
+.foot{padding:0}
+.newsl{background:var(--cream);text-align:center;padding:110px 0}
+.newsl h3{font-weight:700;letter-spacing:-.03em;font-size:clamp(24px,3vw,38px)}
+.newsl h3 em{font-family:var(--serif);font-style:italic;font-weight:400}
+.newsl form{margin-top:30px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.newsl input{border:1px solid rgba(17,17,17,.3);background:#FCFBF6;border-radius:99px;
+  padding:14px 22px;font-family:'Archivo';font-size:14px;width:min(320px,80vw);outline:none}
+.newsl button{border:0;cursor:pointer;font-family:'Archivo'}
+.newsl .priv{margin-top:16px;font-size:11.5px;color:var(--dim)}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:24px 40px 28px;
+  font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
+  border-top:1px solid rgba(17,17,17,.1)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
+@media (max-width:920px){
+  .wrap{padding:0 22px}
+  .nav{padding:14px 22px}
+  .nav .links{display:none}
+}
+
+.shero{padding:20px 20px 0}
+.shcard{position:relative;border-radius:var(--r);overflow:hidden;min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center}
+.shcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.3) brightness(.72)}
+.shcard .inr{position:relative;z-index:2;color:#fff;padding:60px 30px}
+.shcard .lbl{margin-bottom:16px}
+.shcard h1{font-size:clamp(32px,4.6vw,64px);max-width:880px}
+.introx{padding:110px 0;text-align:center}
+.introx .minis{display:flex;justify-content:center;gap:20px;margin-bottom:50px}
+.introx .minis img{width:150px;aspect-ratio:1;object-fit:cover;border-radius:16px;filter:grayscale(.15)}
+.introx h2{font-size:clamp(24px,3vw,40px);max-width:880px;margin:0 auto}
+.introx p{margin-top:26px;font-size:15px;line-height:1.75;color:var(--dim);max-width:600px;margin-left:auto;margin-right:auto}
+.svccards{padding:100px 0 130px}
+.svccard{border:1px solid rgba(17,17,17,.25);border-radius:var(--r);overflow:hidden;margin-bottom:30px;background:#FCFBF6}
+.svccard .head{padding:16px 30px;font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+.svccard:nth-child(1) .head{background:var(--peri)}
+.svccard:nth-child(2) .head{background:var(--brown);color:#FCFBF6}
+.svccard:nth-child(3) .head{background:var(--peri)}
+.svccard .bd{padding:36px 30px 42px;display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}
+.svccard h3{font-size:clamp(24px,2.8vw,36px)}
+.svccard p{font-size:15px;line-height:1.7;color:#3C3A33}
+.svccard ul{margin-top:16px;list-style:none}
+.svccard li{font-size:14.5px;padding:9px 0;border-top:1px solid rgba(17,17,17,.12);color:#3C3A33}
+.svccard li b{font-weight:700;color:var(--ink)}
+.svccards .cta{text-align:center;margin-top:40px}
+@media (max-width:920px){.svccard .bd{grid-template-columns:1fr;gap:20px}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="lg" href="index.html">Dr. Jorge Arce</a><div class="links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" class="on">Services</a><a href="stories.html">Stories</a><a href="contact.html">Contact</a><a href="blog.html">Journal</a></div></nav>
+
+<header class="shero">
+  <div class="shcard">
+    <img src="../img/operating.jpg" alt="">
+    <div class="inr reveal">
+      <div class="lbl">Our services</div>
+      <h1 class="mx">Bringing <em>function</em> back to life with a blend of <em>precision</em>, <em>planning</em>, &amp; care</h1>
+    </div>
+  </div>
+</header>
+<section class="introx"><div class="wrap">
+  <div class="minis reveal"><img src="../img/surgery.jpg" alt=""><img src="../img/clinic.jpg" alt=""></div>
+  <h2 class="mx reveal">From <em>single implants</em> to full-arch reconstruction, we craft <em>tailored</em> surgical plans that restore your bite and <em>connect</em> you with your life again.</h2>
+  <p class="reveal">Every case begins with imaging, history, and an honest candidacy assessment — in plain language. The whole case is mapped before anyone operates: the time it actually needs, not the time the schedule allows.</p>
+</div></section>
+<section class="svccards"><div class="wrap">
+  <div class="svccard reveal">
+    <div class="head">Implants &amp; Full-Arch</div>
+    <div class="bd">
+      <h3 class="mx">Implant <em>Surgery</em></h3>
+      <div><p>The core of the practice — placement planned end to end and executed once, correctly.</p>
+      <ul><li><b>Dental implants</b> — single to multiple, precision-placed</li>
+      <li><b>All-On-X full-arch</b> — a fixed new arch, function first</li>
+      <li><b>Grafting</b> — rebuilding the foundation where bone was lost</li></ul></div>
+    </div>
+  </div>
+  <div class="svccard reveal">
+    <div class="head">Surgery &amp; Reconstruction</div>
+    <div class="bd">
+      <h3 class="mx">The <em>Difficult</em> Cases</h3>
+      <div><p>The referrals. The retreatments. The ones other clinicians step away from.</p>
+      <ul><li><b>Complex extractions</b> — done carefully, without drama</li>
+      <li><b>Reconstruction</b> — where bone and tissue have been lost</li>
+      <li><b>Pathology</b> — conditions of teeth, gums, and bone</li></ul></div>
+    </div>
+  </div>
+  <div class="svccard reveal">
+    <div class="head">Care &amp; Clarity</div>
+    <div class="bd">
+      <h3 class="mx">For <em>Life</em></h3>
+      <div><p>Restored work is protected work — and clarity is part of the treatment.</p>
+      <ul><li><b>Implant maintenance</b> — guarding the investment long-term</li>
+      <li><b>Second opinions</b> — honest direction for hard decisions</li>
+      <li><b>Referral reports</b> — your dentist stays fully informed</li></ul></div>
+    </div>
+  </div>
+  <div class="cta reveal"><a class="ovalbtn dark" href="contact.html">Book a consultation</a></div>
+</div></section>
+<div class="pressbar"><div class="row">
+  <span class="b">Board Certified</span><span class="b ser">Est. 2007</span>
+  <span class="b">27 Years</span><span class="b ser">South Bay</span><span class="b">By Referral</span>
+</div></div>
+<section class="newsl"><div class="wrap reveal">
+  <h3>Get the <em>free guide:</em> what to expect from your first consultation</h3>
+  <form onsubmit="return false"><input type="email" placeholder="Email Address" aria-label="Email">
+  <button class="ovalbtn dark" type="submit">Send it over</button></form>
+  <div class="priv">We respect your privacy. No spam — just honest answers.</div>
+</div></section>
+<div class="legal"><span>© Dr. Jorge Arce, D.D.S.</span><span>(310) 327-4166</span><span>Redondo Beach · Torrance, CA</span></div>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

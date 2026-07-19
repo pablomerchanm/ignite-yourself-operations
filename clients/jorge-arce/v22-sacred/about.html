@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Jorge Arce · Sacred Work</title>
+<meta name="description" content="This is careful surgery at scale. The story of Dr. Jorge Arce and the Dental Implants Center of South Bay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Figtree:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#16281B; --deep:#101E14; --cream:#F5F0E7; --sand:#E5D3B2;
+  --rust:#B4532D; --clay:#B0714A; --tan:#E9DCC0; --inkc:#2A3A2D;
+  --serif:'Playfair Display',Georgia,serif; --mono:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--inkc);font-family:'Figtree',system-ui,sans-serif;
+  font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--sand);color:var(--forest)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 40px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:lowercase}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;
+  align-items:center;padding:26px 40px;mix-blend-mode:difference;color:#fff}
+.nav .lg{font-family:var(--serif);font-size:19px;letter-spacing:.04em;line-height:1.1}
+.nav .lg small{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;opacity:.7;margin-top:3px}
+.nav .menu{font-family:var(--mono);font-size:13px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:2px}
+.ovl{position:fixed;inset:0;z-index:70;background:var(--deep);display:flex;align-items:center;
+  justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s}
+.ovl.open{opacity:1;visibility:visible}
+.ovl .links{text-align:center}
+.ovl .links a{display:block;font-family:var(--serif);font-size:clamp(30px,4.6vw,52px);padding:12px 0;color:var(--cream);transition:color .3s}
+.ovl .links a:hover{color:var(--sand)}
+.ovl .links .sm{font-family:var(--mono);font-size:12px;color:rgba(245,240,231,.5);margin-top:34px}
+.ovl .x{position:absolute;top:26px;right:40px;font-family:var(--mono);font-size:13px;cursor:pointer;color:var(--cream);border-bottom:1px solid rgba(245,240,231,.5);padding-bottom:2px}
+
+/* hero */
+.hero{position:relative;height:86vh;min-height:520px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;overflow:hidden;color:var(--cream)}
+.hero img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;filter:brightness(.58) saturate(.9)}
+.hero .k{position:relative;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.16em;margin-bottom:20px;color:rgba(245,240,231,.8)}
+.hero h1{position:relative;z-index:2;font-family:var(--serif);font-weight:400;
+  font-size:clamp(32px,4.6vw,58px);line-height:1.2;max-width:800px;padding:0 20px}
+.hero h1 em{font-style:italic}
+
+/* clay manifesto */
+.clay{background:var(--clay);color:#FBF4EC;padding:150px 0;text-align:center}
+.clay .lede{font-family:'Figtree';font-weight:400;font-size:clamp(24px,3.2vw,42px);line-height:1.42;max-width:960px;margin:0 auto}
+.clay .lede em{font-family:var(--serif);font-style:italic}
+.clay .fn{margin-top:40px;font-family:var(--mono);font-size:11px;color:rgba(251,244,236,.7)}
+.clay .cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:860px;margin:80px auto 0;text-align:left}
+.clay .cols p{font-size:14.5px;line-height:1.75;color:rgba(251,244,236,.9)}
+.clayshots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;max-width:1000px;margin:90px auto 0;padding:0 40px}
+.clayshots img{aspect-ratio:3/4;object-fit:cover;width:100%;filter:sepia(.15) saturate(.95)}
+
+/* center statement */
+.mid{padding:150px 0;text-align:center;background:var(--clay);color:#FBF4EC}
+.mid p{font-size:clamp(20px,2.5vw,30px);font-weight:400;max-width:640px;margin:0 auto;line-height:1.5}
+
+/* collage */
+.collage{background:var(--clay);padding:0 0 150px}
+.collage .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;max-width:1000px;margin:0 auto;padding:0 40px}
+.collage figure{position:relative}
+.collage img{width:100%;object-fit:cover;filter:sepia(.12) saturate(.95)}
+.collage .a img{aspect-ratio:4/3}
+.collage .b img{aspect-ratio:4/5}
+.collage figcaption{position:absolute;left:14px;bottom:12px;right:14px;font-size:12px;line-height:1.5;
+  color:#FBF4EC;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.collage .note{max-width:1000px;margin:26px auto 0;padding:0 40px;font-size:14.5px;color:rgba(251,244,236,.85);line-height:1.7;text-align:left;max-width:520px}
+
+/* forest alliance band */
+.band{position:relative;height:70vh;min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--cream)}
+.band img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;filter:brightness(.55)}
+.band p{position:relative;z-index:2;font-size:clamp(20px,2.6vw,32px);font-weight:400;text-align:center;max-width:760px;padding:0 20px;line-height:1.45}
+.band p em{font-family:var(--serif);font-style:italic}
+
+/* record strip */
+.record{background:var(--deep);color:var(--cream);padding:130px 0}
+.record .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:60px;text-align:center}
+.record .n{font-family:var(--serif);font-size:clamp(44px,5.6vw,76px);color:var(--sand)}
+.record .n em{font-style:italic;font-size:.55em}
+.record .l{margin-top:14px;font-size:14px;color:rgba(245,240,231,.6);line-height:1.6;max-width:250px;margin-left:auto;margin-right:auto}
+
+/* tan CTA */
+.cta{background:var(--tan);padding:130px 0;text-align:center;position:relative;overflow:hidden}
+.cta p{font-size:clamp(19px,2.4vw,28px);font-weight:400;max-width:780px;margin:0 auto;line-height:1.55}
+.cta p em{font-family:var(--serif);font-style:italic}
+.cta .hot{color:var(--rust)}
+.cta .pill{display:inline-block;margin-top:40px;font-family:var(--mono);font-size:12.5px;
+  border:1.5px solid var(--inkc);border-radius:99px;padding:13px 28px;transition:background .3s,color .3s}
+.cta .pill:hover{background:var(--inkc);color:var(--tan)}
+
+/* footer */
+.foot{background:var(--cream);color:var(--inkc);padding:90px 0 60px;position:relative;overflow:hidden}
+.foot .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:44px}
+.foot .mission{font-size:16px;line-height:1.6;color:#4A564C;max-width:280px}
+.foot .h{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:#8B8272;margin-bottom:18px}
+.foot a,.foot .col span{display:block;font-size:14px;color:#4A564C;line-height:2.2}
+.foot .col a:hover{color:var(--rust)}
+.foot .lgf{margin-top:80px;font-family:var(--serif);font-size:22px}
+.foot .lgf small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:#8B8272;margin-top:4px}
+
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+.reveal.rin{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.reveal{opacity:1!important;transform:none!important}}
+@media (max-width:900px){
+  .wrap{padding:0 22px}
+  .nav{padding:20px 22px}
+  .clay .cols{grid-template-columns:1fr;gap:30px}
+  .clayshots{grid-template-columns:1fr;padding:0 22px}
+  .collage .grid{grid-template-columns:1fr;padding:0 22px}
+  .record .grid{grid-template-columns:1fr;gap:40px}
+  .foot .grid{grid-template-columns:1fr 1fr;gap:34px}
+  .clay,.mid{padding:100px 0}
+  .collage{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="lg" href="index.html">Jorge Arce<small>restore function · restore lives</small></a>
+  <span class="menu" id="menuBtn">menu</span>
+</nav>
+<div class="ovl" id="ovl">
+  <span class="x" id="menuX">close</span>
+  <div class="links">
+    <a href="index.html">The Craft Speaks</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="tel:+13103274166">Contact</a>
+    <div class="sm">(310) 327-4166 · redondo beach &amp; torrance, ca</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="../img/speaking.jpg" alt="">
+  <div class="k">restore function · restore lives</div>
+  <h1>This is careful surgery at <em>scale</em></h1>
+</header>
+
+<!-- CLAY MANIFESTO -->
+<section class="clay">
+  <div class="wrap">
+    <p class="lede reveal"><em>Dr. Jorge Arce</em> is a Colombia-born, board-certified oral &amp; maxillofacial surgeon practicing an old yet radical idea: <em>every case deserves the time it actually needs.</em> The founder of the Dental Implants Center of South Bay is one meticulous, stubborn craftsman. <em>Good.</em></p>
+    <div class="fn reveal">not the temperament one would normally entrust with speed — and exactly the one you want with a scalpel.</div>
+    <div class="cols">
+      <p class="reveal">With nearly three decades of leadership in implantology and complex reconstruction, what he lacks in haste he more than makes up for with the ability to take on the extractions, rebuilds, and full-arch cases other clinicians prefer to refer elsewhere.</p>
+      <p class="reveal">He believes in direct action and plain language — honest diagnosis, scalable precision, the right plan for the right patient, and long-term follow-up that protects the work for life.</p>
+    </div>
+  </div>
+  <div class="clayshots">
+    <img class="reveal" src="../img/portrait.jpg" alt="Dr. Jorge Arce">
+    <img class="reveal" src="../img/surgery.jpg" alt="In surgery">
+    <img class="reveal" src="../img/clinic.jpg" alt="The Center">
+  </div>
+</section>
+
+<!-- MID STATEMENT -->
+<section class="mid">
+  <p class="reveal">The practice represents a coming together of two worlds — Colombian craft and Californian specialization.</p>
+</section>
+
+<!-- COLLAGE -->
+<section class="collage">
+  <div class="grid">
+    <figure class="a reveal"><img src="../img/operating.jpg" alt="">
+      <figcaption>Precision work. Every case mapped before anyone operates.</figcaption></figure>
+    <figure class="b reveal"><img src="../img/quote.jpg" alt="">
+      <figcaption>The quiet study of the craft — still reading, still refining.</figcaption></figure>
+  </div>
+  <p class="note reveal">Across twenty-seven years and two countries, one singular mission: preserve and restore the most essential function a person has — at speed and scale the case allows, never faster.</p>
+</section>
+
+<!-- ALLIANCE BAND -->
+<section class="band">
+  <img src="../img/footer.jpg" alt="">
+  <p>This is a practice guided by the rhythm of <em>the person</em> — and driven by the need to act.</p>
+</section>
+
+<!-- RECORD -->
+<section class="record"><div class="wrap"><div class="grid">
+  <div class="reveal"><div class="n">27 <em>yrs</em></div><div class="l">Dedicated to oral &amp; maxillofacial surgery</div></div>
+  <div class="reveal"><div class="n">2007</div><div class="l">Founder, Dental Implants Center of South Bay</div></div>
+  <div class="reveal"><div class="n"><em>Board</em> Cert.</div><div class="l">In dental implantology</div></div>
+</div></div></section>
+
+<!-- TAN CTA -->
+<section class="cta">
+  <p class="reveal">This practice is ever growing (pardon the pun) and takes on the cases that need the best attention. If you would like the <em>Jorge Arce</em> team to look at yours, we are always on the look out. <span class="hot">Reach out</span> and <span class="hot">connect</span>.</p>
+  <a class="pill reveal" href="tel:+13103274166">Let's connect</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot"><div class="wrap">
+  <div class="grid">
+    <div class="mission">Restoring the most precious function a person has — together with the people who trust us.</div>
+    <div class="col"><div class="h">Menu</div>
+      <a href="index.html">The Craft Speaks</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
+    </div>
+    <div class="col"><div class="h">Support</div>
+      <a href="tel:+13103274166">Contact</a><a href="faq.html">FAQ</a><span>By appointment</span>
+    </div>
+    <div class="col"><div class="h">Get in touch</div>
+      <span>Redondo Beach, California</span><span>Torrance, California</span>
+      <a href="tel:+13103274166">(310) 327-4166</a>
+    </div>
+  </div>
+  <div class="lgf">Jorge Arce<small>restore function · restore lives — © dr. jorge arce, d.d.s.</small></div>
+</div></footer>
+
+<script>
+(function(){
+  var ovl=document.getElementById('ovl');
+  document.getElementById('menuBtn').addEventListener('click',function(){ovl.classList.add('open')});
+  document.getElementById('menuX').addEventListener('click',function(){ovl.classList.remove('open')});
+  ovl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ovl.classList.remove('open')})});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
