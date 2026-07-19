@@ -20,7 +20,7 @@
 | 5 | `v3-hanza` | ✅ | Paleta coral potente pero one-note: todas las secciones cantan igual de fuerte y el grano es el único recurso. |
 | 6 | `v5-zentro` | ✅ | Póster tipográfico con marquee de gimmick: el display es el momento y lo repite hasta gastarlo; espaciado tosco. |
 | 7 | `v8-luke` | ✅ | El nombre a 245px es su único momento; después es una lista con hover — la página más corta de ideas. |
-| 8 | `v9-holistic` | ☐ | Réplica framer decente pero nunca recibió pase de motion; reveals genéricos y cero scrollytelling pese a referente animado. |
+| 8 | `v9-holistic` | ✅ | Réplica framer decente pero nunca recibió pase de motion; reveals genéricos y cero scrollytelling pese a referente animado. |
 | 9 | `v10-mobius` | ☐ | Proporciones ya corregidas una vez, pero el ritmo vertical sigue plano y las cards son cajas iguales. |
 | 10 | `v11-firma` | ☐ | El scroll horizontal es novedad frágil: degrada mal en mobile y el resto de la página vive a la sombra del truco. |
 | 11 | `v13-bennett` | ☐ | Sólida de estructura, muerta de motion: composición correcta que nunca sorprende ni una vez. |

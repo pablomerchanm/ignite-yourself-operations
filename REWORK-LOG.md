@@ -249,3 +249,23 @@ reduced ok ✓ · transform/opacity ✓.
 reduced ok · tour verificado programáticamente.
 
 ---
+
+## 8 · v9-holistic — "Holistic" — CERRADA
+
+**Diagnóstico inicial:** referente animado replicado sin motion; signs
+estáticas con data-float muerto; 8 paddings sin sistema; portabilidad cero.
+
+**Qué cambié:** reparto de cartas como momento (pin +130vh, deltas medidos
+en runtime, cada señal en su quinto del progreso); catálogo cerrado 5/2;
+tokens + content.json + placeholders.
+
+**Paso 4:** momento = reparto ✓ · composición cálida ya variada (herocard /
+deck / split about / grid expertise / qband / masonry stories / journal /
+guide split / closing) ✓ · giant display vs body 16 > 4:1 ✓ · easings 2 ✓ ·
+robustez: título ×2, sin fotos (16 labels), stories 3, journal REMOVIDO,
+deal=5 — ovf 0 err 0 ✓ · reduced ok ✓ · transform/opacity ✓.
+
+**Verificación:** batchcheck W9 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
