@@ -11,6 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(96px,13vh,152px);
+
   --cream:#F4F1F0;
   --taupe:#D8D0CA;
   --taupe2:#CDC2BB;
@@ -25,7 +30,8 @@
   --r-lg:26px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
 body{
   background:var(--cream);color:var(--espresso);
   font-family:'Geist',sans-serif;font-weight:400;
@@ -39,7 +45,7 @@ a{color:inherit;text-decoration:none}
 .mono{font-family:'Geist Mono',monospace;font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase}
 
 /* ---------- buttons ---------- */
-.pill{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:14px 26px;font-size:15px;font-weight:500;cursor:pointer;border:none;transition:transform .35s,background .35s}
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:14px 26px;font-size:15px;font-weight:500;cursor:pointer;border:none;transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover) var(--ease-quick)}
 .pill.cream{background:var(--cream);color:var(--espresso)}
 .pill.cream:hover{background:#fff;transform:translateY(-2px)}
 .pill.dark{background:var(--espresso);color:var(--cream)}
@@ -64,7 +70,7 @@ a{color:inherit;text-decoration:none}
 .hnav .brand .t1{font-size:19px;font-weight:600;letter-spacing:-.01em;line-height:1.1}
 .hnav .brand .t2{font-size:12px;color:rgba(255,255,255,.75)}
 .hnav .navpills{display:flex;gap:10px}
-.hnav .np{display:inline-flex;align-items:center;gap:10px;background:rgba(244,241,240,.14);border:1px solid rgba(244,241,240,.22);backdrop-filter:blur(10px);border-radius:100px;padding:11px 20px;font-size:13.5px;font-weight:500;color:#fff;transition:background .3s}
+.hnav .np{display:inline-flex;align-items:center;gap:10px;background:rgba(244,241,240,.14);border:1px solid rgba(244,241,240,.22);backdrop-filter:blur(10px);border-radius:100px;padding:11px 20px;font-size:13.5px;font-weight:500;color:#fff;transition:background var(--dur-hover) var(--ease-quick)}
 .hnav .np:hover{background:rgba(244,241,240,.26)}
 .hnav .np .chev{width:18px;height:18px;border-radius:50%;background:rgba(244,241,240,.25);display:inline-flex;align-items:center;justify-content:center;font-size:9px}
 .hnav .menu{display:inline-flex;align-items:center;gap:10px;background:var(--cream);color:var(--espresso);border-radius:14px;padding:13px 20px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
@@ -81,7 +87,7 @@ a{color:inherit;text-decoration:none}
 .herobot .right{display:flex;flex-direction:column;align-items:flex-end;gap:22px;text-align:right}
 .herobot .right p{font-size:17px;color:rgba(255,255,255,.92);max-width:38ch}
 .herobot .ctas{display:flex;gap:12px;align-items:center}
-.circ{width:52px;height:52px;border-radius:50%;border:1px solid rgba(244,241,240,.5);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:17px;transition:background .3s}
+.circ{width:52px;height:52px;border-radius:50%;border:1px solid rgba(244,241,240,.5);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:17px;transition:background var(--dur-hover) var(--ease-quick)}
 .circ:hover{background:rgba(244,241,240,.15)}
 
 /* ---------- sections ---------- */
@@ -94,7 +100,7 @@ section{padding:120px 0}
 .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px 32px}
 .tcard{display:flex;flex-direction:column}
 .tcard .phwrap{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10}
-.tcard .phwrap img{width:100%;height:100%;object-fit:cover;filter:sepia(.14) contrast(1.02);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.tcard .phwrap img{width:100%;height:100%;object-fit:cover;filter:sepia(.14) contrast(1.02);transition:transform .8s var(--ease-out)}
 .tcard:hover .phwrap img{transform:scale(1.04)}
 .tcard .tag{position:absolute;top:14px;left:14px;background:rgba(21,18,16,.78);backdrop-filter:blur(6px);color:var(--cream);border-radius:10px;padding:9px 16px;font-size:13.5px;font-weight:500}
 .tcard .strip{position:absolute;left:0;right:0;bottom:0;display:flex;gap:36px;padding:14px 20px;background:linear-gradient(180deg,rgba(21,18,16,0),rgba(21,18,16,.72));color:var(--cream)}
@@ -102,7 +108,7 @@ section{padding:120px 0}
 .tcard .strip .c .v{font-family:'Geist Mono',monospace;font-size:13px;margin-top:3px}
 .tcard h3{font-weight:500;letter-spacing:-.015em;font-size:26px;margin:24px 0 10px}
 .tcard p{color:var(--ink2);opacity:.75;font-size:15px;max-width:56ch}
-.tcard .go{margin-top:18px;display:inline-flex;align-items:center;gap:9px;background:var(--taupe);border-radius:100px;padding:10px 18px;font-size:13.5px;font-weight:500;align-self:flex-start;transition:background .3s}
+.tcard .go{margin-top:18px;display:inline-flex;align-items:center;gap:9px;background:var(--taupe);border-radius:100px;padding:10px 18px;font-size:13.5px;font-weight:500;align-self:flex-start;transition:background var(--dur-hover) var(--ease-quick)}
 .tcard:hover .go{background:var(--taupe2)}
 .tcard .go .ar{width:20px;height:20px;border-radius:50%;background:rgba(21,18,16,.12);display:inline-flex;align-items:center;justify-content:center;font-size:11px}
 
@@ -128,9 +134,10 @@ section{padding:120px 0}
 /* ---------- voices ---------- */
 .voices{padding-bottom:60px}
 .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.vcard{background:#fff;border-radius:var(--r);padding:32px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 1px 10px rgba(21,18,16,.04);transition:transform .4s}
+.vcard{background:#fff;border-radius:var(--r);padding:32px 30px;display:flex;flex-direction:column;gap:20px;box-shadow:0 1px 10px rgba(21,18,16,.04);transition:transform .35s var(--ease-quick)}
 .vcard:hover{transform:translateY(-4px)}
-.vcard .stars{color:var(--mocha);letter-spacing:3px;font-size:13px}
+.vcard .rolet{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mocha)}
+.vcard.navy .rolet{color:var(--tan,#CDC2BB)}
 .vcard .q{font-size:15px;line-height:1.65;color:var(--ink2)}
 .vcard .who{margin-top:auto;display:flex;align-items:center;gap:12px}
 .vcard .av{width:40px;height:40px;border-radius:50%;background:var(--taupe);display:flex;align-items:center;justify-content:center;font-family:'Geist Mono',monospace;font-size:11px;flex:0 0 40px}
@@ -185,28 +192,7 @@ footer{background:var(--navy);border-radius:var(--r-lg) var(--r-lg) 0 0;margin:6
 .fbot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(244,241,240,.12);padding-top:24px;font-size:12.5px;color:rgba(244,241,240,.6)}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
-[data-stagger].in>*{opacity:1;transform:none}
-[data-stagger].in>*:nth-child(1){transition-delay:.05s}
-[data-stagger].in>*:nth-child(2){transition-delay:.12s}
-[data-stagger].in>*:nth-child(3){transition-delay:.19s}
-[data-stagger].in>*:nth-child(4){transition-delay:.26s}
-[data-stagger].in>*:nth-child(5){transition-delay:.33s}
-[data-stagger].in>*:nth-child(6){transition-delay:.4s}
-[data-stagger].in>*:nth-child(7){transition-delay:.47s}
-[data-stagger].in>*:nth-child(8){transition-delay:.54s}
-[data-stagger].in>*:nth-child(9){transition-delay:.61s}
-@media (prefers-reduced-motion:reduce){.reveal,[data-stagger]>*{opacity:1;transform:none;transition:none}}
 
-/* ---------- responsive ---------- */
-@media (max-width:1080px){
-  .tgrid{grid-template-columns:1fr}
-  .vgrid{grid-template-columns:1fr 1fr}
-  .stats .lay{grid-template-columns:1fr}
-  .blog .lay{grid-template-columns:1fr}
-}
 @media (max-width:860px){
   .wrap{padding:0 22px}
   section{padding:90px 0}
@@ -223,270 +209,212 @@ footer{background:var(--navy);border-radius:var(--r-lg) var(--r-lg) 0 0;margin:6
   .scard .box{text-align:left}
   .statement,.stats,.blog,footer{margin:0 8px}
 }
-</style>
-</head>
+
+/* ---------- rework: baraja sticky + placeholders ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--espresso,#2B241F);outline-offset:3px}
+.pill:active,.np:active{transform:scale(.97)}
+.phx{display:flex;align-items:center;justify-content:center;background:#e6e0db;color:#8F7868;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#8F7868;font-size:14px}
+@media(min-width:901px){
+  html:not(.no-motion) .tgrid{display:flex;flex-direction:column;gap:36px;padding-bottom:6vh}
+  html:not(.no-motion) .tcard{position:sticky;background:#fff;border-radius:var(--r-lg);padding:26px;display:grid;grid-template-columns:.95fr 1.05fr;gap:6px 36px;box-shadow:0 12px 48px rgba(21,18,16,.09);align-content:start;will-change:transform}
+  html:not(.no-motion) .tcard .phwrap{grid-row:1/6;align-self:stretch;aspect-ratio:auto;min-height:340px}
+  html:not(.no-motion) .tcard .phwrap img,html:not(.no-motion) .tcard .phwrap .phx{height:100%}
+  html:not(.no-motion) .tcard h3{margin-top:18px}
+  html:not(.no-motion) .tcard .go{justify-self:start}
+}
+</style></head>
 <body>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="herocard">
-    <div class="ph"><img src="../img/hero.jpg" alt="Dr. Jorge Arce"></div>
-    <div class="shade"></div>
-    <div class="hnav">
-      <div class="brand">
-        <svg viewBox="0 0 34 34" fill="none"><g stroke="#F4F1F0" stroke-width="1.4"><path d="M17 17 L17 3"/><path d="M17 17 L27 7"/><path d="M17 17 L31 13"/><path d="M17 17 L31 21"/><path d="M17 17 L27 27"/><path d="M17 17 L7 27"/><path d="M17 17 L3 21"/><path d="M17 17 L3 13"/><path d="M17 17 L7 7"/></g></svg>
-        <div><div class="t1">Arce</div><div class="t2">Oral &amp; Maxillofacial Surgery</div></div>
-      </div>
-      <div class="navpills">
-        <a class="np" href="#treatments">Treatments <span class="chev">▾</span></a>
-        <a class="np" href="#about">The Practice <span class="chev">▾</span></a>
-        <a class="np" href="#stories">Patients <span class="chev">▾</span></a>
-      </div>
-      <a class="menu" href="#book"><span class="bars"><i></i><i></i></span> Menu</a>
-    </div>
-    <div class="herobot">
-      <div class="reveal" data-hero>
-        <h1>Precision surgery</h1>
-        <div class="trust">
-          <div class="avs">
-            <span><img src="../img/portrait.jpg" alt=""></span>
-            <span><img src="../img/clinic.jpg" alt=""></span>
-            <span>27+</span>
-          </div>
-          <div class="mono">Trusted by patients &amp;<br>referring doctors since 1999</div>
-        </div>
-      </div>
-      <div class="right reveal" data-hero>
-        <p>Comprehensive oral &amp; maxillofacial care designed to deliver long-term results — on the complex cases other surgeons refer out.</p>
-        <div class="ctas">
-          <a class="circ" href="#treatments">↓</a>
-          <a class="pill cream" href="#book">Schedule your visit <span class="ar">↗</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- TREATMENTS -->
-<section id="treatments">
-  <div class="wrap">
-    <div class="shead reveal">
-      <h2>Popular treatments</h2>
-      <p class="sub">Not a list of services — the disciplines refined over twenty-seven years of practice.</p>
-    </div>
-    <div class="tgrid" data-stagger>
-      <div class="tcard">
-        <div class="phwrap">
-          <img src="../img/surgery.jpg" alt="">
-          <span class="tag">Implant Surgery</span>
-          <div class="strip">
-            <div class="c"><div class="k">Focus</div><div class="v">Full-Arch</div></div>
-            <div class="c"><div class="k">Expertise</div><div class="v">27+ Years</div></div>
-            <div class="c"><div class="k">Planning</div><div class="v">Case-by-case</div></div>
-          </div>
-        </div>
-        <h3>Dental Implants &amp; All-On-X</h3>
-        <p>From a single implant to full-arch All-On-X reconstruction — planned and placed with precision, for patients seeking a complete restoration.</p>
-        <span class="go">Treatment <span class="ar">↗</span></span>
-      </div>
-      <div class="tcard">
-        <div class="phwrap">
-          <img src="../img/operating.jpg" alt="">
-          <span class="tag">Reconstruction</span>
-          <div class="strip">
-            <div class="c"><div class="k">Scope</div><div class="v">Bone &amp; Tissue</div></div>
-            <div class="c"><div class="k">Approach</div><div class="v">Structural</div></div>
-            <div class="c"><div class="k">Referrals</div><div class="v">Welcome</div></div>
-          </div>
-        </div>
-        <h3>Reconstruction &amp; Bone Grafting</h3>
-        <p>Rebuilding function and structure where bone and tissue have been lost — the foundation every lasting restoration depends on.</p>
-        <span class="go">Treatment <span class="ar">↗</span></span>
-      </div>
-      <div class="tcard">
-        <div class="phwrap">
-          <img src="../img/clinic.jpg" alt="">
-          <span class="tag">Complex Cases</span>
-          <div class="strip">
-            <div class="c"><div class="k">Cases</div><div class="v">By referral</div></div>
-            <div class="c"><div class="k">Judgment</div><div class="v">27 years</div></div>
-            <div class="c"><div class="k">Reports</div><div class="v">Every time</div></div>
-          </div>
-        </div>
-        <h3>Complex Extractions</h3>
-        <p>The difficult surgeries other clinicians prefer to refer elsewhere — handled with the time and care the case actually needs.</p>
-        <span class="go">Treatment <span class="ar">↗</span></span>
-      </div>
-      <div class="tcard">
-        <div class="phwrap">
-          <img src="../img/quote.jpg" alt="">
-          <span class="tag">Ongoing Care</span>
-          <div class="strip">
-            <div class="c"><div class="k">Horizon</div><div class="v">Long-term</div></div>
-            <div class="c"><div class="k">Scope</div><div class="v">Maintenance</div></div>
-            <div class="c"><div class="k">Second</div><div class="v">Opinions</div></div>
-          </div>
-        </div>
-        <h3>Maintenance &amp; Second Opinions</h3>
-        <p>Long-term care that protects a restored smile — and clarity for patients facing complex decisions, including when not to operate.</p>
-        <span class="go">Treatment <span class="ar">↗</span></span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATEMENT -->
-<div class="statement reveal" id="about">
-  <div class="wrap">
-    <h2>Precision Care. <span class="dim">Trusted Team.</span></h2>
-    <p class="lead">Dr. Arce trained in Colombia and built his life's work in California. In 2007 he founded the Dental Implants Center of South Bay, guided by one conviction: difficult work, done with care, gives people their lives back.</p>
-  </div>
-</div>
-
-<!-- NAVY STATS -->
-<section style="padding:14px 0 0">
-  <div class="stats">
-    <div class="wrap">
-      <div class="lay">
-        <div class="photos reveal">
-          <img src="../img/portrait.jpg" alt="Dr. Jorge Arce">
-          <img src="../img/operating.jpg" alt="">
-        </div>
-        <div class="statrow" data-stagger>
-          <div class="scard">
-            <div><svg class="glyph" viewBox="0 0 34 34" fill="none"><g stroke="#F4F1F0" stroke-width="1.2"><path d="M17 17 L17 3"/><path d="M17 17 L27 7"/><path d="M17 17 L31 13"/><path d="M17 17 L31 21"/><path d="M17 17 L27 27"/><path d="M17 17 L7 27"/><path d="M17 17 L3 21"/><path d="M17 17 L3 13"/><path d="M17 17 L7 7"/></g></svg>
-            <div class="cap">Clinical dedication.</div></div>
-            <div class="box"><div class="k">Years</div><div class="n">27+</div></div>
-          </div>
-          <div class="scard">
-            <div><svg class="glyph" viewBox="0 0 34 34" fill="none"><g stroke="#F4F1F0" stroke-width="1.2"><path d="M17 17 L17 3"/><path d="M17 17 L27 7"/><path d="M17 17 L31 13"/><path d="M17 17 L31 21"/><path d="M17 17 L27 27"/><path d="M17 17 L7 27"/><path d="M17 17 L3 21"/><path d="M17 17 L3 13"/><path d="M17 17 L7 7"/></g></svg>
-            <div class="cap">Founded in the South Bay.</div></div>
-            <div class="box"><div class="k">Est.</div><div class="n">2007</div></div>
-          </div>
-          <div class="scard">
-            <div><svg class="glyph" viewBox="0 0 34 34" fill="none"><g stroke="#F4F1F0" stroke-width="1.2"><path d="M17 17 L17 3"/><path d="M17 17 L27 7"/><path d="M17 17 L31 13"/><path d="M17 17 L31 21"/><path d="M17 17 L27 27"/><path d="M17 17 L7 27"/><path d="M17 17 L3 21"/><path d="M17 17 L3 13"/><path d="M17 17 L7 7"/></g></svg>
-            <div class="cap">Board certified in implantology.</div></div>
-            <div class="box"><div class="k">Disciplines</div><div class="n">6</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VOICES -->
-<section class="voices" id="stories">
-  <div class="wrap">
-    <div class="shead reveal">
-      <h2>What patients say</h2>
-      <p class="sub">Patients and referring doctors, on twenty-seven years of quiet precision.</p>
-    </div>
-    <div class="vgrid" data-stagger>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</div><div class="who"><span class="av">MR</span><div><div class="nm">Maria R.</div><div class="rl">Full-arch reconstruction</div></div></div></div>
-      <div class="vcard navy"><div class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</div><div class="who"><span class="av">DK</span><div><div class="nm">Dr. David Kim, D.D.S.</div><div class="rl">Referring Dentist · Torrance</div></div></div></div>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself."</div><div class="who"><span class="av">RT</span><div><div class="nm">Robert T.</div><div class="rl">Dental implants</div></div></div></div>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"The most thorough and honest surgeon I have ever met. He treated my father like family."</div><div class="who"><span class="av">AC</span><div><div class="nm">Anabella C.</div><div class="rl">Daughter of patient</div></div></div></div>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"I was terrified of the procedure. He never rushed me. Best decision I have made for my health."</div><div class="who"><span class="av">CS</span><div><div class="nm">Carlos S.</div><div class="rl">Bone graft + implants</div></div></div></div>
-      <div class="vcard navy"><div class="q">"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows."</div><div class="who"><span class="av">LS</span><div><div class="nm">Dr. Lina Soto</div><div class="rl">Periodontist</div></div></div></div>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know."</div><div class="who"><span class="av">EP</span><div><div class="nm">Elena P.</div><div class="rl">TMJ treatment</div></div></div></div>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time."</div><div class="who"><span class="av">JM</span><div><div class="nm">Dr. Jeff Malone</div><div class="rl">Referring Dentist</div></div></div></div>
-      <div class="vcard"><div class="stars">★★★★★</div><div class="q">"The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice."</div><div class="who"><span class="av">ME</span><div><div class="nm">Dr. Mark Ellison</div><div class="rl">Referring Dentist</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- BLOG -->
-<section style="padding-top:0">
-  <div class="blog">
-    <div class="wrap">
-      <h2 class="reveal">Featured patient guides</h2>
-      <div class="lay">
-        <a class="feature reveal" href="#book">
-          <img src="../img/operating.jpg" alt="">
-          <div class="plate">
-            <h3>All-On-X, explained simply</h3>
-            <div class="meta">Category: Implants<br>Read: 6 min.</div>
-          </div>
-        </a>
-        <div class="rows" data-stagger>
-          <a class="rowcard" href="#book"><img src="../img/clinic.jpg" alt=""><div class="bd"><h4>How to know if you need an implant</h4><div class="cat">Before Surgery</div></div></a>
-          <a class="rowcard" href="#book"><img src="../img/quote.jpg" alt=""><div class="bd"><h4>Five myths about oral surgery</h4><div class="cat">Myths</div></div></a>
-          <a class="rowcard" href="#book"><img src="../img/speaking.jpg" alt=""><div class="bd"><h4>What to expect from an implant assessment</h4><div class="cat">First Visit</div></div></a>
-          <a class="rowcard" href="#book"><img src="../img/surgery.jpg" alt=""><div class="bd"><h4>When not to operate: honest advice</h4><div class="cat">Second Opinions</div></div></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOOK -->
-<section class="book" id="book" style="padding-top:0">
-  <div class="wrap">
-    <div class="card reveal">
-      <div class="form">
-        <h2>Schedule your visit</h2>
-        <p class="sub">Or ask for the free guide — What to expect from your first implant consultation.</p>
-        <div class="featlist">
-          <div><span>✓</span> A plain-language walkthrough of the process</div>
-          <div><span>✓</span> The questions worth asking any surgeon</div>
-          <div><span>✓</span> How to know if you're a candidate</div>
-        </div>
-        <input type="text" placeholder="Full name">
-        <input type="email" placeholder="you@email.com">
-        <textarea rows="2" placeholder="What brings you in? (optional)"></textarea>
-        <button class="pill mocha" style="width:100%;justify-content:center">Request appointment <span class="ar">↗</span></button>
-        <p class="fine">By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared. · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</p>
-      </div>
-      <div class="ph"><img src="../img/clinic.jpg" alt="Dental Implants Center of South Bay"></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="fgrid">
-      <div class="fb">
-        <div class="brand">
-          <svg viewBox="0 0 34 34" fill="none"><g stroke="#F4F1F0" stroke-width="1.4"><path d="M17 17 L17 3"/><path d="M17 17 L27 7"/><path d="M17 17 L31 13"/><path d="M17 17 L31 21"/><path d="M17 17 L27 27"/><path d="M17 17 L7 27"/><path d="M17 17 L3 21"/><path d="M17 17 L3 13"/><path d="M17 17 L7 7"/></g></svg>
-          <span class="t1">Arce · Oral &amp; Maxillofacial Surgery</span>
-        </div>
-        <p>Twenty-seven years restoring function, structure, and confidence in the South Bay.</p>
-      </div>
-      <div class="fcol">
-        <div class="h">Treatments</div>
-        <a href="#treatments">Implants &amp; All-On-X</a>
-        <a href="#treatments">Reconstruction</a>
-        <a href="#treatments">Complex Extractions</a>
-        <a href="#treatments">Second Opinions</a>
-      </div>
-      <div class="fcol">
-        <div class="h">Practice</div>
-        <a href="#about">About Dr. Arce</a>
-        <a href="#stories">Patient stories</a>
-        <a href="#book">Patient guides</a>
-      </div>
-      <div class="fcol">
-        <div class="h">Contact</div>
-        <a href="tel:+13103274166">(310) 327-4166</a>
-        <a href="#">Redondo Beach · Torrance</a>
-        <a href="#">By appointment</a>
-      </div>
-    </div>
-    <div class="fbot">
-      <span>© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.</span>
-      <span>Dental Implants Center of South Bay</span>
-    </div>
-  </div>
-</footer>
-
+<main id="site"></main>
+<noscript><div style="padding:40vh 28px;text-align:center;font-size:15px">Arce — Oral &amp; Maxillofacial Surgery · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-hero]').forEach(el => el.classList.add('in'));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.reveal:not([data-hero]),[data-stagger]').forEach(el => io.observe(el));
+(function(){
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+var BRAND='<svg viewBox="0 0 34 34" fill="none"><g stroke="#F4F1F0" stroke-width="1.4"><path d="M17 17 L17 3"/><path d="M17 17 L27 7"/><path d="M17 17 L31 13"/><path d="M17 17 L31 21"/><path d="M17 17 L27 27"/><path d="M17 17 L7 27"/><path d="M17 17 L3 21"/><path d="M17 17 L3 13"/><path d="M17 17 L7 7"/></g></svg>';
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<i>').replace(/&lt;\/i&gt;/g,'</i>')
+  .replace(/&lt;d&gt;/g,'<span class="dim">').replace(/&lt;\/d&gt;/g,'</span>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function img(im,alt){
+  if(im&&im.src)return'<img src="'+esc(im.src)+'" alt="'+esc(alt||im.alt||'')+'">';
+  return'<div class="phx" style="width:100%;height:100%;min-height:200px">'+esc((im&&im.label)||'FOTO')+'</div>'}
+var ROLE={patient:'Patient story',doctor:'Referring doctor',family:'Family of patient'};
+
+var partials={
+hero:function(s){
+  return'<header class="hero"><div class="herocard">'+
+  '<div class="ph">'+img(s.img)+'</div><div class="shade"></div>'+
+  '<div class="hnav">'+
+    '<div class="brand">'+BRAND+'<div><div class="t1">'+esc(s.brand.t1)+'</div><div class="t2">'+esc(s.brand.t2)+'</div></div></div>'+
+    '<div class="navpills">'+(s.pills||[]).map(function(p){return'<a class="np" href="'+esc(p.h)+'">'+esc(p.t)+' <span class="chev">▾</span></a>'}).join('')+'</div>'+
+    '<a class="menu" href="'+esc(s.menu.h)+'"><span class="bars"><i></i><i></i></span> '+esc(s.menu.t)+'</a>'+
+  '</div>'+
+  '<div class="herobot"><div data-r2 class="wr">'+
+    '<h1>'+rich(s.h1)+'</h1>'+
+    '<div class="trust"><div class="avs">'+
+      (s.avs||[]).map(function(a){return'<span>'+img(a)+'</span>'}).join('')+
+      '<span>'+esc(s.badge||'')+'</span></div>'+
+    '<div class="mono">'+rich(s.trust)+'</div></div>'+
+  '</div>'+
+  '<div class="right wr" data-r1>'+
+    '<p>'+rich(s.lead)+'</p>'+
+    '<div class="ctas"><a class="circ" href="'+esc(s.ctas.circ)+'" aria-label="Scroll down">↓</a>'+
+    '<a class="pill cream" href="'+esc(s.ctas.pill.h)+'">'+esc(s.ctas.pill.t)+' <span class="ar">↗</span></a></div>'+
+  '</div></div>'+
+  '</div></header>'},
+treatments:function(s){
+  return'<section id="'+esc(s.id||'treatments')+'"><div class="wrap">'+
+  '<div class="shead" data-r2><h2 class="wr">'+esc(s.head)+'</h2><p class="sub wr">'+rich(s.sub)+'</p></div>'+
+  '<div class="tgrid" id="tgrid">'+(s.cards||[]).map(function(c){return'<div class="tcard wr">'+
+    '<div class="phwrap">'+img(c.img)+'<span class="tag">'+esc(c.tag)+'</span>'+
+    '<div class="strip">'+(c.meta||[]).map(function(m){return'<div class="c"><div class="k">'+esc(m.k)+'</div><div class="v">'+esc(m.v)+'</div></div>'}).join('')+'</div></div>'+
+    '<h3>'+esc(c.title)+'</h3><p>'+rich(c.body)+'</p>'+
+    '<a class="go" href="#book">Treatment <span class="ar">↗</span></a>'+
+  '</div>'}).join('')+'</div>'+
+  '</div></section>'},
+statement:function(s){
+  return'<section class="statement"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap" data-r2>'+
+  '<h2 class="wr">'+rich(s.title)+'</h2><p class="lead wr">'+rich(s.lead)+'</p>'+
+  '</div></section>'},
+stats:function(s){
+  return'<section class="stats"><div class="wrap"><div class="lay">'+
+  '<div class="photos wr" data-r4>'+(s.photos||[]).map(function(p){return img(p)}).join('')+'</div>'+
+  '<div class="statrow" data-cards>'+(s.scards||[]).map(function(sc){return'<div class="scard wr">'+
+    '<div><div class="cap">'+esc(sc.cap)+'</div></div>'+
+    '<div class="box"><div class="k">'+esc(sc.k)+'</div><div class="n">'+esc(sc.v)+'</div></div>'+
+  '</div>'}).join('')+'</div>'+
+  '</div></div></section>'},
+voices:function(s){
+  return'<section class="voices"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap">'+
+  '<div class="shead" data-r2><h2 class="wr">'+esc(s.head)+'</h2><p class="sub wr">'+rich(s.sub)+'</p></div>'+
+  '<div class="vgrid" data-cards>'+(s.cards||[]).map(function(v){return'<div class="vcard'+(v.navy?' navy':'')+' wr">'+
+    '<div class="rolet">'+esc(ROLE[v.role]||'Patient story')+'</div>'+
+    '<p class="q">'+esc(v.q)+'</p>'+
+    '<div class="who"><span class="av">'+esc(v.init)+'</span><div><div class="nm">'+esc(v.n)+'</div><div class="rl">'+esc(v.r)+'</div></div></div>'+
+  '</div>'}).join('')+'</div>'+
+  '</div></section>'},
+blog:function(s){
+  return'<section class="blog"><div class="wrap">'+
+  '<h2 class="wr" data-r1>'+esc(s.head)+'</h2>'+
+  '<div class="lay">'+
+  '<div class="feature wr" data-r4>'+img(s.feature.img)+
+    '<div class="plate"><h3>'+esc(s.feature.title)+'</h3><div class="meta">'+esc(s.feature.meta)+'</div></div></div>'+
+  '<div class="rows">'+(s.rows||[]).map(function(r){return'<a class="rowcard wr" data-r1 data-rule href="#book"><span>'+esc(r.t)+'</span><span class="cat">'+esc(r.cat)+'</span></a>'}).join('')+'</div>'+
+  '</div></div></section>'},
+book:function(s){
+  var f=s.form||{};
+  return'<section class="book"'+(s.id?' id="'+esc(s.id)+'"':'')+'><div class="wrap"><div class="card wr" data-r4>'+
+  '<div class="form"><h2>'+esc(s.head)+'</h2><p class="sub">'+rich(s.sub)+'</p>'+
+  '<div class="featlist">'+(s.points||[]).map(function(t){return'<div>✓ '+esc(t)+'</div>'}).join('')+'</div>'+
+  '<form onsubmit="return false">'+(f.fields||[]).map(function(n){return'<input type="text" placeholder="'+esc(n)+'" aria-label="'+esc(n)+'">'}).join('')+
+  '<button class="pill dark" type="submit">'+esc(f.btn||'Send')+'</button></form>'+
+  '<p class="fine">'+esc(s.fine)+'</p></div>'+
+  '<div class="bd">'+img(s.img)+'</div>'+
+  '</div></div></section>'},
+footer:function(s){
+  return'<footer><div class="wrap"><div class="fgrid">'+
+  '<div class="fb"><div class="brand">'+BRAND+'<span class="t1">'+esc(s.brand.t1)+'</span></div><p>'+rich(s.brand.p)+'</p></div>'+
+  (s.cols||[]).map(function(col){return'<div class="fcol"><div class="h">'+esc(col.h)+'</div>'+(col.items||[]).map(function(it){return'<div>'+esc(it)+'</div>'}).join('')+'</div>'}).join('')+
+  '</div><div class="fbot">'+(s.fbot||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div></div></footer>'}
+};
+
+fetch('/v12-caliora/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
 });
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.classList.contains('wr')?[g]:g.querySelectorAll('.wr');var acc=0;
+    Array.prototype.forEach.call(kids,function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';
+    var l=document.createElement('i');
+    l.style.cssText='position:absolute;left:0;right:0;top:0;height:1px;background:rgba(21,18,16,.1);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-r4]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* tcards: fade sin transform (la baraja es dueña del transform) */
+  document.querySelectorAll('#tgrid .tcard').forEach(function(el){
+    gsap.fromTo(el,{opacity:0},{opacity:1,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 90%',once:true}});
+  });
+
+  /* R5 baraja de tratamientos (desktop) */
+  if(window.innerWidth>900){
+    var cards=Array.prototype.slice.call(document.querySelectorAll('#tgrid .tcard'));
+    cards.forEach(function(c,i){
+      c.style.top=(96+i*26)+'px';
+      c.style.zIndex=String(10+i);
+    });
+    cards.forEach(function(c,i){
+      if(i>=cards.length-1)return;
+      var next=cards[i+1];
+      ScrollTrigger.create({trigger:next,start:'top bottom',end:'top '+(96+i*26+40)+'px',scrub:1.2,
+        onUpdate:function(self){var k=self.progress;
+          c.style.transform='scale('+(1-.045*k)+')';
+          c.style.filter='brightness('+(1-.1*k)+')';
+        }});
+    });
+  }
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+})();
 </script>
 </body>
 </html>
