@@ -1,0 +1,615 @@
+/* ============================================================================
+   template.css — estructura del template. NO tocar para cambiar de marca:
+   todo color/fuente/tamaño/duración viene de tokens.css.
+   Cada sección es un partial opcional; su comportamiento mobile está definido
+   explícitamente en el bloque @media del final (breakpoint único: 768px,
+   como la referencia).
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { overflow-x: clip; }
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-weight: var(--weight-body);
+  line-height: var(--leading-body);
+  color: var(--ink);
+  background: var(--paper);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font: inherit; cursor: pointer; }
+
+/* ----------------------------------------------------------------------------
+   Superficies — rotación seccional full-bleed.
+   Regla del CTA vecino (auditoría §4): cada superficie resuelve --cta-bg
+   con OTRO tono del mismo set, nunca un acento externo.
+   -------------------------------------------------------------------------- */
+
+.surface-paper { background: var(--paper); color: var(--ink);
+  --cta-bg: var(--surface-a); --cta-ink: var(--ink); --frame: var(--white); }
+.surface-a { background: var(--surface-a); color: var(--ink);
+  --cta-bg: var(--surface-c); --cta-ink: var(--ink); --frame: var(--white); }
+.surface-b { background: var(--surface-b); color: var(--ink);
+  --cta-bg: var(--paper); --cta-ink: var(--ink); --frame: var(--white); }
+.surface-c { background: var(--surface-c); color: var(--ink);
+  --cta-bg: var(--paper); --cta-ink: var(--ink); --frame: var(--white); }
+.surface-dark { background: var(--dark); color: var(--on-dark);
+  --cta-bg: var(--surface-a); --cta-ink: var(--ink); --frame: var(--on-dark); }
+
+/* ----------------------------------------------------------------------------
+   Primitivas compartidas
+   -------------------------------------------------------------------------- */
+
+.section { padding-block: var(--space-section); }
+.section.breather { padding-block: var(--space-breather); }
+
+.wrap {
+  max-width: var(--width-content);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.micro {
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+}
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-head);
+}
+
+.head {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-serif);
+  font-size: var(--text-head);
+  line-height: var(--leading-head);
+}
+
+.sub { font-size: var(--text-sub); line-height: var(--leading-sub); }
+.prose { max-width: var(--width-prose); }
+.prose p + p { margin-top: var(--space-2); }
+
+/* Botones — pill, hover solo color/opacidad a 200–300ms, cero layout shift */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-body-s);
+  letter-spacing: var(--track-button);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.9em 2.1em;
+  border-radius: var(--radius-pill);
+  background: var(--cta-bg);
+  color: var(--cta-ink);
+  border: 1px solid transparent;
+  transition: background-color var(--dur-hover) var(--ease-hover),
+              color var(--dur-hover) var(--ease-hover),
+              opacity var(--dur-hover) var(--ease-hover);
+}
+.btn:hover { background: var(--ink); color: var(--paper); }
+.surface-dark .btn:hover { background: var(--on-dark); color: var(--dark); }
+
+.btn.ghost {
+  background: transparent;
+  color: inherit;
+  border-color: currentColor;
+  transition: opacity var(--dur-hover) var(--ease-hover),
+              border-color var(--dur-hover) var(--ease-hover);
+}
+.btn.ghost:hover { opacity: 0.7; background: transparent; color: inherit; }
+
+.textlink {
+  font-weight: var(--weight-medium);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: opacity var(--dur-hover) var(--ease-hover);
+}
+.textlink:hover { opacity: 0.75; }
+
+/* Placeholder de foto — bloque de color sólido con aspect ratio correcto
+   y label mono del tipo de foto requerida. Sustituir: poner "src" en content.json. */
+.ph {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--ph-ratio, 3 / 4);
+  background: var(--ph-tone, var(--ph-tone-1));
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.ph::after {
+  content: attr(data-label);
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  padding: var(--space-2);
+  text-align: center;
+  line-height: 1.6;
+}
+.ph > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Marco blanco tipo polaroid (retratos 3:4 / 4:5, auditoría §5) */
+.framed { background: var(--frame, var(--white)); padding: 12px; }
+
+/* Estado de reveal (JS). Grupo por sección; nunca por elemento suelto. */
+.will-reveal { opacity: 0; }
+html.no-motion .will-reveal { opacity: 1; }
+
+/* ----------------------------------------------------------------------------
+   NAV — hamburguesa pill flotante fija + overlay a pantalla completa
+   Mobile: idéntico (el patrón ya es mobile-first por naturaleza).
+   -------------------------------------------------------------------------- */
+
+.navpill {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.75em 1.4em;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-micro);
+  letter-spacing: var(--track-micro);
+  text-transform: uppercase;
+  transition: opacity var(--dur-hover) var(--ease-hover);
+}
+.navpill:hover { opacity: 0.85; }
+.navpill .bars { display: inline-grid; gap: 4px; }
+.navpill .bars i { display: block; width: 16px; height: 1.5px; background: currentColor; }
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: var(--dark);
+  color: var(--on-dark);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-hover) var(--ease-hover),
+              visibility 0s linear var(--dur-hover);
+}
+.menu.open { opacity: 1; visibility: visible; transition: opacity var(--dur-hover) var(--ease-hover); }
+.menu nav { text-align: center; display: grid; gap: var(--space-3); }
+.menu a {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-display);
+  font-size: var(--text-display);
+  line-height: var(--leading-head);
+  text-decoration: none;
+  transition: opacity var(--dur-hover) var(--ease-hover);
+}
+.menu a:hover { opacity: 0.6; }
+.menu .menu-meta { margin-top: var(--space-5); display: grid; gap: var(--space-1); justify-items: center; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · announcement — bar de anuncio con CTA pill
+   Mobile: texto y CTA en columna centrada.
+   -------------------------------------------------------------------------- */
+
+.s-announcement .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  text-align: center;
+}
+.s-announcement p { font-size: var(--text-body-s); font-weight: var(--weight-medium); }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · hero — identidad: wordmark gigante ENTRELAZADO con el retrato
+   (línea 1 del nombre detrás de la figura, línea 2 delante — auditoría §5).
+   Mobile: se DESCOMPONE, no se escala: nombre → retrato → eyebrow → sub.
+   -------------------------------------------------------------------------- */
+
+.s-hero { position: relative; padding-block: var(--space-breather) 0; }
+.s-hero .stage {
+  position: relative;
+  min-height: 82vh;
+  display: grid;
+  place-items: center;
+}
+.s-hero .portrait {
+  position: relative;
+  z-index: 2;
+  width: min(360px, 58vw);
+}
+.s-hero .name {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  gap: 0.02em;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-weight: var(--weight-display);
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+  pointer-events: none;
+}
+.s-hero .name .line-back { position: relative; z-index: 1; }
+.s-hero .name .line-front { position: relative; z-index: 3; }
+.s-hero .hero-eyebrow { text-align: center; margin-bottom: var(--space-3); }
+.s-hero .hero-sub {
+  position: relative;
+  z-index: 4;
+  text-align: center;
+  max-width: 46ch;
+  margin: var(--space-4) auto 0;
+  padding-bottom: var(--space-6);
+}
+.s-hero .hero-cta { margin-top: var(--space-3); text-align: center; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · paths — segmentación por objetivo del visitante (2–4 rutas)
+   Mobile: columna única, cards a ancho completo.
+   -------------------------------------------------------------------------- */
+
+.s-paths .lede { text-align: center; margin-bottom: var(--space-6); }
+.s-paths .lede .display { margin-top: var(--space-2); }
+.s-paths .cards {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  gap: var(--space-4);
+}
+.s-paths .card {
+  background: var(--frame);
+  border-radius: var(--radius-soft);
+  padding: var(--space-5) var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+  text-align: center;
+}
+.s-paths .card .head { font-size: var(--text-sub); }
+.s-paths .card p { font-size: var(--text-body-s); }
+.s-paths .card .textlink { justify-self: center; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · featured — galería densa (pico de densidad; el arquetipo que la
+   referencia reserva para su objetivo #1 de negocio).
+   Mobile: 1 columna; el grid de 3 se apila.
+   -------------------------------------------------------------------------- */
+
+.s-featured .lede { max-width: 62ch; margin-bottom: var(--space-6); }
+.s-featured .lede .display { margin-top: var(--space-2); }
+.s-featured .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.s-featured .item {
+  display: grid;
+  gap: var(--space-2);
+  align-content: start;
+}
+.s-featured .item .head { font-size: var(--text-sub); }
+.s-featured .item p { font-size: var(--text-body-s); }
+.s-featured .after { margin-top: var(--space-6); text-align: center; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · splash — banda narrativa full-bleed con un statement
+   Mobile: min-height menor; el statement baja de cuerpo.
+   -------------------------------------------------------------------------- */
+
+.s-splash { display: grid; padding: 0; }
+.s-splash .ph { grid-area: 1 / 1; aspect-ratio: auto; min-height: 74vh; height: 100%; }
+.s-splash .statement {
+  grid-area: 1 / 1;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: calc(var(--gutter) * 2) var(--gutter);
+}
+.s-splash .statement .display { max-width: 22ch; color: var(--white); text-shadow: 0 1px 24px rgba(0,0,0,0.25); }
+.s-splash .statement .eyebrow { color: var(--white); margin-bottom: var(--space-2); }
+.s-splash .statement > div { display: grid; justify-items: center; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · media — autoridad por medio propio / straddle interno:
+   fondo dividido en dos tonos DENTRO de la sección y la imagen cruza el límite.
+   Mobile: fondo simple, imagen arriba, texto abajo.
+   -------------------------------------------------------------------------- */
+
+.s-media { background: linear-gradient(to bottom, var(--media-top, var(--paper)) 55%, var(--media-bottom, var(--surface-b)) 55%); }
+.s-media .split {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+.s-media .txt { display: grid; gap: var(--space-3); justify-items: start; }
+.s-media .stats { display: flex; gap: var(--space-5); margin-top: var(--space-2); }
+.s-media .stats .num { font-family: var(--font-serif); font-size: var(--text-head); line-height: 1; }
+.s-media .stats .lbl { margin-top: 0.5em; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · articles — grid de contenido (blog / recursos)
+   Mobile: 1 columna.
+   -------------------------------------------------------------------------- */
+
+.s-articles .lede { text-align: center; margin-bottom: var(--space-6); }
+.s-articles .lede .display { margin-top: var(--space-2); }
+.s-articles .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.s-articles .item { display: grid; gap: var(--space-2); align-content: start; text-decoration: none; }
+.s-articles .item .head { font-size: var(--text-sub); transition: opacity var(--dur-hover) var(--ease-hover); }
+.s-articles .item:hover .head { opacity: 0.65; }
+.s-articles .item .meta { display: flex; gap: var(--space-2); }
+.s-articles .after { margin-top: var(--space-6); text-align: center; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · credentials — sellos/badges de autoridad en fila + statement
+   Mobile: badges en fila de 2, se envuelven.
+   -------------------------------------------------------------------------- */
+
+.s-credentials .inner { text-align: center; }
+.s-credentials .display { max-width: 26ch; margin: var(--space-2) auto 0; }
+.s-credentials .badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+.s-credentials .badge {
+  width: 132px;
+  aspect-ratio: 1;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  padding: var(--space-2);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · offers — escalera de N cards con CADENCIA UNIFORME (mismo alto de
+   ritmo, split alternado). Numeradas: previsibilidad = confianza (auditoría §7).
+   Mobile: cada card se apila (media arriba, texto abajo), sin alternancia.
+   -------------------------------------------------------------------------- */
+
+.s-offers .lede { text-align: center; margin-bottom: var(--space-7); }
+.s-offers .lede .display { margin-top: var(--space-2); }
+.s-offers .ladder { display: grid; gap: var(--space-7); }
+.s-offers .offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  min-height: 480px;      /* cadencia: todas heredan el mismo alto de ritmo */
+}
+.s-offers .offer:nth-child(even) .media { order: 2; }
+.s-offers .offer .txt { display: grid; gap: var(--space-3); justify-items: start; }
+.s-offers .offer .num {
+  font-family: var(--font-mono);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--track-eyebrow);
+}
+.s-offers .offer .tagline { font-weight: var(--weight-medium); }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · about — la persona detrás (split + collage de retratos enmarcados)
+   Mobile: texto primero, collage después en fila horizontal scrolleable.
+   -------------------------------------------------------------------------- */
+
+.s-about .split {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+.s-about .txt { display: grid; gap: var(--space-3); justify-items: start; }
+.s-about .collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+.s-about .collage .framed:nth-child(2) { transform: translateY(var(--space-5)); }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · testimonials — 1 cita grande + grid de citas cortas
+   Mobile: todo en columna.
+   -------------------------------------------------------------------------- */
+
+.s-testimonials .lead-quote { text-align: center; max-width: 34ch; margin-inline: auto; }
+.s-testimonials .lead-quote .display { font-style: italic; }
+.s-testimonials .lead-quote .who { margin-top: var(--space-3); }
+.s-testimonials .grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+}
+.s-testimonials .q {
+  background: var(--frame);
+  border-radius: var(--radius-soft);
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-3);
+  align-content: space-between;
+}
+.s-testimonials .q p { font-size: var(--text-body-s); }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · newsletter — captura relacional (encuadre íntimo, no transaccional)
+   Mobile: input y botón apilados a ancho completo.
+   -------------------------------------------------------------------------- */
+
+.s-newsletter .inner { text-align: center; max-width: 54ch; margin-inline: auto; }
+.s-newsletter .display { margin-top: var(--space-2); }
+.s-newsletter p { margin-top: var(--space-3); }
+.s-newsletter form {
+  margin-top: var(--space-5);
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+}
+.s-newsletter input {
+  font: inherit;
+  font-size: var(--text-body-s);
+  padding: 0.9em 1.4em;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: inherit;
+  min-width: 280px;
+}
+.s-newsletter input::placeholder { color: inherit; opacity: 0.55; }
+.s-newsletter .privacy { margin-top: var(--space-3); opacity: 0.7; }
+
+/* ----------------------------------------------------------------------------
+   SECCIÓN · footer — sitemap + contacto + wordmark gigante recortado
+   Mobile: columnas apiladas; wordmark escala por vw y sigue recortado.
+   -------------------------------------------------------------------------- */
+
+.s-footer { padding-bottom: 0; }
+.s-footer .cols {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: var(--space-5);
+  padding-bottom: var(--space-7);
+}
+.s-footer .col { display: grid; gap: var(--space-2); align-content: start; justify-items: start; }
+.s-footer .col .micro { opacity: 0.6; margin-bottom: var(--space-1); }
+.s-footer .col a { text-decoration: none; font-size: var(--text-body-s); transition: opacity var(--dur-hover) var(--ease-hover); }
+.s-footer .col a:hover { opacity: 0.6; }
+.s-footer .col p { font-size: var(--text-body-s); }
+.s-footer .legal {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding-block: var(--space-3);
+  border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+}
+.s-footer .wordmark {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-display);
+  font-size: clamp(4rem, 13.5vw, 12.5rem);
+  line-height: 0.78;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: -0.06em;   /* recorte inferior deliberado */
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------------------------------
+   Estados de error del loader (content.json ausente / inválido)
+   -------------------------------------------------------------------------- */
+
+.load-error {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: var(--gutter);
+  font-family: var(--font-mono);
+  font-size: var(--text-body-s);
+  line-height: 1.8;
+}
+
+/* ============================================================================
+   MOBILE — breakpoint único 768px (como la referencia).
+   Cada sección se RECOMPONE, no se escala (auditoría §2).
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root { --gutter: 22px; }
+
+  .navpill { top: 14px; right: 14px; }
+
+  /* hero: descomposición total — nombre, retrato, eyebrow, sub */
+  .s-hero .stage { min-height: 0; display: grid; place-items: initial; }
+  .s-hero .portrait { width: min(78vw, 340px); margin-inline: auto; }
+  .s-hero .name {
+    position: static;
+    margin-top: var(--space-4);
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+  .s-hero .hero-sub { padding-bottom: var(--space-5); }
+
+  /* paths: columna única */
+  .s-paths .cards { grid-template-columns: 1fr; }
+
+  /* featured: columna única */
+  .s-featured .grid { grid-template-columns: 1fr; gap: var(--space-6); }
+
+  /* splash: banda más corta */
+  .s-splash .ph { min-height: 58vh; }
+
+  /* media: fondo simple (el straddle desaparece), imagen primero */
+  .s-media { background: var(--media-bottom, var(--surface-b)); }
+  .s-media .split { grid-template-columns: 1fr; gap: var(--space-5); }
+  .s-media .split .media { order: -1; }
+  .s-media .stats { gap: var(--space-4); flex-wrap: wrap; }
+
+  /* articles: columna única */
+  .s-articles .grid { grid-template-columns: 1fr; gap: var(--space-6); }
+
+  /* credentials: badges más pequeños, 2 por fila aprox */
+  .s-credentials .badges { gap: var(--space-3); }
+  .s-credentials .badge { width: 112px; }
+
+  /* offers: apilado, media arriba SIEMPRE (sin alternancia), sin alto mínimo */
+  .s-offers .offer { grid-template-columns: 1fr; gap: var(--space-4); min-height: 0; }
+  .s-offers .offer:nth-child(even) .media { order: 0; }
+  .s-offers .offer .media { order: 0; }
+  .s-offers .offer .txt { order: 1; }
+  .s-offers .ladder { gap: var(--space-7); }
+
+  /* about: texto primero; collage en fila scrolleable horizontal */
+  .s-about .split { grid-template-columns: 1fr; gap: var(--space-5); }
+  .s-about .collage {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 68%;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+  }
+  .s-about .collage .framed:nth-child(2) { transform: none; }
+
+  /* testimonials: columna */
+  .s-testimonials .grid { grid-template-columns: 1fr; }
+
+  /* newsletter: form apilado a ancho completo */
+  .s-newsletter form { flex-direction: column; align-items: stretch; }
+  .s-newsletter input { min-width: 0; }
+  .s-newsletter .btn { text-align: center; }
+
+  /* footer: columnas apiladas */
+  .s-footer .cols { grid-template-columns: 1fr; gap: var(--space-5); }
+}

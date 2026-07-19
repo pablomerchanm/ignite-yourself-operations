@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "title": "Dra. Nombre Apellido — Especialidad Médica en Ciudad",
+    "description": "Descripción SEO de una o dos frases: quién es la profesional, su especialidad principal y su ciudad. Máximo 155 caracteres para no truncarse.",
+    "lang": "es"
+  },
+
+  "brand": {
+    "name": "Nombre Apellido",
+    "shortName": "N.A.",
+    "wordmarkLines": ["Nombre", "Apellido"]
+  },
+
+  "nav": {
+    "label": "Menú",
+    "links": [
+      { "text": "Inicio", "href": "#hero" },
+      { "text": "Tratamientos", "href": "#offers" },
+      { "text": "Sobre mí", "href": "#about" },
+      { "text": "Recursos", "href": "#articles" },
+      { "text": "Contacto", "href": "#footer" }
+    ],
+    "meta": [
+      "(000) 000-0000",
+      "Ciudad · Solo con cita"
+    ]
+  },
+
+  "sections": [
+    {
+      "type": "announcement",
+      "surface": "dark",
+      "text": "Mensaje corto y urgente de una sola línea — nueva guía, apertura de agenda o anuncio de temporada.",
+      "cta": { "text": "Descargar guía", "href": "#featured" }
+    },
+
+    {
+      "type": "hero",
+      "id": "hero",
+      "surface": "paper",
+      "eyebrow": "Especialidad · Ciudad, País",
+      "portrait": { "src": "", "label": "retrato vertical 3:4, ambiente clínico, fondo neutro", "ratio": "3:4", "tone": 1 },
+      "sub": "Una frase de posicionamiento humano de veinte a treinta palabras: qué hace la profesional, para quién, y el resultado que la paciente puede esperar al trabajar con ella.",
+      "cta": { "text": "Agendar valoración", "href": "#footer" }
+    },
+
+    {
+      "type": "paths",
+      "surface": "a",
+      "eyebrow": "Empecemos por ti",
+      "title": "¿Qué te trae hoy por aquí?",
+      "cards": [
+        {
+          "title": "Ruta uno en pocas palabras",
+          "text": "Dos frases que describen a la visitante tipo uno y el problema que quiere resolver, en un tono cercano de unas veinticinco palabras.",
+          "link": { "text": "Esta soy yo", "href": "#featured" }
+        },
+        {
+          "title": "Ruta dos en pocas palabras",
+          "text": "Dos frases que describen a la visitante tipo dos y el problema que quiere resolver, en un tono cercano de unas veinticinco palabras.",
+          "link": { "text": "Esta soy yo", "href": "#offers" }
+        },
+        {
+          "title": "Ruta tres en pocas palabras",
+          "text": "Dos frases que describen a la visitante tipo tres y el problema que quiere resolver, en un tono cercano de unas veinticinco palabras.",
+          "link": { "text": "Esta soy yo", "href": "#about" }
+        }
+      ]
+    },
+
+    {
+      "type": "featured",
+      "id": "featured",
+      "surface": "paper",
+      "eyebrow": "Recursos gratuitos",
+      "title": "Guías del paciente, sin costo y sin jerga.",
+      "lede": "Una o dos frases que expliquen por qué existen estos recursos y qué obtiene la paciente al descargarlos, en unas treinta palabras.",
+      "items": [
+        {
+          "image": { "src": "", "label": "portada de guía 4:5, bodegón editorial", "ratio": "4:5", "tone": 2 },
+          "title": "Nombre de la guía uno",
+          "text": "Una frase de beneficio concreto de la guía, alrededor de quince palabras.",
+          "link": { "text": "Descargar", "href": "#" }
+        },
+        {
+          "image": { "src": "", "label": "portada de guía 4:5, bodegón editorial", "ratio": "4:5", "tone": 3 },
+          "title": "Nombre de la guía dos",
+          "text": "Una frase de beneficio concreto de la guía, alrededor de quince palabras.",
+          "link": { "text": "Descargar", "href": "#" }
+        },
+        {
+          "image": { "src": "", "label": "portada de guía 4:5, bodegón editorial", "ratio": "4:5", "tone": 1 },
+          "title": "Nombre de la guía tres",
+          "text": "Una frase de beneficio concreto de la guía, alrededor de quince palabras.",
+          "link": { "text": "Descargar", "href": "#" }
+        }
+      ],
+      "cta": { "text": "Ver todos los recursos", "href": "#" }
+    },
+
+    {
+      "type": "splash",
+      "surface": "dark",
+      "eyebrow": "Una pausa",
+      "statement": "Una frase narrativa y emocional de ocho a doce palabras que reconecte con la persona.",
+      "image": { "src": "", "label": "foto horizontal 16:9 full-bleed, ambiente de consulta o ciudad", "ratio": "16:9", "tone": 2 }
+    },
+
+    {
+      "type": "media",
+      "surfaceTop": "paper",
+      "surfaceBottom": "b",
+      "eyebrow": "Mi consultorio de puertas abiertas",
+      "title": "Nombre del medio propio — pódcast, canal o columna.",
+      "text": "Dos o tres frases sobre qué encuentra la audiencia en este medio y con qué frecuencia se publica, en unas treinta y cinco palabras que transmitan constancia.",
+      "image": { "src": "", "label": "arte del medio 1:1, cover de pódcast o canal", "ratio": "1:1", "tone": 3 },
+      "stats": [
+        { "num": "000", "label": "episodios" },
+        { "num": "00 mil", "label": "oyentes" },
+        { "num": "0 años", "label": "al aire" }
+      ],
+      "cta": { "text": "Escuchar ahora", "href": "#" }
+    },
+
+    {
+      "type": "articles",
+      "id": "articles",
+      "surface": "paper",
+      "eyebrow": "Del blog",
+      "title": "Lo último que he escrito para ti.",
+      "items": [
+        {
+          "image": { "src": "", "label": "thumbnail 1:1, detalle clínico o editorial", "ratio": "1:1", "tone": 1 },
+          "category": "Categoría",
+          "date": "Mes 0000",
+          "title": "Titular de artículo de ocho a doce palabras que despierte una pregunta.",
+          "href": "#"
+        },
+        {
+          "image": { "src": "", "label": "thumbnail 1:1, detalle clínico o editorial", "ratio": "1:1", "tone": 2 },
+          "category": "Categoría",
+          "date": "Mes 0000",
+          "title": "Titular de artículo de ocho a doce palabras que despierte una pregunta.",
+          "href": "#"
+        },
+        {
+          "image": { "src": "", "label": "thumbnail 1:1, detalle clínico o editorial", "ratio": "1:1", "tone": 3 },
+          "category": "Categoría",
+          "date": "Mes 0000",
+          "title": "Titular de artículo de ocho a doce palabras que despierte una pregunta.",
+          "href": "#"
+        }
+      ],
+      "cta": { "text": "Ver todos los artículos", "href": "#" }
+    },
+
+    {
+      "type": "credentials",
+      "surface": "c",
+      "eyebrow": "Credenciales",
+      "title": "Una frase sobria de diez a catorce palabras que resuma la trayectoria verificable.",
+      "badges": [
+        "Certificación de junta o consejo",
+        "00 años de práctica",
+        "Sociedad o colegio profesional",
+        "Docencia o publicación",
+        "Hospital o institución"
+      ]
+    },
+
+    {
+      "type": "offers",
+      "id": "offers",
+      "surface": "paper",
+      "eyebrow": "Tratamientos",
+      "title": "Cómo puedo acompañarte.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Nombre del tratamiento uno",
+          "tagline": "Subtítulo de una línea: para quién es y qué resuelve.",
+          "text": "Dos o tres frases que expliquen en qué consiste, cómo es el proceso y qué puede esperar la paciente, en unas cuarenta palabras con tono claro y sin tecnicismos.",
+          "image": { "src": "", "label": "foto de procedimiento o consulta 4:5, luz natural", "ratio": "4:5", "tone": 1 },
+          "cta": { "text": "Conocer más", "href": "#" }
+        },
+        {
+          "num": "02",
+          "title": "Nombre del tratamiento dos",
+          "tagline": "Subtítulo de una línea: para quién es y qué resuelve.",
+          "text": "Dos o tres frases que expliquen en qué consiste, cómo es el proceso y qué puede esperar la paciente, en unas cuarenta palabras con tono claro y sin tecnicismos.",
+          "image": { "src": "", "label": "foto de procedimiento o consulta 4:5, luz natural", "ratio": "4:5", "tone": 2 },
+          "cta": { "text": "Conocer más", "href": "#" }
+        },
+        {
+          "num": "03",
+          "title": "Nombre del tratamiento tres",
+          "tagline": "Subtítulo de una línea: para quién es y qué resuelve.",
+          "text": "Dos o tres frases que expliquen en qué consiste, cómo es el proceso y qué puede esperar la paciente, en unas cuarenta palabras con tono claro y sin tecnicismos.",
+          "image": { "src": "", "label": "foto de procedimiento o consulta 4:5, luz natural", "ratio": "4:5", "tone": 3 },
+          "cta": { "text": "Conocer más", "href": "#" }
+        }
+      ]
+    },
+
+    {
+      "type": "about",
+      "id": "about",
+      "surface": "a",
+      "eyebrow": "La persona detrás de la bata",
+      "title": "Un titular en primera persona de ocho a doce palabras.",
+      "text": "Dos párrafos separados por salto. El primero, de unas cuarenta palabras, cuenta el origen y la motivación de la profesional en primera persona.\n\nEl segundo, de unas treinta y cinco palabras, aterriza en el presente: su práctica hoy, su filosofía de cuidado y una nota personal que humanice.",
+      "images": [
+        { "src": "", "label": "retrato casual 3:4, fuera de consulta", "ratio": "3:4", "tone": 2 },
+        { "src": "", "label": "detalle de vida 3:4, hobby o familia", "ratio": "3:4", "tone": 3 }
+      ],
+      "cta": { "text": "Mi historia completa", "href": "#" }
+    },
+
+    {
+      "type": "testimonials",
+      "surface": "b",
+      "eyebrow": "Lo que dicen mis pacientes",
+      "lead": {
+        "quote": "Una cita destacada de quince a veinticinco palabras que capture el resultado emocional, no solo el clínico.",
+        "who": "Nombre de pila, tipo de tratamiento"
+      },
+      "items": [
+        {
+          "quote": "Cita corta de veinte a treinta palabras sobre una experiencia concreta con la profesional, en la voz natural de la paciente.",
+          "who": "Nombre, tratamiento"
+        },
+        {
+          "quote": "Cita corta de veinte a treinta palabras sobre una experiencia concreta con la profesional, en la voz natural de la paciente.",
+          "who": "Nombre, tratamiento"
+        },
+        {
+          "quote": "Cita corta de veinte a treinta palabras sobre una experiencia concreta con la profesional, en la voz natural de la paciente.",
+          "who": "Nombre, tratamiento"
+        }
+      ]
+    },
+
+    {
+      "type": "newsletter",
+      "surface": "paper",
+      "eyebrow": "Quedémonos en contacto",
+      "title": "Un titular íntimo de seis a diez palabras, nunca transaccional.",
+      "text": "Una o dos frases sobre qué recibe la suscriptora y cada cuánto, en unas veinticinco palabras con tono de carta personal.",
+      "placeholder": "Tu correo electrónico",
+      "cta": "Suscribirme",
+      "privacy": "Nota breve de privacidad: sin spam, baja cuando quieras."
+    },
+
+    {
+      "type": "footer",
+      "id": "footer",
+      "surface": "dark",
+      "about": "Dos frases de cierre sobre la práctica: especialidad, ciudad y modalidad de atención, en unas veinticinco palabras.",
+      "columns": [
+        {
+          "label": "Navegación",
+          "links": [
+            { "text": "Inicio", "href": "#hero" },
+            { "text": "Tratamientos", "href": "#offers" },
+            { "text": "Sobre mí", "href": "#about" },
+            { "text": "Recursos", "href": "#articles" }
+          ]
+        },
+        {
+          "label": "Contacto",
+          "links": [
+            { "text": "(000) 000-0000", "href": "tel:+10000000000" },
+            { "text": "correo@dominio.com", "href": "mailto:correo@dominio.com" },
+            { "text": "Dirección corta, Ciudad", "href": "#" }
+          ]
+        },
+        {
+          "label": "Social",
+          "links": [
+            { "text": "Instagram", "href": "#" },
+            { "text": "YouTube", "href": "#" },
+            { "text": "LinkedIn", "href": "#" }
+          ]
+        }
+      ],
+      "legal": [
+        "© 0000 Nombre Apellido. Todos los derechos reservados.",
+        "Aviso de privacidad · Términos"
+      ]
+    }
+  ]
+}
