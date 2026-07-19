@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Jorge Arce — Chapter 01",
+    "description": "A surgeon known for the cases others step away from. A monograph in ten chapters — Dr. Jorge Arce, South Bay, California.",
+    "lang": "en"
+  },
+  "brand": { "name": "DR. JORGE ARCE" },
+  "nav": {
+    "links": [
+      { "text": "About", "href": "#about" },
+      { "text": "Expertise", "href": "#expertise" },
+      { "text": "Appreciation", "href": "#appreciation" },
+      { "text": "Speaking", "href": "#speaking" }
+    ],
+    "cta": { "text": "Contact", "href": "#contact" }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "portrait": { "src": "/img/quote.jpg", "alt": "Dr. Jorge Arce", "label": "retrato editorial vertical, fondo oscuro", "ratio": "16:9" },
+      "nameLines": [
+        { "text": "Jorge", "style": "sans" },
+        { "text": "Arce", "style": "serif" }
+      ],
+      "notes": [
+        "<b>Oral & maxillofacial surgeon</b><br>Dental implantology —<br>complex & full-arch reconstruction",
+        "Trained in Colombia,<br>built in California —<br><b>27 years of practice</b>",
+        "Founder — Dental Implants<br>Center of South Bay <b>(2007)</b>"
+      ],
+      "scrollWord": "Scroll",
+      "strip": ["South Bay, California", "(01 — The Surgeon)"]
+    },
+    {
+      "type": "manifesto",
+      "no": "( 02 )",
+      "kick": "Mission & Experience",
+      "statement": "A surgeon known for <i>the cases others step away from</i> — and the <d>quiet, unhurried</d> precision it takes to <i>give them back their lives.</i>"
+    },
+    {
+      "type": "stamps",
+      "items": [
+        "<b>Based in</b><br>Redondo Beach · Torrance, CA",
+        "<b>Board-certified</b><br>Dental implantology",
+        "<b>Referred by</b><br>The surgeons other surgeons trust"
+      ]
+    },
+    {
+      "type": "path",
+      "no": "( 03 )",
+      "kick": "The Path",
+      "title": "From <i>Colombia</i> to the <i>South&nbsp;Bay.</i>",
+      "route": {
+        "origin": { "city": "Colombia", "co": "04.7110° N · 74.0721° W — trained" },
+        "dest": { "city": "South Bay", "co": "33.8492° N · 118.3880° W — built" },
+        "years": 27,
+        "yearsLabel": "Years of practice"
+      },
+      "cols": [
+        { "h": "Where he trained", "text": "Dr. Arce trained in Colombia, then devoted his career entirely to oral & maxillofacial surgery and dental implantology." },
+        { "h": "Where he built", "text": "He built his life's work in California — <b>the procedures most surgeons refer out:</b> complex extractions, reconstruction, full-arch cases." },
+        { "h": "One conviction", "text": "<b>Difficult work, done with care, gives people their lives back.</b> In 2007 he founded the Dental Implants Center of South Bay on it." }
+      ]
+    },
+    {
+      "type": "expertise",
+      "id": "expertise",
+      "title": "The work of a career spent on the <i>difficult cases.</i>",
+      "rows": [
+        { "t": "Dental Implants", "d": "From single implants to full-arch All-On-X reconstruction, planned and placed with precision." },
+        { "t": "Reconstruction", "d": "Rebuilding function and structure where bone and tissue have been lost." },
+        { "t": "Complex Cases", "d": "The difficult extractions and surgeries other clinicians prefer to refer elsewhere." },
+        { "t": "Implant Maintenance", "d": "Long-term care that protects the work of a restored smile." },
+        { "t": "Pathology", "d": "Identifying and addressing conditions affecting teeth, gums, and bone." },
+        { "t": "Second Opinions", "d": "Clarity and direction for patients facing complex decisions." }
+      ]
+    },
+    {
+      "type": "theatre",
+      "no": "( 05 )",
+      "kick": "In the operating room",
+      "title": "Twenty-seven years of <i>steady hands.</i>",
+      "main": { "src": "/img/surgery.jpg", "alt": "Dr. Arce in surgery", "label": "cirugía en curso, plano medio", "ratio": "4:3", "cap": ["Fig. 01 — The theatre", "South Bay, CA"] },
+      "side": [
+        { "src": "/img/operating.jpg", "alt": "Dr. Arce operating", "label": "detalle quirúrgico horizontal", "ratio": "16:9", "cap": ["Fig. 02 — Precision work", "—"], "pos": "center 30%" },
+        { "src": "/img/operating.jpg", "alt": "Detail — hands and instruments", "label": "detalle instrumental", "ratio": "16:9", "cap": ["Fig. 03 — The instruments", "Detail"], "pos": "82% 88%", "zoom": 1.7 }
+      ]
+    },
+    {
+      "type": "about",
+      "id": "about",
+      "no": "( 06 )",
+      "kick": "About",
+      "title": "The man behind <i>the work.</i>",
+      "paras": [
+        "Jorge grew up in Colombia, the son of a family that valued precision and patience long before he ever held a scalpel. Medicine was not a career choice so much as a calling — <i>a way to use his hands to give something back.</i>",
+        "He moved to California to specialize, and never left. Over twenty-seven years he built a practice on a single, unglamorous principle: <b>take the time the case actually needs.</b>",
+        "Outside the operating room he is a father, a mentor to younger surgeons, and a quiet student of his craft — still reading, still refining, still treating every patient as the person they are before the procedure they need."
+      ],
+      "signature": "— Jorge Arce, D.D.S.",
+      "shots": [
+        { "src": "/img/clinic.jpg", "alt": "Dr. Arce in his clinic", "label": "clínica, plano vertical", "ratio": "4:5", "cap": ["Plate 04 — The clinic", "Redondo Beach"], "pos": "center 20%" },
+        { "src": "/img/hero.jpg", "alt": "Dr. Jorge Arce, portrait", "label": "retrato horizontal", "ratio": "16:9", "cap": ["Plate 05 — Portrait", "Studio"], "pos": "center 12%" }
+      ]
+    },
+    {
+      "type": "press",
+      "id": "appreciation",
+      "no": "( 07 )",
+      "kick": "Appreciation",
+      "title": "The people who <i>were there.</i>",
+      "cards": [
+        { "who": ["Maria R.", "Full-arch"], "q": "I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <i>I can eat, smile, and speak again.</i>" },
+        { "who": ["Dr. David Kim, D.D.S.", "Referring"], "q": "When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I." },
+        { "who": ["Anabella C.", "Family"], "q": "\"The most thorough and honest surgeon I have ever met. He treated my father like family.\"", "tone": "navy" },
+        { "who": ["Robert T.", "Implants"], "q": "Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself." },
+        { "who": ["Dr. Lina Soto", "Periodontist"], "q": "\"I refer my most complex cases to Dr. Arce without hesitation. Twenty-seven years shows.\"", "tone": "blue" },
+        { "who": ["Carlos S.", "Bone graft"], "q": "I was terrified of the procedure. He never rushed me. <i>Best decision I have made for my health.</i>" },
+        { "who": ["Dr. Jeff Malone", "Referring"], "q": "Reliable, communicative, and surgically excellent. He sends my patients back with a full report every time." },
+        { "who": ["Elena P.", "TMJ"], "q": "Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know." }
+      ]
+    },
+    {
+      "type": "patients",
+      "no": "( 08 )",
+      "kick": "For patients",
+      "title": "Understanding your care, <i>before you sit in the chair.</i>",
+      "articles": [
+        { "t": "All-On-X, explained simply", "tag": "Implants — Read ↳", "href": "#" },
+        { "t": "How to know if you need an implant", "tag": "Before surgery — Read ↳", "href": "#" },
+        { "t": "Five myths about oral surgery", "tag": "Myths — Read ↳", "href": "#" }
+      ],
+      "guide": {
+        "kick": "Free patient guide",
+        "title": "What to expect from your first <i>implant consultation.</i>",
+        "bullets": [
+          "A plain-language walkthrough of the process",
+          "The questions worth asking any surgeon",
+          "How to know if you're a candidate"
+        ],
+        "formTitle": "Get the guide",
+        "formSub": "Enter your details and we'll send it to your inbox. No spam — just one helpful guide.",
+        "fields": [
+          { "label": "Full name", "type": "text", "placeholder": "Your name" },
+          { "label": "Email", "type": "email", "placeholder": "you@email.com" }
+        ],
+        "submit": "Send me the guide",
+        "fine": "By submitting, you agree to be contacted by Dental Implants Center of South Bay. Your information is never shared."
+      }
+    },
+    {
+      "type": "speaking",
+      "id": "speaking",
+      "no": "( 09 )",
+      "kick": "Speaking & education",
+      "photo": { "src": "/img/speaking.jpg", "alt": "Dr. Arce speaking", "label": "conferencia, plano vertical", "ratio": "4:5", "cap": ["Plate 06 — Sharing the craft", "Lecture"], "pos": "center 18%" },
+      "title": "Sharing the craft with <i>the profession.</i>",
+      "lead": "Beyond the operating room, Dr. Arce lectures and mentors — training the next generation of surgeons and speaking on implantology and complex reconstruction.",
+      "rings": ["Full-Arch Reconstruction", "Complex Extractions", "Judgment in Oral Surgery"],
+      "invite": "Available for conferences, study clubs & resident training",
+      "cta": { "text": "Request as speaker", "href": "#contact" }
+    },
+    {
+      "type": "finale",
+      "id": "contact",
+      "no": "( 10 )",
+      "kick": "Dental Implants Center of South Bay",
+      "bg": { "src": "/img/footer.jpg", "alt": "", "label": "cierre fotográfico full-bleed", "ratio": "16:9" },
+      "title": "For the patients who were told it <i>couldn't be done.</i>",
+      "cta": { "text": "Request a consultation", "href": "tel:+13103274166" },
+      "contact": "<b>Redondo Beach · Torrance, California</b><br>(310) 327-4166 — by appointment",
+      "footer": ["© 2026 — Dr. Jorge Arce, D.D.S.", "South Bay, California"]
+    }
+  ]
+}
