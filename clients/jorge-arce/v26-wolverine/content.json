@@ -1,0 +1,160 @@
+{
+ "_schema": "v26-wolverine · corporativa heritage B/N · Inter. rich() admite <b><br>. state.lines EXACTO 2-4 (manifiesto pinneado) · bgrid.rows 4-8 (A-0N auto) · stats EXACTO 2-3. Subpáginas about.html/commitment.html se conservan. src vacío = placeholder. Fetch absoluto /v26-wolverine/content.json.",
+ "meta": {
+  "title": "Arce | South Bay — Oral & Maxillofacial Surgery · v26 Wolverine",
+  "description": "Restore. Every case. Fully. Dr. Jorge Arce — board-certified oral & maxillofacial surgeon, Dental Implants Center of South Bay.",
+  "lang": "en"
+ },
+ "nav": {
+  "logo": "Arce <span>| South Bay</span>",
+  "links": [
+   {
+    "t": "About",
+    "h": "about.html"
+   },
+   {
+    "t": "Disciplines",
+    "h": "#brands"
+   },
+   {
+    "t": "Commitment",
+    "h": "commitment.html"
+   },
+   {
+    "t": "Contact",
+    "h": "#close"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "img": {
+    "src": "/img/surgery.jpg",
+    "alt": "Dr. Arce in surgery",
+    "label": "FOTO — hero full-bleed"
+   },
+   "title": "Restore.<br>Every Case.<br>Fully.",
+   "news": {
+    "img": {
+     "src": "/img/speaking.jpg",
+     "label": "FOTO — 16:10"
+    },
+    "k": "From the practice",
+    "t": "Twenty-seven years of surgical judgment",
+    "h": "about.html"
+   }
+  },
+  {
+   "type": "state",
+   "id": "about",
+   "lines": [
+    "One surgeon,",
+    "one standard,",
+    "limitless care."
+   ],
+   "lead": "Our practice runs on precision, patience, and honest answers. Across every case — from a single implant to full-arch reconstruction — Dr. Arce shapes the future of each patient's function and confidence.",
+   "sub": "Trained in Colombia, specialized in California. Board certified in dental implantology. Founder of the Dental Implants Center of South Bay, est. 2007 — Redondo Beach & Torrance."
+  },
+  {
+   "type": "band",
+   "img": {
+    "src": "/img/operating.jpg",
+    "label": "FOTO — guía 1:1"
+   },
+   "k": "Patient Guide",
+   "t": "What to expect from your first implant consultation — imaging, candidacy, planning, and the questions worth asking any surgeon.",
+   "tag": "Free guide",
+   "cta": {
+    "t": "Ask for the Guide",
+    "h": "tel:+13103274166"
+   }
+  },
+  {
+   "type": "brands",
+   "id": "brands",
+   "title": "Many disciplines,<br>one shared standard.",
+   "sub": "Six systems — active",
+   "rows": [
+    {
+     "nm": "Dental Implants",
+     "ds": "From single implants to full-arch All-On-X reconstruction, planned and placed with precision."
+    },
+    {
+     "nm": "Reconstruction",
+     "ds": "Rebuilding function and structure where bone and tissue have been lost."
+    },
+    {
+     "nm": "Complex Cases",
+     "ds": "The difficult extractions and surgeries other clinicians prefer to refer elsewhere."
+    },
+    {
+     "nm": "Implant Maintenance",
+     "ds": "Long-term care that protects the work of a restored smile."
+    },
+    {
+     "nm": "Pathology",
+     "ds": "Identifying and addressing conditions affecting teeth, gums, and bone."
+    },
+    {
+     "nm": "Second Opinions",
+     "ds": "Clarity and direction for patients facing complex decisions."
+    }
+   ]
+  },
+  {
+   "type": "bandimg",
+   "img": {
+    "src": "/img/clinic.jpg",
+    "label": "FOTO — el centro full-bleed"
+   },
+   "cap": "The Center — Est. 2007"
+  },
+  {
+   "type": "stats",
+   "cells": [
+    {
+     "n": "27",
+     "u": "yrs",
+     "l": "Dedicated to oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Founder, Dental Implants Center of South Bay"
+    },
+    {
+     "n": "Board",
+     "u": "cert.",
+     "l": "Certified in dental implantology"
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "q": "“Our culture fuels precision, patience, and honesty. Difficult work, done with care, gives people their lives back.”",
+   "who": "Dr. Jorge Arce, D.D.S."
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "title": "Make it better.<br>Starting today.",
+   "ctas": [
+    {
+     "t": "Book a consultation",
+     "h": "tel:+13103274166",
+     "ghost": false
+    },
+    {
+     "t": "(310) 327-4166",
+     "h": "tel:+13103274166",
+     "ghost": true
+    }
+   ],
+   "fine": [
+    "© Dr. Jorge Arce, D.D.S.",
+    "Redondo Beach · Torrance, California",
+    "By appointment"
+   ]
+  }
+ ]
+}

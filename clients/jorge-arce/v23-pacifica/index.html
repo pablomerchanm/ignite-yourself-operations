@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(96px,13vh,152px);
+
   --paper:#EDECE8; --panel:#E2E1DC; --ink:#191919; --dim:#77756E; --line:rgba(25,25,25,.14);
   --serif:'Instrument Serif',Georgia,serif;
 }
@@ -56,7 +61,7 @@ a{color:inherit;text-decoration:none}
 .full .cap{margin-top:12px;font-family:var(--serif);font-size:16px;color:var(--dim)}
 
 /* ---------- brief / approach ---------- */
-.block{padding:110px 0;border-top:1px solid var(--line)}
+.block{padding:var(--sec) 0;border-top:1px solid var(--line)}
 .block .inr{display:grid;grid-template-columns:.55fr 1.45fr;gap:70px;align-items:start}
 .block .lbl{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
 .block h2{font-weight:700;letter-spacing:-.03em;line-height:1.04;font-size:clamp(30px,4vw,54px);
@@ -72,7 +77,7 @@ a{color:inherit;text-decoration:none}
 .duo figcaption{margin-top:10px;font-family:var(--serif);font-size:15px;color:var(--dim)}
 
 /* ---------- films strip ---------- */
-.films{border-top:1px solid var(--line);padding:110px 0}
+.films{border-top:1px solid var(--line);padding:calc(var(--sec)*1.15) 0}
 .films .head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px;margin-bottom:50px}
 .films h2{font-weight:700;letter-spacing:-.03em;text-transform:uppercase;font-size:clamp(28px,3.4vw,46px)}
 .films h2 .ser{font-family:var(--serif);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0}
@@ -86,7 +91,7 @@ a{color:inherit;text-decoration:none}
 .frame2 .play{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);
   width:74px;height:74px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);
   display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;
-  backdrop-filter:blur(4px);transition:transform .3s,background .3s}
+  backdrop-filter:blur(4px);transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover) var(--ease-quick)}
 .frame2:hover .play{transform:translate(-50%,-50%) scale(1.08);background:rgba(255,255,255,.15)}
 .frame2 .cap2{position:absolute;z-index:3;left:20px;bottom:9%;color:#fff;font-size:11.5px;
   font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
@@ -102,7 +107,7 @@ a{color:inherit;text-decoration:none}
 .nextcase .t2 .ser{font-family:var(--serif);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0}
 
 /* ---------- results strip ---------- */
-.results{border-top:1px solid var(--line);padding:110px 0}
+.results{border-top:1px solid var(--line);padding:calc(var(--sec)*.85) 0}
 .results .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
 .results .n{font-weight:700;letter-spacing:-.04em;font-size:clamp(56px,7vw,104px);line-height:.9;text-transform:uppercase}
 .results .n .ser{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:0;font-size:.6em}
@@ -135,185 +140,200 @@ a{color:inherit;text-decoration:none}
   text-transform:uppercase;color:var(--dim)}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
-.reveal.in{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.6,.2,1),transform .8s cubic-bezier(.2,.6,.2,1)}
-[data-stagger].in>*{opacity:1;transform:none}
-[data-stagger].in>*:nth-child(2){transition-delay:.1s}
-[data-stagger].in>*:nth-child(3){transition-delay:.2s}
-[data-stagger].in>*:nth-child(4){transition-delay:.3s}
-[data-hero]{opacity:0;transform:translateY(24px);animation:hin 1s cubic-bezier(.2,.6,.2,1) forwards}
-[data-hero="2"]{animation-delay:.15s}
-[data-hero="3"]{animation-delay:.3s}
-@keyframes hin{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal,[data-stagger]>*,[data-hero]{opacity:1!important;transform:none!important}
 }
 
-/* ---------- mobile ---------- */
-@media (max-width:900px){
-  .wrap{padding:0 22px}
-  .nav{padding:18px 22px}
-  .hero .foot{left:22px;right:22px}
-  .meta .grid{grid-template-columns:1fr 1fr;gap:28px}
-  .block .inr{grid-template-columns:1fr;gap:26px}
-  .duo{grid-template-columns:1fr}
-  .results .grid{grid-template-columns:1fr;gap:40px}
-  .voices .row{grid-template-columns:1fr}
-  .crow{grid-template-columns:1fr;gap:8px}
-  .block,.results,.voices,.credits{padding:80px 0}
-}
-</style>
-</head>
+
+/* ---------- rework: timeline + placeholders ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink,#191919);outline-offset:3px}
+.phx{display:flex;align-items:center;justify-content:center;background:#dad9d4;color:#77756E;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.frame2 .phx{aspect-ratio:21/9;width:100%}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#77756E;font-size:14px}
+.tline{display:flex;align-items:center;gap:22px;margin-top:44px}
+.tline .ruler{position:relative;flex:1;height:34px;border-top:1px solid rgba(25,25,25,.25)}
+.tline .ruler .tick{position:absolute;top:-1px;width:1px;height:12px;background:rgba(25,25,25,.3)}
+.tline .ruler .phead{position:absolute;top:-7px;left:0;width:2px;height:26px;background:var(--ink,#191919);will-change:transform;display:block}
+.tline .tc{font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;min-width:92px;text-align:right}
+html.no-motion .tline{display:none}
+</style></head>
 <body>
-
-<nav class="nav">
-  <span class="lg">arce</span>
-  <span class="m">Menu</span>
-</nav>
-
-<!-- HERO -->
-<header class="hero" style="position:relative">
-  <div class="l1" data-hero>Jorge</div>
-  <div class="mid" data-hero="2">
-    <span class="glyph ast">*</span>
-    <span class="glyph">(</span>
-    <span class="slot"><img src="../img/portrait.jpg" alt="Dr. Jorge Arce"></span>
-    <span class="glyph">)</span>
-    <span class="sr slabel">The Case Study</span>
-  </div>
-  <div class="l3" data-hero="3">Arce</div>
-  <div class="foot">
-    <span>Oral &amp; Maxillofacial Surgery</span>
-    <span>South Bay, California</span>
-    <span>Est. 2007</span>
-  </div>
-</header>
-
-<!-- CASE META -->
-<section class="meta"><div class="wrap"><div class="grid" data-stagger>
-  <div class="cell"><div class="k">Subject</div><div class="v">Dr. Jorge Arce, D.D.S. — board-certified implantologist</div></div>
-  <div class="cell"><div class="k">Field</div><div class="v">Oral &amp; maxillofacial surgery, complex reconstruction</div></div>
-  <div class="cell"><div class="k">Practice</div><div class="v">Dental Implants Center of South Bay — Redondo Beach &amp; Torrance</div></div>
-  <div class="cell"><div class="k">Running time</div><div class="v">Twenty-seven years, ongoing</div></div>
-</div></div></section>
-
-<!-- FULL IMAGE -->
-<div class="wrap full reveal">
-  <img src="../img/surgery.jpg" alt="Dr. Arce in surgery">
-  <div class="cap">Frame 01 — the operating room, where the case actually gets decided.</div>
-</div>
-
-<!-- BRIEF -->
-<section class="block"><div class="wrap"><div class="inr">
-  <div class="lbl reveal">The brief</div>
-  <div class="reveal">
-    <h2>Take the cases <span class="ser">everyone else</span> refers out.</h2>
-    <p>Complex extractions. Reconstruction where bone and tissue have been lost. Full-arch implant restorations for patients told — sometimes more than once — that nothing could be done.</p>
-    <p>The brief never changes: <strong>difficult work, done with care, gives people their lives back.</strong></p>
-  </div>
-</div></div></section>
-
-<!-- APPROACH -->
-<section class="block" style="border-top:0;padding-top:0"><div class="wrap"><div class="inr">
-  <div class="lbl reveal">The approach</div>
-  <div class="reveal">
-    <h2>Precision first. <span class="ser">Patience</span> always.</h2>
-    <p>Trained in Colombia, specialized in California. Every case is mapped before anyone operates — implants, grafting, sequencing, restoration. The time the case actually needs, not the time the schedule allows.</p>
-  </div>
-</div>
-<div class="duo" style="margin-top:60px">
-  <figure class="reveal"><img src="../img/operating.jpg" alt="Precision work"><figcaption>Frame 02 — precision work.</figcaption></figure>
-  <figure class="reveal"><img src="../img/clinic.jpg" alt="The clinic"><figcaption>Frame 03 — the Center, est. 2007.</figcaption></figure>
-</div>
-</div></section>
-
-<!-- THE FILMS -->
-<section class="films"><div class="wrap">
-  <div class="head reveal">
-    <h2>The <span class="ser">footage.</span></h2>
-    <span class="lbl2">slots de video — el caso en movimiento</span>
-  </div>
-  <div class="fstack">
-    <div class="frame2 reveal">
-      <img src="../img/surgery.jpg" alt="">
-      <span class="play">▶</span>
-      <span class="cap2">Film 01 — The operating room, real time</span>
-    </div>
-    <div class="fduo">
-      <div class="frame2 reveal">
-        <img src="../img/operating.jpg" alt="">
-        <span class="play">▶</span>
-        <span class="cap2">Film 02 — Planning session</span>
-      </div>
-      <div class="frame2 reveal">
-        <img src="../img/speaking.jpg" alt="">
-        <span class="play">▶</span>
-        <span class="cap2">Film 03 — The consultation</span>
-      </div>
-    </div>
-  </div>
-</div></section>
-
-<!-- RESULTS -->
-<section class="results"><div class="wrap"><div class="grid" data-stagger>
-  <div><div class="n">27<span class="ser">yrs</span></div><div class="l">Devoted entirely to oral &amp; maxillofacial surgery</div></div>
-  <div><div class="n">2007</div><div class="l">Dental Implants Center of South Bay founded</div></div>
-  <div><div class="n">Board<span class="ser">cert.</span></div><div class="l">Certified in dental implantology</div></div>
-</div></div></section>
-
-<!-- VOICES -->
-<section class="voices"><div class="wrap"><div class="row" data-stagger>
-  <div class="vcard">
-    <p>"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did."</p>
-    <div class="who">Maria R. — Patient</div>
-  </div>
-  <div class="vcard">
-    <p>"When a case is beyond what I can handle, Jorge is the first call I make."</p>
-    <div class="who">Dr. David Kim — Referring Dentist</div>
-  </div>
-  <div class="vcard">
-    <p>"The most thorough and honest surgeon I have ever met. He treated my father like family."</p>
-    <div class="who">Anabella C. — Daughter of patient</div>
-  </div>
-</div></div></section>
-
-<!-- CREDITS -->
-<section class="credits"><div class="wrap">
-  <h2 class="reveal">The <span class="ser">credits.</span></h2>
-  <div class="reveal">
-    <div class="crow"><span class="k">Surgeon</span><span>Dr. Jorge Arce, D.D.S.</span></div>
-    <div class="crow"><span class="k">Certification</span><span>Board Certified — Dental Implantology</span></div>
-    <div class="crow"><span class="k">Disciplines</span><span>Dental Implants · Reconstruction · Complex Cases · Implant Maintenance · Pathology · Second Opinions</span></div>
-    <div class="crow"><span class="k">Locations</span><span>Redondo Beach · Torrance, California</span></div>
-    <div class="crow"><span class="k">Contact</span><span>(310) 327-4166 · By appointment</span></div>
-  </div>
-</div></section>
-
-<!-- CLOSE -->
-<section class="close"><div class="wrap">
-  <div class="t reveal">Your case, <span class="ser">next.</span></div>
-  <a class="cta reveal" href="tel:+13103274166">Request a consultation</a>
-  <div class="fine">
-    <span>© Dr. Jorge Arce, D.D.S.</span>
-    <span>A case study in surgical care</span>
-    <span>South Bay, CA</span>
-  </div>
-</div></section>
-
-<!-- NEXT CASE -->
-<section class="nextcase"><div class="wrap">
-  <a class="reveal" href="index.html">
-    <span class="k2">Next case study</span>
-    <span class="t2">Full-Arch, <span class="ser">restored.</span> →</span>
-  </a>
-</div></section>
-
+<nav class="nav"><span id="nlogo"></span><span id="nmenu"></span></nav>
+<main id="site"></main>
+<noscript><div style="padding:40vh 28px;text-align:center;font-size:15px">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal,[data-stagger]').forEach(function(el){io.observe(el)});
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;s&gt;/g,'<span class="ser">').replace(/&lt;\/s&gt;/g,'</span>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function img(im,alt,extra){
+  if(im&&im.src)return'<img src="'+esc(im.src)+'" alt="'+esc(alt||im.alt||'')+'"'+(extra||'')+'>';
+  return'<div class="phx">'+esc((im&&im.label)||'FOTO')+'</div>'}
+
+var partials={
+hero:function(s){
+  return'<header class="hero" id="top" style="position:relative" data-r2>'+
+  '<div class="l1 wr">'+esc(s.l1)+'</div>'+
+  '<div class="mid wr">'+
+    '<span class="glyph ast">*</span><span class="glyph">(</span>'+
+    '<span class="slot">'+img(s.img)+'</span>'+
+    '<span class="glyph">)</span><span class="sr slabel">'+esc(s.label)+'</span>'+
+  '</div>'+
+  '<div class="l3 wr">'+esc(s.l3)+'</div>'+
+  '<div class="foot">'+(s.foot||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</header>'},
+caseMeta:function(s){
+  return'<section class="meta"><div class="wrap"><div class="grid" data-cards>'+
+  (s.cells||[]).map(function(cl){return'<div class="cell wr"><div class="k">'+esc(cl.k)+'</div><div class="v">'+rich(cl.v)+'</div></div>'}).join('')+
+  '</div></div></section>'},
+full:function(s){
+  return'<section class="full"><div class="wrap full wr" data-r4>'+img(s.img)+
+  '<div class="cap wr">'+esc(s.cap)+'</div></div></section>'},
+block:function(s){
+  return'<section class="block"><div class="wrap"><div class="inr">'+
+  '<span class="lbl wr" data-r1>'+esc(s.lbl)+'</span>'+
+  '<div data-r2><h2 class="wr">'+rich(s.title)+'</h2>'+
+  (s.paras||[]).map(function(p){return'<p class="t wr">'+rich(p)+'</p>'}).join('')+
+  '</div></div>'+
+  (s.duo?'<div class="duo">'+s.duo.map(function(d){return'<div class="wr" data-r4>'+img(d.img)+'<div class="cap">'+esc(d.cap)+'</div></div>'}).join('')+'</div>':'')+
+  '</div></section>'},
+films:function(s){
+  var slots=s.slots||[];
+  var first=slots.filter(function(x){return x.wide});
+  var rest=slots.filter(function(x){return !x.wide});
+  function slot(f){return'<div class="frame2 wr" data-r4 data-film>'+img(f.img)+
+    '<span class="play">▶</span><span class="cap2">'+esc(f.cap)+'</span></div>'}
+  return'<section class="films"><div class="wrap">'+
+  '<div class="head" data-r2><h2 class="wr">'+rich(s.title)+'</h2><span class="lbl2 wr">'+esc(s.lbl)+'</span></div>'+
+  '<div class="fstack">'+first.map(slot).join('')+
+  (rest.length?'<div class="fduo">'+rest.map(slot).join('')+'</div>':'')+'</div>'+
+  '<div class="tline" aria-hidden="true"><div class="ruler" id="ruler"><i class="phead" id="phead"></i></div><span class="tc" id="tc">FILM 01</span></div>'+
+  '</div></section>'},
+results:function(s){
+  return'<section class="results"><div class="wrap"><div class="grid" data-cards>'+
+  (s.cells||[]).map(function(cl){return'<div class="wr"><div class="n">'+esc(cl.n)+(cl.u?'<span class="ser">'+esc(cl.u)+'</span>':'')+'</div><div class="l">'+rich(cl.l)+'</div></div>'}).join('')+
+  '</div></div></section>'},
+voices:function(s){
+  return'<section class="voices"><div class="wrap">'+
+  (s.cards||[]).map(function(v){return'<div class="vcard wr" data-r1><p class="q">'+esc(v.q)+'</p><div class="who">'+esc(v.who)+'</div></div>'}).join('')+
+  '</div></section>'},
+credits:function(s){
+  return'<section class="credits"><div class="wrap">'+
+  '<h2 class="wr" data-r1>'+rich(s.title)+'</h2>'+
+  (s.rows||[]).map(function(r){return'<div class="crow wr" data-r1 data-rule><span class="k2">'+esc(r.k)+'</span><span class="v">'+rich(r.v)+'</span></div>'}).join('')+
+  '</div></section>'},
+close:function(s){
+  return'<section class="close"><div class="wrap" data-r2>'+
+  '<h2 class="wr">'+rich(s.title)+'</h2>'+
+  '<a class="cta wr" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a>'+
+  '<div class="fine">'+(s.fine||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</div></section>'},
+nextcase:function(s){
+  return'<section class="nextcase"><a class="inr" href="'+esc(s.h||'#top')+'"><div class="wrap">'+
+  '<span class="lbl2">'+esc(s.lbl)+'</span>'+
+  '<h2>'+rich(s.title)+'</h2>'+
+  '</div></a></section>'}
+};
+
+fetch('/v23-pacifica/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  if(c.nav){document.getElementById('nlogo').textContent=c.nav.logo||'';
+    document.getElementById('nmenu').textContent=c.nav.menu||''}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';
+    var l=document.createElement('i');
+    l.style.cssText='position:absolute;left:0;right:0;top:0;height:1px;background:rgba(25,25,25,.15);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-r4]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* R5 la linea de tiempo del montaje */
+  var films=Array.prototype.slice.call(document.querySelectorAll('[data-film]'));
+  var ruler=document.getElementById('ruler'),phead=document.getElementById('phead'),tc=document.getElementById('tc');
+  if(films.length&&ruler){
+    var n=films.length;
+    for(var j=1;j<n;j++){
+      var t=document.createElement('i');t.className='tick';t.style.left=(j/n*100)+'%';
+      ruler.appendChild(t);
+    }
+    ScrollTrigger.create({trigger:'.films',start:'top 60%',end:'bottom 40%',scrub:1.2,
+      onUpdate:function(self){var p=self.progress;
+        var w=ruler.clientWidth-2;
+        phead.style.transform='translateX('+(p*w)+'px)';
+        var seg=1/n;
+        films.forEach(function(f,j){
+          var center=(j+.5)*seg;
+          var a=Math.max(0,1-Math.abs(p-center)/(seg*.9));
+          var im=f.querySelector('img,.phx');
+          if(im)im.style.opacity=(.7+.3*a);
+          var cap=f.querySelector('.cap2');
+          if(cap)cap.style.opacity=(.55+.45*a);
+        });
+        if(tc)tc.textContent='FILM '+('0'+Math.min(n,Math.floor(p*n)+1)).slice(-2);
+      }});
+  }
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
 })();
 </script>
 </body>

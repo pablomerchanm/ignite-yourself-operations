@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Figtree:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(104px,14vh,168px);
+
   --forest:#16281B; --forest2:#1B301F; --deep:#101E14; --cream:#F5F0E7; --sand:#E5D3B2;
   --rust:#B4532D; --clay:#B0714A; --tan:#E9DCC0; --green:#2E4A33; --inkc:#2A3A2D;
   --serif:'Playfair Display',Georgia,serif; --mono:'Space Mono',monospace;
@@ -59,8 +64,8 @@ a{color:inherit;text-decoration:none}
   align-items:center;gap:12px;color:var(--sand)}
 .hero .scr .mouse{width:15px;height:24px;border:1.5px solid var(--sand);border-radius:9px;position:relative}
 .hero .scr .mouse::after{content:"";position:absolute;top:5px;left:50%;width:2px;height:5px;
-  background:var(--sand);transform:translateX(-50%);border-radius:2px;animation:wheel 1.8s infinite}
-@keyframes wheel{0%{opacity:1;top:5px}70%{opacity:0;top:12px}100%{opacity:0;top:5px}}
+  background:var(--sand);transform:translateX(-50%);border-radius:2px;}
+
 
 /* ---------- poetic full-screens ---------- */
 .poem{position:relative;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -142,16 +147,11 @@ a{color:inherit;text-decoration:none}
 .foot .critter.leafy{right:8%;bottom:-30px;width:110px;transform:rotate(-8deg);opacity:.5}
 
 /* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
-.reveal.rin{opacity:1;transform:none}
-[data-hero]{opacity:0;transform:translateY(26px);animation:hin 1.2s cubic-bezier(.2,.6,.2,1) forwards}
+[data-hero]{opacity:0;transform:translateY(26px);}
 [data-hero="2"]{animation-delay:.2s}
 [data-hero="3"]{animation-delay:.45s}
-@keyframes hin{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal,[data-hero]{opacity:1!important;transform:none!important}
-}
+
+
 
 /* ---------- mobile ---------- */
 @media (max-width:900px){
@@ -164,261 +164,182 @@ a{color:inherit;text-decoration:none}
   .intro{padding:110px 0 90px}
   .record,.voices{padding:100px 0}
 }
-</style>
-</head>
+
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid var(--green,#2E4A33);outline-offset:3px}
+.mapfig svg>*{will-change:opacity}
+html:not(.no-motion) .mapfig[data-chart] svg>*{opacity:0}
+.poem,.band{overflow:hidden}
+.phx{display:flex;align-items:center;justify-content:center;background:#1a2b1e;color:rgba(233,230,220,.5);font-family:var(--mono,ui-monospace);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.poem .phx{position:absolute;inset:0}
+.band .phx{position:absolute;inset:0}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:#8B8272;font-size:14px}
+</style></head>
 <body>
-
-<nav class="nav">
-  <a class="lg" href="index.html">Jorge Arce<small>restore function · restore lives</small></a>
-  <span class="menu" id="menuBtn">menu</span>
-</nav>
-
-<div class="ovl" id="ovl">
-  <span class="x" id="menuX">close</span>
-  <div class="links">
-    <a href="index.html">The Craft Speaks</a>
-    <a href="about.html">About</a>
-    <a href="faq.html">FAQ</a>
-    <a href="tel:+13103274166">Contact</a>
-    <div class="sm">(310) 327-4166 · redondo beach &amp; torrance, ca</div>
-  </div>
-</div>
-
-<!-- HERO -->
-<header class="hero">
-  <h1 class="masked" data-hero>Jorge<br>Arce</h1>
-  <div class="tag" data-hero="2">Restore Function. Restore Lives.</div>
-  <div class="sub" data-hero="2">careful surgery for the most precious function a person has</div>
-  <div class="scr mono" data-hero="3"><span class="mouse"></span>Scroll to continue</div>
-</header>
-
-<!-- POETIC SEQUENCE -->
-<section class="poem">
-  <img src="../img/surgery.jpg" alt="" data-plx>
-  <p class="line reveal">I rebuild what was lost.</p>
-  <div class="who">the craft speaks — i</div>
-</section>
-<section class="poem">
-  <img src="../img/operating.jpg" alt="" data-plx>
-  <p class="line reveal">I return the bite, the smile, the voice.</p>
-  <div class="who">the craft speaks — ii</div>
-</section>
-<section class="poem">
-  <img src="../img/quote.jpg" alt="" data-plx>
-  <p class="line reveal">I take the cases others turn away.</p>
-  <div class="who">the craft speaks — iii</div>
-</section>
-
-<!-- CREAM INTRO -->
-<section class="intro"><div class="wrap">
-  <p class="lede reveal"><em>Dr. Jorge Arce</em> is a Colombia-born, California-forged oral &amp; maxillofacial surgeon at the forefront of an old yet radical way to practice: <span class="rust">unhurried surgical care.</span> Twenty-seven years. One discipline. <em>Every case given the time it actually needs.</em></p>
-  <div class="foot reveal">not the pace one would normally expect from modern medicine — and exactly the point.</div>
-  <div class="cols">
-    <p class="reveal">He grew up in Colombia, in a family that treated careful work as a form of respect. Medicine was not a career choice so much as a calling — a way to use his hands to give something back. He moved to California to specialize, and never left.</p>
-    <p class="reveal">Board certified in implantology, he believes in direct action and plain language: honest diagnosis, meticulous planning, and surgery done once, done right. In 2007 he founded the <strong>Dental Implants Center of South Bay</strong>.</p>
-  </div>
-</div></section>
-
-<!-- MAP SCROLLYTELLING -->
-<section class="mapscroll">
-  <div class="mapstep">
-    <div class="tx">
-      <h3 class="reveal"><span class="g">Map out the territory.*</span><br>Identify what can be saved.</h3>
-      <div class="fn reveal">* every case begins with imaging, history, and an honest read — in plain language.</div>
-    </div>
-    <div class="mapfig reveal">
-      <svg viewBox="0 0 520 420" fill="none" aria-label="Illustrated case map — the healthy territory">
-        <rect x="10" y="10" width="500" height="400" fill="#EFE6D4" stroke="#8B7355" stroke-width="3"/>
-        <g stroke="#8B7355" stroke-width="1" opacity=".55">
-          <path d="M10 26 H510 M10 394 H510 M26 10 V410 M494 10 V410"/>
-        </g>
-        <g fill="#8B7355" opacity=".35">
-          <rect x="30" y="14" width="6" height="8"/><rect x="60" y="14" width="6" height="8"/><rect x="90" y="14" width="6" height="8"/><rect x="120" y="14" width="6" height="8"/><rect x="150" y="14" width="6" height="8"/><rect x="180" y="14" width="6" height="8"/><rect x="210" y="14" width="6" height="8"/><rect x="240" y="14" width="6" height="8"/><rect x="270" y="14" width="6" height="8"/><rect x="300" y="14" width="6" height="8"/><rect x="330" y="14" width="6" height="8"/><rect x="360" y="14" width="6" height="8"/><rect x="390" y="14" width="6" height="8"/><rect x="420" y="14" width="6" height="8"/><rect x="450" y="14" width="6" height="8"/><rect x="480" y="14" width="6" height="8"/>
-          <rect x="30" y="398" width="6" height="8"/><rect x="60" y="398" width="6" height="8"/><rect x="90" y="398" width="6" height="8"/><rect x="120" y="398" width="6" height="8"/><rect x="150" y="398" width="6" height="8"/><rect x="180" y="398" width="6" height="8"/><rect x="210" y="398" width="6" height="8"/><rect x="240" y="398" width="6" height="8"/><rect x="270" y="398" width="6" height="8"/><rect x="300" y="398" width="6" height="8"/><rect x="330" y="398" width="6" height="8"/><rect x="360" y="398" width="6" height="8"/><rect x="390" y="398" width="6" height="8"/><rect x="420" y="398" width="6" height="8"/><rect x="450" y="398" width="6" height="8"/><rect x="480" y="398" width="6" height="8"/>
-        </g>
-        <rect x="40" y="40" width="440" height="340" fill="#CBE3F0"/>
-        <path d="M40 150 Q140 90 260 120 Q400 150 480 110 V380 H40 Z" fill="#9DC08B"/>
-        <path d="M120 250 Q160 170 260 165 Q360 170 400 250 Q400 330 340 350 Q300 330 260 332 Q220 330 180 350 Q120 330 120 250 Z" fill="#F5F0E7" stroke="#8B7355" stroke-width="2"/>
-        <g fill="#FBFDF8" stroke="#4A564C" stroke-width="1.6">
-          <path d="M150 250 q6 -22 20 -20 q13 2 10 24 q-3 18 -16 16 q-13 -2 -14 -20 Z"/>
-          <path d="M172 208 q9 -19 22 -14 q12 5 6 25 q-6 16 -18 12 q-12 -4 -10 -23 Z"/>
-          <path d="M205 180 q12 -15 23 -8 q10 7 1 25 q-9 15 -20 9 q-11 -6 -4 -26 Z"/>
-          <path d="M243 168 q14 -9 23 0 q8 9 -4 24 q-12 12 -21 4 q-9 -8 2 -28 Z"/>
-          <path d="M280 170 q15 -5 21 6 q6 12 -8 23 q-13 9 -20 -1 q-7 -10 7 -28 Z"/>
-          <path d="M314 186 q16 0 19 12 q2 12 -13 19 q-15 6 -19 -5 q-4 -12 13 -26 Z"/>
-          <path d="M342 214 q15 5 15 18 q0 13 -16 15 q-16 2 -17 -10 q-1 -13 18 -23 Z"/>
-          <path d="M355 252 q13 9 10 22 q-4 13 -19 10 q-15 -3 -13 -15 q2 -13 22 -17 Z"/>
-        </g>
-        <g transform="translate(432 320)" stroke="#8B7355" fill="none" stroke-width="1.4">
-          <circle r="22"/><path d="M0 -22 V22 M-22 0 H22"/>
-          <path d="M0 -22 L5 -6 L0 0 L-5 -6 Z" fill="#B4532D" stroke="none"/>
-        </g>
-        <text x="60" y="70" font-family="'Space Mono',monospace" font-size="11" fill="#4A564C" letter-spacing="2">THE CASE — CHARTED</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="mapstep">
-    <div class="tx">
-      <h3 class="reveal">Then highlight what we must <span class="r"><em>reclaim</em></span> and <span class="r"><em>rebuild</em></span> to protect function and <span class="g">quality of life.</span></h3>
-      <div class="fn reveal">bone loss, failing teeth, and past work that never held — nothing is judged, everything is mapped.</div>
-    </div>
-    <div class="mapfig reveal">
-      <svg viewBox="0 0 520 420" fill="none" aria-label="Illustrated case map — the compromised territory">
-        <rect x="10" y="10" width="500" height="400" fill="#EFE6D4" stroke="#8B7355" stroke-width="3"/>
-        <g stroke="#8B7355" stroke-width="1" opacity=".55"><path d="M10 26 H510 M10 394 H510 M26 10 V410 M494 10 V410"/></g>
-        <rect x="40" y="40" width="440" height="340" fill="#CBD5DB"/>
-        <path d="M40 150 Q140 90 260 120 Q400 150 480 110 V380 H40 Z" fill="#B9BDB2"/>
-        <path d="M120 250 Q160 170 260 165 Q360 170 400 250 Q400 330 340 350 Q300 330 260 332 Q220 330 180 350 Q120 330 120 250 Z" fill="#E8E2D4" stroke="#8B7355" stroke-width="2"/>
-        <g fill="#D8D2C4" stroke="#77716A" stroke-width="1.6">
-          <path d="M150 250 q6 -22 20 -20 q13 2 10 24 q-3 18 -16 16 q-13 -2 -14 -20 Z"/>
-          <path d="M205 180 q12 -15 23 -8 q10 7 1 25 q-9 15 -20 9 q-11 -6 -4 -26 Z"/>
-          <path d="M280 170 q15 -5 21 6 q6 12 -8 23 q-13 9 -20 -1 q-7 -10 7 -28 Z"/>
-          <path d="M342 214 q15 5 15 18 q0 13 -16 15 q-16 2 -17 -10 q-1 -13 18 -23 Z"/>
-        </g>
-        <g stroke="#B4532D" stroke-width="2" fill="none">
-          <path d="M176 200 l24 24 M200 200 l-24 24"/>
-          <path d="M246 162 l24 24 M270 162 l-24 24"/>
-          <path d="M312 182 l24 24 M336 182 l-24 24"/>
-          <path d="M348 248 l22 22 M370 248 l-22 22"/>
-        </g>
-        <g transform="translate(90 90)" fill="#E8B84B" stroke="#8B7355" stroke-width="1.2">
-          <path d="M0 18 h30 l8 -10 h14 l6 10 h8 v12 h-66 Z"/>
-          <circle cx="12" cy="34" r="6"/><circle cx="48" cy="34" r="6"/>
-        </g>
-        <text x="60" y="70" font-family="'Space Mono',monospace" font-size="11" fill="#4A564C" letter-spacing="2">THE CASE — COMPROMISED</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="mapstep">
-    <div class="tx">
-      <h3 class="reveal">Partnering with patients* to <span class="g">restore territory</span> and give it back — <em>for good:</em></h3>
-      <div class="steplist reveal">
-        <div class="steprow"><span class="pill">Step 01</span><p>Diagnose fully — imaging, history, honest candidacy, in plain language.</p></div>
-        <div class="steprow"><span class="pill">Step 02</span><p>Plan the whole case before anyone operates — implants, grafting, sequencing.</p></div>
-        <div class="steprow"><span class="pill">Step 03</span><p>Restore &amp; maintain for life — full-arch All-On-X down to a single implant.</p></div>
-      </div>
-      <div class="partners reveal">
-        <div class="t">* joining the restoration party with the best of them:</div>
-        <div class="row">
-          <div class="pbadge">Board<br>Certified</div>
-          <div class="pbadge">Est.<br>2007</div>
-          <div class="pbadge">South Bay<br>California</div>
-        </div>
-      </div>
-      <a class="maplink reveal" href="about.html">Want to learn how far the work has already come?</a>
-    </div>
-    <div class="mapfig reveal">
-      <svg viewBox="0 0 520 420" fill="none" aria-label="Illustrated case map — the restored territory">
-        <rect x="10" y="10" width="500" height="400" fill="#EFE6D4" stroke="#8B7355" stroke-width="3"/>
-        <g stroke="#8B7355" stroke-width="1" opacity=".55"><path d="M10 26 H510 M10 394 H510 M26 10 V410 M494 10 V410"/></g>
-        <rect x="40" y="40" width="440" height="340" fill="#CBE3F0"/>
-        <path d="M40 150 Q140 90 260 120 Q400 150 480 110 V380 H40 Z" fill="#9DC08B"/>
-        <path d="M120 250 Q160 170 260 165 Q360 170 400 250 Q400 330 340 350 Q300 330 260 332 Q220 330 180 350 Q120 330 120 250 Z" fill="#F5F0E7" stroke="#8B7355" stroke-width="2"/>
-        <g fill="#FBFDF8" stroke="#4A564C" stroke-width="1.6">
-          <path d="M150 250 q6 -22 20 -20 q13 2 10 24 q-3 18 -16 16 q-13 -2 -14 -20 Z"/>
-          <path d="M172 208 q9 -19 22 -14 q12 5 6 25 q-6 16 -18 12 q-12 -4 -10 -23 Z"/>
-          <path d="M205 180 q12 -15 23 -8 q10 7 1 25 q-9 15 -20 9 q-11 -6 -4 -26 Z"/>
-          <path d="M243 168 q14 -9 23 0 q8 9 -4 24 q-12 12 -21 4 q-9 -8 2 -28 Z"/>
-          <path d="M280 170 q15 -5 21 6 q6 12 -8 23 q-13 9 -20 -1 q-7 -10 7 -28 Z"/>
-          <path d="M314 186 q16 0 19 12 q2 12 -13 19 q-15 6 -19 -5 q-4 -12 13 -26 Z"/>
-          <path d="M342 214 q15 5 15 18 q0 13 -16 15 q-16 2 -17 -10 q-1 -13 18 -23 Z"/>
-          <path d="M355 252 q13 9 10 22 q-4 13 -19 10 q-15 -3 -13 -15 q2 -13 22 -17 Z"/>
-        </g>
-        <g stroke="#C8A96A" stroke-width="3" stroke-linecap="round">
-          <path d="M185 225 v14 M258 185 v14 M330 205 v14 M358 262 v12"/>
-        </g>
-        <g fill="#C8A96A"><circle cx="185" cy="222" r="3.4"/><circle cx="258" cy="182" r="3.4"/><circle cx="330" cy="202" r="3.4"/><circle cx="358" cy="259" r="3.4"/></g>
-        <g transform="translate(120 88)">
-          <circle cx="16" cy="10" r="8" fill="#E8C4A0" stroke="#8B7355" stroke-width="1.2"/>
-          <path d="M8 20 q8 -6 16 0 l4 20 h-24 Z" fill="#B4532D" stroke="#8B7355" stroke-width="1.2"/>
-          <path d="M2 44 q14 8 28 0" stroke="#8B7355" stroke-width="1.2" fill="none"/>
-        </g>
-        <path d="M104 120 q22 -14 44 -4" stroke="#4A564C" stroke-width="1" fill="none" opacity=".6"/>
-        <text x="60" y="70" font-family="'Space Mono',monospace" font-size="11" fill="#4A564C" letter-spacing="2">THE CASE — RESTORED</text>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- RECORD -->
-<section class="record"><div class="wrap"><div class="grid">
-  <div class="reveal"><div class="n">27 <em>yrs</em></div><div class="l">Dedicated to oral &amp; maxillofacial surgery</div></div>
-  <div class="reveal"><div class="n">2007</div><div class="l">Founder, Dental Implants Center of South Bay</div></div>
-  <div class="reveal"><div class="n"><em>Board</em> Cert.</div><div class="l">In dental implantology</div></div>
-</div></div></section>
-
-<!-- VOICES -->
-<section class="voices"><div class="wrap">
-  <div class="q reveal">
-    <p>"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again."</p>
-    <div class="who">maria r. — patient, full-arch reconstruction</div>
-  </div>
-  <div class="q reveal">
-    <p>"The most thorough and honest surgeon I have ever met. He treated my father like family."</p>
-    <div class="who">anabella c. — daughter of patient</div>
-  </div>
-  <div class="q reveal">
-    <p>"When a case is beyond what I can handle, Jorge is the first call I make."</p>
-    <div class="who">dr. david kim, d.d.s. — referring dentist, torrance</div>
-  </div>
-</div></section>
-
-<!-- CONTACT BAND -->
-<section class="band">
-  <img src="../img/clinic.jpg" alt="" data-plx>
-  <a class="pill-cta" href="tel:+13103274166">Contact us</a>
-</section>
-
-<!-- FOOTER -->
-<footer class="foot"><div class="wrap">
-  <div class="grid">
-    <div class="mission">Restoring the most precious function a person has — together with the people who trust us.</div>
-    <div class="col"><div class="h">Menu</div>
-      <a href="index.html">The Craft Speaks</a><a href="about.html">About</a><a href="faq.html">FAQ</a>
-    </div>
-    <div class="col"><div class="h">Support</div>
-      <a href="tel:+13103274166">Contact</a><a href="faq.html">FAQ</a><span>By appointment</span>
-    </div>
-    <div class="col"><div class="h">Get in touch</div>
-      <span>Redondo Beach, California</span><span>Torrance, California</span>
-      <a href="tel:+13103274166">(310) 327-4166</a>
-    </div>
-  </div>
-  <svg class="critter frog" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-    <path d="M30 14 q7 -8 12 -2 q4 5 -2 10 q8 2 8 10 q0 9 -9 10 q2 7 -4 9 q-6 2 -8 -5 q-2 7 -8 5 q-6 -2 -4 -9 q-9 -1 -9 -10 q0 -8 8 -10 q-6 -5 -2 -10 q5 -6 12 2 Z" stroke="#2A3A2D" stroke-width="1.6"/>
-    <circle cx="24" cy="26" r="1.8" fill="#2A3A2D"/><circle cx="36" cy="26" r="1.8" fill="#2A3A2D"/>
-    <circle cx="22" cy="38" r="1.2" fill="#2A3A2D"/><circle cx="30" cy="41" r="1.2" fill="#2A3A2D"/><circle cx="38" cy="38" r="1.2" fill="#2A3A2D"/>
-  </svg>
-  <svg class="critter leafy" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-    <path d="M50 90 Q46 60 50 30 Q54 14 50 6" stroke="#B4532D" stroke-width="1.6"/>
-    <path d="M50 66 q-18 -4 -22 -20 q16 -2 22 12 M50 48 q18 -4 22 -20 q-16 -2 -22 12 M50 30 q-14 -4 -16 -16 q12 -1 16 8" stroke="#B4532D" stroke-width="1.4"/>
-  </svg>
-  <div class="lgf">Jorge Arce<small>restore function · restore lives — © dr. jorge arce, d.d.s.</small></div>
-</div></footer>
-
+<nav class="nav"><div><span class="lg" id="nlogo"></span> <span class="tag" id="ntag"></span></div><button class="menu" id="menuBtn"></button></nav>
+<div class="ovl" id="ovl"><button id="menuX">close</button><div class="in" id="ovlin"></div></div>
+<main id="site"></main>
+<noscript><div style="padding:40vh 28px;text-align:center;font-size:15px">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+var ART={"map1": "<svg viewBox=\"0 0 520 420\" fill=\"none\" aria-label=\"Illustrated case map \u2014 the healthy territory\">\n        <rect x=\"10\" y=\"10\" width=\"500\" height=\"400\" fill=\"#EFE6D4\" stroke=\"#8B7355\" stroke-width=\"3\"/>\n        <g stroke=\"#8B7355\" stroke-width=\"1\" opacity=\".55\">\n          <path d=\"M10 26 H510 M10 394 H510 M26 10 V410 M494 10 V410\"/>\n        </g>\n        <g fill=\"#8B7355\" opacity=\".35\">\n          <rect x=\"30\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"60\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"90\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"120\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"150\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"180\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"210\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"240\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"270\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"300\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"330\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"360\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"390\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"420\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"450\" y=\"14\" width=\"6\" height=\"8\"/><rect x=\"480\" y=\"14\" width=\"6\" height=\"8\"/>\n          <rect x=\"30\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"60\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"90\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"120\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"150\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"180\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"210\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"240\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"270\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"300\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"330\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"360\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"390\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"420\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"450\" y=\"398\" width=\"6\" height=\"8\"/><rect x=\"480\" y=\"398\" width=\"6\" height=\"8\"/>\n        </g>\n        <rect x=\"40\" y=\"40\" width=\"440\" height=\"340\" fill=\"#CBE3F0\"/>\n        <path d=\"M40 150 Q140 90 260 120 Q400 150 480 110 V380 H40 Z\" fill=\"#9DC08B\"/>\n        <path d=\"M120 250 Q160 170 260 165 Q360 170 400 250 Q400 330 340 350 Q300 330 260 332 Q220 330 180 350 Q120 330 120 250 Z\" fill=\"#F5F0E7\" stroke=\"#8B7355\" stroke-width=\"2\"/>\n        <g fill=\"#FBFDF8\" stroke=\"#4A564C\" stroke-width=\"1.6\">\n          <path d=\"M150 250 q6 -22 20 -20 q13 2 10 24 q-3 18 -16 16 q-13 -2 -14 -20 Z\"/>\n          <path d=\"M172 208 q9 -19 22 -14 q12 5 6 25 q-6 16 -18 12 q-12 -4 -10 -23 Z\"/>\n          <path d=\"M205 180 q12 -15 23 -8 q10 7 1 25 q-9 15 -20 9 q-11 -6 -4 -26 Z\"/>\n          <path d=\"M243 168 q14 -9 23 0 q8 9 -4 24 q-12 12 -21 4 q-9 -8 2 -28 Z\"/>\n          <path d=\"M280 170 q15 -5 21 6 q6 12 -8 23 q-13 9 -20 -1 q-7 -10 7 -28 Z\"/>\n          <path d=\"M314 186 q16 0 19 12 q2 12 -13 19 q-15 6 -19 -5 q-4 -12 13 -26 Z\"/>\n          <path d=\"M342 214 q15 5 15 18 q0 13 -16 15 q-16 2 -17 -10 q-1 -13 18 -23 Z\"/>\n          <path d=\"M355 252 q13 9 10 22 q-4 13 -19 10 q-15 -3 -13 -15 q2 -13 22 -17 Z\"/>\n        </g>\n        <g transform=\"translate(432 320)\" stroke=\"#8B7355\" fill=\"none\" stroke-width=\"1.4\">\n          <circle r=\"22\"/><path d=\"M0 -22 V22 M-22 0 H22\"/>\n          <path d=\"M0 -22 L5 -6 L0 0 L-5 -6 Z\" fill=\"#B4532D\" stroke=\"none\"/>\n        </g>\n        <text x=\"60\" y=\"70\" font-family=\"'Space Mono',monospace\" font-size=\"11\" fill=\"#4A564C\" letter-spacing=\"2\">THE CASE \u2014 CHARTED</text>\n      </svg>", "map2": "<svg viewBox=\"0 0 520 420\" fill=\"none\" aria-label=\"Illustrated case map \u2014 the compromised territory\">\n        <rect x=\"10\" y=\"10\" width=\"500\" height=\"400\" fill=\"#EFE6D4\" stroke=\"#8B7355\" stroke-width=\"3\"/>\n        <g stroke=\"#8B7355\" stroke-width=\"1\" opacity=\".55\"><path d=\"M10 26 H510 M10 394 H510 M26 10 V410 M494 10 V410\"/></g>\n        <rect x=\"40\" y=\"40\" width=\"440\" height=\"340\" fill=\"#CBD5DB\"/>\n        <path d=\"M40 150 Q140 90 260 120 Q400 150 480 110 V380 H40 Z\" fill=\"#B9BDB2\"/>\n        <path d=\"M120 250 Q160 170 260 165 Q360 170 400 250 Q400 330 340 350 Q300 330 260 332 Q220 330 180 350 Q120 330 120 250 Z\" fill=\"#E8E2D4\" stroke=\"#8B7355\" stroke-width=\"2\"/>\n        <g fill=\"#D8D2C4\" stroke=\"#77716A\" stroke-width=\"1.6\">\n          <path d=\"M150 250 q6 -22 20 -20 q13 2 10 24 q-3 18 -16 16 q-13 -2 -14 -20 Z\"/>\n          <path d=\"M205 180 q12 -15 23 -8 q10 7 1 25 q-9 15 -20 9 q-11 -6 -4 -26 Z\"/>\n          <path d=\"M280 170 q15 -5 21 6 q6 12 -8 23 q-13 9 -20 -1 q-7 -10 7 -28 Z\"/>\n          <path d=\"M342 214 q15 5 15 18 q0 13 -16 15 q-16 2 -17 -10 q-1 -13 18 -23 Z\"/>\n        </g>\n        <g stroke=\"#B4532D\" stroke-width=\"2\" fill=\"none\">\n          <path d=\"M176 200 l24 24 M200 200 l-24 24\"/>\n          <path d=\"M246 162 l24 24 M270 162 l-24 24\"/>\n          <path d=\"M312 182 l24 24 M336 182 l-24 24\"/>\n          <path d=\"M348 248 l22 22 M370 248 l-22 22\"/>\n        </g>\n        <g transform=\"translate(90 90)\" fill=\"#E8B84B\" stroke=\"#8B7355\" stroke-width=\"1.2\">\n          <path d=\"M0 18 h30 l8 -10 h14 l6 10 h8 v12 h-66 Z\"/>\n          <circle cx=\"12\" cy=\"34\" r=\"6\"/><circle cx=\"48\" cy=\"34\" r=\"6\"/>\n        </g>\n        <text x=\"60\" y=\"70\" font-family=\"'Space Mono',monospace\" font-size=\"11\" fill=\"#4A564C\" letter-spacing=\"2\">THE CASE \u2014 COMPROMISED</text>\n      </svg>", "map3": "<svg viewBox=\"0 0 520 420\" fill=\"none\" aria-label=\"Illustrated case map \u2014 the restored territory\">\n        <rect x=\"10\" y=\"10\" width=\"500\" height=\"400\" fill=\"#EFE6D4\" stroke=\"#8B7355\" stroke-width=\"3\"/>\n        <g stroke=\"#8B7355\" stroke-width=\"1\" opacity=\".55\"><path d=\"M10 26 H510 M10 394 H510 M26 10 V410 M494 10 V410\"/></g>\n        <rect x=\"40\" y=\"40\" width=\"440\" height=\"340\" fill=\"#CBE3F0\"/>\n        <path d=\"M40 150 Q140 90 260 120 Q400 150 480 110 V380 H40 Z\" fill=\"#9DC08B\"/>\n        <path d=\"M120 250 Q160 170 260 165 Q360 170 400 250 Q400 330 340 350 Q300 330 260 332 Q220 330 180 350 Q120 330 120 250 Z\" fill=\"#F5F0E7\" stroke=\"#8B7355\" stroke-width=\"2\"/>\n        <g fill=\"#FBFDF8\" stroke=\"#4A564C\" stroke-width=\"1.6\">\n          <path d=\"M150 250 q6 -22 20 -20 q13 2 10 24 q-3 18 -16 16 q-13 -2 -14 -20 Z\"/>\n          <path d=\"M172 208 q9 -19 22 -14 q12 5 6 25 q-6 16 -18 12 q-12 -4 -10 -23 Z\"/>\n          <path d=\"M205 180 q12 -15 23 -8 q10 7 1 25 q-9 15 -20 9 q-11 -6 -4 -26 Z\"/>\n          <path d=\"M243 168 q14 -9 23 0 q8 9 -4 24 q-12 12 -21 4 q-9 -8 2 -28 Z\"/>\n          <path d=\"M280 170 q15 -5 21 6 q6 12 -8 23 q-13 9 -20 -1 q-7 -10 7 -28 Z\"/>\n          <path d=\"M314 186 q16 0 19 12 q2 12 -13 19 q-15 6 -19 -5 q-4 -12 13 -26 Z\"/>\n          <path d=\"M342 214 q15 5 15 18 q0 13 -16 15 q-16 2 -17 -10 q-1 -13 18 -23 Z\"/>\n          <path d=\"M355 252 q13 9 10 22 q-4 13 -19 10 q-15 -3 -13 -15 q2 -13 22 -17 Z\"/>\n        </g>\n        <g stroke=\"#C8A96A\" stroke-width=\"3\" stroke-linecap=\"round\">\n          <path d=\"M185 225 v14 M258 185 v14 M330 205 v14 M358 262 v12\"/>\n        </g>\n        <g fill=\"#C8A96A\"><circle cx=\"185\" cy=\"222\" r=\"3.4\"/><circle cx=\"258\" cy=\"182\" r=\"3.4\"/><circle cx=\"330\" cy=\"202\" r=\"3.4\"/><circle cx=\"358\" cy=\"259\" r=\"3.4\"/></g>\n        <g transform=\"translate(120 88)\">\n          <circle cx=\"16\" cy=\"10\" r=\"8\" fill=\"#E8C4A0\" stroke=\"#8B7355\" stroke-width=\"1.2\"/>\n          <path d=\"M8 20 q8 -6 16 0 l4 20 h-24 Z\" fill=\"#B4532D\" stroke=\"#8B7355\" stroke-width=\"1.2\"/>\n          <path d=\"M2 44 q14 8 28 0\" stroke=\"#8B7355\" stroke-width=\"1.2\" fill=\"none\"/>\n        </g>\n        <path d=\"M104 120 q22 -14 44 -4\" stroke=\"#4A564C\" stroke-width=\"1\" fill=\"none\" opacity=\".6\"/>\n        <text x=\"60\" y=\"70\" font-family=\"'Space Mono',monospace\" font-size=\"11\" fill=\"#4A564C\" letter-spacing=\"2\">THE CASE \u2014 RESTORED</text>\n      </svg>", "frog": "<svg class=\"critter frog\" viewBox=\"0 0 60 60\" fill=\"none\" aria-hidden=\"true\">\n    <path d=\"M30 14 q7 -8 12 -2 q4 5 -2 10 q8 2 8 10 q0 9 -9 10 q2 7 -4 9 q-6 2 -8 -5 q-2 7 -8 5 q-6 -2 -4 -9 q-9 -1 -9 -10 q0 -8 8 -10 q-6 -5 -2 -10 q5 -6 12 2 Z\" stroke=\"#2A3A2D\" stroke-width=\"1.6\"/>\n    <circle cx=\"24\" cy=\"26\" r=\"1.8\" fill=\"#2A3A2D\"/><circle cx=\"36\" cy=\"26\" r=\"1.8\" fill=\"#2A3A2D\"/>\n    <circle cx=\"22\" cy=\"38\" r=\"1.2\" fill=\"#2A3A2D\"/><circle cx=\"30\" cy=\"41\" r=\"1.2\" fill=\"#2A3A2D\"/><circle cx=\"38\" cy=\"38\" r=\"1.2\" fill=\"#2A3A2D\"/>\n  </svg>", "leafy": "<svg class=\"critter leafy\" viewBox=\"0 0 100 100\" fill=\"none\" aria-hidden=\"true\">\n    <path d=\"M50 90 Q46 60 50 30 Q54 14 50 6\" stroke=\"#B4532D\" stroke-width=\"1.6\"/>\n    <path d=\"M50 66 q-18 -4 -22 -20 q16 -2 22 12 M50 48 q18 -4 22 -20 q-16 -2 -22 12 M50 30 q-14 -4 -16 -16 q12 -1 16 8\" stroke=\"#B4532D\" stroke-width=\"1.4\"/>\n  </svg>"};
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>')
+  .replace(/&lt;g&gt;/g,'<span class="g">').replace(/&lt;\/g&gt;/g,'</span>')
+  .replace(/&lt;r&gt;/g,'<span class="r">').replace(/&lt;\/r&gt;/g,'</span>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function img(im,alt,attrs){
+  if(im&&im.src)return'<img src="'+esc(im.src)+'" alt="'+esc(alt||im.alt||'')+'"'+(attrs||'')+'>';
+  return'<div class="phx">'+esc((im&&im.label)||'FOTO')+'</div>'}
+
+var partials={
+hero:function(s){
+  return'<header class="hero" id="top" data-r2>'+
+  '<h1><span class="wr">'+esc(s.l1)+'</span> <span class="wr">'+esc(s.l2)+'</span></h1>'+
+  '<div class="t2 wr">'+esc(s.title)+'</div>'+
+  '<div class="sub wr">'+esc(s.sub)+'</div>'+
+  '<div class="scr wr"><div class="mouse"></div>'+esc(s.scr)+'</div>'+
+  '</header>'},
+poems:function(s){
+  return(s.items||[]).map(function(p){
+    return'<section class="poem"'+(s.id?' id="'+esc(s.id)+'"':'')+'>'+img(p.img,'',' data-plx')+
+    '<p class="line wr" data-r1>'+esc(p.line)+'</p>'+
+    '<div class="who">'+esc(p.who)+'</div></section>'}).join('')},
+intro:function(s){
+  return'<section class="intro"><div class="wrap" data-r2>'+
+  '<p class="big wr">'+rich(s.big)+'</p>'+
+  '<div class="fn wr">'+esc(s.fn)+'</div>'+
+  '<div class="cols wr">'+(s.cols||[]).map(function(p){return'<p>'+rich(p)+'</p>'}).join('')+'</div>'+
+  '</div></section>'},
+mapscroll:function(s){
+  return'<section class="mapscroll"><div class="steps">'+
+  (s.steps||[]).map(function(st){
+    return'<div class="mapstep"><div class="tx" data-r2>'+
+    '<h3 class="wr">'+rich(st.title)+'</h3>'+
+    (st.fn?'<div class="fn wr">'+esc(st.fn)+'</div>':'')+
+    (st.steps?'<div class="steplist wr">'+st.steps.map(function(x){return'<div class="steprow"><span class="pill">'+esc(x.pill)+'</span><p>'+rich(x.p)+'</p></div>'}).join('')+'</div>':'')+
+    (st.partners?'<div class="partners wr"><div class="t">'+esc(st.partners.t)+'</div><div class="row">'+st.partners.badges.map(function(bd){return'<div class="pbadge">'+rich(bd)+'</div>'}).join('')+'</div></div>':'')+
+    (st.link?'<a class="maplink wr" href="'+esc(st.link.h)+'">'+esc(st.link.t)+'</a>':'')+
+    '</div>'+
+    '<div class="mapfig" data-chart>'+(ART[st.map]||'')+'</div>'+
+    '</div>'}).join('')+
+  '</div></section>'},
+record:function(s){
+  return'<section class="record"><div class="wrap"><div class="inr" data-cards>'+
+  (s.cells||[]).map(function(cl){return'<div class="wr"><div class="n">'+esc(cl.n)+(cl.u?' <span>'+esc(cl.u)+'</span>':'')+'</div><div class="l">'+rich(cl.l)+'</div></div>'}).join('')+
+  '</div></div></section>'},
+voices:function(s){
+  return'<section class="voices"><div class="wrap">'+
+  (s.cards||[]).map(function(v){return'<div class="wr" data-r1 style="margin-bottom:40px"><p class="q" style="opacity:1">'+esc(v.q)+'</p><div class="who">'+esc(v.who)+'</div></div>'}).join('')+
+  '</div></section>'},
+band:function(s){
+  return'<section class="band">'+img(s.img,'',' data-plx')+
+  '<a class="pill-cta" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a></section>'},
+foot:function(s){
+  return'<footer class="foot"><div class="wrap"><div class="grid">'+
+  '<div class="mission">'+rich(s.mission)+'</div>'+
+  (s.cols||[]).map(function(col){return'<div class="col"><div class="h">'+esc(col.h)+'</div>'+
+    (col.items||[]).map(function(it){return it.h?'<a href="'+esc(it.h)+'">'+esc(it.t)+'</a>':'<span>'+esc(it.t)+'</span>'}).join('')+'</div>'}).join('')+
+  '</div>'+
+  '<svg class="critter frog" viewBox="0 0 60 60" fill="none" aria-hidden="true">'+(ART.frog||'').replace(/^<svg[^>]*>|<\/svg>$/g,'')+'</svg>'+
+  '<svg class="critter leafy" viewBox="0 0 100 100" fill="none" aria-hidden="true">'+(ART.leafy||'').replace(/^<svg[^>]*>|<\/svg>$/g,'')+'</svg>'+
+  '<div class="legal">'+esc(s.legal)+'</div>'+
+  '</div></footer>'}
+};
+
+fetch('/v22-sacred/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  if(c.nav){document.getElementById('nlogo').textContent=c.nav.logo||'';
+    document.getElementById('ntag').textContent=c.nav.tag||'';
+    document.getElementById('menuBtn').textContent=c.nav.menu||'menu'}
+  if(c.overlay){document.getElementById('ovlin').innerHTML=
+    (c.overlay.links||[]).map(function(l){return'<a href="'+esc(l.h)+'">'+esc(l.t)+'</a>'}).join('')+
+    '<div class="fine">'+esc(c.overlay.fine)+'</div>'}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+function init(){
   var ovl=document.getElementById('ovl');
   document.getElementById('menuBtn').addEventListener('click',function(){ovl.classList.add('open')});
   document.getElementById('menuX').addEventListener('click',function(){ovl.classList.remove('open')});
   ovl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ovl.classList.remove('open')})});
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.14});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-  if(!rm){
-    var imgs=[].slice.call(document.querySelectorAll('[data-plx]'));
-    addEventListener('scroll',function(){
-      var vh=innerHeight;
-      imgs.forEach(function(im){
-        var r=im.parentElement.getBoundingClientRect();
-        if(r.bottom<0||r.top>vh)return;
-        var p=(r.top+r.height/2-vh/2)/vh;
-        im.style.transform='translateY('+(p*-46).toFixed(1)+'px)';
-      });
-    },{passive:true});
-  }
+
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* parallax de poemas/banda al ticker */
+  document.querySelectorAll('[data-plx]').forEach(function(im){
+    var sec=im.parentElement;
+    ScrollTrigger.create({trigger:sec,start:'top bottom',end:'bottom top',scrub:1.2,
+      onUpdate:function(self){im.style.transform='translateY('+((self.progress-.5)*60)+'px) scale(1.12)'}});
+  });
+
+  /* R5 cartografia por capas: cada mapa se dibuja capa a capa con el scrub */
+  document.querySelectorAll('[data-chart]').forEach(function(fig){
+    var svg=fig.querySelector('svg');
+    if(!svg)return;
+    var layers=Array.prototype.slice.call(svg.children);
+    var n=layers.length;
+    if(!n)return;
+    ScrollTrigger.create({trigger:fig.closest('.mapstep'),start:'top 75%',end:'center 40%',scrub:1.2,
+      onUpdate:function(self){var p=self.progress;
+        layers.forEach(function(ly,j){
+          var k=Math.max(0,Math.min(1,p*n-j));
+          ly.style.opacity=k;
+        })}});
+  });
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
 })();
 </script>
 </body>

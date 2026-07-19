@@ -700,3 +700,177 @@ ocultos, tgrid grid, sin ★, 9 etiquetas de rol · STACK sticky tops
 96/122/148/174, cubiertas scale .955/.976 + brightness · STRESS blog
 fuera, fichas 3 sin fotos → phx, h1 ×2, ovf 0, 0 errores · MOBILE ovf
 0 cards static.
+
+## 21 · v23-pacifica — CERRADA
+
+**Diagnóstico inicial:** case-study fílmico que ya recibió profundidad
+(footage strip) pero con padding clónico de 110px en las secciones
+medias, keyframes hin, un easing sin token, cero gsap/lenis (solo IO
+binario) y copy en HTML.
+
+**Qué cambié:**
+- R5 la línea de tiempo del montaje: bajo la tira de films aparece un
+  ruler de editor con ticks por corte, un playhead que recorre la
+  regla (translateX mapeado al scrub de la sección) y un timecode
+  "FILM 0N"; cada slot se enciende continuamente (opacidad de imagen y
+  caption en campana) al paso del playhead — metáfora de NLE, mecanismo
+  no repetido en el catálogo. Reduced: timeline oculta, todo visible.
+- Ritmo: blocks var(--sec) · films ×1.15 · results ×0.85 (padding
+  clónico eliminado).
+- hin muerto; easing consolidado; motor Lenis+GSAP un ticker; R3
+  hairlines en credits; focus-visible.
+- Shell+loader: 11 secciones opcionales (films.slots 2-5 con timeline
+  auto-repartida, duo opcional en blocks), `.phx` etiquetados.
+
+**Qué elevé:** la tira de footage pasó de decorado a instrumento: el
+scroll "reproduce" el montaje con playhead y timecode.
+
+**Paso 4:** memorable sí (playhead); hero tipográfico / meta 4col /
+full-bleed / blocks asimétricos .55/1.45 / films oscuras — varía;
+ratio 156/16 = 9.7:1; motion continuo; 2 easings; solo
+transform+opacity; robusto.
+
+**Verificación:** batchcheck W23 ovf 0 d+m. robust23: REDUCED nm, 0
+ocultos, timeline oculta · R5 phead translateX 1164px, tc FILM 03,
+2 ticks, opacidades .70/.70/.83 · STRESS voices fuera, films 2 sin
+vídeos → phx, l1 ×2, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 22 · v24-ilcapo — CERRADA
+
+**Diagnóstico inicial:** cine rojo/negro que el showreel elevó, pero el
+resto seguía centrado en serie con motion que no distinguía jerarquías:
+frames full-bleed estáticos (data-plx muerto), keyframes hin, IO
+binario, padding 110-150 casi clónico, copy en HTML.
+
+**Qué cambié:**
+- R5 el dolly: cada frame full-bleed hace un movimiento de cámara —
+  la imagen escala 1.14→1.0 y deriva ±12px mapeada a su travesía
+  completa del viewport (scrub 1.2), como un dolly-out lento. Los
+  frames se numeran solos (Frame 0N). Reduced: sin transform.
+- Ritmo: inter var(--sec) · showreel ×1.1 · prods ×0.9 · stats ×0.85 —
+  el clon de padding muerto.
+- hin fuera; easing consolidado a expo.out+quick; motor un ticker; R3
+  hairlines en rrows/prows; focus-visible rojo.
+- Shell+loader: frames 2-4 declarativos, reel SC-0N y prods SC-A..D
+  automáticos, `.phx` etiquetados.
+
+**Qué elevé:** los frames ya no son fotos con texto: son planos con
+movimiento de cámara — el motion por fin distingue jerarquías (los
+frames respiran, las listas revelan, el showreel es el clímax).
+
+**Paso 4:** memorable sí (dolly); frame/inter/reel/frame/showreel
+alternan full-bleed oscuro y texto; ratio close 110/15.5 = 7:1; motion
+continuo; 2 easings; solo transform; robusto.
+
+**Verificación:** batchcheck W24 ovf 0 d+m. robust24: REDUCED nm, 0
+ocultos, dolly sin transform · R5 scale 1.07→1.028 + translateY 7.2px
+al avanzar, Frames 01-03 auto · STRESS prods fuera, reel 4 → SC-01..04,
+frames y showreel sin fotos → 4 phx, título ×2, ovf 0, 0 errores ·
+MOBILE ovf 0.
+
+## 23 · v27-genesis — CERRADA
+
+**Diagnóstico inicial:** chapter-grid funcional y con carácter
+(ciruela/rosa, capítulos I-IV) pero el scrollytelling del referente
+quedó en insinuación: halo estático, preloader con Math.random +
+setInterval, keyframes hin, IO binario, nth-of-type frágil, copy en
+HTML.
+
+**Qué cambié:**
+- R5a el verso se ilumina: la cita central usa background-clip:text
+  con wipe de background-position 100%→0% mapeado al scrub — la luz
+  recorre el verso letra a letra de forma continua. Reduced: color
+  sólido con acento rosa.
+- R5b numerales que amanecen: cada numeral romano interpola su color
+  de ceniza a limón (rgb continuo + opacidad .45→1) con el progreso de
+  su capítulo; el halo del hero escala 1→1.35 y rota 40° con el
+  progreso global — el génesis avanza con la lectura.
+- Preloader determinista (gsap 0→100% en 900ms); hin muerto;
+  alternancia por `.alt`; numerales romanos automáticos del array.
+- Ritmo --sec: chap estándar · verse ×1.2 · record ×0.85. Tokens, 2
+  easings, focus-visible rosa, `.phx` 4:3.
+
+**Qué elevé:** la insinuación se volvió ejecución: luz que recorre el
+verso, numerales que amanecen y un halo vivo — todo scroll-driven.
+
+**Paso 4:** memorable sí (verso iluminado); capítulos alternados /
+verse centrado / record grid; ratio 104/15.5 = 6.7:1; motion continuo;
+2 easings; wipe es paint, resto transform; robusto.
+
+**Verificación:** batchcheck W27 ovf 0 d+m. robust27: REDUCED nm, 0
+ocultos, pre fuera, verso color sólido · PRE 100%, verso 62.5% mid,
+num I encendido rgb(201,204,182), halo scale 1.22 rotate 25° · STRESS
+voices fuera, capítulos 3 → I.,II.,III. sin fotos → phx, título ×2,
+ovf 0, 0 errores · MOBILE ovf 0.
+
+## 24 · v26-wolverine — CERRADA
+
+**Diagnóstico inicial:** heritage corporativa B/N potente pero los
+valores pedían un pin con progreso que no existía: statement de 3
+líneas estático, `.reveal` IO, keyframes hin, dos easings sin token,
+nav .solid por scroll listener crudo, copy en HTML. (Subpáginas
+about/commitment se conservan tal cual — fuera del alcance de esta
+pasada, anotado.)
+
+**Qué cambié:**
+- R5 el manifiesto se estampa: `.state` se pinnea `n·45%` y las líneas
+  del credo ("One surgeon / one standard / limitless care") pasan de
+  fantasma (.15) a tinta plena una a una con el scrub —
+  `k=clamp(p·n−i)`, opacidad .15+.85k + translateY 14→0 — y SE QUEDAN
+  (acumulación, no crossfade: distinto del libro de v16). Mobile y
+  reduced: sin pin, líneas visibles.
+- Nav .solid integrada al evento de Lenis (muere el listener suelto).
+- hin fuera; easings consolidados; ritmo --sec (brands estándar, stats
+  ×0.85, quote ×1.1); A-0N automáticos; `.phx`; focus-visible.
+- Shell+loader con 8 secciones opcionales.
+
+**Qué elevé:** los valores por fin tienen el pin que pedían — el credo
+corporativo se compone ante el lector como tipografía que se estampa.
+
+**Paso 4:** memorable sí (manifiesto); hero foto / state pinneado /
+band negra / bgrid paper / strip full — alternancia real; ratio close
+116/16 = 7.25:1; motion continuo; 2 easings; solo transform+opacity;
+robusto.
+
+**Verificación:** batchcheck W26 ovf 0 d+m. robust26: REDUCED nm, 0
+ocultos, 3/3 líneas visibles sin pin · R5 cascada 1.00/0.56/0.15 con 1
+pin-spacer, nav solid activa · STRESS quote fuera, state 2 líneas,
+brands 4, hero sin foto → phx, título ×2, ovf 0, 0 errores · MOBILE
+ovf 0 sin pin, líneas visibles.
+
+## 25 · v22-sacred — CERRADA
+
+**Diagnóstico inicial:** poética ilustrada — de las más personales — con
+el case-map en reveals sueltos: los tres mapas SVG aparecían de golpe,
+parallax por scroll-listener crudo, keyframes wheel infinito en el
+mouse, hin en hero, copy y arte enredados.
+
+**Qué cambié:**
+- R5 cartografía por capas: cada mapa SVG se dibuja capa a capa con el
+  scrub de su paso (`k=clamp(p·n−j)` sobre los hijos directos del svg,
+  opacidad continua en cascada) — el caso se CARTOGRAFÍA ante el lector
+  en tres estados: charted → compromised → restored. Reduced: mapas
+  completos.
+- Los mapas y los critters del footer son plantilla del loader (claves
+  map1/map2/map3/frog/leafy); el texto vive en content.json.
+- Parallax de poemas/banda al ticker único de ScrollTrigger (scrub 1.2,
+  translateY ±30 + scale 1.12 con overflow clip); wheel y hin muertos.
+- BUG PROPIO detectado y corregido: los regex de limpieza de CSS
+  desequilibraron llaves y se comieron los @media (overflow 86px) —
+  reconstruido el CSS desde git con parches balanceados (escaneo de
+  profundidad para @media, keyframes anidados con patrón exacto) y
+  asserts de balance. Lección anotada para el resto de la cola.
+- Tokens, 2 easings, focus-visible verde, `.phx`, overlay accesible.
+
+**Qué elevé:** el case-map por fin tiene el scrub real que merecía — la
+metáfora del territorio se ejecuta dibujándose.
+
+**Paso 4:** memorable sí (cartografía); hero centrado / poemas full /
+intro asimétrica / mapsteps alternando texto-mapa; ratio ok; motion
+continuo; 2 easings; solo opacity/transform; robusto.
+
+**Verificación:** batchcheck W22 ovf 0 d+m (tras fix de llaves).
+robust22: REDUCED nm, 0 ocultos, mapas visibles · R5 9 capas en cascada
+1/1/1/.82/0…, plx translateY 30px scale 1.12 en ticker · STRESS record
+fuera, poems 2 sin fotos → phx, mapsteps 2, título ×2, ovf 0, 0
+errores · MOBILE ovf 0.

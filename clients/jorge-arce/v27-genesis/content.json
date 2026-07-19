@@ -1,0 +1,132 @@
+{
+ "_schema": "v27-genesis · génesis ciruela/rosa · Inter + serif. rich() admite <b>(strong)<br><em>(rosa). chapters 3-6 (numeral romano automático, alternancia auto) · record EXACTO 2-3 · voices 2-4. src vacío = placeholder etiquetado. Fetch absoluto /v27-genesis/content.json.",
+ "meta": {
+  "title": "Arce — Genesis · v27",
+  "description": "Every restoration is a beginning. The practice of Dr. Jorge Arce — oral & maxillofacial surgery, South Bay.",
+  "lang": "en"
+ },
+ "nav": {
+  "logo": "Arce",
+  "menu": "Menu"
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "k": "Genesis — the practice of Dr. Jorge Arce",
+   "title": "Every restoration is a <em>beginning.</em>",
+   "sub": "Twenty-seven years of oral & maxillofacial surgery for the cases other surgeons refer out — planned carefully, done once, done right.",
+   "dn": "Scroll"
+  },
+  {
+   "type": "chapters",
+   "items": [
+    {
+     "k": "First — the honest read",
+     "title": "In the beginning, <em>a conversation.</em>",
+     "paras": [
+      "Every case starts with an unhurried consultation: your history, your imaging, your questions — and an honest read of what is possible, in plain language.",
+      "<b>No sales script. No pressure.</b> Just surgical judgment, earned over twenty-seven years."
+     ],
+     "img": {
+      "src": "/img/portrait.jpg",
+      "alt": "Dr. Jorge Arce",
+      "label": "FOTO — retrato 4:3"
+     },
+     "cap": "Chapter I — The read"
+    },
+    {
+     "k": "Then — the plan",
+     "title": "Order out of <em>complexity.</em>",
+     "paras": [
+      "Implants, grafting, sequencing, restoration — mapped before anyone operates. The time the case actually needs, not the time the schedule allows.",
+      "Board certified in implantology; trained in Colombia, specialized in California."
+     ],
+     "img": {
+      "src": "/img/clinic.jpg",
+      "alt": "",
+      "label": "FOTO — la clínica 4:3"
+     },
+     "cap": "Chapter II — The plan"
+    },
+    {
+     "k": "Then — the work",
+     "title": "Steady hands, <em>steady nerve.</em>",
+     "paras": [
+      "Complex extractions. Reconstruction where bone and tissue have been lost. Full-arch All-On-X for patients told nothing could be done.",
+      "The difficult cases are the ordinary day at the <b>Dental Implants Center of South Bay</b>, est. 2007."
+     ],
+     "img": {
+      "src": "/img/surgery.jpg",
+      "alt": "",
+      "label": "FOTO — quirófano 4:3"
+     },
+     "cap": "Chapter III — The work"
+    },
+    {
+     "k": "Finally — the beginning",
+     "title": "A smile that <em>starts a life.</em>",
+     "paras": [
+      "Function first, then confidence. Long-term follow-up protects the work — and the person it belongs to.",
+      "Patients eat, smile, and speak again. That is the genesis this practice exists for."
+     ],
+     "img": {
+      "src": "/img/operating.jpg",
+      "alt": "",
+      "label": "FOTO — el trabajo 4:3"
+     },
+     "cap": "Chapter IV — The beginning"
+    }
+   ]
+  },
+  {
+   "type": "verse",
+   "q": "“Difficult work, done with care, <em>gives people their lives back.</em>”",
+   "who": "Dr. Jorge Arce, D.D.S."
+  },
+  {
+   "type": "record",
+   "cells": [
+    {
+     "n": "27",
+     "u": "yrs",
+     "l": "Dedicated to oral & maxillofacial surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Founder, Dental Implants Center of South Bay"
+    },
+    {
+     "n": "Board",
+     "u": "cert.",
+     "l": "Certified in dental implantology"
+    }
+   ]
+  },
+  {
+   "type": "voices",
+   "cards": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. I can eat, smile, and speak again.”",
+     "who": "Maria R. — Patient, full-arch reconstruction"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. He treated my father like family.”",
+     "who": "Anabella C. — Daughter of patient"
+    }
+   ]
+  },
+  {
+   "type": "close",
+   "title": "Your beginning starts with <em>one call.</em>",
+   "cta": {
+    "t": "Request a consultation — (310) 327-4166",
+    "h": "tel:+13103274166"
+   },
+   "fine": [
+    "© Dr. Jorge Arce, D.D.S.",
+    "Redondo Beach · Torrance, California",
+    "By appointment"
+   ]
+  }
+ ]
+}
