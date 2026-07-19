@@ -10,6 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(96px,13vh,152px);
+
   --cream:#F4F2E9; --peri:#D5DBF2; --peri2:#C7CEF0; --ink:#111111; --dim:#6E6C64; --brown:#8B7355;
   --serif:'Instrument Serif',Georgia,serif; --script:'Caveat',cursive; --r:22px;
 }
@@ -33,12 +38,12 @@ a{color:inherit;text-decoration:none}
 .nav .links a:not(.on)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1.5px;background:var(--ink);transition:right .3s}
 .nav .links a:not(.on):hover::after{right:0}
 .ovalbtn{display:inline-block;background:var(--peri);color:var(--ink);font-weight:600;font-size:15px;
-  padding:18px 40px;border-radius:50%/60%;transform:rotate(-2deg);transition:transform .3s,box-shadow .3s}
+  padding:18px 40px;border-radius:50%/60%;transform:rotate(-2deg);transition:transform var(--dur-hover) var(--ease-quick),box-shadow var(--dur-hover) var(--ease-quick)}
 .ovalbtn:hover{transform:rotate(0) scale(1.04);box-shadow:0 16px 36px rgba(17,17,17,.18)}
 .ovalbtn.dark{background:var(--ink);color:var(--cream)}
 .stamp{width:92px;height:92px;position:relative;flex:0 0 auto}
-.stamp svg{width:100%;height:100%;animation:spin 14s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+.stamp svg{width:100%;height:100%;will-change:transform}
+
 .stamp .cc{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
   font-family:var(--serif);font-size:30px;font-style:italic}
 .pressbar{background:var(--peri);padding:34px 0}
@@ -57,8 +62,10 @@ a{color:inherit;text-decoration:none}
 .legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:24px 40px 28px;
   font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);
   border-top:1px solid rgba(17,17,17,.1)}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
-.reveal.rin{opacity:1;transform:none}
+.reveal{opacity:0}
+html.no-motion .reveal{opacity:1}
+[data-stagger]>*{opacity:0}
+html.no-motion [data-stagger]>*{opacity:1}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}
 @media (max-width:920px){
   .wrap{padding:0 22px}
@@ -131,11 +138,9 @@ a{color:inherit;text-decoration:none}
   <div class="priv">We respect your privacy. No spam — just honest answers.</div>
 </div></section>
 <div class="legal"><span>© Dr. Jorge Arce, D.D.S.</span><span>(310) 327-4166</span><span>Redondo Beach · Torrance, CA</span></div>
-<script>
-(function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('rin');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
-})();
-</script>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script src="/v25-gecko/motion.js"></script>
 </body>
 </html>

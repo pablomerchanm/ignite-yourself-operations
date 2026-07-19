@@ -874,3 +874,34 @@ robust22: REDUCED nm, 0 ocultos, mapas visibles · R5 9 capas en cascada
 1/1/1/.82/0…, plx translateY 30px scale 1.12 en ticker · STRESS record
 fuera, poems 2 sin fotos → phx, mapsteps 2, título ×2, ovf 0, 0
 errores · MOBILE ovf 0.
+
+## 26 · v25-gecko — CERRADA
+
+**Diagnóstico inicial:** 6 páginas generadas por script, la más
+productiva ya — pero cada página con su IO binario inline, `.reveal`
+de transición única, sello `spin 14s infinite` y cero tokens.
+
+**Qué cambié:**
+- Runtime compartido `/v25-gecko/motion.js`: catálogo cerrado (R1 rise
+  para todo `.reveal`, stagger decreciente para `[data-stagger]`, R5
+  sello) + Lenis/GSAP un ticker + anchors + no-motion. Las 6 páginas
+  cargan vendor+motion.js; sus scripts IO murieron.
+- R5 el sello: el stamp circular gira 0→720° mapeado al progreso
+  global (scrub .8) — la firma de la casa registra el avance del
+  lector en vez de girar en bucle. Presente en index/about (donde vive
+  el stamp).
+- Tokens inyectados en las 6 páginas; spin keyframes eliminado en
+  todas; hovers tokenizados. Parches con assert de balance de llaves
+  (lección de v22 aplicada).
+- **Decisión de alcance** (## Bloqueos): el copy queda en el HTML —
+  esta plantilla ES la salida de un generador; su content-system es el
+  script, no un JSON por página. Documentado en V25-GECKO.md con ruta
+  de migración al patrón loader si el equipo lo quiere.
+
+**Qué elevé:** de 6 páginas con motion copy-pasteado a un sistema: un
+solo runtime, una firma scroll-driven, tokens uniformes.
+
+**Verificación:** batchcheck en LAS SEIS (index/about/services/
+stories/contact/blog) 1440+390: ovf 0, 0 errores. robust25: REDUCED
+nm, 0 ocultos, sello quieto · runtime activo en las 6 (ScrollTriggers
+2-13 por página), sellos rotando 175°/316°, reveals disparando.
