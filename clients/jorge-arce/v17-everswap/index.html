@@ -11,6 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(100px,13vh,160px);
+
   --deep:#0D2018;
   --deep2:#132B1D;
   --pine:#203727;
@@ -20,7 +25,8 @@
   --line:rgba(251,255,244,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
 body{
   background:var(--deep);color:var(--cream);
   font-family:'Instrument Sans',sans-serif;font-weight:400;
@@ -35,11 +41,11 @@ a{color:inherit;text-decoration:none}
 
 /* floating orbs */
 .orbs{position:fixed;inset:0;pointer-events:none;z-index:0}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;animation:float 18s ease-in-out infinite alternate}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;will-change:transform}
 .o1{width:44vw;height:44vw;background:radial-gradient(circle,#1E4230 0%,transparent 70%);top:-10%;right:-8%}
 .o2{width:34vw;height:34vw;background:radial-gradient(circle,#274A32 0%,transparent 70%);bottom:8%;left:-10%;animation-delay:-7s}
 .o3{width:24vw;height:24vw;background:radial-gradient(circle,#16371F 0%,transparent 70%);top:44%;left:38%;animation-delay:-12s}
-@keyframes float{from{transform:translate(0,0) scale(1)}to{transform:translate(4%,6%) scale(1.15)}}
+}
 main{position:relative;z-index:1}
 
 /* ---------- type ---------- */
@@ -50,9 +56,6 @@ main{position:relative;z-index:1}
 .lab2{font-size:17px;font-weight:500;letter-spacing:.02em}
 
 /* word reveal */
-.wrev .w{display:inline-block;overflow:hidden;vertical-align:bottom}
-.wrev .w i{display:inline-block;font-style:normal;transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.wrev.in .w i{transform:none}
 
 /* ---------- nav ---------- */
 nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(13,32,24,.6);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -61,7 +64,7 @@ nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(13,32,24,.6);back
 .nlinks{display:flex;gap:34px;align-items:center;font-size:14.5px}
 .nlinks a{opacity:.85;transition:opacity .25s}
 .nlinks a:hover{opacity:1}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--pine);border-radius:100px;padding:12px 24px;font-size:14.5px;font-weight:600;border:none;cursor:pointer;transition:transform .3s}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--pine);border-radius:100px;padding:12px 24px;font-size:14.5px;font-weight:600;border:none;cursor:pointer;transition:transform var(--dur-hover) var(--ease-quick)}
 .btn:hover{transform:translateY(-2px)}
 .btn.ghost{background:transparent;color:var(--cream);border:1px solid var(--line)}
 .btn.ghost:hover{background:rgba(251,255,244,.06)}
@@ -73,18 +76,18 @@ nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(13,32,24,.6);back
 .hero .sub{margin-top:28px;color:var(--cream-dim);max-width:52ch;font-size:16.5px}
 .hero .ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap;justify-content:center}
 .hero .kws{display:flex;gap:34px;margin-top:70px;flex-wrap:wrap;justify-content:center}
-.hero .kws span{font-family:'Cormorant',serif;font-weight:300;font-size:clamp(20px,2vw,28px);color:var(--cream-ghost);transition:color .4s}
-.hero .kws span.on{color:var(--cream)}
+.hero .kws span{font-family:'Cormorant',serif;font-weight:300;font-size:clamp(20px,2vw,28px);color:var(--cream-ghost);transition:color var(--dur-hover) var(--ease-quick)}
+.hero .kws span{color:var(--cream)}
 
 /* ---------- sections ---------- */
-section{padding:130px 0;position:relative}
+section{padding:var(--sec) 0;position:relative}
 .center{text-align:center}
 
 /* ---------- unified (one practice) ---------- */
 .uni .word-stage{text-align:center;margin-top:60px}
 .uni .word-stage .thin{display:block}
 .uni .row3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:80px;border-radius:18px;overflow:hidden}
-.uni .cell{background:var(--deep2);padding:44px 38px;min-height:280px;display:flex;flex-direction:column;transition:background .4s}
+.uni .cell{background:var(--deep2);padding:44px 38px;min-height:280px;display:flex;flex-direction:column;transition:background .4s var(--ease-quick)}
 .uni .cell:hover{background:var(--pine)}
 .uni .cell .thin{font-size:clamp(30px,3vw,44px)}
 .uni .cell p{color:var(--cream-dim);font-size:14.5px;margin-top:14px;max-width:40ch}
@@ -106,7 +109,7 @@ section{padding:130px 0;position:relative}
 
 /* ---------- voices ---------- */
 .voices .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:70px}
-.vcard{background:var(--deep2);border:1px solid var(--line);border-radius:18px;padding:34px 30px;display:flex;flex-direction:column;gap:22px;transition:transform .4s,border-color .4s}
+.vcard{background:var(--deep2);border:1px solid var(--line);border-radius:18px;padding:34px 30px;display:flex;flex-direction:column;gap:22px;transition:transform .35s var(--ease-quick),border-color var(--dur-hover) var(--ease-quick)}
 .vcard:hover{transform:translateY(-5px);border-color:rgba(251,255,244,.28)}
 .vcard .q{font-size:15px;line-height:1.65;color:rgba(251,255,244,.85)}
 .vcard .q em{font-family:'Cormorant',serif;font-style:italic;font-weight:400;font-size:1.15em;color:var(--cream)}
@@ -129,22 +132,6 @@ section{padding:130px 0;position:relative}
 .close .ctas{display:flex;gap:14px;justify-content:center;margin-top:40px;flex-wrap:wrap}
 .fbot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:80px;padding-top:26px;font-size:12.5px;color:var(--cream-dim)}
 
-/* ---------- reveals ---------- */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
-.reveal.in{opacity:1;transform:none}
-[data-stagger]>*{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
-[data-stagger].in>*{opacity:1;transform:none}
-[data-stagger].in>*:nth-child(1){transition-delay:.06s}
-[data-stagger].in>*:nth-child(2){transition-delay:.15s}
-[data-stagger].in>*:nth-child(3){transition-delay:.24s}
-[data-stagger].in>*:nth-child(4){transition-delay:.33s}
-[data-stagger].in>*:nth-child(5){transition-delay:.42s}
-[data-stagger].in>*:nth-child(6){transition-delay:.51s}
-[data-stagger].in>*:nth-child(7){transition-delay:.6s}
-[data-stagger].in>*:nth-child(8){transition-delay:.69s}
-[data-stagger].in>*:nth-child(9){transition-delay:.78s}
-@media (prefers-reduced-motion:reduce){.reveal,[data-stagger]>*,.wrev .w i{opacity:1;transform:none;transition:none}.orb{animation:none}}
-
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
   .uni .row3{grid-template-columns:1fr}
@@ -162,167 +149,186 @@ section{padding:130px 0;position:relative}
   .panel .txt{padding:30px 24px}
   .close .card{padding:60px 26px}
 }
-</style>
-</head>
+
+/* ---------- rework ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.btn:active{transform:scale(.97)}
+.stats{padding:calc(var(--sec)*.8) 0}
+.phx{display:flex;align-items:center;justify-content:center;background:#10241a;color:rgba(251,255,244,.4);font-family:ui-monospace,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.panel .inr.phx{position:relative;min-height:80vh}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:var(--cream-dim);font-size:14px}
+</style></head>
 <body>
-
-<div class="orbs"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
-
-<main>
-<nav>
-  <div class="navin">
-    <span class="nlogo">Arce</span>
-    <div class="nlinks">
-      <a href="#practice">The Practice</a>
-      <a href="#stories">Stories</a>
-      <a href="#journey">The Journey</a>
-      <a class="btn" href="#begin">Begin</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="hero">
-  <div class="lab reveal" data-hero>Oral &amp; Maxillofacial Surgery · South Bay</div>
-  <h1 class="thin d-big wrev" id="heroline">Care at its peak.</h1>
-  <p class="sub reveal" data-hero>Dr. Jorge Arce unifies surgery, restoration, and long-term care in a single practice — twenty-seven years on the complex cases other surgeons refer out.</p>
-  <div class="ctas reveal" data-hero>
-    <a class="btn" href="#begin">Begin your case</a>
-    <a class="btn ghost" href="#practice">Explore the practice</a>
-  </div>
-  <div class="kws reveal" data-hero id="kws">
-    <span class="on">Surgery.</span><span>Restoration.</span><span>Care.</span>
-  </div>
-</header>
-
-<!-- UNIFIED -->
-<section class="uni" id="practice">
-  <div class="wrap">
-    <div class="center reveal"><span class="lab">One practice</span></div>
-    <div class="word-stage">
-      <span class="thin d-mid wrev" id="unihead">One surgeon. Every answer.</span>
-    </div>
-    <div class="row3" data-stagger>
-      <div class="cell">
-        <div class="thin">Surgery</div>
-        <p>From single implants to full-arch All-On-X reconstruction — complex extractions, bone grafting, and the difficult cases other clinicians refer out.</p>
-        <div class="tags"><span>Implants</span><span>All-On-X</span><span>Extractions</span></div>
-      </div>
-      <div class="cell">
-        <div class="thin">Restoration</div>
-        <p>Function first, then structure, then confidence. Rebuilding what was lost with structural precision — the smile is the last step, not the first promise.</p>
-        <div class="tags"><span>Reconstruction</span><span>Grafting</span></div>
-      </div>
-      <div class="cell">
-        <div class="thin">Care</div>
-        <p>Second opinions, honest judgment, long-term maintenance — and a full report back to your referring dentist, every time.</p>
-        <div class="tags"><span>Second Opinions</span><span>Maintenance</span><span>TMJ</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats" style="padding-top:0">
-  <div class="wrap">
-    <div class="grid" data-stagger>
-      <div class="stat"><div class="n">27+</div><div class="l">Years of surgery</div></div>
-      <div class="stat"><div class="n">2007</div><div class="l">Center founded</div></div>
-      <div class="stat"><div class="n">6</div><div class="l">Disciplines</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO PANEL -->
-<div class="panel reveal">
-  <div class="inr">
-    <img src="../img/quote.jpg" alt="Dr. Jorge Arce">
-    <div class="txt">
-      <div class="thin d-mid">"The work is precise. The reason behind it is human."</div>
-      <div class="attr">Dr. Jorge Arce — Founder, Dental Implants Center of South Bay</div>
-    </div>
-  </div>
-</div>
-
-<!-- VOICES -->
-<section class="voices" id="stories">
-  <div class="wrap">
-    <div class="center reveal"><span class="lab">Real stories</span>
-      <h2 class="thin d-mid" style="margin-top:20px">The people who were there.</h2>
-    </div>
-    <div class="grid" data-stagger>
-      <div class="vcard"><div class="q">"I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <em>I can eat, smile, and speak again."</em></div><div class="who"><div class="nm">Maria R.</div><div class="rl">Full-arch reconstruction</div></div></div>
-      <div class="vcard"><div class="q">"When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I."</div><div class="who"><div class="nm">Dr. David Kim, D.D.S.</div><div class="rl">Referring Dentist · Torrance</div></div></div>
-      <div class="vcard"><div class="q">"The most thorough and honest surgeon I have ever met. <em>He treated my father like family."</em></div><div class="who"><div class="nm">Anabella C.</div><div class="rl">Daughter of patient</div></div></div>
-      <div class="vcard"><div class="q">"Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself."</div><div class="who"><div class="nm">Robert T.</div><div class="rl">Dental implants</div></div></div>
-      <div class="vcard"><div class="q">"I refer my most complex cases to Dr. Arce without hesitation. <em>Twenty-seven years shows."</em></div><div class="who"><div class="nm">Dr. Lina Soto</div><div class="rl">Periodontist</div></div></div>
-      <div class="vcard"><div class="q">"I was terrified of the procedure. He never rushed me. <em>Best decision I have made for my health."</em></div><div class="who"><div class="nm">Carlos S.</div><div class="rl">Bone graft + implants</div></div></div>
-      <div class="vcard"><div class="q">"Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know."</div><div class="who"><div class="nm">Elena P.</div><div class="rl">TMJ treatment</div></div></div>
-      <div class="vcard"><div class="q">"Reliable, communicative, and surgically excellent. A full report back, every time."</div><div class="who"><div class="nm">Dr. Jeff Malone</div><div class="rl">Referring Dentist</div></div></div>
-      <div class="vcard"><div class="q">"The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice."</div><div class="who"><div class="nm">Dr. Mark Ellison</div><div class="rl">Referring Dentist</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- JOURNEY -->
-<section class="journey" id="journey" style="padding-top:0">
-  <div class="wrap">
-    <div class="center reveal"><span class="lab">The journey</span></div>
-    <div style="margin-top:60px" data-stagger>
-      <div class="row"><span class="no">i.</span><span class="nm">An honest conversation</span><span class="ds">Your history, your scans, your questions — an unhurried first consultation.</span></div>
-      <div class="row"><span class="no">ii.</span><span class="nm">The case, mapped</span><span class="ds">Planned before anyone operates — the time the case actually needs.</span></div>
-      <div class="row"><span class="no">iii.</span><span class="nm">Steady hands</span><span class="ds">Twenty-seven years of precision in the operating room.</span></div>
-      <div class="row"><span class="no">iv.</span><span class="nm">The return</span><span class="ds">Restoration, maintenance, and a full report to your referring dentist.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSE -->
-<section class="close" id="begin" style="padding-top:0">
-  <div class="wrap">
-    <div class="card reveal">
-      <span class="lab">Told it can't be done?</span>
-      <h2 class="thin d-mid">Every case starts with an honest conversation.</h2>
-      <p class="sub">Request a consultation or ask for the free guide — What to expect from your first implant consultation.</p>
-      <div class="ctas">
-        <a class="btn" href="tel:+13103274166">(310) 327-4166</a>
-        <a class="btn ghost" href="#">Redondo Beach · Torrance, CA</a>
-      </div>
-    </div>
-    <div class="fbot">
-      <span>© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.</span>
-      <span>Dental Implants Center of South Bay — by appointment</span>
-    </div>
-  </div>
-</section>
-</main>
-
+<div class="orbs" aria-hidden="true"><div class="orb o1" data-orb="1"></div><div class="orb o2" data-orb="2"></div><div class="orb o3" data-orb="3"></div></div>
+<nav><div class="navin"><a class="nlogo" href="#top" id="nlogo"></a><div class="nlinks" id="nlinks"></div></div></nav>
+<main id="site"></main>
+<noscript><div style="padding:40vh 28px;text-align:center;font-size:15px">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgery · (310) 327-4166 · Redondo Beach &amp; Torrance, CA</div></noscript>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // word-reveal splitter
-  const split = (el) => {
-    const words = el.textContent.split(' ');
-    el.innerHTML = words.map((w, i) => `<span class="w"><i style="transition-delay:${i * 70}ms">${w}</i></span>`).join(' ');
-  };
-  const hl = document.getElementById('heroline'); split(hl);
-  const uh = document.getElementById('unihead'); split(uh);
-  requestAnimationFrame(() => setTimeout(() => hl.classList.add('in'), 200));
-  const wio = new IntersectionObserver((es) => {
-    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); wio.unobserve(e.target); } });
-  }, { threshold: 0.4 });
-  wio.observe(uh);
+(function(){
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
 
-  // rotating keywords
-  const kws = [...document.querySelectorAll('#kws span')];
-  let ki = 0;
-  setInterval(() => { kws[ki].classList.remove('on'); ki = (ki + 1) % kws.length; kws[ki].classList.add('on'); }, 2200);
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<i>').replace(/&lt;\/i&gt;/g,'</i>')
+  .replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
 
-  document.querySelectorAll('[data-hero]').forEach(el => el.classList.add('in'));
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.reveal:not([data-hero]),[data-stagger]').forEach(el => io.observe(el));
+var partials={
+hero:function(s){
+  return'<section class="hero" id="top" data-scene="'+esc(s.scene||'')+'"><div data-r2>'+
+  '<div class="lab wr">'+esc(s.lab)+'</div>'+
+  '<h1 class="thin d-big wr">'+rich(s.title)+'</h1>'+
+  '<p class="sub wr">'+rich(s.sub)+'</p>'+
+  '<div class="ctas wr">'+(s.ctas||[]).map(function(c){return'<a class="btn'+(c.ghost?' ghost':'')+'" href="'+esc(c.h)+'">'+esc(c.t)+'</a>'}).join('')+'</div>'+
+  '<div class="kws wr">'+(s.kws||[]).map(function(k){return'<span>'+esc(k)+'</span>'}).join('')+'</div>'+
+  '</div></section>'},
+uni:function(s){
+  return'<section class="uni" id="'+esc(s.id||'uni')+'" data-scene="'+esc(s.scene||'')+'"><div class="wrap">'+
+  '<div class="center" data-r2><div class="lab wr">'+esc(s.lab)+'</div>'+
+  '<div class="word-stage wr"><span class="thin d-mid">'+rich(s.head)+'</span></div></div>'+
+  '<div class="row3" data-cards>'+(s.cells||[]).map(function(c){return'<div class="cell wr"><span class="thin">'+esc(c.t)+'</span><p>'+rich(c.d)+'</p>'+
+    '<div class="tags">'+(c.tags||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div></div>'}).join('')+'</div>'+
+  '</div></section>'},
+stats:function(s){
+  return'<section class="stats" data-scene="'+esc(s.scene||'')+'"><div class="wrap"><div class="grid" data-cards>'+
+  (s.items||[]).map(function(st){return'<div class="stat wr"><div class="n thin">'+esc(st.n)+'</div><div class="l">'+esc(st.l)+'</div></div>'}).join('')+
+  '</div></div></section>'},
+panel:function(s){
+  var inner;
+  if(s.img&&s.img.src)inner='<img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'">';
+  else inner='';
+  return'<section class="panel" data-scene="'+esc(s.scene||'')+'"><div class="inr'+(s.img&&s.img.src?'':' phx')+'">'+inner+
+  (s.img&&s.img.src?'':'<span style="position:absolute;inset:auto auto 50% 50%;transform:translate(-50%,50%)">'+esc((s.img&&s.img.label)||'FOTO')+'</span>')+
+  '<div class="txt" data-r2><div class="thin d-mid wr">'+rich(s.quote)+'</div><div class="attr wr">'+esc(s.attr)+'</div></div>'+
+  '</div></section>'},
+voices:function(s){
+  return'<section class="voices" id="'+esc(s.id||'voices')+'" data-scene="'+esc(s.scene||'')+'"><div class="wrap">'+
+  '<div class="center" data-r2><div class="lab wr">'+esc(s.lab)+'</div><div class="thin d-mid wr">'+rich(s.head)+'</div></div>'+
+  '<div class="grid" data-cards>'+(s.cards||[]).map(function(v){return'<div class="vcard wr"><p class="q">'+rich(v.q)+'</p><div class="who"><div class="nm">'+esc(v.n)+'</div><div class="rl">'+esc(v.r)+'</div></div></div>'}).join('')+'</div>'+
+  '</div></section>'},
+journey:function(s){
+  return'<section class="journey" id="'+esc(s.id||'journey')+'" data-scene="'+esc(s.scene||'')+'"><div class="wrap">'+
+  '<div class="lab wr" data-r1 style="margin-bottom:40px">'+esc(s.lab)+'</div>'+
+  (s.rows||[]).map(function(r){return'<div class="row wr" data-r1 data-rule><span class="no">'+esc(r.no)+'</span><span class="nm">'+esc(r.nm)+'</span><span class="ds">'+rich(r.ds)+'</span></div>'}).join('')+
+  '</div></section>'},
+close:function(s){
+  return'<section class="close" id="'+esc(s.id||'close')+'" data-scene="'+esc(s.scene||'')+'"><div class="wrap">'+
+  '<div class="card" data-r2>'+
+  '<div class="lab wr">'+esc(s.kick)+'</div>'+
+  '<div class="thin d-mid wr">'+rich(s.title)+'</div>'+
+  '<p class="sub wr">'+rich(s.sub)+'</p>'+
+  '<div class="ctas wr">'+(s.meta||[]).map(function(m,i){return i===0?'<a class="btn" href="tel:+13103274166">'+esc(m)+'</a>':'<span class="btn ghost" style="cursor:default">'+esc(m)+'</span>'}).join('')+'</div>'+
+  '</div>'+
+  '<div class="fbot">'+(s.foot||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+  '</div></section>'}
+};
+
+fetch('/v17-everswap/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+  document.getElementById('nlogo').textContent=c.logo||'Arce';
+  document.getElementById('nlinks').innerHTML=(c.nav||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
 });
+
+function hex2rgb(x){x=x.replace('#','');return[parseInt(x.substr(0,2),16),parseInt(x.substr(2,2),16),parseInt(x.substr(4,2),16)]}
+
+function init(){
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=new Lenis({duration:1.05});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  gsap.ticker.lagSmoothing(0);
+  wireAnchors(lenis);
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';el.style.borderTopColor='transparent';
+    var l=document.createElement('i');
+    l.style.cssText='position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--line);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* R5 escena-luz: interpolación continua de fondo + deriva de orbes */
+  var scenes=[];
+  document.querySelectorAll('[data-scene]').forEach(function(sec){
+    var hx=sec.getAttribute('data-scene');
+    if(hx&&/^#[0-9a-fA-F]{6}$/.test(hx))scenes.push({el:sec,rgb:hex2rgb(hx)});
+  });
+  var o1=document.querySelector('[data-orb="1"]'),o2=document.querySelector('[data-orb="2"]'),o3=document.querySelector('[data-orb="3"]');
+  if(scenes.length>1){
+    var stops=[];
+    function measure(){
+      var doc=document.documentElement.scrollHeight-window.innerHeight;
+      stops=scenes.map(function(s){
+        var r=s.el.getBoundingClientRect();
+        var mid=r.top+window.scrollY+r.height/2-window.innerHeight/2;
+        return{t:Math.max(0,Math.min(1,doc>0?mid/doc:0)),rgb:s.rgb};
+      }).sort(function(a,b){return a.t-b.t});
+    }
+    measure();
+    ScrollTrigger.addEventListener('refresh',measure);
+    ScrollTrigger.create({start:0,end:'max',scrub:.6,
+      onUpdate:function(self){var p=self.progress;
+        var a=stops[0],b=stops[stops.length-1];
+        for(var i=0;i<stops.length-1;i++){
+          if(p>=stops[i].t&&p<=stops[i+1].t){a=stops[i];b=stops[i+1];break}
+          if(p<stops[0].t){a=b=stops[0];break}
+        }
+        var k=(a===b)?0:(p-a.t)/(b.t-a.t);
+        var rgb=[0,1,2].map(function(j){return Math.round(a.rgb[j]+(b.rgb[j]-a.rgb[j])*k)});
+        document.body.style.backgroundColor='rgb('+rgb.join(',')+')';
+        if(o1)o1.style.transform='translateY('+(p*26)+'vh)';
+        if(o2)o2.style.transform='translate('+(p*8)+'vw,'+(-p*18)+'vh)';
+        if(o3)o3.style.transform='scale('+(1+p*.28)+')';
+      }});
+  }
+}
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+})();
 </script>
 </body>
 </html>

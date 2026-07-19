@@ -1,0 +1,215 @@
+{
+ "_schema": "v17-everswap · penumbra verde cinematográfica · Cormorant 300 + Instrument Sans. rich() admite <b><i><br> y <em> (Cormorant italic realce). Cada sección puede declarar scene:'#hex' — el scroll interpola la luz entre escenas (R5). Límites probados: uni.cells EXACTO 2-3 · stats EXACTO 2-3 · voices 3-9 · journey 3-6 · kws 2-4. src vacío = placeholder. Fetch absoluto /v17-everswap/content.json.",
+ "meta": {
+  "title": "Dr. Jorge Arce — Oral & Maxillofacial Surgery · v17 Everswap",
+  "description": "Surgery, restoration, and long-term care unified in one South Bay practice. Dr. Jorge Arce, board-certified oral & maxillofacial surgeon.",
+  "lang": "en"
+ },
+ "logo": "Arce",
+ "nav": [
+  {
+   "t": "The Practice",
+   "h": "#uni"
+  },
+  {
+   "t": "Stories",
+   "h": "#voices"
+  },
+  {
+   "t": "The Journey",
+   "h": "#journey"
+  },
+  {
+   "t": "Begin",
+   "h": "#close"
+  }
+ ],
+ "sections": [
+  {
+   "type": "hero",
+   "scene": "#0D2018",
+   "lab": "Oral & Maxillofacial Surgery · South Bay",
+   "title": "Care at its peak.",
+   "sub": "Dr. Jorge Arce unifies surgery, restoration, and long-term care in a single practice — twenty-seven years on the complex cases other surgeons refer out.",
+   "ctas": [
+    {
+     "t": "Begin your case",
+     "h": "#close",
+     "ghost": false
+    },
+    {
+     "t": "Explore the practice",
+     "h": "#uni",
+     "ghost": true
+    }
+   ],
+   "kws": [
+    "Surgery.",
+    "Restoration.",
+    "Care."
+   ]
+  },
+  {
+   "type": "uni",
+   "id": "uni",
+   "scene": "#132B1D",
+   "lab": "One practice",
+   "head": "One surgeon. Every answer.",
+   "cells": [
+    {
+     "t": "Surgery",
+     "d": "From single implants to full-arch All-On-X reconstruction — complex extractions, bone grafting, and the difficult cases other clinicians refer out.",
+     "tags": [
+      "Implants",
+      "All-On-X",
+      "Extractions"
+     ]
+    },
+    {
+     "t": "Restoration",
+     "d": "Function first, then structure, then confidence. Rebuilding what was lost with structural precision — the smile is the last step, not the first promise.",
+     "tags": [
+      "Reconstruction",
+      "Grafting"
+     ]
+    },
+    {
+     "t": "Care",
+     "d": "Second opinions, honest judgment, long-term maintenance — and a full report back to your referring dentist, every time.",
+     "tags": [
+      "Second Opinions",
+      "Maintenance",
+      "TMJ"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "stats",
+   "scene": "#16371F",
+   "items": [
+    {
+     "n": "27+",
+     "l": "Years of surgery"
+    },
+    {
+     "n": "2007",
+     "l": "Center founded"
+    },
+    {
+     "n": "6",
+     "l": "Disciplines"
+    }
+   ]
+  },
+  {
+   "type": "panel",
+   "scene": "#0D2018",
+   "img": {
+    "src": "/img/quote.jpg",
+    "alt": "",
+    "label": "FOTO — quirófano · grade verde · full-bleed"
+   },
+   "quote": "“The work is precise. The reason behind it is human.”",
+   "attr": "Dr. Jorge Arce — Founder, Dental Implants Center of South Bay"
+  },
+  {
+   "type": "voices",
+   "id": "voices",
+   "scene": "#132B1D",
+   "lab": "Real stories",
+   "head": "The people who were there.",
+   "cards": [
+    {
+     "q": "“I had been told by two surgeons it was impossible. Dr. Arce took the time no one else did. <em>I can eat, smile, and speak again.”</em>",
+     "n": "Maria R.",
+     "r": "Full-arch reconstruction"
+    },
+    {
+     "q": "“When a case is beyond what I can handle, Jorge is the first call I make. My patients always come back grateful — and so do I.”",
+     "n": "Dr. David Kim, D.D.S.",
+     "r": "Referring Dentist · Torrance"
+    },
+    {
+     "q": "“The most thorough and honest surgeon I have ever met. <em>He treated my father like family.”</em>",
+     "n": "Anabella C.",
+     "r": "Daughter of patient"
+    },
+    {
+     "q": "“Calm, precise, and genuinely kind. He explained every step until I understood. The result speaks for itself.”",
+     "n": "Robert T.",
+     "r": "Dental implants"
+    },
+    {
+     "q": "“I refer my most complex cases to Dr. Arce without hesitation. <em>Twenty-seven years shows.”</em>",
+     "n": "Dr. Lina Soto",
+     "r": "Periodontist"
+    },
+    {
+     "q": "“I was terrified of the procedure. He never rushed me. <em>Best decision I have made for my health.”</em>",
+     "n": "Carlos S.",
+     "r": "Bone graft + implants"
+    },
+    {
+     "q": "“Years of pain, gone. I only wish I had found him sooner. I recommend Dr. Arce to everyone I know.”",
+     "n": "Elena P.",
+     "r": "TMJ treatment"
+    },
+    {
+     "q": "“Reliable, communicative, and surgically excellent. A full report back, every time.”",
+     "n": "Dr. Jeff Malone",
+     "r": "Referring Dentist"
+    },
+    {
+     "q": "“The level of care and follow-up is rare. My patients trust him, and that trust reflects back on my practice.”",
+     "n": "Dr. Mark Ellison",
+     "r": "Referring Dentist"
+    }
+   ]
+  },
+  {
+   "type": "journey",
+   "id": "journey",
+   "scene": "#203727",
+   "lab": "The journey",
+   "rows": [
+    {
+     "no": "i.",
+     "nm": "An honest conversation",
+     "ds": "Your history, your scans, your questions — an unhurried first consultation."
+    },
+    {
+     "no": "ii.",
+     "nm": "The case, mapped",
+     "ds": "Planned before anyone operates — the time the case actually needs."
+    },
+    {
+     "no": "iii.",
+     "nm": "Steady hands",
+     "ds": "Twenty-seven years of precision in the operating room."
+    },
+    {
+     "no": "iv.",
+     "nm": "The return",
+     "ds": "Restoration, maintenance, and a full report to your referring dentist."
+    }
+   ]
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "scene": "#0D2018",
+   "kick": "Told it can't be done?",
+   "title": "Every case starts with an honest conversation.",
+   "sub": "Request a consultation or ask for the free guide — What to expect from your first implant consultation.",
+   "meta": [
+    "(310) 327-4166",
+    "Redondo Beach · Torrance, CA"
+   ],
+   "foot": [
+    "© 2026 Dr. Jorge Arce, D.D.S. All rights reserved.",
+    "Dental Implants Center of South Bay — by appointment"
+   ]
+  }
+ ]
+}

@@ -483,3 +483,37 @@ robust16: REDUCED nm, 0 ocultos, 4 días apilados visibles, rail fuera ·
 BOOK Day One→Day Four crossfade (ops campana), fill scaleX .80 · FAQ
 display-swap ok · STRESS faq fuera, days 3, hero/method sin foto → 2
 phx, titular ×2, ovf 0, 0 errores · MOBILE ovf 0 sin pin.
+
+## 15 · v17-everswap — CERRADA
+
+**Diagnóstico inicial:** el grade cinematográfico como muleta: verdes
+profundos que perdonaban todo, orbes con `float 18s infinite`, keywords
+del hero rotando por `setInterval`, word-split custom, padding 130
+clónico, centrados en cadena, copy en HTML.
+
+**Qué cambié:**
+- R5 escena-luz: cada sección declara `scene:#hex` en content.json; un
+  ScrollTrigger global (0→max, scrub .6) interpola RGB por tramos entre
+  los puntos medios de sección — la página atraviesa escenas de
+  iluminación continuas. Los 3 orbes derivan mapeados al mismo progreso
+  (o1 baja 26vh, o2 cruza, o3 escala 1→1.28). El grade dejó de ser
+  estático: es el sistema, y funciona SIN fotos (probado con panel en
+  placeholder).
+- float infinito y setInterval muertos; kws = tríptico estático con R2.
+- Tokens, `--sec` con stats ×0.8, 2 easings, focus-visible, btn active.
+- R3 hairlines en journey; R4 en cells/stats/vcards.
+- Shell+loader con secciones opcionales y `.phx`.
+
+**Qué elevé:** de "quita las fotos y no queda sistema" a "la luz ES el
+sistema" — mecanismo de catálogo nuevo (interpolación de color por
+escenas), cero repetido.
+
+**Paso 4:** memorable sí (el fondo respira al recorrer); centrados
+rotos por panel full-bleed y journey asimétrico; ratio 12:1; motion
+continuo; 2 easings; solo transform+paint (backgroundColor); robusto.
+
+**Verificación:** batchcheck W17 ovf 0 d+m. robust17: REDUCED nm, 0
+ocultos, bg escena 1 fija, orbes estáticos · SCENE rgb(13,32,24)→
+(16,38,27)→vuelta a deep al final, o1 +13vh o3 ×1.14 · STRESS journey
+fuera, panel sin foto → phx (la escena sigue), cells 2, voices 3,
+título ×2, ovf 0, 0 errores · MOBILE ovf 0.
