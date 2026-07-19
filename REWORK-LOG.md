@@ -1002,3 +1002,36 @@ respetada; motion continuo; 2 easings; solo transform; robusto.
 ocultos, sin split (texto plano) · R5 13 letras, t0 +3.3px t3 −4.1px
 (fase senoidal), aria "Unforgettable" · STRESS press fuera, svc 3,
 script alargado, ovf 0, 0 errores · MOBILE ovf 0.
+
+## 30 · v32-alora — CERRADA
+
+**Diagnóstico inicial:** Elowen brumosa y consistente pero con robustez
+de contenido sin probar (los titulares dobles la rompían), `.reveal` IO
+único, keyframes hin, un easing sin token, copy en HTML.
+
+**Qué cambié:**
+- R5 la bruma se levanta: cada slot fotográfico full-bleed lleva un
+  velo de lino (gradiente #F5F4EF) que se disipa con el scrub de su
+  sección — opacidad 1→.08 + deriva translateY −14% — la niebla de la
+  identidad hecha mecanismo. Elemento real (no filter), reduced: sin
+  velo.
+- Robustez POR FIN probada: titulares ×2 en los tres bloques de líneas
+  (hero/close) → ovf 0; steps 3-5; kind opcional. Bug propio corregido
+  en verificación: inline opacity:0 que habría dejado los titulares
+  invisibles en no-motion.
+- Tokens, ritmo --sec variado, catálogo cerrado R1/R2/R4, parches
+  balanceados, focus-visible.
+- Shell+loader con slots nativos y 9 secciones opcionales.
+
+**Qué elevé:** la consistencia ganó su momento propio (el velo) y la
+robustez que la cola señalaba como deuda quedó demostrada con tests.
+
+**Paso 4:** memorable sí (velos); hero full / press / intro centrada /
+svc grid / band full / exp split / kind — alternancia respetada;
+motion continuo; 2 easings; solo transform+opacity; robusto (titular
+×2 verificado).
+
+**Verificación:** batchcheck W32 ovf 0 d+m. robust32: REDUCED nm, 0
+ocultos, velos ausentes · R5 velo hero op .08 tY −14%, velo band .27
+mid-scrub · STRESS titulares ×2 ovf 0, kind fuera, steps 3, 0
+errores · MOBILE ovf 0.

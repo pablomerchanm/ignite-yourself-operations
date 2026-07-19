@@ -1,0 +1,168 @@
+{
+ "_schema": "v32-alora · Elowen weddings, bruma neutra · Lato caps + script. Slots nativos (tag o src) — cada slot full-bleed lleva velo de bruma que se levanta con el scrub (R5). rich() admite <b><br>. svc.cards EXACTO 3 · exp.steps 3-5 · press 3-5. Titulares probados ×2. Fetch absoluto /v32-alora/content.json.",
+ "meta": {
+  "title": "Elowen — Weddings, Curated · v32 Alora",
+  "description": "An atelier for weddings of quiet grandeur. Template concept.",
+  "lang": "en"
+ },
+ "nav": {
+  "l": [
+   {
+    "t": "About",
+    "h": "#about"
+   },
+   {
+    "t": "Services",
+    "h": "#svc"
+   }
+  ],
+  "logo": "ELOWEN",
+  "r": [
+   {
+    "t": "Experience",
+    "h": "#exp"
+   },
+   {
+    "t": "Contact",
+    "h": "#close"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "type": "hero",
+   "slotTag": "slot foto — pareja entre niebla de montaña",
+   "k": "Beyond exquisite · your vision · seamlessly realised",
+   "lines": [
+    "CURATING",
+    "BEAUTIFUL",
+    "WEDDINGS"
+   ],
+   "script": "for the discerning couple",
+   "p": "Your wedding day deserves to be a masterpiece — a reflection of your story, imbued with unhurried elegance and flawless execution. We don't just plan weddings; we orchestrate memories. Placeholder copy.",
+   "cta": {
+    "t": "Book a clarity call",
+    "h": "#close"
+   }
+  },
+  {
+   "type": "press",
+   "label": "Featured in",
+   "brands": [
+    "VOWS*",
+    "THE AISLE*",
+    "EVER AFTER*",
+    "PLACEHOLDER MAG*"
+   ]
+  },
+  {
+   "type": "intro",
+   "id": "about",
+   "script": "Let's start your journey",
+   "h": "AN ATELIER FOR WEDDINGS OF QUIET GRANDEUR",
+   "p": "Elowen is a full-service planning studio taking a handful of celebrations each year. Fewer weddings, deeper attention — from the first sketch of the day to the last dance. Placeholder studio copy."
+  },
+  {
+   "type": "svc",
+   "id": "svc",
+   "cards": [
+    {
+     "tag": "slot — planeación completa",
+     "h": "FULL PLANNING",
+     "script": "the whole story",
+     "p": "From venue to vows — every vendor, timeline, and detail carried by the studio.",
+     "cta": "Inquire"
+    },
+    {
+     "tag": "slot — diseño de evento",
+     "h": "EVENT DESIGN",
+     "script": "the look & feel",
+     "p": "Palettes, florals, tablescapes, and light — composed like a single photograph.",
+     "cta": "Inquire"
+    },
+    {
+     "tag": "slot — coordinación del día",
+     "h": "THE FINAL MILE",
+     "script": "the day itself",
+     "p": "Month-of coordination for couples who planned beautifully and want to hand off the reins.",
+     "cta": "Inquire"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "slotTag": "slot foto — ceremonia al atardecer",
+   "h": "WE ARE ETERNALLY GRATEFUL FOR THE CALM SHE CARRIED INTO EVERY ROOM",
+   "who": "— a placeholder couple"
+  },
+  {
+   "type": "exp",
+   "id": "exp",
+   "slotTag": "slot foto — detalle de mesa",
+   "script": "the experience",
+   "h": "A MASTERPIECE, COMPOSED IN FOUR MOVEMENTS",
+   "steps": [
+    {
+     "t": "THE CLARITY CALL.",
+     "d": "Your story, your vision, your non-negotiables — heard fully before anything is planned."
+    },
+    {
+     "t": "THE COMPOSITION.",
+     "d": "Design, venues, and vendors curated into one coherent, breathtaking whole."
+    },
+    {
+     "t": "THE REHEARSAL.",
+     "d": "Timelines tightened, contingencies staged, families briefed — quietly."
+    },
+    {
+     "t": "THE DAY.",
+     "d": "You are guests at your own wedding. We conduct from the wings."
+    }
+   ]
+  },
+  {
+   "type": "kind",
+   "script": "kind words",
+   "q": "EVERY DECISION FELT LIGHTER WITH ELOWEN BESIDE US. THE DAY ITSELF WAS, SIMPLY, THE BEST OF OUR LIVES.",
+   "who": "A placeholder couple — garden ceremony"
+  },
+  {
+   "type": "close",
+   "id": "close",
+   "slotTag": "slot foto — pareja caminando al valle",
+   "script": "shall we begin?",
+   "lines": [
+    "YOUR STORY DESERVES",
+    "A BEAUTIFUL TELLING"
+   ],
+   "cta": {
+    "t": "Book a clarity call",
+    "h": "#top"
+   }
+  },
+  {
+   "type": "foot",
+   "wm": "ELOWEN",
+   "script": "weddings, curated",
+   "links": [
+    {
+     "t": "About",
+     "h": "#about"
+    },
+    {
+     "t": "Services",
+     "h": "#svc"
+    },
+    {
+     "t": "Experience",
+     "h": "#exp"
+    },
+    {
+     "t": "Contact",
+     "h": "#close"
+    }
+   ],
+   "legal": "© Elowen Atelier — template concept · placeholder content & press names"
+  }
+ ]
+}
