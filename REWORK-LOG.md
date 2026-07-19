@@ -269,3 +269,24 @@ deal=5 — ovf 0 err 0 ✓ · reduced ok ✓ · transform/opacity ✓.
 reduced ok.
 
 ---
+
+## 9 · v10-mobius — "Möbius" — CERRADA
+
+**Diagnóstico inicial:** ritmo plano con 8 paddings sin sistema; banda foto
+estática; cards clónicas; portabilidad cero.
+
+**Qué cambié:** banda-expand con clip-path scrubbed como momento único;
+catálogo cerrado 5/2 con staggers decrecientes; tokens + content.json +
+placeholders + overflow clip.
+
+**Paso 4:** momento = banda que se abre ✓ · composición ya variada (stack
+hero / split expertise / bignums / band / record split2 / timeline / quote /
+voices grid / faq split / guide lay / talk) ✓ · mark hero enorme + display
+mega > 4:1 ✓ · easings 2 ✓ · robustez: intro ×2, sin fotos (labels), voices
+3, journal REMOVIDO — ovf 0 err 0 ✓ · reduced: clip inset(0) ✓ ·
+transform/paint only ✓.
+
+**Verificación:** batchcheck W10 d+m ovf 0 err 0 · stress ovf 0 err 0 ·
+reduced ok.
+
+---
