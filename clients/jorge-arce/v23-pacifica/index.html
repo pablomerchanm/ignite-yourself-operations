@@ -71,6 +71,36 @@ a{color:inherit;text-decoration:none}
 .duo figure img{aspect-ratio:4/5;object-fit:cover;width:100%;filter:grayscale(.1)}
 .duo figcaption{margin-top:10px;font-family:var(--serif);font-size:15px;color:var(--dim)}
 
+/* ---------- films strip ---------- */
+.films{border-top:1px solid var(--line);padding:110px 0}
+.films .head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px;margin-bottom:50px}
+.films h2{font-weight:700;letter-spacing:-.03em;text-transform:uppercase;font-size:clamp(28px,3.4vw,46px)}
+.films h2 .ser{font-family:var(--serif);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0}
+.films .lbl2{font-family:var(--serif);font-size:18px;color:var(--dim)}
+.fstack{display:grid;gap:26px}
+.frame2{position:relative;background:#101010;overflow:hidden}
+.frame2::before,.frame2::after{content:"";position:absolute;left:0;right:0;height:6%;background:#000;z-index:2}
+.frame2::before{top:0}
+.frame2::after{bottom:0}
+.frame2 img{width:100%;aspect-ratio:21/9;object-fit:cover;opacity:.85;filter:grayscale(.2)}
+.frame2 .play{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:74px;height:74px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;
+  backdrop-filter:blur(4px);transition:transform .3s,background .3s}
+.frame2:hover .play{transform:translate(-50%,-50%) scale(1.08);background:rgba(255,255,255,.15)}
+.frame2 .cap2{position:absolute;z-index:3;left:20px;bottom:9%;color:#fff;font-size:11.5px;
+  font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.fduo{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.fduo .frame2 img{aspect-ratio:16/10}
+
+/* ---------- next case ---------- */
+.nextcase{border-top:1px solid var(--line);padding:80px 0}
+.nextcase a{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;transition:opacity .3s}
+.nextcase a:hover{opacity:.6}
+.nextcase .k2{font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.nextcase .t2{font-weight:700;letter-spacing:-.03em;text-transform:uppercase;font-size:clamp(26px,3.6vw,52px)}
+.nextcase .t2 .ser{font-family:var(--serif);font-weight:400;font-style:italic;text-transform:none;letter-spacing:0}
+
 /* ---------- results strip ---------- */
 .results{border-top:1px solid var(--line);padding:110px 0}
 .results .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
@@ -199,6 +229,33 @@ a{color:inherit;text-decoration:none}
 </div>
 </div></section>
 
+<!-- THE FILMS -->
+<section class="films"><div class="wrap">
+  <div class="head reveal">
+    <h2>The <span class="ser">footage.</span></h2>
+    <span class="lbl2">slots de video — el caso en movimiento</span>
+  </div>
+  <div class="fstack">
+    <div class="frame2 reveal">
+      <img src="../img/surgery.jpg" alt="">
+      <span class="play">▶</span>
+      <span class="cap2">Film 01 — The operating room, real time</span>
+    </div>
+    <div class="fduo">
+      <div class="frame2 reveal">
+        <img src="../img/operating.jpg" alt="">
+        <span class="play">▶</span>
+        <span class="cap2">Film 02 — Planning session</span>
+      </div>
+      <div class="frame2 reveal">
+        <img src="../img/speaking.jpg" alt="">
+        <span class="play">▶</span>
+        <span class="cap2">Film 03 — The consultation</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
 <!-- RESULTS -->
 <section class="results"><div class="wrap"><div class="grid" data-stagger>
   <div><div class="n">27<span class="ser">yrs</span></div><div class="l">Devoted entirely to oral &amp; maxillofacial surgery</div></div>
@@ -243,6 +300,14 @@ a{color:inherit;text-decoration:none}
     <span>A case study in surgical care</span>
     <span>South Bay, CA</span>
   </div>
+</div></section>
+
+<!-- NEXT CASE -->
+<section class="nextcase"><div class="wrap">
+  <a class="reveal" href="index.html">
+    <span class="k2">Next case study</span>
+    <span class="t2">Full-Arch, <span class="ser">restored.</span> →</span>
+  </a>
 </div></section>
 
 <script>

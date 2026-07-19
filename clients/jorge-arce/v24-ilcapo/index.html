@@ -75,6 +75,39 @@ a{color:inherit;text-decoration:none}
 .rrow .t{font-family:var(--serif);font-size:clamp(21px,2.4vw,30px)}
 .rrow .d{font-size:14px;line-height:1.65;color:var(--dim)}
 
+/* ---------- showreel ---------- */
+.showreel{padding:120px 36px;border-top:2px solid var(--red)}
+.showreel .in{max-width:1100px;margin:0 auto}
+.showreel .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--red);margin-bottom:30px;display:flex;align-items:center;gap:12px}
+.showreel .k::before{content:"";width:26px;height:2px;background:var(--red)}
+.reelframe{position:relative;background:#050505;overflow:hidden}
+.reelframe::before,.reelframe::after{content:"";position:absolute;left:0;right:0;height:7%;background:#000;z-index:2}
+.reelframe::before{top:0}
+.reelframe::after{bottom:0}
+.reelframe img{width:100%;aspect-ratio:21/9;object-fit:cover;opacity:.8}
+.reelframe .play{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:84px;height:84px;border-radius:50%;border:2px solid var(--red);display:flex;align-items:center;
+  justify-content:center;color:var(--white);font-size:22px;transition:background .3s,transform .3s}
+.reelframe:hover .play{background:var(--red);transform:translate(-50%,-50%) scale(1.06)}
+.reelframe .dur{position:absolute;z-index:3;right:20px;bottom:10%;font-family:var(--mono);
+  font-size:11px;letter-spacing:.08em;color:var(--dim)}
+.showreel .note{margin-top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--dim)}
+
+/* ---------- productions list ---------- */
+.prods{padding:110px 36px;border-top:1px solid rgba(242,242,242,.14)}
+.prods .in{max-width:1100px;margin:0 auto}
+.prods h2{font-family:var(--serif);font-size:clamp(30px,4vw,52px);margin-bottom:54px}
+.prods h2 em{font-style:italic;color:var(--red)}
+.prow2{display:grid;grid-template-columns:90px 1fr auto auto;gap:26px;align-items:baseline;
+  padding:22px 4px;border-top:1px solid rgba(242,242,242,.14);transition:background .25s,padding-left .3s}
+.prow2:last-of-type{border-bottom:1px solid rgba(242,242,242,.14)}
+.prow2:hover{background:rgba(214,0,1,.06);padding-left:14px}
+.prow2 .y{font-family:var(--mono);font-size:12px;color:var(--red)}
+.prow2 .t{font-family:var(--serif);font-size:clamp(19px,2.2vw,28px)}
+.prow2 .ty{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.prow2 .ar{color:var(--red)}
+
 /* ---------- stats band ---------- */
 .stats{padding:120px 36px;border-top:2px solid var(--red)}
 .stats .inr{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:50px}
@@ -202,6 +235,32 @@ a{color:inherit;text-decoration:none}
     <div class="s">Dental Implants Center of South Bay — Redondo Beach &amp; Torrance</div>
   </div>
   <div class="idx"><b>Frame 03</b>The Center</div>
+</section>
+
+<!-- SHOWREEL -->
+<section class="showreel">
+  <div class="in">
+    <div class="k reveal">The showreel</div>
+    <div class="reelframe reveal">
+      <img src="../img/operating.jpg" alt="Showreel still">
+      <span class="play">▶</span>
+      <span class="dur">SLOT VIDEO — 01:24</span>
+    </div>
+    <div class="note reveal">slot de video — reel de la práctica en producción real</div>
+  </div>
+</section>
+
+<!-- PRODUCTIONS -->
+<section class="prods">
+  <div class="in">
+    <h2 class="reveal">Selected <em>productions.</em></h2>
+    <div class="reveal">
+      <div class="prow2"><span class="y">SC-A</span><span class="t">The Full-Arch Sessions</span><span class="ty">Case film · slot</span><span class="ar">→</span></div>
+      <div class="prow2"><span class="y">SC-B</span><span class="t">Anatomy of a Rescue</span><span class="ty">Case film · slot</span><span class="ar">→</span></div>
+      <div class="prow2"><span class="y">SC-C</span><span class="t">The Referral</span><span class="ty">Short doc · slot</span><span class="ar">→</span></div>
+      <div class="prow2"><span class="y">SC-D</span><span class="t">Twenty-Seven Years</span><span class="ty">Portrait · slot</span><span class="ar">→</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- STATS -->

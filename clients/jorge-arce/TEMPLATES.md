@@ -176,4 +176,4 @@ vastspace, getty/tracingart, sacredforests, adcker, ilcapo, Cobalt, wolverine,
 genesis). Ronda 5 emula los sistemas de diseño de 10 templates Showit
 (hospitality, coaches, bodas, viajes, food) con contenido original — el book
 ya cubre industrias más allá de médicos. Profundización: v22 y v25 son sitios
-multi-página completos (v22: home+about+faq · v25: 6 páginas).*
+multi-página completos (v22: home+about+faq · v25: 6 páginas · v26: home+about+commitment); v23 ganó la tira de footage y next-case; v24 ganó showreel y lista de producciones.*
