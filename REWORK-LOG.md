@@ -1325,3 +1325,13 @@ Three" con 1 pin-spacer, v11 track −3000px prog 17% — 0 errores.
 
 ## Bloqueos
 - Ninguno. Cola de pendientes vacía.
+
+---
+
+## FIX PASS 3b · desktop: doble-suavizado por `html{scroll-behavior:smooth}` (el residuo que Pablo seguía sintiendo)
+
+Pablo aclara que probaba en DESKTOP. Los settle de desktop estaban en dos grupos (~430ms vs ~820ms) con el mismo Lenis — correlación 100%: TODAS las lentas tenían `html{scroll-behavior:smooth}` sin scope y NINGUNA rápida lo tenía. Ese CSS hace que el navegador re-anime cada escritura de scroll de Lenis (doble suavizado; la doc de Lenis exige neutralizarlo — el catálogo ya lo hacía con `.lenis.lenis-smooth{scroll-behavior:auto!important}`, las v-pages no). Y las 4 páginas que Pablo nombró como lentas (sacred, pacifica, cunliffe, wolverine) estaban todas en el grupo afectado.
+
+**Arreglo:** scope a `html.no-motion{scroll-behavior:smooth}` (patrón de v16, la más rápida; los anchors con motor JS ya piden smooth explícito vía scrollIntoView/lenis.scrollTo) en 37 archivos: 28 v-pages + 6 páginas v25 + subpáginas sacred (about, faq) y wolverine (about, commitment). El styles.css del catálogo se queda como está (tiene el neutralizador oficial de Lenis).
+
+**Medido (desktop, tick de rueda 600px):** sacred 825→447ms · pacifica 817→435 · wolverine 828→434 — idénticas al grupo rápido (bennett 434). Cunliffe 684 (imágenes pesadas) y su anomalía de "moved 8" desapareció. Reveals y errores: limpios.
