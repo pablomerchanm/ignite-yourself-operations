@@ -207,9 +207,10 @@ function rich(s){return esc(s)
   .replace(/&lt;br&gt;/g,'<br>')
   .replace(/&lt;t&gt;/g,'<span class="it">').replace(/&lt;\/t&gt;/g,'</span>')
   .replace(/&amp;nbsp;/g,'&nbsp;')}
-function bigimg(img,cls){
-  if(img&&img.src)return'<div class="'+cls+'"><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'"></div>';
-  return'<div class="'+cls+' phx">'+esc((img&&img.label)||'FOTO')+'</div>'}
+function bigimg(img,cls,attr){
+  attr=attr?' '+attr:'';
+  if(img&&img.src)return'<div class="'+cls+'"'+attr+'><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'"></div>';
+  return'<div class="'+cls+' phx"'+attr+'>'+esc((img&&img.label)||'FOTO')+'</div>'}
 
 var partials={
 hero:function(s){
@@ -239,7 +240,7 @@ journey:function(s){
   '</div></section>'},
 method:function(s){
   return'<section class="method" id="'+esc(s.id||'method')+'"><div class="wrap"><div class="lay">'+
-  bigimg(s.img,'ph wr')+
+  bigimg(s.img,'ph wr','data-r1')+
   '<div><div class="shead" data-r2><div class="smallcap wr">'+esc(s.label)+'</div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
   (s.rows||[]).map(function(r){return'<div class="mrow wr" data-r1 data-rule><h4>'+rich(r.t)+'</h4><p>'+rich(r.d)+'</p></div>'}).join('')+
   '</div></div></div></section>'},
@@ -300,9 +301,12 @@ function init(){
   });
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.25});
-  lenis.on('scroll',ScrollTrigger.update);
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
   gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
@@ -317,13 +321,13 @@ function init(){
   document.querySelectorAll('[data-r1]').forEach(function(el){
     if(el.closest('#jstage')&&window.innerWidth>900)return; /* los days del libro los maneja R5 */
     gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
-      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+      scrollTrigger:{trigger:el,start:'clamp(top 88%)',once:true}});
   });
   document.querySelectorAll('[data-r2]').forEach(function(g){
     var kids=g.querySelectorAll('.wr');var acc=0;
     kids.forEach(function(el,i){
       gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
-        scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+        scrollTrigger:{trigger:g,start:'clamp(top 86%)',once:true}});
       acc+=[120,80,60][Math.min(i,2)];
     });
   });
@@ -339,7 +343,7 @@ function init(){
     var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
     kids.forEach(function(el,i){
       gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
-        scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+        scrollTrigger:{trigger:g,start:'clamp(top 84%)',once:true}});
       acc+=steps[Math.min(i,steps.length-1)];
     });
   });

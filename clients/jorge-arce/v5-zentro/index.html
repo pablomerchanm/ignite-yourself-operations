@@ -355,9 +355,12 @@ function initMotion(){
   if(tick)tick.innerHTML+=tick.innerHTML;
   if(!MOTION)return;
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.25});
-  lenis.on('scroll',ScrollTrigger.update);
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
   gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
@@ -368,7 +371,7 @@ function initMotion(){
       im.addEventListener('load',done);im.addEventListener('error',done)});
   })();
   document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;
-    var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();lenis.scrollTo(t)}});
+    var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();if(lenis)lenis.scrollTo(t);else document.querySelector(t).scrollIntoView({behavior:'smooth'})}});
   var acc=0;gsap.utils.toArray('[data-hero]').forEach(function(el,i){
     gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.75,ease:'expo.out',delay:.15+acc/1000,clearProps:'transform'});
     acc+=[120,80,60][Math.min(i,2)]});
@@ -407,9 +410,11 @@ function initMotion(){
   }
   /* ticker scroll-driven: se mueve al ritmo del scroll, no en loop */
   if(tick){var tx=0,last=0;
-    lenis.on('scroll',function(e){var dy=e.scroll-last;last=e.scroll;tx-=dy*.45;
+    var tickMove=function(sc){var dy=sc-last;last=sc;tx-=dy*.45;
       var w=tick.scrollWidth/2;if(w>0){tx=((tx%w)+w)%w*-1}
-      tick.style.transform='translateX('+tx+'px)'})}
+      tick.style.transform='translateX('+tx+'px)'};
+    if(lenis)lenis.on('scroll',function(e){tickMove(e.scroll)});
+    else addEventListener('scroll',function(){tickMove(scrollY)},{passive:true})}
 }
 
 fetch('/v5-zentro/content.json')

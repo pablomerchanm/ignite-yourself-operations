@@ -468,9 +468,12 @@ function initMotion(){
     return;
   }
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.25});
-  lenis.on('scroll',function(e){ScrollTrigger.update();onScrollNav(e.scroll)});
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',function(e){ScrollTrigger.update();onScrollNav(e.scroll)});
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }else{addEventListener('scroll',function(){onScrollNav(scrollY)},{passive:true});}
   gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
@@ -481,7 +484,7 @@ function initMotion(){
       im.addEventListener('load',done);im.addEventListener('error',done)});
   })();
   document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;
-    var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();lenis.scrollTo(t)}});
+    var t=a.getAttribute('href');if(t.length>1&&document.querySelector(t)){e.preventDefault();if(lenis)lenis.scrollTo(t);else document.querySelector(t).scrollIntoView({behavior:'smooth'})}});
 
   /* R2 hero-stagger: decreciente 110/70/50ms */
   var heroEls=gsap.utils.toArray('[data-hero]');
@@ -491,19 +494,19 @@ function initMotion(){
   /* R1 rise: por grupo */
   gsap.utils.toArray('[data-r1]').forEach(function(el){
     gsap.fromTo(el,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'expo.out',clearProps:'transform',
-      scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
+      scrollTrigger:{trigger:el,start:'clamp(top 86%)',once:true}})});
 
   /* R3 rule-draw: hairline real que se dibuja sobre cada índice */
   gsap.utils.toArray('[data-rule]').forEach(function(el){
     var line=document.createElement('div');line.className='rline';
     el.insertBefore(line,el.firstChild);
     gsap.to(line,{scaleX:1,duration:.8,ease:'expo.out',
-      scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
+      scrollTrigger:{trigger:el,start:'clamp(top 88%)',once:true}})});
 
   /* R4 img-settle: imágenes enmarcadas */
   gsap.utils.toArray('[data-img]').forEach(function(el){
     gsap.fromTo(el,{opacity:0,scale:1.04},{opacity:1,scale:1,duration:.9,ease:'expo.out',clearProps:'transform',
-      scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
+      scrollTrigger:{trigger:el,start:'clamp(top 86%)',once:true}})});
 
   /* R5 file-scrub: expediente pinneado (desktop) */
   var file=document.getElementById('fileScrolly');
@@ -531,7 +534,7 @@ function initMotion(){
       num.textContent='05';
       steps.forEach(function(st){st.style.opacity=1;st.style.transform='none';
         gsap.fromTo(st,{opacity:0,y:20},{opacity:1,y:0,duration:.7,ease:'expo.out',
-          scrollTrigger:{trigger:st,start:'top 88%',once:true}})});
+          scrollTrigger:{trigger:st,start:'clamp(top 88%)',once:true}})});
     }
   }
 }

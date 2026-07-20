@@ -1282,3 +1282,46 @@ Three" con 1 pin-spacer, v11 track −3000px prog 17% — 0 errores.
 
 ## Bloqueos y pendientes menores
 - v6-final `.meta wr` (línea footer "Redondo Beach · Torrance") y v16-handx `.ph wr` (placeholder) quedan sin revelar SI el scroll se detiene justo en el fondo (su trigger 'top 8x%' cae apenas más allá del scroll máximo con saltos grandes). **Pre-existente**, no es regresión (los reveals usan `once:true`, intactos). En scroll natural pasan su trigger. Se puede endurecer con un fallback de reveal al llegar al fondo si el usuario lo pide.
+
+---
+
+## FIX PASS 3 · SCROLL-FEEL AUTÓNOMO — el táctil era el problema real (Lenis secuestraba el dedo)
+
+**Reporte del usuario:** tras el pase de lerp:.25, sacred (y otras) se seguían sintiendo "muy lento... se arrastra... no responde a mi dedo" — revisando SIEMPRE desde el teléfono.
+
+**Diagnóstico instrumentado (gestos táctiles sintetizados por CDP, no a ojo):**
+- Flick de 500px en móvil emulado, muestreando scrollY cada 50ms:
+  - CON Lenis (lerp:.25): la página quedaba casi congelada bajo el dedo (sacred: 21px a los 250ms; cunliffe: ¡1px a los 400ms!), daba un tirón tardío, asentaba en ~900-1010ms y — lo peor — **solo recorría ~256px de los 500 del gesto** (se comía la mitad del desplazamiento, incluida la inercia).
+  - SIN Lenis (scroll nativo): la misma página seguía el dedo 1:1 (73px a los 100ms), recorría los 500px completos, asentaba en ~350ms.
+- Conclusión: **Lenis interceptaba el scroll táctil** y lo degradaba doblemente (latencia + mitad de distancia por flick). Eso es exactamente "se arrastra / no puedo recorrer". Los sitios de referencia (Apple, Linear, ganadores Awwwards) NUNCA suavizan el táctil: móvil = física nativa del sistema; el smoothing se reserva para la rueda de desktop.
+- Causa #2 auditada (rangos de scrub en las 36): sanos — contenido gateado en rangos de 35-50vh, rangos viewport-completos solo en parallax decorativo. Los 6 pins (v2, v9, v11, v16, v21, v26) ya estaban guardados a >900px: en móvil no hay pins.
+- Causa #3 auditada (reveals): todos a .7s expo.out; solo dos trazos one-shot a 1.1s (v2 ruta, v6 barra) — flourishes, se quedan.
+
+**Arreglo (36 páginas + v25-gecko/motion.js + base/base-jorge = 39 archivos):**
+- Motor de scroll dividido por dispositivo:
+  - `var lenis=null; if(matchMedia('(hover:hover) and (pointer:fine)').matches){ lenis=new Lenis({lerp:.3}); ... }`
+  - **Táctil → 100% nativo** (Lenis ni se instancia; ScrollTrigger escucha el scroll nativo por sí solo).
+  - **Desktop → Lenis lerp .3** (A/B medido .25/.32/.4: .3 asienta ~450-800ms, responde de inmediato y conserva el glide).
+- 12 páginas llamaban `lenis.scrollTo()` a pelo en anchors → null-safe con fallback `scrollIntoView({behavior:'smooth'})` (y v11 con `window.scrollTo` para su salto horizontal numérico).
+- 5 páginas colgaban lógica extra del evento de Lenis → fallback nativo exacto: v3 navColor, v4/v26 onScroll, v6 onScrollNav, v5-zentro marquee (tickMove dual-bind lenis/nativo).
+
+**Bugs destapados por la verificación (arreglados):**
+- **v11-firma: ROTA POR COMPLETO en móvil desde su rework** — una llave `}` huérfana (cola de un `@media (prefers-reduced-motion)` cuyo opener se perdió) desbalanceaba el CSS y mataba el `@media (max-width:900px)`: el track quedaba `position:fixed` horizontal → documento de altura 0, imposible de scrollear en teléfono. Restaurado el opener → balance 0, el layout vertical móvil renderiza por primera vez (docH 0 → 14451, ovf:false, anchors OK, visual verificado).
+- **v37-bakery / v34-mesamaison:** links `href="#"` lanzaban `querySelector('#')` SyntaxError (pre-existente, también con Lenis) → guard `h.length<2`.
+
+**Más bugs destapados y cerrados en el mismo pase:**
+- **Catálogo (index.html + script.js):** su propio Lenis (`lerp:0.11` + `touchMultiplier:1.6`) también secuestraba el táctil — la PORTADA era la página más flotada de todas en el teléfono. Mismo guard (táctil → su rama nativa de parallax, que ya existía) y lerp desktop alineado a .3.
+- **v25-gecko/motion.js:** anchors con `lenis.scrollTo` a pelo → null-safe (afectaba a las 6 páginas del sitio v25 en móvil).
+- **v33-valenna:** el slot de foto izquierdo del hero (`.inset wr`) tenía `.wr` (opacity:0) sin pertenecer a ningún grupo de reveal — invisible desde siempre (tercer caso del patrón huérfano, como v18/v16). Cableado con `data-r1`.
+
+**Además, cerrados los dos pendientes de FIX PASS 2:**
+- **v6-final:** reveals del pie clampeados con `start:'clamp(top 8x%)'` (GSAP 3.12) — un trigger ya no puede quedar más allá del scroll máximo; el pie revela siempre.
+- **v16-handx:** el "stuck" no era del fondo — era el retrato de la sección method (`bigimg(s.img,'ph wr')`) que tenía `.wr` (opacity:0) pero NO pertenecía a ningún grupo de reveal (mismo patrón que el h2 de stats de v18). `bigimg()` ahora acepta un attr y el retrato va con `data-r1`. También clampeados sus reveals.
+
+**Verificación:**
+- Táctil, las 36: moved 500/500, t90 350-400ms (idéntico a nativo), anchors OK, 0 errores.
+- Desktop, las 36: settle 430-850ms (antes 890-1220), reveals disparan, 0 stuck, 0 errores.
+- Reduced-motion: intacto (el guard táctil vive dentro de la rama MOTION; spot-check 4 páginas: 0 errores, 0 overflow).
+
+## Bloqueos
+- Ninguno. Cola de pendientes vacía.

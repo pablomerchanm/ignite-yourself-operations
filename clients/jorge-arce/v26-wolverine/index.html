@@ -220,9 +220,12 @@ function init(){
     addEventListener('scroll',function(){onScroll(window.scrollY)},{passive:true});
     wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.25});
-  lenis.on('scroll',function(e){ScrollTrigger.update();onScroll(e.scroll)});
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',function(e){ScrollTrigger.update();onScroll(e.scroll)});
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }else{addEventListener('scroll',function(){onScroll(scrollY)},{passive:true});}
   gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}

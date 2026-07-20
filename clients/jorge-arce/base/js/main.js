@@ -330,9 +330,12 @@
     if (!MOTION) return;
     gsap.registerPlugin(ScrollTrigger);
 
-    var lenis = new Lenis({ lerp: .25 });
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+    var lenis = null;
+    if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+      lenis = new Lenis({ lerp: .3 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
+    }
     gsap.ticker.lagSmoothing(0);
 
     /* anchors → scroll suave */
@@ -342,7 +345,7 @@
       var target = a.getAttribute('href');
       if (target.length > 1 && document.querySelector(target)) {
         e.preventDefault();
-        lenis.scrollTo(target, { offset: 0 });
+        lenis && lenis.scrollTo(target, { offset: 0 });
       }
     });
 
