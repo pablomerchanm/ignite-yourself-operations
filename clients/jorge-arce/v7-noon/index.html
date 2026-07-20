@@ -304,7 +304,7 @@ function boot(data){
 function initMotion(){
   if(!MOTION)return;
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -357,7 +357,7 @@ function initMotion(){
   var zeroU=document.querySelector('.stat.zero .l u');
   if(counts.length){
     counts.forEach(function(el){if(+el.dataset.count>0)el.textContent='0'});
-    ScrollTrigger.create({trigger:'#honestCount',start:'top 78%',end:'bottom 55%',scrub:1,
+    ScrollTrigger.create({trigger:'#honestCount',start:'top 78%',end:'bottom 55%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         counts.forEach(function(el){var total=+el.dataset.count;
           if(total>0)el.textContent=String(Math.round(total*Math.min(1,p*1.15)))});

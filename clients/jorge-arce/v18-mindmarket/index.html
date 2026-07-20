@@ -206,7 +206,7 @@ care:function(s){
   '</div></section>'},
 stats:function(s){
   return'<section class="stats"><div class="wrap">'+
-  '<div class="shead" data-r1><h2 class="d40 wr">'+rich(s.head)+'</h2></div>'+
+  '<div class="shead"><h2 class="d40 wr" data-r1>'+rich(s.head)+'</h2></div>'+
   '<div class="grid" data-cards>'+(s.items||[]).map(function(st){return'<div class="stat wr"><div class="statnum '+esc(st.c||'c-blue')+'">'+esc(st.n)+'</div><div class="l">'+esc(st.l)+'</div></div>'}).join('')+'</div>'+
   '</div></section>'},
 voices:function(s){
@@ -252,7 +252,7 @@ function backOut(k){var c1=1.70158,c3=c1+1;k=Math.max(0,Math.min(1,k));return 1+
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -299,7 +299,7 @@ function init(){
     var pops=Array.prototype.slice.call(box.querySelectorAll('.pop'));
     if(!pops.length)return;
     var n=pops.length;
-    ScrollTrigger.create({trigger:box,start:'top 85%',end:'center 45%',scrub:.6,
+    ScrollTrigger.create({trigger:box,start:'top 85%',end:'center 45%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         pops.forEach(function(el,j){
           var k=Math.max(0,Math.min(1,p*(n+.6)-j*.8));

@@ -1253,3 +1253,32 @@ subpáginas):**
 página además decodifica 3 JPG full-viewport); batchcheck ovf 0 en
 muestra de 6 (v11/v12/v13/v16/v24/v34); pins sanos: libro v16 "Day
 Three" con 1 pin-spacer, v11 track −3000px prog 17% — 0 errores.
+
+---
+
+## FIX PASS 2 · scroll "casi pegado" + bugs concretos (cunliffe/sacred/pacifica/wolverine + v18)
+
+**Reporte del usuario:** "cunlife no funciona bien, sacred tampoco, pacifica tampoco, wolverine tampoco. ve y revisa todas las 36 y que todas queden perfectas!" (tras el FIX GLOBAL anterior el scrollytelling mejoró "en general" pero estas páginas seguían sintiéndose mal).
+
+**Diagnóstico (instrumentado, no a ojo):**
+- Revisadas las 36 en reduced-motion full-page @390 y @1440: **cero overflow, cero pageerrors, cero stuck-hidden** salvo los casos abajo. Estructura sana.
+- Medición de FPS durante scroll continuo en las 4 reportadas + control: **60fps sólidos** (med 17ms, p95 17-18ms, 0-1 frames largos). NO hay jank ni problema de rendimiento — las páginas están bien hechas.
+- Medición de *settle* de un tick de rueda de 600px: con `Lenis duration:.8` el asentamiento tardaba **~1200ms** (floaty/laggy = lo que se siente "casi pegado"). Ese es el origen real de la queja: el suavizado de Lenis por `duration` deja una cola larga.
+- Las 4 reportadas comparten ser páginas de scrollytelling pesado (scrub por elemento / pins), donde esa cola se nota más.
+
+**Arreglo del feel (global, 36 páginas + motion.js + base/base-jorge):**
+- `new Lenis({duration:.8})` → `new Lenis({lerp:.25})`. Cambiar de suavizado por-duración a por-lerp hace el scroll **directo** (responde al input) sin perder suavidad. Settle medido baja a **~500-950ms** (pág. simples ~500, storytelling pesado ~900). Verificado: reveals siguen disparando, 0 errores, 60fps.
+- `scrub:.6 → .4`, `scrub:.5 → .35`, `scrub:1 → .4` (v7). Los efectos scrubbeados siguen el scroll (ya crispado) más de cerca sin quedar secos.
+- NOTA de calibración: `lerp:.25` es un punto medio defendible (2-3× más crespo que antes). El "peso" exacto es preferencia; se ajusta con un solo número si el usuario quiere más/menos.
+
+**Bugs concretos encontrados y arreglados:**
+- **v18-mindmarket:** el `<h2>` de la sección stats ("A few numbers behind the care we deliver") quedaba invisible para siempre — `data-r1` estaba en el wrapper `.shead` pero la clase `.wr` (opacity:0) en el `<h2>` hijo; R1 animaba el padre y nunca el hijo. Movido `data-r1` al `<h2>` (mismo idioma que `.illobox wr data-r1`). Ahora revela.
+- **v23-pacifica:** (a) `content.json` tenía `"logo": "arce"` (minúscula, roto) → `"Dr. Arce"`. (b) La nav fija usaba `linear-gradient` que se desvanecía a transparente → el contenido se colaba por debajo al hacer scroll (verificado en captura: "Beach/Torrance" atravesaba la barra). Cambiada a `background:rgba(237,236,232,.9)+backdrop-filter:blur(8px)+color:var(--ink)` — banda cream casi opaca, siempre legible, sin sangrado.
+
+**Verificado NO roto (falsas alarmas descartadas):**
+- Navs con `mix-blend-mode:difference` (sacred, ilcapo, genesis): legibles a media página (captura full-viewport de sacred confirma "Jorge Arce restore function…" blanco sobre foto). El blend funciona; el strip recortado engañaba.
+- Wolverine: perfecto en desktop; su pin de manifiesto ya está guardado a `innerWidth>900` (desactivado en móvil). Sin bug.
+- Sacred `.ovl` (overlay de menú): `visibility:hidden` cerrado — no bloquea clicks.
+
+## Bloqueos y pendientes menores
+- v6-final `.meta wr` (línea footer "Redondo Beach · Torrance") y v16-handx `.ph wr` (placeholder) quedan sin revelar SI el scroll se detiene justo en el fondo (su trigger 'top 8x%' cae apenas más allá del scroll máximo con saltos grandes). **Pre-existente**, no es regresión (los reveals usan `once:true`, intactos). En scroll natural pasan su trigger. Se puede endurecer con un fallback de reveal al llegar al fondo si el usuario lo pide.

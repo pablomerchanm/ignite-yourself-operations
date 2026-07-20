@@ -262,7 +262,7 @@ fetch('/v31-chronicle/content.json').then(function(r){if(!r.ok)throw new Error(r
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -300,14 +300,14 @@ function init(){
   /* marquee featured mapeado al viewport */
   var mq=document.getElementById('featin');
   if(mq){
-    ScrollTrigger.create({trigger:'.feat',start:'top bottom',end:'bottom top',scrub:.6,
+    ScrollTrigger.create({trigger:'.feat',start:'top bottom',end:'bottom top',scrub:.4,
       onUpdate:function(self){mq.style.transform='translateX('+(-self.progress*25)+'%)'}});
   }
   /* R5 la mano escribe: las lineas manuscritas se escriben con el scrub */
   document.querySelectorAll('[data-write]').forEach(function(el){
     var ink=el.querySelector('.hmask i');
     if(!ink)return;
-    ScrollTrigger.create({trigger:el,start:'top 90%',end:'top 55%',scrub:.6,
+    ScrollTrigger.create({trigger:el,start:'top 90%',end:'top 55%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         var e=1-Math.pow(1-p,2);
         ink.style.transform='translateX('+(-(1-e)*101)+'%)';

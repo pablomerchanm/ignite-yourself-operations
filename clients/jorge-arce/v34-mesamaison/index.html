@@ -323,7 +323,7 @@ var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').ma
 var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
 if(!MOTION){document.documentElement.classList.add('no-motion');return}
 gsap.registerPlugin(ScrollTrigger);
-var lenis=new Lenis({duration:.8});
+var lenis=new Lenis({lerp:.25});
 lenis.on('scroll',ScrollTrigger.update);
 gsap.ticker.add(function(t){lenis.raf(t*1000)});
 gsap.ticker.lagSmoothing(0);
@@ -343,7 +343,7 @@ document.querySelectorAll('.reveal').forEach(function(el){
 /* R5 el sol atardece: cruza el cielo y se pone tras la mesa con el scroll del hero */
 var sun=document.querySelector('[data-sun]');
 if(sun){
-  ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:.6,
+  ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:.4,
     onUpdate:function(self){var p=self.progress;
       var x=240+p*960;
       var y=70+p*p*175;

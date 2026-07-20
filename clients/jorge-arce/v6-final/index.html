@@ -468,7 +468,7 @@ function initMotion(){
     return;
   }
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',function(e){ScrollTrigger.update();onScrollNav(e.scroll)});
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -512,7 +512,7 @@ function initMotion(){
     var steps=gsap.utils.toArray('.fstep');
     if(matchMedia('(min-width:901px)').matches){
       gsap.set(fill,{scaleY:0});
-      ScrollTrigger.create({trigger:file,start:'top 62%',end:'bottom 45%',scrub:.6,
+      ScrollTrigger.create({trigger:file,start:'top 62%',end:'bottom 45%',scrub:.4,
         onUpdate:function(self){var p=self.progress;
           fill.style.transform='scaleY('+p+')';
           num.textContent=('0'+Math.min(5,Math.max(1,Math.ceil(p*5)||1))).slice(-2);

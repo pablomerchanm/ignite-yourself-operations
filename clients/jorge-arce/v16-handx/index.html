@@ -300,7 +300,7 @@ function init(){
   });
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -354,7 +354,7 @@ function init(){
       days.forEach(function(d,i){d.classList.remove('wr');gsap.set(d,{opacity:i===0?1:0})});
       var words=days.map(function(d){var el=d.querySelector('.dnum');return el?el.childNodes[0].textContent:''});
       if(cnt)cnt.textContent='Day '+words[0];
-      ScrollTrigger.create({trigger:'.journey',start:'top 12%',end:'+='+(n*80)+'%',pin:true,scrub:.6,
+      ScrollTrigger.create({trigger:'.journey',start:'top 12%',end:'+='+(n*80)+'%',pin:true,scrub:.4,
         onUpdate:function(self){var p=self.progress;
           var f=Math.min(n-1,Math.max(0,p*n-.5));
           days.forEach(function(d,i){

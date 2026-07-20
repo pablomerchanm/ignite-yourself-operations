@@ -355,7 +355,7 @@ function initMotion(){
   if(tick)tick.innerHTML+=tick.innerHTML;
   if(!MOTION)return;
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -392,7 +392,7 @@ function initMotion(){
   /* bandas full-bleed: la imagen asienta 1.12→1 mapeada al progreso (scrub) */
   gsap.utils.toArray('[data-caseband] .bgw img,[data-caseband] .bgw .phx').forEach(function(im){
     gsap.fromTo(im,{scale:1.12},{scale:1,ease:'none',
-      scrollTrigger:{trigger:im.closest('[data-caseband]'),start:'top bottom',end:'bottom top',scrub:.6}})});
+      scrollTrigger:{trigger:im.closest('[data-caseband]'),start:'top bottom',end:'bottom top',scrub:.4}})});
   gsap.utils.toArray('[data-caseband]').forEach(function(el){
     gsap.fromTo(el,{opacity:0},{opacity:1,duration:.9,ease:'expo.out',
       scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
@@ -400,7 +400,7 @@ function initMotion(){
   var fans=gsap.utils.toArray('[data-fan]');
   if(fans.length&&matchMedia('(min-width:761px)').matches){
     gsap.set(fans,function(){return{}});
-    ScrollTrigger.create({trigger:'#heroFan',start:'top top',end:'bottom 60%',scrub:.6,
+    ScrollTrigger.create({trigger:'#heroFan',start:'top top',end:'bottom 60%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         fans.forEach(function(f,i){var k=(i-(fans.length-1)/2);
           f.style.transform='translateX('+(k*18*p)+'px) translateY('+(-14*p*Math.abs(k))+'px) rotate('+(k*4*p)+'deg)'})}});

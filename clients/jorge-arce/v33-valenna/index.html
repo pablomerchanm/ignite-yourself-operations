@@ -229,7 +229,7 @@ fetch('/v33-valenna/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -275,7 +275,7 @@ function init(){
   /* R5 el diptico se abre: las dos mitades del hero divergen al salir */
   var L=document.querySelector('[data-split="l"]'),R=document.querySelector('[data-split="r"]');
   if(L&&R){
-    ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom 20%',scrub:.6,
+    ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom 20%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         L.style.transform='translateX('+(-p*4)+'vw)';
         R.style.transform='translateX('+(p*4)+'vw)';

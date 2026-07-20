@@ -244,7 +244,7 @@ fetch('/v21-getty/content.json').then(function(r){if(!r.ok)throw new Error(r.sta
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -294,7 +294,7 @@ function init(){
   /* R5a revelado de placas */
   var maxBlur=window.innerWidth>900?6:4;
   document.querySelectorAll('[data-dev]').forEach(function(el){
-    ScrollTrigger.create({trigger:el,start:'top 92%',end:'top 40%',scrub:.6,
+    ScrollTrigger.create({trigger:el,start:'top 92%',end:'top 40%',scrub:.4,
       onUpdate:function(self){var k=self.progress;
         el.style.filter='grayscale('+(1-.85*k)+') brightness('+(1.35-.35*k)+') blur('+((1-k)*maxBlur)+'px) contrast(1.02)';
       }});
@@ -305,7 +305,7 @@ function init(){
     if(name){
       name.style.transform='scale(.96)';
       if(sub)sub.style.opacity=0;
-      ScrollTrigger.create({trigger:'.giant',start:'top 18%',end:'+=55%',pin:true,scrub:.6,
+      ScrollTrigger.create({trigger:'.giant',start:'top 18%',end:'+=55%',pin:true,scrub:.4,
         onUpdate:function(self){var p=self.progress;
           name.style.transform='scale('+(0.96+.04*Math.min(1,p*1.6))+')';
           if(sub)sub.style.opacity=Math.min(1,p*2);
@@ -315,7 +315,7 @@ function init(){
   /* píldora de progreso global */
   var fill=document.getElementById('pfill');
   if(fill){
-    ScrollTrigger.create({start:0,end:'max',scrub:.6,
+    ScrollTrigger.create({start:0,end:'max',scrub:.4,
       onUpdate:function(self){fill.style.transform='scaleY('+self.progress+')'}});
   }
 }

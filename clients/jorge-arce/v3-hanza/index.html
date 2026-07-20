@@ -406,7 +406,7 @@ function initMotion(navColor){
     quote.innerHTML=words.map(function(w){return'<span class="qw">'+esc(w)+'</span>'}).join(' ')}
   if(!MOTION){addEventListener('scroll',navColor,{passive:true});return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',function(){ScrollTrigger.update();navColor()});
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -442,7 +442,7 @@ function initMotion(navColor){
       scrollTrigger:{trigger:el,start:'top 86%',once:true}})});
   /* R5 quote-scrub: la cita se enciende palabra a palabra con el scroll */
   if(quote){var qws=quote.querySelectorAll('.qw');
-    ScrollTrigger.create({trigger:'#quoteScrolly',start:'top 72%',end:'center 42%',scrub:.6,
+    ScrollTrigger.create({trigger:'#quoteScrolly',start:'top 72%',end:'center 42%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         qws.forEach(function(w,i){var k=gsap.utils.clamp(0,1,(p-(i/qws.length))/(1.6/qws.length));
           w.style.color=k>.5?'#fff':''})}})}

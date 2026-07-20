@@ -278,7 +278,7 @@ var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').ma
 var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
 if(!MOTION){document.documentElement.classList.add('no-motion');return}
 gsap.registerPlugin(ScrollTrigger);
-var lenis=new Lenis({duration:.8});
+var lenis=new Lenis({lerp:.25});
 lenis.on('scroll',ScrollTrigger.update);
 gsap.ticker.add(function(t){lenis.raf(t*1000)});
 gsap.ticker.lagSmoothing(0);
@@ -296,12 +296,12 @@ document.querySelectorAll('.reveal').forEach(function(el){
 });
 var tk=document.querySelector('.ticker .in');
 if(tk){
-  ScrollTrigger.create({trigger:'.ticker',start:'top bottom',end:'bottom top',scrub:.6,
+  ScrollTrigger.create({trigger:'.ticker',start:'top bottom',end:'bottom top',scrub:.4,
     onUpdate:function(self){tk.style.transform='translateX('+(-self.progress*28)+'%)'}});
 }
 var ck=document.querySelector('.hero .cookie');
 if(ck){
-  ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:.6,
+  ScrollTrigger.create({trigger:'.hero',start:'top top',end:'bottom top',scrub:.4,
     onUpdate:function(self){var p=self.progress;
       ck.style.transform='translateY('+(-p*46)+'px) rotate('+(-4+p*9)+'deg)'}});
 }
@@ -312,7 +312,7 @@ function bounceK(k){
   var t2=(k-.8)/.2;return 1+.06*Math.sin(t2*Math.PI);
 }
 document.querySelectorAll('.bake .item svg').forEach(function(sv){
-  ScrollTrigger.create({trigger:sv,start:'top 96%',end:'top 52%',scrub:.6,
+  ScrollTrigger.create({trigger:sv,start:'top 96%',end:'top 52%',scrub:.4,
     onUpdate:function(self){var k=self.progress;
       var bk=bounceK(k);
       var y=(1-Math.min(1,k/.6))*-46;
