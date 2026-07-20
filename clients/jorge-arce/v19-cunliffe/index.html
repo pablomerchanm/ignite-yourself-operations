@@ -306,7 +306,7 @@ function init(){
 
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -355,7 +355,7 @@ function init(){
   document.querySelectorAll('.chapter').forEach(function(sec){
     var ghost=sec.querySelector('[data-ghost]');
     if(!ghost)return;
-    ScrollTrigger.create({trigger:sec,start:'top 80%',end:'bottom 45%',scrub:.6,
+    ScrollTrigger.create({trigger:sec,start:'top 80%',end:'bottom 45%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         var bell=1-Math.abs(p-.5)*2;
         ghost.style.color='rgba(244,244,245,'+(Math.max(0,bell)*.10).toFixed(3)+')';
@@ -366,7 +366,7 @@ function init(){
   var fill=document.getElementById('spinefill'),sky=document.getElementById('sky');
   var links=Array.prototype.slice.call(document.querySelectorAll('.rail a'));
   var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
-  ScrollTrigger.create({start:0,end:'max',scrub:.6,
+  ScrollTrigger.create({start:0,end:'max',scrub:.4,
     onUpdate:function(self){var p=self.progress;
       if(fill)fill.style.transform='scaleY('+p+')';
       window.__readPct=Math.round(p*100);

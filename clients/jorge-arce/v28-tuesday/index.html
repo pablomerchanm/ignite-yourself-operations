@@ -233,7 +233,7 @@ fetch('/v28-tuesday/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -264,7 +264,7 @@ function init(){
   document.querySelectorAll('[data-tilt]').forEach(function(el){
     var dir=el.getAttribute('data-side')==='r'?1:-1;
     el.style.opacity=0;
-    ScrollTrigger.create({trigger:el,start:'top 96%',end:'top 55%',scrub:.6,
+    ScrollTrigger.create({trigger:el,start:'top 96%',end:'top 55%',scrub:.4,
       onUpdate:function(self){var k=self.progress;
         el.style.opacity=Math.min(1,k*1.6);
         el.style.transform='rotate('+(dir*4*(1-k))+'deg) translateY('+((1-k)*26)+'px)';

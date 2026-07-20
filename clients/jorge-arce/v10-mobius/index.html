@@ -360,7 +360,7 @@ function boot(data){
 function initMotion(){
   if(!MOTION)return;
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -393,7 +393,7 @@ function initMotion(){
     gsap.to(line,{scaleX:1,duration:.8,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}})});
   /* R5 BANDA-EXPAND: clip-path inset 7%+radio → full-bleed, mapeado (paint) */
   var bx=document.querySelector('#bandX .bx');
-  if(bx){ScrollTrigger.create({trigger:'#bandX',start:'top 85%',end:'top 25%',scrub:.6,
+  if(bx){ScrollTrigger.create({trigger:'#bandX',start:'top 85%',end:'top 25%',scrub:.4,
     onUpdate:function(self){var p=self.progress;
       bx.style.clipPath='inset(0 '+(7*(1-p))+'% round '+(24*(1-p))+'px)'}})}
 }

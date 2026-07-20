@@ -8,7 +8,7 @@ var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').ma
 var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
 if(!MOTION){document.documentElement.classList.add('no-motion');return}
 gsap.registerPlugin(ScrollTrigger);
-var lenis=new Lenis({duration:.8});
+var lenis=new Lenis({lerp:.25});
 lenis.on('scroll',ScrollTrigger.update);
 gsap.ticker.add(function(t){lenis.raf(t*1000)});
 gsap.ticker.lagSmoothing(0);
@@ -35,7 +35,7 @@ document.querySelectorAll('[data-stagger]').forEach(function(g){
 });
 /* R5 el sello gira con el scroll */
 document.querySelectorAll('[data-seal]').forEach(function(sv){
-  ScrollTrigger.create({start:0,end:'max',scrub:.5,
+  ScrollTrigger.create({start:0,end:'max',scrub:.35,
     onUpdate:function(self){sv.style.transform='rotate('+(self.progress*720)+'deg)'}});
 });
 document.querySelectorAll('a[href^="#"]').forEach(function(a){

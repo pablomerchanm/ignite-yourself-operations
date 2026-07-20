@@ -342,7 +342,7 @@ fetch('/v12-caliora/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -405,7 +405,7 @@ function init(){
     cards.forEach(function(c,i){
       if(i>=cards.length-1)return;
       var next=cards[i+1];
-      ScrollTrigger.create({trigger:next,start:'top bottom',end:'top '+(96+i*26+40)+'px',scrub:.6,
+      ScrollTrigger.create({trigger:next,start:'top bottom',end:'top '+(96+i*26+40)+'px',scrub:.4,
         onUpdate:function(self){var k=self.progress;
           c.style.transform='scale('+(1-.045*k)+')';
           c.style.filter='brightness('+(1-.1*k)+')';

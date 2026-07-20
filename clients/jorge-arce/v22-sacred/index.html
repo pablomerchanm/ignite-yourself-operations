@@ -282,7 +282,7 @@ function init(){
 
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -320,7 +320,7 @@ function init(){
   /* parallax de poemas/banda al ticker */
   document.querySelectorAll('[data-plx]').forEach(function(im){
     var sec=im.parentElement;
-    ScrollTrigger.create({trigger:sec,start:'top bottom',end:'bottom top',scrub:.6,
+    ScrollTrigger.create({trigger:sec,start:'top bottom',end:'bottom top',scrub:.4,
       onUpdate:function(self){im.style.transform='translateY('+((self.progress-.5)*60)+'px) scale(1.12)'}});
   });
 
@@ -331,7 +331,7 @@ function init(){
     var layers=Array.prototype.slice.call(svg.children);
     var n=layers.length;
     if(!n)return;
-    ScrollTrigger.create({trigger:fig.closest('.mapstep'),start:'top 75%',end:'center 40%',scrub:.6,
+    ScrollTrigger.create({trigger:fig.closest('.mapstep'),start:'top 75%',end:'center 40%',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         layers.forEach(function(ly,j){
           var k=Math.max(0,Math.min(1,p*n-j));

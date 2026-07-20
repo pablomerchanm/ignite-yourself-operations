@@ -249,7 +249,7 @@ function hex2rgb(x){x=x.replace('#','');return[parseInt(x.substr(0,2),16),parseI
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -311,7 +311,7 @@ function init(){
     }
     measure();
     ScrollTrigger.addEventListener('refresh',measure);
-    ScrollTrigger.create({start:0,end:'max',scrub:.6,
+    ScrollTrigger.create({start:0,end:'max',scrub:.4,
       onUpdate:function(self){var p=self.progress;
         var a=stops[0],b=stops[stops.length-1];
         for(var i=0;i<stops.length-1;i++){

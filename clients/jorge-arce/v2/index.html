@@ -402,7 +402,7 @@ function initMotion(){
   if(!MOTION){routeFinal();return}
 
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({duration:.8});
+  var lenis=new Lenis({lerp:.25});
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(function(t){lenis.raf(t*1000)});
   gsap.ticker.lagSmoothing(0);
@@ -454,7 +454,7 @@ function initMotion(){
     var total=+years.dataset.years||0;
     if(matchMedia('(min-width:761px)').matches){
       gsap.set([orig,dest],{opacity:0,y:10});
-      ScrollTrigger.create({trigger:scrolly,start:'top 55%',end:'+=120%',pin:true,scrub:.6,
+      ScrollTrigger.create({trigger:scrolly,start:'top 55%',end:'+=120%',pin:true,scrub:.4,
         onUpdate:function(self){var p=self.progress;
           routePath.style.strokeDashoffset=String(len*(1-p));
           years.textContent=('0'+Math.round(p*total)).slice(-2);

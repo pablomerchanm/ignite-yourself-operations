@@ -330,7 +330,7 @@
     if (!MOTION) return;
     gsap.registerPlugin(ScrollTrigger);
 
-    var lenis = new Lenis({ duration: 1.05 });
+    var lenis = new Lenis({ lerp: .25 });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
     gsap.ticker.lagSmoothing(0);
