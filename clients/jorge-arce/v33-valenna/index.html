@@ -177,7 +177,7 @@ function slot(s,cls,tag){
 var partials={
 hero:function(s){
   return'<header class="hero" id="top">'+
-  '<div class="half left" data-split="l"><div class="inset wr">'+slot(s.left&&s.left.img,(s.left&&s.left.cls)||'',s.left&&s.left.tag)+'</div></div>'+
+  '<div class="half left" data-split="l"><div class="inset wr" data-r1>'+slot(s.left&&s.left.img,(s.left&&s.left.cls)||'',s.left&&s.left.tag)+'</div></div>'+
   '<div class="half right" data-split="r">'+slot(s.right&&s.right.img,(s.right&&s.right.cls)||'',s.right&&s.right.tag)+'</div>'+
   '<div class="wm wr" data-r1>'+esc(s.wm)+'</div>'+
   '<div class="script wr" data-r1>'+esc(s.script)+'</div>'+
@@ -229,9 +229,12 @@ fetch('/v33-valenna/content.json').then(function(r){if(!r.ok)throw new Error(r.s
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.25});
-  lenis.on('scroll',ScrollTrigger.update);
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
   gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}

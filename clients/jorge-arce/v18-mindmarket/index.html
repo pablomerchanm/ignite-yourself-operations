@@ -252,9 +252,12 @@ function backOut(k){var c1=1.70158,c3=c1+1;k=Math.max(0,Math.min(1,k));return 1+
 function init(){
   if(!MOTION){wireAnchors(null);return}
   gsap.registerPlugin(ScrollTrigger);
-  var lenis=new Lenis({lerp:.25});
-  lenis.on('scroll',ScrollTrigger.update);
-  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
   gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}

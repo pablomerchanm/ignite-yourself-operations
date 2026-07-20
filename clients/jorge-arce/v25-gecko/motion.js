@@ -8,9 +8,12 @@ var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').ma
 var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
 if(!MOTION){document.documentElement.classList.add('no-motion');return}
 gsap.registerPlugin(ScrollTrigger);
-var lenis=new Lenis({lerp:.25});
-lenis.on('scroll',ScrollTrigger.update);
-gsap.ticker.add(function(t){lenis.raf(t*1000)});
+var lenis=null;
+if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+  lenis=new Lenis({lerp:.3});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+}
 gsap.ticker.lagSmoothing(0);
   /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
@@ -41,7 +44,7 @@ document.querySelectorAll('[data-seal]').forEach(function(sv){
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     var t=document.querySelector(a.getAttribute('href'));
-    if(!t)return;e.preventDefault();lenis.scrollTo(t);
+    if(!t)return;e.preventDefault();if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
   });
 });
 })();

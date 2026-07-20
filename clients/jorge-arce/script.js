@@ -144,8 +144,8 @@
    * 0 · Smooth scroll (Lenis) — drives the frame loop; native fallback.    *
    * --------------------------------------------------------------------- */
   var lenis = null;
-  if (!reduce && typeof window.Lenis === "function") {
-    lenis = new window.Lenis({ lerp: 0.11, wheelMultiplier: 1, smoothWheel: true, touchMultiplier: 1.6 });
+  if (!reduce && typeof window.Lenis === "function" && window.matchMedia("(hover:hover) and (pointer:fine)").matches) {
+    lenis = new window.Lenis({ lerp: 0.3, wheelMultiplier: 1, smoothWheel: true });
     lenis.on("scroll", frame);
     var raf = function (t) { lenis.raf(t); requestAnimationFrame(raf); };
     requestAnimationFrame(raf);
