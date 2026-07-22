@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Ignite Yourself — Personal Brand Systems</title>
+  <meta name="description" content="Ignite Yourself builds personal brand systems. Ignited is a 12-week Personal Brand System: positioning, narrative, visual world, owned website, Ignite OS, and opportunity architecture — for people who'd rather do the work than post about it." />
+  <meta name="theme-color" content="#080807" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/igy/styles.css" />
+</head>
+<body>
+
+  <!-- Flecha propia del estudio (geometría Swiss, hereda color y tamaño) -->
+  <svg class="sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <symbol id="i-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M2.5 12H20" />
+      <path d="M13.4 5.6 19.8 12 13.4 18.4" />
+    </symbol>
+  </svg>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ 01 HEADER ============ -->
+  <header class="header">
+    <a class="header__logo" href="#top" aria-label="Ignite Yourself — home"><img src="/igy/assets/logo-igy.png" alt="Ignite Yourself" /></a>
+    <nav class="header__nav" id="siteNav" aria-label="Primary">
+      <a href="#about" data-drawer-open>About</a>
+      <a href="#work">Work</a>
+      <a href="#build">The System</a>
+      <a href="#process">Process</a>
+      <a class="header__nav-cta" href="#contact">Tell us your story <svg class="ico ico--ne" aria-hidden="true"><use href="#i-arr"/></svg></a>
+    </nav>
+    <div class="header__right">
+      <a class="btn btn--light" href="#contact"><span>Tell us your story</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+      <button class="header__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 02 HERO (pinned: el logo se arma con el primer scroll) ============ -->
+    <div class="pinh" data-pinh="1.85">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__photo" src="/igy/assets/hero.jpg" alt="" />
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="hero__center">
+        <div class="hero__spark" aria-hidden="true">
+          <img src="/igy/assets/spark.png" alt="" />
+        </div>
+        <p class="hero__statement" data-reveal>You shouldn&rsquo;t be your industry&rsquo;s<br />best-kept secret.</p>
+        <p class="hero__statement" data-reveal>We build the authority-driven<br />personal brand system that makes<br />sure the world sees you.</p>
+        <p class="hero__statement hero__statement--soft" data-reveal>For people who&rsquo;d rather do the work<br />than post about it.</p>
+      </div>
+
+      <h1 class="hero__wordmark" aria-label="Ignite Yourself">
+        <span class="hero__logo-stage">
+          <img class="hero__logo-piece hero__logo-ignite" src="/igy/assets/logo-ignite.png" alt="" width="2400" height="407" />
+          <img class="hero__logo-piece hero__logo-yourself" src="/igy/assets/logo-yourself.png" alt="" width="2400" height="407" />
+          <img class="hero__logo-piece hero__logo-spark" src="/igy/assets/logo-spark.png" alt="" width="2400" height="407" />
+        </span>
+      </h1>
+    </section>
+    </div>
+
+    <!-- ============ 03 AUTHORITY GAP STATEMENT (pinned scrollytelling) ============ -->
+    <div class="pin" data-pin="2.4">
+    <section class="gapst section-dark" id="gap">
+      <div class="gapst__aside" data-reveal>
+        <div class="gapst__track" aria-hidden="true"><span class="gapst__track-fill"></span></div>
+      </div>
+
+      <div class="gapst__main">
+        <p class="gapst__statement" data-reveal>
+          What you&rsquo;ve built is real. The work, the results, the people who trust you — you&rsquo;ve already done the hard part.
+        </p>
+        <p class="gapst__support" data-reveal>
+          But the world doesn&rsquo;t decide with what&rsquo;s real. It decides with what it can see — and it can&rsquo;t see you yet.
+        </p>
+        <p class="gapst__support" data-reveal>
+          Meanwhile, the visible — not the best — are collecting the opportunities.<br />That&rsquo;s not talent. That&rsquo;s a system. And systems can be built.
+        </p>
+        <div class="gapst__sign" data-reveal>
+          <div class="gapst__avatar"><img src="/igy/assets/pablo-sign.jpg" alt="Pablo Merchán" loading="lazy" /></div>
+          <div>
+            <div class="gapst__name">Pablo Merchán</div>
+            <div class="mono gapst__role">Founder, Ignite Yourself</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- ============ 05 BRIDGE ============ -->
+    <section class="bridge section-light" id="bridge">
+      <h2 class="bridge__title bridge__title--one fit" data-drift="-4" data-reveal><span class="fit__text">WE&nbsp;BUILD&nbsp;THAT&nbsp;SYSTEM</span></h2>
+      <p class="bridge__copy" data-reveal>
+        We take who you already are — the work, the story, the point of view — and turn it into positioning, narrative, platform, and opportunity.
+      </p>
+      <p class="bridge__chain" data-reveal>Your story becomes a system.<br />The system goes to work for you.</p>
+      <img class="bridge__spark" src="/igy/assets/spark.png" alt="" aria-hidden="true" data-reveal />
+    </section>
+
+    <!-- ============ 06 SELECTED WORK / PORTFOLIO ============ -->
+    <section class="work section-dark" id="work">
+      <h2 class="section-label" data-reveal><span class="section-label__dot"></span>Success Stories</h2>
+      <p class="work__intro" data-reveal>
+        Different stages, same system: an author and artist building his world, a surgeon with 27 years of mastery, an executive voice going global. What they share isn&rsquo;t a career length — it&rsquo;s a story worth seeing.
+      </p>
+
+      <article class="story story--banner" data-reveal>
+        <div class="story__media">
+          <img src="/igy/assets/adriana.jpg" alt="Adriana Mejía" width="2400" height="1350" loading="lazy" />
+        </div>
+        <div class="story__body">
+          <div class="story__chip mono">AS <svg class="ico ico--left" aria-hidden="true"><use href="#i-arr"/></svg> <span class="chip-box">01</span></div>
+          <h3 class="story__title">Adriana Mejía</h3>
+          <p class="story__field mono">Global Coffee Platform — Sustainability</p>
+          <p class="story__desc">Authority system for an executive voice in global coffee, governance, regeneration, and sustainability.</p>
+          <div class="story__status mono">(Status) Ignite OS / editorial system</div>
+        </div>
+      </article>
+
+      <article class="story story--banner" data-reveal>
+        <div class="story__media">
+          <img src="/igy/assets/tomi.jpg" alt="Tomi Lappi" width="2400" height="1350" loading="lazy" />
+        </div>
+        <div class="story__body">
+          <div class="story__chip mono">AS <svg class="ico ico--left" aria-hidden="true"><use href="#i-arr"/></svg> <span class="chip-box">02</span></div>
+          <h3 class="story__title">Tomi Lappi</h3>
+          <p class="story__field mono">Author, Artist &amp; Guide — Helsinki / Worldwide</p>
+          <p class="story__desc">A complete, live authority system for a writer and guide helping people live beyond logic — positioning, narrative, visual world, owned platform, an online course, and a private mentoring practice, all under his own name, face, and story.</p>
+          <div class="story__status mono">(Status) Live authority system</div>
+          <a class="btn btn--ghost" href="https://www.tomilappi.com/" target="_blank" rel="noopener"><span>Visit site</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+        </div>
+      </article>
+
+      <article class="story story--banner" data-reveal>
+        <div class="story__media">
+          <img src="/igy/assets/josemanuel.jpg" alt="José Manuel Hernández" width="2400" height="1350" loading="lazy" />
+        </div>
+        <div class="story__body">
+          <div class="story__chip mono">AS <svg class="ico ico--left" aria-hidden="true"><use href="#i-arr"/></svg> <span class="chip-box">03</span></div>
+          <h3 class="story__title">José Manuel Hernández</h3>
+          <p class="story__field mono">Profile in preparation</p>
+          <p class="story__desc">The next story in the collection — system ready, going live soon.</p>
+          <div class="story__status mono">(Status) Launching soon</div>
+        </div>
+      </article>
+
+      <article class="story story--banner" data-reveal>
+        <div class="story__media">
+          <img src="/igy/assets/arce.jpg" alt="Dr. Jorge Arce" width="2400" height="1350" loading="lazy" />
+        </div>
+        <div class="story__body">
+          <div class="story__chip mono">AS <svg class="ico ico--left" aria-hidden="true"><use href="#i-arr"/></svg> <span class="chip-box">04</span></div>
+          <h3 class="story__title">Dr. Jorge Arce</h3>
+          <p class="story__field mono">Oral &amp; Maxillofacial Surgery — California / Colombia</p>
+          <p class="story__desc">A live digital ecosystem map translating 27 years of surgical expertise into one connected system — website, social layer, and professional network engineered to work as one, with a 90-day brand journey.</p>
+          <div class="story__status mono">(Status) Live ecosystem map / strategic prototype</div>
+          <a class="btn btn--ghost" href="https://dr-jorge-arce-ignite-yourself.vercel.app/" target="_blank" rel="noopener"><span>Explore system</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+        </div>
+      </article>
+
+      <div class="work__all" data-reveal>
+        <span class="work__all-num">06</span>
+        <h3 class="work__all-title">More stories</h3>
+        <span class="work__all-arrow mono" aria-hidden="true">(<svg class="ico"><use href="#i-arr"/></svg>)</span>
+      </div>
+    </section>
+
+    <!-- ============ 06.5 VOICES / TESTIMONIALS ============ -->
+    <!-- ⚠ DRAFT: the quotes below are placeholders we wrote to show the design.
+         Do NOT publish until each quote is validated and approved by the client. -->
+    <section class="voices section-dark" id="voices">
+      <div class="voices__bar" data-reveal>
+        <div class="voices__nav">
+          <button type="button" class="voices__arrow" data-vprev aria-label="Previous testimonial"><svg class="ico ico--left"><use href="#i-arr"/></svg></button>
+          <button type="button" class="voices__arrow" data-vnext aria-label="Next testimonial"><svg class="ico"><use href="#i-arr"/></svg></button>
+        </div>
+        <span class="voices__count mono"><span data-vcur>01</span>&thinsp;/&thinsp;<span data-vtotal>02</span></span>
+      </div>
+
+      <p class="voices__label mono" data-reveal>(In their words)</p>
+
+      <div class="voices__stage" data-reveal>
+        <figure class="voice is-active" data-voice>
+          <blockquote class="voice__quote">
+            &ldquo;For the first time, twenty-seven years of surgery live in one place &mdash; and it finally looks like the work.&rdquo;
+          </blockquote>
+          <figcaption class="voice__by">
+            <span class="voice__avatar" aria-hidden="true">JA</span>
+            <span class="voice__id">
+              <span class="voice__name">Dr. Jorge Arce</span>
+              <span class="voice__role mono">Oral &amp; Maxillofacial Surgeon</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="voice" data-voice>
+          <blockquote class="voice__quote">
+            &ldquo;I stopped explaining what I do. Now I send one link, and the room already understands the authority I carry.&rdquo;
+          </blockquote>
+          <figcaption class="voice__by">
+            <span class="voice__avatar" aria-hidden="true">AM</span>
+            <span class="voice__id">
+              <span class="voice__name">Adriana Mej&iacute;a</span>
+              <span class="voice__role mono">Executive &mdash; Global Coffee &amp; Sustainability</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 07 WHAT WE BUILD ============ -->
+    <section class="buildv2 section-light" id="build">
+      <h2 class="section-label" data-reveal><span class="section-label__dot"></span>The System</h2>
+
+      <p class="buildv2__headline split-reveal">
+        Five connected layers. One system you own — <span class="dim-light">not a collection of disconnected assets.</span>
+      </p>
+
+      <div class="buildv2__cols">
+        <ul class="buildv2__list" data-stagger>
+          <li>Positioning</li>
+          <li>Narrative</li>
+          <li>Digital Ecosystem</li>
+          <li>Ignite OS</li>
+          <li>Launch</li>
+        </ul>
+        <div class="buildv2__side">
+          <p class="buildv2__support" data-reveal>
+            We turn who you already are into a system that works for you — from what you should be known for, to the platform, profiles, and content that carry it, to the opportunities it&rsquo;s built to attract.
+          </p>
+          <dl class="buildv2__details">
+            <div data-reveal><dt class="mono">01 — Positioning</dt><dd>We define what you should be known for, by whom, and the opportunities it should open.</dd></div>
+            <div data-reveal><dt class="mono">02 — Narrative</dt><dd>We shape your story, ideas, and point of view into one clear narrative — the truth about you, told well.</dd></div>
+            <div data-reveal><dt class="mono">03 — Digital Ecosystem</dt><dd>Where the world meets you: your visual world, an owned website, professional profiles, and launch assets.</dd></div>
+            <div data-reveal><dt class="mono">04 — Ignite OS</dt><dd>The private engine room where your positioning, channels, editorial direction, and content plans run together.</dd></div>
+            <div data-reveal><dt class="mono">05 — Launch</dt><dd>We put it all in motion — first publications, live profiles, opportunity pathways, and a roadmap for what&rsquo;s next.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 12-WEEK AUTHORITY BUILD ============ -->
+    <section class="section-dark" id="process">
+      <h2 class="section-label" data-reveal><span class="section-label__dot"></span>The 12-week journey</h2>
+      <div class="journey__mark">
+        <h2 class="journey__giant fit" data-drift="-5"><span class="fit__text">IGNITED</span></h2>
+        <img class="journey__spark" src="/igy/assets/spark.png" alt="" aria-hidden="true" data-reveal />
+      </div>
+      <p class="journey__intro" data-reveal>This is how we build it — from your story to a system that works for you, in three moves.</p>
+
+      <div class="step" data-reveal>
+        <div class="step__idx mono">Step&nbsp;•&nbsp;01<br />Weeks&nbsp;1–4</div>
+        <div class="step__body">
+          <h3>We uncover your story</h3>
+          <p>We dig into everything you&rsquo;ve built — the work, the wins, the point of view — and shape it into sharp positioning: what you should be known for, by whom, and the opportunities it should open.</p>
+          <ul class="step__list mono" data-stagger>
+            <li>Onboarding</li><li>Deep-dive interview</li><li>Background and market research</li><li>Visibility Gap</li><li>Positioning</li><li>Opportunity Map</li><li>Narrative</li><li>Ignite Playbook</li><li>Ecosystem architecture</li>
+          </ul>
+          <p class="step__outcome"><span class="mono">(Outcome)</span> The strategic foundation your whole system stands on.</p>
+        </div>
+        <div class="step__media"><img src="/igy/assets/step-story.jpg" alt="" width="1200" height="896" loading="lazy" /></div>
+      </div>
+
+      <div class="step" data-reveal>
+        <div class="step__idx mono">Step&nbsp;•&nbsp;02<br />Weeks&nbsp;5–8</div>
+        <div class="step__body">
+          <h3>We build your system</h3>
+          <p>With your story locked, we design and build the whole thing — your visual world, your website, your profiles, and the private engine that runs it — so every piece feels premium and points the same way.</p>
+          <ul class="step__list mono" data-stagger>
+            <li>Visual universe</li><li>Owned website</li><li>Core copy</li><li>Professional profiles</li><li>Ignite OS</li><li>Initial editorial assets</li><li>Opportunity pathways</li>
+          </ul>
+          <p class="step__outcome"><span class="mono">(Outcome)</span> The infrastructure of your brand, built and ready to go live.</p>
+        </div>
+        <div class="step__media"><img src="/igy/assets/step-system.jpg" alt="" width="1200" height="896" loading="lazy" /></div>
+      </div>
+
+      <div class="step" data-reveal>
+        <div class="step__idx mono">Step&nbsp;•&nbsp;03<br />Weeks&nbsp;9–12</div>
+        <div class="step__body">
+          <h3>We put you in the world</h3>
+          <p>Your system goes live as a long-term asset: first publications, active profiles, and clear pathways that turn attention into the opportunities you&rsquo;re built for — with a roadmap to keep growing.</p>
+          <ul class="step__list mono" data-stagger>
+            <li>Website and profile activation</li><li>Launch publications</li><li>Initial signal review</li><li>Narrative and experience adjustments</li><li>Handover</li><li>90-day roadmap</li>
+          </ul>
+          <p class="step__outcome"><span class="mono">(Outcome)</span> An active system you own and can keep operating.</p>
+        </div>
+        <div class="step__media"><img src="/igy/assets/step-world.jpg" alt="" width="1200" height="896" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- ============ 09 INVESTMENT ============ -->
+    <section class="invest section-dark" id="investment">
+      <h2 class="section-label" data-reveal><span class="section-label__dot"></span>Investment</h2>
+      <p class="work__intro" data-reveal>What&rsquo;s it costing you to stay the best-kept secret? Not in dollars — in the opportunities quietly going to someone more visible.</p>
+
+      <div class="invest__grid">
+        <div class="invest__offer" data-reveal>
+          <h3 class="invest__name">Ignited</h3>
+          <div class="invest__price">
+            <span class="invest__weeks mono">12 weeks</span>
+            <span class="invest__amount">USD 9,000</span>
+          </div>
+          <p class="invest__payment">Paid in full or in three monthly payments of USD 3,000.</p>
+          <a class="btn btn--light" href="#contact"><span>Tell us your story</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+        </div>
+
+        <div class="invest__detail" data-reveal>
+          <div class="invest__label mono">(Included)</div>
+          <ul class="invest__list mono" data-stagger>
+            <li>Positioning</li>
+            <li>Narrative</li>
+            <li>Ignite Playbook</li>
+            <li>Visual universe</li>
+            <li>Owned website</li>
+            <li>Professional profiles</li>
+            <li>Ignite OS</li>
+            <li>Initial launch assets</li>
+            <li>Opportunity architecture</li>
+            <li>90-day roadmap</li>
+          </ul>
+
+          <div class="invest__continuity">
+            <div class="invest__label mono">(Continuity)</div>
+            <p>After Ignited, you may operate the system internally or continue with Ignite Yourself through Ignite Operations, starting at USD 2,500/month.</p>
+            <p class="invest__line">First, we build the system.<br /><span class="dim">Then, if you choose, we operate it with you.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 BEFORE WE BUILD / FAQ ============ -->
+    <section class="faq section-dark" id="faq">
+      <div class="faq__aside" data-reveal>
+        <h2 class="section-label"><span class="section-label__dot"></span>FAQ</h2>
+        <p class="faq__lead split-reveal">Before we build<br />your system.</p>
+        <p class="faq__note dim">More questions?<br />Let&rsquo;s talk.</p>
+        <a class="btn btn--light" href="#contact"><span>Tell us your story</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+      </div>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>Who is Ignited for?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>People with something real behind them — work, results, a story, a point of view. Wherever you are in that story, the system is built around who you already are, never manufactured from scratch.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Is this personal branding?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>It&rsquo;s what personal branding should have been. Not posting more — a system that tells the world who you are, and then goes to work for you.</p>
+        </details>
+        <details class="faq__item">
+          <summary>How long does it take?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>Ignited takes 12 weeks.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What do you need from me?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>Your time, your story, your expertise, and access to the material we need to extract and shape the system.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Is this social media management?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>No. This is the construction of a complete personal brand system. Content is part of the system, but volume is not the product.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What happens after Ignited?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>You can operate the system internally or continue with Ignite Yourself through Ignite Operations.</p>
+        </details>
+        <details class="faq__item">
+          <summary>What is the investment?<span class="faq__dot" aria-hidden="true"></span></summary>
+          <p>Ignited is USD 9,000, paid upfront or in three monthly payments of USD 3,000.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 11+12 CIERRE — finale y footer sobre la misma foto ============ -->
+  <div class="close">
+    <div class="close__media" aria-hidden="true">
+      <img src="/igy/assets/finale.jpg" alt="" loading="lazy" />
+      <div class="close__shade"></div>
+    </div>
+
+    <section class="finale" id="contact">
+      <div class="finale__stack">
+        <h2 class="finale__title" data-stagger>
+          <span class="line-mask"><span class="line-in">THE WORLD</span></span>
+          <span class="line-mask finale__indent"><span class="line-in">CAN&rsquo;T SAY YES</span></span>
+          <span class="line-mask"><span class="line-in">TO WHAT IT</span></span>
+          <span class="line-mask finale__indent"><span class="line-in">CAN&rsquo;T SEE</span></span>
+        </h2>
+        <a class="btn btn--light finale__cta" href="mailto:pablomerchanm@gmail.com" data-reveal><span>Tell us your story</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+        <p class="finale__micro mono" data-reveal>A 30-minute conversation. We listen first — that&rsquo;s the whole method.</p>
+      </div>
+    </section>
+
+  <footer class="footer section-dark">
+    <div class="footer__cols">
+      <div>
+        <h2 class="section-label"><span class="section-label__dot"></span>Navigation</h2>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#work">Work</a>
+          <a href="#build">The System</a>
+          <a href="#process">Process</a>
+          <a href="#investment">Investment</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer__meta">
+        <div class="footer__block">
+          <div class="mono footer__label">(Details)</div>
+          <a class="footer__mail" href="mailto:pablomerchanm@gmail.com"><svg class="ico footer__mail-ico" aria-hidden="true"><use href="#i-arr"/></svg>pablomerchanm@gmail.com</a>
+          <p class="dim">Personal Brand Systems.<br />Built remotely.<br />For people building something real, worldwide.</p>
+        </div>
+        <div class="footer__block">
+          <div class="mono footer__label">(Elsewhere)</div>
+          <a href="#">Instagram <svg class="ico ico--ne" aria-hidden="true"><use href="#i-arr"/></svg></a>
+          <a href="#">LinkedIn <svg class="ico ico--ne" aria-hidden="true"><use href="#i-arr"/></svg></a>
+          <a href="#">Website <svg class="ico ico--ne" aria-hidden="true"><use href="#i-arr"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__logo" data-reveal>
+      <img src="/igy/assets/logo-stacked.png" alt="Ignite Yourself" />
+    </div>
+    <div class="footer__bar mono">
+      <span id="clock" data-clock-tz="America/Bogota" data-clock-label="Bogotá">Bogotá --:--:--</span>
+      <span>Best-kept secrets end here.</span>
+      <a href="#top" id="backTop">Back to top <svg class="ico ico--up" aria-hidden="true"><use href="#i-arr"/></svg></a>
+    </div>
+  </footer>
+  </div><!-- /.close -->
+
+  <!-- ============ ABOUT DRAWER ============ -->
+  <div class="drawer" id="aboutDrawer" aria-hidden="true">
+    <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="About the studio">
+
+      <div class="drawer__head">
+        <h2 class="section-label"><span class="section-label__dot"></span>About the studio</h2>
+        <button class="drawer__close" type="button" data-drawer-close>
+          <span>Close</span><span class="drawer__esc mono">ESC</span>
+        </button>
+      </div>
+
+      <div class="drawer__letter">
+        <p>Hey, I&rsquo;m Pablo. I started Ignite Yourself for people who&rsquo;ve built something real — and watched the world look right past it.</p>
+        <p>My obsession is simple: helping you feel proud of who you are and what you&rsquo;ve made, and turning that into a presence powerful enough that the right opportunities finally find you.</p>
+        <p>We don&rsquo;t manufacture anyone. We listen first, dig into your story, and build a system around who you already are — one you own, that works for you instead of the other way around.</p>
+      </div>
+
+      <div class="drawer__bar mono">
+        <span>Ignite Yourself</span>
+        <span>Personal Brand Systems</span>
+        <span>Working worldwide</span>
+      </div>
+
+      <div class="drawer__photo">
+        <img src="/igy/assets/pablo-about.jpg" alt="Pablo Merchán" loading="lazy" />
+        <span class="drawer__word drawer__word--1">extract</span>
+        <span class="drawer__word drawer__word--2">build</span>
+        <span class="drawer__word drawer__word--3">launch</span>
+      </div>
+
+      <div class="drawer__row">
+        <h3 class="section-label"><span class="section-label__dot"></span>Our principles</h3>
+        <div class="drawer__principles">
+          <div class="drawer__principle">
+            <h4>We extract, we don&rsquo;t invent</h4>
+            <p>You&rsquo;ve already done the work. We organize and project what&rsquo;s real — never a manufactured persona, never turning you into an influencer.</p>
+          </div>
+          <div class="drawer__principle">
+            <h4>A system, not a stream</h4>
+            <p>Not more posting. One connected system — positioning, platform, and story — built to compound quietly while you do your work.</p>
+          </div>
+          <div class="drawer__principle">
+            <h4>You own it</h4>
+            <p>Your platform, your narrative, your name. Everything we build is infrastructure you keep and can run without us.</p>
+          </div>
+          <div class="drawer__principle">
+            <h4>The person before the brand</h4>
+            <p>Behind every system is a real person with real stakes. The most powerful presence is the one that feels unmistakably, proudly you.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn btn--light drawer__cta" href="#contact" data-drawer-close><span>Tell us your story</span><span class="btn__icon" aria-hidden="true"><svg class="ico ico--ne"><use href="#i-arr"/></svg></span></a>
+
+    </aside>
+  </div>
+
+  <script src="/igy/main.js"></script>
+</body>
+</html>
