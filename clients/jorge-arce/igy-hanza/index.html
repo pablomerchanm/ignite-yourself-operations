@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ignite Yourself — The Authority Platform</title>
+<meta name="description" content="A premium website you own — built in one week — that turns your reputation into opportunity.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,400;0,500;0,600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ease-out:cubic-bezier(.16,1,.3,1);--ease-quick:cubic-bezier(.33,1,.68,1);--dur-hover:.2s;--sec:clamp(110px,14vh,170px);
+  --ink:#121212;--dark:#161616;--white:#FFFFFF;--off:#FCFCFC;--gray:#F3F3F3;--line:#E8E8E8;--dim:#6B6B6B;--dimw:rgba(255,255,255,.55);--coral:#FF6044;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
+body{background:var(--off);color:var(--ink);font-family:'Zalando Sans',system-ui,sans-serif;font-weight:500;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--coral);color:#fff}
+.wrap{max-width:1392px;margin:0 auto;padding:0 48px}
+.mono{font-family:'Geist Mono',monospace;font-weight:400;font-size:13px;letter-spacing:.02em;text-transform:uppercase}
+.disp{font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.94}
+h2.disp{font-size:clamp(44px,5.6vw,80px)}
+.disp .coral{color:var(--coral)}
+.sq{display:inline-block;width:7px;height:7px;background:var(--coral);flex:0 0 7px}
+.seclab{display:flex;align-items:center;gap:10px;margin-bottom:56px}
+.seclab .num{color:var(--coral);font-family:'Geist Mono',monospace;font-size:13px}
+
+/* split button */
+.hbtn{display:inline-flex;align-items:stretch;cursor:pointer}
+.hbtn .t{background:var(--ink);color:#fff;font-family:'Geist Mono',monospace;font-size:13px;letter-spacing:.04em;text-transform:uppercase;padding:15px 22px;display:flex;align-items:center}
+.hbtn .a{background:var(--coral);width:46px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:17px;transition:transform var(--dur-hover) var(--ease-quick)}
+.hbtn:hover .a{transform:translateX(3px)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:60;color:#fff;transition:background .35s,color .35s}
+.navin{display:flex;justify-content:space-between;align-items:center;padding:16px 48px}
+.nbrand img{height:18px;display:block;transition:filter .35s}
+nav.onlight{background:rgba(252,252,252,.92);backdrop-filter:blur(8px);color:var(--ink);border-bottom:1px solid var(--line)}
+nav.onlight .nbrand img{filter:brightness(0)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;background:var(--dark);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 24%;opacity:.9;filter:grayscale(1) contrast(1.05) brightness(.8)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.5) 0%,rgba(10,10,10,.12) 40%,rgba(10,10,10,.72) 100%)}
+.hero .mid{position:relative;z-index:2;display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:end;padding:0 48px;margin-bottom:30px}
+.hero .lede-u{font-weight:500;text-transform:uppercase;font-size:15px;line-height:1.35;letter-spacing:-.02em;max-width:34ch}
+.hero .lede-u b{font-weight:600}.hero .lede-u .dim2{color:var(--dimw)}
+.hero .facts{display:flex;flex-direction:column;gap:10px}
+.hero .facts .row{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.18);padding-top:8px}
+.hero .facts .mono{color:var(--dimw)}
+.hero .markrow{position:relative;z-index:2;padding:0 24px;margin-bottom:-1.4vw}
+.hero .mark{font-weight:500;text-transform:uppercase;letter-spacing:-.02em;line-height:.78;font-size:clamp(96px,19vw,270px);white-space:nowrap;color:#fff}
+.hero .mark .coral{color:var(--coral)}
+.hero .trust{position:absolute;left:48px;bottom:calc(15.5vw + 34px);z-index:3;display:flex;align-items:center;gap:14px}
+.hero .trust .mono{color:var(--dimw)}
+.hero .trust .sqs{display:flex;gap:3px}
+.hero .spark{position:absolute;top:96px;left:48px;width:40px;z-index:3}
+
+/* sections */
+section{padding:var(--sec) 0}
+.darksec{background:var(--dark);color:#fff}
+
+/* intro / cost */
+.intro .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:start}
+.intro h2{margin-bottom:30px;max-width:15ch}
+.intro p{font-size:16.5px;font-weight:400;color:var(--dim);max-width:52ch;margin-bottom:18px;line-height:1.7}
+.intro p b{color:var(--ink);font-weight:600}
+.intro .side{border-top:2px solid var(--ink);padding-top:20px}
+.intro .side .mono{color:var(--coral)}
+.intro .side p{margin-top:12px;font-size:15px;color:var(--dim)}
+
+/* what */
+.what h2{max-width:20ch;margin-bottom:0}
+.what .lead{margin-top:30px;font-size:17px;color:var(--dim);max-width:56ch;line-height:1.7;font-weight:400}
+.what .lead b{color:var(--ink);font-weight:600}
+
+/* parts grid */
+.exp .egrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.ecell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 30px 40px;min-height:250px;display:flex;flex-direction:column;background:var(--off);transition:background var(--dur-hover)}
+.ecell:hover{background:var(--gray)}
+.ecell .mono{color:var(--coral)}
+.ecell h3{font-size:23px;font-weight:500;text-transform:uppercase;letter-spacing:-.02em;margin:38px 0 12px}
+.ecell p{font-size:14.5px;font-weight:400;color:var(--dim);line-height:1.6}
+
+/* process */
+.proc .giant{font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;font-size:clamp(72px,15vw,230px);margin:8px 0 60px}
+.proc .giant .coral{color:var(--coral)}
+.proc .steps{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(255,255,255,.18)}
+.pstep{border-right:1px solid rgba(255,255,255,.18);border-left:1px solid rgba(255,255,255,.18);margin-left:-1px;padding:34px 30px 44px}
+.pstep .st{font-family:'Geist Mono',monospace;font-size:13px;text-transform:uppercase;color:var(--coral);margin-bottom:24px}
+.pstep h3{font-size:clamp(24px,2.6vw,34px);font-weight:500;text-transform:uppercase;letter-spacing:-.02em;line-height:1.02}
+.pstep p{margin-top:18px;font-size:15.5px;font-weight:400;color:var(--dimw);line-height:1.6;max-width:44ch}
+.pstep .tags{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px}
+.pstep .tags span{font-family:'Geist Mono',monospace;font-size:11px;text-transform:uppercase;color:var(--dimw);border:1px solid rgba(255,255,255,.2);padding:7px 12px}
+
+/* proof / case */
+.case .qgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:70px;align-items:start}
+.case .qmarks{color:var(--coral);font-size:70px;line-height:.5;font-weight:600;margin-bottom:20px;display:block}
+.case .q{font-size:clamp(24px,2.5vw,36px);font-weight:500;line-height:1.24;letter-spacing:-.01em;max-width:22ch}
+.case .q .coral{color:var(--coral)}
+.case .who{margin-top:44px;font-family:'Geist Mono',monospace;font-size:13px;text-transform:uppercase;color:var(--dimw)}
+.case .list{display:flex;flex-direction:column}
+.case .crow{display:flex;align-items:center;gap:14px;border-top:1px solid rgba(255,255,255,.18);padding:18px 0}
+.case .crow:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.case .crow img{width:44px;height:44px;object-fit:cover;filter:grayscale(1)}
+.case .crow .nm{font-size:17px;font-weight:500;text-transform:uppercase;letter-spacing:-.01em}
+.case .crow .rl{margin-left:auto;font-family:'Geist Mono',monospace;font-size:11px;text-transform:uppercase;color:var(--dimw)}
+
+/* investment */
+.invest .price{font-weight:500;text-transform:uppercase;letter-spacing:-.03em;line-height:.86;font-size:clamp(80px,13vw,190px)}
+.invest .price .coral{color:var(--coral)}
+.invest .row{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:44px;align-items:start}
+.invest .terms{font-size:17px;line-height:1.65}
+.invest .care{margin-top:12px;font-size:14.5px;color:var(--dim);line-height:1.6}
+.invest .act{margin-top:34px}
+.invest .inc .h{font-family:'Geist Mono',monospace;font-size:13px;text-transform:uppercase;color:var(--coral);margin-bottom:18px}
+.invest .inc ul{list-style:none}
+.invest .inc li{font-size:15.5px;font-weight:500;text-transform:uppercase;letter-spacing:-.01em;padding:14px 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.invest .inc li .sq{opacity:.9}
+
+/* fit */
+.fit .row{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink)}
+.fcol{padding:44px 40px 46px}.fcol:first-child{border-right:1px solid var(--line)}
+.fcol .h{font-family:'Geist Mono',monospace;font-size:13px;text-transform:uppercase;margin-bottom:28px}
+.fcol.yes .h{color:var(--ink)}.fcol.no .h{color:var(--coral)}
+.fcol ul{list-style:none}
+.fcol li{font-size:15.5px;line-height:1.45;padding:15px 0;border-top:1px solid var(--line);display:flex;gap:12px;color:#2E2E2E}
+.fcol li .sq{margin-top:7px}
+.fcol.no li .sq{background:#C9C9C9}
+
+/* faq */
+.faq .row{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
+.faq h2{max-width:12ch}
+.faq .note{margin-top:22px;font-size:15px;color:var(--dim)}
+.faq details{border-top:1px solid var(--line);padding:26px 0}
+.faq summary{font-size:clamp(18px,1.9vw,24px);font-weight:500;text-transform:uppercase;letter-spacing:-.02em;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--coral);font-family:'Geist Mono',monospace;font-size:20px}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:16px;font-size:15.5px;font-weight:400;color:var(--dim);line-height:1.65;max-width:56ch}
+
+/* close */
+.close{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.close .ph{position:absolute;inset:0}
+.close .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.5) contrast(1.05)}
+.close .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2),rgba(10,10,10,.72))}
+.close .inner{position:relative;z-index:2;width:100%;padding:0 48px 60px}
+.close h2{font-size:clamp(44px,7vw,120px);max-width:16ch;margin-bottom:34px}
+.close h2 .coral{color:var(--coral)}
+.close .sub{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.2);padding-top:24px}
+.close .sub .mono{color:var(--dimw)}
+
+/* footer */
+.footer{background:var(--ink);color:#fff;padding:70px 0 54px}
+.footer .grid{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.footer .flogo{height:24px;display:block}
+.footer .meta{font-family:'Geist Mono',monospace;font-size:12px;text-transform:uppercase;color:var(--dimw);text-align:right;line-height:2}
+.footer .meta a:hover{color:var(--coral)}
+
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+
+@media (max-width:900px){
+  .wrap{padding:0 24px}
+  .navin{padding:14px 24px}
+  .hero .mid{grid-template-columns:1fr;gap:24px;padding:0 24px}
+  .hero .markrow{padding:0 24px}
+  .hero .trust{left:24px;bottom:calc(19vw + 60px)}
+  .hero .spark{left:24px;top:78px}
+  .intro .grid{grid-template-columns:1fr;gap:34px}
+  .exp .egrid{grid-template-columns:1fr}
+  .proc .steps{grid-template-columns:1fr}
+  .case .qgrid{grid-template-columns:1fr;gap:44px}
+  .invest .row{grid-template-columns:1fr;gap:40px}
+  .fit .row{grid-template-columns:1fr}.fcol:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .faq .row{grid-template-columns:1fr;gap:30px}
+  .close .inner{padding:0 24px 44px}
+  .footer .grid{flex-direction:column;align-items:flex-start}.footer .meta{text-align:left}
+}
+</style></head>
+<body>
+
+<nav id="nav"><div class="navin">
+  <a class="nbrand" href="#top" aria-label="Ignite Yourself"><img src="/igy/assets/logo-igy.png" alt="Ignite Yourself"></a>
+  <div class="hbtn" onclick="location.hash='#book'"><span class="t">Book the call</span><span class="a">→</span></div>
+</div></nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="ph"><img src="/igy/assets/hero.jpg" alt=""></div>
+    <div class="shade"></div>
+    <img class="spark" src="/igy/assets/spark.png" alt="" />
+    <div class="mid">
+      <p class="lede-u wr" data-reveal><b>You did the work.</b> <span class="dim2">A premium platform you own — built in one week — that turns your reputation into opportunity.</span></p>
+      <div class="facts wr" data-reveal>
+        <div class="row"><span class="mono">Delivery</span><span class="mono" style="color:#fff">One week</span></div>
+        <div class="row"><span class="mono">Investment</span><span class="mono" style="color:#fff">USD 3,000</span></div>
+        <div class="row"><span class="mono">For</span><span class="mono" style="color:#fff">Accomplished pros</span></div>
+      </div>
+    </div>
+    <div class="markrow"><h1 class="mark wr" data-reveal>Be <span class="coral">Seen</span>.</h1></div>
+  </header>
+
+  <!-- COST -->
+  <section class="intro"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">01</span><span class="mono">The cost of staying invisible</span></div>
+    <div class="grid">
+      <div class="wr" data-reveal>
+        <h2 class="disp">What you built is real.<br>What the world sees <span class="coral">isn't.</span></h2>
+      </div>
+      <div class="wr" data-reveal>
+        <p>The results, the reputation, the people who trust you — <b>the hard part is already done.</b> But the world doesn't decide with what's real. It decides with what it can see.</p>
+        <p>And the ones collecting the opportunities aren't the best — they're the visible.</p>
+        <div class="side"><span class="mono">The good news</span><p>That's not talent. That's a system. And systems can be built.</p></div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- WHAT -->
+  <section class="what"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">02</span><span class="mono">What it is</span></div>
+    <h2 class="disp wr" data-reveal>One platform you own —<br>built to be <span class="coral">seen.</span></h2>
+    <p class="lead wr" data-reveal>The Authority Platform is a premium website that holds your <b>positioning, story, and visual world</b> in one place — engineered to turn attention into opportunity. Built and delivered in one week. Yours to keep, never rented, never a template.</p>
+  </div></section>
+
+  <!-- PARTS -->
+  <section class="exp"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">03</span><span class="mono">What's inside — five connected parts</span></div>
+    <div class="egrid">
+      <div class="ecell wr" data-reveal><span class="mono">01</span><h3>Positioning</h3><p>What you should be known for, by whom, and the opportunities it should open.</p></div>
+      <div class="ecell wr" data-reveal><span class="mono">02</span><h3>Narrative</h3><p>Your story and point of view, shaped into one clear message — the truth about you, told well.</p></div>
+      <div class="ecell wr" data-reveal><span class="mono">03</span><h3>Visual World</h3><p>A look and feel that makes your authority unmistakable — designed around you, never a template.</p></div>
+      <div class="ecell wr" data-reveal><span class="mono">04</span><h3>Owned Website</h3><p>A premium site you own — your work, your story, your authority, in one place built to be seen.</p></div>
+      <div class="ecell wr" data-reveal><span class="mono">05</span><h3>Opportunity Capture</h3><p>A contact form and pathways wired straight to you — every inquiry lands the moment it happens.</p></div>
+      <div class="ecell wr" data-reveal><span class="mono" style="color:var(--ink)">↦</span><h3>One Week</h3><p>From a single call to a live platform you own. That's the whole build.</p></div>
+    </div>
+  </div></section>
+
+  <!-- PROCESS -->
+  <section class="darksec proc"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">04</span><span class="mono">The process</span></div>
+    <h2 class="disp giant wr" data-reveal>One <span class="coral">Week.</span></h2>
+    <div class="steps">
+      <div class="pstep wr" data-reveal>
+        <div class="st">Step 01 — The call</div>
+        <h3>We extract everything.</h3>
+        <p>One conversation. We listen first — your work, results, story, point of view — and pull out what you should be known for and the opportunities it should open.</p>
+        <div class="tags"><span>Deep-dive call</span><span>Positioning</span><span>Narrative</span><span>Opportunity map</span></div>
+      </div>
+      <div class="pstep wr" data-reveal>
+        <div class="st">Step 02 — One week</div>
+        <h3>We build and deliver.</h3>
+        <p>In one week we design and build the whole thing — visual world, owned website, story and authority in one place. Then it's live, and it's yours.</p>
+        <div class="tags"><span>Visual world</span><span>Owned website</span><span>Core copy</span><span>Live &amp; yours</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- PROOF -->
+  <section class="darksec case"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">05</span><span class="mono">The proof</span></div>
+    <div class="qgrid">
+      <div class="wr" data-reveal>
+        <span class="qmarks">"</span>
+        <p class="q">For the first time, twenty-seven years of surgery live in one place — and it finally <span class="coral">looks like the work.</span></p>
+        <div class="who">Dr. Jorge Arce — Oral &amp; Maxillofacial Surgeon</div>
+      </div>
+      <div class="list wr" data-reveal>
+        <div class="crow"><img src="/igy/assets/arce.jpg" alt=""><span class="nm">Dr. Jorge Arce</span><span class="rl">Surgery · CA</span></div>
+        <div class="crow"><img src="/igy/assets/adriana.jpg" alt=""><span class="nm">Adriana Mejía</span><span class="rl">Coffee · Global</span></div>
+        <div class="crow"><img src="/igy/assets/tomi.jpg" alt=""><span class="nm">Tomi Lappi</span><span class="rl">Author · WW</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- INVESTMENT -->
+  <section class="invest" id="book"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">06</span><span class="mono">The investment</span></div>
+    <h2 class="price wr" data-reveal>USD 3,<span class="coral">000</span></h2>
+    <div class="row">
+      <div class="wr" data-reveal>
+        <p class="terms">USD 1,500 to start · USD 1,500 on delivery.</p>
+        <p class="care">Then USD 99/month Platform Care — hosting, upkeep, and small changes. Your platform stays live and cared for.</p>
+        <div class="act"><div class="hbtn" onclick="location.hash='#book'"><span class="t">Book the 30-minute call</span><span class="a">→</span></div></div>
+      </div>
+      <div class="inc wr" data-reveal>
+        <div class="h">Everything included</div>
+        <ul>
+          <li><span class="sq"></span>Positioning &amp; narrative</li>
+          <li><span class="sq"></span>Visual world</li>
+          <li><span class="sq"></span>Owned website — yours to keep</li>
+          <li><span class="sq"></span>Core copy, written for you</li>
+          <li><span class="sq"></span>Opportunity capture</li>
+          <li><span class="sq"></span>Live in one week</li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- FIT -->
+  <section class="fit"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">07</span><span class="mono">Is it for you?</span></div>
+    <div class="row wr" data-reveal>
+      <div class="fcol yes"><div class="h">This is for you if</div><ul>
+        <li><span class="sq"></span>You've built real authority over years of work.</li>
+        <li><span class="sq"></span>Your reputation is bigger than your digital presence shows.</li>
+        <li><span class="sq"></span>You'd rather do the work than post about it.</li>
+        <li><span class="sq"></span>You want to own your platform, not rent it.</li>
+      </ul></div>
+      <div class="fcol no"><div class="h">It's not for you if</div><ul>
+        <li><span class="sq"></span>You're just starting out, with little behind you yet.</li>
+        <li><span class="sq"></span>You want to become an influencer.</li>
+        <li><span class="sq"></span>You want volume of content over substance.</li>
+        <li><span class="sq"></span>You want a persona manufactured from scratch.</li>
+      </ul></div>
+    </div>
+  </div></section>
+
+  <!-- FAQ -->
+  <section class="faq"><div class="wrap">
+    <div class="seclab wr" data-reveal><span class="sq"></span><span class="num">08</span><span class="mono">FAQ</span></div>
+    <div class="row">
+      <div class="wr" data-reveal><h2 class="disp">Questions, answered.</h2><p class="note">More? The call is where we answer everything.</p></div>
+      <div class="list">
+        <details class="wr" data-reveal><summary>How long does it really take?</summary><p>One week — from the extraction call to a live platform you own. No twelve-week projects.</p></details>
+        <details class="wr" data-reveal><summary>What do you need from me?</summary><p>One call, your story, your expertise, and access to the material we need to shape the platform. We do the rest.</p></details>
+        <details class="wr" data-reveal><summary>Is this personal branding?</summary><p>It's what personal branding should have been. Not posting more — a platform that tells the world who you are, and then goes to work for you.</p></details>
+        <details class="wr" data-reveal><summary>Is this social media management?</summary><p>No. It's an owned platform that carries your authority. Content and reach can come later, if you choose.</p></details>
+        <details class="wr" data-reveal><summary>What happens after delivery?</summary><p>Your platform stays live with Platform Care (USD 99/month). When you're ready, it becomes the base for strategy, content, and reach.</p></details>
+        <details class="wr" data-reveal><summary>What is the investment?</summary><p>USD 3,000 — USD 1,500 to start and USD 1,500 on delivery. Then USD 99/month Platform Care.</p></details>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- CLOSE -->
+  <section class="close">
+    <div class="ph"><img src="/igy/assets/finale.jpg" alt=""></div>
+    <div class="shade"></div>
+    <div class="inner wr" data-reveal>
+      <h2 class="disp">The world can't say yes<br>to what it <span class="coral">can't see.</span></h2>
+      <div class="sub">
+        <div class="hbtn" onclick="location.hash='#book'"><span class="t">Book the 30-minute call</span><span class="a">→</span></div>
+        <span class="mono">One call. We listen first — that's the whole method.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer"><div class="wrap grid">
+  <img class="flogo" src="/igy/assets/logo-igy.png" alt="Ignite Yourself">
+  <div class="meta"><a href="mailto:pablomerchanm@gmail.com">pablomerchanm@gmail.com</a><div>The Authority Platform · Worldwide</div></div>
+</div></footer>
+
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var hero=document.querySelector('.hero');
+  function navColor(){var h=hero?hero.offsetHeight-80:600;nav.classList.toggle('onlight',(window.scrollY||window.pageYOffset)>h);}
+  navColor();
+  var REDUCED=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined';
+  var html=document.documentElement;
+  if(!MOTION){html.classList.add('no-motion');addEventListener('scroll',navColor,{passive:true});wireAnchors(null);return;}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});lenis.on('scroll',function(){ScrollTrigger.update();navColor()});gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  } else { addEventListener('scroll',navColor,{passive:true}); }
+  gsap.ticker.lagSmoothing(0);
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});var left=pend.length;
+    pend.forEach(function(im){function d(){if(--left===0)rf()}im.addEventListener('load',d);im.addEventListener('error',d)});})();
+  wireAnchors(lenis);
+  document.querySelectorAll('[data-reveal]').forEach(function(el){
+    gsap.set(el,{opacity:0,y:20});
+    gsap.to(el,{opacity:1,y:0,duration:.8,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}});});
+  document.querySelectorAll('.hero [data-reveal]').forEach(function(el,i){
+    if(el.getBoundingClientRect().top<innerHeight){var tw=gsap.getTweensOf(el)[0];if(tw&&tw.scrollTrigger)tw.scrollTrigger.kill();
+      gsap.fromTo(el,{opacity:0,y:20},{opacity:1,y:0,duration:.85,ease:'expo.out',delay:.12+i*.08});}});
+  function wireAnchors(l){document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();
+      if(l)l.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});});});}
+})();
+</script>
+</body>
+</html>
