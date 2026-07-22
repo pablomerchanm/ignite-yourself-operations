@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ignite Yourself — The Authority Platform</title>
+<meta name="description" content="A premium website you own — built in one week — that turns your reputation into opportunity. For accomplished professionals who'd rather do the work than post about it.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Figtree:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.25s;
+  --sec:clamp(104px,14vh,168px);
+
+  --forest:#16281B; --forest2:#1B301F; --deep:#101E14; --cream:#F5F0E7; --sand:#E5D3B2;
+  --rust:#B4532D; --clay:#B0714A; --tan:#E9DCC0; --green:#2E4A33; --inkc:#2A3A2D;
+  --line-d:rgba(245,240,231,.14); --line-l:rgba(42,58,45,.16);
+  --serif:'Playfair Display',Georgia,serif; --mono:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
+body{background:var(--forest);color:var(--cream);font-family:'Figtree',system-ui,sans-serif;
+  font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--sand);color:var(--forest)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sand)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(229,211,178,.7)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;
+  align-items:center;padding:20px 40px;background:rgba(16,30,20,.72);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-d)}
+.nav .lg{font-family:var(--serif);font-size:19px;letter-spacing:.03em}
+.nav .lg small{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.16em;color:rgba(229,211,178,.6);margin-top:2px;text-transform:uppercase}
+.nav .cta{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);
+  background:var(--sand);border-radius:99px;padding:11px 22px;transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.nav .cta:hover{transform:translateY(-2px);background:var(--cream)}
+
+/* ---------- buttons ---------- */
+.pill{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;border-radius:99px;padding:17px 34px;transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover),color var(--dur-hover)}
+.pill--solid{background:var(--sand);color:var(--forest)}
+.pill--solid:hover{background:var(--cream);transform:translateY(-2px)}
+.pill--ghost{border:1.5px solid var(--sand);color:var(--sand)}
+.pill--ghost:hover{background:var(--sand);color:var(--forest)}
+.pill--dark{border:1.5px solid rgba(42,58,45,.4);color:var(--inkc)}
+.pill--dark:hover{background:var(--green);color:var(--cream);border-color:var(--green)}
+.pill .a{font-size:15px}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;padding:150px 22px 110px;
+  background:radial-gradient(92% 74% at 50% 22%,var(--forest2) 0%,var(--forest) 58%,var(--deep) 100%)}
+.hero .eyebrow{margin-bottom:34px}
+.hero h1{font-family:var(--serif);font-weight:500;line-height:1.02;letter-spacing:-.005em;
+  font-size:clamp(46px,7.4vw,110px);max-width:15ch}
+.hero h1 em{font-style:italic;color:var(--sand)}
+.hero .tag{margin-top:32px;font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:clamp(19px,2.3vw,30px);color:#6E8A6F;max-width:26ch}
+.hero .sub{margin-top:26px;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;
+  color:rgba(229,211,178,.6);text-transform:lowercase;max-width:44ch}
+.hero .act{margin-top:52px}
+.hero .scr{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(229,211,178,.45)}
+
+/* ---------- section frames ---------- */
+.dark{background:var(--forest);padding:var(--sec) 0}
+.deepsec{background:var(--deep);padding:var(--sec) 0}
+.cream{background:var(--cream);color:var(--inkc);padding:var(--sec) 0}
+.slabel{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--clay);margin-bottom:52px}
+.slabel::before{content:"";width:26px;height:1px;background:var(--clay)}
+.cream .slabel{color:var(--rust)}.cream .slabel::before{background:var(--rust)}
+
+/* ---------- gap / cost ---------- */
+.gap .lede{font-family:var(--serif);font-weight:400;font-size:clamp(27px,3.5vw,50px);line-height:1.34;
+  max-width:20ch}
+.gap .lede em{font-style:italic;color:var(--green)}
+.gap .lede .rust{font-style:italic;color:var(--rust)}
+.gap .foot{margin-top:46px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#8B8272;text-transform:uppercase}
+
+/* ---------- what it is ---------- */
+.what .big{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.9vw,58px);line-height:1.22;max-width:18ch}
+.what .big em{font-style:italic;color:var(--sand)}
+.what .sub{margin-top:32px;font-size:clamp(16px,1.5vw,19px);color:rgba(245,240,231,.66);max-width:44ch;line-height:1.7}
+
+/* ---------- included parts ---------- */
+.parts{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.part{padding:40px 44px 44px;border-top:1px solid var(--line-d)}
+.part:nth-child(odd){border-right:1px solid var(--line-d)}
+.part .n{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--sand);margin-bottom:16px}
+.part h3{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.3vw,30px);line-height:1.15}
+.part p{margin-top:14px;font-size:14.5px;line-height:1.7;color:rgba(245,240,231,.6);max-width:38ch}
+
+/* ---------- process ---------- */
+.proc .giant{font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.01em;
+  font-size:clamp(58px,15vw,220px);line-height:.9;color:var(--sand);text-align:center;margin:6px 0 70px}
+.proc .giant em{font-style:italic;color:var(--clay)}
+.pstep{display:grid;grid-template-columns:200px 1fr;gap:50px;padding:50px 0;border-top:1px solid var(--line-d);align-items:start}
+.pstep .idx{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);line-height:1.8}
+.pstep h3{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,42px);line-height:1.08}
+.pstep h3 em{font-style:italic;color:var(--sand)}
+.pstep p{margin-top:18px;font-size:16px;line-height:1.72;color:rgba(245,240,231,.66);max-width:52ch}
+.pstep .tags{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.pstep .tags span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--sand);border:1px solid var(--line-d);border-radius:99px;padding:7px 14px}
+
+/* ---------- proof / voices ---------- */
+.proof .q{max-width:900px;margin:0 auto;text-align:center;padding:58px 0;border-top:1px solid var(--line-l)}
+.proof .q:first-of-type{border-top:0;padding-top:0}
+.proof .q p{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.7vw,36px);line-height:1.42;color:var(--inkc)}
+.proof .q .who{margin-top:26px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--rust)}
+.proof .names{margin-top:80px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px;
+  border-top:1px solid var(--line-l);padding-top:44px}
+.proof .names .nm{display:flex;align-items:center;gap:12px}
+.proof .names img{width:44px;height:44px;border-radius:50%;object-fit:cover;filter:grayscale(1) sepia(.2) brightness(.95)}
+.proof .names .t{font-size:13.5px;color:#4A564C}.proof .names .t b{color:var(--inkc);font-weight:500;display:block}
+.proof .names .t span{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:#8B8272;text-transform:uppercase}
+
+/* ---------- investment ---------- */
+.invest .row{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+.invest .price{font-family:var(--serif);font-weight:400;font-size:clamp(64px,10vw,150px);line-height:.86;color:var(--sand)}
+.invest .price small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:20px}
+.invest .terms{margin-top:30px;font-size:17px;line-height:1.7;color:rgba(245,240,231,.72)}
+.invest .care{margin-top:14px;font-size:14.5px;line-height:1.65;color:rgba(245,240,231,.5)}
+.invest .act{margin-top:40px}
+.invest .inc .h{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--clay);margin-bottom:22px}
+.invest .inc ul{list-style:none}
+.invest .inc li{font-size:15px;padding:13px 0;border-top:1px solid var(--line-d);color:rgba(245,240,231,.82);
+  display:flex;align-items:center;gap:12px}
+.invest .inc li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--clay);flex:0 0 5px}
+
+/* ---------- fit / not fit ---------- */
+.fit .row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line-l)}
+.fit .col{padding:48px 44px}
+.fit .col:first-child{border-right:1px solid var(--line-l)}
+.fit .col .h{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.6vw,34px);margin-bottom:28px}
+.fit .yes .h{color:var(--green)}.fit .no .h{color:var(--clay)}
+.fit ul{list-style:none}
+.fit li{font-size:15.5px;line-height:1.5;padding:15px 0;border-top:1px solid var(--line-l);color:#3F4B41;display:flex;gap:14px}
+.fit li::before{font-family:var(--serif);font-size:18px;line-height:1;flex:0 0 auto}
+.fit .yes li::before{content:"—";color:var(--green)}
+.fit .no li::before{content:"×";color:var(--clay)}
+
+/* ---------- faq ---------- */
+.faq .row{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.faq .aside h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1.08}
+.faq .aside .note{margin-top:22px;color:rgba(245,240,231,.55);font-size:15px}
+.faq details{border-top:1px solid var(--line-d);padding:26px 0}
+.faq summary{font-family:var(--serif);font-size:clamp(19px,2vw,25px);cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--clay);font-size:20px}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:18px;font-size:15.5px;line-height:1.72;color:rgba(245,240,231,.62);max-width:56ch}
+
+/* ---------- closing band ---------- */
+.close{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.close img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;
+  filter:brightness(.4) saturate(.7) sepia(.15) hue-rotate(60deg)}
+.close .shade{position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 50%,rgba(16,40,24,.35),rgba(16,30,20,.86))}
+.close .in{position:relative;z-index:2;padding:0 24px}
+.close h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5.4vw,84px);line-height:1.04;max-width:16ch;margin:0 auto}
+.close h2 em{font-style:italic;color:var(--sand)}
+.close .sub{margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(229,211,178,.7)}
+.close .act{margin-top:44px}
+
+/* ---------- footer ---------- */
+.footer{background:var(--deep);padding:70px 0 56px;border-top:1px solid var(--line-d)}
+.footer .grid{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.footer .lgf{font-family:var(--serif);font-size:24px;letter-spacing:.03em}
+.footer .lgf small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(229,211,178,.5);margin-top:6px}
+.footer .meta{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:rgba(245,240,231,.42);text-align:right;line-height:2}
+.footer .meta a:hover{color:var(--sand)}
+
+/* ---------- reveals ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--sand);outline-offset:3px}
+
+/* ---------- mobile ---------- */
+@media (max-width:900px){
+  .wrap{padding:0 22px}
+  .nav{padding:16px 22px}
+  .nav .lg small{display:none}
+  .parts{grid-template-columns:1fr}
+  .part{border-right:0!important;padding:34px 0 38px}
+  .pstep{grid-template-columns:1fr;gap:18px;padding:40px 0}
+  .invest .row{grid-template-columns:1fr;gap:44px}
+  .fit .row{grid-template-columns:1fr}
+  .fit .col:first-child{border-right:0;border-bottom:1px solid var(--line-l)}
+  .faq .row{grid-template-columns:1fr;gap:36px}
+  .footer .grid{flex-direction:column;align-items:flex-start}
+  .footer .meta{text-align:left}
+}
+</style></head>
+<body>
+
+<nav class="nav">
+  <a class="lg" href="#top">Ignite Yourself<small>The Authority Platform</small></a>
+  <a class="cta" href="#book">Book the call</a>
+</nav>
+
+<main id="top">
+
+  <!-- 01 HERO -->
+  <section class="hero">
+    <p class="eyebrow wr" data-reveal>Ignite Yourself · The Authority Platform</p>
+    <h1 class="wr" data-reveal>The work is done.<br />Now <em>be seen</em> for it.</h1>
+    <p class="tag wr" data-reveal>A premium website you own — built in one week — that turns your reputation into opportunity.</p>
+    <p class="sub wr" data-reveal>for accomplished professionals who'd rather do the work than post about it.</p>
+    <div class="act wr" data-reveal><a class="pill pill--solid" href="#book">Book the 30-minute call <span class="a">→</span></a></div>
+    <div class="scr">scroll</div>
+  </section>
+
+  <!-- 02 THE COST OF INVISIBILITY -->
+  <section class="cream gap">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>The cost of staying invisible</div>
+      <p class="lede wr" data-reveal>What you've built is real. The results, the reputation, the people who trust you — <em>the hard part is already done.</em> But the world doesn't decide with what's real. It decides with what it can <span class="rust">see</span>. And the ones collecting the opportunities aren't the best — they're the visible.</p>
+      <p class="foot wr" data-reveal>That's not talent. That's a system. And systems can be built.</p>
+    </div>
+  </section>
+
+  <!-- 03 WHAT IT IS -->
+  <section class="dark what">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>What it is</div>
+      <p class="big wr" data-reveal>The Authority Platform is a premium website you own — your positioning, your story, and your visual world in one place, <em>engineered to turn attention into opportunity.</em></p>
+      <p class="sub wr" data-reveal>Built and delivered in one week. Yours to keep — never rented, never a template.</p>
+    </div>
+  </section>
+
+  <!-- 04 WHAT'S INSIDE -->
+  <section class="deepsec">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>What's inside</div>
+      <div class="parts">
+        <div class="part wr" data-reveal><div class="n">01</div><h3>Positioning</h3><p>What you should be known for, by whom, and the opportunities it should open.</p></div>
+        <div class="part wr" data-reveal><div class="n">02</div><h3>Narrative</h3><p>Your story and point of view, shaped into one clear message — the truth about you, told well.</p></div>
+        <div class="part wr" data-reveal><div class="n">03</div><h3>Visual World</h3><p>A look and feel that makes your authority unmistakable — designed around you, never a template.</p></div>
+        <div class="part wr" data-reveal><div class="n">04</div><h3>Owned Website</h3><p>A premium site you own — your work, your story, your authority, in one place built to be seen.</p></div>
+        <div class="part wr" data-reveal><div class="n">05</div><h3>Opportunity Capture</h3><p>A contact form and pathways wired straight to you — every inquiry lands with you the moment it happens.</p></div>
+        <div class="part wr" data-reveal><div class="n">—</div><h3><em>One week.</em></h3><p>From a single call to a live platform you own. That's the whole build.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 PROCESS -->
+  <section class="dark proc">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>The process</div>
+      <h2 class="giant wr" data-reveal>One <em>Week</em></h2>
+      <div class="pstep wr" data-reveal>
+        <div class="idx">Step 01<br />The call</div>
+        <div>
+          <h3>We <em>extract</em> everything.</h3>
+          <p>One conversation. We listen first — your work, your results, your story, your point of view — and pull out what you should be known for and the opportunities it should open.</p>
+          <div class="tags"><span>Deep-dive call</span><span>Positioning</span><span>Visibility gap</span><span>Narrative</span><span>Opportunity map</span></div>
+        </div>
+      </div>
+      <div class="pstep wr" data-reveal>
+        <div class="idx">Step 02<br />One week</div>
+        <div>
+          <h3>We build and <em>deliver</em>.</h3>
+          <p>In one week we design and build the whole thing — your visual world, your owned website, your story and authority in one place — premium, and pointing the same way. Then it's live, and it's yours.</p>
+          <div class="tags"><span>Visual world</span><span>Owned website</span><span>Core copy</span><span>Opportunity capture</span><span>Live &amp; yours</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 PROOF -->
+  <section class="cream proof">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>The proof</div>
+      <div class="q wr" data-reveal>
+        <p>"For the first time, twenty-seven years of surgery live in one place — and it finally looks like the work."</p>
+        <div class="who">Dr. Jorge Arce · Oral &amp; Maxillofacial Surgeon</div>
+      </div>
+      <div class="q wr" data-reveal>
+        <p>"I stopped explaining what I do. Now I send one link, and the room already understands the authority I carry."</p>
+        <div class="who">Adriana Mejía · Executive, Global Coffee &amp; Sustainability</div>
+      </div>
+      <div class="names wr" data-reveal>
+        <div class="nm"><img src="/igy/assets/arce.jpg" alt=""><div class="t"><b>Dr. Jorge Arce</b><span>Surgery · California</span></div></div>
+        <div class="nm"><img src="/igy/assets/adriana.jpg" alt=""><div class="t"><b>Adriana Mejía</b><span>Coffee · Global</span></div></div>
+        <div class="nm"><img src="/igy/assets/tomi.jpg" alt=""><div class="t"><b>Tomi Lappi</b><span>Author · Worldwide</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 INVESTMENT -->
+  <section class="deepsec invest" id="book">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>The investment</div>
+      <div class="row">
+        <div class="wr" data-reveal>
+          <div class="price"><small>Authority Platform · 1 week</small>USD 3,000</div>
+          <p class="terms">USD 1,500 to start · USD 1,500 on delivery.</p>
+          <p class="care">Then USD 99/month Platform Care — hosting, upkeep, and small changes. Your platform stays live and cared for.</p>
+          <div class="act"><a class="pill pill--solid" href="#book">Book the 30-minute call <span class="a">→</span></a></div>
+        </div>
+        <div class="inc wr" data-reveal>
+          <div class="h">Everything included</div>
+          <ul>
+            <li>Positioning &amp; narrative</li>
+            <li>Visual world</li>
+            <li>Owned website — yours to keep</li>
+            <li>Core copy, written for you</li>
+            <li>Opportunity capture</li>
+            <li>Live in one week</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 FIT / NOT FIT -->
+  <section class="cream fit">
+    <div class="wrap">
+      <div class="slabel wr" data-reveal>Is it for you?</div>
+      <div class="row wr" data-reveal>
+        <div class="col yes">
+          <div class="h">This is for you if…</div>
+          <ul>
+            <li>You've built real authority over years of work.</li>
+            <li>Your reputation is bigger than your digital presence shows.</li>
+            <li>You'd rather do the work than post about it.</li>
+            <li>You want to own your platform, not rent it.</li>
+          </ul>
+        </div>
+        <div class="col no">
+          <div class="h">It's not for you if…</div>
+          <ul>
+            <li>You're just starting out and have little behind you yet.</li>
+            <li>You want to become an influencer.</li>
+            <li>You want volume of content over substance.</li>
+            <li>You want a persona manufactured from scratch.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 FAQ -->
+  <section class="dark faq">
+    <div class="wrap">
+      <div class="row">
+        <div class="aside wr" data-reveal>
+          <div class="slabel">Before we build</div>
+          <h2>Questions,<br />answered.</h2>
+          <p class="note">More? The call is where we answer everything.</p>
+        </div>
+        <div class="list">
+          <details class="wr" data-reveal><summary>How long does it really take?</summary><p>One week — from the extraction call to a live platform you own. No twelve-week projects.</p></details>
+          <details class="wr" data-reveal><summary>What do you need from me?</summary><p>One call, your story, your expertise, and access to the material we need to shape the platform. We do the rest.</p></details>
+          <details class="wr" data-reveal><summary>Is this personal branding?</summary><p>It's what personal branding should have been. Not posting more — a platform that tells the world who you are, and then goes to work for you.</p></details>
+          <details class="wr" data-reveal><summary>Is this social media management?</summary><p>No. It's an owned platform that carries your authority. Content and reach can come later, if you choose — but they're not the product here.</p></details>
+          <details class="wr" data-reveal><summary>What happens after delivery?</summary><p>Your platform stays live and cared for with Platform Care (USD 99/month). When you're ready, it becomes the base for strategy, content, and reach.</p></details>
+          <details class="wr" data-reveal><summary>What is the investment?</summary><p>USD 3,000 — USD 1,500 to start and USD 1,500 on delivery. Then USD 99/month Platform Care.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 CLOSE -->
+  <section class="close">
+    <img src="/igy/assets/finale.jpg" alt="">
+    <div class="shade"></div>
+    <div class="in">
+      <h2 class="wr" data-reveal>The world can't say yes to <em>what it can't see.</em></h2>
+      <p class="sub wr" data-reveal>One call. We listen first — that's the whole method.</p>
+      <div class="act wr" data-reveal><a class="pill pill--ghost" href="#book">Book the 30-minute call <span class="a">→</span></a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap grid">
+    <div class="lgf">Ignite Yourself<small>The Authority Platform</small></div>
+    <div class="meta">
+      <a href="mailto:pablomerchanm@gmail.com">pablomerchanm@gmail.com</a>
+      <div>Built remotely · Worldwide</div>
+      <div>For people building something real.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script>
+(function(){
+  var REDUCED = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var MOTION = !REDUCED && typeof gsap!=='undefined' && typeof ScrollTrigger!=='undefined';
+  var html=document.documentElement;
+  if(!MOTION){ html.classList.add('no-motion'); wireAnchors(null); return; }
+
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
+  gsap.ticker.lagSmoothing(0);
+  /* re-medir tras fuentes/imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
+  wireAnchors(lenis);
+
+  /* reveals: sube+aparece, una vez */
+  document.querySelectorAll('[data-reveal]').forEach(function(el){
+    gsap.set(el,{opacity:0,y:22});
+    gsap.to(el,{opacity:1,y:0,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  /* hero: cadena escalonada al cargar */
+  var heroKids=document.querySelectorAll('.hero [data-reveal]');
+  heroKids.forEach(function(el,i){
+    if(el.getBoundingClientRect().top<window.innerHeight){
+      var st=gsap.getTweensOf(el)[0]; if(st)st.scrollTrigger&&st.scrollTrigger.kill();
+      gsap.fromTo(el,{opacity:0,y:22},{opacity:1,y:0,duration:.85,ease:'expo.out',delay:.15+i*.09});
+    }
+  });
+
+  function wireAnchors(l){
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click',function(e){
+        var id=a.getAttribute('href'); if(id.length<2)return;
+        var t=document.querySelector(id); if(!t)return; e.preventDefault();
+        if(l)l.scrollTo(t,{offset:0}); else t.scrollIntoView({behavior:'smooth'});
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
