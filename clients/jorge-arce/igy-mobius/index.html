@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ignite Yourself — The Authority Platform</title>
-<meta name="description" content="A premium website you own — built in one week — that turns your reputation into opportunity.">
+<meta name="description" content="Turn the authority you have earned into an asset you can use. A premium authority platform you own — built in one focused week.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,10 @@
 <style>
 :root{
   --ease-out:cubic-bezier(.16,1,.3,1);--ease-quick:cubic-bezier(.33,1,.68,1);--dur-hover:.2s;
-  --white:#FFFFFF;--paper:#FBF9F6;--black:#0C0B0A;--ink:#141210;--panel:#F5F1EC;--chip:#EFEAE3;--gray:#9C948B;--gray2:#6B645C;--line:#E7E1D9;
-  --o-lite:#FFA62E;--orange:#F57900;--o-deep:#C85A00;--red:#F57900;
+  --white:#FFFFFF;--paper:#FBF9F6;--black:#0C0B0A;--warm:#100C07;--ink:#141210;--panel:#F5F1EC;--chip:#EFEAE3;--gray:#9C948B;--gray2:#6B645C;--line:#E7E1D9;
+  --o-lite:#FFA62E;--orange:#F57900;--o-deep:#C85A00;
   --o-grad:linear-gradient(118deg,#FFA62E 0%,#F57900 54%,#C85A00 100%);
+  --spark-o:brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(1352%) hue-rotate(360deg) brightness(101%) contrast(103%);
   --mono:'IBM Plex Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -25,87 +26,99 @@ img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 ::selection{background:var(--orange);color:#fff}
 .wrap{max-width:1400px;margin:0 auto;padding:0 40px}
+.wrapn{max-width:1080px;margin:0 auto;padding:0 40px}
 .og{background:var(--o-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.mark{font-weight:800;letter-spacing:-.05em;line-height:.78;font-size:clamp(72px,15vw,220px)}
-h2.mega{font-weight:800;letter-spacing:-.05em;line-height:.95;font-size:clamp(48px,9vw,140px)}
-h3.state{font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(28px,4.2vw,60px)}
-.label{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--gray)}
-.label .lspark{width:16px;height:16px;filter:brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(1352%) hue-rotate(360deg) brightness(101%) contrast(103%)}
-.prefix{font-weight:800;letter-spacing:-.03em;line-height:1;font-size:clamp(34px,5vw,72px);color:#fff;-webkit-text-stroke:1.4px #E0D8CE}
-
-/* rise-from-mask reveal */
-.rmask{display:block;overflow:hidden;padding-bottom:.06em}
+.eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.rmask{display:block;overflow:hidden;padding-bottom:.08em}
 .rin{display:block}
 
 /* nav */
-nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(251,249,246,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{position:fixed;inset:0 0 auto 0;z-index:60;color:#fff;transition:background .35s,color .35s,border-color .35s;border-bottom:1px solid transparent}
 .navin{max-width:1400px;margin:0 auto;padding:16px 40px;display:flex;justify-content:space-between;align-items:center}
-.nbrand img{height:18px;filter:brightness(0);display:block}
+.nbrand img{height:18px;display:block;transition:filter .35s}
 .navr{display:flex;align-items:center;gap:28px}
 .nlink{font-size:13px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;position:relative;cursor:pointer}
 .nlink::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--orange);transition:width .3s var(--ease-quick)}
 .nlink:hover::after{width:100%}
-.ncta{font-size:13px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;background:var(--black);color:#fff;padding:12px 22px;border-radius:100px;transition:background var(--dur-hover)}
-.ncta:hover{background:var(--orange)}
+.ncta{font-size:13px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;background:var(--orange);color:#fff;padding:12px 22px;border-radius:100px;transition:background var(--dur-hover),transform var(--dur-hover)}
+.ncta:hover{background:var(--o-deep);transform:translateY(-2px)}
+nav.onlight{background:rgba(251,249,246,.9);backdrop-filter:blur(12px);color:var(--ink);border-bottom-color:var(--line)}
+nav.onlight .nbrand img{filter:brightness(0)}
 
-/* hero */
-.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding-top:120px;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(58% 46% at 72% 26%,rgba(245,121,0,.16),rgba(245,121,0,0) 68%);pointer-events:none;z-index:0}
-.hero>*{position:relative;z-index:1}
-.hero .intro{max-width:392px;margin-left:40px;font-size:21px;line-height:1.5;font-weight:500;letter-spacing:-.01em}
-.hero .intro b{font-weight:800}
-.hero .intro .spark{width:44px;margin-bottom:22px;filter:brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(1352%) hue-rotate(360deg) brightness(101%) contrast(103%)}
-.stack{position:absolute;top:40%;left:54%;transform:translate(-50%,-52%);width:min(27vw,370px);aspect-ratio:3/4;z-index:2;pointer-events:none}
-.stack .card{position:absolute;inset:0;border-radius:3px;overflow:hidden;box-shadow:0 30px 80px rgba(40,20,0,.22)}
-.stack .card img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.02)}
-.stack .c1{transform:rotate(9deg) translate(7%,-3%)}
-.stack .c2{transform:rotate(-7deg) translate(-6%,2%)}
-.stack .c3{transform:rotate(2.5deg)}
-.hero .rgt{position:absolute;top:47%;right:48px;text-align:right;font-family:var(--mono);font-size:12.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--gray2);line-height:2}
-.hero .markrow{padding:0 24px 26px}
-.hero .mark sup{font-size:.3em;vertical-align:super}
-.hero .loc{position:absolute;bottom:26px;right:48px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray2)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:17px 32px;border-radius:100px;transition:background var(--dur-hover),transform var(--dur-hover),color var(--dur-hover);cursor:pointer;border:none;font-family:inherit}
+.btn--o{background:var(--orange);color:#fff}.btn--o:hover{background:var(--o-deep);transform:translateY(-2px)}
+.btn--dark{background:var(--black);color:#fff}.btn--dark:hover{background:var(--orange);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}.btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn--gd{background:transparent;color:var(--ink);border:1.5px solid rgba(20,18,16,.3)}.btn--gd:hover{background:var(--black);color:#fff;border-color:var(--black)}
 
-/* sections */
-section{padding:140px 0}
-.label-top{margin-bottom:40px}
-.split{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px;align-items:start}
-.split .lft{position:sticky;top:120px}
-.arrowlink{display:inline-flex;align-items:center;gap:12px;font-size:clamp(20px,1.8vw,26px);font-weight:700;letter-spacing:-.02em;margin-top:20px;transition:gap .3s,color .3s}
-.arrowlink:hover{gap:22px;color:var(--orange)}
-.sub{max-width:440px;margin-top:26px;font-size:17px;color:var(--gray2)}
+/* ===== HERO (dark, emblematic) ===== */
+.hero{position:relative;min-height:100vh;background:var(--warm);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 24px 90px;overflow:hidden}
+.hero::before{content:'';position:absolute;left:50%;top:34%;transform:translate(-50%,-50%);width:min(120vw,1200px);height:min(120vw,1200px);
+  background:radial-gradient(circle,rgba(245,121,0,.34) 0%,rgba(245,121,0,.10) 34%,rgba(245,121,0,0) 62%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E")}
+.hero>*{position:relative;z-index:2}
+.hero .emblem{width:clamp(80px,9vw,124px);margin:0 auto 30px;filter:var(--spark-o) drop-shadow(0 0 34px rgba(245,121,0,.6))}
+.hero .eyebrow{color:var(--o-lite);margin-bottom:26px}
+.hero h1{font-weight:800;letter-spacing:-.045em;line-height:.98;font-size:clamp(42px,6.6vw,104px);max-width:15ch}
+.hero .supp{margin-top:30px;font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.5;color:rgba(251,249,246,.82);max-width:44ch;margin-left:auto;margin-right:auto}
+.hero .prod{margin-top:20px;font-size:15.5px;line-height:1.6;color:rgba(251,249,246,.5);max-width:50ch;margin-left:auto;margin-right:auto}
+.hero .info{margin-top:34px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--o-lite)}
+.hero .acts{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .micro{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(251,249,246,.4)}
 
-/* parts */
-.parts .grid{border-top:1px solid var(--line)}
-.prow{display:grid;grid-template-columns:120px 1fr 1.2fr;gap:30px;align-items:start;padding:38px 0;border-bottom:1px solid var(--line);transition:background .3s}
-.prow:hover{background:var(--panel)}
-.prow:hover .prefix{-webkit-text-stroke-color:var(--o-lite)}
-.prow h3{font-weight:800;font-size:clamp(24px,2.6vw,36px);letter-spacing:-.03em}
-.prow p{font-size:16px;color:var(--gray2);line-height:1.55;max-width:44ch}
+/* ===== narrative sections ===== */
+section{padding:clamp(96px,12vh,150px) 0}
+.narr .eyebrow{margin-bottom:34px;display:flex;align-items:center;gap:10px}
+.narr .eyebrow .lspark{width:15px;filter:var(--spark-o)}
+.narr h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(34px,5.2vw,82px);max-width:16ch}
+.narr h2 .og{display:inline}
+.narr .body{margin-top:38px;max-width:60ch}
+.narr .body p{font-size:clamp(17px,1.5vw,21px);line-height:1.62;color:var(--gray2)}
+.narr .body p+p{margin-top:22px}
+.narr .body p b{color:var(--ink);font-weight:600}
+.pull{margin-top:56px;border-top:2px solid var(--black);padding-top:30px;max-width:20ch;
+  font-weight:700;letter-spacing:-.02em;line-height:1.12;font-size:clamp(24px,3vw,42px)}
+.pull .og{display:inline}
+.supline{margin-top:34px;font-weight:700;letter-spacing:-.02em;line-height:1.15;font-size:clamp(22px,2.4vw,34px)}
+.supline span{color:var(--gray)}
 
-/* process timeline */
-.tl{margin-top:70px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
-.tl-cell{border-right:1px solid var(--line);border-left:1px solid var(--line);padding:34px 30px 60px;margin-left:-1px}
+/* narrative alt (offset) */
+.narr.alt{background:var(--panel)}
+.narr.dark{background:var(--warm);color:var(--paper)}
+.narr.dark h2{color:var(--paper)}
+.narr.dark .body p{color:rgba(251,249,246,.66)}.narr.dark .body p b{color:#fff}
+.narr.dark .pull{border-top-color:rgba(255,255,255,.28)}
+
+/* product bullets */
+.prod-list{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.prod-list li{list-style:none;background:var(--paper);padding:30px 28px;font-weight:700;font-size:clamp(18px,1.9vw,24px);letter-spacing:-.02em;display:flex;align-items:flex-start;gap:12px}
+.prod-list li::before{content:"";width:7px;height:7px;background:var(--orange);flex:0 0 7px;margin-top:.5em}
+.closing{margin-top:48px;font-weight:700;letter-spacing:-.02em;line-height:1.18;font-size:clamp(22px,2.5vw,36px);max-width:22ch}
+.closing span{color:var(--gray)}
+
+/* process */
+.tl{margin-top:60px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+.tl-cell{border-right:1px solid var(--line);border-left:1px solid var(--line);padding:34px 30px 56px;margin-left:-1px}
 .tl-cell .step{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:#fff;font-family:var(--mono);font-size:13px;font-weight:500;padding:12px 20px}
 .tl-cell h3{margin-top:26px;font-weight:800;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.03em}
-.tl-cell p{margin-top:16px;font-size:15.5px;line-height:1.55;color:var(--gray2);max-width:40ch}
+.tl-cell p{margin-top:16px;font-size:15.5px;line-height:1.55;color:var(--gray2);max-width:42ch}
 .tl-cell .tags{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
 .tl-cell .tags span{background:var(--chip);border-radius:100px;padding:9px 16px;font-size:13px;font-weight:500}
 
-/* bigquote */
+/* proof */
 .bigquote{max-width:1150px}
-.bigquote .attr{margin-top:36px;font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--gray2)}
+.bigquote h3{font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(28px,4vw,58px)}
+.bigquote .attr{margin-top:34px;font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--gray2)}
 .bigquote .attr b{color:var(--black)}
-
-/* record table (clients) */
-.record{border-top:1px solid var(--line);margin-top:90px}
+.record{border-top:1px solid var(--line);margin-top:70px}
 .rrow{display:grid;grid-template-columns:auto 1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:center}
 .rrow img{width:46px;height:46px;border-radius:100px;object-fit:cover;filter:grayscale(1)}
 .rrow .a{font-size:18px;font-weight:700}
 .rrow .c{font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--gray2)}
 
-/* bignum */
-.bignum-wrap{border-top:1px solid var(--line);padding-top:20px}
+/* investment */
 .bignum .n{font-weight:900;letter-spacing:-.045em;line-height:.82;font-size:clamp(96px,15vw,220px)}
 .invrow{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;align-items:start}
 .invrow .terms{font-size:18px;line-height:1.65}.invrow .care{margin-top:12px;font-size:15px;color:var(--gray2);line-height:1.6}
@@ -113,21 +126,10 @@ section{padding:140px 0}
 .inc .h{font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--orange);margin-bottom:18px}
 .inc ul{list-style:none}.inc li{font-size:16px;font-weight:500;padding:13px 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px}
 .inc li::before{content:"";width:6px;height:6px;background:var(--orange);flex:0 0 6px}
-.btn{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;background:var(--black);color:#fff;padding:17px 32px;border-radius:100px;transition:background var(--dur-hover),transform var(--dur-hover);cursor:pointer;border:none;font-family:inherit}
-.btn:hover{background:var(--orange);transform:translateY(-2px)}
-.btn--wht{background:#fff;color:var(--black)}.btn--wht:hover{background:var(--orange);color:#fff}
-
-/* fit */
-.fit .row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid var(--black)}
-.fcol{padding:44px 40px 46px}.fcol:first-child{border-right:1px solid var(--line)}
-.fcol .h{font-weight:800;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.02em;margin-bottom:26px}
-.fcol.no .h{color:var(--orange)}
-.fcol ul{list-style:none}.fcol li{font-size:16px;line-height:1.5;padding:15px 0;border-top:1px solid var(--line);display:flex;gap:12px}
-.fcol li::before{font-weight:800}.fcol.yes li::before{content:"+";color:var(--black)}.fcol.no li::before{content:"–";color:var(--orange)}
 
 /* faq */
 .faq .row{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
-.faq h2{font-weight:800;font-size:clamp(34px,5vw,72px);letter-spacing:-.04em;line-height:.92}
+.faq h2{font-weight:800;font-size:clamp(34px,5vw,64px);letter-spacing:-.04em;line-height:.94}
 .faq .note{margin-top:22px;color:var(--gray2)}
 .faq details{border-top:1px solid var(--line);padding:26px 0}
 .faq summary{font-size:clamp(19px,2vw,26px);font-weight:700;letter-spacing:-.02em;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline}
@@ -136,14 +138,16 @@ section{padding:140px 0}
 .faq details[open] summary::after{content:"–"}
 .faq details p{margin-top:16px;font-size:16px;line-height:1.6;color:var(--gray2);max-width:56ch}
 
-/* close */
-.close{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;color:#fff}
-.close img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.close .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,0,.5),rgba(12,8,4,.78)),radial-gradient(60% 50% at 50% 40%,rgba(245,121,0,.28),transparent 70%)}
-.close .in{position:relative;z-index:2;padding:0 24px}
-.close h2{font-weight:800;letter-spacing:-.04em;line-height:.94;font-size:clamp(42px,7vw,120px)}
-.close .sub2{margin-top:24px;font-size:17px;font-weight:500;color:rgba(255,255,255,.82)}
-.close .act{margin-top:40px}
+/* final CTA */
+.finalcta{position:relative;background:var(--warm);color:var(--paper);text-align:center;overflow:hidden}
+.finalcta::before{content:'';position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:min(120vw,1100px);height:min(120vw,1100px);
+  background:radial-gradient(circle,rgba(245,121,0,.3) 0%,rgba(245,121,0,0) 60%);pointer-events:none}
+.finalcta>.wrapn{position:relative;z-index:2}
+.finalcta .eyebrow{color:var(--o-lite);margin-bottom:26px}
+.finalcta h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(38px,6vw,96px);max-width:16ch;margin:0 auto}
+.finalcta .body{margin-top:30px;font-size:clamp(17px,1.5vw,20px);color:rgba(251,249,246,.72);max-width:52ch;margin-left:auto;margin-right:auto;line-height:1.6}
+.finalcta .act{margin-top:38px}
+.finalcta .micro{margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:rgba(251,249,246,.42)}
 
 /* footer */
 .footer{background:var(--black);color:#fff;padding:76px 0 54px}
@@ -152,7 +156,7 @@ section{padding:140px 0}
 .footer .meta{font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.5);text-align:right;line-height:2}
 .footer .meta a:hover{color:var(--orange)}
 
-/* ---------- About drawer (mobius-styled) ---------- */
+/* ---------- About drawer ---------- */
 .drawer{position:fixed;inset:0;z-index:200;visibility:hidden}
 .drawer.is-open{visibility:visible}
 .drawer__ov{position:absolute;inset:0;background:rgba(12,8,4,.55);backdrop-filter:blur(10px) saturate(.7);opacity:0;transition:opacity .5s ease;cursor:pointer}
@@ -161,7 +165,8 @@ section{padding:140px 0}
   padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:clamp(34px,3vw,52px);transform:translateX(100%);transition:transform .55s cubic-bezier(.3,.8,.25,1)}
 .drawer.is-open .drawer__panel{transform:translateX(0)}
 .drawer__head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.drawer__head .label{color:rgba(251,249,246,.6)}
+.drawer__head .eyebrow{color:rgba(251,249,246,.6);display:flex;align-items:center;gap:10px}
+.drawer__head .eyebrow .lspark{width:14px;filter:var(--spark-o)}
 .drawer__close{display:inline-flex;align-items:stretch;background:var(--paper);color:var(--black);border:none;cursor:pointer;font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;overflow:hidden}
 .drawer__close>span:first-child{padding:11px 16px}
 .drawer__esc{display:flex;align-items:center;padding:0 12px;background:var(--orange);color:#fff}
@@ -174,6 +179,7 @@ section{padding:140px 0}
 .drawer__word{position:absolute;font-weight:800;letter-spacing:-.03em;font-size:clamp(38px,4vw,58px);color:#fff;mix-blend-mode:difference}
 .drawer__word.w1{top:7%;left:6%}.drawer__word.w2{top:44%;right:7%;color:var(--o-lite);mix-blend-mode:normal}.drawer__word.w3{bottom:9%;left:6%}
 .drawer__row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:24px;padding-top:26px;border-top:1px solid rgba(251,249,246,.14)}
+.drawer__row .eyebrow{color:rgba(251,249,246,.6);display:flex;align-items:center;gap:10px}.drawer__row .eyebrow .lspark{width:14px;filter:var(--spark-o)}
 .drawer__principle h4{font-size:18px;font-weight:700;margin-bottom:8px}
 .drawer__principle p{color:rgba(251,249,246,.55);line-height:1.5;max-width:44ch;font-size:15px}
 .drawer__principle+.drawer__principle{margin-top:22px;padding-top:22px;border-top:1px solid rgba(251,249,246,.1)}
@@ -185,19 +191,12 @@ html.no-motion .wr{opacity:1}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
 @media (max-width:900px){
-  .wrap{padding:0 22px}
+  .wrap,.wrapn{padding:0 22px}
   .navin{padding:16px 22px}.navr{gap:18px}
-  .hero{padding-top:100px}
-  .hero .intro{margin-left:22px;max-width:none;padding-right:22px}
-  .stack{position:static;transform:none;width:64%;margin:40px auto 30px}
-  .stack .card{position:relative;inset:auto}.stack .c1,.stack .c2{display:none}
-  .hero .rgt,.hero .loc{display:none}
-  .hero .markrow{padding:0 22px 30px}
-  .split{grid-template-columns:1fr;gap:30px}.split .lft{position:static}
-  .prow{grid-template-columns:1fr;gap:12px;padding:30px 0}
+  .hero{padding:110px 22px 80px}
+  .prod-list{grid-template-columns:1fr}
   .tl{grid-template-columns:1fr}
   .invrow{grid-template-columns:1fr;gap:36px}
-  .fit .row{grid-template-columns:1fr}.fcol:first-child{border-right:0;border-bottom:1px solid var(--line)}
   .faq .row{grid-template-columns:1fr;gap:30px}
   .drawer__row{grid-template-columns:1fr}
   .footer .grid{flex-direction:column;align-items:flex-start}.footer .meta{text-align:left}
@@ -205,7 +204,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 </style></head>
 <body>
 
-<nav><div class="navin">
+<nav id="nav"><div class="navin">
   <a class="nbrand" href="#top" aria-label="Ignite Yourself"><img src="/igy/assets/logo-igy.png" alt="Ignite Yourself"></a>
   <div class="navr">
     <span class="nlink" data-drawer-open>About</span>
@@ -215,75 +214,98 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="intro wr" data-reveal>
-      <img class="spark" src="/igy/assets/spark.png" alt="" />
-      <b>You did the work.</b> A premium platform you own — built in one week — that turns your reputation into opportunity.
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <img class="emblem wr" data-reveal src="/igy/assets/spark.png" alt="" />
+    <p class="eyebrow wr" data-reveal>The Authority Platform</p>
+    <h1><span class="rmask"><span class="rin">Turn the authority you have earned</span></span><span class="rmask"><span class="rin">into <span class="og">an asset you can use.</span></span></span></h1>
+    <p class="supp wr" data-reveal>We transform accumulated experience into a clear authority platform — so everything you have learned, contributed, and earned can become an active part of your future.</p>
+    <p class="prod wr" data-reveal>In one focused week, we turn your experience, body of work, and point of view into a premium authority platform you own.</p>
+    <p class="info wr" data-reveal>One focused week · USD 3,000 · Built remotely, worldwide</p>
+    <div class="acts wr" data-reveal>
+      <a class="btn btn--o" href="#book">Build your Authority Platform →</a>
+      <a class="btn btn--ghost" href="#how">See how it works</a>
     </div>
-    <div class="stack" data-stack>
-      <div class="card c1"><img src="/igy/assets/tomi.jpg" alt=""></div>
-      <div class="card c2"><img src="/igy/assets/adriana.jpg" alt=""></div>
-      <div class="card c3"><img src="/igy/assets/arce.jpg" alt=""></div>
-    </div>
-    <div class="rgt wr" data-reveal>The Authority Platform<br>One week · USD 3,000</div>
-    <div class="markrow"><div class="mark" data-mark><span class="rmask"><span class="rin">BE <span class="og">SEEN</span>.<sup class="og">®</sup></span></span></div></div>
-    <div class="loc wr" data-reveal>For accomplished professionals</div>
-  </section>
+    <p class="micro wr" data-reveal>One conversation · One focused production week · One platform you own.</p>
+  </header>
 
-  <!-- COST -->
-  <section><div class="wrap">
-    <div class="label label-top wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The cost of staying invisible</div>
-    <h2 class="mega"><span class="rmask"><span class="rin">The world doesn't decide</span></span><span class="rmask"><span class="rin">with what's real. It</span></span><span class="rmask"><span class="rin">decides with what it</span></span><span class="rmask"><span class="rin">can <span class="og">see.</span></span></span></h2>
-    <p class="sub wr" data-reveal>You've done the hard part — the work, the results, the reputation. But the ones collecting the opportunities aren't the best. They're the visible. That's not talent. That's a system. And systems can be built.</p>
+  <!-- ===== 02 · ACCUMULATED VALUE ===== -->
+  <section class="narr"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">What you have earned</div>
+    <h2><span class="rmask"><span class="rin">Your career is more than a history.</span></span><span class="rmask"><span class="rin">It is <span class="og">accumulated value.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>Every project, decision, contribution, relationship, and result has added weight to your name.</p>
+      <p class="wr" data-reveal>But much of that value may still live in private conversations, institutional profiles, scattered publications, and the memory of people who already know your work.</p>
+      <p class="wr" data-reveal>We bring it together into one clear expression — so your experience can become something <b>visible, ownable, and useful.</b></p>
+    </div>
+    <p class="pull wr" data-reveal>Your experience should not remain trapped in the places where it was built.</p>
   </div></section>
 
-  <!-- WHAT IT IS -->
-  <section><div class="wrap"><div class="split">
-    <div class="lft wr" data-reveal><div class="label"><img class="lspark" src="/igy/assets/spark.png" alt="">What it is</div><a class="arrowlink" href="#book">Book the call →</a></div>
-    <div class="wr" data-reveal>
-      <h3 class="state">The Authority Platform is a premium website you own — your positioning, story, and visual world in one place, engineered to turn attention into <span class="og">opportunity.</span></h3>
-      <p class="sub">Built and delivered in one week. Yours to keep — never rented, never a template.</p>
+  <!-- ===== 03 · A FORM FOR YOUR AUTHORITY ===== -->
+  <section class="narr alt"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">From reputation to asset</div>
+    <h2><span class="rmask"><span class="rin">We give the work behind your reputation</span></span><span class="rmask"><span class="rin">a form that can <span class="og">carry you forward.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>The Authority Platform turns your experience, work, evidence, and point of view into an asset that can introduce you, establish context, and communicate the full weight of your career.</p>
+      <p class="wr" data-reveal>It gives your reputation a place of its own — one that does not disappear when you leave a room, change institutions, or step into a new professional chapter.</p>
     </div>
-  </div></div></section>
-
-  <!-- PARTS -->
-  <section class="parts"><div class="wrap">
-    <div class="label label-top wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">What's inside — five connected parts</div>
-    <div class="grid" data-stagger>
-      <div class="prow"><div class="prefix">01</div><h3>Positioning</h3><p>What you should be known for, by whom, and the opportunities it should open.</p></div>
-      <div class="prow"><div class="prefix">02</div><h3>Narrative</h3><p>Your story and point of view, shaped into one clear message — the truth about you, told well.</p></div>
-      <div class="prow"><div class="prefix">03</div><h3>Visual World</h3><p>A look and feel that makes your authority unmistakable — designed around you, never a template.</p></div>
-      <div class="prow"><div class="prefix">04</div><h3>Owned Website</h3><p>A premium site you own — your work, your story, your authority, in one place built to be seen.</p></div>
-      <div class="prow"><div class="prefix">05</div><h3>Opportunity Capture</h3><p>A contact form and pathways wired straight to you — every inquiry lands the moment it happens.</p></div>
-    </div>
+    <p class="pull wr" data-reveal>What you have built should continue creating value for <span class="og">what comes next.</span></p>
   </div></section>
 
-  <!-- PROCESS -->
+  <!-- ===== 04 · BEYOND YOUR EXISTING CIRCLES ===== -->
+  <section class="narr dark"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">Built to travel</div>
+    <h2><span class="rmask"><span class="rin">Your authority should extend beyond</span></span><span class="rmask"><span class="rin">the people who <span class="og">already know you.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>A meaningful career often grows through relationships, referrals, institutions, and years of earned trust. But those forms of reputation do not always travel easily.</p>
+      <p class="wr" data-reveal>We turn your experience, work, and point of view into an authority platform that can <b>speak for you, travel beyond your existing circles,</b> and put the full weight of your career behind what comes next.</p>
+    </div>
+    <p class="supline wr" data-reveal>Not louder. <span>Not more performative.</span><br>Simply clearer, more complete, and easier to carry forward.</p>
+  </div></section>
+
+  <!-- ===== 05 · THE PRODUCT ===== -->
+  <section class="narr" id="how"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The Authority Platform</div>
+    <h2><span class="rmask"><span class="rin">One owned asset for everything</span></span><span class="rmask"><span class="rin"><span class="og">behind your name.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>Your story, evidence, expertise, visual identity, and professional pathways come together in one premium digital platform. A place where the right person can understand:</p>
+    </div>
+    <ul class="prod-list" data-stagger>
+      <li>Who you are.</li>
+      <li>What you have built.</li>
+      <li>What you know.</li>
+      <li>What you believe.</li>
+      <li>Why your work matters.</li>
+      <li>What they can invite you into next.</li>
+    </ul>
+    <p class="closing wr" data-reveal>Not a manufactured personal brand. <span>Not another generic professional website.</span> An owned authority asset built from what is already true about you.</p>
+  </div></section>
+
+  <!-- ===== PROCESS ===== -->
   <section><div class="wrap">
-    <div class="label label-top wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The process</div>
-    <h2 class="mega"><span class="rmask"><span class="rin">One <span class="og">Week.</span></span></span></h2>
+    <div class="eyebrow wr" data-reveal style="display:flex;align-items:center;gap:10px;margin-bottom:38px"><img class="lspark" src="/igy/assets/spark.png" alt="" style="width:15px;filter:var(--spark-o)">How it works · one focused week</div>
+    <h2 class="narr" style="max-width:none"><span class="rmask"><span class="rin" style="font-weight:800;letter-spacing:-.04em;font-size:clamp(48px,10vw,150px);line-height:.9">One <span class="og">Week.</span></span></span></h2>
     <div class="tl" data-stagger>
       <div class="tl-cell">
-        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 01 — The call</div>
+        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 01 — The conversation</div>
         <h3>We extract everything.</h3>
-        <p>One conversation. We listen first — your work, results, story, point of view — and pull out what you should be known for.</p>
-        <div class="tags"><span>Deep-dive call</span><span>Positioning</span><span>Narrative</span><span>Opportunity map</span></div>
+        <p>One focused conversation. We listen first — your experience, body of work, evidence, and point of view — and find what deserves to be seen.</p>
+        <div class="tags"><span>Deep-dive call</span><span>Positioning</span><span>Narrative</span><span>Evidence map</span></div>
       </div>
       <div class="tl-cell">
-        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 02 — One week</div>
-        <h3>We build and deliver.</h3>
-        <p>In one week we design and build the whole thing — visual world, owned website, story and authority in one place. Then it's live, and it's yours.</p>
-        <div class="tags"><span>Visual world</span><span>Owned website</span><span>Core copy</span><span>Live &amp; yours</span></div>
+        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 02 — The production week</div>
+        <h3>We build your asset.</h3>
+        <p>In one focused week we design and build the whole platform — your visual world, your owned website, your authority in one place. Then it's live, and it's yours.</p>
+        <div class="tags"><span>Visual world</span><span>Owned platform</span><span>Core copy</span><span>Live &amp; yours</span></div>
       </div>
     </div>
   </div></section>
 
-  <!-- PROOF -->
-  <section><div class="wrap">
-    <div class="label label-top wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The proof</div>
+  <!-- ===== PROOF ===== -->
+  <section class="narr alt"><div class="wrap">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The proof</div>
     <div class="bigquote wr" data-reveal>
-      <h3 class="state">"For the first time, twenty-seven years of surgery live in one place — and it finally <span class="og">looks like the work.</span>"</h3>
+      <h3>"For the first time, twenty-seven years of surgery live in one place — and it finally <span class="og">looks like the work.</span>"</h3>
       <div class="attr">— <b>Dr. Jorge Arce</b> · Oral &amp; Maxillofacial Surgeon</div>
     </div>
     <div class="record" data-stagger>
@@ -293,65 +315,44 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
     </div>
   </div></section>
 
-  <!-- INVESTMENT -->
+  <!-- ===== INVESTMENT ===== -->
   <section id="book"><div class="wrap">
-    <div class="label label-top wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The investment</div>
-    <div class="bignum-wrap"><div class="bignum" data-mark><span class="rmask"><span class="rin">USD 3,<span class="og">000</span></span></span></div></div>
+    <div class="eyebrow wr" data-reveal style="display:flex;align-items:center;gap:10px;margin-bottom:38px"><img class="lspark" src="/igy/assets/spark.png" alt="" style="width:15px;filter:var(--spark-o)">The investment</div>
+    <div class="bignum" data-mark><span class="rmask"><span class="rin">USD 3,<span class="og">000</span></span></span></div>
     <div class="invrow">
       <div class="wr" data-reveal>
         <p class="terms">USD 1,500 to start · USD 1,500 on delivery.</p>
-        <p class="care">Then USD 99/month Platform Care — hosting, upkeep, and small changes. Your platform stays live and cared for.</p>
-        <div class="act"><a class="btn" href="#book">Book the 30-minute call →</a></div>
+        <p class="care">Then USD 99/month Platform Care — hosting, upkeep, and small changes. Your asset stays live and cared for.</p>
+        <div class="act"><a class="btn btn--dark" href="#book">Build your Authority Platform →</a></div>
       </div>
       <div class="inc wr" data-reveal>
         <div class="h">Everything included</div>
-        <ul><li>Positioning &amp; narrative</li><li>Visual world</li><li>Owned website — yours to keep</li><li>Core copy, written for you</li><li>Opportunity capture</li><li>Live in one week</li></ul>
+        <ul><li>Positioning &amp; narrative</li><li>Visual world</li><li>Owned platform — yours to keep</li><li>Core copy, written for you</li><li>Evidence &amp; professional pathways</li><li>Live in one focused week</li></ul>
       </div>
     </div>
   </div></section>
 
-  <!-- FIT -->
-  <section class="fit"><div class="wrap">
-    <div class="label label-top wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">Is it for you?</div>
-    <div class="row wr" data-reveal>
-      <div class="fcol yes"><div class="h">This is for you if…</div><ul>
-        <li>You've built real authority over years of work.</li>
-        <li>Your reputation is bigger than your digital presence shows.</li>
-        <li>You'd rather do the work than post about it.</li>
-        <li>You want to own your platform, not rent it.</li>
-      </ul></div>
-      <div class="fcol no"><div class="h">It's not for you if…</div><ul>
-        <li>You're just starting out, with little behind you yet.</li>
-        <li>You want to become an influencer.</li>
-        <li>You want volume of content over substance.</li>
-        <li>You want a persona manufactured from scratch.</li>
-      </ul></div>
-    </div>
-  </div></section>
-
-  <!-- FAQ -->
+  <!-- ===== FAQ ===== -->
   <section class="faq"><div class="wrap"><div class="row">
     <div class="wr" data-reveal><h2>Questions,<br>answered.</h2><p class="note">More? The call is where we answer everything.</p></div>
     <div class="list" data-stagger>
-      <details><summary>How long does it really take?</summary><p>One week — from the extraction call to a live platform you own. No twelve-week projects.</p></details>
-      <details><summary>What do you need from me?</summary><p>One call, your story, your expertise, and access to the material we need. We do the rest.</p></details>
-      <details><summary>Is this personal branding?</summary><p>It's what personal branding should have been. Not posting more — a platform that tells the world who you are, and then goes to work for you.</p></details>
-      <details><summary>Is this social media management?</summary><p>No. It's an owned platform that carries your authority. Content and reach can come later, if you choose.</p></details>
-      <details><summary>What happens after delivery?</summary><p>Your platform stays live with Platform Care (USD 99/month). When you're ready, it becomes the base for strategy, content, and reach.</p></details>
+      <details><summary>How long does it really take?</summary><p>One focused week — from the conversation to a live platform you own. No twelve-week projects.</p></details>
+      <details><summary>What do you need from me?</summary><p>One conversation, your experience, and access to the material we need to shape the platform. We do the rest.</p></details>
+      <details><summary>Is this personal branding?</summary><p>No. It's not a manufactured persona. It's an owned authority asset built from what is already true about you.</p></details>
+      <details><summary>Is this social media management?</summary><p>No. It's a platform you own that carries your authority. Content and reach can come later, if you choose.</p></details>
+      <details><summary>What happens after delivery?</summary><p>Your platform stays live and cared for with Platform Care (USD 99/month). When you're ready, it becomes the base for strategy, content, and reach.</p></details>
       <details><summary>What is the investment?</summary><p>USD 3,000 — USD 1,500 to start and USD 1,500 on delivery. Then USD 99/month Platform Care.</p></details>
     </div>
   </div></div></section>
 
-  <!-- CLOSE -->
-  <section class="close">
-    <img src="/igy/assets/hero.jpg" alt="">
-    <div class="shade"></div>
-    <div class="in">
-      <h2><span class="rmask"><span class="rin">The world can't say yes</span></span><span class="rmask"><span class="rin">to what it <span class="og">can't see.</span></span></span></h2>
-      <p class="sub2 wr" data-reveal>One call. We listen first — that's the whole method.</p>
-      <div class="act wr" data-reveal><a class="btn btn--wht" href="#book">Book the 30-minute call →</a></div>
-    </div>
-  </section>
+  <!-- ===== FINAL CTA ===== -->
+  <section class="finalcta"><div class="wrapn">
+    <p class="eyebrow wr" data-reveal>Put your experience to work</p>
+    <h2><span class="rmask"><span class="rin">Put the full weight of your career</span></span><span class="rmask"><span class="rin">behind <span class="og">what comes next.</span></span></span></h2>
+    <p class="body wr" data-reveal>In thirty minutes, we will explore what you have built, what remains difficult to see, and how your experience could become a clear authority platform you own.</p>
+    <div class="act wr" data-reveal><a class="btn btn--o" href="#book">Book the 30-minute call →</a></div>
+    <p class="micro wr" data-reveal>No pressure · No manufactured persona · Just a focused conversation about turning earned authority into a usable asset.</p>
+  </div></section>
 
 </main>
 
@@ -365,7 +366,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   <div class="drawer__ov" data-drawer-close tabindex="-1"></div>
   <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="About the studio">
     <div class="drawer__head">
-      <div class="label"><img class="lspark" src="/igy/assets/spark.png" alt="">About the studio</div>
+      <div class="eyebrow"><img class="lspark" src="/igy/assets/spark.png" alt="">About the studio</div>
       <button class="drawer__close" type="button" data-drawer-close><span>Close</span><span class="drawer__esc">ESC</span></button>
     </div>
     <div class="drawer__letter">
@@ -381,7 +382,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
       <span class="drawer__word w3">launch</span>
     </div>
     <div class="drawer__row">
-      <div class="label"><img class="lspark" src="/igy/assets/spark.png" alt="">Our principles</div>
+      <div class="eyebrow"><img class="lspark" src="/igy/assets/spark.png" alt="">Our principles</div>
       <div class="drawer__principles">
         <div class="drawer__principle"><h4>We extract, we don't invent</h4><p>You've already done the work. We organize and project what's real — never a manufactured persona, never turning you into an influencer.</p></div>
         <div class="drawer__principle"><h4>A system, not a stream</h4><p>Not more posting. One connected system — positioning, platform, and story — built to compound quietly while you do your work.</p></div>
@@ -389,7 +390,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
         <div class="drawer__principle"><h4>The person before the brand</h4><p>Behind every system is a real person with real stakes. The most powerful presence is the one that feels unmistakably, proudly you.</p></div>
       </div>
     </div>
-    <a class="btn drawer__cta" href="#book" data-drawer-close>Book the 30-minute call →</a>
+    <a class="btn btn--o drawer__cta" href="#book" data-drawer-close>Book the 30-minute call →</a>
   </aside>
 </div>
 
@@ -398,11 +399,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <script src="/vendor/lenis.min.js"></script>
 <script>
 (function(){
-  /* ---------- About drawer ---------- */
-  (function(){
-    var drawer=document.getElementById('aboutDrawer'); if(!drawer)return;
-    function open(){drawer.classList.add('is-open');drawer.setAttribute('aria-hidden','false');document.body.classList.add('drawer-locked');}
-    function close(){drawer.classList.remove('is-open');drawer.setAttribute('aria-hidden','true');document.body.classList.remove('drawer-locked');}
+  /* nav light/dark toggle */
+  var nav=document.getElementById('nav');var hero=document.querySelector('.hero');
+  function navColor(){var h=hero?hero.offsetHeight-80:600;nav.classList.toggle('onlight',(window.scrollY||pageYOffset)>h)}
+  navColor();
+
+  /* drawer */
+  (function(){var drawer=document.getElementById('aboutDrawer');if(!drawer)return;
+    function open(){drawer.classList.add('is-open');drawer.setAttribute('aria-hidden','false');document.body.classList.add('drawer-locked')}
+    function close(){drawer.classList.remove('is-open');drawer.setAttribute('aria-hidden','true');document.body.classList.remove('drawer-locked')}
     document.querySelectorAll('[data-drawer-open]').forEach(function(o){o.addEventListener('click',function(e){e.preventDefault();open()})});
     drawer.querySelectorAll('[data-drawer-close]').forEach(function(c){c.addEventListener('click',function(e){e.preventDefault();close()})});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('is-open'))close()});
@@ -411,12 +416,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   var REDUCED=matchMedia('(prefers-reduced-motion:reduce)').matches;
   var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined';
   var html=document.documentElement;
-  if(!MOTION){html.classList.add('no-motion');wireAnchors(null);return;}
+  if(!MOTION){html.classList.add('no-motion');addEventListener('scroll',navColor,{passive:true});wireAnchors(null);return;}
   gsap.registerPlugin(ScrollTrigger);
   var lenis=null;
   if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
-    lenis=new Lenis({lerp:.3});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(function(t){lenis.raf(t*1000)});
-  }
+    lenis=new Lenis({lerp:.3});lenis.on('scroll',function(){ScrollTrigger.update();navColor()});gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  } else { addEventListener('scroll',navColor,{passive:true}); }
   gsap.ticker.lagSmoothing(0);
   (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
     if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
@@ -424,39 +429,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
     pend.forEach(function(im){function d(){if(--left===0)rf()}im.addEventListener('load',d);im.addEventListener('error',d)});})();
   wireAnchors(lenis);
 
-  /* R1 · fade+rise reveals */
+  /* R1 fade+rise */
   document.querySelectorAll('[data-reveal]').forEach(function(el){
     gsap.set(el,{opacity:0,y:22});
-    gsap.to(el,{opacity:1,y:0,duration:.8,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}});});
-
-  /* R2 · headlines rise from mask (scrollytelling — paces the reading).
-     IntersectionObserver = fiable en movil y desktop, en-vista-al-cargar y al scrollear. */
+    gsap.to(el,{opacity:1,y:0,duration:.8,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}});});
+  /* R2 headline rise from mask (gsap owns transform → sin compound) */
   document.querySelectorAll('.rmask .rin').forEach(function(el){
     gsap.set(el,{yPercent:112});
-    gsap.to(el,{yPercent:0,duration:.9,ease:'expo.out',
-      scrollTrigger:{trigger:el.closest('.rmask'),start:'top 94%',once:true}});
-  });
-
-  /* R3 · staggered groups */
+    gsap.to(el,{yPercent:0,duration:.9,ease:'expo.out',scrollTrigger:{trigger:el.closest('.rmask'),start:'top 94%',once:true}});});
+  /* R3 stagger */
   document.querySelectorAll('[data-stagger]').forEach(function(g){
-    var kids=g.children;
-    gsap.set(kids,{opacity:0,y:26});
-    gsap.to(kids,{opacity:1,y:0,duration:.7,ease:'expo.out',stagger:.08,
-      scrollTrigger:{trigger:g,start:'top 82%',once:true}});
-  });
-
-  /* R4 · hero card-stack parallax — cards spread & drift as you scroll (intentional) */
-  var stack=document.querySelector('[data-stack]');
-  if(stack&&window.innerWidth>900){
-    var cards=stack.querySelectorAll('.card');
-    gsap.to(stack,{yPercent:-14,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.6}});
-    gsap.to(cards[0],{rotation:16,x:'22%',ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.8}});
-    gsap.to(cards[1],{rotation:-14,x:'-20%',ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:.8}});
-  }
-  /* R5 · giant marks drift softly with scroll */
+    gsap.set(g.children,{opacity:0,y:26});
+    gsap.to(g.children,{opacity:1,y:0,duration:.7,ease:'expo.out',stagger:.08,scrollTrigger:{trigger:g,start:'top 84%',once:true}});});
+  /* R4 giant marks drift */
   document.querySelectorAll('[data-mark]').forEach(function(m){
-    gsap.to(m,{yPercent:-8,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:.8}});
-  });
+    gsap.to(m,{yPercent:-8,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:.8}});});
 
   function wireAnchors(l){document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();
