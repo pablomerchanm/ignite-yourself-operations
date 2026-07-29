@@ -132,6 +132,24 @@ section{padding:clamp(96px,12vh,150px) 0}
 .dgrid h3{margin-top:14px;font-weight:800;font-size:clamp(19px,1.9vw,24px);letter-spacing:-.02em}
 .dgrid p{margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--gray2);max-width:46ch}
 
+/* showcase */
+.showcase{background:var(--warm);color:var(--paper);overflow:hidden}
+.showcase .eyebrow{color:var(--o-lite)}
+.showcase h2{color:var(--paper)}
+.showcase .body p{color:rgba(251,249,246,.66)}
+.stage{margin-top:60px;position:relative;padding-bottom:clamp(30px,5vw,70px)}
+.browser{background:#1B1713;border:1px solid rgba(251,249,246,.14);border-radius:12px;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,.55);margin-right:clamp(0px,12vw,170px)}
+.browser .bar{display:flex;align-items:center;gap:7px;padding:13px 18px;background:#15110E;border-bottom:1px solid rgba(251,249,246,.09)}
+.browser .dot{width:9px;height:9px;border-radius:50%;background:rgba(251,249,246,.18)}
+.browser .url{margin-left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:rgba(251,249,246,.45);background:rgba(251,249,246,.07);padding:6px 16px;border-radius:100px}
+.pan{position:relative;overflow:hidden;height:clamp(380px,58vh,620px)}
+.pan img{width:100%;height:auto;will-change:transform}
+.phone{position:absolute;right:0;bottom:0;width:clamp(150px,17vw,225px);background:#15110E;border:1px solid rgba(251,249,246,.16);border-radius:30px;padding:9px;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.phone .pan{border-radius:21px;height:clamp(300px,40vh,460px)}
+.showcase .concept-note{margin-top:44px;max-width:64ch}
+.concept-note .t{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--o-lite)}
+.concept-note p{margin-top:8px;font-size:14px;line-height:1.6;color:rgba(251,249,246,.5)}
+
 /* process */
 .tl{margin-top:60px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)}
 .tl-cell{border-right:1px solid var(--line);border-left:1px solid var(--line);padding:34px 30px 56px;margin-left:-1px}
@@ -225,6 +243,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   .navin{padding:16px 22px}.navr{gap:16px}
   .hero{padding:110px 22px 80px}
   .dims,.dgrid{grid-template-columns:1fr}
+  .browser{margin-right:0}
+  .phone{position:relative;right:auto;bottom:auto;margin:-70px auto 0}
   .tl{grid-template-columns:1fr}
   .invrow{grid-template-columns:1fr;gap:36px}
   .faq .row{grid-template-columns:1fr;gap:30px}
@@ -342,6 +362,28 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
       <div class="cell"><div class="num">06</div><h3>Owned Digital Platform</h3><p>A tailored, responsive website designed around your name and built to remain useful beyond a single role or institution.</p></div>
       <div class="cell"><div class="num">07</div><h3>Professional Pathways</h3><p>Clear routes toward the appropriate practice, appointment, referral, speaking, advisory, collaboration, or contact opportunities.</p></div>
       <div class="cell"><div class="num">08</div><h3>Launch &amp; Handover</h3><p>Domain connection, launch, essential technical setup, and access to the platform you own.</p></div>
+    </div>
+  </div></section>
+
+  <!-- ===== 05b · SHOWCASE ===== -->
+  <section class="narr showcase"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The platform, in practice</div>
+    <h2><span class="rmask"><span class="rin">What an Authority Platform</span></span><span class="rmask"><span class="rin"><span class="og">looks like.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>A complete platform concept for an oral &amp; maxillofacial surgeon—story, evidence, point of view, and pathways brought together in one place that carries the full weight of a career.</p>
+    </div>
+    <div class="stage wr" data-reveal>
+      <div class="browser">
+        <div class="bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">yourname.com</span></div>
+        <div class="pan" data-pan><img src="/igy-mobius/assets/preview-desktop.jpg" alt="Desktop preview of an Authority Platform concept for an oral and maxillofacial surgeon" loading="lazy"></div>
+      </div>
+      <div class="phone">
+        <div class="pan" data-pan><img src="/igy-mobius/assets/preview-mobile.jpg" alt="Mobile preview of the same Authority Platform concept" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="concept-note wr" data-reveal>
+      <div class="t">Independent Authority Platform Concept</div>
+      <p>Created from publicly available information to demonstrate the method. Not an authorized client engagement.</p>
     </div>
   </div></section>
 
@@ -584,6 +626,13 @@ The platform, narrative, core copy, and digital asset are built around your name
   /* R4 giant marks drift */
   document.querySelectorAll('[data-mark]').forEach(function(m){
     gsap.to(m,{yPercent:-8,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:.8}});});
+  /* R5 showcase pan — preview screenshots scroll inside their frames */
+  document.querySelectorAll('[data-pan]').forEach(function(w){
+    var img=w.querySelector('img');
+    function run(){var d=img.offsetHeight-w.offsetHeight;if(d<=40)return;
+      gsap.fromTo(img,{y:0},{y:-d,ease:'none',scrollTrigger:{trigger:w.closest('.stage')||w,start:'top 85%',end:'bottom -60%',scrub:.6}});}
+    if(img.complete&&img.offsetHeight>0)run();else img.addEventListener('load',run);
+  });
 
   function wireAnchors(l){document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();
