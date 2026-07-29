@@ -3,9 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ignite Yourself — The Authority Platform</title>
-<meta name="description" content="Turn the authority you have earned into an asset you can use. A premium authority platform you own — built in one focused week.">
-<meta name="robots" content="noindex">
+<title>Ignite Yourself — Turn Earned Authority Into an Asset</title>
+<meta name="description" content="Authority Platforms for established professionals. Research, storytelling, strategy, editorial design, and digital development—brought together in one personal platform you own.">
+<link rel="canonical" href="https://igniteyourself.co/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://igniteyourself.co/">
+<meta property="og:title" content="Your authority already exists. Give it a place of its own.">
+<meta property="og:description" content="Turn accumulated experience, evidence, reputation, and point of view into an owned Authority Platform for what comes next.">
+<meta property="og:image" content="https://igniteyourself.co/igy/assets/logo-stacked.png">
+<link rel="icon" href="/igy/assets/spark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Inter:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -33,24 +39,43 @@ a{color:inherit;text-decoration:none}
 .rin{display:block}
 
 /* nav */
-nav{position:fixed;inset:0 0 auto 0;z-index:60;color:#fff;transition:background .35s,color .35s,border-color .35s;border-bottom:1px solid transparent}
-.navin{max-width:1400px;margin:0 auto;padding:16px 40px;display:flex;justify-content:space-between;align-items:center}
+#nav{position:fixed;inset:0 0 auto 0;z-index:60;color:#fff;transition:background .35s,color .35s,border-color .35s;border-bottom:1px solid transparent}
+.navin{max-width:1400px;margin:0 auto;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 .nbrand img{height:18px;display:block;transition:filter .35s}
-.navr{display:flex;align-items:center;gap:28px}
+.navr{display:flex;align-items:center;gap:26px}
 .nlink{font-size:13px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;position:relative;cursor:pointer}
 .nlink::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:var(--orange);transition:width .3s var(--ease-quick)}
 .nlink:hover::after{width:100%}
-.ncta{font-size:13px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;background:var(--orange);color:#fff;padding:12px 22px;border-radius:100px;transition:background var(--dur-hover),transform var(--dur-hover)}
+.ncta{font-size:13px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;background:var(--orange);color:#fff;padding:12px 22px;border-radius:100px;transition:background var(--dur-hover),transform var(--dur-hover);white-space:nowrap}
 .ncta:hover{background:var(--o-deep);transform:translateY(-2px)}
-nav.onlight{background:rgba(251,249,246,.9);backdrop-filter:blur(12px);color:var(--ink);border-bottom-color:var(--line)}
-nav.onlight .nbrand img{filter:brightness(0)}
+#nav.onlight{background:rgba(251,249,246,.9);backdrop-filter:blur(12px);color:var(--ink);border-bottom-color:var(--line)}
+#nav.onlight .nbrand img{filter:brightness(0)}
+.nburger{display:none;background:transparent;border:none;cursor:pointer;padding:8px;color:inherit}
+.nburger span{display:block;width:22px;height:2px;background:currentColor;margin:5px 0;transition:transform .3s,opacity .3s}
+.nmenu-mobile{display:none}
+@media (max-width:900px){
+  .navr .nlink{display:none}
+  .nburger{display:block}
+  .nmenu-mobile{display:none;position:fixed;inset:0;z-index:55;background:var(--warm);color:var(--paper);padding:110px 32px 40px;flex-direction:column;gap:8px}
+  .nmenu-mobile.is-open{display:flex}
+  .nmenu-mobile a{font-weight:800;font-size:30px;letter-spacing:-.03em;padding:12px 0;border-bottom:1px solid rgba(251,249,246,.12)}
+  .nmenu-mobile .ncta{margin-top:26px;text-align:center;font-size:14px;border-bottom:none}
+  body.menu-locked{overflow:hidden}
+  .nburger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nburger.is-open span:nth-child(2){opacity:0}
+  .nburger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:480px){
+  .nbrand{flex-shrink:0}
+  .navin>.navr .ncta{font-size:11px;padding:10px 14px;letter-spacing:.01em}
+  .navr{gap:10px}
+}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:17px 32px;border-radius:100px;transition:background var(--dur-hover),transform var(--dur-hover),color var(--dur-hover);cursor:pointer;border:none;font-family:inherit}
 .btn--o{background:var(--orange);color:#fff}.btn--o:hover{background:var(--o-deep);transform:translateY(-2px)}
 .btn--dark{background:var(--black);color:#fff}.btn--dark:hover{background:var(--orange);transform:translateY(-2px)}
 .btn--ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}.btn--ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn--gd{background:transparent;color:var(--ink);border:1.5px solid rgba(20,18,16,.3)}.btn--gd:hover{background:var(--black);color:#fff;border-color:var(--black)}
 
 /* ===== HERO (dark, emblematic) ===== */
 .hero{position:relative;min-height:100vh;background:var(--warm);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 24px 90px;overflow:hidden}
@@ -62,72 +87,92 @@ nav.onlight .nbrand img{filter:brightness(0)}
 .hero .emblem{width:clamp(80px,9vw,124px);margin:0 auto 30px;filter:var(--spark-o) drop-shadow(0 0 34px rgba(245,121,0,.6))}
 .hero .eyebrow{color:var(--o-lite);margin-bottom:26px}
 .hero h1{font-weight:800;letter-spacing:-.045em;line-height:.98;font-size:clamp(42px,6.6vw,104px);max-width:15ch}
-.hero .supp{margin-top:30px;font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.5;color:rgba(251,249,246,.82);max-width:44ch;margin-left:auto;margin-right:auto}
-.hero .prod{margin-top:20px;font-size:15.5px;line-height:1.6;color:rgba(251,249,246,.5);max-width:50ch;margin-left:auto;margin-right:auto}
-.hero .info{margin-top:34px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--o-lite)}
-.hero .acts{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero .micro{margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:rgba(251,249,246,.4)}
+.hero .supp{margin-top:30px;font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.5;color:rgba(251,249,246,.82);max-width:52ch;margin-left:auto;margin-right:auto}
+.hero .acts{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .micro{margin-top:28px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--o-lite)}
 
 /* ===== narrative sections ===== */
 section{padding:clamp(96px,12vh,150px) 0}
 .narr .eyebrow{margin-bottom:34px;display:flex;align-items:center;gap:10px}
 .narr .eyebrow .lspark{width:15px;filter:var(--spark-o)}
-.narr h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(34px,5.2vw,82px);max-width:16ch}
+.narr h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(34px,5.2vw,82px);max-width:17ch}
 .narr h2 .og{display:inline}
 .narr .body{margin-top:38px;max-width:60ch}
 .narr .body p{font-size:clamp(17px,1.5vw,21px);line-height:1.62;color:var(--gray2)}
 .narr .body p+p{margin-top:22px}
 .narr .body p b{color:var(--ink);font-weight:600}
-.pull{margin-top:56px;border-top:2px solid var(--black);padding-top:30px;max-width:20ch;
+.pull{margin-top:56px;border-top:2px solid var(--black);padding-top:30px;max-width:22ch;
   font-weight:700;letter-spacing:-.02em;line-height:1.12;font-size:clamp(24px,3vw,42px)}
 .pull .og{display:inline}
-.supline{margin-top:34px;font-weight:700;letter-spacing:-.02em;line-height:1.15;font-size:clamp(22px,2.4vw,34px)}
-.supline span{color:var(--gray)}
-
-/* narrative alt (offset) */
 .narr.alt{background:var(--panel)}
 .narr.dark{background:var(--warm);color:var(--paper)}
 .narr.dark h2{color:var(--paper)}
 .narr.dark .body p{color:rgba(251,249,246,.66)}.narr.dark .body p b{color:#fff}
 .narr.dark .pull{border-top-color:rgba(255,255,255,.28)}
-
-/* product bullets */
-.prod-list{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.prod-list li{list-style:none;background:var(--paper);padding:30px 28px;font-weight:700;font-size:clamp(18px,1.9vw,24px);letter-spacing:-.02em;display:flex;align-items:flex-start;gap:12px}
-.prod-list li::before{content:"";width:7px;height:7px;background:var(--orange);flex:0 0 7px;margin-top:.5em}
-.closing{margin-top:48px;font-weight:700;letter-spacing:-.02em;line-height:1.18;font-size:clamp(22px,2.5vw,36px);max-width:22ch}
+.closing{margin-top:48px;font-weight:700;letter-spacing:-.02em;line-height:1.18;font-size:clamp(22px,2.5vw,36px);max-width:24ch}
 .closing span{color:var(--gray)}
 
+/* dimensions grid */
+.dims{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.dims .cell{background:var(--paper);padding:34px 30px}
+.narr.alt .dims .cell{background:var(--panel)}
+.dims h3{font-weight:800;font-size:clamp(20px,2vw,26px);letter-spacing:-.02em;display:flex;align-items:baseline;gap:12px}
+.dims h3 .k{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--orange)}
+.dims p{margin-top:12px;font-size:16px;line-height:1.55;color:var(--gray2);max-width:44ch}
+
+/* fit signals */
+.signals{margin-top:44px;border-top:1px solid rgba(251,249,246,.2)}
+.signals li{list-style:none;padding:22px 0;border-bottom:1px solid rgba(251,249,246,.14);font-size:clamp(17px,1.6vw,21px);font-weight:500;line-height:1.5;display:flex;gap:16px;align-items:flex-start;max-width:64ch}
+.signals li::before{content:"";width:7px;height:7px;background:var(--orange);flex:0 0 7px;margin-top:.55em}
+
+/* deliverables */
+.dgrid{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.dgrid .cell{background:var(--panel);padding:32px 30px 38px}
+.dgrid .num{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--orange)}
+.dgrid h3{margin-top:14px;font-weight:800;font-size:clamp(19px,1.9vw,24px);letter-spacing:-.02em}
+.dgrid p{margin-top:10px;font-size:15.5px;line-height:1.55;color:var(--gray2);max-width:46ch}
+
+/* showcase */
+.showcase{background:var(--warm);color:var(--paper);overflow:hidden}
+.showcase .eyebrow{color:var(--o-lite)}
+.showcase h2{color:var(--paper)}
+.showcase .body p{color:rgba(251,249,246,.66)}
+.stage{margin-top:60px;position:relative;padding-bottom:clamp(30px,5vw,70px)}
+.browser{background:#1B1713;border:1px solid rgba(251,249,246,.14);border-radius:12px;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,.55);margin-right:clamp(0px,12vw,170px)}
+.browser .bar{display:flex;align-items:center;gap:7px;padding:13px 18px;background:#15110E;border-bottom:1px solid rgba(251,249,246,.09)}
+.browser .dot{width:9px;height:9px;border-radius:50%;background:rgba(251,249,246,.18)}
+.browser .url{margin-left:14px;font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:rgba(251,249,246,.45);background:rgba(251,249,246,.07);padding:6px 16px;border-radius:100px}
+.pan{position:relative;overflow:hidden;height:clamp(380px,58vh,620px)}
+.pan img{width:100%;height:auto;will-change:transform}
+.phone{position:absolute;right:0;bottom:0;width:clamp(150px,17vw,225px);background:#15110E;border:1px solid rgba(251,249,246,.16);border-radius:30px;padding:9px;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+.phone .pan{border-radius:21px;height:clamp(300px,40vh,460px)}
+.showcase .concept-note{margin-top:44px;max-width:64ch}
+.concept-note .t{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--o-lite)}
+.concept-note p{margin-top:8px;font-size:14px;line-height:1.6;color:rgba(251,249,246,.5)}
+
 /* process */
-.tl{margin-top:60px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr}
+.tl{margin-top:60px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)}
 .tl-cell{border-right:1px solid var(--line);border-left:1px solid var(--line);padding:34px 30px 56px;margin-left:-1px}
 .tl-cell .step{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:#fff;font-family:var(--mono);font-size:13px;font-weight:500;padding:12px 20px}
-.tl-cell h3{margin-top:26px;font-weight:800;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.03em}
+.tl-cell h3{margin-top:26px;font-weight:800;font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em}
 .tl-cell p{margin-top:16px;font-size:15.5px;line-height:1.55;color:var(--gray2);max-width:42ch}
-.tl-cell .tags{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
-.tl-cell .tags span{background:var(--chip);border-radius:100px;padding:9px 16px;font-size:13px;font-weight:500}
-
-/* proof */
-.bigquote{max-width:1150px}
-.bigquote h3{font-weight:700;letter-spacing:-.03em;line-height:1.08;font-size:clamp(28px,4vw,58px)}
-.bigquote .attr{margin-top:34px;font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--gray2)}
-.bigquote .attr b{color:var(--black)}
-.record{border-top:1px solid var(--line);margin-top:70px}
-.rrow{display:grid;grid-template-columns:auto 1fr auto;gap:24px;padding:24px 0;border-bottom:1px solid var(--line);align-items:center}
-.rrow img{width:46px;height:46px;border-radius:100px;object-fit:cover;filter:grayscale(1)}
-.rrow .a{font-size:18px;font-weight:700}
-.rrow .c{font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--gray2)}
+.timeline-note{margin-top:44px;display:flex;gap:16px;align-items:flex-start;max-width:62ch}
+.timeline-note::before{content:"";width:7px;height:7px;background:var(--orange);flex:0 0 7px;margin-top:.55em}
+.timeline-note p{font-size:clamp(17px,1.5vw,20px);font-weight:600;line-height:1.5}
 
 /* investment */
-.bignum .n{font-weight:900;letter-spacing:-.045em;line-height:.82;font-size:clamp(96px,15vw,220px)}
-.invrow{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px;align-items:start}
-.invrow .terms{font-size:18px;line-height:1.65}.invrow .care{margin-top:12px;font-size:15px;color:var(--gray2);line-height:1.6}
-.invrow .act{margin-top:34px}
+.bignum .n{font-weight:900;letter-spacing:-.045em;line-height:.82;font-size:clamp(84px,14vw,200px)}
+.invrow{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:44px;align-items:start}
+.invrow .pay{font-size:clamp(18px,1.7vw,22px);font-weight:600;line-height:1.55}
+.invrow .supline2{margin-top:14px;font-size:16px;color:var(--gray2)}
+.invrow .care{margin-top:26px;font-size:15px;color:var(--gray2);line-height:1.6;max-width:44ch;padding-top:22px;border-top:1px solid var(--line)}
+.invrow .act{margin-top:32px}
 .inc .h{font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em;color:var(--orange);margin-bottom:18px}
 .inc ul{list-style:none}.inc li{font-size:16px;font-weight:500;padding:13px 0;border-top:1px solid var(--line);display:flex;align-items:center;gap:12px}
 .inc li::before{content:"";width:6px;height:6px;background:var(--orange);flex:0 0 6px}
 
 /* faq */
+.faq{padding-top:0}
 .faq .row{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
 .faq h2{font-weight:800;font-size:clamp(34px,5vw,64px);letter-spacing:-.04em;line-height:.94}
 .faq .note{margin-top:22px;color:var(--gray2)}
@@ -136,70 +181,76 @@ section{padding:clamp(96px,12vh,150px) 0}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";color:var(--orange);font-weight:800}
 .faq details[open] summary::after{content:"–"}
-.faq details p{margin-top:16px;font-size:16px;line-height:1.6;color:var(--gray2);max-width:56ch}
+.faq details p{margin-top:16px;font-size:16px;line-height:1.6;color:var(--gray2);max-width:56ch;white-space:pre-line}
 
-/* final CTA */
-.finalcta{position:relative;background:var(--warm);color:var(--paper);text-align:center;overflow:hidden}
-.finalcta::before{content:'';position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:min(120vw,1100px);height:min(120vw,1100px);
-  background:radial-gradient(circle,rgba(245,121,0,.3) 0%,rgba(245,121,0,0) 60%);pointer-events:none}
-.finalcta>.wrapn{position:relative;z-index:2}
+/* about */
+.founder{margin-top:64px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:44px;align-items:start;padding-top:44px;border-top:1px solid rgba(251,249,246,.18)}
+.founder .photo{position:relative;overflow:hidden;border-radius:3px}
+.founder .photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.4)}
+.founder .letter p{font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:rgba(251,249,246,.75)}
+.founder .letter p+p{margin-top:20px}
+.founder .letter p b{color:#fff;font-weight:700}
+.founder .sig{margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--o-lite)}
+
+/* final CTA + form */
+.finalcta{position:relative;background:var(--warm);color:var(--paper);overflow:hidden;padding-top:0}
+.finalcta::before{content:'';position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);width:min(120vw,1100px);height:min(120vw,1100px);
+  background:radial-gradient(circle,rgba(245,121,0,.22) 0%,rgba(245,121,0,0) 60%);pointer-events:none}
+.finalcta>.wrapn{position:relative;z-index:2;text-align:center}
 .finalcta .eyebrow{color:var(--o-lite);margin-bottom:26px}
-.finalcta h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(38px,6vw,96px);max-width:16ch;margin:0 auto}
+.finalcta h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(38px,5.6vw,88px);max-width:16ch;margin:0 auto}
 .finalcta .body{margin-top:30px;font-size:clamp(17px,1.5vw,20px);color:rgba(251,249,246,.72);max-width:52ch;margin-left:auto;margin-right:auto;line-height:1.6}
-.finalcta .act{margin-top:38px}
-.finalcta .micro{margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:rgba(251,249,246,.42)}
+
+/* form */
+.formcard{margin:56px auto 0;max-width:640px;background:var(--paper);color:var(--black);text-align:left;padding:clamp(28px,4vw,48px);border-radius:4px}
+.formcard h3{font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.03em}
+.formcard .fintro{margin-top:14px;font-size:16px;line-height:1.6;color:var(--gray2)}
+.field{margin-top:24px}
+.field label{display:block;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gray2);margin-bottom:8px}
+.field input,.field textarea{width:100%;font-family:'Inter Tight',sans-serif;font-size:17px;padding:14px 16px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--black)}
+.field input:focus,.field textarea:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
+.field textarea{min-height:110px;resize:vertical}
+.field .err{display:none;margin-top:7px;font-size:14px;color:#B3400A;font-weight:500}
+.field.invalid .err{display:block}
+.field.invalid input,.field.invalid textarea{border-color:#B3400A}
+.formcard .fsubmit{margin-top:30px;width:100%;justify-content:center}
+.formcard .fnote{margin-top:16px;font-size:13.5px;line-height:1.55;color:var(--gray2)}
+.formcard .fnote a{color:var(--orange);font-weight:600}
+.fconfirm{display:none;margin-top:26px;padding:20px 22px;background:var(--panel);border-left:3px solid var(--orange);font-size:16px;line-height:1.6}
+.fconfirm.is-visible{display:block}
+.fconfirm b{font-weight:700}
+.finalcta .contactline{margin-top:34px;font-size:16px;color:rgba(251,249,246,.72)}
+.finalcta .contactline a{color:var(--o-lite);font-weight:600}
+.finalcta .micro{margin-top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:rgba(251,249,246,.42)}
 
 /* footer */
-.footer{background:var(--black);color:#fff;padding:76px 0 54px}
-.footer .grid{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.footer{background:var(--black);color:#fff;padding:80px 0 54px}
+.footer .top{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.12)}
 .footer .flogo{height:26px;display:block}
-.footer .meta{font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.5);text-align:right;line-height:2}
-.footer .meta a:hover{color:var(--orange)}
-
-/* ---------- About drawer ---------- */
-.drawer{position:fixed;inset:0;z-index:200;visibility:hidden}
-.drawer.is-open{visibility:visible}
-.drawer__ov{position:absolute;inset:0;background:rgba(12,8,4,.55);backdrop-filter:blur(10px) saturate(.7);opacity:0;transition:opacity .5s ease;cursor:pointer}
-.drawer.is-open .drawer__ov{opacity:1}
-.drawer__panel{position:absolute;top:0;right:0;bottom:0;width:min(660px,94vw);background:#0d0c0b;color:var(--paper);overflow-y:auto;
-  padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:clamp(34px,3vw,52px);transform:translateX(100%);transition:transform .55s cubic-bezier(.3,.8,.25,1)}
-.drawer.is-open .drawer__panel{transform:translateX(0)}
-.drawer__head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.drawer__head .eyebrow{color:rgba(251,249,246,.6);display:flex;align-items:center;gap:10px}
-.drawer__head .eyebrow .lspark{width:14px;filter:var(--spark-o)}
-.drawer__close{display:inline-flex;align-items:stretch;background:var(--paper);color:var(--black);border:none;cursor:pointer;font-family:var(--mono);font-size:12px;font-weight:500;text-transform:uppercase;overflow:hidden}
-.drawer__close>span:first-child{padding:11px 16px}
-.drawer__esc{display:flex;align-items:center;padding:0 12px;background:var(--orange);color:#fff}
-.drawer__letter{display:flex;flex-direction:column;gap:20px}
-.drawer__letter p{font-size:clamp(19px,1.4vw,24px);font-weight:500;line-height:1.36;letter-spacing:-.01em}
-.drawer__letter p:first-child b{font-weight:800}
-.drawer__bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:rgba(251,249,246,.5);padding-top:16px;border-top:1px solid rgba(251,249,246,.14)}
-.drawer__photo{position:relative;overflow:hidden;min-height:400px;border-radius:3px}
-.drawer__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.4)}
-.drawer__word{position:absolute;font-weight:800;letter-spacing:-.03em;font-size:clamp(38px,4vw,58px);color:#fff;mix-blend-mode:difference}
-.drawer__word.w1{top:7%;left:6%}.drawer__word.w2{top:44%;right:7%;color:var(--o-lite);mix-blend-mode:normal}.drawer__word.w3{bottom:9%;left:6%}
-.drawer__row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:24px;padding-top:26px;border-top:1px solid rgba(251,249,246,.14)}
-.drawer__row .eyebrow{color:rgba(251,249,246,.6);display:flex;align-items:center;gap:10px}.drawer__row .eyebrow .lspark{width:14px;filter:var(--spark-o)}
-.drawer__principle h4{font-size:18px;font-weight:700;margin-bottom:8px}
-.drawer__principle p{color:rgba(251,249,246,.55);line-height:1.5;max-width:44ch;font-size:15px}
-.drawer__principle+.drawer__principle{margin-top:22px;padding-top:22px;border-top:1px solid rgba(251,249,246,.1)}
-.drawer__cta{align-self:flex-start}
-body.drawer-locked{overflow:hidden}
+.footer .fstate{margin-top:22px;font-weight:700;font-size:clamp(19px,2vw,26px);letter-spacing:-.02em;max-width:20ch;line-height:1.2}
+.footer .fmeta{margin-top:22px;font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.5);line-height:2}
+.footer .fmeta a:hover{color:var(--orange)}
+.footer .flinks{display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:600}
+.footer .flinks a:hover{color:var(--orange)}
+.footer .bottom{padding-top:26px;font-family:var(--mono);font-size:11.5px;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 .wr{opacity:0}
 html.no-motion .wr{opacity:1}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 
 @media (max-width:900px){
   .wrap,.wrapn{padding:0 22px}
-  .navin{padding:16px 22px}.navr{gap:18px}
+  .navin{padding:16px 22px}.navr{gap:16px}
   .hero{padding:110px 22px 80px}
-  .prod-list{grid-template-columns:1fr}
+  .dims,.dgrid{grid-template-columns:1fr}
+  .browser{margin-right:0}
+  .phone{position:relative;right:auto;bottom:auto;margin:-70px auto 0}
   .tl{grid-template-columns:1fr}
   .invrow{grid-template-columns:1fr;gap:36px}
   .faq .row{grid-template-columns:1fr;gap:30px}
-  .drawer__row{grid-template-columns:1fr}
-  .footer .grid{flex-direction:column;align-items:flex-start}.footer .meta{text-align:left}
+  .founder{grid-template-columns:1fr;gap:30px}
+  .founder .photo{max-height:420px}
+  .footer .top{flex-direction:column}
 }
 </style></head>
 <body>
@@ -207,192 +258,294 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <nav id="nav"><div class="navin">
   <a class="nbrand" href="#top" aria-label="Ignite Yourself"><img src="/igy/assets/logo-igy.png" alt="Ignite Yourself"></a>
   <div class="navr">
-    <span class="nlink" data-drawer-open>About</span>
-    <a class="ncta" href="#book">Book the call</a>
+    <a class="nlink" href="#platform">The Platform</a>
+    <a class="nlink" href="#who-its-for">Who It&rsquo;s For</a>
+    <a class="nlink" href="#how-it-works">How It Works</a>
+    <a class="nlink" href="#investment">Investment</a>
+    <a class="nlink" href="#about">About</a>
+    <a class="ncta" href="#contact">Request a Private Preview</a>
+    <button class="nburger" id="nburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nmenu"><span></span><span></span><span></span></button>
   </div>
 </div></nav>
+<div class="nmenu-mobile" id="nmenu">
+  <a href="#platform">The Platform</a>
+  <a href="#who-its-for">Who It&rsquo;s For</a>
+  <a href="#how-it-works">How It Works</a>
+  <a href="#investment">Investment</a>
+  <a href="#about">About</a>
+  <a class="ncta" href="#contact">Request a Private Preview</a>
+</div>
 
 <main id="top">
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== 01 · HERO ===== -->
   <header class="hero">
     <img class="emblem wr" data-reveal src="/igy/assets/spark.png" alt="" />
-    <p class="eyebrow wr" data-reveal>The Authority Platform</p>
+    <p class="eyebrow wr" data-reveal>Authority Platforms for established professionals</p>
     <h1><span class="rmask"><span class="rin">Turn the authority you have earned</span></span><span class="rmask"><span class="rin">into <span class="og">an asset you can use.</span></span></span></h1>
-    <p class="supp wr" data-reveal>We transform accumulated experience into a clear authority platform — so everything you have learned, contributed, and earned can become an active part of your future.</p>
-    <p class="prod wr" data-reveal>In one focused week, we turn your experience, body of work, and point of view into a premium authority platform you own.</p>
-    <p class="info wr" data-reveal>One focused week · USD 3,000 · Built remotely, worldwide</p>
+    <p class="supp wr" data-reveal>We research, write, design, and build a personal digital platform that brings your experience, evidence, reputation, and point of view together in one place you own.</p>
     <div class="acts wr" data-reveal>
-      <a class="btn btn--o" href="#book">Build your Authority Platform →</a>
-      <a class="btn btn--ghost" href="#how">See how it works</a>
+      <a class="btn btn--o" href="#contact">Request a Private Preview</a>
+      <a class="btn btn--ghost" href="#how-it-works">See How It Works</a>
     </div>
-    <p class="micro wr" data-reveal>One conversation · One focused production week · One platform you own.</p>
+    <p class="micro wr" data-reveal>One focused production week · USD 3,000 · Built remotely, worldwide</p>
   </header>
 
-  <!-- ===== 02 · ACCUMULATED VALUE ===== -->
+  <!-- ===== 02 · THE REPRESENTATION GAP ===== -->
   <section class="narr"><div class="wrapn">
-    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">What you have earned</div>
-    <h2><span class="rmask"><span class="rin">Your career is more than a history.</span></span><span class="rmask"><span class="rin">It is <span class="og">accumulated value.</span></span></span></h2>
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The representation gap</div>
+    <h2><span class="rmask"><span class="rin">Your work may already be visible.</span></span><span class="rmask"><span class="rin">The full picture of you <span class="og">may not be.</span></span></span></h2>
     <div class="body">
-      <p class="wr" data-reveal>Every project, decision, contribution, relationship, and result has added weight to your name.</p>
-      <p class="wr" data-reveal>But much of that value may still live in private conversations, institutional profiles, scattered publications, and the memory of people who already know your work.</p>
-      <p class="wr" data-reveal>We bring it together into one clear expression — so your experience can become something <b>visible, ownable, and useful.</b></p>
+      <p class="wr" data-reveal>Your practice has a website. Your institution has a profile. Your publications, interviews, projects, and contributions live across different places.</p>
+      <p class="wr" data-reveal>Each one shows a piece. None of them was designed to hold <b>the full body of work behind your name.</b></p>
+      <p class="wr" data-reveal>An Authority Platform brings those pieces together—clearly, thoughtfully, and in a place you own.</p>
     </div>
-    <p class="pull wr" data-reveal>Your experience should not remain trapped in the places where it was built.</p>
+    <p class="pull wr" data-reveal>Your authority already exists. <span class="og">We give it a place of its own.</span></p>
   </div></section>
 
-  <!-- ===== 03 · A FORM FOR YOUR AUTHORITY ===== -->
-  <section class="narr alt"><div class="wrapn">
-    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">From reputation to asset</div>
-    <h2><span class="rmask"><span class="rin">We give the work behind your reputation</span></span><span class="rmask"><span class="rin">a form that can <span class="og">carry you forward.</span></span></span></h2>
-    <div class="body">
-      <p class="wr" data-reveal>The Authority Platform turns your experience, work, evidence, and point of view into an asset that can introduce you, establish context, and communicate the full weight of your career.</p>
-      <p class="wr" data-reveal>It gives your reputation a place of its own — one that does not disappear when you leave a room, change institutions, or step into a new professional chapter.</p>
-    </div>
-    <p class="pull wr" data-reveal>What you have built should continue creating value for <span class="og">what comes next.</span></p>
-  </div></section>
-
-  <!-- ===== 04 · BEYOND YOUR EXISTING CIRCLES ===== -->
-  <section class="narr dark"><div class="wrapn">
-    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">Built to travel</div>
-    <h2><span class="rmask"><span class="rin">Your authority should extend beyond</span></span><span class="rmask"><span class="rin">the people who <span class="og">already know you.</span></span></span></h2>
-    <div class="body">
-      <p class="wr" data-reveal>A meaningful career often grows through relationships, referrals, institutions, and years of earned trust. But those forms of reputation do not always travel easily.</p>
-      <p class="wr" data-reveal>We turn your experience, work, and point of view into an authority platform that can <b>speak for you, travel beyond your existing circles,</b> and put the full weight of your career behind what comes next.</p>
-    </div>
-    <p class="supline wr" data-reveal>Not louder. <span>Not more performative.</span><br>Simply clearer, more complete, and easier to carry forward.</p>
-  </div></section>
-
-  <!-- ===== 05 · THE PRODUCT ===== -->
-  <section class="narr" id="how"><div class="wrapn">
+  <!-- ===== 03 · THE AUTHORITY PLATFORM ===== -->
+  <section class="narr alt" id="platform"><div class="wrapn">
     <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The Authority Platform</div>
-    <h2><span class="rmask"><span class="rin">One owned asset for everything</span></span><span class="rmask"><span class="rin"><span class="og">behind your name.</span></span></span></h2>
+    <h2><span class="rmask"><span class="rin">One owned place for the work</span></span><span class="rmask"><span class="rin"><span class="og">behind your name.</span></span></span></h2>
     <div class="body">
-      <p class="wr" data-reveal>Your story, evidence, expertise, visual identity, and professional pathways come together in one premium digital platform. A place where the right person can understand:</p>
+      <p class="wr" data-reveal>A researched, written, designed, and developed personal platform built from the authority you have already earned.</p>
     </div>
-    <ul class="prod-list" data-stagger>
-      <li>Who you are.</li>
-      <li>What you have built.</li>
-      <li>What you know.</li>
-      <li>What you believe.</li>
-      <li>Why your work matters.</li>
-      <li>What they can invite you into next.</li>
-    </ul>
-    <p class="closing wr" data-reveal>Not a manufactured personal brand. <span>Not another generic professional website.</span> An owned authority asset built from what is already true about you.</p>
+    <div class="dims" data-stagger>
+      <div class="cell"><h3><span class="k">01</span>Your story</h3><p>The decisions, experiences, and contributions that shaped your career.</p></div>
+      <div class="cell"><h3><span class="k">02</span>Your evidence</h3><p>Credentials, publications, projects, results, recognition, and proof of work.</p></div>
+      <div class="cell"><h3><span class="k">03</span>Your point of view</h3><p>What you have learned, what you believe, and the judgment you have earned through experience.</p></div>
+      <div class="cell"><h3><span class="k">04</span>Your pathways</h3><p>Clear ways for people to contact, refer, invite, collaborate with, or work with you.</p></div>
+    </div>
+    <p class="closing wr" data-reveal>Not a résumé. <span>Not a manufactured personal brand. Not another generic professional website.</span> An owned authority asset built from what is already true about you.</p>
   </div></section>
 
-  <!-- ===== PROCESS ===== -->
-  <section><div class="wrap">
-    <div class="eyebrow wr" data-reveal style="display:flex;align-items:center;gap:10px;margin-bottom:38px"><img class="lspark" src="/igy/assets/spark.png" alt="" style="width:15px;filter:var(--spark-o)">How it works · one focused week</div>
-    <h2 class="narr" style="max-width:none"><span class="rmask"><span class="rin" style="font-weight:800;letter-spacing:-.04em;font-size:clamp(48px,10vw,150px);line-height:.9">One <span class="og">Week.</span></span></span></h2>
+  <!-- ===== 03b · WHO IT IS FOR ===== -->
+  <section class="narr dark" id="who-its-for"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">Not by industry. By professional stage.</div>
+    <h2><span class="rmask"><span class="rin">For professionals whose authority</span></span><span class="rmask"><span class="rin">has outgrown the way it is</span></span><span class="rmask"><span class="rin"><span class="og">currently represented.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>You may be a surgeon, founder, executive, academic, advisor, specialist, or independent professional.</p>
+      <p class="wr" data-reveal>The common thread is not your industry—or your age. <b>It is the professional moment you are in.</b></p>
+    </div>
+    <ul class="signals" data-stagger>
+      <li>You have built meaningful experience, trust, evidence, or contribution.</li>
+      <li>Your story currently lives across institutions, practices, profiles, publications, and other people&rsquo;s platforms.</li>
+      <li>The representation around your name does not yet carry the full weight of your work.</li>
+      <li>You are entering—or intentionally creating—a meaningful next chapter.</li>
+      <li>You want an asset you own, not another channel you have to feed constantly.</li>
+    </ul>
+    <p class="pull wr" data-reveal>Age is not the qualification. <span class="og">Earned authority is.</span></p>
+  </div></section>
+
+  <!-- ===== 04 · YOUR NAME CAN STRENGTHEN EVERYTHING AROUND IT ===== -->
+  <section class="narr"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The person behind the work</div>
+    <h2><span class="rmask"><span class="rin">Your name can strengthen</span></span><span class="rmask"><span class="rin"><span class="og">everything around it.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>An Authority Platform does not replace your practice, company, institution, or team.</p>
+      <p class="wr" data-reveal>It gives people another way to discover the person behind the work—and directs that trust toward everything connected to your name.</p>
+      <p class="wr" data-reveal>Your personal platform and your institution do not have to compete. <b>Each can make the other more valuable.</b></p>
+    </div>
+    <p class="pull wr" data-reveal>Your name becomes another trusted entry point into <span class="og">what you have built.</span></p>
+  </div></section>
+
+  <!-- ===== 05 · WHAT WE BUILD ===== -->
+  <section class="narr alt"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">Everything behind the platform</div>
+    <h2><span class="rmask"><span class="rin">More than a website.</span></span><span class="rmask"><span class="rin">A complete <span class="og">authority interpretation.</span></span></span></h2>
+    <div class="dgrid" data-stagger>
+      <div class="cell"><div class="num">01</div><h3>Public Research &amp; Authority Brief</h3><p>We study your public footprint, professional history, evidence, existing presence, and available material.</p></div>
+      <div class="cell"><div class="num">02</div><h3>Authority Interview</h3><p>One focused 30–45 minute conversation to understand the person, judgment, and perspective behind the credentials.</p></div>
+      <div class="cell"><div class="num">03</div><h3>Positioning &amp; Narrative</h3><p>We define the central story, professional positioning, point of view, and architecture of the platform.</p></div>
+      <div class="cell"><div class="num">04</div><h3>Core Copy &amp; Evidence Architecture</h3><p>We write the professional biography and platform copy, then organize credentials, publications, results, roles, recognition, and proof with intention.</p></div>
+      <div class="cell"><div class="num">05</div><h3>Editorial Visual Direction</h3><p>Art direction, typography, imagery, rhythm, and a visual language shaped around your work.</p></div>
+      <div class="cell"><div class="num">06</div><h3>Owned Digital Platform</h3><p>A tailored, responsive website designed around your name and built to remain useful beyond a single role or institution.</p></div>
+      <div class="cell"><div class="num">07</div><h3>Professional Pathways</h3><p>Clear routes toward the appropriate practice, appointment, referral, speaking, advisory, collaboration, or contact opportunities.</p></div>
+      <div class="cell"><div class="num">08</div><h3>Launch &amp; Handover</h3><p>Domain connection, launch, essential technical setup, and access to the platform you own.</p></div>
+    </div>
+  </div></section>
+
+  <!-- ===== 05b · SHOWCASE ===== -->
+  <section class="narr showcase"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The platform, in practice</div>
+    <h2><span class="rmask"><span class="rin">What an Authority Platform</span></span><span class="rmask"><span class="rin"><span class="og">looks like.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>A complete platform concept for an oral &amp; maxillofacial surgeon—story, evidence, point of view, and pathways brought together in one place that carries the full weight of a career.</p>
+    </div>
+    <div class="stage wr" data-reveal>
+      <div class="browser">
+        <div class="bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">yourname.com</span></div>
+        <div class="pan" data-pan><img src="/igy-mobius/assets/preview-desktop.jpg" alt="Desktop preview of an Authority Platform concept for an oral and maxillofacial surgeon" loading="lazy"></div>
+      </div>
+      <div class="phone">
+        <div class="pan" data-pan><img src="/igy-mobius/assets/preview-mobile.jpg" alt="Mobile preview of the same Authority Platform concept" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="concept-note wr" data-reveal>
+      <div class="t">Independent Authority Platform Concept</div>
+      <p>Created from publicly available information to demonstrate the method. Not an authorized client engagement.</p>
+    </div>
+  </div></section>
+
+  <!-- ===== 06 · HOW IT WORKS ===== -->
+  <section class="narr" id="how-it-works"><div class="wrap">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">A focused process</div>
+    <h2><span class="rmask"><span class="rin">We do the research, interpretation,</span></span><span class="rmask"><span class="rin">writing, design, <span class="og">and build.</span></span></span></h2>
     <div class="tl" data-stagger>
       <div class="tl-cell">
-        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 01 — The conversation</div>
-        <h3>We extract everything.</h3>
-        <p>One focused conversation. We listen first — your experience, body of work, evidence, and point of view — and find what deserves to be seen.</p>
-        <div class="tags"><span>Deep-dive call</span><span>Positioning</span><span>Narrative</span><span>Evidence map</span></div>
+        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 01</div>
+        <h3>We research</h3>
+        <p>We study the work already around you and identify the story, evidence, gaps, and opportunities the platform should address.</p>
       </div>
       <div class="tl-cell">
-        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 02 — The production week</div>
-        <h3>We build your asset.</h3>
-        <p>In one focused week we design and build the whole platform — your visual world, your owned website, your authority in one place. Then it's live, and it's yours.</p>
-        <div class="tags"><span>Visual world</span><span>Owned platform</span><span>Core copy</span><span>Live &amp; yours</span></div>
+        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 02</div>
+        <h3>We interview and interpret</h3>
+        <p>One focused conversation gives us the context that institutional profiles and credentials cannot.</p>
+      </div>
+      <div class="tl-cell">
+        <div class="step"><img src="/igy/assets/spark.png" alt="" style="width:14px;filter:invert(1)">Step 03</div>
+        <h3>We write, design, and build</h3>
+        <p>We bring the narrative, evidence, visual world, and digital experience together into one complete platform for your review.</p>
       </div>
     </div>
+    <div class="timeline-note wr" data-reveal><p>Most platforms are completed within 7–10 business days after the Authority Interview and receipt of the required materials.</p></div>
   </div></section>
 
-  <!-- ===== PROOF ===== -->
-  <section class="narr alt"><div class="wrap">
-    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The proof</div>
-    <div class="bigquote wr" data-reveal>
-      <h3>"For the first time, twenty-seven years of surgery live in one place — and it finally <span class="og">looks like the work.</span>"</h3>
-      <div class="attr">— <b>Dr. Jorge Arce</b> · Oral &amp; Maxillofacial Surgeon</div>
-    </div>
-    <div class="record" data-stagger>
-      <div class="rrow"><img src="/igy/assets/arce.jpg" alt=""><div class="a">Dr. Jorge Arce</div><div class="c">Surgery · California</div></div>
-      <div class="rrow"><img src="/igy/assets/adriana.jpg" alt=""><div class="a">Adriana Mejía</div><div class="c">Coffee · Global</div></div>
-      <div class="rrow"><img src="/igy/assets/tomi.jpg" alt=""><div class="a">Tomi Lappi</div><div class="c">Author · Worldwide</div></div>
-    </div>
-  </div></section>
-
-  <!-- ===== INVESTMENT ===== -->
-  <section id="book"><div class="wrap">
-    <div class="eyebrow wr" data-reveal style="display:flex;align-items:center;gap:10px;margin-bottom:38px"><img class="lspark" src="/igy/assets/spark.png" alt="" style="width:15px;filter:var(--spark-o)">The investment</div>
-    <div class="bignum" data-mark><span class="rmask"><span class="rin">USD 3,<span class="og">000</span></span></span></div>
+  <!-- ===== 07 · INVESTMENT ===== -->
+  <section class="narr alt" id="investment"><div class="wrap">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">The investment</div>
+    <h2 style="margin-bottom:34px"><span class="rmask"><span class="rin">The Authority Platform</span></span></h2>
+    <div class="bignum" data-mark><span class="rmask"><span class="rin n">USD 3,<span class="og">000</span></span></span></div>
     <div class="invrow">
       <div class="wr" data-reveal>
-        <p class="terms">USD 1,500 to start · USD 1,500 on delivery.</p>
-        <p class="care">Then USD 99/month Platform Care — hosting, upkeep, and small changes. Your asset stays live and cared for.</p>
-        <div class="act"><a class="btn btn--dark" href="#book">Build your Authority Platform →</a></div>
+        <p class="pay">USD 1,500 to begin<br>USD 1,500 after final approval, before launch</p>
+        <p class="supline2">Built remotely. Delivered as an asset you own.</p>
+        <p class="care">Optional Platform Care is available after launch for USD 99/month, including hosting, technical upkeep, and small changes.</p>
+        <div class="act"><a class="btn btn--dark" href="#contact">Request a Private Preview</a></div>
       </div>
       <div class="inc wr" data-reveal>
-        <div class="h">Everything included</div>
-        <ul><li>Positioning &amp; narrative</li><li>Visual world</li><li>Owned platform — yours to keep</li><li>Core copy, written for you</li><li>Evidence &amp; professional pathways</li><li>Live in one focused week</li></ul>
+        <div class="h">Included</div>
+        <ul>
+          <li>Public research</li>
+          <li>Authority Interview</li>
+          <li>Positioning and narrative</li>
+          <li>Professional biography and core copy</li>
+          <li>Evidence architecture</li>
+          <li>Editorial visual direction</li>
+          <li>Responsive digital platform</li>
+          <li>Professional pathways</li>
+          <li>Launch and handover</li>
+        </ul>
       </div>
     </div>
   </div></section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="faq"><div class="wrap"><div class="row">
-    <div class="wr" data-reveal><h2>Questions,<br>answered.</h2><p class="note">More? The call is where we answer everything.</p></div>
+  <!-- ===== 07b · FAQ ===== -->
+  <section class="faq narr alt"><div class="wrap"><div class="row">
+    <div class="wr" data-reveal><h2>Questions,<br>answered.</h2><p class="note">Anything else? Write to <a href="mailto:pablo@igniteyourself.co" style="color:var(--orange);font-weight:600">pablo@igniteyourself.co</a>.</p></div>
     <div class="list" data-stagger>
-      <details><summary>How long does it really take?</summary><p>One focused week — from the conversation to a live platform you own. No twelve-week projects.</p></details>
-      <details><summary>What do you need from me?</summary><p>One conversation, your experience, and access to the material we need to shape the platform. We do the rest.</p></details>
-      <details><summary>Is this personal branding?</summary><p>No. It's not a manufactured persona. It's an owned authority asset built from what is already true about you.</p></details>
-      <details><summary>Is this social media management?</summary><p>No. It's a platform you own that carries your authority. Content and reach can come later, if you choose.</p></details>
-      <details><summary>What happens after delivery?</summary><p>Your platform stays live and cared for with Platform Care (USD 99/month). When you're ready, it becomes the base for strategy, content, and reach.</p></details>
-      <details><summary>What is the investment?</summary><p>USD 3,000 — USD 1,500 to start and USD 1,500 on delivery. Then USD 99/month Platform Care.</p></details>
+      <details><summary>Is this personal branding?</summary><p>Not in the manufactured sense.
+
+We do not create a persona or turn you into an influencer. We research, organize, articulate, and give form to authority that already exists.</p></details>
+      <details><summary>I already have a page through my practice, company, or institution.</summary><p>An Authority Platform does not replace it.
+
+It gives your own body of work a clearer home and creates another trusted route into the practice, company, institution, or work around you.</p></details>
+      <details><summary>Do I need to become active on social media?</summary><p>No.
+
+The Authority Platform is an owned, permanent asset. Content and reach can be added later, but constant posting is not required for the platform to be useful.</p></details>
+      <details><summary>How much time will you need from me?</summary><p>One 30–45 minute interview, access to the relevant materials, and one focused review round. We handle the research, narrative, design, and development.</p></details>
+      <details><summary>How long does it take?</summary><p>Most projects are completed within 7–10 business days after the Authority Interview and receipt of the required materials.</p></details>
+      <details><summary>Will I own the platform?</summary><p>Yes.
+
+The platform, narrative, core copy, and digital asset are built around your name and delivered for you to own.</p></details>
     </div>
   </div></div></section>
 
-  <!-- ===== FINAL CTA ===== -->
-  <section class="finalcta"><div class="wrapn">
+  <!-- ===== 08 · ABOUT ===== -->
+  <section class="narr dark" id="about"><div class="wrapn">
+    <div class="eyebrow wr" data-reveal><img class="lspark" src="/igy/assets/spark.png" alt="">About Ignite Yourself</div>
+    <h2><span class="rmask"><span class="rin">We do not invent authority.</span></span><span class="rmask"><span class="rin"><span class="og">We reveal it.</span></span></span></h2>
+    <div class="body">
+      <p class="wr" data-reveal>Ignite Yourself is a founder-led creative studio working across research, storytelling, strategy, editorial design, and digital development.</p>
+      <p class="wr" data-reveal>We help professionals turn accumulated experience, evidence, reputation, and point of view into an asset that can support what comes next.</p>
+      <p class="wr" data-reveal><b>We listen before we write. We investigate before we design. And we build from what is already true.</b></p>
+    </div>
+    <div class="founder wr" data-reveal>
+      <div class="photo"><img src="/igy/assets/pablo-about.jpg" alt="Pablo Merchán, founder of Ignite Yourself" loading="lazy"></div>
+      <div class="letter">
+        <p><b>I&rsquo;m Pablo Merchán, founder of Ignite Yourself.</b></p>
+        <p>I created the studio for people who have spent years doing meaningful work, earning trust, and building something real—but whose full story still has no place of its own.</p>
+        <p>My role is to understand what is there, identify what deserves to be seen, and direct the narrative and platform that can carry it forward.</p>
+        <p class="sig">Pablo Merchán · Founder</p>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ===== 08b · FINAL CTA + FORM ===== -->
+  <section class="finalcta" id="contact"><div class="wrapn">
     <p class="eyebrow wr" data-reveal>Put your experience to work</p>
-    <h2><span class="rmask"><span class="rin">Put the full weight of your career</span></span><span class="rmask"><span class="rin">behind <span class="og">what comes next.</span></span></span></h2>
-    <p class="body wr" data-reveal>In thirty minutes, we will explore what you have built, what remains difficult to see, and how your experience could become a clear authority platform you own.</p>
-    <div class="act wr" data-reveal><a class="btn btn--o" href="#book">Book the 30-minute call →</a></div>
-    <p class="micro wr" data-reveal>No pressure · No manufactured persona · Just a focused conversation about turning earned authority into a usable asset.</p>
+    <h2><span class="rmask"><span class="rin">You have already built the authority.</span></span><span class="rmask"><span class="rin">Let&rsquo;s give it <span class="og">a place of its own.</span></span></span></h2>
+    <p class="body wr" data-reveal>Tell us what you have built, what remains difficult to see, and what you want the next chapter to make possible.</p>
+
+    <form class="formcard wr" data-reveal id="inquiryForm" novalidate>
+      <h3>Tell us what you&rsquo;ve built.</h3>
+      <p class="fintro">Share a little about your work. We&rsquo;ll personally review your current presence and determine whether an Authority Platform could be useful for what comes next.</p>
+      <div class="field" data-field>
+        <label for="f-name">Full name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+        <p class="err">Please tell us your name so we know who to reply to.</p>
+      </div>
+      <div class="field" data-field>
+        <label for="f-email">Professional email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+        <p class="err">We need a valid email address to get back to you.</p>
+      </div>
+      <div class="field" data-field>
+        <label for="f-role">Current role or organization</label>
+        <input id="f-role" name="role" type="text" autocomplete="organization-title">
+      </div>
+      <div class="field" data-field>
+        <label for="f-url">Website, LinkedIn, or professional profile</label>
+        <input id="f-url" name="url" type="url" inputmode="url" placeholder="https://">
+        <p class="err">That link doesn&rsquo;t look complete — please include the full URL, or leave it empty.</p>
+      </div>
+      <div class="field" data-field>
+        <label for="f-next">What are you building toward next?</label>
+        <textarea id="f-next" name="next"></textarea>
+      </div>
+      <button class="btn btn--o fsubmit" type="submit">Request My Private Preview</button>
+      <p class="fnote">Submitting opens a pre-filled email in your mail app addressed to <a href="mailto:pablo@igniteyourself.co">pablo@igniteyourself.co</a> — send it, and we&rsquo;ll take it from there. Prefer to write directly? Use that same address.</p>
+      <div class="fconfirm" id="fconfirm" role="status"><b>Thank you. We&rsquo;ll review your work and get back to you personally.</b><br>Your email app should now be open with your request — press send to complete it. If it didn&rsquo;t open, email us at pablo@igniteyourself.co.</div>
+    </form>
+
+    <p class="contactline wr" data-reveal><a href="mailto:pablo@igniteyourself.co">pablo@igniteyourself.co</a></p>
+    <p class="micro wr" data-reveal>A focused conversation · No pressure · No manufactured persona</p>
   </div></section>
 
 </main>
 
-<footer class="footer"><div class="wrap grid">
-  <img class="flogo" src="/igy/assets/logo-igy.png" alt="Ignite Yourself">
-  <div class="meta"><a href="mailto:pablomerchanm@gmail.com">pablomerchanm@gmail.com</a><div>The Authority Platform · Built remotely · Worldwide</div></div>
-</div></footer>
-
-<!-- ABOUT DRAWER -->
-<div class="drawer" id="aboutDrawer" aria-hidden="true">
-  <div class="drawer__ov" data-drawer-close tabindex="-1"></div>
-  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="About the studio">
-    <div class="drawer__head">
-      <div class="eyebrow"><img class="lspark" src="/igy/assets/spark.png" alt="">About the studio</div>
-      <button class="drawer__close" type="button" data-drawer-close><span>Close</span><span class="drawer__esc">ESC</span></button>
-    </div>
-    <div class="drawer__letter">
-      <p><b>Hey, I'm Pablo.</b> I started Ignite Yourself for people who've built something real — and watched the world look right past it.</p>
-      <p>My obsession is simple: helping you feel proud of who you are and what you've made, and turning that into a presence powerful enough that the right opportunities finally find you.</p>
-      <p>We don't manufacture anyone. We listen first, dig into your story, and build a system around who you already are — one you own, that works for you instead of the other way around.</p>
-    </div>
-    <div class="drawer__bar"><span>Ignite Yourself</span><span>The Authority Platform</span><span>Working worldwide</span></div>
-    <div class="drawer__photo">
-      <img src="/igy/assets/pablo-about.jpg" alt="Pablo Merchán" loading="lazy" />
-      <span class="drawer__word w1">extract</span>
-      <span class="drawer__word w2">build</span>
-      <span class="drawer__word w3">launch</span>
-    </div>
-    <div class="drawer__row">
-      <div class="eyebrow"><img class="lspark" src="/igy/assets/spark.png" alt="">Our principles</div>
-      <div class="drawer__principles">
-        <div class="drawer__principle"><h4>We extract, we don't invent</h4><p>You've already done the work. We organize and project what's real — never a manufactured persona, never turning you into an influencer.</p></div>
-        <div class="drawer__principle"><h4>A system, not a stream</h4><p>Not more posting. One connected system — positioning, platform, and story — built to compound quietly while you do your work.</p></div>
-        <div class="drawer__principle"><h4>You own it</h4><p>Your platform, your narrative, your name. Everything we build is infrastructure you keep and can run without us.</p></div>
-        <div class="drawer__principle"><h4>The person before the brand</h4><p>Behind every system is a real person with real stakes. The most powerful presence is the one that feels unmistakably, proudly you.</p></div>
+<footer class="footer"><div class="wrap">
+  <div class="top">
+    <div>
+      <img class="flogo" src="/igy/assets/logo-igy.png" alt="Ignite Yourself">
+      <p class="fstate">Turn the authority you have earned into an asset you can use.</p>
+      <div class="fmeta">
+        <div>The Authority Platform</div>
+        <div>Built remotely · Working worldwide</div>
+        <a href="mailto:pablo@igniteyourself.co">pablo@igniteyourself.co</a>
       </div>
     </div>
-    <a class="btn btn--o drawer__cta" href="#book" data-drawer-close>Book the 30-minute call →</a>
-  </aside>
-</div>
+    <nav class="flinks" aria-label="Footer">
+      <a href="#platform">The Platform</a>
+      <a href="#who-its-for">Who It&rsquo;s For</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#investment">Investment</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="bottom"><span>Ignite Yourself</span><span>The Authority Platform</span></div>
+</div></footer>
 
 <script src="/vendor/gsap.min.js"></script>
 <script src="/vendor/ScrollTrigger.min.js"></script>
@@ -404,14 +557,43 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   function navColor(){var h=hero?hero.offsetHeight-80:600;nav.classList.toggle('onlight',(window.scrollY||pageYOffset)>h)}
   navColor();
 
-  /* drawer */
-  (function(){var drawer=document.getElementById('aboutDrawer');if(!drawer)return;
-    function open(){drawer.classList.add('is-open');drawer.setAttribute('aria-hidden','false');document.body.classList.add('drawer-locked')}
-    function close(){drawer.classList.remove('is-open');drawer.setAttribute('aria-hidden','true');document.body.classList.remove('drawer-locked')}
-    document.querySelectorAll('[data-drawer-open]').forEach(function(o){o.addEventListener('click',function(e){e.preventDefault();open()})});
-    drawer.querySelectorAll('[data-drawer-close]').forEach(function(c){c.addEventListener('click',function(e){e.preventDefault();close()})});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('is-open'))close()});
-  })();
+  /* mobile menu */
+  var burger=document.getElementById('nburger');var menu=document.getElementById('nmenu');
+  function closeMenu(){menu.classList.remove('is-open');burger.classList.remove('is-open');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Open menu');document.body.classList.remove('menu-locked')}
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('is-open');burger.classList.toggle('is-open',open);
+    burger.setAttribute('aria-expanded',String(open));burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    document.body.classList.toggle('menu-locked',open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('is-open'))closeMenu()});
+
+  /* inquiry form → validated, prefilled email to pablo@igniteyourself.co */
+  var form=document.getElementById('inquiryForm');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var ok=true;
+      function setInvalid(input,bad){var f=input.closest('.field');f.classList.toggle('invalid',bad);if(bad&&ok){input.focus();ok=false}}
+      var name=form.querySelector('#f-name'),email=form.querySelector('#f-email'),url=form.querySelector('#f-url');
+      setInvalid(name,!name.value.trim());
+      setInvalid(email,!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
+      var uv=url.value.trim();
+      setInvalid(url,uv!==''&&!/^(https?:\/\/)?[^\s]+\.[^\s]{2,}$/i.test(uv));
+      if(!ok)return;
+      var role=form.querySelector('#f-role').value.trim(),next=form.querySelector('#f-next').value.trim();
+      var subject='Private Preview Request — '+name.value.trim();
+      var body='Full name: '+name.value.trim()+
+        '\nProfessional email: '+email.value.trim()+
+        (role?'\nCurrent role or organization: '+role:'')+
+        (uv?'\nWebsite / LinkedIn / profile: '+uv:'')+
+        (next?'\n\nWhat I am building toward next:\n'+next:'')+
+        '\n\n—\nSent from the Ignite Yourself website.';
+      location.href='mailto:pablo@igniteyourself.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+      document.getElementById('fconfirm').classList.add('is-visible');
+    });
+    form.querySelectorAll('input,textarea').forEach(function(i){i.addEventListener('input',function(){i.closest('.field').classList.remove('invalid')})});
+  }
 
   var REDUCED=matchMedia('(prefers-reduced-motion:reduce)').matches;
   var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined';
@@ -433,7 +615,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   document.querySelectorAll('[data-reveal]').forEach(function(el){
     gsap.set(el,{opacity:0,y:22});
     gsap.to(el,{opacity:1,y:0,duration:.8,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}});});
-  /* R2 headline rise from mask (gsap owns transform → sin compound) */
+  /* R2 headline rise from mask */
   document.querySelectorAll('.rmask .rin').forEach(function(el){
     gsap.set(el,{yPercent:112});
     gsap.to(el,{yPercent:0,duration:.9,ease:'expo.out',scrollTrigger:{trigger:el.closest('.rmask'),start:'top 94%',once:true}});});
@@ -444,6 +626,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
   /* R4 giant marks drift */
   document.querySelectorAll('[data-mark]').forEach(function(m){
     gsap.to(m,{yPercent:-8,ease:'none',scrollTrigger:{trigger:m,start:'top bottom',end:'bottom top',scrub:.8}});});
+  /* R5 showcase pan — preview screenshots scroll inside their frames */
+  document.querySelectorAll('[data-pan]').forEach(function(w){
+    var img=w.querySelector('img');
+    function run(){var d=img.offsetHeight-w.offsetHeight;if(d<=40)return;
+      gsap.fromTo(img,{y:0},{y:-d,ease:'none',scrollTrigger:{trigger:w.closest('.stage')||w,start:'top 85%',end:'bottom -60%',scrub:.6}});}
+    if(img.complete&&img.offsetHeight>0)run();else img.addEventListener('load',run);
+  });
 
   function wireAnchors(l){document.querySelectorAll('a[href^="#"]').forEach(function(a){
     a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length<2)return;var t=document.querySelector(id);if(!t)return;e.preventDefault();
