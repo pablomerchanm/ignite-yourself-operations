@@ -52,7 +52,8 @@
       "cta": {
         "t": "Explore Leon’s work",
         "h": "#work"
-      }
+      },
+      "no": "01"
     },
     {
       "type": "proof",
@@ -73,7 +74,8 @@
           "n": "Global experience",
           "d": "Work with law firms, corporations, government entities and international institutions."
         }
-      ]
+      ],
+      "no": "02"
     },
     {
       "type": "mission",
@@ -84,7 +86,8 @@
         "When complex systems fail, the cause is rarely a single defect or decision. It is more often found in the interaction of architecture, requirements, project methods, management, contracts, communication, incentives, organizational conditions and people.",
         "Leon’s work brings these dimensions together—so difficult questions can be examined rigorously, explained clearly and acted on responsibly."
       ],
-      "who": "The system is only part of the story. The decisions, structures and people around it matter just as much."
+      "who": "The system is only part of the story. The decisions, structures and people around it matter just as much.",
+      "no": "03"
     },
     {
       "type": "access",
@@ -139,7 +142,8 @@
             "h": "#writing"
           }
         }
-      ]
+      ],
+      "no": "04"
     },
     {
       "type": "journey",
@@ -202,7 +206,18 @@
             "National media"
           ]
         }
-      ]
+      ],
+      "no": "05"
+    },
+    {
+      "type": "band",
+      "id": "band",
+      "label": "The person behind the analysis",
+      "quote": "Independent. Rigorous. <t>Able to explain it.</t>",
+      "img": {
+        "src": "/kappelman/assets/band-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
+      }
     },
     {
       "type": "method",
@@ -261,7 +276,9 @@
           "Validity and infringement reports",
           "Depositions and expert witness testimony"
         ]
-      }
+      },
+      "no": "06",
+      "invert": true
     },
     {
       "type": "exp",
@@ -293,7 +310,8 @@
           ]
         }
       ],
-      "fn": "Selected from publicly listed consulting and litigation-support experience"
+      "fn": "Selected from publicly listed consulting and litigation-support experience",
+      "no": "07"
     },
     {
       "type": "voices",
@@ -340,12 +358,13 @@
           ]
         }
       ],
-      "fn": "Selected from media coverage listed on Leon’s current website"
+      "fn": "Selected from media coverage listed on Leon’s current website",
+      "no": "08"
     },
     {
       "type": "access",
       "id": "writing",
-      "c4": true,
+      "c4": false,
       "label": "Writing and research",
       "title": "Ideas shaped by decades of studying systems, organizations and technology leadership.",
       "cards": [
@@ -393,7 +412,12 @@
             "ext": true
           }
         }
-      ]
+      ],
+      "no": "09",
+      "ph": {
+        "src": "/kappelman/assets/writing-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
+      }
     },
     {
       "type": "reserve",
@@ -416,7 +440,8 @@
         "Professor Emeritus, University of North Texas",
         "Leon@Kappelman.net · 940-367-0405 · Dallas, Texas",
         "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Leon before publication"
-      ]
+      ],
+      "no": "10"
     }
   ]
 }
