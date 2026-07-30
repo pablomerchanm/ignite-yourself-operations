@@ -255,11 +255,15 @@
       var legal = (s.legal || []).map(function (t) {
         return '<span class="micro">' + esc(t) + '</span>';
       }).join('');
+      /* Crédito del estudio: se emite siempre, no depende de content.json,
+         para que ninguna plataforma se publique sin atribución. */
+      var credit = '<span class="micro credit">Platform by ' +
+        '<a href="https://igniteyourself.co/" target="_blank" rel="noopener">Ignite Yourself</a></span>';
       return '<div class="wrap will-reveal" data-reveal><div class="cols">' +
         '<div class="col"><p class="micro">' + esc(brand.shortName || '') + '</p>' +
           '<p>' + esc(s.about) + '</p></div>' +
         cols + '</div>' +
-        '<div class="legal">' + legal + '</div></div>' +
+        '<div class="legal">' + legal + credit + '</div></div>' +
         '<div class="wordmark" aria-hidden="true">' + esc(brand.name || '') + '</div>';
     }
   };
