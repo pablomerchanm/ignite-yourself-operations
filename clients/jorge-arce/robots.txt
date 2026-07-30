@@ -9,6 +9,7 @@ Disallow: /catalogo
 Disallow: /enlaces
 Disallow: /igy
 Disallow: /igy2
+Disallow: /kappelman
 Disallow: /base
 Disallow: /base-jorge
 Disallow: /lab
