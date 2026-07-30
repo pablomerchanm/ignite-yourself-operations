@@ -600,6 +600,13 @@ html.no-motion .will-reveal { opacity: 1; }
   padding-block: var(--space-3);
   border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent);
 }
+.s-footer .legal .credit { opacity: 0.55; }
+.s-footer .legal .credit a {
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+  transition: opacity var(--dur-hover) var(--ease-hover);
+}
+.s-footer .legal .credit a:hover { opacity: 0.7; }
 .s-footer .wordmark {
   font-family: var(--font-serif);
   font-weight: var(--weight-display);
