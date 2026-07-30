@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leon A. Kappelman, Ph.D. — Systems, Organizations &amp; Software Disputes</title>
+<meta name="description" content="Leon Kappelman brings more than three decades of research, leadership, advisory and expert-witness experience to complex software and information-systems questions.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --sec:clamp(104px,14vh,168px);
+  --ivory:#FAF8F5; --ink:#141412; --stone:#CDC7BE; --rust:#8C4A2F;
+  --body:#54504A; --hair:#E2DDD4;
+  --serif:'Playfair Display',Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:'Archivo',sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--ivory)}
+.lbl{font-size:10px;font-weight:500;letter-spacing:.26em;text-transform:uppercase}
+.lbl.r{color:var(--rust)}
+
+/* photo slot */
+.slot{position:relative;overflow:hidden;background:linear-gradient(160deg,#E8E4DE 0%,#D6D1C9 55%,#C4BEB4 100%)}
+.slot::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E")}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.04)}
+
+/* ---------- double nav ---------- */
+.nav1{display:flex;justify-content:space-between;align-items:center;background:var(--ink);
+  color:var(--ivory);padding:10px 22px;position:sticky;top:0;z-index:60}
+.nav1 .links{display:flex;gap:24px}
+.nav1 a{font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;opacity:.9}
+.nav1 a b{opacity:.5;margin-right:5px;font-weight:500}
+.nav1 a:hover{opacity:.6}
+.nav1 .cta{border:1px solid rgba(250,248,245,.4);padding:7px 14px;opacity:1}
+.nav1 .cta:hover{background:var(--ivory);color:var(--ink);opacity:1}
+.nav2{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;
+  padding:16px 22px;border-bottom:1px solid var(--ink)}
+.nav2 .side{font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
+.nav2 .side.rt{text-align:right;color:#8A857E}
+.nav2 .lg{font-family:var(--serif);font-size:22px;text-align:center;padding:0 26px;
+  border-left:1px solid var(--ink);border-right:1px solid var(--ink);white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:54px 0 100px;overflow:hidden}
+.hero .eyebrow{text-align:center;font-size:10px;font-weight:600;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--rust)}
+.hero .wm{font-family:var(--serif);font-size:clamp(52px,10.4vw,150px);letter-spacing:.16em;
+  line-height:.95;white-space:nowrap;color:var(--ink);text-align:center;margin-top:16px;
+  margin-right:-.16em;user-select:none}
+.hero .stage{position:relative;max-width:1140px;margin:clamp(28px,4vw,52px) auto 0;display:grid;
+  grid-template-columns:1fr 330px 1fr;gap:44px;align-items:start;padding:0 4vw}
+.hero .midph .slot{aspect-ratio:3/4}
+.hero .left{padding-top:3vw}
+.hero .left h1{font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.5vw,34px);line-height:1.28}
+.hero .left h1 em{font-style:italic}
+.hero .left p{margin-top:20px;font-size:13.5px;line-height:1.8;color:var(--body);max-width:40ch}
+.hero .left .desc{margin-top:22px;font-size:9.5px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:#8A857E}
+.hero .right{padding-top:3vw}
+.hero .right .lbl{color:#8A857E;padding-bottom:12px}
+.hero .right a{display:flex;justify-content:space-between;gap:14px;font-size:10px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;padding:15px 2px;border-top:1px solid var(--ink);transition:letter-spacing .3s}
+.hero .right a:last-of-type{border-bottom:1px solid var(--ink)}
+.hero .right a:hover{letter-spacing:.26em}
+.hero .right .go{display:inline-block;margin-top:26px;font-size:10px;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;background:var(--ink);color:var(--ivory);padding:16px 26px;border:0;transition:background .3s}
+.hero .right .go:hover{background:#3A3A36}
+
+/* ---------- proof ---------- */
+.proof{border-top:1px solid var(--ink);padding:calc(var(--sec)*.62) 4vw}
+.prow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1240px;margin:0 auto}
+.pcell{padding:10px 34px 6px;border-left:1px solid var(--hair)}
+.pcell:first-child{border-left:0;padding-left:0}
+.pcell .n{font-family:var(--serif);font-size:clamp(21px,1.9vw,27px);line-height:1.15}
+.pcell p{margin-top:10px;font-size:12px;line-height:1.7;color:var(--body);max-width:30ch}
+
+/* ---------- perspective ---------- */
+.persp{padding:var(--sec) 6vw;text-align:center;border-top:1px solid var(--ink)}
+.persp h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4.4vw,58px);line-height:1.2;max-width:840px;margin:22px auto 0}
+.persp h2 em{font-style:italic}
+.persp .cols{max-width:660px;margin:34px auto 0;text-align:left}
+.persp .cols p{font-size:14px;line-height:1.85;color:var(--body)}
+.persp .cols p+p{margin-top:16px}
+.persp .pull{margin:44px auto 0;max-width:620px;font-family:var(--serif);font-style:italic;
+  font-size:clamp(18px,2vw,24px);line-height:1.5;color:var(--ink);
+  padding-top:30px;border-top:1px solid var(--ink);position:relative}
+
+/* ---------- pillars ---------- */
+.svc{padding:0 4vw calc(var(--sec)*.9)}
+.svc .head{max-width:1240px;margin:0 auto calc(var(--sec)*.42)}
+.svc .head h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.22;max-width:22ch}
+.svc .head h2 em{font-style:italic}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:1240px;margin:0 auto;border:1px solid var(--ink)}
+.scard{padding:42px 36px 46px;border-right:1px solid var(--ink);display:flex;flex-direction:column}
+.scard:last-child{border-right:0}
+.scard:hover{background:#F2EFE9}
+.scard .n{font-family:var(--serif);font-size:40px}
+.scard h3{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.2vw,29px);line-height:1.18;margin-top:18px}
+.scard h3 em{font-style:italic}
+.scard>p{margin-top:14px;font-size:13px;line-height:1.75;color:var(--body)}
+.scard ul{margin-top:22px;list-style:none;border-top:1px solid var(--hair)}
+.scard li{font-size:11.5px;letter-spacing:.02em;color:var(--body);padding:9px 0;border-bottom:1px solid var(--hair)}
+
+/* ---------- chapters ---------- */
+.chapters{border-top:1px solid var(--ink);padding:var(--sec) 4vw}
+.chapters .in{max-width:1000px;margin:0 auto}
+.chapters h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.8vw,52px);line-height:1.2;max-width:20ch}
+.chapters h2 em{font-style:italic}
+.chapters .intro{margin-top:24px;max-width:60ch;font-size:14px;line-height:1.85;color:var(--body)}
+.chapters .intro p+p{margin-top:14px}
+.chlist{margin-top:calc(var(--sec)*.42);border-top:1px solid var(--ink)}
+.ch{display:grid;grid-template-columns:110px 1fr 1.4fr;gap:34px;align-items:baseline;
+  padding:30px 2px;border-bottom:1px solid var(--ink);transition:background .3s}
+.ch:hover{background:#F2EFE9}
+.ch .no{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--rust)}
+.ch h3{font-family:var(--serif);font-weight:400;font-size:clamp(20px,2.4vw,30px);line-height:1.2}
+.ch p{font-size:12.5px;line-height:1.75;color:var(--body)}
+
+/* ---------- for counsel (ink band) ---------- */
+.counsel{background:var(--ink);color:var(--ivory);padding:var(--sec) 4vw}
+.counsel .in{max-width:1140px;margin:0 auto}
+.counsel .lbl{color:var(--stone)}
+.counsel h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,54px);line-height:1.2;margin-top:18px;max-width:20ch}
+.counsel h2 em{font-style:italic}
+.counsel .lede{margin-top:24px;max-width:62ch;font-size:14px;line-height:1.85;color:#B9B4AC}
+.counsel .lede p+p{margin-top:14px}
+.counsel .lede b{color:var(--ivory);font-weight:500}
+.mgrid{margin-top:calc(var(--sec)*.42);display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid rgba(250,248,245,.28)}
+.mcell{padding:34px 30px 40px;border-right:1px solid rgba(250,248,245,.28)}
+.mcell:last-child{border-right:0}
+.mcell h3{font-family:var(--serif);font-weight:400;font-size:clamp(19px,1.9vw,25px);line-height:1.25}
+.mcell p{margin-top:12px;font-size:12.5px;line-height:1.75;color:#B9B4AC}
+.counsel .acts{margin-top:44px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.counsel .cta{font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  background:var(--ivory);color:var(--ink);padding:17px 28px;transition:background .3s}
+.counsel .cta:hover{background:var(--stone)}
+.counsel .sec{font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#B9B4AC;
+  border-bottom:1px solid rgba(250,248,245,.35);padding-bottom:4px;transition:color .3s}
+.counsel .sec:hover{color:var(--ivory)}
+
+/* ---------- experience ---------- */
+.exp{padding:var(--sec) 6vw;text-align:center}
+.exp h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.6vw,48px);line-height:1.22;max-width:24ch;margin:18px auto 0}
+.exp h2 em{font-style:italic}
+.exp .row{max-width:900px;margin:calc(var(--sec)*.36) auto 0}
+.exp .row .lbl{color:#8A857E}
+.exp .names{margin-top:16px;font-family:var(--serif);font-size:clamp(16px,1.9vw,22px);line-height:1.9;color:var(--ink)}
+.exp .names i{font-style:normal;color:var(--stone);padding:0 10px}
+.exp .fn{margin-top:44px;font-size:10px;color:#8A857E;letter-spacing:.06em}
+
+/* ---------- comments ---------- */
+.comments{border-top:1px solid var(--ink);padding:var(--sec) 6vw}
+.comments .in{max-width:1140px;margin:0 auto}
+.comments h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.6vw,48px);line-height:1.2}
+.comments h2 em{font-style:italic}
+.qrow{margin-top:calc(var(--sec)*.4);display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+.q blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.7vw,21px);line-height:1.55;
+  border-top:1px solid var(--ink);padding-top:24px}
+.comments .attr{margin-top:36px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8A857E}
+
+/* ---------- writing ---------- */
+.writing{border-top:1px solid var(--ink);padding:var(--sec) 4vw}
+.writing .in{max-width:1240px;margin:0 auto}
+.writing h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.22;max-width:24ch;margin-top:18px}
+.writing h2 em{font-style:italic}
+.writing .intro{margin-top:20px;max-width:62ch;font-size:13.5px;line-height:1.8;color:var(--body)}
+.wgrid{margin-top:calc(var(--sec)*.42);display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink)}
+.wcard{padding:34px 28px 40px;border-right:1px solid var(--ink);display:flex;flex-direction:column;transition:background .3s}
+.wcard:last-child{border-right:0}
+.wcard:hover{background:#F2EFE9}
+.wcard .no{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--rust)}
+.wcard h3{font-family:var(--serif);font-weight:400;font-size:clamp(18px,1.7vw,22px);line-height:1.3;margin-top:14px}
+.wcard p{margin-top:12px;font-size:12px;line-height:1.7;color:var(--body)}
+.wcard .more{margin-top:auto;padding-top:24px;font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.wcard .more span{border-bottom:1px solid var(--ink);padding-bottom:3px}
+.writing .all{display:inline-block;margin-top:38px;font-size:10px;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px}
+
+/* ---------- final ---------- */
+.final{border-top:1px solid var(--ink);padding:var(--sec) 6vw;text-align:center}
+.final h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,66px);line-height:1.12}
+.final h2 em{font-style:italic}
+.final .copy{max-width:56ch;margin:26px auto 0;font-size:14px;line-height:1.85;color:var(--body)}
+.final .acts{margin-top:44px;display:flex;justify-content:center;align-items:center;gap:26px;flex-wrap:wrap}
+.final .cta{font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  background:var(--ink);color:var(--ivory);padding:17px 30px;transition:background .3s}
+.final .cta:hover{background:#3A3A36}
+.final .sec{font-size:9.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  border-bottom:1px solid var(--ink);padding-bottom:4px}
+.final .reach{margin-top:46px;font-size:12px;letter-spacing:.04em;color:var(--body)}
+.final .reach a{border-bottom:1px solid var(--stone);padding-bottom:2px}
+.final .reach a:hover{border-color:var(--ink)}
+.final .reach i{font-style:normal;color:var(--stone);padding:0 10px}
+
+/* ---------- footer ---------- */
+.foot{background:var(--ink);color:var(--ivory);padding:80px 6vw 34px;text-align:center}
+.foot .wm{font-family:var(--serif);font-size:clamp(30px,5.4vw,72px);letter-spacing:.14em;line-height:1;margin-right:-.14em}
+.foot .roles{margin-top:18px;font-size:9.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#B9B4AC}
+.foot .aff{margin-top:34px;font-size:11.5px;line-height:2;color:#B9B4AC}
+.foot .links{margin-top:26px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.foot .links a{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#B9B4AC;transition:color .3s}
+.foot .links a:hover{color:var(--ivory)}
+.foot .fine{margin-top:56px;max-width:640px;margin-left:auto;margin-right:auto;
+  font-size:9.5px;letter-spacing:.04em;line-height:1.8;color:#7A756D}
+.foot .credit{margin-top:22px;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:#7A756D}
+.foot .credit a{color:#B9B4AC;border-bottom:1px solid rgba(250,248,245,.25);padding-bottom:2px}
+.foot .credit a:hover{color:var(--ivory)}
+
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+
+@media (max-width:960px){
+  .nav1 .links.r2{display:none}
+  .nav2 .side{display:none}
+  .nav2{grid-template-columns:1fr}
+  .hero .wm{font-size:clamp(38px,11vw,64px)}
+  .hero .stage{grid-template-columns:1fr;gap:38px}
+  .hero .left,.hero .right{padding-top:0}
+  .hero .midph{order:-1;max-width:330px;margin:0 auto;width:100%}
+  .prow{grid-template-columns:1fr 1fr;gap:34px 28px}
+  .pcell{border-left:0;padding:0}
+  .sgrid,.mgrid,.wgrid{grid-template-columns:1fr}
+  .scard,.mcell,.wcard{border-right:0;border-bottom:1px solid var(--ink)}
+  .mcell{border-bottom:1px solid rgba(250,248,245,.28)}
+  .scard:last-child,.mcell:last-child,.wcard:last-child{border-bottom:0}
+  .ch{grid-template-columns:1fr;gap:8px;padding:24px 2px}
+  .qrow{grid-template-columns:1fr;gap:34px}
+}
+</style></head>
+<body>
+
+<nav class="nav1" aria-label="Primary">
+  <div class="links">
+    <a href="#top"><b>01</b>Leon</a>
+    <a href="#perspective"><b>02</b>Perspective</a>
+    <a href="#work"><b>03</b>Work</a>
+    <a href="#for-counsel"><b>04</b>For Counsel</a>
+    <a href="#writing"><b>05</b>Writing</a>
+    <a href="#contact"><b>06</b>Contact</a>
+  </div>
+  <div class="links r2">
+    <a class="cta" href="#contact">Discuss a matter</a>
+  </div>
+</nav>
+<div class="nav2">
+  <span class="side">Systems · Organizations · Software Disputes</span>
+  <span class="lg">Leon A. Kappelman, Ph.D.</span>
+  <span class="side rt">Private concept</span>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <header class="hero" id="top" data-r2>
+    <p class="eyebrow wr">Leon A. Kappelman, Ph.D.</p>
+    <div class="wm wr" aria-hidden="true">KAPPELMAN</div>
+    <div class="stage">
+      <div class="left wr">
+        <h1>Understanding why complex systems succeed, fail and <em>become disputed.</em></h1>
+        <p>For more than three decades, Leon Kappelman has worked at the intersection of technology, organizations and human decision-making—helping counsel, institutions and leaders make complex information-systems problems understandable.</p>
+        <p class="desc">Research scientist · Educator · Advisor · Expert witness</p>
+      </div>
+      <div class="midph wr"><div class="slot"><img src="/kappelman/assets/leon.jpg" alt="Leon A. Kappelman, Ph.D."></div></div>
+      <div class="right wr">
+        <p class="lbl">Index</p>
+        <a href="#perspective">Perspective <span>&#8594;</span></a>
+        <a href="#work">Three expressions <span>&#8594;</span></a>
+        <a href="#body-of-work">A body of work <span>&#8594;</span></a>
+        <a href="#for-counsel">For counsel <span>&#8594;</span></a>
+        <a href="#writing">Writing <span>&#8594;</span></a>
+        <a class="go" href="#work">Explore Leon&rsquo;s work</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUTHORITY AT A GLANCE -->
+  <section class="proof" data-cards>
+    <div class="prow">
+      <div class="pcell wr"><div class="n">Three decades</div><p>Across information systems, software, technology management and organizational decision-making.</p></div>
+      <div class="pcell wr"><div class="n">150+ articles, six books</div><p>A substantial body of research and writing across information-systems management and software practice.</p></div>
+      <div class="pcell wr"><div class="n">Testimony before Congress</div><p>Public contribution on technology legislation, cybersecurity and information-systems management.</p></div>
+      <div class="pcell wr"><div class="n">Global experience</div><p>Work with law firms, corporations, government entities and international institutions.</p></div>
+    </div>
+  </section>
+
+  <!-- PERSPECTIVE -->
+  <section class="persp" id="perspective" data-r2>
+    <span class="lbl r wr">A point of view built over decades</span>
+    <h2 class="wr">Technology problems are rarely <em>only technical.</em></h2>
+    <div class="cols wr">
+      <p>When complex systems fail, the cause is rarely a single defect or decision.</p>
+      <p>It is more often found in the interaction of architecture, requirements, project methods, management, contracts, communication, incentives, organizational conditions and people.</p>
+      <p>Leon&rsquo;s work brings these dimensions together—so difficult questions can be examined rigorously, explained clearly and acted on responsibly.</p>
+    </div>
+    <p class="pull wr">The system is only part of the story. The decisions, structures and people around it matter just as much.</p>
+  </section>
+
+  <!-- THREE PILLARS -->
+  <section class="svc" id="work">
+    <div class="head" data-r1><h2 class="wr" style="opacity:1">One body of knowledge. <em>Applied across different kinds of consequential work.</em></h2></div>
+    <div class="sgrid" data-cards>
+      <div class="scard wr">
+        <span class="n">01</span>
+        <h3>Systems and <em>organizations</em></h3>
+        <p>Understanding how software, information systems, technology leadership and organizational conditions shape performance.</p>
+        <ul>
+          <li>Software design and development</li>
+          <li>Information-systems management</li>
+          <li>Enterprise architecture</li>
+          <li>IT governance and strategic planning</li>
+          <li>Technology performance and risk</li>
+          <li>Organizational change</li>
+          <li>Continuity and resilience</li>
+        </ul>
+      </div>
+      <div class="scard wr">
+        <span class="n">02</span>
+        <h3>Disputes and <em>evidence</em></h3>
+        <p>Helping counsel examine and explain the technical, managerial and organizational dimensions of complex software and technology disputes.</p>
+        <ul>
+          <li>Failed and troubled software projects</li>
+          <li>Software implementation disputes</li>
+          <li>Copyright, patent and trade-secret matters</li>
+          <li>Software defects and product liability</li>
+          <li>Source-code, architecture and functionality analysis</li>
+          <li>Cybersecurity and unauthorized access</li>
+          <li>Expert reports, depositions and testimony</li>
+        </ul>
+      </div>
+      <div class="scard wr">
+        <span class="n">03</span>
+        <h3>Research, leadership <em>and advisory</em></h3>
+        <p>Translating decades of research, teaching and institutional leadership into clearer decisions about technology, organizations and the future of information systems.</p>
+        <ul>
+          <li>Research and writing</li>
+          <li>Technology leadership</li>
+          <li>Institutional and corporate advisory</li>
+          <li>Public policy</li>
+          <li>Speaking and workshops</li>
+          <li>IT workforce and management trends</li>
+          <li>Education and mentorship</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY OF WORK -->
+  <section class="chapters" id="body-of-work" data-r2>
+    <div class="in">
+      <span class="lbl r wr">A body of work</span>
+      <h2 class="wr" style="margin-top:18px">A career spent making complex technology <em>understandable.</em></h2>
+      <div class="intro wr">
+        <p>Leon&rsquo;s authority was not built in a single role. It developed across research, education, institutional leadership, consulting, public contribution and expert evidence.</p>
+        <p>Each chapter added a different way of seeing the same central problem: how information systems, organizations and people interact—and what happens when that interaction succeeds or breaks down.</p>
+      </div>
+      <div class="chlist" data-cards>
+        <div class="ch wr"><span class="no">Chapter i.</span><h3>Researcher and educator</h3><p>A 30-year academic career devoted to educating future information-technology leaders and advancing the information-systems discipline.</p></div>
+        <div class="ch wr"><span class="no">Chapter ii.</span><h3>Institutional leader</h3><p>Former department chair and research-center director, connecting academic knowledge, professional practice and the changing needs of technology organizations.</p></div>
+        <div class="ch wr"><span class="no">Chapter iii.</span><h3>Advisor</h3><p>Experience helping corporations, public institutions and government organizations understand and manage information, technology, systems and people.</p></div>
+        <div class="ch wr"><span class="no">Chapter iv.</span><h3>Expert witness</h3><p>Independent research, analysis, consultation, reporting and testimony for complex software and information-systems matters.</p></div>
+        <div class="ch wr"><span class="no">Chapter v.</span><h3>Author and public voice</h3><p>An extensive body of writing, presentations, media commentary and public testimony on technology, management, software and institutional change.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR COUNSEL -->
+  <section class="counsel" id="for-counsel" data-r2>
+    <div class="in">
+      <span class="lbl wr">For counsel</span>
+      <h2 class="wr">Software disputes demand more than <em>technical fluency.</em></h2>
+      <div class="lede wr">
+        <p>They require the ability to examine complex evidence, understand the interaction between technology and management, identify the questions that matter and explain those findings clearly to attorneys, judges and juries.</p>
+        <p>Leon provides independent research, consultation, analysis, reporting and testimony in matters involving software projects, intellectual property, system performance, cybersecurity and information-systems management. <b>His public case experience includes work for both plaintiff and defense.</b></p>
+      </div>
+      <div class="mgrid" data-cards>
+        <div class="mcell wr"><h3>Failed and troubled software projects</h3><p>Root-cause analysis involving requirements, architecture, development practices, project management, staffing, testing, contracts and system performance.</p></div>
+        <div class="mcell wr"><h3>Software-related intellectual property</h3><p>Copyright, patent and trade-secret matters involving source code, architecture, logic, functionality, design artifacts and business processes.</p></div>
+        <div class="mcell wr"><h3>Information-systems and technology matters</h3><p>Software defects, product liability, cybersecurity, data transfer, management practices and technology operations.</p></div>
+      </div>
+      <div class="acts wr">
+        <a class="cta" href="#contact">Discuss a confidential matter</a>
+        <a class="sec" href="https://www.leonkappelman.com/leon-kappelman-bio.htm" target="_blank" rel="noopener">Request Leon&rsquo;s CV</a>
+        <a class="sec" href="https://www.leonkappelman.com/kappelman-cases.htm" target="_blank" rel="noopener">Review selected matters</a>
+        <a class="sec" href="#writing">Explore relevant writing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED EXPERIENCE -->
+  <section class="exp" data-r2>
+    <span class="lbl r wr">Selected experience</span>
+    <h2 class="wr">Trusted across law, industry, government and <em>global institutions.</em></h2>
+    <div class="row wr">
+      <p class="lbl">Law firms</p>
+      <p class="names">Jones Day<i>·</i>Greenberg Traurig<i>·</i>Foley &amp; Lardner<i>·</i>Jackson Walker<i>·</i>Kilpatrick Townsend<i>·</i>Locke Lord</p>
+    </div>
+    <div class="row wr">
+      <p class="lbl">Organizations and institutions</p>
+      <p class="names">IBM<i>·</i>Microsoft<i>·</i>AT&amp;T<i>·</i>Verizon<i>·</i>Hewlett Packard Enterprise<i>·</i>United Nations<i>·</i>World Bank<i>·</i>Executive Office of the President of the United States</p>
+    </div>
+    <p class="fn wr">Selected from publicly listed consulting and litigation-support experience.</p>
+  </section>
+
+  <!-- CLIENT COMMENTS -->
+  <section class="comments" data-r2>
+    <div class="in">
+      <h2 class="wr">Clarity and value <em>under pressure.</em></h2>
+      <div class="qrow" data-cards>
+        <div class="q wr"><blockquote>&ldquo;You were self-sufficient, user friendly, and produced a great report.&rdquo;</blockquote></div>
+        <div class="q wr"><blockquote>&ldquo;Your efforts brought real value to the mediation and helped to get the case settled.&rdquo;</blockquote></div>
+        <div class="q wr"><blockquote>&ldquo;This is a tremendous amount of work product produced in a short time. Thank you for the incredible effort.&rdquo;</blockquote></div>
+      </div>
+      <p class="attr wr">Client comments, published on Leon&rsquo;s current website</p>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section class="writing" id="writing" data-r2>
+    <div class="in">
+      <span class="lbl r wr">Writing and research</span>
+      <h2 class="wr">Ideas shaped by decades of studying systems, organizations and <em>technology leadership.</em></h2>
+      <p class="intro wr">Leon&rsquo;s writing spans software design and implementation, enterprise architecture, information-systems management, technology leadership, cybersecurity, workforce questions and organizational change.</p>
+      <div class="wgrid" data-cards>
+        <div class="wcard wr"><span class="no">No. 1</span><h3>The Four Horsemen of IT Project Doom</h3><p>Early warning signs behind troubled technology initiatives.</p><a class="more" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener"><span>Read</span></a></div>
+        <div class="wcard wr"><span class="no">No. 2</span><h3>Auditing IT Projects: Early Warning Signs of Material Risk</h3><p>A framework for recognizing risk before failure becomes irreversible.</p><a class="more" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener"><span>Read</span></a></div>
+        <div class="wcard wr"><span class="no">No. 3</span><h3>Enterprise Architecture: Much More Than You&rsquo;re Thinking</h3><p>A broader view of architecture as a tool for enterprise understanding and transformation.</p><a class="more" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener"><span>Read</span></a></div>
+        <div class="wcard wr"><span class="no">No. 4</span><h3>SIM IT Issues and Trends Study</h3><p>Longitudinal research into the priorities, practices and leadership challenges facing IT organizations.</p><a class="more" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener"><span>Read</span></a></div>
+      </div>
+      <a class="all wr" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener">Explore selected writing</a>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final" id="contact" data-r2>
+    <h2 class="wr">Complex matter. <em>Clearer understanding.</em></h2>
+    <p class="copy wr">Whether the question concerns a failed software project, intellectual property, system performance or technology management, the first step is understanding what happened, why it happened and what the evidence can support.</p>
+    <div class="acts wr">
+      <a class="cta" href="mailto:Leon@Kappelman.net">Discuss a matter with Leon</a>
+      <a class="sec" href="#work">Explore his body of work</a>
+    </div>
+    <p class="reach wr"><a href="mailto:Leon@Kappelman.net">Leon@Kappelman.net</a><i>·</i>940-367-0405<i>·</i>Dallas, Texas<i>·</i><a href="https://www.linkedin.com/in/leon-kappelman-phd-129199" target="_blank" rel="noopener">LinkedIn</a></p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wm">KAPPELMAN</div>
+  <p class="roles">Research scientist · Educator · Advisor · Expert witness</p>
+  <div class="aff">
+    Chief Scientist, Solutions-Organizations-Systems, Inc.<br>
+    Professor Emeritus, University of North Texas
+  </div>
+  <div class="links">
+    <a href="mailto:Leon@Kappelman.net">Leon@Kappelman.net</a>
+    <a href="tel:+19403670405">940-367-0405</a>
+    <a href="https://www.linkedin.com/in/leon-kappelman-phd-129199" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="fine">Private concept. This preview reorganizes publicly available information into a proposed narrative and design direction. Final facts, language, permissions and content should be reviewed with Leon before publication.</p>
+  <p class="credit">Platform concept by <a href="https://igniteyourself.co/" target="_blank" rel="noopener">Ignite Yourself</a></p>
+</footer>
+
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script>
+(function(){
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION){document.documentElement.classList.add('no-motion');wireAnchors(null);return}
+gsap.registerPlugin(ScrollTrigger);
+var lenis=null;
+if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+  lenis=new Lenis({lerp:.3});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(function(t){lenis.raf(t*1000)});
+}
+gsap.ticker.lagSmoothing(0);
+(function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+  var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+  var left=pend.length;
+  pend.forEach(function(im){function done(){if(--left===0)rf()}
+    im.addEventListener('load',done);im.addEventListener('error',done)});
+})();
+wireAnchors(lenis);
+
+document.querySelectorAll('[data-r1] .wr').forEach(function(el){
+  gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+    scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+});
+document.querySelectorAll('[data-r2]').forEach(function(g){
+  var kids=g.querySelectorAll('.wr');var acc=0;
+  kids.forEach(function(el,i){
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+      scrollTrigger:{trigger:g,start:'top 86%',once:true}});
+    acc+=[120,80,60][Math.min(i,2)];
+  });
+});
+document.querySelectorAll('[data-cards]').forEach(function(g){
+  var kids=g.querySelectorAll(':scope .wr');var acc=0;var steps=[90,70,55,45,40,40];
+  kids.forEach(function(el,i){
+    gsap.fromTo(el,{opacity:0,y:14},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+      scrollTrigger:{trigger:g,start:'top 84%',once:true}});
+    acc+=steps[Math.min(i,steps.length-1)];
+  });
+});
+
+function wireAnchors(lenis){
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t);else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+})();
+</script>
+</body>
+</html>
