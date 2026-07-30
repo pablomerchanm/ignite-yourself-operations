@@ -159,6 +159,13 @@ section{padding:var(--sec) 0;position:relative}
 
 
 
+.msvc{margin-top:40px;padding-top:26px;border-top:1px solid rgba(237,233,229,.14)}
+.msvc .smallcap{margin-bottom:16px}
+.msvc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+.msvc li{font-family:'Inter',sans-serif;font-size:12.5px;line-height:1.5;color:rgba(237,233,229,.78);display:flex;gap:9px}
+.msvc li::before{content:'○';font-size:8px;margin-top:4px;color:var(--dim)}
+@media (max-width:700px){.msvc ul{grid-template-columns:1fr}}
+
 /* ---------- proof ---------- */
 .proof{padding-top:calc(var(--sec)*.55);padding-bottom:calc(var(--sec)*.55)}
 .pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(237,233,229,.14);border:1px solid rgba(237,233,229,.14)}
@@ -292,6 +299,7 @@ method:function(s){
   '<div><div class="shead" data-r2><div class="smallcap wr">'+esc(s.label)+'</div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
   (s.intro?'<p class="mintro wr" data-r1>'+rich(s.intro)+'</p>':'')+
   (s.rows||[]).map(function(r){return'<div class="mrow wr" data-r1 data-rule><h4>'+rich(r.t)+'</h4><p>'+rich(r.d)+'</p></div>'}).join('')+
+  (s.services?'<div class="msvc wr" data-r1><div class="smallcap">'+esc(s.services.label)+'</div><ul>'+(s.services.items||[]).map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul></div>':'')+
   (s.cta?'<div class="macts wr" data-r1><a class="mcta" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a>'+(s.links||[]).map(function(l){return'<a class="mlink" href="'+esc(l.h)+'"'+(l.ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.t)+'</a>'}).join('')+'</div>':'')+
   '</div></div></div></section>'},
 voices:function(s){

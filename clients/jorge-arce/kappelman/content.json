@@ -150,22 +150,22 @@
           "num": "i",
           "cap": "Researcher and educator",
           "title": "Researcher <t>and educator</t>",
-          "body": "A 30-year academic career devoted to educating future information-technology leaders and advancing the information-systems discipline.",
+          "body": "A 30-year academic career devoted to educating future information-technology leaders and advancing the information-systems discipline. Primary investigator of the longest-running study of IT leadership and management practices in the United States.",
           "tags": [
             "Information systems",
             "Teaching",
-            "Discipline-building"
+            "Longitudinal research"
           ]
         },
         {
           "num": "ii",
           "cap": "Institutional leader",
           "title": "Institutional <t>leader</t>",
-          "body": "Former department chair and research-center director, connecting academic knowledge, professional practice and the changing needs of technology organizations.",
+          "body": "Former department chair and director of the Information Systems Research Center. Founding chair of SIM's Enterprise Architecture Working Group, connecting academic knowledge, professional practice and the changing needs of technology organizations.",
           "tags": [
             "Department chair",
-            "Research center",
-            "Practice"
+            "Research center director",
+            "SIM working groups"
           ]
         },
         {
@@ -194,11 +194,11 @@
           "num": "v",
           "cap": "Author and public voice",
           "title": "Author and <t>public voice</t>",
-          "body": "An extensive body of writing, presentations, media commentary and public testimony on technology, management, software and institutional change.",
+          "body": "An extensive body of writing, presentations, media commentary and public testimony—including testimony before the U.S. Congress, White House industry roundtables, and service with the United Nations and World Bank sponsored expert volunteer corps.",
           "tags": [
-            "Writing",
-            "Commentary",
-            "Public testimony"
+            "Congressional testimony",
+            "Public policy",
+            "National media"
           ]
         }
       ]
@@ -246,7 +246,22 @@
           "t": "Relevant writing",
           "h": "#writing"
         }
-      ]
+      ],
+      "services": {
+        "label": "Litigation-support services",
+        "items": [
+          "Consulting and case review",
+          "Discovery preparation and planning",
+          "Deposition support",
+          "Patent research",
+          "Software code analysis and testing",
+          "Markman hearing preparation and planning",
+          "Root-cause research and analysis",
+          "Expert opinion and rebuttal reports",
+          "Validity and infringement reports",
+          "Depositions and expert witness testimony"
+        ]
+      }
     },
     {
       "type": "exp",
@@ -297,6 +312,37 @@
       "attr": "Client comments, published on Leon’s current website"
     },
     {
+      "type": "exp",
+      "id": "press",
+      "label": "In the press",
+      "title": "Work reported across national business, news and <t>broadcast media.</t>",
+      "groups": [
+        {
+          "label": "Press",
+          "names": [
+            "The Wall Street Journal",
+            "The New York Times",
+            "Forbes",
+            "BusinessWeek",
+            "Newsweek",
+            "The Washington Post",
+            "Los Angeles Times",
+            "Dallas Morning News"
+          ]
+        },
+        {
+          "label": "Broadcast",
+          "names": [
+            "CNN",
+            "CNBC",
+            "PBS",
+            "ABC"
+          ]
+        }
+      ],
+      "fn": "Selected from media coverage listed on Leon’s current website"
+    },
+    {
       "type": "access",
       "id": "writing",
       "c4": true,
@@ -338,8 +384,8 @@
         },
         {
           "lv": "No. 4",
-          "title": "SIM IT Issues <t>and Trends Study</t>",
-          "for": "Longitudinal research into the priorities, practices and leadership challenges facing IT organizations.",
+          "title": "SIM IT Trends <t>Study</t>",
+          "for": "Primary investigator of the longest-running study of IT leadership and management practices in the United States.",
           "items": [],
           "go": {
             "t": "Read",
