@@ -6,6 +6,7 @@ Allow: /igy-mobius
 # con sitios oficiales de terceros.
 Disallow: /arce
 Disallow: /catalogo
+Disallow: /enlaces
 Disallow: /igy
 Disallow: /igy2
 Disallow: /base
