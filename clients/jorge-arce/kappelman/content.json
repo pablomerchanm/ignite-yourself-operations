@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Leon A. Kappelman, Ph.D. — Systems, Organizations & Software Disputes",
-    "description": "Leon Kappelman brings more than three decades of research, leadership, advisory and expert-witness experience to complex software and information-systems questions."
+    "description": "A private authority-platform concept exploring the research, advisory and expert-witness work of Leon A. Kappelman, Ph.D."
   },
   "logo": "LEON A. KAPPELMAN, PH.D.",
   "nav": [
@@ -38,7 +38,8 @@
         "alt": "Leon A. Kappelman, Ph.D."
       },
       "name": "Leon A.<br><t>Kappelman,</t> Ph.D.",
-      "sub": "Professor, Consultant, <t>Expert Witness</t>"
+      "sub": "Researcher, Educator, Advisor and Expert Witness",
+      "note": "Working across complex information systems, organizations and software disputes."
     },
     {
       "type": "mission",
@@ -89,11 +90,11 @@
       "type": "access",
       "id": "work",
       "label": "Three expressions of his authority",
-      "title": "One body of knowledge. <t>Applied across different kinds of consequential work.</t>",
+      "title": "One body of knowledge. Applied across different kinds of consequential work.",
       "cards": [
         {
           "lv": "01",
-          "title": "Systems and <t>organizations</t>",
+          "title": "Systems and organizations",
           "for": "Understanding how software, information systems, technology leadership and organizational conditions shape performance.",
           "items": [
             "Software design and development",
@@ -106,7 +107,7 @@
         },
         {
           "lv": "02",
-          "title": "Disputes and <t>evidence</t>",
+          "title": "Disputes and evidence",
           "for": "Helping counsel examine and explain the technical, managerial and organizational dimensions of complex software and technology disputes.",
           "items": [
             "Failed and troubled software projects",
@@ -123,7 +124,7 @@
         },
         {
           "lv": "03",
-          "title": "Research, leadership <t>and advisory</t>",
+          "title": "Research, leadership and advisory",
           "for": "Translating decades of research, teaching and institutional leadership into clearer decisions about technology, organizations and the future of information systems.",
           "items": [
             "Research and writing",
@@ -149,7 +150,7 @@
         {
           "num": "i",
           "cap": "Researcher and educator",
-          "title": "Researcher <t>and educator</t>",
+          "title": "Researcher and educator",
           "body": "A 30-year academic career devoted to educating future information-technology leaders and advancing the information-systems discipline. Primary investigator of the longest-running study of IT leadership and management practices in the United States.",
           "tags": [
             "Information systems",
@@ -160,7 +161,7 @@
         {
           "num": "ii",
           "cap": "Institutional leader",
-          "title": "Institutional <t>leader</t>",
+          "title": "Institutional leader",
           "body": "Former department chair and director of the Information Systems Research Center. Founding chair of SIM's Enterprise Architecture Working Group, connecting academic knowledge, professional practice and the changing needs of technology organizations.",
           "tags": [
             "Department chair",
@@ -171,7 +172,7 @@
         {
           "num": "iii",
           "cap": "Advisor",
-          "title": "<t>Advisor</t>",
+          "title": "Advisor",
           "body": "Experience helping corporations, public institutions and government organizations understand and manage information, technology, systems and people.",
           "tags": [
             "Corporations",
@@ -182,7 +183,7 @@
         {
           "num": "iv",
           "cap": "Expert witness",
-          "title": "Expert <t>witness</t>",
+          "title": "Expert witness",
           "body": "Independent research, analysis, consultation, reporting and testimony for complex software and information-systems matters.",
           "tags": [
             "Analysis",
@@ -193,7 +194,7 @@
         {
           "num": "v",
           "cap": "Author and public voice",
-          "title": "Author and <t>public voice</t>",
+          "title": "Author and public voice",
           "body": "An extensive body of writing, presentations, media commentary and public testimony—including testimony before the U.S. Congress, White House industry roundtables, and service with the United Nations and World Bank sponsored expert volunteer corps.",
           "tags": [
             "Congressional testimony",
@@ -215,15 +216,15 @@
       "intro": "They require the ability to examine complex evidence, understand the interaction between technology and management, identify the questions that matter and explain those findings clearly to attorneys, judges and juries. Leon provides independent research, consultation, analysis, reporting and testimony in matters involving software projects, intellectual property, system performance, cybersecurity and information-systems management. <b>His public case experience includes work for both plaintiff and defense.</b>",
       "rows": [
         {
-          "t": "Failed and troubled <t>software projects</t>",
+          "t": "Failed and troubled software projects",
           "d": "Root-cause analysis involving requirements, architecture, development practices, project management, staffing, testing, contracts and system performance."
         },
         {
-          "t": "Software-related <t>intellectual property</t>",
+          "t": "Software-related intellectual property",
           "d": "Copyright, patent and trade-secret matters involving source code, architecture, logic, functionality, design artifacts and business processes."
         },
         {
-          "t": "Information-systems and <t>technology matters</t>",
+          "t": "Information-systems and technology matters",
           "d": "Software defects, product liability, cybersecurity, data transfer, management practices and technology operations."
         }
       ],
@@ -233,9 +234,8 @@
       },
       "links": [
         {
-          "t": "Request Leon’s CV",
-          "h": "https://www.leonkappelman.com/leon-kappelman-bio.htm",
-          "ext": true
+          "t": "Download Leon’s CV",
+          "disabled": true
         },
         {
           "t": "Review selected matters",
@@ -266,7 +266,7 @@
     {
       "type": "exp",
       "label": "Selected experience",
-      "title": "Trusted across law, industry, government and <t>global institutions.</t>",
+      "title": "A body of work spanning law, industry, government and global institutions.",
       "groups": [
         {
           "label": "Law firms",
@@ -300,13 +300,13 @@
       "label": "Clarity and value under pressure",
       "cards": [
         {
-          "q": "“You were self-sufficient, user friendly, and produced <t>a great report.</t>”"
+          "q": "“You were self-sufficient, user friendly, and produced a great report.”"
         },
         {
-          "q": "“Your efforts brought real value to the mediation and helped to get <t>the case settled.</t>”"
+          "q": "“Your efforts brought real value to the mediation and helped to get the case settled.”"
         },
         {
-          "q": "“This is a tremendous amount of work product produced in a short time. Thank you for <t>the incredible effort.</t>”"
+          "q": "“This is a tremendous amount of work product produced in a short time. Thank you for the incredible effort.”"
         }
       ],
       "attr": "Client comments, published on Leon’s current website"
@@ -315,7 +315,7 @@
       "type": "exp",
       "id": "press",
       "label": "In the press",
-      "title": "Work reported across national business, news and <t>broadcast media.</t>",
+      "title": "Work reported across national business, news and broadcast media.",
       "groups": [
         {
           "label": "Press",
@@ -347,11 +347,11 @@
       "id": "writing",
       "c4": true,
       "label": "Writing and research",
-      "title": "Ideas shaped by decades of studying systems, organizations and <t>technology leadership.</t>",
+      "title": "Ideas shaped by decades of studying systems, organizations and technology leadership.",
       "cards": [
         {
           "lv": "No. 1",
-          "title": "The Four Horsemen of <t>IT Project Doom</t>",
+          "title": "The Four Horsemen of IT Project Doom",
           "for": "Early warning signs behind troubled technology initiatives.",
           "items": [],
           "go": {
@@ -362,7 +362,7 @@
         },
         {
           "lv": "No. 2",
-          "title": "Auditing IT Projects: <t>Early Warning Signs</t>",
+          "title": "Auditing IT Projects: Early Warning Signs",
           "for": "A framework for recognizing material risk before failure becomes irreversible.",
           "items": [],
           "go": {
@@ -373,7 +373,7 @@
         },
         {
           "lv": "No. 3",
-          "title": "Enterprise Architecture: <t>More Than You’re Thinking</t>",
+          "title": "Enterprise Architecture: More Than You’re Thinking",
           "for": "A broader view of architecture as a tool for enterprise understanding and transformation.",
           "items": [],
           "go": {
@@ -384,7 +384,7 @@
         },
         {
           "lv": "No. 4",
-          "title": "SIM IT Trends <t>Study</t>",
+          "title": "SIM IT Trends Study",
           "for": "Primary investigator of the longest-running study of IT leadership and management practices in the United States.",
           "items": [],
           "go": {
@@ -399,7 +399,7 @@
       "type": "reserve",
       "id": "contact",
       "label": "Complex matter",
-      "title": "Complex matter. <t>Clearer understanding.</t>",
+      "title": "Complex matters. <t>Clearer understanding.</t>",
       "form": {
         "fields": [
           "Name",
