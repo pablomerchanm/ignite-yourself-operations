@@ -57,7 +57,7 @@ main{position:relative;z-index:2}
 /* ---------- nav (circle items) ---------- */
 nav{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(11,10,10,.7);backdrop-filter:blur(8px);border-bottom:1px solid rgba(237,233,229,.14)}
 .navin{display:flex;align-items:center;gap:8vw;padding:16px 40px;max-width:1400px;margin:0 auto}
-.nlogo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;letter-spacing:-.02em;flex:0 0 auto}
+.nlogo{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(15px,1.5vw,20px);letter-spacing:.12em;flex:0 0 auto;white-space:nowrap}
 .nitems{display:flex;gap:5vw}
 .nitems a{display:flex;align-items:center;gap:9px;font-family:'Inter',sans-serif;font-size:13.5px;color:var(--paper);opacity:.85;transition:opacity .25s}
 .nitems a:hover{opacity:1}
@@ -334,7 +334,7 @@ fetch('/kappelman/content.json').then(function(r){if(!r.ok)throw new Error(r.sta
   if(c.meta){document.title=c.meta.title||document.title;
     var md=document.querySelector('meta[name="description"]');
     if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
-  document.getElementById('nlogo').textContent=c.logo||'kappelman.';
+  document.getElementById('nlogo').textContent=c.logo||'LEON A. KAPPELMAN, PH.D.';
   document.getElementById('nitems').innerHTML=(c.nav||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
   document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
   init();
