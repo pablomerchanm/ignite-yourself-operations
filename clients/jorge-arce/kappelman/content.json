@@ -37,13 +37,21 @@
         "src": "/kappelman/assets/hero-leon.jpg",
         "alt": "Leon A. Kappelman, Ph.D."
       },
-      "date": "Leon A. Kappelman, Ph.D.<br>Research scientist · Educator · Advisor · Expert witness",
-      "title": "Understanding why complex systems <t>succeed, fail and become disputed.</t>",
+      "name": "Leon A.<br><t>Kappelman,</t> Ph.D.",
+      "sub": "Professor, Consultant, <t>Expert Witness</t>"
+    },
+    {
+      "type": "mission",
+      "id": "intro",
+      "label": "Leon A. Kappelman, Ph.D.",
+      "quote": "Understanding why complex systems <t>succeed, fail and become disputed.</t>",
+      "body": [
+        "For more than three decades, Leon Kappelman has worked at the intersection of technology, organizations and human decision-making—helping counsel, institutions and leaders make complex information-systems problems understandable."
+      ],
       "cta": {
         "t": "Explore Leon’s work",
         "h": "#work"
-      },
-      "loc": "Dallas, Texas"
+      }
     },
     {
       "type": "proof",
