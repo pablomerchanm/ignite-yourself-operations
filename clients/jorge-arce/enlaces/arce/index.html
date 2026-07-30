@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Jorge Arce — Links</title>
+<meta name="description" content="Oral &amp; maxillofacial surgeon in the South Bay. Book a consultation, refer a patient, or explore the practice.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B1522">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B1522; --navy:#10243A; --paper:#F7F5F1; --card:#FFFFFF;
+  --soft:#5E6B79; --line:#E4E0D9; --blue:#1C6FE8;
+  --sans:'Archivo',system-ui,-apple-system,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink); color:var(--navy); font-family:var(--sans);
+  line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  /* En desktop la página vive como un objeto sobre fondo oscuro */
+  display:flex; justify-content:center; min-height:100vh;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+.sheet{
+  width:100%; max-width:460px; background:var(--paper);
+  display:flex; flex-direction:column; min-height:100vh;
+}
+@media (min-width:620px){
+  body{padding:34px 20px; align-items:flex-start}
+  .sheet{min-height:0; border-radius:6px; overflow:hidden;
+    box-shadow:0 40px 90px rgba(0,0,0,.5)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative; background:var(--navy); color:var(--paper)}
+.hero>img{width:100%; aspect-ratio:4/5; object-fit:cover; object-position:52% 22%;
+  filter:grayscale(1) contrast(1.04)}
+.hero::after{content:''; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(178deg,rgba(11,21,34,.34) 0%,rgba(11,21,34,0) 34%,rgba(11,21,34,.5) 68%,rgba(11,21,34,.94) 100%)}
+.hero .plate{position:absolute; left:0; right:0; bottom:0; z-index:2; padding:0 26px 28px}
+.hero .eyebrow{font-size:10.5px; font-weight:600; letter-spacing:.19em; text-transform:uppercase;
+  color:rgba(247,245,241,.72); margin-bottom:12px}
+.hero h1{font-family:var(--serif); font-weight:300; font-size:clamp(40px,12vw,52px);
+  line-height:.94; letter-spacing:-.015em}
+.hero h1 em{font-style:italic; display:block}
+.hero .role{margin-top:14px; font-size:13.5px; font-weight:500; letter-spacing:.01em;
+  color:rgba(247,245,241,.86)}
+.hero .place{margin-top:3px; font-size:12.5px; color:rgba(247,245,241,.58)}
+
+/* ---------- primary action ---------- */
+.primary{padding:24px 26px 0}
+.primary a{display:flex; align-items:center; justify-content:space-between; gap:14px;
+  background:var(--navy); color:var(--paper); padding:19px 22px; border-radius:3px;
+  font-size:15.5px; font-weight:600; letter-spacing:-.005em;
+  transition:background .22s var(--ease), transform .22s var(--ease)}
+.primary a .sub{display:block; font-size:11.5px; font-weight:400; letter-spacing:.02em;
+  color:rgba(247,245,241,.6); margin-top:3px}
+.primary a:hover{background:#16324F; transform:translateY(-1px)}
+.primary a:active{transform:translateY(0)}
+.arrow{flex:0 0 auto; font-size:16px; opacity:.75}
+
+/* ---------- grouped pathways ---------- */
+.groups{padding:30px 26px 0; display:flex; flex-direction:column; gap:28px}
+.group h2{font-size:10px; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--soft); padding-bottom:11px; border-bottom:1px solid var(--line)}
+.group ul{list-style:none}
+.group li+li{border-top:1px solid var(--line)}
+.group a{display:flex; align-items:center; gap:16px; padding:16px 2px;
+  transition:padding-left .22s var(--ease), color .22s var(--ease)}
+.group a:hover{padding-left:8px; color:var(--blue)}
+.group .txt{flex:1 1 auto; min-width:0}
+.group .t{display:block; font-size:16px; font-weight:600; letter-spacing:-.01em; line-height:1.25}
+.group .d{display:block; margin-top:3px; font-size:12.5px; color:var(--soft); line-height:1.4}
+.group a:hover .d{color:var(--soft)}
+.group .arrow{opacity:.35; transition:opacity .22s var(--ease), transform .22s var(--ease)}
+.group a:hover .arrow{opacity:1; transform:translateX(3px)}
+
+/* ---------- social ---------- */
+.social{margin:34px 26px 0; padding-top:22px; border-top:1px solid var(--line);
+  display:flex; gap:10px; flex-wrap:wrap}
+.social a{width:42px; height:42px; display:grid; place-items:center;
+  border:1px solid var(--line); border-radius:100px; color:var(--navy);
+  transition:background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease)}
+.social a:hover{background:var(--navy); color:var(--paper); border-color:var(--navy)}
+.social svg{width:17px; height:17px}
+
+/* ---------- footer ---------- */
+.foot{margin-top:auto; padding:36px 26px 30px; display:flex; flex-direction:column; gap:14px}
+.foot .line{font-family:var(--serif); font-style:italic; font-weight:300; font-size:17px;
+  color:var(--soft); line-height:1.35}
+.credit{font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--soft)}
+.credit a{border-bottom:1px solid rgba(94,107,121,.4); padding-bottom:1px;
+  transition:color .2s, border-color .2s}
+.credit a:hover{color:var(--blue); border-color:var(--blue)}
+
+a:focus-visible{outline:2px solid var(--blue); outline-offset:3px; border-radius:2px}
+
+/* ---------- entrada ---------- */
+.rise{opacity:0; transform:translateY(14px); animation:rise .7s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.d1{animation-delay:.05s}.d2{animation-delay:.13s}.d3{animation-delay:.21s}
+.d4{animation-delay:.29s}.d5{animation-delay:.37s}.d6{animation-delay:.45s}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;animation:none}
+  *{transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<main class="sheet">
+
+  <header class="hero">
+    <img src="/img/portrait.jpg" alt="Dr. Jorge Arce">
+    <div class="plate">
+      <p class="eyebrow rise d1">Dental Implants Center of South Bay</p>
+      <h1 class="rise d2">Jorge <em>Arce</em></h1>
+      <p class="role rise d3">Oral &amp; Maxillofacial Surgeon · D.D.S.</p>
+      <p class="place rise d3">Redondo Beach, California · Est. 2007</p>
+    </div>
+  </header>
+
+  <div class="primary rise d3">
+    <a href="/arce#contact">
+      <span>Book a consultation<span class="sub">Usually within two weeks</span></span>
+      <span class="arrow" aria-hidden="true">&#8594;</span>
+    </a>
+  </div>
+
+  <div class="groups">
+    <section class="group rise d4">
+      <h2>For patients</h2>
+      <ul>
+        <li><a href="/arce#expertise"><span class="txt"><span class="t">Treatments</span><span class="d">Implants, reconstruction, and complex extractions</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+        <li><a href="/arce#contact"><span class="txt"><span class="t">Visit the practice</span><span class="d">Redondo Beach · Hours and directions</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+        <li><a href="/arce#about"><span class="txt"><span class="t">What to expect</span><span class="d">Your first consultation, step by step</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+      </ul>
+    </section>
+
+    <section class="group rise d5">
+      <h2>For referring colleagues</h2>
+      <ul>
+        <li><a href="/arce#contact"><span class="txt"><span class="t">Refer a patient</span><span class="d">Direct line for referring clinicians</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+        <li><a href="/arce#expertise"><span class="txt"><span class="t">Second opinions</span><span class="d">Clarity for patients facing complex decisions</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+      </ul>
+    </section>
+
+    <section class="group rise d6">
+      <h2>More</h2>
+      <ul>
+        <li><a href="/arce"><span class="txt"><span class="t">The full site</span><span class="d">Twenty-seven years of work in one place</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+        <li><a href="/arce#about"><span class="txt"><span class="t">The story</span><span class="d">From Colombia to the South Bay</span></span><span class="arrow" aria-hidden="true">&#8594;</span></a></li>
+      </ul>
+    </section>
+  </div>
+
+  <nav class="social rise d6" aria-label="Social">
+    <a href="/arce#contact" aria-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 6.5L21 6"/></svg>
+    </a>
+    <a href="/arce#contact" aria-label="Phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a13 13 0 0 0 6 6L16 13l5 2v3a2.5 2.5 0 0 1-2.7 2.5A17.5 17.5 0 0 1 3.5 5.7 2.5 2.5 0 0 1 6 3Z"/></svg>
+    </a>
+    <a href="/arce#contact" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="/arce#contact" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.6v.1M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg>
+    </a>
+  </nav>
+
+  <footer class="foot">
+    <p class="line">“Difficult work, done with care,<br>gives people their lives back.”</p>
+    <p class="credit">Platform by <a href="https://igniteyourself.co/" target="_blank" rel="noopener">Ignite Yourself</a></p>
+  </footer>
+
+</main>
+
+</body>
+</html>
