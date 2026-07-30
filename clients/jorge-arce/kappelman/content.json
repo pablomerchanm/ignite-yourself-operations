@@ -34,8 +34,8 @@
     {
       "type": "hero",
       "img": {
-        "src": "/kappelman/assets/hero-atmos.jpg",
-        "alt": ""
+        "src": "/kappelman/assets/hero-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
       },
       "date": "Leon A. Kappelman, Ph.D.<br>Research scientist · Educator · Advisor · Expert witness",
       "title": "Understanding why complex systems <t>succeed, fail and become disputed.</t>",
@@ -201,8 +201,8 @@
       "label": "For counsel",
       "title": "Software disputes demand more than <t>technical fluency.</t>",
       "img": {
-        "src": "/kappelman/assets/counsel-atmos.jpg",
-        "alt": ""
+        "src": "/kappelman/assets/counsel-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
       },
       "intro": "They require the ability to examine complex evidence, understand the interaction between technology and management, identify the questions that matter and explain those findings clearly to attorneys, judges and juries. Leon provides independent research, consultation, analysis, reporting and testimony in matters involving software projects, intellectual property, system performance, cybersecurity and information-systems management. <b>His public case experience includes work for both plaintiff and defense.</b>",
       "rows": [
