@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/igy/assets/spark.png" type="image/png">
+<title>Versiones del sitio de Jorge Arce — hoja de contactos</title>
+<style>
+:root {
+  --paper:#FAF7F2; --card:#F2EDE5; --ink:#17140F; --muted:#6E6559;
+  --line:#E3DBD1; --accent:#F57900; --shadow:20px 40px rgba(60,44,24,.10);
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+@media (prefers-color-scheme:dark) {
+  :root { --paper:#14110D; --card:#1D1915; --ink:#EDE7DE; --muted:#9A9082;
+    --line:#312A22; --accent:#FFA62E; --shadow:20px 40px rgba(0,0,0,.5); }
+}
+:root[data-theme="dark"] { --paper:#14110D; --card:#1D1915; --ink:#EDE7DE; --muted:#9A9082;
+  --line:#312A22; --accent:#FFA62E; --shadow:20px 40px rgba(0,0,0,.5); }
+:root[data-theme="light"] { --paper:#FAF7F2; --card:#F2EDE5; --ink:#17140F; --muted:#6E6559;
+  --line:#E3DBD1; --accent:#F57900; --shadow:20px 40px rgba(60,44,24,.10); }
+
+*, *::before, *::after { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans);
+  line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+
+.page { max-width:1360px; margin:0 auto; padding:clamp(28px,5vw,68px) clamp(18px,4vw,44px) 90px; }
+
+header { display:flex; flex-direction:column; gap:14px; padding-bottom:26px;
+  border-bottom:1px solid var(--line); }
+.kicker { font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); margin:0; }
+h1 { margin:0; font-size:clamp(26px,3.6vw,44px); letter-spacing:-.025em; font-weight:650;
+  text-wrap:balance; line-height:1.08; }
+.lede { margin:0; max-width:62ch; color:var(--muted); font-size:clamp(15px,1.5vw,17px); }
+
+.tools { display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+  padding:22px 0 30px; }
+.search { display:flex; align-items:center; gap:9px; background:var(--card); border:1px solid var(--line);
+  border-radius:999px; padding:9px 16px; min-width:min(340px,100%); }
+.search input { border:0; background:transparent; color:inherit; font:inherit; font-size:15px;
+  width:100%; outline:none; }
+.search svg { flex:0 0 15px; color:var(--muted); }
+.count { font-family:var(--mono); font-size:12px; letter-spacing:.06em; color:var(--muted);
+  font-variant-numeric:tabular-nums; }
+
+.sheet { display:grid; gap:clamp(22px,3vw,38px);
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr)); }
+
+.frame { display:flex; flex-direction:column; min-width:0; }
+.frame[hidden] { display:none; }
+
+.shot { position:relative; display:block; width:100%; padding:0; border:1px solid var(--line);
+  border-radius:3px; overflow:hidden; background:var(--card); cursor:zoom-in; line-height:0;
+  transition:box-shadow .28s ease, transform .28s ease, border-color .28s ease; }
+.shot img { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; object-position:top center; }
+.shot:hover, .shot:focus-visible { box-shadow:0 var(--shadow); transform:translateY(-3px);
+  border-color:var(--accent); }
+.shot:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.idx { position:absolute; top:9px; left:9px; font-family:var(--mono); font-size:10.5px;
+  letter-spacing:.08em; text-transform:uppercase; color:#fff; background:rgba(18,14,10,.62);
+  backdrop-filter:blur(6px); padding:4px 9px; border-radius:2px; line-height:1.4; }
+
+.strip { display:flex; flex-direction:column; gap:7px; padding-top:14px; }
+.strip h2 { margin:0; font-size:17px; font-weight:640; letter-spacing:-.012em;
+  display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
+.live { font-family:var(--mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--accent); border:1px solid var(--accent); border-radius:2px; padding:2px 6px;
+  line-height:1.3; font-weight:500; }
+.profile { margin:0; font-size:14px; color:var(--muted); }
+.meta { margin:0; display:flex; gap:8px; font-family:var(--mono); font-size:11.5px;
+  letter-spacing:.02em; color:var(--muted); }
+.meta dt { text-transform:uppercase; letter-spacing:.1em; opacity:.7; }
+.meta dd { margin:0; }
+.open { font-family:var(--mono); font-size:12px; letter-spacing:.03em; color:var(--ink);
+  text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;
+  align-self:flex-start; margin-top:2px; transition:color .2s, border-color .2s; }
+.open:hover { color:var(--accent); border-color:var(--accent); }
+.open:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px; }
+
+.empty { font-family:var(--mono); font-size:13px; color:var(--muted); padding:40px 0; }
+.empty[hidden] { display:none; }
+
+dialog.lb { border:0; padding:0; max-width:min(1240px,94vw); max-height:92vh; width:100%;
+  background:transparent; overflow:visible; }
+dialog.lb::backdrop { background:rgba(14,10,6,.86); backdrop-filter:blur(5px); }
+.lb-inner { display:flex; flex-direction:column; gap:12px; }
+.lb-bar { display:flex; align-items:center; justify-content:space-between; gap:14px; color:#EDE7DE; }
+.lb-bar strong { font-size:15px; font-weight:600; letter-spacing:-.01em; }
+.lb-close { font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+  background:#EDE7DE; color:#17140F; border:0; border-radius:2px; padding:8px 13px; cursor:pointer; }
+.lb-close:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+dialog.lb img { width:100%; height:auto; max-height:82vh; object-fit:contain;
+  border-radius:3px; display:block; }
+
+@media (prefers-reduced-motion:reduce) {
+  .shot, .open { transition:none; }
+  .shot:hover, .shot:focus-visible { transform:none; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <p class="kicker">Ignite Yourself · Catálogo de plantillas</p>
+    <h1>Las 27 versiones del sitio de Jorge Arce</h1>
+    <p class="lede">Cada plantilla del sistema, poblada con el contenido real de Arce. Haz click en
+      cualquier fotograma para verlo grande, o abre la ruta para navegarlo en vivo.</p>
+  </header>
+
+  <div class="tools">
+    <label class="search">
+      <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6.8" cy="6.8" r="4.6"/><path d="M10.4 10.4 14 14"/></svg>
+      <input id="q" type="search" placeholder="Buscar por nombre, perfil o paleta…" aria-label="Buscar versiones">
+    </label>
+    <p class="count" id="count">27 versiones</p>
+  </div>
+
+  <div class="sheet" id="sheet">
+<article class="frame" data-q="la que está live cirujano senior — la versión publicada hoy en igniteyourself.co/arce navy + fraunces italic /arce">
+  <button class="shot" type="button" data-img="shots/arce.jpg" data-name="La que está live" aria-label="Ampliar La que está live">
+    <img src="shots/arce.jpg" alt="Hero de la versión La que está live del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    
+  </button>
+  <div class="strip">
+    <h2>La que está live<span class="live">live</span></h2>
+    <p class="profile">Cirujano senior — la versión publicada hoy en igniteyourself.co/arce</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Navy + Fraunces italic</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/arce" target="_blank" rel="noopener">/arce <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="monograph cirujano senior, autoridad silenciosa, historia larga navy + serif /v2">
+  <button class="shot" type="button" data-img="shots/v2.jpg" data-name="Monograph" aria-label="Ampliar Monograph">
+    <img src="shots/v2.jpg" alt="Hero de la versión Monograph del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v2</span>
+  </button>
+  <div class="strip">
+    <h2>Monograph</h2>
+    <p class="profile">Cirujano senior, autoridad silenciosa, historia larga</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Navy + serif</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v2" target="_blank" rel="noopener">/v2 <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="hanza moderno 35–50, marca personal fuerte ink + coral #ff6044 /v3-hanza">
+  <button class="shot" type="button" data-img="shots/v3-hanza.jpg" data-name="Hanza" aria-label="Ampliar Hanza">
+    <img src="shots/v3-hanza.jpg" alt="Hero de la versión Hanza del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v3</span>
+  </button>
+  <div class="strip">
+    <h2>Hanza</h2>
+    <p class="profile">Moderno 35–50, marca personal fuerte</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Ink + coral #FF6044</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v3-hanza" target="_blank" rel="noopener">/v3-hanza <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="clearpath empático, pacientes nerviosos, general/ortodoncia sage + crimson serif /v4-clearpath">
+  <button class="shot" type="button" data-img="shots/v4-clearpath.jpg" data-name="ClearPath" aria-label="Ampliar ClearPath">
+    <img src="shots/v4-clearpath.jpg" alt="Hero de la versión ClearPath del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v4</span>
+  </button>
+  <div class="strip">
+    <h2>ClearPath</h2>
+    <p class="profile">Empático, pacientes nerviosos, general/ortodoncia</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Sage + Crimson serif</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v4-clearpath" target="_blank" rel="noopener">/v4-clearpath <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="zentro ambicioso, clínica con color de marca monocolor brand + b/n /v5-zentro">
+  <button class="shot" type="button" data-img="shots/v5-zentro.jpg" data-name="Zentro" aria-label="Ampliar Zentro">
+    <img src="shots/v5-zentro.jpg" alt="Hero de la versión Zentro del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v5</span>
+  </button>
+  <div class="strip">
+    <h2>Zentro</h2>
+    <p class="profile">Ambicioso, clínica con color de marca</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Monocolor brand + b/n</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v5-zentro" target="_blank" rel="noopener">/v5-zentro <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="definitiva cliente indeciso — híbrido seguro navy / azul /v6-final">
+  <button class="shot" type="button" data-img="shots/v6-final.jpg" data-name="Definitiva" aria-label="Ampliar Definitiva">
+    <img src="shots/v6-final.jpg" alt="Hero de la versión Definitiva del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v6</span>
+  </button>
+  <div class="strip">
+    <h2>Definitiva</h2>
+    <p class="profile">Cliente indeciso — híbrido seguro</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Navy / azul</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v6-final" target="_blank" rel="noopener">/v6-final <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="noon independiente, anti-marketing, por remisión ink / crema / óxido /v7-noon">
+  <button class="shot" type="button" data-img="shots/v7-noon.jpg" data-name="Noon" aria-label="Ampliar Noon">
+    <img src="shots/v7-noon.jpg" alt="Hero de la versión Noon del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v7</span>
+  </button>
+  <div class="strip">
+    <h2>Noon</h2>
+    <p class="profile">Independiente, anti-marketing, por remisión</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Ink / crema / óxido</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v7-noon" target="_blank" rel="noopener">/v7-noon <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="luke estética dental, perfil creativo negro + aurora roja /v8-luke">
+  <button class="shot" type="button" data-img="shots/v8-luke.jpg" data-name="Luke" aria-label="Ampliar Luke">
+    <img src="shots/v8-luke.jpg" alt="Hero de la versión Luke del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v8</span>
+  </button>
+  <div class="strip">
+    <h2>Luke</h2>
+    <p class="profile">Estética dental, perfil creativo</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Negro + aurora roja</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v8-luke" target="_blank" rel="noopener">/v8-luke <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="holistic familiar, cercano, dolor/tmj, pediatría crema + terracota /v9-holistic">
+  <button class="shot" type="button" data-img="shots/v9-holistic.jpg" data-name="Holistic" aria-label="Ampliar Holistic">
+    <img src="shots/v9-holistic.jpg" alt="Hero de la versión Holistic del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v9</span>
+  </button>
+  <div class="strip">
+    <h2>Holistic</h2>
+    <p class="profile">Familiar, cercano, dolor/TMJ, pediatría</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Crema + terracota</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v9-holistic" target="_blank" rel="noopener">/v9-holistic <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="möbius referencia académica, máxima autoridad b/n + rojo /v10-mobius">
+  <button class="shot" type="button" data-img="shots/v10-mobius.jpg" data-name="Möbius" aria-label="Ampliar Möbius">
+    <img src="shots/v10-mobius.jpg" alt="Hero de la versión Möbius del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v10</span>
+  </button>
+  <div class="strip">
+    <h2>Möbius</h2>
+    <p class="profile">Referencia académica, máxima autoridad</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>B/N + rojo</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v10-mobius" target="_blank" rel="noopener">/v10-mobius <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="firma práctica premium, high-ticket blanco + coral + script /v11-firma">
+  <button class="shot" type="button" data-img="shots/v11-firma.jpg" data-name="Firma" aria-label="Ampliar Firma">
+    <img src="shots/v11-firma.jpg" alt="Hero de la versión Firma del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v11</span>
+  </button>
+  <div class="strip">
+    <h2>Firma</h2>
+    <p class="profile">Práctica premium, high-ticket</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Blanco + coral + script</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v11-firma" target="_blank" rel="noopener">/v11-firma <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="caliora clínica boutique, rebrand completo cream + navy + mocha /v12-caliora">
+  <button class="shot" type="button" data-img="shots/v12-caliora.jpg" data-name="Caliora" aria-label="Ampliar Caliora">
+    <img src="shots/v12-caliora.jpg" alt="Hero de la versión Caliora del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v12</span>
+  </button>
+  <div class="strip">
+    <h2>Caliora</h2>
+    <p class="profile">Clínica boutique, rebrand completo</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Cream + navy + mocha</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v12-caliora" target="_blank" rel="noopener">/v12-caliora <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="bennett marca personal audaz, statement tipográfico b/n puro /v13-bennett">
+  <button class="shot" type="button" data-img="shots/v13-bennett.jpg" data-name="Bennett" aria-label="Ampliar Bennett">
+    <img src="shots/v13-bennett.jpg" alt="Hero de la versión Bennett del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v13</span>
+  </button>
+  <div class="strip">
+    <h2>Bennett</h2>
+    <p class="profile">Marca personal audaz, statement tipográfico</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>B/N puro</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v13-bennett" target="_blank" rel="noopener">/v13-bennett <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="gareis perfil visual / creative director gris galería #f7f7f7 /v14-gareis">
+  <button class="shot" type="button" data-img="shots/v14-gareis.jpg" data-name="Gareis" aria-label="Ampliar Gareis">
+    <img src="shots/v14-gareis.jpg" alt="Hero de la versión Gareis del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v14</span>
+  </button>
+  <div class="strip">
+    <h2>Gareis</h2>
+    <p class="profile">Perfil visual / creative director</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Gris galería #F7F7F7</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v14-gareis" target="_blank" rel="noopener">/v14-gareis <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="norris joven de alto impacto, vibra deportiva volt #d2ff00 + olivo /v15-norris">
+  <button class="shot" type="button" data-img="shots/v15-norris.jpg" data-name="Norris" aria-label="Ampliar Norris">
+    <img src="shots/v15-norris.jpg" alt="Hero de la versión Norris del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v15</span>
+  </button>
+  <div class="strip">
+    <h2>Norris</h2>
+    <p class="profile">Joven de alto impacto, vibra deportiva</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Volt #D2FF00 + olivo</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v15-norris" target="_blank" rel="noopener">/v15-norris <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="handx experiencia premium, eventos y cursos negro + papel + grano /v16-handx">
+  <button class="shot" type="button" data-img="shots/v16-handx.jpg" data-name="HandX" aria-label="Ampliar HandX">
+    <img src="shots/v16-handx.jpg" alt="Hero de la versión HandX del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v16</span>
+  </button>
+  <div class="strip">
+    <h2>HandX</h2>
+    <p class="profile">Experiencia premium, eventos y cursos</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Negro + papel + grano</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v16-handx" target="_blank" rel="noopener">/v16-handx <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="everswap boutique serena, wellness high-end verde profundo + crema /v17-everswap">
+  <button class="shot" type="button" data-img="shots/v17-everswap.jpg" data-name="Everswap" aria-label="Ampliar Everswap">
+    <img src="shots/v17-everswap.jpg" alt="Hero de la versión Everswap del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v17</span>
+  </button>
+  <div class="strip">
+    <h2>Everswap</h2>
+    <p class="profile">Boutique serena, wellness high-end</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Verde profundo + crema</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v17-everswap" target="_blank" rel="noopener">/v17-everswap <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="mindmarket pediatría, familiar, marcas con humor crema + 5 acentos vivos /v18-mindmarket">
+  <button class="shot" type="button" data-img="shots/v18-mindmarket.jpg" data-name="Mindmarket" aria-label="Ampliar Mindmarket">
+    <img src="shots/v18-mindmarket.jpg" alt="Hero de la versión Mindmarket del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v18</span>
+  </button>
+  <div class="strip">
+    <h2>Mindmarket</h2>
+    <p class="profile">Pediatría, familiar, marcas con humor</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Crema + 5 acentos vivos</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v18-mindmarket" target="_blank" rel="noopener">/v18-mindmarket <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="cunliffe trayectoria larga, narrativa por capítulos negro estelar + grises /v19-cunliffe">
+  <button class="shot" type="button" data-img="shots/v19-cunliffe.jpg" data-name="Cunliffe" aria-label="Ampliar Cunliffe">
+    <img src="shots/v19-cunliffe.jpg" alt="Hero de la versión Cunliffe del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v19</span>
+  </button>
+  <div class="strip">
+    <h2>Cunliffe</h2>
+    <p class="profile">Trayectoria larga, narrativa por capítulos</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Negro estelar + grises</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v19-cunliffe" target="_blank" rel="noopener">/v19-cunliffe <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="vast cirujano técnico, clínica de referencia grafito + bone + naranja /v20-vast">
+  <button class="shot" type="button" data-img="shots/v20-vast.jpg" data-name="Vast" aria-label="Ampliar Vast">
+    <img src="shots/v20-vast.jpg" alt="Hero de la versión Vast del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v20</span>
+  </button>
+  <div class="strip">
+    <h2>Vast</h2>
+    <p class="profile">Cirujano técnico, clínica de referencia</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Grafito + bone + naranja</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v20-vast" target="_blank" rel="noopener">/v20-vast <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="getty perfil artístico, storytelling profundo b/n museo + fraunces /v21-getty">
+  <button class="shot" type="button" data-img="shots/v21-getty.jpg" data-name="Getty" aria-label="Ampliar Getty">
+    <img src="shots/v21-getty.jpg" alt="Hero de la versión Getty del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v21</span>
+  </button>
+  <div class="strip">
+    <h2>Getty</h2>
+    <p class="profile">Perfil artístico, storytelling profundo</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>B/N museo + Fraunces</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v21-getty" target="_blank" rel="noopener">/v21-getty <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="sacred práctica consciente, bienestar narrativo verde bosque + crema + óxido /v22-sacred">
+  <button class="shot" type="button" data-img="shots/v22-sacred.jpg" data-name="Sacred" aria-label="Ampliar Sacred">
+    <img src="shots/v22-sacred.jpg" alt="Hero de la versión Sacred del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v22</span>
+  </button>
+  <div class="strip">
+    <h2>Sacred</h2>
+    <p class="profile">Práctica consciente, bienestar narrativo</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Verde bosque + crema + óxido</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v22-sacred" target="_blank" rel="noopener">/v22-sacred <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="pacifica perfil editorial, presentar resultados paper cálido + ink /v23-pacifica">
+  <button class="shot" type="button" data-img="shots/v23-pacifica.jpg" data-name="Pacifica" aria-label="Ampliar Pacifica">
+    <img src="shots/v23-pacifica.jpg" alt="Hero de la versión Pacifica del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v23</span>
+  </button>
+  <div class="strip">
+    <h2>Pacifica</h2>
+    <p class="profile">Perfil editorial, presentar resultados</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Paper cálido + ink</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v23-pacifica" target="_blank" rel="noopener">/v23-pacifica <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="il capo perfil dramático, video-first negro + rojo #d60001 /v24-ilcapo">
+  <button class="shot" type="button" data-img="shots/v24-ilcapo.jpg" data-name="Il Capo" aria-label="Ampliar Il Capo">
+    <img src="shots/v24-ilcapo.jpg" alt="Hero de la versión Il Capo del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v24</span>
+  </button>
+  <div class="strip">
+    <h2>Il Capo</h2>
+    <p class="profile">Perfil dramático, video-first</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Negro + rojo #D60001</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v24-ilcapo" target="_blank" rel="noopener">/v24-ilcapo <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="cobalt práctica familiar moderna, millennials crema + periwinkle #d5dbf2 /v25-gecko">
+  <button class="shot" type="button" data-img="shots/v25-gecko.jpg" data-name="Cobalt" aria-label="Ampliar Cobalt">
+    <img src="shots/v25-gecko.jpg" alt="Hero de la versión Cobalt del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v25</span>
+  </button>
+  <div class="strip">
+    <h2>Cobalt</h2>
+    <p class="profile">Práctica familiar moderna, millennials</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Crema + periwinkle #D5DBF2</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v25-gecko" target="_blank" rel="noopener">/v25-gecko <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="wolverine grupo médico, multi-sede, institucional blanco/negro + foto /v26-wolverine">
+  <button class="shot" type="button" data-img="shots/v26-wolverine.jpg" data-name="Wolverine" aria-label="Ampliar Wolverine">
+    <img src="shots/v26-wolverine.jpg" alt="Hero de la versión Wolverine del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v26</span>
+  </button>
+  <div class="strip">
+    <h2>Wolverine</h2>
+    <p class="profile">Grupo médico, multi-sede, institucional</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Blanco/negro + foto</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v26-wolverine" target="_blank" rel="noopener">/v26-wolverine <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+<article class="frame" data-q="genesis transformaciones, narrativa de renacer cocoa + crema-limón /v27-genesis">
+  <button class="shot" type="button" data-img="shots/v27-genesis.jpg" data-name="Genesis" aria-label="Ampliar Genesis">
+    <img src="shots/v27-genesis.jpg" alt="Hero de la versión Genesis del sitio del Dr. Jorge Arce" loading="lazy" decoding="async">
+    <span class="idx">v27</span>
+  </button>
+  <div class="strip">
+    <h2>Genesis</h2>
+    <p class="profile">Transformaciones, narrativa de renacer</p>
+    <dl class="meta">
+      <dt>Paleta</dt><dd>Cocoa + crema-limón</dd>
+    </dl>
+    <a class="open" href="https://igniteyourself.co/v27-genesis" target="_blank" rel="noopener">/v27-genesis <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</article>
+  </div>
+  <p class="empty" id="empty" hidden>Ninguna versión coincide con esa búsqueda.</p>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Vista ampliada">
+  <div class="lb-inner">
+    <div class="lb-bar">
+      <strong id="lbName"></strong>
+      <button class="lb-close" type="button" id="lbClose">Cerrar · Esc</button>
+    </div>
+    <img id="lbImg" alt="">
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var lb = document.getElementById('lb'),
+      lbImg = document.getElementById('lbImg'),
+      lbName = document.getElementById('lbName'),
+      frames = Array.prototype.slice.call(document.querySelectorAll('.frame')),
+      q = document.getElementById('q'),
+      count = document.getElementById('count'),
+      empty = document.getElementById('empty');
+
+  document.querySelectorAll('.shot').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      lbImg.src = btn.dataset.img;
+      lbImg.alt = 'Vista ampliada de ' + btn.dataset.name;
+      lbName.textContent = btn.dataset.name;
+      lb.showModal();
+    });
+  });
+  document.getElementById('lbClose').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+
+  q.addEventListener('input', function () {
+    var term = q.value.trim().toLowerCase(), shown = 0;
+    frames.forEach(function (f) {
+      var hit = !term || f.dataset.q.indexOf(term) !== -1;
+      f.hidden = !hit;
+      if (hit) shown++;
+    });
+    count.textContent = shown === 1 ? '1 versión' : shown + ' versiones';
+    empty.hidden = shown !== 0;
+  });
+})();
+</script>
+
+</body>
+</html>
