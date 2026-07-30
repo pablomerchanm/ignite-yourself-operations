@@ -1,0 +1,54 @@
+User-agent: *
+Allow: /$
+Allow: /igy-mobius
+
+# Trabajo interno y conceptos de plantilla: accesibles por enlace directo,
+# fuera del índice para que no compitan con la landing ni se confundan
+# con sitios oficiales de terceros.
+Disallow: /arce
+Disallow: /igy
+Disallow: /igy2
+Disallow: /base
+Disallow: /base-jorge
+Disallow: /lab
+Disallow: /p
+Disallow: /refs
+Disallow: /templates
+Disallow: /v2
+Disallow: /v3-hanza
+Disallow: /v4-clearpath
+Disallow: /v5-zentro
+Disallow: /v6-final
+Disallow: /v7-noon
+Disallow: /v8-luke
+Disallow: /v9-holistic
+Disallow: /v10-mobius
+Disallow: /v11-firma
+Disallow: /v12-caliora
+Disallow: /v13-bennett
+Disallow: /v14-gareis
+Disallow: /v15-norris
+Disallow: /v16-handx
+Disallow: /v17-everswap
+Disallow: /v18-mindmarket
+Disallow: /v19-cunliffe
+Disallow: /v20-vast
+Disallow: /v21-getty
+Disallow: /v22-sacred
+Disallow: /v23-pacifica
+Disallow: /v24-ilcapo
+Disallow: /v25-gecko
+Disallow: /v26-wolverine
+Disallow: /v27-genesis
+Disallow: /v28-tuesday
+Disallow: /v29-heritage
+Disallow: /v30-capri
+Disallow: /v31-chronicle
+Disallow: /v32-alora
+Disallow: /v33-valenna
+Disallow: /v34-mesamaison
+Disallow: /v35-astramaven
+Disallow: /v36-kimberly
+Disallow: /v37-bakery
+
+Sitemap: https://igniteyourself.co/sitemap.xml
