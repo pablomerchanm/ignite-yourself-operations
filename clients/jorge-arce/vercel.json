@@ -8,7 +8,14 @@
       "has": [{ "type": "host", "value": "www.igniteyourself.co" }],
       "destination": "https://igniteyourself.co/$1",
       "permanent": true
-    }
+    },
+    { "source": "/kappelman2", "destination": "/kappelman-getty", "permanent": false },
+    { "source": "/kappelman3", "destination": "/kappelman-gareis", "permanent": false },
+    { "source": "/Kappelman", "destination": "/kappelman", "permanent": false },
+    { "source": "/Kappelman2", "destination": "/kappelman-getty", "permanent": false },
+    { "source": "/Kappelman3", "destination": "/kappelman-gareis", "permanent": false },
+    { "source": "/Kappelman-Getty", "destination": "/kappelman-getty", "permanent": false },
+    { "source": "/Kappelman-Gareis", "destination": "/kappelman-gareis", "permanent": false }
   ],
   "rewrites": [
     { "source": "/", "destination": "/igy-mobius" }
