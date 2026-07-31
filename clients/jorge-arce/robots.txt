@@ -1,3 +1,13 @@
+# Los buscadores no deben indexar el preview privado del cliente.
+User-agent: Googlebot
+Disallow: /kappelman
+
+User-agent: Bingbot
+Disallow: /kappelman
+
+User-agent: DuckDuckBot
+Disallow: /kappelman
+
 User-agent: *
 Allow: /$
 Allow: /igy-mobius
