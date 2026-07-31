@@ -24,12 +24,12 @@
     {
       "t": "Writing",
       "h": "#writing"
-    },
-    {
-      "t": "Contact",
-      "h": "#contact"
     }
   ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
   "sections": [
     {
       "type": "hero",
@@ -39,7 +39,18 @@
       },
       "name": "Leon A.<br><t>Kappelman,</t> Ph.D.",
       "sub": "Researcher, Educator, Advisor and Expert Witness",
-      "note": "Working across complex information systems, organizations and software disputes."
+      "note": "Working across complex information systems, organizations and software disputes.",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "Explore Leon’s work",
+          "h": "#work"
+        }
+      ]
     },
     {
       "type": "mission",
@@ -49,10 +60,6 @@
       "body": [
         "For more than three decades, Leon Kappelman has worked at the intersection of technology, organizations and human decision-making—helping counsel, institutions and leaders make complex information-systems problems understandable."
       ],
-      "cta": {
-        "t": "Explore Leon’s work",
-        "h": "#work"
-      },
       "no": "01"
     },
     {
@@ -84,7 +91,8 @@
       "quote": "Technology problems are rarely <t>only technical.</t>",
       "body": [
         "When complex systems fail, the cause is rarely a single defect or decision. It is more often found in the interaction of architecture, requirements, project methods, management, contracts, communication, incentives, organizational conditions and people.",
-        "Leon’s work brings these dimensions together—so difficult questions can be examined rigorously, explained clearly and acted on responsibly."
+        "Leon approaches complex systems holistically—examining the technical, organizational, managerial and human conditions that shape outcomes.",
+        "His work brings these dimensions together—so difficult questions can be examined rigorously, explained clearly and acted on responsibly."
       ],
       "who": "The system is only part of the story. The decisions, structures and people around it matter just as much.",
       "no": "03"
@@ -243,14 +251,18 @@
           "d": "Software defects, product liability, cybersecurity, data transfer, management practices and technology operations."
         }
       ],
+      "ctaLede": "Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.",
       "cta": {
-        "t": "Discuss a confidential matter",
-        "h": "#contact"
+        "t": "Request availability & conflict check",
+        "h": "#inquiry",
+        "path": "counsel"
       },
+      "ctaNote": "Submission of this form does not establish an engagement or confidential relationship.",
       "links": [
         {
           "t": "Download Leon’s CV",
-          "disabled": true
+          "disabled": true,
+          "desc": "The final document will be connected before launch."
         },
         {
           "t": "Review selected matters",
@@ -368,8 +380,8 @@
       "type": "access",
       "id": "writing",
       "c4": false,
-      "label": "Writing and research",
-      "title": "Ideas shaped by decades of studying systems, organizations and technology leadership.",
+      "label": "Writing and Perspective",
+      "title": "Ideas shaped by decades of studying systems, organizations and the world around them.",
       "cards": [
         {
           "lv": "No. 1",
@@ -423,26 +435,152 @@
       }
     },
     {
-      "type": "reserve",
-      "id": "contact",
-      "label": "Contact",
-      "title": "Complex matters. <t>Clearer understanding.</t>",
-      "form": {
-        "fields": [
-          "Name",
-          "Firm or organization",
-          "Email",
-          "The matter, briefly"
-        ],
-        "btn": "Send a note",
-        "fine": "Private concept — this form is illustrative and does not send. Write directly to Leon@Kappelman.net or call 940-367-0405."
-      },
+      "type": "paths",
+      "id": "work-with-leon",
+      "label": "Work with Leon",
+      "title": "Different contexts. <t>One standard of clarity.</t>",
+      "lede": "Leon’s experience can be engaged in different ways depending on the nature of the question, dispute or institution involved.",
       "no": "10",
-      "lede": "Whether the question concerns a failed software project, intellectual property, system performance or technology management, the first step is understanding what happened, why it happened and what the evidence can support.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "For Counsel",
+          "title": "Expert witness and litigation support",
+          "desc": "Independent analysis, reporting and testimony for complex software, intellectual-property and information-systems disputes.",
+          "items": [
+            "Failed or troubled software projects",
+            "Software implementation disputes",
+            "Software-related intellectual property",
+            "Source-code and systems analysis",
+            "Software defects and product liability",
+            "Cybersecurity and information-systems matters"
+          ],
+          "cta": {
+            "t": "Request availability & conflict check",
+            "h": "#inquiry",
+            "path": "counsel"
+          }
+        },
+        {
+          "label": "For Organizations",
+          "title": "Independent software and systems review",
+          "desc": "Independent review of troubled software initiatives, systems performance and technology-management questions.",
+          "items": [
+            "Project and implementation review",
+            "Root-cause analysis",
+            "Requirements and contract review",
+            "Vendor and systems assessment",
+            "Technology-management practices",
+            "Pre-litigation understanding"
+          ],
+          "cta": {
+            "t": "Discuss an independent review",
+            "h": "#inquiry",
+            "path": "organization"
+          }
+        },
+        {
+          "label": "For Institutions",
+          "title": "Speaking, research and public contribution",
+          "desc": "Speaking, research, media and institutional inquiries related to information systems, technology leadership, organizations and software-project outcomes.",
+          "items": [
+            "Conferences and executive briefings",
+            "Research collaboration",
+            "Media and publication inquiries",
+            "Academic or institutional contribution",
+            "Technology and public-policy conversations"
+          ],
+          "cta": {
+            "t": "Invite Leon to contribute",
+            "h": "#inquiry",
+            "path": "institution"
+          }
+        }
+      ],
+      "fn": "Presented as possible engagement pathways based on Leon’s public experience, not as productized offerings."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the context.</t>",
+      "no": "11",
+      "lede": "Select the nature of your inquiry and share enough information for an initial response.",
       "contact": {
         "email": "Leon@Kappelman.net",
         "phone": "940-367-0405",
         "city": "Dallas, Texas"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your inquiry",
+        "preview": "This inquiry flow is illustrative and would be configured with Leon before launch.",
+        "fine": "Private concept — nothing is transmitted from this page. Write directly to Leon@Kappelman.net or call 940-367-0405.",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "Expert witness or litigation support",
+            "btn": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Law firm", "r": true },
+              { "n": "Professional title" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Phone", "ty": "tel" },
+              { "n": "Jurisdiction" },
+              { "n": "General type of matter", "full": true },
+              { "n": "Parties involved, for conflict-check purposes", "ta": true, "full": true, "r": true },
+              { "n": "Relevant deadline or timing", "full": true },
+              { "n": "Brief non-privileged summary", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "organization",
+            "t": "Independent software or systems review",
+            "btn": "Discuss an independent review",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organization", "r": true },
+              { "n": "Professional title" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Phone", "ty": "tel" },
+              { "n": "Current project stage" },
+              { "n": "Desired timeframe", "full": true },
+              { "n": "Nature of the project or challenge", "ta": true, "full": true, "r": true },
+              { "n": "Brief context", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "institution",
+            "t": "Speaking, research or media inquiry",
+            "btn": "Send an invitation",
+            "note": "Availability, format and participation are confirmed with Leon directly.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organization", "r": true },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Type of inquiry" },
+              { "n": "Event, publication or initiative", "full": true },
+              { "n": "Proposed date or timing", "full": true },
+              { "n": "Topic or requested contribution", "ta": true, "full": true, "r": true },
+              { "n": "Brief context", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send inquiry",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organization" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Subject", "full": true, "r": true },
+              { "n": "Message", "ta": true, "full": true, "r": true }
+            ]
+          }
+        ]
       },
       "name": "Leon A. Kappelman, Ph.D.",
       "roles": "Researcher, Educator, Advisor and Expert Witness",
