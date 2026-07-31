@@ -1,0 +1,594 @@
+{
+  "meta": {
+    "title": "Leon A. Kappelman, Ph.D. — Systems, Organizations & Software Disputes",
+    "description": "A private authority-platform concept exploring the research, advisory and expert-witness work of Leon A. Kappelman, Ph.D."
+  },
+  "logo": "LEON A. KAPPELMAN, PH.D.",
+  "nav": [
+    {
+      "t": "Leon",
+      "h": "#top"
+    },
+    {
+      "t": "Perspective",
+      "h": "#perspective"
+    },
+    {
+      "t": "Work",
+      "h": "#work"
+    },
+    {
+      "t": "For Counsel",
+      "h": "#for-counsel"
+    },
+    {
+      "t": "Writing",
+      "h": "#writing"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "img": {
+        "src": "/kappelman/assets/hero-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
+      },
+      "name": "Leon A.<br><t>Kappelman,</t> Ph.D.",
+      "sub": "Researcher, Educator, Advisor and Expert Witness",
+      "note": "Working across complex information systems, organizations and software disputes.",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "Explore Leon’s work",
+          "h": "#work"
+        }
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "intro",
+      "label": "Leon A. Kappelman, Ph.D.",
+      "quote": "Understanding why complex systems <t>succeed, fail and become disputed.</t>",
+      "body": [
+        "For more than three decades, Leon Kappelman has worked at the intersection of technology, organizations and human decision-making—helping counsel, institutions and leaders make complex information-systems problems understandable."
+      ],
+      "no": "01"
+    },
+    {
+      "type": "proof",
+      "items": [
+        {
+          "n": "Three decades",
+          "d": "Across information systems, software, technology management and organizational decision-making."
+        },
+        {
+          "n": "150+ articles, six books",
+          "d": "A substantial body of research and writing across information-systems management and software practice."
+        },
+        {
+          "n": "Testimony before Congress",
+          "d": "Public contribution on technology legislation, cybersecurity and information-systems management."
+        },
+        {
+          "n": "Global experience",
+          "d": "Work with law firms, corporations, government entities and international institutions."
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "mission",
+      "id": "perspective",
+      "label": "A point of view built over decades",
+      "quote": "Technology problems are rarely <t>only technical.</t>",
+      "body": [
+        "When complex systems fail, the cause is rarely a single defect or decision. It is more often found in the interaction of architecture, requirements, project methods, management, contracts, communication, incentives, organizational conditions and people.",
+        "Leon approaches complex systems holistically—examining the technical, organizational, managerial and human conditions that shape outcomes.",
+        "His work brings these dimensions together—so difficult questions can be examined rigorously, explained clearly and acted on responsibly."
+      ],
+      "who": "The system is only part of the story. The decisions, structures and people around it matter just as much.",
+      "no": "03"
+    },
+    {
+      "type": "access",
+      "id": "work",
+      "label": "Three expressions of his authority",
+      "title": "One body of knowledge. Applied across different kinds of consequential work.",
+      "cards": [
+        {
+          "lv": "01",
+          "title": "Systems and organizations",
+          "for": "Understanding how software, information systems, technology leadership and organizational conditions shape performance.",
+          "items": [
+            "Software design and development",
+            "Information-systems management",
+            "Enterprise architecture",
+            "IT governance and strategic planning",
+            "Technology performance and risk",
+            "Organizational change · Continuity and resilience"
+          ]
+        },
+        {
+          "lv": "02",
+          "title": "Disputes and evidence",
+          "for": "Helping counsel examine and explain the technical, managerial and organizational dimensions of complex software and technology disputes.",
+          "items": [
+            "Failed and troubled software projects",
+            "Software implementation disputes",
+            "Copyright, patent and trade-secret matters",
+            "Software defects and product liability",
+            "Source-code, architecture and functionality analysis",
+            "Cybersecurity · Expert reports, depositions and testimony"
+          ],
+          "go": {
+            "t": "For counsel",
+            "h": "#for-counsel"
+          }
+        },
+        {
+          "lv": "03",
+          "title": "Research, leadership and advisory",
+          "for": "Translating decades of research, teaching and institutional leadership into clearer decisions about technology, organizations and the future of information systems.",
+          "items": [
+            "Research and writing",
+            "Technology leadership",
+            "Institutional and corporate advisory",
+            "Public policy · Speaking and workshops",
+            "IT workforce and management trends",
+            "Education and mentorship"
+          ],
+          "go": {
+            "t": "Writing",
+            "h": "#writing"
+          }
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "journey",
+      "id": "body-of-work",
+      "label": "A body of work",
+      "title": "A career spent making complex technology <t>understandable.</t>",
+      "days": [
+        {
+          "num": "i",
+          "cap": "Researcher and educator",
+          "title": "Researcher and educator",
+          "body": "A 30-year academic career devoted to educating future information-technology leaders and advancing the information-systems discipline. Primary investigator of the longest-running study of IT leadership and management practices in the United States.",
+          "tags": [
+            "Information systems",
+            "Teaching",
+            "Longitudinal research"
+          ]
+        },
+        {
+          "num": "ii",
+          "cap": "Institutional leader",
+          "title": "Institutional leader",
+          "body": "Former department chair and director of the Information Systems Research Center. Founding chair of SIM's Enterprise Architecture Working Group, connecting academic knowledge, professional practice and the changing needs of technology organizations.",
+          "tags": [
+            "Department chair",
+            "Research center director",
+            "SIM working groups"
+          ]
+        },
+        {
+          "num": "iii",
+          "cap": "Advisor",
+          "title": "Advisor",
+          "body": "Experience helping corporations, public institutions and government organizations understand and manage information, technology, systems and people.",
+          "tags": [
+            "Corporations",
+            "Public institutions",
+            "Government"
+          ]
+        },
+        {
+          "num": "iv",
+          "cap": "Expert witness",
+          "title": "Expert witness",
+          "body": "Independent research, analysis, consultation, reporting and testimony for complex software and information-systems matters.",
+          "tags": [
+            "Analysis",
+            "Reports",
+            "Testimony"
+          ]
+        },
+        {
+          "num": "v",
+          "cap": "Author and public voice",
+          "title": "Author and public voice",
+          "body": "An extensive body of writing, presentations, media commentary and public testimony—including testimony before the U.S. Congress, White House industry roundtables, and service with the United Nations and World Bank sponsored expert volunteer corps.",
+          "tags": [
+            "Congressional testimony",
+            "Public policy",
+            "National media"
+          ]
+        }
+      ],
+      "no": "05"
+    },
+    {
+      "type": "band",
+      "id": "band",
+      "label": "The person behind the analysis",
+      "quote": "Independent. Rigorous. <t>Able to explain it.</t>",
+      "img": {
+        "src": "/kappelman/assets/band-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
+      }
+    },
+    {
+      "type": "method",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "Software disputes demand more than <t>technical fluency.</t>",
+      "img": {
+        "src": "/kappelman/assets/counsel-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
+      },
+      "intro": "They require the ability to examine complex evidence, understand the interaction between technology and management, identify the questions that matter and explain those findings clearly to attorneys, judges and juries. Leon provides independent research, consultation, analysis, reporting and testimony in matters involving software projects, intellectual property, system performance, cybersecurity and information-systems management. <b>His public case experience includes work for both plaintiff and defense.</b>",
+      "rows": [
+        {
+          "t": "Failed and troubled software projects",
+          "d": "Root-cause analysis involving requirements, architecture, development practices, project management, staffing, testing, contracts and system performance."
+        },
+        {
+          "t": "Software-related intellectual property",
+          "d": "Copyright, patent and trade-secret matters involving source code, architecture, logic, functionality, design artifacts and business processes."
+        },
+        {
+          "t": "Information-systems and technology matters",
+          "d": "Software defects, product liability, cybersecurity, data transfer, management practices and technology operations."
+        }
+      ],
+      "ctaLede": "Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.",
+      "cta": {
+        "t": "Request availability & conflict check",
+        "h": "#inquiry",
+        "path": "counsel"
+      },
+      "ctaNote": "Submission of this form does not establish an engagement or confidential relationship.",
+      "links": [
+        {
+          "t": "Download Leon’s CV",
+          "disabled": true,
+          "desc": "The final document will be connected before launch."
+        },
+        {
+          "t": "Review selected matters",
+          "h": "https://www.leonkappelman.com/kappelman-cases.htm",
+          "ext": true
+        },
+        {
+          "t": "Relevant writing",
+          "h": "#writing"
+        }
+      ],
+      "services": {
+        "label": "Litigation-support services",
+        "items": [
+          "Consulting and case review",
+          "Discovery preparation and planning",
+          "Deposition support",
+          "Patent research",
+          "Software code analysis and testing",
+          "Markman hearing preparation and planning",
+          "Root-cause research and analysis",
+          "Expert opinion and rebuttal reports",
+          "Validity and infringement reports",
+          "Depositions and expert witness testimony"
+        ]
+      },
+      "no": "06",
+      "invert": true
+    },
+    {
+      "type": "exp",
+      "label": "The record",
+      "title": "A body of work spanning law, industry, government and global institutions.",
+      "groups": [
+        {
+          "label": "Law firms",
+          "names": [
+            "Jones Day",
+            "Greenberg Traurig",
+            "Foley & Lardner",
+            "Jackson Walker",
+            "Kilpatrick Townsend",
+            "Locke Lord"
+          ]
+        },
+        {
+          "label": "Organizations and institutions",
+          "names": [
+            "IBM",
+            "Microsoft",
+            "AT&T",
+            "Verizon",
+            "Hewlett Packard Enterprise",
+            "United Nations",
+            "World Bank",
+            "Executive Office of the President of the United States"
+          ]
+        }
+      ],
+      "no": "07",
+      "id": "experience",
+      "lede": "Selected from the consulting and litigation-support experience Leon lists publicly.",
+      "tint": true
+    },
+    {
+      "type": "voices",
+      "label": "Clarity and value under pressure",
+      "cards": [
+        {
+          "q": "“You were self-sufficient, user friendly, and produced a great report.”"
+        },
+        {
+          "q": "“Your efforts brought real value to the mediation and helped to get the case settled.”"
+        },
+        {
+          "q": "“This is a tremendous amount of work product produced in a short time. Thank you for the incredible effort.”"
+        }
+      ],
+      "attr": "Client comments, published on Leon’s current website"
+    },
+    {
+      "type": "exp",
+      "id": "press",
+      "label": "In the press",
+      "title": "Work reported across national business, news and broadcast media.",
+      "groups": [
+        {
+          "label": "Print and business press",
+          "names": [
+            "The Wall Street Journal",
+            "The New York Times",
+            "Forbes",
+            "BusinessWeek",
+            "Newsweek",
+            "The Washington Post",
+            "Los Angeles Times",
+            "Dallas Morning News"
+          ],
+          "wide": true
+        },
+        {
+          "label": "Broadcast",
+          "names": [
+            "CNN",
+            "CNBC",
+            "PBS",
+            "ABC"
+          ]
+        }
+      ],
+      "no": "08",
+      "lede": "Selected from the media coverage Leon lists publicly."
+    },
+    {
+      "type": "access",
+      "id": "writing",
+      "c4": false,
+      "label": "Writing and Perspective",
+      "title": "Ideas shaped by decades of studying systems, organizations and the world around them.",
+      "cards": [
+        {
+          "lv": "No. 1",
+          "title": "The Four Horsemen of IT Project Doom",
+          "for": "Early warning signs behind troubled technology initiatives.",
+          "items": [],
+          "go": {
+            "t": "Read",
+            "h": "https://www.leonkappelman.com/kappelman-articles.htm",
+            "ext": true
+          }
+        },
+        {
+          "lv": "No. 2",
+          "title": "Auditing IT Projects: Early Warning Signs",
+          "for": "A framework for recognizing material risk before failure becomes irreversible.",
+          "items": [],
+          "go": {
+            "t": "Read",
+            "h": "https://www.leonkappelman.com/kappelman-articles.htm",
+            "ext": true
+          }
+        },
+        {
+          "lv": "No. 3",
+          "title": "Enterprise Architecture: More Than You’re Thinking",
+          "for": "A broader view of architecture as a tool for enterprise understanding and transformation.",
+          "items": [],
+          "go": {
+            "t": "Read",
+            "h": "https://www.leonkappelman.com/kappelman-articles.htm",
+            "ext": true
+          }
+        },
+        {
+          "lv": "No. 4",
+          "title": "SIM IT Trends Study",
+          "for": "Primary investigator of the longest-running study of IT leadership and management practices in the United States.",
+          "items": [],
+          "go": {
+            "t": "Read",
+            "h": "https://www.leonkappelman.com/kappelman-articles.htm",
+            "ext": true
+          }
+        }
+      ],
+      "no": "09",
+      "ph": {
+        "src": "/kappelman/assets/writing-leon.jpg",
+        "alt": "Leon A. Kappelman, Ph.D."
+      }
+    },
+    {
+      "type": "paths",
+      "id": "work-with-leon",
+      "label": "Work with Leon",
+      "title": "Different contexts. <t>One standard of clarity.</t>",
+      "lede": "Leon’s experience can be engaged in different ways depending on the nature of the question, dispute or institution involved.",
+      "no": "10",
+      "cards": [
+        {
+          "lead": true,
+          "label": "For Counsel",
+          "title": "Expert witness and litigation support",
+          "desc": "Independent analysis, reporting and testimony for complex software, intellectual-property and information-systems disputes.",
+          "items": [
+            "Failed or troubled software projects",
+            "Software implementation disputes",
+            "Software-related intellectual property",
+            "Source-code and systems analysis",
+            "Software defects and product liability",
+            "Cybersecurity and information-systems matters"
+          ],
+          "cta": {
+            "t": "Request availability & conflict check",
+            "h": "#inquiry",
+            "path": "counsel"
+          }
+        },
+        {
+          "label": "For Organizations",
+          "title": "Independent software and systems review",
+          "desc": "Independent review of troubled software initiatives, systems performance and technology-management questions.",
+          "items": [
+            "Project and implementation review",
+            "Root-cause analysis",
+            "Requirements and contract review",
+            "Vendor and systems assessment",
+            "Technology-management practices",
+            "Pre-litigation understanding"
+          ],
+          "cta": {
+            "t": "Discuss an independent review",
+            "h": "#inquiry",
+            "path": "organization"
+          }
+        },
+        {
+          "label": "For Institutions",
+          "title": "Speaking, research and public contribution",
+          "desc": "Speaking, research, media and institutional inquiries related to information systems, technology leadership, organizations and software-project outcomes.",
+          "items": [
+            "Conferences and executive briefings",
+            "Research collaboration",
+            "Media and publication inquiries",
+            "Academic or institutional contribution",
+            "Technology and public-policy conversations"
+          ],
+          "cta": {
+            "t": "Invite Leon to contribute",
+            "h": "#inquiry",
+            "path": "institution"
+          }
+        }
+      ],
+      "fn": "Presented as possible engagement pathways based on Leon’s public experience, not as productized offerings."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the context.</t>",
+      "no": "11",
+      "lede": "Select the nature of your inquiry and share enough information for an initial response.",
+      "contact": {
+        "email": "Leon@Kappelman.net",
+        "phone": "940-367-0405",
+        "city": "Dallas, Texas"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your inquiry",
+        "preview": "This inquiry flow is illustrative and would be configured with Leon before launch.",
+        "fine": "Private concept — nothing is transmitted from this page. Write directly to Leon@Kappelman.net or call 940-367-0405.",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "Expert witness or litigation support",
+            "btn": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Law firm", "r": true },
+              { "n": "Professional title" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Phone", "ty": "tel" },
+              { "n": "Jurisdiction" },
+              { "n": "General type of matter", "full": true },
+              { "n": "Parties involved, for conflict-check purposes", "ta": true, "full": true, "r": true },
+              { "n": "Relevant deadline or timing", "full": true },
+              { "n": "Brief non-privileged summary", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "organization",
+            "t": "Independent software or systems review",
+            "btn": "Discuss an independent review",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organization", "r": true },
+              { "n": "Professional title" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Phone", "ty": "tel" },
+              { "n": "Current project stage" },
+              { "n": "Desired timeframe", "full": true },
+              { "n": "Nature of the project or challenge", "ta": true, "full": true, "r": true },
+              { "n": "Brief context", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "institution",
+            "t": "Speaking, research or media inquiry",
+            "btn": "Send an invitation",
+            "note": "Availability, format and participation are confirmed with Leon directly.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organization", "r": true },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Type of inquiry" },
+              { "n": "Event, publication or initiative", "full": true },
+              { "n": "Proposed date or timing", "full": true },
+              { "n": "Topic or requested contribution", "ta": true, "full": true, "r": true },
+              { "n": "Brief context", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send inquiry",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organization" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Subject", "full": true, "r": true },
+              { "n": "Message", "ta": true, "full": true, "r": true }
+            ]
+          }
+        ]
+      },
+      "name": "Leon A. Kappelman, Ph.D.",
+      "roles": "Researcher, Educator, Advisor and Expert Witness",
+      "affiliations": [
+        "Chief Scientist, Solutions-Organizations-Systems, Inc.",
+        "Professor Emeritus, University of North Texas"
+      ],
+      "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Leon before publication."
+    }
+  ]
+}
