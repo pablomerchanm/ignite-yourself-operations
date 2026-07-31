@@ -377,6 +377,52 @@
       "lede": "Selected from the media coverage Leon lists publicly."
     },
     {
+      "type": "exp",
+      "id": "credentials",
+      "label": "Appointments and recognition",
+      "title": "University leadership, fellowships and service to the public record.",
+      "lede": "Selected from the appointments and recognitions Leon lists publicly.",
+      "tint": true,
+      "groups": [
+        {
+          "label": "University of North Texas — G. Brint Ryan College of Business",
+          "wide": true,
+          "names": [
+            "Professor Emeritus",
+            "Professor of Information Systems (ret.)",
+            "Director Emeritus, Information Systems Research Center",
+            "Chair, Information Technology & Decision Sciences Department (ret.)",
+            "Fellow, Texas Center for Digital Knowledge",
+            "Faculty, Interdisciplinary Information Science Ph.D. Program"
+          ]
+        },
+        {
+          "label": "Society for Information Management",
+          "wide": true,
+          "names": [
+            "SIM Research Fellow",
+            "SIM Fellow, DFW Chapter",
+            "Primary investigator, SIM IT Trends Study",
+            "Founding chair, Enterprise Architecture Working Group",
+            "Founding chair, Year 2000 Working Group"
+          ]
+        },
+        {
+          "label": "Public service",
+          "wide": true,
+          "names": [
+            "Testimony before the U.S. Congress on technology legislation and IT management",
+            "White House industry roundtables",
+            "United Nations IT conference — program committee and speaker",
+            "U.N. & World Bank Y2K Expert Service Volunteer Corps — founding steering committee",
+            "American Heart Association IT Expert Panel"
+          ]
+        }
+      ],
+      "fn": "Leon has brought approximately $2.6 million in research funding to the University of North Texas.",
+      "no": "09"
+    },
+    {
       "type": "access",
       "id": "writing",
       "c4": false,
@@ -428,11 +474,47 @@
           }
         }
       ],
-      "no": "09",
+      "no": "10",
       "ph": {
         "src": "/kappelman/assets/writing-leon.jpg",
         "alt": "Leon A. Kappelman, Ph.D."
       }
+    },
+    {
+      "type": "exp",
+      "id": "books",
+      "label": "The books",
+      "title": "Six books across software practice, enterprise architecture and the Year 2000 effort.",
+      "lede": "As listed in Leon’s published bio — author, editor and co-editor — with the journals that have carried his research.",
+      "groups": [
+        {
+          "label": "Author, editor and co-editor",
+          "wide": true,
+          "names": [
+            "Information Systems for Managers — McGraw-Hill, 1993",
+            "SIM Guide to Enterprise Architecture — CRC Press, 2010",
+            "Year 2000 Problem: Strategies and Solutions from the Fortune 100 — International Thomson Press, 1997",
+            "Y2K Endgame Strategies — SIM International, 1999",
+            "Year 2000 Update — SIM International, 1998",
+            "Solving the Year 2000 Computer Date Problem — SIM International, 1996"
+          ]
+        },
+        {
+          "label": "In the journals",
+          "names": [
+            "Communications of the ACM",
+            "MIS Quarterly",
+            "MIS Quarterly Executive",
+            "Journal of Management Information Systems",
+            "Decision Sciences",
+            "IEEE Software",
+            "Project Management Journal",
+            "InformationWeek",
+            "Computerworld"
+          ]
+        }
+      ],
+      "no": "11"
     },
     {
       "type": "paths",
@@ -440,7 +522,7 @@
       "label": "Work with Leon",
       "title": "Different contexts. <t>One standard of clarity.</t>",
       "lede": "Leon’s experience can be engaged in different ways depending on the nature of the question, dispute or institution involved.",
-      "no": "10",
+      "no": "12",
       "cards": [
         {
           "lead": true,
@@ -504,7 +586,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the context.</t>",
-      "no": "11",
+      "no": "13",
       "lede": "Select the nature of your inquiry and share enough information for an initial response.",
       "contact": {
         "email": "Leon@Kappelman.net",
@@ -523,16 +605,48 @@
             "btn": "Request availability & conflict check",
             "note": "Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.",
             "fields": [
-              { "n": "Full name", "r": true },
-              { "n": "Law firm", "r": true },
-              { "n": "Professional title" },
-              { "n": "Email", "ty": "email", "r": true },
-              { "n": "Phone", "ty": "tel" },
-              { "n": "Jurisdiction" },
-              { "n": "General type of matter", "full": true },
-              { "n": "Parties involved, for conflict-check purposes", "ta": true, "full": true, "r": true },
-              { "n": "Relevant deadline or timing", "full": true },
-              { "n": "Brief non-privileged summary", "ta": true, "full": true }
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Law firm",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction"
+              },
+              {
+                "n": "General type of matter",
+                "full": true
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
             ]
           },
           {
@@ -541,15 +655,44 @@
             "btn": "Discuss an independent review",
             "note": "Please share only the high-level context needed for an initial conversation.",
             "fields": [
-              { "n": "Full name", "r": true },
-              { "n": "Organization", "r": true },
-              { "n": "Professional title" },
-              { "n": "Email", "ty": "email", "r": true },
-              { "n": "Phone", "ty": "tel" },
-              { "n": "Current project stage" },
-              { "n": "Desired timeframe", "full": true },
-              { "n": "Nature of the project or challenge", "ta": true, "full": true, "r": true },
-              { "n": "Brief context", "ta": true, "full": true }
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Current project stage"
+              },
+              {
+                "n": "Desired timeframe",
+                "full": true
+              },
+              {
+                "n": "Nature of the project or challenge",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
             ]
           },
           {
@@ -558,14 +701,41 @@
             "btn": "Send an invitation",
             "note": "Availability, format and participation are confirmed with Leon directly.",
             "fields": [
-              { "n": "Full name", "r": true },
-              { "n": "Organization", "r": true },
-              { "n": "Email", "ty": "email", "r": true },
-              { "n": "Type of inquiry" },
-              { "n": "Event, publication or initiative", "full": true },
-              { "n": "Proposed date or timing", "full": true },
-              { "n": "Topic or requested contribution", "ta": true, "full": true, "r": true },
-              { "n": "Brief context", "ta": true, "full": true }
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of inquiry"
+              },
+              {
+                "n": "Event, publication or initiative",
+                "full": true
+              },
+              {
+                "n": "Proposed date or timing",
+                "full": true
+              },
+              {
+                "n": "Topic or requested contribution",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
             ]
           },
           {
@@ -573,11 +743,29 @@
             "t": "Something else",
             "btn": "Send inquiry",
             "fields": [
-              { "n": "Full name", "r": true },
-              { "n": "Organization" },
-              { "n": "Email", "ty": "email", "r": true },
-              { "n": "Subject", "full": true, "r": true },
-              { "n": "Message", "ta": true, "full": true, "r": true }
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organization"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
             ]
           }
         ]
@@ -585,7 +773,7 @@
       "name": "Leon A. Kappelman, Ph.D.",
       "roles": "Researcher, Educator, Advisor and Expert Witness",
       "affiliations": [
-        "Chief Scientist, Solutions-Organizations-Systems, Inc.",
+        "Chief Scientist, SOS Solutions LLC",
         "Professor Emeritus, University of North Texas"
       ],
       "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Leon before publication."
