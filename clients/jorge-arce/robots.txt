@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /$
 Allow: /igy-mobius
+Allow: /kappelman
 # Trabajo interno y conceptos de plantilla: accesibles por enlace directo,
 # fuera del indice para que no compitan con la landing ni se confundan
 # con sitios oficiales de terceros.
@@ -9,7 +10,6 @@ Disallow: /catalogo
 Disallow: /enlaces
 Disallow: /igy
 Disallow: /igy2
-Disallow: /kappelman
 Disallow: /base
 Disallow: /base-jorge
 Disallow: /lab
