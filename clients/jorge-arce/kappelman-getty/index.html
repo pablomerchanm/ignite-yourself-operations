@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leon A. Kappelman, Ph.D. — Concept II · Essay</title>
+<meta name="description" content="A private authority-platform concept exploring the research, advisory and expert-witness work of Leon A. Kappelman, Ph.D.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(110px,15vh,170px);
+  --black:#111111;
+  --white:#FFFFFF;
+  --grey:#6E6E6E;
+  --dim:#3A3A3A;
+  --border:rgba(186,186,186,.45);
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
+body{
+  background:var(--white);color:var(--black);
+  font-family:var(--sans);font-weight:400;
+  font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:clip;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--black);color:var(--white)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- type ---------- */
+.d97{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.04;font-size:clamp(44px,6vw,86px)}
+.d80{font-family:var(--serif);font-weight:400;letter-spacing:-.008em;line-height:1.12;font-size:clamp(34px,4.6vw,64px)}
+.d56{font-family:var(--serif);font-weight:400;letter-spacing:-.008em;line-height:1.16;font-size:clamp(28px,3.4vw,46px)}
+.it{font-style:italic}
+.smallcap{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--black)}
+.rnum{font-family:var(--serif);font-style:italic;font-size:clamp(26px,2.6vw,40px);line-height:.9;color:rgba(17,17,17,.28)}
+
+/* ---------- chrome ---------- */
+.glogo{position:fixed;top:24px;left:32px;z-index:70;font-family:var(--serif);
+  font-size:clamp(17px,1.7vw,22px);font-weight:500;letter-spacing:-.005em;
+  mix-blend-mode:difference;color:#fff}
+.glogo em{font-style:italic}
+.ncta{position:fixed;top:20px;right:76px;z-index:70;display:inline-flex;align-items:center;height:44px;
+  background:var(--black);color:#fff;font-family:var(--sans);font-size:13px;font-weight:500;
+  letter-spacing:.01em;padding:0 24px;border-radius:12px;white-space:nowrap;
+  border:1px solid rgba(255,255,255,.24);
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.ncta:hover{transform:translateY(-2px);background:#000}
+.gmenu{position:fixed;top:20px;right:20px;z-index:70;width:44px;height:44px;background:var(--black);
+  border:1px solid rgba(255,255,255,.24);border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:5px;cursor:pointer}
+.gmenu span{display:block;width:18px;height:1.6px;background:#fff;transition:transform .3s var(--ease-quick),opacity .3s}
+.gmenu[aria-expanded="true"] span:nth-child(1){transform:translateY(6.6px) rotate(45deg)}
+.gmenu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.gmenu[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.6px) rotate(-45deg)}
+.gpanel{position:fixed;top:76px;right:20px;z-index:69;background:var(--black);color:#fff;
+  padding:32px 44px;display:flex;flex-direction:column;gap:15px;text-align:right;border-radius:14px;
+  opacity:0;pointer-events:none;transform:translateY(-8px);
+  transition:opacity .35s var(--ease-quick),transform .35s var(--ease-quick)}
+.gpanel.open{opacity:1;pointer-events:auto;transform:none}
+.gpanel a{font-family:var(--serif);font-size:20px;opacity:.85;transition:opacity var(--dur-hover)}
+.gpanel a:hover{opacity:1;font-style:italic}
+.progress{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:60;width:32px;height:76px;
+  background:#EDEDED;border-radius:16px;display:flex;align-items:flex-start;justify-content:center;padding:9px 0}
+.progress .track{width:2.5px;height:100%;background:rgba(17,17,17,.14);border-radius:2px;position:relative}
+.progress .fill{position:absolute;inset:0;background:var(--black);border-radius:2px;transform-origin:top;transform:scaleY(0)}
+html.no-motion .progress{display:none}
+
+/* ---------- hero: foto + nombre grande, fiel al original ---------- */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:flex-start;
+  justify-content:flex-end;text-align:left;overflow:hidden;padding:0 0 clamp(56px,9vh,110px);color:#fff}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:72% 24%;
+  filter:grayscale(1) brightness(.78) contrast(1.06)}
+.hero .ph::after{content:'';position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(11,10,10,.62) 0%,rgba(11,10,10,.28) 42%,rgba(11,10,10,.05) 70%),
+  linear-gradient(180deg,rgba(11,10,10,.3) 0%,rgba(11,10,10,0) 35%,rgba(11,10,10,.5) 100%)}
+.hero .inr{position:relative;z-index:2;padding:0 clamp(24px,6vw,90px);max-width:1400px;width:100%}
+.hero .hname{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1;
+  font-size:clamp(50px,8.2vw,126px)}
+.hero .hname .it{font-style:italic}
+.hero .hsub{margin-top:clamp(14px,2.2vh,22px);margin-left:clamp(10px,6vw,150px);
+  font-family:var(--serif);font-style:italic;font-size:clamp(19px,2vw,29px);font-weight:400;
+  letter-spacing:0;color:rgba(255,255,255,.92);max-width:26ch}
+.hero .hnote{margin-top:clamp(10px,1.4vh,14px);margin-left:clamp(10px,6vw,150px);
+  font-family:var(--sans);font-size:clamp(13px,1.05vw,15px);line-height:1.6;
+  color:rgba(255,255,255,.72);max-width:46ch}
+.hacts{display:flex;align-items:center;gap:clamp(16px,2vw,30px);flex-wrap:wrap;
+  margin-top:clamp(26px,3.6vh,42px);margin-left:clamp(10px,6vw,150px)}
+.hcta{background:#fff;color:var(--black);font-family:var(--sans);font-size:13.5px;font-weight:500;
+  padding:15px 32px;border-radius:99px;
+  transition:transform var(--dur-hover) var(--ease-quick),box-shadow var(--dur-hover)}
+.hcta:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,255,255,.16)}
+.hcta.alt{background:transparent;color:#fff;border-radius:0;padding:15px 0 5px;
+  font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.5)}
+.hcta.alt:hover{transform:none;box-shadow:none;border-bottom-color:#fff}
+
+/* ---------- secciones ---------- */
+section{padding:var(--sec) 0;position:relative;scroll-margin-top:var(--navh,60px)}
+.shead{text-align:center;margin-bottom:70px}
+.shead .smallcap{display:block;margin-bottom:0}
+.shead.rail,.shead.lft{text-align:left;display:grid;grid-template-columns:clamp(150px,17vw,240px) minmax(0,1fr);
+  gap:clamp(24px,4vw,60px);align-items:start;margin-bottom:clamp(48px,7vh,78px)}
+.shead.lft{grid-template-columns:1fr;gap:22px}
+.rlab{display:flex;flex-direction:column;gap:12px;padding-top:.5em}
+.shead.lft .rlab{flex-direction:row;align-items:baseline;gap:16px;padding-top:0}
+.rlab .smallcap{display:block;color:var(--grey)}
+.shead.rail h2,.shead.lft h2{max-width:20ch}
+.mlab{display:flex;align-items:baseline;justify-content:center;gap:16px}
+.mlab .rnum{font-size:clamp(20px,1.9vw,30px)}
+.mlab .smallcap{color:var(--grey)}
+
+/* ---------- mission: lede de ensayo ---------- */
+.mission .wrap>p{font-family:var(--serif);font-size:clamp(27px,3.1vw,42px);line-height:1.3;
+  letter-spacing:-.005em;max-width:26ch;margin:0 auto;text-align:center}
+.mission p .it{font-style:italic}
+.mbody{max-width:640px;margin:52px auto 0;text-align:left}
+.mbody p{font-family:var(--sans);font-size:17px;line-height:1.8;color:var(--dim)}
+.mbody p+p{margin-top:22px}
+.mission .who{margin-top:clamp(40px,6vh,58px);text-align:center;
+  font-family:var(--serif);font-style:italic;font-size:clamp(19px,1.9vw,25px);font-weight:400;
+  line-height:1.5;color:var(--black);max-width:36ch;margin-left:auto;margin-right:auto;
+  padding-top:clamp(28px,4vh,36px);border-top:1px solid var(--border)}
+.mcta{display:inline-block;background:var(--black);color:#fff;font-family:var(--sans);
+  font-size:13.5px;font-weight:500;padding:15px 32px;border-radius:99px;
+  transition:transform var(--dur-hover) var(--ease-quick),box-shadow var(--dur-hover)}
+.mcta:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(17,17,17,.18)}
+
+/* ---------- proof: 4 datos con filetes ---------- */
+.proof{padding-top:calc(var(--sec)*.55);padding-bottom:calc(var(--sec)*.55)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.pit{position:relative;padding:42px 30px 46px;border-left:1px solid var(--border)}
+.pit:first-child{border-left:0}
+.pix{position:absolute;top:20px;right:22px;font-family:var(--serif);font-style:italic;font-size:15px;color:rgba(17,17,17,.32)}
+.pit .pn{font-family:var(--serif);font-size:clamp(24px,2.2vw,33px);line-height:1.12;letter-spacing:-.008em;padding-right:26px}
+.pit p{font-family:var(--sans);font-size:14.5px;line-height:1.65;color:var(--grey);margin-top:14px;max-width:32ch}
+
+/* ---------- access: columnas con filete ---------- */
+.access .cards{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;
+  border-top:1px solid var(--border)}
+.acard{padding:44px 34px 48px;display:flex;flex-direction:column;min-height:380px;border-left:1px solid var(--border)}
+.acard:first-child{border-left:0}
+.acard .lv{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--grey)}
+.acard h3{font-family:var(--serif);font-weight:400;font-size:clamp(25px,2.3vw,33px);letter-spacing:-.008em;line-height:1.14;margin:18px 0 8px}
+.acard .for{font-family:var(--sans);font-size:14.5px;line-height:1.65;color:var(--grey);margin-bottom:24px}
+.acard ul{list-style:none;display:flex;flex-direction:column}
+.acard li{font-family:var(--sans);font-size:14.5px;line-height:1.55;color:var(--dim);
+  padding:10px 0;border-top:1px solid var(--border)}
+.acard .go{margin-top:auto;padding-top:30px;font-family:var(--sans);font-size:13.5px;font-weight:500;
+  align-self:flex-start;border-bottom:1px solid var(--black);padding-bottom:3px}
+
+/* ---------- journey: capitulos con numeral serif ---------- */
+.journey .day{display:grid;grid-template-columns:200px 1fr;gap:50px;padding:54px 0;border-top:1px solid var(--border);align-items:start}
+.journey .day:last-of-type{border-bottom:1px solid var(--border)}
+.journey .dnum{font-family:var(--serif);font-style:italic;font-size:clamp(48px,5.6vw,92px);line-height:.9;color:var(--black)}
+.journey .dnum span{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.02em;font-weight:500;margin-top:12px;color:var(--grey)}
+.journey h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.2vw,46px);letter-spacing:-.008em;line-height:1.08}
+.journey p{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--dim);max-width:56ch;margin-top:16px}
+.journey .tags{display:flex;gap:22px;margin-top:20px;flex-wrap:wrap}
+.journey .tags span{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--grey)}
+
+/* ---------- band: placa fotografica ---------- */
+.band{position:relative;padding:0;min-height:clamp(420px,64vh,720px);display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.band .bph{position:absolute;inset:0}
+.band .bph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;
+  filter:grayscale(1) brightness(.62) contrast(1.08)}
+.band .bph::after{content:'';position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(11,10,10,.55) 0%,rgba(11,10,10,.1) 34%,rgba(11,10,10,.82) 100%)}
+.band .bin{position:relative;z-index:2;width:100%;padding-bottom:clamp(48px,8vh,86px)}
+.band .smallcap{color:rgba(255,255,255,.75)}
+.band .bq{margin-top:22px;font-family:var(--serif);font-weight:400;font-size:clamp(28px,4.4vw,64px);
+  letter-spacing:-.01em;line-height:1.14;max-width:20ch}
+.band .bq .it{font-style:italic}
+.band .bwho{margin-top:24px}
+
+/* ---------- method (For Counsel): el capitulo oscuro ---------- */
+.method{background:var(--black);color:#fff}
+.method .smallcap{color:rgba(255,255,255,.65)}
+.method .rnum{color:rgba(255,255,255,.34)}
+.method .lay{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,74px);align-items:start}
+@media(min-width:1081px){.method .ph{position:sticky;top:clamp(96px,13vh,132px)}}
+.method .ph{overflow:hidden;border-radius:2px}
+.method .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(.92)}
+.method .mintro{font-family:var(--sans);font-size:16.5px;line-height:1.75;color:rgba(255,255,255,.78);max-width:56ch;margin-bottom:34px}
+.method .mintro b{color:#fff;font-weight:500}
+.method .mrow{padding:26px 0;border-top:1px solid rgba(255,255,255,.18)}
+.method .mrow:last-of-type{border-bottom:1px solid rgba(255,255,255,.18)}
+.method .mrow h4{font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.2vw,31px);letter-spacing:-.005em}
+.method .mrow p{font-family:var(--sans);font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.66);margin-top:10px;max-width:52ch}
+.msvc{margin-top:40px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
+.msvc .smallcap{margin-bottom:16px}
+.msvc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+.msvc li{font-family:var(--sans);font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.78);display:flex;gap:9px}
+.msvc li::before{content:'—';color:rgba(255,255,255,.4)}
+.mctalede{margin-top:clamp(34px,4.6vh,44px);padding-top:clamp(24px,3vh,30px);
+  border-top:1px solid rgba(255,255,255,.18);font-family:var(--sans);
+  font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.7);max-width:56ch}
+.mctalede+.macts{margin-top:clamp(24px,3vh,30px)}
+.macts{margin-top:40px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.method .mcta{background:#fff;color:var(--black)}
+.method .mcta:hover{box-shadow:0 14px 30px rgba(255,255,255,.16)}
+.mlink{font-family:var(--sans);font-size:13.5px;font-weight:500;color:rgba(255,255,255,.85);
+  border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:3px;transition:color .3s,border-color .3s}
+.mlink:hover{color:#fff;border-bottom-color:#fff}
+.mlink.is-off{color:rgba(255,255,255,.5);border-bottom-style:dashed;border-bottom-color:rgba(255,255,255,.28);cursor:default}
+.mfine{margin-top:20px;font-family:var(--sans);font-size:12.5px;line-height:1.65;color:rgba(255,255,255,.5);max-width:54ch}
+
+/* ---------- exp: la coleccion ---------- */
+.elede{margin-top:20px;font-family:var(--sans);font-size:15.5px;line-height:1.7;color:var(--grey);max-width:56ch}
+.ledger{margin-top:clamp(44px,6vh,66px)}
+.lhead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  padding-bottom:14px;border-bottom:1px solid var(--black)}
+.lhead .smallcap{color:var(--black)}
+.lcount{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--grey)}
+.lgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 90px}
+.lgrid.wide{grid-template-columns:1fr 1fr}
+.lcell{font-family:var(--serif);font-size:clamp(20px,1.9vw,26px);letter-spacing:-.005em;line-height:1.24;
+  padding:20px 4px;border-bottom:1px solid var(--border)}
+.efn{margin-top:clamp(40px,5vh,56px);color:var(--grey)}
+
+/* ---------- voices: citas centradas ---------- */
+.voices .grid{display:block;max-width:820px;margin:0 auto}
+.voices .v{text-align:center;padding:64px 0;border-top:1px solid var(--border)}
+.voices .v:first-child{border-top:0}
+.voices .v .q{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.5vw,33px);line-height:1.42}
+.voices .v .who{margin-top:22px;font-family:var(--sans);font-size:13px;font-weight:500;color:var(--grey)}
+.voices .vattr{margin-top:44px;text-align:center;color:var(--grey)}
+
+/* ---------- writing con fotografia ---------- */
+.access.withph .wlay{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr);
+  gap:clamp(32px,4.5vw,66px);align-items:start;margin-top:clamp(40px,6vh,64px)}
+.access.withph .wph{overflow:hidden;position:relative}
+.access.withph .wph img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05) brightness(.94)}
+.access.withph .cards{margin-top:0;grid-template-columns:1fr 1fr;border-top:0}
+.access.withph .cards .acard{min-height:0;padding:30px 26px 36px;border-top:1px solid var(--border)}
+.access.withph .cards .acard:nth-child(-n+2){border-top:0}
+.access.withph .acard h3{font-size:clamp(20px,1.8vw,25px)}
+
+/* ---------- paths: la tarjeta lider en negro ---------- */
+.paths .plede{margin-top:20px;font-family:var(--sans);font-size:15.5px;line-height:1.7;color:var(--grey);max-width:56ch}
+.pathgrid{display:grid;grid-template-columns:1.28fr 1fr 1fr;margin-top:clamp(44px,6vh,66px);
+  border-top:1px solid var(--border)}
+.pcard{position:relative;display:flex;flex-direction:column;
+  padding:clamp(36px,3.2vw,50px) clamp(28px,2.6vw,40px) clamp(38px,3.4vw,52px);
+  border-left:1px solid var(--border)}
+.pcard:first-child{border-left:0}
+.pcard.lead{background:var(--black);color:#fff;border-left:0;margin-top:-1px;border-radius:2px}
+.pcard .plab{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--grey)}
+.pcard.lead .plab{color:rgba(255,255,255,.75)}
+.pcard h3{font-family:var(--serif);font-weight:400;margin-top:16px;font-size:clamp(23px,2.1vw,29px);letter-spacing:-.008em;line-height:1.14}
+.pcard.lead h3{font-size:clamp(28px,2.8vw,40px);letter-spacing:-.012em;line-height:1.06}
+.pcard .pdesc{margin-top:14px;font-family:var(--sans);font-size:14.5px;line-height:1.65;color:var(--grey)}
+.pcard.lead .pdesc{font-size:15.5px;color:rgba(255,255,255,.78)}
+.pcard ul{list-style:none;margin-top:26px;padding-top:10px;display:flex;flex-direction:column}
+.pcard li{font-family:var(--sans);font-size:14px;line-height:1.5;color:var(--dim);
+  padding:10px 0;border-top:1px solid var(--border)}
+.pcard.lead li{color:rgba(255,255,255,.82);border-top-color:rgba(255,255,255,.18)}
+.pcard .pgo{margin-top:auto;padding-top:clamp(28px,3.4vh,38px)}
+.pcard.lead .pgo .mcta{background:#fff;color:var(--black)}
+.pcard .pgo .go{display:inline-block;font-family:var(--sans);font-size:13.5px;font-weight:500;
+  color:var(--black);border-bottom:1px solid var(--black);padding-bottom:3px}
+.pfn{margin-top:clamp(36px,4.6vh,52px);color:var(--grey)}
+
+/* ---------- inquiry ---------- */
+.reserve{padding-bottom:clamp(80px,10vh,120px)}
+.rlay{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(44px,6vw,96px);align-items:start}
+.rlay .mlab{justify-content:flex-start}
+.reserve .d97{margin-top:clamp(20px,3vh,30px);max-width:14ch;font-size:clamp(38px,4.6vw,72px);line-height:1.04}
+.rlede{margin-top:clamp(24px,3.4vh,32px);font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--dim);max-width:48ch}
+.rdirect{margin-top:clamp(36px,5vh,52px);padding-top:clamp(26px,3.4vh,32px);border-top:1px solid var(--border)}
+.rmail{font-family:var(--serif);font-size:clamp(21px,2.1vw,29px);letter-spacing:-.005em;
+  border-bottom:1px solid rgba(17,17,17,.35);padding-bottom:4px;transition:border-color .3s}
+.rmail:hover{border-bottom-color:var(--black)}
+.rmeta{margin-top:18px;display:flex;gap:24px;flex-wrap:wrap;font-family:var(--sans);font-size:13.5px;color:var(--grey)}
+.rform{display:flex;flex-direction:column;border-top:1px solid var(--border)}
+.rfield{display:block;padding:20px 0 18px;border-bottom:1px solid var(--border)}
+.rfield .smallcap{display:block;margin-bottom:9px;font-size:12px;color:var(--grey)}
+.rform input{width:100%;background:transparent;border:0;color:var(--black);
+  font-family:var(--serif);font-size:20px;padding:0;outline:none;text-align:left}
+.rfield:focus-within{border-bottom-color:var(--black)}
+.rform button{margin-top:30px;align-self:flex-start;background:var(--black);color:#fff;
+  border:none;cursor:pointer;font-family:var(--sans);font-size:13.5px;font-weight:500;
+  padding:17px 34px;border-radius:99px;
+  transition:transform var(--dur-hover) var(--ease-quick),box-shadow var(--dur-hover)}
+.rform button:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(17,17,17,.18)}
+.rform .fine{margin-top:26px;padding-top:22px;border-top:1px solid var(--border);
+  font-family:var(--sans);font-size:12.5px;line-height:1.65;color:var(--grey);max-width:46ch}
+.iselect{position:relative}
+.iform select{width:100%;background:transparent;border:0;color:var(--black);
+  font-family:var(--serif);font-size:20px;line-height:1.4;
+  padding:4px 26px 4px 0;min-height:36px;outline:none;appearance:none;-webkit-appearance:none;
+  cursor:pointer;border-radius:0}
+.iform select option{background:#fff;color:var(--black);font-family:var(--sans);font-size:15px}
+.iselect::after{content:'';position:absolute;right:2px;bottom:26px;width:8px;height:8px;
+  border-right:1px solid var(--grey);border-bottom:1px solid var(--grey);
+  transform:rotate(45deg);pointer-events:none}
+.ipath[hidden]{display:none}
+.ifields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(18px,2.2vw,32px)}
+.rfield.full{grid-column:1/-1}
+.iform textarea{width:100%;background:transparent;border:0;color:var(--black);
+  font-family:var(--serif);font-size:20px;line-height:1.45;padding:0;
+  outline:none;resize:vertical;min-height:66px}
+.req{font-style:normal;font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;
+  color:rgba(17,17,17,.42);margin-left:8px}
+.inote{margin-top:22px;font-family:var(--sans);font-size:12.5px;line-height:1.7;color:var(--grey);max-width:56ch}
+.ipreview{margin-top:22px;padding:16px 18px;border:1px solid rgba(17,17,17,.3);border-radius:12px;
+  font-family:var(--sans);font-size:13px;line-height:1.6;color:var(--black)}
+.ipreview[hidden]{display:none}
+
+/* ---------- footer ---------- */
+.kfoot{border-top:1px solid var(--border);padding:clamp(56px,8vh,88px) 0 clamp(34px,4vh,44px)}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,.8fr);
+  gap:clamp(32px,5vw,72px);align-items:start}
+.fname{font-family:var(--serif);font-size:clamp(24px,2.4vw,34px);letter-spacing:-.008em;line-height:1.16}
+.froles{margin-top:12px;font-family:var(--sans);font-size:13.5px;line-height:1.6;color:var(--grey);max-width:32ch}
+.fcol .smallcap{display:block;margin-bottom:16px;color:var(--grey)}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol li{font-family:var(--sans);font-size:14px;line-height:1.6;color:var(--dim)}
+.fcol li a{border-bottom:1px solid rgba(17,17,17,.25);padding-bottom:2px;transition:border-color .3s}
+.fcol li a:hover{border-bottom-color:var(--black)}
+.fnote{margin-top:clamp(48px,7vh,80px);padding-top:clamp(24px,3vh,30px);
+  border-top:1px solid var(--border);font-family:var(--sans);
+  font-size:12px;line-height:1.7;color:var(--grey);max-width:70ch}
+
+/* ---------- reveals / util ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--black);outline-offset:3px}
+.method a:focus-visible,.method button:focus-visible,.pcard.lead a:focus-visible{outline-color:#fff}
+.phx{display:flex;align-items:center;justify-content:center;background:#e4e4e4;color:#8a8a8a;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.hero .ph.phx{position:absolute;inset:0}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:var(--grey);font-size:14px}
+.jrail{display:none}
+@media(min-width:901px){
+  html:not(.no-motion) .journey .stage{position:relative;min-height:46vh}
+  html:not(.no-motion) .journey .shead{margin-bottom:40px}
+  html:not(.no-motion) .journey .stage .day{position:absolute;inset:0;border:0!important;opacity:0;will-change:transform,opacity}
+  html:not(.no-motion) .jrail{display:flex;align-items:center;gap:18px;margin-top:44px}
+  html:not(.no-motion) .jrail .bar{position:relative;flex:1;height:1px;background:var(--border)}
+  html:not(.no-motion) .jrail .fill{position:absolute;inset:0;background:var(--black);transform-origin:left;transform:scaleX(0)}
+  html:not(.no-motion) .jrail .cnt{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--grey);min-width:96px;text-align:right}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  .pathgrid{grid-template-columns:1fr 1fr}
+  .pcard.lead{grid-column:1/-1;border-radius:2px}
+  .pcard:nth-child(2){border-left:0}
+}
+@media (max-width:1080px){
+  .rlay{grid-template-columns:1fr;gap:clamp(48px,7vh,70px)}
+  .reserve .d97{max-width:none}
+  .fgrid{grid-template-columns:1fr 1fr;gap:44px 40px}
+  .fid{grid-column:1/-1}
+  .access .cards{grid-template-columns:1fr}
+  .acard{border-left:0;border-top:1px solid var(--border);min-height:0}
+  .access .cards{border-top:0}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .pit{border-left:0;border-top:1px solid var(--border)}
+  .pgrid{border-top:0}
+  .method .lay{grid-template-columns:1fr;gap:40px}
+}
+@media (max-width:960px){
+  .shead.rail{grid-template-columns:1fr;gap:20px}
+  .rlab{flex-direction:row;align-items:baseline;gap:14px;padding-top:0}
+  .shead.rail h2,.shead.lft h2{max-width:none}
+  .access.withph .wlay{grid-template-columns:1fr}
+  .access.withph .cards{grid-template-columns:1fr}
+  .access.withph .wph{max-height:460px}
+  .band{min-height:clamp(380px,58vh,560px)}
+  .lgrid,.lgrid.wide{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .wrap{padding:0 22px}
+  .glogo{top:18px;left:20px;font-size:15px;max-width:calc(100vw - 236px);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .ncta{top:16px;right:70px;height:40px;font-size:12px;padding:0 18px}
+  .gmenu{top:16px;right:16px;width:40px;height:40px}
+  .gpanel{top:68px;right:16px}
+  .progress{display:none}
+  .hero .hsub{margin-left:0;max-width:none}
+  .hero .hnote{margin-left:0}
+  .hacts{margin-left:0}
+  .journey .day{grid-template-columns:1fr;gap:18px}
+  .pgrid{grid-template-columns:1fr}
+  .voices .v{padding:48px 0}
+}
+@media (max-width:760px){.pathgrid{grid-template-columns:1fr}.pcard{border-left:0;border-top:1px solid var(--border)}.pathgrid{border-top:0}.pcard.lead{border-top:0}}
+@media (max-width:640px){
+  .glogo{font-size:13px;top:21px}
+  .ncta{font-size:11px;padding:0 14px;letter-spacing:0}
+  .ifields{grid-template-columns:1fr}
+  /* 16px o mas evita el zoom automatico de iOS al enfocar un campo */
+  .iform select,.iform textarea,.rform input{font-size:17px}
+  .iform select{min-height:44px}
+  .iform textarea{min-height:76px}
+  .rform button{width:100%;text-align:center;padding:19px 24px}
+  .hcta{padding:16px 28px}
+  .pcard .pgo .mcta{display:block;text-align:center}
+  .fgrid{grid-template-columns:1fr;gap:38px}
+}
+</style>
+<noscript><style>.wr{opacity:1!important}.ipath[hidden]{display:block!important}.iselect::after{display:none}</style></noscript></head>
+<body>
+<div class="glogo" id="glogo">Leon A. Kappelman, <em>Ph.D.</em></div>
+<a class="ncta" id="ncta" href="#inquiry">Discuss a matter</a>
+<button class="gmenu" id="gmenu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<nav class="gpanel" id="nitems" aria-label="Site"><a href="#top">Leon</a><a href="#perspective">Perspective</a><a href="#work">Work</a><a href="#for-counsel">For Counsel</a><a href="#writing">Writing</a></nav>
+<div class="progress" aria-hidden="true"><div class="track"><div class="fill" id="pfill"></div></div></div>
+<main id="site"><section class="hero" id="top"><div class="ph"><img src="/kappelman/assets/hero-leon.jpg" alt="Leon A. Kappelman, Ph.D."></div><div class="inr" data-r2=""><h1 class="hname wr">Leon A.<br><span class="it">Kappelman,</span> Ph.D.</h1><p class="hsub wr">Researcher, Educator, Advisor and Expert Witness</p><p class="hnote wr">Working across complex information systems, organizations and software disputes.</p><div class="hacts wr"><a class="hcta" href="#inquiry">Discuss a matter</a><a class="hcta alt" href="#work">Explore Leon’s work</a></div></div></section><section class="mission" id="intro"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">01</span><span class="smallcap">Leon A. Kappelman, Ph.D.</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">Understanding why complex systems <span class="it">succeed, fail and become disputed.</span></p><div class="mbody wr"><p>For more than three decades, Leon Kappelman has worked at the intersection of technology, organizations and human decision-making—helping counsel, institutions and leaders make complex information-systems problems understandable.</p></div></div></section><section class="proof" id="proof"><div class="wrap"><div class="pgrid" data-cards=""><div class="pit wr"><span class="pix">01</span><div class="pn">Three decades</div><p>Across information systems, software, technology management and organizational decision-making.</p></div><div class="pit wr"><span class="pix">02</span><div class="pn">150+ articles, six books</div><p>A substantial body of research and writing across information-systems management and software practice.</p></div><div class="pit wr"><span class="pix">03</span><div class="pn">Testimony before Congress</div><p>Public contribution on technology legislation, cybersecurity and information-systems management.</p></div><div class="pit wr"><span class="pix">04</span><div class="pn">Global experience</div><p>Work with law firms, corporations, government entities and international institutions.</p></div></div></div></section><section class="mission" id="perspective"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">03</span><span class="smallcap">A point of view built over decades</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">Technology problems are rarely <span class="it">only technical.</span></p><div class="mbody wr"><p>When complex systems fail, the cause is rarely a single defect or decision. It is more often found in the interaction of architecture, requirements, project methods, management, contracts, communication, incentives, organizational conditions and people.</p><p>Leon approaches complex systems holistically—examining the technical, organizational, managerial and human conditions that shape outcomes.</p><p>His work brings these dimensions together—so difficult questions can be examined rigorously, explained clearly and acted on responsibly.</p></div><div class="who wr smallcap">The system is only part of the story. The decisions, structures and people around it matter just as much.</div></div></section><section class="access" id="work"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">04</span><span class="smallcap wr">Three expressions of his authority</span></div><h2 class="d80 wr">One body of knowledge. Applied across different kinds of consequential work.</h2></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">01</div><h3>Systems and organizations</h3><div class="for">Understanding how software, information systems, technology leadership and organizational conditions shape performance.</div><ul><li>Software design and development</li><li>Information-systems management</li><li>Enterprise architecture</li><li>IT governance and strategic planning</li><li>Technology performance and risk</li><li>Organizational change · Continuity and resilience</li></ul></div><div class="acard wr"><div class="lv">02</div><h3>Disputes and evidence</h3><div class="for">Helping counsel examine and explain the technical, managerial and organizational dimensions of complex software and technology disputes.</div><ul><li>Failed and troubled software projects</li><li>Software implementation disputes</li><li>Copyright, patent and trade-secret matters</li><li>Software defects and product liability</li><li>Source-code, architecture and functionality analysis</li><li>Cybersecurity · Expert reports, depositions and testimony</li></ul><a class="go" href="#for-counsel">For counsel</a></div><div class="acard wr"><div class="lv">03</div><h3>Research, leadership and advisory</h3><div class="for">Translating decades of research, teaching and institutional leadership into clearer decisions about technology, organizations and the future of information systems.</div><ul><li>Research and writing</li><li>Technology leadership</li><li>Institutional and corporate advisory</li><li>Public policy · Speaking and workshops</li><li>IT workforce and management trends</li><li>Education and mentorship</li></ul><a class="go" href="#writing">Writing</a></div></div></div></section><section class="journey" id="body-of-work"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">05</span><span class="smallcap wr">A body of work</span></div><h2 class="d80 wr">A career spent making complex technology <span class="it">understandable.</span></h2></div><div class="stage" id="jstage"><div class="day" data-r1=""><div class="dnum">i<span>Researcher and educator</span></div><div><h3>Researcher and educator</h3><p>A 30-year academic career devoted to educating future information-technology leaders and advancing the information-systems discipline. Primary investigator of the longest-running study of IT leadership and management practices in the United States.</p><div class="tags"><span>Information systems</span><span>Teaching</span><span>Longitudinal research</span></div></div></div><div class="day" data-r1=""><div class="dnum">ii<span>Institutional leader</span></div><div><h3>Institutional leader</h3><p>Former department chair and director of the Information Systems Research Center. Founding chair of SIM's Enterprise Architecture Working Group, connecting academic knowledge, professional practice and the changing needs of technology organizations.</p><div class="tags"><span>Department chair</span><span>Research center director</span><span>SIM working groups</span></div></div></div><div class="day" data-r1=""><div class="dnum">iii<span>Advisor</span></div><div><h3>Advisor</h3><p>Experience helping corporations, public institutions and government organizations understand and manage information, technology, systems and people.</p><div class="tags"><span>Corporations</span><span>Public institutions</span><span>Government</span></div></div></div><div class="day" data-r1=""><div class="dnum">iv<span>Expert witness</span></div><div><h3>Expert witness</h3><p>Independent research, analysis, consultation, reporting and testimony for complex software and information-systems matters.</p><div class="tags"><span>Analysis</span><span>Reports</span><span>Testimony</span></div></div></div><div class="day" data-r1=""><div class="dnum">v<span>Author and public voice</span></div><div><h3>Author and public voice</h3><p>An extensive body of writing, presentations, media commentary and public testimony—including testimony before the U.S. Congress, White House industry roundtables, and service with the United Nations and World Bank sponsored expert volunteer corps.</p><div class="tags"><span>Congressional testimony</span><span>Public policy</span><span>National media</span></div></div></div></div><div class="jrail"><div class="bar"><div class="fill" id="jfill"></div></div><div class="cnt" id="jcnt"></div></div></div></section><section class="band" id="band"><div class="bph"><img src="/kappelman/assets/band-leon.jpg" alt="Leon A. Kappelman, Ph.D."></div><div class="bin"><div class="wrap"><div class="smallcap wr" data-r1="">The person behind the analysis</div><p class="bq wr" data-r1="">Independent. Rigorous. <span class="it">Able to explain it.</span></p></div></div></section><section class="method invert" id="for-counsel"><div class="wrap"><div class="lay"><div class="ph wr" data-r1=""><img src="/kappelman/assets/counsel-leon.jpg" alt="Leon A. Kappelman, Ph.D."></div><div><div class="shead lft" data-r2=""><div class="rlab"><span class="rnum wr">06</span><span class="smallcap wr">For counsel</span></div><h2 class="d80 wr">Software disputes demand more than <span class="it">technical fluency.</span></h2></div><p class="mintro wr" data-r1="">They require the ability to examine complex evidence, understand the interaction between technology and management, identify the questions that matter and explain those findings clearly to attorneys, judges and juries. Leon provides independent research, consultation, analysis, reporting and testimony in matters involving software projects, intellectual property, system performance, cybersecurity and information-systems management. <b>His public case experience includes work for both plaintiff and defense.</b></p><div class="mrow wr" data-r1="" data-rule=""><h4>Failed and troubled software projects</h4><p>Root-cause analysis involving requirements, architecture, development practices, project management, staffing, testing, contracts and system performance.</p></div><div class="mrow wr" data-r1="" data-rule=""><h4>Software-related intellectual property</h4><p>Copyright, patent and trade-secret matters involving source code, architecture, logic, functionality, design artifacts and business processes.</p></div><div class="mrow wr" data-r1="" data-rule=""><h4>Information-systems and technology matters</h4><p>Software defects, product liability, cybersecurity, data transfer, management practices and technology operations.</p></div><div class="msvc wr" data-r1=""><div class="smallcap">Litigation-support services</div><ul><li>Consulting and case review</li><li>Discovery preparation and planning</li><li>Deposition support</li><li>Patent research</li><li>Software code analysis and testing</li><li>Markman hearing preparation and planning</li><li>Root-cause research and analysis</li><li>Expert opinion and rebuttal reports</li><li>Validity and infringement reports</li><li>Depositions and expert witness testimony</li></ul></div><p class="mctalede wr" data-r1="">Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.</p><div class="macts wr" data-r1=""><a class="mcta" href="#inquiry" data-path="counsel">Request availability &amp; conflict check</a><span class="mlink is-off" aria-disabled="true" role="link" tabindex="0" aria-describedby="cvnote-for-counsel-0" title="The final document will be connected before launch.">Download Leon’s CV</span><span class="vh" id="cvnote-for-counsel-0">The final document will be connected before launch.</span><a class="mlink" href="https://www.leonkappelman.com/kappelman-cases.htm" target="_blank" rel="noopener">Review selected matters</a><a class="mlink" href="#writing">Relevant writing</a></div><p class="mfine wr" data-r1="">Submission of this form does not establish an engagement or confidential relationship.</p></div></div></div></section><section class="exp tint" id="experience"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">07</span><span class="smallcap wr">The record</span></div><div><h2 class="d56 wr">A body of work spanning law, industry, government and global institutions.</h2><p class="elede wr">Selected from the consulting and litigation-support experience Leon lists publicly.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Law firms</span><span class="lcount">06</span></div><div class="lgrid" data-cards=""><div class="lcell wr">Jones Day</div><div class="lcell wr">Greenberg Traurig</div><div class="lcell wr">Foley &amp; Lardner</div><div class="lcell wr">Jackson Walker</div><div class="lcell wr">Kilpatrick Townsend</div><div class="lcell wr">Locke Lord</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Organizations and institutions</span><span class="lcount">08</span></div><div class="lgrid" data-cards=""><div class="lcell wr">IBM</div><div class="lcell wr">Microsoft</div><div class="lcell wr">AT&amp;T</div><div class="lcell wr">Verizon</div><div class="lcell wr">Hewlett Packard Enterprise</div><div class="lcell wr">United Nations</div><div class="lcell wr">World Bank</div><div class="lcell wr">Executive Office of the President of the United States</div></div></div></div></section><section class="voices"><div class="wrap"><div class="smallcap wr" data-r1="" style="text-align:center">Clarity and value under pressure</div><div class="grid" data-cards=""><div class="v wr"><p class="q">“You were self-sufficient, user friendly, and produced a great report.”</p></div><div class="v wr"><p class="q">“Your efforts brought real value to the mediation and helped to get the case settled.”</p></div><div class="v wr"><p class="q">“This is a tremendous amount of work product produced in a short time. Thank you for the incredible effort.”</p></div></div><div class="vattr wr smallcap" data-r1="">Client comments, published on Leon’s current website</div></div></section><section class="exp" id="press"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">08</span><span class="smallcap wr">In the press</span></div><div><h2 class="d56 wr">Work reported across national business, news and broadcast media.</h2><p class="elede wr">Selected from the media coverage Leon lists publicly.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Print and business press</span><span class="lcount">08</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">The Wall Street Journal</div><div class="lcell wr">The New York Times</div><div class="lcell wr">Forbes</div><div class="lcell wr">BusinessWeek</div><div class="lcell wr">Newsweek</div><div class="lcell wr">The Washington Post</div><div class="lcell wr">Los Angeles Times</div><div class="lcell wr">Dallas Morning News</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Broadcast</span><span class="lcount">04</span></div><div class="lgrid" data-cards=""><div class="lcell wr">CNN</div><div class="lcell wr">CNBC</div><div class="lcell wr">PBS</div><div class="lcell wr">ABC</div></div></div></div></section><section class="access withph" id="writing"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">09</span><span class="smallcap wr">Writing and Perspective</span></div><h2 class="d80 wr">Ideas shaped by decades of studying systems, organizations and the world around them.</h2></div><div class="wlay"><div class="wph wr" data-r1=""><img src="/kappelman/assets/writing-leon.jpg" alt="Leon A. Kappelman, Ph.D."></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">No. 1</div><h3>The Four Horsemen of IT Project Doom</h3><div class="for">Early warning signs behind troubled technology initiatives.</div><ul></ul><a class="go" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener">Read</a></div><div class="acard wr"><div class="lv">No. 2</div><h3>Auditing IT Projects: Early Warning Signs</h3><div class="for">A framework for recognizing material risk before failure becomes irreversible.</div><ul></ul><a class="go" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener">Read</a></div><div class="acard wr"><div class="lv">No. 3</div><h3>Enterprise Architecture: More Than You’re Thinking</h3><div class="for">A broader view of architecture as a tool for enterprise understanding and transformation.</div><ul></ul><a class="go" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener">Read</a></div><div class="acard wr"><div class="lv">No. 4</div><h3>SIM IT Trends Study</h3><div class="for">Primary investigator of the longest-running study of IT leadership and management practices in the United States.</div><ul></ul><a class="go" href="https://www.leonkappelman.com/kappelman-articles.htm" target="_blank" rel="noopener">Read</a></div></div></div></div></section><section class="paths" id="work-with-leon"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">10</span><span class="smallcap wr">Work with Leon</span></div><div><h2 class="d80 wr">Different contexts. <span class="it">One standard of clarity.</span></h2><p class="plede wr">Leon’s experience can be engaged in different ways depending on the nature of the question, dispute or institution involved.</p></div></div><div class="pathgrid" data-cards=""><div class="pcard wr lead"><div class="plab">For Counsel</div><h3>Expert witness and litigation support</h3><p class="pdesc">Independent analysis, reporting and testimony for complex software, intellectual-property and information-systems disputes.</p><ul><li>Failed or troubled software projects</li><li>Software implementation disputes</li><li>Software-related intellectual property</li><li>Source-code and systems analysis</li><li>Software defects and product liability</li><li>Cybersecurity and information-systems matters</li></ul><div class="pgo"><a class="mcta" href="#inquiry" data-path="counsel">Request availability &amp; conflict check</a></div></div><div class="pcard wr"><div class="plab">For Organizations</div><h3>Independent software and systems review</h3><p class="pdesc">Independent review of troubled software initiatives, systems performance and technology-management questions.</p><ul><li>Project and implementation review</li><li>Root-cause analysis</li><li>Requirements and contract review</li><li>Vendor and systems assessment</li><li>Technology-management practices</li><li>Pre-litigation understanding</li></ul><div class="pgo"><a class="go" href="#inquiry" data-path="organization">Discuss an independent review</a></div></div><div class="pcard wr"><div class="plab">For Institutions</div><h3>Speaking, research and public contribution</h3><p class="pdesc">Speaking, research, media and institutional inquiries related to information systems, technology leadership, organizations and software-project outcomes.</p><ul><li>Conferences and executive briefings</li><li>Research collaboration</li><li>Media and publication inquiries</li><li>Academic or institutional contribution</li><li>Technology and public-policy conversations</li></ul><div class="pgo"><a class="go" href="#inquiry" data-path="institution">Invite Leon to contribute</a></div></div></div><div class="pfn wr smallcap" data-r1="">Presented as possible engagement pathways based on Leon’s public experience, not as productized offerings.</div></div></section><section class="reserve paths-in" id="inquiry"><div class="wrap"><div class="rlay" data-r2=""><div class="rleft"><div class="mlab wr" style="justify-content:flex-start"><span class="rnum">11</span><span class="smallcap">Start a conversation</span></div><h2 class="d97 wr">Start with <span class="it">the context.</span></h2><p class="rlede wr">Select the nature of your inquiry and share enough information for an initial response.</p><div class="rdirect wr"><a class="rmail" href="mailto:Leon@Kappelman.net">Leon@Kappelman.net</a><div class="rmeta"><span>940-367-0405</span><span>Dallas, Texas</span></div></div></div><div class="rright"><form class="rform iform wr" id="iform" novalidate=""><label class="rfield iselect" for="iqtype"><span class="smallcap">What would you like to discuss?</span><select id="iqtype" name="iqtype"><option value="">Select the nature of your inquiry</option><option value="counsel">Expert witness or litigation support</option><option value="organization">Independent software or systems review</option><option value="institution">Speaking, research or media inquiry</option><option value="other">Something else</option></select></label><div class="ipath" data-path="counsel" hidden=""><div class="ifields"><label class="rfield" for="f-counsel-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-counsel-0" name="f-counsel-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-1"><span class="smallcap">Law firm<em class="req">Required</em></span><input type="text" id="f-counsel-1" name="f-counsel-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-2"><span class="smallcap">Professional title</span><input type="text" id="f-counsel-2" name="f-counsel-2" disabled=""></label><label class="rfield" for="f-counsel-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-counsel-3" name="f-counsel-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-4"><span class="smallcap">Phone</span><input type="tel" id="f-counsel-4" name="f-counsel-4" disabled=""></label><label class="rfield" for="f-counsel-5"><span class="smallcap">Jurisdiction</span><input type="text" id="f-counsel-5" name="f-counsel-5" disabled=""></label><label class="rfield full" for="f-counsel-6"><span class="smallcap">General type of matter</span><input type="text" id="f-counsel-6" name="f-counsel-6" disabled=""></label><label class="rfield full" for="f-counsel-7"><span class="smallcap">Parties involved, for conflict-check purposes<em class="req">Required</em></span><textarea id="f-counsel-7" name="f-counsel-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-counsel-8"><span class="smallcap">Relevant deadline or timing</span><input type="text" id="f-counsel-8" name="f-counsel-8" disabled=""></label><label class="rfield full" for="f-counsel-9"><span class="smallcap">Brief non-privileged summary</span><textarea id="f-counsel-9" name="f-counsel-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Request availability &amp; conflict check</button><p class="inote">Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.</p></div><div class="ipath" data-path="organization" hidden=""><div class="ifields"><label class="rfield" for="f-organization-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-organization-0" name="f-organization-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-organization-1"><span class="smallcap">Organization<em class="req">Required</em></span><input type="text" id="f-organization-1" name="f-organization-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-organization-2"><span class="smallcap">Professional title</span><input type="text" id="f-organization-2" name="f-organization-2" disabled=""></label><label class="rfield" for="f-organization-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-organization-3" name="f-organization-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-organization-4"><span class="smallcap">Phone</span><input type="tel" id="f-organization-4" name="f-organization-4" disabled=""></label><label class="rfield" for="f-organization-5"><span class="smallcap">Current project stage</span><input type="text" id="f-organization-5" name="f-organization-5" disabled=""></label><label class="rfield full" for="f-organization-6"><span class="smallcap">Desired timeframe</span><input type="text" id="f-organization-6" name="f-organization-6" disabled=""></label><label class="rfield full" for="f-organization-7"><span class="smallcap">Nature of the project or challenge<em class="req">Required</em></span><textarea id="f-organization-7" name="f-organization-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-organization-8"><span class="smallcap">Brief context</span><textarea id="f-organization-8" name="f-organization-8" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an independent review</button><p class="inote">Please share only the high-level context needed for an initial conversation.</p></div><div class="ipath" data-path="institution" hidden=""><div class="ifields"><label class="rfield" for="f-institution-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-institution-0" name="f-institution-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-institution-1"><span class="smallcap">Organization<em class="req">Required</em></span><input type="text" id="f-institution-1" name="f-institution-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-institution-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-institution-2" name="f-institution-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-institution-3"><span class="smallcap">Type of inquiry</span><input type="text" id="f-institution-3" name="f-institution-3" disabled=""></label><label class="rfield full" for="f-institution-4"><span class="smallcap">Event, publication or initiative</span><input type="text" id="f-institution-4" name="f-institution-4" disabled=""></label><label class="rfield full" for="f-institution-5"><span class="smallcap">Proposed date or timing</span><input type="text" id="f-institution-5" name="f-institution-5" disabled=""></label><label class="rfield full" for="f-institution-6"><span class="smallcap">Topic or requested contribution<em class="req">Required</em></span><textarea id="f-institution-6" name="f-institution-6" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-institution-7"><span class="smallcap">Brief context</span><textarea id="f-institution-7" name="f-institution-7" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Send an invitation</button><p class="inote">Availability, format and participation are confirmed with Leon directly.</p></div><div class="ipath" data-path="other" hidden=""><div class="ifields"><label class="rfield" for="f-other-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-other-0" name="f-other-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-other-1"><span class="smallcap">Organization</span><input type="text" id="f-other-1" name="f-other-1" disabled=""></label><label class="rfield" for="f-other-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-other-2" name="f-other-2" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-3"><span class="smallcap">Subject<em class="req">Required</em></span><input type="text" id="f-other-3" name="f-other-3" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-4"><span class="smallcap">Message<em class="req">Required</em></span><textarea id="f-other-4" name="f-other-4" rows="3" required="" aria-required="true" disabled=""></textarea></label></div><button type="submit" disabled="">Send inquiry</button></div><p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden="">This inquiry flow is illustrative and would be configured with Leon before launch.</p><p class="fine">Private concept — nothing is transmitted from this page. Write directly to Leon@Kappelman.net or call 940-367-0405.</p></form></div></div></div></section><footer class="kfoot"><div class="wrap"><div class="fgrid"><div class="fid"><div class="fname">Leon A. Kappelman, Ph.D.</div><div class="froles">Researcher, Educator, Advisor and Expert Witness</div></div><div class="fcol"><span class="smallcap">Affiliations</span><ul><li>Chief Scientist, Solutions-Organizations-Systems, Inc.</li><li>Professor Emeritus, University of North Texas</li></ul></div><div class="fcol"><span class="smallcap">Contact</span><ul><li><a href="mailto:Leon@Kappelman.net">Leon@Kappelman.net</a></li><li><a href="tel:9403670405">940-367-0405</a></li><li>Dallas, Texas</li></ul></div></div><div class="fnote">Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Leon before publication.</div></div></footer></main>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script>
+(function(){
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<i>').replace(/&lt;\/i&gt;/g,'</i>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&lt;t&gt;/g,'<span class="it">').replace(/&lt;\/t&gt;/g,'</span>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function bigimg(img,cls,attr){
+  attr=attr?' '+attr:'';
+  if(img&&img.src)return'<div class="'+cls+'"'+attr+'><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'"></div>';
+  return'<div class="'+cls+' phx"'+attr+'>'+esc((img&&img.label)||'FOTO')+'</div>'}
+
+var partials={
+band:function(s){
+  return'<section class="band" id="'+esc(s.id||'band')+'">'+
+  '<div class="bph">'+(s.img&&s.img.src?'<img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'">':'')+'</div>'+
+  '<div class="bin"><div class="wrap">'+
+  (s.label?'<div class="smallcap wr" data-r1>'+esc(s.label)+'</div>':'')+
+  '<p class="bq wr" data-r1>'+rich(s.quote)+'</p>'+
+  (s.who?'<div class="bwho wr smallcap" data-r1>'+esc(s.who)+'</div>':'')+
+  '</div></div></section>'},
+proof:function(s){
+  return'<section class="proof" id="'+esc(s.id||'proof')+'"><div class="wrap"><div class="pgrid" data-cards>'+
+  (s.items||[]).map(function(it,ix){return'<div class="pit wr"><span class="pix">'+('0'+(ix+1)).slice(-2)+'</span><div class="pn">'+rich(it.n)+'</div><p>'+rich(it.d)+'</p></div>'}).join('')+
+  '</div></div></section>'},
+exp:function(s){
+  return'<section class="exp'+(s.tint?' tint':'')+'" id="'+esc(s.id||'exp')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  (s.groups||[]).map(function(g){
+    return'<div class="ledger" data-r1>'+
+      '<div class="lhead"><span class="smallcap">'+esc(g.label)+'</span><span class="lcount">'+('0'+g.names.length).slice(-2)+'</span></div>'+
+      '<div class="lgrid'+(g.wide?' wide':'')+'" data-cards>'+
+        g.names.map(function(n){return'<div class="lcell wr">'+esc(n)+'</div>'}).join('')+
+      '</div></div>'}).join('')+
+  (s.fn?'<div class="efn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
+  '</div></section>'},
+hero:function(s){
+  return'<section class="hero" id="top">'+bigimg(s.img,'ph')+
+  '<div class="inr" data-r2>'+
+  '<h1 class="hname wr">'+rich(s.name)+'</h1>'+
+  (s.sub?'<p class="hsub wr">'+rich(s.sub)+'</p>':'')+
+  (s.note?'<p class="hnote wr">'+rich(s.note)+'</p>':'')+
+  ((s.actions||[]).length?'<div class="hacts wr">'+(s.actions||[]).map(function(a){
+    return'<a class="hcta'+(a.primary?'':' alt')+'" href="'+esc(a.h)+'"'+(a.path?' data-path="'+esc(a.path)+'"':'')+'>'+esc(a.t)+'</a>'}).join('')+'</div>':'')+
+  '</div></section>'},
+mission:function(s){
+  return'<section class="mission" id="'+esc(s.id||'mission')+'"><div class="wrap" data-r2>'+
+  '<div class="mlab wr"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+
+  '<p class="wr" style="margin-top:clamp(26px,4vh,38px)">'+rich(s.quote)+'</p>'+
+  (s.body?'<div class="mbody wr">'+(s.body||[]).map(function(b){return'<p>'+rich(b)+'</p>'}).join('')+'</div>':'')+
+  (s.who?'<div class="who wr smallcap">'+esc(s.who)+'</div>':'')+
+  (s.cta?'<p class="wr" style="text-align:center;margin-top:38px"><a class="mcta" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a></p>':'')+
+  '</div></section>'},
+journey:function(s){
+  return'<section class="journey" id="'+esc(s.id||'journey')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="stage" id="jstage">'+
+  (s.days||[]).map(function(d){return'<div class="day" data-r1>'+
+    '<div class="dnum">'+esc(d.num)+'<span>'+esc(d.cap)+'</span></div>'+
+    '<div><h3>'+rich(d.title)+'</h3><p>'+rich(d.body)+'</p>'+
+    '<div class="tags">'+(d.tags||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div></div>'+
+  '</div>'}).join('')+
+  '</div>'+
+  '<div class="jrail"><div class="bar"><div class="fill" id="jfill"></div></div><div class="cnt" id="jcnt"></div></div>'+
+  '</div></section>'},
+method:function(s){
+  return'<section class="method'+(s.invert?' invert':'')+'" id="'+esc(s.id||'method')+'"><div class="wrap"><div class="lay">'+
+  bigimg(s.img,'ph wr','data-r1')+
+  '<div><div class="shead lft" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  (s.intro?'<p class="mintro wr" data-r1>'+rich(s.intro)+'</p>':'')+
+  (s.rows||[]).map(function(r){return'<div class="mrow wr" data-r1 data-rule><h4>'+rich(r.t)+'</h4><p>'+rich(r.d)+'</p></div>'}).join('')+
+  (s.services?'<div class="msvc wr" data-r1><div class="smallcap">'+esc(s.services.label)+'</div><ul>'+(s.services.items||[]).map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul></div>':'')+
+  (s.ctaLede?'<p class="mctalede wr" data-r1>'+rich(s.ctaLede)+'</p>':'')+
+  (s.cta?'<div class="macts wr" data-r1><a class="mcta" href="'+esc(s.cta.h)+'"'+(s.cta.path?' data-path="'+esc(s.cta.path)+'"':'')+'>'+esc(s.cta.t)+'</a>'+(s.links||[]).map(function(l,li){
+    if(l.disabled){var did='cvnote-'+esc(s.id||'m')+'-'+li;
+      return'<span class="mlink is-off" aria-disabled="true" role="link" tabindex="0"'+
+        (l.desc?' aria-describedby="'+did+'" title="'+esc(l.desc)+'"':'')+'>'+esc(l.t)+'</span>'+
+        (l.desc?'<span class="vh" id="'+did+'">'+esc(l.desc)+'</span>':'')}
+    return'<a class="mlink" href="'+esc(l.h)+'"'+(l.ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.t)+'</a>'}).join('')+'</div>':'')+
+  (s.ctaNote?'<p class="mfine wr" data-r1>'+esc(s.ctaNote)+'</p>':'')+
+  '</div></div></div></section>'},
+paths:function(s){
+  return'<section class="paths" id="'+esc(s.id||'paths')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d80 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="plede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="pathgrid" data-cards>'+(s.cards||[]).map(function(c){
+    var g=c.cta||{};
+    return'<div class="pcard wr'+(c.lead?' lead':'')+'">'+
+      '<div class="plab">'+esc(c.label)+'</div>'+
+      '<h3>'+rich(c.title)+'</h3>'+
+      '<p class="pdesc">'+rich(c.desc)+'</p>'+
+      '<ul>'+(c.items||[]).map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul>'+
+      (g.t?'<div class="pgo"><a class="'+(c.lead?'mcta':'go')+'" href="'+esc(g.h)+'"'+(g.path?' data-path="'+esc(g.path)+'"':'')+'>'+esc(g.t)+'</a></div>':'')+
+    '</div>'}).join('')+'</div>'+
+  (s.fn?'<div class="pfn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
+  '</div></section>'},
+inquiry:function(s){
+  var f=s.form||{},c=s.contact||{},paths=f.paths||[];
+  function field(fl,pv,ix){
+    var id='f-'+pv+'-'+ix, req=fl.r?' required aria-required="true"':'';
+    var ctrl=fl.ta
+      ? '<textarea id="'+id+'" name="'+id+'" rows="3"'+req+'></textarea>'
+      : '<input type="'+esc(fl.ty||'text')+'" id="'+id+'" name="'+id+'"'+req+'>';
+    return'<label class="rfield'+(fl.full?' full':'')+'" for="'+id+'">'+
+      '<span class="smallcap">'+esc(fl.n)+(fl.r?'<em class="req">Required</em>':'')+'</span>'+ctrl+'</label>'}
+  return'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+
+  '<div class="rlay" data-r2>'+
+    '<div class="rleft">'+
+      '<div class="mlab wr" style="justify-content:flex-start"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+
+      '<h2 class="d97 wr">'+rich(s.title)+'</h2>'+
+      (s.lede?'<p class="rlede wr">'+rich(s.lede)+'</p>':'')+
+      '<div class="rdirect wr">'+
+        (c.email?'<a class="rmail" href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a>':'')+
+        '<div class="rmeta">'+[c.phone,c.city].filter(Boolean).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="rright">'+
+      '<form class="rform iform wr" id="iform" novalidate>'+
+        '<label class="rfield iselect" for="iqtype"><span class="smallcap">'+esc(f.selectLabel||'')+'</span>'+
+          '<select id="iqtype" name="iqtype">'+
+            '<option value="">'+esc(f.selectPlaceholder||'Select…')+'</option>'+
+            paths.map(function(p){return'<option value="'+esc(p.v)+'">'+esc(p.t)+'</option>'}).join('')+
+          '</select></label>'+
+        paths.map(function(p){
+          return'<div class="ipath" data-path="'+esc(p.v)+'" hidden>'+
+            '<div class="ifields">'+(p.fields||[]).map(function(fl,ix){return field(fl,p.v,ix)}).join('')+'</div>'+
+            '<button type="submit">'+esc(p.btn||'Send')+'</button>'+
+            (p.note?'<p class="inote">'+esc(p.note)+'</p>':'')+
+          '</div>'}).join('')+
+        '<p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden>'+esc(f.preview||'')+'</p>'+
+        (f.fine?'<p class="fine">'+esc(f.fine)+'</p>':'')+
+      '</form>'+
+    '</div>'+
+  '</div></div></section>'+
+  '<footer class="kfoot"><div class="wrap">'+
+    '<div class="fgrid">'+
+      '<div class="fid"><div class="fname">'+esc(s.name||'')+'</div>'+
+        (s.roles?'<div class="froles">'+esc(s.roles)+'</div>':'')+'</div>'+
+      '<div class="fcol"><span class="smallcap">Affiliations</span><ul>'+
+        (s.affiliations||[]).map(function(a){return'<li>'+esc(a)+'</li>'}).join('')+'</ul></div>'+
+      '<div class="fcol"><span class="smallcap">Contact</span><ul>'+
+        (c.email?'<li><a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>':'')+
+        (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
+        (c.city?'<li>'+esc(c.city)+'</li>':'')+
+      '</ul></div>'+
+    '</div>'+
+    '<div class="fnote">'+esc(s.note||'')+'</div>'+
+  '</div></footer>'},
+voices:function(s){
+  return'<section class="voices"><div class="wrap">'+
+  '<div class="smallcap wr" data-r1 style="text-align:center">'+esc(s.label)+'</div>'+
+  '<div class="grid" data-cards>'+(s.cards||[]).map(function(v){return'<div class="v wr"><p class="q">'+rich(v.q)+'</p>'+(v.who?'<div class="who smallcap">'+esc(v.who)+'</div>':'')+'</div>'}).join('')+'</div>'+
+  (s.attr?'<div class="vattr wr smallcap" data-r1>'+esc(s.attr)+'</div>':'')+
+  '</div></section>'},
+access:function(s){
+  return'<section class="access'+(s.ph?' withph':'')+'" id="'+esc(s.id||'access')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  (s.ph?'<div class="wlay"><div class="wph wr" data-r1><img src="'+esc(s.ph.src)+'" alt="'+esc(s.ph.alt||'')+'"></div>':'')+
+  '<div class="cards'+(s.c4?' c4':'')+'" data-cards>'+(s.cards||[]).map(function(c){return'<div class="acard wr">'+
+    '<div class="lv">'+esc(c.lv)+'</div><h3>'+rich(c.title)+'</h3><div class="for">'+esc(c['for'])+'</div>'+
+    '<ul>'+(c.items||[]).map(function(i){return'<li>'+rich(i)+'</li>'}).join('')+'</ul>'+
+    (c.go?'<a class="go" href="'+esc(c.go.h)+'"'+(c.go.ext?' target="_blank" rel="noopener"':'')+'>'+esc(c.go.t)+'</a>':'')+
+  '</div>'}).join('')+'</div>'+
+  '</div></section>'},
+faq:function(s){
+  return'<section class="faq" id="'+esc(s.id||'faq')+'"><div class="wrap">'+
+  '<div class="shead" data-r2 style="text-align:center"><div class="smallcap wr">'+esc(s.label)+'</div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="rows">'+(s.rows||[]).map(function(r){return'<div class="frow wr" data-r1 tabindex="0" role="button" aria-expanded="false">'+
+    '<div class="qq"><span>'+rich(r.q)+'</span><span class="tg">+</span></div>'+
+    '<div class="ans">'+rich(r.a)+'</div></div>'}).join('')+'</div>'+
+  '</div></section>'},
+};
+
+
+fetch('/kappelman-getty/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=(c.meta.title||document.title)+' \u00b7 Concept II';
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+    document.getElementById('nitems').innerHTML=(c.nav||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
+  var nc=document.getElementById('ncta');
+  if(nc&&c.navcta){nc.href=c.navcta.h;nc.textContent=c.navcta.t;nc.hidden=false}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  init();
+}).catch(function(e){
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+/* El CV todavia no existe como archivo: el enlace queda visible pero inerte,
+   y anuncia por que. Nada de navegacion rota ni de documentos inventados. */
+function wireDisabledLinks(){
+  document.querySelectorAll('.mlink.is-off').forEach(function(el){
+    el.addEventListener('click',function(e){e.preventDefault()});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')e.preventDefault()});
+  });
+}
+
+/* Consulta condicional. Es una maqueta: no envia, no promete recepcion,
+   y lo dice con todas las letras al intentar enviar. */
+function wireInquiry(){
+  var form=document.getElementById('iform');
+  if(!form)return;
+  var sel=form.querySelector('#iqtype');
+  var paths=Array.prototype.slice.call(form.querySelectorAll('.ipath'));
+  var preview=form.querySelector('#ipreview');
+  function show(v){
+    paths.forEach(function(p){
+      var on=p.getAttribute('data-path')===v;
+      p.hidden=!on;
+      /* los campos ocultos no participan en la validacion ni en el foco */
+      p.querySelectorAll('input,textarea,button').forEach(function(el){el.disabled=!on});
+    });
+    if(preview)preview.hidden=true;
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  }
+  show(sel?sel.value:'');
+  if(sel)sel.addEventListener('change',function(){show(sel.value)});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!preview)return;
+    preview.hidden=false;
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  });
+  /* los CTA de las tarjetas llegan con su ruta ya elegida */
+  document.querySelectorAll('a[data-path]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var v=a.getAttribute('data-path');
+      if(!sel)return;
+      sel.value=v;show(v);
+    });
+  });
+}
+
+function init(){
+  var gm=document.getElementById('gmenu'),gp=document.getElementById('nitems');
+  if(gm&&gp){
+    gm.addEventListener('click',function(){var open=gp.classList.toggle('open');gm.setAttribute('aria-expanded',open?'true':'false')});
+    gp.addEventListener('click',function(e){if(e.target.tagName==='A'){gp.classList.remove('open');gm.setAttribute('aria-expanded','false')}});
+  }
+  wireDisabledLinks();
+  wireInquiry();
+  document.querySelectorAll('.frow').forEach(function(f){
+    function tog(){var open=f.classList.toggle('open');f.setAttribute('aria-expanded',open?'true':'false');
+      var ans=f.querySelector('.ans');
+      if(open&&MOTION)gsap.fromTo(ans,{opacity:0,y:8},{opacity:1,y:0,duration:.3,ease:'expo.out'});}
+    f.addEventListener('click',tog);
+    f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog()}});
+  });
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
+  gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
+  wireAnchors(lenis);
+
+  /* pildora de progreso global */
+  var pfill=document.getElementById('pfill');
+  if(pfill){ScrollTrigger.create({start:0,end:'max',scrub:.4,
+    onUpdate:function(self){pfill.style.transform='scaleY('+self.progress+')'}})}
+  /* revelado de placas: del desenfoque al foco, sin pisar el filtro propio de cada foto */
+  document.querySelectorAll('.method .ph,.wph,.band .bph').forEach(function(ph){
+    ScrollTrigger.create({trigger:ph,start:'top 94%',end:'top 42%',scrub:.4,
+      onUpdate:function(self){var k=self.progress;
+        ph.style.filter=k>=1?'none':'brightness('+(1.28-.28*k)+') blur('+((1-k)*6)+'px)'}});
+  });
+
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    if(el.closest('#jstage')&&window.innerWidth>900)return; /* los days del libro los maneja R5 */
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'clamp(top 88%)',once:true}});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'clamp(top 86%)',once:true}});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';el.classList.add('ruled');el.style.borderTopColor='transparent';
+    var l=document.createElement('i');l.className='rline';
+    l.style.cssText='position:absolute;left:0;right:0;top:-1px;height:1px;background:rgba(255,255,255,.18);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:{trigger:g,start:'clamp(top 84%)',once:true}});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* R5 libro de dias pinneado (solo desktop) */
+  var stage=document.getElementById('jstage');
+  if(stage&&window.innerWidth>900){
+    var days=Array.prototype.slice.call(stage.querySelectorAll('.day'));
+    var fill=document.getElementById('jfill'),cnt=document.getElementById('jcnt');
+    var n=days.length;
+    if(n>1){
+      days.forEach(function(d,i){d.classList.remove('wr');gsap.set(d,{opacity:i===0?1:0})});
+      var words=days.map(function(d){var el=d.querySelector('.dnum');return el?el.childNodes[0].textContent:''});
+      if(cnt)cnt.textContent='Chapter '+words[0];
+      ScrollTrigger.create({trigger:'.journey',start:'top 12%',end:'+='+(n*80)+'%',pin:true,scrub:.4,
+        onUpdate:function(self){var p=self.progress;
+          var f=Math.min(n-1,Math.max(0,p*n-.5));
+          days.forEach(function(d,i){
+            var dst=Math.abs(f-i);
+            var k=Math.max(0,1-dst/.55);
+            d.style.opacity=k;
+            d.style.transform='translateY('+((i-f)*-18)+'px)';
+            d.style.pointerEvents=k>.5?'auto':'none';
+          });
+          if(fill)fill.style.transform='scaleX('+p+')';
+          if(cnt)cnt.textContent='Chapter '+words[Math.round(f)];
+        }});
+    }
+  }
+}
+/* La barra crece a dos filas en movil: el desplazamiento se mide, no se adivina. */
+function navOffset(){return 60}
+function syncScrollMargin(){
+  document.documentElement.style.setProperty('--navh',navOffset()+'px');
+}
+function wireAnchors(lenis){
+  syncScrollMargin();
+  addEventListener('resize',syncScrollMargin);
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t,{offset:-navOffset()});else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+})();
+</script>
+</body>
+</html>
