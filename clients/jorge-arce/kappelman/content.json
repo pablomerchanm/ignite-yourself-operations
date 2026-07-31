@@ -282,7 +282,7 @@
     },
     {
       "type": "exp",
-      "label": "Selected experience",
+      "label": "The record",
       "title": "A body of work spanning law, industry, government and global institutions.",
       "groups": [
         {
@@ -310,8 +310,10 @@
           ]
         }
       ],
-      "fn": "Selected from publicly listed consulting and litigation-support experience",
-      "no": "07"
+      "no": "07",
+      "id": "experience",
+      "lede": "Selected from the consulting and litigation-support experience Leon lists publicly.",
+      "tint": true
     },
     {
       "type": "voices",
@@ -336,7 +338,7 @@
       "title": "Work reported across national business, news and broadcast media.",
       "groups": [
         {
-          "label": "Press",
+          "label": "Print and business press",
           "names": [
             "The Wall Street Journal",
             "The New York Times",
@@ -346,7 +348,8 @@
             "The Washington Post",
             "Los Angeles Times",
             "Dallas Morning News"
-          ]
+          ],
+          "wide": true
         },
         {
           "label": "Broadcast",
@@ -358,8 +361,8 @@
           ]
         }
       ],
-      "fn": "Selected from media coverage listed on Leon’s current website",
-      "no": "08"
+      "no": "08",
+      "lede": "Selected from the media coverage Leon lists publicly."
     },
     {
       "type": "access",
@@ -422,7 +425,7 @@
     {
       "type": "reserve",
       "id": "contact",
-      "label": "Complex matter",
+      "label": "Contact",
       "title": "Complex matters. <t>Clearer understanding.</t>",
       "form": {
         "fields": [
@@ -431,17 +434,23 @@
           "Email",
           "The matter, briefly"
         ],
-        "btn": "Discuss a matter with Leon",
-        "fine": "Private concept — this form is illustrative. Write directly to Leon@Kappelman.net or call 940-367-0405."
+        "btn": "Send a note",
+        "fine": "Private concept — this form is illustrative and does not send. Write directly to Leon@Kappelman.net or call 940-367-0405."
       },
-      "foot": [
-        "Leon A. Kappelman, Ph.D.",
+      "no": "10",
+      "lede": "Whether the question concerns a failed software project, intellectual property, system performance or technology management, the first step is understanding what happened, why it happened and what the evidence can support.",
+      "contact": {
+        "email": "Leon@Kappelman.net",
+        "phone": "940-367-0405",
+        "city": "Dallas, Texas"
+      },
+      "name": "Leon A. Kappelman, Ph.D.",
+      "roles": "Researcher, Educator, Advisor and Expert Witness",
+      "affiliations": [
         "Chief Scientist, Solutions-Organizations-Systems, Inc.",
-        "Professor Emeritus, University of North Texas",
-        "Leon@Kappelman.net · 940-367-0405 · Dallas, Texas",
-        "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Leon before publication"
+        "Professor Emeritus, University of North Texas"
       ],
-      "no": "10"
+      "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Leon before publication."
     }
   ]
 }
