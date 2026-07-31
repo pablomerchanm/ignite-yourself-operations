@@ -151,10 +151,7 @@ section{padding:var(--sec) 0;position:relative;scroll-margin-top:88px}
 .frow.open .ans{display:block;margin-top:16px}
 
 /* ---------- reserve ---------- */
-.reserve{text-align:center;padding-bottom:110px}
-.reserve .d97{max-width:14ch;margin:22px auto 0}
-.reserve .d97 .it{color:var(--paper2)}
-.rform{max-width:480px;margin:50px auto 0;display:flex;flex-direction:column;gap:12px}
+
 .rform input,.rform textarea{background:transparent;border:1px solid rgba(237,233,229,.25);color:var(--paper);font-family:'Inter',sans-serif;font-size:14px;padding:16px;outline:none;resize:none;text-align:center}
 .rform input:focus,.rform textarea:focus{border-color:var(--paper)}
 .rform ::placeholder{color:rgba(237,233,229,.4)}
@@ -181,10 +178,7 @@ section{padding:var(--sec) 0;position:relative;scroll-margin-top:88px}
 .pit p{font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;color:var(--dim);margin-top:14px;max-width:32ch}
 
 /* ---------- exp ---------- */
-.egroup{max-width:880px;margin:56px auto 0;text-align:center}
-.enames{font-size:clamp(20px,2.2vw,30px);line-height:1.75;letter-spacing:-.01em;margin-top:14px}
-.enames i{font-style:normal;color:rgba(237,233,229,.3);padding:0 12px}
-.efn{margin-top:48px;text-align:center}
+
 
 /* ---------- mission body / method extras / voices attr ---------- */
 .mbody{max-width:62ch;margin:36px auto 0;text-align:left}
@@ -276,6 +270,87 @@ section{padding:var(--sec) 0;position:relative;scroll-margin-top:88px}
   .band{min-height:clamp(380px,58vh,560px)}
 }
 
+
+/* ═══════════ LEDGER INSTITUCIONAL — el registro verificable ═══════════ */
+.exp.tint{background:var(--black2)}
+.elede{margin-top:20px;font-family:'Inter',sans-serif;font-size:15.5px;line-height:1.7;
+  color:var(--dim);max-width:56ch}
+.ledger{margin-top:clamp(44px,6vh,66px)}
+.lhead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;
+  padding-bottom:14px;border-bottom:1px solid rgba(237,233,229,.24)}
+.lcount{font-family:'Cormorant Infant',serif;font-size:19px;color:rgba(237,233,229,.3)}
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:rgba(237,233,229,.13);border-left:1px solid rgba(237,233,229,.13);
+  border-right:1px solid rgba(237,233,229,.13);border-bottom:1px solid rgba(237,233,229,.13)}
+.lgrid.wide{grid-template-columns:repeat(2,1fr)}
+.lcell{background:var(--black);padding:26px 26px 28px;font-size:clamp(19px,1.8vw,25px);
+  font-weight:400;letter-spacing:-.015em;line-height:1.24;
+  display:flex;align-items:center;min-height:96px;transition:background .35s var(--ease-quick)}
+.exp.tint .lcell{background:var(--black2)}
+.lcell:hover{background:#1A1613}
+.efn{margin-top:clamp(40px,5vh,56px)}
+
+/* ═══════════ CIERRE EN DOS COLUMNAS ═══════════ */
+.reserve{padding-bottom:clamp(80px,10vh,120px)}
+.rlay{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(44px,6vw,96px);align-items:start}
+.reserve .d97{margin-top:clamp(20px,3vh,30px);max-width:14ch;font-size:clamp(38px,4.6vw,70px);line-height:1.02}
+.reserve .d97 .it{color:var(--paper2)}
+.rlede{margin-top:clamp(24px,3.4vh,32px);font-family:'Inter',sans-serif;font-size:16.5px;
+  line-height:1.7;color:var(--dim);max-width:48ch}
+.rdirect{margin-top:clamp(36px,5vh,52px);padding-top:clamp(26px,3.4vh,32px);
+  border-top:1px solid rgba(237,233,229,.16)}
+.rmail{font-size:clamp(21px,2.1vw,29px);letter-spacing:-.015em;
+  border-bottom:1px solid rgba(237,233,229,.3);padding-bottom:4px;transition:border-color .3s}
+.rmail:hover{border-bottom-color:var(--paper)}
+.rmeta{margin-top:18px;display:flex;gap:24px;flex-wrap:wrap;
+  font-family:'Inter',sans-serif;font-size:13.5px;letter-spacing:.04em;color:var(--meta)}
+
+/* formulario en rejilla, con etiquetas visibles */
+.rform{display:flex;flex-direction:column;gap:0;
+  border-top:1px solid rgba(237,233,229,.16)}
+.rfield{display:block;padding:20px 0 18px;border-bottom:1px solid rgba(237,233,229,.16)}
+.rfield .smallcap{display:block;margin-bottom:9px;color:var(--meta)}
+.rform input{width:100%;background:transparent;border:0;color:var(--paper);
+  font-family:'Cormorant Garamond',serif;font-size:20px;padding:0;outline:none;text-align:left}
+.rform input:focus{color:#fff}
+.rfield:focus-within{border-bottom-color:var(--paper)}
+.rform button{margin-top:30px;align-self:flex-start;background:var(--paper);color:var(--black);
+  border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;
+  letter-spacing:.02em;padding:17px 34px;transition:background var(--dur-hover) var(--ease-quick)}
+.rform button:hover{background:#fff}
+.rform .fine{margin-top:26px;padding-top:22px;border-top:1px solid rgba(237,233,229,.12);font-family:'Inter',sans-serif;font-size:12.5px;line-height:1.65;
+  color:var(--meta);max-width:46ch}
+
+/* ═══════════ FOOTER REAL ═══════════ */
+.kfoot{border-top:1px solid rgba(237,233,229,.16);padding:clamp(56px,8vh,88px) 0 clamp(34px,4vh,44px)}
+.fgrid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,.8fr);
+  gap:clamp(32px,5vw,72px);align-items:start}
+.fname{font-size:clamp(24px,2.4vw,34px);letter-spacing:-.02em;line-height:1.15}
+.froles{margin-top:12px;font-family:'Inter',sans-serif;font-size:13.5px;line-height:1.6;
+  color:var(--meta);max-width:32ch}
+.fcol .smallcap{display:block;margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol li{font-family:'Inter',sans-serif;font-size:14.5px;line-height:1.6;color:var(--dim)}
+.fcol li a{border-bottom:1px solid rgba(237,233,229,.22);padding-bottom:2px;transition:color .3s,border-color .3s}
+.fcol li a:hover{color:var(--paper);border-bottom-color:var(--paper)}
+.fnote{margin-top:clamp(48px,7vh,80px);padding-top:clamp(24px,3vh,30px);width:100%;
+  border-top:1px solid rgba(237,233,229,.12);font-family:'Inter',sans-serif;
+  font-size:12px;line-height:1.7;color:var(--meta);max-width:70ch}
+
+@media (max-width:1080px){
+  .rlay{grid-template-columns:1fr;gap:clamp(48px,7vh,70px)}
+  .reserve .d97{max-width:none}
+  .lgrid{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr 1fr;gap:44px 40px}
+  .fid{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .lgrid,.lgrid.wide{grid-template-columns:1fr}
+  .lcell{min-height:0;padding:20px 22px;font-size:18px}
+  .fgrid{grid-template-columns:1fr;gap:38px}
+}
+
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
   .voices .grid{grid-template-columns:1fr}
@@ -357,10 +432,16 @@ proof:function(s){
   (s.items||[]).map(function(it,ix){return'<div class="pit wr"><span class="pix">'+('0'+(ix+1)).slice(-2)+'</span><div class="pn">'+rich(it.n)+'</div><p>'+rich(it.d)+'</p></div>'}).join('')+
   '</div></div></section>'},
 exp:function(s){
-  return'<section class="exp" id="'+esc(s.id||'exp')+'"><div class="wrap" data-r2>'+
-  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d56 wr">'+rich(s.title)+'</h2></div>'+
-  (s.groups||[]).map(function(g){return'<div class="egroup wr"><div class="smallcap">'+esc(g.label)+'</div><p class="enames">'+g.names.map(function(n){return esc(n)}).join('<i>·</i>')+'</p></div>'}).join('')+
-  (s.fn?'<div class="efn wr smallcap">'+esc(s.fn)+'</div>':'')+
+  return'<section class="exp'+(s.tint?' tint':'')+'" id="'+esc(s.id||'exp')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  (s.groups||[]).map(function(g){
+    return'<div class="ledger" data-r1>'+
+      '<div class="lhead"><span class="smallcap">'+esc(g.label)+'</span><span class="lcount">'+('0'+g.names.length).slice(-2)+'</span></div>'+
+      '<div class="lgrid'+(g.wide?' wide':'')+'" data-cards>'+
+        g.names.map(function(n){return'<div class="lcell wr">'+esc(n)+'</div>'}).join('')+
+      '</div></div>'}).join('')+
+  (s.fn?'<div class="efn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
   '</div></section>'},
 hero:function(s){
   return'<section class="hero" id="top">'+bigimg(s.img,'ph')+
@@ -424,18 +505,42 @@ faq:function(s){
     '<div class="ans">'+rich(r.a)+'</div></div>'}).join('')+'</div>'+
   '</div></section>'},
 reserve:function(s){
-  var f=s.form||{};
-  return'<section class="reserve" id="'+esc(s.id||'reserve')+'"><div class="wrap" data-r2>'+
-  '<div class="smallcap wr">'+esc(s.label)+'</div>'+
-  '<h2 class="d97 wr">'+rich(s.title)+'</h2>'+
-  '<form class="rform wr" onsubmit="return false">'+
-    (f.fields||[]).map(function(n){return'<input type="text" placeholder="'+esc(n)+'" aria-label="'+esc(n)+'">'}).join('')+
-    '<button type="submit">'+esc(f.btn||'Reserve')+'</button>'+
-    (f.fine?'<p class="fine">'+esc(f.fine)+'</p>':'')+
-  '</form>'+
-  '<div class="fbot">'+(s.foot||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
-  '</div></section>'}
+  var f=s.form||{},c=s.contact||{};
+  return'<section class="reserve" id="'+esc(s.id||'reserve')+'"><div class="wrap">'+
+  '<div class="rlay" data-r2>'+
+    '<div class="rleft">'+
+      '<div class="mlab wr" style="justify-content:flex-start"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+
+      '<h2 class="d97 wr">'+rich(s.title)+'</h2>'+
+      (s.lede?'<p class="rlede wr">'+rich(s.lede)+'</p>':'')+
+      '<div class="rdirect wr">'+
+        (c.email?'<a class="rmail" href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a>':'')+
+        '<div class="rmeta">'+[c.phone,c.city].filter(Boolean).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="rright">'+
+      '<form class="rform wr" onsubmit="return false">'+
+        (f.fields||[]).map(function(n){return'<label class="rfield"><span class="smallcap">'+esc(n)+'</span><input type="text" aria-label="'+esc(n)+'"></label>'}).join('')+
+        '<button type="submit">'+esc(f.btn||'Send')+'</button>'+
+        (f.fine?'<p class="fine">'+esc(f.fine)+'</p>':'')+
+      '</form>'+
+    '</div>'+
+  '</div></div></section>'+
+  '<footer class="kfoot"><div class="wrap">'+
+    '<div class="fgrid">'+
+      '<div class="fid"><div class="fname">'+esc(s.name||'')+'</div>'+
+        (s.roles?'<div class="froles">'+esc(s.roles)+'</div>':'')+'</div>'+
+      '<div class="fcol"><span class="smallcap">Affiliations</span><ul>'+
+        (s.affiliations||[]).map(function(a){return'<li>'+esc(a)+'</li>'}).join('')+'</ul></div>'+
+      '<div class="fcol"><span class="smallcap">Contact</span><ul>'+
+        (c.email?'<li><a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>':'')+
+        (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
+        (c.city?'<li>'+esc(c.city)+'</li>':'')+
+      '</ul></div>'+
+    '</div>'+
+    '<div class="fnote">'+esc(s.note||'')+'</div>'+
+  '</div></footer>'}
 };
+
 
 fetch('/kappelman/content.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
   if(c.meta){document.title=c.meta.title||document.title;
