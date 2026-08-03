@@ -1,17 +1,24 @@
 # Los buscadores no deben indexar el preview privado del cliente.
 User-agent: Googlebot
 Disallow: /kappelman
+Disallow: /mark-cooke
+Disallow: /cooke
 
 User-agent: Bingbot
 Disallow: /kappelman
+Disallow: /mark-cooke
+Disallow: /cooke
 
 User-agent: DuckDuckBot
 Disallow: /kappelman
+Disallow: /mark-cooke
+Disallow: /cooke
 
 User-agent: *
 Allow: /$
 Allow: /igy-mobius
 Allow: /kappelman
+Allow: /mark-cooke
 # Trabajo interno y conceptos de plantilla: accesibles por enlace directo,
 # fuera del indice para que no compitan con la landing ni se confundan
 # con sitios oficiales de terceros.

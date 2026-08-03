@@ -9,6 +9,10 @@
       "destination": "https://igniteyourself.co/$1",
       "permanent": true
     },
+    { "source": "/cooke", "destination": "/mark-cooke", "permanent": false },
+    { "source": "/Cooke", "destination": "/mark-cooke", "permanent": false },
+    { "source": "/mark", "destination": "/mark-cooke", "permanent": false },
+    { "source": "/Mark-Cooke", "destination": "/mark-cooke", "permanent": false },
     { "source": "/kappelman2", "destination": "/kappelman-getty", "permanent": false },
     { "source": "/kappelman3", "destination": "/kappelman-gareis", "permanent": false },
     { "source": "/Kappelman", "destination": "/kappelman", "permanent": false },

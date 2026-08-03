@@ -1,0 +1,499 @@
+{
+  "meta": {
+    "title": "Mark Cooke, BEng (Hons) — Commercial Aviation Advisor & Expert Witness",
+    "description": "A private authority-platform concept exploring the aviation advisory and expert-witness work of Mark Cooke, BEng (Hons)."
+  },
+  "logo": "MARK COOKE, BENG (HONS)",
+  "nav": [
+    { "t": "Mark", "h": "#top" },
+    { "t": "Perspective", "h": "#perspective" },
+    { "t": "Work", "h": "#work" },
+    { "t": "For Counsel", "h": "#for-counsel" },
+    { "t": "Advisory", "h": "#advisory" }
+  ],
+  "navcta": { "t": "Discuss a matter", "h": "#inquiry" },
+  "sections": [
+    {
+      "type": "hero",
+      "img": {
+        "src": "/mark-cooke/assets/hero-mark.jpg",
+        "alt": "Mark Cooke, BEng (Hons)",
+        "label": "RETRATO — DIRECCIÓN DE ARTE PROVISIONAL"
+      },
+      "name": "Mark<br><t>Cooke,</t> BEng (Hons)",
+      "sub": "Commercial Aviation Advisor and Expert Witness",
+      "note": "Independent judgment where aircraft condition, contracts and asset value meet.",
+      "actions": [
+        { "t": "Discuss a matter", "h": "#inquiry", "primary": true },
+        { "t": "Explore Mark’s work", "h": "#work" }
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "intro",
+      "label": "Mark Cooke, BEng (Hons)",
+      "quote": "Understanding what happened to the aircraft—<t>and what the records can support.</t>",
+      "body": [
+        "For forty-five years Mark Cooke has worked across military and commercial aviation—as an airframe technician, a CAA and FAA licensed engineer, an overhaul manager and a founder—helping owners, lessors and counsel understand aircraft condition, maintenance history and the contractual obligations attached to them."
+      ],
+      "no": "01"
+    },
+    {
+      "type": "proof",
+      "items": [
+        {
+          "n": "Forty-five years",
+          "d": "Across military and commercial aircraft environments—from Royal Air Force airframe technician to founder and operator."
+        },
+        {
+          "n": "UK CAA and FAA licensed",
+          "d": "EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 · FAA Airframe & Powerplant Licence No. 257104."
+        },
+        {
+          "n": "BEng (Hons) · CUBS certified",
+          "d": "Aircraft Engineering, Kingston University London. Cardiff University Bond Solon Expert Witness Civil Certificate, 2024."
+        },
+        {
+          "n": "Claimant and defendant",
+          "d": "Instructed by both sides, and available as single joint expert. Written reports for aviation matters worldwide."
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "mission",
+      "id": "perspective",
+      "label": "A point of view built over four decades",
+      "quote": "In aviation, the asset is <t>never just the aircraft.</t>",
+      "body": [
+        "Its condition, maintenance history, technical records, contractual obligations, commercial position and transition requirements have to be understood together. A discrepancy in a maintenance record is rarely only a technical question—it moves value, triggers obligations and decides disputes.",
+        "Mark’s work sits at that intersection: establishing what the aircraft and its records actually show, then explaining what that means for the contract and for the asset.",
+        "That perspective comes from having done the work. He has held the licence, signed the release to service, run the hangar and built the organisation."
+      ],
+      "who": "The aircraft, the records and the agreement are one story. They have to be read together.",
+      "no": "03"
+    },
+    {
+      "type": "access",
+      "id": "work",
+      "label": "Three expressions of his authority",
+      "title": "One body of experience. Applied wherever aircraft condition carries consequence.",
+      "cards": [
+        {
+          "lv": "01",
+          "title": "Aircraft and engine condition",
+          "for": "Establishing the airworthiness, maintenance and records position of an aircraft or engine—and what the documentation genuinely supports.",
+          "items": [
+            "Continuing airworthiness management",
+            "Maintenance programmes and compliance",
+            "Technical records and traceability",
+            "Engine condition and management",
+            "Maintenance error and human factors",
+            "Pre-purchase and mid-term audits"
+          ]
+        },
+        {
+          "lv": "02",
+          "title": "Leases, transitions and asset value",
+          "for": "Understanding how contractual obligations, redelivery conditions and technical reality meet during a transition—and where value is gained or lost.",
+          "items": [
+            "Lease agreements and return conditions",
+            "Maintenance reserve funds",
+            "Pre-redelivery and redelivery management",
+            "Repossession and aircraft recovery",
+            "MRO and commercial agreements",
+            "Boeing and Airbus new deliveries"
+          ],
+          "go": { "t": "Advisory", "h": "#advisory" }
+        },
+        {
+          "lv": "03",
+          "title": "Disputes and evidence",
+          "for": "Independent analysis and written reports for counsel—explaining technical and commercial aviation evidence to lawyers, arbitrators and tribunals.",
+          "items": [
+            "Aircraft condition and redelivery disputes",
+            "Records, traceability and compliance evidence",
+            "Maintenance error and workmanship",
+            "Contractual and MRO disputes",
+            "Expert reports and expert determination",
+            "Arbitration and early case assessment"
+          ],
+          "go": { "t": "For counsel", "h": "#for-counsel" }
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "journey",
+      "id": "career",
+      "label": "The arc of the work",
+      "title": "Forty-five years spent on the aircraft, <t>then on the business around it.</t>",
+      "days": [
+        {
+          "num": "i",
+          "cap": "Royal Air Force · 1980–1990",
+          "title": "Airframe technician",
+          "body": "Ten years across several Royal Air Force bases in the United Kingdom, on the maintenance and rectification of both fixed and rotary wing aircraft. The decade that set the standard for everything after it.",
+          "tags": ["Fixed and rotary wing", "Maintenance and rectification", "Military standards"]
+        },
+        {
+          "num": "ii",
+          "cap": "FLS Aerospace · 1990–2002",
+          "title": "Licensed engineer to overhaul manager",
+          "body": "Twelve years at one of the largest maintenance facilities in Europe at the time, capable of four widebody aircraft. Inspector Supervisor and UK CAA and FAA licensed engineer, then project manager, then aircraft overhaul manager—responsible for day-to-day operations and roughly two hundred staff.",
+          "tags": ["CAA and FAA licensed", "Base and line maintenance", "Two hundred staff"]
+        },
+        {
+          "num": "iii",
+          "cap": "29 Aero Limited · 2002–2018",
+          "title": "Founder and technical director",
+          "body": "Built a consultancy serving major commercial aircraft leasing and asset-management companies, with a team of twenty consultants working transitions, pre-redelivery, pre-purchase and mid-lease audits at locations worldwide.",
+          "tags": ["Twenty consultants", "Worldwide audits", "Lessor clients"]
+        },
+        {
+          "num": "iv",
+          "cap": "Aircamo Group · 2018–2025",
+          "title": "Founder, partner and EVP",
+          "body": "Co-founded and built an airworthiness and engine maintenance group from scratch—a CAMO office at Manchester International Airport and an engine maintenance facility at Hawarden Airport, approved by several airworthiness authorities. The group was sold to Sabena Engineering Brussels in 2023.",
+          "tags": ["CAMO and Part 145", "Built from scratch", "Sold to Sabena Engineering"]
+        },
+        {
+          "num": "v",
+          "cap": "Independent practice · 2025–",
+          "title": "Advisor and expert witness",
+          "body": "Advisory services to the commercial aviation industry through 29 Aero Limited, together with expert witness and expert advice services following Cardiff University Bond Solon certification in 2024.",
+          "tags": ["Expert reports", "Advisory", "Worldwide"]
+        }
+      ],
+      "no": "05"
+    },
+    {
+      "type": "band",
+      "id": "band",
+      "label": "The person behind the analysis",
+      "quote": "Forty-five years on the aircraft. <t>Not only in the file.</t>",
+      "img": {
+        "src": "/mark-cooke/assets/band-mark.jpg",
+        "alt": "Mark Cooke, BEng (Hons)",
+        "label": "BANDA — DIRECCIÓN DE ARTE PROVISIONAL"
+      }
+    },
+    {
+      "type": "method",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "Aviation disputes turn on what the records <t>can actually support.</t>",
+      "img": {
+        "src": "/mark-cooke/assets/counsel-mark.jpg",
+        "alt": "Mark Cooke, BEng (Hons)",
+        "label": "RETRATO — PROVISIONAL"
+      },
+      "intro": "Aircraft condition, maintenance history and contractual obligation rarely align neatly by the time a matter reaches counsel. Establishing what happened requires someone who has read these records as the person accountable for them—and who can explain the findings plainly to lawyers, arbitrators and tribunals. Mark provides independent analysis, written reports and expert advice in commercial aviation matters. <b>He is instructed by claimants and defendants alike, and is available as a single joint expert.</b>",
+      "rows": [
+        {
+          "t": "Aircraft condition and redelivery disputes",
+          "d": "Return conditions, pre-redelivery and redelivery findings, maintenance reserves, transition scope and the technical basis of claims between lessors, operators and purchasers."
+        },
+        {
+          "t": "Maintenance, records and traceability",
+          "d": "Continuing airworthiness compliance, technical record integrity, back-to-birth traceability, maintenance programme adherence, workmanship and maintenance error."
+        },
+        {
+          "t": "Contracts, MRO and commercial agreements",
+          "d": "Lease agreements, maintenance agreements and work scopes, MRO and OEM obligations, repossession and recovery, and the commercial consequences of technical findings."
+        }
+      ],
+      "services": {
+        "label": "Expert services",
+        "items": [
+          "Early case assessment and case review",
+          "Independent technical investigation",
+          "Technical records analysis",
+          "Aircraft and engine inspection",
+          "Written expert reports",
+          "Expert determination and arbitration support",
+          "Single joint expert appointments",
+          "Expert advice to legal teams"
+        ]
+      },
+      "ctaLede": "Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.",
+      "cta": { "t": "Request availability & conflict check", "h": "#inquiry", "path": "counsel" },
+      "ctaNote": "Submission of this form does not establish an engagement or confidential relationship.",
+      "links": [
+        { "t": "Download Mark’s CV", "disabled": true, "desc": "The final document will be connected before launch." },
+        { "t": "29 Aero Limited", "h": "https://www.29aero.com/", "ext": true },
+        { "t": "Qualifications", "h": "#qualifications" }
+      ],
+      "no": "06",
+      "invert": true
+    },
+    {
+      "type": "exp",
+      "id": "record",
+      "label": "Selected experience",
+      "title": "Programmes, fleets and organisations built or brought through transition.",
+      "lede": "Selected from the experience Mark records in his published curriculum vitae.",
+      "groups": [
+        {
+          "label": "Fleet and transition programmes",
+          "wide": true,
+          "names": [
+            "Redelivery of seven Airbus A320 from a UAE operator, onward to a European MRO for cabin reconfiguration and delivery to the next lessee — 2017–2018",
+            "Technical management of the sale of the British Airways DC-10 fleet, positioned at Manchester Airport — 1998–2000",
+            "Steering group for the analysis and implementation of the STREAM technical records platform into a major lessor’s system",
+            "Aircamo Group built from scratch: CAMO office at Manchester International and engine maintenance facility at Hawarden Airport"
+          ]
+        },
+        {
+          "label": "Airworthiness authorities",
+          "names": [
+            "UK Civil Aviation Authority",
+            "European Union Aviation Safety Agency",
+            "US Federal Aviation Administration",
+            "Civil Aviation Authority of the Cayman Islands",
+            "Civil Aviation Authority of Bermuda"
+          ]
+        }
+      ],
+      "fn": "Authority approvals held by the organisations Mark founded and led. Client and matter names are not published.",
+      "no": "07",
+      "tint": true
+    },
+    {
+      "type": "exp",
+      "id": "qualifications",
+      "label": "Qualifications and currency",
+      "title": "Licences, certification and technical currency—verifiable in full.",
+      "lede": "The record an instructing solicitor checks first, set out in one place.",
+      "groups": [
+        {
+          "label": "Licences and qualifications",
+          "wide": true,
+          "names": [
+            "BEng (Hons) Aircraft Maintenance & Engineering — Kingston University London",
+            "EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 — UK Civil Aviation Authority",
+            "FAA Airframe & Powerplant Licence No. 257104 — Federal Aviation Administration",
+            "UK CAA Form 4 Holder at Aircamo Aviation inception",
+            "PRINCE2 Project Management Certified",
+            "Human Factors & Error Management"
+          ]
+        },
+        {
+          "label": "Expert witness training — Cardiff University Bond Solon, 2024",
+          "wide": true,
+          "names": [
+            "Expert Witness Civil Certificate",
+            "Report Writing",
+            "Courtroom Skills",
+            "Cross Examination Skills",
+            "Civil Law & Procedure",
+            "Experts Discussion"
+          ]
+        },
+        {
+          "label": "Current technical currency",
+          "names": [
+            "Maintenance Human Factors Phase 1 & 2",
+            "Fuel Tank & Fuel System Safety Awareness (SFAR88)",
+            "Electrical Wiring Interconnection Systems (EWIS Groups 1 & 2)",
+            "Part 145 Safety Management Systems",
+            "Extended Range Twin Engine Operations (ETOPS)"
+          ]
+        },
+        {
+          "label": "Memberships",
+          "names": [
+            "International Society of Transport Aircraft Trading (ISTAT)",
+            "The Air League",
+            "Aviation Club UK"
+          ]
+        }
+      ],
+      "no": "08"
+    },
+    {
+      "type": "access",
+      "id": "advisory",
+      "c4": false,
+      "label": "For owners, lessors and investors",
+      "title": "Independent advisory where the aircraft is the asset and its condition is the question.",
+      "cards": [
+        {
+          "lv": "No. 1",
+          "title": "Transitions and redeliveries",
+          "for": "Managing or reviewing pre-redelivery, redelivery and onward delivery—scope, findings, negotiation with the MRO and control of cost and timing.",
+          "items": []
+        },
+        {
+          "lv": "No. 2",
+          "title": "Technical due diligence",
+          "for": "Pre-purchase inspections, mid-term audits and letter-of-intent inspections that establish the real condition and records position before value is committed.",
+          "items": []
+        },
+        {
+          "lv": "No. 3",
+          "title": "Repossession and recovery",
+          "for": "Aircraft repossession and recovery handled with a clear, calm and professional approach through difficult transitions.",
+          "items": []
+        },
+        {
+          "lv": "No. 4",
+          "title": "Records and asset management",
+          "for": "Aircraft and engine documentation, engine management, maintenance representation and continuing airworthiness oversight.",
+          "items": []
+        }
+      ],
+      "no": "09",
+      "ph": {
+        "src": "/mark-cooke/assets/advisory-mark.jpg",
+        "alt": "Mark Cooke, BEng (Hons)",
+        "label": "FOTO — PROVISIONAL"
+      }
+    },
+    {
+      "type": "paths",
+      "id": "work-with-mark",
+      "label": "Work with Mark",
+      "title": "Different questions. <t>One standard of evidence.</t>",
+      "lede": "Mark’s experience can be engaged in different ways depending on the nature of the matter, the asset or the organisation involved.",
+      "no": "10",
+      "cards": [
+        {
+          "lead": true,
+          "label": "For Counsel",
+          "title": "Expert witness and expert advice",
+          "desc": "Independent analysis, written reports and expert advice for commercial aviation disputes—engineering, records, condition and contract.",
+          "items": [
+            "Aircraft condition and redelivery disputes",
+            "Technical records and traceability",
+            "Maintenance error and workmanship",
+            "Lease, MRO and commercial agreements",
+            "Expert determination and arbitration",
+            "Early case assessment"
+          ],
+          "cta": { "t": "Request availability & conflict check", "h": "#inquiry", "path": "counsel" }
+        },
+        {
+          "label": "For Owners, Lessors and Investors",
+          "title": "Independent aviation advisory",
+          "desc": "Technical due diligence, transition management and asset-condition judgment before value is committed or a position is taken.",
+          "items": [
+            "Pre-purchase and mid-term audits",
+            "Transition and redelivery management",
+            "Repossession and recovery",
+            "Maintenance reserves and return conditions",
+            "Engine management",
+            "Records and documentation review"
+          ],
+          "cta": { "t": "Discuss an advisory matter", "h": "#inquiry", "path": "advisory" }
+        },
+        {
+          "label": "For Maintenance and Airworthiness Organisations",
+          "title": "Continuing airworthiness support",
+          "desc": "Support for CAMO and Part 145 organisations on compliance, maintenance programmes and technical management, from someone who has built and held the approvals.",
+          "items": [
+            "Continuing airworthiness management",
+            "Maintenance programme review",
+            "Compliance and audit preparation",
+            "Human factors and error management",
+            "Maintenance representation",
+            "Technical records systems"
+          ],
+          "cta": { "t": "Discuss an airworthiness matter", "h": "#inquiry", "path": "airworthiness" }
+        }
+      ],
+      "fn": "Presented as possible engagement pathways based on Mark’s published experience, not as productized offerings."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the context.</t>",
+      "no": "11",
+      "lede": "Select the nature of your inquiry and share enough information for an initial response.",
+      "contact": {
+        "email": "mcooke@29aero.com",
+        "phone": "+44 (0) 7811 329962",
+        "city": "London, United Kingdom"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your inquiry",
+        "preview": "This inquiry flow is illustrative and would be configured with Mark before launch.",
+        "fine": "Private concept — nothing is transmitted from this page. Write directly to mcooke@29aero.com or call +44 (0) 7811 329962.",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "Expert witness or litigation support",
+            "btn": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Law firm", "r": true },
+              { "n": "Professional title" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Phone", "ty": "tel" },
+              { "n": "Jurisdiction or forum" },
+              { "n": "General type of matter", "full": true },
+              { "n": "Parties involved, for conflict-check purposes", "ta": true, "full": true, "r": true },
+              { "n": "Relevant deadline or timing", "full": true },
+              { "n": "Brief non-privileged summary", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "advisory",
+            "t": "Aviation advisory, transition or asset question",
+            "btn": "Discuss an advisory matter",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation", "r": true },
+              { "n": "Professional title" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Phone", "ty": "tel" },
+              { "n": "Aircraft or engine type" },
+              { "n": "Location", "full": true },
+              { "n": "Nature of the matter", "ta": true, "full": true, "r": true },
+              { "n": "Desired timeframe", "full": true },
+              { "n": "Brief context", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "airworthiness",
+            "t": "Airworthiness or maintenance organisation support",
+            "btn": "Discuss an airworthiness matter",
+            "note": "Approach, scope and availability are confirmed with Mark directly.",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation", "r": true },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Approval type or authority" },
+              { "n": "Nature of the requirement", "ta": true, "full": true, "r": true },
+              { "n": "Timing", "full": true },
+              { "n": "Brief context", "ta": true, "full": true }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send inquiry",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Subject", "full": true, "r": true },
+              { "n": "Message", "ta": true, "full": true, "r": true }
+            ]
+          }
+        ]
+      },
+      "name": "Mark Cooke, BEng (Hons)",
+      "roles": "Commercial Aviation Advisor and Expert Witness",
+      "affiliations": [
+        "29 Aero Limited, London — Company No. 10439981",
+        "124 City Road, London EC1V 2NX, United Kingdom"
+      ],
+      "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction."
+    }
+  ]
+}
