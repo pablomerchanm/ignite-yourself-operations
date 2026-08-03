@@ -426,6 +426,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .hcta{padding:16px 28px}
   .pcard .pgo .mcta{display:block;text-align:center}
 }
+
+/* ---------- hero: calibrado a la fotografia de Mark ---------- */
+.hero .ph img{object-position:68% 28%;filter:grayscale(1) brightness(.9) contrast(1.05)}
+.hero .ph::after{background:
+  linear-gradient(90deg,rgba(10,11,13,.72) 0%,rgba(10,11,13,.34) 38%,rgba(10,11,13,.04) 66%),
+  linear-gradient(180deg,rgba(10,11,13,.34) 0%,rgba(10,11,13,0) 32%,rgba(10,11,13,.56) 100%)}
+@media (max-width:860px){
+  .hero .ph img{object-position:70% 22%}
+  /* en vertical el nombre cae sobre su rostro: la rampa inferior lo despega */
+  .hero .ph::after{background:
+    linear-gradient(180deg,rgba(10,11,13,.34) 0%,rgba(10,11,13,0) 20%,
+      rgba(10,11,13,.46) 46%,rgba(10,11,13,.86) 100%)}
+}
 </style>
 <noscript><style>.wr{opacity:1!important}.ipath[hidden]{display:block!important}.iselect::after{display:none}</style></noscript></head>
 <body>
