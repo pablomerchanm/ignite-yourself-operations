@@ -323,6 +323,15 @@
       "tint": true
     },
     {
+      "type": "strip",
+      "id": "strip-1",
+      "img": {
+        "src": "/mark-cooke/assets/strip-dusk.jpg",
+        "alt": ""
+      },
+      "pos": "62% 54%"
+    },
+    {
       "type": "exp",
       "id": "qualifications",
       "label": "Qualifications and currency",
@@ -412,7 +421,13 @@
         "alt": "Official AerData Approved Partner · ISTAT Member",
         "note": "Official AerData Approved Partner. Member of the International Society of Transport Aircraft Trading."
       },
-      "no": "09"
+      "no": "09",
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/mark-c-7b2685b/"
+        }
+      ]
     },
     {
       "type": "access",
@@ -451,6 +466,15 @@
         "src": "/mark-cooke/assets/advisory-mark.jpg",
         "alt": "Mark Cooke, BEng (Hons)"
       }
+    },
+    {
+      "type": "strip",
+      "id": "strip-2",
+      "img": {
+        "src": "/mark-cooke/assets/strip-approach.jpg",
+        "alt": ""
+      },
+      "pos": "50% 46%"
     },
     {
       "type": "paths",
@@ -718,7 +742,13 @@
         "src": "/mark-cooke/assets/29aero-logo.png",
         "alt": "29 Aero Limited",
         "href": "https://www.29aero.com/"
-      }
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/mark-c-7b2685b/"
+        }
+      ]
     }
   ]
 }
