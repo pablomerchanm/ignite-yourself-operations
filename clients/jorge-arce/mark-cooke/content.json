@@ -227,9 +227,10 @@
       "label": "The person behind the analysis",
       "quote": "Forty-five years on the aircraft. <t>Not only in the file.</t>",
       "img": {
-        "src": "/mark-cooke/assets/band-mark.jpg",
-        "alt": "Mark Cooke, BEng (Hons)"
-      }
+        "src": "/mark-cooke/assets/band-apron.jpg",
+        "alt": "Mark Cooke, BEng (Hons), beside an aircraft on the apron"
+      },
+      "light": true
     },
     {
       "type": "method",
