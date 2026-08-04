@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "title": "The Story — Mark Cooke, BEng (Hons)",
+    "description": "The perspective and forty-five-year arc behind Mark Cooke's aviation practice."
+  },
+  "logo": "MARK COOKE, BENG (HONS)",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/mark-cooke-lite"
+    },
+    {
+      "t": "The Story",
+      "h": "/mark-cooke-lite/story"
+    },
+    {
+      "t": "The Practice",
+      "h": "/mark-cooke-lite/practice"
+    },
+    {
+      "t": "The Record",
+      "h": "/mark-cooke/record"
+    },
+    {
+      "t": "Contact",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "mission",
+      "id": "perspective",
+      "label": "A point of view built over four decades",
+      "quote": "In aviation, the asset is <t>never just the aircraft.</t>",
+      "body": [
+        "Its condition, maintenance history, technical records, contractual obligations, commercial position and transition requirements have to be understood together. A discrepancy in a maintenance record is rarely only a technical question—it moves value, triggers obligations and decides disputes.",
+        "Mark’s work sits at that intersection: establishing what the aircraft and its records actually show, then explaining what that means for the contract and for the asset.",
+        "That perspective comes from having done the work. He has held the licence, signed the release to service, run the hangar and built the organisation."
+      ],
+      "no": "01"
+    },
+    {
+      "type": "access",
+      "id": "work",
+      "label": "Three expressions of his authority",
+      "title": "One body of experience. Applied wherever aircraft condition carries consequence.",
+      "cards": [
+        {
+          "lv": "01",
+          "title": "Aircraft and engine condition",
+          "for": "Establishing the airworthiness, maintenance and records position of an aircraft or engine—and what the documentation genuinely supports.",
+          "items": [
+            "Continuing airworthiness management",
+            "Maintenance programmes and compliance",
+            "Technical records and traceability",
+            "Engine condition and management",
+            "Maintenance error and human factors",
+            "Pre-purchase and mid-term audits"
+          ]
+        },
+        {
+          "lv": "02",
+          "title": "Leases, transitions and asset value",
+          "for": "Understanding how contractual obligations, redelivery conditions and technical reality meet during a transition—and where value is gained or lost.",
+          "items": [
+            "Lease agreements and return conditions",
+            "Maintenance reserve funds",
+            "Pre-redelivery and redelivery management",
+            "Repossession and aircraft recovery",
+            "MRO and commercial agreements",
+            "Boeing and Airbus new deliveries"
+          ],
+          "go": {
+            "t": "Advisory",
+            "h": "/mark-cooke-lite/practice#advisory"
+          }
+        },
+        {
+          "lv": "03",
+          "title": "Disputes and evidence",
+          "for": "Independent analysis and written reports for counsel—explaining technical and commercial aviation evidence to lawyers, arbitrators and tribunals.",
+          "items": [
+            "Aircraft condition and redelivery disputes",
+            "Records, traceability and compliance evidence",
+            "Maintenance error and workmanship",
+            "Contractual and MRO disputes",
+            "Expert reports and expert determination",
+            "Arbitration and early case assessment"
+          ],
+          "go": {
+            "t": "For counsel",
+            "h": "/mark-cooke-lite/practice#for-counsel"
+          }
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "journey",
+      "id": "career",
+      "label": "The arc of the work",
+      "title": "Forty-five years spent on the aircraft, <t>then on the business around it.</t>",
+      "days": [
+        {
+          "num": "i",
+          "cap": "Royal Air Force · 1980–1990",
+          "title": "Airframe technician",
+          "body": "Ten years across several Royal Air Force bases in the United Kingdom, on the maintenance and rectification of both fixed and rotary wing aircraft. The decade that set the standard for everything after it.",
+          "tags": [
+            "Fixed and rotary wing",
+            "Maintenance and rectification",
+            "Military standards"
+          ]
+        },
+        {
+          "num": "ii",
+          "cap": "FLS Aerospace · 1990–2002",
+          "title": "Licensed engineer to overhaul manager",
+          "body": "Twelve years at one of the largest maintenance facilities in Europe at the time, capable of four widebody aircraft. Inspector Supervisor and UK CAA and FAA licensed engineer, then project manager, then aircraft overhaul manager—responsible for day-to-day operations and roughly two hundred staff.",
+          "tags": [
+            "CAA and FAA licensed",
+            "Base and line maintenance",
+            "Two hundred staff"
+          ]
+        },
+        {
+          "num": "iii",
+          "cap": "29 Aero Limited · 2002–2018",
+          "title": "Founder and technical director",
+          "body": "Built a consultancy serving major commercial aircraft leasing and asset-management companies, with a team of twenty consultants working transitions, pre-redelivery, pre-purchase and mid-lease audits at locations worldwide.",
+          "tags": [
+            "Twenty consultants",
+            "Worldwide audits",
+            "Lessor clients"
+          ]
+        },
+        {
+          "num": "iv",
+          "cap": "Aircamo Group · 2018–2025",
+          "title": "Founder, partner and EVP",
+          "body": "Co-founded and built an airworthiness and engine maintenance group from scratch—a CAMO office at Manchester International Airport and an engine maintenance facility at Hawarden Airport, approved by several airworthiness authorities. The group was sold to Sabena Engineering Brussels in 2023.",
+          "tags": [
+            "CAMO and Part 145",
+            "Built from scratch",
+            "Sold to Sabena Engineering"
+          ]
+        },
+        {
+          "num": "v",
+          "cap": "Independent practice · 2025–",
+          "title": "Advisor and expert witness",
+          "body": "Advisory services to the commercial aviation industry through 29 Aero Limited, together with expert witness and expert advice services following Cardiff University Bond Solon certification in 2024.",
+          "tags": [
+            "Expert reports",
+            "Advisory",
+            "Worldwide"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "band",
+      "id": "band",
+      "label": "The person behind the analysis",
+      "quote": "Forty-five years on the aircraft. <t>Not only in the file.</t>",
+      "img": {
+        "src": "/mark-cooke/assets/band-dusk.jpg",
+        "alt": "The nose of a widebody aircraft on the apron at dusk"
+      },
+      "light": true
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the context.</t>",
+      "no": "04",
+      "lede": "Select the nature of your inquiry and share enough information for an initial response.",
+      "contact": {
+        "email": "mcooke@29aero.com",
+        "phone": "+44 (0) 7811 329962",
+        "city": "London, United Kingdom"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your inquiry",
+        "preview": "This inquiry flow is illustrative and would be configured with Mark before launch.",
+        "fine": "Private concept — nothing is transmitted from this page. Write directly to mcooke@29aero.com or call +44 (0) 7811 329962.",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "Expert witness or litigation support",
+            "btn": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Law firm",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction or forum"
+              },
+              {
+                "n": "General type of matter",
+                "full": true
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "advisory",
+            "t": "Aviation advisory, transition or asset question",
+            "btn": "Discuss an advisory matter",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Aircraft or engine type"
+              },
+              {
+                "n": "Location",
+                "full": true
+              },
+              {
+                "n": "Nature of the matter",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Desired timeframe",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "insurers",
+            "t": "Insurance, claims or subrogation matter",
+            "btn": "Discuss a claims matter",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Aircraft or engine type"
+              },
+              {
+                "n": "Policy or claim reference",
+                "full": true
+              },
+              {
+                "n": "Nature of the claim",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "airworthiness",
+            "t": "Airworthiness or maintenance organisation support",
+            "btn": "Discuss an airworthiness matter",
+            "note": "Approach, scope and availability are confirmed with Mark directly.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Approval type or authority"
+              },
+              {
+                "n": "Nature of the requirement",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send inquiry",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ]
+          }
+        ]
+      },
+      "name": "Mark Cooke",
+      "cred": "BEng (Hons)",
+      "roles": "Commercial Aviation Advisor <t>and Expert Witness</t>",
+      "fkick": "Independent judgment where aircraft condition, contracts and asset value meet.",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "mark": {
+        "src": "/mark-cooke/assets/29aero-logo.png",
+        "alt": "29 Aero Limited",
+        "href": "https://www.29aero.com/",
+        "label": "The practice",
+        "lede": "Advisory, aircraft technical management and expert services are delivered through 29 Aero Limited — the company Mark founded in 2002 and leads today.",
+        "link": "Visit 29aero.com",
+        "meta": [
+          "Official AerData Approved Partner",
+          "Member, International Society of Transport Aircraft Trading"
+        ]
+      },
+      "affiliations": [
+        "29 Aero Limited, London — Company No. 10439981",
+        "124 City Road, London EC1V 2NX, United Kingdom"
+      ],
+      "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction, and the 29 Aero mark shown here is a redrawn placeholder pending the original artwork.",
+      "fine": "Private preview · Not indexed",
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/mark-c-7b2685b/"
+        }
+      ],
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/mark-cooke/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Mark Cooke, BEng (Hons), and shared with him privately. It was assembled from publicly available information and imagery, used provisionally and for demonstration purposes only, and every element remains subject to his review and approval. The page is not indexed, not published and not distributed."
+      }
+    }
+  ]
+}

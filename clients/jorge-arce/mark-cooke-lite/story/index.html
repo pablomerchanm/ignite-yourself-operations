@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Story — Mark Cooke, BEng (Hons)</title>
+<meta name="description" content="A private authority-platform concept exploring the aviation advisory and expert-witness work of Mark Cooke, BEng (Hons).">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/mark-cooke/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/mark-cooke/assets/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mark Cooke, BEng (Hons)">
+<meta property="og:title" content="The Story — Mark Cooke, BEng (Hons)">
+<meta property="og:description" content="A private authority-platform concept exploring the aviation advisory and expert-witness work of Mark Cooke, BEng (Hons).">
+<meta property="og:url" content="https://igniteyourself.co/mark-cooke-lite/story">
+<meta property="og:image" content="https://igniteyourself.co/mark-cooke/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F3F1;
+  --ink:#14161A;
+  --gray:#6A6E74;
+  --line:rgba(20,22,26,.13);
+  --green:#C1272D;
+  --red:#C1272D;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-quick:cubic-bezier(.33,1,.68,1);
+  --dur-hover:.2s;
+  --sec:clamp(104px,15vh,184px);
+  --phh:36vh;   /* alto de la foto del hero en vertical */
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:clip}
+html.no-motion{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Instrument Sans',sans-serif;font-weight:400;
+  font-size:13.5px;line-height:1.65;letter-spacing:-.01em;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ink);color:var(--bg)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 34px}
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- type ---------- */
+/* Cuatro escalones reales de display. El salto entre uno y otro es lo que
+   quita la sensacion de pagina plana: nada aterriza al mismo peso. */
+.d97{font-weight:500;letter-spacing:-.045em;line-height:.96;font-size:clamp(42px,6.2vw,94px)}
+.d80{font-weight:500;letter-spacing:-.042em;line-height:.99;font-size:clamp(34px,4.9vw,72px)}
+.d56{font-weight:500;letter-spacing:-.035em;line-height:1.04;font-size:clamp(26px,3.4vw,46px)}
+.it{font-weight:400}
+.smallcap{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+.rnum{font-size:clamp(15px,1.4vw,19px);font-weight:500;letter-spacing:.08em;color:rgba(14,14,14,.35)}
+
+/* ---------- preloader ---------- */
+#pre{position:fixed;inset:0;background:var(--bg);z-index:100;display:flex;align-items:flex-end;
+  justify-content:flex-start;padding:34px;transition:opacity .4s var(--ease-quick),visibility .4s}
+#pre.done{opacity:0;visibility:hidden}
+#pre .cnt{font-size:clamp(60px,8vw,110px);font-weight:400;letter-spacing:-.05em;line-height:1}
+html.no-motion #pre{display:none}
+
+/* ---------- chrome ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;
+  align-items:center;gap:16px;padding:24px 34px;mix-blend-mode:difference;color:#fff;pointer-events:none}
+.topbar .u11{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.topbar .ncta{pointer-events:auto;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:2px;
+  transition:border-color var(--dur-hover)}
+.topbar .ncta:hover{border-bottom-color:#fff}
+.menuchip{
+  position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:60;
+  background:var(--ink);color:#fff;border:0;font-family:inherit;font-size:12px;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;padding:16px 44px;cursor:pointer;
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover) var(--ease-quick)}
+.menuchip:hover{transform:translateX(-50%) translateY(-2px);background:#2c2c2c}
+.menuchip:active{transform:translateX(-50%) scale(.97)}
+.menupanel{
+  position:fixed;left:50%;bottom:80px;transform:translateX(-50%) translateY(14px);z-index:59;
+  background:var(--ink);color:#fff;padding:26px 44px;display:flex;flex-direction:column;gap:12px;text-align:center;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease-quick),transform .35s var(--ease-quick)}
+.menupanel.open{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.menupanel a{font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.8;transition:opacity var(--dur-hover)}
+.menupanel a:hover{opacity:1}
+
+/* ---------- hero: foto + nombre grande, fiel al original ---------- */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:flex-start;
+  justify-content:flex-end;text-align:left;overflow:hidden;padding:0 0 clamp(64px,10vh,120px);color:#fff}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:72% 24%;
+  filter:grayscale(1) brightness(.78) contrast(1.06)}
+.hero .ph::after{content:'';position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(10,10,10,.6) 0%,rgba(10,10,10,.26) 42%,rgba(10,10,10,.05) 70%),
+  linear-gradient(180deg,rgba(10,10,10,.3) 0%,rgba(10,10,10,0) 35%,rgba(10,10,10,.52) 100%)}
+.hero .inr{position:relative;z-index:2;padding:0 clamp(20px,5vw,80px);max-width:1500px;width:100%}
+
+/* Jerarquia del hero, de mayor a menor peso:
+   nombre (display) > subtitulo (rol) > nota (promesa) > credencial y kicker (dato).
+   La credencial baja de rango a proposito: es un sello, no un titulo. */
+.hero .hkick{display:flex;align-items:center;gap:11px;
+  font-size:clamp(10px,.78vw,11.5px);font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(255,255,255,.62);margin-bottom:clamp(20px,3.2vh,34px)}
+.hero .hkick::before{content:'';flex:0 0 auto;width:clamp(28px,4vw,58px);height:1px;background:var(--red)}
+.hero .hname{font-weight:500;letter-spacing:-.05em;line-height:.9;
+  font-size:clamp(52px,11.2vw,164px);white-space:nowrap}
+.hero .hname .it{font-weight:400}
+.hero .hcred{display:flex;align-items:center;gap:clamp(12px,1.4vw,20px);
+  margin-top:clamp(14px,2vh,22px);font-size:clamp(11px,.86vw,13px);font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.66)}
+.hero .hcred::after{content:'';flex:1 1 auto;max-width:clamp(60px,14vw,220px);height:1px;
+  background:rgba(255,255,255,.28)}
+.hero .hsub{margin-top:clamp(26px,3.8vh,44px);max-width:28ch;
+  font-size:clamp(21px,2.5vw,38px);font-weight:500;letter-spacing:-.035em;line-height:1.08;
+  color:#fff;text-transform:none}
+.hero .hsub .it{font-weight:400;color:rgba(255,255,255,.66)}
+.hero .hnote{margin-top:clamp(18px,2.4vh,26px);display:flex;align-items:flex-start;gap:11px;
+  font-size:clamp(14px,1.12vw,17px);line-height:1.62;color:rgba(255,255,255,.76);max-width:44ch}
+.hero .hnote::before{content:'';flex:0 0 auto;width:7px;height:7px;background:var(--red);
+  margin-top:.55em}
+.hacts{display:flex;align-items:center;gap:clamp(16px,2vw,30px);flex-wrap:wrap;
+  margin-top:clamp(32px,4.4vh,52px)}
+.hcta{background:#fff;color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.24em;
+  text-transform:uppercase;padding:16px 38px;
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.hcta:hover{transform:translateY(-2px)}
+.hcta.alt{background:transparent;color:#fff;padding:16px 0 6px;letter-spacing:.2em;
+  border-bottom:1px solid rgba(255,255,255,.5)}
+.hcta.alt:hover{transform:none;border-bottom-color:#fff}
+
+/* ---------- secciones ---------- */
+section{padding:var(--sec) 0;position:relative;scroll-margin-top:var(--navh,72px)}
+.shead{text-align:center;margin-bottom:64px}
+.shead .smallcap{display:block;margin-bottom:0}
+.shead.rail,.shead.lft{text-align:left;display:grid;grid-template-columns:clamp(140px,15vw,220px) minmax(0,1fr);
+  gap:clamp(24px,4vw,60px);align-items:start;margin-bottom:clamp(44px,6.5vh,72px)}
+.shead.lft{grid-template-columns:1fr;gap:20px}
+.rlab{display:flex;flex-direction:column;gap:10px;padding-top:.4em}
+.shead.lft .rlab{flex-direction:row;align-items:baseline;gap:14px;padding-top:0}
+.rlab .smallcap{display:block}
+.shead.rail h2,.shead.lft h2{max-width:22ch}
+.mlab{display:flex;align-items:baseline;justify-content:flex-start;gap:14px}
+.mlab .rnum{font-size:clamp(13px,1.2vw,16px)}
+
+/* ---------- mission: bloque suizo alineado a la izquierda ---------- */
+.mission .wrap{max-width:1360px}
+.mission .mlab{justify-content:flex-start}
+.mission .wrap>p{font-weight:500;font-size:clamp(29px,4.1vw,64px);line-height:1.08;
+  letter-spacing:-.042em;max-width:20ch;margin:0;text-align:left}
+.mission p .it{font-weight:400;color:rgba(14,14,14,.44)}
+/* El cuerpo entra desplazado a la derecha: la asimetria rompe el bloque. */
+.mbody{max-width:56ch;margin:clamp(38px,5.4vh,62px) 0 0;text-align:left;
+  margin-left:clamp(0px,14vw,240px)}
+.mbody p{font-size:clamp(14.5px,1.08vw,16.5px);line-height:1.78;color:#3c3c3c}
+.mbody p+p{margin-top:1.15em}
+.mission .who{margin-top:clamp(40px,5.6vh,64px);text-align:left;
+  font-size:clamp(14px,1.25vw,19px);font-style:italic;line-height:1.6;color:var(--ink);max-width:34ch;
+  letter-spacing:-.015em;text-transform:none;
+  padding-top:clamp(24px,3.2vh,34px);border-top:1px solid var(--line);
+  margin-left:clamp(0px,14vw,240px)}
+.mission .who::before{content:'\201C\00a0'}
+.mcta{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;padding:16px 38px;
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.mcta:hover{transform:translateY(-2px);background:#2c2c2c}
+
+/* ---------- tono tinta: cualquier seccion puede invertirse ----------
+   El azul oscuro es el respiro de la pagina, no un adorno: parte el scroll
+   en capitulos y evita que veinte bloques claros se lean como uno solo. */
+.ink{background:var(--ink);color:#fff}
+.ink .smallcap{color:rgba(255,255,255,.5)}
+.ink .rnum{color:rgba(255,255,255,.34)}
+.ink .lhead .smallcap{color:rgba(255,255,255,.72)}
+.ink .lcount{color:rgba(255,255,255,.45)}
+.ink .lgrid{border-top-color:rgba(255,255,255,.3)}
+.ink .lcell{border-bottom-color:rgba(255,255,255,.13)}
+.ink .lcell::after{color:rgba(255,255,255,.42)}
+.ink .elede,.ink .plede{color:rgba(255,255,255,.66)}
+.ink .go{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+.ink .go:hover{border-bottom-color:#fff}
+.ink ::selection{background:#fff;color:var(--ink)}
+.ink a:focus-visible,.ink button:focus-visible{outline-color:#fff}
+/* las placas blancas sostienen los logos que vienen en negro sobre transparente */
+.plate{background:#fff;display:inline-block;padding:22px 26px}
+
+/* ---------- proof: la credencial, en tinta ---------- */
+.proof{padding-top:clamp(76px,10vh,120px);padding-bottom:clamp(76px,10vh,120px)}
+.phead{display:flex;align-items:baseline;gap:16px;margin-bottom:clamp(40px,5.4vh,64px)}
+.phead .rnum{color:rgba(255,255,255,.34)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(40px,6vw,110px);
+  border-top:1px solid rgba(255,255,255,.24)}
+.pit{position:relative;padding:clamp(26px,3.4vh,38px) 0;
+  border-bottom:1px solid rgba(255,255,255,.13)}
+.pix{position:absolute;right:0;top:clamp(28px,3.6vh,40px);
+  font-size:10.5px;letter-spacing:.14em;color:rgba(255,255,255,.34)}
+.pit .pn{font-size:clamp(20px,2.15vw,32px);font-weight:500;letter-spacing:-.035em;
+  line-height:1.06;max-width:14ch}
+.pit p{margin-top:12px;font-size:clamp(13px,1vw,14.5px);line-height:1.7;
+  color:rgba(255,255,255,.62);max-width:48ch;padding-right:clamp(0px,3vw,40px)}
+
+/* ---------- access: columnas con filete ---------- */
+.access .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px;margin-top:60px}
+.acard{padding:26px 0 34px;display:flex;flex-direction:column;min-height:340px;border-top:1px solid var(--ink)}
+.acard .lv{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
+.acard h3{font-size:clamp(18px,1.7vw,23px);font-weight:500;letter-spacing:-.03em;line-height:1.15;margin:16px 0 8px}
+.acard .for{font-size:12.5px;line-height:1.65;color:var(--gray);margin-bottom:20px}
+.acard ul{list-style:none;display:flex;flex-direction:column}
+.acard li{font-size:12.5px;line-height:1.55;color:#3c3c3c;padding:8px 0;border-top:1px solid var(--line)}
+.acard .go{margin-top:auto;padding-top:26px;font-size:11px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;align-self:flex-start;border-bottom:1px solid var(--ink);padding-bottom:3px}
+
+/* ---------- journey: expediente ---------- */
+.journey .day{display:grid;grid-template-columns:170px 1fr;gap:44px;padding:44px 0;border-top:1px solid var(--line);align-items:start}
+.journey .day:last-of-type{border-bottom:1px solid var(--line)}
+.journey .dnum{font-size:clamp(36px,4.4vw,64px);font-weight:500;letter-spacing:-.04em;line-height:.9}
+.journey .dnum span{display:block;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-top:12px;color:var(--gray)}
+.journey h3{font-size:clamp(20px,2.2vw,30px);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.journey p{font-size:13px;line-height:1.75;color:#3c3c3c;max-width:58ch;margin-top:14px}
+.journey .tags{display:flex;gap:18px;margin-top:18px;flex-wrap:wrap}
+.journey .tags span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);
+  display:flex;align-items:center;gap:7px}
+.journey .tags span::before{content:'';width:5px;height:5px;background:var(--red)}
+
+/* ---------- band ---------- */
+.band{position:relative;padding:0;min-height:clamp(400px,60vh,680px);display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.band .bph{position:absolute;inset:0}
+.band .bph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;
+  filter:grayscale(1) brightness(.62) contrast(1.08)}
+.band .bph::after{content:'';position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(10,10,10,.5) 0%,rgba(10,10,10,.1) 34%,rgba(10,10,10,.8) 100%)}
+.band .bin{position:relative;z-index:2;width:100%;padding-bottom:clamp(44px,7vh,80px)}
+.band .smallcap{color:rgba(255,255,255,.7)}
+.band .bq{margin-top:20px;font-weight:500;font-size:clamp(26px,4vw,58px);
+  letter-spacing:-.04em;line-height:1.04;max-width:20ch}
+.band .bq .it{font-weight:400;color:rgba(255,255,255,.75)}
+.band .bwho{margin-top:22px}
+
+/* ---------- method (For Counsel): bloque tinta ---------- */
+.method{background:var(--ink);color:#fff}
+.method .smallcap{color:rgba(255,255,255,.55)}
+.method .rnum{color:rgba(255,255,255,.4)}
+.method .lay{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(34px,4.6vw,70px);align-items:start}
+@media(min-width:1081px){.method .ph{position:sticky;top:clamp(90px,12vh,124px)}}
+.method .ph{overflow:hidden}
+.method .ph img{width:100%;aspect-ratio:4/5;object-fit:cover;
+  filter:grayscale(1) contrast(1.05) brightness(.92);transition:transform .7s var(--ease-out)}
+.method .ph:hover img{transform:scale(1.03)}
+.method .mintro{font-size:14px;line-height:1.75;color:rgba(255,255,255,.75);max-width:58ch;margin-bottom:30px}
+.method .mintro b{color:#fff;font-weight:500}
+.method .mrow{padding:22px 0;border-top:1px solid rgba(255,255,255,.16)}
+.method .mrow:last-of-type{border-bottom:1px solid rgba(255,255,255,.16)}
+.method .mrow h4{font-size:clamp(16px,1.6vw,21px);font-weight:500;letter-spacing:-.025em}
+.method .mrow p{font-size:12.5px;line-height:1.7;color:rgba(255,255,255,.62);margin-top:8px;max-width:54ch}
+.msvc{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.16)}
+.msvc .smallcap{margin-bottom:14px;display:block}
+.msvc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:7px 26px}
+.msvc li{font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.75);display:flex;gap:8px}
+.msvc li::before{content:'';flex:0 0 auto;width:5px;height:5px;background:var(--red);margin-top:7px}
+.mctalede{margin-top:clamp(30px,4vh,40px);padding-top:clamp(22px,2.8vh,28px);
+  border-top:1px solid rgba(255,255,255,.16);font-size:13px;line-height:1.7;
+  color:rgba(255,255,255,.68);max-width:58ch}
+.mctalede+.macts{margin-top:clamp(22px,2.8vh,28px)}
+.macts{margin-top:36px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.method .mcta{background:#fff;color:var(--ink)}
+.method .mcta:hover{background:#e9e9e9}
+.mlink{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.8);border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:3px;
+  transition:color .3s,border-color .3s}
+.mlink:hover{color:#fff;border-bottom-color:#fff}
+.mlink.is-off{color:rgba(255,255,255,.45);border-bottom-style:dashed;border-bottom-color:rgba(255,255,255,.25);cursor:default}
+.mfine{margin-top:18px;font-size:11.5px;line-height:1.65;color:rgba(255,255,255,.48);max-width:56ch}
+
+/* ---------- exp: el registro ---------- */
+.elede{margin-top:16px;font-size:13px;line-height:1.7;color:var(--gray);max-width:56ch}
+.ledger{margin-top:clamp(40px,5.5vh,60px)}
+.lhead{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-bottom:12px}
+.lhead .smallcap{color:var(--ink)}
+.lcount{font-size:10.5px;letter-spacing:.14em;color:var(--gray)}
+.lgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 90px;border-top:1px solid var(--ink);counter-reset:cell}
+.lgrid.wide{grid-template-columns:1fr 1fr}
+.lcell{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  font-size:14px;font-weight:500;letter-spacing:-.02em;line-height:1.3;
+  padding:14px 0;border-bottom:1px solid var(--line)}
+.lcell::after{counter-increment:cell;content:'(' counter(cell,decimal-leading-zero) ')';
+  font-size:10.5px;font-weight:400;letter-spacing:.1em;color:var(--gray)}
+.efn{margin-top:clamp(36px,4.5vh,50px)}
+
+/* ---------- voices: fila de citas ---------- */
+.voices .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:56px}
+.voices .v .q{font-size:13px;font-style:italic;line-height:1.7;color:var(--gray)}
+.voices .v .q::before{content:'\201C\00a0';font-style:normal}
+.voices .v .who{margin-top:14px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.voices .vattr{margin-top:44px;text-align:center}
+
+/* ---------- writing con fotografia ---------- */
+.access.withph .wlay{display:grid;grid-template-columns:minmax(0,.58fr) minmax(0,1fr);
+  gap:clamp(30px,4vw,60px);align-items:start;margin-top:clamp(36px,5.5vh,58px)}
+.access.withph .wph{overflow:hidden;position:relative}
+.access.withph .wph img{width:100%;aspect-ratio:3/4;object-fit:cover;
+  filter:grayscale(1) contrast(1.05) brightness(.94);transition:transform .7s var(--ease-out)}
+.access.withph .wph:hover img{transform:scale(1.03)}
+.access.withph .cards{margin-top:0;grid-template-columns:1fr 1fr;gap:0 40px}
+.access.withph .cards .acard{min-height:0;padding:22px 0 30px}
+.access.withph .acard h3{font-size:clamp(16px,1.5vw,20px)}
+
+/* ---------- paths: la ruta principal en tinta ---------- */
+.paths .plede{margin-top:16px;font-size:13px;line-height:1.7;color:var(--gray);max-width:56ch}
+.pathgrid{display:grid;grid-template-columns:1.28fr 1fr 1fr;gap:0 44px;margin-top:clamp(40px,5.5vh,60px)}
+.pcard{position:relative;display:flex;flex-direction:column;
+  padding:26px 0 34px;border-top:1px solid var(--ink)}
+.pcard.lead{background:var(--ink);color:#fff;border-top:0;
+  padding:clamp(30px,2.8vw,44px) clamp(24px,2.2vw,36px) clamp(32px,3vw,46px)}
+.pcard .plab{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
+.pcard.lead .plab{color:rgba(255,255,255,.65)}
+.pcard h3{margin-top:16px;font-size:clamp(18px,1.7vw,23px);font-weight:500;letter-spacing:-.03em;line-height:1.15}
+.pcard.lead h3{font-size:clamp(23px,2.3vw,33px);letter-spacing:-.035em;line-height:1.06}
+.pcard .pdesc{margin-top:12px;font-size:12.5px;line-height:1.65;color:var(--gray)}
+.pcard.lead .pdesc{font-size:13.5px;color:rgba(255,255,255,.75)}
+.pcard ul{list-style:none;margin-top:22px;display:flex;flex-direction:column}
+.pcard li{font-size:12.5px;line-height:1.55;color:#3c3c3c;padding:8px 0;border-top:1px solid var(--line)}
+.pcard.lead li{color:rgba(255,255,255,.78);border-top-color:rgba(255,255,255,.16)}
+.pcard .pgo{margin-top:auto;padding-top:clamp(26px,3.2vh,36px)}
+.pcard.lead .pgo .mcta{background:#fff;color:var(--ink)}
+.pcard.lead .pgo .mcta:hover{background:#e9e9e9}
+.pcard .pgo .go{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px}
+.pfn{margin-top:clamp(32px,4vh,46px)}
+
+/* ---------- inquiry ---------- */
+.reserve{padding-bottom:clamp(76px,9.5vh,112px)}
+.rlay{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+  gap:clamp(40px,5.5vw,90px);align-items:start}
+.rlay .mlab{justify-content:flex-start}
+.reserve .d97{margin-top:clamp(18px,2.6vh,26px);max-width:14ch;font-size:clamp(36px,4.4vw,68px);line-height:.98}
+.reserve .d97 .it{font-weight:400;color:rgba(14,14,14,.55)}
+.rlede{margin-top:clamp(22px,3vh,30px);font-size:14px;line-height:1.75;color:#3c3c3c;max-width:50ch}
+.rdirect{margin-top:clamp(32px,4.5vh,46px);padding-top:clamp(24px,3vh,30px);border-top:1px solid var(--line)}
+.rmail{font-size:clamp(17px,1.7vw,23px);font-weight:500;letter-spacing:-.025em;
+  border-bottom:1px solid rgba(14,14,14,.4);padding-bottom:3px;transition:border-color .3s}
+.rmail:hover{border-bottom-color:var(--ink)}
+.rmeta{margin-top:16px;display:flex;gap:24px;flex-wrap:wrap;
+  font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+.rform{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.rfield{display:block;padding:18px 0 16px;border-bottom:1px solid var(--line)}
+.rfield .smallcap{display:block;margin-bottom:8px;font-size:10.5px}
+.rform input{width:100%;background:transparent;border:0;color:var(--ink);
+  font-family:inherit;font-size:15px;letter-spacing:-.01em;padding:0;outline:none;text-align:left}
+.rfield:focus-within{border-bottom-color:var(--ink)}
+.rform button{margin-top:28px;align-self:flex-start;background:var(--ink);color:#fff;
+  border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:500;
+  letter-spacing:.24em;text-transform:uppercase;padding:17px 38px;
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.rform button:hover{transform:translateY(-2px);background:#2c2c2c}
+.rform .fine{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:11.5px;line-height:1.65;color:var(--gray);max-width:48ch}
+.iselect{position:relative}
+.iform select{width:100%;background:transparent;border:0;color:var(--ink);
+  font-family:inherit;font-size:15px;letter-spacing:-.01em;line-height:1.4;
+  padding:4px 26px 4px 0;min-height:36px;outline:none;appearance:none;-webkit-appearance:none;
+  cursor:pointer;border-radius:0}
+.iform select option{background:#fff;color:var(--ink);font-size:14px}
+.iselect::after{content:'';position:absolute;right:2px;bottom:24px;width:8px;height:8px;
+  border-right:1px solid var(--gray);border-bottom:1px solid var(--gray);
+  transform:rotate(45deg);pointer-events:none}
+.ipath[hidden]{display:none}
+.ifields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(18px,2.2vw,32px)}
+.rfield.full{grid-column:1/-1}
+.iform textarea{width:100%;background:transparent;border:0;color:var(--ink);
+  font-family:inherit;font-size:15px;letter-spacing:-.01em;line-height:1.5;padding:0;
+  outline:none;resize:vertical;min-height:62px}
+.req{font-style:normal;font-size:9px;letter-spacing:.16em;color:rgba(14,14,14,.4);margin-left:8px}
+.inote{margin-top:20px;font-size:11.5px;line-height:1.7;color:var(--gray);max-width:56ch}
+.ipreview{margin-top:20px;padding:14px 16px;border:1px solid rgba(14,14,14,.35);
+  font-size:12px;line-height:1.6;color:var(--ink)}
+.ipreview[hidden]{display:none}
+
+/* ---------- footer: cierre en tinta, con el mismo rango que el header ----------
+   Dos columnas de peso igual: a la izquierda quien es, a la derecha adonde va
+   el trabajo. La marca de 29 Aero no es un credito al pie: es un destino. */
+.kfoot{background:var(--ink);color:#fff;border-top:0;
+  padding:clamp(84px,12vh,150px) 0 clamp(104px,12vh,140px);text-align:left}
+.kfoot ::selection{background:#fff;color:var(--ink)}
+.kfoot a:focus-visible{outline-color:#fff}
+
+.ftop{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(48px,6vw,110px);align-items:start}
+
+.fkick{display:flex;align-items:flex-start;gap:11px;max-width:40ch;
+  font-size:clamp(13px,1.05vw,16px);line-height:1.6;color:rgba(255,255,255,.7);
+  margin-bottom:clamp(26px,3.6vh,42px)}
+.fkick::before{content:'';flex:0 0 auto;width:7px;height:7px;background:var(--red);margin-top:.55em}
+.fname{font-weight:500;letter-spacing:-.05em;line-height:.9;
+  font-size:clamp(46px,8.4vw,132px);white-space:nowrap}
+.fcred{display:flex;align-items:center;gap:clamp(12px,1.4vw,20px);margin-top:clamp(12px,1.8vh,20px);
+  font-size:clamp(10.5px,.82vw,12.5px);font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(255,255,255,.6)}
+.fcred::after{content:'';flex:1 1 auto;max-width:clamp(50px,10vw,160px);height:1px;
+  background:rgba(255,255,255,.26)}
+.froles{margin-top:clamp(22px,3vh,32px);max-width:24ch;
+  font-size:clamp(19px,2.1vw,32px);font-weight:500;letter-spacing:-.035em;line-height:1.1;
+  color:#fff;text-transform:none}
+.froles .it{font-weight:400;color:rgba(255,255,255,.6)}
+.fcta{display:inline-block;margin-top:clamp(28px,3.8vh,44px);background:#fff;color:var(--ink);
+  font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;padding:17px 40px;
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.fcta:hover{transform:translateY(-2px);background:#e9e9e9}
+
+/* bloque 29 Aero: placa blanca, texto propio y su propia llamada */
+.fpract{border-top:1px solid rgba(255,255,255,.22);padding-top:clamp(24px,3.2vh,34px)}
+.fpract>.smallcap{display:block;margin-bottom:clamp(22px,3vh,30px);color:rgba(255,255,255,.5)}
+.fmark{display:block;width:-moz-fit-content;width:fit-content;
+  transition:transform var(--dur-hover) var(--ease-quick),opacity var(--dur-hover)}
+.fmark:hover{transform:translateY(-2px);opacity:.82}
+.fmark img{width:clamp(180px,19vw,248px);height:auto}
+.fplede{margin-top:clamp(22px,3vh,30px);font-size:clamp(13.5px,1.05vw,15.5px);line-height:1.72;
+  color:rgba(255,255,255,.72);max-width:46ch}
+.fpmeta{margin-top:clamp(18px,2.4vh,24px);display:flex;flex-direction:column;gap:7px;
+  font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.5)}
+.fpmeta span{display:flex;align-items:flex-start;gap:9px}
+.fpmeta span::before{content:'';flex:0 0 auto;width:5px;height:5px;background:var(--red);margin-top:.5em}
+.fplink{display:inline-block;margin-top:clamp(22px,3vh,30px);font-size:11.5px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:4px;transition:border-color .3s}
+.fplink:hover{border-bottom-color:#fff}
+.fplink::after{content:'\00a0\2192'}
+
+/* franja de datos */
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,64px);
+  margin-top:clamp(60px,8vh,104px);padding-top:clamp(30px,4vh,42px);
+  border-top:1px solid rgba(255,255,255,.22)}
+.fcol{text-align:left}
+.fcol .smallcap{display:block;margin-bottom:16px;font-size:10.5px;color:rgba(255,255,255,.5)}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol li{font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.78)}
+.fcol li a{border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:2px;transition:border-color .3s}
+.fcol li a:hover{border-bottom-color:#fff}
+.fbase{margin-top:clamp(46px,6.4vh,80px);padding-top:clamp(22px,3vh,28px);
+  border-top:1px solid rgba(255,255,255,.16);
+  display:flex;justify-content:space-between;align-items:flex-start;gap:clamp(24px,4vw,60px)}
+.fnote{font-size:11.5px;line-height:1.7;color:rgba(255,255,255,.5);max-width:72ch;margin:0}
+.ffine{flex:0 0 auto;font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);white-space:nowrap}
+
+/* ---------- reveals / util ---------- */
+.wr{opacity:0}
+html.no-motion .wr{opacity:1}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.method a:focus-visible,.method button:focus-visible,.pcard.lead a:focus-visible,.menupanel a:focus-visible,.menuchip:focus-visible{outline-color:#fff}
+.phx{display:flex;align-items:center;justify-content:center;background:#e7e7e4;color:#8a8a86;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px}
+.hero .ph.phx{position:absolute;inset:0}
+.err{min-height:60vh;display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:14px}
+.jrail{display:none}
+@media(min-width:901px){
+  html:not(.no-motion) .journey .stage{position:relative;min-height:44vh}
+  html:not(.no-motion) .journey .shead{margin-bottom:36px}
+  html:not(.no-motion) .journey .stage .day{position:absolute;inset:0;border:0!important;opacity:0;will-change:transform,opacity}
+  html:not(.no-motion) .jrail{display:flex;align-items:center;gap:16px;margin-top:40px}
+  html:not(.no-motion) .jrail .bar{position:relative;flex:1;height:1px;background:var(--line)}
+  html:not(.no-motion) .jrail .fill{position:absolute;inset:0;background:var(--ink);transform-origin:left;transform:scaleX(0)}
+  html:not(.no-motion) .jrail .cnt{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);min-width:96px;text-align:right}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  .pathgrid{grid-template-columns:1fr 1fr}
+  .pcard.lead{grid-column:1/-1}
+}
+@media (max-width:1080px){
+  .rlay{grid-template-columns:1fr;gap:clamp(44px,6.5vh,64px)}
+  .reserve .d97{max-width:none}
+  .access .cards{grid-template-columns:1fr;gap:0}
+  .acard{min-height:0}
+  .pgrid{grid-template-columns:1fr;gap:0}
+  .method .lay{grid-template-columns:1fr;gap:36px}
+  .voices .grid{grid-template-columns:1fr;gap:32px}
+  .lgrid,.lgrid.wide{grid-template-columns:1fr;gap:0}
+}
+@media (max-width:1080px){
+  .mbody,.mission .who{margin-left:0}
+}
+@media (max-width:960px){
+  .shead.rail{grid-template-columns:1fr;gap:16px}
+  .rlab{flex-direction:row;align-items:baseline;gap:12px;padding-top:0}
+  .shead.rail h2,.shead.lft h2{max-width:none}
+  .access.withph .wlay{grid-template-columns:1fr}
+  .access.withph .cards{grid-template-columns:1fr}
+  .access.withph .wph{max-height:460px}
+  .band{min-height:clamp(360px,54vh,520px)}
+  .ftop{grid-template-columns:1fr;gap:clamp(44px,6vh,64px)}
+  .fpract{border-top-color:rgba(255,255,255,.16)}
+  .fgrid{grid-template-columns:1fr 1fr;gap:34px 40px}
+}
+@media (max-width:860px){
+  :root{--sec:clamp(78px,11vh,116px)}
+  .wrap{padding:0 18px}
+  .topbar{padding:16px 18px}
+  .topbar .u11{font-size:10px;letter-spacing:.12em}
+  .menuchip{padding:14px 36px}
+  .hero .hkick{font-size:9px;letter-spacing:.13em;gap:9px}
+  .hero .hkick::before{width:16px}
+  .hero .hsub{max-width:16ch}
+  .hero .hnote{max-width:38ch}
+  .hacts{margin-left:0}
+  .journey .day{grid-template-columns:1fr;gap:16px}
+  .pgrid{grid-template-columns:1fr}
+  .pit p{padding-right:0}
+  .pit .pn{max-width:none}
+  .fgrid{grid-template-columns:1fr;gap:30px}
+  .fbase{flex-direction:column;gap:16px}
+}
+@media (max-width:400px){
+  /* el kicker es largo: en pantallas estrechas se aprieta para no partirse */
+  .hero .hkick{font-size:8.5px;letter-spacing:.1em;gap:8px}
+  .hero .hkick::before{width:14px}
+}
+@media (max-width:380px){
+  .hero .hname{font-size:46px}
+  .fname{font-size:42px}
+}
+@media (max-width:340px){
+  /* pantallas muy estrechas (SE): la foto cede alto para que el bloque de
+     texto siga cabiendo por encima del chip de menu */
+  :root{--phh:26vh}
+  .hero .hkick{font-size:8px;letter-spacing:.06em}
+  .hero .hname{font-size:42px}
+  .fname{font-size:38px}
+}
+@media (max-width:760px){.pathgrid{grid-template-columns:1fr;gap:0}}
+@media (max-width:640px){
+  .ifields{grid-template-columns:1fr}
+  /* 16px o mas evita el zoom automatico de iOS al enfocar un campo */
+  .iform select,.iform textarea,.rform input{font-size:16px}
+  .iform select{min-height:44px}
+  .iform textarea{min-height:76px}
+  .rform button{width:100%;text-align:center;padding:18px 24px}
+  .hcta{padding:16px 28px}
+  .pcard .pgo .mcta{display:block;text-align:center}
+}
+
+/* ---------- hero: calibrado a la fotografia de Mark ---------- */
+.hero .ph img{object-position:68% 28%;filter:brightness(.94) contrast(1.03) saturate(.96)}
+.hero .ph::after{background:
+  linear-gradient(90deg,rgba(10,11,13,.72) 0%,rgba(10,11,13,.34) 38%,rgba(10,11,13,.04) 66%),
+  linear-gradient(180deg,rgba(10,11,13,.34) 0%,rgba(10,11,13,0) 32%,rgba(10,11,13,.56) 100%)}
+.method .ph img{filter:contrast(1.04) brightness(.98)}
+.access.withph .wph img{filter:contrast(1.03) brightness(.97)}
+/* la foto de advisory viene pre-recortada para que el avion SI se vea:
+   se respeta su proporcion en vez de forzar el 3:4 de la plantilla */
+.access.withph .wph img{aspect-ratio:auto}
+.band .bph img{object-position:50% 34%;filter:contrast(1.05) brightness(.82)}
+@media (max-width:860px){
+  .band .bph img{object-position:62% 34%}
+  /* La fotografia del hero es apaisada (1.78). Recortada a un movil vertical
+     solo se veia el 26% del ancho: un primer plano enorme con el texto encima
+     de su rostro. Aqui la imagen ocupa unicamente la franja superior y se
+     disuelve en la tinta; el texto vive sobre fondo limpio, no sobre su cara.
+     Como el fondo del estudio ya es casi negro, la union no se nota. */
+  .hero{background:var(--ink);justify-content:flex-start;
+    min-height:100svh;
+    padding:calc(var(--phh) + clamp(18px,2.6vh,28px)) 0 clamp(96px,12vh,124px)}
+  .hero .ph{inset:0 0 auto 0;height:var(--phh)}
+  .hero .ph img{object-position:88% 26%}
+  /* el bloque de texto tiene que caber por encima del chip de menu, que es
+     fijo: los espaciados se aprietan sin tocar los tamanos de letra */
+  .hero .hkick{margin-bottom:clamp(13px,1.9vh,19px)}
+  .hero .hcred{margin-top:clamp(10px,1.4vh,14px)}
+  .hero .hsub{margin-top:clamp(17px,2.3vh,25px);max-width:17ch}
+  .hero .hnote{margin-top:clamp(12px,1.6vh,18px);max-width:38ch}
+  .hacts{margin-top:clamp(19px,2.7vh,29px);gap:14px}
+  .hero .ph::after{background:
+    linear-gradient(180deg,rgba(20,22,26,.46) 0%,rgba(20,22,26,0) 30%,
+      rgba(20,22,26,.22) 58%,rgba(20,22,26,.86) 86%,#14161A 100%)}
+}
+
+/* ---------- practice: la empresa que fundo ---------- */
+.prlay{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+  gap:clamp(32px,4.5vw,70px);align-items:start;margin-top:clamp(40px,5.5vh,60px)}
+.prlogo{display:inline-block;padding:22px 26px;background:#fff;
+  border:1px solid var(--line)}
+.prlogo img{width:clamp(150px,15vw,190px);height:auto}
+.prrole{display:block;margin-top:22px;color:var(--ink)}
+.prdesc{margin-top:12px;font-size:13.5px;line-height:1.75;color:#3c3c3c;max-width:44ch}
+.prmeta{margin-top:20px;display:flex;flex-direction:column;gap:5px;
+  font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--gray)}
+.prlinks{margin-top:24px;display:flex;gap:clamp(18px,2.4vw,32px);flex-wrap:wrap}
+.prid .go{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.prbody .lgrid{counter-reset:cell}
+.prmarks{margin-top:clamp(40px,5vh,60px);padding-top:clamp(24px,3vh,32px);
+  border-top:1px solid var(--line);display:flex;align-items:center;gap:clamp(20px,3vw,40px);flex-wrap:wrap}
+.prmarks img{height:74px;width:auto;mix-blend-mode:multiply}
+.prnote{font-size:12.5px;line-height:1.6;color:var(--gray);max-width:38ch}
+@media (max-width:960px){
+  .prlay{grid-template-columns:1fr;gap:36px}
+  .prmarks{gap:20px}
+  .prmarks img{height:60px}
+}
+
+/* ---------- strip: respiro fotografico ---------- */
+.strip{padding:0;min-height:clamp(200px,30vh,360px);overflow:hidden;position:relative;background:var(--ink)}
+.strip .sph{position:absolute;inset:0}
+.strip .sph img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;
+  filter:contrast(1.03) saturate(.94)}
+.strip .sph::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,22,26,.1) 0%,rgba(20,22,26,0) 40%,rgba(20,22,26,.12) 100%)}
+
+/* ---------- practice sobre tinta ---------- */
+.practice.ink .prlogo{background:transparent;border-color:transparent;padding:0}
+.practice.ink .prlogo img{width:clamp(180px,19vw,240px)}
+.practice.ink .prdesc{color:rgba(255,255,255,.72)}
+.practice.ink .prrole{color:#fff}
+.practice.ink .prmeta{color:rgba(255,255,255,.5)}
+.practice.ink .prmarks{border-top-color:rgba(255,255,255,.2)}
+.practice.ink .prnote{color:rgba(255,255,255,.6)}
+.practice.ink .prmarks .plate{padding:16px 20px}
+.practice.ink .prmarks img{mix-blend-mode:normal}
+.practice.ink .prid .go{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+.practice.ink .prid .go:hover{border-bottom-color:#fff}
+
+/* ---------- scrollytelling ---------- */
+.hero .ph,.hero .inr{will-change:transform}
+.mission .wrap>p.lit .sw{transition:none}
+.mission .wrap>p.lit{opacity:1}
+.strip .sph img,.band .bph img{will-change:transform}
+/* el parallax recorta por arriba y por abajo: la foto crece para cubrirlo */
+.strip .sph img,.band .bph img{height:118%;top:-9%;position:absolute;left:0}
+html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
+
+/* ---------- credito de Ignite en el pie ---------- */
+.figy{margin-top:clamp(26px,3.6vh,38px);padding-top:clamp(28px,3.6vh,38px);
+  border-top:1px solid rgba(255,255,255,.16);
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:clamp(24px,4vw,64px);align-items:start}
+.igyb .smallcap{display:block;margin-bottom:16px;color:rgba(255,255,255,.42)}
+.igyb img{width:clamp(150px,15vw,190px);height:auto;opacity:.92;
+  transition:opacity var(--dur-hover)}
+.igyb a:hover img{opacity:1}
+.igylink{display:inline-block;margin-top:18px;font-size:11px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:3px;transition:border-color .3s}
+.igylink:hover{border-bottom-color:#fff}
+.igyd{font-size:11.5px;line-height:1.75;color:rgba(255,255,255,.48);max-width:64ch}
+@media (max-width:860px){.figy{grid-template-columns:1fr;gap:22px}}
+
+/* ---------- band dusk: la cola al atardecer carga la tesis ---------- */
+.band.light.dusk .bph img{object-position:50% 38%}
+.band.light.dusk .bq{max-width:26ch}
+@media (max-width:860px){
+  .band.light.dusk .bph img{object-position:100% 42%}
+}
+/* ---------- band clara: el unico respiro luminoso de la pagina ---------- */
+.band.light{color:var(--ink);align-items:flex-start;
+  min-height:clamp(470px,74vh,800px);background:var(--bg)}
+.band.light .bph img{position:absolute;top:0;height:100%;
+  object-position:50% 76%;filter:contrast(1.04) saturate(.96)}
+.band.light .bph::after{background:
+  linear-gradient(101deg,rgba(244,243,241,.72) 0%,rgba(244,243,241,.3) 32%,rgba(244,243,241,0) 60%),
+  linear-gradient(180deg,rgba(244,243,241,.5) 0%,rgba(244,243,241,0) 40%)}
+.band.light .bin{padding:clamp(54px,8.5vh,96px) 0 0}
+.band.light .smallcap{color:var(--gray)}
+.band.light .bq{max-width:30ch;text-wrap:balance}
+.band.light .bq .it{color:rgba(20,22,26,.44)}
+.band.light .bwho{color:var(--gray)}
+@media (max-width:860px){
+  /* en vertical el recorte es horizontal: Mark se corre al centro y la rampa
+     superior crece para que la tinta siga teniendo suelo palido */
+  .band.light{min-height:clamp(500px,78vh,720px)}
+  .band.light .bph img{object-position:50% 50%}
+  .band.light .bq{max-width:22ch}
+  .band.light .bph::after{background:
+    linear-gradient(180deg,rgba(244,243,241,.94) 0%,rgba(244,243,241,.66) 30%,rgba(244,243,241,0) 62%)}
+}
+
+/* ---------- oferta nombrada dentro de For Counsel ---------- */
+.moffer{margin-top:34px;border:1px solid rgba(255,255,255,.32);padding:clamp(22px,2.6vw,32px)}
+.moffer .olab{display:block;color:rgba(255,255,255,.5)}
+.moffer h4{margin-top:10px;font-size:clamp(18px,1.9vw,26px);font-weight:500;letter-spacing:-.03em;line-height:1.15}
+.moffer p{margin-top:10px;font-size:13px;line-height:1.7;color:rgba(255,255,255,.68);max-width:52ch}
+.octa{display:inline-block;margin-top:18px;font-size:11px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:#fff;border-bottom:1px solid rgba(255,255,255,.5);
+  padding-bottom:4px;transition:border-color .3s}
+.octa:hover{border-bottom-color:#fff}
+/* ---------- estandares de practica: letra pequena, señal grande ---------- */
+.mstd{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16)}
+.mstd .smallcap{display:block;margin-bottom:12px}
+.mstd ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.mstd li{font-size:12px;line-height:1.6;color:rgba(255,255,255,.55);display:flex;gap:9px}
+.mstd li::before{content:'';flex:0 0 auto;width:4px;height:4px;background:var(--red);margin-top:8px}
+/* ---------- canal urgente en Advisory ---------- */
+.aurgent{grid-column:1/-1;margin-top:clamp(40px,5.5vh,60px);background:var(--ink);color:#fff;
+  display:flex;align-items:center;justify-content:space-between;gap:clamp(20px,3vw,44px);
+  padding:clamp(26px,3vw,38px) clamp(24px,3vw,42px);flex-wrap:wrap}
+.aurgent .smallcap{color:rgba(255,255,255,.5)}
+.aurgent p{margin-top:8px;font-size:clamp(15px,1.3vw,20px);font-weight:500;letter-spacing:-.025em;
+  line-height:1.3;max-width:34ch}
+.wacta{display:inline-block;background:#fff;color:var(--ink);font-size:12px;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;padding:16px 32px;
+  transition:transform var(--dur-hover) var(--ease-quick)}
+.wacta:hover{transform:translateY(-2px)}
+.wanote{display:block;margin-top:12px;font-size:10.5px;line-height:1.6;color:rgba(255,255,255,.45);max-width:32ch}
+/* ---------- cuatro vias ---------- */
+.pathgrid.p4{grid-template-columns:repeat(3,1fr)}
+.pathgrid.p4 .pcard.lead{grid-column:1/-1}
+.pathgrid.p4 .pcard.lead ul{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+@media (max-width:1180px){.pathgrid.p4{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.pathgrid.p4{grid-template-columns:1fr}
+  .pathgrid.p4 .pcard.lead ul{grid-template-columns:1fr}}
+@media (max-width:640px){.aurgent{flex-direction:column;align-items:flex-start}}
+</style>
+<noscript><style>.wr{opacity:1!important}.ipath[hidden]{display:block!important}.iselect::after{display:none}</style></noscript></head>
+<body>
+<div id="pre" aria-hidden="true"><div class="cnt" id="cnt">0</div></div>
+<script>
+/* El contador no puede depender de GSAP: durante el arranque el ticker esta
+   saturado montando la pagina y el tween se completaba de un salto, sin llegar
+   a pintar un solo numero. Aqui va suelto, con su propio rAF.
+   Y sobre todo: el preloader se retira pase lo que pase. Si el fetch falla, si
+   un script no carga o si algo lanza antes de tiempo, la red de seguridad lo
+   quita igual y nunca deja la pagina tapada. */
+(function(){
+  var pre=document.getElementById('pre'),cnt=document.getElementById('cnt');
+  if(!pre||!cnt)return;
+  var t0=Date.now(),MIN=850,MAX=4000,listo=false,n=0,fin=false;
+  function cerrar(){if(fin)return;fin=true;cnt.textContent='100';pre.classList.add('done')}
+  window.__igyListo=function(){listo=true};
+  addEventListener('load',window.__igyListo);
+  setTimeout(cerrar,MAX);
+  (function paso(){
+    if(fin)return;
+    var t=Date.now()-t0;
+    /* sube hasta 92 con el tiempo y reserva el ultimo tramo al contenido real */
+    var meta=listo?100:Math.min(92,t/MIN*92);
+    n=Math.min(100,Math.max(n,Math.min(meta,n+2.4)));
+    cnt.textContent=Math.round(n);
+    if(n>=100){cerrar();return}
+    requestAnimationFrame(paso);
+  })();
+})();
+</script>
+<div class="topbar"><span class="u11 smallcap" style="color:#fff">Mark Cooke, BEng (Hons)</span><a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a></div>
+<button class="menuchip" id="mbtn" aria-expanded="false">Menu</button>
+<nav class="menupanel" id="nitems" aria-label="Site"><a href="/mark-cooke-lite">Overview</a><a href="/mark-cooke-lite/story">The Story</a><a href="/mark-cooke-lite/practice">The Practice</a><a href="/mark-cooke/record">The Record</a><a href="#inquiry">Contact</a></nav>
+<main id="site"><section class="mission" id="perspective"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">01</span><span class="smallcap">A point of view built over four decades</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">In aviation, the asset is <span class="it">never just the aircraft.</span></p><div class="mbody wr"><p>Its condition, maintenance history, technical records, contractual obligations, commercial position and transition requirements have to be understood together. A discrepancy in a maintenance record is rarely only a technical question—it moves value, triggers obligations and decides disputes.</p><p>Mark’s work sits at that intersection: establishing what the aircraft and its records actually show, then explaining what that means for the contract and for the asset.</p><p>That perspective comes from having done the work. He has held the licence, signed the release to service, run the hangar and built the organisation.</p></div></div></section><section class="access" id="work"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">02</span><span class="smallcap wr">Three expressions of his authority</span></div><h2 class="d80 wr">One body of experience. Applied wherever aircraft condition carries consequence.</h2></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">01</div><h3>Aircraft and engine condition</h3><div class="for">Establishing the airworthiness, maintenance and records position of an aircraft or engine—and what the documentation genuinely supports.</div><ul><li>Continuing airworthiness management</li><li>Maintenance programmes and compliance</li><li>Technical records and traceability</li><li>Engine condition and management</li><li>Maintenance error and human factors</li><li>Pre-purchase and mid-term audits</li></ul></div><div class="acard wr"><div class="lv">02</div><h3>Leases, transitions and asset value</h3><div class="for">Understanding how contractual obligations, redelivery conditions and technical reality meet during a transition—and where value is gained or lost.</div><ul><li>Lease agreements and return conditions</li><li>Maintenance reserve funds</li><li>Pre-redelivery and redelivery management</li><li>Repossession and aircraft recovery</li><li>MRO and commercial agreements</li><li>Boeing and Airbus new deliveries</li></ul><a class="go" href="/mark-cooke-lite/practice#advisory">Advisory</a></div><div class="acard wr"><div class="lv">03</div><h3>Disputes and evidence</h3><div class="for">Independent analysis and written reports for counsel—explaining technical and commercial aviation evidence to lawyers, arbitrators and tribunals.</div><ul><li>Aircraft condition and redelivery disputes</li><li>Records, traceability and compliance evidence</li><li>Maintenance error and workmanship</li><li>Contractual and MRO disputes</li><li>Expert reports and expert determination</li><li>Arbitration and early case assessment</li></ul><a class="go" href="/mark-cooke-lite/practice#for-counsel">For counsel</a></div></div></div></section><section class="journey" id="career"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">03</span><span class="smallcap wr">The arc of the work</span></div><h2 class="d80 wr">Forty-five years spent on the aircraft, <span class="it">then on the business around it.</span></h2></div><div class="stage" id="jstage"><div class="day" data-r1=""><div class="dnum">i<span>Royal Air Force · 1980–1990</span></div><div><h3>Airframe technician</h3><p>Ten years across several Royal Air Force bases in the United Kingdom, on the maintenance and rectification of both fixed and rotary wing aircraft. The decade that set the standard for everything after it.</p><div class="tags"><span>Fixed and rotary wing</span><span>Maintenance and rectification</span><span>Military standards</span></div></div></div><div class="day" data-r1=""><div class="dnum">ii<span>FLS Aerospace · 1990–2002</span></div><div><h3>Licensed engineer to overhaul manager</h3><p>Twelve years at one of the largest maintenance facilities in Europe at the time, capable of four widebody aircraft. Inspector Supervisor and UK CAA and FAA licensed engineer, then project manager, then aircraft overhaul manager—responsible for day-to-day operations and roughly two hundred staff.</p><div class="tags"><span>CAA and FAA licensed</span><span>Base and line maintenance</span><span>Two hundred staff</span></div></div></div><div class="day" data-r1=""><div class="dnum">iii<span>29 Aero Limited · 2002–2018</span></div><div><h3>Founder and technical director</h3><p>Built a consultancy serving major commercial aircraft leasing and asset-management companies, with a team of twenty consultants working transitions, pre-redelivery, pre-purchase and mid-lease audits at locations worldwide.</p><div class="tags"><span>Twenty consultants</span><span>Worldwide audits</span><span>Lessor clients</span></div></div></div><div class="day" data-r1=""><div class="dnum">iv<span>Aircamo Group · 2018–2025</span></div><div><h3>Founder, partner and EVP</h3><p>Co-founded and built an airworthiness and engine maintenance group from scratch—a CAMO office at Manchester International Airport and an engine maintenance facility at Hawarden Airport, approved by several airworthiness authorities. The group was sold to Sabena Engineering Brussels in 2023.</p><div class="tags"><span>CAMO and Part 145</span><span>Built from scratch</span><span>Sold to Sabena Engineering</span></div></div></div><div class="day" data-r1=""><div class="dnum">v<span>Independent practice · 2025–</span></div><div><h3>Advisor and expert witness</h3><p>Advisory services to the commercial aviation industry through 29 Aero Limited, together with expert witness and expert advice services following Cardiff University Bond Solon certification in 2024.</p><div class="tags"><span>Expert reports</span><span>Advisory</span><span>Worldwide</span></div></div></div></div><div class="jrail"><div class="bar"><div class="fill" id="jfill"></div></div><div class="cnt" id="jcnt"></div></div></div></section><section class="band light" id="band"><div class="bph"><img src="/mark-cooke/assets/band-dusk.jpg" alt="The nose of a widebody aircraft on the apron at dusk"></div><div class="bin"><div class="wrap"><div class="smallcap wr" data-r1="">The person behind the analysis</div><p class="bq wr" data-r1="">Forty-five years on the aircraft. <span class="it">Not only in the file.</span></p></div></div></section><section class="reserve paths-in" id="inquiry"><div class="wrap"><div class="rlay" data-r2=""><div class="rleft"><div class="mlab wr" style="justify-content:flex-start"><span class="rnum">04</span><span class="smallcap">Start a conversation</span></div><h2 class="d97 wr">Start with <span class="it">the context.</span></h2><p class="rlede wr">Select the nature of your inquiry and share enough information for an initial response.</p><div class="rdirect wr"><a class="rmail" href="mailto:mcooke@29aero.com">mcooke@29aero.com</a><div class="rmeta"><span>+44 (0) 7811 329962</span><span>London, United Kingdom</span></div></div></div><div class="rright"><form class="rform iform wr" id="iform" novalidate=""><label class="rfield iselect" for="iqtype"><span class="smallcap">What would you like to discuss?</span><select id="iqtype" name="iqtype"><option value="">Select the nature of your inquiry</option><option value="counsel">Expert witness or litigation support</option><option value="advisory">Aviation advisory, transition or asset question</option><option value="insurers">Insurance, claims or subrogation matter</option><option value="airworthiness">Airworthiness or maintenance organisation support</option><option value="other">Something else</option></select></label><div class="ipath" data-path="counsel" hidden=""><div class="ifields"><label class="rfield" for="f-counsel-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-counsel-0" name="f-counsel-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-1"><span class="smallcap">Law firm<em class="req">Required</em></span><input type="text" id="f-counsel-1" name="f-counsel-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-2"><span class="smallcap">Professional title</span><input type="text" id="f-counsel-2" name="f-counsel-2" disabled=""></label><label class="rfield" for="f-counsel-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-counsel-3" name="f-counsel-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-4"><span class="smallcap">Phone</span><input type="tel" id="f-counsel-4" name="f-counsel-4" disabled=""></label><label class="rfield" for="f-counsel-5"><span class="smallcap">Jurisdiction or forum</span><input type="text" id="f-counsel-5" name="f-counsel-5" disabled=""></label><label class="rfield full" for="f-counsel-6"><span class="smallcap">General type of matter</span><input type="text" id="f-counsel-6" name="f-counsel-6" disabled=""></label><label class="rfield full" for="f-counsel-7"><span class="smallcap">Parties involved, for conflict-check purposes<em class="req">Required</em></span><textarea id="f-counsel-7" name="f-counsel-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-counsel-8"><span class="smallcap">Relevant deadline or timing</span><input type="text" id="f-counsel-8" name="f-counsel-8" disabled=""></label><label class="rfield full" for="f-counsel-9"><span class="smallcap">Brief non-privileged summary</span><textarea id="f-counsel-9" name="f-counsel-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Request availability &amp; conflict check</button><p class="inote">Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.</p></div><div class="ipath" data-path="advisory" hidden=""><div class="ifields"><label class="rfield" for="f-advisory-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-advisory-0" name="f-advisory-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-advisory-1" name="f-advisory-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-2"><span class="smallcap">Professional title</span><input type="text" id="f-advisory-2" name="f-advisory-2" disabled=""></label><label class="rfield" for="f-advisory-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-advisory-3" name="f-advisory-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-4"><span class="smallcap">Phone</span><input type="tel" id="f-advisory-4" name="f-advisory-4" disabled=""></label><label class="rfield" for="f-advisory-5"><span class="smallcap">Aircraft or engine type</span><input type="text" id="f-advisory-5" name="f-advisory-5" disabled=""></label><label class="rfield full" for="f-advisory-6"><span class="smallcap">Location</span><input type="text" id="f-advisory-6" name="f-advisory-6" disabled=""></label><label class="rfield full" for="f-advisory-7"><span class="smallcap">Nature of the matter<em class="req">Required</em></span><textarea id="f-advisory-7" name="f-advisory-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-advisory-8"><span class="smallcap">Desired timeframe</span><input type="text" id="f-advisory-8" name="f-advisory-8" disabled=""></label><label class="rfield full" for="f-advisory-9"><span class="smallcap">Brief context</span><textarea id="f-advisory-9" name="f-advisory-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an advisory matter</button><p class="inote">Please share only the high-level context needed for an initial conversation.</p></div><div class="ipath" data-path="insurers" hidden=""><div class="ifields"><label class="rfield" for="f-insurers-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-insurers-0" name="f-insurers-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-insurers-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-insurers-1" name="f-insurers-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-insurers-2"><span class="smallcap">Professional title</span><input type="text" id="f-insurers-2" name="f-insurers-2" disabled=""></label><label class="rfield" for="f-insurers-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-insurers-3" name="f-insurers-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-insurers-4"><span class="smallcap">Phone</span><input type="tel" id="f-insurers-4" name="f-insurers-4" disabled=""></label><label class="rfield" for="f-insurers-5"><span class="smallcap">Aircraft or engine type</span><input type="text" id="f-insurers-5" name="f-insurers-5" disabled=""></label><label class="rfield full" for="f-insurers-6"><span class="smallcap">Policy or claim reference</span><input type="text" id="f-insurers-6" name="f-insurers-6" disabled=""></label><label class="rfield full" for="f-insurers-7"><span class="smallcap">Nature of the claim<em class="req">Required</em></span><textarea id="f-insurers-7" name="f-insurers-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-insurers-8"><span class="smallcap">Timing</span><input type="text" id="f-insurers-8" name="f-insurers-8" disabled=""></label><label class="rfield full" for="f-insurers-9"><span class="smallcap">Brief context</span><textarea id="f-insurers-9" name="f-insurers-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss a claims matter</button><p class="inote">Please share only the high-level context needed for an initial conversation.</p></div><div class="ipath" data-path="airworthiness" hidden=""><div class="ifields"><label class="rfield" for="f-airworthiness-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-airworthiness-0" name="f-airworthiness-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-airworthiness-1" name="f-airworthiness-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-airworthiness-2" name="f-airworthiness-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-3"><span class="smallcap">Approval type or authority</span><input type="text" id="f-airworthiness-3" name="f-airworthiness-3" disabled=""></label><label class="rfield full" for="f-airworthiness-4"><span class="smallcap">Nature of the requirement<em class="req">Required</em></span><textarea id="f-airworthiness-4" name="f-airworthiness-4" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-airworthiness-5"><span class="smallcap">Timing</span><input type="text" id="f-airworthiness-5" name="f-airworthiness-5" disabled=""></label><label class="rfield full" for="f-airworthiness-6"><span class="smallcap">Brief context</span><textarea id="f-airworthiness-6" name="f-airworthiness-6" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an airworthiness matter</button><p class="inote">Approach, scope and availability are confirmed with Mark directly.</p></div><div class="ipath" data-path="other" hidden=""><div class="ifields"><label class="rfield" for="f-other-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-other-0" name="f-other-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-other-1"><span class="smallcap">Organisation</span><input type="text" id="f-other-1" name="f-other-1" disabled=""></label><label class="rfield" for="f-other-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-other-2" name="f-other-2" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-3"><span class="smallcap">Subject<em class="req">Required</em></span><input type="text" id="f-other-3" name="f-other-3" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-4"><span class="smallcap">Message<em class="req">Required</em></span><textarea id="f-other-4" name="f-other-4" rows="3" required="" aria-required="true" disabled=""></textarea></label></div><button type="submit" disabled="">Send inquiry</button></div><p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden="">This inquiry flow is illustrative and would be configured with Mark before launch.</p><p class="fine">Private concept — nothing is transmitted from this page. Write directly to mcooke@29aero.com or call +44 (0) 7811 329962.</p></form></div></div></div></section><footer class="kfoot"><div class="wrap"><div class="ftop" data-r2=""><div class="fid"><p class="fkick wr">Independent judgment where aircraft condition, contracts and asset value meet.</p><div class="fname wr">Mark Cooke</div><div class="fcred wr">BEng (Hons)</div><div class="froles wr">Commercial Aviation Advisor <span class="it">and Expert Witness</span></div><a class="fcta wr" href="#inquiry">Discuss a matter</a></div><div class="fpract wr" data-r1=""><span class="smallcap">The practice</span><a class="fmark" href="https://www.29aero.com/" target="_blank" rel="noopener"><img src="/mark-cooke/assets/29aero-logo.png" alt="29 Aero Limited"></a><p class="fplede">Advisory, aircraft technical management and expert services are delivered through 29 Aero Limited — the company Mark founded in 2002 and leads today.</p><div class="fpmeta"><span>Official AerData Approved Partner</span><span>Member, International Society of Transport Aircraft Trading</span></div><a class="fplink" href="https://www.29aero.com/" target="_blank" rel="noopener">Visit 29aero.com</a></div></div><div class="fgrid" data-cards=""><div class="fcol wr"><span class="smallcap">Contact</span><ul><li><a href="mailto:mcooke@29aero.com">mcooke@29aero.com</a></li><li><a href="tel:+4407811329962">+44 (0) 7811 329962</a></li><li>London, United Kingdom</li></ul></div><div class="fcol wr"><span class="smallcap">Affiliations</span><ul><li>29 Aero Limited, London — Company No. 10439981</li><li>124 City Road, London EC1V 2NX, United Kingdom</li></ul></div><div class="fcol wr"><span class="smallcap">Elsewhere</span><ul><li><a href="https://www.linkedin.com/in/mark-c-7b2685b/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="fbase"><p class="fnote">Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction, and the 29 Aero mark shown here is a redrawn placeholder pending the original artwork.</p><span class="ffine">Private preview · Not indexed</span></div><div class="figy"><div class="igyb"><span class="smallcap">A commercial concept by</span><a href="https://www.igniteyourself.co" target="_blank" rel="noopener"><img src="/mark-cooke/assets/igy-logo.png" alt="Ignite Yourself"></a><a class="igylink" href="https://www.igniteyourself.co" target="_blank" rel="noopener">Discover Ignite Yourself</a></div><p class="igyd">This page is a commercial concept preview created by Ignite Yourself specifically for Mark Cooke, BEng (Hons), and shared with him privately. It was assembled from publicly available information and imagery, used provisionally and for demonstration purposes only, and every element remains subject to his review and approval. The page is not indexed, not published and not distributed.</p></div></div></footer></main>
+<script src="/vendor/gsap.min.js"></script>
+<script src="/vendor/ScrollTrigger.min.js"></script>
+<script src="/vendor/lenis.min.js"></script>
+<script>
+(function(){
+var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var MOTION=!REDUCED&&typeof gsap!=='undefined'&&typeof Lenis!=='undefined';
+if(!MOTION)document.documentElement.classList.add('no-motion');
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function rich(s){return esc(s)
+  .replace(/&lt;b&gt;/g,'<b>').replace(/&lt;\/b&gt;/g,'</b>')
+  .replace(/&lt;i&gt;/g,'<i>').replace(/&lt;\/i&gt;/g,'</i>')
+  .replace(/&lt;br&gt;/g,'<br>')
+  .replace(/&lt;t&gt;/g,'<span class="it">').replace(/&lt;\/t&gt;/g,'</span>')
+  .replace(/&amp;nbsp;/g,'&nbsp;')}
+function bigimg(img,cls,attr){
+  attr=attr?' '+attr:'';
+  if(img&&img.src)return'<div class="'+cls+'"'+attr+'><img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'"></div>';
+  return'<div class="'+cls+' phx"'+attr+'>'+esc((img&&img.label)||'FOTO')+'</div>'}
+
+var partials={
+band:function(s){
+  return'<section class="band'+(s.light?' light':'')+(s.variant?' '+esc(s.variant):'')+'" id="'+esc(s.id||'band')+'">'+
+  '<div class="bph">'+(s.img&&s.img.src?'<img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'">':'')+'</div>'+
+  '<div class="bin"><div class="wrap">'+
+  (s.label?'<div class="smallcap wr" data-r1>'+esc(s.label)+'</div>':'')+
+  '<p class="bq wr" data-r1>'+rich(s.quote)+'</p>'+
+  (s.who?'<div class="bwho wr smallcap" data-r1>'+esc(s.who)+'</div>':'')+
+  '</div></div></section>'},
+proof:function(s){
+  return'<section class="proof'+(s.ink?' ink':'')+'" id="'+esc(s.id||'proof')+'"><div class="wrap">'+
+  (s.label?'<div class="phead" data-r2><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>':'')+
+  '<div class="pgrid" data-cards>'+
+  (s.items||[]).map(function(it,ix){return'<div class="pit wr"><span class="pix">'+('0'+(ix+1)).slice(-2)+'</span><div class="pn">'+rich(it.n)+'</div><p>'+rich(it.d)+'</p></div>'}).join('')+
+  '</div></div></section>'},
+exp:function(s){
+  return'<section class="exp'+(s.tint?' tint':'')+'" id="'+esc(s.id||'exp')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  (s.groups||[]).map(function(g){
+    return'<div class="ledger" data-r1>'+
+      '<div class="lhead"><span class="smallcap">'+esc(g.label)+'</span><span class="lcount">'+('0'+g.names.length).slice(-2)+'</span></div>'+
+      '<div class="lgrid'+(g.wide?' wide':'')+'" data-cards>'+
+        g.names.map(function(n){return'<div class="lcell wr">'+esc(n)+'</div>'}).join('')+
+      '</div></div>'}).join('')+
+  (s.fn?'<div class="efn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
+  '</div></section>'},
+hero:function(s){
+  return'<section class="hero" id="top">'+bigimg(s.img,'ph')+
+  '<div class="inr" data-r2>'+
+  (s.kick?'<div class="hkick wr">'+esc(s.kick)+'</div>':'')+
+  '<h1 class="hname wr">'+rich(s.name)+'</h1>'+
+  (s.cred?'<div class="hcred wr">'+esc(s.cred)+'</div>':'')+
+  (s.sub?'<p class="hsub wr">'+rich(s.sub)+'</p>':'')+
+  (s.note?'<p class="hnote wr">'+rich(s.note)+'</p>':'')+
+  ((s.actions||[]).length?'<div class="hacts wr">'+(s.actions||[]).map(function(a){
+    return'<a class="hcta'+(a.primary?'':' alt')+'" href="'+esc(a.h)+'"'+(a.path?' data-path="'+esc(a.path)+'"':'')+'>'+esc(a.t)+'</a>'}).join('')+'</div>':'')+
+  '</div></section>'},
+mission:function(s){
+  return'<section class="mission" id="'+esc(s.id||'mission')+'"><div class="wrap" data-r2>'+
+  '<div class="mlab wr"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+
+  '<p class="wr" style="margin-top:clamp(26px,4vh,38px)">'+rich(s.quote)+'</p>'+
+  (s.body?'<div class="mbody wr">'+(s.body||[]).map(function(b){return'<p>'+rich(b)+'</p>'}).join('')+'</div>':'')+
+  (s.who?'<div class="who wr smallcap">'+esc(s.who)+'</div>':'')+
+  (s.cta?'<p class="wr" style="text-align:center;margin-top:38px"><a class="mcta" href="'+esc(s.cta.h)+'">'+esc(s.cta.t)+'</a></p>':'')+
+  '</div></section>'},
+journey:function(s){
+  return'<section class="journey" id="'+esc(s.id||'journey')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="stage" id="jstage">'+
+  (s.days||[]).map(function(d){return'<div class="day" data-r1>'+
+    '<div class="dnum">'+esc(d.num)+'<span>'+esc(d.cap)+'</span></div>'+
+    '<div><h3>'+rich(d.title)+'</h3><p>'+rich(d.body)+'</p>'+
+    '<div class="tags">'+(d.tags||[]).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div></div>'+
+  '</div>'}).join('')+
+  '</div>'+
+  '<div class="jrail"><div class="bar"><div class="fill" id="jfill"></div></div><div class="cnt" id="jcnt"></div></div>'+
+  '</div></section>'},
+method:function(s){
+  return'<section class="method'+(s.invert?' invert':'')+'" id="'+esc(s.id||'method')+'"><div class="wrap"><div class="lay">'+
+  bigimg(s.img,'ph wr','data-r1')+
+  '<div><div class="shead lft" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  (s.intro?'<p class="mintro wr" data-r1>'+rich(s.intro)+'</p>':'')+
+  (s.rows||[]).map(function(r){return'<div class="mrow wr" data-r1 data-rule><h4>'+rich(r.t)+'</h4><p>'+rich(r.d)+'</p></div>'}).join('')+
+  (s.services?'<div class="msvc wr" data-r1><div class="smallcap">'+esc(s.services.label)+'</div><ul>'+(s.services.items||[]).map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul></div>':'')+
+  (s.offer?'<div class="moffer wr" data-r1>'+
+    (s.offer.label?'<span class="olab smallcap">'+esc(s.offer.label)+'</span>':'')+
+    '<h4>'+rich(s.offer.title)+'</h4><p>'+rich(s.offer.desc)+'</p>'+
+    (s.offer.cta?'<a class="octa" href="'+esc(s.offer.cta.h)+'"'+(s.offer.cta.path?' data-path="'+esc(s.offer.cta.path)+'"':'')+'>'+esc(s.offer.cta.t)+'</a>':'')+
+  '</div>':'')+
+  (s.ctaLede?'<p class="mctalede wr" data-r1>'+rich(s.ctaLede)+'</p>':'')+
+  (s.cta?'<div class="macts wr" data-r1><a class="mcta" href="'+esc(s.cta.h)+'"'+(s.cta.path?' data-path="'+esc(s.cta.path)+'"':'')+'>'+esc(s.cta.t)+'</a>'+(s.links||[]).map(function(l,li){
+    if(l.disabled){var did='cvnote-'+esc(s.id||'m')+'-'+li;
+      return'<span class="mlink is-off" aria-disabled="true" role="link" tabindex="0"'+
+        (l.desc?' aria-describedby="'+did+'" title="'+esc(l.desc)+'"':'')+'>'+esc(l.t)+'</span>'+
+        (l.desc?'<span class="vh" id="'+did+'">'+esc(l.desc)+'</span>':'')}
+    return'<a class="mlink" href="'+esc(l.h)+'"'+(l.ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.t)+'</a>'}).join('')+'</div>':'')+
+  (s.ctaNote?'<p class="mfine wr" data-r1>'+esc(s.ctaNote)+'</p>':'')+
+  (s.std?'<div class="mstd wr" data-r1><span class="smallcap">'+esc(s.std.label)+'</span><ul>'+
+    (s.std.items||[]).map(function(x){return'<li>'+esc(x)+'</li>'}).join('')+'</ul></div>':'')+
+  
+  '</div></div></div></section>'},
+strip:function(s){
+  return'<section class="strip"'+(s.id?' id="'+esc(s.id)+'"':'')+' aria-hidden="true">'+
+  '<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+
+  (s.pos?' style="object-position:'+esc(s.pos)+'"':'')+'></div>'+
+  '</section>'},
+
+practice:function(s){
+  var co=s.company||{};
+  return'<section class="practice'+(s.ink?' ink':'')+'" id="'+esc(s.id||'practice')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="prlay" data-r1>'+
+    '<div class="prid">'+
+      (co.logo?'<div class="prlogo"><img src="'+esc(co.logo)+'" alt="'+esc(co.name||'')+'"></div>':'')+
+      (co.role?'<div class="prrole smallcap">'+esc(co.role)+'</div>':'')+
+      (co.desc?'<p class="prdesc">'+rich(co.desc)+'</p>':'')+
+      '<div class="prmeta">'+(co.meta||[]).map(function(x){return'<span>'+esc(x)+'</span>'}).join('')+'</div>'+
+      '<div class="prlinks">'+
+        (co.href?'<a class="go" href="'+esc(co.href)+'" target="_blank" rel="noopener">'+esc(co.link||'Visit')+'</a>':'')+
+        (s.social||[]).map(function(x){return'<a class="go" href="'+esc(x.h)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a>'}).join('')+
+      '</div>'+
+    '</div>'+
+    '<div class="prbody">'+
+      '<div class="lhead"><span class="smallcap">'+esc(s.svcLabel||'Services')+'</span><span class="lcount">'+('0'+(s.services||[]).length).slice(-2)+'</span></div>'+
+      '<div class="lgrid" data-cards>'+(s.services||[]).map(function(x){return'<div class="lcell wr">'+esc(x)+'</div>'}).join('')+'</div>'+
+    '</div>'+
+  '</div>'+
+  (s.marks?'<div class="prmarks wr" data-r1><span class="smallcap">'+esc(s.marks.label)+'</span>'+
+    (s.marks.img?'<span class="plate"><img src="'+esc(s.marks.img)+'" alt="'+esc(s.marks.alt||'')+'"></span>':'')+
+    (s.marks.note?'<span class="prnote">'+esc(s.marks.note)+'</span>':'')+'</div>':'')+
+  '</div></section>'},
+
+paths:function(s){
+  return'<section class="paths" id="'+esc(s.id||'paths')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d80 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="plede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="pathgrid'+((s.cards||[]).length>3?' p4':'')+'" data-cards>'+(s.cards||[]).map(function(c){
+    var g=c.cta||{};
+    return'<div class="pcard wr'+(c.lead?' lead':'')+'">'+
+      '<div class="plab">'+esc(c.label)+'</div>'+
+      '<h3>'+rich(c.title)+'</h3>'+
+      '<p class="pdesc">'+rich(c.desc)+'</p>'+
+      '<ul>'+(c.items||[]).map(function(i){return'<li>'+esc(i)+'</li>'}).join('')+'</ul>'+
+      (g.t?'<div class="pgo"><a class="'+(c.lead?'mcta':'go')+'" href="'+esc(g.h)+'"'+(g.path?' data-path="'+esc(g.path)+'"':'')+'>'+esc(g.t)+'</a></div>':'')+
+    '</div>'}).join('')+'</div>'+
+  (s.fn?'<div class="pfn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
+  '</div></section>'},
+inquiry:function(s){
+  var f=s.form||{},c=s.contact||{},paths=f.paths||[];
+  function field(fl,pv,ix){
+    var id='f-'+pv+'-'+ix, req=fl.r?' required aria-required="true"':'';
+    var ctrl=fl.ta
+      ? '<textarea id="'+id+'" name="'+id+'" rows="3"'+req+'></textarea>'
+      : '<input type="'+esc(fl.ty||'text')+'" id="'+id+'" name="'+id+'"'+req+'>';
+    return'<label class="rfield'+(fl.full?' full':'')+'" for="'+id+'">'+
+      '<span class="smallcap">'+esc(fl.n)+(fl.r?'<em class="req">Required</em>':'')+'</span>'+ctrl+'</label>'}
+  return'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+
+  '<div class="rlay" data-r2>'+
+    '<div class="rleft">'+
+      '<div class="mlab wr" style="justify-content:flex-start"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+
+      '<h2 class="d97 wr">'+rich(s.title)+'</h2>'+
+      (s.lede?'<p class="rlede wr">'+rich(s.lede)+'</p>':'')+
+      '<div class="rdirect wr">'+
+        (c.email?'<a class="rmail" href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a>':'')+
+        '<div class="rmeta">'+[c.phone,c.city].filter(Boolean).map(function(t){return'<span>'+esc(t)+'</span>'}).join('')+'</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="rright">'+
+      '<form class="rform iform wr" id="iform" novalidate>'+
+        '<label class="rfield iselect" for="iqtype"><span class="smallcap">'+esc(f.selectLabel||'')+'</span>'+
+          '<select id="iqtype" name="iqtype">'+
+            '<option value="">'+esc(f.selectPlaceholder||'Select…')+'</option>'+
+            paths.map(function(p){return'<option value="'+esc(p.v)+'">'+esc(p.t)+'</option>'}).join('')+
+          '</select></label>'+
+        paths.map(function(p){
+          return'<div class="ipath" data-path="'+esc(p.v)+'" hidden>'+
+            '<div class="ifields">'+(p.fields||[]).map(function(fl,ix){return field(fl,p.v,ix)}).join('')+'</div>'+
+            '<button type="submit">'+esc(p.btn||'Send')+'</button>'+
+            (p.note?'<p class="inote">'+esc(p.note)+'</p>':'')+
+          '</div>'}).join('')+
+        '<p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden>'+esc(f.preview||'')+'</p>'+
+        (f.fine?'<p class="fine">'+esc(f.fine)+'</p>':'')+
+      '</form>'+
+    '</div>'+
+  '</div></div></section>'+
+  '<footer class="kfoot"><div class="wrap">'+
+    '<div class="ftop" data-r2>'+
+      '<div class="fid">'+
+        (s.fkick?'<p class="fkick wr">'+esc(s.fkick)+'</p>':'')+
+        '<div class="fname wr">'+esc(s.name||'')+'</div>'+
+        (s.cred?'<div class="fcred wr">'+esc(s.cred)+'</div>':'')+
+        (s.roles?'<div class="froles wr">'+rich(s.roles)+'</div>':'')+
+        (s.fcta?'<a class="fcta wr" href="'+esc(s.fcta.h)+'">'+esc(s.fcta.t)+'</a>':'')+
+      '</div>'+
+      (s.mark?'<div class="fpract wr" data-r1>'+
+        (s.mark.label?'<span class="smallcap">'+esc(s.mark.label)+'</span>':'')+
+        '<a class="fmark" href="'+esc(s.mark.href)+'" target="_blank" rel="noopener">'+
+          '<img src="'+esc(s.mark.src)+'" alt="'+esc(s.mark.alt||'')+'"></a>'+
+        (s.mark.lede?'<p class="fplede">'+rich(s.mark.lede)+'</p>':'')+
+        '<div class="fpmeta">'+(s.mark.meta||[]).map(function(x){return'<span>'+esc(x)+'</span>'}).join('')+'</div>'+
+        '<a class="fplink" href="'+esc(s.mark.href)+'" target="_blank" rel="noopener">'+esc(s.mark.link||'Visit')+'</a>'+
+      '</div>':'')+
+    '</div>'+
+    '<div class="fgrid" data-cards>'+
+      '<div class="fcol wr"><span class="smallcap">Contact</span><ul>'+
+        (c.email?'<li><a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>':'')+
+        (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
+        (c.city?'<li>'+esc(c.city)+'</li>':'')+
+      '</ul></div>'+
+      '<div class="fcol wr"><span class="smallcap">Affiliations</span><ul>'+
+        (s.affiliations||[]).map(function(a){return'<li>'+esc(a)+'</li>'}).join('')+'</ul></div>'+
+      '<div class="fcol wr"><span class="smallcap">Elsewhere</span><ul>'+
+        (s.social||[]).map(function(x){return'<li><a href="'+esc(x.h)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a></li>'}).join('')+
+      '</ul></div>'+
+    '</div>'+
+    '<div class="fbase">'+
+      '<p class="fnote">'+esc(s.note||'')+'</p>'+
+      (s.fine?'<span class="ffine">'+esc(s.fine)+'</span>':'')+
+    '</div>'+
+    (s.igy?'<div class="figy">'+
+      '<div class="igyb"><span class="smallcap">'+esc(s.igy.label)+'</span>'+
+      '<a href="'+esc(s.igy.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.igy.logo)+'" alt="Ignite Yourself"></a>'+
+      '<a class="igylink" href="'+esc(s.igy.href)+'" target="_blank" rel="noopener">'+esc(s.igy.link)+'</a></div>'+
+      '<p class="igyd">'+esc(s.igy.note)+'</p>'+
+    '</div>':'')+
+  '</div></footer>'},
+voices:function(s){
+  return'<section class="voices"><div class="wrap">'+
+  '<div class="smallcap wr" data-r1 style="text-align:center">'+esc(s.label)+'</div>'+
+  '<div class="grid" data-cards>'+(s.cards||[]).map(function(v){return'<div class="v wr"><p class="q">'+rich(v.q)+'</p>'+(v.who?'<div class="who smallcap">'+esc(v.who)+'</div>':'')+'</div>'}).join('')+'</div>'+
+  (s.attr?'<div class="vattr wr smallcap" data-r1>'+esc(s.attr)+'</div>':'')+
+  '</div></section>'},
+access:function(s){
+  return'<section class="access'+(s.ph?' withph':'')+'" id="'+esc(s.id||'access')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  (s.ph?'<div class="wlay"><div class="wph wr" data-r1><img src="'+esc(s.ph.src)+'" alt="'+esc(s.ph.alt||'')+'"></div>':'')+
+  '<div class="cards'+(s.c4?' c4':'')+'" data-cards>'+(s.cards||[]).map(function(c){return'<div class="acard wr">'+
+    '<div class="lv">'+esc(c.lv)+'</div><h3>'+rich(c.title)+'</h3><div class="for">'+esc(c['for'])+'</div>'+
+    '<ul>'+(c.items||[]).map(function(i){return'<li>'+rich(i)+'</li>'}).join('')+'</ul>'+
+    (c.go?'<a class="go" href="'+esc(c.go.h)+'"'+(c.go.ext?' target="_blank" rel="noopener"':'')+'>'+esc(c.go.t)+'</a>':'')+
+  '</div>'}).join('')+'</div>'+
+  (s.urgent?'<div class="aurgent wr" data-r1>'+
+    '<div class="aur"><span class="smallcap">'+esc(s.urgent.label)+'</span><p>'+rich(s.urgent.text)+'</p></div>'+
+    '<div class="aur2"><a class="wacta" href="'+esc(s.urgent.cta.h)+'" target="_blank" rel="noopener">'+esc(s.urgent.cta.t)+'</a>'+
+    (s.urgent.note?'<span class="wanote">'+esc(s.urgent.note)+'</span>':'')+'</div>'+
+  '</div>':'')+'</div></section>'},
+faq:function(s){
+  return'<section class="faq" id="'+esc(s.id||'faq')+'"><div class="wrap">'+
+  '<div class="shead" data-r2 style="text-align:center"><div class="smallcap wr">'+esc(s.label)+'</div><h2 class="d80 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="rows">'+(s.rows||[]).map(function(r){return'<div class="frow wr" data-r1 tabindex="0" role="button" aria-expanded="false">'+
+    '<div class="qq"><span>'+rich(r.q)+'</span><span class="tg">+</span></div>'+
+    '<div class="ans">'+rich(r.a)+'</div></div>'}).join('')+'</div>'+
+  '</div></section>'},
+};
+
+
+fetch('/mark-cooke-lite/story.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(function(c){
+  if(c.meta){document.title=c.meta.title||document.title;
+    var md=document.querySelector('meta[name="description"]');
+    if(md&&c.meta.description)md.setAttribute('content',c.meta.description)}
+    document.getElementById('nitems').innerHTML=(c.nav||[]).map(function(n){return'<a href="'+esc(n.h)+'">'+esc(n.t)+'</a>'}).join('');
+  var nc=document.getElementById('ncta');
+  if(nc&&c.navcta){nc.href=c.navcta.h;nc.textContent=c.navcta.t;nc.hidden=false}
+  document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  if(window.__igyListo)window.__igyListo();
+  init();
+}).catch(function(e){
+  var pre=document.getElementById('pre');if(pre)pre.classList.add('done');
+  document.getElementById('site').innerHTML='<div class="err">Could not load content ('+esc(e.message)+').</div>';
+});
+
+/* El CV todavia no existe como archivo: el enlace queda visible pero inerte,
+   y anuncia por que. Nada de navegacion rota ni de documentos inventados. */
+function wireDisabledLinks(){
+  document.querySelectorAll('.mlink.is-off').forEach(function(el){
+    el.addEventListener('click',function(e){e.preventDefault()});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')e.preventDefault()});
+  });
+}
+
+/* Consulta condicional. Es una maqueta: no envia, no promete recepcion,
+   y lo dice con todas las letras al intentar enviar. */
+function wireInquiry(){
+  var form=document.getElementById('iform');
+  if(!form)return;
+  var sel=form.querySelector('#iqtype');
+  var paths=Array.prototype.slice.call(form.querySelectorAll('.ipath'));
+  var preview=form.querySelector('#ipreview');
+  function show(v){
+    paths.forEach(function(p){
+      var on=p.getAttribute('data-path')===v;
+      p.hidden=!on;
+      /* los campos ocultos no participan en la validacion ni en el foco */
+      p.querySelectorAll('input,textarea,button').forEach(function(el){el.disabled=!on});
+    });
+    if(preview)preview.hidden=true;
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  }
+  show(sel?sel.value:'');
+  if(sel)sel.addEventListener('change',function(){show(sel.value)});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!preview)return;
+    preview.hidden=false;
+    if(window.ScrollTrigger)ScrollTrigger.refresh();
+  });
+  /* los CTA de las tarjetas llegan con su ruta ya elegida */
+  document.querySelectorAll('a[data-path]').forEach(function(a){
+    a.addEventListener('click',function(){
+      var v=a.getAttribute('data-path');
+      if(!sel)return;
+      sel.value=v;show(v);
+    });
+  });
+}
+
+function init(){
+  var mbtn=document.getElementById('mbtn'),mpanel=document.getElementById('nitems');
+  if(mbtn&&mpanel){
+    mbtn.addEventListener('click',function(){var open=mpanel.classList.toggle('open');mbtn.setAttribute('aria-expanded',open?'true':'false')});
+    mpanel.addEventListener('click',function(e){if(e.target.tagName==='A'){mpanel.classList.remove('open');mbtn.setAttribute('aria-expanded','false')}});
+  }
+  wireDisabledLinks();
+  wireInquiry();
+  document.querySelectorAll('.frow').forEach(function(f){
+    function tog(){var open=f.classList.toggle('open');f.setAttribute('aria-expanded',open?'true':'false');
+      var ans=f.querySelector('.ans');
+      if(open&&MOTION)gsap.fromTo(ans,{opacity:0,y:8},{opacity:1,y:0,duration:.3,ease:'expo.out'});}
+    f.addEventListener('click',tog);
+    f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog()}});
+  });
+  if(!MOTION){wireAnchors(null);return}
+  gsap.registerPlugin(ScrollTrigger);
+  var lenis=null;
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.3});
+    lenis.on('scroll',ScrollTrigger.update);
+    gsap.ticker.add(function(t){lenis.raf(t*1000)});
+  }
+  gsap.ticker.lagSmoothing(0);
+  /* re-medir triggers cuando terminan fuentes e imagenes (anti-desfase) */
+  (function(){function rf(){if(window.ScrollTrigger)ScrollTrigger.refresh()}
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(rf);
+    var pend=Array.prototype.filter.call(document.images,function(im){return !im.complete});
+    var left=pend.length;
+    pend.forEach(function(im){function done(){if(--left===0)rf()}
+      im.addEventListener('load',done);im.addEventListener('error',done)});
+  })();
+  wireAnchors(lenis);
+
+  function stCfg(trigger,pct){
+    if(trigger.getBoundingClientRect().top<window.innerHeight*pct)return undefined;
+    return{trigger:trigger,start:'clamp(top '+Math.round(pct*100)+'%)',once:true};
+  }
+  document.querySelectorAll('[data-r1]').forEach(function(el){
+    if(el.closest('#jstage')&&window.innerWidth>900)return; /* los days del libro los maneja R5 */
+    gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
+      scrollTrigger:stCfg(el,.88)});
+  });
+  document.querySelectorAll('[data-r2]').forEach(function(g){
+    var kids=g.querySelectorAll('.wr');var acc=0;
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:stCfg(g,.86)});
+      acc+=[120,80,60][Math.min(i,2)];
+    });
+  });
+  document.querySelectorAll('[data-rule]').forEach(function(el){
+    el.style.position='relative';el.classList.add('ruled');el.style.borderTopColor='transparent';
+    var l=document.createElement('i');l.className='rline';
+    l.style.cssText='position:absolute;left:0;right:0;top:-1px;height:1px;background:rgba(255,255,255,.16);transform-origin:left;display:block';
+    el.appendChild(l);
+    gsap.fromTo(l,{scaleX:0},{scaleX:1,duration:.8,ease:'expo.out',
+      scrollTrigger:{trigger:el,start:'top 92%',once:true}});
+  });
+  document.querySelectorAll('[data-cards]').forEach(function(g){
+    var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
+    kids.forEach(function(el,i){
+      gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
+        scrollTrigger:stCfg(g,.84)});
+      acc+=steps[Math.min(i,steps.length-1)];
+    });
+  });
+
+  /* --- S1 hero: la fotografia cede terreno y el texto se despide --- */
+  (function(){
+    var hero=document.querySelector('.hero'),ph=hero&&hero.querySelector('.ph'),inr=hero&&hero.querySelector('.inr');
+    if(!hero||!ph)return;
+    gsap.to(ph,{yPercent:16,scale:1.1,ease:'none',
+      scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:.5}});
+    if(inr)gsap.to(inr,{yPercent:-14,opacity:0,ease:'none',
+      scrollTrigger:{trigger:hero,start:'top top',end:'bottom 40%',scrub:.5}});
+  })();
+
+  /* --- S2 la frase de apertura se escribe con el scroll --- */
+  (function(){
+    var sec=document.getElementById('intro');if(!sec)return;
+    var q=sec.querySelector('.wrap>p');if(!q)return;
+    /* cada palabra pasa de tenue a tinta; los <span> del contenido se respetan */
+    var words=[];
+    (function walk(node){
+      Array.prototype.slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var parts=n.textContent.split(/(\s+)/).filter(function(t){return t!==''});
+          var frag=document.createDocumentFragment();
+          parts.forEach(function(t){
+            if(/^\s+$/.test(t)){frag.appendChild(document.createTextNode(t));return}
+            var w=document.createElement('span');w.className='sw';w.textContent=t;
+            frag.appendChild(w);words.push(w);
+          });
+          node.replaceChild(frag,n);
+        }else if(n.nodeType===1){walk(n)}
+      });
+    })(q);
+    if(!words.length)return;
+    q.classList.remove('wr');q.classList.add('lit');
+    gsap.set(words,{opacity:.14});
+    gsap.to(words,{opacity:1,ease:'none',stagger:{each:1,from:'start'},
+      scrollTrigger:{trigger:sec,start:'top 78%',end:'top 22%',scrub:.6}});
+  })();
+
+  /* --- S3 las bandas fotograficas se mueven a otra velocidad --- */
+  document.querySelectorAll('.strip .sph img, .band:not(.light) .bph img').forEach(function(im){
+    gsap.fromTo(im,{yPercent:-8},{yPercent:8,ease:'none',
+      scrollTrigger:{trigger:im.closest('section'),start:'top bottom',end:'bottom top',scrub:.5}});
+  });
+
+  /* R5 libro de dias pinneado (solo desktop) */
+  var stage=document.getElementById('jstage');
+  if(stage&&window.innerWidth>900){
+    var days=Array.prototype.slice.call(stage.querySelectorAll('.day'));
+    var fill=document.getElementById('jfill'),cnt=document.getElementById('jcnt');
+    var n=days.length;
+    if(n>1){
+      days.forEach(function(d,i){d.classList.remove('wr');gsap.set(d,{opacity:i===0?1:0})});
+      var words=days.map(function(d){var el=d.querySelector('.dnum');return el?el.childNodes[0].textContent:''});
+      if(cnt)cnt.textContent='Chapter '+words[0];
+      ScrollTrigger.create({trigger:'.journey',start:'top 12%',end:'+='+(n*80)+'%',pin:true,scrub:.4,
+        onUpdate:function(self){var p=self.progress;
+          var f=Math.min(n-1,Math.max(0,p*n-.5));
+          days.forEach(function(d,i){
+            var dst=Math.abs(f-i);
+            var k=Math.max(0,1-dst/.55);
+            d.style.opacity=k;
+            d.style.transform='translateY('+((i-f)*-18)+'px)';
+            d.style.pointerEvents=k>.5?'auto':'none';
+          });
+          if(fill)fill.style.transform='scaleX('+p+')';
+          if(cnt)cnt.textContent='Chapter '+words[Math.round(f)];
+        }});
+    }
+  }
+}
+/* La barra crece a dos filas en movil: el desplazamiento se mide, no se adivina. */
+function navOffset(){return 72}
+function syncScrollMargin(){
+  document.documentElement.style.setProperty('--navh',navOffset()+'px');
+}
+function wireAnchors(lenis){
+  syncScrollMargin();
+  addEventListener('resize',syncScrollMargin);
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(!t)return;e.preventDefault();
+      if(lenis)lenis.scrollTo(t,{offset:-navOffset()});else t.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+})();
+</script>
+</body>
+</html>
