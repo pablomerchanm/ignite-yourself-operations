@@ -1,0 +1,204 @@
+/* ============================================================
+   IGNITE YOURSELF — piezas propias de esta página
+   Todo lo demás sale del kit (styles.css). Aquí solo van
+   los componentes que el kit no traía: el escaparate de
+   previews, la nota de proceso, el segundo bloque de
+   inversión y el formulario de contacto.
+   ============================================================ */
+
+/* ---------- Header legible sobre las secciones claras ----------
+   El kit deja el header en blanco fijo, que sobre beige desaparece.
+   El JS marca .is-onlight cuando la franja del header cae sobre
+   una sección clara. */
+.header.is-onlight { color: var(--black-400); }
+.header.is-onlight .btn--light { background: var(--black-400); color: var(--beige-100); }
+.header.is-onlight .btn--light .btn__icon { background: var(--beige-100); color: var(--black-400); }
+.header.is-onlight .header__toggle span { background: var(--black-400); }
+/* El logotipo es un PNG blanco: sobre beige hay que invertirlo. */
+.header.is-onlight .header__logo img { filter: invert(1); }
+.header { transition: color .35s ease; }
+.header__logo img { transition: filter .35s ease; }
+.header .btn--light,
+.header .btn--light .btn__icon { transition: background .35s ease, color .35s ease; }
+.header__toggle span { transition: background .35s ease, transform .3s ease, opacity .3s ease; }
+
+/* Con el menú móvil abierto el panel es oscuro: el header vuelve a blanco. */
+.header:has(.header__nav.is-open) { color: var(--beige-100); }
+.header:has(.header__nav.is-open) .header__toggle span { background: var(--beige-100); }
+.header:has(.header__nav.is-open) .header__logo img { filter: none; }
+
+/* ---------- Escaparate: la plataforma, en la práctica ---------- */
+.showcase .stage {
+  display: grid;
+  grid-template-columns: minmax(0, 9fr) minmax(0, 3fr);
+  align-items: end;
+  gap: clamp(1.25rem, 1rem + 2vw, 3rem);
+}
+
+.browser {
+  border: var(--hairline-dark);
+  border-radius: var(--radius-med);
+  overflow: hidden;
+  background: var(--card-bg);
+}
+.browser__bar {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .7rem .9rem;
+  border-bottom: var(--hairline-dark);
+  background: rgba(232, 232, 227, .04);
+}
+.browser__bar .dot {
+  width: .5rem; height: .5rem;
+  border-radius: 50%;
+  background: var(--black-200);
+}
+.browser__bar .url {
+  margin-left: .9rem;
+  color: var(--black-50);
+  text-transform: none;
+  letter-spacing: .02em;
+}
+
+.phone {
+  border: var(--hairline-dark);
+  border-radius: var(--radius-main);
+  overflow: hidden;
+  background: var(--card-bg);
+  padding: .4rem;
+}
+.phone .pan { border-radius: calc(var(--radius-main) - .35rem); }
+
+/* La ventana recorta; el JS desplaza la captura dentro de ella. */
+.pan {
+  position: relative;
+  overflow: hidden;
+  height: clamp(280px, 46vh, 560px);
+}
+.phone .pan { height: clamp(320px, 52vh, 620px); }
+.pan img {
+  width: 100%;
+  height: auto;
+  will-change: transform;
+}
+
+.concept-note {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 10fr);
+  gap: clamp(1rem, .8rem + 1.5vw, 3rem);
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  padding-top: clamp(1.2rem, 1rem + 1vw, 2rem);
+  border-top: var(--hairline-dark);
+}
+.concept-note .mono { color: var(--black-50); }
+.concept-note p { color: var(--black-50); max-width: 62ch; }
+
+/* ---------- Nota al pie del proceso ---------- */
+.journey__note {
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  padding-top: clamp(1.2rem, 1rem + 1vw, 2rem);
+  border-top: var(--hairline-dark);
+  color: var(--black-50);
+  max-width: 58ch;
+}
+
+/* ---------- Segundo bloque de inversión ---------- */
+.invest__grid--second {
+  margin-top: clamp(3rem, 2.5rem + 3vw, 5.5rem);
+  padding-top: clamp(3rem, 2.5rem + 3vw, 5.5rem);
+  border-top: var(--hairline-dark);
+}
+.invest__grid--second .invest__amount { color: var(--beige-200); }
+
+/* ---------- Formulario de contacto (dentro del cierre) ---------- */
+.formcard {
+  position: relative;
+  width: min(100%, 46rem);
+  align-self: center;
+  background: rgba(8, 8, 7, .62);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: var(--hairline-dark);
+  border-radius: var(--radius-main);
+  padding: clamp(1.5rem, 1.2rem + 2vw, 2.8rem);
+  text-align: left;
+}
+.formcard h3 {
+  font-size: var(--h5);
+  font-weight: 500;
+  letter-spacing: -.015em;
+  line-height: 1.1;
+}
+.formcard__intro {
+  margin-top: .7rem;
+  margin-bottom: clamp(1.5rem, 1.2rem + 1.5vw, 2.4rem);
+  color: var(--black-50);
+  max-width: 52ch;
+}
+
+.field { margin-bottom: 1.15rem; }
+.field label {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--black-50);
+}
+.field input,
+.field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: var(--text-main);
+  color: var(--beige-100);
+  background: rgba(232, 232, 227, .05);
+  border: var(--hairline-dark);
+  border-radius: var(--radius-med);
+  padding: .75em .9em;
+  transition: border-color .25s ease, background .25s ease;
+}
+.field textarea { resize: vertical; min-height: 6.5em; }
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: rgba(232, 232, 227, .45);
+  background: rgba(232, 232, 227, .09);
+}
+.field .err {
+  display: none;
+  margin-top: .45rem;
+  font-size: .85em;
+  color: #e0a08a;
+}
+.field.invalid input,
+.field.invalid textarea { border-color: #e0a08a; }
+.field.invalid .err { display: block; }
+
+.formcard__submit { margin-top: .6rem; }
+.formcard__note {
+  margin-top: 1.2rem;
+  font-size: .9em;
+  color: var(--black-50);
+  max-width: 54ch;
+}
+.formcard__note a { text-decoration: underline; text-underline-offset: .2em; }
+
+.formcard__confirm {
+  display: none;
+  margin-top: 1.2rem;
+  padding: 1rem 1.1rem;
+  border: var(--hairline-dark);
+  border-radius: var(--radius-med);
+  background: rgba(232, 232, 227, .06);
+  color: var(--beige-200);
+  font-size: .95em;
+  line-height: 1.45;
+}
+.formcard__confirm.is-visible { display: block; }
+
+/* El cierre necesita más aire ahora que carga el formulario. */
+.close .finale { min-height: auto; padding-top: clamp(5rem, 3rem + 8vw, 9rem); }
+
+@media (max-width: 900px) {
+  .showcase .stage { grid-template-columns: 1fr; align-items: stretch; }
+  .phone { max-width: 20rem; }
+  .concept-note { grid-template-columns: 1fr; gap: .6rem; }
+}

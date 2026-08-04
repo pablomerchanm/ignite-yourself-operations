@@ -50,6 +50,21 @@ Dr. Jorge Arce como relleno. Algunas ya se usaron en producción:
 - `v10-mobius` → la web actual de Ignite Yourself (igniteyourself.co)
 - `v14-gareis` → la piel de Kappelman y de Mark Cooke
 
+### La web de Ignite Yourself
+
+| Dónde | Qué es |
+|---|---|
+| `clients/jorge-arce/igy-mobius/` | **La que está viva hoy** en igniteyourself.co (el rewrite de `/` apunta aquí) |
+| `clients/jorge-arce/igy-v3/` | **La nueva.** Mismo contenido comercial, sobre el sistema gráfico del repo 2 (`v2/`): Spark animado, scrollytelling, Success Stories |
+
+Para publicar la nueva basta cambiar una línea en `vercel.json`: el `destination`
+del rewrite de `/`, de `/igy-mobius` a `/igy-v3`. La vieja sigue accesible en
+`/igy-mobius` por si hay que volver atrás.
+
+El sistema gráfico (`igy-v3/styles.css`) es el kit MONOLOG del repo 2, copiado tal
+cual. Lo propio de esta página vive en `site.css` y `site.js` — así el kit se
+puede volver a usar en otro sitio sin arrastrar nada.
+
 `TEMPLATES.md` es el playbook del negocio: el intake que se le pide a cada médico,
 y el modelo (outreach → intake → elegir plantilla → verter contenido → deploy).
 Cada sitio nuevo es un fork con find-replace, no un rediseño.
