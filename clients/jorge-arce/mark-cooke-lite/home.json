@@ -19,7 +19,7 @@
     },
     {
       "t": "The Record",
-      "h": "/mark-cooke/record"
+      "h": "/mark-cooke-lite/record"
     },
     {
       "t": "Contact",
@@ -57,7 +57,7 @@
     {
       "type": "proof",
       "ink": true,
-      "label": "The record, in short",
+      "label": "Why instruct Mark",
       "items": [
         {
           "n": "Forty-five years",
@@ -76,7 +76,12 @@
           "d": "Instructed by both sides, and available as single joint expert. Written reports for aviation matters worldwide."
         }
       ],
-      "no": "01"
+      "no": "01",
+      "title": "The record, <t>in short.</t>",
+      "more": {
+        "t": "Verify the full record",
+        "h": "/mark-cooke-lite/record"
+      }
     },
     {
       "type": "band",
@@ -88,6 +93,10 @@
       "img": {
         "src": "/mark-cooke/assets/band-tail.jpg",
         "alt": "The tail of an airliner against a dusk sky"
+      },
+      "more": {
+        "t": "The story behind this view",
+        "h": "/mark-cooke-lite/story"
       }
     },
     {
