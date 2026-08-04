@@ -288,44 +288,46 @@
           "ext": true
         },
         {
-          "t": "Qualifications",
-          "h": "#qualifications"
+          "t": "Qualifications & record",
+          "h": "/mark-cooke/record"
         }
       ],
       "no": "06",
-      "invert": true
+      "invert": true,
+      "offer": {
+        "label": "A named starting point",
+        "title": "Before litigation: a documentary position review",
+        "desc": "A focused early assessment of what the aircraft, engine and records position can actually support—before proceedings begin or a position is taken.",
+        "cta": {
+          "t": "Request a position review",
+          "h": "#inquiry",
+          "path": "counsel"
+        }
+      },
+      "std": {
+        "label": "Standards of practice",
+        "items": [
+          "Instructed under CPR Part 35 — the expert’s duty is to the court, above the instructing party.",
+          "Expert evidence in arbitration, including proceedings under the IBA Rules.",
+          "Accepts instruction in England & Wales and internationally; written reports worldwide.",
+          "Initial response within one business day.",
+          "He does not opine on flight operations, piloting or air-traffic control."
+        ]
+      }
     },
     {
-      "type": "exp",
+      "type": "mission",
       "id": "record",
-      "label": "Selected experience",
-      "title": "Programmes, fleets and organisations built or brought through transition.",
-      "lede": "Selected from the experience Mark records in his published curriculum vitae.",
-      "groups": [
-        {
-          "label": "Fleet and transition programmes",
-          "wide": true,
-          "names": [
-            "Redelivery of seven Airbus A320 from a UAE operator, onward to a European MRO for cabin reconfiguration and delivery to the next lessee — 2017–2018",
-            "Technical management of the sale of the British Airways DC-10 fleet, positioned at Manchester Airport — 1998–2000",
-            "Steering group for the analysis and implementation of the STREAM technical records platform into a major lessor’s system",
-            "Aircamo Group built from scratch: CAMO office at Manchester International and engine maintenance facility at Hawarden Airport"
-          ]
-        },
-        {
-          "label": "Airworthiness authorities",
-          "names": [
-            "UK Civil Aviation Authority",
-            "European Union Aviation Safety Agency",
-            "US Federal Aviation Administration",
-            "Civil Aviation Authority of the Cayman Islands",
-            "Civil Aviation Authority of Bermuda"
-          ]
-        }
+      "label": "Licences, experience and currency",
+      "quote": "The full record, <t>set out for verification.</t>",
+      "body": [
+        "Licences, expert-witness training, technical currency, fleet programmes and airworthiness authorities—kept on its own page for the reader who needs to verify before instructing."
       ],
-      "fn": "Authority approvals held by the organisations Mark founded and led. Client and matter names are not published.",
-      "no": "07",
-      "tint": true
+      "cta": {
+        "t": "View the full record",
+        "h": "/mark-cooke/record"
+      },
+      "no": "07"
     },
     {
       "type": "strip",
@@ -335,58 +337,6 @@
         "alt": ""
       },
       "pos": "62% 54%"
-    },
-    {
-      "type": "exp",
-      "id": "qualifications",
-      "label": "Qualifications and currency",
-      "title": "Licences, certification and technical currency—verifiable in full.",
-      "lede": "The record an instructing solicitor checks first, set out in one place.",
-      "groups": [
-        {
-          "label": "Licences and qualifications",
-          "wide": true,
-          "names": [
-            "BEng (Hons) Aircraft Maintenance & Engineering — Kingston University London",
-            "EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 — UK Civil Aviation Authority",
-            "FAA Airframe & Powerplant Licence No. 257104 — Federal Aviation Administration",
-            "UK CAA Form 4 Holder at Aircamo Aviation inception",
-            "PRINCE2 Project Management Certified",
-            "Human Factors & Error Management"
-          ]
-        },
-        {
-          "label": "Expert witness training — Cardiff University Bond Solon, 2024",
-          "wide": true,
-          "names": [
-            "Expert Witness Civil Certificate",
-            "Report Writing",
-            "Courtroom Skills",
-            "Cross Examination Skills",
-            "Civil Law & Procedure",
-            "Experts Discussion"
-          ]
-        },
-        {
-          "label": "Current technical currency",
-          "names": [
-            "Maintenance Human Factors Phase 1 & 2",
-            "Fuel Tank & Fuel System Safety Awareness (SFAR88)",
-            "Electrical Wiring Interconnection Systems (EWIS Groups 1 & 2)",
-            "Part 145 Safety Management Systems",
-            "Extended Range Twin Engine Operations (ETOPS)"
-          ]
-        },
-        {
-          "label": "Memberships",
-          "names": [
-            "International Society of Transport Aircraft Trading (ISTAT)",
-            "The Air League",
-            "Aviation Club UK"
-          ]
-        }
-      ],
-      "no": "08"
     },
     {
       "type": "practice",
@@ -427,7 +377,7 @@
         "alt": "Official AerData Approved Partner · ISTAT Member",
         "note": "Official AerData Approved Partner. Member of the International Society of Transport Aircraft Trading."
       },
-      "no": "09",
+      "no": "08",
       "social": [
         {
           "t": "LinkedIn",
@@ -467,10 +417,19 @@
           "items": []
         }
       ],
-      "no": "10",
+      "no": "09",
       "ph": {
         "src": "/mark-cooke/assets/advisory-apron.jpg",
         "alt": "Mark Cooke, BEng (Hons), on the apron beside an aircraft"
+      },
+      "urgent": {
+        "label": "Time-critical",
+        "text": "Aircraft on ground, a repossession in motion or an inspection that cannot wait.",
+        "cta": {
+          "t": "Message Mark on WhatsApp",
+          "h": "https://wa.me/447811329962"
+        },
+        "note": "For instructions from counsel, please use the inquiry form—not WhatsApp."
       }
     },
     {
@@ -488,7 +447,7 @@
       "label": "Work with Mark",
       "title": "Different questions. <t>One standard of evidence.</t>",
       "lede": "Mark’s experience can be engaged in different ways depending on the nature of the matter, the asset or the organisation involved.",
-      "no": "11",
+      "no": "10",
       "cards": [
         {
           "lead": true,
@@ -544,6 +503,23 @@
             "h": "#inquiry",
             "path": "airworthiness"
           }
+        },
+        {
+          "label": "For Insurers and Claims Teams",
+          "title": "Technical opinion for aviation claims",
+          "desc": "Independent assessment of aircraft condition, maintenance error and records for hull and liability claims, coverage questions and subrogation.",
+          "items": [
+            "Maintenance error and workmanship",
+            "Damage assessment and repair review",
+            "Records and traceability for coverage questions",
+            "Subrogation support",
+            "Expert reports for claims resolution"
+          ],
+          "cta": {
+            "t": "Discuss a claims matter",
+            "h": "#inquiry",
+            "path": "insurers"
+          }
         }
       ],
       "fn": "Presented as possible engagement pathways based on Mark’s published experience, not as productized offerings."
@@ -553,7 +529,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the context.</t>",
-      "no": "12",
+      "no": "11",
       "lede": "Select the nature of your inquiry and share enough information for an initial response.",
       "contact": {
         "email": "mcooke@29aero.com",
@@ -657,6 +633,56 @@
               },
               {
                 "n": "Desired timeframe",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "insurers",
+            "t": "Insurance, claims or subrogation matter",
+            "btn": "Discuss a claims matter",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Aircraft or engine type"
+              },
+              {
+                "n": "Policy or claim reference",
+                "full": true
+              },
+              {
+                "n": "Nature of the claim",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
                 "full": true
               },
               {
