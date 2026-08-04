@@ -5,23 +5,85 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.igniteyourself.co" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.igniteyourself.co"
+        }
+      ],
       "destination": "https://igniteyourself.co/$1",
       "permanent": true
     },
-    { "source": "/cooke", "destination": "/mark-cooke", "permanent": false },
-    { "source": "/Cooke", "destination": "/mark-cooke", "permanent": false },
-    { "source": "/mark", "destination": "/mark-cooke", "permanent": false },
-    { "source": "/Mark-Cooke", "destination": "/mark-cooke", "permanent": false },
-    { "source": "/kappelman2", "destination": "/kappelman-getty", "permanent": false },
-    { "source": "/kappelman3", "destination": "/kappelman-gareis", "permanent": false },
-    { "source": "/Kappelman", "destination": "/kappelman", "permanent": false },
-    { "source": "/Kappelman2", "destination": "/kappelman-getty", "permanent": false },
-    { "source": "/Kappelman3", "destination": "/kappelman-gareis", "permanent": false },
-    { "source": "/Kappelman-Getty", "destination": "/kappelman-getty", "permanent": false },
-    { "source": "/Kappelman-Gareis", "destination": "/kappelman-gareis", "permanent": false }
+    {
+      "source": "/cooke",
+      "destination": "/mark-cooke",
+      "permanent": false
+    },
+    {
+      "source": "/Cooke",
+      "destination": "/mark-cooke",
+      "permanent": false
+    },
+    {
+      "source": "/mark",
+      "destination": "/mark-cooke",
+      "permanent": false
+    },
+    {
+      "source": "/mark-cooke-lite",
+      "destination": "/mark-cooke",
+      "permanent": false
+    },
+    {
+      "source": "/mark-cooke-lite/:path*",
+      "destination": "/mark-cooke/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/Mark-Cooke",
+      "destination": "/mark-cooke",
+      "permanent": false
+    },
+    {
+      "source": "/kappelman2",
+      "destination": "/kappelman-getty",
+      "permanent": false
+    },
+    {
+      "source": "/kappelman3",
+      "destination": "/kappelman-gareis",
+      "permanent": false
+    },
+    {
+      "source": "/Kappelman",
+      "destination": "/kappelman",
+      "permanent": false
+    },
+    {
+      "source": "/Kappelman2",
+      "destination": "/kappelman-getty",
+      "permanent": false
+    },
+    {
+      "source": "/Kappelman3",
+      "destination": "/kappelman-gareis",
+      "permanent": false
+    },
+    {
+      "source": "/Kappelman-Getty",
+      "destination": "/kappelman-getty",
+      "permanent": false
+    },
+    {
+      "source": "/Kappelman-Gareis",
+      "destination": "/kappelman-gareis",
+      "permanent": false
+    }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/igy-mobius" }
+    {
+      "source": "/",
+      "destination": "/igy-mobius"
+    }
   ]
 }
