@@ -776,13 +776,16 @@ band:function(s){
   (s.label?'<div class="smallcap wr" data-r1>'+esc(s.label)+'</div>':'')+
   '<p class="bq wr" data-r1>'+rich(s.quote)+'</p>'+
   (s.who?'<div class="bwho wr smallcap" data-r1>'+esc(s.who)+'</div>':'')+
+  (s.more?'<a class="bmore wr" data-r1 href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+
   '</div></div></section>'},
 proof:function(s){
   return'<section class="proof'+(s.ink?' ink':'')+'" id="'+esc(s.id||'proof')+'"><div class="wrap">'+
   (s.label?'<div class="phead" data-r2><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>':'')+
+  (s.title?'<h2 class="d80 ptitle wr" data-r1>'+rich(s.title)+'</h2>':'')+
   '<div class="pgrid" data-cards>'+
-  (s.items||[]).map(function(it,ix){return'<div class="pit wr"><span class="pix">'+('0'+(ix+1)).slice(-2)+'</span><div class="pn">'+rich(it.n)+'</div><p>'+rich(it.d)+'</p></div>'}).join('')+
-  '</div></div></section>'},
+  (s.items||[]).map(function(it,ix){return'<div class="pit wr"><span class="pix">'+('0'+(ix+1)).slice(-2)+'</span><div class="pn">'+rich(it.n)+'</div><p>'+rich(it.d)+'</p></div>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
 exp:function(s){
   return'<section class="exp'+(s.tint?' tint':'')+'" id="'+esc(s.id||'exp')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
