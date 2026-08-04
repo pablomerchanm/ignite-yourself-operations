@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "title": "The Practice — Mark Cooke, BEng (Hons)",
+    "description": "Expert witness, advisory and airworthiness services delivered by Mark Cooke through 29 Aero Limited."
+  },
+  "logo": "MARK COOKE, BENG (HONS)",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/mark-cooke-lite"
+    },
+    {
+      "t": "The Story",
+      "h": "/mark-cooke-lite/story"
+    },
+    {
+      "t": "The Practice",
+      "h": "/mark-cooke-lite/practice"
+    },
+    {
+      "t": "The Record",
+      "h": "/mark-cooke/record"
+    },
+    {
+      "t": "Contact",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "method",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "Aviation disputes turn on what the records <t>can actually support.</t>",
+      "img": {
+        "src": "/mark-cooke/assets/counsel-mark.jpg",
+        "alt": "Mark Cooke, BEng (Hons)"
+      },
+      "intro": "Aircraft condition, maintenance history and contractual obligation rarely align neatly by the time a matter reaches counsel. Establishing what happened requires someone who has read these records as the person accountable for them—and who can explain the findings plainly to lawyers, arbitrators and tribunals. Mark provides independent analysis, written reports and expert advice in commercial aviation matters. <b>He is instructed by claimants and defendants alike, and is available as a single joint expert.</b>",
+      "rows": [
+        {
+          "t": "Aircraft condition and redelivery disputes",
+          "d": "Return conditions, pre-redelivery and redelivery findings, maintenance reserves, transition scope and the technical basis of claims between lessors, operators and purchasers."
+        },
+        {
+          "t": "Maintenance, records and traceability",
+          "d": "Continuing airworthiness compliance, technical record integrity, back-to-birth traceability, maintenance programme adherence, workmanship and maintenance error."
+        },
+        {
+          "t": "Contracts, MRO and commercial agreements",
+          "d": "Lease agreements, maintenance agreements and work scopes, MRO and OEM obligations, repossession and recovery, and the commercial consequences of technical findings."
+        }
+      ],
+      "services": {
+        "label": "Expert services",
+        "items": [
+          "Early case assessment and case review",
+          "Independent technical investigation",
+          "Technical records analysis",
+          "Aircraft and engine inspection",
+          "Written expert reports",
+          "Expert determination and arbitration support",
+          "Single joint expert appointments",
+          "Expert advice to legal teams"
+        ]
+      },
+      "ctaLede": "Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.",
+      "cta": {
+        "t": "Request availability & conflict check",
+        "h": "#inquiry",
+        "path": "counsel"
+      },
+      "ctaNote": "Submission of this form does not establish an engagement or confidential relationship.",
+      "links": [
+        {
+          "t": "Download Mark’s CV",
+          "disabled": true,
+          "desc": "The final document will be connected before launch."
+        },
+        {
+          "t": "29 Aero Limited",
+          "h": "https://www.29aero.com/",
+          "ext": true
+        },
+        {
+          "t": "Qualifications & record",
+          "h": "/mark-cooke/record"
+        }
+      ],
+      "no": "01",
+      "invert": true,
+      "offer": {
+        "label": "A named starting point",
+        "title": "Before litigation: a documentary position review",
+        "desc": "A focused early assessment of what the aircraft, engine and records position can actually support—before proceedings begin or a position is taken.",
+        "cta": {
+          "t": "Request a position review",
+          "h": "#inquiry",
+          "path": "counsel"
+        }
+      },
+      "std": {
+        "label": "Standards of practice",
+        "items": [
+          "Instructed under CPR Part 35 — the expert’s duty is to the court, above the instructing party.",
+          "Expert evidence in arbitration, including proceedings under the IBA Rules.",
+          "Accepts instruction in England & Wales and internationally; written reports worldwide.",
+          "Initial response within one business day.",
+          "He does not opine on flight operations, piloting or air-traffic control."
+        ]
+      }
+    },
+    {
+      "type": "access",
+      "id": "advisory",
+      "c4": false,
+      "label": "For owners, lessors and investors",
+      "title": "Independent advisory, delivered through 29 Aero.",
+      "cards": [
+        {
+          "lv": "No. 1",
+          "title": "Transitions and redeliveries",
+          "for": "Managing or reviewing pre-redelivery, redelivery and onward delivery—scope, findings, negotiation with the MRO and control of cost and timing.",
+          "items": []
+        },
+        {
+          "lv": "No. 2",
+          "title": "Technical due diligence",
+          "for": "Pre-purchase inspections, mid-term audits and letter-of-intent inspections that establish the real condition and records position before value is committed.",
+          "items": []
+        },
+        {
+          "lv": "No. 3",
+          "title": "Repossession and recovery",
+          "for": "Aircraft repossession and recovery handled with a clear, calm and professional approach through difficult transitions.",
+          "items": []
+        },
+        {
+          "lv": "No. 4",
+          "title": "Records and asset management",
+          "for": "Aircraft and engine documentation, engine management, maintenance representation and continuing airworthiness oversight.",
+          "items": []
+        }
+      ],
+      "no": "02",
+      "ph": {
+        "src": "/mark-cooke/assets/advisory-aircraft.jpg",
+        "alt": "Mark Cooke, BEng (Hons), on the apron beside an aircraft"
+      },
+      "urgent": {
+        "label": "Time-critical",
+        "text": "Aircraft on ground, a repossession in motion or an inspection that cannot wait.",
+        "cta": {
+          "t": "Message Mark on WhatsApp",
+          "h": "https://wa.me/447811329962"
+        },
+        "note": "For instructions from counsel, please use the inquiry form—not WhatsApp."
+      }
+    },
+    {
+      "type": "practice",
+      "id": "practice",
+      "ink": true,
+      "label": "The practice",
+      "title": "The company he founded—<t>and the work that runs through it.</t>",
+      "lede": "Mark founded 29 Aero Limited in 2002 and leads it today. The advisory and expert work described on this page is delivered through it.",
+      "company": {
+        "logo": "/mark-cooke/assets/29aero-logo.png",
+        "name": "29 Aero Limited",
+        "role": "Founder · Commercial Aviation Advisor",
+        "desc": "Aircraft and engine technical management, advisory services, and expert witness and advice services to clients worldwide. Its team comes from airlines, lessors and maintenance organisations.",
+        "meta": [
+          "29 Aero Limited · London",
+          "Company No. 10439981",
+          "124 City Road, London EC1V 2NX"
+        ],
+        "href": "https://www.29aero.com/",
+        "link": "Visit 29aero.com"
+      },
+      "svcLabel": "What the practice does",
+      "services": [
+        "Aircraft technical management — lease transition services",
+        "Aircraft pre-purchase inspections",
+        "Aircraft pre-redelivery & mid-term audits",
+        "Repossession & aircraft recovery",
+        "Documentation — aircraft & engine",
+        "Aircraft maintenance representation",
+        "Engine management",
+        "Boeing & Airbus new deliveries",
+        "Expert witness & advice",
+        "Commercial aviation advisory"
+      ],
+      "marks": {
+        "label": "Approvals and memberships",
+        "img": "/mark-cooke/assets/29aero-marks.png",
+        "alt": "Official AerData Approved Partner · ISTAT Member",
+        "note": "Official AerData Approved Partner. Member of the International Society of Transport Aircraft Trading."
+      },
+      "no": "03",
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/mark-c-7b2685b/"
+        }
+      ]
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the context.</t>",
+      "no": "04",
+      "lede": "Select the nature of your inquiry and share enough information for an initial response.",
+      "contact": {
+        "email": "mcooke@29aero.com",
+        "phone": "+44 (0) 7811 329962",
+        "city": "London, United Kingdom"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your inquiry",
+        "preview": "This inquiry flow is illustrative and would be configured with Mark before launch.",
+        "fine": "Private concept — nothing is transmitted from this page. Write directly to mcooke@29aero.com or call +44 (0) 7811 329962.",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "Expert witness or litigation support",
+            "btn": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Law firm",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction or forum"
+              },
+              {
+                "n": "General type of matter",
+                "full": true
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "advisory",
+            "t": "Aviation advisory, transition or asset question",
+            "btn": "Discuss an advisory matter",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Aircraft or engine type"
+              },
+              {
+                "n": "Location",
+                "full": true
+              },
+              {
+                "n": "Nature of the matter",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Desired timeframe",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "insurers",
+            "t": "Insurance, claims or subrogation matter",
+            "btn": "Discuss a claims matter",
+            "note": "Please share only the high-level context needed for an initial conversation.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Aircraft or engine type"
+              },
+              {
+                "n": "Policy or claim reference",
+                "full": true
+              },
+              {
+                "n": "Nature of the claim",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "airworthiness",
+            "t": "Airworthiness or maintenance organisation support",
+            "btn": "Discuss an airworthiness matter",
+            "note": "Approach, scope and availability are confirmed with Mark directly.",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Approval type or authority"
+              },
+              {
+                "n": "Nature of the requirement",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              },
+              {
+                "n": "Brief context",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send inquiry",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ]
+          }
+        ]
+      },
+      "name": "Mark Cooke",
+      "cred": "BEng (Hons)",
+      "roles": "Commercial Aviation Advisor <t>and Expert Witness</t>",
+      "fkick": "Independent judgment where aircraft condition, contracts and asset value meet.",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "mark": {
+        "src": "/mark-cooke/assets/29aero-logo.png",
+        "alt": "29 Aero Limited",
+        "href": "https://www.29aero.com/",
+        "label": "The practice",
+        "lede": "Advisory, aircraft technical management and expert services are delivered through 29 Aero Limited — the company Mark founded in 2002 and leads today.",
+        "link": "Visit 29aero.com",
+        "meta": [
+          "Official AerData Approved Partner",
+          "Member, International Society of Transport Aircraft Trading"
+        ]
+      },
+      "affiliations": [
+        "29 Aero Limited, London — Company No. 10439981",
+        "124 City Road, London EC1V 2NX, United Kingdom"
+      ],
+      "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction, and the 29 Aero mark shown here is a redrawn placeholder pending the original artwork.",
+      "fine": "Private preview · Not indexed",
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/mark-c-7b2685b/"
+        }
+      ],
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/mark-cooke/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Mark Cooke, BEng (Hons), and shared with him privately. It was assembled from publicly available information and imagery, used provisionally and for demonstration purposes only, and every element remains subject to his review and approval. The page is not indexed, not published and not distributed."
+      }
+    }
+  ]
+}
