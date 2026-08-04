@@ -712,6 +712,22 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
 @media (max-width:760px){.pathgrid.p4{grid-template-columns:1fr}
   .pathgrid.p4 .pcard.lead ul{grid-template-columns:1fr}}
 @media (max-width:640px){.aurgent{flex-direction:column;align-items:flex-start}}
+
+/* ---------- pathgrid v2: numerales fantasma, iconos de linea, acento ---------- */
+.pcard{position:relative;transition:border-color .3s}
+.pcard:not(.lead):hover{border-top-color:var(--red)}
+.pnum{position:absolute;top:20px;right:0;font-weight:500;letter-spacing:-.03em;line-height:1;
+  font-size:clamp(38px,3.6vw,58px);color:rgba(20,22,26,.09);pointer-events:none}
+.pcard.lead .pnum{color:rgba(255,255,255,.12);top:clamp(28px,2.6vw,40px);
+  right:clamp(24px,2.2vw,36px);font-size:clamp(48px,4.6vw,80px)}
+.picon{display:block;width:27px;height:27px;margin:2px 0 16px;color:var(--ink);
+  transition:color .3s,transform .3s var(--ease-quick)}
+.picon svg{width:100%;height:100%;display:block}
+.pcard:hover .picon{color:var(--red);transform:translateY(-2px)}
+.pcard.lead .picon{color:#fff;width:31px;height:31px}
+.pcard.lead:hover .picon{color:#fff}
+.pcard h3{font-size:clamp(20px,1.9vw,26px)}
+.pcard.lead h3{font-size:clamp(26px,2.6vw,38px)}
 </style>
 <noscript><style>.wr{opacity:1!important}.ipath[hidden]{display:block!important}.iselect::after{display:none}</style></noscript><style>
 /* ---------- concepto B: nav superior permanente ---------- */
@@ -922,9 +938,11 @@ paths:function(s){
   return'<section class="paths" id="'+esc(s.id||'paths')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
   '<div><h2 class="d80 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="plede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
-  '<div class="pathgrid'+((s.cards||[]).length>3?' p4':'')+'" data-cards>'+(s.cards||[]).map(function(c){
+  '<div class="pathgrid'+((s.cards||[]).length>3?' p4':'')+'" data-cards>'+(s.cards||[]).map(function(c,ci){
     var g=c.cta||{};
     return'<div class="pcard wr'+(c.lead?' lead':'')+'">'+
+      (s.nums?'<span class="pnum" aria-hidden="true">0'+(ci+1)+'</span>':'')+
+      (c.icon?'<span class="picon" aria-hidden="true">'+c.icon+'</span>':'')+
       '<div class="plab">'+esc(c.label)+'</div>'+
       '<h3>'+rich(c.title)+'</h3>'+
       '<p class="pdesc">'+rich(c.desc)+'</p>'+
