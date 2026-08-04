@@ -37,8 +37,10 @@
         "src": "/mark-cooke/assets/hero-mark.jpg",
         "alt": "Mark Cooke, BEng (Hons)"
       },
-      "name": "Mark<br><t>Cooke,</t> BEng (Hons)",
-      "sub": "Commercial Aviation Advisor and Expert Witness",
+      "kick": "29 Aero Limited · London · Instructed worldwide",
+      "name": "Mark Cooke",
+      "cred": "BEng (Hons)",
+      "sub": "Commercial Aviation Advisor <t>and Expert Witness</t>",
       "note": "Independent judgment where aircraft condition, contracts and asset value meet.",
       "actions": [
         {
@@ -64,6 +66,8 @@
     },
     {
       "type": "proof",
+      "ink": true,
+      "label": "The record, in short",
       "items": [
         {
           "n": "Forty-five years",
@@ -386,6 +390,7 @@
     {
       "type": "practice",
       "id": "practice",
+      "ink": true,
       "label": "The practice",
       "title": "The company he founded—<t>and the work that runs through it.</t>",
       "lede": "Mark founded 29 Aero Limited in 2002 and leads it today. The advisory and expert work described on this page is delivered through it.",
@@ -731,18 +736,32 @@
           }
         ]
       },
-      "name": "Mark Cooke, BEng (Hons)",
-      "roles": "Commercial Aviation Advisor and Expert Witness",
+      "name": "Mark Cooke",
+      "cred": "BEng (Hons)",
+      "roles": "Commercial Aviation Advisor <t>and Expert Witness</t>",
+      "fkick": "Independent judgment where aircraft condition, contracts and asset value meet.",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "mark": {
+        "src": "/mark-cooke/assets/29aero-logo.png",
+        "alt": "29 Aero Limited",
+        "href": "https://www.29aero.com/",
+        "label": "The practice",
+        "lede": "Advisory, aircraft technical management and expert services are delivered through 29 Aero Limited — the company Mark founded in 2002 and leads today.",
+        "link": "Visit 29aero.com",
+        "meta": [
+          "Official AerData Approved Partner",
+          "Member, International Society of Transport Aircraft Trading"
+        ]
+      },
       "affiliations": [
         "29 Aero Limited, London — Company No. 10439981",
         "124 City Road, London EC1V 2NX, United Kingdom"
       ],
       "note": "Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction.",
-      "mark": {
-        "src": "/mark-cooke/assets/29aero-logo.png",
-        "alt": "29 Aero Limited",
-        "href": "https://www.29aero.com/"
-      },
+      "fine": "Private preview · Not indexed",
       "social": [
         {
           "t": "LinkedIn",
