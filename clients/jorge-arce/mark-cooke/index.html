@@ -42,7 +42,7 @@
   --ease-out:cubic-bezier(.16,1,.3,1);
   --ease-quick:cubic-bezier(.33,1,.68,1);
   --dur-hover:.2s;
-  --sec:clamp(96px,13vh,152px);
+  --sec:clamp(104px,15vh,184px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{overflow-x:clip}
@@ -61,9 +61,11 @@ a{color:inherit;text-decoration:none}
   clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* ---------- type ---------- */
-.d97{font-weight:500;letter-spacing:-.045em;line-height:.96;font-size:clamp(40px,5.6vw,82px)}
-.d80{font-weight:500;letter-spacing:-.04em;line-height:1;font-size:clamp(32px,4.4vw,62px)}
-.d56{font-weight:500;letter-spacing:-.035em;line-height:1.04;font-size:clamp(25px,3.2vw,42px)}
+/* Cuatro escalones reales de display. El salto entre uno y otro es lo que
+   quita la sensacion de pagina plana: nada aterriza al mismo peso. */
+.d97{font-weight:500;letter-spacing:-.045em;line-height:.96;font-size:clamp(42px,6.2vw,94px)}
+.d80{font-weight:500;letter-spacing:-.042em;line-height:.99;font-size:clamp(34px,4.9vw,72px)}
+.d56{font-weight:500;letter-spacing:-.035em;line-height:1.04;font-size:clamp(26px,3.4vw,46px)}
 .it{font-weight:400}
 .smallcap{font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
 .rnum{font-size:clamp(15px,1.4vw,19px);font-weight:500;letter-spacing:.08em;color:rgba(14,14,14,.35)}
@@ -107,15 +109,32 @@ html.no-motion #pre{display:none}
   linear-gradient(90deg,rgba(10,10,10,.6) 0%,rgba(10,10,10,.26) 42%,rgba(10,10,10,.05) 70%),
   linear-gradient(180deg,rgba(10,10,10,.3) 0%,rgba(10,10,10,0) 35%,rgba(10,10,10,.52) 100%)}
 .hero .inr{position:relative;z-index:2;padding:0 clamp(20px,5vw,80px);max-width:1500px;width:100%}
-.hero .hname{font-weight:500;letter-spacing:-.045em;line-height:.94;font-size:clamp(46px,7.8vw,122px)}
+
+/* Jerarquia del hero, de mayor a menor peso:
+   nombre (display) > subtitulo (rol) > nota (promesa) > credencial y kicker (dato).
+   La credencial baja de rango a proposito: es un sello, no un titulo. */
+.hero .hkick{display:flex;align-items:center;gap:11px;
+  font-size:clamp(10px,.78vw,11.5px);font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(255,255,255,.62);margin-bottom:clamp(20px,3.2vh,34px)}
+.hero .hkick::before{content:'';flex:0 0 auto;width:clamp(28px,4vw,58px);height:1px;background:var(--red)}
+.hero .hname{font-weight:500;letter-spacing:-.05em;line-height:.9;
+  font-size:clamp(52px,11.2vw,164px);white-space:nowrap}
 .hero .hname .it{font-weight:400}
-.hero .hsub{margin-top:clamp(18px,2.6vh,28px);font-size:clamp(11px,1vw,13px);font-weight:500;
-  letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-.hero .hnote{margin-top:clamp(12px,1.6vh,16px);display:flex;align-items:center;gap:9px;
-  font-size:clamp(12px,.95vw,13.5px);line-height:1.6;color:rgba(255,255,255,.75);max-width:52ch}
-.hero .hnote::before{content:'';flex:0 0 auto;width:7px;height:7px;background:var(--red)}
+.hero .hcred{display:flex;align-items:center;gap:clamp(12px,1.4vw,20px);
+  margin-top:clamp(14px,2vh,22px);font-size:clamp(11px,.86vw,13px);font-weight:500;
+  letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.66)}
+.hero .hcred::after{content:'';flex:1 1 auto;max-width:clamp(60px,14vw,220px);height:1px;
+  background:rgba(255,255,255,.28)}
+.hero .hsub{margin-top:clamp(26px,3.8vh,44px);max-width:28ch;
+  font-size:clamp(21px,2.5vw,38px);font-weight:500;letter-spacing:-.035em;line-height:1.08;
+  color:#fff;text-transform:none}
+.hero .hsub .it{font-weight:400;color:rgba(255,255,255,.66)}
+.hero .hnote{margin-top:clamp(18px,2.4vh,26px);display:flex;align-items:flex-start;gap:11px;
+  font-size:clamp(14px,1.12vw,17px);line-height:1.62;color:rgba(255,255,255,.76);max-width:44ch}
+.hero .hnote::before{content:'';flex:0 0 auto;width:7px;height:7px;background:var(--red);
+  margin-top:.55em}
 .hacts{display:flex;align-items:center;gap:clamp(16px,2vw,30px);flex-wrap:wrap;
-  margin-top:clamp(28px,3.8vh,44px)}
+  margin-top:clamp(32px,4.4vh,52px)}
 .hcta{background:#fff;color:var(--ink);font-size:12px;font-weight:500;letter-spacing:.24em;
   text-transform:uppercase;padding:16px 38px;
   transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
@@ -141,29 +160,58 @@ section{padding:var(--sec) 0;position:relative;scroll-margin-top:var(--navh,72px
 /* ---------- mission: bloque suizo alineado a la izquierda ---------- */
 .mission .wrap{max-width:1360px}
 .mission .mlab{justify-content:flex-start}
-.mission .wrap>p{font-weight:500;font-size:clamp(24px,3vw,44px);line-height:1.14;
-  letter-spacing:-.035em;max-width:26ch;margin:0;text-align:left}
-.mission p .it{font-weight:400;color:rgba(14,14,14,.55)}
-.mbody{max-width:640px;margin:40px 0 0;text-align:left}
-.mbody p{font-size:14px;line-height:1.75;color:#3c3c3c}
-.mbody p+p{margin-top:16px}
-.mission .who{margin-top:clamp(36px,5vh,52px);text-align:left;
-  font-size:12.5px;font-style:italic;line-height:1.7;color:var(--gray);max-width:44ch;
-  padding-top:clamp(22px,3vh,30px);border-top:1px solid var(--line)}
+.mission .wrap>p{font-weight:500;font-size:clamp(29px,4.1vw,64px);line-height:1.08;
+  letter-spacing:-.042em;max-width:20ch;margin:0;text-align:left}
+.mission p .it{font-weight:400;color:rgba(14,14,14,.44)}
+/* El cuerpo entra desplazado a la derecha: la asimetria rompe el bloque. */
+.mbody{max-width:56ch;margin:clamp(38px,5.4vh,62px) 0 0;text-align:left;
+  margin-left:clamp(0px,14vw,240px)}
+.mbody p{font-size:clamp(14.5px,1.08vw,16.5px);line-height:1.78;color:#3c3c3c}
+.mbody p+p{margin-top:1.15em}
+.mission .who{margin-top:clamp(40px,5.6vh,64px);text-align:left;
+  font-size:clamp(14px,1.25vw,19px);font-style:italic;line-height:1.6;color:var(--ink);max-width:34ch;
+  letter-spacing:-.015em;text-transform:none;
+  padding-top:clamp(24px,3.2vh,34px);border-top:1px solid var(--line);
+  margin-left:clamp(0px,14vw,240px)}
 .mission .who::before{content:'\201C\00a0'}
 .mcta{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:500;
   letter-spacing:.24em;text-transform:uppercase;padding:16px 38px;
   transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
 .mcta:hover{transform:translateY(-2px);background:#2c2c2c}
 
-/* ---------- proof: tabla de datos ---------- */
-.proof{padding-top:calc(var(--sec)*.5);padding-bottom:calc(var(--sec)*.5)}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 90px;border-top:1px solid var(--line)}
-.pit{position:relative;display:grid;grid-template-columns:minmax(150px,200px) 1fr;gap:18px;
-  padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.pix{position:absolute;right:0;top:22px;font-size:10.5px;letter-spacing:.14em;color:var(--gray)}
-.pit .pn{font-size:15px;font-weight:500;letter-spacing:-.02em}
-.pit p{font-size:12.5px;line-height:1.65;color:var(--gray);max-width:38ch;padding-right:40px}
+/* ---------- tono tinta: cualquier seccion puede invertirse ----------
+   El azul oscuro es el respiro de la pagina, no un adorno: parte el scroll
+   en capitulos y evita que veinte bloques claros se lean como uno solo. */
+.ink{background:var(--ink);color:#fff}
+.ink .smallcap{color:rgba(255,255,255,.5)}
+.ink .rnum{color:rgba(255,255,255,.34)}
+.ink .lhead .smallcap{color:rgba(255,255,255,.72)}
+.ink .lcount{color:rgba(255,255,255,.45)}
+.ink .lgrid{border-top-color:rgba(255,255,255,.3)}
+.ink .lcell{border-bottom-color:rgba(255,255,255,.13)}
+.ink .lcell::after{color:rgba(255,255,255,.42)}
+.ink .elede,.ink .plede{color:rgba(255,255,255,.66)}
+.ink .go{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+.ink .go:hover{border-bottom-color:#fff}
+.ink ::selection{background:#fff;color:var(--ink)}
+.ink a:focus-visible,.ink button:focus-visible{outline-color:#fff}
+/* las placas blancas sostienen los logos que vienen en negro sobre transparente */
+.plate{background:#fff;display:inline-block;padding:22px 26px}
+
+/* ---------- proof: la credencial, en tinta ---------- */
+.proof{padding-top:clamp(76px,10vh,120px);padding-bottom:clamp(76px,10vh,120px)}
+.phead{display:flex;align-items:baseline;gap:16px;margin-bottom:clamp(40px,5.4vh,64px)}
+.phead .rnum{color:rgba(255,255,255,.34)}
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(40px,6vw,110px);
+  border-top:1px solid rgba(255,255,255,.24)}
+.pit{position:relative;padding:clamp(26px,3.4vh,38px) 0;
+  border-bottom:1px solid rgba(255,255,255,.13)}
+.pix{position:absolute;right:0;top:clamp(28px,3.6vh,40px);
+  font-size:10.5px;letter-spacing:.14em;color:rgba(255,255,255,.34)}
+.pit .pn{font-size:clamp(20px,2.15vw,32px);font-weight:500;letter-spacing:-.035em;
+  line-height:1.06;max-width:14ch}
+.pit p{margin-top:12px;font-size:clamp(13px,1vw,14.5px);line-height:1.7;
+  color:rgba(255,255,255,.62);max-width:48ch;padding-right:clamp(0px,3vw,40px)}
 
 /* ---------- access: columnas con filete ---------- */
 .access .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px;margin-top:60px}
@@ -341,22 +389,74 @@ section{padding:var(--sec) 0;position:relative;scroll-margin-top:var(--navh,72px
   font-size:12px;line-height:1.6;color:var(--ink)}
 .ipreview[hidden]{display:none}
 
-/* ---------- footer: el nombre en grande ---------- */
-.kfoot{border-top:1px solid var(--line);padding:clamp(64px,9vh,100px) 0 clamp(96px,12vh,130px);text-align:center}
-.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vh,52px) 80px;
-  max-width:700px;margin:0 auto;justify-items:start}
-.fid{grid-column:1/-1;justify-self:center;text-align:center}
-.fname{font-weight:500;letter-spacing:-.045em;line-height:.92;font-size:clamp(44px,7.6vw,110px)}
-.froles{margin-top:18px;font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gray)}
+/* ---------- footer: cierre en tinta, con el mismo rango que el header ----------
+   Dos columnas de peso igual: a la izquierda quien es, a la derecha adonde va
+   el trabajo. La marca de 29 Aero no es un credito al pie: es un destino. */
+.kfoot{background:var(--ink);color:#fff;border-top:0;
+  padding:clamp(84px,12vh,150px) 0 clamp(104px,12vh,140px);text-align:left}
+.kfoot ::selection{background:#fff;color:var(--ink)}
+.kfoot a:focus-visible{outline-color:#fff}
+
+.ftop{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(48px,6vw,110px);align-items:start}
+
+.fkick{display:flex;align-items:flex-start;gap:11px;max-width:40ch;
+  font-size:clamp(13px,1.05vw,16px);line-height:1.6;color:rgba(255,255,255,.7);
+  margin-bottom:clamp(26px,3.6vh,42px)}
+.fkick::before{content:'';flex:0 0 auto;width:7px;height:7px;background:var(--red);margin-top:.55em}
+.fname{font-weight:500;letter-spacing:-.05em;line-height:.9;
+  font-size:clamp(46px,8.4vw,132px);white-space:nowrap}
+.fcred{display:flex;align-items:center;gap:clamp(12px,1.4vw,20px);margin-top:clamp(12px,1.8vh,20px);
+  font-size:clamp(10.5px,.82vw,12.5px);font-weight:500;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(255,255,255,.6)}
+.fcred::after{content:'';flex:1 1 auto;max-width:clamp(50px,10vw,160px);height:1px;
+  background:rgba(255,255,255,.26)}
+.froles{margin-top:clamp(22px,3vh,32px);max-width:24ch;
+  font-size:clamp(19px,2.1vw,32px);font-weight:500;letter-spacing:-.035em;line-height:1.1;
+  color:#fff;text-transform:none}
+.froles .it{font-weight:400;color:rgba(255,255,255,.6)}
+.fcta{display:inline-block;margin-top:clamp(28px,3.8vh,44px);background:#fff;color:var(--ink);
+  font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;padding:17px 40px;
+  transition:transform var(--dur-hover) var(--ease-quick),background var(--dur-hover)}
+.fcta:hover{transform:translateY(-2px);background:#e9e9e9}
+
+/* bloque 29 Aero: placa blanca, texto propio y su propia llamada */
+.fpract{border-top:1px solid rgba(255,255,255,.22);padding-top:clamp(24px,3.2vh,34px)}
+.fpract>.smallcap{display:block;margin-bottom:clamp(22px,3vh,30px);color:rgba(255,255,255,.5)}
+.fmark{display:block;width:-moz-fit-content;width:fit-content;background:#fff;
+  padding:clamp(20px,2.2vw,28px) clamp(24px,2.6vw,34px);
+  transition:transform var(--dur-hover) var(--ease-quick)}
+.fmark:hover{transform:translateY(-2px)}
+.fmark img{width:clamp(160px,17vw,220px);height:auto}
+.fplede{margin-top:clamp(22px,3vh,30px);font-size:clamp(13.5px,1.05vw,15.5px);line-height:1.72;
+  color:rgba(255,255,255,.72);max-width:46ch}
+.fpmeta{margin-top:clamp(18px,2.4vh,24px);display:flex;flex-direction:column;gap:7px;
+  font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.5)}
+.fpmeta span{display:flex;align-items:flex-start;gap:9px}
+.fpmeta span::before{content:'';flex:0 0 auto;width:5px;height:5px;background:var(--red);margin-top:.5em}
+.fplink{display:inline-block;margin-top:clamp(22px,3vh,30px);font-size:11.5px;font-weight:500;
+  letter-spacing:.2em;text-transform:uppercase;color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.5);padding-bottom:4px;transition:border-color .3s}
+.fplink:hover{border-bottom-color:#fff}
+.fplink::after{content:'\00a0\2192'}
+
+/* franja de datos */
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,64px);
+  margin-top:clamp(60px,8vh,104px);padding-top:clamp(30px,4vh,42px);
+  border-top:1px solid rgba(255,255,255,.22)}
 .fcol{text-align:left}
-.fcol .smallcap{display:block;margin-bottom:14px;font-size:10.5px}
-.fcol ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.fcol li{font-size:13px;line-height:1.6;color:#3c3c3c}
-.fcol li a{border-bottom:1px solid rgba(14,14,14,.3);padding-bottom:2px;transition:border-color .3s}
-.fcol li a:hover{border-bottom-color:var(--ink)}
-.fnote{margin-top:clamp(20px,3vh,28px);padding-top:clamp(22px,3vh,28px);width:100%;
-  border-top:1px solid var(--line);font-size:11px;line-height:1.7;color:var(--gray);
-  max-width:74ch;margin-left:auto;margin-right:auto}
+.fcol .smallcap{display:block;margin-bottom:16px;font-size:10.5px;color:rgba(255,255,255,.5)}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcol li{font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.78)}
+.fcol li a{border-bottom:1px solid rgba(255,255,255,.28);padding-bottom:2px;transition:border-color .3s}
+.fcol li a:hover{border-bottom-color:#fff}
+.fbase{margin-top:clamp(46px,6.4vh,80px);padding-top:clamp(22px,3vh,28px);
+  border-top:1px solid rgba(255,255,255,.16);
+  display:flex;justify-content:space-between;align-items:flex-start;gap:clamp(24px,4vw,60px)}
+.fnote{font-size:11.5px;line-height:1.7;color:rgba(255,255,255,.5);max-width:72ch;margin:0}
+.ffine{flex:0 0 auto;font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.4);white-space:nowrap}
 
 /* ---------- reveals / util ---------- */
 .wr{opacity:0}
@@ -392,6 +492,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .voices .grid{grid-template-columns:1fr;gap:32px}
   .lgrid,.lgrid.wide{grid-template-columns:1fr;gap:0}
 }
+@media (max-width:1080px){
+  .mbody,.mission .who{margin-left:0}
+}
 @media (max-width:960px){
   .shead.rail{grid-template-columns:1fr;gap:16px}
   .rlab{flex-direction:row;align-items:baseline;gap:12px;padding-top:0}
@@ -400,20 +503,31 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .access.withph .cards{grid-template-columns:1fr}
   .access.withph .wph{max-height:460px}
   .band{min-height:clamp(360px,54vh,520px)}
+  .ftop{grid-template-columns:1fr;gap:clamp(44px,6vh,64px)}
+  .fpract{border-top-color:rgba(255,255,255,.16)}
+  .fgrid{grid-template-columns:1fr 1fr;gap:34px 40px}
 }
 @media (max-width:860px){
-  :root{--sec:clamp(72px,10vh,104px)}
+  :root{--sec:clamp(78px,11vh,116px)}
   .wrap{padding:0 18px}
   .topbar{padding:16px 18px}
   .topbar .u11{font-size:10px;letter-spacing:.12em}
   .menuchip{padding:14px 36px}
-  .hero .hsub{max-width:none}
+  .hero .hkick{font-size:9px;letter-spacing:.13em;gap:9px}
+  .hero .hkick::before{width:16px}
+  .hero .hsub{max-width:16ch}
+  .hero .hnote{max-width:38ch}
   .hacts{margin-left:0}
   .journey .day{grid-template-columns:1fr;gap:16px}
-  .pit{grid-template-columns:1fr;gap:6px}
+  .pgrid{grid-template-columns:1fr}
   .pit p{padding-right:0}
-  .fgrid{grid-template-columns:1fr;gap:32px;justify-items:center}
-  .fcol{text-align:center}
+  .pit .pn{max-width:none}
+  .fgrid{grid-template-columns:1fr;gap:30px}
+  .fbase{flex-direction:column;gap:16px}
+}
+@media (max-width:380px){
+  .hero .hname{font-size:46px}
+  .fname{font-size:42px}
 }
 @media (max-width:760px){.pathgrid{grid-template-columns:1fr;gap:0}}
 @media (max-width:640px){
@@ -438,10 +552,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 @media (max-width:860px){
   .band .bph img{object-position:62% 34%}
   .hero .ph img{object-position:70% 22%}
-  /* en vertical el nombre cae sobre su rostro: la rampa inferior lo despega */
+  /* en vertical el bloque de texto crecio y cae sobre su rostro:
+     la rampa arranca antes y cierra mas oscuro para sostener la lectura */
   .hero .ph::after{background:
-    linear-gradient(180deg,rgba(10,11,13,.34) 0%,rgba(10,11,13,0) 20%,
-      rgba(10,11,13,.46) 46%,rgba(10,11,13,.86) 100%)}
+    linear-gradient(180deg,rgba(10,11,13,.4) 0%,rgba(10,11,13,.04) 14%,
+      rgba(10,11,13,.58) 34%,rgba(10,11,13,.82) 62%,rgba(10,11,13,.93) 100%)}
 }
 
 /* ---------- practice: la empresa que fundo ---------- */
@@ -462,8 +577,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   border-top:1px solid var(--line);display:flex;align-items:center;gap:clamp(20px,3vw,40px);flex-wrap:wrap}
 .prmarks img{height:74px;width:auto;mix-blend-mode:multiply}
 .prnote{font-size:12.5px;line-height:1.6;color:var(--gray);max-width:38ch}
-.fmark{display:inline-block;margin-bottom:22px}
-.fmark img{width:150px;height:auto}
 @media (max-width:960px){
   .prlay{grid-template-columns:1fr;gap:36px}
   .prmarks{gap:20px}
@@ -477,14 +590,35 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   filter:contrast(1.03) saturate(.94)}
 .strip .sph::after{content:'';position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(20,22,26,.1) 0%,rgba(20,22,26,0) 40%,rgba(20,22,26,.12) 100%)}
+
+/* ---------- practice sobre tinta ---------- */
+.practice.ink .prlogo{border-color:transparent}
+.practice.ink .prdesc{color:rgba(255,255,255,.72)}
+.practice.ink .prrole{color:#fff}
+.practice.ink .prmeta{color:rgba(255,255,255,.5)}
+.practice.ink .prmarks{border-top-color:rgba(255,255,255,.2)}
+.practice.ink .prnote{color:rgba(255,255,255,.6)}
+.practice.ink .prmarks .plate{padding:16px 20px}
+.practice.ink .prmarks img{mix-blend-mode:normal}
+.practice.ink .prid .go{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+.practice.ink .prid .go:hover{border-bottom-color:#fff}
+
+/* ---------- scrollytelling ---------- */
+.hero .ph,.hero .inr{will-change:transform}
+.mission .wrap>p.lit .sw{transition:none}
+.mission .wrap>p.lit{opacity:1}
+.strip .sph img,.band .bph img{will-change:transform}
+/* el parallax recorta por arriba y por abajo: la foto crece para cubrirlo */
+.strip .sph img,.band .bph img{height:118%;top:-9%;position:absolute;left:0}
+html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
 </style>
 <noscript><style>.wr{opacity:1!important}.ipath[hidden]{display:block!important}.iselect::after{display:none}</style></noscript></head>
 <body>
 <div id="pre" aria-hidden="true"><div class="cnt" id="cnt">0</div></div>
 <div class="topbar"><span class="u11 smallcap" style="color:#fff">Mark Cooke, BEng (Hons)</span><a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a></div>
 <button class="menuchip" id="mbtn" aria-expanded="false">Menu</button>
-<nav class="menupanel" id="nitems" aria-label="Site"><a href="#top">Leon</a><a href="#perspective">Perspective</a><a href="#work">Work</a><a href="#for-counsel">For Counsel</a><a href="#writing">Writing</a></nav>
-<main id="site"><section class="hero" id="top"><div class="ph"><img src="/mark-cooke/assets/hero-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div class="inr" data-r2=""><h1 class="hname wr">Mark<br><span class="it">Cooke,</span> BEng (Hons)</h1><p class="hsub wr">Commercial Aviation Advisor and Expert Witness</p><p class="hnote wr">Independent judgment where aircraft condition, contracts and asset value meet.</p><div class="hacts wr"><a class="hcta" href="#inquiry">Discuss a matter</a><a class="hcta alt" href="#work">Explore Mark’s work</a></div></div></section><section class="mission" id="intro"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">01</span><span class="smallcap">Mark Cooke, BEng (Hons)</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">Understanding what happened to the aircraft—<span class="it">and what the records can support.</span></p><div class="mbody wr"><p>For forty-five years Mark Cooke has worked across military and commercial aviation—as an airframe technician, a CAA and FAA licensed engineer, an overhaul manager and a founder—helping owners, lessors and counsel understand aircraft condition, maintenance history and the contractual obligations attached to them.</p></div></div></section><section class="proof" id="proof"><div class="wrap"><div class="pgrid" data-cards=""><div class="pit wr"><span class="pix">01</span><div class="pn">Forty-five years</div><p>Across military and commercial aircraft environments—from Royal Air Force airframe technician to founder and operator.</p></div><div class="pit wr"><span class="pix">02</span><div class="pn">UK CAA and FAA licensed</div><p>EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 · FAA Airframe &amp; Powerplant Licence No. 257104.</p></div><div class="pit wr"><span class="pix">03</span><div class="pn">BEng (Hons) · CUBS certified</div><p>Aircraft Engineering, Kingston University London. Cardiff University Bond Solon Expert Witness Civil Certificate, 2024.</p></div><div class="pit wr"><span class="pix">04</span><div class="pn">Claimant and defendant</div><p>Instructed by both sides, and available as single joint expert. Written reports for aviation matters worldwide.</p></div></div></div></section><section class="mission" id="perspective"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">03</span><span class="smallcap">A point of view built over four decades</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">In aviation, the asset is <span class="it">never just the aircraft.</span></p><div class="mbody wr"><p>Its condition, maintenance history, technical records, contractual obligations, commercial position and transition requirements have to be understood together. A discrepancy in a maintenance record is rarely only a technical question—it moves value, triggers obligations and decides disputes.</p><p>Mark’s work sits at that intersection: establishing what the aircraft and its records actually show, then explaining what that means for the contract and for the asset.</p><p>That perspective comes from having done the work. He has held the licence, signed the release to service, run the hangar and built the organisation.</p></div><div class="who wr smallcap">The aircraft, the records and the agreement are one story. They have to be read together.</div></div></section><section class="access" id="work"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">04</span><span class="smallcap wr">Three expressions of his authority</span></div><h2 class="d80 wr">One body of experience. Applied wherever aircraft condition carries consequence.</h2></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">01</div><h3>Aircraft and engine condition</h3><div class="for">Establishing the airworthiness, maintenance and records position of an aircraft or engine—and what the documentation genuinely supports.</div><ul><li>Continuing airworthiness management</li><li>Maintenance programmes and compliance</li><li>Technical records and traceability</li><li>Engine condition and management</li><li>Maintenance error and human factors</li><li>Pre-purchase and mid-term audits</li></ul></div><div class="acard wr"><div class="lv">02</div><h3>Leases, transitions and asset value</h3><div class="for">Understanding how contractual obligations, redelivery conditions and technical reality meet during a transition—and where value is gained or lost.</div><ul><li>Lease agreements and return conditions</li><li>Maintenance reserve funds</li><li>Pre-redelivery and redelivery management</li><li>Repossession and aircraft recovery</li><li>MRO and commercial agreements</li><li>Boeing and Airbus new deliveries</li></ul><a class="go" href="#advisory">Advisory</a></div><div class="acard wr"><div class="lv">03</div><h3>Disputes and evidence</h3><div class="for">Independent analysis and written reports for counsel—explaining technical and commercial aviation evidence to lawyers, arbitrators and tribunals.</div><ul><li>Aircraft condition and redelivery disputes</li><li>Records, traceability and compliance evidence</li><li>Maintenance error and workmanship</li><li>Contractual and MRO disputes</li><li>Expert reports and expert determination</li><li>Arbitration and early case assessment</li></ul><a class="go" href="#for-counsel">For counsel</a></div></div></div></section><section class="journey" id="career"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">05</span><span class="smallcap wr">The arc of the work</span></div><h2 class="d80 wr">Forty-five years spent on the aircraft, <span class="it">then on the business around it.</span></h2></div><div class="stage" id="jstage"><div class="day" data-r1=""><div class="dnum">i<span>Royal Air Force · 1980–1990</span></div><div><h3>Airframe technician</h3><p>Ten years across several Royal Air Force bases in the United Kingdom, on the maintenance and rectification of both fixed and rotary wing aircraft. The decade that set the standard for everything after it.</p><div class="tags"><span>Fixed and rotary wing</span><span>Maintenance and rectification</span><span>Military standards</span></div></div></div><div class="day" data-r1=""><div class="dnum">ii<span>FLS Aerospace · 1990–2002</span></div><div><h3>Licensed engineer to overhaul manager</h3><p>Twelve years at one of the largest maintenance facilities in Europe at the time, capable of four widebody aircraft. Inspector Supervisor and UK CAA and FAA licensed engineer, then project manager, then aircraft overhaul manager—responsible for day-to-day operations and roughly two hundred staff.</p><div class="tags"><span>CAA and FAA licensed</span><span>Base and line maintenance</span><span>Two hundred staff</span></div></div></div><div class="day" data-r1=""><div class="dnum">iii<span>29 Aero Limited · 2002–2018</span></div><div><h3>Founder and technical director</h3><p>Built a consultancy serving major commercial aircraft leasing and asset-management companies, with a team of twenty consultants working transitions, pre-redelivery, pre-purchase and mid-lease audits at locations worldwide.</p><div class="tags"><span>Twenty consultants</span><span>Worldwide audits</span><span>Lessor clients</span></div></div></div><div class="day" data-r1=""><div class="dnum">iv<span>Aircamo Group · 2018–2025</span></div><div><h3>Founder, partner and EVP</h3><p>Co-founded and built an airworthiness and engine maintenance group from scratch—a CAMO office at Manchester International Airport and an engine maintenance facility at Hawarden Airport, approved by several airworthiness authorities. The group was sold to Sabena Engineering Brussels in 2023.</p><div class="tags"><span>CAMO and Part 145</span><span>Built from scratch</span><span>Sold to Sabena Engineering</span></div></div></div><div class="day" data-r1=""><div class="dnum">v<span>Independent practice · 2025–</span></div><div><h3>Advisor and expert witness</h3><p>Advisory services to the commercial aviation industry through 29 Aero Limited, together with expert witness and expert advice services following Cardiff University Bond Solon certification in 2024.</p><div class="tags"><span>Expert reports</span><span>Advisory</span><span>Worldwide</span></div></div></div></div><div class="jrail"><div class="bar"><div class="fill" id="jfill"></div></div><div class="cnt" id="jcnt"></div></div></div></section><section class="band" id="band"><div class="bph"><img src="/mark-cooke/assets/band-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div class="bin"><div class="wrap"><div class="smallcap wr" data-r1="">The person behind the analysis</div><p class="bq wr" data-r1="">Forty-five years on the aircraft. <span class="it">Not only in the file.</span></p></div></div></section><section class="method invert" id="for-counsel"><div class="wrap"><div class="lay"><div class="ph wr" data-r1=""><img src="/mark-cooke/assets/counsel-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div><div class="shead lft" data-r2=""><div class="rlab"><span class="rnum wr">06</span><span class="smallcap wr">For counsel</span></div><h2 class="d80 wr">Aviation disputes turn on what the records <span class="it">can actually support.</span></h2></div><p class="mintro wr" data-r1="">Aircraft condition, maintenance history and contractual obligation rarely align neatly by the time a matter reaches counsel. Establishing what happened requires someone who has read these records as the person accountable for them—and who can explain the findings plainly to lawyers, arbitrators and tribunals. Mark provides independent analysis, written reports and expert advice in commercial aviation matters. <b>He is instructed by claimants and defendants alike, and is available as a single joint expert.</b></p><div class="mrow wr" data-r1="" data-rule=""><h4>Aircraft condition and redelivery disputes</h4><p>Return conditions, pre-redelivery and redelivery findings, maintenance reserves, transition scope and the technical basis of claims between lessors, operators and purchasers.</p></div><div class="mrow wr" data-r1="" data-rule=""><h4>Maintenance, records and traceability</h4><p>Continuing airworthiness compliance, technical record integrity, back-to-birth traceability, maintenance programme adherence, workmanship and maintenance error.</p></div><div class="mrow wr" data-r1="" data-rule=""><h4>Contracts, MRO and commercial agreements</h4><p>Lease agreements, maintenance agreements and work scopes, MRO and OEM obligations, repossession and recovery, and the commercial consequences of technical findings.</p></div><div class="msvc wr" data-r1=""><div class="smallcap">Expert services</div><ul><li>Early case assessment and case review</li><li>Independent technical investigation</li><li>Technical records analysis</li><li>Aircraft and engine inspection</li><li>Written expert reports</li><li>Expert determination and arbitration support</li><li>Single joint expert appointments</li><li>Expert advice to legal teams</li></ul></div><p class="mctalede wr" data-r1="">Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.</p><div class="macts wr" data-r1=""><a class="mcta" href="#inquiry" data-path="counsel">Request availability &amp; conflict check</a><span class="mlink is-off" aria-disabled="true" role="link" tabindex="0" aria-describedby="cvnote-for-counsel-0" title="The final document will be connected before launch.">Download Mark’s CV</span><span class="vh" id="cvnote-for-counsel-0">The final document will be connected before launch.</span><a class="mlink" href="https://www.29aero.com/" target="_blank" rel="noopener">29 Aero Limited</a><a class="mlink" href="#qualifications">Qualifications</a></div><p class="mfine wr" data-r1="">Submission of this form does not establish an engagement or confidential relationship.</p></div></div></div></section><section class="exp tint" id="record"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">07</span><span class="smallcap wr">Selected experience</span></div><div><h2 class="d56 wr">Programmes, fleets and organisations built or brought through transition.</h2><p class="elede wr">Selected from the experience Mark records in his published curriculum vitae.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Fleet and transition programmes</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Redelivery of seven Airbus A320 from a UAE operator, onward to a European MRO for cabin reconfiguration and delivery to the next lessee — 2017–2018</div><div class="lcell wr">Technical management of the sale of the British Airways DC-10 fleet, positioned at Manchester Airport — 1998–2000</div><div class="lcell wr">Steering group for the analysis and implementation of the STREAM technical records platform into a major lessor’s system</div><div class="lcell wr">Aircamo Group built from scratch: CAMO office at Manchester International and engine maintenance facility at Hawarden Airport</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Airworthiness authorities</span><span class="lcount">05</span></div><div class="lgrid" data-cards=""><div class="lcell wr">UK Civil Aviation Authority</div><div class="lcell wr">European Union Aviation Safety Agency</div><div class="lcell wr">US Federal Aviation Administration</div><div class="lcell wr">Civil Aviation Authority of the Cayman Islands</div><div class="lcell wr">Civil Aviation Authority of Bermuda</div></div></div><div class="efn wr smallcap" data-r1="">Authority approvals held by the organisations Mark founded and led. Client and matter names are not published.</div></div></section><section class="strip" id="strip-1" aria-hidden="true"><div class="sph"><img src="/mark-cooke/assets/strip-dusk.jpg" alt="" loading="lazy" style="object-position:62% 54%"></div></section><section class="exp" id="qualifications"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">08</span><span class="smallcap wr">Qualifications and currency</span></div><div><h2 class="d56 wr">Licences, certification and technical currency—verifiable in full.</h2><p class="elede wr">The record an instructing solicitor checks first, set out in one place.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Licences and qualifications</span><span class="lcount">06</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">BEng (Hons) Aircraft Maintenance &amp; Engineering — Kingston University London</div><div class="lcell wr">EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 — UK Civil Aviation Authority</div><div class="lcell wr">FAA Airframe &amp; Powerplant Licence No. 257104 — Federal Aviation Administration</div><div class="lcell wr">UK CAA Form 4 Holder at Aircamo Aviation inception</div><div class="lcell wr">PRINCE2 Project Management Certified</div><div class="lcell wr">Human Factors &amp; Error Management</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Expert witness training — Cardiff University Bond Solon, 2024</span><span class="lcount">06</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Expert Witness Civil Certificate</div><div class="lcell wr">Report Writing</div><div class="lcell wr">Courtroom Skills</div><div class="lcell wr">Cross Examination Skills</div><div class="lcell wr">Civil Law &amp; Procedure</div><div class="lcell wr">Experts Discussion</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Current technical currency</span><span class="lcount">05</span></div><div class="lgrid" data-cards=""><div class="lcell wr">Maintenance Human Factors Phase 1 &amp; 2</div><div class="lcell wr">Fuel Tank &amp; Fuel System Safety Awareness (SFAR88)</div><div class="lcell wr">Electrical Wiring Interconnection Systems (EWIS Groups 1 &amp; 2)</div><div class="lcell wr">Part 145 Safety Management Systems</div><div class="lcell wr">Extended Range Twin Engine Operations (ETOPS)</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Memberships</span><span class="lcount">03</span></div><div class="lgrid" data-cards=""><div class="lcell wr">International Society of Transport Aircraft Trading (ISTAT)</div><div class="lcell wr">The Air League</div><div class="lcell wr">Aviation Club UK</div></div></div></div></section><section class="practice" id="practice"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">09</span><span class="smallcap wr">The practice</span></div><div><h2 class="d56 wr">The company he founded—<span class="it">and the work that runs through it.</span></h2><p class="elede wr">Mark founded 29 Aero Limited in 2002 and leads it today. The advisory and expert work described on this page is delivered through it.</p></div></div><div class="prlay" data-r1=""><div class="prid"><div class="prlogo"><img src="/mark-cooke/assets/29aero-logo.png" alt="29 Aero Limited"></div><div class="prrole smallcap">Founder · Commercial Aviation Advisor</div><p class="prdesc">Aircraft and engine technical management, advisory services, and expert witness and advice services to clients worldwide. Its team comes from airlines, lessors and maintenance organisations.</p><div class="prmeta"><span>29 Aero Limited · London</span><span>Company No. 10439981</span><span>124 City Road, London EC1V 2NX</span></div><div class="prlinks"><a class="go" href="https://www.29aero.com/" target="_blank" rel="noopener">Visit 29aero.com</a><a class="go" href="https://www.linkedin.com/in/mark-c-7b2685b/" target="_blank" rel="noopener">LinkedIn</a></div></div><div class="prbody"><div class="lhead"><span class="smallcap">What the practice does</span><span class="lcount">10</span></div><div class="lgrid" data-cards=""><div class="lcell wr">Aircraft technical management — lease transition services</div><div class="lcell wr">Aircraft pre-purchase inspections</div><div class="lcell wr">Aircraft pre-redelivery &amp; mid-term audits</div><div class="lcell wr">Repossession &amp; aircraft recovery</div><div class="lcell wr">Documentation — aircraft &amp; engine</div><div class="lcell wr">Aircraft maintenance representation</div><div class="lcell wr">Engine management</div><div class="lcell wr">Boeing &amp; Airbus new deliveries</div><div class="lcell wr">Expert witness &amp; advice</div><div class="lcell wr">Commercial aviation advisory</div></div></div></div><div class="prmarks wr" data-r1=""><span class="smallcap">Approvals and memberships</span><img src="/mark-cooke/assets/29aero-marks.png" alt="Official AerData Approved Partner · ISTAT Member"><span class="prnote">Official AerData Approved Partner. Member of the International Society of Transport Aircraft Trading.</span></div></div></section><section class="access withph" id="advisory"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">10</span><span class="smallcap wr">For owners, lessors and investors</span></div><h2 class="d80 wr">Independent advisory, delivered through 29 Aero.</h2></div><div class="wlay"><div class="wph wr" data-r1=""><img src="/mark-cooke/assets/advisory-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">No. 1</div><h3>Transitions and redeliveries</h3><div class="for">Managing or reviewing pre-redelivery, redelivery and onward delivery—scope, findings, negotiation with the MRO and control of cost and timing.</div><ul></ul></div><div class="acard wr"><div class="lv">No. 2</div><h3>Technical due diligence</h3><div class="for">Pre-purchase inspections, mid-term audits and letter-of-intent inspections that establish the real condition and records position before value is committed.</div><ul></ul></div><div class="acard wr"><div class="lv">No. 3</div><h3>Repossession and recovery</h3><div class="for">Aircraft repossession and recovery handled with a clear, calm and professional approach through difficult transitions.</div><ul></ul></div><div class="acard wr"><div class="lv">No. 4</div><h3>Records and asset management</h3><div class="for">Aircraft and engine documentation, engine management, maintenance representation and continuing airworthiness oversight.</div><ul></ul></div></div></div></div></section><section class="strip" id="strip-2" aria-hidden="true"><div class="sph"><img src="/mark-cooke/assets/strip-approach.jpg" alt="" loading="lazy" style="object-position:50% 46%"></div></section><section class="paths" id="work-with-mark"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">11</span><span class="smallcap wr">Work with Mark</span></div><div><h2 class="d80 wr">Different questions. <span class="it">One standard of evidence.</span></h2><p class="plede wr">Mark’s experience can be engaged in different ways depending on the nature of the matter, the asset or the organisation involved.</p></div></div><div class="pathgrid" data-cards=""><div class="pcard wr lead"><div class="plab">For Counsel</div><h3>Expert witness and expert advice</h3><p class="pdesc">Independent analysis, written reports and expert advice for commercial aviation disputes—engineering, records, condition and contract.</p><ul><li>Aircraft condition and redelivery disputes</li><li>Technical records and traceability</li><li>Maintenance error and workmanship</li><li>Lease, MRO and commercial agreements</li><li>Expert determination and arbitration</li><li>Early case assessment</li></ul><div class="pgo"><a class="mcta" href="#inquiry" data-path="counsel">Request availability &amp; conflict check</a></div></div><div class="pcard wr"><div class="plab">For Owners, Lessors and Investors</div><h3>Independent aviation advisory</h3><p class="pdesc">Technical due diligence, transition management and asset-condition judgment before value is committed or a position is taken.</p><ul><li>Pre-purchase and mid-term audits</li><li>Transition and redelivery management</li><li>Repossession and recovery</li><li>Maintenance reserves and return conditions</li><li>Engine management</li><li>Records and documentation review</li></ul><div class="pgo"><a class="go" href="#inquiry" data-path="advisory">Discuss an advisory matter</a></div></div><div class="pcard wr"><div class="plab">For Maintenance and Airworthiness Organisations</div><h3>Continuing airworthiness support</h3><p class="pdesc">Support for CAMO and Part 145 organisations on compliance, maintenance programmes and technical management, from someone who has built and held the approvals.</p><ul><li>Continuing airworthiness management</li><li>Maintenance programme review</li><li>Compliance and audit preparation</li><li>Human factors and error management</li><li>Maintenance representation</li><li>Technical records systems</li></ul><div class="pgo"><a class="go" href="#inquiry" data-path="airworthiness">Discuss an airworthiness matter</a></div></div></div><div class="pfn wr smallcap" data-r1="">Presented as possible engagement pathways based on Mark’s published experience, not as productized offerings.</div></div></section><section class="reserve paths-in" id="inquiry"><div class="wrap"><div class="rlay" data-r2=""><div class="rleft"><div class="mlab wr" style="justify-content:flex-start"><span class="rnum">12</span><span class="smallcap">Start a conversation</span></div><h2 class="d97 wr">Start with <span class="it">the context.</span></h2><p class="rlede wr">Select the nature of your inquiry and share enough information for an initial response.</p><div class="rdirect wr"><a class="rmail" href="mailto:mcooke@29aero.com">mcooke@29aero.com</a><div class="rmeta"><span>+44 (0) 7811 329962</span><span>London, United Kingdom</span></div></div></div><div class="rright"><form class="rform iform wr" id="iform" novalidate=""><label class="rfield iselect" for="iqtype"><span class="smallcap">What would you like to discuss?</span><select id="iqtype" name="iqtype"><option value="">Select the nature of your inquiry</option><option value="counsel">Expert witness or litigation support</option><option value="advisory">Aviation advisory, transition or asset question</option><option value="airworthiness">Airworthiness or maintenance organisation support</option><option value="other">Something else</option></select></label><div class="ipath" data-path="counsel" hidden=""><div class="ifields"><label class="rfield" for="f-counsel-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-counsel-0" name="f-counsel-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-1"><span class="smallcap">Law firm<em class="req">Required</em></span><input type="text" id="f-counsel-1" name="f-counsel-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-2"><span class="smallcap">Professional title</span><input type="text" id="f-counsel-2" name="f-counsel-2" disabled=""></label><label class="rfield" for="f-counsel-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-counsel-3" name="f-counsel-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-4"><span class="smallcap">Phone</span><input type="tel" id="f-counsel-4" name="f-counsel-4" disabled=""></label><label class="rfield" for="f-counsel-5"><span class="smallcap">Jurisdiction or forum</span><input type="text" id="f-counsel-5" name="f-counsel-5" disabled=""></label><label class="rfield full" for="f-counsel-6"><span class="smallcap">General type of matter</span><input type="text" id="f-counsel-6" name="f-counsel-6" disabled=""></label><label class="rfield full" for="f-counsel-7"><span class="smallcap">Parties involved, for conflict-check purposes<em class="req">Required</em></span><textarea id="f-counsel-7" name="f-counsel-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-counsel-8"><span class="smallcap">Relevant deadline or timing</span><input type="text" id="f-counsel-8" name="f-counsel-8" disabled=""></label><label class="rfield full" for="f-counsel-9"><span class="smallcap">Brief non-privileged summary</span><textarea id="f-counsel-9" name="f-counsel-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Request availability &amp; conflict check</button><p class="inote">Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.</p></div><div class="ipath" data-path="advisory" hidden=""><div class="ifields"><label class="rfield" for="f-advisory-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-advisory-0" name="f-advisory-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-advisory-1" name="f-advisory-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-2"><span class="smallcap">Professional title</span><input type="text" id="f-advisory-2" name="f-advisory-2" disabled=""></label><label class="rfield" for="f-advisory-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-advisory-3" name="f-advisory-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-4"><span class="smallcap">Phone</span><input type="tel" id="f-advisory-4" name="f-advisory-4" disabled=""></label><label class="rfield" for="f-advisory-5"><span class="smallcap">Aircraft or engine type</span><input type="text" id="f-advisory-5" name="f-advisory-5" disabled=""></label><label class="rfield full" for="f-advisory-6"><span class="smallcap">Location</span><input type="text" id="f-advisory-6" name="f-advisory-6" disabled=""></label><label class="rfield full" for="f-advisory-7"><span class="smallcap">Nature of the matter<em class="req">Required</em></span><textarea id="f-advisory-7" name="f-advisory-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-advisory-8"><span class="smallcap">Desired timeframe</span><input type="text" id="f-advisory-8" name="f-advisory-8" disabled=""></label><label class="rfield full" for="f-advisory-9"><span class="smallcap">Brief context</span><textarea id="f-advisory-9" name="f-advisory-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an advisory matter</button><p class="inote">Please share only the high-level context needed for an initial conversation.</p></div><div class="ipath" data-path="airworthiness" hidden=""><div class="ifields"><label class="rfield" for="f-airworthiness-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-airworthiness-0" name="f-airworthiness-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-airworthiness-1" name="f-airworthiness-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-airworthiness-2" name="f-airworthiness-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-3"><span class="smallcap">Approval type or authority</span><input type="text" id="f-airworthiness-3" name="f-airworthiness-3" disabled=""></label><label class="rfield full" for="f-airworthiness-4"><span class="smallcap">Nature of the requirement<em class="req">Required</em></span><textarea id="f-airworthiness-4" name="f-airworthiness-4" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-airworthiness-5"><span class="smallcap">Timing</span><input type="text" id="f-airworthiness-5" name="f-airworthiness-5" disabled=""></label><label class="rfield full" for="f-airworthiness-6"><span class="smallcap">Brief context</span><textarea id="f-airworthiness-6" name="f-airworthiness-6" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an airworthiness matter</button><p class="inote">Approach, scope and availability are confirmed with Mark directly.</p></div><div class="ipath" data-path="other" hidden=""><div class="ifields"><label class="rfield" for="f-other-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-other-0" name="f-other-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-other-1"><span class="smallcap">Organisation</span><input type="text" id="f-other-1" name="f-other-1" disabled=""></label><label class="rfield" for="f-other-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-other-2" name="f-other-2" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-3"><span class="smallcap">Subject<em class="req">Required</em></span><input type="text" id="f-other-3" name="f-other-3" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-4"><span class="smallcap">Message<em class="req">Required</em></span><textarea id="f-other-4" name="f-other-4" rows="3" required="" aria-required="true" disabled=""></textarea></label></div><button type="submit" disabled="">Send inquiry</button></div><p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden="">This inquiry flow is illustrative and would be configured with Mark before launch.</p><p class="fine">Private concept — nothing is transmitted from this page. Write directly to mcooke@29aero.com or call +44 (0) 7811 329962.</p></form></div></div></div></section><footer class="kfoot"><div class="wrap"><div class="fgrid"><div class="fid"><a class="fmark" href="https://www.29aero.com/" target="_blank" rel="noopener"><img src="/mark-cooke/assets/29aero-logo.png" alt="29 Aero Limited"></a><div class="fname">Mark Cooke, BEng (Hons)</div><div class="froles">Commercial Aviation Advisor and Expert Witness</div></div><div class="fcol"><span class="smallcap">Affiliations</span><ul><li>29 Aero Limited, London — Company No. 10439981</li><li>124 City Road, London EC1V 2NX, United Kingdom</li></ul></div><div class="fcol"><span class="smallcap">Contact</span><ul><li><a href="mailto:mcooke@29aero.com">mcooke@29aero.com</a></li><li><a href="tel:+4407811329962">+44 (0) 7811 329962</a></li><li>London, United Kingdom</li><li><a href="https://www.linkedin.com/in/mark-c-7b2685b/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="fnote">Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction.</div></div></footer></main>
+<nav class="menupanel" id="nitems" aria-label="Site"><a href="#top">Mark</a><a href="#perspective">Perspective</a><a href="#work">Work</a><a href="#for-counsel">For Counsel</a><a href="#advisory">Advisory</a></nav>
+<main id="site"><section class="hero" id="top"><div class="ph"><img src="/mark-cooke/assets/hero-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div class="inr" data-r2=""><div class="hkick wr">29 Aero Limited · London · Instructed worldwide</div><h1 class="hname wr">Mark Cooke</h1><div class="hcred wr">BEng (Hons)</div><p class="hsub wr">Commercial Aviation Advisor <span class="it">and Expert Witness</span></p><p class="hnote wr">Independent judgment where aircraft condition, contracts and asset value meet.</p><div class="hacts wr"><a class="hcta" href="#inquiry">Discuss a matter</a><a class="hcta alt" href="#work">Explore Mark’s work</a></div></div></section><section class="mission" id="intro"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">01</span><span class="smallcap">Mark Cooke, BEng (Hons)</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">Understanding what happened to the aircraft—<span class="it">and what the records can support.</span></p><div class="mbody wr"><p>For forty-five years Mark Cooke has worked across military and commercial aviation—as an airframe technician, a CAA and FAA licensed engineer, an overhaul manager and a founder—helping owners, lessors and counsel understand aircraft condition, maintenance history and the contractual obligations attached to them.</p></div></div></section><section class="proof ink" id="proof"><div class="wrap"><div class="phead" data-r2=""><span class="rnum wr">02</span><span class="smallcap wr">The record, in short</span></div><div class="pgrid" data-cards=""><div class="pit wr"><span class="pix">01</span><div class="pn">Forty-five years</div><p>Across military and commercial aircraft environments—from Royal Air Force airframe technician to founder and operator.</p></div><div class="pit wr"><span class="pix">02</span><div class="pn">UK CAA and FAA licensed</div><p>EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 · FAA Airframe &amp; Powerplant Licence No. 257104.</p></div><div class="pit wr"><span class="pix">03</span><div class="pn">BEng (Hons) · CUBS certified</div><p>Aircraft Engineering, Kingston University London. Cardiff University Bond Solon Expert Witness Civil Certificate, 2024.</p></div><div class="pit wr"><span class="pix">04</span><div class="pn">Claimant and defendant</div><p>Instructed by both sides, and available as single joint expert. Written reports for aviation matters worldwide.</p></div></div></div></section><section class="mission" id="perspective"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">03</span><span class="smallcap">A point of view built over four decades</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">In aviation, the asset is <span class="it">never just the aircraft.</span></p><div class="mbody wr"><p>Its condition, maintenance history, technical records, contractual obligations, commercial position and transition requirements have to be understood together. A discrepancy in a maintenance record is rarely only a technical question—it moves value, triggers obligations and decides disputes.</p><p>Mark’s work sits at that intersection: establishing what the aircraft and its records actually show, then explaining what that means for the contract and for the asset.</p><p>That perspective comes from having done the work. He has held the licence, signed the release to service, run the hangar and built the organisation.</p></div><div class="who wr smallcap">The aircraft, the records and the agreement are one story. They have to be read together.</div></div></section><section class="access" id="work"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">04</span><span class="smallcap wr">Three expressions of his authority</span></div><h2 class="d80 wr">One body of experience. Applied wherever aircraft condition carries consequence.</h2></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">01</div><h3>Aircraft and engine condition</h3><div class="for">Establishing the airworthiness, maintenance and records position of an aircraft or engine—and what the documentation genuinely supports.</div><ul><li>Continuing airworthiness management</li><li>Maintenance programmes and compliance</li><li>Technical records and traceability</li><li>Engine condition and management</li><li>Maintenance error and human factors</li><li>Pre-purchase and mid-term audits</li></ul></div><div class="acard wr"><div class="lv">02</div><h3>Leases, transitions and asset value</h3><div class="for">Understanding how contractual obligations, redelivery conditions and technical reality meet during a transition—and where value is gained or lost.</div><ul><li>Lease agreements and return conditions</li><li>Maintenance reserve funds</li><li>Pre-redelivery and redelivery management</li><li>Repossession and aircraft recovery</li><li>MRO and commercial agreements</li><li>Boeing and Airbus new deliveries</li></ul><a class="go" href="#advisory">Advisory</a></div><div class="acard wr"><div class="lv">03</div><h3>Disputes and evidence</h3><div class="for">Independent analysis and written reports for counsel—explaining technical and commercial aviation evidence to lawyers, arbitrators and tribunals.</div><ul><li>Aircraft condition and redelivery disputes</li><li>Records, traceability and compliance evidence</li><li>Maintenance error and workmanship</li><li>Contractual and MRO disputes</li><li>Expert reports and expert determination</li><li>Arbitration and early case assessment</li></ul><a class="go" href="#for-counsel">For counsel</a></div></div></div></section><section class="journey" id="career"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">05</span><span class="smallcap wr">The arc of the work</span></div><h2 class="d80 wr">Forty-five years spent on the aircraft, <span class="it">then on the business around it.</span></h2></div><div class="stage" id="jstage"><div class="day" data-r1=""><div class="dnum">i<span>Royal Air Force · 1980–1990</span></div><div><h3>Airframe technician</h3><p>Ten years across several Royal Air Force bases in the United Kingdom, on the maintenance and rectification of both fixed and rotary wing aircraft. The decade that set the standard for everything after it.</p><div class="tags"><span>Fixed and rotary wing</span><span>Maintenance and rectification</span><span>Military standards</span></div></div></div><div class="day" data-r1=""><div class="dnum">ii<span>FLS Aerospace · 1990–2002</span></div><div><h3>Licensed engineer to overhaul manager</h3><p>Twelve years at one of the largest maintenance facilities in Europe at the time, capable of four widebody aircraft. Inspector Supervisor and UK CAA and FAA licensed engineer, then project manager, then aircraft overhaul manager—responsible for day-to-day operations and roughly two hundred staff.</p><div class="tags"><span>CAA and FAA licensed</span><span>Base and line maintenance</span><span>Two hundred staff</span></div></div></div><div class="day" data-r1=""><div class="dnum">iii<span>29 Aero Limited · 2002–2018</span></div><div><h3>Founder and technical director</h3><p>Built a consultancy serving major commercial aircraft leasing and asset-management companies, with a team of twenty consultants working transitions, pre-redelivery, pre-purchase and mid-lease audits at locations worldwide.</p><div class="tags"><span>Twenty consultants</span><span>Worldwide audits</span><span>Lessor clients</span></div></div></div><div class="day" data-r1=""><div class="dnum">iv<span>Aircamo Group · 2018–2025</span></div><div><h3>Founder, partner and EVP</h3><p>Co-founded and built an airworthiness and engine maintenance group from scratch—a CAMO office at Manchester International Airport and an engine maintenance facility at Hawarden Airport, approved by several airworthiness authorities. The group was sold to Sabena Engineering Brussels in 2023.</p><div class="tags"><span>CAMO and Part 145</span><span>Built from scratch</span><span>Sold to Sabena Engineering</span></div></div></div><div class="day" data-r1=""><div class="dnum">v<span>Independent practice · 2025–</span></div><div><h3>Advisor and expert witness</h3><p>Advisory services to the commercial aviation industry through 29 Aero Limited, together with expert witness and expert advice services following Cardiff University Bond Solon certification in 2024.</p><div class="tags"><span>Expert reports</span><span>Advisory</span><span>Worldwide</span></div></div></div></div><div class="jrail"><div class="bar"><div class="fill" id="jfill"></div></div><div class="cnt" id="jcnt"></div></div></div></section><section class="band" id="band"><div class="bph"><img src="/mark-cooke/assets/band-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div class="bin"><div class="wrap"><div class="smallcap wr" data-r1="">The person behind the analysis</div><p class="bq wr" data-r1="">Forty-five years on the aircraft. <span class="it">Not only in the file.</span></p></div></div></section><section class="method invert" id="for-counsel"><div class="wrap"><div class="lay"><div class="ph wr" data-r1=""><img src="/mark-cooke/assets/counsel-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div><div class="shead lft" data-r2=""><div class="rlab"><span class="rnum wr">06</span><span class="smallcap wr">For counsel</span></div><h2 class="d80 wr">Aviation disputes turn on what the records <span class="it">can actually support.</span></h2></div><p class="mintro wr" data-r1="">Aircraft condition, maintenance history and contractual obligation rarely align neatly by the time a matter reaches counsel. Establishing what happened requires someone who has read these records as the person accountable for them—and who can explain the findings plainly to lawyers, arbitrators and tribunals. Mark provides independent analysis, written reports and expert advice in commercial aviation matters. <b>He is instructed by claimants and defendants alike, and is available as a single joint expert.</b></p><div class="mrow wr" data-r1="" data-rule=""><h4>Aircraft condition and redelivery disputes</h4><p>Return conditions, pre-redelivery and redelivery findings, maintenance reserves, transition scope and the technical basis of claims between lessors, operators and purchasers.</p></div><div class="mrow wr" data-r1="" data-rule=""><h4>Maintenance, records and traceability</h4><p>Continuing airworthiness compliance, technical record integrity, back-to-birth traceability, maintenance programme adherence, workmanship and maintenance error.</p></div><div class="mrow wr" data-r1="" data-rule=""><h4>Contracts, MRO and commercial agreements</h4><p>Lease agreements, maintenance agreements and work scopes, MRO and OEM obligations, repossession and recovery, and the commercial consequences of technical findings.</p></div><div class="msvc wr" data-r1=""><div class="smallcap">Expert services</div><ul><li>Early case assessment and case review</li><li>Independent technical investigation</li><li>Technical records analysis</li><li>Aircraft and engine inspection</li><li>Written expert reports</li><li>Expert determination and arbitration support</li><li>Single joint expert appointments</li><li>Expert advice to legal teams</li></ul></div><p class="mctalede wr" data-r1="">Share the parties involved, the general nature of the matter and any relevant timing. Please do not submit privileged, confidential or highly sensitive materials until potential conflicts have been reviewed.</p><div class="macts wr" data-r1=""><a class="mcta" href="#inquiry" data-path="counsel">Request availability &amp; conflict check</a><span class="mlink is-off" aria-disabled="true" role="link" tabindex="0" aria-describedby="cvnote-for-counsel-0" title="The final document will be connected before launch.">Download Mark’s CV</span><span class="vh" id="cvnote-for-counsel-0">The final document will be connected before launch.</span><a class="mlink" href="https://www.29aero.com/" target="_blank" rel="noopener">29 Aero Limited</a><a class="mlink" href="#qualifications">Qualifications</a></div><p class="mfine wr" data-r1="">Submission of this form does not establish an engagement or confidential relationship.</p></div></div></div></section><section class="exp tint" id="record"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">07</span><span class="smallcap wr">Selected experience</span></div><div><h2 class="d56 wr">Programmes, fleets and organisations built or brought through transition.</h2><p class="elede wr">Selected from the experience Mark records in his published curriculum vitae.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Fleet and transition programmes</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Redelivery of seven Airbus A320 from a UAE operator, onward to a European MRO for cabin reconfiguration and delivery to the next lessee — 2017–2018</div><div class="lcell wr">Technical management of the sale of the British Airways DC-10 fleet, positioned at Manchester Airport — 1998–2000</div><div class="lcell wr">Steering group for the analysis and implementation of the STREAM technical records platform into a major lessor’s system</div><div class="lcell wr">Aircamo Group built from scratch: CAMO office at Manchester International and engine maintenance facility at Hawarden Airport</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Airworthiness authorities</span><span class="lcount">05</span></div><div class="lgrid" data-cards=""><div class="lcell wr">UK Civil Aviation Authority</div><div class="lcell wr">European Union Aviation Safety Agency</div><div class="lcell wr">US Federal Aviation Administration</div><div class="lcell wr">Civil Aviation Authority of the Cayman Islands</div><div class="lcell wr">Civil Aviation Authority of Bermuda</div></div></div><div class="efn wr smallcap" data-r1="">Authority approvals held by the organisations Mark founded and led. Client and matter names are not published.</div></div></section><section class="strip" id="strip-1" aria-hidden="true"><div class="sph"><img src="/mark-cooke/assets/strip-dusk.jpg" alt="" loading="lazy" style="object-position:62% 54%"></div></section><section class="exp" id="qualifications"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">08</span><span class="smallcap wr">Qualifications and currency</span></div><div><h2 class="d56 wr">Licences, certification and technical currency—verifiable in full.</h2><p class="elede wr">The record an instructing solicitor checks first, set out in one place.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Licences and qualifications</span><span class="lcount">06</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">BEng (Hons) Aircraft Maintenance &amp; Engineering — Kingston University London</div><div class="lcell wr">EASA Part-66 Aircraft Maintenance Engineer Licence No. 101488 — UK Civil Aviation Authority</div><div class="lcell wr">FAA Airframe &amp; Powerplant Licence No. 257104 — Federal Aviation Administration</div><div class="lcell wr">UK CAA Form 4 Holder at Aircamo Aviation inception</div><div class="lcell wr">PRINCE2 Project Management Certified</div><div class="lcell wr">Human Factors &amp; Error Management</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Expert witness training — Cardiff University Bond Solon, 2024</span><span class="lcount">06</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Expert Witness Civil Certificate</div><div class="lcell wr">Report Writing</div><div class="lcell wr">Courtroom Skills</div><div class="lcell wr">Cross Examination Skills</div><div class="lcell wr">Civil Law &amp; Procedure</div><div class="lcell wr">Experts Discussion</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Current technical currency</span><span class="lcount">05</span></div><div class="lgrid" data-cards=""><div class="lcell wr">Maintenance Human Factors Phase 1 &amp; 2</div><div class="lcell wr">Fuel Tank &amp; Fuel System Safety Awareness (SFAR88)</div><div class="lcell wr">Electrical Wiring Interconnection Systems (EWIS Groups 1 &amp; 2)</div><div class="lcell wr">Part 145 Safety Management Systems</div><div class="lcell wr">Extended Range Twin Engine Operations (ETOPS)</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Memberships</span><span class="lcount">03</span></div><div class="lgrid" data-cards=""><div class="lcell wr">International Society of Transport Aircraft Trading (ISTAT)</div><div class="lcell wr">The Air League</div><div class="lcell wr">Aviation Club UK</div></div></div></div></section><section class="practice ink" id="practice"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">09</span><span class="smallcap wr">The practice</span></div><div><h2 class="d56 wr">The company he founded—<span class="it">and the work that runs through it.</span></h2><p class="elede wr">Mark founded 29 Aero Limited in 2002 and leads it today. The advisory and expert work described on this page is delivered through it.</p></div></div><div class="prlay" data-r1=""><div class="prid"><div class="prlogo"><img src="/mark-cooke/assets/29aero-logo.png" alt="29 Aero Limited"></div><div class="prrole smallcap">Founder · Commercial Aviation Advisor</div><p class="prdesc">Aircraft and engine technical management, advisory services, and expert witness and advice services to clients worldwide. Its team comes from airlines, lessors and maintenance organisations.</p><div class="prmeta"><span>29 Aero Limited · London</span><span>Company No. 10439981</span><span>124 City Road, London EC1V 2NX</span></div><div class="prlinks"><a class="go" href="https://www.29aero.com/" target="_blank" rel="noopener">Visit 29aero.com</a><a class="go" href="https://www.linkedin.com/in/mark-c-7b2685b/" target="_blank" rel="noopener">LinkedIn</a></div></div><div class="prbody"><div class="lhead"><span class="smallcap">What the practice does</span><span class="lcount">10</span></div><div class="lgrid" data-cards=""><div class="lcell wr">Aircraft technical management — lease transition services</div><div class="lcell wr">Aircraft pre-purchase inspections</div><div class="lcell wr">Aircraft pre-redelivery &amp; mid-term audits</div><div class="lcell wr">Repossession &amp; aircraft recovery</div><div class="lcell wr">Documentation — aircraft &amp; engine</div><div class="lcell wr">Aircraft maintenance representation</div><div class="lcell wr">Engine management</div><div class="lcell wr">Boeing &amp; Airbus new deliveries</div><div class="lcell wr">Expert witness &amp; advice</div><div class="lcell wr">Commercial aviation advisory</div></div></div></div><div class="prmarks wr" data-r1=""><span class="smallcap">Approvals and memberships</span><span class="plate"><img src="/mark-cooke/assets/29aero-marks.png" alt="Official AerData Approved Partner · ISTAT Member"></span><span class="prnote">Official AerData Approved Partner. Member of the International Society of Transport Aircraft Trading.</span></div></div></section><section class="access withph" id="advisory"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">10</span><span class="smallcap wr">For owners, lessors and investors</span></div><h2 class="d80 wr">Independent advisory, delivered through 29 Aero.</h2></div><div class="wlay"><div class="wph wr" data-r1=""><img src="/mark-cooke/assets/advisory-mark.jpg" alt="Mark Cooke, BEng (Hons)"></div><div class="cards" data-cards=""><div class="acard wr"><div class="lv">No. 1</div><h3>Transitions and redeliveries</h3><div class="for">Managing or reviewing pre-redelivery, redelivery and onward delivery—scope, findings, negotiation with the MRO and control of cost and timing.</div><ul></ul></div><div class="acard wr"><div class="lv">No. 2</div><h3>Technical due diligence</h3><div class="for">Pre-purchase inspections, mid-term audits and letter-of-intent inspections that establish the real condition and records position before value is committed.</div><ul></ul></div><div class="acard wr"><div class="lv">No. 3</div><h3>Repossession and recovery</h3><div class="for">Aircraft repossession and recovery handled with a clear, calm and professional approach through difficult transitions.</div><ul></ul></div><div class="acard wr"><div class="lv">No. 4</div><h3>Records and asset management</h3><div class="for">Aircraft and engine documentation, engine management, maintenance representation and continuing airworthiness oversight.</div><ul></ul></div></div></div></div></section><section class="strip" id="strip-2" aria-hidden="true"><div class="sph"><img src="/mark-cooke/assets/strip-approach.jpg" alt="" loading="lazy" style="object-position:50% 46%"></div></section><section class="paths" id="work-with-mark"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">11</span><span class="smallcap wr">Work with Mark</span></div><div><h2 class="d80 wr">Different questions. <span class="it">One standard of evidence.</span></h2><p class="plede wr">Mark’s experience can be engaged in different ways depending on the nature of the matter, the asset or the organisation involved.</p></div></div><div class="pathgrid" data-cards=""><div class="pcard wr lead"><div class="plab">For Counsel</div><h3>Expert witness and expert advice</h3><p class="pdesc">Independent analysis, written reports and expert advice for commercial aviation disputes—engineering, records, condition and contract.</p><ul><li>Aircraft condition and redelivery disputes</li><li>Technical records and traceability</li><li>Maintenance error and workmanship</li><li>Lease, MRO and commercial agreements</li><li>Expert determination and arbitration</li><li>Early case assessment</li></ul><div class="pgo"><a class="mcta" href="#inquiry" data-path="counsel">Request availability &amp; conflict check</a></div></div><div class="pcard wr"><div class="plab">For Owners, Lessors and Investors</div><h3>Independent aviation advisory</h3><p class="pdesc">Technical due diligence, transition management and asset-condition judgment before value is committed or a position is taken.</p><ul><li>Pre-purchase and mid-term audits</li><li>Transition and redelivery management</li><li>Repossession and recovery</li><li>Maintenance reserves and return conditions</li><li>Engine management</li><li>Records and documentation review</li></ul><div class="pgo"><a class="go" href="#inquiry" data-path="advisory">Discuss an advisory matter</a></div></div><div class="pcard wr"><div class="plab">For Maintenance and Airworthiness Organisations</div><h3>Continuing airworthiness support</h3><p class="pdesc">Support for CAMO and Part 145 organisations on compliance, maintenance programmes and technical management, from someone who has built and held the approvals.</p><ul><li>Continuing airworthiness management</li><li>Maintenance programme review</li><li>Compliance and audit preparation</li><li>Human factors and error management</li><li>Maintenance representation</li><li>Technical records systems</li></ul><div class="pgo"><a class="go" href="#inquiry" data-path="airworthiness">Discuss an airworthiness matter</a></div></div></div><div class="pfn wr smallcap" data-r1="">Presented as possible engagement pathways based on Mark’s published experience, not as productized offerings.</div></div></section><section class="reserve paths-in" id="inquiry"><div class="wrap"><div class="rlay" data-r2=""><div class="rleft"><div class="mlab wr" style="justify-content:flex-start"><span class="rnum">12</span><span class="smallcap">Start a conversation</span></div><h2 class="d97 wr">Start with <span class="it">the context.</span></h2><p class="rlede wr">Select the nature of your inquiry and share enough information for an initial response.</p><div class="rdirect wr"><a class="rmail" href="mailto:mcooke@29aero.com">mcooke@29aero.com</a><div class="rmeta"><span>+44 (0) 7811 329962</span><span>London, United Kingdom</span></div></div></div><div class="rright"><form class="rform iform wr" id="iform" novalidate=""><label class="rfield iselect" for="iqtype"><span class="smallcap">What would you like to discuss?</span><select id="iqtype" name="iqtype"><option value="">Select the nature of your inquiry</option><option value="counsel">Expert witness or litigation support</option><option value="advisory">Aviation advisory, transition or asset question</option><option value="airworthiness">Airworthiness or maintenance organisation support</option><option value="other">Something else</option></select></label><div class="ipath" data-path="counsel" hidden=""><div class="ifields"><label class="rfield" for="f-counsel-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-counsel-0" name="f-counsel-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-1"><span class="smallcap">Law firm<em class="req">Required</em></span><input type="text" id="f-counsel-1" name="f-counsel-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-2"><span class="smallcap">Professional title</span><input type="text" id="f-counsel-2" name="f-counsel-2" disabled=""></label><label class="rfield" for="f-counsel-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-counsel-3" name="f-counsel-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-counsel-4"><span class="smallcap">Phone</span><input type="tel" id="f-counsel-4" name="f-counsel-4" disabled=""></label><label class="rfield" for="f-counsel-5"><span class="smallcap">Jurisdiction or forum</span><input type="text" id="f-counsel-5" name="f-counsel-5" disabled=""></label><label class="rfield full" for="f-counsel-6"><span class="smallcap">General type of matter</span><input type="text" id="f-counsel-6" name="f-counsel-6" disabled=""></label><label class="rfield full" for="f-counsel-7"><span class="smallcap">Parties involved, for conflict-check purposes<em class="req">Required</em></span><textarea id="f-counsel-7" name="f-counsel-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-counsel-8"><span class="smallcap">Relevant deadline or timing</span><input type="text" id="f-counsel-8" name="f-counsel-8" disabled=""></label><label class="rfield full" for="f-counsel-9"><span class="smallcap">Brief non-privileged summary</span><textarea id="f-counsel-9" name="f-counsel-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Request availability &amp; conflict check</button><p class="inote">Please do not submit privileged, confidential or highly sensitive materials through this initial form. Submission does not establish an engagement or confidential relationship.</p></div><div class="ipath" data-path="advisory" hidden=""><div class="ifields"><label class="rfield" for="f-advisory-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-advisory-0" name="f-advisory-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-advisory-1" name="f-advisory-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-2"><span class="smallcap">Professional title</span><input type="text" id="f-advisory-2" name="f-advisory-2" disabled=""></label><label class="rfield" for="f-advisory-3"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-advisory-3" name="f-advisory-3" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-advisory-4"><span class="smallcap">Phone</span><input type="tel" id="f-advisory-4" name="f-advisory-4" disabled=""></label><label class="rfield" for="f-advisory-5"><span class="smallcap">Aircraft or engine type</span><input type="text" id="f-advisory-5" name="f-advisory-5" disabled=""></label><label class="rfield full" for="f-advisory-6"><span class="smallcap">Location</span><input type="text" id="f-advisory-6" name="f-advisory-6" disabled=""></label><label class="rfield full" for="f-advisory-7"><span class="smallcap">Nature of the matter<em class="req">Required</em></span><textarea id="f-advisory-7" name="f-advisory-7" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-advisory-8"><span class="smallcap">Desired timeframe</span><input type="text" id="f-advisory-8" name="f-advisory-8" disabled=""></label><label class="rfield full" for="f-advisory-9"><span class="smallcap">Brief context</span><textarea id="f-advisory-9" name="f-advisory-9" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an advisory matter</button><p class="inote">Please share only the high-level context needed for an initial conversation.</p></div><div class="ipath" data-path="airworthiness" hidden=""><div class="ifields"><label class="rfield" for="f-airworthiness-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-airworthiness-0" name="f-airworthiness-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-1"><span class="smallcap">Organisation<em class="req">Required</em></span><input type="text" id="f-airworthiness-1" name="f-airworthiness-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-airworthiness-2" name="f-airworthiness-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-airworthiness-3"><span class="smallcap">Approval type or authority</span><input type="text" id="f-airworthiness-3" name="f-airworthiness-3" disabled=""></label><label class="rfield full" for="f-airworthiness-4"><span class="smallcap">Nature of the requirement<em class="req">Required</em></span><textarea id="f-airworthiness-4" name="f-airworthiness-4" rows="3" required="" aria-required="true" disabled=""></textarea></label><label class="rfield full" for="f-airworthiness-5"><span class="smallcap">Timing</span><input type="text" id="f-airworthiness-5" name="f-airworthiness-5" disabled=""></label><label class="rfield full" for="f-airworthiness-6"><span class="smallcap">Brief context</span><textarea id="f-airworthiness-6" name="f-airworthiness-6" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Discuss an airworthiness matter</button><p class="inote">Approach, scope and availability are confirmed with Mark directly.</p></div><div class="ipath" data-path="other" hidden=""><div class="ifields"><label class="rfield" for="f-other-0"><span class="smallcap">Full name<em class="req">Required</em></span><input type="text" id="f-other-0" name="f-other-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-other-1"><span class="smallcap">Organisation</span><input type="text" id="f-other-1" name="f-other-1" disabled=""></label><label class="rfield" for="f-other-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-other-2" name="f-other-2" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-3"><span class="smallcap">Subject<em class="req">Required</em></span><input type="text" id="f-other-3" name="f-other-3" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-other-4"><span class="smallcap">Message<em class="req">Required</em></span><textarea id="f-other-4" name="f-other-4" rows="3" required="" aria-required="true" disabled=""></textarea></label></div><button type="submit" disabled="">Send inquiry</button></div><p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden="">This inquiry flow is illustrative and would be configured with Mark before launch.</p><p class="fine">Private concept — nothing is transmitted from this page. Write directly to mcooke@29aero.com or call +44 (0) 7811 329962.</p></form></div></div></div></section><footer class="kfoot"><div class="wrap"><div class="ftop" data-r2=""><div class="fid"><p class="fkick wr">Independent judgment where aircraft condition, contracts and asset value meet.</p><div class="fname wr">Mark Cooke</div><div class="fcred wr">BEng (Hons)</div><div class="froles wr">Commercial Aviation Advisor <span class="it">and Expert Witness</span></div><a class="fcta wr" href="#inquiry">Discuss a matter</a></div><div class="fpract wr" data-r1=""><span class="smallcap">The practice</span><a class="fmark" href="https://www.29aero.com/" target="_blank" rel="noopener"><img src="/mark-cooke/assets/29aero-logo.png" alt="29 Aero Limited"></a><p class="fplede">Advisory, aircraft technical management and expert services are delivered through 29 Aero Limited — the company Mark founded in 2002 and leads today.</p><div class="fpmeta"><span>Official AerData Approved Partner</span><span>Member, International Society of Transport Aircraft Trading</span></div><a class="fplink" href="https://www.29aero.com/" target="_blank" rel="noopener">Visit 29aero.com</a></div></div><div class="fgrid" data-cards=""><div class="fcol wr"><span class="smallcap">Contact</span><ul><li><a href="mailto:mcooke@29aero.com">mcooke@29aero.com</a></li><li><a href="tel:+4407811329962">+44 (0) 7811 329962</a></li><li>London, United Kingdom</li></ul></div><div class="fcol wr"><span class="smallcap">Affiliations</span><ul><li>29 Aero Limited, London — Company No. 10439981</li><li>124 City Road, London EC1V 2NX, United Kingdom</li></ul></div><div class="fcol wr"><span class="smallcap">Elsewhere</span><ul><li><a href="https://www.linkedin.com/in/mark-c-7b2685b/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div></div><div class="fbase"><p class="fnote">Private concept by Ignite Yourself — facts, language and permissions to be reviewed with Mark before publication. Photography is provisional art direction.</p><span class="ffine">Private preview · Not indexed</span></div></div></footer></main>
 <script src="/vendor/gsap.min.js"></script>
 <script src="/vendor/ScrollTrigger.min.js"></script>
 <script src="/vendor/lenis.min.js"></script>
@@ -516,7 +650,9 @@ band:function(s){
   (s.who?'<div class="bwho wr smallcap" data-r1>'+esc(s.who)+'</div>':'')+
   '</div></div></section>'},
 proof:function(s){
-  return'<section class="proof" id="'+esc(s.id||'proof')+'"><div class="wrap"><div class="pgrid" data-cards>'+
+  return'<section class="proof'+(s.ink?' ink':'')+'" id="'+esc(s.id||'proof')+'"><div class="wrap">'+
+  (s.label?'<div class="phead" data-r2><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>':'')+
+  '<div class="pgrid" data-cards>'+
   (s.items||[]).map(function(it,ix){return'<div class="pit wr"><span class="pix">'+('0'+(ix+1)).slice(-2)+'</span><div class="pn">'+rich(it.n)+'</div><p>'+rich(it.d)+'</p></div>'}).join('')+
   '</div></div></section>'},
 exp:function(s){
@@ -534,7 +670,9 @@ exp:function(s){
 hero:function(s){
   return'<section class="hero" id="top">'+bigimg(s.img,'ph')+
   '<div class="inr" data-r2>'+
+  (s.kick?'<div class="hkick wr">'+esc(s.kick)+'</div>':'')+
   '<h1 class="hname wr">'+rich(s.name)+'</h1>'+
+  (s.cred?'<div class="hcred wr">'+esc(s.cred)+'</div>':'')+
   (s.sub?'<p class="hsub wr">'+rich(s.sub)+'</p>':'')+
   (s.note?'<p class="hnote wr">'+rich(s.note)+'</p>':'')+
   ((s.actions||[]).length?'<div class="hacts wr">'+(s.actions||[]).map(function(a){
@@ -584,7 +722,7 @@ strip:function(s){
 
 practice:function(s){
   var co=s.company||{};
-  return'<section class="practice" id="'+esc(s.id||'practice')+'"><div class="wrap">'+
+  return'<section class="practice'+(s.ink?' ink':'')+'" id="'+esc(s.id||'practice')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
   '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
   '<div class="prlay" data-r1>'+
@@ -604,7 +742,7 @@ practice:function(s){
     '</div>'+
   '</div>'+
   (s.marks?'<div class="prmarks wr" data-r1><span class="smallcap">'+esc(s.marks.label)+'</span>'+
-    (s.marks.img?'<img src="'+esc(s.marks.img)+'" alt="'+esc(s.marks.alt||'')+'">':'')+
+    (s.marks.img?'<span class="plate"><img src="'+esc(s.marks.img)+'" alt="'+esc(s.marks.alt||'')+'"></span>':'')+
     (s.marks.note?'<span class="prnote">'+esc(s.marks.note)+'</span>':'')+'</div>':'')+
   '</div></section>'},
 
@@ -662,18 +800,39 @@ inquiry:function(s){
     '</div>'+
   '</div></div></section>'+
   '<footer class="kfoot"><div class="wrap">'+
-    '<div class="fgrid">'+
-      '<div class="fid">'+(s.mark?'<a class="fmark" href="'+esc(s.mark.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.mark.src)+'" alt="'+esc(s.mark.alt||'')+'"></a>':'')+'<div class="fname">'+esc(s.name||'')+'</div>'+
-        (s.roles?'<div class="froles">'+esc(s.roles)+'</div>':'')+'</div>'+
-      '<div class="fcol"><span class="smallcap">Affiliations</span><ul>'+
-        (s.affiliations||[]).map(function(a){return'<li>'+esc(a)+'</li>'}).join('')+'</ul></div>'+
-      '<div class="fcol"><span class="smallcap">Contact</span><ul>'+
+    '<div class="ftop" data-r2>'+
+      '<div class="fid">'+
+        (s.fkick?'<p class="fkick wr">'+esc(s.fkick)+'</p>':'')+
+        '<div class="fname wr">'+esc(s.name||'')+'</div>'+
+        (s.cred?'<div class="fcred wr">'+esc(s.cred)+'</div>':'')+
+        (s.roles?'<div class="froles wr">'+rich(s.roles)+'</div>':'')+
+        (s.fcta?'<a class="fcta wr" href="'+esc(s.fcta.h)+'">'+esc(s.fcta.t)+'</a>':'')+
+      '</div>'+
+      (s.mark?'<div class="fpract wr" data-r1>'+
+        (s.mark.label?'<span class="smallcap">'+esc(s.mark.label)+'</span>':'')+
+        '<a class="fmark" href="'+esc(s.mark.href)+'" target="_blank" rel="noopener">'+
+          '<img src="'+esc(s.mark.src)+'" alt="'+esc(s.mark.alt||'')+'"></a>'+
+        (s.mark.lede?'<p class="fplede">'+rich(s.mark.lede)+'</p>':'')+
+        '<div class="fpmeta">'+(s.mark.meta||[]).map(function(x){return'<span>'+esc(x)+'</span>'}).join('')+'</div>'+
+        '<a class="fplink" href="'+esc(s.mark.href)+'" target="_blank" rel="noopener">'+esc(s.mark.link||'Visit')+'</a>'+
+      '</div>':'')+
+    '</div>'+
+    '<div class="fgrid" data-cards>'+
+      '<div class="fcol wr"><span class="smallcap">Contact</span><ul>'+
         (c.email?'<li><a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>':'')+
         (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
-        (c.city?'<li>'+esc(c.city)+'</li>':'')+(s.social||[]).map(function(x){return'<li><a href="'+esc(x.h)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a></li>'}).join('')+
+        (c.city?'<li>'+esc(c.city)+'</li>':'')+
+      '</ul></div>'+
+      '<div class="fcol wr"><span class="smallcap">Affiliations</span><ul>'+
+        (s.affiliations||[]).map(function(a){return'<li>'+esc(a)+'</li>'}).join('')+'</ul></div>'+
+      '<div class="fcol wr"><span class="smallcap">Elsewhere</span><ul>'+
+        (s.social||[]).map(function(x){return'<li><a href="'+esc(x.h)+'" target="_blank" rel="noopener">'+esc(x.t)+'</a></li>'}).join('')+
       '</ul></div>'+
     '</div>'+
-    '<div class="fnote">'+esc(s.note||'')+'</div>'+
+    '<div class="fbase">'+
+      '<p class="fnote">'+esc(s.note||'')+'</p>'+
+      (s.fine?'<span class="ffine">'+esc(s.fine)+'</span>':'')+
+    '</div>'+
   '</div></footer>'},
 voices:function(s){
   return'<section class="voices"><div class="wrap">'+
@@ -800,16 +959,20 @@ function init(){
     onUpdate:function(){cnt.textContent=Math.round(o.n)},
     onComplete:function(){pre.classList.add('done')}});}
 
+  function stCfg(trigger,pct){
+    if(trigger.getBoundingClientRect().top<window.innerHeight*pct)return undefined;
+    return{trigger:trigger,start:'clamp(top '+Math.round(pct*100)+'%)',once:true};
+  }
   document.querySelectorAll('[data-r1]').forEach(function(el){
     if(el.closest('#jstage')&&window.innerWidth>900)return; /* los days del libro los maneja R5 */
     gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',
-      scrollTrigger:{trigger:el,start:'clamp(top 88%)',once:true}});
+      scrollTrigger:stCfg(el,.88)});
   });
   document.querySelectorAll('[data-r2]').forEach(function(g){
     var kids=g.querySelectorAll('.wr');var acc=0;
     kids.forEach(function(el,i){
       gsap.fromTo(el,{opacity:0,y:18},{opacity:1,y:0,duration:.7,ease:'expo.out',delay:acc/1000,
-        scrollTrigger:{trigger:g,start:'clamp(top 86%)',once:true}});
+        scrollTrigger:stCfg(g,.86)});
       acc+=[120,80,60][Math.min(i,2)];
     });
   });
@@ -825,9 +988,52 @@ function init(){
     var kids=g.querySelectorAll(':scope > .wr');var acc=0;var steps=[90,70,55,45,40,40];
     kids.forEach(function(el,i){
       gsap.fromTo(el,{opacity:0,y:14,scale:.988},{opacity:1,y:0,scale:1,duration:.7,ease:'expo.out',delay:acc/1000,
-        scrollTrigger:{trigger:g,start:'clamp(top 84%)',once:true}});
+        scrollTrigger:stCfg(g,.84)});
       acc+=steps[Math.min(i,steps.length-1)];
     });
+  });
+
+  /* --- S1 hero: la fotografia cede terreno y el texto se despide --- */
+  (function(){
+    var hero=document.querySelector('.hero'),ph=hero&&hero.querySelector('.ph'),inr=hero&&hero.querySelector('.inr');
+    if(!hero||!ph)return;
+    gsap.to(ph,{yPercent:16,scale:1.1,ease:'none',
+      scrollTrigger:{trigger:hero,start:'top top',end:'bottom top',scrub:.5}});
+    if(inr)gsap.to(inr,{yPercent:-14,opacity:0,ease:'none',
+      scrollTrigger:{trigger:hero,start:'top top',end:'bottom 40%',scrub:.5}});
+  })();
+
+  /* --- S2 la frase de apertura se escribe con el scroll --- */
+  (function(){
+    var sec=document.getElementById('intro');if(!sec)return;
+    var q=sec.querySelector('.wrap>p');if(!q)return;
+    /* cada palabra pasa de tenue a tinta; los <span> del contenido se respetan */
+    var words=[];
+    (function walk(node){
+      Array.prototype.slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var parts=n.textContent.split(/(\s+)/).filter(function(t){return t!==''});
+          var frag=document.createDocumentFragment();
+          parts.forEach(function(t){
+            if(/^\s+$/.test(t)){frag.appendChild(document.createTextNode(t));return}
+            var w=document.createElement('span');w.className='sw';w.textContent=t;
+            frag.appendChild(w);words.push(w);
+          });
+          node.replaceChild(frag,n);
+        }else if(n.nodeType===1){walk(n)}
+      });
+    })(q);
+    if(!words.length)return;
+    q.classList.remove('wr');q.classList.add('lit');
+    gsap.set(words,{opacity:.14});
+    gsap.to(words,{opacity:1,ease:'none',stagger:{each:1,from:'start'},
+      scrollTrigger:{trigger:sec,start:'top 78%',end:'top 22%',scrub:.6}});
+  })();
+
+  /* --- S3 las bandas fotograficas se mueven a otra velocidad --- */
+  document.querySelectorAll('.strip .sph img, .band .bph img').forEach(function(im){
+    gsap.fromTo(im,{yPercent:-8},{yPercent:8,ease:'none',
+      scrollTrigger:{trigger:im.closest('section'),start:'top bottom',end:'bottom top',scrub:.5}});
   });
 
   /* R5 libro de dias pinneado (solo desktop) */
