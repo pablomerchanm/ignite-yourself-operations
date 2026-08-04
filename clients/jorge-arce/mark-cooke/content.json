@@ -89,6 +89,18 @@
       "no": "02"
     },
     {
+      "type": "band",
+      "id": "band-thesis",
+      "light": true,
+      "variant": "dusk",
+      "label": "How Mark reads a matter",
+      "quote": "The aircraft, the records and the agreement are one story. <t>They have to be read together.</t>",
+      "img": {
+        "src": "/mark-cooke/assets/band-tail.jpg",
+        "alt": "The tail of an airliner against a dusk sky"
+      }
+    },
+    {
       "type": "mission",
       "id": "perspective",
       "label": "A point of view built over four decades",
@@ -98,7 +110,6 @@
         "Mark’s work sits at that intersection: establishing what the aircraft and its records actually show, then explaining what that means for the contract and for the asset.",
         "That perspective comes from having done the work. He has held the licence, signed the release to service, run the hangar and built the organisation."
       ],
-      "who": "The aircraft, the records and the agreement are one story. They have to be read together.",
       "no": "03"
     },
     {
@@ -328,15 +339,6 @@
         "h": "/mark-cooke/record"
       },
       "no": "07"
-    },
-    {
-      "type": "strip",
-      "id": "strip-1",
-      "img": {
-        "src": "/mark-cooke/assets/strip-dusk.jpg",
-        "alt": ""
-      },
-      "pos": "62% 54%"
     },
     {
       "type": "practice",
@@ -794,7 +796,14 @@
           "t": "LinkedIn",
           "h": "https://www.linkedin.com/in/mark-c-7b2685b/"
         }
-      ]
+      ],
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/mark-cooke/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Mark Cooke, BEng (Hons), and shared with him privately. It was assembled from publicly available information and imagery, used provisionally and for demonstration purposes only, and every element remains subject to his review and approval. The page is not indexed, not published and not distributed."
+      }
     }
   ]
 }
