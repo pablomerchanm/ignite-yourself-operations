@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "Saman Vahedi, DDS, MD — Oral & Maxillofacial Surgery",
+    "description": "Board-certified oral and maxillofacial surgeon trained as both dentist and physician. Wilshire Oral Surgery, West Los Angeles.",
+    "lang": "en"
+  },
+  "brand": { "name": "S. VAHEDI · DDS, MD" },
+  "nav": {
+    "links": [
+      { "text": "Training", "href": "#training" },
+      { "text": "Scope", "href": "#expertise" },
+      { "text": "Referring", "href": "#referring" },
+      { "text": "Practice", "href": "#practice" }
+    ],
+    "cta": { "text": "Contact", "href": "#contact" }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "portrait": { "src": "/img/dr-vahedi.jpg", "alt": "Dr. Saman Vahedi, DDS, MD", "label": "", "ratio": "3:4", "pos": "center 22%" },
+      "nameLines": [
+        { "text": "Saman", "style": "sans" },
+        { "text": "Vahedi", "style": "serif" }
+      ],
+      "credential": "DDS, MD",
+      "notes": [
+        "<b>Oral & maxillofacial surgeon</b><br>Diplomate, ABOMS",
+        "Trained as both<br><b>dentist and physician</b>",
+        "Practicing at<br><b>Wilshire Oral Surgery</b><br>West Los Angeles"
+      ],
+      "scrollWord": "Scroll",
+      "strip": ["West Los Angeles, California", "(Saman Vahedi — DDS, MD)"]
+    },
+    {
+      "type": "manifesto",
+      "no": "( 01 )",
+      "kick": "The practice philosophy",
+      "statement": "A surgeon who trained as <i>both dentist and physician</i> — bringing a full medical education to the management of <d>anesthesia, trauma, and the complex cases</d> other clinicians refer out."
+    },
+    {
+      "type": "stamps",
+      "items": [
+        "<b>Based in</b><br>West Los Angeles, CA",
+        "<b>Board-certified</b><br>Diplomate, ABOMS",
+        "<b>Dual doctorate</b><br>DDS + MD"
+      ]
+    },
+    {
+      "type": "timeline",
+      "id": "training",
+      "no": "( 02 )",
+      "kick": "The training",
+      "title": "Two doctorates, <i>one surgeon.</i>",
+      "sub": "What sets Dr. Vahedi apart is not a single degree but two — a full dental education and a full medical education, earned in sequence.",
+      "nodes": [
+        { "era": "Undergraduate · UCLA", "inst": "University of California, Los Angeles", "detail": "B.S. in Molecular, Cell & Developmental Biology." },
+        { "era": "Dental · USC", "inst": "Herman Ostrow School of Dentistry, USC", "detail": "Doctor of Dental Surgery (DDS)." },
+        { "era": "Medical · Nebraska", "inst": "University of Nebraska", "detail": "<b>Doctor of Medicine (MD)</b> from the College of Medicine, followed by residency in Oral & Maxillofacial Surgery at the University of Nebraska Medical Center.", "key": true },
+        { "era": "2013–2014", "inst": "Chief Resident", "detail": "Led the oral and maxillofacial surgical service as Chief Resident." },
+        { "era": "Board certification", "inst": "Diplomate, ABOMS", "detail": "Diplomate of the American Board of Oral and Maxillofacial Surgery." },
+        { "era": "Hospital affiliation", "inst": "Southern California Hospital, Culver City", "detail": "Listed in the hospital's own provider directory." }
+      ]
+    },
+    {
+      "type": "expertise",
+      "id": "expertise",
+      "title": "The full scope of oral & <i>maxillofacial surgery.</i>",
+      "rows": [
+        { "t": "Facial Trauma", "d": "Management of facial injuries and fractures." },
+        { "t": "Orthognathic Surgery", "d": "Corrective jaw surgery to restore function and alignment." },
+        { "t": "Oral Pathology", "d": "Evaluating and addressing conditions of the mouth and jaw." },
+        { "t": "Wisdom Teeth", "d": "Removal of impacted and problematic third molars." },
+        { "t": "Dental Implants", "d": "Single, multiple, and complex implant reconstruction." },
+        { "t": "Bone Grafting", "d": "Bone grafting and ridge augmentation to rebuild lost support." },
+        { "t": "IV Sedation & Anesthesia", "d": "IV sedation and general anesthesia, managed with a physician's training." }
+      ]
+    },
+    {
+      "type": "referring",
+      "id": "referring",
+      "no": "( 04 )",
+      "kick": "For referring doctors",
+      "title": "The cases you refer out, received by a surgeon <i>trained as a physician.</i>",
+      "sub": "A surgical practice lives on referrals from general dentists and orthodontists. When a case calls for judgment beyond the general chair, Dr. Vahedi's dual training — dentist and physician — is the reason to send it here.",
+      "items": [
+        { "t": "Complex & full-arch implants", "d": "Single, multiple, and complex implant reconstruction with bone grafting and ridge augmentation." },
+        { "t": "Surgical extractions", "d": "Impacted third molars and the extractions better handled surgically." },
+        { "t": "Orthognathic & trauma", "d": "Corrective jaw surgery, facial trauma, and fracture management." },
+        { "t": "Sedation & anesthesia", "d": "IV sedation and general anesthesia, overseen with full medical training." },
+        { "t": "Oral pathology", "d": "Evaluation of conditions affecting the mouth, jaw, and surrounding structures." }
+      ],
+      "paths": [
+        { "text": "Request an appointment", "href": "https://wilshireoralsurgery.com" },
+        { "text": "Professional contact", "href": "mailto:info@wilshireoralsurgery.com" }
+      ],
+      "form": {
+        "title": "Refer a patient",
+        "sub": "Send the case and the office will follow up. No patient records, insurance, or identifiers — this is an introduction, not intake.",
+        "fields": [
+          { "type": "text", "label": "Referring doctor / practice", "placeholder": "Dr. —, practice name" },
+          { "type": "text", "label": "Your name", "placeholder": "Full name" },
+          { "type": "email", "label": "Email", "placeholder": "you@practice.com" },
+          { "type": "textarea", "label": "Case summary", "placeholder": "Brief, non-identifying description of the case" }
+        ],
+        "submit": "Send referral",
+        "msg": "This is a preview — nothing was sent.",
+        "fine": "Preview only. This form is disabled and collects no information."
+      }
+    },
+    {
+      "type": "press",
+      "id": "patient-trust",
+      "no": "( 05 )",
+      "kick": "Patient trust",
+      "title": "In patients' <i>own words.</i>",
+      "cards": [
+        { "who": ["David D.", "Wisdom-tooth surgery"], "q": "Very professional and answered all our questions.", "tone": "navy" },
+        { "who": ["Rebecca C.", "Parent of patient"], "q": "He removed a supernumerary tooth for my anxious eight-year-old and kept her calm and reassured the whole way through." },
+        { "who": ["Verified patient", "Sharecare"], "q": "His demeanor while I was in the chair … was comforting." }
+      ],
+      "note": "Real patient reviews from the practice's public pages. Individual experiences — not a description or promise of clinical results."
+    },
+    {
+      "type": "practice",
+      "id": "practice",
+      "no": "( 06 )",
+      "kick": "The practice",
+      "title": "Dr. Vahedi practices at <i>Wilshire Oral Surgery.</i>",
+      "logo": { "src": "/img/wilshire-logo.png", "alt": "Wilshire Oral Surgery and Implant Center" },
+      "paras": [
+        "This platform introduces the surgeon. The care happens at Wilshire Oral Surgery and Implant Center — the West Los Angeles practice he co-founded.",
+        "The personal platform feeds the practice. It does not compete with it."
+      ],
+      "meta": "<b>Wilshire Oral Surgery and Implant Center</b><br>12300 Wilshire Blvd #326, Los Angeles, CA 90025<br>(310) 954-9449 — call or text",
+      "link": { "text": "wilshireoralsurgery.com", "href": "https://wilshireoralsurgery.com" },
+      "image": { "src": "/img/clinic.jpg", "alt": "Wilshire Oral Surgery and Implant Center", "label": "", "ratio": "4:5", "pos": "center 40%" }
+    },
+    {
+      "type": "finale",
+      "id": "contact",
+      "no": "( 07 )",
+      "kick": "Wilshire Oral Surgery and Implant Center",
+      "bg": { "src": "/img/clinic.jpg", "alt": "", "label": "", "ratio": "16:9", "pos": "center 40%" },
+      "title": "For the complex case that needs a surgeon trained as <i>both dentist and physician.</i>",
+      "cta": { "text": "Refer a complex case", "href": "#referring" },
+      "contact": "<b>12300 Wilshire Blvd #326, Los Angeles, CA 90025</b><br>(310) 954-9449 — call or text · info@wilshireoralsurgery.com",
+      "footer": ["Private preview — concept · Prepared by Ignite Yourself", "Wilshire Oral Surgery · West Los Angeles"]
+    }
+  ]
+}
