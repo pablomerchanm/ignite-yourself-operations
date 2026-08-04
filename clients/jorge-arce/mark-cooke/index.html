@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mark Cooke, BEng (Hons) — Commercial Aviation Advisor &amp; Expert Witness</title>
-<meta name="description" content="A private authority-platform concept exploring the research, advisory and expert-witness work of Leon A. Kappelman, Ph.D.">
+<meta name="description" content="A private authority-platform concept exploring the aviation advisory and expert-witness work of Mark Cooke, BEng (Hons).">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="/mark-cooke/assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/mark-cooke/assets/icon-180.png">
@@ -14,17 +14,6 @@
 <meta property="og:description" content="A private authority-platform concept exploring the aviation advisory and expert-witness work of Mark Cooke, BEng (Hons).">
 <meta property="og:url" content="https://igniteyourself.co/mark-cooke">
 <meta property="og:image" content="https://igniteyourself.co/mark-cooke/assets/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/kappelman/assets/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/kappelman/assets/icon-180.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Leon A. Kappelman, Ph.D.">
-<meta property="og:title" content="Leon A. Kappelman, Ph.D. — Systems, Organizations &amp; Software Disputes">
-<meta property="og:description" content="A private authority-platform concept exploring the research, advisory and expert-witness work of Leon A. Kappelman, Ph.D.">
-<meta property="og:url" content="https://igniteyourself.co/kappelman">
-<meta property="og:image" content="https://igniteyourself.co/kappelman/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -43,6 +32,7 @@
   --ease-quick:cubic-bezier(.33,1,.68,1);
   --dur-hover:.2s;
   --sec:clamp(104px,15vh,184px);
+  --phh:36vh;   /* alto de la foto del hero en vertical */
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{overflow-x:clip}
@@ -524,9 +514,22 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .fgrid{grid-template-columns:1fr;gap:30px}
   .fbase{flex-direction:column;gap:16px}
 }
+@media (max-width:400px){
+  /* el kicker es largo: en pantallas estrechas se aprieta para no partirse */
+  .hero .hkick{font-size:8.5px;letter-spacing:.1em;gap:8px}
+  .hero .hkick::before{width:14px}
+}
 @media (max-width:380px){
   .hero .hname{font-size:46px}
   .fname{font-size:42px}
+}
+@media (max-width:340px){
+  /* pantallas muy estrechas (SE): la foto cede alto para que el bloque de
+     texto siga cabiendo por encima del chip de menu */
+  :root{--phh:26vh}
+  .hero .hkick{font-size:8px;letter-spacing:.06em}
+  .hero .hname{font-size:42px}
+  .fname{font-size:38px}
 }
 @media (max-width:760px){.pathgrid{grid-template-columns:1fr;gap:0}}
 @media (max-width:640px){
@@ -550,12 +553,26 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .band .bph img{object-position:50% 34%;filter:contrast(1.05) brightness(.82)}
 @media (max-width:860px){
   .band .bph img{object-position:62% 34%}
-  .hero .ph img{object-position:70% 22%}
-  /* en vertical el bloque de texto crecio y cae sobre su rostro:
-     la rampa arranca antes y cierra mas oscuro para sostener la lectura */
+  /* La fotografia del hero es apaisada (1.78). Recortada a un movil vertical
+     solo se veia el 26% del ancho: un primer plano enorme con el texto encima
+     de su rostro. Aqui la imagen ocupa unicamente la franja superior y se
+     disuelve en la tinta; el texto vive sobre fondo limpio, no sobre su cara.
+     Como el fondo del estudio ya es casi negro, la union no se nota. */
+  .hero{background:var(--ink);justify-content:flex-start;
+    min-height:100svh;
+    padding:calc(var(--phh) + clamp(18px,2.6vh,28px)) 0 clamp(96px,12vh,124px)}
+  .hero .ph{inset:0 0 auto 0;height:var(--phh)}
+  .hero .ph img{object-position:88% 26%}
+  /* el bloque de texto tiene que caber por encima del chip de menu, que es
+     fijo: los espaciados se aprietan sin tocar los tamanos de letra */
+  .hero .hkick{margin-bottom:clamp(13px,1.9vh,19px)}
+  .hero .hcred{margin-top:clamp(10px,1.4vh,14px)}
+  .hero .hsub{margin-top:clamp(17px,2.3vh,25px);max-width:17ch}
+  .hero .hnote{margin-top:clamp(12px,1.6vh,18px);max-width:38ch}
+  .hacts{margin-top:clamp(19px,2.7vh,29px);gap:14px}
   .hero .ph::after{background:
-    linear-gradient(180deg,rgba(10,11,13,.4) 0%,rgba(10,11,13,.04) 14%,
-      rgba(10,11,13,.58) 34%,rgba(10,11,13,.82) 62%,rgba(10,11,13,.93) 100%)}
+    linear-gradient(180deg,rgba(20,22,26,.46) 0%,rgba(20,22,26,0) 30%,
+      rgba(20,22,26,.22) 58%,rgba(20,22,26,.86) 86%,#14161A 100%)}
 }
 
 /* ---------- practice: la empresa que fundo ---------- */
@@ -638,6 +655,33 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
 <noscript><style>.wr{opacity:1!important}.ipath[hidden]{display:block!important}.iselect::after{display:none}</style></noscript></head>
 <body>
 <div id="pre" aria-hidden="true"><div class="cnt" id="cnt">0</div></div>
+<script>
+/* El contador no puede depender de GSAP: durante el arranque el ticker esta
+   saturado montando la pagina y el tween se completaba de un salto, sin llegar
+   a pintar un solo numero. Aqui va suelto, con su propio rAF.
+   Y sobre todo: el preloader se retira pase lo que pase. Si el fetch falla, si
+   un script no carga o si algo lanza antes de tiempo, la red de seguridad lo
+   quita igual y nunca deja la pagina tapada. */
+(function(){
+  var pre=document.getElementById('pre'),cnt=document.getElementById('cnt');
+  if(!pre||!cnt)return;
+  var t0=Date.now(),MIN=850,MAX=4000,listo=false,n=0,fin=false;
+  function cerrar(){if(fin)return;fin=true;cnt.textContent='100';pre.classList.add('done')}
+  window.__igyListo=function(){listo=true};
+  addEventListener('load',window.__igyListo);
+  setTimeout(cerrar,MAX);
+  (function paso(){
+    if(fin)return;
+    var t=Date.now()-t0;
+    /* sube hasta 92 con el tiempo y reserva el ultimo tramo al contenido real */
+    var meta=listo?100:Math.min(92,t/MIN*92);
+    n=Math.min(100,Math.max(n,Math.min(meta,n+2.4)));
+    cnt.textContent=Math.round(n);
+    if(n>=100){cerrar();return}
+    requestAnimationFrame(paso);
+  })();
+})();
+</script>
 <div class="topbar"><span class="u11 smallcap" style="color:#fff">Mark Cooke, BEng (Hons)</span><a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a></div>
 <button class="menuchip" id="mbtn" aria-expanded="false">Menu</button>
 <nav class="menupanel" id="nitems" aria-label="Site"><a href="#top">Mark</a><a href="#perspective">Perspective</a><a href="#work">Work</a><a href="#for-counsel">For Counsel</a><a href="#advisory">Advisory</a></nav>
@@ -891,6 +935,7 @@ fetch('/mark-cooke/content.json').then(function(r){if(!r.ok)throw new Error(r.st
   var nc=document.getElementById('ncta');
   if(nc&&c.navcta){nc.href=c.navcta.h;nc.textContent=c.navcta.t;nc.hidden=false}
   document.getElementById('site').innerHTML=(c.sections||[]).map(function(s){var p=partials[s.type];return p?p(s):''}).join('');
+  if(window.__igyListo)window.__igyListo();
   init();
 }).catch(function(e){
   var pre=document.getElementById('pre');if(pre)pre.classList.add('done');
@@ -975,12 +1020,6 @@ function init(){
       im.addEventListener('load',done);im.addEventListener('error',done)});
   })();
   wireAnchors(lenis);
-
-  /* preloader contador determinista */
-  var pre=document.getElementById('pre'),cnt=document.getElementById('cnt'),o={n:0};
-  if(pre&&cnt){gsap.to(o,{n:100,duration:.9,ease:'expo.out',
-    onUpdate:function(){cnt.textContent=Math.round(o.n)},
-    onComplete:function(){pre.classList.add('done')}});}
 
   function stCfg(trigger,pct){
     if(trigger.getBoundingClientRect().top<window.innerHeight*pct)return undefined;
