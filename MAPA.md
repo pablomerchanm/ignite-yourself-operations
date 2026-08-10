@@ -74,9 +74,27 @@ Cada sitio nuevo es un fork con find-replace, no un rediseño.
 | Cliente | Dónde | Estado |
 |---|---|---|
 | **Mark Cooke** | `clients/jorge-arce/mark-cooke/` | Preview enviado. 4 páginas: home, story, practice, record |
+| **Dr Robert Freudenthal** | `clients/jorge-arce/freudenthal/` | Preview sin enviar. 4 páginas: overview, practice, thinking, record. Misma piel que Mark, calibrada sin fotografía |
 | **Leon Kappelman** | `clients/jorge-arce/kappelman/` | Preview enviado. Variantes: `kappelman-gareis`, `kappelman-getty` |
 | **Wilshire Oral Surgery** | `clients/wilshire-oral-surgery/` | Dos previews sin enviar: Dr. Vahedi y Dr. Shadi |
 | **Prospección abogados** | `prospecting/round-1/` | 4 briefs + CSV de prospectos y exclusiones |
+
+### Cómo se reconstruye un preview
+
+Los previews de cliente no se editan a mano: se generan. El contenido vive en
+`content.json` y un script lo reparte en páginas y deriva los HTML.
+
+| Cliente | Script |
+|---|---|
+| Dr Robert Freudenthal | `tools/build-freudenthal.py` + `tools/prerender-freudenthal.mjs` |
+
+El orden es siempre el mismo: levantar el servidor local que imita el `cleanUrls`
+de Vercel, correr el build, y después el prerender (que abre cada página con las
+animaciones apagadas y congela el HTML resultante dentro de `<main id="site">`,
+para que la página se lea aunque el JavaScript no cargue).
+
+`tools/` está fuera de lo que Vercel publica: la raíz del proyecto es
+`clients/jorge-arce/`.
 
 ### Configuración
 

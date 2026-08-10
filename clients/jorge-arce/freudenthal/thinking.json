@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "title": "The Thinking — Dr Robert Freudenthal",
+    "description": "Twenty years studying how psychiatric evidence is made, accepted and abandoned — and four of sixteen publications."
+  },
+  "logo": "DR ROBERT FREUDENTHAL",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/freudenthal"
+    },
+    {
+      "t": "The Practice",
+      "h": "/freudenthal/practice"
+    },
+    {
+      "t": "The Thinking",
+      "h": "/freudenthal/thinking"
+    },
+    {
+      "t": "The Record",
+      "h": "/freudenthal/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "mission",
+      "id": "thinking-lede",
+      "no": "01",
+      "label": "The Thinking",
+      "quote": "An expert gives an opinion, then has to hold it <t>when the other side attacks its basis.</t>",
+      "body": [
+        "He has studied that problem as a discipline. An intercalated BSc in the History of Medicine at the Wellcome Trust Centre. An MSc thesis on insulin coma therapy. A paper in History of Psychiatry on how a treatment once called a landmark in psychiatric progress rose and fell.",
+        "And, separately, published work on how far the participants in psychiatric clinical trials resemble the patients those trials are meant to serve."
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "thinking-work",
+      "no": "02",
+      "label": "Selected publications",
+      "title": "Four of sixteen.",
+      "lede": "The complete list of sixteen publications, with dates, appears on the record page.",
+      "groups": [
+        {
+          "label": "Capacity and end-of-life questions",
+          "wide": true,
+          "names": [
+            "Freudenthal R, Cohn V, Brady J. Is There a Role for Palliative Care in the Treatment of Anorexia Nervosa. British Journal of Hospital Medicine, 2026"
+          ]
+        },
+        {
+          "label": "How psychiatric evidence is made, accepted and abandoned",
+          "wide": true,
+          "names": [
+            "Freudenthal R, Moncrieff J. 'A landmark in psychiatric progress'? The role of evidence in the rise and fall of insulin coma therapy. History of Psychiatry, 2021",
+            "Freudenthal R, Marston L, Stansfeld J, Priebe S, Moncrieff J. How do participants in clinical trials compare with other patients with schizophrenia? Contemporary Clinical Trials Communications, 2021",
+            "Ash G, Hilton C, Freudenthal R, Stephenson T, Ikkos G. History of psychiatry in the curriculum? British Journal of Psychiatry, 2020"
+          ]
+        }
+      ],
+      "fn": "Titles and years as listed on his own curriculum vitae, 2026."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "no": "03",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Select the nature of the enquiry and give enough context for an initial response. Nothing on this page is transmitted anywhere.",
+      "contact": {
+        "city": "London, United Kingdom"
+      },
+      "fkick": "Where clinical judgement meets the question of capacity — and the question of how far the evidence can be trusted.",
+      "name": "Robert Freudenthal",
+      "cred": "MBBS · MSc",
+      "roles": "Consultant Psychiatrist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Royal College of Psychiatrists — 2016",
+        "Royal College of Physicians — 2014",
+        "Expert Witness Institute, affiliate member — 2025",
+        "Faculty of Eating Disorders, RCPsych — Executive Committee"
+      ],
+      "social": [],
+      "note": "Private concept by Ignite Yourself — every fact, all language and any permission to be reviewed with Dr Freudenthal before publication. Contact details are deliberately absent. The NHS Trust is named as a matter of fact and does not endorse any private or expert practice.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/freudenthal/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Dr Robert Freudenthal, and shared with him privately. It was assembled from his own publicly available curriculum vitae and professional profile, used for demonstration purposes only, and every element remains subject to his review and approval. It contains no case, no clinical detail and no claim about his expert-witness volume or history. The page is not indexed, not published and not distributed."
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "cop",
+            "t": "Court of Protection — capacity or best interests",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "civil",
+            "t": "Civil claim — psychiatric injury, causation or prognosis",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction or forum"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "service",
+            "t": "Trust or local authority — MEED, review or training",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the requirement",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              }
+            ],
+            "submit": "Discuss a service matter",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "academic",
+            "t": "Academic collaboration, research or peer review",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Institution",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the collaboration",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Discuss a collaboration",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Send enquiry",
+            "note": "Scope, approach and availability are confirmed directly."
+          }
+        ],
+        "preview": "This enquiry flow is illustrative. Fields, routing and contact details would be configured with Dr Freudenthal before anything goes live.",
+        "fine": "Private concept — nothing is transmitted from this page, and no contact details are published here. Direct contact details would be added only with his approval."
+      }
+    }
+  ]
+}
