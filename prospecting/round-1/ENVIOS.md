@@ -10,7 +10,7 @@
 |---|---|---|---|---|---|
 | Thomas A. Demetrio | TAD@CorboyDemetrio.com | 2026-08-18 | Your Wikipedia entry stops in 2009 | 2026-08-26 | enviado |
 | Alejandro O. Soto | asoto@ffslawfirm.com | por confirmar | Your Bar profile, and your partner's | — | por confirmar |
-| Margaret G. Lodise | mlodise@trustlitigation.la | — | — | — | pendiente |
+| Margaret G. Lodise | mlodise@trustlitigation.la | 2026-08-18 | Your presidential year lives on ACTEC's website | 2026-08-26 | enviado |
 | Cynthia E. Tobisman | — | — | — | — | pendiente |
 | Michael D. Stutman | — (T3) | — | — | — | vía LinkedIn, sin correo directo |
 
