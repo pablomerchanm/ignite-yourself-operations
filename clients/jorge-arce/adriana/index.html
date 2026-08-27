@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Adriana Mejía Cuartas</title>
+<meta name="description" content="Adriana Mejía Cuartas — Board Chair of the Global Coffee Platform and founder of Herencia VL. She designs and governs regenerative value chains in coffee, cocoa and palm.">
+<meta name="theme-color" content="#EDEFEC">
+
+<!-- PENDIENTE (dossier §13.3): sin fotografía con derechos resueltos.
+     La página está construida para sostenerse sin imágenes; los retratos
+     y el material de campo entran después sin rehacer la estructura. -->
+<!-- PENDIENTE (dossier §13.4): color de acento y tipografía son PROPUESTA,
+     sujeta a las brand guidelines en construcción. -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap">
+
+<style>
+:root{
+  /* Neutros con sesgo hacia el acento — elegidos, no heredados. */
+  --ground:#EDEFEC;
+  --surface:#F7F8F6;
+  --sunk:#E3E6E1;
+  --ink:#131614;
+  --muted:#4E554F;
+  --faint:#7C847E;
+  --line:rgba(19,22,20,.16);
+  --hair:rgba(19,22,20,.08);
+  --accent:#2E5E4E;
+
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  --s--1:clamp(.74rem,.72rem + .1vw,.8rem);
+  --s-0:clamp(1rem,.96rem + .2vw,1.09rem);
+  --s-1:clamp(1.15rem,1.05rem + .4vw,1.4rem);
+  --s-2:clamp(1.45rem,1.2rem + 1.1vw,2.1rem);
+  --s-3:clamp(1.9rem,1.4rem + 2.2vw,3.2rem);
+  --s-4:clamp(2.4rem,1.5rem + 4.4vw,5.4rem);
+
+  --gutter:clamp(1.25rem,.8rem + 2.2vw,3.5rem);
+  --block:clamp(4.5rem,3rem + 6vw,9rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1210; --surface:#161B18; --sunk:#0A0D0B;
+    --ink:#E8EAE6; --muted:#A8B0AA; --faint:#79817B;
+    --line:rgba(232,234,230,.17); --hair:rgba(232,234,230,.09);
+    --accent:#6FA88F;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1210; --surface:#161B18; --sunk:#0A0D0B;
+  --ink:#E8EAE6; --muted:#A8B0AA; --faint:#79817B;
+  --line:rgba(232,234,230,.17); --hair:rgba(232,234,230,.09);
+  --accent:#6FA88F;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);
+  font-family:var(--sans);font-size:var(--s-0);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:70rem;margin:0 auto;padding:0 var(--gutter)}
+.narrow{max-width:44rem}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.012em;line-height:1.12;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+
+.lab{font-size:var(--s--1);font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* reveal discreto — sobriedad, no espectáculo */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* ---------------- cabecera ---------------- */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 88%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--hair)}
+.topin{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem var(--gutter);max-width:70rem;margin:0 auto}
+.mono-mark{font-family:var(--serif);font-size:1.15rem;letter-spacing:.18em;text-decoration:none}
+.topnav{display:flex;gap:clamp(1rem,2.2vw,2.2rem)}
+.topnav a{font-size:var(--s--1);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  text-decoration:none;transition:color .25s}
+.topnav a:hover{color:var(--ink)}
+@media(max-width:44rem){.topnav{display:none}}
+
+/* ---------------- hero ---------------- */
+.hero{padding:clamp(5rem,4rem + 8vw,11rem) 0 clamp(3.5rem,2.5rem + 4vw,6rem)}
+.hero .name{font-size:var(--s--1);font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.anchor{font-family:var(--serif);font-size:var(--s-4);font-weight:300;line-height:1.03;
+  letter-spacing:-.025em;margin-top:clamp(1.4rem,1rem + 1.6vw,2.4rem);max-width:17ch}
+.anchor em{font-style:italic;color:var(--accent)}
+.hero .roles{margin-top:clamp(1.8rem,1.2rem + 2vw,3rem);display:flex;flex-wrap:wrap;
+  gap:.5rem 1.5rem;color:var(--muted);font-size:var(--s-1);max-width:52ch;line-height:1.45}
+.hero .roles span{display:block}
+
+/* ---------------- secciones ---------------- */
+section{padding:var(--block) 0;border-top:1px solid var(--hair);scroll-margin-top:4.5rem}
+.shead{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(1rem,3vw,3.5rem);
+  margin-bottom:clamp(2.2rem,1.5rem + 2.5vw,4rem);align-items:start}
+@media(max-width:48rem){.shead{grid-template-columns:1fr;gap:.9rem}}
+.shead h2{font-size:var(--s-2)}
+.lede{color:var(--muted);font-size:var(--s-1);line-height:1.5;max-width:52ch}
+
+/* tesis */
+.thesis p{font-family:var(--serif);font-size:var(--s-2);line-height:1.32;font-weight:300;max-width:26ch}
+.thesis p + p{margin-top:1.2em}
+.thesis .dim{color:var(--muted)}
+.figure{margin-top:clamp(2.5rem,2rem + 3vw,4.5rem);padding-top:clamp(1.4rem,1rem + 1.5vw,2.2rem);
+  border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr);gap:.6rem;max-width:44rem}
+.figure .n{font-family:var(--serif);font-size:var(--s-3);line-height:1;color:var(--accent)}
+.figure p{font-family:var(--sans);font-size:var(--s-0);color:var(--muted);max-width:46ch}
+
+/* barreras */
+.bars{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bar{background:var(--ground);display:grid;grid-template-columns:3.5rem minmax(0,1fr);gap:clamp(1rem,2.5vw,2.5rem);
+  padding:clamp(1.3rem,1rem + 1.2vw,2.1rem) 0}
+.bar .i{font-family:var(--serif);color:var(--accent);font-size:var(--s-1)}
+.bar h3{font-size:var(--s-1);margin-bottom:.35em}
+.bar p{color:var(--muted);max-width:54ch}
+
+/* trayectoria */
+.layers{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.layer{background:var(--surface);padding:clamp(1.5rem,1.2rem + 1.4vw,2.4rem)}
+.layer .lab{color:var(--accent)}
+.layer h3{font-size:var(--s-1);margin:.7rem 0 .8rem}
+.layer p{color:var(--muted);font-size:.97em}
+.layer ul{margin:1.1rem 0 0;padding:0;list-style:none;display:grid;gap:.55rem}
+.layer li{color:var(--muted);font-size:.94em;padding-left:1.1rem;position:relative;line-height:1.5}
+.layer li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--accent);border-radius:50%}
+@media(min-width:52rem){.layers{grid-template-columns:repeat(3,1fr)}}
+
+/* enfoque */
+.steps{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.step{background:var(--ground);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);
+  gap:clamp(1rem,3vw,3rem);padding:clamp(1.3rem,1rem + 1.2vw,2rem) 0;border-bottom:1px solid var(--line)}
+@media(max-width:48rem){.step{grid-template-columns:1fr;gap:.5rem}}
+.step h3{font-size:var(--s-1)}
+.step p{color:var(--muted);max-width:56ch}
+
+/* casos */
+.cases{display:grid;gap:clamp(1rem,2vw,1.5rem)}
+@media(min-width:52rem){.cases{grid-template-columns:repeat(2,1fr)}.cases .wide{grid-column:1/-1}}
+.case{background:var(--surface);border:1px solid var(--line);padding:clamp(1.5rem,1.2rem + 1.4vw,2.5rem);
+  display:flex;flex-direction:column;gap:.8rem}
+.case h3{font-size:var(--s-1)}
+.case p{color:var(--muted)}
+.case .kicker{color:var(--accent)}
+.case .lesson{margin-top:auto;padding-top:1.1rem;border-top:1px solid var(--line);
+  font-family:var(--serif);font-size:var(--s-1);line-height:1.35;color:var(--ink)}
+
+/* servicios — correspondencia, no conversión */
+.serve{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(min-width:52rem){.serve{grid-template-columns:repeat(3,1fr)}}
+.svc{background:var(--surface);padding:clamp(1.5rem,1.2rem + 1.4vw,2.4rem);display:flex;flex-direction:column;gap:.8rem}
+.svc h3{font-size:var(--s-1)}
+.svc p{color:var(--muted);font-size:.97em}
+.svc .who{color:var(--faint);font-size:var(--s--1);letter-spacing:.06em;text-transform:uppercase}
+.standard{margin-top:clamp(2rem,1.5rem + 2vw,3rem);font-family:var(--serif);font-size:var(--s-1);
+  line-height:1.45;color:var(--muted);max-width:46ch}
+
+/* prensa */
+.press{display:grid;gap:0;border-top:1px solid var(--line)}
+.pitem{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(1rem,3vw,3rem);
+  padding:clamp(1.1rem,.9rem + 1vw,1.7rem) 0;border-bottom:1px solid var(--line)}
+@media(max-width:48rem){.pitem{grid-template-columns:1fr;gap:.4rem}}
+.pitem .src{font-weight:500}
+.pitem .src span{display:block;color:var(--faint);font-size:var(--s--1);font-weight:400;margin-top:.2rem}
+.pitem p{color:var(--muted)}
+
+/* correspondencia */
+.corr{text-align:left}
+.corr .big{font-family:var(--serif);font-size:var(--s-3);font-weight:300;line-height:1.12;max-width:20ch}
+.corr .mail{display:inline-block;margin-top:clamp(1.6rem,1.2rem + 1.5vw,2.4rem);
+  font-family:var(--serif);font-size:var(--s-2);color:var(--accent);text-decoration:none;
+  border-bottom:1px solid currentColor;padding-bottom:.15rem}
+.corr .note{margin-top:1.4rem;color:var(--muted);max-width:46ch}
+
+/* pie */
+footer{border-top:1px solid var(--line);padding:clamp(2.5rem,2rem + 3vw,4.5rem) 0 3rem;background:var(--sunk)}
+.fgrid{display:grid;gap:2rem clamp(1.5rem,3vw,3.5rem)}
+@media(min-width:48rem){.fgrid{grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,4fr)}}
+.fgrid h4{font-family:var(--sans);font-size:var(--s--1);font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--faint);margin:0 0 .9rem}
+.fgrid a{color:var(--muted);text-decoration:none;display:block;padding:.2rem 0;transition:color .25s}
+.fgrid a:hover{color:var(--ink)}
+.fgrid p{color:var(--muted);font-size:.95em}
+.disclaimer{margin-top:clamp(2.5rem,2rem + 2vw,3.5rem);padding-top:1.5rem;border-top:1px solid var(--line);
+  color:var(--faint);font-size:var(--s--1);line-height:1.65;max-width:62ch}
+.draftflag{margin-top:1.2rem;color:var(--accent);font-size:var(--s--1);letter-spacing:.08em;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="topin">
+    <a class="mono-mark" href="#top" aria-label="Adriana Mejía Cuartas">AMC</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#thesis">Thesis</a>
+      <a href="#path">Trajectory</a>
+      <a href="#approach">Approach</a>
+      <a href="#work">Work</a>
+      <a href="#serve">Where I serve</a>
+      <a href="#contact">Correspondence</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" style="border-top:0">
+    <div class="wrap">
+      <p class="name rv">Adriana Mejía Cuartas</p>
+      <h1 class="anchor rv">Coffee doesn’t need another hero. It needs <em>better choreography.</em></h1>
+      <div class="roles rv">
+        <span>Board Chair, Global Coffee Platform.</span>
+        <span>Founder and CEO, Herencia VL.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESIS ============ -->
+  <section id="thesis">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">The argument</p>
+        <div class="thesis">
+          <p class="rv">Most projects in this sector do not fail for lack of money. They fail because someone treated an adaptive problem as a technical one.</p>
+          <p class="rv dim">A technical problem is solved with more resources. An adaptive problem is solved by changing the choreography between the people involved. Roughly eight in ten projects get that diagnosis wrong.</p>
+        </div>
+      </div>
+      <div class="figure rv">
+        <span class="n tnum">12.5 million</span>
+        <p>Coffee-growing families still living in poverty — after years of a growing conversation about sustainability and ESG. That gap between the conversation and the farm is the whole problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BARRERAS ============ -->
+  <section id="barriers">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">Four structural barriers</p>
+        <p class="lede rv">Not opinions about the sector. The four things that stop good intentions from reaching a farm.</p>
+      </div>
+      <div class="bars">
+        <div class="bar rv">
+          <span class="i tnum">01</span>
+          <div>
+            <h3>Poverty forces a short horizon</h3>
+            <p>Nobody invests on a five- or ten-year view without a stable income. The horizon a regenerative transition requires is the one poverty makes impossible.</p>
+          </div>
+        </div>
+        <div class="bar rv">
+          <span class="i tnum">02</span>
+          <div>
+            <h3>Asymmetries of power and information</h3>
+            <p>The producer does not know how the price of coffee is formed, or which climate risks are coming. Decisions are made where that information sits, and it does not sit on the farm.</p>
+          </div>
+        </div>
+        <div class="bar rv">
+          <span class="i tnum">03</span>
+          <div>
+            <h3>Institutions that fail, or fail to coordinate</h3>
+            <p>Several organisations arrive at the same farm with contradictory messages. The producer is left to arbitrate between them.</p>
+          </div>
+        </div>
+        <div class="bar rv">
+          <span class="i tnum">04</span>
+          <div>
+            <h3>Women and young people left out of decisions</h3>
+            <p>Cultural exclusion from the rooms where things are decided — which removes from the table exactly the people who will still be farming in twenty years.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRAYECTORIA ============ -->
+  <section id="path">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">Trajectory</p>
+        <p class="lede rv">Three layers, built in sequence: the institution that formed her, the company she founded, and the global table she now chairs.</p>
+      </div>
+      <div class="layers">
+        <article class="layer rv">
+          <p class="lab">Colombia &rarr; Europe</p>
+          <h3>Inside the institution</h3>
+          <p>Director for Europe of the National Federation of Colombian Coffee Growers. Fourth generation of a coffee family from Manizales.</p>
+          <ul>
+            <li>2015 — first woman in the Federation’s history nominated for its General Management. She travelled all fifteen coffee-growing regions of Colombia during the candidacy, and then withdrew in support of Roberto Vélez Vallejo.</li>
+            <li>First woman on the board of UTZ Certified, now Rainforest Alliance.</li>
+            <li>Daughter of María Mercedes Cuartas, the first woman to represent her region at Colombia’s National Coffee Growers’ Congress — and still active on the regional committee at 75.</li>
+          </ul>
+        </article>
+        <article class="layer rv">
+          <p class="lab">Since 2017 · Netherlands</p>
+          <h3>Herencia VL</h3>
+          <p>The company she founded: impact investment, ESG and innovation across coffee, cocoa and palm value chains, operating in Latin America and Africa.</p>
+          <ul>
+            <li>Four regenerative agriculture projects in Tanzania, each financed by a different European country.</li>
+            <li>A maize programme with GIZ, German development cooperation, closed in 2026.</li>
+            <li>Kilimanjaro Water and Food for All.</li>
+          </ul>
+        </article>
+        <article class="layer rv">
+          <p class="lab">Since 2024 · Global</p>
+          <h3>Global Coffee Platform</h3>
+          <p>Board Chair of the platform that brings together more than 170 member organisations across every major producing country — Brazil, Colombia, Honduras, Indonesia, Kenya, Nicaragua, Peru, Tanzania, Uganda, Vietnam. The GCP turns ten in 2026.</p>
+          <ul>
+            <li>RegenCoffee — the global regenerative agriculture guide launched in 2025: shared language, principles and indicators for soil, water and biodiversity.</li>
+            <li>A 2030 target to close at least 25% of the living income gap for more than a million smallholders.</li>
+            <li>The Coffee Sustainability Reference Code and its equivalence mechanism.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="standard rv">Ten years in, there is more left to do than there is to celebrate. That is the honest reading, and it is the one worth working from.</p>
+    </div>
+  </section>
+
+  <!-- ============ ENFOQUE ============ -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">How the work is done</p>
+        <p class="lede rv">Not a method with a name on it. A sequence, followed in order, that has produced programmes which outlast the person who designed them.</p>
+      </div>
+      <div class="steps">
+        <div class="step rv"><h3>Diagnose the problem correctly</h3><p>Is this solved with more resources, or does it require changing the choreography between the actors? Everything downstream depends on getting this one right.</p></div>
+        <div class="step rv"><h3>Map the stakeholders and the power</h3><p>Who decides. Who pays. Who implements. Who carries the risk. The asymmetries are identified before anything is designed, not after.</p></div>
+        <div class="step rv"><h3>Design the what before the how</h3><p>Picture the programme finished, ten years out, before starting it — and define success in the producer’s terms rather than the donor’s.</p></div>
+        <div class="step rv"><h3>Build the financing architecture</h3><p>Public capital, private capital, development cooperation and philanthropy, combined under a narrative umbrella wide enough to let the work scale.</p></div>
+        <div class="step rv"><h3>Set the operating choreography</h3><p>Shared definitions, shared measurement, shared investment, shared accountability. Projects require choreography, not command.</p></div>
+        <div class="step rv"><h3>Regenerate the institution continuously</h3><p>Programmes rarely fail at the start; they fail at the sustaining. The work is to build institutions that survive their leader.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASOS ============ -->
+  <section id="work">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">Work</p>
+        <p class="lede rv">Programmes do not scale by increasing their budget. They scale by growing the story that holds them up.</p>
+      </div>
+      <div class="cases">
+        <article class="case wide rv">
+          <p class="lab kicker">Tanzania</p>
+          <h3>Kilimanjaro Loud Rules of Hope</h3>
+          <p>It began as “Paint the Walls”: forty thousand euros to paint the walls of seventeen schools. She renamed and redesigned it as a broader narrative umbrella — one wide enough to attract recurring financing and new partners rather than a single grant.</p>
+          <p class="lesson">Turning something small into a platform. The budget was never the constraint; the story was.</p>
+        </article>
+        <article class="case rv">
+          <p class="lab kicker">Tanzania · Closed 2026</p>
+          <h3>Maize programme with GIZ</h3>
+          <p>Designed and delivered with German development cooperation, and closed in 2026 with its results documented.</p>
+        </article>
+        <article class="case rv">
+          <p class="lab kicker">Tanzania</p>
+          <h3>Kilimanjaro Water and Food for All</h3>
+          <p>How a programme is designed from first principles, how communities are built into it from the start, and how a private agricultural business becomes an engine of social impact.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DONDE SIRVE ============ -->
+  <section id="serve">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">Where I serve</p>
+        <p class="lede rv">Three ways of working, each with a different rhythm and a different room.</p>
+      </div>
+      <div class="serve">
+        <article class="svc rv">
+          <p class="who">Boards</p>
+          <h3>Board and governance service</h3>
+          <p>Global boards in agriculture, food and retail, and multi-commodity groups whose supply-chain resilience and reputation are now a governance question rather than a communications one. Technical judgement in the room, from someone who has sat on both sides of the value chain.</p>
+        </article>
+        <article class="svc rv">
+          <p class="who">Advisory</p>
+          <h3>Strategic advisory and executive accompaniment</h3>
+          <p>For organisations investing in sustainability without seeing it arrive at the farm, and for the executives leading them. Designed programme by programme, or as a standing quarterly engagement.</p>
+        </article>
+        <article class="svc rv">
+          <p class="who">Speaking</p>
+          <h3>Keynotes and moderation</h3>
+          <p>Regeneration beyond the soil. Technical against adaptive. How more than a hundred and seventy stakeholders are moved as one. Most recently at EFICO’s centenary and at World of Coffee, both in Brussels in June 2026.</p>
+        </article>
+      </div>
+      <p class="standard rv">I serve on few boards at a time, and I am fully present on the ones I take.</p>
+    </div>
+  </section>
+
+  <!-- ============ PRENSA ============ -->
+  <section id="press">
+    <div class="wrap">
+      <div class="shead">
+        <p class="lab rv">In print</p>
+      </div>
+      <div class="press">
+        <div class="pitem rv">
+          <p class="src">Comunicaffe International<span>Italy · April 2026</span></p>
+          <p>An interview on adaptive leadership — where the line about choreography first came from.</p>
+        </div>
+        <div class="pitem rv">
+          <p class="src">Revista Espresso<span>Brazil · December 2025</span></p>
+          <p>“A cafeicultura é política: a voz da base pode mudar decisões globais.” The long-form interview setting out the four barriers and the three strategic corridors of global coffee.</p>
+        </div>
+        <div class="pitem rv">
+          <p class="src">El Espectador<span>Colombia · August 2015</span></p>
+          <p>A column arguing she was the candidate of greatest social purpose for the General Management of the Colombian Coffee Growers Federation.</p>
+        </div>
+        <div class="pitem rv">
+          <p class="src">Semana<span>Colombia · August 2015</span></p>
+          <p>Coverage of her decision to withdraw from the candidacy in support of Roberto Vélez Vallejo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CORRESPONDENCIA ============ -->
+  <section id="contact">
+    <div class="wrap corr">
+      <p class="lab rv">Correspondence</p>
+      <!-- PENDIENTE (dossier §13.1): dirección sin confirmar. -->
+      <p class="big rv">For board enquiries, advisory work and speaking.</p>
+      <a class="mail rv" href="mailto:hello@adrianamejiacuartas.com">hello@adrianamejiacuartas.com</a>
+      <p class="note rv">Write with the context rather than the calendar. If it is the right room, we will find the time.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Adriana Mejía Cuartas</h4>
+        <p>Board Chair of the Global Coffee Platform. Founder and CEO of Herencia VL. Fourth generation of a coffee family from Manizales, Colombia. Based in Haarlem, the Netherlands.</p>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/in/adriana-mejia-cuartas-9001356/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.globalcoffeeplatform.org/staff/adriana-mejia-cuartas/" target="_blank" rel="noopener">Global Coffee Platform</a>
+        <a href="https://www.idhsustainabletrade.com/people/adriana-mejia-cuartas/" target="_blank" rel="noopener">IDH Sustainable Trade</a>
+        <!-- PENDIENTE (dossier §13.5): URL de Herencia VL para el pie. -->
+      </div>
+      <div>
+        <h4>Enquiries</h4>
+        <a href="mailto:hello@adrianamejiacuartas.com">hello@adrianamejiacuartas.com</a>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      This is the personal site of Adriana Mejía Cuartas. The views expressed here are her own and do not represent the Global Coffee Platform, where she serves as Board Chair, nor any other organisation with which she is associated. The Global Coffee Platform and Herencia VL appear here as credentials, not as publishers of this page.
+    </p>
+    <p class="draftflag">Draft for review · Not published</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e,i){e.style.transitionDelay=(Math.min(i,4)*60)+'ms';io.observe(e)});
+})();
+</script>
+</body>
+</html>
