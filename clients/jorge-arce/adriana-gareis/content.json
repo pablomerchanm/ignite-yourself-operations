@@ -1,0 +1,339 @@
+{
+  "meta": {
+    "title": "Adriana Mejía Cuartas — Board Chair, Global Coffee Platform",
+    "description": "Adriana Mejía Cuartas: Board Chair of the Global Coffee Platform and founder of Herencia VL. She designs and governs regenerative value chains in coffee, cocoa and palm."
+  },
+  "logo": "ADRIANA MEJÍA CUARTAS",
+  "nav": [
+    { "t": "Adriana", "h": "#top" },
+    { "t": "The argument", "h": "#argument" },
+    { "t": "Trajectory", "h": "#record" },
+    { "t": "Where I serve", "h": "#serve" }
+  ],
+  "navcta": { "t": "Correspondence", "h": "#inquiry" },
+
+  "sections": [
+    {
+      "type": "hero",
+      "kick": "Global Coffee Platform · Herencia VL · Haarlem, working worldwide",
+      "name": "Adriana Mejía Cuartas",
+      "cred": "Board Chair · Founder",
+      "sub": "Coffee doesn’t need another hero. <t>It needs better choreography.</t>",
+      "note": "Board Chair of the Global Coffee Platform. Founder and CEO of Herencia VL. Fourth generation of a coffee family from Manizales.",
+      "actions": [
+        { "t": "Correspondence", "h": "#inquiry", "primary": true },
+        { "t": "The argument", "h": "#argument" }
+      ]
+    },
+
+    {
+      "type": "mission",
+      "id": "argument",
+      "no": "01",
+      "label": "The argument",
+      "quote": "Most projects here don’t fail for lack of money. <t>They fail because someone treated an adaptive problem as a technical one.</t>",
+      "body": [
+        "A technical problem is solved with more resources. An adaptive problem is solved by changing the choreography between the people involved. Roughly eight in ten projects get that diagnosis wrong — and the cost of the error lands on the farm, not in the room where it was made.",
+        "Twelve and a half million coffee-growing families still live in poverty, after years of a growing conversation about sustainability. That distance between the conversation and the farm is the whole problem."
+      ]
+    },
+
+    {
+      "type": "proof",
+      "id": "standing",
+      "ink": true,
+      "no": "02",
+      "label": "Standing",
+      "title": "The rooms where <t>the decisions are made.</t>",
+      "items": [
+        {
+          "n": "Board Chair, Global Coffee Platform",
+          "d": "Since 2024. More than 170 member organisations, across every major producing country. The platform turns ten in 2026."
+        },
+        {
+          "n": "Founder and CEO, Herencia VL",
+          "d": "Founded 2017 in the Netherlands. Impact investment, ESG and innovation in coffee, cocoa and palm value chains across Latin America and Africa."
+        },
+        {
+          "n": "Colombian Coffee Growers Federation",
+          "d": "Director for Europe. In 2015, the first woman in the Federation’s history nominated for its General Management, having travelled all fifteen coffee regions of Colombia."
+        },
+        {
+          "n": "UTZ Certified, now Rainforest Alliance",
+          "d": "First woman on its board. Fourth generation of a coffee family from Manizales; her mother was the first woman to represent her region at Colombia’s National Coffee Growers' Congress."
+        }
+      ],
+      "more": { "t": "The full trajectory", "h": "#record" }
+    },
+
+    {
+      "type": "band",
+      "id": "band-choreography",
+      "label": "The line",
+      "quote": "Projects require choreography, <t>not command.</t>",
+      "more": { "t": "How the work is done", "h": "#approach" }
+    },
+
+    {
+      "type": "method",
+      "id": "barriers",
+      "no": "03",
+      "label": "Four structural barriers",
+      "title": "What stops good intentions <t>from reaching a farm.</t>",
+      "intro": "Not opinions about the sector. The four things that have to be answered before any programme can work.",
+      "rows": [
+        {
+          "t": "Poverty forces a short horizon",
+          "d": "Nobody invests on a five- or ten-year view without a stable income. The horizon a regenerative transition requires is the one poverty makes impossible."
+        },
+        {
+          "t": "Asymmetries of power and information",
+          "d": "The producer does not know how the price of coffee is formed, or which climate risks are coming. Decisions are made where that information sits, and it does not sit on the farm."
+        },
+        {
+          "t": "Institutions that fail, or fail to coordinate",
+          "d": "Several organisations arrive at the same farm with contradictory messages, and the producer is left to arbitrate between them."
+        },
+        {
+          "t": "Women and young people left out of decisions",
+          "d": "Cultural exclusion from the rooms where things are decided — which removes from the table exactly the people who will still be farming in twenty years."
+        }
+      ]
+    },
+
+    {
+      "type": "method",
+      "id": "approach",
+      "no": "04",
+      "invert": true,
+      "label": "How the work is done",
+      "title": "A sequence, <t>followed in order.</t>",
+      "intro": "Not a method with a name on it. The order that has produced programmes which outlast the person who designed them.",
+      "rows": [
+        { "t": "Diagnose the problem correctly", "d": "Is this solved with more resources, or does it require changing the choreography between the actors? Everything downstream depends on getting this right." },
+        { "t": "Map the stakeholders and the power", "d": "Who decides. Who pays. Who implements. Who carries the risk. The asymmetries are identified before anything is designed." },
+        { "t": "Design the what before the how", "d": "Picture the programme finished, ten years out, before starting it — and define success in the producer’s terms rather than the donor’s." },
+        { "t": "Build the financing architecture", "d": "Public capital, private capital, development cooperation and philanthropy, combined under a narrative umbrella wide enough to let the work scale." },
+        { "t": "Set the operating choreography", "d": "Shared definitions, shared measurement, shared investment, shared accountability." },
+        { "t": "Regenerate the institution continuously", "d": "Programmes rarely fail at the start; they fail at the sustaining. The work is to build institutions that survive their leader." }
+      ]
+    },
+
+    {
+      "type": "exp",
+      "id": "record",
+      "no": "05",
+      "label": "Trajectory",
+      "title": "Three layers, <t>built in sequence.</t>",
+      "lede": "The institution that formed her, the company she founded, and the global table she now chairs.",
+      "groups": [
+        {
+          "label": "Colombia and Europe — the institution",
+          "wide": true,
+          "names": [
+            "Director for Europe, National Federation of Colombian Coffee Growers",
+            "2015 — first woman nominated for the Federation’s General Management; travelled all fifteen coffee regions, then withdrew in support of Roberto Vélez Vallejo",
+            "First woman on the board of UTZ Certified, now Rainforest Alliance"
+          ]
+        },
+        {
+          "label": "Herencia VL — the company, since 2017",
+          "wide": true,
+          "names": [
+            "Impact investment, ESG and innovation across coffee, cocoa and palm, in Latin America and Africa",
+            "Four regenerative agriculture projects in Tanzania, each financed by a different European country",
+            "Maize programme with GIZ, German development cooperation — closed 2026",
+            "Kilimanjaro Water and Food for All"
+          ]
+        },
+        {
+          "label": "Global Coffee Platform — the table, since 2024",
+          "wide": true,
+          "names": [
+            "Board Chair. 170+ member organisations across Brazil, Colombia, Honduras, Indonesia, Kenya, Nicaragua, Peru, Tanzania, Uganda and Vietnam",
+            "RegenCoffee — the global regenerative agriculture guide launched in 2025",
+            "A 2030 target to close at least 25% of the living income gap for more than a million smallholders",
+            "The Coffee Sustainability Reference Code and its equivalence mechanism"
+          ]
+        }
+      ],
+      "fn": "Ten years in, there is more left to do than there is to celebrate."
+    },
+
+    {
+      "type": "paths",
+      "id": "serve",
+      "no": "06",
+      "nums": true,
+      "label": "Where I serve",
+      "title": "Three ways of working, <t>three different rooms.</t>",
+      "lede": "Each with its own rhythm. All of them under her own name, and none of them a product.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Boards",
+          "title": "Board and governance service",
+          "desc": "Global boards in agriculture, food and retail, and multi-commodity groups whose supply-chain resilience has become a governance question rather than a communications one.",
+          "items": [
+            "Technical judgement in the room",
+            "Supply-chain resilience and reputation",
+            "Regenerative transition oversight",
+            "Someone who has sat on both sides of the value chain"
+          ],
+          "cta": { "t": "Board enquiries", "h": "#inquiry", "path": "board" }
+        },
+        {
+          "label": "Advisory",
+          "title": "Strategic advisory and executive accompaniment",
+          "desc": "For organisations investing in sustainability without seeing it arrive at the farm, and for the executives leading them.",
+          "items": [
+            "Programme design with real outcomes",
+            "Diagnosis before investment",
+            "Financing architecture",
+            "By programme, or as a standing quarterly engagement"
+          ],
+          "cta": { "t": "Discuss an engagement", "h": "#inquiry", "path": "advisory" }
+        },
+        {
+          "label": "Speaking",
+          "title": "Keynotes and moderation",
+          "desc": "Regeneration beyond the soil. Technical against adaptive. How more than a hundred and seventy stakeholders are moved as one.",
+          "items": [
+            "EFICO centenary, Brussels, June 2026",
+            "World of Coffee, Brussels, June 2026",
+            "Keynote and panel moderation",
+            "English and Spanish"
+          ],
+          "cta": { "t": "Speaking enquiries", "h": "#inquiry", "path": "speaking" }
+        }
+      ],
+      "fn": "I serve on few boards at a time, and I am fully present on the ones I take."
+    },
+
+    {
+      "type": "exp",
+      "id": "print",
+      "no": "07",
+      "tint": true,
+      "label": "In print",
+      "title": "Where the thinking <t>has appeared.</t>",
+      "groups": [
+        {
+          "label": "Interviews",
+          "wide": true,
+          "names": [
+            "Comunicaffe International, Italy, April 2026 — on adaptive leadership, where the line about choreography first came from",
+            "Revista Espresso, Brazil, December 2025 — “A cafeicultura é política: a voz da base pode mudar decisões globais”"
+          ]
+        },
+        {
+          "label": "Archive",
+          "wide": true,
+          "names": [
+            "El Espectador, Colombia, August 2015 — a column arguing she was the candidate of greatest social purpose for the Federation’s General Management",
+            "Semana, Colombia, August 2015 — her decision to withdraw in support of Roberto Vélez Vallejo"
+          ]
+        }
+      ]
+    },
+
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "no": "08",
+      "label": "Correspondence",
+      "title": "Start with <t>the context.</t>",
+      "lede": "Write with the context rather than the calendar. If it is the right room, we will find the time.",
+      "contact": {
+        "email": "hello@adrianamejiacuartas.com",
+        "city": "Haarlem, the Netherlands"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "board",
+            "t": "Board or governance appointment",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation", "r": true },
+              { "n": "Role", "r": false },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Sector and geography", "full": true },
+              { "n": "The question the board is facing", "ta": true, "full": true, "r": true }
+            ],
+            "submit": "Send board enquiry",
+            "note": "Nothing is transmitted from this page. Terms, availability and any conflict of interest are established directly."
+          },
+          {
+            "v": "advisory",
+            "t": "Advisory or executive accompaniment",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation", "r": true },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "What is not reaching the farm", "ta": true, "full": true, "r": true },
+              { "n": "Timing", "full": true }
+            ],
+            "submit": "Send enquiry",
+            "note": "Nothing is transmitted from this page. Scope and approach are agreed directly."
+          },
+          {
+            "v": "speaking",
+            "t": "Speaking or moderation",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation", "r": true },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Event, date and city", "full": true, "r": true },
+              { "n": "Audience and theme", "ta": true, "full": true }
+            ],
+            "submit": "Send speaking enquiry",
+            "note": "Nothing is transmitted from this page."
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "fields": [
+              { "n": "Full name", "r": true },
+              { "n": "Organisation" },
+              { "n": "Email", "ty": "email", "r": true },
+              { "n": "Message", "ta": true, "full": true, "r": true }
+            ],
+            "submit": "Send message",
+            "note": "Nothing is transmitted from this page."
+          }
+        ],
+        "preview": "This enquiry flow is illustrative. Fields, routing and the contact address would be confirmed with Adriana before anything goes live.",
+        "fine": "Draft for review — nothing is transmitted from this page, and the contact address is not yet confirmed."
+      },
+
+      "fkick": "Coffee doesn’t need another hero. It needs better choreography.",
+      "name": "Adriana Mejía Cuartas",
+      "cred": "Board Chair · Founder",
+      "roles": "Global Coffee Platform <t>and Herencia VL</t>",
+      "fcta": { "t": "Correspondence", "h": "#inquiry" },
+      "affiliations": [
+        "Board Chair, Global Coffee Platform — since 2024",
+        "Founder and CEO, Herencia VL — since 2017",
+        "Former Director for Europe, National Federation of Colombian Coffee Growers",
+        "Former board member, UTZ Certified (now Rainforest Alliance)"
+      ],
+      "social": [
+        { "t": "LinkedIn", "h": "https://www.linkedin.com/in/adriana-mejia-cuartas-9001356/" },
+        { "t": "Global Coffee Platform", "h": "https://www.globalcoffeeplatform.org/staff/adriana-mejia-cuartas/" },
+        { "t": "IDH Sustainable Trade", "h": "https://www.idhsustainabletrade.com/people/adriana-mejia-cuartas/" }
+      ],
+      "note": "This is the personal site of Adriana Mejía Cuartas. The views expressed here are her own and do not represent the Global Coffee Platform, where she serves as Board Chair, nor any other organisation with which she is associated. The Global Coffee Platform and Herencia VL appear here as credentials, not as publishers of this page.",
+      "fine": "Draft for review · Not published",
+      "igy": {
+        "label": "Built by",
+        "logo": "/adriana-gareis/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Ignite Yourself",
+        "note": "Draft prepared by Ignite Yourself from Adriana Mejía Cuartas’s own material. Every fact on this page comes from her dossier; nothing has been inferred or estimated. Photography, the accent colour and the final typography are still pending, as is her approval of all copy. The page is not indexed, not published and not distributed."
+      }
+    }
+  ]
+}
