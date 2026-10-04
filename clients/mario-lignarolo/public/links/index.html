@@ -21,115 +21,109 @@
 
 <!--
   Mini web de Mario Lignarolo — destino del enlace de la bio.
-  Misma familia visual que mariolignarolo.com. Todo lo marcado
-  [PENDIENTE] / [VERIFICAR] se resuelve con Mario antes de publicar.
+  Un tablero de tarjetas: cada tarjeta es un destino y dice para quién es.
+  Misma familia visual que mariolignarolo.com.
+  Lo marcado [PENDIENTE] / [VERIFICAR] se resuelve con Mario antes de publicar;
+  un enlace sin URL se muestra atenuado y no navega.
 -->
 
-<header class="cover">
-  <img class="cover__img" src="/links/img/retrato.jpg" alt="Retrato de Mario Lignarolo sobre fondo verde oscuro." width="1672" height="941" fetchpriority="high" />
-
-  <ul class="cover__terr" aria-label="Territorios">
+<header class="top">
+  <ul class="terr" aria-label="Territorios">
     <li>Cuerpo</li><li>Mente</li><li><i>Identidad</i></li><li>Expansión</li>
   </ul>
-
-  <nav class="cover__links" aria-label="Contacto">
+  <nav aria-label="Contacto">
     <a href="https://www.instagram.com/mariolignarolo/" target="_blank" rel="noopener">Instagram <span class="arr">↗</span></a>
-    <span class="sep" aria-hidden="true">·</span>
     <!-- [PENDIENTE: correo público, a Mario] -->
-    <a class="pending" aria-disabled="true" title="Correo pendiente de confirmar">Email</a>
+    <a class="pending" aria-disabled="true" title="Correo pendiente">Email</a>
   </nav>
-
-  <div class="cover__text">
-    <!-- [VERIFICAR] frase de misión: textual de su bio de Instagram; Mario aprueba. -->
-    <h1 class="mission">Breathwork y reprogramación del&nbsp;subconsciente.</h1>
-    <p class="who">
-      <span class="name">Mario Lignarolo</span>
-      <span class="creds">
-        <!-- [PENDIENTE: URLs de Psico-Cibernética e Hipertrofia del Ser; VERIFICAR cargo en Lignarolo] -->
-        <a class="pending" aria-disabled="true">Creador de Psico-Cibernética</a>
-        <a class="pending" aria-disabled="true">Autor de Hipertrofia del Ser</a>
-        <a class="pending" aria-disabled="true">Lignarolo</a>
-      </span>
-    </p>
-  </div>
 </header>
 
-<main>
+<main class="board">
 
-  <section class="new" aria-labelledby="new-title">
-    <div class="wrap">
-    <p class="label">Lo nuevo</p>
-    <h2 id="new-title" class="new__title">Psico-<br />Cibernética</h2>
-    <p class="new__deck">Breathwork y reprogramación del subconsciente. Transforma tu autoconcepto en 40 días.</p>
-    <!-- [PENDIENTE: URL del producto] -->
-    <a class="btn pending" aria-disabled="true">Conocer Psico-Cibernética <span class="arr">↗</span></a>
-    </div>
+  <!-- Quién es: el retrato manda. Lleva a la historia completa. -->
+  <a class="card card--portrait" href="https://mariolignarolo.com" target="_blank" rel="noopener">
+    <img src="/links/img/retrato-4x5.jpg" alt="Mario Lignarolo" width="752" height="941" fetchpriority="high" />
+    <span class="card__foot">
+      <span class="card__name">Mario Lignarolo</span>
+      <span class="card__kicker">Conocer mi historia <span class="arr">↗</span></span>
+    </span>
+  </a>
+
+  <!-- Lo que hace: nivel 1. [VERIFICAR] frase textual de su bio; Mario aprueba. -->
+  <section class="card card--mission" aria-label="Qué hago">
+    <h1>Breathwork y reprogramación del&nbsp;subconsciente.</h1>
   </section>
 
-  <section class="ser" aria-labelledby="ser-title">
-    <div class="wrap">
-    <h2 id="ser-title" class="ser__word">«SER»</h2>
-    <div>
-      <p class="ser__text">Si eres emprendedor y quieres volver a conectar con tu esencia para, desde ahí, impactar con autenticidad y escalar tus resultados, escríbeme «SER» por mensaje directo y te cuento cómo te puedo ayudar.</p>
-      <a class="btn btn--acid" href="https://ig.me/m/mariolignarolo" target="_blank" rel="noopener">Escribir «SER» por Instagram <span class="arr">↗</span></a>
-    </div>
-    </div>
-  </section>
+  <!-- Trabajar con él: su CTA real. -->
+  <a class="card card--ser" href="https://ig.me/m/mariolignarolo" target="_blank" rel="noopener">
+    <span class="card__kicker">Trabajar conmigo</span>
+    <span class="card__huge">«SER»</span>
+    <span class="card__sub">Si eres emprendedor, escríbeme «SER» por mensaje directo y te cuento cómo te puedo ayudar.</span>
+  </a>
 
-  <section class="projects" aria-labelledby="projects-title">
-    <div class="wrap">
-    <p id="projects-title" class="label">Proyectos</p>
-    <ul>
-      <li>
-        <a class="pending" aria-disabled="true">
-          <span class="projects__name">Psico-Cibernética</span>
-          <span class="projects__role">Proceso de 40 días · breathwork y autoconcepto</span>
-        </a>
-      </li>
-      <li>
-        <a class="pending" aria-disabled="true">
-          <span class="projects__name">Hipertrofia <i>del</i> Ser</span>
-          <span class="projects__role">Escritos sobre identidad, cuerpo y trabajo interior</span>
-        </a>
-      </li>
-      <li>
-        <a class="pending" aria-disabled="true">
-          <span class="projects__name">Lignarolo</span>
-          <span class="projects__role">Calzado · <em>[VERIFICAR: cargo]</em></span>
-        </a>
-      </li>
-      <li>
-        <a href="https://mariolignarolo.com" target="_blank" rel="noopener">
-          <span class="projects__name">mariolignarolo.com <span class="arr">↗</span></span>
-          <span class="projects__role">La historia completa, las ideas y los videos</span>
-        </a>
-      </li>
-    </ul>
-    </div>
-  </section>
+  <!-- El programa. [PENDIENTE: URL del producto] -->
+  <a class="card card--psico pending" aria-disabled="true">
+    <span class="card__kicker">Programa de 40 días</span>
+    <span class="card__big">Psico-<br />Cibernética</span>
+    <span class="card__sub">Breathwork y reprogramación del subconsciente. Transforma tu autoconcepto.</span>
+    <span class="card__num" aria-hidden="true">40</span>
+  </a>
 
-  <section class="contact" aria-label="Contacto">
-    <div class="wrap">
-    <a href="https://www.instagram.com/mariolignarolo/" target="_blank" rel="noopener">Instagram <span class="arr">↗</span></a>
-    <a class="pending" aria-disabled="true">Email</a>
-    </div>
-  </section>
+  <!-- Verlo en acción. Foto provisional de su publicación; [PENDIENTE: original]. -->
+  <a class="card card--photo" href="https://www.instagram.com/mariolignarolo/" target="_blank" rel="noopener">
+    <img src="/links/img/gym.jpg" alt="" width="622" height="1388" loading="lazy" />
+    <span class="card__foot">
+      <span class="card__kicker">Ver</span>
+      <span class="card__name">@mariolignarolo <span class="arr">↗</span></span>
+    </span>
+  </a>
+
+  <!-- Leer. [PENDIENTE: URL de Substack; VERIFICAR que la publicación exista con ese nombre] -->
+  <a class="card card--hiper pending" aria-disabled="true">
+    <span class="card__kicker">Leer</span>
+    <span class="card__big">Hipertrofia <i>del</i> Ser</span>
+    <span class="card__sub">Ideas sobre identidad, cuerpo y trabajo interior.</span>
+  </a>
+
+  <!-- Calzado. [VERIFICAR: cargo y URL] -->
+  <a class="card card--ligna pending" aria-disabled="true">
+    <span class="card__kicker">Calzado</span>
+    <span class="card__word">Lignarolo</span>
+  </a>
+
+  <!-- Video. [PENDIENTE: URLs de YouTube y TikTok] -->
+  <a class="card card--yt pending" aria-disabled="true">
+    <span class="card__kicker">Ver</span>
+    <span class="card__word">YouTube</span>
+  </a>
+  <a class="card card--tt pending" aria-disabled="true">
+    <span class="card__kicker">Ver</span>
+    <span class="card__word">TikTok</span>
+  </a>
+
+  <!-- Correo. [PENDIENTE] -->
+  <a class="card card--mail pending" aria-disabled="true">
+    <span class="card__kicker">Escribir</span>
+    <span class="card__word">Email</span>
+  </a>
 
 </main>
 
-<footer class="foot"><div class="wrap">
+<footer class="foot">
   <span>Mario Lignarolo</span>
   <span>© 2026</span>
-</div></footer>
+</footer>
 
 <script>
-  // Entrada suave al hacer scroll (sin librerías). Sin JS, todo se ve.
+  // Entrada escalonada de las tarjetas (sin librerías). Sin JS, todo se ve.
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
     document.documentElement.classList.add("js");
+    const cards = [...document.querySelectorAll(".card")];
+    cards.forEach((c, i) => c.style.setProperty("--i", i));
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-    }), { rootMargin: "0px 0px -8% 0px" });
-    document.querySelectorAll("main section").forEach((s) => io.observe(s));
+    }), { rootMargin: "0px 0px -6% 0px" });
+    cards.forEach((c) => io.observe(c));
   }
 </script>
 </body>
