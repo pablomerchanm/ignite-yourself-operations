@@ -26,7 +26,9 @@ export default function Hipertrofia() {
       <div className="grid grid-cols-1 gap-y-14 border-t border-charcoal/20 pt-[clamp(2.5rem,5vw,4.5rem)] lg:grid-cols-12 lg:gap-x-6">
         <div className="lg:col-span-5">
           <p data-reveal="up" className="display text-[clamp(2rem,1.4rem+2.1vw,3.4rem)] leading-[1.02]">
-            {hipertrofia.headline}
+            {hipertrofia.headline.before}
+            <br />
+            <em>{hipertrofia.headline.em}</em>
           </p>
           <p data-reveal="up" className="mt-8 max-w-[30rem] text-[1.0625rem] leading-relaxed text-charcoal/80">
             {hipertrofia.intro}
