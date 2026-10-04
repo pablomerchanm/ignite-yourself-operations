@@ -1,0 +1,464 @@
+@import "tailwindcss";
+
+/* ════════════════════════════════════════════════════════════
+   LÍNEA GRÁFICA — derivada del header aprobado
+   · verde-negro profundo + verde ácido (firma, con moderación)
+   · crema cálida / neutro claro para respirar
+   · Instrument Serif (nombre, titulares, itálica selectiva)
+   · Inter Tight (texto, navegación, etiquetas, CTAs)
+   ════════════════════════════════════════════════════════════ */
+@theme inline {
+  --color-ink: #0a1615; /* fondo del header */
+  --color-ink-2: #0c201a; /* verde de la pared: módulo de producto */
+  --color-acid: #2ee25e; /* verde ácido del nombre */
+  --color-cream: #efe9dd; /* crema cálida */
+  --color-paper: #f6f4ef; /* neutro muy claro */
+  --color-charcoal: #1b1e1c; /* texto sobre claro */
+  --color-bone: #ece8de; /* texto sobre oscuro */
+  --color-stone: #6b6d66; /* texto secundario sobre claro */
+  --color-fog: #9aa39d; /* texto secundario sobre oscuro */
+
+  --font-serif: var(--font-instrument), "Times New Roman", serif;
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+
+  --ease-out-soft: cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+
+:root {
+  --nav-h: 4.5rem;
+  --gutter: clamp(1rem, 0.4rem + 2.6vw, 3.5rem);
+}
+
+html {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  overflow-x: clip;
+}
+::selection {
+  background: var(--color-acid);
+  color: var(--color-ink);
+}
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 1px;
+}
+section[id] {
+  scroll-margin-top: calc(var(--nav-h) - 1px);
+}
+
+/* ── Utilidades editoriales ──────────────────────────────── */
+@utility caps {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+@utility display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+}
+@utility gutter {
+  padding-inline: var(--gutter);
+}
+
+/* Grano de película (≈5%) sobre secciones oscuras, como la foto. */
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Enlace pendiente de URL (contenido por confirmar). */
+.is-pending {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Subrayado editorial que se dibuja al pasar. */
+.link-line {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size 0.6s var(--ease-out-soft);
+}
+.link-line:hover,
+.link-line:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* ════════════════════════════════════════════════════════════
+   HERO — portada editorial
+   Móvil/vertical: recompuesto (nombre · retrato · territorios · frase).
+   Escritorio/horizontal: registro exacto del header aprobado (1920×1080):
+   el nombre se ancla a la foto (no al viewport) para que «Mario» y
+   «Lignarolo.» abracen siempre el rostro.
+   ════════════════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  padding-top: calc(var(--nav-h) + 0.75rem);
+  padding-bottom: 3rem;
+  overflow: hidden;
+  background: var(--color-ink);
+}
+.hero__stage {
+  display: flex;
+  flex-direction: column;
+}
+.hero__name {
+  order: 1;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--gutter);
+  color: var(--color-acid);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: min(calc((100vw - 2 * var(--gutter)) / 3.42), 15svh);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+}
+.hero__first,
+.hero__last {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}
+.hero__last {
+  align-self: flex-end;
+}
+.hero__name i {
+  font-style: italic;
+}
+.hero__media {
+  order: 2;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 74svh;
+  margin-top: -0.9rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 72%, transparent 100%);
+}
+.hero__settle,
+.hero__drift {
+  position: absolute;
+  inset: 0;
+}
+.hero__img {
+  object-fit: cover;
+  object-position: 47.5% 30%;
+}
+.hero__words {
+  order: 3;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 0.45em;
+  margin-top: -2.6rem;
+  padding-inline: var(--gutter);
+  color: var(--color-acid);
+  font-family: var(--font-serif);
+  /* los cuatro territorios en una sola línea, a todo el ancho */
+  font-size: min(1.75rem, calc((100vw - 2 * var(--gutter)) / 19));
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.hero__words li + li::before {
+  content: "·";
+  margin-right: 0.45em;
+}
+.hero__statement {
+  order: 4;
+  position: relative;
+  z-index: 3;
+  align-self: flex-end;
+  margin-top: 1.75rem;
+  padding-inline: var(--gutter);
+  color: var(--color-acid);
+  font-size: clamp(0.95rem, 0.8rem + 0.7vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.hero__statement span {
+  display: block;
+}
+.hero__scroll {
+  display: none;
+}
+
+@media (min-width: 768px) and (min-aspect-ratio: 5/4) {
+  .hero {
+    display: block;
+    height: 100svh;
+    min-height: 32rem;
+    padding: 0;
+    container-type: size;
+  }
+  /* 1 px del header en pantalla (la foto cubre el escenario). */
+  .hero__stage {
+    --u: max(100cqw / 1920, 100cqh / 1080);
+    --ox: calc((100cqw - 1920 * var(--u)) * 0.5);
+    --oy: calc((100cqh - 1080 * var(--u)) * 0.4);
+    /* Tamaño del nombre: el del header (153 px), reducido solo si
+       «Lignarolo.» no cabe a la derecha del rostro. */
+    --F: min(calc(153 * var(--u)), calc((97cqw - var(--ox) - 1212 * var(--u)) / 3.42));
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  .hero__media {
+    position: absolute;
+    inset: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    margin: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .hero__img {
+    object-position: 50% 40%;
+  }
+  .hero__name {
+    position: static;
+    display: block;
+    padding: 0;
+    font-size: var(--F);
+    line-height: 1;
+  }
+  .hero__first,
+  .hero__last {
+    position: absolute;
+    z-index: 3;
+    top: calc(var(--oy) + 586 * var(--u) - 0.84 * var(--F));
+  }
+  .hero__first {
+    right: calc(100cqw - var(--ox) - 629 * var(--u));
+  }
+  .hero__last {
+    left: calc(var(--ox) + 1212 * var(--u));
+  }
+  .hero__words {
+    position: absolute;
+    left: max(1.25rem, 5.68cqw);
+    top: max(calc(var(--nav-h) + 0.5rem), 9.4cqh);
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: max(0.95rem, 45.8 * var(--u));
+    line-height: 0.873;
+    letter-spacing: 0.105em;
+  }
+  .hero__words li {
+    display: block;
+  }
+  .hero__words li + li::before {
+    content: none;
+  }
+  .hero__words li:nth-child(1)::after {
+    content: " ·";
+    font-size: 0.6em;
+    vertical-align: 0.35em;
+  }
+  .hero__words li:nth-child(2) {
+    padding-left: 0.61em;
+  }
+  .hero__words li:nth-child(4) {
+    padding-left: 0.8em;
+  }
+  .hero__statement {
+    position: absolute;
+    right: max(1.25rem, 7.25cqw);
+    bottom: 9.26cqh;
+    margin: 0;
+    padding: 0;
+    font-size: max(0.8rem, 45.4 * var(--u));
+  }
+  .hero__scroll {
+    position: absolute;
+    left: max(1.25rem, 5.68cqw);
+    bottom: 9.26cqh;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--color-bone);
+    opacity: 0.7;
+    transition: opacity 0.4s;
+  }
+  .hero__scroll:hover {
+    opacity: 1;
+  }
+}
+
+/* ── Entrada del hero: piezas enteras que suben desde máscara ── */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    display: inline-block;
+    animation: rise 1.5s var(--ease-out-soft) both;
+    animation-delay: var(--delay, 0s);
+  }
+  .fade-up {
+    animation: fade-up 1.4s var(--ease-out-soft) both;
+    animation-delay: var(--delay, 0s);
+  }
+  .hero__settle {
+    animation: settle 2.6s var(--ease-out-soft) both;
+  }
+  .scroll-line::after {
+    animation: scroll-line 2.4s var(--ease-out-soft) infinite;
+  }
+}
+@keyframes rise {
+  from {
+    transform: translate3d(0, 112%, 0);
+  }
+}
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+}
+@keyframes settle {
+  from {
+    opacity: 0.35;
+    transform: scale(1.06);
+  }
+}
+.scroll-line {
+  position: relative;
+  display: block;
+  width: 3.5rem;
+  height: 1px;
+  overflow: hidden;
+  background: color-mix(in srgb, currentColor 30%, transparent);
+}
+.scroll-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-acid);
+  transform: translateX(-100%);
+}
+@keyframes scroll-line {
+  60%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ── Revelado al hacer scroll (lo activa <Motion/>) ────────── */
+html.reveal-ready [data-reveal="up"] {
+  opacity: 0;
+  transform: translate3d(0, 2.75rem, 0);
+  transition:
+    opacity 1.2s var(--ease-out-soft),
+    transform 1.25s var(--ease-out-soft);
+  transition-delay: var(--delay, 0s);
+}
+html.reveal-ready [data-reveal="up"][data-in] {
+  opacity: 1;
+  transform: none;
+}
+.line {
+  display: block;
+  overflow: hidden;
+  /* aire para tildes de mayúsculas y descendentes dentro de la máscara */
+  padding-block: 0.16em 0.14em;
+  margin-block: -0.16em -0.14em;
+}
+.line > span {
+  display: block;
+}
+html.reveal-ready [data-reveal="lines"] .line > span {
+  transform: translate3d(0, 108%, 0);
+  transition: transform 1.25s var(--ease-out-soft);
+  transition-delay: calc(var(--delay, 0s) + var(--i, 0) * 0.09s);
+}
+html.reveal-ready [data-reveal="lines"][data-in] .line > span {
+  transform: none;
+}
+
+/* ── Movimiento ligado al scroll (CSS puro, mejora progresiva) ── */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero__drift {
+      animation: hero-drift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100svh;
+    }
+    .sd-zoom {
+      animation: sd-zoom linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 55%;
+    }
+    .sd-drift {
+      animation: sd-drift linear both;
+      animation-timeline: view();
+    }
+  }
+}
+@keyframes hero-drift {
+  to {
+    transform: scale(1.05) translate3d(0, 2.5%, 0);
+  }
+}
+@keyframes sd-zoom {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes sd-drift {
+  from {
+    transform: translate3d(0, 1.5rem, 0);
+  }
+  to {
+    transform: translate3d(0, -1.5rem, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
