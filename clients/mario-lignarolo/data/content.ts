@@ -88,32 +88,47 @@ export const origin = {
   // líneas «Casi pierdo la vida en una ocasión» y «Conecté con Dios», y si
   // entra la confesión sobre los estudios («no fui coherente, engañé, copié»),
   // que por ahora queda fuera.
-  // `pull: true` = se compone grande, como cita destacada.
-  beats: [
+  // Capítulos: `title` es una etiqueta editorial del estudio [HIPÓTESIS];
+  // `pull` y `text` son de Mario, textuales [MARIO]. `photo` describe la foto
+  // original que falta (se pide a Mario); `src` vacío = hueco (solo visible
+  // en borrador). `photo: null` = capítulo solo tipográfico.
+  chapters: [
     {
+      title: "Crear",
       text: "Siempre me encantó crear desde mi esencia. Emprender, construir, explorar mi creatividad… eso me hacía sentir vivo. Pero tenía una creencia que me limitaba: «Eso no aporta. Eso no tiene valor».",
+      photo: { src: "", alt: "", pendingLabel: "Pintando zapatillas" },
     },
     {
+      title: "El camino tradicional",
       text: "Tengo una familia increíble que siempre estuvo ahí para mí. Pero ser el menor de cinco hermanos me hizo creer que tenía que seguir el camino tradicional. Empecé mis estudios… no porque me gustaba, sino porque sentía que debía seguir la tradición familiar. Y ahí empezó todo: la búsqueda de validación y aprobación externa, porque no sabía lo que quería.",
+      photo: { src: "", alt: "", pendingLabel: "Con sus hermanos" },
     },
     {
-      text: "Me gradué de algo que no era lo mío. Dejé muchas cosas que me apasionaban por perseguir sueños que nunca fueron míos. Y en ese proceso… me perdí por completo.",
+      title: "Perdido",
+      pull: "Y en ese proceso… me perdí por completo.",
+      text: "Me gradué de algo que no era lo mío. Dejé muchas cosas que me apasionaban por perseguir sueños que nunca fueron míos.",
+      photo: null,
     },
     {
+      title: "El vacío",
       text: "Intenté llenar el vacío con alcohol y comida chatarra. Buscaba llenar por fuera lo que faltaba por dentro. Pero solo me hundía más.",
+      photo: { src: "", alt: "", pendingLabel: "Antes" },
     },
     {
+      title: "El fondo",
       text: "Toqué fondo varias veces. Casi pierdo la vida en una ocasión. Hasta que decidí que algo tenía que cambiar. Empecé a invertir en mi crecimiento. Mejoré mi entorno. Dejé ir lo que no servía. Y ahí pasó la transformación: conecté con mi verdadera esencia. Conecté con Dios. Reconocí el poder que siempre estuvo dentro.",
+      photo: { src: "", alt: "", pendingLabel: "Hielo · fuego · respiración" },
     },
     {
-      pull: true,
-      text: "La única persona que necesitaba impresionar… era mi niño interior.",
-    },
-    {
+      title: "El niño interior",
+      pull: "La única persona que necesitaba impresionar… era mi niño interior.",
       text: "Me había olvidado de disfrutar. Me había olvidado de jugar. Me había olvidado de crear desde la inocencia. Estaba viviendo para todos… menos para él.",
+      photo: { src: "", alt: "", pendingLabel: "Mario de niño" },
     },
     {
+      title: "Volver a casa",
       text: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido. Sentir el placer de crear. De explorar mi creatividad. De construir sin miedo al juicio. Era como volver a casa después de tanto tiempo.",
+      photo: { src: "", alt: "", pendingLabel: "Taller Lignarolo" },
     },
   ],
   // [HIPÓTESIS] puente del estudio hacia la pregunta que organiza el sitio.
@@ -121,14 +136,6 @@ export const origin = {
     "El cuerpo fue el primer lugar donde el cambio se hizo visible. Después, todo lo que explora (cuerpo, mente, identidad, creación) apunta a una misma pregunta:",
   question:
     "¿Qué tiene que cambiar dentro de una persona para que pueda sostener una realidad diferente afuera?",
-  // [MARIO] cierre: su frase firma.
-  closing: { before: "No se trata de hacer más.", em: "Se trata de ser más." },
-  // [CONFIRMAR] foto documental (entrenando, caminando, escribiendo…). No usar el retrato del hero.
-  image: {
-    src: "",
-    alt: "",
-    pendingLabel: "Foto documental · movimiento / entrenamiento",
-  },
 };
 
 /* ── 03 TERRITORIOS ──────────────────────────────────────── */
@@ -169,7 +176,9 @@ export const territories = {
 export const hipertrofia = {
   eyebrow: "Diario de ideas · por Mario Lignarolo",
   name: { before: "Hipertrofia", italic: "del", after: "Ser" },
-  headline: "Entrenar no solamente el cuerpo, sino la persona que lo habita.",
+  // [MARIO] su frase firma: el «Ser» de Hipertrofia del Ser.
+  headline: { before: "No se trata de hacer más.", em: "Se trata de ser más." },
+  // [HIPÓTESIS] alternativa del brief: «Entrenar no solamente el cuerpo, sino la persona que lo habita.»
   intro:
     "Un lugar para ideas en evolución sobre identidad, cuerpo, trabajo interior, espiritualidad, creación, emprendimiento y ejecución.",
   topics: [
@@ -303,6 +312,14 @@ export const about = {
 /* ── 11 CONECTA ──────────────────────────────────────────── */
 export const connect = {
   eyebrow: "Conecta",
+  // [MARIO] su llamada a la acción real (carrusel del 17 oct 2025).
+  ser: {
+    keyword: "SER",
+    text: "Si eres emprendedor y quieres volver a conectar con tu esencia para, desde ahí, impactar con autenticidad y escalar tus resultados, escríbeme «SER» por mensaje directo y te cuento cómo te puedo ayudar.",
+    cta: "Escribir «SER» por Instagram",
+    // Abre el chat de Instagram con Mario.
+    href: "https://ig.me/m/mariolignarolo",
+  },
   title: ["Sigamos la", "conversación."],
   newsletterLabel: "Recibe los escritos de Hipertrofia del Ser",
   newsletterPlaceholder: "tu@correo.com",

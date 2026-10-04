@@ -21,6 +21,23 @@ export default function Connect() {
         className="display text-[clamp(3.2rem,0.8rem+9vw,11.5rem)] leading-[0.86]"
       />
 
+      <div data-reveal="up" className="mt-[clamp(2.5rem,5vw,4rem)] grid grid-cols-1 items-end gap-8 border-y border-bone/15 py-[clamp(2rem,4vw,3rem)] lg:grid-cols-12 lg:gap-x-6">
+        <p className="display text-[clamp(5rem,3rem+8vw,11rem)] leading-[0.8] text-acid lg:col-span-4">
+          «{connect.ser.keyword}»
+        </p>
+        <div className="lg:col-span-7 lg:col-start-6">
+          <p className="max-w-[36rem] text-[clamp(1.05rem,0.95rem+0.4vw,1.25rem)] leading-relaxed text-bone/85">
+            {connect.ser.text}
+          </p>
+          <SmartLink
+            href={connect.ser.href}
+            className="caps mt-6 inline-flex items-center gap-3 bg-acid px-7 py-[1.1rem] font-medium text-ink transition-colors hover:bg-bone"
+          >
+            {connect.ser.cta} <Arrow diagonal />
+          </SmartLink>
+        </div>
+      </div>
+
       <div className="mt-[clamp(3.5rem,7vw,6rem)] grid grid-cols-1 gap-y-16 lg:grid-cols-12 lg:gap-x-6">
         <ul className="border-b border-bone/15 lg:col-span-7">
           {rows.map((r, i) => (
