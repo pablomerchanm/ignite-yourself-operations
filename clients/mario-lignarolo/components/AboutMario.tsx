@@ -11,13 +11,12 @@ export default function AboutMario() {
         <div data-reveal="up" className="lg:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden bg-ink">
             <div className="sd-zoom absolute inset-0">
-              {/* Provisional: recorte cerrado del retrato del hero, en B/N, hasta tener un retrato actual. */}
               <Image
                 src={about.image.src}
                 alt={about.image.alt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="origin-[48%_44%] scale-[1.45] object-cover object-[48%_40%] contrast-[1.08] grayscale"
+                className="object-cover"
               />
             </div>
           </div>

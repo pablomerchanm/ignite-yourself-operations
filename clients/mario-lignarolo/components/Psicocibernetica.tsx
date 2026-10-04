@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import { psico, psicoUrl } from "@/data/content";
-import { Arrow, Eyebrow, Lines, SmartLink } from "./ui";
+import { Arrow, Eyebrow, ImageSlot, Lines, SmartLink } from "./ui";
+import VideoPlayer from "./VideoPlayer";
 
 /**
  * 06 — El producto actual, como consecuencia de la visión (no como página
@@ -39,6 +40,29 @@ export default function Psicocibernetica() {
             días
           </span>
         </p>
+      </div>
+
+      {/* El video con el que Mario presenta el proceso, y su retrato en azul. */}
+      <div className="mt-[clamp(3rem,6vw,5.5rem)] grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-stretch">
+        <div data-reveal="up" className="lg:col-span-8">
+          <VideoPlayer
+            src={psico.video.src}
+            poster={psico.video.poster}
+            duration={psico.video.duration}
+            label={psico.video.label}
+            className="aspect-video w-full"
+          />
+        </div>
+        <div data-reveal="up" className="lg:col-span-4">
+          <ImageSlot
+            src={psico.image.src}
+            alt={psico.image.alt}
+            pendingLabel="Retrato"
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            tone="dark"
+            className="aspect-[4/5] w-full lg:aspect-auto lg:h-full"
+          />
+        </div>
       </div>
 
       <div className="mt-[clamp(3rem,6vw,5.5rem)] grid grid-cols-1 gap-y-12 lg:grid-cols-12 lg:gap-x-6">

@@ -113,12 +113,14 @@ export const origin = {
     {
       title: "El vacío",
       text: "Intenté llenar el vacío con alcohol y comida chatarra. Buscaba llenar por fuera lo que faltaba por dentro. Pero solo me hundía más.",
-      photo: { src: "", alt: "", pendingLabel: "Antes" },
+      // [CONFIRMADO] foto «Antes» de su carrusel del 17 oct 2025.
+      photo: { src: "/mario/antes.jpg", alt: "Mario, antes: de perfil, con una botella en la mano.", pendingLabel: "Antes" },
     },
     {
       title: "El fondo",
       text: "Toqué fondo varias veces. Casi pierdo la vida en una ocasión. Hasta que decidí que algo tenía que cambiar. Empecé a invertir en mi crecimiento. Mejoré mi entorno. Dejé ir lo que no servía. Y ahí pasó la transformación: conecté con mi verdadera esencia. Conecté con Dios. Reconocí el poder que siempre estuvo dentro.",
-      photo: { src: "", alt: "", pendingLabel: "Hielo · fuego · respiración" },
+      // Provisional: entreno en el gimnasio; se cambia por la de hielo · fuego · respiración cuando Mario la pase.
+      photo: { src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio.", pendingLabel: "Hielo · fuego · respiración" },
     },
     {
       title: "El niño interior",
@@ -129,7 +131,8 @@ export const origin = {
     {
       title: "Volver a casa",
       text: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido. Sentir el placer de crear. De explorar mi creatividad. De construir sin miedo al juicio. Era como volver a casa después de tanto tiempo.",
-      photo: { src: "", alt: "", pendingLabel: "Taller Lignarolo" },
+      // Provisional: mocasines Lignarolo; se cambia por la del taller cuando Mario la pase.
+      photo: { src: "/mario/lignarolo-zapatos.jpg", alt: "Mocasines Lignarolo, en blanco y negro.", pendingLabel: "Taller Lignarolo" },
     },
   ],
   // [HIPÓTESIS] puente del estudio hacia la pregunta que organiza el sitio.
@@ -193,6 +196,7 @@ export const hipertrofia = {
   ],
   latestLabel: "Último escrito",
   subscribe: "Suscribirme",
+  image: { src: "/mario/entreno-curl.jpg", alt: "Mario entrenando bíceps con mancuerna." },
 };
 
 /* ── 05 PUNTO DE VISTA ───────────────────────────────────── */
@@ -253,6 +257,9 @@ export const psico = {
     "Práctica diaria",
   ],
   cta: "Conocer Psico-Cibernética",
+  // [CONFIRMADO] su video de presentación en Skool (2:26), alojado aquí.
+  video: { src: "/mario/psico.mp4", poster: "/mario/psico-poster.jpg", duration: "2:26", label: "Mario presenta Psico-Cibernética" },
+  image: { src: "/mario/psico.jpg", alt: "Mario, retrato en doble exposición sobre azul." },
   // [CONFIRMAR] nota de encuadre seguro (práctica personal, sin promesas clínicas).
   note: "Un proceso de práctica personal. No sustituye la atención médica ni psicológica.",
 };
@@ -303,10 +310,9 @@ export const about = {
   focus: ["Psico-Cibernética", "Hipertrofia del Ser", "Contenido en Instagram, YouTube y TikTok"],
   // [CONFIRMAR] ciudad: solo si Mario aprueba publicarla.
   location: "",
-  // Provisional: recorte del retrato del hero hasta tener un retrato actual.
   image: {
-    src: "/mario/hero.jpg",
-    alt: "Mario Lignarolo, retrato en primer plano.",
+    src: "/mario/mario-hoy.jpg",
+    alt: "Mario Lignarolo, sentado, en blanco y negro.",
   },
 };
 
