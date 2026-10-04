@@ -141,7 +141,16 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--ser .card__kicker { color: rgba(10, 22, 21, 0.65); }
 .card--ser .card__sub { font-weight: 400; }
 
-.card--psico { background: var(--ink-2); border: 1px solid rgba(46, 226, 94, 0.25); }
+.card--psico { background: var(--ink-2); min-height: 320px; }
+.card--psico img { object-position: 78% 12%; }
+@media (min-width: 820px) { .card--psico img { object-position: 62% 12%; } }
+.card--psico::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(10, 22, 21, 0.9) 0%, rgba(10, 22, 21, 0.35) 45%, rgba(10, 22, 21, 0.05) 75%);
+}
 .card--psico .card__big { color: var(--bone); text-transform: uppercase; }
 .card__num {
   position: absolute;
@@ -158,14 +167,18 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--hiper { background: var(--cream); color: var(--charcoal); color-scheme: light; }
 .card--hiper .card__kicker { color: rgba(27, 30, 28, 0.6); }
 
-.card--ligna { background: var(--charcoal); }
+.card--ligna { background: #e9e9e7; color: var(--charcoal); color-scheme: light; justify-content: flex-start; aspect-ratio: 16 / 9; }
+.card--ligna img { object-position: 60% 50%; }
+.card--ligna .card__kicker { color: rgba(27, 30, 28, 0.6); }
+.card--ligna .card__word { font-size: clamp(2rem, 1.2rem + 3.4vw, 4rem); }
 .card--yt, .card--tt, .card--mail { background: transparent; border: 1px solid rgba(236, 232, 222, 0.18); }
 
 /* ── Colocación: móvil (2 columnas) ─────────────────────────── */
 .card--mission  { grid-column: 1 / -1; }
 .card--portrait { grid-column: 1; grid-row: span 2; }
 .card--ser      { grid-column: 2; grid-row: span 2; }
-.card--psico    { grid-column: 1 / -1; min-height: 220px; }
+.card--psico    { grid-column: 1 / -1; }
+.card--ligna    { grid-column: 1 / -1; }
 .card--photo    { grid-row: span 2; }
 .card--hiper    { min-height: 180px; }
 
@@ -179,8 +192,8 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
       "portrait mission mission ser"
       "portrait psico   psico   photo"
       "hiper    psico   psico   photo"
-      "hiper    ligna   yt      photo"
-      "mail     ligna   tt      photo";
+      "hiper    ligna   ligna   yt"
+      "mail     ligna   ligna   tt";
   }
   .card { padding: 22px; }
   .card--portrait { grid-area: portrait; aspect-ratio: auto; }
@@ -189,7 +202,7 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   .card--psico    { grid-area: psico; min-height: 0; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
   .card--hiper    { grid-area: hiper; min-height: 0; }
-  .card--ligna    { grid-area: ligna; }
+  .card--ligna    { grid-area: ligna; aspect-ratio: auto; }
   .card--yt       { grid-area: yt; }
   .card--tt       { grid-area: tt; }
   .card--mail     { grid-area: mail; }
