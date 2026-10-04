@@ -21,7 +21,8 @@
 
 <!--
   Mini web de Mario Lignarolo — destino del enlace de la bio.
-  Tablero de tarjetas: las fotos mandan y cada tarjeta lleva a un destino.
+  Hero con la foto y el nombre (misma geometría que mariolignarolo.com),
+  y debajo un tablero de tarjetas: cada tarjeta lleva a un destino.
   Una sola tarjeta cuenta la historia, con frases textuales de Mario
   (carrusel de Instagram, 17 oct 2025). Lo marcado [VERIFICAR] se resuelve
   con él antes de publicar; un enlace sin URL se muestra atenuado.
@@ -40,13 +41,18 @@
 
 <main class="board">
 
-  <!-- Quién. [VERIFICAR] la línea bajo el nombre: textual de su bio. -->
-  <a class="card card--portrait" id="mario" href="https://mariolignarolo.com" target="_blank" rel="noopener">
-    <img src="/links/img/retrato-4x5.jpg" alt="Mario Lignarolo" width="752" height="941" fetchpriority="high" />
-    <span class="card__foot">
-      <span class="card__name">Mario Lignarolo</span>
-      <span class="card__sub">Breathwork y reprogramación del subconsciente.</span>
+  <!-- Hero: la foto manda; el nombre abraza el rostro como en la web grande.
+       [VERIFICAR] la línea bajo el nombre: textual de su bio. -->
+  <a class="card card--hero" id="mario" href="https://mariolignarolo.com" target="_blank" rel="noopener" aria-label="Mario Lignarolo — conocer mi historia">
+    <picture>
+      <source media="(min-width: 820px)" srcset="/mario/hero.jpg" />
+      <img src="/links/img/retrato-4x5.jpg" alt="" width="752" height="941" fetchpriority="high" />
+    </picture>
+    <span class="hero__name" aria-hidden="true">
+      <span class="hero__first">Mario</span>
+      <span class="hero__last">Li<i>gn</i>arolo.</span>
     </span>
+    <span class="card__sub">Breathwork y reprogramación del subconsciente.</span>
   </a>
 
   <!-- La historia, en cuatro frases suyas: perdido → fondo → decisión → ser. -->
