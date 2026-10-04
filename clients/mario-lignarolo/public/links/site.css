@@ -182,6 +182,38 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   opacity: 0.8;
 }
 
+/* Video: portada con la frase y botón; al reproducir, solo el video. */
+.card--video { background: #000; color: var(--bone); aspect-ratio: 16 / 9; padding: 0; }
+.card--video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: #000; }
+.card--video.playing video { object-fit: contain; }
+.card__play {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  margin: 0;
+  border: 0;
+  background: linear-gradient(to top, rgba(10, 22, 21, 0.94) 0%, rgba(10, 22, 21, 0.55) 45%, rgba(10, 22, 21, 0.18) 100%);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 0.5s var(--ease);
+}
+.card__play:focus-visible { outline: 2px solid var(--acid); outline-offset: -4px; }
+.card__play .card__big { font-size: min(clamp(1.5rem, 1rem + 2vw, 2.4rem), 9cqi); line-height: 1.02; max-width: 22ch; }
+.card__play .card__kicker { color: var(--acid); }
+.card__play .card__meta { display: inline-flex; align-items: center; gap: 10px; }
+.play-dot { width: 34px; height: 34px; border-radius: 50%; background: var(--acid); position: relative; flex: none; transition: transform 0.5s var(--ease); }
+.play-dot::after { content: ""; position: absolute; left: 13px; top: 10px; border-left: 11px solid var(--ink); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+.card__play:hover .play-dot { transform: scale(1.1); }
+.card--video.playing .card__play { opacity: 0; pointer-events: none; }
+
 .card--hiper { background: var(--ink-2); color: var(--bone); aspect-ratio: 4 / 5; }
 .card--hiper img { object-position: 50% 30%; }
 .card--hiper .card__kicker { color: var(--acid); }
@@ -198,6 +230,7 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--ser      { grid-column: 1 / -1; min-height: 190px; }
 .card--ser .card__huge { font-size: min(5rem, 44cqi); }
 .card--story    { grid-column: 1 / -1; min-height: 300px; }
+.card--video    { grid-column: 1 / -1; }
 .card--psico    { grid-column: 1 / -1; }
 .card--hiper    { grid-row: span 2; }
 .card--photo    { grid-row: span 2; }
@@ -215,9 +248,10 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
       "hero   hero   hero   ser"
       "story  story  hiper  photo"
       "story  story  hiper  photo"
-      "yt     tt     mail   mail"
-      "ligna  ligna  psico  psico"
-      "ligna  ligna  psico  psico";
+      "video  video  psico  psico"
+      "video  video  psico  psico"
+      "ligna  ligna  yt     tt"
+      "ligna  ligna  mail   mail";
   }
   .card { padding: 22px; }
 
@@ -249,6 +283,8 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   .card--story h1 { font-size: clamp(2.2rem, 1.4rem + 2.2vw, 3.2rem); max-width: 20ch; }
   .card--story .card__beat { font-size: 1.3rem; max-width: 36ch; }
   .card--story .card__close { font-size: 1.55rem; max-width: 30ch; }
+  .card--video    { grid-area: video; aspect-ratio: auto; }
+  .card__play { padding: 22px; }
   .card--psico    { grid-area: psico; min-height: 0; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
   .card--hiper    { grid-area: hiper; aspect-ratio: auto; }
