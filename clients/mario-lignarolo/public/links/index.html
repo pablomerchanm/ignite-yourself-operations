@@ -70,6 +70,19 @@
     <span class="card__sub">Escríbeme «SER» por DM.</span>
   </a>
 
+  <!-- El video con el que presenta Psico-Cibernética en Skool (2:26).
+       Título: la primera frase de su página de Skool. -->
+  <section class="card card--video" id="video" aria-label="Video: Mario presenta Psico-Cibernética">
+    <video preload="none" playsinline poster="/links/video/psico-poster.jpg" width="1280" height="720">
+      <source src="/links/video/psico.mp4" type="video/mp4" />
+    </video>
+    <button type="button" class="card__play" aria-label="Reproducir video">
+      <span class="card__kicker">Video · 2:26</span>
+      <span class="card__big">Hay algo que nadie te enseñó sobre por qué no has cambiado.</span>
+      <span class="card__meta"><span class="play-dot" aria-hidden="true"></span> Reproducir</span>
+    </button>
+  </section>
+
   <!-- El programa. Frase textual de Mario (Substack). -->
   <a class="card card--psico" id="psico" href="https://www.skool.com/psico-cibernetica-7760/about" target="_blank" rel="noopener">
     <img src="/links/img/psico.jpg" alt="" width="1122" height="1402" loading="lazy" />
@@ -128,6 +141,13 @@
 </footer>
 
 <script>
+  // Video: al pulsar, se quita la portada y se reproduce con controles.
+  document.querySelectorAll(".card--video").forEach((card) => {
+    const v = card.querySelector("video"), b = card.querySelector(".card__play");
+    b.addEventListener("click", () => { card.classList.add("playing"); v.controls = true; v.play(); });
+    v.addEventListener("ended", () => { card.classList.remove("playing"); v.controls = false; v.load(); });
+  });
+
   // Entrada escalonada de las tarjetas (sin librerías). Sin JS, todo se ve.
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
     document.documentElement.classList.add("js");
