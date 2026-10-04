@@ -30,13 +30,14 @@ export const site = {
 export const channels = {
   // [CONFIRMADO] cuenta verificada @mariolignarolo
   instagram: { label: "Instagram", href: "https://www.instagram.com/mariolignarolo/" },
-  youtube: { label: "YouTube", href: "" },
-  tiktok: { label: "TikTok", href: "" },
-  substack: { label: "Substack", href: "" },
+  // [CONFIRMADO] canales verificados
+  youtube: { label: "YouTube", href: "https://www.youtube.com/@mariolignarolo" },
+  tiktok: { label: "TikTok", href: "https://www.tiktok.com/@mariolignarolo" },
+  substack: { label: "Substack", href: "https://mariolignarolo.substack.com" },
 } satisfies Record<string, Channel>;
 
-/** [CONFIRMAR] destino actual del producto. */
-export const psicoUrl = "";
+/** [CONFIRMADO] la comunidad del programa vive en Skool. */
+export const psicoUrl = "https://www.skool.com/psico-cibernetica-7760/about";
 
 /** [CONFIRMAR] correo público: dejar vacío si Mario no quiere publicarlo. */
 export const publicEmail = "";
@@ -172,7 +173,7 @@ export const territories = {
 };
 
 /* ── 04 HIPERTROFIA DEL SER ──────────────────────────────── */
-// [HIPÓTESIS] territorio editorial de Mario: aún no es una empresa aparte.
+// [CONFIRMADO] «Hipertrofia del Ser» es el nombre real de su Substack.
 export const hipertrofia = {
   eyebrow: "Diario de ideas · por Mario Lignarolo",
   name: { before: "Hipertrofia", italic: "del", after: "Ser" },
