@@ -90,6 +90,7 @@ img { display: block; max-width: 100%; }
   border-radius: var(--r);
   overflow: hidden;
   isolation: isolate;
+  container-type: inline-size; /* los títulos se miden contra su tarjeta */
   transition: transform 0.7s var(--ease), box-shadow 0.7s var(--ease);
 }
 .card img {
@@ -107,13 +108,11 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card__kicker { color: var(--fog); }
 .card__meta { color: var(--acid); margin-top: 4px; }
 .card__sub { font-size: 14px; line-height: 1.4; max-width: 32ch; }
-.card__text { font-size: 15px; line-height: 1.5; max-width: 52ch; }
-.card__text em { font-family: var(--serif); font-style: italic; font-size: 1.15em; }
 .card__name, .card__big, .card__huge, .card__word { font-family: var(--serif); font-weight: 400; line-height: 0.95; }
-.card__name { font-size: clamp(1.25rem, 1rem + 1vw, 1.9rem); }
-.card__big { font-size: clamp(1.9rem, 1.2rem + 3.2vw, 3.6rem); letter-spacing: -0.01em; }
-.card__huge { font-size: clamp(3.4rem, 1.8rem + 7vw, 7rem); line-height: 0.85; letter-spacing: -0.02em; }
-.card__word { font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.6rem); }
+.card__name { font-size: min(clamp(1.25rem, 1rem + 1vw, 1.9rem), 14cqi); }
+.card__big { font-size: min(clamp(1.9rem, 1.2rem + 3.2vw, 3.6rem), 24cqi); letter-spacing: -0.01em; }
+.card__huge { font-size: min(clamp(3.4rem, 1.8rem + 7vw, 7rem), 44cqi); line-height: 0.85; letter-spacing: -0.02em; }
+.card__word { font-size: min(clamp(1.6rem, 1.1rem + 2.2vw, 2.6rem), 22cqi); white-space: nowrap; }
 .card__foot { display: grid; gap: 6px; }
 
 /* Fotos: degradé de legibilidad abajo. */
@@ -128,43 +127,34 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--portrait img { object-position: 50% 20%; }
 .card--photo img { object-position: 45% 30%; }
 .card--portrait .card__kicker, .card--photo .card__kicker { color: var(--acid); }
-.card--portrait .card__sub { color: rgba(236, 232, 222, 0.8); }
+.card--portrait .card__sub { color: rgba(236, 232, 222, 0.8); max-width: 22ch; }
 
-/* Lo que hace: nivel 1 del tablero. */
-.card--mission { background: var(--ink-2); justify-content: center; padding: 20px 16px; gap: 14px; }
-.card--mission h1 {
+/* La historia: la única tarjeta que se lee. Cuatro frases suyas. */
+.card--story { background: var(--ink-2); justify-content: center; padding: 22px 18px; gap: 18px; }
+.card--story h1 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(1.8rem, 1rem + 4.6vw, 4.4rem);
+  font-size: clamp(1.9rem, 1rem + 4.6vw, 4.2rem);
   line-height: 0.95;
   letter-spacing: -0.01em;
   color: var(--acid);
   text-wrap: balance;
+  max-width: 16ch;
 }
-.card--mission .card__sub { color: rgba(236, 232, 222, 0.8); max-width: 40ch; }
+.card__beat { font-family: var(--serif); font-size: clamp(1.15rem, 1rem + 0.9vw, 1.6rem); line-height: 1.15; color: rgba(236, 232, 222, 0.78); max-width: 30ch; }
+.card__close { font-family: var(--serif); font-size: clamp(1.25rem, 1rem + 1.2vw, 1.9rem); line-height: 1.1; max-width: 26ch; }
+.card__close em { font-style: italic; color: var(--acid); }
+.card--story .card__meta { margin-top: 4px; }
 
 .card--ser { background: var(--acid); color: var(--ink); }
 .card--ser .card__kicker, .card--ser .card__meta { color: rgba(10, 22, 21, 0.65); }
 .card--ser .card__sub { font-weight: 400; }
 
-/* Abrebocas: la única tarjeta larga de leer. */
-.card--about { background: var(--cream); color: var(--charcoal); color-scheme: light; justify-content: flex-start; gap: 14px; padding: 20px 16px; }
-.card--about .card__kicker { color: rgba(27, 30, 28, 0.6); }
-.card--about .card__big { font-size: clamp(1.6rem, 1.1rem + 2.1vw, 2.6rem); line-height: 1.02; max-width: 22ch; }
-.card--about .card__text { color: rgba(27, 30, 28, 0.85); }
-.card__steps { margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(27, 30, 28, 0.18); display: grid; gap: 10px; }
-.card__steps ol { display: flex; flex-wrap: wrap; gap: 8px 20px; counter-reset: step; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + 0.6vw, 1.4rem); }
-.card__steps li { counter-increment: step; }
-.card__steps li::before { content: counter(step) " "; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; color: rgba(27, 30, 28, 0.55); margin-right: 6px; vertical-align: 0.25em; }
-.card__steps li a { border-bottom: 1px solid rgba(27, 30, 28, 0.35); }
-.card__steps li a:hover { border-color: var(--charcoal); }
-.card__link { font-size: 11px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--charcoal); }
-
 .card--psico { background: var(--ink-2); min-height: 340px; }
 .card--psico img { object-position: 78% 12%; }
 @media (min-width: 820px) { .card--psico img { object-position: 62% 12%; } }
 .card--psico .card__big { color: var(--bone); text-transform: uppercase; }
-.card--psico .card__sub { max-width: 40ch; }
+.card--psico .card__sub { max-width: 26ch; }
 .card__num {
   position: absolute;
   right: 12px;
@@ -185,42 +175,39 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--ligna img { object-position: 60% 50%; }
 .card--ligna .card__kicker { color: rgba(27, 30, 28, 0.6); }
 .card--ligna .card__word { font-size: clamp(2rem, 1.2rem + 3.4vw, 4rem); }
-.card--ligna .card__sub { color: rgba(27, 30, 28, 0.75); max-width: 24ch; }
 
 .card--yt, .card--tt, .card--mail { background: transparent; border: 1px solid rgba(236, 232, 222, 0.18); }
-.card--yt .card__meta, .card--tt .card__meta, .card--mail .card__meta { color: var(--fog); text-transform: none; letter-spacing: 0; font-size: 13px; }
 
 /* ── Colocación: móvil (2 columnas) ─────────────────────────── */
-.card--mission  { grid-column: 1 / -1; }
 .card--portrait { grid-column: 1; grid-row: span 2; }
 .card--ser      { grid-column: 2; grid-row: span 2; }
-.card--about    { grid-column: 1 / -1; }
+.card--story    { grid-column: 1 / -1; min-height: 300px; }
 .card--psico    { grid-column: 1 / -1; }
 .card--hiper    { grid-row: span 2; }
 .card--photo    { grid-row: span 2; }
+.card--mail     { grid-column: 1 / -1; min-height: 100px; }
 .card--ligna    { grid-column: 1 / -1; }
-.card--mail     { grid-column: 1 / -1; min-height: 120px; }
 
 /* ── Colocación: escritorio (4 columnas, bento) ─────────────── */
 @media (min-width: 820px) {
   .board {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-auto-rows: 150px;
+    grid-auto-rows: 170px;
     grid-template-areas:
-      "portrait mission mission ser"
-      "portrait mission mission ser"
-      "portrait about   about   photo"
-      "hiper    about   about   photo"
-      "hiper    about   about   yt"
+      "portrait story   story   ser"
+      "portrait story   story   ser"
+      "portrait hiper   yt      photo"
+      "tt       hiper   mail    photo"
       "ligna    ligna   psico   psico"
-      "ligna    ligna   psico   psico"
-      "tt       tt      mail    mail";
+      "ligna    ligna   psico   psico";
   }
   .card { padding: 22px; }
   .card--portrait { grid-area: portrait; aspect-ratio: auto; }
-  .card--mission  { grid-area: mission; padding: 32px; }
+  .card--story    { grid-area: story; padding: 26px 30px; min-height: 0; gap: 12px; }
+  .card--story h1 { font-size: clamp(2.2rem, 1.4rem + 2.2vw, 3.2rem); max-width: 20ch; }
+  .card--story .card__beat { font-size: 1.3rem; max-width: 36ch; }
+  .card--story .card__close { font-size: 1.55rem; max-width: 30ch; }
   .card--ser      { grid-area: ser; }
-  .card--about    { grid-area: about; padding: 24px; }
   .card--psico    { grid-area: psico; min-height: 0; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
   .card--hiper    { grid-area: hiper; aspect-ratio: auto; }
