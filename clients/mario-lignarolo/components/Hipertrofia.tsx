@@ -1,6 +1,6 @@
 import { articles } from "@/data/articles";
 import { channels, hipertrofia } from "@/data/content";
-import { Arrow, Eyebrow, Lines, SampleTag, SmartLink } from "./ui";
+import { Arrow, Eyebrow, ImageSlot, Lines, SampleTag, SmartLink } from "./ui";
 import { formatDate } from "./format";
 
 /** 04 — Hipertrofia del Ser: el territorio intelectual, tratado como publicación. */
@@ -24,7 +24,7 @@ export default function Hipertrofia() {
       />
 
       <div className="grid grid-cols-1 gap-y-14 border-t border-charcoal/20 pt-[clamp(2.5rem,5vw,4.5rem)] lg:grid-cols-12 lg:gap-x-6">
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-4">
           <p data-reveal="up" className="display text-[clamp(2rem,1.4rem+2.1vw,3.4rem)] leading-[1.02]">
             {hipertrofia.headline.before}
             <br />
@@ -51,8 +51,18 @@ export default function Hipertrofia() {
           </div>
         </div>
 
+        <div data-reveal="up" className="lg:col-span-3">
+          <ImageSlot
+            src={hipertrofia.image.src}
+            alt={hipertrofia.image.alt}
+            pendingLabel="Entreno"
+            sizes="(min-width: 1024px) 25vw, 100vw"
+            className="aspect-[4/5] w-full max-w-[22rem] lg:max-w-none"
+          />
+        </div>
+
         {latest && (
-          <article data-reveal="up" className="lg:col-span-6 lg:col-start-7">
+          <article data-reveal="up" className="lg:col-span-5">
             <div className="caps flex flex-wrap items-center gap-3 text-charcoal/60">
               <span>{hipertrofia.latestLabel}</span>
               <span aria-hidden="true">·</span>
