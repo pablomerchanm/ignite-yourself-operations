@@ -1,7 +1,7 @@
 /**
- * Videos (YouTube). Uno destacado + una lista corta curada (no más de 4).
- * Con `youtubeId` se usa la miniatura real de YouTube y se enlaza al video;
- * sin él se muestra una miniatura tipográfica. `sample: true` = de muestra.
+ * Videos (YouTube @mariolignarolo). Uno destacado + tres curados.
+ * Datos reales del canal (id y título). Con `youtubeId` se usa la miniatura
+ * real y se enlaza al video.
  */
 export type Video = {
   title: string;
@@ -11,8 +11,8 @@ export type Video = {
 };
 
 export const videos: Video[] = [
-  { title: "Cambiar quién eres para cambiar lo que construyes", youtubeId: null, sample: true },
-  { title: "Autoconcepto", youtubeId: null, sample: true },
-  { title: "Respiración consciente", youtubeId: null, sample: true },
-  { title: "No negociables", youtubeId: null, sample: true },
+  { title: "Haz esto por 40 días para ser irreconocible", youtubeId: "gZ5VfirI-Fs" },
+  { title: "Cómo ser tan atractivo para que la realidad te persiga", youtubeId: "wSEMgi6puZo" },
+  { title: "El verdadero reto es ignorar tu realidad", youtubeId: "VdQ770YhriQ" },
+  { title: "Para ser fit físicamente, primero necesitas ser fit mentalmente", youtubeId: "nKX1_RJirM4" },
 ];
