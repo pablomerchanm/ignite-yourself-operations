@@ -122,7 +122,7 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   background: linear-gradient(to top, rgba(10, 22, 21, 0.85) 0%, rgba(10, 22, 21, 0.2) 40%, transparent 65%);
 }
 .card--portrait img { object-position: 50% 20%; }
-.card--photo img { object-position: 50% 35%; }
+.card--photo img { object-position: 45% 30%; }
 .card--portrait .card__kicker, .card--photo .card__kicker { color: var(--acid); }
 
 /* Lo que hace: nivel 1 del tablero. */
@@ -164,8 +164,16 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   opacity: 0.8;
 }
 
-.card--hiper { background: var(--cream); color: var(--charcoal); color-scheme: light; }
-.card--hiper .card__kicker { color: rgba(27, 30, 28, 0.6); }
+.card--hiper { background: var(--ink-2); color: var(--bone); aspect-ratio: 4 / 5; }
+.card--hiper img { object-position: 50% 30%; }
+.card--hiper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(10, 22, 21, 0.9) 0%, rgba(10, 22, 21, 0.3) 45%, transparent 70%);
+}
+.card--hiper .card__kicker { color: var(--acid); }
 
 .card--ligna { background: #e9e9e7; color: var(--charcoal); color-scheme: light; justify-content: flex-start; aspect-ratio: 16 / 9; }
 .card--ligna img { object-position: 60% 50%; }
@@ -180,7 +188,7 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--psico    { grid-column: 1 / -1; }
 .card--ligna    { grid-column: 1 / -1; }
 .card--photo    { grid-row: span 2; }
-.card--hiper    { min-height: 180px; }
+.card--hiper    { grid-row: span 2; }
 
 /* ── Colocación: escritorio (4 columnas, bento) ─────────────── */
 @media (min-width: 820px) {
@@ -201,7 +209,7 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   .card--ser      { grid-area: ser; }
   .card--psico    { grid-area: psico; min-height: 0; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
-  .card--hiper    { grid-area: hiper; min-height: 0; }
+  .card--hiper    { grid-area: hiper; aspect-ratio: auto; }
   .card--ligna    { grid-area: ligna; aspect-ratio: auto; }
   .card--yt       { grid-area: yt; }
   .card--tt       { grid-area: tt; }
