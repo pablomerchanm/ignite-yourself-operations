@@ -21,10 +21,10 @@
 
 <!--
   Mini web de Mario Lignarolo — destino del enlace de la bio.
-  Un tablero de tarjetas: cada tarjeta es un destino y dice para quién es.
-  Todo el texto en primera persona es textual de Mario (Instagram, Substack,
-  Skool). Lo marcado [VERIFICAR] se resuelve con él antes de publicar; un
-  enlace sin URL se muestra atenuado y no navega.
+  Tablero de tarjetas: las fotos mandan y cada tarjeta lleva a un destino.
+  Una sola tarjeta cuenta la historia, con frases textuales de Mario
+  (carrusel de Instagram, 17 oct 2025). Lo marcado [VERIFICAR] se resuelve
+  con él antes de publicar; un enlace sin URL se muestra atenuado.
 -->
 
 <header class="top">
@@ -40,92 +40,71 @@
 
 <main class="board">
 
-  <!-- Quién es: el retrato manda y lleva a la historia completa. -->
+  <!-- Quién. [VERIFICAR] la línea bajo el nombre: textual de su bio. -->
   <a class="card card--portrait" id="mario" href="https://mariolignarolo.com" target="_blank" rel="noopener">
     <img src="/links/img/retrato-4x5.jpg" alt="Mario Lignarolo" width="752" height="941" fetchpriority="high" />
     <span class="card__foot">
       <span class="card__name">Mario Lignarolo</span>
-      <span class="card__sub">Emprendedor. Crea Psico-Cibernética y escribe Hipertrofia del Ser.</span>
-      <span class="card__kicker">Conocer mi historia <span class="arr">↗</span></span>
+      <span class="card__sub">Breathwork y reprogramación del subconsciente.</span>
     </span>
   </a>
 
-  <!-- Lo que hace y para quién. [VERIFICAR] frase de misión: textual de su bio. -->
-  <section class="card card--mission" aria-label="Qué hago">
-    <h1>Breathwork y reprogramación del&nbsp;subconsciente.</h1>
-    <p class="card__sub">Para emprendedores que quieren volver a conectar con su esencia y, desde ahí, construir con autenticidad.</p>
+  <!-- La historia, en cuatro frases suyas: perdido → fondo → decisión → ser. -->
+  <section class="card card--story" aria-label="La historia de Mario">
+    <h1>Es difícil encontrarte cuando no sabes que estás perdido.</h1>
+    <p class="card__beat">Toqué fondo varias veces. Hasta que decidí que algo tenía que cambiar.</p>
+    <p class="card__close">No se trata de hacer más. <em>Se trata de ser más.</em></p>
+    <a class="card__meta" href="https://mariolignarolo.com" target="_blank" rel="noopener">Mi historia <span class="arr">↗</span></a>
   </section>
 
-  <!-- Trabajar con él: su llamada a la acción real. -->
+  <!-- Trabajar con él: su llamada real. -->
   <a class="card card--ser" id="ser" href="https://ig.me/m/mariolignarolo" target="_blank" rel="noopener">
     <span class="card__kicker">Trabajar conmigo</span>
     <span class="card__huge">«SER»</span>
-    <span class="card__sub">Escríbeme «SER» por mensaje directo y te cuento cómo te puedo ayudar.</span>
-    <span class="card__meta">Instagram · DM</span>
+    <span class="card__sub">Escríbeme «SER» por DM.</span>
   </a>
 
-  <!-- Abrebocas: su historia en seis frases suyas, y por dónde empezar. -->
-  <section class="card card--about" aria-labelledby="about-title">
-    <p class="card__kicker">Quién es Mario</p>
-    <h2 id="about-title" class="card__big">Es difícil encontrarte cuando no sabes que estás perdido.</h2>
-    <p class="card__text">Por mucho tiempo permití que las circunstancias decidieran por mí. Toqué fondo varias veces. Hasta que decidí que algo tenía que cambiar: conecté con mi verdadera esencia y reconocí el poder que siempre estuvo dentro. Hoy estoy conectado con esa versión de mí que no necesita validación externa. <em>No se trata de hacer más. Se trata de ser más.</em></p>
-    <div class="card__steps">
-      <p class="card__kicker">Empieza por aquí</p>
-      <ol>
-        <li><a href="#hiper">Lee un escrito</a></li>
-        <li><a href="#yt">Mira un video</a></li>
-        <li><a href="#ser">Escríbeme «SER»</a></li>
-      </ol>
-      <a class="card__link" href="https://mariolignarolo.com" target="_blank" rel="noopener">La historia completa <span class="arr">↗</span></a>
-    </div>
-  </section>
-
-  <!-- El programa. Texto de Mario (Substack y Skool). [VERIFICAR: si se publica el precio] -->
+  <!-- El programa. Frase textual de Mario (Substack). -->
   <a class="card card--psico" id="psico" href="https://www.skool.com/psico-cibernetica-7760/about" target="_blank" rel="noopener">
     <img src="/links/img/psico.jpg" alt="" width="1122" height="1402" loading="lazy" />
     <span class="card__kicker">Programa · 40 días</span>
     <span class="card__big">Psico-<br />Cibernética</span>
-    <span class="card__sub">Un proceso de 40 días para transformar tu autoconcepto a través de la respiración consciente. Respiración que lleva el cerebro a estado theta y, desde ahí, una hipnomeditación que entra directo al subconsciente.</span>
-    <span class="card__meta">Entrar a la comunidad <span class="arr">↗</span></span>
+    <span class="card__sub">Respiración consciente para transformar tu autoconcepto.</span>
+    <span class="card__meta">Entrar <span class="arr">↗</span></span>
     <span class="card__num" aria-hidden="true">40</span>
   </a>
 
-  <!-- Leer: su Substack, «Hipertrofia del Ser». -->
+  <!-- Leer. -->
   <a class="card card--hiper" id="hiper" href="https://mariolignarolo.substack.com" target="_blank" rel="noopener">
     <img src="/links/img/hipertrofia.jpg" alt="" width="900" height="1600" loading="lazy" />
-    <span class="card__kicker">Leer · Substack</span>
+    <span class="card__kicker">Leer</span>
     <span class="card__big">Hipertrofia <i>del</i> Ser</span>
-    <span class="card__sub">Escritos casi a diario sobre identidad, cuerpo, espiritualidad y emprendimiento.</span>
-    <span class="card__meta">Último: «Vive de tus intereses» <span class="arr">↗</span></span>
+    <span class="card__meta">Substack <span class="arr">↗</span></span>
   </a>
 
   <!-- Verlo en el día a día. -->
   <a class="card card--photo" href="https://www.instagram.com/mariolignarolo/" target="_blank" rel="noopener">
     <img src="/links/img/instagram.jpg" alt="" width="1122" height="1402" loading="lazy" />
     <span class="card__foot">
-      <span class="card__kicker">Ver · Instagram</span>
+      <span class="card__kicker">Instagram</span>
       <span class="card__name">@mariolignarolo <span class="arr">↗</span></span>
-      <span class="card__sub">Entrenamiento, ideas y proceso, en el día a día.</span>
     </span>
   </a>
 
   <!-- Video. -->
   <a class="card card--yt" id="yt" href="https://www.youtube.com/@mariolignarolo" target="_blank" rel="noopener">
-    <span class="card__kicker">Ver · YouTube</span>
+    <span class="card__kicker">Ver</span>
     <span class="card__word">YouTube <span class="arr">↗</span></span>
-    <span class="card__meta">Último: «Haz esto por 40 días para ser irreconocible»</span>
   </a>
   <a class="card card--tt" href="https://www.tiktok.com/@mariolignarolo" target="_blank" rel="noopener">
-    <span class="card__kicker">Ver · TikTok</span>
+    <span class="card__kicker">Ver</span>
     <span class="card__word">TikTok <span class="arr">↗</span></span>
-    <span class="card__meta">Ideas en corto.</span>
   </a>
 
   <!-- Correo. [PENDIENTE] -->
   <a class="card card--mail pending" aria-disabled="true">
     <span class="card__kicker">Escribir</span>
     <span class="card__word">Email</span>
-    <span class="card__meta">Pronto.</span>
   </a>
 
   <!-- Calzado. [VERIFICAR: cargo de Mario en Lignarolo] -->
@@ -133,7 +112,6 @@
     <img src="/links/img/lignarolo.jpg" alt="" width="1600" height="900" loading="lazy" />
     <span class="card__kicker">Calzado</span>
     <span class="card__word">Lignarolo <span class="arr">↗</span></span>
-    <span class="card__sub">Calzado artesanal en cuero italiano, hecho a mano en Bogotá.</span>
   </a>
 
 </main>
