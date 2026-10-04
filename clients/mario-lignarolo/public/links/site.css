@@ -116,18 +116,33 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card__foot { display: grid; gap: 6px; }
 
 /* Fotos: degradé de legibilidad abajo. */
-.card--portrait, .card--photo { min-height: 0; aspect-ratio: 4 / 5; color: var(--bone); }
-.card--portrait::after, .card--photo::after, .card--hiper::after, .card--psico::after {
+.card--photo { min-height: 0; aspect-ratio: 4 / 5; color: var(--bone); }
+.card--hero::after, .card--photo::after, .card--hiper::after, .card--psico::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background: linear-gradient(to top, rgba(10, 22, 21, 0.9) 0%, rgba(10, 22, 21, 0.35) 45%, rgba(10, 22, 21, 0.05) 75%);
 }
-.card--portrait img { object-position: 50% 20%; }
 .card--photo img { object-position: 45% 30%; }
-.card--portrait .card__kicker, .card--photo .card__kicker { color: var(--acid); }
-.card--portrait .card__sub { color: rgba(236, 232, 222, 0.8); max-width: 22ch; }
+.card--photo .card__kicker { color: var(--acid); }
+
+/* Hero: móvil, retrato 4:5 con el nombre abajo. */
+.card--hero { aspect-ratio: 4 / 5; color: var(--bone); gap: 10px; }
+.card--hero img { object-position: 50% 20%; }
+.card--hero .card__sub { color: rgba(236, 232, 222, 0.8); max-width: 24ch; }
+.hero__name {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: min(calc((100cqi - 8px) / 3.42), 5.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--acid);
+}
+.hero__last { align-self: flex-end; }
+.hero__name i { font-style: italic; }
 
 /* La historia: la única tarjeta que se lee. Cuatro frases suyas. */
 .card--story { background: var(--ink-2); justify-content: center; padding: 22px 18px; gap: 18px; }
@@ -179,8 +194,9 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--yt, .card--tt, .card--mail { background: transparent; border: 1px solid rgba(236, 232, 222, 0.18); }
 
 /* ── Colocación: móvil (2 columnas) ─────────────────────────── */
-.card--portrait { grid-column: 1; grid-row: span 2; }
-.card--ser      { grid-column: 2; grid-row: span 2; }
+.card--hero     { grid-column: 1 / -1; }
+.card--ser      { grid-column: 1 / -1; min-height: 190px; }
+.card--ser .card__huge { font-size: min(5rem, 44cqi); }
 .card--story    { grid-column: 1 / -1; min-height: 300px; }
 .card--psico    { grid-column: 1 / -1; }
 .card--hiper    { grid-row: span 2; }
@@ -194,20 +210,45 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-auto-rows: 170px;
     grid-template-areas:
-      "portrait story   story   ser"
-      "portrait story   story   ser"
-      "portrait hiper   yt      photo"
-      "tt       hiper   mail    photo"
-      "ligna    ligna   psico   psico"
-      "ligna    ligna   psico   psico";
+      "hero   hero   hero   ser"
+      "hero   hero   hero   ser"
+      "hero   hero   hero   ser"
+      "story  story  hiper  photo"
+      "story  story  hiper  photo"
+      "yt     tt     mail   mail"
+      "ligna  ligna  psico  psico"
+      "ligna  ligna  psico  psico";
   }
   .card { padding: 22px; }
-  .card--portrait { grid-area: portrait; aspect-ratio: auto; }
+
+  /* Hero apaisado: 1 px del header aprobado (1920×1080); el nombre se ancla
+     a la foto, no a la tarjeta, para que «Mario» y «Lignarolo.» abracen el rostro. */
+  .card--hero {
+    grid-area: hero;
+    aspect-ratio: auto;
+    container-type: size;
+    --u: max(100cqw / 1920, 100cqh / 1080);
+    --ox: calc((100cqw - 1920 * var(--u)) * 0.5);
+    --oy: calc((100cqh - 1080 * var(--u)) * 0.4);
+    --F: min(calc(153 * var(--u)), calc((97cqw - var(--ox) - 1212 * var(--u)) / 3.42));
+  }
+  .card--hero img { object-position: 50% 40%; }
+  .card--hero::after { background: linear-gradient(to top, rgba(10, 22, 21, 0.7) 0%, rgba(10, 22, 21, 0) 38%); }
+  .card--hero .hero__name { display: block; font-size: var(--F); line-height: 1; }
+  .hero__first, .hero__last {
+    position: absolute;
+    z-index: 2;
+    top: calc(var(--oy) + 586 * var(--u) - 0.84 * var(--F));
+  }
+  .hero__first { right: calc(100cqw - var(--ox) - 629 * var(--u)); }
+  .hero__last  { left: calc(var(--ox) + 1212 * var(--u)); }
+
+  .card--ser      { grid-area: ser; min-height: 0; }
+  .card--ser .card__huge { font-size: min(7rem, 44cqi); }
   .card--story    { grid-area: story; padding: 26px 30px; min-height: 0; gap: 12px; }
   .card--story h1 { font-size: clamp(2.2rem, 1.4rem + 2.2vw, 3.2rem); max-width: 20ch; }
   .card--story .card__beat { font-size: 1.3rem; max-width: 36ch; }
   .card--story .card__close { font-size: 1.55rem; max-width: 30ch; }
-  .card--ser      { grid-area: ser; }
   .card--psico    { grid-area: psico; min-height: 0; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
   .card--hiper    { grid-area: hiper; aspect-ratio: auto; }
