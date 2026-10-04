@@ -3,7 +3,7 @@
 > Este archivo existe por una razón: que nunca haya que preguntarse "¿dónde quedó
 > aquello?". Si creas algo nuevo, añádelo aquí.
 >
-> Última revisión: 4 de agosto de 2026.
+> Última revisión: 4 de octubre de 2026.
 
 ---
 
@@ -62,6 +62,16 @@ Cada sitio nuevo es un fork con find-replace, no un rediseño.
 | **Leon Kappelman** | `clients/jorge-arce/kappelman/` | Preview enviado. Variantes: `kappelman-gareis`, `kappelman-getty` |
 | **Wilshire Oral Surgery** | `clients/wilshire-oral-surgery/` | Dos previews sin enviar: Dr. Vahedi y Dr. Shadi |
 | **Prospección abogados** | `prospecting/round-1/` | 4 briefs + CSV de prospectos y exclusiones |
+| **Mario Lignarolo** | `clients/mario-lignarolo/` | V1 en borrador (marca personal, Next.js). Proyecto propio en Vercel → mariolignarolo.com |
+
+### Sitios con proyecto propio en Vercel
+
+No todo sale por igniteyourself.co. Un cliente con dominio propio tiene su
+propio proyecto en Vercel apuntando a su carpeta (Root Directory):
+
+| Sitio | Root Directory | Dominio |
+|---|---|---|
+| Mario Lignarolo | `clients/mario-lignarolo` | mariolignarolo.com (pendiente de conectar) |
 
 ### Configuración
 
