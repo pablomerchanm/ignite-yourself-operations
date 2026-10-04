@@ -26,18 +26,19 @@
 @media (min-width: 820px) { :root { --gap: 16px; } }
 
 * { box-sizing: border-box; }
-html { background: var(--ink); color: var(--bone); -webkit-text-size-adjust: 100%; }
+html { background: var(--ink); color: var(--bone); -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body { margin: 0; font-family: var(--sans); font-weight: 300; line-height: 1.4; overflow-x: clip; }
 a { color: inherit; text-decoration: none; }
 a:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
-ul { list-style: none; margin: 0; padding: 0; }
-h1, p { margin: 0; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, p { margin: 0; }
 img { display: block; max-width: 100%; }
 .arr { font-family: var(--sans); font-weight: 400; }
 .pending { opacity: 0.4; cursor: not-allowed; }
+.card[id] { scroll-margin-top: 16px; }
 
-/* Micro-caps, solo para lo que orienta: a dónde lleva cada tarjeta y el contacto. */
-.card__kicker, .top nav, .foot {
+/* Micro-caps: a dónde lleva cada tarjeta, metadatos y contacto. */
+.card__kicker, .card__meta, .top nav, .foot {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.18em;
@@ -104,7 +105,10 @@ a.card:not(.pending):hover { transform: translateY(-3px); box-shadow: 0 18px 40p
 a.card:not(.pending):hover img { transform: scale(1.04); }
 
 .card__kicker { color: var(--fog); }
-.card__sub { font-size: 14px; line-height: 1.4; max-width: 30ch; }
+.card__meta { color: var(--acid); margin-top: 4px; }
+.card__sub { font-size: 14px; line-height: 1.4; max-width: 32ch; }
+.card__text { font-size: 15px; line-height: 1.5; max-width: 52ch; }
+.card__text em { font-family: var(--serif); font-style: italic; font-size: 1.15em; }
 .card__name, .card__big, .card__huge, .card__word { font-family: var(--serif); font-weight: 400; line-height: 0.95; }
 .card__name { font-size: clamp(1.25rem, 1rem + 1vw, 1.9rem); }
 .card__big { font-size: clamp(1.9rem, 1.2rem + 3.2vw, 3.6rem); letter-spacing: -0.01em; }
@@ -114,19 +118,20 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 
 /* Fotos: degradé de legibilidad abajo. */
 .card--portrait, .card--photo { min-height: 0; aspect-ratio: 4 / 5; color: var(--bone); }
-.card--portrait::after, .card--photo::after {
+.card--portrait::after, .card--photo::after, .card--hiper::after, .card--psico::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to top, rgba(10, 22, 21, 0.85) 0%, rgba(10, 22, 21, 0.2) 40%, transparent 65%);
+  background: linear-gradient(to top, rgba(10, 22, 21, 0.9) 0%, rgba(10, 22, 21, 0.35) 45%, rgba(10, 22, 21, 0.05) 75%);
 }
 .card--portrait img { object-position: 50% 20%; }
 .card--photo img { object-position: 45% 30%; }
 .card--portrait .card__kicker, .card--photo .card__kicker { color: var(--acid); }
+.card--portrait .card__sub { color: rgba(236, 232, 222, 0.8); }
 
 /* Lo que hace: nivel 1 del tablero. */
-.card--mission { background: var(--ink-2); justify-content: center; padding: 20px 16px; }
+.card--mission { background: var(--ink-2); justify-content: center; padding: 20px 16px; gap: 14px; }
 .card--mission h1 {
   font-family: var(--serif);
   font-weight: 400;
@@ -136,22 +141,30 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   color: var(--acid);
   text-wrap: balance;
 }
+.card--mission .card__sub { color: rgba(236, 232, 222, 0.8); max-width: 40ch; }
 
 .card--ser { background: var(--acid); color: var(--ink); }
-.card--ser .card__kicker { color: rgba(10, 22, 21, 0.65); }
+.card--ser .card__kicker, .card--ser .card__meta { color: rgba(10, 22, 21, 0.65); }
 .card--ser .card__sub { font-weight: 400; }
 
-.card--psico { background: var(--ink-2); min-height: 320px; }
+/* Abrebocas: la única tarjeta larga de leer. */
+.card--about { background: var(--cream); color: var(--charcoal); color-scheme: light; justify-content: flex-start; gap: 14px; padding: 20px 16px; }
+.card--about .card__kicker { color: rgba(27, 30, 28, 0.6); }
+.card--about .card__big { font-size: clamp(1.6rem, 1.1rem + 2.1vw, 2.6rem); line-height: 1.02; max-width: 22ch; }
+.card--about .card__text { color: rgba(27, 30, 28, 0.85); }
+.card__steps { margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(27, 30, 28, 0.18); display: grid; gap: 10px; }
+.card__steps ol { display: flex; flex-wrap: wrap; gap: 8px 20px; counter-reset: step; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + 0.6vw, 1.4rem); }
+.card__steps li { counter-increment: step; }
+.card__steps li::before { content: counter(step) " "; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; color: rgba(27, 30, 28, 0.55); margin-right: 6px; vertical-align: 0.25em; }
+.card__steps li a { border-bottom: 1px solid rgba(27, 30, 28, 0.35); }
+.card__steps li a:hover { border-color: var(--charcoal); }
+.card__link { font-size: 11px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: var(--charcoal); }
+
+.card--psico { background: var(--ink-2); min-height: 340px; }
 .card--psico img { object-position: 78% 12%; }
 @media (min-width: 820px) { .card--psico img { object-position: 62% 12%; } }
-.card--psico::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to top, rgba(10, 22, 21, 0.9) 0%, rgba(10, 22, 21, 0.35) 45%, rgba(10, 22, 21, 0.05) 75%);
-}
 .card--psico .card__big { color: var(--bone); text-transform: uppercase; }
+.card--psico .card__sub { max-width: 40ch; }
 .card__num {
   position: absolute;
   right: 12px;
@@ -166,29 +179,27 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 
 .card--hiper { background: var(--ink-2); color: var(--bone); aspect-ratio: 4 / 5; }
 .card--hiper img { object-position: 50% 30%; }
-.card--hiper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to top, rgba(10, 22, 21, 0.9) 0%, rgba(10, 22, 21, 0.3) 45%, transparent 70%);
-}
 .card--hiper .card__kicker { color: var(--acid); }
 
 .card--ligna { background: #e9e9e7; color: var(--charcoal); color-scheme: light; justify-content: flex-start; aspect-ratio: 16 / 9; }
 .card--ligna img { object-position: 60% 50%; }
 .card--ligna .card__kicker { color: rgba(27, 30, 28, 0.6); }
 .card--ligna .card__word { font-size: clamp(2rem, 1.2rem + 3.4vw, 4rem); }
+.card--ligna .card__sub { color: rgba(27, 30, 28, 0.75); max-width: 24ch; }
+
 .card--yt, .card--tt, .card--mail { background: transparent; border: 1px solid rgba(236, 232, 222, 0.18); }
+.card--yt .card__meta, .card--tt .card__meta, .card--mail .card__meta { color: var(--fog); text-transform: none; letter-spacing: 0; font-size: 13px; }
 
 /* ── Colocación: móvil (2 columnas) ─────────────────────────── */
 .card--mission  { grid-column: 1 / -1; }
 .card--portrait { grid-column: 1; grid-row: span 2; }
 .card--ser      { grid-column: 2; grid-row: span 2; }
+.card--about    { grid-column: 1 / -1; }
 .card--psico    { grid-column: 1 / -1; }
-.card--ligna    { grid-column: 1 / -1; }
-.card--photo    { grid-row: span 2; }
 .card--hiper    { grid-row: span 2; }
+.card--photo    { grid-row: span 2; }
+.card--ligna    { grid-column: 1 / -1; }
+.card--mail     { grid-column: 1 / -1; min-height: 120px; }
 
 /* ── Colocación: escritorio (4 columnas, bento) ─────────────── */
 @media (min-width: 820px) {
@@ -198,22 +209,25 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
     grid-template-areas:
       "portrait mission mission ser"
       "portrait mission mission ser"
-      "portrait psico   psico   photo"
-      "hiper    psico   psico   photo"
-      "hiper    ligna   ligna   yt"
-      "mail     ligna   ligna   tt";
+      "portrait about   about   photo"
+      "hiper    about   about   photo"
+      "hiper    about   about   yt"
+      "ligna    ligna   psico   psico"
+      "ligna    ligna   psico   psico"
+      "tt       tt      mail    mail";
   }
   .card { padding: 22px; }
   .card--portrait { grid-area: portrait; aspect-ratio: auto; }
   .card--mission  { grid-area: mission; padding: 32px; }
   .card--ser      { grid-area: ser; }
+  .card--about    { grid-area: about; padding: 24px; }
   .card--psico    { grid-area: psico; min-height: 0; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
   .card--hiper    { grid-area: hiper; aspect-ratio: auto; }
   .card--ligna    { grid-area: ligna; aspect-ratio: auto; }
   .card--yt       { grid-area: yt; }
   .card--tt       { grid-area: tt; }
-  .card--mail     { grid-area: mail; }
+  .card--mail     { grid-area: mail; min-height: 0; }
 }
 
 /* ── Pie ────────────────────────────────────────────────────── */
@@ -230,3 +244,4 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .js .card { opacity: 0; transform: translateY(18px); transition: opacity 0.9s var(--ease), transform 1s var(--ease); transition-delay: calc(var(--i, 0) * 60ms); }
 .js .card.in { opacity: 1; transform: none; }
 .js a.card.in:not(.pending):hover { transform: translateY(-3px); transition-delay: 0s; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
