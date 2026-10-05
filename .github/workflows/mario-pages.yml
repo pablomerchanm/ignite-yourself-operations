@@ -5,7 +5,9 @@ name: Mario · GitHub Pages
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    # El entorno github-pages solo acepta despliegues desde la rama por
+    # defecto del repo (claude/web-project-setup-pw636t); main se espeja ahí.
+    branches: [claude/web-project-setup-pw636t]
     paths:
       - "clients/mario-lignarolo/**"
       - ".github/workflows/mario-pages.yml"
