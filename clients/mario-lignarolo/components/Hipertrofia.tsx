@@ -51,16 +51,6 @@ export default function Hipertrofia() {
           </div>
         </div>
 
-        <div data-reveal="up" className="lg:col-span-3">
-          <ImageSlot
-            src={hipertrofia.image.src}
-            alt={hipertrofia.image.alt}
-            pendingLabel="Entreno"
-            sizes="(min-width: 1024px) 25vw, 100vw"
-            className="aspect-[4/5] w-full max-w-[22rem] lg:max-w-none"
-          />
-        </div>
-
         {latest && (
           <article data-reveal="up" className="lg:col-span-5">
             <div className="caps flex flex-wrap items-center gap-3 text-charcoal/60">
@@ -76,7 +66,7 @@ export default function Hipertrofia() {
               <SampleTag show={latest.sample} />
             </div>
             <h3 className="display mt-6 text-[clamp(2.4rem,1.5rem+3.2vw,4.75rem)] leading-[0.95]">{latest.title}</h3>
-            <p className="mt-6 max-w-[34rem] text-[1.0625rem] leading-relaxed text-charcoal/75">{latest.excerpt}</p>
+            <p className="mt-6 max-w-[30rem] text-[1.0625rem] leading-relaxed text-charcoal/75">{latest.excerpt}</p>
             <SmartLink
               href={latest.url}
               className="caps link-line mt-8 inline-flex items-center gap-3 pb-1"
@@ -85,6 +75,16 @@ export default function Hipertrofia() {
             </SmartLink>
           </article>
         )}
+
+        <div data-reveal="up" className="lg:col-span-3">
+          <ImageSlot
+            src={hipertrofia.image.src}
+            alt={hipertrofia.image.alt}
+            pendingLabel="Entreno"
+            sizes="(min-width: 1024px) 25vw, 100vw"
+            className="aspect-[4/5] w-full max-w-[22rem] lg:max-w-none"
+          />
+        </div>
       </div>
     </section>
   );

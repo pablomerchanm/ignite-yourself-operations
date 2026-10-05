@@ -115,6 +115,7 @@ export function ImageSlot({
   className = "",
   imgClassName = "object-cover",
   tone = "light",
+  showPending = false,
 }: {
   src: string;
   alt: string;
@@ -123,6 +124,7 @@ export function ImageSlot({
   className?: string;
   imgClassName?: string;
   tone?: "light" | "dark";
+  showPending?: boolean;
 }) {
   if (src) {
     return (
@@ -133,7 +135,9 @@ export function ImageSlot({
       </div>
     );
   }
-  if (!site.draft) return null;
+  // Sin foto, sin hueco: la composición se cierra sola. (El marco de
+  // «fotografía pendiente» queda disponible con `showPending`.)
+  if (!site.draft || !showPending) return null;
   const toneCls =
     tone === "light"
       ? "bg-[#e4ddcf] text-charcoal/60 border-charcoal/15"
