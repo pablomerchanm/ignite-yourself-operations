@@ -113,14 +113,13 @@ export const origin = {
     {
       title: "El vacío",
       text: "Intenté llenar el vacío con alcohol y comida chatarra. Buscaba llenar por fuera lo que faltaba por dentro. Pero solo me hundía más.",
-      // [CONFIRMADO] foto «Antes» de su carrusel del 17 oct 2025.
-      photo: { src: "/mario/antes.jpg", alt: "Mario, antes: de perfil, con una botella en la mano.", pendingLabel: "Antes" },
+      photo: null,
     },
     {
       title: "El fondo",
       text: "Toqué fondo varias veces. Casi pierdo la vida en una ocasión. Hasta que decidí que algo tenía que cambiar. Empecé a invertir en mi crecimiento. Mejoré mi entorno. Dejé ir lo que no servía. Y ahí pasó la transformación: conecté con mi verdadera esencia. Conecté con Dios. Reconocí el poder que siempre estuvo dentro.",
-      // Provisional: entreno en el gimnasio; se cambia por la de hielo · fuego · respiración cuando Mario la pase.
-      photo: { src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio.", pendingLabel: "Hielo · fuego · respiración" },
+      // La foto de hielo · fuego · respiración se pide a Mario; de momento el díptico cierra el capítulo.
+      photo: null,
     },
     {
       title: "El niño interior",
@@ -135,9 +134,17 @@ export const origin = {
       photo: { src: "/mario/lignarolo-zapatos.jpg", alt: "Mocasines Lignarolo, en blanco y negro.", pendingLabel: "Taller Lignarolo" },
     },
   ],
+  // [CONFIRMADO] Su propio «Antes / Ahora» (carrusel del 17 oct 2025), como
+  // momento visual a todo el ancho tras el capítulo «El fondo».
+  diptych: {
+    afterChapter: 5,
+    before: { src: "/mario/antes.jpg", alt: "Mario, antes: de perfil, con una botella en la mano.", label: "Antes" },
+    after: { src: "/mario/entreno-curl.jpg", alt: "Mario, ahora: entrenando bíceps con mancuerna.", label: "Ahora" },
+    caption: "El cuerpo fue el primer lugar donde el cambio se hizo visible.",
+  },
   // [HIPÓTESIS] puente del estudio hacia la pregunta que organiza el sitio.
   bridge:
-    "El cuerpo fue el primer lugar donde el cambio se hizo visible. Después, todo lo que explora (cuerpo, mente, identidad, creación) apunta a una misma pregunta:",
+    "Después, todo lo que explora (cuerpo, mente, identidad, creación) apunta a una misma pregunta:",
   question:
     "¿Qué tiene que cambiar dentro de una persona para que pueda sostener una realidad diferente afuera?",
 };
@@ -196,7 +203,7 @@ export const hipertrofia = {
   ],
   latestLabel: "Último escrito",
   subscribe: "Suscribirme",
-  image: { src: "/mario/entreno-curl.jpg", alt: "Mario entrenando bíceps con mancuerna." },
+  image: { src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio, de espaldas." },
 };
 
 /* ── 05 PUNTO DE VISTA ───────────────────────────────────── */
