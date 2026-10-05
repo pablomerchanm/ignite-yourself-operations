@@ -1,0 +1,57 @@
+# Publica la web de Mario Lignarolo en GitHub Pages (exportación estática).
+# Respaldo de Vercel: https://pablomerchanm.github.io/ignite-yourself-operations/
+name: Mario · GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "clients/mario-lignarolo/**"
+      - ".github/workflows/mario-pages.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: mario-pages
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: clients/mario-lignarolo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: clients/mario-lignarolo/package-lock.json
+      - run: npm ci
+      - run: npm run build
+        env:
+          STATIC_EXPORT: "1"
+      - run: node scripts/export-relative.mjs out
+      - run: touch out/.nojekyll
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: clients/mario-lignarolo/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
