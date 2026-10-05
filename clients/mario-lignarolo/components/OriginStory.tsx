@@ -33,6 +33,7 @@ export default function OriginStory() {
         {origin.chapters.map((c, i) => {
           const n = i + 1;
           const hasPhoto = Boolean(c.photo?.src);
+          const wide = Boolean(c.photo && "wide" in c.photo && c.photo.wide);
           return (
             <li key={c.title} className="border-t border-charcoal/20">
               <div className="grid grid-cols-1 gap-y-5 py-[clamp(1.75rem,3vw,2.75rem)] lg:grid-cols-12 lg:gap-x-6">
@@ -41,7 +42,7 @@ export default function OriginStory() {
                   <h3 className="display text-[clamp(1.6rem,1.3rem+1vw,2.3rem)] leading-none">{c.title}</h3>
                 </div>
 
-                <div className={`max-w-[38rem] ${hasPhoto ? "lg:col-span-5" : "lg:col-span-6"}`}>
+                <div className={`max-w-[38rem] ${hasPhoto && !wide ? "lg:col-span-5" : "lg:col-span-6"}`}>
                   {c.pull && (
                     <p data-reveal="up" className="display mb-5 text-[clamp(1.8rem,1.3rem+1.8vw,2.9rem)] leading-[1.04] italic">
                       {c.pull}
@@ -52,7 +53,20 @@ export default function OriginStory() {
                   </p>
                 </div>
 
-                {hasPhoto && c.photo && (
+                {/* Foto apaisada: completa, bajo el texto, al ancho de la columna de lectura. */}
+                {hasPhoto && c.photo && wide && (
+                  <div data-reveal="up" className="mt-2 lg:col-span-9 lg:col-start-4 lg:mt-4">
+                    <ImageSlot
+                      src={c.photo.src}
+                      alt={c.photo.alt}
+                      pendingLabel={c.photo.pendingLabel}
+                      sizes="(min-width: 1024px) 70vw, 100vw"
+                      className="aspect-[16/9] w-full"
+                    />
+                  </div>
+                )}
+
+                {hasPhoto && c.photo && !wide && (
                   <div data-reveal="up" className="lg:col-span-4 lg:col-start-9">
                     <ImageSlot
                       src={c.photo.src}

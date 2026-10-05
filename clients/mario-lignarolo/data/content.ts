@@ -130,8 +130,8 @@ export const origin = {
     {
       title: "Volver a casa",
       text: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido. Sentir el placer de crear. De explorar mi creatividad. De construir sin miedo al juicio. Era como volver a casa después de tanto tiempo.",
-      // Provisional: mocasines Lignarolo; se cambia por la del taller cuando Mario la pase.
-      photo: { src: "/mario/lignarolo-zapatos.jpg", alt: "Mocasines Lignarolo, en blanco y negro.", pendingLabel: "Taller Lignarolo" },
+      // Foto completa, apaisada, bajo el texto (sin recorte). Se cambia por la del taller cuando Mario la pase.
+      photo: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo. Blanco y negro.", pendingLabel: "Taller Lignarolo", wide: true },
     },
   ],
   // [CONFIRMADO] Su propio «Antes / Ahora» (carrusel del 17 oct 2025), como
