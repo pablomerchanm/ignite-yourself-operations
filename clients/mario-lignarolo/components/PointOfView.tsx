@@ -15,7 +15,7 @@ export default function PointOfView() {
         </div>
       </div>
 
-      <ul className="mt-[clamp(3.5rem,8vw,7rem)] space-y-[clamp(2.5rem,5vw,4.5rem)]">
+      <ul className="mt-[clamp(3rem,6vw,5rem)] space-y-[clamp(2rem,3.5vw,3.25rem)]">
         {pointOfView.ideas.map((idea, i) => {
           const right = i % 2 === 1;
           return (
@@ -23,11 +23,11 @@ export default function PointOfView() {
               <Lines
                 as="p"
                 lines={[idea.word + "."]}
-                className={`display text-[clamp(3rem,0.8rem+8.6vw,10rem)] leading-[0.9] ${i === 0 ? "text-acid" : ""}`}
+                className={`display text-[clamp(2.8rem,0.8rem+7.4vw,8.5rem)] leading-[0.9] ${i === 0 ? "text-acid" : ""}`}
               />
               <blockquote
                 data-reveal="up"
-                className={`display mt-5 max-w-[32rem] text-[clamp(1.35rem,1.05rem+1.1vw,2.1rem)] leading-[1.15] text-bone/85 ${
+                className={`display mt-4 max-w-[30rem] text-[clamp(1.3rem,1.05rem+1vw,1.95rem)] leading-[1.15] text-bone/85 ${
                   right ? "border-r border-bone/20 pr-5" : "border-l border-bone/20 pl-5"
                 }`}
               >
