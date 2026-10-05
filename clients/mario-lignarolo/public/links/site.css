@@ -168,7 +168,11 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
 .card--psico { background: var(--ink-2); display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; justify-content: stretch; }
 .psico__text { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; min-height: 220px; }
 .card--psico img { object-position: 78% 12%; }
-@media (min-width: 820px) { .card--psico img { object-position: 62% 12%; } }
+/* Escritorio: el retrato azul vive solo tras la columna de texto y se funde hacia el video. */
+@media (min-width: 820px) {
+  .card--psico img { width: 46%; object-position: 50% 15%; }
+  .card--psico::after { background: linear-gradient(to right, rgba(12, 32, 26, 0.35) 0%, rgba(12, 32, 26, 0.7) 30%, rgba(12, 32, 26, 1) 46%), linear-gradient(to top, rgba(12, 32, 26, 0.85) 0%, rgba(12, 32, 26, 0) 55%); }
+}
 .card--psico .card__big { color: var(--bone); text-transform: uppercase; }
 .card--psico .card__sub { max-width: 26ch; }
 .card__num {
@@ -243,6 +247,7 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
       "story  story  hiper  photo"
       "psico  psico  psico  psico"
       "psico  psico  psico  psico"
+      "psico  psico  psico  psico"
       "ligna  ligna  yt     tt"
       "ligna  ligna  mail   mail";
   }
@@ -276,9 +281,13 @@ a.card:not(.pending):hover img { transform: scale(1.04); }
   .card--story h1 { font-size: clamp(2.2rem, 1.4rem + 2.2vw, 3.2rem); max-width: 20ch; }
   .card--story .card__beat { font-size: 1.3rem; max-width: 36ch; }
   .card--story .card__close { font-size: 1.55rem; max-width: 30ch; }
-  .card--psico    { grid-area: psico; min-height: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; align-items: center; }
-  .psico__text    { min-height: 0; align-self: stretch; }
-  .card--psico .card__num { right: auto; left: 16px; top: 4px; }
+  /* Psico-Cibernética: texto en un tercio, video en dos tercios, a lo grande. */
+  .card--psico    { grid-area: psico; min-height: 0; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 28px; align-items: center; padding: 26px; }
+  .psico__text    { min-height: 0; align-self: stretch; container-type: inline-size; padding-right: 8px; }
+  .psico__text .card__big { font-size: min(3.6rem, 14cqi); }
+  .psico__text .card__sub { max-width: 24ch; }
+  .psico__video   { border-color: rgba(236, 232, 222, 0.22); }
+  .card--psico .card__num { right: auto; left: 20px; top: 6px; }
   .card--photo    { grid-area: photo; aspect-ratio: auto; }
   .card--hiper    { grid-area: hiper; aspect-ratio: auto; }
   .card--ligna    { grid-area: ligna; aspect-ratio: auto; }
