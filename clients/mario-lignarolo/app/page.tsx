@@ -4,9 +4,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Hipertrofia from "@/components/Hipertrofia";
+import Lignarolo from "@/components/Lignarolo";
 import Motion from "@/components/Motion";
 import OriginStory from "@/components/OriginStory";
 import PointOfView from "@/components/PointOfView";
+import Speaking from "@/components/Speaking";
 import Psicocibernetica from "@/components/Psicocibernetica";
 import Territories from "@/components/Territories";
 import Testimonials from "@/components/Testimonials";
@@ -16,7 +18,7 @@ import { about, channels, site } from "@/data/content";
 
 /**
  * Orden de la experiencia (no reordenar a «producto → comprar»):
- * PERSONA → PREGUNTA → HISTORIA → VISIÓN → IDEAS → PRODUCTO → CONTENIDO → PRUEBA → CONEXIÓN
+ * PERSONA → PREGUNTA → HISTORIA → VISIÓN → IDEAS → PRODUCTO → EMPRENDER → CONTENIDO → PRUEBA → PLATAFORMA → CONEXIÓN
  */
 export default function Home() {
   // schema.org: solo perfiles confirmados (los que tienen URL) y sin credenciales.
@@ -48,10 +50,12 @@ export default function Home() {
         <Hipertrofia />
         <PointOfView />
         <Psicocibernetica />
+        <Lignarolo />
         <Writing />
         <Watch />
         <Testimonials />
         <AboutMario />
+        <Speaking />
         <Connect />
       </main>
       <Footer />

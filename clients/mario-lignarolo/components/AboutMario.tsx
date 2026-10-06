@@ -16,7 +16,7 @@ export default function AboutMario() {
                 alt={about.image.alt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
+                className="origin-[48%_44%] scale-[1.45] object-cover object-[48%_40%] contrast-[1.08] grayscale"
               />
             </div>
           </div>

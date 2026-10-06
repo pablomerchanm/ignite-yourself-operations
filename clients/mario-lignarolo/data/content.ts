@@ -46,8 +46,10 @@ export const nav = [
   { label: "Mario", href: "#mario" },
   { label: "Ideas", href: "#ideas" },
   { label: "Psico-Cibernética", href: "#psicocibernetica" },
+  { label: "Lignarolo", href: "#lignarolo" },
   { label: "Escritos", href: "#escritos" },
   { label: "Videos", href: "#videos" },
+  { label: "Invitar", href: "#invitar" },
   { label: "Conecta", href: "#conecta" },
 ];
 
@@ -130,8 +132,9 @@ export const origin = {
     {
       title: "Volver a casa",
       text: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido. Sentir el placer de crear. De explorar mi creatividad. De construir sin miedo al juicio. Era como volver a casa después de tanto tiempo.",
-      // Foto completa, apaisada, bajo el texto (sin recorte). Se cambia por la del taller cuando Mario la pase.
-      photo: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo. Blanco y negro.", pendingLabel: "Taller Lignarolo", wide: true },
+      // La foto de Lignarolo vive en su propia sección (#lignarolo); aquí, solo texto.
+      // Pendiente a Mario: una foto del taller para este capítulo.
+      photo: null,
     },
   ],
   // [CONFIRMADO] Su propio «Antes / Ahora» (carrusel del 17 oct 2025), como
@@ -271,6 +274,55 @@ export const psico = {
   note: "Un proceso de práctica personal. No sustituye la atención médica ni psicológica.",
 };
 
+/* ── 06b LIGNAROLO (emprendimiento) ──────────────────────── */
+// [CONFIRMADO] lo que la marca dice de sí misma en lignarolo.com (título,
+// descripción y claims de portada). [CONFIRMAR] el rol exacto de Mario en
+// Lignarolo: por eso la etiqueta no le atribuye cargo.
+export const lignarolo = {
+  eyebrow: "Emprender · Calzado",
+  name: "Lignarolo",
+  tagline: "Ereditá di Famiglia",
+  // [MARIO] textual (carrusel del 17 oct 2025).
+  quote: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido: sentir el placer de crear.",
+  description:
+    "Zapatos y botas artesanales en cuero italiano de plena flor, con construcción Blake Stitch, hechos a mano en Bogotá. Venta directa, sin intermediarios.",
+  facts: ["Cuero italiano", "Hecho a mano en Bogotá", "Venta directa", "Producción limitada"],
+  cta: "Visitar lignarolo.com",
+  href: "https://www.lignarolo.com",
+  image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo. Blanco y negro." },
+};
+
+/* ── 10b INVITAR (charlas · podcasts · entrevistas) ──────── */
+// [HIPÓTESIS] Plataforma para que organizadores y podcasts lo inviten.
+// Los temas salen de su propio contenido; no se afirma ningún evento pasado.
+export const speaking = {
+  eyebrow: "Charlas · Podcasts · Entrevistas",
+  title: ["Lleva esta conversación", "a tu escenario."],
+  titleItalicLine: 1,
+  intro:
+    "Mario conversa sobre identidad, cuerpo, respiración y emprendimiento desde su propia historia: lo que cambió por dentro antes de que cambiara lo de afuera.",
+  topicsLabel: "Temas de conversación",
+  topics: [
+    { title: "El cuerpo como primer laboratorio", text: "Disciplina, entrenamiento y lo que el cuerpo enseña sobre la identidad." },
+    { title: "Autoconcepto y reprogramación del subconsciente", text: "Por qué volvemos siempre al mismo nivel, y qué hace falta para reescribirlo." },
+    { title: "Breathwork en la práctica", text: "Respiración consciente como herramienta diaria, no como tendencia." },
+    { title: "Emprender desde la esencia", text: "Construir sin pedir permiso: de Lignarolo a Psico-Cibernética." },
+  ],
+  formats: ["Conferencia", "Podcast", "Taller de respiración", "Entrevista"],
+  inviteLabel: "Para invitarlo",
+  inviteText: "Cuéntale de tu evento, podcast o medio y te responde por mensaje directo.",
+  inviteCta: "Escribir por Instagram",
+  inviteHref: "https://ig.me/m/mariolignarolo",
+  // [CONFIRMAR] correo público para prensa: mientras no exista, se muestra pendiente.
+  emailPending: "Correo de prensa · pendiente",
+  bioLabel: "Bio corta para presentarlo",
+  photosLabel: "Fotos para prensa",
+  photos: [
+    { label: "Retrato (color, horizontal)", href: "/mario/hero.jpg" },
+    { label: "Retrato (blanco y negro)", href: "/mario/lignarolo.jpg" },
+  ],
+};
+
 /* ── 07 ESCRITOS ─────────────────────────────────────────── */
 export const writing = {
   eyebrow: "Hipertrofia del Ser — Escritos",
@@ -317,9 +369,10 @@ export const about = {
   focus: ["Psico-Cibernética", "Hipertrofia del Ser", "Contenido en Instagram, YouTube y TikTok"],
   // [CONFIRMAR] ciudad: solo si Mario aprueba publicarla.
   location: "",
+  // Recorte cerrado del retrato del hero, en B/N (la foto sentada vive en #lignarolo).
   image: {
-    src: "/mario/mario-hoy.jpg",
-    alt: "Mario Lignarolo, sentado, en blanco y negro.",
+    src: "/mario/hero.jpg",
+    alt: "Mario Lignarolo, retrato en primer plano.",
   },
 };
 
