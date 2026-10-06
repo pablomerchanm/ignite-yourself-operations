@@ -55,6 +55,7 @@ Dr. Jorge Arce como relleno. Algunas ya se usaron en producción:
 | Dónde | Qué es |
 |---|---|
 | `clients/jorge-arce/igy-mobius/` | **La que está viva hoy** en igniteyourself.co (el rewrite de `/` apunta aquí) |
+| `clients/jorge-arce/igy-next/` | **Copia de la viva para trabajar encima.** Mismo diseño; aquí se añaden los servicios nuevos sin tocar lo publicado |
 | `clients/jorge-arce/igy-v3/` | **La nueva.** Mismo contenido comercial, sobre el sistema gráfico del repo 2 (`v2/`): Spark animado, scrollytelling, Success Stories |
 
 Para publicar la nueva basta cambiar una línea en `vercel.json`: el `destination`
