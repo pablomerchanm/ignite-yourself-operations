@@ -182,14 +182,51 @@ Su credencial más fuerte solo es verificable enterrándose en un acta de health
 Ordenados por encaje, no por acceso. Si el mejor del lote no tiene correo, va
 arriba igual: el canal se busca.
 
-### Tracy Moore — ex MHRA · **sin vía de contacto**
+### Tracy Moore — ex MHRA · **a un clic de ser nivel 2**
 **Redactó los Anexos 1, 16 y 21 de las normas europeas de fabricación
 farmacéutica.** Escribió la guía británica de integridad de datos GXP. **Creó la
 academia de inspectores de la MHRA en 2020.** Asesora principal de GMP para la
 cadena de suministro de la vacuna COVID. Diez años de inspectora, 22 previos en
 industria. Seis artículos firmados en el blog oficial del gobierno británico.
-**La brecha:** *verificado — `tmpharmagroup.co.uk` devuelve 200 con 114 bytes: está
-aparcado.* **Con un correo, es el mejor prospecto de los veinticinco.**
+
+**Añadido en la segunda vuelta:**
+- **Chapter President del PDA United Kingdom Chapter** — cargo electivo, visible y
+  vigente en la asociación de referencia del sector. Es disparador y cumple la
+  condición 6.
+- **Docencia internacional pagada bajo su propio nombre:** coimpartió el taller de
+  día completo *«Annex 1 Implementation and First Inspector Finding»* el 24 de
+  abril de 2025 en Singapur. https://ispe.org/node/282366
+- Companies House: su sociedad tiene ahora un segundo officer, **Anthony David
+  Moore, secretario desde marzo de 2025.** Mismo apellido: administración
+  doméstica, no una firma que venda por ella. **Sigue siendo ella el producto**, y
+  el nombramiento es un disparador fechado.
+
+**La brecha:** *verificado — `tmpharmagroup.co.uk` está aparcado.*
+
+**El correo, SIN CONFIRMAR:** `tracy.moore@tmpharmagroup.com` aparece de forma
+consistente en los resultados de búsqueda leyendo
+**https://pda.org/chapters/europe/united-kingdom**, pero esa página devuelve 403
+de Cloudflare a todo cliente que no sea navegador, y el Internet Archive está
+bloqueado por la política de salida del entorno. Se intentó por ocho vías.
+
+**El argumento de que no es deducido:** el dominio que ella tiene registrado y
+aparcado es `tmpharmagroup.co.uk`. El correo que aparece es `tmpharmagroup.com`
+— **otro dominio, otra terminación.** Una deducción del patrón habría escrito
+`.co.uk`. Que no coincida es señal de que sale de la página y no de una inferencia.
+
+**→ Acción humana: abrir esa página en un navegador normal y leer la línea de
+contacto del Chapter President.** Un clic la pasa a nivel 2 y la convierte, con
+Hamrell, en el mejor prospecto de los veinticinco.
+
+### Lisa Hornback — ex FDA · **imposible de juzgar desde aquí**
+**FDA Field Investigator y experta regional de dispositivos médicos del Medio
+Oeste.** Principal única de Hornback Consulting LLC, especializada en resolver
+Warning Letters y Consent Decrees.
+**El bloqueo:** `hornbackconsulting.com` falla por seis rutas distintas — el
+servidor de origen corta el handshake TLS, probablemente porque rechaza IPs de
+centro de datos. El Internet Archive está bloqueado por la política de salida.
+**No se juzgó por una copia: no se juzgó en absoluto.**
+**→ Acción humana: abrir la web. Treinta segundos.** Si es pobre, entra al lote.
 
 ### Leslie K. Lenzo, CFA — **el disparador más fresco**
 **CEO y directora de inversiones del Hershey Trust**, enero 2023 – julio 2026.
@@ -228,12 +265,23 @@ sociedad.** Consulta propia unipersonal.
 **La brecha:** su web **no menciona que es presidenta** y sus promociones visibles
 son de 2024. Nivel 3: teléfono y formulario.
 
-### E. Dennis Bashaw, PharmD
+### E. Dennis Bashaw, PharmD · **confirmado en registro oficial**
 **Director de división de farmacología clínica del CDER de la FDA durante once
 años**, después Senior Advisor for Science. 31+ años en la agencia. Fijó política
-regulatoria en productos OTC, nanotecnología y absorción dérmica.
+regulatoria en productos OTC, nanotecnología y absorción dérmica. Copresidió un
+workshop de la FDA sobre desarrollo de fármacos tópicos; su ponencia sigue
+publicada en el sitio del CERSI de la Universidad de Maryland.
 **La brecha:** *verificado — `bashawconsulting.com` no resuelve en DNS.* No existe.
-Nivel 3. **Su salida de la FDA solo está confirmada por LinkedIn: sin confirmar.**
+
+**Resuelto sin LinkedIn de por medio.** El registro de sociedades del estado de
+Nueva Jersey devuelve: **BASHAW CONSULTING LLC, entidad 0450683569, Monroe
+Township, constituida el 1 de agosto de 2021.** Eso fija la sociedad, la ciudad y
+el disparador en fuente oficial.
+*La precisión que toca mantener:* el registro no publica los miembros de la LLC,
+así que el vínculo entre la sociedad y la persona sigue apoyándose en la
+coincidencia de ciudad y en su propio perfil. Es evidencia circunstancial fuerte,
+no documental.
+**Nivel 3:** sin correo publicado en ninguna página abierta.
 
 ### Ashley Hibbett Page, JD
 22 años. Arnold & Porter, Alston & Bird, **Google**, IMG, General Counsel de
@@ -296,12 +344,48 @@ independizado en solitario es visible. Ese segmento necesita manos humanas.
 ## Las dos técnicas que más rindieron
 
 **Consultar el DNS y el registro del dominio antes de abrir la web.** Resuelve en
-segundos lo que ninguna búsqueda aclara. **Un 200 no significa que haya web:** un
-dominio aparcado devuelve 200 con ~114 bytes. Esa cifra se repitió en dos dominios
-de dos lotes distintos y sirve como regla de detección. Y la fecha de registro
-*es* un disparador fechado: así se fechó la práctica de Auchincloss.
+segundos lo que ninguna búsqueda aclara. Y la fecha de registro *es* un disparador
+fechado: así se fechó la práctica de Auchincloss.
 
-**La cátedra adjunta resuelve el correo.** Hamrell es nivel 1 solo porque USC
-publica su correo. Para subir cualquier segmento de nivel 3 a nivel 1, buscar a los
-que dan clase. La página de adjuntos de Stevens lista 76 personas con nombre,
-correo institucional y firma propia en un solo sitio.
+### La regla del dominio aparcado, ya determinista
+
+**Un 200 no significa que haya web.** Tres dominios de tres lotes distintos
+—`tmpharmagroup.co.uk`, `dlkconsulting.com` y `leaderocity.com`— devuelven **el
+mismo archivo, byte por byte**:
+
+```
+HTTP 200 · 114 bytes · md5 e89f75f918dbdcee28604d4e09dd71d7
+<!DOCTYPE html><html><head><script>window.onload=function(){
+window.location.href="/lander"}</script></head></html>
+```
+
+No hace falta heurística:
+
+```bash
+curl -sS -L --max-time 20 "https://$DOM/" | md5sum | grep -q e89f75f918dbdcee28604d4e09dd71d7 && echo APARCADO
+```
+
+**Dos reglas hermanas:**
+
+- **Que no haya DNS es mejor señal que un 200.** `getent hosts $DOM` → sin
+  respuesta significa que no hay web ni la hubo nunca. Así se cerraron Bashaw y
+  Klein sin ambigüedad.
+- **Un certificado roto no es «sin web», es «web rota» — y eso es mejor prospecto
+  que un dominio aparcado.** La página de 1997 de Hamrell solo carga por `http://`
+  porque su HTTPS está roto. Quedarse en el fallo de TLS habría descartado al
+  mejor del lote.
+
+### La cátedra adjunta: el atajo funciona al revés
+
+La idea era buena —la universidad publica el correo siempre— pero se corrió a
+fondo y **el cuello de botella se desplaza**: de «no hay correo» pasa a «no hay
+listado». Se descargaron los **134 perfiles de facultad de la escuela de farmacia
+de USC** y se filtraron: once mencionan reguladores y **exactamente uno** es un ex
+regulador con práctica propia — Hamrell. Temple presume de que «cerca de 250
+profesionales de la industria y de la regulación» dan clase en su programa, y **no
+publica ni un nombre.**
+
+**La vía rentable es la inversa:** identificar primero al ex regulador con
+consultora unipersonal —por razón social con su apellido, que es lo que funcionó
+en todo este lote— y después comprobar si da clase en alguna parte. Hamrell
+apareció así, no por el directorio.
