@@ -50,15 +50,53 @@ Dr. Jorge Arce como relleno. Algunas ya se usaron en producción:
 - `v10-mobius` → la web actual de Ignite Yourself (igniteyourself.co)
 - `v14-gareis` → la piel de Kappelman y de Mark Cooke
 
+### La web de Ignite Yourself
+
+| Dónde | Qué es |
+|---|---|
+| `clients/jorge-arce/igy-mobius/` | **La que está viva hoy** en igniteyourself.co (el rewrite de `/` apunta aquí) |
+| `clients/jorge-arce/igy-next/` | **Copia de la viva para trabajar encima.** Mismo diseño; aquí se añaden los servicios nuevos sin tocar lo publicado |
+| `clients/jorge-arce/igy-v3/` | **La nueva.** Mismo contenido comercial, sobre el sistema gráfico del repo 2 (`v2/`): Spark animado, scrollytelling, Success Stories |
+
+Para publicar la nueva basta cambiar una línea en `vercel.json`: el `destination`
+del rewrite de `/`, de `/igy-mobius` a `/igy-v3`. La vieja sigue accesible en
+`/igy-mobius` por si hay que volver atrás.
+
+El sistema gráfico (`igy-v3/styles.css`) es el kit MONOLOG del repo 2, copiado tal
+cual. Lo propio de esta página vive en `site.css` y `site.js` — así el kit se
+puede volver a usar en otro sitio sin arrastrar nada.
+
 `TEMPLATES.md` es el playbook del negocio: el intake que se le pide a cada médico,
 y el modelo (outreach → intake → elegir plantilla → verter contenido → deploy).
 Cada sitio nuevo es un fork con find-replace, no un rediseño.
+
+### El producto Profiles
+
+Dos niveles de perfil (gratis y de pago) y una pieza de venta que los enfrenta.
+
+| Dónde | Qué es |
+|---|---|
+| `clients/jorge-arce/profiles/` | La página de producto. Qué es un Ignite Profile y qué añade el Authority Profile |
+| `clients/jorge-arce/profiles/profile.css` | **La plantilla del producto.** Una estructura, una tipografía, un juego corto de paletas. Las dos páginas de abajo son el mismo CSS |
+| `clients/jorge-arce/profiles/adriana/` | Demo del **nivel gratis**: lo que el propio perfilado escribe. 8 elementos |
+| `clients/jorge-arce/profiles/adriana-authority/` | Demo del **nivel de pago**: lo que la investigación encuentra. 23 elementos, 15 con fuente pública enlazada |
+| `clients/jorge-arce/profiles/showcase/` | La pieza de venta: las dos en vivo, lado a lado, con la hoja de verificación y la escalera de precios |
+
+Las dos demos son de **Adriana Mejía Cuartas y ella todavía no las ha visto**.
+Están en `noindex` y no se enseñan fuera de Ignite hasta que dé el visto bueno.
+`profiles/index.html` enlaza a ellas desde la sección `#example`; hay un comentario
+en el HTML recordándolo.
+
+Sus fotos y los logos de prensa salen de su propio repositorio
+(`pablomerchanm/Adriana-Mejia-Cuartas`, rama `web-herencia`, carpeta
+`06-web/sitio/web/img/`) y ya estaban publicados en su web.
 
 ### Clientes y prospectos
 
 | Cliente | Dónde | Estado |
 |---|---|---|
 | **Mark Cooke** | `clients/jorge-arce/mark-cooke/` | Preview enviado. 4 páginas: home, story, practice, record |
+| **Dr Robert Freudenthal** | `clients/jorge-arce/freudenthal/` | Preview sin enviar. 4 páginas: overview, practice, thinking, record. Misma piel que Mark, calibrada sin fotografía |
 | **Leon Kappelman** | `clients/jorge-arce/kappelman/` | Preview enviado. Variantes: `kappelman-gareis`, `kappelman-getty` |
 | **Wilshire Oral Surgery** | `clients/wilshire-oral-surgery/` | Dos previews sin enviar: Dr. Vahedi y Dr. Shadi |
 | **Prospección abogados** | `prospecting/round-1/` | 4 briefs + CSV de prospectos y exclusiones |
@@ -72,6 +110,23 @@ propio proyecto en Vercel apuntando a su carpeta (Root Directory):
 | Sitio | Root Directory | Dominio |
 |---|---|---|
 | Mario Lignarolo | `clients/mario-lignarolo` | mariolignarolo.com (pendiente de conectar) |
+
+### Cómo se reconstruye un preview
+
+Los previews de cliente no se editan a mano: se generan. El contenido vive en
+`content.json` y un script lo reparte en páginas y deriva los HTML.
+
+| Cliente | Script |
+|---|---|
+| Dr Robert Freudenthal | `tools/build-freudenthal.py` + `tools/prerender-freudenthal.mjs` |
+
+El orden es siempre el mismo: levantar el servidor local que imita el `cleanUrls`
+de Vercel, correr el build, y después el prerender (que abre cada página con las
+animaciones apagadas y congela el HTML resultante dentro de `<main id="site">`,
+para que la página se lea aunque el JavaScript no cargue).
+
+`tools/` está fuera de lo que Vercel publica: la raíz del proyecto es
+`clients/jorge-arce/`.
 
 ### Configuración
 

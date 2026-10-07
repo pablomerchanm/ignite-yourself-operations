@@ -1,0 +1,562 @@
+{
+  "meta": {
+    "title": "Dr Robert Freudenthal — Consultant Psychiatrist & Expert Witness",
+    "description": "A private authority-platform concept exploring the clinical, academic and expert-witness work of Dr Robert Freudenthal, Consultant Psychiatrist."
+  },
+  "logo": "DR ROBERT FREUDENTHAL",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/freudenthal"
+    },
+    {
+      "t": "The Practice",
+      "h": "/freudenthal/practice"
+    },
+    {
+      "t": "The Thinking",
+      "h": "/freudenthal/thinking"
+    },
+    {
+      "t": "The Record",
+      "h": "/freudenthal/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "kick": "Consultant Psychiatrist · London · Civil claims and the Court of Protection",
+      "name": "Robert Freudenthal",
+      "cred": "MBBS · MSc",
+      "sub": "Consultant Psychiatrist <t>and Expert Witness</t>",
+      "note": "Where clinical judgement meets the question of capacity — <t>and the question of how far the evidence can be trusted.</t>",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "Read the thinking",
+          "h": "/freudenthal/thinking"
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "id": "proof",
+      "ink": true,
+      "no": "01",
+      "label": "The position, in short",
+      "title": "Consultant Psychiatrist, St Ann's <t>Eating Disorder Service.</t>",
+      "items": [
+        {
+          "n": "Consultant Psychiatrist",
+          "d": "St Ann's Eating Disorder Service, North London NHS Foundation Trust, since 2022. Stated as a matter of fact; the Trust does not endorse any private or expert practice."
+        },
+        {
+          "n": "Royal Colleges",
+          "d": "Royal College of Psychiatrists, 2016. Royal College of Physicians, 2014."
+        },
+        {
+          "n": "Dual higher training",
+          "d": "Adult and older adult psychiatry, North Central London, 2017–2022. MSc in Mental Health Research, UCL, 2019, with Distinction."
+        },
+        {
+          "n": "Expert Witness Institute",
+          "d": "Affiliate member since 2025. Declared instruction areas: civil claims and the Court of Protection."
+        }
+      ],
+      "more": {
+        "t": "The full record, with dates",
+        "h": "/freudenthal/record"
+      }
+    },
+    {
+      "type": "band",
+      "id": "band-thesis",
+      "label": "The two columns",
+      "quote": "A psychiatrist who has spent as long studying how psychiatric evidence is made <t>as applying it.</t>",
+      "more": {
+        "t": "The thinking behind that",
+        "h": "/freudenthal/thinking"
+      }
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "no": "02",
+      "nums": true,
+      "label": "Routes of instruction",
+      "title": "Four questions <t>his experience speaks to.</t>",
+      "lede": "Presented as possible routes of instruction derived from published clinical, academic and professional experience — not as a menu of services offered.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Court of Protection",
+          "title": "Capacity and best interests",
+          "desc": "Where the question is whether a person retains the capacity to refuse treatment, and what follows if they do not.",
+          "items": [
+            "Capacity to refuse or consent to treatment",
+            "Best-interests analysis",
+            "Eating disorder presentations",
+            "Older adult presentations"
+          ],
+          "cta": {
+            "t": "Discuss a Court of Protection matter",
+            "h": "#inquiry",
+            "path": "cop"
+          }
+        },
+        {
+          "label": "Civil claims",
+          "title": "Psychiatric injury, causation and prognosis",
+          "desc": "Independent opinion on psychiatric injury in civil proceedings, its causation and its likely course.",
+          "items": [
+            "Psychiatric injury",
+            "Causation",
+            "Prognosis",
+            "General adult and older adult presentations"
+          ],
+          "cta": {
+            "t": "Discuss a civil claim",
+            "h": "#inquiry",
+            "path": "civil"
+          }
+        },
+        {
+          "label": "Trusts and local authorities",
+          "title": "MEED standards, incident review and training",
+          "desc": "Delivering MEED training to mental health Trusts, acute Trusts and medical students since 2022, and peer reviewing for the Quality Network for Eating Disorders since 2024.",
+          "items": [
+            "Medical emergencies in eating disorders",
+            "Incident and service review",
+            "Team and trainee education",
+            "Quality Network peer review"
+          ],
+          "cta": {
+            "t": "Discuss a service matter",
+            "h": "#inquiry",
+            "path": "service"
+          }
+        },
+        {
+          "label": "Academic collaboration",
+          "title": "Research, teaching and peer review",
+          "desc": "Sixteen publications, an MSc in mental health research and a research fellowship on the RADAR trial.",
+          "items": [
+            "Research collaboration",
+            "Teaching and supervision",
+            "Peer review",
+            "History of psychiatry"
+          ],
+          "cta": {
+            "t": "Discuss a collaboration",
+            "h": "#inquiry",
+            "path": "academic"
+          }
+        }
+      ],
+      "fn": "Instruction volume, claimant and defendant balance, court attendance and fees are not stated on this page. Those are questions for a first conversation."
+    },
+    {
+      "type": "mission",
+      "id": "practice-lede",
+      "no": "01",
+      "label": "The Practice",
+      "quote": "Two clinical populations. <t>One legal question, approached from opposite ends.</t>",
+      "body": [
+        "Eating disorder psychiatry and dual accreditation in adult and older adult psychiatry put the same question in front of a clinician from two directions: when does a person retain the capacity to refuse treatment, and what should follow when they do not.",
+        "That is the question a Court of Protection case turns on. His 2026 paper on the role of palliative care in the treatment of anorexia nervosa takes on the hardest version of it."
+      ]
+    },
+    {
+      "type": "method",
+      "id": "practice-areas",
+      "no": "02",
+      "label": "Areas of instruction",
+      "title": "By subject matter, <t>not by case.</t>",
+      "intro": "The areas below reflect clinical experience declared on his Expert Witness Institute profile. No case, no clinical detail and no outcome appears anywhere on this page — and instruction volume, court attendance and fees are matters to establish directly, not to advertise.",
+      "rows": [
+        {
+          "t": "Eating disorder psychiatry",
+          "d": "Consultant practice at St Ann's Eating Disorder Service since 2022. Executive Committee of the Faculty of Eating Disorders at the Royal College of Psychiatrists since 2023. Mentor on the College's eating disorder credential since 2025."
+        },
+        {
+          "t": "General adult psychiatry",
+          "d": "Higher training in North Central London, 2017–2022, following core psychiatry training in the same deanery, 2014–2017."
+        },
+        {
+          "t": "Older adult psychiatry",
+          "d": "The second half of a dual higher training, completed 2022. The capacity question arrives here from the opposite direction to eating disorders, and is no easier."
+        },
+        {
+          "t": "Medical emergencies in eating disorders",
+          "d": "MEED training delivered to mental health Trusts, acute Trusts and medical students since 2022. Peer reviewer for the Quality Network for Eating Disorders since 2024."
+        }
+      ],
+      "std": {
+        "label": "What this page does not state",
+        "items": [
+          "Number or volume of instructions",
+          "Balance between claimant and defendant work",
+          "Court attendance",
+          "Fees, terms or basis of instruction"
+        ]
+      }
+    },
+    {
+      "type": "mission",
+      "id": "thinking-lede",
+      "no": "01",
+      "label": "The Thinking",
+      "quote": "An expert gives an opinion, then has to hold it <t>when the other side attacks its basis.</t>",
+      "body": [
+        "He has studied that problem as a discipline. An intercalated BSc in the History of Medicine at the Wellcome Trust Centre. An MSc thesis on insulin coma therapy. A paper in History of Psychiatry on how a treatment once called a landmark in psychiatric progress rose and fell.",
+        "And, separately, published work on how far the participants in psychiatric clinical trials resemble the patients those trials are meant to serve."
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "thinking-work",
+      "no": "02",
+      "label": "Selected publications",
+      "title": "Four of sixteen.",
+      "lede": "The complete list of sixteen publications, with dates, appears on the record page.",
+      "groups": [
+        {
+          "label": "Capacity and end-of-life questions",
+          "wide": true,
+          "names": [
+            "Freudenthal R, Cohn V, Brady J. Is There a Role for Palliative Care in the Treatment of Anorexia Nervosa. British Journal of Hospital Medicine, 2026"
+          ]
+        },
+        {
+          "label": "How psychiatric evidence is made, accepted and abandoned",
+          "wide": true,
+          "names": [
+            "Freudenthal R, Moncrieff J. 'A landmark in psychiatric progress'? The role of evidence in the rise and fall of insulin coma therapy. History of Psychiatry, 2021",
+            "Freudenthal R, Marston L, Stansfeld J, Priebe S, Moncrieff J. How do participants in clinical trials compare with other patients with schizophrenia? Contemporary Clinical Trials Communications, 2021",
+            "Ash G, Hilton C, Freudenthal R, Stephenson T, Ikkos G. History of psychiatry in the curriculum? British Journal of Psychiatry, 2020"
+          ]
+        }
+      ],
+      "fn": "Titles and years as listed on his own curriculum vitae, 2026."
+    },
+    {
+      "type": "exp",
+      "id": "record-training",
+      "no": "01",
+      "label": "Education and training",
+      "title": "The record, <t>with dates.</t>",
+      "lede": "Every entry below is taken from his curriculum vitae, 2026, and is stated with the years he states.",
+      "groups": [
+        {
+          "label": "Degrees and diplomas",
+          "wide": true,
+          "names": [
+            "MBBS, University College London Medical School — 2004–2010",
+            "BSc (intercalated), History of Medicine, Wellcome Trust Centre, UCL — 2006–2007, first class",
+            "Diploma in Tropical Medicine and Hygiene, Liverpool School of Tropical Medicine — 2012, Merit",
+            "MSc, Mental Health Research, UCL — 2017–2019, Distinction",
+            "Postgraduate Certificate, Peer-Supported Open Dialogue, London South Bank — 2018–2019",
+            "Group Work Practitioner Diploma, Institute of Group Analysis — 2020–2021"
+          ]
+        },
+        {
+          "label": "Specialist training",
+          "wide": true,
+          "names": [
+            "Dual higher training, adult and older adult psychiatry, North Central London — 2017–2022",
+            "Research fellow, RADAR trial, NELFT and UCL — 2017–2018",
+            "Core psychiatry training, North Central London — 2014–2017",
+            "Academic clinical fellow, endocrinology, King's College London — 2013–2014"
+          ]
+        },
+        {
+          "label": "Colleges and membership",
+          "names": [
+            "Royal College of Psychiatrists — 2016",
+            "Royal College of Physicians — 2014",
+            "Expert Witness Institute, affiliate member — 2025"
+          ]
+        },
+        {
+          "label": "Scholarships",
+          "names": [
+            "NOCLOR Research Scholarship — 2017–2019",
+            "UCL Division of Psychiatry Research Scholarship — 2017–2019"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-roles",
+      "no": "02",
+      "tint": true,
+      "label": "Appointments, leadership and teaching",
+      "title": "Current positions.",
+      "groups": [
+        {
+          "label": "Clinical",
+          "wide": true,
+          "names": [
+            "Consultant Psychiatrist, St Ann's Eating Disorder Service, North London NHS Foundation Trust — 2022–present"
+          ]
+        },
+        {
+          "label": "Leadership",
+          "wide": true,
+          "names": [
+            "London Mental Health Strategy Clinical Advisory Group — 2026–present",
+            "Executive Committee, Faculty of Eating Disorders, Royal College of Psychiatrists — 2023–present",
+            "Mentor, RCPsych eating disorder credential — 2025–present",
+            "Peer reviewer, Quality Network for Eating Disorders — 2024–present"
+          ]
+        },
+        {
+          "label": "Teaching",
+          "wide": true,
+          "names": [
+            "MEED training to mental health Trusts, acute Trusts and medical students — 2022–present",
+            "Clinical and educational supervisor, Foundation Programme and core training — 2023–present"
+          ]
+        }
+      ],
+      "fn": "Sixteen publications in total. Four are set out on the thinking page; the complete list is available on request."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "no": "03",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Select the nature of the enquiry and give enough context for an initial response. Nothing on this page is transmitted anywhere.",
+      "contact": {
+        "city": "London, United Kingdom"
+      },
+      "fkick": "Where clinical judgement meets the question of capacity — and the question of how far the evidence can be trusted.",
+      "name": "Robert Freudenthal",
+      "cred": "MBBS · MSc",
+      "roles": "Consultant Psychiatrist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Royal College of Psychiatrists — 2016",
+        "Royal College of Physicians — 2014",
+        "Expert Witness Institute, affiliate member — 2025",
+        "Faculty of Eating Disorders, RCPsych — Executive Committee"
+      ],
+      "social": [],
+      "note": "Private concept by Ignite Yourself — every fact, all language and any permission to be reviewed with Dr Freudenthal before publication. Contact details are deliberately absent. The NHS Trust is named as a matter of fact and does not endorse any private or expert practice.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/freudenthal/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Dr Robert Freudenthal, and shared with him privately. It was assembled from his own publicly available curriculum vitae and professional profile, used for demonstration purposes only, and every element remains subject to his review and approval. It contains no case, no clinical detail and no claim about his expert-witness volume or history. The page is not indexed, not published and not distributed."
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "cop",
+            "t": "Court of Protection — capacity or best interests",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "civil",
+            "t": "Civil claim — psychiatric injury, causation or prognosis",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction or forum"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "service",
+            "t": "Trust or local authority — MEED, review or training",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the requirement",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              }
+            ],
+            "submit": "Discuss a service matter",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "academic",
+            "t": "Academic collaboration, research or peer review",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Institution",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the collaboration",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Discuss a collaboration",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Send enquiry",
+            "note": "Scope, approach and availability are confirmed directly."
+          }
+        ],
+        "preview": "This enquiry flow is illustrative. Fields, routing and contact details would be configured with Dr Freudenthal before anything goes live.",
+        "fine": "Private concept — nothing is transmitted from this page, and no contact details are published here. Direct contact details would be added only with his approval."
+      }
+    }
+  ]
+}

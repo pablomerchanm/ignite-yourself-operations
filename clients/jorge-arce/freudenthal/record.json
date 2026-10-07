@@ -1,0 +1,342 @@
+{
+  "meta": {
+    "title": "The Record — Dr Robert Freudenthal",
+    "description": "Education, training, colleges, appointments, leadership and teaching, with the dates as stated on his own curriculum vitae."
+  },
+  "logo": "DR ROBERT FREUDENTHAL",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/freudenthal"
+    },
+    {
+      "t": "The Practice",
+      "h": "/freudenthal/practice"
+    },
+    {
+      "t": "The Thinking",
+      "h": "/freudenthal/thinking"
+    },
+    {
+      "t": "The Record",
+      "h": "/freudenthal/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "exp",
+      "id": "record-training",
+      "no": "01",
+      "label": "Education and training",
+      "title": "The record, <t>with dates.</t>",
+      "lede": "Every entry below is taken from his curriculum vitae, 2026, and is stated with the years he states.",
+      "groups": [
+        {
+          "label": "Degrees and diplomas",
+          "wide": true,
+          "names": [
+            "MBBS, University College London Medical School — 2004–2010",
+            "BSc (intercalated), History of Medicine, Wellcome Trust Centre, UCL — 2006–2007, first class",
+            "Diploma in Tropical Medicine and Hygiene, Liverpool School of Tropical Medicine — 2012, Merit",
+            "MSc, Mental Health Research, UCL — 2017–2019, Distinction",
+            "Postgraduate Certificate, Peer-Supported Open Dialogue, London South Bank — 2018–2019",
+            "Group Work Practitioner Diploma, Institute of Group Analysis — 2020–2021"
+          ]
+        },
+        {
+          "label": "Specialist training",
+          "wide": true,
+          "names": [
+            "Dual higher training, adult and older adult psychiatry, North Central London — 2017–2022",
+            "Research fellow, RADAR trial, NELFT and UCL — 2017–2018",
+            "Core psychiatry training, North Central London — 2014–2017",
+            "Academic clinical fellow, endocrinology, King's College London — 2013–2014"
+          ]
+        },
+        {
+          "label": "Colleges and membership",
+          "names": [
+            "Royal College of Psychiatrists — 2016",
+            "Royal College of Physicians — 2014",
+            "Expert Witness Institute, affiliate member — 2025"
+          ]
+        },
+        {
+          "label": "Scholarships",
+          "names": [
+            "NOCLOR Research Scholarship — 2017–2019",
+            "UCL Division of Psychiatry Research Scholarship — 2017–2019"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-roles",
+      "no": "02",
+      "tint": true,
+      "label": "Appointments, leadership and teaching",
+      "title": "Current positions.",
+      "groups": [
+        {
+          "label": "Clinical",
+          "wide": true,
+          "names": [
+            "Consultant Psychiatrist, St Ann's Eating Disorder Service, North London NHS Foundation Trust — 2022–present"
+          ]
+        },
+        {
+          "label": "Leadership",
+          "wide": true,
+          "names": [
+            "London Mental Health Strategy Clinical Advisory Group — 2026–present",
+            "Executive Committee, Faculty of Eating Disorders, Royal College of Psychiatrists — 2023–present",
+            "Mentor, RCPsych eating disorder credential — 2025–present",
+            "Peer reviewer, Quality Network for Eating Disorders — 2024–present"
+          ]
+        },
+        {
+          "label": "Teaching",
+          "wide": true,
+          "names": [
+            "MEED training to mental health Trusts, acute Trusts and medical students — 2022–present",
+            "Clinical and educational supervisor, Foundation Programme and core training — 2023–present"
+          ]
+        }
+      ],
+      "fn": "Sixteen publications in total. Four are set out on the thinking page; the complete list is available on request."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "no": "03",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Select the nature of the enquiry and give enough context for an initial response. Nothing on this page is transmitted anywhere.",
+      "contact": {
+        "city": "London, United Kingdom"
+      },
+      "fkick": "Where clinical judgement meets the question of capacity — and the question of how far the evidence can be trusted.",
+      "name": "Robert Freudenthal",
+      "cred": "MBBS · MSc",
+      "roles": "Consultant Psychiatrist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Royal College of Psychiatrists — 2016",
+        "Royal College of Physicians — 2014",
+        "Expert Witness Institute, affiliate member — 2025",
+        "Faculty of Eating Disorders, RCPsych — Executive Committee"
+      ],
+      "social": [],
+      "note": "Private concept by Ignite Yourself — every fact, all language and any permission to be reviewed with Dr Freudenthal before publication. Contact details are deliberately absent. The NHS Trust is named as a matter of fact and does not endorse any private or expert practice.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/freudenthal/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Dr Robert Freudenthal, and shared with him privately. It was assembled from his own publicly available curriculum vitae and professional profile, used for demonstration purposes only, and every element remains subject to his review and approval. It contains no case, no clinical detail and no claim about his expert-witness volume or history. The page is not indexed, not published and not distributed."
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "cop",
+            "t": "Court of Protection — capacity or best interests",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "civil",
+            "t": "Civil claim — psychiatric injury, causation or prognosis",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction or forum"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "service",
+            "t": "Trust or local authority — MEED, review or training",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the requirement",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              }
+            ],
+            "submit": "Discuss a service matter",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "academic",
+            "t": "Academic collaboration, research or peer review",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Institution",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the collaboration",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Discuss a collaboration",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Send enquiry",
+            "note": "Scope, approach and availability are confirmed directly."
+          }
+        ],
+        "preview": "This enquiry flow is illustrative. Fields, routing and contact details would be configured with Dr Freudenthal before anything goes live.",
+        "fine": "Private concept — nothing is transmitted from this page, and no contact details are published here. Direct contact details would be added only with his approval."
+      }
+    }
+  ]
+}

@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ignite Profiles — The two tiers, on one person</title>
+<meta name="description" content="A worked demonstration of the Ignite Profile and the Authority Profile, built on the same person. Internal and sales use.">
+<meta name="theme-color" content="#FBF9F6">
+<link rel="icon" href="/profiles/assets/spark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF;--paper:#FBF9F6;--black:#0C0B0A;--warm:#100C07;--ink:#141210;
+  --panel:#F5F1EC;--chip:#EFEAE3;--gray:#9C948B;--gray2:#6B645C;--line:#E7E1D9;
+  --o-lite:#FFA62E;--orange:#F57900;--o-deep:#C85A00;
+  --green:#2E5E4E;
+  --spark-o:brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(1352%) hue-rotate(360deg) brightness(101%) contrast(103%);
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--paper);color:var(--black);font-family:'Inter Tight',sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--orange);color:#fff}
+.wrapn{max-width:1120px;margin:0 auto;padding:0 clamp(20px, 4vw, 40px)}
+
+.eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.eyebrow img{display:inline-block;height:14px;width:auto;vertical-align:-2px;margin-right:9px;filter:var(--spark-o)}
+
+h1{font-weight:800;letter-spacing:-.042em;line-height:1.02;font-size:clamp(38px, 7.6vw, 86px);text-wrap:balance}
+h2{font-weight:800;letter-spacing:-.036em;line-height:1.06;font-size:clamp(30px, 5.2vw, 58px);text-wrap:balance}
+h3{font-weight:700;letter-spacing:-.022em;line-height:1.18}
+.og{color:var(--orange)}
+
+section{padding:clamp(64px, 9vw, 118px) 0}
+.sechead{max-width:28ch}
+.lede{font-size:clamp(17px, 2.1vw, 21px);line-height:1.58;color:var(--gray2);margin-top:22px;max-width:62ch;text-wrap:pretty}
+
+.btn{display:inline-flex;align-items:center;gap:11px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;padding:16px 30px;border-radius:100px;transition:background .2s,color .2s,border-color .2s;cursor:pointer;border:1px solid transparent;font-family:inherit}
+.btn--o{background:var(--orange);color:#fff}
+.btn--o:hover{background:var(--o-deep)}
+.btn--ghost{border-color:var(--line);color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(74px, 11vw, 132px);padding-bottom:clamp(44px, 6vw, 70px)}
+.hero h1{margin-top:22px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.hero .micro{font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--gray);margin-top:26px;text-wrap:pretty}
+
+/* ---------- the gap ---------- */
+.gap{background:var(--warm);color:var(--paper)}
+.gap .lede{color:rgba(251,249,246,.68)}
+.nums{display:grid;gap:0;margin-top:48px;border-top:1px solid rgba(251,249,246,.14)}
+.nums div{padding:26px 0 24px;border-bottom:1px solid rgba(251,249,246,.14)}
+.nums b{display:block;font-size:clamp(44px, 7vw, 76px);font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--o-lite)}
+.nums span{display:block;font-size:14.5px;line-height:1.5;color:rgba(251,249,246,.6);margin-top:12px;max-width:30ch}
+@media (min-width:760px){.nums{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 34px}}
+.gap .after{margin-top:40px;font-size:clamp(19px, 2.6vw, 25px);line-height:1.4;font-weight:500;letter-spacing:-.02em;max-width:50ch;text-wrap:pretty}
+.gap .after em{font-style:normal;color:var(--o-lite)}
+
+/* ---------- live demo ---------- */
+.demo{background:var(--panel)}
+.tabs{display:inline-flex;gap:6px;background:var(--white);border:1px solid var(--line);border-radius:100px;padding:6px;margin-top:34px;flex-wrap:wrap}
+.tabs button{
+  font-family:inherit;font-size:13.5px;font-weight:700;letter-spacing:.01em;
+  padding:12px 22px;border-radius:100px;border:none;background:transparent;color:var(--gray2);cursor:pointer;
+  transition:background .2s,color .2s;
+}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.tabnote{font-size:15.5px;line-height:1.6;color:var(--gray2);margin-top:22px;max-width:60ch;min-height:3em;text-wrap:pretty}
+
+.stage{display:grid;gap:28px;margin-top:38px;align-items:start}
+@media (min-width:980px){.stage{grid-template-columns:minmax(0,1fr) 340px;gap:34px}}
+
+.dev{border-radius:10px;overflow:hidden;background:var(--ink);box-shadow:0 44px 80px -46px rgba(0,0,0,.5)}
+.dev .chrome{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#1C1917}
+.dev .dots{display:flex;gap:6px;flex:none}
+.dev .dots i{width:9px;height:9px;border-radius:50%;background:rgba(251,249,246,.2)}
+.dev .url{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:rgba(251,249,246,.5);background:rgba(251,249,246,.07);padding:6px 16px;border-radius:100px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dev .vp{position:relative;overflow:hidden;background:#151813;height:calc(840px * var(--s, .5))}
+.dev .vp iframe{width:1280px;height:840px;border:0;display:block;transform:scale(var(--s, .5));transform-origin:top left}
+
+.phone{margin:0 auto;width:320px;max-width:100%;border-radius:34px;padding:10px;background:var(--ink);box-shadow:0 34px 60px -40px rgba(0,0,0,.5)}
+.phone .vp{position:relative;overflow:hidden;border-radius:26px;background:#151813;height:calc(760px * var(--sp, .77))}
+.phone .vp iframe{width:390px;height:760px;border:0;display:block;transform:scale(var(--sp, .77));transform-origin:top left}
+.phone .cap{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(251,249,246,.45);text-align:center;padding:12px 0 4px}
+
+.openrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.openrow a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--gray2);border-bottom:1px solid var(--line);padding-bottom:3px}
+.openrow a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ---------- comparison ---------- */
+.cmp-wrap{overflow-x:auto;margin-top:42px;-webkit-overflow-scrolling:touch}
+table.cmp{width:100%;min-width:660px;border-collapse:collapse;text-align:left}
+table.cmp th,table.cmp td{padding:20px 18px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px;line-height:1.5}
+table.cmp thead th{
+  font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gray2);border-bottom:1px solid var(--ink);padding-bottom:14px;
+}
+table.cmp thead th:nth-child(3){color:var(--green)}
+table.cmp tbody th{font-weight:600;color:var(--gray2);font-size:14px;width:23%}
+table.cmp tbody td:last-child{background:rgba(46,94,78,.05)}
+table.cmp tfoot th{font-weight:700;font-size:14px;padding-top:22px}
+table.cmp tfoot td{font-weight:700;font-size:17px;letter-spacing:-.01em;padding-top:22px}
+table.cmp tfoot td:last-child{color:var(--green)}
+
+.addon{margin-top:38px;background:var(--chip);border-radius:4px;padding:30px 28px}
+.addon .t{font-weight:700;font-size:20px;letter-spacing:-.02em;margin-bottom:12px}
+.addon p{font-size:15.5px;line-height:1.6;color:var(--gray2);max-width:66ch;text-wrap:pretty}
+
+/* ---------- verification sheet ---------- */
+.sheetwrap{background:var(--ink);color:var(--paper)}
+.sheetwrap .lede{color:rgba(251,249,246,.66)}
+.sheet{margin-top:44px;background:#fff;color:var(--ink);border-radius:4px;overflow:hidden}
+.sheet .sh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 24px 18px;border-bottom:1px solid var(--line)}
+.sheet .sh .t{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray2)}
+.sheet .sh .d{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--gray)}
+.row{display:grid;gap:14px;padding:24px;border-bottom:1px solid var(--line)}
+@media (min-width:780px){.row{grid-template-columns:132px minmax(0,1fr) 190px;gap:24px;align-items:start}}
+.st{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.st::before{content:"";width:8px;height:8px;border-radius:50%;flex:none}
+.st.ok{color:var(--green)}.st.ok::before{background:var(--green)}
+.st.wait{color:var(--o-deep)}.st.wait::before{background:var(--o-lite)}
+.st.held{color:var(--gray)}.st.held::before{background:transparent;border:1px solid var(--gray)}
+.row .cl{font-size:16px;font-weight:600;letter-spacing:-.012em;line-height:1.35}
+.row .cl small{display:block;font-weight:400;font-size:13.5px;color:var(--gray2);margin-top:7px;line-height:1.55;text-wrap:pretty}
+.row .act{font-family:var(--mono);font-size:11.5px;line-height:1.6;color:var(--gray2);letter-spacing:.02em}
+.sheet .sf{padding:20px 24px;background:var(--panel);font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--gray2);text-wrap:pretty}
+.sheetwrap .note{margin-top:28px;font-size:15.5px;line-height:1.62;color:rgba(251,249,246,.6);max-width:62ch;text-wrap:pretty}
+
+/* ---------- the four moves ---------- */
+.moves{display:grid;gap:2px;margin-top:44px;background:var(--line)}
+@media (min-width:860px){.moves{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.move{background:var(--paper);padding:32px 28px 30px}
+.move .n{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;color:var(--orange)}
+.move h3{font-size:24px;margin:14px 0 12px}
+.move p{font-size:15px;line-height:1.62;color:var(--gray2);text-wrap:pretty}
+.move .ex{margin-top:16px;padding-top:15px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;line-height:1.75;color:var(--ink);letter-spacing:.01em}
+.move .ex b{color:var(--orange);font-weight:500}
+
+/* ---------- ladder ---------- */
+.ladder{display:grid;gap:2px;margin-top:44px;background:var(--line)}
+.rung{background:var(--paper);padding:26px 26px 24px;display:grid;gap:10px}
+@media (min-width:820px){.rung{grid-template-columns:200px minmax(0,1fr) 170px;gap:26px;align-items:baseline}}
+.rung .v{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray2)}
+.rung h3{font-size:20px}
+.rung p{font-size:14.5px;line-height:1.58;color:var(--gray2);text-wrap:pretty}
+.rung .pr{font-weight:700;font-size:19px;letter-spacing:-.015em}
+.rung.hi{background:var(--ink);color:var(--paper)}
+.rung.hi .v{color:var(--o-lite)}
+.rung.hi p{color:rgba(251,249,246,.66)}
+.rung.sep{background:var(--chip)}
+.sepnote{font-family:var(--mono);font-size:12px;line-height:1.7;color:var(--gray2);margin-top:22px;max-width:62ch;text-wrap:pretty}
+
+/* ---------- final ---------- */
+.final{background:var(--warm);color:var(--paper);text-align:left}
+.final .lede{color:rgba(251,249,246,.66)}
+.final .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.final .btn--ghost{border-color:rgba(251,249,246,.26);color:var(--paper)}
+.final .btn--ghost:hover{background:var(--paper);color:var(--ink)}
+
+footer{padding:44px 0 56px;border-top:1px solid var(--line)}
+footer p{font-family:var(--mono);font-size:11.5px;line-height:1.85;color:var(--gray);text-wrap:pretty}
+footer p + p{margin-top:14px}
+footer b{color:var(--ink);font-weight:500}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">Worked demonstration</p>
+    <h1>One person.<br>Two profiles.<br><span class="og">One of them proves it.</span></h1>
+    <p class="lede">Adriana Mejía Cuartas chairs the board of the Global Coffee Platform and founded Herencia VL. Below is the same person on the free Ignite Profile and on the Authority Profile, side by side and live. Everything on both pages came from a published source or from her own material. Nothing was invented.</p>
+    <div class="acts">
+      <a class="btn btn--o" href="#live">See both, live</a>
+      <a class="btn btn--ghost" href="#price">What it costs</a>
+    </div>
+    <p class="micro">Demonstration for Ignite Yourself &middot; Not published, not indexed &middot; Adriana has not reviewed these pages</p>
+  </div>
+</header>
+
+<!-- ================= THE GAP ================= -->
+<section class="gap">
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">The problem a profile solves</p>
+    <h2 class="sechead" style="margin-top:20px">Her record exists. <span class="og">It is just scattered.</span></h2>
+    <p class="lede">An hour of research found her across national press in Colombia, trade press in Italy, Brazil and the United States, two institutional biographies, her company&rsquo;s site and an archive she keeps herself. All of it public. None of it in one place.</p>
+    <div class="nums">
+      <div><b>23</b><span>verifiable items about her professional record</span></div>
+      <div><b>7</b><span>publications, across four countries</span></div>
+      <div><b>11</b><span>years of public record, 2015 to 2026</span></div>
+      <div><b>5</b><span>institutions that carry her name</span></div>
+    </div>
+    <p class="after">A links page is a good start, and it does one job: it sends people somewhere else. <em>An Authority Profile keeps them.</em></p>
+  </div>
+</section>
+
+<!-- ================= LIVE ================= -->
+<section class="demo" id="live">
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">The same address, two tiers</p>
+    <h2 class="sechead" style="margin-top:20px">Switch between them.</h2>
+    <p class="lede">Both pages are real and scrollable. Same structure, same typography, same address. The only thing that changes is how much of her is on it &mdash; and whether each line can be checked.</p>
+
+    <div class="tabs" role="tablist" aria-label="Profile tier">
+      <button role="tab" id="tab-free" aria-selected="true" aria-controls="live" data-src="/profiles/adriana">Ignite Profile &middot; Free</button>
+      <button role="tab" id="tab-auth" aria-selected="false" aria-controls="live" data-src="/profiles/adriana-authority">Authority Profile &middot; USD 390/yr</button>
+    </div>
+    <p class="tabnote" id="tabnote">What she would put together herself in twenty minutes: a photograph, a headline, the roles, one featured article and three links. Designed properly, and better than most professional pages on the internet. It is still only what she remembered to type.</p>
+
+    <div class="stage">
+      <div class="dev" id="desk">
+        <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url" id="url">adriana.igniteyourself.co</span></div>
+        <div class="vp"><iframe id="fdesk" src="/profiles/adriana" title="Profile preview, desktop" loading="lazy"></iframe></div>
+      </div>
+      <div class="phone" id="ph">
+        <div class="vp"><iframe id="fph" src="/profiles/adriana" title="Profile preview, phone" loading="lazy"></iframe></div>
+        <p class="cap">On a phone</p>
+      </div>
+    </div>
+
+    <div class="openrow">
+      <a href="/profiles/adriana" target="_blank" rel="noopener">Open the free profile in a new tab &nearr;</a>
+      <a href="/profiles/adriana-authority" target="_blank" rel="noopener">Open the Authority Profile &nearr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT CHANGES ================= -->
+<section>
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">Side by side</p>
+    <h2 class="sechead" style="margin-top:20px">What actually changes <span class="og">between the two.</span></h2>
+    <p class="lede">Not features. The difference is who does the work, and whether a stranger has to take her word for it.</p>
+
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr><th scope="col">&nbsp;</th><th scope="col">Ignite Profile</th><th scope="col">Authority Profile</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Who writes it</th><td>You do. We design it.</td><td>We research it. You confirm it.</td></tr>
+          <tr><th scope="row">What ends up on it</th><td>What you remember to add.</td><td>What we find &mdash; including the things you had forgotten were published.</td></tr>
+          <tr><th scope="row">How a stranger checks it</th><td>They take your word for it.</td><td>A source line under every claim, linked where the source is public.</td></tr>
+          <tr><th scope="row">Depth</th><td>Bio, featured work, roles, links, contact.</td><td>All of that, plus standing, trajectory, press, speaking and the terms on which you work.</td></tr>
+          <tr><th scope="row">Who keeps it current</th><td>You, when you remember.</td><td>We watch for what&rsquo;s new and send it to you before it goes on.</td></tr>
+          <tr><th scope="row">The Ignite mark</th><td>On the page. That is the trade.</td><td>Discreet, at the foot.</td></tr>
+          <tr><th scope="row">On this demonstration</th><td>8 items</td><td>23 items, 15 of them linked to a published source</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><th scope="row">Price</th><td>Free</td><td>USD 390 / year</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="addon">
+      <div class="t">Would you rather we did all of it?</div>
+      <p>Send a name, a LinkedIn URL and a photograph. We research, write, assemble and quality-check the whole profile, and you only verify what we found. Done-for-you setup, from USD 500 on top of the first year.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VERIFICATION SHEET ================= -->
+<section class="sheetwrap">
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">What the member receives</p>
+    <h2 class="sechead" style="margin-top:20px">Nothing is published <span class="og">until she has seen it.</span></h2>
+    <p class="lede">Before the Authority Profile goes live, everything found is sent back as a sheet. Each item carries its source and its state. She keeps it, corrects it, or strikes it. This is an extract from hers.</p>
+
+    <div class="sheet">
+      <div class="sh"><span class="t">Verification sheet &middot; Adriana Mejía Cuartas</span><span class="d">Extract &middot; 3 of 23 items</span></div>
+
+      <div class="row">
+        <span class="st ok">Sourced</span>
+        <div class="cl">Board Chair, Global Coffee Platform, since March 2024
+          <small>Succeeded Carlos Brando. Source: Daily Coffee News, 6 March 2024.</small></div>
+        <div class="act">Published with its source<br>visible on the page.</div>
+      </div>
+
+      <div class="row">
+        <span class="st wait">Your word</span>
+        <div class="cl">Maize programme with GIZ, German development cooperation, closed 2026
+          <small>No public source found. Held in your own records.</small></div>
+        <div class="act">Published only because<br>you confirmed it. Marked<br>as your own statement.</div>
+      </div>
+
+      <div class="row">
+        <span class="st held">Held back</span>
+        <div class="cl">Irrigation programme in Tanzania, financed by a European government
+          <small>Requires the donor&rsquo;s sign-off before it can appear anywhere public.</small></div>
+        <div class="act">Not on the page.<br>Stays on the sheet until<br>the donor confirms.</div>
+      </div>
+
+      <div class="sf">Nothing is inferred, estimated or rounded. An item with no source and no confirmation does not go on the page &mdash; it stays on this sheet.</div>
+    </div>
+
+    <p class="note">That third row is the whole product. Anyone can list achievements. The work is knowing which ones you are allowed to publish, and being willing to leave the others off.</p>
+  </div>
+</section>
+
+<!-- ================= THE FOUR MOVES ================= -->
+<section>
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">How it was built</p>
+    <h2 class="sechead" style="margin-top:20px">Four moves. <span class="og">Hers, specifically.</span></h2>
+    <p class="lede">She was asked for nothing but her name, her links and a photograph. Everything else is what the work produced.</p>
+
+    <div class="moves">
+      <div class="move">
+        <p class="n">01 &middot; Discover</p>
+        <h3>We go looking</h3>
+        <p>Official biographies, national and trade press, institutional pages, company sites, talks and the archive the person holds themselves.</p>
+        <p class="ex">Found in her case: <b>Global Coffee Platform</b> official biography &middot; <b>IDH Sustainable Trade</b> profile &middot; <b>Daily Coffee News</b> &middot; <b>Comunicaffe</b> &middot; <b>Revista Espresso</b> &middot; <b>La Patria</b> &middot; <b>CNCafé</b> &middot; <b>Herencia VL</b> &middot; 2015 archive, Colombia</p>
+      </div>
+      <div class="move">
+        <p class="n">02 &middot; Structure</p>
+        <h3>We organise it</h3>
+        <p>Into the sections that make sense for that profession. A board chair is not read the way a surgeon is read.</p>
+        <p class="ex">Hers became: <b>the position</b> &middot; <b>standing</b> &middot; <b>trajectory in three layers</b> &mdash; the institution, the company, the table &middot; <b>in print</b> &middot; <b>speaking</b> &middot; <b>where she serves</b></p>
+      </div>
+      <div class="move">
+        <p class="n">03 &middot; Verify</p>
+        <h3>She confirms it</h3>
+        <p>Every item goes back with its source attached. She keeps it, corrects it, or removes it. No questionnaire, no blank page.</p>
+        <p class="ex">Of 23 items: <b>15</b> open to a published source &middot; <b>8</b> exist on the page only because she confirmed them &middot; <b>1</b> held back pending a donor&rsquo;s approval</p>
+      </div>
+      <div class="move">
+        <p class="n">04 &middot; Monitor</p>
+        <h3>It stays current</h3>
+        <p>A new interview, a new appointment, a new stage. We find it, check it, and ask before it goes on. Most professional pages are written once and then quietly go out of date.</p>
+        <p class="ex">Last review: <b>7 October 2026</b> &middot; Next scheduled: <b>January 2027</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICE ================= -->
+<section id="price" style="background:var(--panel)">
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">The ladder</p>
+    <h2 class="sechead" style="margin-top:20px">Start free. <span class="og">Move when it is worth it.</span></h2>
+    <p class="lede">Nobody is asked to buy on day one. The free profile is a real product, not a trial, and it stays free.</p>
+
+    <div class="ladder">
+      <div class="rung">
+        <p class="v">Ignite Profile</p>
+        <div><h3>Your page, at your own Ignite address</h3><p>Designed, responsive, yours to edit. Carries the Ignite mark at the foot.</p></div>
+        <p class="pr">Free</p>
+      </div>
+      <div class="rung hi">
+        <p class="v">Authority Profile</p>
+        <div><h3>The same page, with your record found and sourced</h3><p>Research, structure, a source under every claim, and monitoring for what comes next.</p></div>
+        <p class="pr">USD 390 / yr</p>
+      </div>
+      <div class="rung">
+        <p class="v">Done for you</p>
+        <div><h3>We assemble the whole thing</h3><p>You send a name, a LinkedIn URL and a photograph, and verify what we found.</p></div>
+        <p class="pr">From USD 500</p>
+      </div>
+      <div class="rung sep">
+        <p class="v">Authority Platform</p>
+        <div><h3>Your own domain, built around your career</h3><p>Not another tier of the profile. A separate piece of work: custom architecture, your narrative, the evidence organised with intention.</p></div>
+        <p class="pr">From USD 3,000</p>
+      </div>
+    </div>
+
+    <p class="sepnote">A profile lives at an Ignite address and shares one structure with every other profile. A platform lives at your own domain and shares nothing with anyone. They are different products, bought for different reasons.</p>
+  </div>
+</section>
+
+<!-- ================= FINAL ================= -->
+<section class="final">
+  <div class="wrapn">
+    <p class="eyebrow"><img src="/profiles/assets/spark.png" alt="">Next</p>
+    <h2 class="sechead" style="margin-top:20px">Your authority already exists.</h2>
+    <p class="lede">The question is only whether a stranger can find it in one place, and check it when they do.</p>
+    <div class="acts">
+      <a class="btn btn--o" href="mailto:pablo@igniteyourself.co?subject=Ignite%20Profile">Talk to us</a>
+      <a class="btn btn--ghost" href="/profiles">The product page</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrapn">
+    <p><b>About this demonstration.</b> Both profile pages were built by Ignite Yourself from published sources and from Adriana Mejía Cuartas&rsquo;s own material. Every claim carries the source it came from. Nothing has been inferred, estimated or invented, and one item was deliberately left off pending a third party&rsquo;s approval.</p>
+    <p><b>Her approval has not been given.</b> These pages exist to demonstrate the product and have not been reviewed by her. They are not published, not indexed and not to be shown outside Ignite Yourself until she has seen them and agreed.</p>
+    <p>Ignite Yourself &middot; pablo@igniteyourself.co</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var fdesk = document.getElementById('fdesk');
+  var fph   = document.getElementById('fph');
+  var url   = document.getElementById('url');
+  var note  = document.getElementById('tabnote');
+  var tabs  = Array.prototype.slice.call(document.querySelectorAll('.tabs button'));
+
+  var NOTES = {
+    '/profiles/adriana':
+      'What she would put together herself in twenty minutes: a photograph, a headline, the roles, one featured article and three links. Designed properly, and better than most professional pages on the internet. It is still only what she remembered to type.',
+    '/profiles/adriana-authority':
+      'The same page after the research. Her position, her standing, eleven years of trajectory in three layers, six published appearances, the stages she has spoken from — and under each one, in small type, where it came from.'
+  };
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){
+      var src = t.dataset.src;
+      tabs.forEach(function(o){ o.setAttribute('aria-selected', String(o === t)); });
+      fdesk.src = src; fph.src = src;
+      note.textContent = NOTES[src];
+      url.textContent = 'adriana.igniteyourself.co';
+    });
+  });
+
+  // scale the framed previews to whatever width they end up with
+  function fit(){
+    var vp = document.querySelector('#desk .vp');
+    if (vp) document.documentElement.style.setProperty('--s', (vp.clientWidth / 1280).toFixed(4));
+    var pv = document.querySelector('#ph .vp');
+    if (pv) document.documentElement.style.setProperty('--sp', (pv.clientWidth / 390).toFixed(4));
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+})();
+</script>
+
+</body>
+</html>

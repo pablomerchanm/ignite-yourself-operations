@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "The Practice — Dr Robert Freudenthal",
+    "description": "Areas of instruction by subject matter: eating disorder psychiatry, general adult and older adult psychiatry, and medical emergencies in eating disorders."
+  },
+  "logo": "DR ROBERT FREUDENTHAL",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/freudenthal"
+    },
+    {
+      "t": "The Practice",
+      "h": "/freudenthal/practice"
+    },
+    {
+      "t": "The Thinking",
+      "h": "/freudenthal/thinking"
+    },
+    {
+      "t": "The Record",
+      "h": "/freudenthal/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "mission",
+      "id": "practice-lede",
+      "no": "01",
+      "label": "The Practice",
+      "quote": "Two clinical populations. <t>One legal question, approached from opposite ends.</t>",
+      "body": [
+        "Eating disorder psychiatry and dual accreditation in adult and older adult psychiatry put the same question in front of a clinician from two directions: when does a person retain the capacity to refuse treatment, and what should follow when they do not.",
+        "That is the question a Court of Protection case turns on. His 2026 paper on the role of palliative care in the treatment of anorexia nervosa takes on the hardest version of it."
+      ]
+    },
+    {
+      "type": "method",
+      "id": "practice-areas",
+      "no": "02",
+      "label": "Areas of instruction",
+      "title": "By subject matter, <t>not by case.</t>",
+      "intro": "The areas below reflect clinical experience declared on his Expert Witness Institute profile. No case, no clinical detail and no outcome appears anywhere on this page — and instruction volume, court attendance and fees are matters to establish directly, not to advertise.",
+      "rows": [
+        {
+          "t": "Eating disorder psychiatry",
+          "d": "Consultant practice at St Ann's Eating Disorder Service since 2022. Executive Committee of the Faculty of Eating Disorders at the Royal College of Psychiatrists since 2023. Mentor on the College's eating disorder credential since 2025."
+        },
+        {
+          "t": "General adult psychiatry",
+          "d": "Higher training in North Central London, 2017–2022, following core psychiatry training in the same deanery, 2014–2017."
+        },
+        {
+          "t": "Older adult psychiatry",
+          "d": "The second half of a dual higher training, completed 2022. The capacity question arrives here from the opposite direction to eating disorders, and is no easier."
+        },
+        {
+          "t": "Medical emergencies in eating disorders",
+          "d": "MEED training delivered to mental health Trusts, acute Trusts and medical students since 2022. Peer reviewer for the Quality Network for Eating Disorders since 2024."
+        }
+      ],
+      "std": {
+        "label": "What this page does not state",
+        "items": [
+          "Number or volume of instructions",
+          "Balance between claimant and defendant work",
+          "Court attendance",
+          "Fees, terms or basis of instruction"
+        ]
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "no": "03",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Select the nature of the enquiry and give enough context for an initial response. Nothing on this page is transmitted anywhere.",
+      "contact": {
+        "city": "London, United Kingdom"
+      },
+      "fkick": "Where clinical judgement meets the question of capacity — and the question of how far the evidence can be trusted.",
+      "name": "Robert Freudenthal",
+      "cred": "MBBS · MSc",
+      "roles": "Consultant Psychiatrist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Royal College of Psychiatrists — 2016",
+        "Royal College of Physicians — 2014",
+        "Expert Witness Institute, affiliate member — 2025",
+        "Faculty of Eating Disorders, RCPsych — Executive Committee"
+      ],
+      "social": [],
+      "note": "Private concept by Ignite Yourself — every fact, all language and any permission to be reviewed with Dr Freudenthal before publication. Contact details are deliberately absent. The NHS Trust is named as a matter of fact and does not endorse any private or expert practice.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "logo": "/freudenthal/assets/igy-logo.png",
+        "href": "https://www.igniteyourself.co",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept preview created by Ignite Yourself specifically for Dr Robert Freudenthal, and shared with him privately. It was assembled from his own publicly available curriculum vitae and professional profile, used for demonstration purposes only, and every element remains subject to his review and approval. It contains no case, no clinical detail and no claim about his expert-witness volume or history. The page is not indexed, not published and not distributed."
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "cop",
+            "t": "Court of Protection — capacity or best interests",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "civil",
+            "t": "Civil claim — psychiatric injury, causation or prognosis",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Firm or organisation",
+                "r": true
+              },
+              {
+                "n": "Professional title"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Phone",
+                "ty": "tel"
+              },
+              {
+                "n": "Jurisdiction or forum"
+              },
+              {
+                "n": "Parties involved, for conflict-check purposes",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Relevant deadline or timing",
+                "full": true
+              },
+              {
+                "n": "Brief non-privileged summary",
+                "ta": true,
+                "full": true
+              }
+            ],
+            "submit": "Request availability & conflict check",
+            "note": "Please do not submit privileged, confidential or clinical material through this form. Submission does not establish an instruction, an expert-client relationship or any duty of confidence."
+          },
+          {
+            "v": "service",
+            "t": "Trust or local authority — MEED, review or training",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the requirement",
+                "ta": true,
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Timing",
+                "full": true
+              }
+            ],
+            "submit": "Discuss a service matter",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "academic",
+            "t": "Academic collaboration, research or peer review",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Institution",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Nature of the collaboration",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Discuss a collaboration",
+            "note": "Scope, approach and availability are confirmed directly."
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "fields": [
+              {
+                "n": "Full name",
+                "r": true
+              },
+              {
+                "n": "Organisation"
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Subject",
+                "full": true,
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true,
+                "r": true
+              }
+            ],
+            "submit": "Send enquiry",
+            "note": "Scope, approach and availability are confirmed directly."
+          }
+        ],
+        "preview": "This enquiry flow is illustrative. Fields, routing and contact details would be configured with Dr Freudenthal before anything goes live.",
+        "fine": "Private concept — nothing is transmitted from this page, and no contact details are published here. Direct contact details would be added only with his approval."
+      }
+    }
+  ]
+}
