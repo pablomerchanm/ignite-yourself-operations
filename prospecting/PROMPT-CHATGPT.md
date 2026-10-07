@@ -27,6 +27,42 @@ El argumento es siempre el mismo: **su carrera es mucho más grande que su
 presencia en internet, y cualquiera que lo busque antes de contratarlo se queda
 con una versión pobre de quién es.**
 
+## Míralo antes de buscar
+
+Este es el producto terminado, hecho para la presidenta del consejo de una
+plataforma global del café:
+
+**https://igniteyourself.co/profiles/adriana-authority**
+
+Ábrelo. Fíjate en la línea pequeña debajo de cada afirmación: ahí va la fuente.
+Veintitrés elementos, quince de ellos enlazados a una fuente pública. Eso es lo
+que compra el cliente — no un diseño bonito, sino que un desconocido pueda
+comprobar cada línea.
+
+## Tres casos reales, para que calibres el filtro
+
+**ENCAJA — Barbara C. Luna, contabilidad forense, California.** Doctora en
+Matemáticas Aplicadas por Harvard, cuarenta y cinco años de ejercicio, más de
+quinientos testimonios en juicios y arbitrajes, once certificaciones, su apellido
+en el nombre de la firma. Toda su presencia en internet son fichas en directorios
+ajenos. *Por qué encaja: autoridad enorme, articulación cero, y ella es el
+producto.*
+
+**NO ENCAJA — Ash Ramzan, consultoría regulatoria, Reino Unido.** Se presenta
+como "fundador y consultor principal", treinta años en farmacéutica, suena
+perfecto. Al abrir su web resulta que su empresa tiene equipo, casos de estudio y
+oficinas en cuatro países. *Por qué no encaja: tiene una empresa que vende por
+él. El título "fundador y consultor principal" esconde firmas reales la mitad de
+las veces — por eso hay que abrir la web siempre.*
+
+**ENCAJA PERO COMPRA LENTO — Robert L. Ditchey, aviación, California.** Título de
+Ingeniero Aeronáutico de Caltech, Academia Naval, vicepresidente sénior de
+aerolínea, cuarenta años peritando. Su currículum completo es un archivo Word
+colgado en el sitio de un directorio ajeno. Pero entró a la Academia Naval en
+1958: ronda los ochenta y seis. *Por qué importa: el perfil es correcto y el
+disparador no. Compra legado, no siguiente capítulo. Prefiero gente que todavía
+esté construyendo, así que si me traes a alguien así, señálamelo.*
+
 ## A quién busco — las seis condiciones
 
 Las seis, no cinco.
