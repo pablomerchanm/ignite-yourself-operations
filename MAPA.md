@@ -70,6 +70,27 @@ puede volver a usar en otro sitio sin arrastrar nada.
 y el modelo (outreach → intake → elegir plantilla → verter contenido → deploy).
 Cada sitio nuevo es un fork con find-replace, no un rediseño.
 
+### El producto Profiles
+
+Dos niveles de perfil (gratis y de pago) y una pieza de venta que los enfrenta.
+
+| Dónde | Qué es |
+|---|---|
+| `clients/jorge-arce/profiles/` | La página de producto. Qué es un Ignite Profile y qué añade el Authority Profile |
+| `clients/jorge-arce/profiles/profile.css` | **La plantilla del producto.** Una estructura, una tipografía, un juego corto de paletas. Las dos páginas de abajo son el mismo CSS |
+| `clients/jorge-arce/profiles/adriana/` | Demo del **nivel gratis**: lo que el propio perfilado escribe. 8 elementos |
+| `clients/jorge-arce/profiles/adriana-authority/` | Demo del **nivel de pago**: lo que la investigación encuentra. 23 elementos, 15 con fuente pública enlazada |
+| `clients/jorge-arce/profiles/showcase/` | La pieza de venta: las dos en vivo, lado a lado, con la hoja de verificación y la escalera de precios |
+
+Las dos demos son de **Adriana Mejía Cuartas y ella todavía no las ha visto**.
+Están en `noindex` y no se enseñan fuera de Ignite hasta que dé el visto bueno.
+`profiles/index.html` enlaza a ellas desde la sección `#example`; hay un comentario
+en el HTML recordándolo.
+
+Sus fotos y los logos de prensa salen de su propio repositorio
+(`pablomerchanm/Adriana-Mejia-Cuartas`, rama `web-herencia`, carpeta
+`06-web/sitio/web/img/`) y ya estaban publicados en su web.
+
 ### Clientes y prospectos
 
 | Cliente | Dónde | Estado |
