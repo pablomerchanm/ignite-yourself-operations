@@ -29,17 +29,11 @@ con una versión pobre de quién es.**
 
 ## Para qué es este lote
 
-**Todavía no estoy vendiendo. Estoy buscando conversaciones.**
+**Para vender.** Busco cerrar clientes este mes, no hacer entrevistas.
 
-El producto está en desarrollo y tiene mucho por mejorar. Lo que necesito ahora
-es hablar con gente de este perfil para entender qué quieren, qué les falta y
-qué estarían dispuestos a pagar. Las ventas vienen después, de esas mismas
-conversaciones.
-
-Eso no relaja el filtro, lo endurece: **si la persona no podría ser cliente, su
-opinión no me sirve.** Hablar con alguien que nunca pagaría tres mil dólares me
-desvía en vez de orientarme. Las seis condiciones de abajo siguen valiendo
-enteras.
+Eso sube el peso del disparador: alguien en medio de un cambio decide en
+semanas, mientras que alguien cómodo lo aplaza al año que viene. Si dudas entre
+dos perfiles parecidos, tráeme al que algo se le está moviendo.
 
 ## Míralo antes de buscar
 
