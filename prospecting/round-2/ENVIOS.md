@@ -9,7 +9,7 @@
 > **Entran los dos canales.** Lo que sale por ChatGPT cuenta igual que lo que
 > sale desde aquí: si vive solo en la bandeja de Gmail, el seguimiento no existe.
 
-## 7 de octubre de 2026 — doce envíos
+## 7 de octubre de 2026 — trece envíos
 
 | Hora UTC | Prospecto | Correo | Asunto | Canal | Seguimiento | Estado |
 |---|---|---|---|---|---|---|
@@ -25,9 +25,10 @@
 | — | Michael R. Hamrell | hamrell@usc.edu | Dr Hamrell, a thought after reading your background | aquí | 2026-10-15 | enviado |
 | — | Prof Timothy Board | tnboard@gmail.com | Professor Board, a thought after reading your PHIN profile | aquí | 2026-10-15 | enviado |
 | — | George J. Tsimis | gtsimis@gjtmarine.com | George, a thought after reading your SMA profile | aquí | 2026-10-15 | enviado |
+| — | Patricia Saporito | psaporito@patsaporito.com | Ms Saporito, a thought after reading your background | aquí | 2026-10-15 | enviado |
 
-Doce contactos en un día contra el objetivo de cuatro cierres. El 15 de octubre
-hay doce recordatorios que escribir: conviene tenerlos listos antes, no ese día.
+Trece contactos en un día contra el objetivo de cuatro cierres. El 15 de octubre
+hay trece recordatorios que escribir: conviene tenerlos listos antes, no ese día.
 
 ## Pendiente de no enviar
 
@@ -104,3 +105,20 @@ por nombre, a veces alguien que no lo conoce y tiene veinte minutos para decidir
 Ese párrafo es el que convierte una observación en una oportunidad.
 
 Longitud: cinco párrafos cortos, ~160 palabras. La versión de 230 se sentía larga.
+
+### Cómo se trata al prospecto en la primera línea
+
+Saporito publica como «Pat» —es su dominio, el título de su web y su ficha de
+autora en Pearson—, y aun así salió como **«Ms Saporito»**. La decisión es de
+Pablo y la razón es buena: en un primer correo en frío, el diminutivo que alguien
+usa para sí mismo no es necesariamente el que un desconocido puede usar.
+
+Las tres opciones y su coste:
+- **El nombre que la persona usa públicamente** — lo más cercano, y demuestra que
+  se miró su web. Riesgo: suena confianzudo viniendo de un desconocido.
+- **Apellido con tratamiento** — distancia correcta. Es la opción segura cuando no
+  hay título profesional al que recurrir.
+- **El nombre formal que la persona NO usa** —«Patricia» aquí— es siempre la peor:
+  delata que no se abrió su web.
+
+Donde hay título —Dr Hamrell, Prof Board— se usa el título y no hay duda.
