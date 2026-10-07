@@ -82,7 +82,9 @@ Las seis, no cinco.
    práctica propia, aceptó un cargo visible, publicó un libro, ganó un premio.
    También vale la fase de legado: carrera cerrándose y nada que la recoja.
 
-5. **Tiene un correo publicado en una fuente oficial.**
+5. **Existe alguna vía pública para llegarle.** Correo, teléfono, LinkedIn
+   activo, formulario propio o un asistente publicado. El correo es la mejor y
+   por eso se busca primero, pero no es la única.
 
 6. **Ya le importa cómo se le ve.** Hay señales de que invirtió antes en su
    imagen profesional: un retrato hecho por un fotógrafo, una charla, un artículo
@@ -95,22 +97,39 @@ Las seis, no cinco.
 - **Ya tiene una web propia buena y actualizada.** No hay brecha, no hay venta.
   Este filtro es contraintuitivo y es el que más se olvida.
 - Tiene menos de tres elementos públicos verificables sobre su carrera.
-- No hay ningún correo suyo publicado en una fuente oficial.
 - Es tan conocido que su nombre llena una página de resultados. Ese ya tiene
   quien se lo resuelva y no contesta correos de desconocidos.
 
-## En qué orden trabajar cada candidato
+## Dos ejes separados: encaje y acceso
 
-**El correo va primero, antes de investigar nada más.** Es la condición que más
-candidatos mata, y si la dejas para el final habrás hecho todo el trabajo para
-descubrir que no se le puede escribir. Sin correo no hay prospecto: hay una
-biografía interesante que no me sirve.
+Son cosas distintas y no se mezclan. **El encaje dice si vale la pena. El acceso
+dice por dónde se le llega.** Un perfil excelente sin correo no se descarta: se
+clasifica y se aborda por otra vía.
 
-1. ¿Tiene correo publicado en una fuente oficial? Si no lo encuentras en cinco
-   minutos, **descártalo y pasa al siguiente.** No lo apuntes "para después".
-2. ¿Es él el producto, o hay una empresa que vende por él? Abre su web.
-3. ¿Qué tan atrás va su presencia respecto a su carrera?
-4. Recién ahí, reúne los logros y las fuentes.
+Nunca borres a nadie por no encontrarle el correo. Lo que haces es ponerle su
+nivel de acceso y seguir.
+
+### Niveles de acceso
+
+| Nivel | Qué es | Qué se hace |
+|---|---|---|
+| **1 · Correo directo** | Correo personal publicado en fuente oficial | Se escribe hoy |
+| **2 · Correo indirecto** | Correo de firma que lleva su apellido, o genérico de una firma donde él es socio nombrado | Se escribe, con el asunto nombrándolo a él |
+| **3 · Sin correo, con canal** | Teléfono directo publicado, LinkedIn con actividad reciente, formulario en su propio sitio | Otro movimiento, pero llega |
+| **4 · Con portero** | Asistente, secretaria, agente o representante publicado | Solo si el encaje es alto |
+| **5 · Sin vía encontrada** | Nada público | Se guarda con todo lo investigado. **No se borra** |
+
+### La regla que lo gobierna
+
+**El esfuerzo en buscar canal escala con el encaje, no al revés.** A alguien con
+cuarenta años de carrera y cero presencia le buscas el teléfono, el LinkedIn y
+el formulario. A uno mediano, si no aparece el correo en dos minutos, lo dejas
+en nivel 5 y sigues.
+
+Sobre Instagram y redes personales: depende del segmento y hay que decirlo. Un
+contador forense de sesenta años no se aborda por ahí. Un cirujano plástico o un
+médico estético en privado muchas veces lleva su propia cuenta y sí funciona.
+Úsalo solo cuando sea evidente que publica él, no su agencia.
 
 ### Dónde sí está el correo
 
@@ -184,12 +203,23 @@ Una ficha por persona, solo de quienes cumplan las seis condiciones:
 | **Años de carrera** | Con la URL de donde sale el dato |
 | **Tres logros verificables** | Cada uno con su URL |
 | **Su web** | La URL, o "no tiene". Más una frase sobre qué tan atrás va respecto a su carrera |
-| **Correo** | Y la URL exacta donde lo viste publicado |
+| **Nivel de acceso** | Del 1 al 5, según la tabla de arriba |
+| **Vía de contacto** | El correo, teléfono, URL de LinkedIn o lo que sea, **con la URL exacta donde lo viste publicado** |
 | **Disparador** | Qué está cambiando ahora, con fecha y fuente |
 | **Por qué encaja** | Dos frases. La brecha concreta, nada genérico |
 
-Al terminar, dame aparte **la lista de los que descartaste y el motivo de cada
-uno**. Esa lista me sirve tanto como la otra: me enseña dónde no volver a buscar.
+Ordena el resultado en dos bloques:
+
+1. **Listos para escribir** — niveles 1 y 2. Van primero porque son los que se
+   trabajan hoy.
+2. **Buenos, por otra vía** — niveles 3, 4 y 5, **ordenados por encaje, no por
+   acceso.** Si el mejor perfil del lote está en nivel 5, va arriba de ese
+   bloque: le buscaré el canal yo.
+
+Y al final, aparte, **la lista de los que descartaste y el motivo de cada uno.**
+Esa lista me sirve tanto como las otras: me enseña dónde no volver a buscar.
+Descartar es por no cumplir las condiciones o por caer en un descalificador —
+**nunca por no haberle encontrado el correo.**
 
 ## Empieza
 
