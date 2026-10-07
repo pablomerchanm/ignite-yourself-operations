@@ -27,16 +27,34 @@ El argumento es siempre el mismo: **su carrera es mucho más grande que su
 presencia en internet, y cualquiera que lo busque antes de contratarlo se queda
 con una versión pobre de quién es.**
 
+## Para qué es este lote
+
+**Todavía no estoy vendiendo. Estoy buscando conversaciones.**
+
+El producto está en desarrollo y tiene mucho por mejorar. Lo que necesito ahora
+es hablar con gente de este perfil para entender qué quieren, qué les falta y
+qué estarían dispuestos a pagar. Las ventas vienen después, de esas mismas
+conversaciones.
+
+Eso no relaja el filtro, lo endurece: **si la persona no podría ser cliente, su
+opinión no me sirve.** Hablar con alguien que nunca pagaría tres mil dólares me
+desvía en vez de orientarme. Las seis condiciones de abajo siguen valiendo
+enteras.
+
 ## Míralo antes de buscar
 
-Este es el producto terminado, hecho para la presidenta del consejo de una
-plataforma global del café:
+Esta es una demostración de hacia dónde va el producto, construida para la
+presidenta del consejo de una plataforma global del café:
 
 **https://igniteyourself.co/profiles/adriana-authority**
 
-Ábrelo. Fíjate en la línea pequeña debajo de cada afirmación: ahí va la fuente.
-Veintitrés elementos, quince de ellos enlazados a una fuente pública. Eso es lo
-que compra el cliente — no un diseño bonito, sino que un desconocido pueda
+Para que quede claro: **está incompleta y no es el producto final.** Se armó en
+una mañana y le falta bastante. Sirve para que entiendas la idea, no para que
+la tomes como el estándar.
+
+Ábrela y fíjate en una sola cosa: la línea pequeña debajo de cada afirmación.
+Ahí va la fuente. Veintitrés elementos, quince enlazados a una fuente pública.
+Eso es lo que importa del producto — no el diseño, sino que un desconocido pueda
 comprobar cada línea.
 
 ## Tres casos reales, para que calibres el filtro
