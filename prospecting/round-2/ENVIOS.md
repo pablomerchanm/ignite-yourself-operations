@@ -9,7 +9,7 @@
 > **Entran los dos canales.** Lo que sale por ChatGPT cuenta igual que lo que
 > sale desde aquí: si vive solo en la bandeja de Gmail, el seguimiento no existe.
 
-## 7 de octubre de 2026 — once envíos
+## 7 de octubre de 2026 — doce envíos
 
 | Hora UTC | Prospecto | Correo | Asunto | Canal | Seguimiento | Estado |
 |---|---|---|---|---|---|---|
@@ -24,9 +24,10 @@
 | 16:48 | Kelley Slaught | Kelley@californiawealthadvisors.com | Kelley, a thought after finding Bull Market News | ChatGPT | 2026-10-15 | enviado |
 | — | Michael R. Hamrell | hamrell@usc.edu | Dr Hamrell, a thought after reading your background | aquí | 2026-10-15 | enviado |
 | — | Prof Timothy Board | tnboard@gmail.com | Professor Board, a thought after reading your PHIN profile | aquí | 2026-10-15 | enviado |
+| — | George J. Tsimis | gtsimis@gjtmarine.com | George, a thought after reading your SMA profile | aquí | 2026-10-15 | enviado |
 
-Once contactos en un día contra el objetivo de cuatro cierres. El 15 de octubre
-hay once recordatorios que escribir: conviene tenerlos listos antes, no ese día.
+Doce contactos en un día contra el objetivo de cuatro cierres. El 15 de octubre
+hay doce recordatorios que escribir: conviene tenerlos listos antes, no ese día.
 
 ## Pendiente de no enviar
 
@@ -85,3 +86,21 @@ Para Board el hecho fue el único verificado a mano: el PHIN, organismo
 estatutario británico, publica `timboard.co.uk` en su ficha oficial, y el dominio
 resuelve sin devolver nada. El registro del Estado manda a los pacientes a un
 sitio muerto.
+
+### El hecho duro se nombra como activo, no como diagnóstico
+
+La primera versión del correo de Tsimis decía: «you own the domain, it's pointed
+at Google's site hosting, and it returns nothing — so the site was started and
+never published». Es verdad y está verificado, y aun así no sirve: pone al
+prospecto a defenderse antes de llegar a la oferta. Nadie compra desde ahí.
+
+La versión que salió usa el mismo hecho al revés: «you already own gjtmarine.com.
+The address is there, in your name, waiting for the record to sit on it».
+
+**La regla:** el hecho verificado se busca con el mismo rigor, pero se escribe
+como algo que ya tiene a favor, no como algo que hizo mal. Y antes del hecho va
+un párrafo de por qué le conviene a él —en el caso de un árbitro, que lo nombran
+por nombre, a veces alguien que no lo conoce y tiene veinte minutos para decidir.
+Ese párrafo es el que convierte una observación en una oportunidad.
+
+Longitud: cinco párrafos cortos, ~160 palabras. La versión de 230 se sentía larga.

@@ -66,13 +66,23 @@ enlaza a `timboard.co.uk`. *Verificado: el dominio resuelve y no responde nada.*
 El registro oficial manda a los pacientes a un sitio muerto.
 https://www.phin.org.uk/profiles/consultants/timothy-board-143948
 
-### George J. Tsimis, JD · `gtsimis@gjtmarine.com`
-**Vicepresidente de la Society of Maritime Arbitrators desde el 14 de mayo de
-2025.** Coeditor de *The Arbitrator*. Preside el comité de eólica marina, sector
-nuevo sin árbitros de referencia. Antes General Counsel y VP sénior del American
-Club. 34 años.
-**La brecha:** *verificado — `gjtmarine.com` no responde.* Es dueño del dominio y
-lo usa solo para recibir correo. https://smany.org/tsimis-george-j/
+### George J. Tsimis, JD · `gtsimis@gjtmarine.com` — **enviado 7 oct 2026**
+Lo que la ficha de la SMA sí dice, releída el 7 de octubre:
+Director de **GJT Marine Consultants LLC** (sus iniciales en el nombre de la
+firma). SVP y Global Claims Director de Shipowners Claims Bureau. **General
+Counsel de SCB 2007-2018.** FD&D Manager del American Club 2002-2008. Managing
+Director de SCB Hellas 2005-2008. Práctica de derecho marítimo 1992-2002 — 34
+años. https://smany.org/tsimis-george-j/
+
+**No verificado, no se usó:** la vicepresidencia de la SMA del 14 de mayo de 2025,
+la coedición de *The Arbitrator* y la presidencia del comité de eólica marina
+**no aparecen en esa ficha.** Venían de una ronda anterior sin URL que las
+respalde. Si se retoman, hay que encontrarles fuente primero.
+
+**La brecha, verificada a mano el 7 de octubre:** `gjtmarine.com` resuelve a las
+IPs de Google y el `www` apunta a `ghs.googlehosted.com` — montó un Google Site
+y nunca lo publicó. HTTP devuelve cero bytes. No es un dominio parqueado: es un
+sitio empezado y abandonado, y el dominio ya es suyo.
 
 ### Kim J. Landsman, JD · `kimj@landsman.law`
 46 años. Socio de **Morrison & Foerster** y de **Patterson Belknap**. SVP de **Two
