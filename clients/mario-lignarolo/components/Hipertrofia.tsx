@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { articles } from "@/data/articles";
 import { channels, hipertrofia } from "@/data/content";
 import { Arrow, Eyebrow, ImageSlot, Lines, SampleTag, SmartLink } from "./ui";
@@ -85,6 +86,28 @@ export default function Hipertrofia() {
             className="aspect-[4/5] w-full max-w-[22rem] lg:max-w-none"
           />
         </div>
+      </div>
+
+      {/* Los tres planos: el método detrás del nombre. */}
+      <div className="mt-[clamp(3.5rem,7vw,6rem)] grid grid-cols-1 gap-y-8 border-t border-charcoal pt-[clamp(2rem,4vw,3rem)] lg:grid-cols-12 lg:gap-x-6">
+        <div className="lg:col-span-4">
+          <p data-reveal="up" className="caps text-charcoal/60">{hipertrofia.planesLabel}</p>
+          <p data-reveal="up" className="display mt-4 text-[clamp(2rem,1.4rem+2vw,3.2rem)] leading-[1.02]">
+            {hipertrofia.planesTitle}
+          </p>
+          <p data-reveal="up" className="mt-5 max-w-[26rem] text-[1.0625rem] leading-relaxed text-charcoal/75">
+            {hipertrofia.planesIntro}
+          </p>
+        </div>
+        <ol className="grid grid-cols-1 gap-y-6 sm:grid-cols-3 sm:gap-x-6 lg:col-span-8">
+          {hipertrofia.planes.map((pl, i) => (
+            <li key={pl.name} data-reveal="up" style={{ "--delay": `${i * 0.08}s` } as CSSProperties} className="border-t border-charcoal/20 pt-5">
+              <span className="caps text-charcoal/50">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="display mt-3 text-[clamp(2rem,1.5rem+1.6vw,3rem)] leading-none">{pl.name}</h3>
+              <p className="mt-4 text-[0.975rem] leading-relaxed text-charcoal/70">{pl.text}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

@@ -204,6 +204,15 @@ export const hipertrofia = {
     "Emprendimiento",
     "Ejecución",
   ],
+  // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] su método: hipertrofiar el ser en tres planos (parafraseado).
+  planesLabel: "Los tres planos",
+  planesTitle: "El ser también es un músculo.",
+  planesIntro: "Lograr algo no basta: hay que convertirse en alguien capaz de sostenerlo. Por eso el trabajo pasa por tres planos a la vez.",
+  planes: [
+    { name: "Espiritual", text: "Meditación, observación, reflexión y gratitud." },
+    { name: "Mental", text: "Leer, escribir, crear ideas nuevas y desarrollar las habilidades que te faltan." },
+    { name: "Físico", text: "Lo que presentas al mundo: tus acciones, cómo hablas, cómo vistes. Ahí se genera la evidencia." },
+  ],
   latestLabel: "Último escrito",
   subscribe: "Suscribirme",
   image: { src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio, de espaldas." },
@@ -217,7 +226,7 @@ export const hipertrofia = {
 export const pointOfView = {
   eyebrow: "Punto de vista",
   title: "Ideas a las que vuelvo.",
-  sourceNote: "Palabras de Mario, tomadas de sus publicaciones.",
+  sourceNote: "Palabras de Mario, de sus publicaciones y de una conversación con el estudio.",
   ideas: [
     {
       word: "Sacudidas",
@@ -232,15 +241,20 @@ export const pointOfView = {
       word: "Poder",
       quote: "Siempre que le permites al exterior determinar tu estado interno, pierdes poder.",
     },
+    // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] [MARIO] textual.
     {
-      word: "Interior",
-      quote:
-        "Entre más rápido aceptes que no puedes controlar el exterior, más rápido entiendes que tu interior sí puedes controlarlo.",
+      word: "Información",
+      quote: "Cualquier cosa que uno asuma como un fracaso, al final termina siendo nada más información.",
     },
     {
       word: "Autenticidad",
       quote:
         "Por mucho tiempo quise pertenecer. Hasta que por fin me di cuenta: entre más auténtico soy, más a gusto me siento conmigo mismo.",
+    },
+    // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] [MARIO] textual, con recorte mínimo.
+    {
+      word: "Intereses",
+      quote: "Eso es lo que hace que tú seas único, irrepetible: la intersección de tus intereses.",
     },
     {
       word: "Creación",
@@ -267,6 +281,11 @@ export const psico = {
     "Práctica diaria",
   ],
   cta: "Conocer Psico-Cibernética",
+  // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] de dónde viene el concepto (Maxwell Maltz). [MARIO] la última frase es textual.
+  originLabel: "De dónde viene",
+  origin:
+    "El término es de Maxwell Maltz: la cibernética estudia cómo un sistema se retroalimenta para llegar a un objetivo. Aplicado a la mente, la imaginación diseña el autoconcepto y cada intento corrige el rumbo.",
+  originQuote: "Cualquier cosa que uno asuma como un fracaso, al final termina siendo nada más información.",
   // [CONFIRMADO] su video de presentación en Skool (2:26), alojado aquí.
   video: { src: "/mario/psico.mp4", poster: "/mario/psico-poster.jpg", duration: "2:26", label: "Mario presenta Psico-Cibernética" },
   image: { src: "/mario/psico.jpg", alt: "Mario, retrato en doble exposición sobre azul." },
@@ -289,6 +308,12 @@ export const lignarolo = {
   facts: ["Cuero italiano", "Hecho a mano en Bogotá", "Venta directa", "Producción limitada"],
   cta: "Visitar lignarolo.com",
   href: "https://www.lignarolo.com",
+  // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] [MARIO] textual (parte en español), con recortes mínimos.
+  thesis: {
+    title: "Emprender es aprender.",
+    text: "Te lleva a convertirte en una versión tuya que necesita habilidades eternas: marketing, ventas, marca personal, liderazgo. Y cuando vendes algo que a ti te cambió la vida, vender, al final, termina siendo amor.",
+    close: "Perseguir las cosas que te apasionan, resolver tus problemas, compartir las soluciones.",
+  },
   image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo. Blanco y negro." },
 };
 
@@ -299,18 +324,20 @@ export const speaking = {
   eyebrow: "Charlas · Podcasts · Entrevistas",
   title: ["Lleva esta conversación", "a tu escenario."],
   titleItalicLine: 1,
+  // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] su tema central: transformación de identidad, «no desde el misticismo».
   intro:
-    "Mario conversa sobre identidad, cuerpo, respiración y emprendimiento desde su propia historia: lo que cambió por dentro antes de que cambiara lo de afuera.",
+    "Su tema es la transformación de identidad, no desde el misticismo sino desde la práctica: cuerpo, mente y espíritu trabajando a la vez.",
   topicsLabel: "Temas de conversación",
   topics: [
-    { title: "El cuerpo como primer laboratorio", text: "Disciplina, entrenamiento y lo que el cuerpo enseña sobre la identidad." },
-    { title: "Autoconcepto y reprogramación del subconsciente", text: "Por qué volvemos siempre al mismo nivel, y qué hace falta para reescribirlo." },
-    { title: "Breathwork en la práctica", text: "Respiración consciente como herramienta diaria, no como tendencia." },
-    { title: "Emprender desde la esencia", text: "Construir sin pedir permiso: de Lignarolo a Psico-Cibernética." },
+    { title: "Transformación de identidad", text: "Cómo dejar morir una versión de ti y sostener la siguiente, en tres planos." },
+    { title: "Psico-Cibernética", text: "La imaginación como sistema de dirección: el fracaso es solo información." },
+    { title: "Hipertrofia del Ser", text: "El ser también es un músculo. Lograr no basta: hay que poder sostenerlo." },
+    { title: "Emprender es aprender", text: "Vender desde la coherencia: ofrecer lo que a uno le cambió la vida." },
   ],
   formats: ["Conferencia", "Podcast", "Taller de respiración", "Entrevista"],
   inviteLabel: "Para invitarlo",
-  inviteText: "Cuéntale de tu evento, podcast o medio y te responde por mensaje directo.",
+  // [ENTREVISTA] elige con cuidado sus colaboraciones: todavía no ha aceptado ninguna.
+  inviteText: "Mario elige con cuidado sus conversaciones. Cuéntale de tu evento, podcast o medio por mensaje directo.",
   inviteCta: "Escribir por Instagram",
   inviteHref: "https://ig.me/m/mariolignarolo",
   // [CONFIRMAR] correo público para prensa: mientras no exista, se muestra pendiente.
