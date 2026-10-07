@@ -89,17 +89,31 @@ sitio empezado y abandonado, y el dominio ya es suyo.
 Sigma**. Fellow del Chartered Institute of Arbitrators y del College of Commercial
 Arbitrators. Rosters de AAA e ICDR. Distinguished Neutral del CPR. **Mediador
 designado por los tribunales federales del Sur y el Este de Nueva York.**
-**La brecha:** su web es un Google Sites con una sección «Publications/Speaking»
-que no lista publicaciones. **Disparador: Fellow de la CCA, 28 de octubre de 2025.**
-Correo en el CV que él mismo depositó, fechado 13 nov 2025:
-https://www.arbitrationclub.org/members/kim-j-landsman/
+**DESCALIFICADO — verificado el 7 de octubre de 2026.** La ficha anterior decía que
+su sección «Publications/Speaking» no listaba publicaciones. **Lista catorce**, con
+cita completa y fecha: Fordham IP Media & Ent. L.J. (2014), NYLJ, Law360, capítulos
+de libro, informes del comité del City Bar de Nueva York (2014 y 2023). Su página
+de carrera trae fechas exactas: Yale JD 1979, Oxford MA 1976, Vassar AB 1974,
+clerkship en el Tercer Circuito 1979-80, Morrison & Foerster 1987-feb 1995,
+Patterson Belknap feb 1995-nov 2011, Golenbock nov 2011-jun 2016, Two Sigma SVP
+jul 2016-jun 2019.
+
+**No hay brecha: ya hizo el trabajo.** Es un Google Sites de aspecto pobre, pero el
+contenido está completo y fechado. Venderle sería venderle un rediseño, que es otra
+venta —más débil y más barata— y no la nuestra.
+La fecha del Fellowship de la CCA (28 oct 2025) **tampoco está** en la página citada.
+https://www.landsman.law/publicationsspeaking · https://www.landsman.law/educationcareer
 
 ### Jay Alexander, JD · `Jay.Alexander@AlexanderArbitration.com`
 **Fundó y dirigió la práctica de arbitraje internacional de Baker Botts** desde
 Londres, 2010-2021. **Letrado de Ruth Bader Ginsburg.** Juez del tribunal de
 apelación de la FIA. Stanford JD, Dartmouth summa cum laude. 40 años.
-**La brecha:** cuatro pestañas sin una sola cita; las comillas de Chambers están
-pegadas como texto suelto sin enlace. **Disparador: Fellow de la CCA, 28 oct 2025.**
+**La brecha — verificado el 7 de octubre de 2026, parcialmente cierto.** Son tres
+pestañas, no cuatro, y sí tiene una de «Publications & Presentations». Lo que se
+confirma y sirve: **las comillas de Chambers están pegadas como texto suelto, sin
+fuente ni fecha ni enlace** —«a super arbitrator», «an impressive intellect»— que es
+exactamente nuestro argumento. Fechas presentes: Dartmouth 1983, Stanford 1986,
+Londres 2010-2021. El Fellowship de la CCA de oct 2025 **sigue sin fuente.**
 https://alexanderarbitration.com/
 
 ### LeRoy Lambert, JD · `leroy@lambertadr.com`
@@ -131,16 +145,29 @@ enero de 2025.** https://patientsafetymasters.georgetown.edu/faculty/
 Arbitraje inversor-Estado, donde están los honorarios más altos. Adjunct professor
 en George Washington y American University. Vicepresidenta de la American Society
 of International Law 2019-2021. Listada en ICSID, ICC y PCA.
-**La brecha:** Wix de cuatro páginas con copyright 2023 y ninguna fuente citada.
+**DESCALIFICADA — verificado el 7 de octubre de 2026.** La ficha anterior decía «Wix
+de cuatro páginas con copyright 2023 y ninguna fuente citada». Su CV es una página de
+660 KB con años de 2010 a 2026, Sidley desglosado —colíder de la práctica global
+2018-2023, socia 2005-2023, asociada 2002-2004— y una página aparte de Case List.
+Está documentada. No hay brecha que vender.
 https://www.mcarlsonarbitration.com/cv
 
 ### Patricia Saporito, CPCU · `psaporito@patsaporito.com`
 30+ años. Autora de *Applied Insurance Analytics* (Pearson/FT Press). Dirigió el
 programa de estrategia analítica del **centro global de excelencia de SAP** y antes
 el grupo de seguros y salud de **Teradata**. **Columnista de Best's Review ~10 años.**
-**La brecha:** su web tiene © 2021, contenido detenido en febrero de 2020, y
-erratas de plantilla visibles en portada («real-word», repetido cinco veces).
-https://patsaporito.com
+**La brecha — verificado el 7 de octubre de 2026, matizada.** Confirmado: el único
+año de la portada es 2021, y la errata «Our real-word experience includes:» está ahí
+sin corregir. **Pero su página «Thought Leadership» sí lista su trabajo** —el libro,
+tres eGuides de SAP de 2017, presentaciones, white papers— con años de 2014 a 2021.
+La brecha real es más estrecha y más concreta: **todo se detiene en 2021**, está
+escrita en voz de empresa («our thought leadership») para una consultora de una
+persona, y su registro personal —CPCU, FIDM, Senior Director del centro global de
+excelencia de SAP, presidenta pasada de la Society of Insurance Research y de APIW,
+columnista de Best's Review— no está armado en ninguna parte como carrera.
+**Puntúa ~75. Pasa, pero sin disparador.**
+Credenciales: https://www.informit.com/authors/bio/6D3A4AA0-88F5-4F0D-9EBB-41D2DC2D7CF0
+Correo verificado publicado en su propia web: https://patsaporito.com
 
 ### Stephen A. White, PhD · `swhite1@stevens.edu`
 **Autor principal y editor de las especificaciones BPMN 1.0 y 2.0** — el estándar
@@ -399,3 +426,32 @@ publica ni un nombre.**
 consultora unipersonal —por razón social con su apellido, que es lo que funcionó
 en todo este lote— y después comprobar si da clase en alguna parte. Hamrell
 apareció así, no por el directorio.
+
+---
+
+## Auditoría del 7 de octubre de 2026 — leer antes de usar este archivo
+
+Se verificaron a mano cinco fichas abriendo las páginas. Resultado:
+
+| Ficha | Veredicto |
+|---|---|
+| Board | Exacta. Enviado |
+| Tsimis | Tres cargos sin fuente. Corregida. Enviado con lo verificado |
+| Landsman | **Mal.** Su web está completa y fechada → descalificado |
+| Carlson | **Mal.** CV completo con fechas → descalificada |
+| Alexander | Parcial. La brecha real son las citas de Chambers sin fuente |
+| Saporito | Confirmada con matiz: el contenido existe pero para en 2021 |
+
+**Tres de seis sobrestimaban la brecha.** El patrón es claro: las rondas anteriores
+afirmaron que una web estaba vacía **sin abrirla**, probablemente deduciéndolo de que
+fuera un Wix o un Google Sites. El soporte no dice nada del contenido: el Google Sites
+de Landsman tiene catorce publicaciones citadas y el Wix de Carlson tiene un CV de
+660 KB.
+
+**Regla nueva, no negociable:** antes de pasar un perfil a aprobación se abre su web
+y se leen sus subpáginas. La brecha es el producto; si se afirma sin mirar, se quema
+una aprobación y, peor, se manda un correo que le dice a alguien que no tiene algo
+que sí tiene. Ese correo no se recupera.
+
+Los 15 perfiles restantes de este archivo **no están verificados** y no deben pasarse
+a aprobación tal como están.
