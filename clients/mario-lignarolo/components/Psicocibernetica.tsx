@@ -70,6 +70,13 @@ export default function Psicocibernetica() {
           <p data-reveal="up" className="display text-[clamp(2rem,1.4rem+2vw,3.3rem)] leading-[1.02]">
             {psico.promise}
           </p>
+          <div data-reveal="up" className="mt-8 max-w-[30rem] border-l border-bone/20 pl-5">
+            <p className="caps text-fog">{psico.originLabel}</p>
+            <p className="mt-3 text-[0.975rem] leading-relaxed text-bone/75">{psico.origin}</p>
+            <p className="display mt-4 text-[clamp(1.3rem,1.1rem+0.6vw,1.6rem)] leading-[1.12] italic text-bone/90">
+              «{psico.originQuote}»
+            </p>
+          </div>
           <div data-reveal="up" className="mt-10 flex flex-col items-start gap-5">
             <SmartLink
               href={psicoUrl}

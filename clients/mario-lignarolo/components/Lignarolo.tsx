@@ -69,6 +69,20 @@ export default function Lignarolo() {
           </div>
         </div>
       </div>
+
+      {/* Su tesis sobre emprender, en sus palabras. */}
+      <div className="mt-[clamp(3.5rem,7vw,6rem)] grid grid-cols-1 gap-y-6 border-t border-charcoal/20 pt-[clamp(2rem,4vw,3rem)] lg:grid-cols-12 lg:gap-x-6">
+        <Lines
+          lines={[lignarolo.thesis.title]}
+          className="display text-[clamp(2.6rem,1.2rem+4.6vw,6rem)] leading-[0.92] lg:col-span-6"
+        />
+        <div className="lg:col-span-5 lg:col-start-8">
+          <p data-reveal="up" className="text-[1.0625rem] leading-relaxed text-charcoal/80">{lignarolo.thesis.text}</p>
+          <p data-reveal="up" className="display mt-6 text-[clamp(1.4rem,1.1rem+0.9vw,1.9rem)] leading-[1.1] italic">
+            {lignarolo.thesis.close}
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
