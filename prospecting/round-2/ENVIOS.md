@@ -9,7 +9,7 @@
 > **Entran los dos canales.** Lo que sale por ChatGPT cuenta igual que lo que
 > sale desde aquí: si vive solo en la bandeja de Gmail, el seguimiento no existe.
 
-## 7 de octubre de 2026 — trece envíos
+## 7 de octubre de 2026 — catorce envíos
 
 | Hora UTC | Prospecto | Correo | Asunto | Canal | Seguimiento | Estado |
 |---|---|---|---|---|---|---|
@@ -26,9 +26,10 @@
 | — | Prof Timothy Board | tnboard@gmail.com | Professor Board, a thought after reading your PHIN profile | aquí | 2026-10-15 | enviado |
 | — | George J. Tsimis | gtsimis@gjtmarine.com | George, a thought after reading your SMA profile | aquí | 2026-10-15 | enviado |
 | — | Patricia Saporito | psaporito@patsaporito.com | Ms Saporito, a thought after reading your background | aquí | 2026-10-15 | enviado |
+| — | Kalah Auchincloss | kauchincloss@auchinclosslegal.com | Ms Auchincloss, a thought after reading your background | aquí | 2026-10-15 | enviado |
 
-Trece contactos en un día contra el objetivo de cuatro cierres. El 15 de octubre
-hay trece recordatorios que escribir: conviene tenerlos listos antes, no ese día.
+Catorce contactos en un día contra el objetivo de cuatro cierres. El 15 de octubre
+hay catorce recordatorios que escribir: conviene tenerlos listos antes, no ese día.
 
 ## Pendiente de no enviar
 
@@ -122,3 +123,37 @@ Las tres opciones y su coste:
   delata que no se abrió su web.
 
 Donde hay título —Dr Hamrell, Prof Board— se usa el título y no hay duda.
+
+### El hecho duro puede ser una discreción, no un defecto
+
+El correo de Auchincloss es el mejor del día y la razón es una sola línea:
+**«You're the only source being discreet about yours.»**
+
+Su web le pone nombre a todos sus cargos y se lo quita a todos sus empleadores
+—«Principal at major consulting firm», «FDA Associate at well respected law
+firm»— mientras la FDLI la lista con nombre y apellido como Principal y Deputy
+General Counsel de ELIQUENT, y la página de Ro le acredita dos Comisionados de
+la FDA donde su propia web nombra uno.
+
+El hecho es el mismo que en Tsimis o Saporito, pero el encuadre sube un nivel:
+no es «te falta algo», es **«eres más modesta que tus propias fuentes»**. Nadie
+se ofende con eso, y aun así queda nombrada la brecha exacta.
+
+Lo segundo que hace ese correo: **prueba que se miró de verdad.** Su web dice un
+Comisionado; el correo dice dos. Eso no se improvisa, y es lo único que separa
+este correo de uno automatizado.
+
+### El correo se escribe a prueba de la duda que quede
+
+Las bases de enriquecimiento dicen que Auchincloss dejó ELIQUENT en agosto de
+2025 y cofundó Canal Row Advisors. Sin fuente primaria, y `canalrowadvisors.com`
+está **aparcado en GoDaddy** —md5 `e89f75f918dbdcee28604d4e09dd71d7`, la firma
+determinista. Podía ser que su despacho propio ya no fuera su foco.
+
+La solución no fue esperar: fue escribir el correo **sin apoyarse en ese dato**.
+En ningún momento le habla de «tu nuevo despacho». Se ancla en su registro y en
+que su propia página es la única que no nombra a sus empleadores — verdad en
+cualquiera de los dos escenarios.
+
+**Regla:** cuando queda una duda que no se puede cerrar, el correo se construye
+sobre lo que es verdad en todos los escenarios posibles, no sobre el más probable.
