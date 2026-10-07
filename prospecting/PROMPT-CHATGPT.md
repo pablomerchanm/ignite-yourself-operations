@@ -99,6 +99,37 @@ Las seis, no cinco.
 - Es tan conocido que su nombre llena una página de resultados. Ese ya tiene
   quien se lo resuelva y no contesta correos de desconocidos.
 
+## En qué orden trabajar cada candidato
+
+**El correo va primero, antes de investigar nada más.** Es la condición que más
+candidatos mata, y si la dejas para el final habrás hecho todo el trabajo para
+descubrir que no se le puede escribir. Sin correo no hay prospecto: hay una
+biografía interesante que no me sirve.
+
+1. ¿Tiene correo publicado en una fuente oficial? Si no lo encuentras en cinco
+   minutos, **descártalo y pasa al siguiente.** No lo apuntes "para después".
+2. ¿Es él el producto, o hay una empresa que vende por él? Abre su web.
+3. ¿Qué tan atrás va su presencia respecto a su carrera?
+4. Recién ahí, reúne los logros y las fuentes.
+
+### Dónde sí está el correo
+
+- **El sitio de su propia firma.** Es el lugar número uno. Si el despacho lleva
+  su apellido, casi siempre está ahí.
+- **Registros oficiales de colegios profesionales.** Colegios de abogados,
+  médicos, contadores: muchos publican el correo del colegiado.
+- **Páginas de facultad universitaria.** Casi siempre lo publican.
+- **Su propio currículum en PDF o Word**, cuando lo tiene colgado en algún lado.
+
+### Dónde NO está, aunque lo parezca
+
+- **Los directorios de peritos y consultores lo tapan a propósito** — Expert
+  Institute, SEAK, LexVisio y parecidos cobran por el contacto. Sirven para
+  encontrar nombres y calificar; el correo lo buscas después en el sitio de la
+  firma.
+- **Las bases de enriquecimiento** tipo ZoomInfo o RocketReach dan correos
+  inferidos que rebotan. No las uses.
+
 ## Dónde buscar — ocho patrones que funcionan
 
 1. **La firma se llama como la persona.** "Smith & Associates", "Julie M. Plat,
