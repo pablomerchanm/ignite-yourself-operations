@@ -128,7 +128,7 @@
       "pin": 2.2,
       "paras": [
         "The specialty: costing life care plans and reducing future care to present value.",
-        "Ph.D. in Economics, Manchester. Master of Public Health in health economics, Tulane. <t>Professor of economics for more than two decades.</t>",
+        "Ph.D. in Economics, Manchester. Master of Public Health in health economics, Tulane. <t>Professor of economics for more than two decades, teaching health care and medical economics.</t>",
         "Published on the cost of future care, life expectancy and hospital inflation. <t>Still testifying in 2026.</t>"
       ],
       "more": {
@@ -721,13 +721,8 @@
         },
         {
           "a": 1987,
-          "b": 1988,
-          "t": "Florida Tech"
-        },
-        {
-          "a": 1988,
           "b": 1998,
-          "t": "Palm Beach Atlantic"
+          "t": "Florida Tech and Palm Beach Atlantic"
         },
         {
           "a": 1985,
@@ -769,31 +764,31 @@
       "tint": true,
       "label": "Academic appointments",
       "title": "More than two decades <t>of teaching.</t>",
-      "lede": "Palm Beach Atlantic, Florida Tech, Southwestern Louisiana, LSU Medical Center, New Orleans, Manchester and London.",
+      "lede": "Health care economics, medical economics and managerial economics, from Manchester and London to Louisiana and Florida.",
       "groups": [
         {
-          "label": "Florida",
+          "label": "Florida · 1987–1998",
           "wide": true,
           "names": [
-            "Professor of Economics, Rinker School of Business, Palm Beach Atlantic College, West Palm Beach — 1988–1998",
-            "Professor of Economics, Graduate Business School, Florida Institute of Technology, Treasure Coast Graduate Center, Stuart — 1987–1988"
+            "Professor of Economics, Graduate Business School, Florida Institute of Technology, Treasure Coast Graduate Center, Stuart. Graduate courses in health care economics, managerial economics and advanced macro- and microeconomics",
+            "Professor of Economics, Rinker School of Business, Palm Beach Atlantic College, West Palm Beach. Microeconomics, macroeconomics, the free enterprise system and international economics"
           ]
         },
         {
-          "label": "Louisiana",
+          "label": "Louisiana · 1977–1987",
           "wide": true,
           "names": [
-            "Associate Professor, College of Business Administration, University of Southwestern Louisiana, Lafayette — 1980–1987",
-            "Associate Professor, Department of Medicine, LSU Medical Center, New Orleans — 1978–1980",
-            "Assistant Professor, Department of Economics and Management, University of New Orleans — 1977–1978"
+            "Associate Professor, College of Business Administration, University of Southwestern Louisiana, Lafayette — 1980–1987. Undergraduate and graduate courses in economics, finance and management",
+            "Associate Professor, Department of Medicine, LSU Medical Center, New Orleans — 1978–1980. Lectures in medical economics at the medical school, and computer-assisted data analysis for drug research",
+            "Assistant Professor, Department of Economics and Management, University of New Orleans — 1977–1978. Courses in economics and health care"
           ]
         },
         {
-          "label": "England",
+          "label": "England · 1974–1977",
           "wide": true,
           "names": [
-            "Research Associate and Lecturer in Economics, University of Manchester — 1975–1977",
-            "Research Fellow, Centre for Studies in Social Policy, London — 1974–1975"
+            "Research Associate, University of Manchester — 1975–1977. Lecturer in economics and course coordinator of the administrative development course for hospital administrators",
+            "Research Fellow, Centre for Studies in Social Policy, London — 1974–1975. Case study of the Wigan Community Health Council, published in 1976"
           ]
         }
       ]

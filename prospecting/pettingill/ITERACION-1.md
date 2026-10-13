@@ -273,3 +273,19 @@ El botón dice **"Settle the retainer"** (no "Pay now") y abre la página de pag
 Los documentos de divulgación pasan a su propio bloque, "The expert disclosure, in one place": CV, publicaciones y listado de testimonios previos.
 
 Pendiente con Biff: confirmar que las tarifas publicadas siguen vigentes y que quiere mostrarlas en el sitio nuevo.
+
+---
+
+# Iteración 16 — la página Founder y el CV de 2020
+
+Fuentes revisadas: la página Founder de pettingillanalytics.com (pestañas Experience, Organizations, Education, Publications, Cases) y el CV que enlaza, de junio de 2020 y 5 páginas. Lo comparé con el CV vigente del 7 de julio de 2025, de 7 páginas.
+
+**Lo que aporta:**
+- **Las materias que enseñó**, presentes en los dos CV y ausentes del sitio: economía de la salud de posgrado y economía gerencial en Florida Tech, clases de economía médica en la escuela de medicina de LSU, cursos de economía y salud en New Orleans, y coordinación del curso para administradores de hospital en Manchester. Es el mejor argumento ante un Daubert. **Incorporado** en el CV del sitio y en "In brief".
+- **Corrección de fechas.** El CV de 2025 pone Florida Tech en 1987–1988 y Palm Beach Atlantic en 1988–1998, pero el bloque de Florida Tech dice "(Retired)". El CV de 2020 dice Florida Tech 1988–1998 y Palm Beach Atlantic 1987–1988. La página Founder dice Florida Tech 1988–1996. Todo indica que el CV de 2025 intercambió las fechas. **Solución en el sitio:** los dos cargos se agrupan como "Florida · 1987–1998", sin años individuales, y la línea de tiempo muestra "Florida Tech and Palm Beach Atlantic, 1987–1998". **Hay que confirmarlo con Biff.**
+
+**Lo que no aporta:**
+- **Las listas de la pestaña Cases** (Current Cases, Trial List, Deposition List) son versiones de septiembre de 2024 del mismo listado que contamos. El nuestro es de febrero de 2026 y más completo.
+- **Las publicaciones de la página Founder** terminan en 2004. El CV de 2025 es más completo.
+- **Las organizaciones antiguas** (DECUS, Southern Management Association, Junior Chamber, Chamber of Commerce, Emergency Medical Service) no ayudan a un abogado a decidir.
+- **El CV de 2020** no trae nada que el de 2025 no tenga, salvo las fechas de Florida y que firma como "Consulting Economists" en plural.
