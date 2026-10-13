@@ -342,51 +342,53 @@
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
         "fine": "Private concept: nothing is sent from this page."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
-      "name": "Bernard Pettingill",
-      "cred": "Ph.D. · MPH · MBA · BBA",
-      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "name": "Bernard F. Pettingill, <t>Jr.</t>",
       "fcta": {
         "t": "Discuss a matter",
         "h": "#inquiry"
       },
-      "affiliations": [
-        "Referee, Journal of Forensic Economics",
-        "National Association of Forensic Economists — since 1989",
-        "American Economic Association — since 1983",
-        "Founder & President, Pettingill Analytics"
-      ],
       "social": [
         {
-          "t": "bpettingill.com",
-          "h": "https://bpettingill.com/"
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/bernard-pettingill-jr-ph-d-00242730/",
+          "i": "linkedin"
         },
         {
-          "t": "Pettingill Analytics",
-          "h": "https://www.pettingillanalytics.com/"
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/",
+          "i": "globe"
         }
       ],
-      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session.",
-      "fine": "Private preview · Concept · Not indexed",
       "igy": {
-        "label": "A commercial concept by",
+        "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
+        "note": "A private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Dr. Pettingill, and it is not indexed or distributed."
       },
-      "mark": {
-        "label": "The firm",
+      "kick": "Forensic Economist · Expert Witness",
+      "sub": "The economics of injury, loss and future care. <t>Since 1985.</t>",
+      "firm": {
         "href": "https://www.pettingillanalytics.com/",
         "src": "/pettingill/assets/pa-logo-white.png",
         "alt": "Pettingill Analytics",
-        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
-        "meta": [
-          "Palm Beach Gardens, Florida",
-          "Bpett@pettingillanalytics.com"
-        ],
-        "link": "Visit pettingillanalytics.com"
+        "lede": "Founder and President since 1996. Business valuation, litigation support and analytics, through the firm.",
+        "link": "Visit pettingillanalytics.com",
+        "social": [
+          {
+            "t": "Pettingill Analytics on LinkedIn",
+            "h": "https://www.linkedin.com/company/pettingill-consulting/",
+            "i": "linkedin"
+          },
+          {
+            "t": "Pettingill Analytics on Facebook",
+            "h": "https://www.facebook.com/PettingillAnalytics",
+            "i": "facebook"
+          }
+        ]
       },
+      "fine": "Private preview · Not indexed",
+      "base": "Bernard F. Pettingill, Jr. · Ph.D. Economics · MPH · MBA",
       "no": "01"
     }
   ]

@@ -392,3 +392,23 @@ Comentario del usuario: la versión móvil es la que más le preocupa, sobre tod
 Resultado: la home móvil pasa de 10.100 a 8.400 px de alto con el mismo contenido. Verificado en 375×667, 390×844 y 430×932, sin desbordes ni errores.
 
 **Ajuste 20b.** El subtítulo del hero vuelve a "The economics of injury, loss and future care. Since 1985." La "J" de "Jr." se cortaba porque la máscara de la animación de entrada seguía recortando el trazo cursivo después de la animación. Ahora la máscara tiene más margen y, al terminar la entrada, deja de recortar.
+
+---
+
+# Iteración 21 — el cierre, como la apertura
+
+Comentario del usuario: el final de la página tenía demasiada información junta. Quiere que cierre como abre: limpio, bien presentado, con los enlaces a sus redes y con la firma de Ignite Yourself aparte.
+
+**El pie nuevo**, en tinta, con cuatro filas:
+1. Como el hero: "Forensic Economist · Expert Witness", el nombre completo grande, la misma frase ("The economics of injury, loss and future care. Since 1985.") y el botón "Discuss a matter".
+2. Contacto en una línea (correo, teléfono, ciudad) y, a la derecha, dos iconos: LinkedIn y bpettingill.com.
+3. La firma: el logo de Pettingill Analytics en blanco, "Founder and President since 1996…", el enlace a la web y los iconos de LinkedIn y Facebook de la firma.
+4. Línea final: "Bernard F. Pettingill, Jr. · Ph.D. Economics · MPH · MBA" y "Private preview · Not indexed".
+
+**Sale del pie:** la frase con viñeta, la lista de afiliaciones (sigue en el CV), la columna "Elsewhere" y la nota larga.
+
+**Ignite Yourself** pasa a una banda propia debajo del pie, con fondo más negro y un filete de latón: "A concept by", el logo, "Discover Ignite Yourself" y la nota del concepto, unificada en un solo párrafo.
+
+**Enlaces a redes y su fuente:**
+- LinkedIn personal: linkedin.com/in/bernard-pettingill-jr-ph-d-00242730 — enlazado desde bpettingill.com. **Pendiente de confirmar** que es el perfil que quiere mostrar.
+- LinkedIn y Facebook de la firma: linkedin.com/company/pettingill-consulting y facebook.com/PettingillAnalytics — enlazados desde pettingillanalytics.com.
