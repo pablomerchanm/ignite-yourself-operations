@@ -324,6 +324,21 @@ TIPJS = r"""<script>
 })();
 </script>"""
 base = sub1(r'</body>', TIPJS + '\n</body>', base, tag='tipjs')
+MOBJS = """<script>
+(function(){
+  var html=document.documentElement;
+  function upd(){
+    var hero=document.querySelector('#site .hero');
+    var at=window.innerWidth<=860&&hero&&hero.offsetHeight>0&&window.scrollY<hero.offsetHeight-140;
+    html.classList.toggle('athero',!!at);
+  }
+  upd();addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);addEventListener('load',upd);
+  var site=document.getElementById('site');
+  if(site&&window.MutationObserver)new MutationObserver(upd).observe(site,{childList:true});
+  var n=0,iv=setInterval(function(){upd();if(++n>12)clearInterval(iv)},250);
+})();
+</script>"""
+base = sub1(r'</body>', MOBJS + '\n</body>', base, tag='mobjs')
 
 # ------------------------------------------------- 5b. motion propio (dentro de init, solo con MOTION)
 PETJS = r"""
@@ -1185,6 +1200,94 @@ html.no-motion .scarr{display:none}
 /* carril de secciones: los puntos alineados en una columna */
 .srail a{position:relative}
 .srail a span{position:absolute;right:18px;top:50%;margin-top:-.6em}
+
+/* ============ Iteracion 20: curaduria movil ============ */
+@media(max-width:860px){
+  /* --- la barra: sobre el hero solo el logo y la accion; las pestanas aparecen al bajar --- */
+  .topbar{transition:background .4s}
+  .tbot{transition:opacity .35s}
+  html.athero .topbar{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+  html.athero .tbot{opacity:0;pointer-events:none}
+
+  /* --- hero: la foto ocupa toda la primera pantalla; el nombre, la frase y el boton abajo --- */
+  .hero.photo{--phh:0px;min-height:100svh;justify-content:flex-end;
+    padding:0 0 calc(clamp(34px,5vh,52px) + env(safe-area-inset-bottom))}
+  .hero.photo .ph{position:absolute;inset:0;top:0;height:auto}
+  .hero.photo .ph img{object-position:50% 8%}
+  .hero.photo .ph::after{background:linear-gradient(180deg,rgba(20,22,26,.46) 0%,rgba(20,22,26,0) 22%,
+    rgba(20,22,26,0) 42%,rgba(20,22,26,.72) 66%,rgba(20,22,26,.97) 100%)}
+  .hero.photo .inr{padding-top:0;padding-right:0}
+  #site .hero .hname{font-size:clamp(50px,15vw,78px)!important;line-height:.92!important}
+  .hero .hsub{margin-top:18px;font-size:clamp(18px,5vw,22px);max-width:22ch;color:rgba(255,255,255,.92)}
+  .hero .hacts{margin-top:26px}
+
+  /* --- aperturas de subpagina: la misma logica que el hero --- */
+  .stmt.withimg.opener{min-height:88svh;padding:0 0 clamp(40px,6vh,60px)}
+  .stmt.withimg.opener .sph{inset:0;height:auto}
+  .stmt.withimg.opener .sph::after{background:linear-gradient(180deg,rgba(20,22,26,.6) 0%,rgba(20,22,26,.12) 30%,
+    rgba(20,22,26,.1) 44%,rgba(20,22,26,.8) 70%,#14161A 100%)}
+  .stmt.withimg.opener .wrap{padding-top:calc(var(--barh) + 40px)}
+
+  /* --- ritmo general: menos aire entre cabecera y contenido --- */
+  .shead.rail,.shead.lft{margin-bottom:26px}
+  .qt{padding:clamp(60px,9vh,88px) 0}
+  .qlead{font-size:15px}
+
+  /* --- in brief: numero a la izquierda, contenido a la derecha --- */
+  .brf{padding:clamp(60px,9vh,88px) 0}
+  .brl{margin-bottom:16px}
+  .bri{display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;
+    padding:20px 0 18px!important;border-bottom:1px solid var(--line)}
+  .bri:last-child{border-bottom:0}
+  .brn{grid-column:1;padding-top:6px}
+  #site .bri h3{grid-column:2;margin-top:0;font-size:clamp(23px,6.4vw,27px);max-width:none}
+  .brt{grid-column:2;margin-top:9px;font-size:14.5px;line-height:1.5;max-width:none}
+  .brd{grid-column:2;margin-top:9px;padding-top:9px;font-size:13px;max-width:none}
+
+  /* --- cifras: la grande sola, las otras dos a la par --- */
+  .nums .ngrid{grid-template-columns:1fr 1fr;column-gap:18px;margin-top:20px}
+  .nit{padding:22px 0 16px!important;border-right:0;border-bottom:1px solid rgba(255,255,255,.13)}
+  .nit:first-child{grid-column:1/-1}
+  .nit:nth-child(n+2){border-bottom:0}
+  #site .nn{font-size:clamp(52px,15vw,66px)}
+  #site .nit:first-child .nn{font-size:clamp(64px,20vw,88px)}
+  .nk{font-size:13.5px;line-height:1.35}
+
+  /* --- for counsel: lista de recursos en filas --- */
+  .csl{padding:clamp(60px,9vh,88px) 0}
+  .cshead{gap:12px;margin-bottom:20px}
+  .csgrid,.csgrid.c3{grid-template-columns:1fr;gap:0;border-top:1px solid rgba(255,255,255,.22)}
+  .csl.light .csgrid{border-top-color:var(--ink)}
+  .csc{display:grid;grid-template-columns:24px minmax(0,1fr) 22px;column-gap:14px;align-items:center;
+    min-height:0;padding:17px 0;border:0;border-bottom:1px solid rgba(255,255,255,.14);
+    background:transparent!important;transform:none!important}
+  .csl.light .csc{border-bottom-color:var(--line)}
+  .cstop{display:contents}
+  .csico{grid-column:1;grid-row:1/span 2;width:22px;height:22px;align-self:start;margin-top:2px}
+  .cstag{display:none}
+  #site .cst{grid-column:2;grid-row:1;margin-top:0;font-size:20px;line-height:1.1}
+  .csd{grid-column:2;grid-row:2;margin-top:5px;font-size:13.5px;line-height:1.45}
+  .csa{grid-column:3;grid-row:1/span 2;margin:0;padding:0;border:0;font-size:0;justify-content:flex-end}
+  .csa i{font-size:18px}
+
+  /* --- research: el conteo a la izquierda, la linea de trabajo a la derecha --- */
+  .rcl{padding:clamp(60px,9vh,88px) 0}
+  .rcg{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:16px;align-items:start;padding:22px 0 18px!important}
+  .rcghd{grid-column:1;flex-direction:column;align-items:flex-start;gap:5px}
+  #site .rcn{font-size:46px;line-height:.9}
+  .rcnk{font-size:10px}
+  #site .rcg h3{grid-column:2;margin-top:2px;font-size:22px}
+  .rcarea{grid-column:2;margin-top:8px;font-size:14px}
+  .rcg ul{grid-column:1/-1;margin-top:14px}
+  .rcg li a{grid-template-columns:44px minmax(0,1fr);padding:11px 0}
+  .rcg li span{font-size:16px}
+
+  /* --- practice: las listas de cada tarjeta a dos columnas; las condiciones tambien --- */
+  .pcard ul,.pathgrid.p4 .pcard.lead ul{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  .pcard li{font-size:13.5px}
+  .rtcard dl{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}
+  .rtcard dl div:nth-child(odd):last-child{grid-column:1/-1}
+}
 
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){

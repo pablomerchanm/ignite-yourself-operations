@@ -366,3 +366,27 @@ Comentario del usuario: la cita y los títulos se veían desproporcionados. Quie
 - En móvil, cada nivel tiene su propio tope para que nada desborde ni grite.
 - El espacio entre secciones baja de 17vh a 13vh (de 153 a 117 px en una pantalla de 900 px). Con títulos más contenidos, el aire sigue ahí sin que las secciones floten.
 - Los puntos del carril de secciones quedan alineados en una columna. Antes se desalineaban por el ancho de las etiquetas ocultas.
+
+---
+
+# Iteración 20 — curaduría móvil
+
+Comentario del usuario: la versión móvil es la que más le preocupa, sobre todo la primera pantalla. Quiere el mismo impacto y limpieza del hero de escritorio, aprovechar toda la pantalla y distribuir mejor los textos usando el formato vertical, en lugar de apilarlo todo hacia abajo.
+
+**Primera pantalla (home):**
+- La foto ocupa toda la pantalla (100svh), con el rostro en la mitad superior y un degradado en la inferior.
+- Sobre el degradado, abajo: el nombre (58 px en un iPhone 14), la frase y el botón. Nada más.
+- La barra superior, mientras el hero está en pantalla, es transparente y solo lleva el logo y "Discuss a matter". Las pestañas de navegación aparecen con la barra en tinta al empezar a bajar.
+- Antes: barra opaca de dos filas (86 px), foto recortada en una banda del 46 %, y hasta 195 px vacíos al final en teléfonos grandes.
+
+**Aperturas de subpágina:** misma lógica. Foto a pantalla casi completa (88svh) y el título abajo sobre el degradado. En las subpáginas las pestañas se ven siempre.
+
+**Distribución en el resto de la página (solo móvil):**
+- *In brief*: número a la izquierda, contenido a la derecha, en lugar de todo en columna.
+- *Cifras*: 1,500+ ocupa la fila entera; 550+ y 29 comparten la segunda.
+- *For counsel* y *The expert disclosure*: pasan de cuatro tarjetas altas a una lista de filas (icono, título, descripción, flecha).
+- *Research, tres líneas*: el conteo a la izquierda y la línea de trabajo a la derecha; los papers debajo.
+- *Practice*: las listas de cada tarjeta y las condiciones de contratación a dos columnas.
+- Menos aire entre cabecera y contenido de cada sección.
+
+Resultado: la home móvil pasa de 10.100 a 8.400 px de alto con el mismo contenido. Verificado en 375×667, 390×844 y 430×932, sin desbordes ni errores.
