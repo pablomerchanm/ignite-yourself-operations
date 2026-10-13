@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Bernard “Biff” Pettingill, Ph.D. — Forensic Economist & Expert Witness",
-    "description": "A private authority-platform concept: the forensic economics record of Bernard F. Pettingill, Jr., Ph.D., with the source behind every figure."
+    "description": "A private concept: the forensic economics record of Bernard F. Pettingill, Jr., Ph.D. Every figure, sourced."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -44,7 +44,7 @@
       },
       "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "Forensic economist and expert witness since 1985. <t>Every figure on this site comes with its source.</t>",
+      "sub": "Forensic economics since 1985. <t>Every figure, sourced.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -66,7 +66,7 @@
       "items": [
         {
           "n": "1985",
-          "k": "Forensic economist since",
+          "k": "Forensic economics since",
           "src": "Self-reported · bpettingill.com"
         },
         {
@@ -106,9 +106,9 @@
       "id": "s-training",
       "ink": true,
       "label": "The record",
-      "quote": "He studied what care costs <t>before he testified on it.</t>",
-      "sub": "Ph.D. in Economics, University of Manchester, 1977. Master of Public Health, Tulane, 1973. Two decades teaching economics before and alongside the practice.",
-      "src": "As stated on his CV",
+      "quote": "Trained in health economics. <t>Then retained to price it.</t>",
+      "sub": "Ph.D. in Economics, Manchester, 1977. Master of Public Health, Tulane, 1973. Two decades of teaching before and alongside the practice.",
+      "src": "CV · July 2025",
       "more": {
         "t": "Education and appointments",
         "h": "/pettingill/record"
@@ -118,8 +118,8 @@
       "type": "stmt",
       "id": "s-research",
       "label": "The research",
-      "quote": "Still publishing. <t>2025.</t>",
-      "sub": "Seven papers with a record outside his own websites, from Psychosomatics in 1979 to hospital inflation in 2025.",
+      "quote": "Published from 1979 <t>to 2025.</t>",
+      "sub": "Seven papers with an outside record, from Psychosomatics to hospital inflation.",
       "src": "Independent records · PubMed, Crossref, publishers",
       "more": {
         "t": "The research",
@@ -131,8 +131,8 @@
       "id": "s-sourced",
       "ink": true,
       "label": "How to read this site",
-      "quote": "What he says. What documents show. What others recorded. <t>Kept apart.</t>",
-      "sub": "Every claim on this site carries one of four tags, so an attorney knows what kind of evidence stands behind it.",
+      "quote": "Claim, document, record. <t>Kept apart.</t>",
+      "sub": "Four tags, one beside every figure on this site. Each names the kind of evidence behind it.",
       "keys": [
         "Self-reported",
         "Public document",
@@ -141,7 +141,7 @@
       ],
       "tags": true,
       "more": {
-        "t": "The four tags, explained",
+        "t": "The four tags",
         "h": "/pettingill/practice#sources"
       }
     },
@@ -150,13 +150,13 @@
       "id": "firm-home",
       "ink": true,
       "label": "The firm",
-      "title": "Pettingill Analytics, <t>the firm he founded.</t>",
-      "lede": "This site is the expert. The firm is where a broader engagement starts: a team, a wider set of services, and the same founder at its head.",
+      "title": "Pettingill Analytics. <t>Founder and President.</t>",
+      "lede": "The expert here. The firm there: a team, a wider set of services, the same founder at its head.",
       "company": {
         "name": "Pettingill Analytics",
         "logo": "/pettingill/assets/pa-logo-white.png",
         "role": "Founder & President",
-        "desc": "The consultancy he founded and leads as President. Its published team spans forensic accounting, international finance and data analysis, and carries work beyond his individual practice: business valuations, litigation support, structured settlements and analytics.",
+        "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
@@ -171,7 +171,7 @@
           "path": "firm"
         }
       ],
-      "svcLabel": "Services published by the firm",
+      "svcLabel": "Services of the firm",
       "services": [
         "Forensic Economic Consulting",
         "Structured Settlement Solutions",
@@ -189,62 +189,23 @@
       "label": "The Practice",
       "quote": "Four questions. <t>One discipline.</t>",
       "body": [
-        "Each question below is drawn from the work stated on his website and from the intake checklists he publishes for counsel. Each is tied to his own published research on the same question.",
-        "Broader business services belong to Pettingill Analytics and its team. They are listed on the record page, attributed to the firm."
+        "Each question is drawn from the published practice and from the intake checklists issued to counsel, and tied to published research on the same question.",
+        "Broader business services belong to Pettingill Analytics and its team, and are attributed to the firm."
       ]
-    },
-    {
-      "type": "proof",
-      "id": "proof",
-      "ink": true,
-      "label": "The record, in brief",
-      "title": "Four decades of testimony, <t>each figure traced to where it is published.</t>",
-      "items": [
-        {
-          "n": "Since 1985",
-          "d": "Practising as a forensic economist, as stated on his website and on his curriculum vitae. <src>Self-reported · bpettingill.com · CV, July 2025</src>"
-        },
-        {
-          "n": "1,500+ cases",
-          "d": "Cases in which he has given deposition or trial testimony. A count of cases, not of trials. <src>Self-reported · bpettingill.com</src>"
-        },
-        {
-          "n": "29 states + USVI",
-          "d": "Where he states he has qualified to testify, in federal and state courts, including the U.S. Virgin Islands. It describes where he has testified, not a licence to practise. <src>Self-reported · bpettingill.com</src>"
-        },
-        {
-          "n": "Ph.D., Manchester, 1977",
-          "d": "Economics, Department of Economics and Social Administration, University of Manchester. Preceded by an MPH in health economics from Tulane University, 1973. <src>As stated on his CV</src>"
-        }
-      ],
-      "more": {
-        "t": "How each figure is sourced",
-        "h": "/pettingill/testimony"
-      }
-    },
-    {
-      "type": "band",
-      "id": "band-thesis",
-      "label": "Why the training matters",
-      "quote": "Trained in health economics before he testified on what future care will cost. <t>Still publishing on it in 2025.</t>",
-      "more": {
-        "t": "Read the research",
-        "h": "/pettingill/research"
-      }
     },
     {
       "type": "paths",
       "id": "routes",
       "nums": true,
-      "label": "Questions he is retained on",
-      "title": "Four economic questions <t>his record speaks to.</t>",
-      "lede": "Drawn from the work stated on his website and the intake checklists he publishes, each tied to his own published research on the same question. Broader business services belong to Pettingill Analytics and are listed on the record page.",
+      "label": "Areas of retention",
+      "title": "What the loss is worth, <t>in four forms.</t>",
+      "lede": "Drawn from the published practice and the intake checklists issued to counsel. Each tied to published research on the same question. Broader business services are the firm's.",
       "cards": [
         {
           "lead": true,
           "label": "Life care plans",
           "title": "What will future care cost?",
-          "desc": "Costing life care plans and reducing future care needs to present value — the specialty his website names. His 2024 and 2025 papers with a physiatrist examine how future medical care is projected; a 2025 paper examines hospital inflation.",
+          "desc": "Costing life care plans and reducing future care needs to present value: the stated specialty. Papers from 2024 and 2025 on how future medical care is projected, and on hospital inflation.",
           "items": [
             "Future medical costs",
             "Present-value reduction",
@@ -260,7 +221,7 @@
         {
           "label": "Personal injury",
           "title": "What earning capacity was lost?",
-          "desc": "His injury checklist asks for five years of earnings records, fringe benefits and household services before and after the injury.",
+          "desc": "The injury checklist asks for five years of earnings records, fringe benefits and household services, before and after the injury.",
           "items": [
             "Lost earnings",
             "Earning capacity",
@@ -276,7 +237,7 @@
         {
           "label": "Wrongful death",
           "title": "What was the economic loss to the family?",
-          "desc": "His death checklist covers earnings history, fringe benefits and household services. His 2024 paper addresses which database to use for life expectancy.",
+          "desc": "The death checklist covers earnings history, fringe benefits and household services. A 2024 paper addresses which database to use for life expectancy.",
           "items": [
             "Loss of support",
             "Life expectancy basis",
@@ -292,7 +253,7 @@
         {
           "label": "Household services",
           "title": "What is unpaid care worth?",
-          "desc": "The economic value of household services, care and support — including nighttime protection, the subject of his 2019 paper in The Earnings Analyst.",
+          "desc": "The economic value of household services, care and support, including nighttime protection: the subject of a 2019 paper in The Earnings Analyst.",
           "items": [
             "Household services",
             "Care and support",
@@ -306,30 +267,30 @@
           }
         }
       ],
-      "fn": "Areas stated by subject matter. No case outcome, client or result is claimed anywhere on this site."
+      "fn": "Areas stated by subject matter. No case outcome, client or result is claimed on this site."
     },
     {
       "type": "legend",
       "id": "sources",
       "label": "How to read this record",
       "title": "Every claim carries <t>its source.</t>",
-      "lede": "An attorney deciding whether to retain an expert needs to know what the expert says, what documents show, and what someone else has recorded. This site keeps the three apart.",
+      "lede": "An attorney retaining an expert needs to know what the expert states, what documents show, and what others have recorded. This site keeps the three apart, and says so beside every figure.",
       "items": [
         {
           "k": "Self-reported",
-          "d": "Stated by Dr. Pettingill on bpettingill.com or on his curriculum vitae. Shown as he states it."
+          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records."
         },
         {
           "k": "Public document",
-          "d": "A dated document he publishes himself, such as his testimony listing. Linked, with its date."
+          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025."
         },
         {
           "k": "Independent record",
-          "d": "A record kept outside his own websites: a publisher, PubMed or Crossref. Linked to the source."
+          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source."
         },
         {
           "k": "Ignite count",
-          "d": "A figure counted from a public document for this site, with the method stated next to it."
+          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it."
         }
       ]
     },
@@ -338,15 +299,15 @@
       "id": "engage",
       "label": "Starting an engagement",
       "title": "What a paralegal needs, <t>in one place.</t>",
-      "intro": "These documents are already public on his website. This site gathers them and dates them, so the current version is never in doubt.",
+      "intro": "Public documents, gathered and dated, so the current version is never in doubt.",
       "rows": [
         {
           "t": "Curriculum vitae",
-          "d": "Eight pages: education, appointments, organizations and publications. The current PDF is dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)"
+          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)"
         },
         {
           "t": "Testimony listing",
-          "d": "Depositions and trials since 2017, with case, number and court. Deposition pages dated 20 February 2026; trial pages dated 26 August 2025. [See the analysis](/pettingill/testimony)"
+          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)"
         },
         {
           "t": "Intake checklists",
@@ -354,7 +315,7 @@
         },
         {
           "t": "Terms and engagement letter",
-          "d": "Billing rates, retainer and cancellation terms are published on his website, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
+          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
         }
       ]
     },
@@ -362,10 +323,10 @@
       "type": "mission",
       "id": "testimony-lede",
       "label": "The Testimony",
-      "quote": "Three figures appear across his two websites. <t>Each one measures something different.</t>",
+      "quote": "Three figures, two websites. <t>Each measures something different.</t>",
       "body": [
-        "An attorney checking an expert will find all three. This page shows where each is published and what it counts, then reads the testimony listing he publishes — the document that backs them.",
-        "Nothing here describes the outcome of a case. An entry in a testimony listing records that testimony was given. It says nothing about who prevailed, or how a court weighed the testimony."
+        "Where each is published, what it counts, and the public listing behind them.",
+        "No entry on this site describes the outcome of a case. A testimony listing records that testimony was given, not who prevailed or how a court weighed it."
       ]
     },
     {
@@ -379,7 +340,7 @@
           "what": "Cases with deposition or trial testimony",
           "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
           "href": "https://bpettingill.com/services/forensic-consulting/",
-          "status": "Self-reported. The figure this site uses."
+          "status": "Self-reported. The figure used on this site."
         },
         {
           "n": "550+",
@@ -393,7 +354,7 @@
           "what": "Cases or testimonies — unit not stated",
           "where": "pettingillanalytics.com — home and team pages",
           "href": "https://www.pettingillanalytics.com/our-team/",
-          "status": "Published by the firm. Period and unit to confirm with Dr. Pettingill.",
+          "status": "Published by the firm. Period and unit to be confirmed.",
           "pending": true
         }
       ]
@@ -403,7 +364,7 @@
       "id": "listing",
       "label": "The public listing",
       "title": "329 entries <t>since September 2017.</t>",
-      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not his full career, and some matters appear in both sections.",
+      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not the full career, and some matters appear in both sections.",
       "doc": {
         "t": "Open the listing (PDF)",
         "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
@@ -518,18 +479,18 @@
       "type": "band",
       "id": "band-register",
       "variant": "proposal",
-      "label": "Proposed, with his review",
-      "quote": "The same listing, searchable by year, jurisdiction and court — <t>once he has checked every line.</t>",
+      "label": "Proposed, subject to review",
+      "quote": "The same listing, searchable by year, jurisdiction and court, <t>once every line is checked.</t>",
       "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
     },
     {
       "type": "mission",
       "id": "research-lede",
       "label": "The Research",
-      "quote": "His research is not only historical. <t>The most recent paper here is from 2025.</t>",
+      "quote": "Published from 1979 <t>to 2025.</t>",
       "body": [
-        "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, the thread is the same: what medical care costs, and how to project it honestly.",
-        "Each entry in the first list links to a record kept outside his own websites. The second list is taken from his curriculum vitae and says so."
+        "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, one thread: what medical care costs, and how to project it.",
+        "The first list links each entry to a record outside the two Pettingill websites. The second list is taken from the curriculum vitae and says so."
       ]
     },
     {
@@ -562,7 +523,7 @@
           "y": "2024",
           "t": "Choosing the Correct Database for Measuring Life Expectancy",
           "a": "Bernard F. Pettingill, Jr., Sean P. Escoffery",
-          "v": "Current Opinion, 4(6), 2024. His CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
+          "v": "Current Opinion, 4(6), 2024. The CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
           "id": "DOI 10.52845/currentopinion.v4i6.330",
           "h": "https://currentopinion.be/index.php/co/en/article/view/330",
           "src": "Publisher link · page details pending verification",
@@ -583,7 +544,7 @@
           "y": "2024",
           "t": "Why Hospitals Resist Disclosing the Absolute Costs of Their Procedures",
           "a": "Bernard F. Pettingill, Jr.",
-          "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. His CV lists MEGA Journal of Case Reports, September 2024.",
+          "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. The CV lists MEGA Journal of Case Reports, September 2024.",
           "id": "DOI 10.61440/jcmhc.2024.v1.13",
           "h": "https://doi.org/10.61440/jcmhc.2024.v1.13",
           "src": "Independent record · Crossref",
@@ -615,9 +576,9 @@
       "type": "exp",
       "id": "research-cv",
       "tint": true,
-      "label": "Further work, from his CV",
+      "label": "Further work, from the CV",
       "title": "Written for the courtroom, <t>and for the hospital.</t>",
-      "lede": "Titles and years as listed on his CV dated 7 July 2025. A selection, not a complete bibliography; venues have not been independently checked.",
+      "lede": "Titles and years as listed in the CV dated 7 July 2025. A selection, not a complete bibliography; venues not independently checked.",
       "groups": [
         {
           "label": "Damages, settlements and the courtroom",
@@ -659,7 +620,7 @@
       "id": "record-education",
       "label": "Education",
       "title": "Economics, business <t>and public health.</t>",
-      "lede": "As stated on his CV, July 2025, and on his website. Degrees have not been checked against university records.",
+      "lede": "As stated in the CV, July 2025. Not checked against university records.",
       "groups": [
         {
           "label": "Degrees",
@@ -685,8 +646,8 @@
       "id": "record-academic",
       "tint": true,
       "label": "Academic appointments",
-      "title": "More than two decades of teaching, <t>none of it current.</t>",
-      "lede": "Dates as printed on his CV. His website summarises these years as professor of economics at Florida Institute of Technology and Palm Beach Atlantic, with many years at the University of Louisiana in Lafayette and LSU Medical School.",
+      "title": "More than two decades of teaching. <t>None of it current.</t>",
+      "lede": "Dates as printed in the CV. Palm Beach Atlantic, Florida Institute of Technology, the University of Southwestern Louisiana, LSU Medical Center, New Orleans, Manchester and London.",
       "groups": [
         {
           "label": "Florida",
@@ -719,8 +680,8 @@
       "type": "exp",
       "id": "record-orgs",
       "label": "Professional organizations",
-      "title": "The professional bodies <t>of his field.</t>",
-      "lede": "As listed on his CV, July 2025. Memberships the CV marks as “present” have not been confirmed as current.",
+      "title": "The professional bodies <t>of the field.</t>",
+      "lede": "As listed in the CV, July 2025. Memberships marked “present” not confirmed as current.",
       "groups": [
         {
           "label": "Forensic and business economics",
@@ -750,13 +711,13 @@
       "type": "practice",
       "id": "firm",
       "label": "The firm",
-      "title": "Two websites, <t>two jobs.</t>",
-      "lede": "This site is the expert: his record, his research, his testimony. Pettingill Analytics is the practice he founded and leads, with a team that carries work beyond his individual practice.",
+      "title": "The expert here. <t>The firm there.</t>",
+      "lede": "This site is the record: practice, testimony, research. Pettingill Analytics is the firm, founded and led as President, with a team that carries work beyond the individual practice.",
       "company": {
         "name": "Pettingill Analytics",
         "logo": "/pettingill/assets/pa-logo-white.png",
         "role": "Founder & President",
-        "desc": "The consultancy he founded and leads as President. Its published team spans forensic accounting, international finance and data analysis, and carries work beyond his individual practice: business valuations, litigation support, structured settlements and analytics.",
+        "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
@@ -764,7 +725,7 @@
         "href": "https://www.pettingillanalytics.com/",
         "link": "Visit pettingillanalytics.com"
       },
-      "svcLabel": "Services published by the firm",
+      "svcLabel": "Services of the firm",
       "services": [
         "Forensic Economic Consulting",
         "Structured Settlement Solutions",
@@ -916,10 +877,10 @@
             ]
           }
         ],
-        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
         "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -928,9 +889,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — per CV",
-        "National Association of Forensic Economists — since 1989, per CV",
-        "American Economic Association — since 1983, per CV",
+        "Referee, Journal of Forensic Economics — CV",
+        "National Association of Forensic Economists — since 1989, CV",
+        "American Economic Association — since 1983, CV",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [
@@ -943,21 +904,21 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
       },
       "mark": {
         "label": "The firm",
         "href": "https://www.pettingillanalytics.com/",
         "src": "/pettingill/assets/pa-logo-white.png",
         "alt": "Pettingill Analytics",
-        "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
+        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"

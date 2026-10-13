@@ -114,3 +114,19 @@ Pablo revisa → crítica de narrativa, veracidad y oferta (ChatGPT) → iteraci
 - **Formulario:** nueva vía "Business valuation, litigation support or analytics — Pettingill Analytics", preseleccionada desde el botón de la ficha. En el sitio real se enrutaría a la firma.
 - Logo tomado de pettingillanalytics.com (`assets/pa-logo.png`). Tarjeta social regenerada con el nombre.
 - `BRAND-DIRECTION.md` actualizado: el hero lleva nombre, no frase; la firma siempre a un clic.
+
+
+---
+
+# Iteración 5 — la voz del registro
+
+**Pedido de Pablo:** el tono era descriptivo y biográfico ("he did, he thinks"). Elegido: una voz sin persona gramatical, elegante y estratégica, no ornamentada.
+
+**Qué cambió**
+- Reescritas las cinco páginas: el sujeto de cada frase es el trabajo, no el hombre. Cero "he/his" en el texto editorial; "Dr. Pettingill" solo en las notas legales del pie y en la clave de fuentes.
+- Las fuentes salen de las frases y viven solo en las etiquetas mono.
+- Las salvedades metodológicas (títulos no verificados, membresías "present", fechas del listado) se concentran en la clave de fuentes de la página Practice.
+- Línea de marca fijada: *Every figure, sourced.* Regla de voz añadida a `BRAND-DIRECTION.md` (sección 8).
+- Eliminadas dos secciones que ya no se usaban en ninguna página (`proof`, `band-thesis`).
+
+**Datos y fuentes:** sin cambios.

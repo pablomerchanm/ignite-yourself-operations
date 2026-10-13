@@ -39,10 +39,10 @@
       "type": "mission",
       "id": "research-lede",
       "label": "The Research",
-      "quote": "His research is not only historical. <t>The most recent paper here is from 2025.</t>",
+      "quote": "Published from 1979 <t>to 2025.</t>",
       "body": [
-        "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, the thread is the same: what medical care costs, and how to project it honestly.",
-        "Each entry in the first list links to a record kept outside his own websites. The second list is taken from his curriculum vitae and says so."
+        "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, one thread: what medical care costs, and how to project it.",
+        "The first list links each entry to a record outside the two Pettingill websites. The second list is taken from the curriculum vitae and says so."
       ],
       "no": "01"
     },
@@ -76,7 +76,7 @@
           "y": "2024",
           "t": "Choosing the Correct Database for Measuring Life Expectancy",
           "a": "Bernard F. Pettingill, Jr., Sean P. Escoffery",
-          "v": "Current Opinion, 4(6), 2024. His CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
+          "v": "Current Opinion, 4(6), 2024. The CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
           "id": "DOI 10.52845/currentopinion.v4i6.330",
           "h": "https://currentopinion.be/index.php/co/en/article/view/330",
           "src": "Publisher link · page details pending verification",
@@ -97,7 +97,7 @@
           "y": "2024",
           "t": "Why Hospitals Resist Disclosing the Absolute Costs of Their Procedures",
           "a": "Bernard F. Pettingill, Jr.",
-          "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. His CV lists MEGA Journal of Case Reports, September 2024.",
+          "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. The CV lists MEGA Journal of Case Reports, September 2024.",
           "id": "DOI 10.61440/jcmhc.2024.v1.13",
           "h": "https://doi.org/10.61440/jcmhc.2024.v1.13",
           "src": "Independent record · Crossref",
@@ -130,9 +130,9 @@
       "type": "exp",
       "id": "research-cv",
       "tint": true,
-      "label": "Further work, from his CV",
+      "label": "Further work, from the CV",
       "title": "Written for the courtroom, <t>and for the hospital.</t>",
-      "lede": "Titles and years as listed on his CV dated 7 July 2025. A selection, not a complete bibliography; venues have not been independently checked.",
+      "lede": "Titles and years as listed in the CV dated 7 July 2025. A selection, not a complete bibliography; venues not independently checked.",
       "groups": [
         {
           "label": "Damages, settlements and the courtroom",
@@ -303,10 +303,10 @@
             ]
           }
         ],
-        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
         "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -315,9 +315,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — per CV",
-        "National Association of Forensic Economists — since 1989, per CV",
-        "American Economic Association — since 1983, per CV",
+        "Referee, Journal of Forensic Economics — CV",
+        "National Association of Forensic Economists — since 1989, CV",
+        "American Economic Association — since 1983, CV",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [
@@ -330,21 +330,21 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
       },
       "mark": {
         "label": "The firm",
         "href": "https://www.pettingillanalytics.com/",
         "src": "/pettingill/assets/pa-logo-white.png",
         "alt": "Pettingill Analytics",
-        "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
+        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"

@@ -243,14 +243,29 @@ marca en serif, una esquina con el objeto B3.
 
 ---
 
-## 8. Voz
+## 8. Voz: la voz del registro
 
-Declarativa. Frases de 3 a 9 palabras. Sin adjetivos de rango (“leading”,
-“renowned”, “trusted”). El dato hace el trabajo del adjetivo. Cada cifra con
-su etiqueta de fuente. Inglés americano. Tratamiento: *Dr. Pettingill* en el
-cuerpo, *Biff* solo en el nombre de marca.
+Ni primera ni tercera persona. **El sujeto de cada frase es el trabajo**, nunca el
+hombre: la práctica, el testimonio, la investigación, la firma. Nada de “he
+studied”, “his website”, “the firm he founded”. La persona aparece por su
+nombre solo cuando es inevitable: “Dr. Pettingill” en cuerpo, “Pettingill” como
+marca.
 
----
+- La fuente vive en la etiqueta mono, nunca dentro de la frase. Desaparecen
+  “as stated on”, “he publishes”, “his CV says”.
+- Frases nominales o en presente. Sin pasado narrativo. 3 a 9 palabras.
+- Sin adjetivos de rango (“leading”, “renowned”, “trusted”), sin metáforas.
+  El dato hace el trabajo del adjetivo.
+- Las salvedades metodológicas viven en una sola página (“How to read this
+  record”). El resto del sitio no se disculpa.
+- Inglés americano. Línea de marca: *Every figure, sourced.*
+
+| No | Sí |
+|---|---|
+| He studied what care costs before he testified on it. | Trained in health economics. Then retained to price it. |
+| Pettingill Analytics, the firm he founded. | Pettingill Analytics. Founder and President. |
+| Where he states he has qualified to testify… | State and federal courts in 29 states and the U.S. Virgin Islands. |
+| What he says. What documents show. What others recorded. | Claim, document, record. Kept apart. |
 
 ## 9. Sí / No
 

@@ -44,7 +44,7 @@
       },
       "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "Forensic economist and expert witness since 1985. <t>Every figure on this site comes with its source.</t>",
+      "sub": "Forensic economics since 1985. <t>Every figure, sourced.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -66,7 +66,7 @@
       "items": [
         {
           "n": "1985",
-          "k": "Forensic economist since",
+          "k": "Forensic economics since",
           "src": "Self-reported · bpettingill.com"
         },
         {
@@ -106,9 +106,9 @@
       "id": "s-training",
       "ink": true,
       "label": "The record",
-      "quote": "He studied what care costs <t>before he testified on it.</t>",
-      "sub": "Ph.D. in Economics, University of Manchester, 1977. Master of Public Health, Tulane, 1973. Two decades teaching economics before and alongside the practice.",
-      "src": "As stated on his CV",
+      "quote": "Trained in health economics. <t>Then retained to price it.</t>",
+      "sub": "Ph.D. in Economics, Manchester, 1977. Master of Public Health, Tulane, 1973. Two decades of teaching before and alongside the practice.",
+      "src": "CV · July 2025",
       "more": {
         "t": "Education and appointments",
         "h": "/pettingill/record"
@@ -118,8 +118,8 @@
       "type": "stmt",
       "id": "s-research",
       "label": "The research",
-      "quote": "Still publishing. <t>2025.</t>",
-      "sub": "Seven papers with a record outside his own websites, from Psychosomatics in 1979 to hospital inflation in 2025.",
+      "quote": "Published from 1979 <t>to 2025.</t>",
+      "sub": "Seven papers with an outside record, from Psychosomatics to hospital inflation.",
       "src": "Independent records · PubMed, Crossref, publishers",
       "more": {
         "t": "The research",
@@ -131,8 +131,8 @@
       "id": "s-sourced",
       "ink": true,
       "label": "How to read this site",
-      "quote": "What he says. What documents show. What others recorded. <t>Kept apart.</t>",
-      "sub": "Every claim on this site carries one of four tags, so an attorney knows what kind of evidence stands behind it.",
+      "quote": "Claim, document, record. <t>Kept apart.</t>",
+      "sub": "Four tags, one beside every figure on this site. Each names the kind of evidence behind it.",
       "keys": [
         "Self-reported",
         "Public document",
@@ -141,7 +141,7 @@
       ],
       "tags": true,
       "more": {
-        "t": "The four tags, explained",
+        "t": "The four tags",
         "h": "/pettingill/practice#sources"
       }
     },
@@ -150,13 +150,13 @@
       "id": "firm-home",
       "ink": true,
       "label": "The firm",
-      "title": "Pettingill Analytics, <t>the firm he founded.</t>",
-      "lede": "This site is the expert. The firm is where a broader engagement starts: a team, a wider set of services, and the same founder at its head.",
+      "title": "Pettingill Analytics. <t>Founder and President.</t>",
+      "lede": "The expert here. The firm there: a team, a wider set of services, the same founder at its head.",
       "company": {
         "name": "Pettingill Analytics",
         "logo": "/pettingill/assets/pa-logo-white.png",
         "role": "Founder & President",
-        "desc": "The consultancy he founded and leads as President. Its published team spans forensic accounting, international finance and data analysis, and carries work beyond his individual practice: business valuations, litigation support, structured settlements and analytics.",
+        "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
@@ -171,7 +171,7 @@
           "path": "firm"
         }
       ],
-      "svcLabel": "Services published by the firm",
+      "svcLabel": "Services of the firm",
       "services": [
         "Forensic Economic Consulting",
         "Structured Settlement Solutions",
@@ -317,10 +317,10 @@
             ]
           }
         ],
-        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
         "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -329,9 +329,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — per CV",
-        "National Association of Forensic Economists — since 1989, per CV",
-        "American Economic Association — since 1983, per CV",
+        "Referee, Journal of Forensic Economics — CV",
+        "National Association of Forensic Economists — since 1989, CV",
+        "American Economic Association — since 1983, CV",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [
@@ -344,21 +344,21 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
       },
       "mark": {
         "label": "The firm",
         "href": "https://www.pettingillanalytics.com/",
         "src": "/pettingill/assets/pa-logo-white.png",
         "alt": "Pettingill Analytics",
-        "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
+        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"

@@ -39,10 +39,10 @@
       "type": "mission",
       "id": "testimony-lede",
       "label": "The Testimony",
-      "quote": "Three figures appear across his two websites. <t>Each one measures something different.</t>",
+      "quote": "Three figures, two websites. <t>Each measures something different.</t>",
       "body": [
-        "An attorney checking an expert will find all three. This page shows where each is published and what it counts, then reads the testimony listing he publishes — the document that backs them.",
-        "Nothing here describes the outcome of a case. An entry in a testimony listing records that testimony was given. It says nothing about who prevailed, or how a court weighed the testimony."
+        "Where each is published, what it counts, and the public listing behind them.",
+        "No entry on this site describes the outcome of a case. A testimony listing records that testimony was given, not who prevailed or how a court weighed it."
       ],
       "no": "01"
     },
@@ -57,7 +57,7 @@
           "what": "Cases with deposition or trial testimony",
           "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
           "href": "https://bpettingill.com/services/forensic-consulting/",
-          "status": "Self-reported. The figure this site uses."
+          "status": "Self-reported. The figure used on this site."
         },
         {
           "n": "550+",
@@ -71,7 +71,7 @@
           "what": "Cases or testimonies — unit not stated",
           "where": "pettingillanalytics.com — home and team pages",
           "href": "https://www.pettingillanalytics.com/our-team/",
-          "status": "Published by the firm. Period and unit to confirm with Dr. Pettingill.",
+          "status": "Published by the firm. Period and unit to be confirmed.",
           "pending": true
         }
       ],
@@ -82,7 +82,7 @@
       "id": "listing",
       "label": "The public listing",
       "title": "329 entries <t>since September 2017.</t>",
-      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not his full career, and some matters appear in both sections.",
+      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not the full career, and some matters appear in both sections.",
       "doc": {
         "t": "Open the listing (PDF)",
         "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
@@ -198,8 +198,8 @@
       "type": "band",
       "id": "band-register",
       "variant": "proposal",
-      "label": "Proposed, with his review",
-      "quote": "The same listing, searchable by year, jurisdiction and court — <t>once he has checked every line.</t>",
+      "label": "Proposed, subject to review",
+      "quote": "The same listing, searchable by year, jurisdiction and court, <t>once every line is checked.</t>",
       "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
     },
     {
@@ -335,10 +335,10 @@
             ]
           }
         ],
-        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
         "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -347,9 +347,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — per CV",
-        "National Association of Forensic Economists — since 1989, per CV",
-        "American Economic Association — since 1983, per CV",
+        "Referee, Journal of Forensic Economics — CV",
+        "National Association of Forensic Economists — since 1989, CV",
+        "American Economic Association — since 1983, CV",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [
@@ -362,21 +362,21 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
       },
       "mark": {
         "label": "The firm",
         "href": "https://www.pettingillanalytics.com/",
         "src": "/pettingill/assets/pa-logo-white.png",
         "alt": "Pettingill Analytics",
-        "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
+        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
         "meta": [
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
