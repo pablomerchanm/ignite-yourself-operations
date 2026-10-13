@@ -1378,6 +1378,10 @@ html.no-motion .scarr{display:none}
   .igy .wrap{grid-template-columns:1fr;gap:26px}
 }
 
+/* ---------- botones principales: mas contenidos ---------- */
+.hcta,.fcta{font-size:11px;letter-spacing:.16em;padding:13px 26px}
+@media(max-width:860px){.hcta,.fcta{font-size:10.5px;letter-spacing:.14em;padding:13px 22px}}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
