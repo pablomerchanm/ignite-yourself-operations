@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Testimony — Bernard F. Pettingill, Jr., Ph.D.",
-    "description": "The three published testimony figures, what each counts, how to read the source tags, and a count of the public listing since 2017."
+    "description": "More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -45,78 +45,37 @@
         "alt": "A brass balance on a stack of books, in window light",
         "pos": "0% 62%"
       },
-      "quote": "Three published figures. <t>What each one counts.</t>",
-      "sub": "1,500+ and 1,900+ both count cases with deposition or trial testimony, on two websites. 550+ counts trials only. None of them records an outcome."
+      "quote": "More than 1,500 cases. <t>Deposition and trial.</t>",
+      "sub": "Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court."
     },
     {
-      "type": "figs",
+      "type": "nums",
       "id": "figures",
-      "label": "The figures, as published",
-      "title": "One record, <t>three ways of counting it.</t>",
-      "cards": [
-        {
-          "n": "1,500+",
-          "what": "Cases with deposition or trial testimony",
-          "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
-          "href": "https://bpettingill.com/services/forensic-consulting/",
-          "status": "Self-reported. The figure used on this site until the current count is confirmed."
-        },
-        {
-          "n": "550+",
-          "what": "Trials",
-          "where": "bpettingill.com — Prior Testimony page",
-          "href": "https://bpettingill.com/new-case/prior-testimony/",
-          "status": "Self-reported. A narrower count: trial testimony only."
-        },
-        {
-          "n": "1,900+",
-          "what": "Cases with deposition or trial testimony",
-          "where": "pettingillanalytics.com — team page (“over 1900 cases in 29 states plus the US Virgin Islands”); the home page says “testimonies”",
-          "href": "https://www.pettingillanalytics.com/our-team/",
-          "status": "Published by the firm. Same unit as 1,500+, a higher count. Which figure is current: to be confirmed.",
-          "pending": true
-        }
-      ],
-      "no": "01"
-    },
-    {
-      "type": "legend",
-      "id": "sources",
-      "label": "How to read the figures",
-      "title": "Every claim carries <t>its source.</t>",
-      "lede": "An attorney retaining an expert needs to know what the expert states, what documents show, and what others have recorded. This site keeps the three apart, and says so beside every figure.",
+      "ink": true,
+      "label": "Testimony, in numbers",
       "items": [
         {
-          "k": "Self-reported",
-          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records.",
-          "icon": "quote"
+          "n": "1,500<sup>+</sup>",
+          "k": "Cases with deposition or trial testimony"
         },
         {
-          "k": "Public document",
-          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025.",
-          "icon": "doc"
+          "n": "550<sup>+</sup>",
+          "k": "Trials"
         },
         {
-          "k": "Independent record",
-          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source.",
-          "icon": "link"
-        },
-        {
-          "k": "Ignite count",
-          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it.",
-          "icon": "tally"
+          "n": "29",
+          "k": "States, plus the U.S. Virgin Islands"
         }
-      ],
-      "no": "02"
+      ]
     },
     {
       "type": "tally",
       "id": "listing",
-      "label": "The public listing",
-      "title": "329 entries <t>since September 2017.</t>",
-      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not the full career, and some matters appear in both sections.",
+      "label": "Prior testimony",
+      "title": "329 testimonies <t>since 2017.</t>",
+      "lede": "Depositions and trials on the current testimony listing, year by year.",
       "doc": {
-        "t": "Open the listing (PDF)",
+        "t": "The full listing (PDF)",
         "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
       },
       "stats": [
@@ -133,12 +92,12 @@
         {
           "n": "289",
           "k": "Florida courts",
-          "d": "Entries naming a Florida court. Fifteen entries name no court."
+          "d": "State and federal, across Florida"
         },
         {
           "n": "26",
           "k": "U.S. District Courts",
-          "d": "Entries in federal district courts, in Florida and elsewhere"
+          "d": "Federal district courts, in Florida and beyond"
         }
       ],
       "series": [
@@ -206,7 +165,7 @@
         }
       ],
       "beyond": {
-        "k": "Outside Florida, in the same listing",
+        "k": "Beyond Florida",
         "items": [
           "Alabama",
           "Arkansas",
@@ -223,22 +182,13 @@
           "U.S. Virgin Islands"
         ]
       },
-      "fn": "Ignite count · Deposition pages dated 20 February 2026 and trial pages dated 26 August 2025, as published. 2017 starts in September. The 2026 figures stop in January. 2025 trial entries stop in May.",
-      "no": "03"
-    },
-    {
-      "type": "band",
-      "id": "band-register",
-      "variant": "proposal",
-      "label": "Proposed, subject to review",
-      "quote": "The same listing, searchable by year, jurisdiction and court, <t>once every line is checked.</t>",
-      "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
+      "no": "01"
     },
     {
       "type": "next",
       "k": "Next",
       "t": "Publications",
-      "d": "Seven papers with an outside record, further work from the CV, and the firm’s notes for counsel.",
+      "d": "Papers from 1979 to 2025.",
       "h": "/pettingill/research"
     },
     {
@@ -246,7 +196,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the question.</t>",
-      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
         "phone": "(561) 622-0330",
@@ -375,9 +325,9 @@
           }
         ],
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
-        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+        "fine": "Private concept: nothing is sent from this page."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -401,7 +351,7 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
@@ -422,7 +372,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "04"
+      "no": "02"
     }
   ]
 }

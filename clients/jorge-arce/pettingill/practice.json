@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Practice — Bernard F. Pettingill, Jr., Ph.D.",
-    "description": "The four economic questions in the practice, and the documents counsel needs to start a case."
+    "description": "Future care, lost earnings, wrongful death and household services, and how to start a case."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -45,7 +45,7 @@
         "pos": "62% 50%"
       },
       "quote": "Four questions. <t>One discipline.</t>",
-      "sub": "Each drawn from the published practice and the intake checklists issued to counsel, and tied to published research on the same question. Broader business services belong to Pettingill Analytics."
+      "sub": "Future care, lost earnings, wrongful death and household services, reduced to present value."
     },
     {
       "type": "paths",
@@ -53,13 +53,13 @@
       "nums": true,
       "label": "Areas of retention",
       "title": "What the loss is worth, <t>in four forms.</t>",
-      "lede": "Drawn from the published practice and the intake checklists issued to counsel. Each tied to published research on the same question. Broader business services are the firm's.",
+      "lede": "Four economic questions, each backed by published research.",
       "cards": [
         {
           "lead": true,
           "label": "Life care plans",
           "title": "What will future care cost?",
-          "desc": "Costing life care plans and reducing future care needs to present value: the stated specialty. Papers from 2024 and 2025 on how future medical care is projected, and on hospital inflation.",
+          "desc": "Costing life care plans and reducing future care needs to present value. The specialty, and the subject of 2024 and 2025 papers on projecting medical care and hospital inflation.",
           "items": [
             "Future medical costs",
             "Present-value reduction",
@@ -76,7 +76,7 @@
         {
           "label": "Personal injury",
           "title": "What earning capacity was lost?",
-          "desc": "The injury checklist asks for five years of earnings records, fringe benefits and household services, before and after the injury.",
+          "desc": "Lost earnings, earning capacity, fringe benefits and household services, measured before and after the injury.",
           "items": [
             "Lost earnings",
             "Earning capacity",
@@ -92,8 +92,8 @@
         },
         {
           "label": "Wrongful death",
-          "title": "What was the economic loss to the family?",
-          "desc": "The death checklist covers earnings history, fringe benefits and household services. A 2024 paper addresses which database to use for life expectancy.",
+          "title": "What did the family lose?",
+          "desc": "Loss of support, household services and the life expectancy behind every lifetime figure, the subject of a 2024 paper.",
           "items": [
             "Loss of support",
             "Life expectancy basis",
@@ -110,7 +110,7 @@
         {
           "label": "Household services",
           "title": "What is unpaid care worth?",
-          "desc": "The economic value of household services, care and support, including nighttime protection: the subject of a 2019 paper in The Earnings Analyst.",
+          "desc": "Household services, care and support, including nighttime protection, the subject of a 2019 paper in The Earnings Analyst.",
           "items": [
             "Household services",
             "Care and support",
@@ -125,15 +125,14 @@
           "icon": "house"
         }
       ],
-      "fn": "Areas stated by subject matter. No case outcome, client or result is claimed on this site.",
       "no": "01"
     },
     {
       "type": "method",
       "id": "engage",
-      "label": "Starting a case",
-      "title": "Start a case <t>in four documents.</t>",
-      "intro": "The sequence bpettingill.com publishes for a new case: the checklist for the type of matter, the retainer, the terms, and the CV for the file. Public documents, linked at their source.",
+      "label": "Retaining",
+      "title": "To start a case, <t>begin here.</t>",
+      "intro": "Checklists for injury and death, the retainer, the terms and the CV.",
       "rows": [
         {
           "t": "Intake checklists",
@@ -142,7 +141,7 @@
         },
         {
           "t": "Terms and engagement letter",
-          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)",
+          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. [Billing rates](https://bpettingill.com/new-case/billing-rates/)",
           "icon": "sign"
         },
         {
@@ -152,7 +151,7 @@
         },
         {
           "t": "Testimony listing",
-          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)",
+          "d": "Depositions and trials since 2017, with case, number and court. [Prior testimony](/pettingill/testimony)",
           "icon": "list"
         }
       ],
@@ -162,7 +161,7 @@
       "type": "next",
       "k": "Next",
       "t": "Testimony",
-      "d": "The three published figures, what each counts, and the public listing since 2017.",
+      "d": "Depositions and trials since 2017.",
       "h": "/pettingill/testimony"
     },
     {
@@ -170,7 +169,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the question.</t>",
-      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
         "phone": "(561) 622-0330",
@@ -299,9 +298,9 @@
           }
         ],
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
-        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+        "fine": "Private concept: nothing is sent from this page."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -325,7 +324,7 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",

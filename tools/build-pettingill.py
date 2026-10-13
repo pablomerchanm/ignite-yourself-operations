@@ -37,8 +37,8 @@ base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al c
 
 # ------------------------------------------------------- 3. cabeza del documento
 TITLE = 'Bernard “Biff” Pettingill, Ph.D. — Forensic Economist &amp; Expert Witness'
-DESC = ('A private authority-platform concept: the forensic economics record of '
-        'Bernard F. Pettingill, Jr., Ph.D., with the source behind every figure.')
+DESC = ('Bernard F. Pettingill, Jr., Ph.D.: forensic economist and expert witness since 1985. '
+        'Economic damages in personal injury, wrongful death and medical malpractice.')
 URL = 'https://igniteyourself.co/pettingill'
 
 base = sub1(r'<title>[^<]*</title>', f'<title>{TITLE}</title>', base, tag='title')
@@ -127,13 +127,14 @@ stmt:function(s){
   return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+(s.align==='right'?' tr':'')+'" id="'+esc(s.id||'stmt')+'">'+
   (s.img&&s.img.src?'<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+(s.img.pos?' style="object-position:'+esc(s.img.pos)+'"':'')+'></div>':'')+
   '<div class="wrap" data-r2>'+
-  (s.label?'<div class="slab smallcap wr">'+esc(s.label)+'</div>':'')+
+  (s.logo?'<img class="slogo wr" src="'+esc(s.logo)+'" alt="'+esc(s.label||'')+'">':'')+
+  (s.label&&!s.logo?'<div class="slab smallcap wr">'+esc(s.label)+'</div>':'')+
   '<h2 class="sq wr">'+rich(s.quote)+'</h2>'+
   (s.sub?'<p class="ssub wr">'+rich(s.sub)+'</p>':'')+
   (s.keys?'<ul class="skeys'+(s.tags?' astags':'')+' wr">'+(s.keys||[]).map(function(k){return'<li>'+(s.tags?'<span class="src">'+esc(k)+'</span>':esc(k))+'</li>'}).join('')+'</ul>':'')+
   '<div class="sfoot wr">'+
-    (s.src?'<span class="src">'+esc(s.src)+'</span>':'<span></span>')+
-    (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+
+    (s.src?'<span class="src">'+esc(s.src)+'</span>':'')+
+    (s.more?'<a class="smore" href="'+esc(s.more.h)+'"'+(/^https?:/.test(s.more.h)?' target="_blank" rel="noopener"':'')+'>'+esc(s.more.t)+(/^https?:/.test(s.more.h)?' \u2197':'')+'</a>':'')+
   '</div>'+
   '</div></section>'},
 legend:function(s){
@@ -244,7 +245,7 @@ pubs:function(s){
       '<div class="pmain"><h3><a href="'+esc(p.h)+'" target="_blank" rel="noopener">'+esc(p.t)+'</a></h3>'+
         '<p class="pau">'+esc(p.a)+'</p><p class="pve">'+esc(p.v)+'</p>'+
         (p.why?'<p class="pwhy"><span class="smallcap">For counsel</span>'+esc(p.why)+'</p>':'')+'</div>'+
-      '<div class="pside"><span class="src'+(p.pending?' pend':'')+'">'+esc(p.src)+'</span><span class="pid">'+esc(p.id)+'</span></div>'+
+      '<div class="pside">'+(p.src?'<span class="src">'+esc(p.src)+'</span>':'')+'<span class="pid">'+esc(p.id)+'</span></div>'+
     '</li>'}).join('')+'</ol>'+
   '</div></section>'},
 """
@@ -939,6 +940,9 @@ html.no-motion .scarr{display:none}
 .ntlist a:hover .ntt{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 @media(max-width:860px){.ntlist a{grid-template-columns:minmax(0,1fr) 20px;gap:6px 12px}.ntk{grid-column:1;grid-row:2}.ntgo{grid-row:1/3;grid-column:2}}
 
+/* ---------- logo de la firma sobre su lamina ---------- */
+.slogo{display:block;width:clamp(200px,18vw,270px);height:auto;margin-bottom:clamp(26px,4vh,40px)}
+
 /* ---------- next: la siguiente pagina, siempre a la vista ---------- */
 .nxt{padding:clamp(56px,9vh,104px) 0;border-top:1px solid var(--line)}
 .nxa{display:flex;flex-direction:column;gap:14px;color:var(--ink)}
@@ -1026,23 +1030,23 @@ T_CV = 'CV — Bernard F. Pettingill, Jr., Ph.D.'
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
         [deep('hero'), deep('numbers'), deep('in-brief'), deep('start-here'), deep('s-question'),
-         deep('s-research'), deep('s-firm'), deep('firm-home'), inq()]),
+         deep('s-research'), deep('s-firm'), inq()]),
     'practice': page(T_PR,
-        'The four economic questions in the practice, and the documents counsel needs to start a case.',
+        'Future care, lost earnings, wrongful death and household services, and how to start a case.',
         [deep('practice-open'), deep('routes'), deep('engage'),
-         NX('Next', 'Testimony', 'The three published figures, what each counts, and the public listing since 2017.', '/pettingill/testimony'), inq()]),
+         NX('Next', 'Testimony', 'Depositions and trials since 2017.', '/pettingill/testimony'), inq()]),
     'testimony': page(T_TE,
-        'The three published testimony figures, what each counts, how to read the source tags, and a count of the public listing since 2017.',
-        [deep('testimony-open'), deep('figures'), deep('sources'), deep('listing'), deep('band-register'),
-         NX('Next', 'Publications', 'Seven papers with an outside record, further work from the CV, and the firm’s notes for counsel.', '/pettingill/research'), inq()]),
+        'More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands.',
+        [deep('testimony-open'), deep('figures'), deep('listing'),
+         NX('Next', 'Publications', 'Papers from 1979 to 2025.', '/pettingill/research'), inq()]),
     'research': page(T_PU,
-        'Selected publications from 1979 to 2025, each linked to a record outside his own websites, further work listed on his CV, and notes for counsel from the firm.',
-        [deep('research-open'), deep('research-years'), deep('publications'), deep('research-cv'), deep('firm-notes'),
-         NX('Next', 'CV', 'Education, appointments and professional bodies, on one line from 1969.', '/pettingill/record'), inq()]),
+        'Papers from 1979 to 2025 on the cost of future care, life expectancy, household services and hospital pricing.',
+        [deep('research-open'), deep('research-years'), deep('publications'), deep('research-cv'),
+         NX('Next', 'CV', 'Education, teaching and professional bodies since 1969.', '/pettingill/record'), inq()]),
     'record': page(T_CV,
-        'Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics.',
-        [deep('record-open'), deep('record-years'), deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'),
-         NX('Ready to begin', 'Start a <t>case</t>', 'The checklist for the type of matter, the retainer, the terms and the CV, in one place.', '/pettingill/practice#engage'), inq()]),
+        'Education, academic appointments and professional bodies, and Pettingill Analytics.',
+        [deep('record-open'), deep('record-years'), deep('record-education'), deep('record-academic'), deep('record-orgs'),
+         NX('Next', 'Start a <t>case</t>', 'Checklists for injury and death, the retainer and the terms.', '/pettingill/practice#engage'), inq()]),
 }
 
 os.makedirs(DST, exist_ok=True)

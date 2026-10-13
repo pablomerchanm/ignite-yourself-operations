@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "CV — Bernard F. Pettingill, Jr., Ph.D.",
-    "description": "Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics."
+    "description": "Education, academic appointments and professional bodies, and Pettingill Analytics."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -45,7 +45,7 @@
         "pos": "40% 0%"
       },
       "quote": "The record, <t>in order.</t>",
-      "sub": "Education, academic appointments and professional bodies as listed in the CV dated 7 July 2025, and the firm. Not checked against university or association records."
+      "sub": "Education, teaching and the professional bodies of the field."
     },
     {
       "type": "timeline",
@@ -53,7 +53,6 @@
       "tint": true,
       "label": "The record, on one line",
       "title": "From a first degree in 1969 <t>to the practice.</t>",
-      "lede": "Degrees and teaching appointments by the dates printed in the CV, and the year the forensic practice began as stated on bpettingill.com. Not checked against university records.",
       "from": 1969,
       "to": 2026,
       "marks": [
@@ -123,7 +122,6 @@
         }
       ],
       "rlabel": "Teaching appointments and the practice",
-      "src": "Self-reported · CV, July 2025 and bpettingill.com",
       "no": "01"
     },
     {
@@ -131,7 +129,6 @@
       "id": "record-education",
       "label": "Education",
       "title": "Economics, business <t>and public health.</t>",
-      "lede": "As stated in the CV, July 2025. Not checked against university records.",
       "groups": [
         {
           "label": "Degrees",
@@ -158,8 +155,8 @@
       "id": "record-academic",
       "tint": true,
       "label": "Academic appointments",
-      "title": "More than two decades of teaching. <t>None of it current.</t>",
-      "lede": "Dates as printed in the CV. Palm Beach Atlantic, Florida Institute of Technology, the University of Southwestern Louisiana, LSU Medical Center, New Orleans, Manchester and London.",
+      "title": "More than two decades <t>of teaching.</t>",
+      "lede": "Palm Beach Atlantic, Florida Tech, Southwestern Louisiana, LSU Medical Center, New Orleans, Manchester and London.",
       "groups": [
         {
           "label": "Florida",
@@ -175,7 +172,7 @@
           "names": [
             "Associate Professor, College of Business Administration, University of Southwestern Louisiana, Lafayette — 1980–1987",
             "Associate Professor, Department of Medicine, LSU Medical Center, New Orleans — 1978–1980",
-            "Assistant Professor, Department of Economics and Management, University of New Orleans — 1977–1978, printed on the CV as 1997–1978"
+            "Assistant Professor, Department of Economics and Management, University of New Orleans — 1977–1978"
           ]
         },
         {
@@ -194,7 +191,6 @@
       "id": "record-orgs",
       "label": "Professional organizations",
       "title": "The professional bodies <t>of the field.</t>",
-      "lede": "As listed in the CV, July 2025. Memberships marked “present” not confirmed as current.",
       "groups": [
         {
           "label": "Forensic and business economics",
@@ -222,49 +218,10 @@
       "no": "04"
     },
     {
-      "type": "practice",
-      "id": "firm",
-      "label": "The firm",
-      "title": "The expert here. <t>The firm there.</t>",
-      "lede": "This site is the record: practice, testimony, research. Pettingill Analytics is the firm, founded and led as President, with a team that carries work beyond the individual practice.",
-      "company": {
-        "name": "Pettingill Analytics",
-        "logo": "/pettingill/assets/pa-logo-white.png",
-        "role": "Founder & President",
-        "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
-        "meta": [
-          "Founded 1996, per the firm’s founder page",
-          "Palm Beach Gardens, Florida",
-          "Bpett@pettingillanalytics.com"
-        ],
-        "href": "https://www.pettingillanalytics.com/",
-        "link": "Visit pettingillanalytics.com"
-      },
-      "svcLabel": "Services of the firm",
-      "services": [
-        "Forensic Economic Consulting",
-        "Structured Settlement Solutions",
-        "Litigation Support & Jury Selection",
-        "Medical Practice Consulting & Valuations",
-        "Independent Reviews & Business Valuations",
-        "Health & Life Insurance Solutions",
-        "Project Management & Data Analytics",
-        "Staffing & Executive Searches"
-      ],
-      "social": [
-        {
-          "t": "Discuss a firm engagement",
-          "h": "#inquiry",
-          "path": "firm"
-        }
-      ],
-      "no": "05"
-    },
-    {
       "type": "next",
-      "k": "Ready to begin",
+      "k": "Next",
       "t": "Start a <t>case</t>",
-      "d": "The checklist for the type of matter, the retainer, the terms and the CV, in one place.",
+      "d": "Checklists for injury and death, the retainer and the terms.",
       "h": "/pettingill/practice#engage"
     },
     {
@@ -272,7 +229,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the question.</t>",
-      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
         "phone": "(561) 622-0330",
@@ -401,9 +358,9 @@
           }
         ],
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
-        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+        "fine": "Private concept: nothing is sent from this page."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -427,7 +384,7 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
@@ -448,7 +405,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "06"
+      "no": "05"
     }
   ]
 }

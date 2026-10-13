@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Bernard “Biff” Pettingill, Ph.D. — Forensic Economist & Expert Witness",
-    "description": "A private authority-platform concept: the forensic economics record of Bernard F. Pettingill, Jr., Ph.D., with the source behind every figure."
+    "description": "Bernard F. Pettingill, Jr., Ph.D.: forensic economist and expert witness since 1985. Economic damages in personal injury, wrongful death and medical malpractice."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -44,7 +44,7 @@
       },
       "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "Forensic economics since 1985. <t>Every figure, sourced.</t>",
+      "sub": "Economic damages in injury and death cases. <t>Since 1985.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -62,26 +62,23 @@
       "type": "nums",
       "id": "numbers",
       "ink": true,
-      "label": "The record, in three numbers",
+      "label": "The record",
       "items": [
         {
           "n": "1985",
-          "k": "Forensic economics since",
-          "src": "Self-reported · bpettingill.com"
+          "k": "Forensic economics since"
         },
         {
           "n": "1,500<sup>+</sup>",
-          "k": "Cases with deposition or trial testimony",
-          "src": "Self-reported · bpettingill.com"
+          "k": "Cases with deposition or trial testimony"
         },
         {
           "n": "29",
-          "k": "States, plus the U.S. Virgin Islands",
-          "src": "Self-reported · bpettingill.com"
+          "k": "States, plus the U.S. Virgin Islands"
         }
       ],
       "more": {
-        "t": "How each number is counted",
+        "t": "Prior testimony",
         "h": "/pettingill/testimony"
       }
     },
@@ -92,49 +89,43 @@
       "label": "In brief",
       "pin": 2.2,
       "paras": [
-        "Forensic economics since 1985, for counsel in injury and death cases.",
-        "Trained in health economics: a Master of Public Health from Tulane in 1973, a Ph.D. from Manchester in 1977. <t>Then retained to price it.</t>",
-        "Every figure on this site carries its source. <t>Claim, document, record. Kept apart.</t>"
-      ],
-      "keys": [
-        "Self-reported",
-        "Public document",
-        "Independent record",
-        "Ignite count"
+        "What will future care cost? What earning capacity was lost? What did a family lose? <t>The questions counsel bring, answered in present value.</t>",
+        "Trained in health economics at Tulane and Manchester. Professor of economics for more than two decades. <t>Forensic economist since 1985.</t>",
+        "More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands. <t>State and federal.</t>"
       ],
       "more": {
-        "t": "What each tag means",
-        "h": "/pettingill/testimony#sources"
+        "t": "The practice",
+        "h": "/pettingill/practice"
       }
     },
     {
       "type": "index",
       "id": "start-here",
-      "label": "What counsel usually needs",
-      "title": "Four routes, <t>one click each.</t>",
+      "label": "For counsel",
+      "title": "Start <t>here.</t>",
       "cards": [
         {
           "icon": "check",
           "t": "Start a case",
-          "d": "Injury and death checklists, the retainer and the published terms, in one place.",
+          "d": "Checklists for injury and death, the retainer and the terms.",
           "h": "/pettingill/practice#engage"
         },
         {
           "icon": "list",
           "t": "Prior testimony",
-          "d": "The public listing since 2017, counted by year, court and state.",
+          "d": "Depositions and trials since 2017, by year and court.",
           "h": "/pettingill/testimony#listing"
         },
         {
           "icon": "cv",
-          "t": "CV and education",
-          "d": "Degrees, appointments and memberships, on one line from 1969.",
+          "t": "Curriculum vitae",
+          "d": "Education, teaching and professional bodies since 1969.",
           "h": "/pettingill/record"
         },
         {
           "icon": "doc",
           "t": "Publications",
-          "d": "Seven papers with an outside record, 1979 to 2025.",
+          "d": "Papers from 1979 to 2025.",
           "h": "/pettingill/research"
         }
       ]
@@ -165,8 +156,7 @@
       "id": "s-research",
       "label": "Publications",
       "quote": "Published from 1979 <t>to 2025.</t>",
-      "sub": "Seven papers with an outside record, from Psychosomatics to hospital inflation.",
-      "src": "Independent records · PubMed, Crossref, publishers",
+      "sub": "From Psychosomatics in 1979 to hospital inflation in 2025.",
       "more": {
         "t": "The publications",
         "h": "/pettingill/research"
@@ -182,60 +172,25 @@
       "type": "stmt",
       "id": "s-firm",
       "label": "Pettingill Analytics",
-      "quote": "One founder. <t>A team at the table.</t>",
-      "sub": "The expert here. The firm there: forensic accounting, international finance and data analysis, with the same founder at its head.",
-      "src": "Public document · pettingillanalytics.com",
+      "quote": "Founder and President <t>since 1996.</t>",
+      "sub": "Pettingill Analytics: forensic accounting, international finance and data analysis.",
       "img": {
         "src": "/pettingill/assets/team.jpg",
         "alt": "The founder marking a chart at a working session with the team",
         "pos": "62% 30%"
-      }
-    },
-    {
-      "type": "practice",
-      "id": "firm-home",
-      "ink": true,
-      "label": "The firm",
-      "title": "Pettingill Analytics. <t>Founder and President.</t>",
-      "company": {
-        "name": "Pettingill Analytics",
-        "logo": "/pettingill/assets/pa-logo-white.png",
-        "role": "Founder & President",
-        "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
-        "meta": [
-          "Founded 1996, per the firm’s founder page",
-          "Palm Beach Gardens, Florida",
-          "Bpett@pettingillanalytics.com"
-        ],
-        "href": "https://www.pettingillanalytics.com/",
-        "link": "Visit pettingillanalytics.com"
       },
-      "social": [
-        {
-          "t": "Discuss a firm engagement",
-          "h": "#inquiry",
-          "path": "firm"
-        }
-      ],
-      "svcLabel": "Services of the firm",
-      "services": [
-        "Forensic Economic Consulting",
-        "Structured Settlement Solutions",
-        "Litigation Support & Jury Selection",
-        "Medical Practice Consulting & Valuations",
-        "Independent Reviews & Business Valuations",
-        "Health & Life Insurance Solutions",
-        "Project Management & Data Analytics",
-        "Staffing & Executive Searches"
-      ],
-      "no": "01"
+      "logo": "/pettingill/assets/pa-logo-white.png",
+      "more": {
+        "t": "Visit pettingillanalytics.com",
+        "h": "https://www.pettingillanalytics.com/"
+      }
     },
     {
       "type": "inquiry",
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the question.</t>",
-      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
         "phone": "(561) 622-0330",
@@ -364,9 +319,9 @@
           }
         ],
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
-        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+        "fine": "Private concept: nothing is sent from this page."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -390,7 +345,7 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
@@ -411,7 +366,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "02"
+      "no": "01"
     }
   ]
 }

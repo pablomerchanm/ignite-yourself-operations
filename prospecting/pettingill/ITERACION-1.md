@@ -204,3 +204,28 @@ Análisis completo de bpettingill.com y pettingillanalytics.com en `CURADURIA-WE
 Pendiente de permiso o confirmación: testimonios anónimos y cartas, fechas docentes cruzadas entre la página del fundador y el CV, cuál de los tres correos usar, y si el Bhatia coautor de 1982–1985 es el Dr. Sanjiv Bhatia del equipo.
 
 Revisión a 1440 y 390 px con motion: sin desbordes ni errores.
+
+---
+
+# Iteración 13 — la narrativa de una marca personal
+
+Decisión de Pablo: el sitio es su marca personal, no un expediente. Habla de él con orgullo y no se justifica. Lo corporativo vive en pettingillanalytics.com.
+
+**Fuera de la página:**
+- "Every figure, sourced." y toda la línea de etiquetas de fuente (Self-reported, Public document, Independent record, Ignite count), en cifras, publicaciones y líneas de tiempo.
+- La clave "Every claim carries its source" y el párrafo "Claim, document, record. Kept apart."
+- La banda "Proposed, subject to review" del registro buscable.
+- Las salvedades en pantalla: "as stated in the CV", "not checked against university records", "memberships not confirmed", el conteo explicado del listado, "None of it current".
+- La comparación de las tres cifras (1,500+ / 550+ / 1,900+). Queda el 1,500+ de su web personal.
+- Lo corporativo: las fichas de servicios de la firma y las notas del blog. La firma queda en una sola pantalla con su logo, "Founder and President since 1996" y enlace a pettingillanalytics.com, más el pie de cada página.
+
+**Nueva voz, en una línea por página:**
+- Hero: "Economic damages in injury and death cases. Since 1985."
+- In brief: las tres preguntas, la formación y el historial, en tres frases.
+- Testimony: "More than 1,500 cases. Deposition and trial." · cifras 1,500+, 550+, 29 · "329 testimonies since 2017."
+- Practice: "To start a case, begin here."
+- CV: "More than two decades of teaching."
+
+**Lo que no cambia:** no se inventa ningún dato. Cada cifra y cada fecha siguen siendo las de sus webs, su CV y los registros externos. Las verificaciones pendientes salen de la página pero siguen en estas notas y en `CURADURIA-WEBS-ACTUALES.md`. Hay que cerrarlas con Biff antes de publicar: cifra vigente (1,500+ o 1,900+), fechas docentes, correo, títulos y membresías, permisos de fotos y cartas.
+
+`BRAND-DIRECTION.md` actualizado: sin línea de marca fija, y voz de marca personal sin etiquetas de fuente.

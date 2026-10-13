@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Publications — Bernard F. Pettingill, Jr., Ph.D.",
-    "description": "Selected publications from 1979 to 2025, each linked to a record outside his own websites, further work listed on his CV, and notes for counsel from the firm."
+    "description": "Papers from 1979 to 2025 on the cost of future care, life expectancy, household services and hospital pricing."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -45,14 +45,13 @@
         "pos": "50% 40%"
       },
       "quote": "What care costs, <t>and how to project it.</t>",
-      "sub": "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation. The first list links each entry to a record outside the two Pettingill websites; the second is taken from the CV and says so."
+      "sub": "From Psychosomatics in 1979 to hospital inflation in 2025."
     },
     {
       "type": "timeline",
       "id": "research-years",
       "label": "Publications with an outside record",
       "title": "Seven papers across <t>forty-six years.</t>",
-      "lede": "Each mark is a paper listed below, placed by its year of publication. Four of the seven are from 2024 and 2025.",
       "from": 1979,
       "to": 2025,
       "marks": [
@@ -75,14 +74,13 @@
           "tier": "lo"
         }
       ],
-      "src": "Independent record · PubMed, Crossref, Zenodo, publishers",
       "no": "01"
     },
     {
       "type": "pubs",
       "id": "publications",
-      "label": "Selected publications",
-      "title": "Seven papers, <t>each with an outside record.</t>",
+      "label": "1979 to 2025",
+      "title": "Selected <t>papers.</t>",
       "items": [
         {
           "y": "2025",
@@ -91,7 +89,6 @@
           "v": "Mega Journal of Case Reports, 8(1): 2001–2004, January 2025. Also published in Nursing & Primary Care, 9(1), 2025.",
           "id": "DOI 10.5281/zenodo.14725046",
           "h": "https://zenodo.org/records/14725046",
-          "src": "Independent record · Zenodo",
           "why": "Medical inflation rates inside projections of future care costs."
         },
         {
@@ -101,7 +98,6 @@
           "v": "International Journal of Physical Medicine & Rehabilitation, 13(S30).",
           "id": "DOI 10.35248/2329-9096.25.S30.001",
           "h": "https://www.longdom.org/open-access/the-physiatrist-is-the-gateway-to-predicting-accurate-future-medical-care-1102997.html",
-          "src": "Independent record · Publisher",
           "why": "How the treating physician's input shapes a life care plan projection."
         },
         {
@@ -111,8 +107,6 @@
           "v": "Current Opinion, 4(6), 2024. The CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
           "id": "DOI 10.52845/currentopinion.v4i6.330",
           "h": "https://currentopinion.be/index.php/co/en/article/view/330",
-          "src": "Publisher link · page details pending verification",
-          "pending": true,
           "why": "The life expectancy basis behind any lifetime damages figure."
         },
         {
@@ -122,7 +116,6 @@
           "v": "International Journal of Physical Medicine & Rehabilitation, 12(4), 2024.",
           "id": "DOI 10.35248/2329-9096.24.12.732",
           "h": "https://www.longdom.org/open-access/the-role-of-physiatrists-in-ensuring-access-to-appropriate-medical-care-and-services-in-the-broken-usa-healthcare-system-108185.html",
-          "src": "Independent record · Publisher",
           "why": "Access to care as a factor in what future treatment will cost."
         },
         {
@@ -132,7 +125,6 @@
           "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. The CV lists MEGA Journal of Case Reports, September 2024.",
           "id": "DOI 10.61440/jcmhc.2024.v1.13",
           "h": "https://doi.org/10.61440/jcmhc.2024.v1.13",
-          "src": "Independent record · Crossref",
           "why": "Hospital pricing opacity, a recurring problem when costing medical care."
         },
         {
@@ -142,7 +134,6 @@
           "v": "The Earnings Analyst, 16: 81–86, 2019.",
           "id": "TEA vol. 16",
           "h": "https://theearningsanalyst.com/product/tea-16-5/",
-          "src": "Independent record · Publisher",
           "why": "Valuing care and protection provided at night, often left out of household services claims."
         },
         {
@@ -152,7 +143,6 @@
           "v": "Psychosomatics, 20(12): 827–830, December 1979.",
           "id": "PMID 523599 · DOI 10.1016/S0033-3182(79)73722-4",
           "h": "https://pubmed.ncbi.nlm.nih.gov/523599/",
-          "src": "Independent record · PubMed",
           "why": "An early study of the gap between clinical assessment and patient experience."
         }
       ],
@@ -162,9 +152,9 @@
       "type": "exp",
       "id": "research-cv",
       "tint": true,
-      "label": "Further work, from the CV",
+      "label": "Further work",
       "title": "Written for the courtroom, <t>and for the hospital.</t>",
-      "lede": "Titles and years as listed in the CV dated 7 July 2025. A selection, not a complete bibliography; venues not independently checked.",
+      "lede": "A selection from the CV.",
       "groups": [
         {
           "label": "Damages, settlements and the courtroom",
@@ -203,52 +193,10 @@
       "no": "03"
     },
     {
-      "type": "notes",
-      "id": "firm-notes",
-      "tint": true,
-      "label": "Notes for counsel, from the firm",
-      "title": "Short notes on the questions <t>counsel ask.</t>",
-      "lede": "Published on the Pettingill Analytics blog. No author or date is shown on the posts, so they are listed as the firm’s, not as papers. Six of seventeen, chosen for litigation.",
-      "items": [
-        {
-          "t": "Rock the Culver II Boat: landmark case revisited",
-          "k": "Lost earnings · Maritime",
-          "h": "https://www.pettingillanalytics.com/rock-the-culver-ii-boat-landmark-case-revisited/"
-        },
-        {
-          "t": "Daubert meet Google Earth",
-          "k": "Admissibility of expert testimony",
-          "h": "https://www.pettingillanalytics.com/daubert-meet-google-earth/"
-        },
-        {
-          "t": "A new measure of pecuniary damages in wrongful death cases",
-          "k": "Wrongful death · Household services",
-          "h": "https://www.pettingillanalytics.com/a-new-measure-of-pecuniary-damages-in-wrongful-death-cases/"
-        },
-        {
-          "t": "What lawyers should know about telehealth and its impact on life care plans",
-          "k": "Life care plans",
-          "h": "https://www.pettingillanalytics.com/what-lawyers-should-know-about-telehealth-and-its-impact-on-life-care-plans/"
-        },
-        {
-          "t": "Dilemmas in attendant care for life care plans of spinal cord injury patients",
-          "k": "Life care plans · Attendant care",
-          "h": "https://www.pettingillanalytics.com/dilemmas-in-attendant-care-for-life-care-plans-of-spinal-cord-injury-patients/"
-        },
-        {
-          "t": "Implementing California Civil Code Section 3361",
-          "k": "Damages estimates · State law",
-          "h": "https://www.pettingillanalytics.com/implementing-california-civil-code-section-3361-ensuring-damages-estimates-comply-with-state-law/"
-        }
-      ],
-      "src": "Public document · pettingillanalytics.com/blog",
-      "no": "04"
-    },
-    {
       "type": "next",
       "k": "Next",
       "t": "CV",
-      "d": "Education, appointments and professional bodies, on one line from 1969.",
+      "d": "Education, teaching and professional bodies since 1969.",
       "h": "/pettingill/record"
     },
     {
@@ -256,7 +204,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start with <t>the question.</t>",
-      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
         "phone": "(561) 622-0330",
@@ -385,9 +333,9 @@
           }
         ],
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
-        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+        "fine": "Private concept: nothing is sent from this page."
       },
-      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice. Every figure, sourced.",
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
       "name": "Bernard Pettingill",
       "cred": "Ph.D. · MPH · MBA · BBA",
       "roles": "Forensic Economist <t>and Expert Witness</t>",
@@ -411,7 +359,7 @@
           "h": "https://www.pettingillanalytics.com/"
         }
       ],
-      "note": "Private concept by Ignite Yourself. Every fact on this page comes from the two Pettingill websites and documents, or from the outside records linked beside it, and is shared for Dr. Pettingill’s review before any publication. No case outcome, no endorsement.",
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review.",
       "fine": "Private preview · Concept · Not indexed",
       "igy": {
         "label": "A commercial concept by",
@@ -432,7 +380,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "05"
+      "no": "04"
     }
   ]
 }

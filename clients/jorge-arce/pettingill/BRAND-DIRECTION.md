@@ -41,16 +41,9 @@ o el objeto ocupando la pantalla entera.
 **El problema que resuelve para el comprador (un abogado):** ¿cuánto vale esta
 pérdida, y resistirá el número en un estrado?
 
-**La promesa de marca:** *la cifra que aguanta.* Cada número viene con su fuente.
+**La promesa de marca:** *la cifra que aguanta.* Se demuestra con el historial, no se explica.
 
-**Línea de marca (elegir una):**
-1. **Every figure, sourced.** — la literal, ya usada en el preview. Sobria.
-2. **The number has to hold.** — la del estrado. Más tensión.
-3. **What a loss is worth.** — la pregunta del cliente. Más directa.
-
-Recomendación: **1** como línea permanente (cierra el sistema de etiquetas de
-fuente). El hero no lleva frase: lleva el **nombre completo** (decisión de
-Pablo, 13 oct). Las frases quedan para las pantallas siguientes.
+**Sin línea de marca fija** (decisión de Pablo, 13 oct). "Every figure, sourced" queda descartada: convertía el sitio en una justificación. El hero lleva el **nombre completo** y una sola frase de oficio: *Economic damages in injury and death cases. Since 1985.*
 
 **Wordmark:** `PETTINGILL` en serif editorial, mayúsculas, tracking abierto.
 Debajo, en grotesca pequeña: `BERNARD F. PETTINGILL, JR., PH.D. · FORENSIC ECONOMIST`.
@@ -254,14 +247,16 @@ studied”, “his website”, “the firm he founded”. La persona aparece por
 nombre solo cuando es inevitable: “Dr. Pettingill” en cuerpo, “Pettingill” como
 marca.
 
-- La fuente vive en la etiqueta mono, nunca dentro de la frase. Desaparecen
-  “as stated on”, “he publishes”, “his CV says”.
+- **Marca personal, no expediente.** El sitio afirma con orgullo y no se
+  justifica: nada de etiquetas de fuente, “as stated on”, “not checked”,
+  “self-reported” ni conteos explicados. Las verificaciones pendientes viven
+  en las notas internas (`prospecting/pettingill/`), nunca en la página.
 - Frases nominales o en presente. Sin pasado narrativo. 3 a 9 palabras.
 - Sin adjetivos de rango (“leading”, “renowned”, “trusted”), sin metáforas.
   El dato hace el trabajo del adjetivo.
-- Las salvedades metodológicas viven en una sola página (“How to read this
-  record”). El resto del sitio no se disculpa.
-- Inglés americano. Línea de marca: *Every figure, sourced.*
+- Lo corporativo (equipo, servicios, notas del blog) vive en
+  pettingillanalytics.com. Aquí, un solo acceso a la firma, con su logo.
+- Inglés americano.
 
 | No | Sí |
 |---|---|
