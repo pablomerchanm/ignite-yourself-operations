@@ -1351,6 +1351,122 @@ html.no-motion .scarr{display:none}
 .nxa:hover .nxt-t i{transform:translateX(12px)}
 .nxd{font-size:14px;color:var(--gray);max-width:60ch}
 
+/* ============ Iteracion 17: refinamiento editorial ============ */
+/* ---------- primer impacto: sin precargador, hero mas limpio ---------- */
+#pre{display:none!important}
+.hero::after{content:none}
+.hero .hname{font-size:clamp(58px,9.6vw,150px);line-height:.92}
+.hero .hkick{opacity:.85}
+.hero .hcred{font-size:11.5px;letter-spacing:.2em;color:rgba(255,255,255,.62);margin-top:clamp(44px,5.8vh,62px)}
+@media(max-width:860px){.hero .hcred{margin-top:26px}.hero .hkick{font-size:11px;letter-spacing:.14em}}
+.hero .hsub{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,31px);line-height:1.25;letter-spacing:-.005em;
+  max-width:24ch;color:rgba(255,255,255,.94);margin-top:clamp(20px,2.8vh,30px)}
+.hero .hsub .it{font-family:var(--serif);font-style:italic;font-weight:300;color:rgba(255,255,255,.62)}
+@media(max-width:860px){.hero .hsub{font-size:clamp(21px,5.8vw,25px);max-width:22ch}}
+
+/* ---------- in brief: tres ideas en composicion ---------- */
+.brf{padding:var(--sec) 0;background:var(--bg)}
+.brl{margin-bottom:clamp(28px,4vh,44px)}
+.brgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.bri{padding:clamp(28px,4vh,44px) clamp(18px,2.6vw,44px) 8px 0;border-right:1px solid var(--line)}
+.bri+.bri{padding-left:clamp(18px,2.6vw,44px)}
+.bri:last-child{border-right:0}
+.brn{display:block;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11.5px;letter-spacing:.12em;color:var(--brass)}
+.bri h3{margin-top:18px;font-family:var(--serif);font-weight:300;font-size:clamp(30px,2.9vw,46px);line-height:1.02;letter-spacing:-.015em;max-width:12ch}
+.brt{margin-top:20px;font-size:clamp(15.5px,1.15vw,17.5px);line-height:1.6;color:#2b2e33;max-width:34ch}
+.brd{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.55;color:var(--gray);max-width:34ch}
+@media(max-width:860px){.brgrid{grid-template-columns:1fr}.bri{border-right:0;padding-left:0!important;border-bottom:1px solid var(--line);padding-bottom:28px}
+  .bri:last-child{border-bottom:0}.bri h3{font-size:clamp(30px,8.4vw,40px)}}
+
+/* ---------- la cita: una pausa ---------- */
+.qt{padding:clamp(96px,15vh,180px) 0;background:var(--bg);border-top:1px solid var(--line)}
+@media(min-width:981px){.qt .wrap{padding-left:calc(34px + 20%)}}
+.qlead{max-width:48ch;font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:#3c3f44}
+.qq{margin-top:clamp(18px,2.6vh,28px);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(50px,7.4vw,118px);
+  line-height:.96;letter-spacing:-.02em;max-width:13ch;color:var(--ink)}
+.qwho{margin-top:clamp(26px,4vh,40px);display:flex;align-items:center;gap:14px;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+.qwho::before{content:'';width:40px;height:1px;background:var(--brass)}
+
+/* ---------- for counsel: los recursos como protagonistas ---------- */
+.csl{background:var(--ink);color:#fff;padding:var(--sec) 0}
+.csl.light{background:var(--bg);color:var(--ink)}
+.cshead{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(40px,6vh,64px)}
+.csl .cshead .smallcap{color:rgba(255,255,255,.6)}
+.csl.light .cshead .smallcap{color:var(--gray)}
+.csgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,20px)}
+.csgrid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.csc{display:flex;flex-direction:column;gap:14px;min-height:clamp(280px,34vh,340px);padding:clamp(24px,2.2vw,34px);
+  border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.025);color:inherit;transition:border-color .35s,transform .35s,background .35s}
+.csc:hover{border-color:var(--brass);background:rgba(181,131,63,.07);transform:translateY(-3px)}
+.csl.light .csc{border-color:var(--line);background:#F4F0E8}
+.csl.light .csc:hover{border-color:var(--brass);background:#F7F3EC}
+.cstop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.csico{display:block;width:30px;height:30px;color:var(--brass)}
+.cstag{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:right}
+.csl.light .cstag{color:var(--gray)}
+.cst{margin-top:clamp(36px,6vh,64px);font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.2vw,36px);line-height:1.04;letter-spacing:-.01em}
+.csd{font-size:15px;line-height:1.55;color:rgba(255,255,255,.76)}
+.csl.light .csd{color:#3c3f44}
+.csa{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+.csl.light .csa{border-top-color:var(--line)}
+.csa i{font-style:normal;font-size:15px;letter-spacing:0;color:var(--brass);transition:transform .35s}
+.csc:hover .csa i{transform:translateX(4px)}
+@media(max-width:1080px){.csgrid,.csgrid.c3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.csgrid,.csgrid.c3{grid-template-columns:1fr}.csc{min-height:0}.cst{margin-top:6px}}
+
+/* ---------- research: tres lineas de trabajo ---------- */
+.rcl{padding:var(--sec) 0;background:#E4DED2}
+.rclgrid{display:grid;grid-template-columns:1.45fr 1fr 1fr;border-top:1px solid var(--ink)}
+.rcg{padding:clamp(28px,4vh,44px) clamp(18px,2.4vw,40px) 10px 0;border-right:1px solid rgba(20,22,26,.16)}
+.rcg+.rcg{padding-left:clamp(18px,2.4vw,40px)}
+.rcg:last-child{border-right:0}
+.rcghd{display:flex;align-items:baseline;gap:12px}
+.rcn{font-family:var(--serif);font-weight:300;font-size:clamp(64px,7vw,112px);line-height:.8;letter-spacing:-.03em;color:var(--brass)}
+.rcnk{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+.rcg h3{margin-top:22px;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.3vw,36px);line-height:1.05;letter-spacing:-.01em}
+.rcarea{display:inline-flex;align-items:baseline;gap:10px;margin-top:14px;font-size:15px;color:var(--ink);border-bottom:1px solid rgba(20,22,26,.35);padding-bottom:3px}
+.rcarea .smallcap{font-size:11px}
+.rcarea:hover{border-bottom-color:var(--ink)}
+.rcg ul{list-style:none;margin-top:26px;border-top:1px solid rgba(20,22,26,.16)}
+.rcg li a{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:14px 0;border-bottom:1px solid rgba(20,22,26,.12);color:var(--ink)}
+.rcg li b{font-weight:500;font-size:14px;font-variant-numeric:tabular-nums;color:var(--gray)}
+.rcg li span{font-family:var(--serif);font-size:clamp(17px,1.35vw,20px);line-height:1.25}
+.rcg li a:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+@media(max-width:980px){.rclgrid{grid-template-columns:1fr}.rcg{border-right:0;padding-left:0!important;border-bottom:1px solid rgba(20,22,26,.16);padding-bottom:30px}}
+
+/* ---------- pantallas con foto: compacta y apertura ---------- */
+@media(min-width:861px){
+  .stmt.withimg.compact{min-height:clamp(460px,66svh,700px)}
+  .stmt.withimg.opener{min-height:clamp(560px,82svh,900px)}
+}
+.nxalt{display:inline-block;margin-top:24px;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);border-bottom:1px solid rgba(20,22,26,.4);padding-bottom:4px}
+.nxalt:hover{border-bottom-color:var(--ink)}
+
+/* ---------- legibilidad: textos pequenos y contraste ---------- */
+:root{--gray:#565A60}
+.smallcap{font-size:12px;letter-spacing:.14em}
+.elede,.plede{font-size:clamp(15px,1.15vw,17px);line-height:1.65}
+.pcard .pdesc{font-size:14.5px;line-height:1.6}
+.pcard.lead .pdesc{font-size:15.5px}
+.pcard li{font-size:14px}
+.method .mintro{font-size:15.5px}
+.mrow p{font-size:15px;line-height:1.6}
+.lgrid.wide .lcell,.lcell{font-size:clamp(14.5px,1.1vw,16px);line-height:1.55}
+.tst p{font-size:14px}.tlg{font-size:13px}.tgrid em{font-size:11.5px}.tcol .tyr{font-size:12px}
+.pau{font-size:15px}.pve,.pwhy{font-size:14.5px}
+.rtsteps p{font-size:15.5px}.rtcard dd{font-size:15px}.rtcard dt{font-size:11.5px}
+.ssub{font-size:clamp(16px,1.3vw,19px)}
+.tlt{font-size:12.5px}.tlrt{font-size:12.5px}
+@media(max-width:860px){
+  .smallcap{font-size:11.5px}
+  .elede,.plede{font-size:16px}
+  .stmt .ssub{font-size:16.5px}
+  .pcard .pdesc,.mrow p,.lcell{font-size:15.5px}
+  .tbot a{flex:1 1 auto;padding-left:5px;padding-right:5px;font-size:10.5px;letter-spacing:.05em}
+}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -1397,10 +1513,10 @@ html.no-motion .scarr{display:none}
   })();
 })();
 </script>
-<div class="topbar"><a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Pettingill</a><nav class="tnav" aria-label="Primary"><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony" class="on">Testimony</a><a href="/pettingill/research">Publications</a><a href="/pettingill/record">CV</a><a class="ext" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics ↗</a></nav><a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a><nav class="tbot" aria-label="Primary"><a href="/pettingill">Overview</a><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony" class="on">Testimony</a><a href="/pettingill/research">Publications</a><a href="/pettingill/record">CV</a></nav></div>
+<div class="topbar"><a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Pettingill</a><nav class="tnav" aria-label="Primary"><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony" class="on">Testimony</a><a href="/pettingill/research">Publications</a><a href="/pettingill/record">CV</a><a class="ext" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics ↗</a></nav><a class="u11 smallcap ncta" id="ncta" href="/pettingill#inquiry" style="color:#fff">Discuss a matter</a><nav class="tbot" aria-label="Primary"><a href="/pettingill">Overview</a><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony" class="on">Testimony</a><a href="/pettingill/research">Publications</a><a href="/pettingill/record">CV</a></nav></div>
 <button class="menuchip" id="mbtn" aria-expanded="false">Menu</button>
-<nav class="menupanel" id="nitems" aria-label="Site"><a href="/pettingill">Overview</a><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony">Testimony</a><a href="/pettingill/research">Publications</a><a href="/pettingill/record">CV</a><a href="#inquiry">Enquiry</a></nav>
-<main id="site"><section class="stmt withimg tr" id="testimony-open"><div class="sph"><img src="/pettingill/assets/balance.jpg" alt="A brass balance on a stack of books, in window light" loading="lazy" style="object-position:0% 62%"></div><div class="wrap" data-r2=""><div class="slab smallcap wr">Testimony</div><h2 class="sq wr">More than 1,500 cases. <span class="it">Deposition and trial.</span></h2><p class="ssub wr">Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court.</p><div class="sfoot wr"></div></div></section><section class="tally" id="listing"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">01</span><span class="smallcap wr">Prior testimony</span></div><div><h2 class="d80 wr">329 testimonies <span class="it">since 2017.</span></h2><p class="elede wr">Depositions and trials on the current listing, through January 2026.</p><a class="tdoc wr" href="https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf" target="_blank" rel="noopener">The full listing (PDF)</a></div></div><div class="tstats" data-cards=""><div class="tst wr"><div class="tn">269</div><div class="smallcap">Depositions</div><p>September 2017 to January 2026</p></div><div class="tst wr"><div class="tn">60</div><div class="smallcap">Trials</div><p>March 2018 to May 2025</p></div><div class="tst wr"><div class="tn">289</div><div class="smallcap">Florida courts</div><p>State and federal, across Florida</p></div><div class="tst wr"><div class="tn">26</div><div class="smallcap">U.S. District Courts</div><p>Federal district courts, in Florida and beyond</p></div></div><div class="tlay" data-r1=""><div class="tmain"><div class="thd"><span class="smallcap">Entries per year</span><div class="tlg"><span><i style="background:#3B64A0"></i>Depositions</span><span><i style="background:#B5833F"></i>Trials</span></div></div><div class="tch" role="img" aria-label="Testimony listing entries per year, stacked by depositions and trials. Peak: 2024, 58 entries."><div class="tgrid" aria-hidden="true"><span style="bottom:33.33333333333333%"><em>20</em></span><span style="bottom:66.66666666666666%"><em>40</em></span><span style="bottom:100%"><em>60</em></span></div><div class="tbars"><div class="tcol" tabindex="0" data-tip="2017 — 8 depositions, 0 trials"><div class="tstack"><i class="tseg" style="height:13.333333333333334%;background:#3B64A0"></i></div><span class="tyr">2017</span></div><div class="tcol" tabindex="0" data-tip="2018 — 20 depositions, 5 trials"><div class="tstack"><i class="tseg" style="height:33.33333333333333%;background:#3B64A0"></i><i class="tseg" style="height:8.333333333333332%;background:#B5833F"></i></div><span class="tyr">2018</span></div><div class="tcol" tabindex="0" data-tip="2019 — 26 depositions, 4 trials"><div class="tstack"><i class="tseg" style="height:43.333333333333336%;background:#3B64A0"></i><i class="tseg" style="height:6.666666666666667%;background:#B5833F"></i></div><span class="tyr">2019</span></div><div class="tcol" tabindex="0" data-tip="2020 — 23 depositions, 4 trials"><div class="tstack"><i class="tseg" style="height:38.333333333333336%;background:#3B64A0"></i><i class="tseg" style="height:6.666666666666667%;background:#B5833F"></i></div><span class="tyr">2020</span></div><div class="tcol" tabindex="0" data-tip="2021 — 35 depositions, 19 trials"><div class="tstack"><i class="tseg" style="height:58.333333333333336%;background:#3B64A0"></i><i class="tseg" style="height:31.666666666666664%;background:#B5833F"></i></div><span class="tyr">2021</span></div><div class="tcol" tabindex="0" data-tip="2022 — 34 depositions, 8 trials"><div class="tstack"><i class="tseg" style="height:56.666666666666664%;background:#3B64A0"></i><i class="tseg" style="height:13.333333333333334%;background:#B5833F"></i></div><span class="tyr">2022</span></div><div class="tcol" tabindex="0" data-tip="2023 — 40 depositions, 5 trials"><div class="tstack"><i class="tseg" style="height:66.66666666666666%;background:#3B64A0"></i><i class="tseg" style="height:8.333333333333332%;background:#B5833F"></i></div><span class="tyr">2023</span></div><div class="tcol" tabindex="0" data-tip="2024 — 49 depositions, 9 trials"><div class="tstack"><b class="tpeak">58</b><i class="tseg" style="height:81.66666666666667%;background:#3B64A0"></i><i class="tseg" style="height:15%;background:#B5833F"></i></div><span class="tyr">2024</span></div><div class="tcol" tabindex="0" data-tip="2025 — 30 depositions, 6 trials"><div class="tstack"><i class="tseg" style="height:50%;background:#3B64A0"></i><i class="tseg" style="height:10%;background:#B5833F"></i></div><span class="tyr">2025</span></div><div class="tcol" tabindex="0" data-tip="2026 — 4 depositions, 0 trials"><div class="tstack"><i class="tseg" style="height:6.666666666666667%;background:#3B64A0"></i></div><span class="tyr">2026</span></div></div><div class="ttip" aria-hidden="true"></div></div><details class="ttab"><summary>View as table</summary><table><thead><tr><th>Year</th><th>Depositions</th><th>Trials</th><th>Total</th></tr></thead><tbody><tr><td>2017</td><td>8</td><td>0</td><td>8</td></tr><tr><td>2018</td><td>20</td><td>5</td><td>25</td></tr><tr><td>2019</td><td>26</td><td>4</td><td>30</td></tr><tr><td>2020</td><td>23</td><td>4</td><td>27</td></tr><tr><td>2021</td><td>35</td><td>19</td><td>54</td></tr><tr><td>2022</td><td>34</td><td>8</td><td>42</td></tr><tr><td>2023</td><td>40</td><td>5</td><td>45</td></tr><tr><td>2024</td><td>49</td><td>9</td><td>58</td></tr><tr><td>2025</td><td>30</td><td>6</td><td>36</td></tr><tr><td>2026</td><td>4</td><td>0</td><td>4</td></tr></tbody></table></details></div><div class="tbey"><span class="smallcap">Beyond Florida</span><span class="lcount">13</span><ul><li>Alabama</li><li>Arkansas</li><li>California</li><li>Georgia</li><li>Louisiana</li><li>Maryland</li><li>Massachusetts</li><li>Missouri</li><li>Nebraska</li><li>New Jersey</li><li>Texas</li><li>Washington</li><li>U.S. Virgin Islands</li></ul></div></div></div></section><section class="nxt" id="next"><div class="wrap"><a class="nxa" href="/pettingill/research" data-r2=""><span class="smallcap wr">Next</span><span class="nxt-t wr">Publications<i aria-hidden="true">→</i></span><span class="nxd wr">Papers from 1979 to 2025.</span></a></div></section><section class="reserve paths-in" id="inquiry"><div class="wrap"><div class="rlay" data-r2=""><div class="rleft"><div class="mlab wr" style="justify-content:flex-start"><span class="rnum">02</span><span class="smallcap">Start a conversation</span></div><h2 class="d97 wr">Start with <span class="it">the question.</span></h2><p class="rlede wr">Choose the nature of the enquiry and give enough non-confidential context for a first response.</p><div class="rdirect wr"><a class="rmail" href="mailto:biffpett@gmail.com">biffpett@gmail.com</a><div class="rmeta"><span>(561) 622-0330</span><span>Palm Beach Gardens, Florida</span></div></div></div><div class="rright"><form class="rform iform wr" id="iform" novalidate=""><label class="rfield iselect" for="iqtype"><span class="smallcap">What would you like to discuss?</span><select id="iqtype" name="iqtype"><option value="">Select the nature of your enquiry</option><option value="matter">A new matter — economic damages</option><option value="firm">Business valuation, litigation support or analytics — Pettingill Analytics</option><option value="records">CV, testimony listing or engagement terms</option><option value="referral">Checking a referral</option></select></label><div class="ipath" data-path="matter" hidden=""><div class="ifields"><label class="rfield" for="f-matter-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-matter-0" name="f-matter-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-matter-1"><span class="smallcap">Firm<em class="req">Required</em></span><input type="text" id="f-matter-1" name="f-matter-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-matter-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-matter-2" name="f-matter-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-matter-3"><span class="smallcap">Type of claim</span><input type="text" id="f-matter-3" name="f-matter-3" disabled=""></label><label class="rfield" for="f-matter-4"><span class="smallcap">Court or jurisdiction</span><input type="text" id="f-matter-4" name="f-matter-4" disabled=""></label><label class="rfield" for="f-matter-5"><span class="smallcap">Report or trial date, if set</span><input type="text" id="f-matter-5" name="f-matter-5" disabled=""></label><label class="rfield full" for="f-matter-6"><span class="smallcap">Brief, non-confidential description</span><textarea id="f-matter-6" name="f-matter-6" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Send enquiry</button><p class="inote">Please do not include confidential or privileged case information.</p></div><div class="ipath" data-path="firm" hidden=""><div class="ifields"><label class="rfield" for="f-firm-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-firm-0" name="f-firm-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-firm-1"><span class="smallcap">Organization<em class="req">Required</em></span><input type="text" id="f-firm-1" name="f-firm-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-firm-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-firm-2" name="f-firm-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-firm-3"><span class="smallcap">Service of interest</span><input type="text" id="f-firm-3" name="f-firm-3" disabled=""></label><label class="rfield full" for="f-firm-4"><span class="smallcap">Brief description</span><textarea id="f-firm-4" name="f-firm-4" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Send to the firm</button><p class="inote">Routed to Pettingill Analytics. Please do not include confidential information.</p></div><div class="ipath" data-path="records" hidden=""><div class="ifields"><label class="rfield" for="f-records-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-records-0" name="f-records-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-records-1"><span class="smallcap">Firm<em class="req">Required</em></span><input type="text" id="f-records-1" name="f-records-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-records-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-records-2" name="f-records-2" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-records-3"><span class="smallcap">Documents needed</span><textarea id="f-records-3" name="f-records-3" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Request documents</button></div><div class="ipath" data-path="referral" hidden=""><div class="ifields"><label class="rfield" for="f-referral-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-referral-0" name="f-referral-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-referral-1"><span class="smallcap">Firm<em class="req">Required</em></span><input type="text" id="f-referral-1" name="f-referral-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-referral-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-referral-2" name="f-referral-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-referral-3"><span class="smallcap">Who referred you, if you wish to say</span><input type="text" id="f-referral-3" name="f-referral-3" disabled=""></label><label class="rfield full" for="f-referral-4"><span class="smallcap">What you need to know</span><textarea id="f-referral-4" name="f-referral-4" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Send enquiry</button></div><p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden="">Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.</p><p class="fine">Private concept: nothing is sent from this page.</p></form></div></div></div></section><footer class="kfoot"><div class="wrap"><div class="ftop" data-r2=""><div class="fid"><p class="fkick wr">Economic damages in personal injury, wrongful death and medical malpractice.</p><div class="fname wr">Bernard Pettingill</div><div class="fcred wr">Ph.D. · MPH · MBA · BBA</div><div class="froles wr">Forensic Economist <span class="it">and Expert Witness</span></div><a class="fcta wr" href="#inquiry">Discuss a matter</a></div><div class="fpract wr" data-r1=""><span class="smallcap">The firm</span><a class="fmark" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener"><img src="/pettingill/assets/pa-logo-white.png" alt="Pettingill Analytics"></a><p class="fplede">Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.</p><div class="fpmeta"><span>Palm Beach Gardens, Florida</span><span>Bpett@pettingillanalytics.com</span></div><a class="fplink" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Visit pettingillanalytics.com</a></div></div><div class="fgrid" data-cards=""><div class="fcol wr"><span class="smallcap">Contact</span><ul><li><a href="mailto:biffpett@gmail.com">biffpett@gmail.com</a></li><li><a href="tel:5616220330">(561) 622-0330</a></li><li>Palm Beach Gardens, Florida</li></ul></div><div class="fcol wr"><span class="smallcap">Affiliations</span><ul><li>Referee, Journal of Forensic Economics</li><li>National Association of Forensic Economists — since 1989</li><li>American Economic Association — since 1983</li><li>Founder &amp; President, Pettingill Analytics</li></ul></div><div class="fcol wr"><span class="smallcap">Elsewhere</span><ul><li><a href="https://bpettingill.com/" target="_blank" rel="noopener">bpettingill.com</a></li><li><a href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics</a></li></ul></div></div><div class="fbase"><p class="fnote">Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session.</p><span class="ffine">Private preview · Concept · Not indexed</span></div><div class="figy"><div class="igyb"><span class="smallcap">A commercial concept by</span><a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/pettingill/assets/igy-logo.png" alt="Ignite Yourself"></a><a class="igylink" href="https://igniteyourself.co/" target="_blank" rel="noopener">Discover Ignite Yourself</a></div><p class="igyd">This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed.</p></div></div></footer></main>
+<nav class="menupanel" id="nitems" aria-label="Site"><a href="/pettingill">Overview</a><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony">Testimony</a><a href="/pettingill/research">Publications</a><a href="/pettingill/record">CV</a><a href="/pettingill#inquiry">Enquiry</a></nav>
+<main id="site"><section class="stmt withimg tr opener" id="testimony-open"><div class="sph"><img src="/pettingill/assets/balance.jpg" alt="A brass balance on a stack of books, in window light" loading="lazy" style="object-position:0% 62%"></div><div class="wrap" data-r2=""><div class="slab smallcap wr">Testimony</div><h2 class="sq wr">More than 1,500 cases. <span class="it">Deposition and trial.</span></h2><p class="ssub wr">Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court.</p><div class="sfoot wr"></div></div></section><section class="tally" id="listing"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">01</span><span class="smallcap wr">Prior testimony</span></div><div><h2 class="d80 wr">329 testimonies <span class="it">since 2017.</span></h2><p class="elede wr">Depositions and trials on the current listing, through January 2026.</p><a class="tdoc wr" href="https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf" target="_blank" rel="noopener">The full listing (PDF)</a></div></div><div class="tstats" data-cards=""><div class="tst wr"><div class="tn">269</div><div class="smallcap">Depositions</div><p>September 2017 to January 2026</p></div><div class="tst wr"><div class="tn">60</div><div class="smallcap">Trials</div><p>March 2018 to May 2025</p></div><div class="tst wr"><div class="tn">289</div><div class="smallcap">Florida courts</div><p>State and federal, across Florida</p></div><div class="tst wr"><div class="tn">26</div><div class="smallcap">U.S. District Courts</div><p>Federal district courts, in Florida and beyond</p></div></div><div class="tlay" data-r1=""><div class="tmain"><div class="thd"><span class="smallcap">Entries per year</span><div class="tlg"><span><i style="background:#3B64A0"></i>Depositions</span><span><i style="background:#B5833F"></i>Trials</span></div></div><div class="tch" role="img" aria-label="Testimony listing entries per year, stacked by depositions and trials. Peak: 2024, 58 entries."><div class="tgrid" aria-hidden="true"><span style="bottom:33.33333333333333%"><em>20</em></span><span style="bottom:66.66666666666666%"><em>40</em></span><span style="bottom:100%"><em>60</em></span></div><div class="tbars"><div class="tcol" tabindex="0" data-tip="2017 — 8 depositions, 0 trials"><div class="tstack"><i class="tseg" style="height:13.333333333333334%;background:#3B64A0"></i></div><span class="tyr">2017</span></div><div class="tcol" tabindex="0" data-tip="2018 — 20 depositions, 5 trials"><div class="tstack"><i class="tseg" style="height:33.33333333333333%;background:#3B64A0"></i><i class="tseg" style="height:8.333333333333332%;background:#B5833F"></i></div><span class="tyr">2018</span></div><div class="tcol" tabindex="0" data-tip="2019 — 26 depositions, 4 trials"><div class="tstack"><i class="tseg" style="height:43.333333333333336%;background:#3B64A0"></i><i class="tseg" style="height:6.666666666666667%;background:#B5833F"></i></div><span class="tyr">2019</span></div><div class="tcol" tabindex="0" data-tip="2020 — 23 depositions, 4 trials"><div class="tstack"><i class="tseg" style="height:38.333333333333336%;background:#3B64A0"></i><i class="tseg" style="height:6.666666666666667%;background:#B5833F"></i></div><span class="tyr">2020</span></div><div class="tcol" tabindex="0" data-tip="2021 — 35 depositions, 19 trials"><div class="tstack"><i class="tseg" style="height:58.333333333333336%;background:#3B64A0"></i><i class="tseg" style="height:31.666666666666664%;background:#B5833F"></i></div><span class="tyr">2021</span></div><div class="tcol" tabindex="0" data-tip="2022 — 34 depositions, 8 trials"><div class="tstack"><i class="tseg" style="height:56.666666666666664%;background:#3B64A0"></i><i class="tseg" style="height:13.333333333333334%;background:#B5833F"></i></div><span class="tyr">2022</span></div><div class="tcol" tabindex="0" data-tip="2023 — 40 depositions, 5 trials"><div class="tstack"><i class="tseg" style="height:66.66666666666666%;background:#3B64A0"></i><i class="tseg" style="height:8.333333333333332%;background:#B5833F"></i></div><span class="tyr">2023</span></div><div class="tcol" tabindex="0" data-tip="2024 — 49 depositions, 9 trials"><div class="tstack"><b class="tpeak">58</b><i class="tseg" style="height:81.66666666666667%;background:#3B64A0"></i><i class="tseg" style="height:15%;background:#B5833F"></i></div><span class="tyr">2024</span></div><div class="tcol" tabindex="0" data-tip="2025 — 30 depositions, 6 trials"><div class="tstack"><i class="tseg" style="height:50%;background:#3B64A0"></i><i class="tseg" style="height:10%;background:#B5833F"></i></div><span class="tyr">2025</span></div><div class="tcol" tabindex="0" data-tip="2026 — 4 depositions, 0 trials"><div class="tstack"><i class="tseg" style="height:6.666666666666667%;background:#3B64A0"></i></div><span class="tyr">2026</span></div></div><div class="ttip" aria-hidden="true"></div></div><details class="ttab"><summary>View as table</summary><table><thead><tr><th>Year</th><th>Depositions</th><th>Trials</th><th>Total</th></tr></thead><tbody><tr><td>2017</td><td>8</td><td>0</td><td>8</td></tr><tr><td>2018</td><td>20</td><td>5</td><td>25</td></tr><tr><td>2019</td><td>26</td><td>4</td><td>30</td></tr><tr><td>2020</td><td>23</td><td>4</td><td>27</td></tr><tr><td>2021</td><td>35</td><td>19</td><td>54</td></tr><tr><td>2022</td><td>34</td><td>8</td><td>42</td></tr><tr><td>2023</td><td>40</td><td>5</td><td>45</td></tr><tr><td>2024</td><td>49</td><td>9</td><td>58</td></tr><tr><td>2025</td><td>30</td><td>6</td><td>36</td></tr><tr><td>2026</td><td>4</td><td>0</td><td>4</td></tr></tbody></table></details></div><div class="tbey"><span class="smallcap">Beyond Florida</span><span class="lcount">13</span><ul><li>Alabama</li><li>Arkansas</li><li>California</li><li>Georgia</li><li>Louisiana</li><li>Maryland</li><li>Massachusetts</li><li>Missouri</li><li>Nebraska</li><li>New Jersey</li><li>Texas</li><li>Washington</li><li>U.S. Virgin Islands</li></ul></div></div></div></section><section class="nxt" id="next"><div class="wrap"><a class="nxa" href="/pettingill/research" data-r2=""><span class="smallcap wr">Next</span><span class="nxt-t wr">Publications<i aria-hidden="true">→</i></span><span class="nxd wr">Papers from 1979 to 2025.</span></a><a class="nxalt" href="/pettingill#inquiry">Discuss a matter</a></div></section><footer class="kfoot"><div class="wrap"><div class="ftop" data-r2=""><div class="fid"><p class="fkick wr">Economic damages in personal injury, wrongful death and medical malpractice.</p><div class="fname wr">Bernard Pettingill</div><div class="fcred wr">Ph.D. · MPH · MBA · BBA</div><div class="froles wr">Forensic Economist <span class="it">and Expert Witness</span></div><a class="fcta wr" href="/pettingill#inquiry">Discuss a matter</a></div><div class="fpract wr" data-r1=""><span class="smallcap">The firm</span><a class="fmark" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener"><img src="/pettingill/assets/pa-logo-white.png" alt="Pettingill Analytics"></a><p class="fplede">Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.</p><div class="fpmeta"><span>Palm Beach Gardens, Florida</span><span>Bpett@pettingillanalytics.com</span></div><a class="fplink" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Visit pettingillanalytics.com</a></div></div><div class="fgrid" data-cards=""><div class="fcol wr"><span class="smallcap">Contact</span><ul><li><a href="mailto:biffpett@gmail.com">biffpett@gmail.com</a></li><li><a href="tel:5616220330">(561) 622-0330</a></li><li>Palm Beach Gardens, Florida</li></ul></div><div class="fcol wr"><span class="smallcap">Affiliations</span><ul><li>Referee, Journal of Forensic Economics</li><li>National Association of Forensic Economists — since 1989</li><li>American Economic Association — since 1983</li><li>Founder &amp; President, Pettingill Analytics</li></ul></div><div class="fcol wr"><span class="smallcap">Elsewhere</span><ul><li><a href="https://bpettingill.com/" target="_blank" rel="noopener">bpettingill.com</a></li><li><a href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics</a></li></ul></div></div><div class="fbase"><p class="fnote">Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session.</p><span class="ffine">Private preview · Concept · Not indexed</span></div><div class="figy"><div class="igyb"><span class="smallcap">A commercial concept by</span><a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/pettingill/assets/igy-logo.png" alt="Ignite Yourself"></a><a class="igylink" href="https://igniteyourself.co/" target="_blank" rel="noopener">Discover Ignite Yourself</a></div><p class="igyd">This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed.</p></div></div></footer></main>
 <script src="/vendor/gsap.min.js"></script>
 <script src="/vendor/ScrollTrigger.min.js"></script>
 <script src="/vendor/lenis.min.js"></script>
@@ -1459,7 +1575,7 @@ nums:function(s){
   (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
   '</div></section>'},
 stmt:function(s){
-  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+(s.align==='right'?' tr':'')+'" id="'+esc(s.id||'stmt')+'">'+
+  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+(s.align==='right'?' tr':'')+(s.compact?' compact':'')+(s.opener?' opener':'')+'" id="'+esc(s.id||'stmt')+'">'+
   (s.img&&s.img.src?'<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+(s.img.pos?' style="object-position:'+esc(s.img.pos)+'"':'')+'></div>':'')+
   '<div class="wrap" data-r2>'+
   (s.logo?'<img class="slogo wr" src="'+esc(s.logo)+'" alt="'+esc(s.label||'')+'">':'')+
@@ -1491,6 +1607,39 @@ scrub:function(s){
     '<div class="scsign">'+(s.keys?'<ul class="skeys astags">'+s.keys.map(function(k){return'<li><span class="src">'+esc(k)+'</span></li>'}).join('')+'</ul>':'')+
     (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+'</div>'+
   '</div></div></section>'},
+brief:function(s){
+  return'<section class="brf" id="'+esc(s.id||'brief')+'"><div class="wrap">'+
+  (s.label?'<div class="smallcap brl wr" data-r1>'+esc(s.label)+'</div>':'')+
+  '<div class="brgrid" data-cards>'+(s.items||[]).map(function(it,i){
+    return'<div class="bri wr"><span class="brn">0'+(i+1)+'</span><h3>'+rich(it.k)+'</h3><p class="brt">'+rich(it.t)+'</p>'+(it.d?'<p class="brd">'+rich(it.d)+'</p>':'')+'</div>'}).join('')+'</div>'+
+  '</div></section>'},
+quote:function(s){
+  return'<section class="qt" id="'+esc(s.id||'quote')+'"><div class="wrap" data-r2>'+
+  (s.lead?'<p class="qlead wr">'+esc(s.lead)+'</p>':'')+
+  '<blockquote class="qq wr">'+esc(s.q)+'</blockquote>'+
+  (s.who?'<p class="qwho wr">'+esc(s.who)+'</p>':'')+
+  '</div></section>'},
+counsel:function(s){
+  return'<section class="csl'+(s.light?' light':'')+'" id="'+esc(s.id||'counsel')+'"><div class="wrap">'+
+  '<div class="cshead" data-r2><span class="smallcap wr">'+esc(s.label)+'</span><h2 class="d56 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="csgrid'+((s.items||[]).length===3?' c3':'')+'" data-cards>'+(s.items||[]).map(function(it){
+    var ext=/^https?:/.test(it.h);
+    return'<a class="csc wr" href="'+esc(it.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+
+      '<span class="cstop"><span class="csico" aria-hidden="true">'+ico(it.icon)+'</span><span class="cstag">'+esc(it.tag)+'</span></span>'+
+      '<span class="cst">'+esc(it.t)+'</span><span class="csd">'+esc(it.d)+'</span>'+
+      '<span class="csa">'+esc(it.a)+'<i aria-hidden="true">'+(ext?'&nearr;':'&rarr;')+'</i></span></a>'}).join('')+'</div>'+
+  '</div></section>'},
+clusters:function(s){
+  return'<section class="rcl" id="'+esc(s.id||'clusters')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2></div></div>'+
+  '<div class="rclgrid" data-cards>'+(s.groups||[]).map(function(g){
+    var n=(g.papers||[]).length;
+    return'<div class="rcg wr"><div class="rcghd"><span class="rcn">'+n+'</span><span class="rcnk">'+(n===1?'paper':'papers')+'</span></div>'+
+      '<h3>'+esc(g.t)+'</h3>'+
+      '<a class="rcarea" href="'+esc(g.h)+'"><span class="smallcap">In practice</span>'+esc(g.area)+'</a>'+
+      '<ul>'+(g.papers||[]).map(function(p){return'<li><a href="'+esc(p.h)+'" target="_blank" rel="noopener"><b>'+esc(p.y)+'</b><span>'+esc(p.t)+'</span></a></li>'}).join('')+'</ul></div>'}).join('')+'</div>'+
+  '</div></section>'},
 retain:function(s){
   function lk(l){var ext=/^https?:/.test(l.h);return'<a class="rtl" href="'+esc(l.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.t)+'</a>'}
   return'<section class="rtn" id="'+esc(s.id||'retain')+'"><div class="wrap">'+
@@ -1525,7 +1674,8 @@ notes:function(s){
 next:function(s){
   return'<section class="nxt" id="next"><div class="wrap"><a class="nxa" href="'+esc(s.h)+'" data-r2>'+
   '<span class="smallcap wr">'+esc(s.k||'Next')+'</span><span class="nxt-t wr">'+rich(s.t)+'<i aria-hidden="true">&rarr;</i></span>'+
-  (s.d?'<span class="nxd wr">'+esc(s.d)+'</span>':'')+'</a></div></section>'},
+  (s.d?'<span class="nxd wr">'+esc(s.d)+'</span>':'')+'</a>'+
+  (s.alt?'<a class="nxalt" href="'+esc(s.alt.h)+'">'+esc(s.alt.t)+'</a>':'')+'</div></section>'},
 timeline:function(s){
   var a=s.from,b=s.to,span=(b-a)||1;function pct(y){return((y-a)/span*100).toFixed(2)}
   var tiers=['hi','lo','up'];
@@ -1742,7 +1892,7 @@ inquiry:function(s){
       : '<input type="'+esc(fl.ty||'text')+'" id="'+id+'" name="'+id+'"'+req+'>';
     return'<label class="rfield'+(fl.full?' full':'')+'" for="'+id+'">'+
       '<span class="smallcap">'+esc(fl.n)+(fl.r?'<em class="req">Required</em>':'')+'</span>'+ctrl+'</label>'}
-  return'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+
+  return(s.noform?'':'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+
   '<div class="rlay" data-r2>'+
     '<div class="rleft">'+
       '<div class="mlab wr" style="justify-content:flex-start"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+
@@ -1770,7 +1920,7 @@ inquiry:function(s){
         (f.fine?'<p class="fine">'+esc(f.fine)+'</p>':'')+
       '</form>'+
     '</div>'+
-  '</div></div></section>'+
+  '</div></div></section>')+
   '<footer class="kfoot"><div class="wrap">'+
     '<div class="ftop" data-r2>'+
       '<div class="fid">'+

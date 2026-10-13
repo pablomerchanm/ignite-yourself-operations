@@ -289,3 +289,36 @@ Fuentes revisadas: la página Founder de pettingillanalytics.com (pestañas Expe
 - **Las publicaciones de la página Founder** terminan en 2004. El CV de 2025 es más completo.
 - **Las organizaciones antiguas** (DECUS, Southern Management Association, Junior Chamber, Chamber of Commerce, Emergency Medical Service) no ayudan a un abogado a decidir.
 - **El CV de 2020** no trae nada que el de 2025 no tenga, salvo las fechas de Florida y que firma como "Consulting Economists" en plural.
+
+---
+
+# Iteración 17 — refinamiento editorial
+
+Objetivo: que el sitio se lea como una marca personal cuidada y útil para un abogado, sin rehacer la identidad. **Se conserva** todo lo que ya funcionaba: tipografía serif, paleta cálida, fotografía, cifras verificadas, las cinco páginas, la navegación y los enlaces.
+
+**Home, en este orden:** identidad (hero) → In brief → evidencia judicial (las tres cifras) → la cita → especialidad (The practice) → investigación → For counsel → la firma → contacto. Sale el índice de cuatro rutas, porque For counsel cumple esa función con más claridad.
+
+1. **Hero.** El nombre domina con más tamaño y la línea superior desaparece. Las credenciales quedan en segundo plano, separadas del nombre. **Prueba A/B del subtítulo:**
+   - A: "The economics of injury, loss and future care. Since 1985."
+   - B: "Life care plans, lost earnings and wrongful death damages. Since 1985."
+   - Se queda A: es más corta, en móvil no deja "1985." sola en una línea y no repite lo que ya dice The practice.
+2. **In brief.** El scrollytelling se sustituye por tres columnas editoriales: economía y salud pública, cuatro décadas de testimonio e investigación vigente. Cada columna lleva un título, el dato y una línea de apoyo. Todo sale del CV de 2025.
+3. **La cita** "He's an expert's expert", como pausa editorial sin imagen. Atribución: "A law partner, as quoted by Pettingill Analytics". **Sigue pendiente el permiso** para usarla.
+4. **For counsel.** Cuatro tarjetas: CV (PDF de julio de 2025), testimonios previos, publicaciones y cómo contratarlo. En Practice, el bloque de la divulgación usa el mismo componente en versión clara.
+5. **Research: "Three lines of work".** Relaciona las publicaciones con las áreas de práctica:
+   - Costos médicos futuros: 4 papers → Life care plans.
+   - Esperanza de vida: 1 paper → Wrongful death.
+   - Servicios del hogar: 1 paper → Household services.
+   - No se inventa ninguna aplicación a casos.
+   - Sale la línea de años, que repetía la tabla.
+6. **Subpáginas.** Aperturas con foto más altas. Al final ya no está el formulario completo: solo "Next", un enlace "Discuss a matter" que lleva al contacto de la home y el pie. El CTA del topbar y el "Enquiry" del menú también apuntan a /pettingill#inquiry.
+7. **Legibilidad.**
+   - El gris pasa a #565A60 para mejorar el contraste.
+   - Smallcaps a 12 px.
+   - Los textos pequeños suben entre 1 y 2 px, y más en móvil.
+   - Las pestañas móviles ya no se montan.
+   - Se quita el precargador para que la primera impresión no tarde.
+
+Verificación local a 1440 y 390 px en las cinco páginas: sin desbordamiento horizontal y sin errores de consola.
+
+**Pendientes sin cambios:** 1,500+ frente a 1,900+; las fechas docentes en Florida; qué correo usar; si las tarifas siguen vigentes; Bhatia; y los permisos de fotos, cartas y la cita.

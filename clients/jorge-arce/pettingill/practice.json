@@ -27,12 +27,12 @@
     },
     {
       "t": "Enquiry",
-      "h": "#inquiry"
+      "h": "/pettingill#inquiry"
     }
   ],
   "navcta": {
     "t": "Discuss a matter",
-    "h": "#inquiry"
+    "h": "/pettingill#inquiry"
   },
   "sections": [
     {
@@ -45,7 +45,8 @@
         "pos": "62% 50%"
       },
       "quote": "Economic damages, <t>to present value.</t>",
-      "sub": "Personal injury, wrongful death and medical malpractice."
+      "sub": "Personal injury, wrongful death and medical malpractice.",
+      "opener": true
     },
     {
       "type": "paths",
@@ -68,7 +69,7 @@
           ],
           "cta": {
             "t": "Discuss a life care plan matter",
-            "h": "#inquiry",
+            "h": "/pettingill#inquiry",
             "path": "matter"
           },
           "icon": "care"
@@ -85,7 +86,7 @@
           ],
           "cta": {
             "t": "Discuss an injury matter",
-            "h": "#inquiry",
+            "h": "/pettingill#inquiry",
             "path": "matter"
           },
           "icon": "earn"
@@ -102,7 +103,7 @@
           ],
           "cta": {
             "t": "Discuss a death matter",
-            "h": "#inquiry",
+            "h": "/pettingill#inquiry",
             "path": "matter"
           },
           "icon": "support"
@@ -119,7 +120,7 @@
           ],
           "cta": {
             "t": "Discuss a matter",
-            "h": "#inquiry",
+            "h": "/pettingill#inquiry",
             "path": "matter"
           },
           "icon": "house"
@@ -192,41 +193,53 @@
       "ctaNote": "Payment through bpettingill.com.",
       "alt": {
         "t": "Discuss the matter first",
-        "h": "#inquiry"
+        "h": "/pettingill#inquiry"
       },
       "no": "02"
     },
     {
-      "type": "method",
+      "type": "counsel",
       "id": "disclosure",
+      "light": true,
       "label": "For the file",
       "title": "The expert disclosure, <t>in one place.</t>",
-      "intro": "The CV, the publications and the prior testimony listing.",
-      "rows": [
+      "items": [
         {
+          "icon": "cv",
+          "tag": "PDF · July 2025",
           "t": "Curriculum vitae",
-          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
-          "icon": "cv"
+          "d": "Education, academic appointments, organizations and publications.",
+          "a": "Download the CV",
+          "h": "https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf"
         },
         {
+          "icon": "list",
+          "tag": "Listing · since 2017",
+          "t": "Prior testimony",
+          "d": "Depositions and trials, by year, court and state.",
+          "a": "View the listing",
+          "h": "/pettingill/testimony#listing"
+        },
+        {
+          "icon": "doc",
+          "tag": "1979 – 2025",
           "t": "Publications",
-          "d": "Papers from 1979 to 2025, each with its journal and identifier. [Publications](/pettingill/research)",
-          "icon": "doc"
-        },
-        {
-          "t": "Testimony listing",
-          "d": "Depositions and trials since 2017, with case, number and court. [Prior testimony](/pettingill/testimony)",
-          "icon": "list"
+          "d": "Future medical costs, life expectancy and household services.",
+          "a": "Read the papers",
+          "h": "/pettingill/research"
         }
-      ],
-      "no": "03"
+      ]
     },
     {
       "type": "next",
       "k": "Next",
       "t": "Testimony",
       "d": "Depositions and trials since 2017.",
-      "h": "/pettingill/testimony"
+      "h": "/pettingill/testimony",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/pettingill#inquiry"
+      }
     },
     {
       "type": "inquiry",
@@ -370,7 +383,7 @@
       "roles": "Forensic Economist <t>and Expert Witness</t>",
       "fcta": {
         "t": "Discuss a matter",
-        "h": "#inquiry"
+        "h": "/pettingill#inquiry"
       },
       "affiliations": [
         "Referee, Journal of Forensic Economics",
@@ -409,7 +422,8 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "04"
+      "noform": true,
+      "no": "03"
     }
   ]
 }

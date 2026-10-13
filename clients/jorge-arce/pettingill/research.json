@@ -27,12 +27,12 @@
     },
     {
       "t": "Enquiry",
-      "h": "#inquiry"
+      "h": "/pettingill#inquiry"
     }
   ],
   "navcta": {
     "t": "Discuss a matter",
-    "h": "#inquiry"
+    "h": "/pettingill#inquiry"
   },
   "sections": [
     {
@@ -45,33 +45,65 @@
         "pos": "50% 40%"
       },
       "quote": "What care costs, <t>and how to project it.</t>",
-      "sub": "From Psychosomatics in 1979 to hospital inflation in 2025."
+      "sub": "From Psychosomatics in 1979 to hospital inflation in 2025.",
+      "opener": true
     },
     {
-      "type": "timeline",
-      "id": "research-years",
-      "label": "Publications",
-      "title": "Seven papers across <t>forty-six years.</t>",
-      "from": 1979,
-      "to": 2025,
-      "marks": [
+      "type": "clusters",
+      "id": "research-lines",
+      "label": "Three lines of work",
+      "title": "The research <t>behind the practice.</t>",
+      "groups": [
         {
-          "y": 1979,
-          "t": "Psychosomatics"
+          "t": "Future medical costs",
+          "area": "Life care plans",
+          "h": "/pettingill/practice#routes",
+          "papers": [
+            {
+              "y": "2025",
+              "t": "The Resurgence of Hospital Inflation: Analysis and Implications for Forensic Practitioners",
+              "h": "https://zenodo.org/records/14725046"
+            },
+            {
+              "y": "2025",
+              "t": "The Physiatrist is Essential to Predicting Accurate Future Medical Care",
+              "h": "https://www.longdom.org/open-access/the-physiatrist-is-the-gateway-to-predicting-accurate-future-medical-care-1102997.html"
+            },
+            {
+              "y": "2024",
+              "t": "The Role of Physiatrists in Ensuring Access to Appropriate Medical Care and Services in the Broken U.S. Healthcare System",
+              "h": "https://www.longdom.org/open-access/the-role-of-physiatrists-in-ensuring-access-to-appropriate-medical-care-and-services-in-the-broken-usa-healthcare-system-108185.html"
+            },
+            {
+              "y": "2024",
+              "t": "Why Hospitals Resist Disclosing the Absolute Costs of Their Procedures",
+              "h": "https://doi.org/10.61440/jcmhc.2024.v1.13"
+            }
+          ]
         },
         {
-          "y": 2019,
+          "t": "Life expectancy",
+          "area": "Wrongful death",
+          "h": "/pettingill/practice#routes",
+          "papers": [
+            {
+              "y": "2024",
+              "t": "Choosing the Correct Database for Measuring Life Expectancy",
+              "h": "https://currentopinion.be/index.php/co/en/article/view/330"
+            }
+          ]
+        },
+        {
           "t": "Household services",
-          "tier": "hi"
-        },
-        {
-          "y": 2024,
-          "t": "Three papers"
-        },
-        {
-          "y": 2025,
-          "t": "Two papers",
-          "tier": "lo"
+          "area": "Household services",
+          "h": "/pettingill/practice#routes",
+          "papers": [
+            {
+              "y": "2019",
+              "t": "Estimating the Full Value of Household Services Damages: Inclusion of Nighttime Protection and Care Services",
+              "h": "https://theearningsanalyst.com/product/tea-16-5/"
+            }
+          ]
         }
       ],
       "no": "01"
@@ -197,7 +229,11 @@
       "k": "Next",
       "t": "CV",
       "d": "Education, teaching and professional bodies since 1969.",
-      "h": "/pettingill/record"
+      "h": "/pettingill/record",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/pettingill#inquiry"
+      }
     },
     {
       "type": "inquiry",
@@ -341,7 +377,7 @@
       "roles": "Forensic Economist <t>and Expert Witness</t>",
       "fcta": {
         "t": "Discuss a matter",
-        "h": "#inquiry"
+        "h": "/pettingill#inquiry"
       },
       "affiliations": [
         "Referee, Journal of Forensic Economics",
@@ -380,6 +416,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
+      "noform": true,
       "no": "04"
     }
   ]

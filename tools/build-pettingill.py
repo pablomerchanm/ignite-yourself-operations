@@ -108,6 +108,12 @@ base = sub1(r"""'<div class="mrow wr" data-r1 data-rule><h4>'\+rich\(r\.t\)\+'</
             """'<div class="mrow wr'+(r.icon?' hasico':'')+'" data-r1 data-rule>'+(r.icon?'<span class="mico" aria-hidden="true">'+ico(r.icon)+'</span>':'')+'<h4>'+rich(r.t)+'</h4>""",
             base, tag='method-icon')
 
+# -------- subpaginas: solo el pie, sin el formulario completo
+base = sub1(r"""return'<section class="reserve paths-in" id="'\+esc\(s\.id\|\|'inquiry'\)\+'"><div class="wrap">'\+""",
+            """return(s.noform?'':'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+""", base, tag='inq-open')
+base = sub1(r"""'</div></div></section>'\+\n  '<footer class="kfoot">""",
+            """'</div></div></section>')+\n  '<footer class="kfoot">""", base, tag='inq-close')
+
 # -------- la ficha de firma: enlaces internos sin pestana nueva, con data-path
 base = sub1(r"""\(s\.social\|\|\[\]\)\.map\(function\(x\)\{return'<a class="go" href="'\+esc\(x\.h\)\+'" target="_blank" rel="noopener">'\+esc\(x\.t\)\+'</a>'\}\)\.join\(''\)\+""",
             """(s.social||[]).map(function(x){var ext=/^https?:/.test(x.h);return'<a class="go" href="'+esc(x.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+(x.path?' data-path="'+esc(x.path)+'"':'')+'>'+esc(x.t)+'</a>'}).join('')+""",
@@ -124,7 +130,7 @@ nums:function(s){
   (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
   '</div></section>'},
 stmt:function(s){
-  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+(s.align==='right'?' tr':'')+'" id="'+esc(s.id||'stmt')+'">'+
+  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+(s.align==='right'?' tr':'')+(s.compact?' compact':'')+(s.opener?' opener':'')+'" id="'+esc(s.id||'stmt')+'">'+
   (s.img&&s.img.src?'<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+(s.img.pos?' style="object-position:'+esc(s.img.pos)+'"':'')+'></div>':'')+
   '<div class="wrap" data-r2>'+
   (s.logo?'<img class="slogo wr" src="'+esc(s.logo)+'" alt="'+esc(s.label||'')+'">':'')+
@@ -156,6 +162,39 @@ scrub:function(s){
     '<div class="scsign">'+(s.keys?'<ul class="skeys astags">'+s.keys.map(function(k){return'<li><span class="src">'+esc(k)+'</span></li>'}).join('')+'</ul>':'')+
     (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+'</div>'+
   '</div></div></section>'},
+brief:function(s){
+  return'<section class="brf" id="'+esc(s.id||'brief')+'"><div class="wrap">'+
+  (s.label?'<div class="smallcap brl wr" data-r1>'+esc(s.label)+'</div>':'')+
+  '<div class="brgrid" data-cards>'+(s.items||[]).map(function(it,i){
+    return'<div class="bri wr"><span class="brn">0'+(i+1)+'</span><h3>'+rich(it.k)+'</h3><p class="brt">'+rich(it.t)+'</p>'+(it.d?'<p class="brd">'+rich(it.d)+'</p>':'')+'</div>'}).join('')+'</div>'+
+  '</div></section>'},
+quote:function(s){
+  return'<section class="qt" id="'+esc(s.id||'quote')+'"><div class="wrap" data-r2>'+
+  (s.lead?'<p class="qlead wr">'+esc(s.lead)+'</p>':'')+
+  '<blockquote class="qq wr">'+esc(s.q)+'</blockquote>'+
+  (s.who?'<p class="qwho wr">'+esc(s.who)+'</p>':'')+
+  '</div></section>'},
+counsel:function(s){
+  return'<section class="csl'+(s.light?' light':'')+'" id="'+esc(s.id||'counsel')+'"><div class="wrap">'+
+  '<div class="cshead" data-r2><span class="smallcap wr">'+esc(s.label)+'</span><h2 class="d56 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="csgrid'+((s.items||[]).length===3?' c3':'')+'" data-cards>'+(s.items||[]).map(function(it){
+    var ext=/^https?:/.test(it.h);
+    return'<a class="csc wr" href="'+esc(it.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+
+      '<span class="cstop"><span class="csico" aria-hidden="true">'+ico(it.icon)+'</span><span class="cstag">'+esc(it.tag)+'</span></span>'+
+      '<span class="cst">'+esc(it.t)+'</span><span class="csd">'+esc(it.d)+'</span>'+
+      '<span class="csa">'+esc(it.a)+'<i aria-hidden="true">'+(ext?'&nearr;':'&rarr;')+'</i></span></a>'}).join('')+'</div>'+
+  '</div></section>'},
+clusters:function(s){
+  return'<section class="rcl" id="'+esc(s.id||'clusters')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2></div></div>'+
+  '<div class="rclgrid" data-cards>'+(s.groups||[]).map(function(g){
+    var n=(g.papers||[]).length;
+    return'<div class="rcg wr"><div class="rcghd"><span class="rcn">'+n+'</span><span class="rcnk">'+(n===1?'paper':'papers')+'</span></div>'+
+      '<h3>'+esc(g.t)+'</h3>'+
+      '<a class="rcarea" href="'+esc(g.h)+'"><span class="smallcap">In practice</span>'+esc(g.area)+'</a>'+
+      '<ul>'+(g.papers||[]).map(function(p){return'<li><a href="'+esc(p.h)+'" target="_blank" rel="noopener"><b>'+esc(p.y)+'</b><span>'+esc(p.t)+'</span></a></li>'}).join('')+'</ul></div>'}).join('')+'</div>'+
+  '</div></section>'},
 retain:function(s){
   function lk(l){var ext=/^https?:/.test(l.h);return'<a class="rtl" href="'+esc(l.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+esc(l.t)+'</a>'}
   return'<section class="rtn" id="'+esc(s.id||'retain')+'"><div class="wrap">'+
@@ -190,7 +229,8 @@ notes:function(s){
 next:function(s){
   return'<section class="nxt" id="next"><div class="wrap"><a class="nxa" href="'+esc(s.h)+'" data-r2>'+
   '<span class="smallcap wr">'+esc(s.k||'Next')+'</span><span class="nxt-t wr">'+rich(s.t)+'<i aria-hidden="true">&rarr;</i></span>'+
-  (s.d?'<span class="nxd wr">'+esc(s.d)+'</span>':'')+'</a></div></section>'},
+  (s.d?'<span class="nxd wr">'+esc(s.d)+'</span>':'')+'</a>'+
+  (s.alt?'<a class="nxalt" href="'+esc(s.alt.h)+'">'+esc(s.alt.t)+'</a>':'')+'</div></section>'},
 timeline:function(s){
   var a=s.from,b=s.to,span=(b-a)||1;function pct(y){return((y-a)/span*100).toFixed(2)}
   var tiers=['hi','lo','up'];
@@ -994,6 +1034,122 @@ html.no-motion .scarr{display:none}
 .nxa:hover .nxt-t i{transform:translateX(12px)}
 .nxd{font-size:14px;color:var(--gray);max-width:60ch}
 
+/* ============ Iteracion 17: refinamiento editorial ============ */
+/* ---------- primer impacto: sin precargador, hero mas limpio ---------- */
+#pre{display:none!important}
+.hero::after{content:none}
+.hero .hname{font-size:clamp(58px,9.6vw,150px);line-height:.92}
+.hero .hkick{opacity:.85}
+.hero .hcred{font-size:11.5px;letter-spacing:.2em;color:rgba(255,255,255,.62);margin-top:clamp(44px,5.8vh,62px)}
+@media(max-width:860px){.hero .hcred{margin-top:26px}.hero .hkick{font-size:11px;letter-spacing:.14em}}
+.hero .hsub{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,31px);line-height:1.25;letter-spacing:-.005em;
+  max-width:24ch;color:rgba(255,255,255,.94);margin-top:clamp(20px,2.8vh,30px)}
+.hero .hsub .it{font-family:var(--serif);font-style:italic;font-weight:300;color:rgba(255,255,255,.62)}
+@media(max-width:860px){.hero .hsub{font-size:clamp(21px,5.8vw,25px);max-width:22ch}}
+
+/* ---------- in brief: tres ideas en composicion ---------- */
+.brf{padding:var(--sec) 0;background:var(--bg)}
+.brl{margin-bottom:clamp(28px,4vh,44px)}
+.brgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.bri{padding:clamp(28px,4vh,44px) clamp(18px,2.6vw,44px) 8px 0;border-right:1px solid var(--line)}
+.bri+.bri{padding-left:clamp(18px,2.6vw,44px)}
+.bri:last-child{border-right:0}
+.brn{display:block;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11.5px;letter-spacing:.12em;color:var(--brass)}
+.bri h3{margin-top:18px;font-family:var(--serif);font-weight:300;font-size:clamp(30px,2.9vw,46px);line-height:1.02;letter-spacing:-.015em;max-width:12ch}
+.brt{margin-top:20px;font-size:clamp(15.5px,1.15vw,17.5px);line-height:1.6;color:#2b2e33;max-width:34ch}
+.brd{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:14.5px;line-height:1.55;color:var(--gray);max-width:34ch}
+@media(max-width:860px){.brgrid{grid-template-columns:1fr}.bri{border-right:0;padding-left:0!important;border-bottom:1px solid var(--line);padding-bottom:28px}
+  .bri:last-child{border-bottom:0}.bri h3{font-size:clamp(30px,8.4vw,40px)}}
+
+/* ---------- la cita: una pausa ---------- */
+.qt{padding:clamp(96px,15vh,180px) 0;background:var(--bg);border-top:1px solid var(--line)}
+@media(min-width:981px){.qt .wrap{padding-left:calc(34px + 20%)}}
+.qlead{max-width:48ch;font-size:clamp(16px,1.3vw,19px);line-height:1.6;color:#3c3f44}
+.qq{margin-top:clamp(18px,2.6vh,28px);font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(50px,7.4vw,118px);
+  line-height:.96;letter-spacing:-.02em;max-width:13ch;color:var(--ink)}
+.qwho{margin-top:clamp(26px,4vh,40px);display:flex;align-items:center;gap:14px;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+.qwho::before{content:'';width:40px;height:1px;background:var(--brass)}
+
+/* ---------- for counsel: los recursos como protagonistas ---------- */
+.csl{background:var(--ink);color:#fff;padding:var(--sec) 0}
+.csl.light{background:var(--bg);color:var(--ink)}
+.cshead{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(40px,6vh,64px)}
+.csl .cshead .smallcap{color:rgba(255,255,255,.6)}
+.csl.light .cshead .smallcap{color:var(--gray)}
+.csgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,20px)}
+.csgrid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.csc{display:flex;flex-direction:column;gap:14px;min-height:clamp(280px,34vh,340px);padding:clamp(24px,2.2vw,34px);
+  border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.025);color:inherit;transition:border-color .35s,transform .35s,background .35s}
+.csc:hover{border-color:var(--brass);background:rgba(181,131,63,.07);transform:translateY(-3px)}
+.csl.light .csc{border-color:var(--line);background:#F4F0E8}
+.csl.light .csc:hover{border-color:var(--brass);background:#F7F3EC}
+.cstop{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.csico{display:block;width:30px;height:30px;color:var(--brass)}
+.cstag{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);text-align:right}
+.csl.light .cstag{color:var(--gray)}
+.cst{margin-top:clamp(36px,6vh,64px);font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.2vw,36px);line-height:1.04;letter-spacing:-.01em}
+.csd{font-size:15px;line-height:1.55;color:rgba(255,255,255,.76)}
+.csl.light .csd{color:#3c3f44}
+.csa{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+.csl.light .csa{border-top-color:var(--line)}
+.csa i{font-style:normal;font-size:15px;letter-spacing:0;color:var(--brass);transition:transform .35s}
+.csc:hover .csa i{transform:translateX(4px)}
+@media(max-width:1080px){.csgrid,.csgrid.c3{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.csgrid,.csgrid.c3{grid-template-columns:1fr}.csc{min-height:0}.cst{margin-top:6px}}
+
+/* ---------- research: tres lineas de trabajo ---------- */
+.rcl{padding:var(--sec) 0;background:#E4DED2}
+.rclgrid{display:grid;grid-template-columns:1.45fr 1fr 1fr;border-top:1px solid var(--ink)}
+.rcg{padding:clamp(28px,4vh,44px) clamp(18px,2.4vw,40px) 10px 0;border-right:1px solid rgba(20,22,26,.16)}
+.rcg+.rcg{padding-left:clamp(18px,2.4vw,40px)}
+.rcg:last-child{border-right:0}
+.rcghd{display:flex;align-items:baseline;gap:12px}
+.rcn{font-family:var(--serif);font-weight:300;font-size:clamp(64px,7vw,112px);line-height:.8;letter-spacing:-.03em;color:var(--brass)}
+.rcnk{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gray)}
+.rcg h3{margin-top:22px;font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.3vw,36px);line-height:1.05;letter-spacing:-.01em}
+.rcarea{display:inline-flex;align-items:baseline;gap:10px;margin-top:14px;font-size:15px;color:var(--ink);border-bottom:1px solid rgba(20,22,26,.35);padding-bottom:3px}
+.rcarea .smallcap{font-size:11px}
+.rcarea:hover{border-bottom-color:var(--ink)}
+.rcg ul{list-style:none;margin-top:26px;border-top:1px solid rgba(20,22,26,.16)}
+.rcg li a{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;padding:14px 0;border-bottom:1px solid rgba(20,22,26,.12);color:var(--ink)}
+.rcg li b{font-weight:500;font-size:14px;font-variant-numeric:tabular-nums;color:var(--gray)}
+.rcg li span{font-family:var(--serif);font-size:clamp(17px,1.35vw,20px);line-height:1.25}
+.rcg li a:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+@media(max-width:980px){.rclgrid{grid-template-columns:1fr}.rcg{border-right:0;padding-left:0!important;border-bottom:1px solid rgba(20,22,26,.16);padding-bottom:30px}}
+
+/* ---------- pantallas con foto: compacta y apertura ---------- */
+@media(min-width:861px){
+  .stmt.withimg.compact{min-height:clamp(460px,66svh,700px)}
+  .stmt.withimg.opener{min-height:clamp(560px,82svh,900px)}
+}
+.nxalt{display:inline-block;margin-top:24px;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);border-bottom:1px solid rgba(20,22,26,.4);padding-bottom:4px}
+.nxalt:hover{border-bottom-color:var(--ink)}
+
+/* ---------- legibilidad: textos pequenos y contraste ---------- */
+:root{--gray:#565A60}
+.smallcap{font-size:12px;letter-spacing:.14em}
+.elede,.plede{font-size:clamp(15px,1.15vw,17px);line-height:1.65}
+.pcard .pdesc{font-size:14.5px;line-height:1.6}
+.pcard.lead .pdesc{font-size:15.5px}
+.pcard li{font-size:14px}
+.method .mintro{font-size:15.5px}
+.mrow p{font-size:15px;line-height:1.6}
+.lgrid.wide .lcell,.lcell{font-size:clamp(14.5px,1.1vw,16px);line-height:1.55}
+.tst p{font-size:14px}.tlg{font-size:13px}.tgrid em{font-size:11.5px}.tcol .tyr{font-size:12px}
+.pau{font-size:15px}.pve,.pwhy{font-size:14.5px}
+.rtsteps p{font-size:15.5px}.rtcard dd{font-size:15px}.rtcard dt{font-size:11.5px}
+.ssub{font-size:clamp(16px,1.3vw,19px)}
+.tlt{font-size:12.5px}.tlrt{font-size:12.5px}
+@media(max-width:860px){
+  .smallcap{font-size:11.5px}
+  .elede,.plede{font-size:16px}
+  .stmt .ssub{font-size:16.5px}
+  .pcard .pdesc,.mrow p,.lcell{font-size:15.5px}
+  .tbot a{flex:1 1 auto;padding-left:5px;padding-right:5px;font-size:10.5px;letter-spacing:.05em}
+}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -1018,7 +1174,7 @@ NAV = [
     {"t": "Testimony",     "h": "/pettingill/testimony"},
     {"t": "Publications",  "h": "/pettingill/research"},
     {"t": "CV",            "h": "/pettingill/record"},
-    {"t": "Enquiry",       "h": "#inquiry"},
+    {"t": "Enquiry",       "h": "/pettingill#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
@@ -1041,7 +1197,7 @@ def topbar_html(active):
     return ('<div class="topbar">'
             '<a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Pettingill</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
-            '<a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a>'
+            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/pettingill#inquiry"}" style="color:#fff">Discuss a matter</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
 # ---------------------------------------------------------- 8. reparto por pagina
@@ -1051,17 +1207,31 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
     return secs
 
-def page(title, desc, secs):
+def homeward(o):
+    if isinstance(o, dict):
+        return {k: ('/pettingill#inquiry' if v == '#inquiry' else homeward(v)) for k, v in o.items()}
+    if isinstance(o, list):
+        return [homeward(x) for x in o]
+    return o
+
+def page(title, desc, secs, sub=False):
+    nc = dict(full['navcta'])
+    if sub:
+        secs = homeward(secs); nc['h'] = '/pettingill#inquiry'
     return {"meta": {"title": title, "description": desc},
-            "logo": full['logo'], "nav": NAV, "navcta": full['navcta'], "sections": renum(secs)}
+            "logo": full['logo'], "nav": NAV, "navcta": nc, "sections": renum(secs)}
 
 inq = lambda: deep('inquiry')
+def foot():
+    s = deep('inquiry'); s['noform'] = True
+    return s
+ALT = {"t": "Discuss a matter", "h": "/pettingill#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
 T_PR = 'Practice — Bernard F. Pettingill, Jr., Ph.D.'
@@ -1071,24 +1241,24 @@ T_CV = 'CV — Bernard F. Pettingill, Jr., Ph.D.'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('numbers'), deep('in-brief'), deep('start-here'), deep('s-question'),
-         deep('s-research'), deep('s-firm'), inq()]),
+        [deep('hero'), deep('in-brief'), deep('numbers'), deep('quote'), deep('s-question'),
+         deep('s-research'), deep('for-counsel'), deep('s-firm'), inq()]),
     'practice': page(T_PR,
         'Future care, lost earnings, wrongful death and household services, and how to start a case.',
         [deep('practice-open'), deep('routes'), deep('engage'), deep('disclosure'),
-         NX('Next', 'Testimony', 'Depositions and trials since 2017.', '/pettingill/testimony'), inq()]),
+         dict(NX('Next', 'Testimony', 'Depositions and trials since 2017.', '/pettingill/testimony'), alt=ALT), foot()], sub=True),
     'testimony': page(T_TE,
         'More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands.',
         [deep('testimony-open'), deep('listing'),
-         NX('Next', 'Publications', 'Papers from 1979 to 2025.', '/pettingill/research'), inq()]),
+         dict(NX('Next', 'Publications', 'Papers from 1979 to 2025.', '/pettingill/research'), alt=ALT), foot()], sub=True),
     'research': page(T_PU,
         'Papers from 1979 to 2025 on the cost of future care, life expectancy, household services and hospital pricing.',
-        [deep('research-open'), deep('research-years'), deep('publications'), deep('research-cv'),
-         NX('Next', 'CV', 'Education, teaching and professional bodies since 1969.', '/pettingill/record'), inq()]),
+        [deep('research-open'), deep('research-lines'), deep('publications'), deep('research-cv'),
+         dict(NX('Next', 'CV', 'Education, teaching and professional bodies since 1969.', '/pettingill/record'), alt=ALT), foot()], sub=True),
     'record': page(T_CV,
         'Education, academic appointments and professional bodies, and Pettingill Analytics.',
         [deep('record-open'), deep('record-years'), deep('record-education'), deep('record-academic'), deep('record-orgs'),
-         NX('Next', 'Start a <t>case</t>', 'Checklists for injury and death, the retainer and the terms.', '/pettingill/practice#engage'), inq()]),
+         dict(NX('Next', 'Start a <t>case</t>', 'Checklists for injury and death, the retainer and the terms.', '/pettingill/practice#engage'), alt=ALT), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)
