@@ -342,3 +342,27 @@ Comentario del usuario: el hero seguía lleno de "cosita menuda", no impactaba l
 - **Corte de letras:** la animación de entrada del nombre usaba una máscara demasiado ajustada, que cortaba la cola de la "g" y el trazo de la "J" cursiva. Ahora la máscara deja margen alrededor de cada palabra.
 
 **Ajuste 18b.** El nombre bajó cerca de un 25 %: hasta 150 px en escritorio y 72 px en móvil. Sigue siendo el protagonista sin competir con la foto. Además, los puntos del carril de secciones ya no reaparecen al volver arriba del todo: se muestran solo después del hero.
+
+---
+
+# Iteración 19 — una sola escala tipográfica
+
+Comentario del usuario: la cita y los títulos se veían desproporcionados. Quiere jerarquía, armonía y espacios de silencio, sin nada exagerado.
+
+**Escala a 1440 px** (de mayor a menor):
+
+| Nivel | Tamaño |
+|---|---|
+| Nombre (hero) | 121 px |
+| Cifras de testimonio | 86 px, antes 124 |
+| Títulos de pantalla con foto | 64 px, antes 78 |
+| Cita | 60 px, antes 107 |
+| Títulos de sección y "Next" | 52 px, antes 79–86 |
+| Subsecciones | 40 px, antes 50 |
+| Títulos de tarjeta | 26–32 px, antes 33–42 |
+| Cuerpo | 15–18 px |
+
+- El nombre del pie baja de 101 a 66 px. El conteo de papers en Research (el número grande de cada línea) y el total del listado bajan a 63 px.
+- En móvil, cada nivel tiene su propio tope para que nada desborde ni grite.
+- El espacio entre secciones baja de 17vh a 13vh (de 153 a 117 px en una pantalla de 900 px). Con títulos más contenidos, el aire sigue ahí sin que las secciones floten.
+- Los puntos del carril de secciones quedan alineados en una columna. Antes se desalineaban por el ancho de las etiquetas ocultas.

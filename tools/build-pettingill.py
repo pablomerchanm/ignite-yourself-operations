@@ -1150,6 +1150,42 @@ html.no-motion .scarr{display:none}
   .tbot a{flex:1 1 auto;padding-left:5px;padding-right:5px;font-size:10.5px;letter-spacing:.05em}
 }
 
+/* ============ Iteracion 19: una sola escala tipografica ============ */
+/* Niveles (a 1440px): nombre 121 · pantalla 64 · cita 60 · seccion 52 · subseccion 40 · tarjeta 26-32 · cuerpo 15-18.
+   Las cifras siguen la misma escala: grandes, nunca por encima del nombre. */
+#site .hero .hname{font-size:clamp(56px,8.4vw,150px)!important}
+#site .sq{font-size:clamp(40px,4.5vw,76px);line-height:1;max-width:14ch}
+#site .d80,#site .reserve .d97{font-size:clamp(32px,3.6vw,58px);line-height:1.04}
+#site .d56{font-size:clamp(28px,2.8vw,44px);line-height:1.08}
+#site .qq{font-size:clamp(38px,4.2vw,68px);line-height:1.02;max-width:16ch}
+#site .qt{padding:clamp(80px,11vh,140px) 0}
+#site .nn{font-size:clamp(56px,6vw,96px)}
+#site .tn{font-size:clamp(42px,4.4vw,70px)}
+#site .rcn{font-size:clamp(42px,4.4vw,70px)}
+#site .nxt-t{font-size:clamp(34px,3.6vw,58px)}
+#site .nxt-t i{font-size:.6em}
+#site .fname{font-size:clamp(44px,4.6vw,76px)}
+#site .pcard .pnum{font-size:clamp(28px,2.8vw,44px)}
+#site .bri h3{font-size:clamp(26px,2.2vw,34px)}
+#site .pcard h3,#site .rcg h3{font-size:clamp(22px,1.9vw,28px)}
+#site .rtsteps h3{font-size:clamp(21px,1.7vw,26px)}
+#site .rtn-n{font-size:clamp(22px,2vw,30px)}
+#site .cst{font-size:clamp(22px,1.8vw,28px)}
+#site .froles{font-size:clamp(19px,1.6vw,24px)}
+@media(max-width:860px){
+  #site .sq{font-size:clamp(36px,10vw,46px)}
+  #site .d80,#site .reserve .d97{font-size:clamp(30px,8.4vw,40px)}
+  #site .d56{font-size:clamp(26px,7.2vw,34px)}
+  #site .qq{font-size:clamp(34px,9.4vw,44px)}
+  #site .nn{font-size:clamp(56px,16vw,76px)}
+  #site .fname{font-size:clamp(40px,11vw,52px)}
+}
+:root{--sec:clamp(96px,13vh,160px)}
+@media(max-width:860px){:root{--sec:clamp(72px,10vh,104px)}}
+/* carril de secciones: los puntos alineados en una columna */
+.srail a{position:relative}
+.srail a span{position:absolute;right:18px;top:50%;margin-top:-.6em}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
