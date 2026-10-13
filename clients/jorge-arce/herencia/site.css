@@ -55,6 +55,19 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(4px)}
   .bar.open{transform:none}
 }
 .bar .btn{padding:10px 18px;font-size:14px}
+/* idiomas: inglés por defecto, español y holandés (selector en la portada, el menú y el pie) */
+.lang{display:flex;align-items:center;gap:2px;font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;line-height:1}
+.lang a{padding:7px;opacity:.55;transition:opacity .2s}
+.lang a:hover{opacity:1}
+.lang a[aria-current]{opacity:1;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.lang.in-hero{position:absolute;top:24px;right:14px;z-index:2;color:var(--paper)}
+.f-base .lang a{border-bottom:0;color:var(--paper)}
+.bar nav.lang{gap:2px;font-size:11.5px}  /* el selector es un nav dentro de la barra: no hereda su espaciado */
+@media (max-width:759.98px){
+  .bar.open .navlinks .lang{margin-top:22px}
+  .bar.open .navlinks .lang a{font-family:var(--mono);font-size:14px;line-height:1;padding:10px 12px;border:0;color:var(--paper)}
+}
+@media (min-width:760px){.navlinks{align-items:center}}
 
 /* portada */
 .hero{display:grid;grid-template-columns:1fr;min-height:calc(100svh - 76px)}

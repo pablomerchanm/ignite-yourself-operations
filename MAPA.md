@@ -101,7 +101,7 @@ Sus fotos y los logos de prensa salen de su propio repositorio
 | **Wilshire Oral Surgery** | `clients/wilshire-oral-surgery/` | Dos previews sin enviar: Dr. Vahedi y Dr. Shadi |
 | **Prospección abogados** | `prospecting/round-1/` | 4 briefs + CSV de prospectos y exclusiones |
 | **Mario Lignarolo** | `clients/mario-lignarolo/` | V1 en borrador (marca personal, Next.js). Proyecto propio en Vercel → mariolignarolo.com |
-| **Herencia VL** (Adriana Mejía Cuartas y Lina Echeverri-Roeder) | `clients/jorge-arce/herencia/` → igniteyourself.co/herencia | Preview para que Adriana y Lina revisen la web antes de lanzarla en herenciavl.com. **No se edita aquí:** se genera en `pablomerchanm/Adriana-Mejia-Cuartas` (rama `web-herencia`, `06-web/sitio-herencia/`) con `generar_origen.py` y `exportar_ignite.py`, que reescribe las rutas con el prefijo `/herencia` |
+| **Herencia VL** (Adriana Mejía Cuartas y Lina Echeverri-Roeder) | `clients/jorge-arce/herencia/` → igniteyourself.co/herencia | Preview para que Adriana y Lina revisen la web antes de lanzarla en herenciavl.com. En inglés, español (`/herencia/es`) y holandés (`/herencia/nl`). **No se edita aquí:** se genera en `pablomerchanm/Adriana-Mejia-Cuartas` (rama `web-herencia`, `06-web/sitio-herencia/`) con `generar_origen.py` y `exportar_ignite.py`, que reescribe las rutas con el prefijo `/herencia` |
 
 ### Sitios con proyecto propio en Vercel
 
