@@ -340,3 +340,5 @@ Comentario del usuario: el hero seguía lleno de "cosita menuda", no impactaba l
   - los puntos del carril de secciones, que ahora aparecen al salir del hero.
 - **La barra superior** pierde el enlace "Pettingill Analytics ↗". La firma ya tiene su sección y aparece en el pie.
 - **Corte de letras:** la animación de entrada del nombre usaba una máscara demasiado ajustada, que cortaba la cola de la "g" y el trazo de la "J" cursiva. Ahora la máscara deja margen alrededor de cada palabra.
+
+**Ajuste 18b.** El nombre bajó cerca de un 25 %: hasta 150 px en escritorio y 72 px en móvil. Sigue siendo el protagonista sin competir con la foto. Además, los puntos del carril de secciones ya no reaparecen al volver arriba del todo: se muestran solo después del hero.
