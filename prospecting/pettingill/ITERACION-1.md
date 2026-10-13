@@ -151,3 +151,12 @@ Imagen aportada por Pablo (`assets/counsel.jpg`): Biff escuchando a dos abogados
 # Iteración 8 — la balanza
 
 `assets/balance.jpg` (balanza de latón sobre libros, luz de ventana): abre la página Testimony con "Three figures, two websites. Each measures something different." Es el único uso de la balanza en todo el sitio, como fija la dirección de marca: el instrumento con el que se pesa, no el icono de la justicia. Texto a la derecha, sobre la pared en sombra.
+
+---
+
+# Iteración 9 — las dos puertas que faltaban
+
+- `assets/papers.jpg` (manos con la pluma sobre los papeles): abre la página Research con "What care costs, and how to project it." Sustituye al lede de texto.
+- `assets/notes.jpg` (Biff tomando notas en la reunión): abre la página Record con "The record, in order." El subtítulo deja dicho que todo viene del CV del 7 de julio de 2025 y no se ha cotejado con universidades ni asociaciones. Encuadre anclado arriba, porque la imagen original ya corta a la altura de la boca.
+- Con esto las cinco páginas abren con lámina. Revisión a 1440 y 390 px: sin desbordes ni errores de consola.
+- Pendientes de autorización de Biff como el resto de retratos.

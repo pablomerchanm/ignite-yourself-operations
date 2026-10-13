@@ -648,10 +648,10 @@ PAGES = {
         [deep('testimony-open'), deep('figures'), deep('listing'), deep('band-register'), inq()]),
     'research': page('The Research — Bernard F. Pettingill, Jr., Ph.D.',
         'Selected publications from 1979 to 2025, each linked to a record outside his own websites, and further work listed on his CV.',
-        [deep('research-lede'), deep('publications'), deep('research-cv'), inq()]),
+        [deep('research-open'), deep('publications'), deep('research-cv'), inq()]),
     'record': page('The Record — Bernard F. Pettingill, Jr., Ph.D.',
         'Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics.',
-        [deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'), inq()]),
+        [deep('record-open'), deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'), inq()]),
 }
 
 os.makedirs(DST, exist_ok=True)

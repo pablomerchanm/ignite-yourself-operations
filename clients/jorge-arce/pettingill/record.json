@@ -36,6 +36,18 @@
   },
   "sections": [
     {
+      "type": "stmt",
+      "id": "record-open",
+      "label": "The Record",
+      "img": {
+        "src": "/pettingill/assets/notes.jpg",
+        "alt": "Taking notes during a working session at dusk",
+        "pos": "40% 0%"
+      },
+      "quote": "The record, <t>in order.</t>",
+      "sub": "Education, academic appointments and professional bodies as listed in the CV dated 7 July 2025, and the firm. Not checked against university or association records."
+    },
+    {
       "type": "exp",
       "id": "record-education",
       "label": "Education",

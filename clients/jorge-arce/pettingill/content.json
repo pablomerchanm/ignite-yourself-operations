@@ -500,14 +500,16 @@
       "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
     },
     {
-      "type": "mission",
-      "id": "research-lede",
+      "type": "stmt",
+      "id": "research-open",
       "label": "The Research",
-      "quote": "Published from 1979 <t>to 2025.</t>",
-      "body": [
-        "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, one thread: what medical care costs, and how to project it.",
-        "The first list links each entry to a record outside the two Pettingill websites. The second list is taken from the curriculum vitae and says so."
-      ]
+      "img": {
+        "src": "/pettingill/assets/papers.jpg",
+        "alt": "Hands, a pen and a report on a conference table at dusk",
+        "pos": "50% 40%"
+      },
+      "quote": "What care costs, <t>and how to project it.</t>",
+      "sub": "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation. The first list links each entry to a record outside the two Pettingill websites; the second is taken from the CV and says so."
     },
     {
       "type": "pubs",
@@ -630,6 +632,18 @@
           ]
         }
       ]
+    },
+    {
+      "type": "stmt",
+      "id": "record-open",
+      "label": "The Record",
+      "img": {
+        "src": "/pettingill/assets/notes.jpg",
+        "alt": "Taking notes during a working session at dusk",
+        "pos": "40% 0%"
+      },
+      "quote": "The record, <t>in order.</t>",
+      "sub": "Education, academic appointments and professional bodies as listed in the CV dated 7 July 2025, and the firm. Not checked against university or association records."
     },
     {
       "type": "exp",
