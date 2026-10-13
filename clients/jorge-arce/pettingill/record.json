@@ -48,6 +48,85 @@
       "sub": "Education, academic appointments and professional bodies as listed in the CV dated 7 July 2025, and the firm. Not checked against university or association records."
     },
     {
+      "type": "timeline",
+      "id": "record-years",
+      "tint": true,
+      "label": "The record, on one line",
+      "title": "From a first degree in 1969 <t>to the practice.</t>",
+      "lede": "Degrees and teaching appointments by the dates printed in the CV, and the year the forensic practice began as stated on bpettingill.com. Not checked against university records.",
+      "from": 1969,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1969,
+          "t": "BBA, Loyola"
+        },
+        {
+          "y": 1971,
+          "t": "MBA, Loyola"
+        },
+        {
+          "y": 1973,
+          "t": "MPH, Tulane"
+        },
+        {
+          "y": 1977,
+          "t": "Ph.D., Manchester"
+        },
+        {
+          "y": 1985,
+          "t": "Forensic economics since",
+          "brass": true
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1974,
+          "b": 1975,
+          "t": "London"
+        },
+        {
+          "a": 1975,
+          "b": 1977,
+          "t": "Manchester"
+        },
+        {
+          "a": 1977,
+          "b": 1978,
+          "t": "New Orleans"
+        },
+        {
+          "a": 1978,
+          "b": 1980,
+          "t": "LSU Medical Center"
+        },
+        {
+          "a": 1980,
+          "b": 1987,
+          "t": "Southwestern Louisiana"
+        },
+        {
+          "a": 1987,
+          "b": 1988,
+          "t": "Florida Tech"
+        },
+        {
+          "a": 1988,
+          "b": 1998,
+          "t": "Palm Beach Atlantic"
+        },
+        {
+          "a": 1985,
+          "b": 2026,
+          "t": "Forensic economics, 1985 to date",
+          "brass": true
+        }
+      ],
+      "rlabel": "Teaching appointments and the practice",
+      "src": "Self-reported · CV, July 2025 and bpettingill.com",
+      "no": "01"
+    },
+    {
       "type": "exp",
       "id": "record-education",
       "label": "Education",
@@ -72,7 +151,7 @@
           ]
         }
       ],
-      "no": "01"
+      "no": "02"
     },
     {
       "type": "exp",
@@ -108,7 +187,7 @@
           ]
         }
       ],
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "exp",
@@ -140,7 +219,7 @@
           ]
         }
       ],
-      "no": "03"
+      "no": "04"
     },
     {
       "type": "practice",
@@ -178,7 +257,7 @@
           "path": "firm"
         }
       ],
-      "no": "04"
+      "no": "05"
     },
     {
       "type": "inquiry",
@@ -361,7 +440,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "05"
+      "no": "06"
     }
   ]
 }

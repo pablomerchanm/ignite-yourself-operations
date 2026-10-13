@@ -138,19 +138,22 @@
       "align": "right"
     },
     {
-      "type": "stmt",
-      "id": "s-sourced",
+      "type": "scrub",
+      "id": "how-to-read",
       "ink": true,
       "label": "How to read this site",
-      "quote": "Claim, document, record. <t>Kept apart.</t>",
-      "sub": "Four tags, one beside every figure on this site. Each names the kind of evidence behind it.",
+      "pin": 2.6,
+      "paras": [
+        "Every figure on this site carries a tag, and the tag names the kind of evidence behind it.",
+        "<t>Self-reported</t> is what the CV and bpettingill.com state. <t>Public document</t> is a dated file anyone can open. <t>Independent record</t> is kept by a publisher, PubMed or Crossref.",
+        "<t>Ignite count</t> is a number counted here from a public document, with the method stated beside it. Claim, document, record. Kept apart."
+      ],
       "keys": [
         "Self-reported",
         "Public document",
         "Independent record",
         "Ignite count"
       ],
-      "tags": true,
       "more": {
         "t": "The four tags",
         "h": "/pettingill/practice#sources"

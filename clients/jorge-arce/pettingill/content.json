@@ -138,19 +138,22 @@
       "align": "right"
     },
     {
-      "type": "stmt",
-      "id": "s-sourced",
+      "type": "scrub",
+      "id": "how-to-read",
       "ink": true,
       "label": "How to read this site",
-      "quote": "Claim, document, record. <t>Kept apart.</t>",
-      "sub": "Four tags, one beside every figure on this site. Each names the kind of evidence behind it.",
+      "pin": 2.6,
+      "paras": [
+        "Every figure on this site carries a tag, and the tag names the kind of evidence behind it.",
+        "<t>Self-reported</t> is what the CV and bpettingill.com state. <t>Public document</t> is a dated file anyone can open. <t>Independent record</t> is kept by a publisher, PubMed or Crossref.",
+        "<t>Ignite count</t> is a number counted here from a public document, with the method stated beside it. Claim, document, record. Kept apart."
+      ],
       "keys": [
         "Self-reported",
         "Public document",
         "Independent record",
         "Ignite count"
       ],
-      "tags": true,
       "more": {
         "t": "The four tags",
         "h": "/pettingill/practice#sources"
@@ -241,7 +244,8 @@
             "t": "Discuss a life care plan matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "care"
         },
         {
           "label": "Personal injury",
@@ -257,7 +261,8 @@
             "t": "Discuss an injury matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "earn"
         },
         {
           "label": "Wrongful death",
@@ -273,7 +278,8 @@
             "t": "Discuss a death matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "support"
         },
         {
           "label": "Household services",
@@ -289,7 +295,8 @@
             "t": "Discuss a matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "house"
         }
       ],
       "fn": "Areas stated by subject matter. No case outcome, client or result is claimed on this site."
@@ -303,19 +310,23 @@
       "items": [
         {
           "k": "Self-reported",
-          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records."
+          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records.",
+          "icon": "quote"
         },
         {
           "k": "Public document",
-          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025."
+          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025.",
+          "icon": "doc"
         },
         {
           "k": "Independent record",
-          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source."
+          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source.",
+          "icon": "link"
         },
         {
           "k": "Ignite count",
-          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it."
+          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it.",
+          "icon": "tally"
         }
       ]
     },
@@ -328,19 +339,23 @@
       "rows": [
         {
           "t": "Curriculum vitae",
-          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)"
+          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
+          "icon": "cv"
         },
         {
           "t": "Testimony listing",
-          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)"
+          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)",
+          "icon": "list"
         },
         {
           "t": "Intake checklists",
-          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)"
+          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)",
+          "icon": "check"
         },
         {
           "t": "Terms and engagement letter",
-          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
+          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)",
+          "icon": "sign"
         }
       ]
     },
@@ -524,6 +539,36 @@
       "sub": "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation. The first list links each entry to a record outside the two Pettingill websites; the second is taken from the CV and says so."
     },
     {
+      "type": "timeline",
+      "id": "research-years",
+      "label": "Publications with an outside record",
+      "title": "Seven papers across <t>forty-six years.</t>",
+      "lede": "Each mark is a paper listed below, placed by its year of publication. Four of the seven are from 2024 and 2025.",
+      "from": 1979,
+      "to": 2025,
+      "marks": [
+        {
+          "y": 1979,
+          "t": "Psychosomatics"
+        },
+        {
+          "y": 2019,
+          "t": "Household services",
+          "tier": "hi"
+        },
+        {
+          "y": 2024,
+          "t": "Three papers"
+        },
+        {
+          "y": 2025,
+          "t": "Two papers",
+          "tier": "lo"
+        }
+      ],
+      "src": "Independent record · PubMed, Crossref, Zenodo, publishers"
+    },
+    {
       "type": "pubs",
       "id": "publications",
       "label": "Selected publications",
@@ -656,6 +701,84 @@
       },
       "quote": "The record, <t>in order.</t>",
       "sub": "Education, academic appointments and professional bodies as listed in the CV dated 7 July 2025, and the firm. Not checked against university or association records."
+    },
+    {
+      "type": "timeline",
+      "id": "record-years",
+      "tint": true,
+      "label": "The record, on one line",
+      "title": "From a first degree in 1969 <t>to the practice.</t>",
+      "lede": "Degrees and teaching appointments by the dates printed in the CV, and the year the forensic practice began as stated on bpettingill.com. Not checked against university records.",
+      "from": 1969,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1969,
+          "t": "BBA, Loyola"
+        },
+        {
+          "y": 1971,
+          "t": "MBA, Loyola"
+        },
+        {
+          "y": 1973,
+          "t": "MPH, Tulane"
+        },
+        {
+          "y": 1977,
+          "t": "Ph.D., Manchester"
+        },
+        {
+          "y": 1985,
+          "t": "Forensic economics since",
+          "brass": true
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1974,
+          "b": 1975,
+          "t": "London"
+        },
+        {
+          "a": 1975,
+          "b": 1977,
+          "t": "Manchester"
+        },
+        {
+          "a": 1977,
+          "b": 1978,
+          "t": "New Orleans"
+        },
+        {
+          "a": 1978,
+          "b": 1980,
+          "t": "LSU Medical Center"
+        },
+        {
+          "a": 1980,
+          "b": 1987,
+          "t": "Southwestern Louisiana"
+        },
+        {
+          "a": 1987,
+          "b": 1988,
+          "t": "Florida Tech"
+        },
+        {
+          "a": 1988,
+          "b": 1998,
+          "t": "Palm Beach Atlantic"
+        },
+        {
+          "a": 1985,
+          "b": 2026,
+          "t": "Forensic economics, 1985 to date",
+          "brass": true
+        }
+      ],
+      "rlabel": "Teaching appointments and the practice",
+      "src": "Self-reported · CV, July 2025 and bpettingill.com"
     },
     {
       "type": "exp",

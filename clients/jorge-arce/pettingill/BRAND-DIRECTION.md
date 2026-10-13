@@ -234,9 +234,12 @@ imagen/texto de la home: la mitad de las pantallas llevan fotografía.
 después entran en la retícula de datos actual. La profundidad no cambia; cambia
 la puerta de entrada.
 
-**Motion.** Lo que ya hace el motor: revelado suave, deriva lenta (Ken Burns)
-en las fotos a sangre, frase que se enciende palabra a palabra en la primera
-pantalla de cada página. Nada rebota, nada gira.
+**Motion.** Revelado suave, deriva lenta en las fotos a sangre, el nombre del
+hero subiendo desde una máscara, cifras que cuentan, iconos de línea que se
+dibujan y respiran, líneas de tiempo que se trazan y una pantalla de
+scrollytelling en la home (texto que se enciende palabra a palabra, con
+progreso y flechas). Nada rebota, nada gira rápido. Con `prefers-reduced-motion`
+todo se ve completo y quieto.
 
 **Tarjeta social (OG).** Lámina 1200×630: nogal, wordmark en hueso, línea de
 marca en serif, una esquina con el objeto B3.

@@ -70,7 +70,8 @@
             "t": "Discuss a life care plan matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "care"
         },
         {
           "label": "Personal injury",
@@ -86,7 +87,8 @@
             "t": "Discuss an injury matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "earn"
         },
         {
           "label": "Wrongful death",
@@ -102,7 +104,8 @@
             "t": "Discuss a death matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "support"
         },
         {
           "label": "Household services",
@@ -118,7 +121,8 @@
             "t": "Discuss a matter",
             "h": "#inquiry",
             "path": "matter"
-          }
+          },
+          "icon": "house"
         }
       ],
       "fn": "Areas stated by subject matter. No case outcome, client or result is claimed on this site.",
@@ -133,19 +137,23 @@
       "items": [
         {
           "k": "Self-reported",
-          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records."
+          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records.",
+          "icon": "quote"
         },
         {
           "k": "Public document",
-          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025."
+          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025.",
+          "icon": "doc"
         },
         {
           "k": "Independent record",
-          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source."
+          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source.",
+          "icon": "link"
         },
         {
           "k": "Ignite count",
-          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it."
+          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it.",
+          "icon": "tally"
         }
       ],
       "no": "02"
@@ -159,19 +167,23 @@
       "rows": [
         {
           "t": "Curriculum vitae",
-          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)"
+          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
+          "icon": "cv"
         },
         {
           "t": "Testimony listing",
-          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)"
+          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)",
+          "icon": "list"
         },
         {
           "t": "Intake checklists",
-          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)"
+          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)",
+          "icon": "check"
         },
         {
           "t": "Terms and engagement letter",
-          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
+          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)",
+          "icon": "sign"
         }
       ],
       "no": "03"

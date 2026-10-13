@@ -48,6 +48,37 @@
       "sub": "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation. The first list links each entry to a record outside the two Pettingill websites; the second is taken from the CV and says so."
     },
     {
+      "type": "timeline",
+      "id": "research-years",
+      "label": "Publications with an outside record",
+      "title": "Seven papers across <t>forty-six years.</t>",
+      "lede": "Each mark is a paper listed below, placed by its year of publication. Four of the seven are from 2024 and 2025.",
+      "from": 1979,
+      "to": 2025,
+      "marks": [
+        {
+          "y": 1979,
+          "t": "Psychosomatics"
+        },
+        {
+          "y": 2019,
+          "t": "Household services",
+          "tier": "hi"
+        },
+        {
+          "y": 2024,
+          "t": "Three papers"
+        },
+        {
+          "y": 2025,
+          "t": "Two papers",
+          "tier": "lo"
+        }
+      ],
+      "src": "Independent record · PubMed, Crossref, Zenodo, publishers",
+      "no": "01"
+    },
+    {
       "type": "pubs",
       "id": "publications",
       "label": "Selected publications",
@@ -125,7 +156,7 @@
           "why": "An early study of the gap between clinical assessment and patient experience."
         }
       ],
-      "no": "01"
+      "no": "02"
     },
     {
       "type": "exp",
@@ -169,7 +200,7 @@
           ]
         }
       ],
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "inquiry",
@@ -352,7 +383,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "03"
+      "no": "04"
     }
   ]
 }

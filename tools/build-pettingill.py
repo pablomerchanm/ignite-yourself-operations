@@ -79,8 +79,34 @@ function rich(s){return rich0(s)
   .replace(/&lt;sup&gt;/g,'<sup>').replace(/&lt;\/sup&gt;/g,'</sup>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,function(m,t,u){var ext=/^https?:/.test(u);
     return'<a class="ilink" href="'+u+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+t+'</a>'})}
+/* Iconos de linea del oficio. Un trazo por icono se mueve en reposo (clase idraw / ifade / ispin / ihand). */
+var ICONS={
+  care:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path class="idraw" d="M8.5 15h2l1.5-3 2 6 1.5-3h2"/>',
+  earn:'<path d="M4 4v16h16"/><path class="idraw" d="M7 15l3.5-4 3 2.5L19 7"/><circle class="ifade" cx="19" cy="7" r="1.2"/>',
+  support:'<path d="M4 20h16"/><path d="M7 20v-7"/><path class="ifade" d="M12 20V5"/><path d="M17 20v-10"/>',
+  house:'<path d="M4 11l8-7 8 7"/><path d="M6.5 9.5V20h11V9.5"/><circle cx="12" cy="14.5" r="2.6"/><path class="ihand" d="M12 14.5v-1.7"/>',
+  quote:'<path d="M9.5 8.5c-2 .3-3.5 1.8-3.5 4v3h3.5v-3.5H8c0-1.2.6-1.9 1.5-2.2z"/><path class="ifade" d="M17.5 8.5c-2 .3-3.5 1.8-3.5 4v3h3.5v-3.5H16c0-1.2.6-1.9 1.5-2.2z"/>',
+  doc:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 12h6"/><path d="M9 15.5h4"/><circle class="ispin" cx="16.5" cy="17" r="2.6" stroke-dasharray="2 1.5"/>',
+  link:'<path d="M10 14a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1 1"/><path class="idraw" d="M14 10a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1-1"/>',
+  tally:'<path d="M5 6v12"/><path d="M9 6v12"/><path d="M13 6v12"/><path d="M17 6v12"/><path class="idraw" d="M3 16L19 8"/>',
+  cv:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path class="idraw" d="M9 12h6"/><path class="idraw" d="M9 15.5h6"/><path class="idraw" d="M9 19h4"/>',
+  list:'<circle cx="5.5" cy="7" r=".9"/><path d="M9 7h10"/><circle cx="5.5" cy="12" r=".9"/><path d="M9 12h10"/><circle cx="5.5" cy="17" r=".9"/><path class="idraw" d="M9 17h7"/>',
+  check:'<rect x="4" y="4" width="16" height="16" rx="1.5"/><path class="idraw" d="M8 12.5l2.8 2.8L16.5 9"/>',
+  sign:'<path d="M4 19h16"/><path class="idraw" d="M5 15.5c2-5 4-5.5 5-2s2 4 3.5 0 2.5-4 3.5-1 1.5 1.5 2.5.5"/>'
+};
+function ico(n){var d=ICONS[n];if(!d)return n||'';
+  return'<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+
+    d.replace(/<(path|circle|rect) /g,'<$1 pathLength="1" ')+'</svg>'}
 """
 base = sub1(r'(function bigimg\()', lambda m: RICH + m.group(1), base, tag='rich')
+
+# Los iconos de las tarjetas y de las filas de documentos se nombran en el JSON y se resuelven aqui.
+base = sub1(r"""\(c\.icon\?'<span class="picon" aria-hidden="true">'\+c\.icon\+'</span>':''\)\+""",
+            """(c.icon?'<span class="picon" aria-hidden="true">'+ico(c.icon)+'</span>':'')+""",
+            base, tag='paths-icon')
+base = sub1(r"""'<div class="mrow wr" data-r1 data-rule><h4>'\+rich\(r\.t\)\+'</h4>""",
+            """'<div class="mrow wr'+(r.icon?' hasico':'')+'" data-r1 data-rule>'+(r.icon?'<span class="mico" aria-hidden="true">'+ico(r.icon)+'</span>':'')+'<h4>'+rich(r.t)+'</h4>""",
+            base, tag='method-icon')
 
 # -------- la ficha de firma: enlaces internos sin pestana nueva, con data-path
 base = sub1(r"""\(s\.social\|\|\[\]\)\.map\(function\(x\)\{return'<a class="go" href="'\+esc\(x\.h\)\+'" target="_blank" rel="noopener">'\+esc\(x\.t\)\+'</a>'\}\)\.join\(''\)\+""",
@@ -115,7 +141,39 @@ legend:function(s){
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
   '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
   '<div class="lgd" data-cards>'+(s.items||[]).map(function(it){
-    return'<div class="lgi wr"><span class="src">'+esc(it.k)+'</span><p>'+rich(it.d)+'</p></div>'}).join('')+'</div>'+
+    return'<div class="lgi wr">'+(it.icon?'<span class="lgico" aria-hidden="true">'+ico(it.icon)+'</span>':'')+'<span class="src">'+esc(it.k)+'</span><p>'+rich(it.d)+'</p></div>'}).join('')+'</div>'+
+  '</div></section>'},
+scrub:function(s){
+  var ps=s.paras||[];var n=('0'+ps.length).slice(-2);
+  return'<section class="scrub'+(s.ink?' ink':'')+'" id="'+esc(s.id||'scrub')+'" data-pin="'+(s.pin||2.4)+'"><div class="wrap sclay">'+
+  '<div class="scaside">'+(s.label?'<div class="smallcap scl">'+esc(s.label)+'</div>':'')+
+    '<div class="sctrack" aria-hidden="true"><span class="scfill"></span></div>'+
+    '<div class="scnav"><button type="button" class="scarr" data-qprev aria-label="Previous">&larr;</button>'+
+    '<button type="button" class="scarr" data-qnext aria-label="Next">&rarr;</button>'+
+    '<span class="sccnt"><span data-qcur>01</span>/'+n+'</span></div></div>'+
+  '<div class="scmain">'+ps.map(function(t){return'<p class="scp">'+rich(t)+'</p>'}).join('')+
+    '<div class="scsign">'+(s.keys?'<ul class="skeys astags">'+s.keys.map(function(k){return'<li><span class="src">'+esc(k)+'</span></li>'}).join('')+'</ul>':'')+
+    (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+'</div>'+
+  '</div></div></section>'},
+timeline:function(s){
+  var a=s.from,b=s.to,span=(b-a)||1;function pct(y){return((y-a)/span*100).toFixed(2)}
+  var tiers=['hi','lo','up'];
+  var marks=(s.marks||[]).map(function(m,i){var p=(m.y-a)/span*100;
+    return'<div class="tlm '+(m.tier||tiers[i%3])+(m.brass?' brass':'')+(p<12?' al':p>88?' ar':'')+'" style="left:'+pct(m.y)+'%">'+
+      '<i class="tldot"></i><span class="tlyr">'+m.y+'</span><span class="tlt">'+esc(m.t)+(m.n?' <b>&times;'+m.n+'</b>':'')+'</span></div>'}).join('');
+  var ranges=(s.ranges||[]).map(function(r){var right=(r.b-a)/span*100>72;
+    return'<div class="tlr'+(r.brass?' brass':'')+(right?' labl':'')+'" style="left:'+pct(r.a)+'%;width:'+((r.b-r.a)/span*100).toFixed(2)+'%">'+
+      '<i class="tlbar"></i><span class="tlrt">'+esc(r.t)+' <em>'+r.a+'–'+r.b+'</em></span></div>'}).join('');
+  return'<section class="tl'+(s.tint?' tint':'')+'" id="'+esc(s.id||'timeline')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="tlwrap wr" data-r1 aria-hidden="true"><div class="tltrack"><span class="tlfill"></span>'+
+    ((s.marks||[]).some(function(m){return m.y===a})?'':'<span class="tlend l">'+a+'</span>')+
+    ((s.marks||[]).some(function(m){return m.y===b})?'':'<span class="tlend r">'+b+'</span>')+'</div><div class="tlmarks">'+marks+'</div>'+
+    (ranges?'<div class="tlrs">'+(s.rlabel?'<span class="smallcap tlrl">'+esc(s.rlabel)+'</span>':'')+ranges+'</div>':'')+'</div>'+
+  '<ul class="tllist wr" data-r1>'+(s.marks||[]).map(function(m){return'<li><b>'+m.y+'</b>'+esc(m.t)+(m.n?' (×'+m.n+')':'')+'</li>'}).join('')+
+    (s.ranges||[]).map(function(r){return'<li><b>'+r.a+'–'+r.b+'</b>'+esc(r.t)+'</li>'}).join('')+'</ul>'+
+  (s.src?'<div class="tlsrc wr" data-r1><span class="src">'+esc(s.src)+'</span></div>':'')+
   '</div></section>'},
 figs:function(s){
   return'<section class="figs" id="'+esc(s.id||'figs')+'"><div class="wrap">'+
@@ -190,6 +248,152 @@ TIPJS = r"""<script>
 })();
 </script>"""
 base = sub1(r'</body>', TIPJS + '\n</body>', base, tag='tipjs')
+
+# ------------------------------------------------- 5b. motion propio (dentro de init, solo con MOTION)
+PETJS = r"""
+  /* ===== Pettingill: el nombre sube desde una mascara, palabra a palabra ===== */
+  (function(){
+    var h=document.querySelector('.hero .hname');if(!h||h.querySelector('.hw'))return;
+    var ws=[];
+    (function walk(node){
+      Array.prototype.slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var parts=n.textContent.split(/(\s+)/).filter(function(t){return t!==''});
+          var frag=document.createDocumentFragment();
+          parts.forEach(function(t){
+            if(/^\s+$/.test(t)){frag.appendChild(document.createTextNode(t));return}
+            var m=document.createElement('span');m.className='hwm';
+            var w=document.createElement('span');w.className='hw';w.textContent=t;
+            m.appendChild(w);frag.appendChild(m);ws.push(w);
+          });
+          node.replaceChild(frag,n);
+        }else if(n.nodeType===1){walk(n)}
+      });
+    })(h);
+    if(ws.length)gsap.fromTo(ws,{yPercent:110},{yPercent:0,duration:1.25,ease:'expo.out',stagger:.09,delay:.3});
+  })();
+
+  /* ===== la senal de scroll en el hero, se apaga al bajar ===== */
+  (function(){
+    var hero=document.querySelector('.hero');if(!hero)return;
+    var c=document.createElement('div');c.className='hcue';c.setAttribute('aria-hidden','true');
+    c.innerHTML='<span>Scroll</span><i></i>';hero.appendChild(c);
+    gsap.to(c,{opacity:0,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'25% top',scrub:true}});
+  })();
+
+  /* ===== las cifras cuentan hasta su valor ===== */
+  (function(){
+    function fmt(v,comma){v=Math.round(v);var s=String(v);return comma?s.replace(/\B(?=(\d{3})+(?!\d))/g,','):s}
+    document.querySelectorAll('.nn,.fgn,.tn').forEach(function(el){
+      var tn=null;for(var i=0;i<el.childNodes.length;i++){var n=el.childNodes[i];if(n.nodeType===3&&/\d/.test(n.textContent)){tn=n;break}}
+      if(!tn)return;var m=tn.textContent.match(/^(\s*)([\d,]+)(.*)$/);if(!m)return;
+      var pre=m[1],num=m[2],post=m[3],val=parseInt(num.replace(/,/g,''),10),comma=num.indexOf(',')>-1;
+      var year=!comma&&num.length===4&&val>=1900&&val<=2100;
+      var o={v:year?val-24:0};tn.textContent=pre+fmt(o.v,comma)+post;
+      gsap.to(o,{v:val,duration:year?1:1.6,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 90%',once:true},
+        onUpdate:function(){tn.textContent=pre+fmt(o.v,comma)+post}});
+    });
+  })();
+
+  /* ===== el grafico del listado crece columna a columna ===== */
+  document.querySelectorAll('.tch').forEach(function(ch){
+    var cols=ch.querySelectorAll('.tcol');if(!cols.length)return;
+    var tl=gsap.timeline({scrollTrigger:{trigger:ch,start:'top 85%',once:true}});
+    cols.forEach(function(col,i){
+      col.querySelectorAll('.tseg').forEach(function(seg){
+        var hgt=seg.style.height;tl.fromTo(seg,{height:0},{height:hgt,duration:1,ease:'power3.out'},i*.05)});
+      var pk=col.querySelector('.tpeak');if(pk)tl.fromTo(pk,{opacity:0,y:6},{opacity:1,y:0,duration:.45,ease:'expo.out'},i*.05+.75);
+    });
+  });
+
+  /* ===== los iconos se dibujan al llegar, y despues respiran ===== */
+  document.querySelectorAll('.ico').forEach(function(sv){
+    var shapes=sv.querySelectorAll('path,circle,rect');if(!shapes.length)return;
+    gsap.set(shapes,{strokeDasharray:1,strokeDashoffset:1});
+    gsap.to(shapes,{strokeDashoffset:0,duration:.9,ease:'power2.inOut',stagger:.12,
+      scrollTrigger:{trigger:sv,start:'top 92%',once:true},
+      onComplete:function(){gsap.set(shapes,{clearProps:'strokeDasharray,strokeDashoffset'});sv.classList.add('on')}});
+  });
+
+  /* ===== la linea de tiempo se traza de izquierda a derecha ===== */
+  document.querySelectorAll('.tlwrap').forEach(function(w){
+    var fill=w.querySelector('.tlfill'),marks=w.querySelectorAll('.tlm'),bars=w.querySelectorAll('.tlbar');
+    var tl=gsap.timeline({scrollTrigger:{trigger:w,start:'top 80%',once:true}});
+    if(fill)tl.fromTo(fill,{scaleX:0},{scaleX:1,duration:1.6,ease:'power2.inOut'},0);
+    marks.forEach(function(d){var p=parseFloat(d.style.left)/100;
+      tl.fromTo(d,{opacity:0,y:8},{opacity:1,y:0,duration:.55,ease:'expo.out'},.15+p*1.35)});
+    bars.forEach(function(b){var p=parseFloat(b.parentNode.style.left)/100;gsap.set(b,{transformOrigin:'0 50%'});
+      tl.fromTo(b,{scaleX:0},{scaleX:1,duration:.8,ease:'power2.out'},.25+p*1.35)});
+  });
+
+  /* ===== las laminas derivan despacio bajo el texto ===== */
+  document.querySelectorAll('.stmt .sph img').forEach(function(im){
+    gsap.fromTo(im,{yPercent:-4,scale:1.1},{yPercent:4,scale:1.1,ease:'none',
+      scrollTrigger:{trigger:im.closest('section'),start:'top bottom',end:'bottom top',scrub:.5}});
+  });
+
+  /* ===== scrub: la seccion se fija y el texto se enciende palabra a palabra ===== */
+  document.querySelectorAll('.scrub').forEach(function(sec){
+    var ps=Array.prototype.slice.call(sec.querySelectorAll('.scp'));if(!ps.length)return;
+    var words=[],segs=[];
+    ps.forEach(function(p){segs.push(words.length);
+      (function walk(node){
+        Array.prototype.slice.call(node.childNodes).forEach(function(n){
+          if(n.nodeType===3){
+            var parts=n.textContent.split(/(\s+)/).filter(function(t){return t!==''});
+            var frag=document.createDocumentFragment();
+            parts.forEach(function(t){
+              if(/^\s+$/.test(t)){frag.appendChild(document.createTextNode(t));return}
+              var w=document.createElement('span');w.className='sw';w.textContent=t;frag.appendChild(w);words.push(w);
+            });
+            node.replaceChild(frag,n);
+          }else if(n.nodeType===1){walk(n)}
+        });
+      })(p);
+    });
+    if(!words.length)return;
+    var fill=sec.querySelector('.scfill'),cur=sec.querySelector('[data-qcur]'),sign=sec.querySelector('.scsign');
+    var factor=parseFloat(sec.getAttribute('data-pin'))||2.4,K=words.length*1.15;
+    words.forEach(function(w){w.style.opacity=.16});
+    if(sign)sign.style.opacity=0;
+    function seg(n){var k=0;for(var j=0;j<segs.length;j++)if(segs[j]<=n)k=j;return k}
+    var st=ScrollTrigger.create({trigger:sec,start:'top top',end:'+='+Math.round(factor*100)+'%',pin:true,scrub:.5,anticipatePin:1,
+      onUpdate:function(self){var p=self.progress,n=p*K;
+        for(var i=0;i<words.length;i++)words[i].style.opacity=Math.min(1,Math.max(.16,(n-i)*.6+.16));
+        if(fill)fill.style.transform='scaleX('+p+')';
+        if(cur)cur.textContent=('0'+(seg(n)+1)).slice(-2);
+        if(sign)sign.style.opacity=Math.min(1,Math.max(0,(p-.82)*6));
+      }});
+    function goto(k){k=Math.max(0,Math.min(segs.length-1,k));
+      var y=st.start+(segs[k]/K)*(st.end-st.start)+(k?4:0);
+      if(lenis)lenis.scrollTo(y);else window.scrollTo({top:y,behavior:'smooth'})}
+    var pv=sec.querySelector('[data-qprev]'),nx=sec.querySelector('[data-qnext]');
+    if(pv)pv.addEventListener('click',function(){goto(seg(st.progress*K)-1)});
+    if(nx)nx.addEventListener('click',function(){goto(seg(st.progress*K)+1)});
+  });
+
+  /* ===== carril de secciones: donde estoy, y a donde puedo ir ===== */
+  (function(){
+    if(window.innerWidth<1100)return;
+    var secs=Array.prototype.filter.call(document.querySelectorAll('#site > section[id]'),function(s){return s.offsetHeight>160});
+    if(secs.length<3)return;
+    var nav=document.createElement('nav');nav.className='srail';nav.setAttribute('aria-label','Sections');
+    secs.forEach(function(s){
+      var e=s.querySelector('.slab,.scl,.rlab .smallcap,.phead .smallcap,.nums .smallcap,.mlab .smallcap,.band .smallcap');
+      var lab=s.classList.contains('hero')?'Overview':(e?e.textContent.trim():s.id);
+      var a=document.createElement('a');a.href='#'+s.id;a.innerHTML='<i></i><span>'+esc(lab)+'</span>';
+      a.addEventListener('click',function(ev){ev.preventDefault();
+        if(lenis)lenis.scrollTo(s,{offset:-navOffset()});else s.scrollIntoView({behavior:'smooth'})});
+      nav.appendChild(a);
+      ScrollTrigger.create({trigger:s,start:'top 50%',end:'bottom 50%',
+        onToggle:function(self){if(self.isActive){nav.querySelectorAll('a').forEach(function(x){x.classList.remove('on')});a.classList.add('on')}}});
+    });
+    document.body.appendChild(nav);
+  })();
+
+"""
+base = sub1(r'(  /\* R5 libro de dias pinneado \(solo desktop\) \*/)', lambda m: PETJS + m.group(1), base, tag='petjs')
 
 # --------------------------------------------------------- 6. calibrado visual
 CAL = """<style>
@@ -582,6 +786,120 @@ body{background:var(--bg)}
   .tbey ul{columns:2;column-gap:20px}
   .tbey li{break-inside:avoid}
 }
+
+/* ============ Iteracion 11: motion, iconos, lineas de tiempo, carril ============ */
+/* ---------- hero: el nombre sube linea a linea desde una mascara ---------- */
+.hwm{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.14em;margin-bottom:-.14em}
+.hw{display:inline-block;will-change:transform}
+.hcue{position:absolute;right:clamp(20px,5vw,80px);bottom:clamp(72px,11vh,132px);z-index:3;display:flex;flex-direction:column;
+  align-items:center;gap:12px;color:rgba(255,255,255,.72)}
+.hcue span{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;writing-mode:vertical-rl}
+.hcue i{display:block;width:1px;height:58px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.hcue i::after{content:'';position:absolute;left:0;top:-100%;width:100%;height:100%;background:#fff}
+@media(max-width:860px){.hcue{display:none}}
+
+/* ---------- iconos de linea: laton, un trazo vivo ---------- */
+.ico{display:block;width:100%;height:100%}
+.picon{color:var(--brass)}
+.pcard.lead .picon,.pcard.lead:hover .picon{color:var(--brass)}
+.pcard:hover .picon{color:var(--brass)}
+.lgico{display:block;width:26px;height:26px;color:var(--brass);margin-bottom:16px}
+.mico{display:block;width:24px;height:24px;color:var(--brass);margin-top:4px}
+.mrow.hasico{grid-template-columns:36px clamp(180px,22vw,320px) minmax(0,1fr)}
+@media(max-width:860px){.mrow.hasico{grid-template-columns:36px minmax(0,1fr)}.mrow.hasico p{grid-column:2}}
+
+/* ---------- scrub: la frase se enciende palabra a palabra, la seccion se fija ---------- */
+.scrub{position:relative;min-height:100svh;display:flex;align-items:center;padding:clamp(96px,12vh,140px) 0 clamp(72px,9vh,110px);overflow:hidden}
+.scrub.ink{background:var(--ink);color:#fff}
+.sclay{display:grid;grid-template-columns:clamp(180px,18vw,260px) minmax(0,1fr);gap:clamp(32px,5vw,96px);align-items:start}
+.scaside{position:sticky;top:0;padding-top:.5em}
+.scrub.ink .scl{color:rgba(255,255,255,.5)}
+.sctrack{position:relative;height:1px;background:rgba(255,255,255,.18);margin-top:26px}
+.scfill{position:absolute;top:-.5px;left:0;height:2px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:left}
+html.no-motion .scfill{transform:none}
+.scnav{display:flex;align-items:center;gap:16px;margin-top:18px}
+.scarr{background:none;border:0;color:inherit;font:inherit;font-size:20px;line-height:1;cursor:pointer;opacity:.75;padding:4px 2px;transition:opacity .25s,transform .35s}
+.scarr:hover{opacity:1}
+.scarr[data-qprev]:hover{transform:translateX(-3px)}
+.scarr[data-qnext]:hover{transform:translateX(3px)}
+html.no-motion .scarr{display:none}
+.sccnt{margin-left:auto;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:.12em;opacity:.6;font-variant-numeric:tabular-nums}
+.scp{font-family:var(--serif);font-weight:300;font-size:clamp(23px,1rem + 1.5vw,39px);line-height:1.18;letter-spacing:-.012em;max-width:32ch;text-wrap:pretty}
+.scp+.scp{margin-top:.9em}
+.scp .it{font-style:italic;color:var(--brass)}
+.scp .sw{opacity:1}
+.scsign{margin-top:clamp(28px,4vh,44px);display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px}
+.scsign .skeys{margin-top:0}
+.scrub.ink .scsign .skeys .src{color:rgba(255,255,255,.72);font-size:11.5px;padding:7px 12px 6px}
+.scrub.ink .scsign .smore{color:#fff;border-color:rgba(255,255,255,.45)}
+@media(max-width:860px){.scrub{padding-top:calc(var(--barh) + 28px);min-height:100svh}
+  .sclay{grid-template-columns:1fr;gap:28px}.scaside{position:static}
+  .scp{font-size:clamp(21px,5.6vw,26px);max-width:none}}
+
+/* ---------- timeline: la linea que se dibuja ---------- */
+.tl{padding:var(--sec) 0}
+.tl.tint{background:#E4DED2}
+.tlwrap{position:relative;margin-top:clamp(40px,6vh,70px);padding:112px 0 72px}
+.tltrack{position:relative;height:1px;background:var(--line)}
+.tlfill{position:absolute;inset:0;background:var(--ink);transform-origin:left}
+.tlend{position:absolute;top:14px;font-size:11px;color:var(--gray);font-variant-numeric:tabular-nums}
+.tlend.l{left:0}.tlend.r{right:0}
+.tlmarks{position:absolute;left:0;right:0;top:112px;height:0}
+.tlm{position:absolute;top:0;width:0}
+.tldot{position:absolute;left:-5px;top:-5px;width:10px;height:10px;border-radius:50%;background:var(--ink);display:block;
+  box-shadow:0 0 0 4px var(--bg)}
+.tl.tint .tldot{box-shadow:0 0 0 4px #E4DED2}
+.tlm.brass .tldot{background:var(--brass)}
+.tlyr{position:absolute;left:-40px;width:80px;text-align:center;font-weight:500;font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.tlt{position:absolute;left:-80px;width:160px;text-align:center;font-size:11.5px;line-height:1.35;color:var(--gray)}
+.tlt b{font-weight:500;color:var(--brass)}
+.tlm.hi .tlyr{top:-38px}.tlm.hi .tlt{top:-68px}
+.tlm.up .tlyr{top:-78px}.tlm.up .tlt{top:-108px}
+.tlm.lo .tlyr{top:16px}.tlm.lo .tlt{top:38px}
+.tlm.al .tlyr,.tlm.al .tlt{left:-5px;text-align:left}
+.tlm.ar .tlyr,.tlm.ar .tlt{left:auto;right:-5px;text-align:right}
+.tlm.lo.al .tlyr{left:0}
+.tlrs{position:relative;margin-top:88px;padding-top:16px;border-top:1px solid var(--line)}
+.tlrl{display:block;color:var(--ink);margin-bottom:8px}
+.tlr{position:relative;height:22px;margin-top:6px}
+.tlbar{position:absolute;left:0;right:0;top:8px;height:6px;background:var(--ink);border-radius:3px;display:block;transform-origin:left}
+.tlr.brass .tlbar{background:var(--brass)}
+.tlrt{position:absolute;left:calc(100% + 10px);top:3px;white-space:nowrap;font-size:11.5px;color:var(--ink)}
+.tlrt em{font-style:normal;color:var(--gray);margin-left:6px;font-variant-numeric:tabular-nums}
+.tlr.labl .tlrt{left:auto;right:calc(100% + 10px);text-align:right}
+.tllist{list-style:none;margin-top:28px;border-top:1px solid var(--ink)}
+.tllist li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.tllist b{font-weight:500;font-variant-numeric:tabular-nums}
+.tlsrc{margin-top:22px}
+@media(min-width:861px){.tllist{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0;border:0}}
+@media(max-width:860px){.tlwrap{display:none}}
+
+/* ---------- carril de secciones (escritorio) ---------- */
+.srail{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:12px;
+  mix-blend-mode:difference;color:#fff}
+.srail a{display:flex;align-items:center;justify-content:flex-end;gap:10px;color:inherit;text-decoration:none;opacity:.5;transition:opacity .25s;padding:2px 0}
+.srail a span{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s}
+.srail a i{display:block;width:6px;height:6px;border-radius:50%;background:currentColor;transition:transform .25s;flex:0 0 6px}
+.srail a:hover,.srail a.on{opacity:1}
+.srail a.on i{transform:scale(1.7)}
+.srail:hover a span{opacity:1;transform:none}
+@media(max-width:1100px){.srail{display:none}}
+
+/* ---------- reposo: lo que se mueve solo, despacio ---------- */
+@media(prefers-reduced-motion:no-preference){
+  .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
+  @keyframes hcue{0%{top:-100%}50%{top:0}100%{top:100%}}
+  .ico.on .idraw{stroke-dasharray:1;animation:idraw 7s ease-in-out infinite}
+  @keyframes idraw{0%{stroke-dashoffset:1;opacity:1}32%{stroke-dashoffset:0;opacity:1}76%{stroke-dashoffset:0;opacity:1}
+    88%{stroke-dashoffset:0;opacity:0}89%{stroke-dashoffset:1;opacity:0}100%{stroke-dashoffset:1;opacity:1}}
+  .ico.on .ifade{animation:ifade 4.6s ease-in-out infinite}
+  @keyframes ifade{0%,100%{opacity:1}50%{opacity:.18}}
+  .ico.on .ispin{transform-box:fill-box;transform-origin:center;animation:ispin 18s linear infinite}
+  .ico.on .ihand{transform-box:fill-box;transform-origin:50% 100%;animation:ispin 12s linear infinite}
+  @keyframes ispin{to{transform:rotate(360deg)}}
+  .fgs-st .dot{animation:dotp 3.4s ease-out infinite}
+  @keyframes dotp{0%{box-shadow:0 0 0 0 rgba(181,131,63,.55)}70%{box-shadow:0 0 0 9px rgba(181,131,63,0)}100%{box-shadow:0 0 0 0 rgba(181,131,63,0)}}
+}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
@@ -624,7 +942,7 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] in ('hero', 'band', 'nums', 'stmt'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
@@ -639,7 +957,7 @@ inq = lambda: deep('inquiry')
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
         [deep('hero'), deep('numbers'), deep('s-question'), deep('s-training'), deep('s-research'),
-         deep('s-sourced'), deep('s-firm'), deep('firm-home'), inq()]),
+         deep('how-to-read'), deep('s-firm'), deep('firm-home'), inq()]),
     'practice': page('The Practice — Bernard F. Pettingill, Jr., Ph.D.',
         'Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement.',
         [deep('practice-open'), deep('routes'), deep('sources'), deep('engage'), inq()]),
@@ -648,10 +966,10 @@ PAGES = {
         [deep('testimony-open'), deep('figures'), deep('listing'), deep('band-register'), inq()]),
     'research': page('The Research — Bernard F. Pettingill, Jr., Ph.D.',
         'Selected publications from 1979 to 2025, each linked to a record outside his own websites, and further work listed on his CV.',
-        [deep('research-open'), deep('publications'), deep('research-cv'), inq()]),
+        [deep('research-open'), deep('research-years'), deep('publications'), deep('research-cv'), inq()]),
     'record': page('The Record — Bernard F. Pettingill, Jr., Ph.D.',
         'Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics.',
-        [deep('record-open'), deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'), inq()]),
+        [deep('record-open'), deep('record-years'), deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'), inq()]),
 }
 
 os.makedirs(DST, exist_ok=True)

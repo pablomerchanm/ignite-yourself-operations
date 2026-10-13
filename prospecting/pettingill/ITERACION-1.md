@@ -166,3 +166,22 @@ Imagen aportada por Pablo (`assets/counsel.jpg`): Biff escuchando a dos abogados
 # Iteración 10 — la mesa de trabajo de la firma
 
 `assets/team.jpg` (Biff marcando una gráfica con la pluma, el equipo alrededor): nueva pantalla en la home justo antes de la ficha de Pettingill Analytics, con la etiqueta "Pettingill Analytics" y la frase "One founder. A team at the table." Es la imagen que vende la firma: un equipo, no un solo perito. El lede que tenía la ficha pasa a esta pantalla para no repetirse. La afirmación del equipo se apoya en el equipo publicado en pettingillanalytics.com y lleva la etiqueta Public document. Pendiente de autorización de Biff como el resto.
+
+---
+
+# Iteración 11 — motion, iconos y gráficos
+
+Lo que se mueve, y por qué. Todo respeta `prefers-reduced-motion`: sin motion, cada pieza se ve completa y quieta.
+
+- **Scrollytelling en la home.** La pantalla "How to read this site" se fija y el texto se enciende palabra a palabra con el scroll (patrón MONOLOG del estudio, sobre el motor GSAP/ScrollTrigger que ya usa la plantilla). Lleva línea de progreso, contador 01/03 y flechas que saltan de párrafo. Sustituye a la frase estática "Claim, document, record." Las cuatro etiquetas aparecen al final.
+- **El nombre del hero** sube palabra a palabra desde una máscara. Señal de "Scroll" a la derecha que se apaga al bajar.
+- **Cifras que cuentan** hasta su valor al entrar en pantalla: las tres de la home, las tres de Testimony y las cuatro del listado. Los años ruedan desde 24 años antes.
+- **Iconos de línea en latón** con un trazo en reposo: cuatro áreas de la práctica (documento con pulso, curva de ingresos, columnas de soporte, casa con reloj), cuatro etiquetas de fuente (comillas, documento con sello, eslabón, conteo de palotes) y cuatro documentos del paralegal (CV, listado, casilla con tilde, firma). Se dibujan al llegar y luego respiran despacio.
+- **Dos líneas de tiempo** nuevas, con datos ya verificados en iteraciones anteriores:
+  - Research: siete papers entre 1979 y 2025, uno por marca.
+  - Record: cuatro grados (1969–1977), siete nombramientos docentes como barras (1974–1998) y la práctica desde 1985 en latón. En móvil se muestran como lista.
+- **El gráfico del listado** crece columna a columna.
+- **Las láminas** derivan despacio bajo el texto (parallax suave).
+- **Carril de secciones** a la derecha en escritorio: un punto por sección, el activo más grande, etiqueta al pasar el ratón, clic para saltar.
+
+Revisión a 1440 y 390 px con motion activo: sin desbordes ni errores de consola.
