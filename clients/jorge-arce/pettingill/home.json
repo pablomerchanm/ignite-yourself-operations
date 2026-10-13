@@ -99,6 +99,11 @@
       "more": {
         "t": "The practice",
         "h": "/pettingill/practice"
+      },
+      "img": {
+        "src": "/pettingill/assets/counsel.jpg",
+        "alt": "A working session with counsel at dusk",
+        "pos": "50% 42%"
       }
     },
     {

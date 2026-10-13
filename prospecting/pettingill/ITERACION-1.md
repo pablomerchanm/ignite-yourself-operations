@@ -130,3 +130,9 @@ Pablo revisa → crítica de narrativa, veracidad y oferta (ChatGPT) → iteraci
 - Eliminadas dos secciones que ya no se usaban en ninguna página (`proof`, `band-thesis`).
 
 **Datos y fuentes:** sin cambios.
+
+---
+
+# Iteración 6 — la mesa con los abogados
+
+Imagen aportada por Pablo (`assets/counsel.jpg`): Biff escuchando a dos abogados, luz de atardecer. Colocada a sangre detrás de la primera pantalla después de las cifras, la de la práctica ("One question, in four forms: what is the loss worth?"). Es el primer momento en que un abogado se ve a sí mismo en la mesa. Texto en la columna izquierda, sobre la espalda en sombra, para dejar el rostro libre. Pendiente de autorización de Biff como el resto de retratos.
