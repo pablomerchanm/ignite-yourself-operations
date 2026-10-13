@@ -98,7 +98,7 @@ nums:function(s){
   (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
   '</div></section>'},
 stmt:function(s){
-  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+'" id="'+esc(s.id||'stmt')+'">'+
+  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+(s.align==='right'?' tr':'')+'" id="'+esc(s.id||'stmt')+'">'+
   (s.img&&s.img.src?'<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+(s.img.pos?' style="object-position:'+esc(s.img.pos)+'"':'')+'></div>':'')+
   '<div class="wrap" data-r2>'+
   (s.label?'<div class="slab smallcap wr">'+esc(s.label)+'</div>':'')+
@@ -356,6 +356,14 @@ body{background:var(--bg)}
   linear-gradient(180deg,rgba(14,16,19,0) 55%,rgba(14,16,19,.42) 100%)}
 .stmt.withimg{min-height:clamp(600px,92svh,980px);align-items:flex-end;padding-bottom:clamp(64px,9vh,110px)}
 .stmt.withimg .sq{font-size:clamp(40px,5.4vw,90px);max-width:8.6ch}
+/* texto a la derecha, sobre el vacio de la imagen */
+.stmt.tr .wrap{display:flex;flex-direction:column;align-items:flex-end}
+.stmt.tr .wrap>*{width:min(100%,620px)}
+.stmt.tr .sph::after{background:
+  linear-gradient(270deg,rgba(14,16,19,.55) 0%,rgba(14,16,19,.25) 34%,rgba(14,16,19,0) 55%),
+  linear-gradient(180deg,rgba(14,16,19,0) 55%,rgba(14,16,19,.42) 100%)}
+.stmt.tr .sq{max-width:none;font-size:clamp(40px,5vw,84px)}
+@media(max-width:860px){.stmt.tr .wrap{align-items:flex-start}.stmt.tr .wrap>*{width:100%}}
 .stmt.withimg .skeys{grid-template-columns:1fr 1fr;max-width:560px}
 .stmt.withimg .sfoot{max-width:560px}
 .stmt.withimg .sq .it{color:rgba(255,255,255,.7)}
@@ -364,8 +372,12 @@ body{background:var(--bg)}
 .stmt.withimg .skeys li{border-bottom-color:rgba(255,255,255,.18)}
 .stmt.withimg .smore{color:#fff;border-color:rgba(255,255,255,.5)}
 .stmt.withimg .sfoot .src{color:rgba(255,255,255,.6)}
-@media(max-width:860px){.stmt.withimg{min-height:100svh;display:flex;align-items:flex-end;padding-bottom:clamp(56px,9vh,80px)}
-  .stmt.withimg .sph::after{background:linear-gradient(180deg,rgba(14,16,19,0) 0%,rgba(14,16,19,0) 40%,rgba(14,16,19,.75) 80%)}}
+/* movil: la foto en la franja superior, el texto debajo sobre tinta (como el hero) */
+@media(max-width:860px){.stmt.withimg{min-height:100svh;background:var(--ink);color:#fff;display:flex;align-items:flex-end;padding:0 0 clamp(48px,7vh,72px)}
+  .stmt.withimg .sph{inset:0 0 auto 0;height:56svh}
+  .stmt.withimg .sph::after,.stmt.tr .sph::after{background:linear-gradient(180deg,rgba(20,22,26,0) 0%,rgba(20,22,26,0) 55%,rgba(20,22,26,.85) 88%,#14161A 100%)}
+  .stmt.withimg .wrap{padding-top:50svh}
+  .stmt.withimg .sq{font-size:clamp(36px,10.5vw,56px)}}
 @media(max-width:860px){.stmt{min-height:auto;padding:clamp(72px,12vh,110px) 0}
   .sq{font-size:clamp(38px,11.5vw,64px)}.skeys{grid-template-columns:1fr 1fr}}
 
@@ -626,7 +638,7 @@ PAGES = {
          deep('s-sourced'), deep('firm-home'), inq()]),
     'practice': page('The Practice — Bernard F. Pettingill, Jr., Ph.D.',
         'Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement.',
-        [deep('practice-lede'), deep('routes'), deep('sources'), deep('engage'), inq()]),
+        [deep('practice-open'), deep('routes'), deep('sources'), deep('engage'), inq()]),
     'testimony': page('The Testimony — Bernard F. Pettingill, Jr., Ph.D.',
         'The three published testimony figures, what each counts, and a count of the public testimony listing since 2017.',
         [deep('testimony-lede'), deep('figures'), deep('listing'), deep('band-register'), inq()]),

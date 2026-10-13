@@ -36,15 +36,16 @@
   },
   "sections": [
     {
-      "type": "mission",
-      "id": "practice-lede",
+      "type": "stmt",
+      "id": "practice-open",
       "label": "The Practice",
+      "img": {
+        "src": "/pettingill/assets/room.jpg",
+        "alt": "A working session with counsel, seen from the corridor",
+        "pos": "62% 50%"
+      },
       "quote": "Four questions. <t>One discipline.</t>",
-      "body": [
-        "Each question is drawn from the published practice and from the intake checklists issued to counsel, and tied to published research on the same question.",
-        "Broader business services belong to Pettingill Analytics and its team, and are attributed to the firm."
-      ],
-      "no": "01"
+      "sub": "Each drawn from the published practice and the intake checklists issued to counsel, and tied to published research on the same question. Broader business services belong to Pettingill Analytics."
     },
     {
       "type": "paths",
@@ -121,7 +122,7 @@
         }
       ],
       "fn": "Areas stated by subject matter. No case outcome, client or result is claimed on this site.",
-      "no": "02"
+      "no": "01"
     },
     {
       "type": "legend",
@@ -147,7 +148,7 @@
           "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it."
         }
       ],
-      "no": "03"
+      "no": "02"
     },
     {
       "type": "method",
@@ -173,7 +174,7 @@
           "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
         }
       ],
-      "no": "04"
+      "no": "03"
     },
     {
       "type": "inquiry",
@@ -356,7 +357,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "05"
+      "no": "04"
     }
   ]
 }

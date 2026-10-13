@@ -129,7 +129,13 @@
       "more": {
         "t": "The research",
         "h": "/pettingill/research"
-      }
+      },
+      "img": {
+        "src": "/pettingill/assets/desk.jpg",
+        "alt": "Writing at a desk by lamplight",
+        "pos": "28% 45%"
+      },
+      "align": "right"
     },
     {
       "type": "stmt",
@@ -189,14 +195,16 @@
       ]
     },
     {
-      "type": "mission",
-      "id": "practice-lede",
+      "type": "stmt",
+      "id": "practice-open",
       "label": "The Practice",
+      "img": {
+        "src": "/pettingill/assets/room.jpg",
+        "alt": "A working session with counsel, seen from the corridor",
+        "pos": "62% 50%"
+      },
       "quote": "Four questions. <t>One discipline.</t>",
-      "body": [
-        "Each question is drawn from the published practice and from the intake checklists issued to counsel, and tied to published research on the same question.",
-        "Broader business services belong to Pettingill Analytics and its team, and are attributed to the firm."
-      ]
+      "sub": "Each drawn from the published practice and the intake checklists issued to counsel, and tied to published research on the same question. Broader business services belong to Pettingill Analytics."
     },
     {
       "type": "paths",

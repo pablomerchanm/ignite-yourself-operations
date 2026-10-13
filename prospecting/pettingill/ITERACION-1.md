@@ -136,3 +136,12 @@ Pablo revisa → crítica de narrativa, veracidad y oferta (ChatGPT) → iteraci
 # Iteración 6 — la mesa con los abogados
 
 Imagen aportada por Pablo (`assets/counsel.jpg`): Biff escuchando a dos abogados, luz de atardecer. Colocada a sangre detrás de la primera pantalla después de las cifras, la de la práctica ("One question, in four forms: what is the loss worth?"). Es el primer momento en que un abogado se ve a sí mismo en la mesa. Texto en la columna izquierda, sobre la espalda en sombra, para dejar el rostro libre. Pendiente de autorización de Biff como el resto de retratos.
+
+---
+
+# Iteración 7 — dos imágenes más
+
+- `assets/desk.jpg` (Biff escribiendo a la luz de una lámpara): detrás de "Published from 1979 to 2025" en la home, con el texto a la derecha, sobre la pared vacía. Escribir es publicar.
+- `assets/room.jpg` (la sala vista desde la puerta): apertura de la página Practice, con "Four questions. One discipline." Sustituye al lede de texto.
+- En móvil, todas las pantallas con foto pasan al patrón del hero: la imagen en la franja superior y el texto debajo sobre tinta, para no tapar rostros.
+- La home alterna ya foto, cifras, foto, frase, foto, frase, firma. Pendientes de autorización de Biff como el resto.

@@ -129,7 +129,13 @@
       "more": {
         "t": "The research",
         "h": "/pettingill/research"
-      }
+      },
+      "img": {
+        "src": "/pettingill/assets/desk.jpg",
+        "alt": "Writing at a desk by lamplight",
+        "pos": "28% 45%"
+      },
+      "align": "right"
     },
     {
       "type": "stmt",
