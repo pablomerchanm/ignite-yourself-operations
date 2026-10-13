@@ -1,0 +1,344 @@
+{
+  "meta": {
+    "title": "The Testimony — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "The three published testimony figures, what each counts, and a count of the public testimony listing since 2017."
+  },
+  "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/pettingill"
+    },
+    {
+      "t": "The Testimony",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "t": "The Research",
+      "h": "/pettingill/research"
+    },
+    {
+      "t": "The Record",
+      "h": "/pettingill/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "mission",
+      "id": "testimony-lede",
+      "label": "The Testimony",
+      "quote": "Three figures appear across his two websites. <t>Each one measures something different.</t>",
+      "body": [
+        "An attorney checking an expert will find all three. This page shows where each is published and what it counts, then reads the testimony listing he publishes — the document that backs them.",
+        "Nothing here describes the outcome of a case. An entry in a testimony listing records that testimony was given. It says nothing about who prevailed, or how a court weighed the testimony."
+      ],
+      "no": "01"
+    },
+    {
+      "type": "figs",
+      "id": "figures",
+      "label": "The figures, as published",
+      "title": "One record, <t>three ways of counting it.</t>",
+      "cards": [
+        {
+          "n": "1,500+",
+          "what": "Cases with deposition or trial testimony",
+          "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
+          "href": "https://bpettingill.com/services/forensic-consulting/",
+          "status": "Self-reported. The figure this site uses."
+        },
+        {
+          "n": "550+",
+          "what": "Trials",
+          "where": "bpettingill.com — Prior Testimony page",
+          "href": "https://bpettingill.com/new-case/prior-testimony/",
+          "status": "Self-reported. A narrower count: trial testimony only."
+        },
+        {
+          "n": "1,900+",
+          "what": "Cases or testimonies — unit not stated",
+          "where": "pettingillanalytics.com — home and team pages",
+          "href": "https://www.pettingillanalytics.com/our-team/",
+          "status": "Published by the firm. Period and unit to confirm with Dr. Pettingill.",
+          "pending": true
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "tally",
+      "id": "listing",
+      "label": "The public listing",
+      "title": "329 entries <t>since September 2017.</t>",
+      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not his full career, and some matters appear in both sections.",
+      "doc": {
+        "t": "Open the listing (PDF)",
+        "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
+      },
+      "stats": [
+        {
+          "n": "269",
+          "k": "Depositions",
+          "d": "September 2017 to January 2026"
+        },
+        {
+          "n": "60",
+          "k": "Trials",
+          "d": "March 2018 to May 2025"
+        },
+        {
+          "n": "289",
+          "k": "Florida courts",
+          "d": "Entries naming a Florida court. Fifteen entries name no court."
+        },
+        {
+          "n": "26",
+          "k": "U.S. District Courts",
+          "d": "Entries in federal district courts, in Florida and elsewhere"
+        }
+      ],
+      "series": [
+        {
+          "k": "dep",
+          "t": "Depositions",
+          "c": "#3B64A0"
+        },
+        {
+          "k": "tri",
+          "t": "Trials",
+          "c": "#B5833F"
+        }
+      ],
+      "years": [
+        {
+          "y": "2017",
+          "dep": 8,
+          "tri": 0
+        },
+        {
+          "y": "2018",
+          "dep": 20,
+          "tri": 5
+        },
+        {
+          "y": "2019",
+          "dep": 26,
+          "tri": 4
+        },
+        {
+          "y": "2020",
+          "dep": 23,
+          "tri": 4
+        },
+        {
+          "y": "2021",
+          "dep": 35,
+          "tri": 19
+        },
+        {
+          "y": "2022",
+          "dep": 34,
+          "tri": 8
+        },
+        {
+          "y": "2023",
+          "dep": 40,
+          "tri": 5
+        },
+        {
+          "y": "2024",
+          "dep": 49,
+          "tri": 9
+        },
+        {
+          "y": "2025",
+          "dep": 30,
+          "tri": 6
+        },
+        {
+          "y": "2026",
+          "dep": 4,
+          "tri": 0
+        }
+      ],
+      "beyond": {
+        "k": "Outside Florida, in the same listing",
+        "items": [
+          "Alabama",
+          "Arkansas",
+          "California",
+          "Georgia",
+          "Louisiana",
+          "Maryland",
+          "Massachusetts",
+          "Missouri",
+          "Nebraska",
+          "New Jersey",
+          "Texas",
+          "Washington",
+          "U.S. Virgin Islands"
+        ]
+      },
+      "fn": "Ignite count · Deposition pages dated 20 February 2026 and trial pages dated 26 August 2025, as published. 2017 starts in September. The 2026 figures stop in January. 2025 trial entries stop in May.",
+      "no": "03"
+    },
+    {
+      "type": "band",
+      "id": "band-register",
+      "variant": "proposal",
+      "label": "Proposed, with his review",
+      "quote": "The same listing, searchable by year, jurisdiction and court — <t>once he has checked every line.</t>",
+      "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "contact": {
+        "email": "biffpett@gmail.com",
+        "phone": "(561) 622-0330",
+        "city": "Palm Beach Gardens, Florida"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A new matter — economic damages",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV, testimony listing or engagement terms",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "referral",
+            "t": "Checking a referral",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Who referred you, if you wish to say"
+              },
+              {
+                "n": "What you need to know",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+      },
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "name": "Bernard Pettingill",
+      "cred": "Ph.D. · MPH · MBA · BBA",
+      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Referee, Journal of Forensic Economics — per CV",
+        "National Association of Forensic Economists — since 1989, per CV",
+        "American Economic Association — since 1983, per CV",
+        "Founder & President, Pettingill Analytics"
+      ],
+      "social": [
+        {
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/"
+        },
+        {
+          "t": "Pettingill Analytics",
+          "h": "https://www.pettingillanalytics.com/"
+        }
+      ],
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/pettingill/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+      },
+      "no": "04"
+    }
+  ]
+}

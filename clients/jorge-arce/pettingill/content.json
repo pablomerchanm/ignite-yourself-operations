@@ -1,0 +1,776 @@
+{
+  "meta": {
+    "title": "Bernard “Biff” Pettingill, Ph.D. — Forensic Economist & Expert Witness",
+    "description": "A private authority-platform concept: the forensic economics record of Bernard F. Pettingill, Jr., Ph.D., with the source behind every figure."
+  },
+  "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/pettingill"
+    },
+    {
+      "t": "The Testimony",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "t": "The Research",
+      "h": "/pettingill/research"
+    },
+    {
+      "t": "The Record",
+      "h": "/pettingill/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "kick": "Forensic Economist · Palm Beach Gardens, Florida · Since 1985",
+      "name": "Bernard <t>“Biff”</t> Pettingill",
+      "cred": "Ph.D. Economics · MPH · MBA",
+      "sub": "Forensic Economist <t>and Expert Witness</t>",
+      "note": "Economic damages in personal injury, wrongful death and medical malpractice — <t>with the source behind every figure on this page.</t>",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "See the testimony record",
+          "h": "/pettingill/testimony"
+        }
+      ]
+    },
+    {
+      "type": "proof",
+      "id": "proof",
+      "ink": true,
+      "label": "The record, in brief",
+      "title": "Four decades of testimony, <t>each figure traced to where it is published.</t>",
+      "items": [
+        {
+          "n": "Since 1985",
+          "d": "Practising as a forensic economist, as stated on his website and on his curriculum vitae. <src>Self-reported · bpettingill.com · CV, July 2025</src>"
+        },
+        {
+          "n": "1,500+ cases",
+          "d": "Cases in which he has given deposition or trial testimony. A count of cases, not of trials. <src>Self-reported · bpettingill.com</src>"
+        },
+        {
+          "n": "29 states + USVI",
+          "d": "Where he states he has qualified to testify, in federal and state courts, including the U.S. Virgin Islands. It describes where he has testified, not a licence to practise. <src>Self-reported · bpettingill.com</src>"
+        },
+        {
+          "n": "Ph.D., Manchester, 1977",
+          "d": "Economics, Department of Economics and Social Administration, University of Manchester. Preceded by an MPH in health economics from Tulane University, 1973. <src>As stated on his CV</src>"
+        }
+      ],
+      "more": {
+        "t": "How each figure is sourced",
+        "h": "/pettingill/testimony"
+      }
+    },
+    {
+      "type": "band",
+      "id": "band-thesis",
+      "label": "Why the training matters",
+      "quote": "Trained in health economics before he testified on what future care will cost. <t>Still publishing on it in 2025.</t>",
+      "more": {
+        "t": "Read the research",
+        "h": "/pettingill/research"
+      }
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Questions he is retained on",
+      "title": "Four economic questions <t>his record speaks to.</t>",
+      "lede": "Drawn from the work stated on his website and the intake checklists he publishes, each tied to his own published research on the same question. Broader business services belong to Pettingill Analytics and are listed on the record page.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Life care plans",
+          "title": "What will future care cost?",
+          "desc": "Costing life care plans and reducing future care needs to present value — the specialty his website names. His 2024 and 2025 papers with a physiatrist examine how future medical care is projected; a 2025 paper examines hospital inflation.",
+          "items": [
+            "Future medical costs",
+            "Present-value reduction",
+            "Attendant and nursing care",
+            "Medical cost inflation"
+          ],
+          "cta": {
+            "t": "Discuss a life care plan matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "Personal injury",
+          "title": "What earning capacity was lost?",
+          "desc": "His injury checklist asks for five years of earnings records, fringe benefits and household services before and after the injury.",
+          "items": [
+            "Lost earnings",
+            "Earning capacity",
+            "Fringe benefits",
+            "Household services"
+          ],
+          "cta": {
+            "t": "Discuss an injury matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "Wrongful death",
+          "title": "What was the economic loss to the family?",
+          "desc": "His death checklist covers earnings history, fringe benefits and household services. His 2024 paper addresses which database to use for life expectancy.",
+          "items": [
+            "Loss of support",
+            "Life expectancy basis",
+            "Household services",
+            "Present value"
+          ],
+          "cta": {
+            "t": "Discuss a death matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "Household services",
+          "title": "What is unpaid care worth?",
+          "desc": "The economic value of household services, care and support — including nighttime protection, the subject of his 2019 paper in The Earnings Analyst.",
+          "items": [
+            "Household services",
+            "Care and support",
+            "Nighttime protection",
+            "Injury and death claims"
+          ],
+          "cta": {
+            "t": "Discuss a matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        }
+      ],
+      "fn": "Areas stated by subject matter. No case outcome, client or result is claimed anywhere on this site."
+    },
+    {
+      "type": "legend",
+      "id": "sources",
+      "label": "How to read this record",
+      "title": "Every claim carries <t>its source.</t>",
+      "lede": "An attorney deciding whether to retain an expert needs to know what the expert says, what documents show, and what someone else has recorded. This site keeps the three apart.",
+      "items": [
+        {
+          "k": "Self-reported",
+          "d": "Stated by Dr. Pettingill on bpettingill.com or on his curriculum vitae. Shown as he states it."
+        },
+        {
+          "k": "Public document",
+          "d": "A dated document he publishes himself, such as his testimony listing. Linked, with its date."
+        },
+        {
+          "k": "Independent record",
+          "d": "A record kept outside his own websites: a publisher, PubMed or Crossref. Linked to the source."
+        },
+        {
+          "k": "Ignite count",
+          "d": "A figure counted from a public document for this site, with the method stated next to it."
+        }
+      ]
+    },
+    {
+      "type": "method",
+      "id": "engage",
+      "label": "Starting an engagement",
+      "title": "What a paralegal needs, <t>in one place.</t>",
+      "intro": "These documents are already public on his website. This site gathers them and dates them, so the current version is never in doubt.",
+      "rows": [
+        {
+          "t": "Curriculum vitae",
+          "d": "Eight pages: education, appointments, organizations and publications. The current PDF is dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)"
+        },
+        {
+          "t": "Testimony listing",
+          "d": "Depositions and trials since 2017, with case, number and court. Deposition pages dated 20 February 2026; trial pages dated 26 August 2025. [See the analysis](/pettingill/testimony)"
+        },
+        {
+          "t": "Intake checklists",
+          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)"
+        },
+        {
+          "t": "Terms and engagement letter",
+          "d": "Billing rates, retainer and cancellation terms are published on his website, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
+        }
+      ]
+    },
+    {
+      "type": "mission",
+      "id": "testimony-lede",
+      "label": "The Testimony",
+      "quote": "Three figures appear across his two websites. <t>Each one measures something different.</t>",
+      "body": [
+        "An attorney checking an expert will find all three. This page shows where each is published and what it counts, then reads the testimony listing he publishes — the document that backs them.",
+        "Nothing here describes the outcome of a case. An entry in a testimony listing records that testimony was given. It says nothing about who prevailed, or how a court weighed the testimony."
+      ]
+    },
+    {
+      "type": "figs",
+      "id": "figures",
+      "label": "The figures, as published",
+      "title": "One record, <t>three ways of counting it.</t>",
+      "cards": [
+        {
+          "n": "1,500+",
+          "what": "Cases with deposition or trial testimony",
+          "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
+          "href": "https://bpettingill.com/services/forensic-consulting/",
+          "status": "Self-reported. The figure this site uses."
+        },
+        {
+          "n": "550+",
+          "what": "Trials",
+          "where": "bpettingill.com — Prior Testimony page",
+          "href": "https://bpettingill.com/new-case/prior-testimony/",
+          "status": "Self-reported. A narrower count: trial testimony only."
+        },
+        {
+          "n": "1,900+",
+          "what": "Cases or testimonies — unit not stated",
+          "where": "pettingillanalytics.com — home and team pages",
+          "href": "https://www.pettingillanalytics.com/our-team/",
+          "status": "Published by the firm. Period and unit to confirm with Dr. Pettingill.",
+          "pending": true
+        }
+      ]
+    },
+    {
+      "type": "tally",
+      "id": "listing",
+      "label": "The public listing",
+      "title": "329 entries <t>since September 2017.</t>",
+      "lede": "Counted from the testimony listing published on bpettingill.com. The listing covers the years since 2017, not his full career, and some matters appear in both sections.",
+      "doc": {
+        "t": "Open the listing (PDF)",
+        "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
+      },
+      "stats": [
+        {
+          "n": "269",
+          "k": "Depositions",
+          "d": "September 2017 to January 2026"
+        },
+        {
+          "n": "60",
+          "k": "Trials",
+          "d": "March 2018 to May 2025"
+        },
+        {
+          "n": "289",
+          "k": "Florida courts",
+          "d": "Entries naming a Florida court. Fifteen entries name no court."
+        },
+        {
+          "n": "26",
+          "k": "U.S. District Courts",
+          "d": "Entries in federal district courts, in Florida and elsewhere"
+        }
+      ],
+      "series": [
+        {
+          "k": "dep",
+          "t": "Depositions",
+          "c": "#3B64A0"
+        },
+        {
+          "k": "tri",
+          "t": "Trials",
+          "c": "#B5833F"
+        }
+      ],
+      "years": [
+        {
+          "y": "2017",
+          "dep": 8,
+          "tri": 0
+        },
+        {
+          "y": "2018",
+          "dep": 20,
+          "tri": 5
+        },
+        {
+          "y": "2019",
+          "dep": 26,
+          "tri": 4
+        },
+        {
+          "y": "2020",
+          "dep": 23,
+          "tri": 4
+        },
+        {
+          "y": "2021",
+          "dep": 35,
+          "tri": 19
+        },
+        {
+          "y": "2022",
+          "dep": 34,
+          "tri": 8
+        },
+        {
+          "y": "2023",
+          "dep": 40,
+          "tri": 5
+        },
+        {
+          "y": "2024",
+          "dep": 49,
+          "tri": 9
+        },
+        {
+          "y": "2025",
+          "dep": 30,
+          "tri": 6
+        },
+        {
+          "y": "2026",
+          "dep": 4,
+          "tri": 0
+        }
+      ],
+      "beyond": {
+        "k": "Outside Florida, in the same listing",
+        "items": [
+          "Alabama",
+          "Arkansas",
+          "California",
+          "Georgia",
+          "Louisiana",
+          "Maryland",
+          "Massachusetts",
+          "Missouri",
+          "Nebraska",
+          "New Jersey",
+          "Texas",
+          "Washington",
+          "U.S. Virgin Islands"
+        ]
+      },
+      "fn": "Ignite count · Deposition pages dated 20 February 2026 and trial pages dated 26 August 2025, as published. 2017 starts in September. The 2026 figures stop in January. 2025 trial entries stop in May."
+    },
+    {
+      "type": "band",
+      "id": "band-register",
+      "variant": "proposal",
+      "label": "Proposed, with his review",
+      "quote": "The same listing, searchable by year, jurisdiction and court — <t>once he has checked every line.</t>",
+      "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
+    },
+    {
+      "type": "mission",
+      "id": "research-lede",
+      "label": "The Research",
+      "quote": "His research is not only historical. <t>The most recent paper here is from 2025.</t>",
+      "body": [
+        "From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, the thread is the same: what medical care costs, and how to project it honestly.",
+        "Each entry in the first list links to a record kept outside his own websites. The second list is taken from his curriculum vitae and says so."
+      ]
+    },
+    {
+      "type": "pubs",
+      "id": "publications",
+      "label": "Selected publications",
+      "title": "Seven papers, <t>each with an outside record.</t>",
+      "items": [
+        {
+          "y": "2025",
+          "t": "The Resurgence of Hospital Inflation: Analysis and Implications for Forensic Practitioners",
+          "a": "Sean P. Escoffery, Bernard F. Pettingill",
+          "v": "Mega Journal of Case Reports, 8(1): 2001–2004, January 2025. Also published in Nursing & Primary Care, 9(1), 2025.",
+          "id": "DOI 10.5281/zenodo.14725046",
+          "h": "https://zenodo.org/records/14725046",
+          "src": "Independent record · Zenodo",
+          "why": "Medical inflation rates inside projections of future care costs."
+        },
+        {
+          "y": "2025",
+          "t": "The Physiatrist is Essential to Predicting Accurate Future Medical Care",
+          "a": "Craig H. Lichtblau, Bernard Pettingill",
+          "v": "International Journal of Physical Medicine & Rehabilitation, 13(S30).",
+          "id": "DOI 10.35248/2329-9096.25.S30.001",
+          "h": "https://www.longdom.org/open-access/the-physiatrist-is-the-gateway-to-predicting-accurate-future-medical-care-1102997.html",
+          "src": "Independent record · Publisher",
+          "why": "How the treating physician's input shapes a life care plan projection."
+        },
+        {
+          "y": "2024",
+          "t": "Choosing the Correct Database for Measuring Life Expectancy",
+          "a": "Bernard F. Pettingill, Jr., Sean P. Escoffery",
+          "v": "Current Opinion, 4(6), 2024. His CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
+          "id": "DOI 10.52845/currentopinion.v4i6.330",
+          "h": "https://currentopinion.be/index.php/co/en/article/view/330",
+          "src": "Publisher link · page details pending verification",
+          "pending": true,
+          "why": "The life expectancy basis behind any lifetime damages figure."
+        },
+        {
+          "y": "2024",
+          "t": "The Role of Physiatrists in Ensuring Access to Appropriate Medical Care and Services in the Broken U.S. Healthcare System",
+          "a": "Craig H. Lichtblau, Bernard F. Pettingill",
+          "v": "International Journal of Physical Medicine & Rehabilitation, 12(4), 2024.",
+          "id": "DOI 10.35248/2329-9096.24.12.732",
+          "h": "https://www.longdom.org/open-access/the-role-of-physiatrists-in-ensuring-access-to-appropriate-medical-care-and-services-in-the-broken-usa-healthcare-system-108185.html",
+          "src": "Independent record · Publisher",
+          "why": "Access to care as a factor in what future treatment will cost."
+        },
+        {
+          "y": "2024",
+          "t": "Why Hospitals Resist Disclosing the Absolute Costs of Their Procedures",
+          "a": "Bernard F. Pettingill, Jr.",
+          "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. His CV lists MEGA Journal of Case Reports, September 2024.",
+          "id": "DOI 10.61440/jcmhc.2024.v1.13",
+          "h": "https://doi.org/10.61440/jcmhc.2024.v1.13",
+          "src": "Independent record · Crossref",
+          "why": "Hospital pricing opacity, a recurring problem when costing medical care."
+        },
+        {
+          "y": "2019",
+          "t": "Estimating the Full Value of Household Services Damages: Inclusion of Nighttime Protection and Care Services",
+          "a": "James A. Mills, Bernard F. Pettingill",
+          "v": "The Earnings Analyst, 16: 81–86, 2019.",
+          "id": "TEA vol. 16",
+          "h": "https://theearningsanalyst.com/product/tea-16-5/",
+          "src": "Independent record · Publisher",
+          "why": "Valuing care and protection provided at night, often left out of household services claims."
+        },
+        {
+          "y": "1979",
+          "t": "Physicians’ Estimates of Disability vs Patients’ Reports of Pain",
+          "a": "B. F. Pettingill, Jr.",
+          "v": "Psychosomatics, 20(12): 827–830, December 1979.",
+          "id": "PMID 523599 · DOI 10.1016/S0033-3182(79)73722-4",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/523599/",
+          "src": "Independent record · PubMed",
+          "why": "An early study of the gap between clinical assessment and patient experience."
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "research-cv",
+      "tint": true,
+      "label": "Further work, from his CV",
+      "title": "Written for the courtroom, <t>and for the hospital.</t>",
+      "lede": "Titles and years as listed on his CV dated 7 July 2025. A selection, not a complete bibliography; venues have not been independently checked.",
+      "groups": [
+        {
+          "label": "Damages, settlements and the courtroom",
+          "wide": true,
+          "names": [
+            "Estimating Future Medical Maintenance Expenses, with Warren A. Perrin — Louisiana Bar Journal, 1986",
+            "How an Economist Sets a Value on Human Life — Palm Beach Post, editorial, 1989",
+            "Case Management: Evaluating a Firm’s Caseload Using a Cost-Benefit Approach, with Michael Eriksen — The Trial Lawyer, 1999",
+            "What Attorneys Should Understand about Medicare Set-Aside Allocations, with Federico R. Tewes — Clinical Medicine and Medical Research, 2021",
+            "Attendant Care for Life Care Plans of Spinal Cord Injury Patients in the Last Years of Life, with Diana Santa Maria — The Trial Lawyer, 2022",
+            "Evolution of the Occupational Classification for Attendant Care, with Federico R. Tewes — The Trial Lawyer, 2022"
+          ]
+        },
+        {
+          "label": "Future care, life expectancy and health costs",
+          "wide": true,
+          "names": [
+            "Providing Economic Consulting Services to Health Professionals — Business Economics, 2004",
+            "Life Expectancy: A Brief International Comparison, with David I. Goldenberg and Federico R. Tewes — 2020",
+            "Analysis and Forecast of Nursing Care Costs, with Federico R. Tewes — 2020",
+            "Methodology for Defining the Cost of Future Medical Care, with Craig H. Lichtblau — International Journal of Physical Medicine & Rehabilitation, 2023",
+            "How Solvent Is the Medicare Trust Fund?, with Sanjiv Bhatia — Current Opinion, 2023"
+          ]
+        },
+        {
+          "label": "Early academic work",
+          "wide": true,
+          "names": [
+            "Wigan Community Health Council — in Community Health Councils: Four Case Studies, Centre for Studies in Social Policy, 1976",
+            "Doctoral thesis on the cost-benefit analysis of arthritis treatment — University of Manchester, 1977",
+            "Cost-Effectiveness Analysis in the Hospital — Dimensions in Health Service, 1978",
+            "Management of Diagnostic Related Groups, with Harriette Westell — Hospital Topics, 1984"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-education",
+      "label": "Education",
+      "title": "Economics, business <t>and public health.</t>",
+      "lede": "As stated on his CV, July 2025, and on his website. Degrees have not been checked against university records.",
+      "groups": [
+        {
+          "label": "Degrees",
+          "wide": true,
+          "names": [
+            "Ph.D., Economics — University of Manchester, Department of Economics and Social Administration — January 1977",
+            "Master of Public Health — Tulane University, Department of Health Economics and Medical Care Administration — June 1973",
+            "MBA, Economics — Loyola University, New Orleans — June 1971",
+            "BBA, Business Administration — Loyola University, New Orleans — June 1969"
+          ]
+        },
+        {
+          "label": "Doctoral dissertation",
+          "wide": true,
+          "names": [
+            "Cost-Benefit Analysis of the Treatment of Arthritis — A Comparison of Five Hospitals — University of Manchester, 1977"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-academic",
+      "tint": true,
+      "label": "Academic appointments",
+      "title": "More than two decades of teaching, <t>none of it current.</t>",
+      "lede": "Dates as printed on his CV. His website summarises these years as professor of economics at Florida Institute of Technology and Palm Beach Atlantic, with many years at the University of Louisiana in Lafayette and LSU Medical School.",
+      "groups": [
+        {
+          "label": "Florida",
+          "wide": true,
+          "names": [
+            "Professor of Economics, Rinker School of Business, Palm Beach Atlantic College, West Palm Beach — 1988–1998",
+            "Professor of Economics, Graduate Business School, Florida Institute of Technology, Treasure Coast Graduate Center, Stuart — 1987–1988"
+          ]
+        },
+        {
+          "label": "Louisiana",
+          "wide": true,
+          "names": [
+            "Associate Professor, College of Business Administration, University of Southwestern Louisiana, Lafayette — 1980–1987",
+            "Associate Professor, Department of Medicine, LSU Medical Center, New Orleans — 1978–1980",
+            "Assistant Professor, Department of Economics and Management, University of New Orleans — 1977–1978, printed on the CV as 1997–1978"
+          ]
+        },
+        {
+          "label": "England",
+          "wide": true,
+          "names": [
+            "Research Associate and Lecturer in Economics, University of Manchester — 1975–1977",
+            "Research Fellow, Centre for Studies in Social Policy, London — 1974–1975"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-orgs",
+      "label": "Professional organizations",
+      "title": "The professional bodies <t>of his field.</t>",
+      "lede": "As listed on his CV, July 2025. Memberships the CV marks as “present” have not been confirmed as current.",
+      "groups": [
+        {
+          "label": "Forensic and business economics",
+          "wide": true,
+          "names": [
+            "Referee, Journal of Forensic Economics — two years",
+            "National Association of Forensic Economists — member since 1989",
+            "American Academy of Economic and Financial Experts — member since 1989",
+            "National Association for Business Economics, Health Roundtable — member since 1990",
+            "American Economic Association — member since 1983"
+          ]
+        },
+        {
+          "label": "Health economics and settlements",
+          "wide": true,
+          "names": [
+            "American Society of Health Economists — member since 2008",
+            "Health Economics Study Group, Great Britain — member since 1973",
+            "Society for Benefit-Cost Analysis — 2023",
+            "National Structured Settlements Trade Association — associate member",
+            "Licensed in health and life insurance — Florida and Louisiana"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "practice",
+      "id": "firm",
+      "label": "The firm",
+      "title": "Two websites, <t>two jobs.</t>",
+      "lede": "This site is the expert: his record, his research, his testimony. Pettingill Analytics is the practice he founded and leads, with a team that carries work beyond his individual practice.",
+      "company": {
+        "name": "Pettingill Analytics",
+        "role": "Founder & President",
+        "desc": "A consultancy whose published team includes forensic accounting, international finance and data analysis. Its services are the firm’s, not his individual practice.",
+        "meta": [
+          "Palm Beach Gardens, Florida"
+        ],
+        "href": "https://www.pettingillanalytics.com/",
+        "link": "pettingillanalytics.com"
+      },
+      "svcLabel": "Services published by the firm",
+      "services": [
+        "Forensic Economic Consulting",
+        "Structured Settlement Solutions",
+        "Litigation Support & Jury Selection",
+        "Medical Practice Consulting & Valuations",
+        "Independent Reviews & Business Valuations",
+        "Health & Life Insurance Solutions",
+        "Project Management & Data Analytics",
+        "Staffing & Executive Searches"
+      ]
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "contact": {
+        "email": "biffpett@gmail.com",
+        "phone": "(561) 622-0330",
+        "city": "Palm Beach Gardens, Florida"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A new matter — economic damages",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV, testimony listing or engagement terms",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "referral",
+            "t": "Checking a referral",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Who referred you, if you wish to say"
+              },
+              {
+                "n": "What you need to know",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+      },
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "name": "Bernard Pettingill",
+      "cred": "Ph.D. · MPH · MBA · BBA",
+      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Referee, Journal of Forensic Economics — per CV",
+        "National Association of Forensic Economists — since 1989, per CV",
+        "American Economic Association — since 1983, per CV",
+        "Founder & President, Pettingill Analytics"
+      ],
+      "social": [
+        {
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/"
+        },
+        {
+          "t": "Pettingill Analytics",
+          "h": "https://www.pettingillanalytics.com/"
+        }
+      ],
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/pettingill/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+      }
+    }
+  ]
+}

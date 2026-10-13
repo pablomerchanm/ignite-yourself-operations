@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "title": "The Record — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics."
+  },
+  "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/pettingill"
+    },
+    {
+      "t": "The Testimony",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "t": "The Research",
+      "h": "/pettingill/research"
+    },
+    {
+      "t": "The Record",
+      "h": "/pettingill/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "exp",
+      "id": "record-education",
+      "label": "Education",
+      "title": "Economics, business <t>and public health.</t>",
+      "lede": "As stated on his CV, July 2025, and on his website. Degrees have not been checked against university records.",
+      "groups": [
+        {
+          "label": "Degrees",
+          "wide": true,
+          "names": [
+            "Ph.D., Economics — University of Manchester, Department of Economics and Social Administration — January 1977",
+            "Master of Public Health — Tulane University, Department of Health Economics and Medical Care Administration — June 1973",
+            "MBA, Economics — Loyola University, New Orleans — June 1971",
+            "BBA, Business Administration — Loyola University, New Orleans — June 1969"
+          ]
+        },
+        {
+          "label": "Doctoral dissertation",
+          "wide": true,
+          "names": [
+            "Cost-Benefit Analysis of the Treatment of Arthritis — A Comparison of Five Hospitals — University of Manchester, 1977"
+          ]
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "record-academic",
+      "tint": true,
+      "label": "Academic appointments",
+      "title": "More than two decades of teaching, <t>none of it current.</t>",
+      "lede": "Dates as printed on his CV. His website summarises these years as professor of economics at Florida Institute of Technology and Palm Beach Atlantic, with many years at the University of Louisiana in Lafayette and LSU Medical School.",
+      "groups": [
+        {
+          "label": "Florida",
+          "wide": true,
+          "names": [
+            "Professor of Economics, Rinker School of Business, Palm Beach Atlantic College, West Palm Beach — 1988–1998",
+            "Professor of Economics, Graduate Business School, Florida Institute of Technology, Treasure Coast Graduate Center, Stuart — 1987–1988"
+          ]
+        },
+        {
+          "label": "Louisiana",
+          "wide": true,
+          "names": [
+            "Associate Professor, College of Business Administration, University of Southwestern Louisiana, Lafayette — 1980–1987",
+            "Associate Professor, Department of Medicine, LSU Medical Center, New Orleans — 1978–1980",
+            "Assistant Professor, Department of Economics and Management, University of New Orleans — 1977–1978, printed on the CV as 1997–1978"
+          ]
+        },
+        {
+          "label": "England",
+          "wide": true,
+          "names": [
+            "Research Associate and Lecturer in Economics, University of Manchester — 1975–1977",
+            "Research Fellow, Centre for Studies in Social Policy, London — 1974–1975"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "record-orgs",
+      "label": "Professional organizations",
+      "title": "The professional bodies <t>of his field.</t>",
+      "lede": "As listed on his CV, July 2025. Memberships the CV marks as “present” have not been confirmed as current.",
+      "groups": [
+        {
+          "label": "Forensic and business economics",
+          "wide": true,
+          "names": [
+            "Referee, Journal of Forensic Economics — two years",
+            "National Association of Forensic Economists — member since 1989",
+            "American Academy of Economic and Financial Experts — member since 1989",
+            "National Association for Business Economics, Health Roundtable — member since 1990",
+            "American Economic Association — member since 1983"
+          ]
+        },
+        {
+          "label": "Health economics and settlements",
+          "wide": true,
+          "names": [
+            "American Society of Health Economists — member since 2008",
+            "Health Economics Study Group, Great Britain — member since 1973",
+            "Society for Benefit-Cost Analysis — 2023",
+            "National Structured Settlements Trade Association — associate member",
+            "Licensed in health and life insurance — Florida and Louisiana"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "practice",
+      "id": "firm",
+      "label": "The firm",
+      "title": "Two websites, <t>two jobs.</t>",
+      "lede": "This site is the expert: his record, his research, his testimony. Pettingill Analytics is the practice he founded and leads, with a team that carries work beyond his individual practice.",
+      "company": {
+        "name": "Pettingill Analytics",
+        "role": "Founder & President",
+        "desc": "A consultancy whose published team includes forensic accounting, international finance and data analysis. Its services are the firm’s, not his individual practice.",
+        "meta": [
+          "Palm Beach Gardens, Florida"
+        ],
+        "href": "https://www.pettingillanalytics.com/",
+        "link": "pettingillanalytics.com"
+      },
+      "svcLabel": "Services published by the firm",
+      "services": [
+        "Forensic Economic Consulting",
+        "Structured Settlement Solutions",
+        "Litigation Support & Jury Selection",
+        "Medical Practice Consulting & Valuations",
+        "Independent Reviews & Business Valuations",
+        "Health & Life Insurance Solutions",
+        "Project Management & Data Analytics",
+        "Staffing & Executive Searches"
+      ],
+      "no": "04"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "contact": {
+        "email": "biffpett@gmail.com",
+        "phone": "(561) 622-0330",
+        "city": "Palm Beach Gardens, Florida"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A new matter — economic damages",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV, testimony listing or engagement terms",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "referral",
+            "t": "Checking a referral",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Who referred you, if you wish to say"
+              },
+              {
+                "n": "What you need to know",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+      },
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "name": "Bernard Pettingill",
+      "cred": "Ph.D. · MPH · MBA · BBA",
+      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Referee, Journal of Forensic Economics — per CV",
+        "National Association of Forensic Economists — since 1989, per CV",
+        "American Economic Association — since 1983, per CV",
+        "Founder & President, Pettingill Analytics"
+      ],
+      "social": [
+        {
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/"
+        },
+        {
+          "t": "Pettingill Analytics",
+          "h": "https://www.pettingillanalytics.com/"
+        }
+      ],
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/pettingill/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+      },
+      "no": "05"
+    }
+  ]
+}
