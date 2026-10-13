@@ -322,3 +322,21 @@ Objetivo: que el sitio se lea como una marca personal cuidada y útil para un ab
 Verificación local a 1440 y 390 px en las cinco páginas: sin desbordamiento horizontal y sin errores de consola.
 
 **Pendientes sin cambios:** 1,500+ frente a 1,900+; las fechas docentes en Florida; qué correo usar; si las tarifas siguen vigentes; Bhatia; y los permisos de fotos, cartas y la cita.
+
+---
+
+# Iteración 18 — un hero más icónico
+
+Comentario del usuario: el hero seguía lleno de "cosita menuda", no impactaba lo suficiente y una letra se cortaba.
+
+- **Quedan tres cosas:** el nombre, una línea y un botón.
+- **El nombre**, más grande (hasta 204 px), siempre en dos líneas.
+- **La línea:** "Forensic economist for injury, loss and future care. Since 1985." Une la especialidad, el nicho y la antigüedad en una sola frase.
+- **Un solo botón:** "Discuss a matter". "Start a case" ya está en For counsel.
+- **Fuera del hero:**
+  - el kicker en mayúsculas;
+  - la línea de credenciales con su filete (los títulos aparecen justo debajo, en In brief, y el lugar en el contacto);
+  - la señal de scroll;
+  - los puntos del carril de secciones, que ahora aparecen al salir del hero.
+- **La barra superior** pierde el enlace "Pettingill Analytics ↗". La firma ya tiene su sección y aparece en el pie.
+- **Corte de letras:** la animación de entrada del nombre usaba una máscara demasiado ajustada, que cortaba la cola de la "g" y el trazo de la "J" cursiva. Ahora la máscara deja margen alrededor de cada palabra.

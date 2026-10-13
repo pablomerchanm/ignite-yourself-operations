@@ -42,21 +42,15 @@
         "mobile": "/pettingill/assets/hero-mobile.jpg",
         "alt": "Bernard F. Pettingill, Jr., Ph.D."
       },
-      "kick": "Forensic Economist · Expert Witness",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "The economics of injury, loss and future care. <t>Since 1985.</t>",
+      "sub": "Forensic economist for injury, loss and future care. <t>Since 1985.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
           "h": "#inquiry",
           "primary": true
-        },
-        {
-          "t": "Start a case",
-          "h": "/pettingill/practice#engage"
         }
-      ],
-      "cred": "Ph.D. Economics · MPH · MBA · Palm Beach Gardens, Florida"
+      ]
     },
     {
       "type": "nums",
