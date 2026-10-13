@@ -27,7 +27,7 @@
     },
     {
       "t": "Enquiry",
-      "h": "#inquiry"
+      "h": "/pettingill#inquiry"
     }
   ],
   "navcta": {
@@ -42,9 +42,9 @@
         "mobile": "/pettingill/assets/hero-mobile.jpg",
         "alt": "Bernard F. Pettingill, Jr., Ph.D."
       },
-      "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
+      "kick": "Forensic Economist · Expert Witness",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "Life care plans, lost earnings and wrongful death damages. <t>Since 1985.</t>",
+      "sub": "The economics of injury, loss and future care. <t>Since 1985.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -56,7 +56,29 @@
           "h": "/pettingill/practice#engage"
         }
       ],
-      "cred": "Ph.D. Economics · MPH · MBA"
+      "cred": "Ph.D. Economics · MPH · MBA · Palm Beach Gardens, Florida"
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "In brief",
+      "items": [
+        {
+          "k": "Economics and public health.",
+          "t": "Ph.D. in Economics, University of Manchester, 1977. Master of Public Health in health economics, Tulane, 1973.",
+          "d": "Professor of economics for more than two decades, teaching health care and medical economics."
+        },
+        {
+          "k": "Four decades of testimony.",
+          "t": "Forensic economist since 1985, in deposition, trial, mediation and arbitration.",
+          "d": "Still testifying in 2026."
+        },
+        {
+          "k": "Research, still current.",
+          "t": "Seven selected papers from 1979 to 2025, five of them from 2024 and 2025.",
+          "d": "Future medical care, life expectancy and hospital pricing."
+        }
+      ]
     },
     {
       "type": "nums",
@@ -83,52 +105,11 @@
       }
     },
     {
-      "type": "scrub",
-      "id": "in-brief",
-      "ink": true,
-      "label": "In brief",
-      "pin": 2.2,
-      "paras": [
-        "The specialty: costing life care plans and reducing future care to present value.",
-        "Ph.D. in Economics, Manchester. Master of Public Health in health economics, Tulane. <t>Professor of economics for more than two decades, teaching health care and medical economics.</t>",
-        "Published on the cost of future care, life expectancy and hospital inflation. <t>Still testifying in 2026.</t>"
-      ],
-      "more": {
-        "t": "Curriculum vitae",
-        "h": "/pettingill/record"
-      }
-    },
-    {
-      "type": "index",
-      "id": "start-here",
-      "label": "For counsel",
-      "title": "Start <t>here.</t>",
-      "cards": [
-        {
-          "icon": "check",
-          "t": "Start a case",
-          "d": "Checklists for injury and death, the retainer and the terms.",
-          "h": "/pettingill/practice#engage"
-        },
-        {
-          "icon": "list",
-          "t": "Prior testimony",
-          "d": "Depositions and trials since 2017, by year and court.",
-          "h": "/pettingill/testimony#listing"
-        },
-        {
-          "icon": "cv",
-          "t": "Curriculum vitae",
-          "d": "Education, teaching and professional bodies since 1969.",
-          "h": "/pettingill/record"
-        },
-        {
-          "icon": "doc",
-          "t": "Publications",
-          "d": "Papers from 1979 to 2025.",
-          "h": "/pettingill/research"
-        }
-      ]
+      "type": "quote",
+      "id": "quote",
+      "lead": "“Of all the experts we have retained in the past, none of them bring the experience and candor brought by Pettingill.",
+      "q": "He’s an expert’s expert.”",
+      "who": "A law partner, as quoted by Pettingill Analytics"
     },
     {
       "type": "stmt",
@@ -166,7 +147,52 @@
         "alt": "Writing at a desk by lamplight",
         "pos": "28% 45%"
       },
-      "align": "right"
+      "align": "right",
+      "keys": [
+        "Future medical costs",
+        "Life expectancy",
+        "Household services"
+      ]
+    },
+    {
+      "type": "counsel",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "What counsel needs, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · July 2025",
+          "t": "Curriculum vitae",
+          "d": "Education, academic appointments, organizations and publications.",
+          "a": "Download the CV",
+          "h": "https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Listing · since 2017",
+          "t": "Prior testimony",
+          "d": "Depositions and trials, by year, court and state.",
+          "a": "View the listing",
+          "h": "/pettingill/testimony#listing"
+        },
+        {
+          "icon": "doc",
+          "tag": "1979 – 2025",
+          "t": "Publications",
+          "d": "Future medical costs, life expectancy and household services.",
+          "a": "Read the papers",
+          "h": "/pettingill/research"
+        },
+        {
+          "icon": "check",
+          "tag": "Checklists · terms",
+          "t": "Retaining",
+          "d": "Injury and death checklists, the engagement letter and the retainer.",
+          "a": "Start a case",
+          "h": "/pettingill/practice#engage"
+        }
+      ]
     },
     {
       "type": "stmt",
@@ -183,7 +209,8 @@
       "more": {
         "t": "Visit pettingillanalytics.com",
         "h": "https://www.pettingillanalytics.com/"
-      }
+      },
+      "compact": true
     },
     {
       "type": "inquiry",

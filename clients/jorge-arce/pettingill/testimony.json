@@ -27,12 +27,12 @@
     },
     {
       "t": "Enquiry",
-      "h": "#inquiry"
+      "h": "/pettingill#inquiry"
     }
   ],
   "navcta": {
     "t": "Discuss a matter",
-    "h": "#inquiry"
+    "h": "/pettingill#inquiry"
   },
   "sections": [
     {
@@ -46,7 +46,8 @@
         "pos": "0% 62%"
       },
       "quote": "More than 1,500 cases. <t>Deposition and trial.</t>",
-      "sub": "Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court."
+      "sub": "Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court.",
+      "opener": true
     },
     {
       "type": "tally",
@@ -169,7 +170,11 @@
       "k": "Next",
       "t": "Publications",
       "d": "Papers from 1979 to 2025.",
-      "h": "/pettingill/research"
+      "h": "/pettingill/research",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/pettingill#inquiry"
+      }
     },
     {
       "type": "inquiry",
@@ -313,7 +318,7 @@
       "roles": "Forensic Economist <t>and Expert Witness</t>",
       "fcta": {
         "t": "Discuss a matter",
-        "h": "#inquiry"
+        "h": "/pettingill#inquiry"
       },
       "affiliations": [
         "Referee, Journal of Forensic Economics",
@@ -352,6 +357,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
+      "noform": true,
       "no": "02"
     }
   ]

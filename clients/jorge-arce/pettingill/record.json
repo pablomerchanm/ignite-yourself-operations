@@ -27,12 +27,12 @@
     },
     {
       "t": "Enquiry",
-      "h": "#inquiry"
+      "h": "/pettingill#inquiry"
     }
   ],
   "navcta": {
     "t": "Discuss a matter",
-    "h": "#inquiry"
+    "h": "/pettingill#inquiry"
   },
   "sections": [
     {
@@ -45,7 +45,8 @@
         "pos": "40% 0%"
       },
       "quote": "The record, <t>in order.</t>",
-      "sub": "Education, teaching and the professional bodies of the field."
+      "sub": "Education, teaching and the professional bodies of the field.",
+      "opener": true
     },
     {
       "type": "timeline",
@@ -217,7 +218,11 @@
       "k": "Next",
       "t": "Start a <t>case</t>",
       "d": "Checklists for injury and death, the retainer and the terms.",
-      "h": "/pettingill/practice#engage"
+      "h": "/pettingill/practice#engage",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/pettingill#inquiry"
+      }
     },
     {
       "type": "inquiry",
@@ -361,7 +366,7 @@
       "roles": "Forensic Economist <t>and Expert Witness</t>",
       "fcta": {
         "t": "Discuss a matter",
-        "h": "#inquiry"
+        "h": "/pettingill#inquiry"
       },
       "affiliations": [
         "Referee, Journal of Forensic Economics",
@@ -400,6 +405,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
+      "noform": true,
       "no": "05"
     }
   ]
