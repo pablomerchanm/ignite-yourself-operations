@@ -141,7 +141,7 @@ PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
       (s.fine?'<span>'+esc(s.fine)+'</span>':'')+
     '</div>'+
   '</div></footer>'+
-  (s.igy?'<section class="igy"><div class="wrap">'+
+  (s.igy?'<section class="igy"><div class="wrap" data-r2>'+
     '<div class="igy-id wr"><span class="smallcap">'+esc(s.igy.label)+'</span>'+
       '<a href="'+esc(s.igy.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.igy.logo)+'" alt="Ignite Yourself"></a>'+
       '<a class="igylink" href="'+esc(s.igy.href)+'" target="_blank" rel="noopener">'+esc(s.igy.link)+'</a></div>'+

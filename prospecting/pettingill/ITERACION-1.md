@@ -412,3 +412,5 @@ Comentario del usuario: el final de la página tenía demasiada información jun
 **Enlaces a redes y su fuente:**
 - LinkedIn personal: linkedin.com/in/bernard-pettingill-jr-ph-d-00242730 — enlazado desde bpettingill.com. **Pendiente de confirmar** que es el perfil que quiere mostrar.
 - LinkedIn y Facebook de la firma: linkedin.com/company/pettingill-consulting y facebook.com/PettingillAnalytics — enlazados desde pettingillanalytics.com.
+
+**Ajuste 21b.** La banda de Ignite Yourself salía como un bloque negro vacío: sus elementos llevaban la clase de "aparecer al hacer scroll", pero el motor solo revela los que están dentro de un grupo marcado. Ahora el contenedor lleva la marca y aparece con el escalonado habitual.
