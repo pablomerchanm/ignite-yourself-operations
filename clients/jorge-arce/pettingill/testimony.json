@@ -36,15 +36,17 @@
   },
   "sections": [
     {
-      "type": "mission",
-      "id": "testimony-lede",
+      "type": "stmt",
+      "id": "testimony-open",
       "label": "The Testimony",
+      "align": "right",
+      "img": {
+        "src": "/pettingill/assets/balance.jpg",
+        "alt": "A brass balance on a stack of books, in window light",
+        "pos": "0% 62%"
+      },
       "quote": "Three figures, two websites. <t>Each measures something different.</t>",
-      "body": [
-        "Where each is published, what it counts, and the public listing behind them.",
-        "No entry on this site describes the outcome of a case. A testimony listing records that testimony was given, not who prevailed or how a court weighed it."
-      ],
-      "no": "01"
+      "sub": "Where each is published, what it counts, and the public listing behind them. No entry on this site describes the outcome of a case: a testimony listing records that testimony was given, not who prevailed or how a court weighed it."
     },
     {
       "type": "figs",
@@ -75,7 +77,7 @@
           "pending": true
         }
       ],
-      "no": "02"
+      "no": "01"
     },
     {
       "type": "tally",
@@ -192,7 +194,7 @@
         ]
       },
       "fn": "Ignite count · Deposition pages dated 20 February 2026 and trial pages dated 26 August 2025, as published. 2017 starts in September. The 2026 figures stop in January. 2025 trial entries stop in May.",
-      "no": "03"
+      "no": "02"
     },
     {
       "type": "band",
@@ -383,7 +385,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "04"
+      "no": "03"
     }
   ]
 }

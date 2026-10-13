@@ -145,3 +145,9 @@ Imagen aportada por Pablo (`assets/counsel.jpg`): Biff escuchando a dos abogados
 - `assets/room.jpg` (la sala vista desde la puerta): apertura de la página Practice, con "Four questions. One discipline." Sustituye al lede de texto.
 - En móvil, todas las pantallas con foto pasan al patrón del hero: la imagen en la franja superior y el texto debajo sobre tinta, para no tapar rostros.
 - La home alterna ya foto, cifras, foto, frase, foto, frase, firma. Pendientes de autorización de Biff como el resto.
+
+---
+
+# Iteración 8 — la balanza
+
+`assets/balance.jpg` (balanza de latón sobre libros, luz de ventana): abre la página Testimony con "Three figures, two websites. Each measures something different." Es el único uso de la balanza en todo el sitio, como fija la dirección de marca: el instrumento con el que se pesa, no el icono de la justicia. Texto a la derecha, sobre la pared en sombra.

@@ -356,6 +356,10 @@ body{background:var(--bg)}
   linear-gradient(180deg,rgba(14,16,19,0) 55%,rgba(14,16,19,.42) 100%)}
 .stmt.withimg{min-height:clamp(600px,92svh,980px);align-items:flex-end;padding-bottom:clamp(64px,9vh,110px)}
 .stmt.withimg .sq{font-size:clamp(40px,5.4vw,90px);max-width:8.6ch}
+/* la balanza: pared clara, el texto necesita mas sombra */
+@media(min-width:861px){#testimony-open .sph::after{background:
+  linear-gradient(270deg,rgba(14,16,19,.78) 0%,rgba(14,16,19,.55) 40%,rgba(14,16,19,.08) 72%),
+  linear-gradient(180deg,rgba(14,16,19,.1) 0%,rgba(14,16,19,0) 40%,rgba(14,16,19,.5) 100%)}}
 /* texto a la derecha, sobre el vacio de la imagen */
 .stmt.tr .wrap{display:flex;flex-direction:column;align-items:flex-end}
 .stmt.tr .wrap>*{width:min(100%,620px)}
@@ -641,7 +645,7 @@ PAGES = {
         [deep('practice-open'), deep('routes'), deep('sources'), deep('engage'), inq()]),
     'testimony': page('The Testimony — Bernard F. Pettingill, Jr., Ph.D.',
         'The three published testimony figures, what each counts, and a count of the public testimony listing since 2017.',
-        [deep('testimony-lede'), deep('figures'), deep('listing'), deep('band-register'), inq()]),
+        [deep('testimony-open'), deep('figures'), deep('listing'), deep('band-register'), inq()]),
     'research': page('The Research — Bernard F. Pettingill, Jr., Ph.D.',
         'Selected publications from 1979 to 2025, each linked to a record outside his own websites, and further work listed on his CV.',
         [deep('research-lede'), deep('publications'), deep('research-cv'), inq()]),

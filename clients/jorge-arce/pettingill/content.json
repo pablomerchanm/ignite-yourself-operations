@@ -333,14 +333,17 @@
       ]
     },
     {
-      "type": "mission",
-      "id": "testimony-lede",
+      "type": "stmt",
+      "id": "testimony-open",
       "label": "The Testimony",
+      "align": "right",
+      "img": {
+        "src": "/pettingill/assets/balance.jpg",
+        "alt": "A brass balance on a stack of books, in window light",
+        "pos": "0% 62%"
+      },
       "quote": "Three figures, two websites. <t>Each measures something different.</t>",
-      "body": [
-        "Where each is published, what it counts, and the public listing behind them.",
-        "No entry on this site describes the outcome of a case. A testimony listing records that testimony was given, not who prevailed or how a court weighed it."
-      ]
+      "sub": "Where each is published, what it counts, and the public listing behind them. No entry on this site describes the outcome of a case: a testimony listing records that testimony was given, not who prevailed or how a court weighed it."
     },
     {
       "type": "figs",
