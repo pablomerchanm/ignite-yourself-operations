@@ -416,3 +416,5 @@ Comentario del usuario: el final de la página tenía demasiada información jun
 **Ajuste 21b.** La banda de Ignite Yourself salía como un bloque negro vacío: sus elementos llevaban la clase de "aparecer al hacer scroll", pero el motor solo revela los que están dentro de un grupo marcado. Ahora el contenedor lleva la marca y aparece con el escalonado habitual.
 
 **Ajuste 21c.** Los botones principales ("Discuss a matter" en el hero y en el pie) eran demasiado grandes: pasan de 12 px con tracking .24em y 16×38 px de relleno a 11 px, .16em y 13×26 px (10.5 px y 13×22 px en móvil).
+
+**Ajuste 20c — hero móvil sin tapar el rostro.** El texto ya no va encima de la foto: la foto ocupa lo que sobra de la primera pantalla (como mínimo el 46 %) y se funde en tinta por abajo; el nombre, la frase y el botón van debajo, sobre tinta, montados 30 px sobre el degradado para que no se lea como una banda. Verificado en 375×667, 390×844 y 430×932: la barbilla queda siempre por encima del texto.
