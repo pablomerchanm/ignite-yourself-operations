@@ -113,6 +113,26 @@
       "source": "/Biff",
       "destination": "/pettingill",
       "permanent": false
+    },
+    {
+      "source": "/Herencia",
+      "destination": "/herencia",
+      "permanent": false
+    },
+    {
+      "source": "/HerenciaVL",
+      "destination": "/herencia",
+      "permanent": false
+    },
+    {
+      "source": "/herenciavl",
+      "destination": "/herencia",
+      "permanent": false
+    },
+    {
+      "source": "/herencia-vl",
+      "destination": "/herencia",
+      "permanent": false
     }
   ],
   "rewrites": [
