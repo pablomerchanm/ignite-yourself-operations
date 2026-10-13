@@ -25,7 +25,7 @@ base = base.replace('/mark-cooke/', '/pettingill/')
 
 # ------------------------------------------- 2. sin foto: hero y method
 base = sub1(r"'<section class=\"hero\" id=\"top\">'\+bigimg\(s\.img,'ph'\)\+",
-            "'<section class=\"hero'+(s.plate?' plate':'')+'\" id=\"top\">'+(s.img?bigimg(s.img,'ph'):'')+",
+            "'<section class=\"hero'+(s.plate?' plate':'')+(s.img&&s.img.src?' photo':'')+'\" id=\"top\">'+heroimg(s.img)+",
             base, tag='hero-bigimg')
 base = sub1(r"bigimg\(s\.img,'ph wr','data-r1'\)\+",
             "(s.img?bigimg(s.img,'ph wr','data-r1'):'')+",
@@ -60,7 +60,10 @@ for pat in [r'\s*<meta property="og:image"[^>]*>', r'\s*<meta property="og:image
     base = re.sub(pat, '', base, count=1)
 
 base = sub1(r'(<meta name="robots"[^>]*>)',
-            lambda m: m.group(1) + '\n<link rel="icon" href="/pettingill/assets/icon.svg" type="image/svg+xml">',
+            lambda m: m.group(1) + '\n<link rel="icon" href="/pettingill/assets/icon.svg" type="image/svg+xml">'
+            '\n<meta property="og:image" content="https://igniteyourself.co/pettingill/assets/og.jpg">'
+            '\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">'
+            '\n<meta name="twitter:card" content="summary_large_image">',
             base, tag='icon-new')
 
 # ------------------------------------------- 4. texto enriquecido: fuente y enlace
@@ -68,6 +71,9 @@ base = sub1(r'(<meta name="robots"[^>]*>)',
 # rich() escapa primero, asi que solo se reabren estas dos formas.
 base = sub1(r'function rich\(s\)\{return esc\(s\)', 'function rich0(s){return esc(s)', base, tag='rich0')
 RICH = r"""
+function heroimg(img){if(!img||!img.src)return'';
+  var m=img.mobile?'<source media="(max-width:860px)" srcset="'+esc(img.mobile)+'">':'';
+  return'<div class="ph"><picture>'+m+'<img src="'+esc(img.src)+'" alt="'+esc(img.alt||'')+'"></picture></div>'}
 function rich(s){return rich0(s)
   .replace(/&lt;src&gt;/g,'<span class="src">').replace(/&lt;\/src&gt;/g,'</span>')
   .replace(/&lt;sup&gt;/g,'<sup>').replace(/&lt;\/sup&gt;/g,'</sup>')
@@ -218,6 +224,45 @@ CAL = """<style>
   max-width:54ch;font-size:clamp(14px,1.18vw,18px);line-height:1.66;color:rgba(255,255,255,.82)}
 .hero .hnote::before{position:absolute;left:0;top:.72em;margin-top:0}
 .hero .hnote .it{color:rgba(255,255,255,.58)}
+
+/* ============ Tipografia de marca: serif para afirmar, grotesca para probar ============ */
+@font-face{font-family:'Editors Note';src:url(/pettingill/assets/fonts/EditorsNote-Light.otf) format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Editors Note';src:url(/pettingill/assets/fonts/EditorsNote-Regular.otf) format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Editors Note';src:url(/pettingill/assets/fonts/EditorsNote-LightItalic.otf) format('opentype');font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:'Editors Note';src:url(/pettingill/assets/fonts/EditorsNote-Italic.otf) format('opentype');font-weight:400;font-style:italic;font-display:swap}
+:root{--serif:'Editors Note',Georgia,'Times New Roman',serif;--bg:#EDE7DC;--line:rgba(20,22,26,.14)}
+body{background:var(--bg)}
+.legend{background:#E4DED2}
+.sq,.d80,.d56,.d97,.ptitle,.mission .wrap>p,.band .bq,.pmain h3,.pcard h3,.mrow h4,.skeys li,.fname{
+  font-family:var(--serif);font-weight:300;letter-spacing:-.012em}
+.sq .it,.d80 .it,.d56 .it,.d97 .it,.ptitle .it,.mission p .it,.band .bq .it,.hero .hname .it{
+  font-family:var(--serif);font-style:italic;font-weight:300}
+.sq{font-size:clamp(44px,7.4vw,124px);line-height:.98;max-width:12ch}
+.d80{font-size:clamp(38px,5.6vw,84px);line-height:1;letter-spacing:-.01em}
+.d56{font-size:clamp(28px,3.6vw,50px);line-height:1.06;letter-spacing:-.005em}
+.reserve .d97{font-size:clamp(38px,4.6vw,70px);line-height:1;letter-spacing:-.01em}
+.mission .wrap>p{font-size:clamp(32px,4.4vw,68px);line-height:1.06;max-width:22ch;letter-spacing:-.01em}
+.band .bq{font-size:clamp(34px,4.6vw,70px);line-height:1.02;max-width:20ch}
+.pmain h3{font-weight:400;font-size:clamp(21px,1.9vw,30px);line-height:1.18;letter-spacing:0}
+.pcard h3{font-weight:400;letter-spacing:0;font-size:clamp(22px,2vw,32px)}
+.mrow h4{font-weight:400;letter-spacing:0;font-size:clamp(19px,1.6vw,25px)}
+.skeys li{font-weight:400;letter-spacing:0;font-size:clamp(20px,2vw,30px)}
+.fname{font-size:clamp(44px,7vw,110px);letter-spacing:-.02em}
+.topbar .tname{font-family:var(--serif);font-weight:400;font-size:15px;letter-spacing:.16em;text-transform:uppercase}
+
+/* ---------- hero a sangre: la fotografia manda, el texto vive en su sombra ---------- */
+.hero.photo::before{content:none}
+.hero.photo .ph img{filter:contrast(1.04) brightness(.96) saturate(.9);object-position:68% 30%}
+.hero.photo .ph::after{background:
+  linear-gradient(90deg,rgba(14,16,19,.8) 0%,rgba(14,16,19,.5) 36%,rgba(14,16,19,.06) 64%),
+  linear-gradient(180deg,rgba(14,16,19,.38) 0%,rgba(14,16,19,0) 30%,rgba(14,16,19,.62) 100%)}
+.hero.photo .inr{padding-right:0}
+.hero .hname{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;line-height:.94;
+  font-size:clamp(56px,9.8vw,152px);max-width:7.4ch;white-space:normal}
+.hero .hname .it{color:rgba(255,255,255,.7)}
+.hero .hsub{font-family:'Instrument Sans',sans-serif;font-weight:400;font-size:clamp(16px,1.35vw,21px);
+  line-height:1.5;letter-spacing:-.01em;max-width:42ch;color:rgba(255,255,255,.88);margin-top:clamp(22px,3vh,34px)}
+.hero .hsub .it{color:rgba(255,255,255,.56);font-weight:400}
 
 /* ---------- hero con placa: retrato a tamano medio, no a sangre ----------
    El unico retrato publico mide 216px; a sangre completa se desharia. Como placa
@@ -461,6 +506,15 @@ CAL = """<style>
   .hero .inr{padding-top:calc(var(--barh) + clamp(54px,9vh,86px))}
   .hero::after{top:calc(var(--barh) + clamp(26px,4vh,40px))}
   .hero .hname{font-size:clamp(42px,12.4vw,72px);max-width:none}
+  .hero.photo{--phh:46svh;justify-content:flex-start;padding:0 0 clamp(72px,10vh,110px)}
+  .hero.photo .ph{position:absolute;inset:0 0 auto 0;height:var(--phh)}
+  .hero.photo .ph img{object-position:50% 22%}
+  .hero.photo .ph::after{background:linear-gradient(180deg,rgba(20,22,26,.5) 0%,rgba(20,22,26,0) 32%,
+    rgba(20,22,26,.18) 60%,rgba(20,22,26,.9) 90%,#14161A 100%)}
+  .hero.photo::after{content:none}
+  .hero.photo .inr{padding-top:calc(var(--phh) + 6px)}
+  .hero .hname{font-size:clamp(46px,13.5vw,74px)}
+  .hero .hsub{max-width:none;font-size:16px}
   .hero.plate{justify-content:flex-start}
   .hero.plate .ph{position:relative;inset:auto;width:min(44vw,180px);height:auto;
     margin:calc(var(--barh) + clamp(40px,6vh,56px)) 0 0 18px}
@@ -502,7 +556,7 @@ def topbar_html(active):
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
-            '<a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Bernard F. Pettingill, Jr., Ph.D.</a>'
+            '<a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Pettingill</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
             '<a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')

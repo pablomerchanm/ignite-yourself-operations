@@ -84,3 +84,20 @@ Pablo revisa → crítica de narrativa, veracidad y oferta (ChatGPT) → iteraci
 - Las pantallas de una frase (`stmt`) aceptan una imagen de fondo (`img`) para cuando existan fotos: texto blanco sobre foto en blanco y negro oscurecida.
 
 **Nada cambió en los datos ni en las fuentes.** Las subpáginas Testimony, Research y Record siguen iguales.
+
+---
+
+# Iteración 3 — hero a sangre y tipografía de marca
+
+**Pedido de Pablo:** usar su imagen de Biff como banner principal y aplicar la dirección de marca (`BRAND-DIRECTION.md`), sobre todo en tipografía.
+
+**Qué cambió**
+- **Hero a sangre** con la imagen aportada por Pablo (`assets/hero.jpg`, 1672 px; recorte 3:4 para móvil en `hero-mobile.jpg`). Texto a la izquierda, sobre la sombra; el rostro a la derecha. Frase en serif, "is worth." en itálica. El nombre pasa al kicker; el wordmark `PETTINGILL` en serif ocupa la barra.
+- **Tipografía:** Editors Note (Light, Regular, itálicas) en frases, titulares, palabras clave, títulos de publicaciones y nombre del pie. Instrument Sans se queda en cuerpo, cifras y navegación. Mono en etiquetas de fuente. Fuentes servidas desde `assets/fonts/`.
+- **Paleta:** el claro pasa de gris a hueso cálido (`#EDE7DC`) según la dirección de marca.
+- **Tarjeta social** propia (`assets/og.jpg`, 1200×630) con la foto, el wordmark y la frase.
+- Retirado el placeholder del retrato público.
+
+**Pendiente**
+- La imagen del hero es una construcción de Pablo a partir del retrato público de Biff. **Requiere autorización de Biff antes de cualquier publicación.** La dirección de marca fija que los retratos deben ser fotografía real; esta pieza se muestra como propuesta.
+- Faltan las imágenes de objetos y lugar (familias B y C) para intercalar bandas en la home y abrir cada subpágina.

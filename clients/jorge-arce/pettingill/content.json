@@ -37,15 +37,14 @@
   "sections": [
     {
       "type": "hero",
-      "plate": true,
       "img": {
-        "src": "/pettingill/assets/portrait-placeholder.jpg",
+        "src": "/pettingill/assets/hero.jpg",
+        "mobile": "/pettingill/assets/hero-mobile.jpg",
         "alt": "Bernard F. Pettingill, Jr., Ph.D."
       },
-      "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
-      "name": "Bernard <t>“Biff”</t> Pettingill",
-      "cred": "Ph.D. Economics · MPH · MBA",
-      "sub": "Economic damages, <t>with the source behind every figure.</t>",
+      "kick": "Bernard F. Pettingill, Jr., Ph.D. · Forensic Economist · Palm Beach Gardens, Florida",
+      "name": "What a loss <t>is worth.</t>",
+      "sub": "Forensic economist and expert witness since 1985. <t>Every figure on this site comes with its source.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
