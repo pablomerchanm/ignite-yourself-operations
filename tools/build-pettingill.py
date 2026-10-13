@@ -256,8 +256,9 @@ body{background:var(--bg)}
 .topbar .tname{font-family:var(--serif);font-weight:400;font-size:15px;letter-spacing:.16em;text-transform:uppercase}
 
 /* ---------- la firma: logo en placa, enlaces, version en tinta ---------- */
-.practice .prlogo{background:#fff;padding:20px 26px;border:1px solid var(--line)}
-.practice .prlogo img{width:clamp(180px,18vw,240px)}
+.practice .prlogo{background:var(--ink);padding:22px 28px;border:0}
+.practice .prlogo img{width:clamp(200px,20vw,260px)}
+.practice.ink .prlogo{padding:0}
 .practice.ink{background:var(--ink);color:#fff;padding:var(--sec) 0}
 .practice.ink .smallcap{color:rgba(255,255,255,.5)}
 .practice.ink .rnum{color:rgba(255,255,255,.34)}
@@ -265,13 +266,13 @@ body{background:var(--bg)}
 .practice.ink .prrole{color:#fff}
 .practice.ink .prdesc{color:rgba(255,255,255,.78)}
 .practice.ink .prmeta{color:rgba(255,255,255,.5)}
-.practice.ink .prlogo{border-color:transparent}
+.practice.ink .prlogo{background:transparent}
 .practice.ink .prid .go{border-bottom-color:rgba(255,255,255,.45);color:#fff}
 .practice.ink .lhead .smallcap{color:rgba(255,255,255,.72)}
 .practice.ink .lgrid{border-top-color:rgba(255,255,255,.3)}
 .practice.ink .lcell{border-bottom-color:rgba(255,255,255,.13)}
-.fmark{display:inline-block;background:#fff;padding:18px 22px;margin-bottom:22px}
-.fmark img{width:clamp(170px,16vw,220px);height:auto}
+.fmark{display:inline-block;background:transparent;padding:0;margin-bottom:22px}
+.fmark img{width:clamp(190px,18vw,250px);height:auto}
 .tnav a.ext{opacity:.85}
 
 /* ---------- hero a sangre: la fotografia manda, el texto vive en su sombra ---------- */

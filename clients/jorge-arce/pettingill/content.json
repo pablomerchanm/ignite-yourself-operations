@@ -154,7 +154,7 @@
       "lede": "This site is the expert. The firm is where a broader engagement starts: a team, a wider set of services, and the same founder at its head.",
       "company": {
         "name": "Pettingill Analytics",
-        "logo": "/pettingill/assets/pa-logo.png",
+        "logo": "/pettingill/assets/pa-logo-white.png",
         "role": "Founder & President",
         "desc": "The consultancy he founded and leads as President. Its published team spans forensic accounting, international finance and data analysis, and carries work beyond his individual practice: business valuations, litigation support, structured settlements and analytics.",
         "meta": [
@@ -754,7 +754,7 @@
       "lede": "This site is the expert: his record, his research, his testimony. Pettingill Analytics is the practice he founded and leads, with a team that carries work beyond his individual practice.",
       "company": {
         "name": "Pettingill Analytics",
-        "logo": "/pettingill/assets/pa-logo.png",
+        "logo": "/pettingill/assets/pa-logo-white.png",
         "role": "Founder & President",
         "desc": "The consultancy he founded and leads as President. Its published team spans forensic accounting, international finance and data analysis, and carries work beyond his individual practice: business valuations, litigation support, structured settlements and analytics.",
         "meta": [
@@ -955,7 +955,7 @@
       "mark": {
         "label": "The firm",
         "href": "https://www.pettingillanalytics.com/",
-        "src": "/pettingill/assets/pa-logo.png",
+        "src": "/pettingill/assets/pa-logo-white.png",
         "alt": "Pettingill Analytics",
         "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
         "meta": [
