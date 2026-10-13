@@ -160,3 +160,9 @@ Imagen aportada por Pablo (`assets/counsel.jpg`): Biff escuchando a dos abogados
 - `assets/notes.jpg` (Biff tomando notas en la reunión): abre la página Record con "The record, in order." El subtítulo deja dicho que todo viene del CV del 7 de julio de 2025 y no se ha cotejado con universidades ni asociaciones. Encuadre anclado arriba, porque la imagen original ya corta a la altura de la boca.
 - Con esto las cinco páginas abren con lámina. Revisión a 1440 y 390 px: sin desbordes ni errores de consola.
 - Pendientes de autorización de Biff como el resto de retratos.
+
+---
+
+# Iteración 10 — la mesa de trabajo de la firma
+
+`assets/team.jpg` (Biff marcando una gráfica con la pluma, el equipo alrededor): nueva pantalla en la home justo antes de la ficha de Pettingill Analytics, con la etiqueta "Pettingill Analytics" y la frase "One founder. A team at the table." Es la imagen que vende la firma: un equipo, no un solo perito. El lede que tenía la ficha pasa a esta pantalla para no repetirse. La afirmación del equipo se apoya en el equipo publicado en pettingillanalytics.com y lleva la etiqueta Public document. Pendiente de autorización de Biff como el resto.

@@ -639,7 +639,7 @@ inq = lambda: deep('inquiry')
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
         [deep('hero'), deep('numbers'), deep('s-question'), deep('s-training'), deep('s-research'),
-         deep('s-sourced'), deep('firm-home'), inq()]),
+         deep('s-sourced'), deep('s-firm'), deep('firm-home'), inq()]),
     'practice': page('The Practice — Bernard F. Pettingill, Jr., Ph.D.',
         'Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement.',
         [deep('practice-open'), deep('routes'), deep('sources'), deep('engage'), inq()]),
