@@ -3,6 +3,7 @@ import fs from 'fs';
 const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium'});
 const D='/home/user/ignite-yourself-operations/clients/jorge-arce/pettingill';
 for (const [path,file] of [['/pettingill/',D+'/index.html'],
+                           ['/pettingill/practice',D+'/practice/index.html'],
                            ['/pettingill/testimony',D+'/testimony/index.html'],
                            ['/pettingill/research',D+'/research/index.html'],
                            ['/pettingill/record',D+'/record/index.html']]) {

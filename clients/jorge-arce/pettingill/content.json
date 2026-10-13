@@ -10,6 +10,10 @@
       "h": "/pettingill"
     },
     {
+      "t": "The Practice",
+      "h": "/pettingill/practice"
+    },
+    {
       "t": "The Testimony",
       "h": "/pettingill/testimony"
     },
@@ -33,11 +37,15 @@
   "sections": [
     {
       "type": "hero",
-      "kick": "Forensic Economist · Palm Beach Gardens, Florida · Since 1985",
+      "plate": true,
+      "img": {
+        "src": "/pettingill/assets/portrait-placeholder.jpg",
+        "alt": "Bernard F. Pettingill, Jr., Ph.D."
+      },
+      "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
       "name": "Bernard <t>“Biff”</t> Pettingill",
       "cred": "Ph.D. Economics · MPH · MBA",
-      "sub": "Forensic Economist <t>and Expert Witness</t>",
-      "note": "Economic damages in personal injury, wrongful death and medical malpractice — <t>with the source behind every figure on this page.</t>",
+      "sub": "Economic damages, <t>with the source behind every figure.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -45,9 +53,117 @@
           "primary": true
         },
         {
-          "t": "See the testimony record",
+          "t": "See the record",
           "h": "/pettingill/testimony"
         }
+      ]
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "The record, in three numbers",
+      "items": [
+        {
+          "n": "1985",
+          "k": "Forensic economist since",
+          "src": "Self-reported · bpettingill.com"
+        },
+        {
+          "n": "1,500<sup>+</sup>",
+          "k": "Cases with deposition or trial testimony",
+          "src": "Self-reported · bpettingill.com"
+        },
+        {
+          "n": "29",
+          "k": "States, plus the U.S. Virgin Islands",
+          "src": "Self-reported · bpettingill.com"
+        }
+      ],
+      "more": {
+        "t": "How each number is counted",
+        "h": "/pettingill/testimony"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-question",
+      "label": "The practice",
+      "quote": "One question, in four forms: <t>what is the loss worth?</t>",
+      "keys": [
+        "Life care plans",
+        "Lost earnings",
+        "Wrongful death",
+        "Household services"
+      ],
+      "more": {
+        "t": "The practice",
+        "h": "/pettingill/practice"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-training",
+      "ink": true,
+      "label": "The record",
+      "quote": "He studied what care costs <t>before he testified on it.</t>",
+      "sub": "Ph.D. in Economics, University of Manchester, 1977. Master of Public Health, Tulane, 1973. Two decades teaching economics before and alongside the practice.",
+      "src": "As stated on his CV",
+      "more": {
+        "t": "Education and appointments",
+        "h": "/pettingill/record"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-research",
+      "label": "The research",
+      "quote": "Still publishing. <t>2025.</t>",
+      "sub": "Seven papers with a record outside his own websites, from Psychosomatics in 1979 to hospital inflation in 2025.",
+      "src": "Independent records · PubMed, Crossref, publishers",
+      "more": {
+        "t": "The research",
+        "h": "/pettingill/research"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-sourced",
+      "ink": true,
+      "label": "How to read this site",
+      "quote": "What he says. What documents show. What others recorded. <t>Kept apart.</t>",
+      "sub": "Every claim on this site carries one of four tags, so an attorney knows what kind of evidence stands behind it.",
+      "keys": [
+        "Self-reported",
+        "Public document",
+        "Independent record",
+        "Ignite count"
+      ],
+      "tags": true,
+      "more": {
+        "t": "The four tags, explained",
+        "h": "/pettingill/practice#sources"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-firm",
+      "label": "The firm",
+      "quote": "The expert here. <t>The firm there.</t>",
+      "sub": "Founder and President of Pettingill Analytics, whose team carries the work beyond his individual practice.",
+      "more": {
+        "t": "Pettingill Analytics",
+        "h": "/pettingill/record#firm"
+      }
+    },
+    {
+      "type": "mission",
+      "id": "practice-lede",
+      "label": "The Practice",
+      "quote": "Four questions. <t>One discipline.</t>",
+      "body": [
+        "Each question below is drawn from the work stated on his website and from the intake checklists he publishes for counsel. Each is tied to his own published research on the same question.",
+        "Broader business services belong to Pettingill Analytics and its team. They are listed on the record page, attributed to the firm."
       ]
     },
     {

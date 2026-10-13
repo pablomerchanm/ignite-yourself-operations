@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "title": "The Practice — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement."
+  },
+  "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/pettingill"
+    },
+    {
+      "t": "The Practice",
+      "h": "/pettingill/practice"
+    },
+    {
+      "t": "The Testimony",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "t": "The Research",
+      "h": "/pettingill/research"
+    },
+    {
+      "t": "The Record",
+      "h": "/pettingill/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "mission",
+      "id": "practice-lede",
+      "label": "The Practice",
+      "quote": "Four questions. <t>One discipline.</t>",
+      "body": [
+        "Each question below is drawn from the work stated on his website and from the intake checklists he publishes for counsel. Each is tied to his own published research on the same question.",
+        "Broader business services belong to Pettingill Analytics and its team. They are listed on the record page, attributed to the firm."
+      ],
+      "no": "01"
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Questions he is retained on",
+      "title": "Four economic questions <t>his record speaks to.</t>",
+      "lede": "Drawn from the work stated on his website and the intake checklists he publishes, each tied to his own published research on the same question. Broader business services belong to Pettingill Analytics and are listed on the record page.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Life care plans",
+          "title": "What will future care cost?",
+          "desc": "Costing life care plans and reducing future care needs to present value — the specialty his website names. His 2024 and 2025 papers with a physiatrist examine how future medical care is projected; a 2025 paper examines hospital inflation.",
+          "items": [
+            "Future medical costs",
+            "Present-value reduction",
+            "Attendant and nursing care",
+            "Medical cost inflation"
+          ],
+          "cta": {
+            "t": "Discuss a life care plan matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "Personal injury",
+          "title": "What earning capacity was lost?",
+          "desc": "His injury checklist asks for five years of earnings records, fringe benefits and household services before and after the injury.",
+          "items": [
+            "Lost earnings",
+            "Earning capacity",
+            "Fringe benefits",
+            "Household services"
+          ],
+          "cta": {
+            "t": "Discuss an injury matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "Wrongful death",
+          "title": "What was the economic loss to the family?",
+          "desc": "His death checklist covers earnings history, fringe benefits and household services. His 2024 paper addresses which database to use for life expectancy.",
+          "items": [
+            "Loss of support",
+            "Life expectancy basis",
+            "Household services",
+            "Present value"
+          ],
+          "cta": {
+            "t": "Discuss a death matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "Household services",
+          "title": "What is unpaid care worth?",
+          "desc": "The economic value of household services, care and support — including nighttime protection, the subject of his 2019 paper in The Earnings Analyst.",
+          "items": [
+            "Household services",
+            "Care and support",
+            "Nighttime protection",
+            "Injury and death claims"
+          ],
+          "cta": {
+            "t": "Discuss a matter",
+            "h": "#inquiry",
+            "path": "matter"
+          }
+        }
+      ],
+      "fn": "Areas stated by subject matter. No case outcome, client or result is claimed anywhere on this site.",
+      "no": "02"
+    },
+    {
+      "type": "legend",
+      "id": "sources",
+      "label": "How to read this record",
+      "title": "Every claim carries <t>its source.</t>",
+      "lede": "An attorney deciding whether to retain an expert needs to know what the expert says, what documents show, and what someone else has recorded. This site keeps the three apart.",
+      "items": [
+        {
+          "k": "Self-reported",
+          "d": "Stated by Dr. Pettingill on bpettingill.com or on his curriculum vitae. Shown as he states it."
+        },
+        {
+          "k": "Public document",
+          "d": "A dated document he publishes himself, such as his testimony listing. Linked, with its date."
+        },
+        {
+          "k": "Independent record",
+          "d": "A record kept outside his own websites: a publisher, PubMed or Crossref. Linked to the source."
+        },
+        {
+          "k": "Ignite count",
+          "d": "A figure counted from a public document for this site, with the method stated next to it."
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "method",
+      "id": "engage",
+      "label": "Starting an engagement",
+      "title": "What a paralegal needs, <t>in one place.</t>",
+      "intro": "These documents are already public on his website. This site gathers them and dates them, so the current version is never in doubt.",
+      "rows": [
+        {
+          "t": "Curriculum vitae",
+          "d": "Eight pages: education, appointments, organizations and publications. The current PDF is dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)"
+        },
+        {
+          "t": "Testimony listing",
+          "d": "Depositions and trials since 2017, with case, number and court. Deposition pages dated 20 February 2026; trial pages dated 26 August 2025. [See the analysis](/pettingill/testimony)"
+        },
+        {
+          "t": "Intake checklists",
+          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)"
+        },
+        {
+          "t": "Terms and engagement letter",
+          "d": "Billing rates, retainer and cancellation terms are published on his website, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)"
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.",
+      "contact": {
+        "email": "biffpett@gmail.com",
+        "phone": "(561) 622-0330",
+        "city": "Palm Beach Gardens, Florida"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A new matter — economic damages",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV, testimony listing or engagement terms",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "referral",
+            "t": "Checking a referral",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Who referred you, if you wish to say"
+              },
+              {
+                "n": "What you need to know",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.",
+        "fine": "Private concept. Public contact details are shown as published on bpettingill.com."
+      },
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.",
+      "name": "Bernard Pettingill",
+      "cred": "Ph.D. · MPH · MBA · BBA",
+      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Referee, Journal of Forensic Economics — per CV",
+        "National Association of Forensic Economists — since 1989, per CV",
+        "American Economic Association — since 1983, per CV",
+        "Founder & President, Pettingill Analytics"
+      ],
+      "social": [
+        {
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/"
+        },
+        {
+          "t": "Pettingill Analytics",
+          "h": "https://www.pettingillanalytics.com/"
+        }
+      ],
+      "note": "Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/pettingill/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+      },
+      "no": "05"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ base = base.replace('/mark-cooke/', '/pettingill/')
 
 # ------------------------------------------- 2. sin foto: hero y method
 base = sub1(r"'<section class=\"hero\" id=\"top\">'\+bigimg\(s\.img,'ph'\)\+",
-            "'<section class=\"hero\" id=\"top\">'+(s.img?bigimg(s.img,'ph'):'')+",
+            "'<section class=\"hero'+(s.plate?' plate':'')+'\" id=\"top\">'+(s.img?bigimg(s.img,'ph'):'')+",
             base, tag='hero-bigimg')
 base = sub1(r"bigimg\(s\.img,'ph wr','data-r1'\)\+",
             "(s.img?bigimg(s.img,'ph wr','data-r1'):'')+",
@@ -70,6 +70,7 @@ base = sub1(r'function rich\(s\)\{return esc\(s\)', 'function rich0(s){return es
 RICH = r"""
 function rich(s){return rich0(s)
   .replace(/&lt;src&gt;/g,'<span class="src">').replace(/&lt;\/src&gt;/g,'</span>')
+  .replace(/&lt;sup&gt;/g,'<sup>').replace(/&lt;\/sup&gt;/g,'</sup>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,function(m,t,u){var ext=/^https?:/.test(u);
     return'<a class="ilink" href="'+u+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+t+'</a>'})}
 """
@@ -77,6 +78,27 @@ base = sub1(r'(function bigimg\()', lambda m: RICH + m.group(1), base, tag='rich
 
 # ---------------------------------------------------------- 5. partials propios
 PARTIALS = r"""
+nums:function(s){
+  return'<section class="nums'+(s.ink?' ink':'')+'" id="'+esc(s.id||'nums')+'"><div class="wrap">'+
+  (s.label?'<div class="smallcap wr" data-r1>'+esc(s.label)+'</div>':'')+
+  '<div class="ngrid" data-cards>'+(s.items||[]).map(function(it){
+    return'<div class="nit wr"><div class="nn">'+rich(it.n)+'</div><div class="nk">'+rich(it.k)+'</div>'+
+      (it.src?'<span class="src">'+esc(it.src)+'</span>':'')+'</div>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
+stmt:function(s){
+  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+'" id="'+esc(s.id||'stmt')+'">'+
+  (s.img&&s.img.src?'<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+(s.img.pos?' style="object-position:'+esc(s.img.pos)+'"':'')+'></div>':'')+
+  '<div class="wrap" data-r2>'+
+  (s.label?'<div class="slab smallcap wr">'+esc(s.label)+'</div>':'')+
+  '<h2 class="sq wr">'+rich(s.quote)+'</h2>'+
+  (s.sub?'<p class="ssub wr">'+rich(s.sub)+'</p>':'')+
+  (s.keys?'<ul class="skeys'+(s.tags?' astags':'')+' wr">'+(s.keys||[]).map(function(k){return'<li>'+(s.tags?'<span class="src">'+esc(k)+'</span>':esc(k))+'</li>'}).join('')+'</ul>':'')+
+  '<div class="sfoot wr">'+
+    (s.src?'<span class="src">'+esc(s.src)+'</span>':'<span></span>')+
+    (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+
+  '</div>'+
+  '</div></section>'},
 legend:function(s){
   return'<section class="legend" id="'+esc(s.id||'legend')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
@@ -196,6 +218,72 @@ CAL = """<style>
   max-width:54ch;font-size:clamp(14px,1.18vw,18px);line-height:1.66;color:rgba(255,255,255,.82)}
 .hero .hnote::before{position:absolute;left:0;top:.72em;margin-top:0}
 .hero .hnote .it{color:rgba(255,255,255,.58)}
+
+/* ---------- hero con placa: retrato a tamano medio, no a sangre ----------
+   El unico retrato publico mide 216px; a sangre completa se desharia. Como placa
+   funciona, y cuando llegue fotografia propia basta quitar "plate" en el JSON. */
+.hero.plate .ph{position:absolute;inset:auto clamp(20px,5vw,80px) clamp(72px,11vh,132px) auto;
+  width:clamp(240px,24vw,380px);aspect-ratio:3/4;overflow:hidden;z-index:1}
+.hero.plate .ph img{object-position:50% 18%;filter:grayscale(1) contrast(1.1) brightness(.9)}
+.hero.plate .ph::after{background:linear-gradient(180deg,rgba(20,22,26,0) 58%,rgba(20,22,26,.5) 100%)}
+.hero.plate .ph::before{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--brass);z-index:2}
+.hero.plate .inr{padding-right:clamp(280px,30vw,480px)}
+.hero.plate .hname{font-size:clamp(44px,8.4vw,122px);max-width:none}
+.hero.plate .hsub{max-width:26ch;font-size:clamp(20px,2.1vw,30px)}
+
+/* ---------- nums: tres cifras como objeto grafico ---------- */
+.nums{padding:var(--sec) 0}
+.nums.ink{background:var(--ink);color:#fff}
+.nums.ink .smallcap{color:rgba(255,255,255,.5)}
+.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(36px,5vh,60px);
+  border-top:1px solid rgba(255,255,255,.3)}
+.nit{padding:clamp(34px,5vh,56px) clamp(16px,2.4vw,40px) 10px 0;border-right:1px solid rgba(255,255,255,.13)}
+.nit+.nit{padding-left:clamp(16px,2.4vw,40px)}
+.nit:last-child{border-right:0}
+.nn{font-weight:500;letter-spacing:-.055em;line-height:.86;font-size:clamp(64px,8.6vw,138px);font-variant-numeric:tabular-nums;white-space:nowrap}
+.nn sup{font-size:.42em;vertical-align:top;position:relative;top:.12em;letter-spacing:0;color:var(--brass)}
+.nk{margin-top:22px;font-size:clamp(16px,1.5vw,22px);letter-spacing:-.02em;line-height:1.3;max-width:16ch}
+.nit .src{display:table;margin-top:22px;color:rgba(255,255,255,.5)}
+.nums .pmore a{color:#fff;border-color:rgba(255,255,255,.45)}
+@media(max-width:860px){.ngrid{grid-template-columns:1fr}.nit{border-right:0;padding-left:0!important;
+  border-bottom:1px solid rgba(255,255,255,.13);padding-bottom:30px}.nit:last-child{border-bottom:0}
+  .nn{font-size:clamp(64px,20vw,110px)}}
+
+/* ---------- stmt: una frase por pantalla ---------- */
+.stmt{position:relative;min-height:clamp(540px,86svh,900px);display:flex;align-items:center;overflow:hidden;
+  padding:clamp(80px,12vh,140px) 0}
+.stmt.ink{background:var(--ink);color:#fff}
+.stmt .wrap{position:relative;z-index:2;width:100%}
+.slab{display:block;margin-bottom:clamp(26px,4vh,40px)}
+.stmt.ink .slab{color:rgba(255,255,255,.5)}
+.sq{font-weight:500;letter-spacing:-.048em;line-height:.98;font-size:clamp(40px,6.8vw,116px);max-width:13ch}
+.sq .it{font-weight:400;color:rgba(14,14,26,.42)}
+.stmt.ink .sq .it{color:rgba(255,255,255,.48)}
+.ssub{margin-top:clamp(26px,4vh,40px);max-width:46ch;font-size:clamp(15px,1.3vw,19px);line-height:1.6;color:#3c3f44}
+.stmt.ink .ssub{color:rgba(255,255,255,.78)}
+.skeys{list-style:none;margin-top:clamp(36px,5.5vh,64px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid currentColor;max-width:1100px}
+.skeys li{padding:18px clamp(12px,1.6vw,24px) 18px 0;font-size:clamp(16px,1.55vw,23px);font-weight:500;
+  letter-spacing:-.02em;border-bottom:1px solid var(--line)}
+.stmt.ink .skeys li{border-bottom-color:rgba(255,255,255,.14)}
+.skeys.astags{display:flex;flex-wrap:wrap;gap:12px;border-top:0;max-width:none}
+.skeys.astags li{padding:0;border:0}
+.stmt.ink .skeys.astags .src{color:rgba(255,255,255,.72);font-size:11.5px;padding:7px 12px 6px}
+.sfoot{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;
+  margin-top:clamp(40px,6vh,72px);max-width:1100px}
+.stmt .sfoot .src{color:var(--gray)}
+.stmt.ink .sfoot .src{color:rgba(255,255,255,.5)}
+.smore{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid;
+  padding-bottom:4px;transition:border-color .3s;border-color:rgba(20,22,26,.4)}
+.smore:hover{border-color:currentColor}
+.stmt.ink .smore{color:#fff;border-color:rgba(255,255,255,.45)}
+.stmt.withimg{color:#fff}
+.stmt .sph{position:absolute;inset:0;z-index:1}
+.stmt .sph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.5) contrast(1.08)}
+.stmt .sph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.35),rgba(10,10,12,.7))}
+.stmt.withimg .sq .it,.stmt.withimg .ssub,.stmt.withimg .slab{color:rgba(255,255,255,.72)}
+@media(max-width:860px){.stmt{min-height:auto;padding:clamp(72px,12vh,110px) 0}
+  .sq{font-size:clamp(38px,11.5vw,64px)}.skeys{grid-template-columns:1fr 1fr}}
 
 /* ---------- band sin fotografia ---------- */
 .band .bph{display:none}
@@ -363,8 +451,8 @@ CAL = """<style>
   .topbar .u11{font-size:9.5px;letter-spacing:.12em}
   .topbar .ncta{border-bottom-color:rgba(255,255,255,.4)}
   .tbot{order:3;flex:1 1 100%;display:flex;margin-top:11px;border-top:1px solid rgba(255,255,255,.14)}
-  .tbot a{flex:1 1 0;text-align:center;padding:11px 2px 12px;white-space:nowrap;
-    font-size:9.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
+  .tbot a{flex:1 1 0;text-align:center;padding:11px 0 12px;white-space:nowrap;
+    font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
     color:rgba(255,255,255,.6);border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
   .tbot a.on{color:#fff;border-bottom-color:rgba(255,255,255,.75)}
   :root{--barh:86px;--phh:0px}
@@ -373,6 +461,11 @@ CAL = """<style>
   .hero .inr{padding-top:calc(var(--barh) + clamp(54px,9vh,86px))}
   .hero::after{top:calc(var(--barh) + clamp(26px,4vh,40px))}
   .hero .hname{font-size:clamp(42px,12.4vw,72px);max-width:none}
+  .hero.plate{justify-content:flex-start}
+  .hero.plate .ph{position:relative;inset:auto;width:min(44vw,180px);height:auto;
+    margin:calc(var(--barh) + clamp(40px,6vh,56px)) 0 0 18px}
+  .hero.plate .inr{padding-top:clamp(34px,5vh,48px);padding-right:0}
+  .hero.plate .hsub{max-width:22ch;font-size:clamp(19px,5.4vw,24px)}
   .hero .hsub{max-width:20ch}
   .hero .hnote{max-width:none}
   .tch{padding-left:24px}.tgrid,.tbars{left:24px}.tgrid em{left:-24px}
@@ -385,6 +478,7 @@ CAL = """<style>
 # ------------------------------------------------------------- 7. navegacion
 NAV = [
     {"t": "Overview",      "h": "/pettingill"},
+    {"t": "The Practice",  "h": "/pettingill/practice"},
     {"t": "The Testimony", "h": "/pettingill/testimony"},
     {"t": "The Research",  "h": "/pettingill/research"},
     {"t": "The Record",    "h": "/pettingill/record"},
@@ -392,10 +486,12 @@ NAV = [
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
-TNAV = [("The Testimony", "/pettingill/testimony", "testimony"),
+TNAV = [("The Practice",  "/pettingill/practice",  "practice"),
+        ("The Testimony", "/pettingill/testimony", "testimony"),
         ("The Research",  "/pettingill/research",  "research"),
         ("The Record",    "/pettingill/record",    "record")]
 TABS = [("Overview",  "/pettingill",           "home"),
+        ("Practice",  "/pettingill/practice",  "practice"),
         ("Testimony", "/pettingill/testimony", "testimony"),
         ("Research",  "/pettingill/research",  "research"),
         ("Record",    "/pettingill/record",    "record")]
@@ -418,7 +514,7 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] == 'hero' or (s['type'] == 'band'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
@@ -432,7 +528,11 @@ inq = lambda: deep('inquiry')
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('proof'), deep('band-thesis'), deep('routes'), deep('sources'), deep('engage'), inq()]),
+        [deep('hero'), deep('numbers'), deep('s-question'), deep('s-training'), deep('s-research'),
+         deep('s-sourced'), deep('s-firm'), inq()]),
+    'practice': page('The Practice — Bernard F. Pettingill, Jr., Ph.D.',
+        'Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement.',
+        [deep('practice-lede'), deep('routes'), deep('sources'), deep('engage'), inq()]),
     'testimony': page('The Testimony — Bernard F. Pettingill, Jr., Ph.D.',
         'The three published testimony figures, what each counts, and a count of the public testimony listing since 2017.',
         [deep('testimony-lede'), deep('figures'), deep('listing'), deep('band-register'), inq()]),
@@ -467,6 +567,7 @@ def derive(json_path, title, ogurl, out_dir, active):
     print('  ', out_dir.replace(DST, 'pettingill') or 'pettingill', 'ok')
 
 derive('/pettingill/home.json', TITLE, URL, DST, None)
+derive('/pettingill/practice.json', 'The Practice — Bernard F. Pettingill, Jr., Ph.D.', URL + '/practice', DST + '/practice', 'practice')
 derive('/pettingill/testimony.json', 'The Testimony — Bernard F. Pettingill, Jr., Ph.D.', URL + '/testimony', DST + '/testimony', 'testimony')
 derive('/pettingill/research.json', 'The Research — Bernard F. Pettingill, Jr., Ph.D.', URL + '/research', DST + '/research', 'research')
 derive('/pettingill/record.json', 'The Record — Bernard F. Pettingill, Jr., Ph.D.', URL + '/record', DST + '/record', 'record')

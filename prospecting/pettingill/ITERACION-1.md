@@ -70,3 +70,17 @@
 ## 7. Siguiente paso previsto
 
 Pablo revisa → crítica de narrativa, veracidad y oferta (ChatGPT) → iteración 2 aquí → solo entonces se decide si y cómo se le muestra a Biff.
+
+---
+
+# Iteración 2 — home más simple, subpáginas con la profundidad
+
+**Pedido de Pablo:** la home se sentía pesada. Más simplicidad y claridad, mensaje afilado, jugar con texto y jerarquías; la profundidad queda para quien entre a las subpáginas. Y uso de imágenes, sobre todo de él (Pablo construirá más imágenes).
+
+**Qué cambió**
+- **Home nueva:** una frase por pantalla. Hero con retrato → tres cifras gigantes con su fuente → cinco pantallas de una frase (la pregunta de la práctica, la formación, la investigación, las cuatro etiquetas de procedencia, la firma) → consulta. Cada pantalla enlaza a su subpágina.
+- **Página nueva `/pettingill/practice`:** recibe lo que antes cargaba la home (las cuatro rutas de trabajo, la clave de fuentes y los documentos para el paralegal).
+- **Imagen:** el hero usa como **placeholder** el retrato público de su web (`Biff-01-1.jpg`, 216 px, reescalado ×3), en placa a tamaño medio, no a sangre completa, porque a esa resolución no aguanta más. Cuando lleguen las imágenes de Pablo basta cambiar la ruta en `content.json` y quitar `"plate": true` para pasar a sangre completa. **Pendiente de autorización** antes de cualquier publicación.
+- Las pantallas de una frase (`stmt`) aceptan una imagen de fondo (`img`) para cuando existan fotos: texto blanco sobre foto en blanco y negro oscurecida.
+
+**Nada cambió en los datos ni en las fuentes.** Las subpáginas Testimony, Research y Record siguen iguales.

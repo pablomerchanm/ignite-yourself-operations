@@ -823,6 +823,72 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
 .hero .hnote::before{position:absolute;left:0;top:.72em;margin-top:0}
 .hero .hnote .it{color:rgba(255,255,255,.58)}
 
+/* ---------- hero con placa: retrato a tamano medio, no a sangre ----------
+   El unico retrato publico mide 216px; a sangre completa se desharia. Como placa
+   funciona, y cuando llegue fotografia propia basta quitar "plate" en el JSON. */
+.hero.plate .ph{position:absolute;inset:auto clamp(20px,5vw,80px) clamp(72px,11vh,132px) auto;
+  width:clamp(240px,24vw,380px);aspect-ratio:3/4;overflow:hidden;z-index:1}
+.hero.plate .ph img{object-position:50% 18%;filter:grayscale(1) contrast(1.1) brightness(.9)}
+.hero.plate .ph::after{background:linear-gradient(180deg,rgba(20,22,26,0) 58%,rgba(20,22,26,.5) 100%)}
+.hero.plate .ph::before{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--brass);z-index:2}
+.hero.plate .inr{padding-right:clamp(280px,30vw,480px)}
+.hero.plate .hname{font-size:clamp(44px,8.4vw,122px);max-width:none}
+.hero.plate .hsub{max-width:26ch;font-size:clamp(20px,2.1vw,30px)}
+
+/* ---------- nums: tres cifras como objeto grafico ---------- */
+.nums{padding:var(--sec) 0}
+.nums.ink{background:var(--ink);color:#fff}
+.nums.ink .smallcap{color:rgba(255,255,255,.5)}
+.ngrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(36px,5vh,60px);
+  border-top:1px solid rgba(255,255,255,.3)}
+.nit{padding:clamp(34px,5vh,56px) clamp(16px,2.4vw,40px) 10px 0;border-right:1px solid rgba(255,255,255,.13)}
+.nit+.nit{padding-left:clamp(16px,2.4vw,40px)}
+.nit:last-child{border-right:0}
+.nn{font-weight:500;letter-spacing:-.055em;line-height:.86;font-size:clamp(64px,8.6vw,138px);font-variant-numeric:tabular-nums;white-space:nowrap}
+.nn sup{font-size:.42em;vertical-align:top;position:relative;top:.12em;letter-spacing:0;color:var(--brass)}
+.nk{margin-top:22px;font-size:clamp(16px,1.5vw,22px);letter-spacing:-.02em;line-height:1.3;max-width:16ch}
+.nit .src{display:table;margin-top:22px;color:rgba(255,255,255,.5)}
+.nums .pmore a{color:#fff;border-color:rgba(255,255,255,.45)}
+@media(max-width:860px){.ngrid{grid-template-columns:1fr}.nit{border-right:0;padding-left:0!important;
+  border-bottom:1px solid rgba(255,255,255,.13);padding-bottom:30px}.nit:last-child{border-bottom:0}
+  .nn{font-size:clamp(64px,20vw,110px)}}
+
+/* ---------- stmt: una frase por pantalla ---------- */
+.stmt{position:relative;min-height:clamp(540px,86svh,900px);display:flex;align-items:center;overflow:hidden;
+  padding:clamp(80px,12vh,140px) 0}
+.stmt.ink{background:var(--ink);color:#fff}
+.stmt .wrap{position:relative;z-index:2;width:100%}
+.slab{display:block;margin-bottom:clamp(26px,4vh,40px)}
+.stmt.ink .slab{color:rgba(255,255,255,.5)}
+.sq{font-weight:500;letter-spacing:-.048em;line-height:.98;font-size:clamp(40px,6.8vw,116px);max-width:13ch}
+.sq .it{font-weight:400;color:rgba(14,14,26,.42)}
+.stmt.ink .sq .it{color:rgba(255,255,255,.48)}
+.ssub{margin-top:clamp(26px,4vh,40px);max-width:46ch;font-size:clamp(15px,1.3vw,19px);line-height:1.6;color:#3c3f44}
+.stmt.ink .ssub{color:rgba(255,255,255,.78)}
+.skeys{list-style:none;margin-top:clamp(36px,5.5vh,64px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid currentColor;max-width:1100px}
+.skeys li{padding:18px clamp(12px,1.6vw,24px) 18px 0;font-size:clamp(16px,1.55vw,23px);font-weight:500;
+  letter-spacing:-.02em;border-bottom:1px solid var(--line)}
+.stmt.ink .skeys li{border-bottom-color:rgba(255,255,255,.14)}
+.skeys.astags{display:flex;flex-wrap:wrap;gap:12px;border-top:0;max-width:none}
+.skeys.astags li{padding:0;border:0}
+.stmt.ink .skeys.astags .src{color:rgba(255,255,255,.72);font-size:11.5px;padding:7px 12px 6px}
+.sfoot{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;
+  margin-top:clamp(40px,6vh,72px);max-width:1100px}
+.stmt .sfoot .src{color:var(--gray)}
+.stmt.ink .sfoot .src{color:rgba(255,255,255,.5)}
+.smore{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid;
+  padding-bottom:4px;transition:border-color .3s;border-color:rgba(20,22,26,.4)}
+.smore:hover{border-color:currentColor}
+.stmt.ink .smore{color:#fff;border-color:rgba(255,255,255,.45)}
+.stmt.withimg{color:#fff}
+.stmt .sph{position:absolute;inset:0;z-index:1}
+.stmt .sph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.5) contrast(1.08)}
+.stmt .sph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.35),rgba(10,10,12,.7))}
+.stmt.withimg .sq .it,.stmt.withimg .ssub,.stmt.withimg .slab{color:rgba(255,255,255,.72)}
+@media(max-width:860px){.stmt{min-height:auto;padding:clamp(72px,12vh,110px) 0}
+  .sq{font-size:clamp(38px,11.5vw,64px)}.skeys{grid-template-columns:1fr 1fr}}
+
 /* ---------- band sin fotografia ---------- */
 .band .bph{display:none}
 .band{background:var(--ink);color:#fff;min-height:auto;padding:clamp(96px,15vh,180px) 0}
@@ -989,8 +1055,8 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
   .topbar .u11{font-size:9.5px;letter-spacing:.12em}
   .topbar .ncta{border-bottom-color:rgba(255,255,255,.4)}
   .tbot{order:3;flex:1 1 100%;display:flex;margin-top:11px;border-top:1px solid rgba(255,255,255,.14)}
-  .tbot a{flex:1 1 0;text-align:center;padding:11px 2px 12px;white-space:nowrap;
-    font-size:9.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;
+  .tbot a{flex:1 1 0;text-align:center;padding:11px 0 12px;white-space:nowrap;
+    font-size:9px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
     color:rgba(255,255,255,.6);border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
   .tbot a.on{color:#fff;border-bottom-color:rgba(255,255,255,.75)}
   :root{--barh:86px;--phh:0px}
@@ -999,6 +1065,11 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
   .hero .inr{padding-top:calc(var(--barh) + clamp(54px,9vh,86px))}
   .hero::after{top:calc(var(--barh) + clamp(26px,4vh,40px))}
   .hero .hname{font-size:clamp(42px,12.4vw,72px);max-width:none}
+  .hero.plate{justify-content:flex-start}
+  .hero.plate .ph{position:relative;inset:auto;width:min(44vw,180px);height:auto;
+    margin:calc(var(--barh) + clamp(40px,6vh,56px)) 0 0 18px}
+  .hero.plate .inr{padding-top:clamp(34px,5vh,48px);padding-right:0}
+  .hero.plate .hsub{max-width:22ch;font-size:clamp(19px,5.4vw,24px)}
   .hero .hsub{max-width:20ch}
   .hero .hnote{max-width:none}
   .tch{padding-left:24px}.tgrid,.tbars{left:24px}.tgrid em{left:-24px}
@@ -1037,9 +1108,9 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
   })();
 })();
 </script>
-<div class="topbar"><a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Bernard F. Pettingill, Jr., Ph.D.</a><nav class="tnav" aria-label="Primary"><a href="/pettingill/testimony">The Testimony</a><a href="/pettingill/research" class="on">The Research</a><a href="/pettingill/record">The Record</a></nav><a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a><nav class="tbot" aria-label="Primary"><a href="/pettingill">Overview</a><a href="/pettingill/testimony">Testimony</a><a href="/pettingill/research" class="on">Research</a><a href="/pettingill/record">Record</a></nav></div>
+<div class="topbar"><a class="u11 smallcap tname" href="/pettingill" style="color:#fff">Bernard F. Pettingill, Jr., Ph.D.</a><nav class="tnav" aria-label="Primary"><a href="/pettingill/practice">The Practice</a><a href="/pettingill/testimony">The Testimony</a><a href="/pettingill/research" class="on">The Research</a><a href="/pettingill/record">The Record</a></nav><a class="u11 smallcap ncta" id="ncta" href="#inquiry" style="color:#fff">Discuss a matter</a><nav class="tbot" aria-label="Primary"><a href="/pettingill">Overview</a><a href="/pettingill/practice">Practice</a><a href="/pettingill/testimony">Testimony</a><a href="/pettingill/research" class="on">Research</a><a href="/pettingill/record">Record</a></nav></div>
 <button class="menuchip" id="mbtn" aria-expanded="false">Menu</button>
-<nav class="menupanel" id="nitems" aria-label="Site"><a href="/pettingill">Overview</a><a href="/pettingill/testimony">The Testimony</a><a href="/pettingill/research">The Research</a><a href="/pettingill/record">The Record</a><a href="#inquiry">Enquiry</a></nav>
+<nav class="menupanel" id="nitems" aria-label="Site"><a href="/pettingill">Overview</a><a href="/pettingill/practice">The Practice</a><a href="/pettingill/testimony">The Testimony</a><a href="/pettingill/research">The Research</a><a href="/pettingill/record">The Record</a><a href="#inquiry">Enquiry</a></nav>
 <main id="site"><section class="mission" id="research-lede"><div class="wrap" data-r2=""><div class="mlab wr"><span class="rnum">01</span><span class="smallcap">The Research</span></div><p class="wr" style="margin-top:clamp(26px,4vh,38px)">His research is not only historical. <span class="it">The most recent paper here is from 2025.</span></p><div class="mbody wr"><p>From a 1979 paper in Psychosomatics to 2025 work on hospital inflation, the thread is the same: what medical care costs, and how to project it honestly.</p><p>Each entry in the first list links to a record kept outside his own websites. The second list is taken from his curriculum vitae and says so.</p></div></div></section><section class="pubs" id="publications"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">02</span><span class="smallcap wr">Selected publications</span></div><div><h2 class="d80 wr">Seven papers, <span class="it">each with an outside record.</span></h2></div></div><ol class="plist"><li class="prow wr" data-r1=""><span class="pyr">2025</span><div class="pmain"><h3><a href="https://zenodo.org/records/14725046" target="_blank" rel="noopener">The Resurgence of Hospital Inflation: Analysis and Implications for Forensic Practitioners</a></h3><p class="pau">Sean P. Escoffery, Bernard F. Pettingill</p><p class="pve">Mega Journal of Case Reports, 8(1): 2001–2004, January 2025. Also published in Nursing &amp; Primary Care, 9(1), 2025.</p><p class="pwhy"><span class="smallcap">For counsel</span>Medical inflation rates inside projections of future care costs.</p></div><div class="pside"><span class="src">Independent record · Zenodo</span><span class="pid">DOI 10.5281/zenodo.14725046</span></div></li><li class="prow wr" data-r1=""><span class="pyr">2025</span><div class="pmain"><h3><a href="https://www.longdom.org/open-access/the-physiatrist-is-the-gateway-to-predicting-accurate-future-medical-care-1102997.html" target="_blank" rel="noopener">The Physiatrist is Essential to Predicting Accurate Future Medical Care</a></h3><p class="pau">Craig H. Lichtblau, Bernard Pettingill</p><p class="pve">International Journal of Physical Medicine &amp; Rehabilitation, 13(S30).</p><p class="pwhy"><span class="smallcap">For counsel</span>How the treating physician's input shapes a life care plan projection.</p></div><div class="pside"><span class="src">Independent record · Publisher</span><span class="pid">DOI 10.35248/2329-9096.25.S30.001</span></div></li><li class="prow wr" data-r1=""><span class="pyr">2024</span><div class="pmain"><h3><a href="https://currentopinion.be/index.php/co/en/article/view/330" target="_blank" rel="noopener">Choosing the Correct Database for Measuring Life Expectancy</a></h3><p class="pau">Bernard F. Pettingill, Jr., Sean P. Escoffery</p><p class="pve">Current Opinion, 4(6), 2024. His CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.</p><p class="pwhy"><span class="smallcap">For counsel</span>The life expectancy basis behind any lifetime damages figure.</p></div><div class="pside"><span class="src pend">Publisher link · page details pending verification</span><span class="pid">DOI 10.52845/currentopinion.v4i6.330</span></div></li><li class="prow wr" data-r1=""><span class="pyr">2024</span><div class="pmain"><h3><a href="https://www.longdom.org/open-access/the-role-of-physiatrists-in-ensuring-access-to-appropriate-medical-care-and-services-in-the-broken-usa-healthcare-system-108185.html" target="_blank" rel="noopener">The Role of Physiatrists in Ensuring Access to Appropriate Medical Care and Services in the Broken U.S. Healthcare System</a></h3><p class="pau">Craig H. Lichtblau, Bernard F. Pettingill</p><p class="pve">International Journal of Physical Medicine &amp; Rehabilitation, 12(4), 2024.</p><p class="pwhy"><span class="smallcap">For counsel</span>Access to care as a factor in what future treatment will cost.</p></div><div class="pside"><span class="src">Independent record · Publisher</span><span class="pid">DOI 10.35248/2329-9096.24.12.732</span></div></li><li class="prow wr" data-r1=""><span class="pyr">2024</span><div class="pmain"><h3><a href="https://doi.org/10.61440/jcmhc.2024.v1.13" target="_blank" rel="noopener">Why Hospitals Resist Disclosing the Absolute Costs of Their Procedures</a></h3><p class="pau">Bernard F. Pettingill, Jr.</p><p class="pve">Journal of Clinical Medicine &amp; Health Care, December 2024, per Crossref. His CV lists MEGA Journal of Case Reports, September 2024.</p><p class="pwhy"><span class="smallcap">For counsel</span>Hospital pricing opacity, a recurring problem when costing medical care.</p></div><div class="pside"><span class="src">Independent record · Crossref</span><span class="pid">DOI 10.61440/jcmhc.2024.v1.13</span></div></li><li class="prow wr" data-r1=""><span class="pyr">2019</span><div class="pmain"><h3><a href="https://theearningsanalyst.com/product/tea-16-5/" target="_blank" rel="noopener">Estimating the Full Value of Household Services Damages: Inclusion of Nighttime Protection and Care Services</a></h3><p class="pau">James A. Mills, Bernard F. Pettingill</p><p class="pve">The Earnings Analyst, 16: 81–86, 2019.</p><p class="pwhy"><span class="smallcap">For counsel</span>Valuing care and protection provided at night, often left out of household services claims.</p></div><div class="pside"><span class="src">Independent record · Publisher</span><span class="pid">TEA vol. 16</span></div></li><li class="prow wr" data-r1=""><span class="pyr">1979</span><div class="pmain"><h3><a href="https://pubmed.ncbi.nlm.nih.gov/523599/" target="_blank" rel="noopener">Physicians’ Estimates of Disability vs Patients’ Reports of Pain</a></h3><p class="pau">B. F. Pettingill, Jr.</p><p class="pve">Psychosomatics, 20(12): 827–830, December 1979.</p><p class="pwhy"><span class="smallcap">For counsel</span>An early study of the gap between clinical assessment and patient experience.</p></div><div class="pside"><span class="src">Independent record · PubMed</span><span class="pid">PMID 523599 · DOI 10.1016/S0033-3182(79)73722-4</span></div></li></ol></div></section><section class="exp tint" id="research-cv"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">03</span><span class="smallcap wr">Further work, from his CV</span></div><div><h2 class="d56 wr">Written for the courtroom, <span class="it">and for the hospital.</span></h2><p class="elede wr">Titles and years as listed on his CV dated 7 July 2025. A selection, not a complete bibliography; venues have not been independently checked.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Damages, settlements and the courtroom</span><span class="lcount">06</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Estimating Future Medical Maintenance Expenses, with Warren A. Perrin — Louisiana Bar Journal, 1986</div><div class="lcell wr">How an Economist Sets a Value on Human Life — Palm Beach Post, editorial, 1989</div><div class="lcell wr">Case Management: Evaluating a Firm’s Caseload Using a Cost-Benefit Approach, with Michael Eriksen — The Trial Lawyer, 1999</div><div class="lcell wr">What Attorneys Should Understand about Medicare Set-Aside Allocations, with Federico R. Tewes — Clinical Medicine and Medical Research, 2021</div><div class="lcell wr">Attendant Care for Life Care Plans of Spinal Cord Injury Patients in the Last Years of Life, with Diana Santa Maria — The Trial Lawyer, 2022</div><div class="lcell wr">Evolution of the Occupational Classification for Attendant Care, with Federico R. Tewes — The Trial Lawyer, 2022</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Future care, life expectancy and health costs</span><span class="lcount">05</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Providing Economic Consulting Services to Health Professionals — Business Economics, 2004</div><div class="lcell wr">Life Expectancy: A Brief International Comparison, with David I. Goldenberg and Federico R. Tewes — 2020</div><div class="lcell wr">Analysis and Forecast of Nursing Care Costs, with Federico R. Tewes — 2020</div><div class="lcell wr">Methodology for Defining the Cost of Future Medical Care, with Craig H. Lichtblau — International Journal of Physical Medicine &amp; Rehabilitation, 2023</div><div class="lcell wr">How Solvent Is the Medicare Trust Fund?, with Sanjiv Bhatia — Current Opinion, 2023</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Early academic work</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Wigan Community Health Council — in Community Health Councils: Four Case Studies, Centre for Studies in Social Policy, 1976</div><div class="lcell wr">Doctoral thesis on the cost-benefit analysis of arthritis treatment — University of Manchester, 1977</div><div class="lcell wr">Cost-Effectiveness Analysis in the Hospital — Dimensions in Health Service, 1978</div><div class="lcell wr">Management of Diagnostic Related Groups, with Harriette Westell — Hospital Topics, 1984</div></div></div></div></section><section class="reserve paths-in" id="inquiry"><div class="wrap"><div class="rlay" data-r2=""><div class="rleft"><div class="mlab wr" style="justify-content:flex-start"><span class="rnum">04</span><span class="smallcap">Start a conversation</span></div><h2 class="d97 wr">Start with <span class="it">the question.</span></h2><p class="rlede wr">Choose the nature of the enquiry and give enough non-confidential context for a first response. Nothing on this preview is transmitted anywhere.</p><div class="rdirect wr"><a class="rmail" href="mailto:biffpett@gmail.com">biffpett@gmail.com</a><div class="rmeta"><span>(561) 622-0330</span><span>Palm Beach Gardens, Florida</span></div></div></div><div class="rright"><form class="rform iform wr" id="iform" novalidate=""><label class="rfield iselect" for="iqtype"><span class="smallcap">What would you like to discuss?</span><select id="iqtype" name="iqtype"><option value="">Select the nature of your enquiry</option><option value="matter">A new matter — economic damages</option><option value="records">CV, testimony listing or engagement terms</option><option value="referral">Checking a referral</option></select></label><div class="ipath" data-path="matter" hidden=""><div class="ifields"><label class="rfield" for="f-matter-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-matter-0" name="f-matter-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-matter-1"><span class="smallcap">Firm<em class="req">Required</em></span><input type="text" id="f-matter-1" name="f-matter-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-matter-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-matter-2" name="f-matter-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-matter-3"><span class="smallcap">Type of claim</span><input type="text" id="f-matter-3" name="f-matter-3" disabled=""></label><label class="rfield" for="f-matter-4"><span class="smallcap">Court or jurisdiction</span><input type="text" id="f-matter-4" name="f-matter-4" disabled=""></label><label class="rfield" for="f-matter-5"><span class="smallcap">Report or trial date, if set</span><input type="text" id="f-matter-5" name="f-matter-5" disabled=""></label><label class="rfield full" for="f-matter-6"><span class="smallcap">Brief, non-confidential description</span><textarea id="f-matter-6" name="f-matter-6" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Send enquiry</button><p class="inote">Please do not include confidential or privileged case information.</p></div><div class="ipath" data-path="records" hidden=""><div class="ifields"><label class="rfield" for="f-records-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-records-0" name="f-records-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-records-1"><span class="smallcap">Firm<em class="req">Required</em></span><input type="text" id="f-records-1" name="f-records-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-records-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-records-2" name="f-records-2" required="" aria-required="true" disabled=""></label><label class="rfield full" for="f-records-3"><span class="smallcap">Documents needed</span><textarea id="f-records-3" name="f-records-3" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Request documents</button></div><div class="ipath" data-path="referral" hidden=""><div class="ifields"><label class="rfield" for="f-referral-0"><span class="smallcap">Name<em class="req">Required</em></span><input type="text" id="f-referral-0" name="f-referral-0" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-referral-1"><span class="smallcap">Firm<em class="req">Required</em></span><input type="text" id="f-referral-1" name="f-referral-1" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-referral-2"><span class="smallcap">Email<em class="req">Required</em></span><input type="email" id="f-referral-2" name="f-referral-2" required="" aria-required="true" disabled=""></label><label class="rfield" for="f-referral-3"><span class="smallcap">Who referred you, if you wish to say</span><input type="text" id="f-referral-3" name="f-referral-3" disabled=""></label><label class="rfield full" for="f-referral-4"><span class="smallcap">What you need to know</span><textarea id="f-referral-4" name="f-referral-4" rows="3" disabled=""></textarea></label></div><button type="submit" disabled="">Send enquiry</button></div><p class="ipreview" id="ipreview" role="status" aria-live="polite" hidden="">Preview only — this form does not send. On a live site it would reach a channel Dr. Pettingill approves.</p><p class="fine">Private concept. Public contact details are shown as published on bpettingill.com.</p></form></div></div></div></section><footer class="kfoot"><div class="wrap"><div class="ftop" data-r2=""><div class="fid"><p class="fkick wr">Economic damages in personal injury, wrongful death and medical malpractice — with the source behind every figure.</p><div class="fname wr">Bernard Pettingill</div><div class="fcred wr">Ph.D. · MPH · MBA · BBA</div><div class="froles wr">Forensic Economist <span class="it">and Expert Witness</span></div><a class="fcta wr" href="#inquiry">Discuss a matter</a></div></div><div class="fgrid" data-cards=""><div class="fcol wr"><span class="smallcap">Contact</span><ul><li><a href="mailto:biffpett@gmail.com">biffpett@gmail.com</a></li><li><a href="tel:5616220330">(561) 622-0330</a></li><li>Palm Beach Gardens, Florida</li></ul></div><div class="fcol wr"><span class="smallcap">Affiliations</span><ul><li>Referee, Journal of Forensic Economics — per CV</li><li>National Association of Forensic Economists — since 1989, per CV</li><li>American Economic Association — since 1983, per CV</li><li>Founder &amp; President, Pettingill Analytics</li></ul></div><div class="fcol wr"><span class="smallcap">Elsewhere</span><ul><li><a href="https://bpettingill.com/" target="_blank" rel="noopener">bpettingill.com</a></li><li><a href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics</a></li></ul></div></div><div class="fbase"><p class="fnote">Private concept by Ignite Yourself. Every fact on this page comes from Dr. Pettingill’s own websites and documents or from the outside records linked beside it, and is shared for his review before any publication. It claims no case outcome and no endorsement.</p><span class="ffine">Private preview · Concept · Not indexed</span></div><div class="figy"><div class="igyb"><span class="smallcap">A commercial concept by</span><a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/pettingill/assets/igy-logo.png" alt="Ignite Yourself"></a><a class="igylink" href="https://igniteyourself.co/" target="_blank" rel="noopener">Discover Ignite Yourself</a></div><p class="igyd">This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed.</p></div></div></footer></main>
 <script src="/vendor/gsap.min.js"></script>
 <script src="/vendor/ScrollTrigger.min.js"></script>
@@ -1060,6 +1131,7 @@ function rich0(s){return esc(s)
 
 function rich(s){return rich0(s)
   .replace(/&lt;src&gt;/g,'<span class="src">').replace(/&lt;\/src&gt;/g,'</span>')
+  .replace(/&lt;sup&gt;/g,'<sup>').replace(/&lt;\/sup&gt;/g,'</sup>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,function(m,t,u){var ext=/^https?:/.test(u);
     return'<a class="ilink" href="'+u+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+t+'</a>'})}
 function bigimg(img,cls,attr){
@@ -1068,6 +1140,27 @@ function bigimg(img,cls,attr){
   return'<div class="'+cls+' phx"'+attr+'>'+esc((img&&img.label)||'FOTO')+'</div>'}
 
 var partials={
+nums:function(s){
+  return'<section class="nums'+(s.ink?' ink':'')+'" id="'+esc(s.id||'nums')+'"><div class="wrap">'+
+  (s.label?'<div class="smallcap wr" data-r1>'+esc(s.label)+'</div>':'')+
+  '<div class="ngrid" data-cards>'+(s.items||[]).map(function(it){
+    return'<div class="nit wr"><div class="nn">'+rich(it.n)+'</div><div class="nk">'+rich(it.k)+'</div>'+
+      (it.src?'<span class="src">'+esc(it.src)+'</span>':'')+'</div>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
+stmt:function(s){
+  return'<section class="stmt'+(s.ink?' ink':'')+(s.img?' withimg':'')+'" id="'+esc(s.id||'stmt')+'">'+
+  (s.img&&s.img.src?'<div class="sph"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"'+(s.img.pos?' style="object-position:'+esc(s.img.pos)+'"':'')+'></div>':'')+
+  '<div class="wrap" data-r2>'+
+  (s.label?'<div class="slab smallcap wr">'+esc(s.label)+'</div>':'')+
+  '<h2 class="sq wr">'+rich(s.quote)+'</h2>'+
+  (s.sub?'<p class="ssub wr">'+rich(s.sub)+'</p>':'')+
+  (s.keys?'<ul class="skeys'+(s.tags?' astags':'')+' wr">'+(s.keys||[]).map(function(k){return'<li>'+(s.tags?'<span class="src">'+esc(k)+'</span>':esc(k))+'</li>'}).join('')+'</ul>':'')+
+  '<div class="sfoot wr">'+
+    (s.src?'<span class="src">'+esc(s.src)+'</span>':'<span></span>')+
+    (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+
+  '</div>'+
+  '</div></section>'},
 legend:function(s){
   return'<section class="legend" id="'+esc(s.id||'legend')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
@@ -1159,7 +1252,7 @@ exp:function(s){
   (s.fn?'<div class="efn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
   '</div></section>'},
 hero:function(s){
-  return'<section class="hero" id="top">'+(s.img?bigimg(s.img,'ph'):'')+
+  return'<section class="hero'+(s.plate?' plate':'')+'" id="top">'+(s.img?bigimg(s.img,'ph'):'')+
   '<div class="inr" data-r2>'+
   (s.kick?'<div class="hkick wr">'+esc(s.kick)+'</div>':'')+
   '<h1 class="hname wr">'+rich(s.name)+'</h1>'+
