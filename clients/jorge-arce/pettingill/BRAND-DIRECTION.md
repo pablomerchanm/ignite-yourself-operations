@@ -49,7 +49,8 @@ pérdida, y resistirá el número en un estrado?
 3. **What a loss is worth.** — la pregunta del cliente. Más directa.
 
 Recomendación: **1** como línea permanente (cierra el sistema de etiquetas de
-fuente) y **3** como titular del hero.
+fuente). El hero no lleva frase: lleva el **nombre completo** (decisión de
+Pablo, 13 oct). Las frases quedan para las pantallas siguientes.
 
 **Wordmark:** `PETTINGILL` en serif editorial, mayúsculas, tracking abierto.
 Debajo, en grotesca pequeña: `BERNARD F. PETTINGILL, JR., PH.D. · FORENSIC ECONOMIST`.
@@ -203,23 +204,27 @@ fotografías de Biff, nunca para generarlo.
 
 ## 7. Aplicación en la web
 
-**Hero (decisión).** Frase grande en serif sobre fotografía a sangre; el nombre
-como wordmark pequeño arriba, el descriptor en grotesca debajo de la frase.
+**Hero (decisión).** Es una marca personal: el **nombre completo** en serif,
+grande, sobre la fotografía a sangre (patrón Allen Matkins). El wordmark
+`PETTINGILL` en la barra, el descriptor y la promesa en grotesca debajo.
 
 ```
-PETTINGILL                                   [nav]
+PETTINGILL        [nav]        Pettingill Analytics ↗
 
-                                   (foto a sangre: retrato o B1)
+                                   (foto a sangre: retrato)
 
-What a loss
-is worth.                 ← Editors Note, 120 px, “is worth.” en itálica
+FORENSIC ECONOMIST · EXPERT WITNESS · PALM BEACH GARDENS, FLORIDA
+Bernard F.
+Pettingill, Jr.           ← Editors Note Light, 130 px, “Jr.” en itálica
+PH.D. ECONOMICS · MPH · MBA
 Forensic economist and expert witness since 1985.   ← grotesca 18 px
 [ Discuss a matter ]   See the record
 ```
 
-Alternativa si Biff prefiere el nombre protagonista: nombre en serif a pie de
-pantalla (patrón Allen Matkins) y la frase pequeña encima. Las dos se montan
-con el mismo JSON; se decide con la foto real delante.
+**La firma, siempre a un clic.** Pettingill Analytics aparece con su logo en
+tres lugares: la barra (enlace externo), una ficha propia en la home con sus
+ocho servicios y un botón que abre la consulta ya enrutada a la firma, y el
+pie de todas las páginas. El sitio trae oportunidades a los dos.
 
 **Cadencia de la home.** Pantalla de frase → pantalla de imagen → pantalla de
 frase. Nunca dos frases seguidas sin una imagen entre medio. Proporción

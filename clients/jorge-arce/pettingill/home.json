@@ -42,8 +42,8 @@
         "mobile": "/pettingill/assets/hero-mobile.jpg",
         "alt": "Bernard F. Pettingill, Jr., Ph.D."
       },
-      "kick": "Bernard F. Pettingill, Jr., Ph.D. · Forensic Economist · Palm Beach Gardens, Florida",
-      "name": "What a loss <t>is worth.</t>",
+      "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
+      "name": "Bernard F. Pettingill, <t>Jr.</t>",
       "sub": "Forensic economist and expert witness since 1985. <t>Every figure on this site comes with its source.</t>",
       "actions": [
         {
@@ -55,7 +55,8 @@
           "t": "See the record",
           "h": "/pettingill/testimony"
         }
-      ]
+      ],
+      "cred": "Ph.D. Economics · MPH · MBA"
     },
     {
       "type": "nums",
@@ -145,15 +146,43 @@
       }
     },
     {
-      "type": "stmt",
-      "id": "s-firm",
+      "type": "practice",
+      "id": "firm-home",
+      "ink": true,
       "label": "The firm",
-      "quote": "The expert here. <t>The firm there.</t>",
-      "sub": "Founder and President of Pettingill Analytics, whose team carries the work beyond his individual practice.",
-      "more": {
-        "t": "Pettingill Analytics",
-        "h": "/pettingill/record#firm"
-      }
+      "title": "Pettingill Analytics, <t>the firm he founded.</t>",
+      "lede": "This site is the expert. The firm is where a broader engagement starts: a team, a wider set of services, and the same founder at its head.",
+      "company": {
+        "name": "Pettingill Analytics",
+        "logo": "/pettingill/assets/pa-logo.png",
+        "role": "Founder & President",
+        "desc": "The consultancy he founded and leads as President. Its published team spans forensic accounting, international finance and data analysis, and carries work beyond his individual practice: business valuations, litigation support, structured settlements and analytics.",
+        "meta": [
+          "Palm Beach Gardens, Florida",
+          "Bpett@pettingillanalytics.com"
+        ],
+        "href": "https://www.pettingillanalytics.com/",
+        "link": "Visit pettingillanalytics.com"
+      },
+      "social": [
+        {
+          "t": "Discuss a firm engagement",
+          "h": "#inquiry",
+          "path": "firm"
+        }
+      ],
+      "svcLabel": "Services published by the firm",
+      "services": [
+        "Forensic Economic Consulting",
+        "Structured Settlement Solutions",
+        "Litigation Support & Jury Selection",
+        "Medical Practice Consulting & Valuations",
+        "Independent Reviews & Business Valuations",
+        "Health & Life Insurance Solutions",
+        "Project Management & Data Analytics",
+        "Staffing & Executive Searches"
+      ],
+      "no": "01"
     },
     {
       "type": "inquiry",
@@ -200,6 +229,35 @@
               },
               {
                 "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Business valuation, litigation support or analytics — Pettingill Analytics",
+            "btn": "Send to the firm",
+            "note": "Routed to Pettingill Analytics. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
                 "ta": true,
                 "full": true
               }
@@ -295,7 +353,19 @@
         "link": "Discover Ignite Yourself",
         "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
       },
-      "no": "01"
+      "mark": {
+        "label": "The firm",
+        "href": "https://www.pettingillanalytics.com/",
+        "src": "/pettingill/assets/pa-logo.png",
+        "alt": "Pettingill Analytics",
+        "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
+        "meta": [
+          "Palm Beach Gardens, Florida",
+          "Bpett@pettingillanalytics.com"
+        ],
+        "link": "Visit pettingillanalytics.com"
+      },
+      "no": "02"
     }
   ]
 }

@@ -253,6 +253,35 @@
             ]
           },
           {
+            "v": "firm",
+            "t": "Business valuation, litigation support or analytics — Pettingill Analytics",
+            "btn": "Send to the firm",
+            "note": "Routed to Pettingill Analytics. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
             "v": "records",
             "t": "CV, testimony listing or engagement terms",
             "btn": "Request documents",
@@ -341,6 +370,18 @@
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
         "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not his official website, has not been reviewed or approved by him, and is not published, indexed or distributed."
+      },
+      "mark": {
+        "label": "The firm",
+        "href": "https://www.pettingillanalytics.com/",
+        "src": "/pettingill/assets/pa-logo.png",
+        "alt": "Pettingill Analytics",
+        "lede": "Business valuations, litigation support, structured settlements and analytics are delivered through Pettingill Analytics, the firm he founded and leads as President.",
+        "meta": [
+          "Palm Beach Gardens, Florida",
+          "Bpett@pettingillanalytics.com"
+        ],
+        "link": "Visit pettingillanalytics.com"
       },
       "no": "04"
     }

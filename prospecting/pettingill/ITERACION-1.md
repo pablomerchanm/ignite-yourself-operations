@@ -101,3 +101,16 @@ Pablo revisa → crítica de narrativa, veracidad y oferta (ChatGPT) → iteraci
 **Pendiente**
 - La imagen del hero es una construcción de Pablo a partir del retrato público de Biff. **Requiere autorización de Biff antes de cualquier publicación.** La dirección de marca fija que los retratos deben ser fotografía real; esta pieza se muestra como propuesta.
 - Faltan las imágenes de objetos y lugar (familias B y C) para intercalar bandas en la home y abrir cada subpágina.
+
+---
+
+# Iteración 4 — el nombre manda y la firma entra con logo
+
+**Pedido de Pablo:** "What a loss is worth" sonaba poético para el header; es una marca personal, así que el nombre completo debe ser el protagonista. Y falta acceso directo a su firma, con logo, porque la página también debe traerle oportunidades a Pettingill Analytics.
+
+**Qué cambió**
+- **Hero:** `Bernard F. Pettingill, Jr.` en Editors Note, "Jr." en itálica; debajo `Ph.D. Economics · MPH · MBA` y la promesa en grotesca. La frase desaparece del hero.
+- **Pettingill Analytics, en tres lugares:** enlace externo en la barra de navegación; ficha propia en la home (logo, rol de fundador y presidente, descripción, contacto de la firma, ocho servicios, botón "Discuss a firm engagement"); y bloque en el pie de todas las páginas con el logo en placa blanca.
+- **Formulario:** nueva vía "Business valuation, litigation support or analytics — Pettingill Analytics", preseleccionada desde el botón de la ficha. En el sitio real se enrutaría a la firma.
+- Logo tomado de pettingillanalytics.com (`assets/pa-logo.png`). Tarjeta social regenerada con el nombre.
+- `BRAND-DIRECTION.md` actualizado: el hero lleva nombre, no frase; la firma siempre a un clic.

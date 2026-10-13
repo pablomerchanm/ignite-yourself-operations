@@ -82,6 +82,11 @@ function rich(s){return rich0(s)
 """
 base = sub1(r'(function bigimg\()', lambda m: RICH + m.group(1), base, tag='rich')
 
+# -------- la ficha de firma: enlaces internos sin pestana nueva, con data-path
+base = sub1(r"""\(s\.social\|\|\[\]\)\.map\(function\(x\)\{return'<a class="go" href="'\+esc\(x\.h\)\+'" target="_blank" rel="noopener">'\+esc\(x\.t\)\+'</a>'\}\)\.join\(''\)\+""",
+            """(s.social||[]).map(function(x){var ext=/^https?:/.test(x.h);return'<a class="go" href="'+esc(x.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+(x.path?' data-path="'+esc(x.path)+'"':'')+'>'+esc(x.t)+'</a>'}).join('')+""",
+            base, tag='practice-social')
+
 # ---------------------------------------------------------- 5. partials propios
 PARTIALS = r"""
 nums:function(s){
@@ -250,6 +255,25 @@ body{background:var(--bg)}
 .fname{font-size:clamp(44px,7vw,110px);letter-spacing:-.02em}
 .topbar .tname{font-family:var(--serif);font-weight:400;font-size:15px;letter-spacing:.16em;text-transform:uppercase}
 
+/* ---------- la firma: logo en placa, enlaces, version en tinta ---------- */
+.practice .prlogo{background:#fff;padding:20px 26px;border:1px solid var(--line)}
+.practice .prlogo img{width:clamp(180px,18vw,240px)}
+.practice.ink{background:var(--ink);color:#fff;padding:var(--sec) 0}
+.practice.ink .smallcap{color:rgba(255,255,255,.5)}
+.practice.ink .rnum{color:rgba(255,255,255,.34)}
+.practice.ink .elede{color:rgba(255,255,255,.72)}
+.practice.ink .prrole{color:#fff}
+.practice.ink .prdesc{color:rgba(255,255,255,.78)}
+.practice.ink .prmeta{color:rgba(255,255,255,.5)}
+.practice.ink .prlogo{border-color:transparent}
+.practice.ink .prid .go{border-bottom-color:rgba(255,255,255,.45);color:#fff}
+.practice.ink .lhead .smallcap{color:rgba(255,255,255,.72)}
+.practice.ink .lgrid{border-top-color:rgba(255,255,255,.3)}
+.practice.ink .lcell{border-bottom-color:rgba(255,255,255,.13)}
+.fmark{display:inline-block;background:#fff;padding:18px 22px;margin-bottom:22px}
+.fmark img{width:clamp(170px,16vw,220px);height:auto}
+.tnav a.ext{opacity:.85}
+
 /* ---------- hero a sangre: la fotografia manda, el texto vive en su sombra ---------- */
 .hero.photo::before{content:none}
 .hero.photo .ph img{filter:contrast(1.04) brightness(.96) saturate(.9);object-position:68% 30%}
@@ -258,7 +282,8 @@ body{background:var(--bg)}
   linear-gradient(180deg,rgba(14,16,19,.38) 0%,rgba(14,16,19,0) 30%,rgba(14,16,19,.62) 100%)}
 .hero.photo .inr{padding-right:0}
 .hero .hname{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;line-height:.94;
-  font-size:clamp(56px,9.8vw,152px);max-width:7.4ch;white-space:normal}
+  font-size:clamp(52px,8.8vw,136px);max-width:9.2ch;white-space:normal}
+.hero .hcred{margin-top:clamp(14px,2vh,22px)}
 .hero .hname .it{color:rgba(255,255,255,.7)}
 .hero .hsub{font-family:'Instrument Sans',sans-serif;font-weight:400;font-size:clamp(16px,1.35vw,21px);
   line-height:1.5;letter-spacing:-.01em;max-width:42ch;color:rgba(255,255,255,.88);margin-top:clamp(22px,3vh,34px)}
@@ -553,6 +578,7 @@ TABS = [("Overview",  "/pettingill",           "home"),
 def topbar_html(active):
     ON = ' class="on"'
     links = ''.join(f'<a href="{h}"{ON if k == active else ""}>{t}</a>' for t, h, k in TNAV)
+    links += '<a class="ext" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics ↗</a>'
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
@@ -583,7 +609,7 @@ inq = lambda: deep('inquiry')
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
         [deep('hero'), deep('numbers'), deep('s-question'), deep('s-training'), deep('s-research'),
-         deep('s-sourced'), deep('s-firm'), inq()]),
+         deep('s-sourced'), deep('firm-home'), inq()]),
     'practice': page('The Practice — Bernard F. Pettingill, Jr., Ph.D.',
         'Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement.',
         [deep('practice-lede'), deep('routes'), deep('sources'), deep('engage'), inq()]),
