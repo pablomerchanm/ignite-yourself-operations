@@ -245,3 +245,31 @@ Filtro aplicado a cada frase: ¿le sirve a un abogado que evalúa a un perito en
 - **Pie:** las afiliaciones ya no dicen "— CV".
 
 Revisión a 1440 y 390 px: sin desbordes ni errores.
+
+---
+
+# Iteración 15 — contratar y pagar, sin aire de catálogo
+
+Revisión de bpettingill.com: publica tarifas en Billing Rates y cobra en línea con "Pay Now". La carta de honorarios dice que solo lo contratan abogados y sus firmas, que también testifica en mediación y arbitraje, y que las condiciones valen un año desde la firma. Decisión de Pablo: **sí al pago, no a conferencias.**
+
+Nueva sección en Practice, "Retained by counsel, in three steps" (ancla `#engage`, así que el botón "Start a case" y el índice de la home llegan ahí):
+
+1. **Send the checklist**, con enlaces a los checklists de lesión y de muerte.
+2. **Sign the engagement letter**, con enlace a la carta. "Retained solely by the attorney and the firm. Terms hold for one year from signature."
+3. **Settle the retainer.** "Work begins once the signed letter and the retainer are received."
+
+Al costado, una ficha oscura "Terms of engagement", en letra discreta y sin cifras grandes:
+
+| Concepto | Texto |
+|---|---|
+| Retainer | $1,800, non-refundable |
+| Professional time | $500 to $600 an hour, as set in the engagement letter |
+| Testimony | Deposition, trial, mediation or arbitration. Three-hour minimum |
+| Cancellation | Two hours, within 48 hours of the date |
+| Travel | Portal to portal, with expenses as incurred |
+
+El botón dice **"Settle the retainer"** (no "Pay now") y abre la página de pago que ya existe en bpettingill.com/pay-now. Debajo, "Discuss the matter first" lleva al formulario.
+
+Los documentos de divulgación pasan a su propio bloque, "The expert disclosure, in one place": CV, publicaciones y listado de testimonios previos.
+
+Pendiente con Biff: confirmar que las tarifas publicadas siguen vigentes y que quiere mostrarlas en el sitio nuevo.

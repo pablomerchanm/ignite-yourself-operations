@@ -128,26 +128,90 @@
       "no": "01"
     },
     {
-      "type": "method",
+      "type": "retain",
       "id": "engage",
       "label": "Retaining",
-      "title": "To start a case, <t>begin here.</t>",
-      "intro": "Checklists for injury and death, the retainer and the terms. For the expert disclosure: the CV, the publications and the prior testimony listing.",
+      "title": "Retained by counsel, <t>in three steps.</t>",
+      "steps": [
+        {
+          "t": "Send the checklist",
+          "d": "Injury or death, completed by counsel with the report due date.",
+          "links": [
+            {
+              "t": "Injury checklist",
+              "h": "https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf"
+            },
+            {
+              "t": "Death checklist",
+              "h": "https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf"
+            }
+          ]
+        },
+        {
+          "t": "Sign the engagement letter",
+          "d": "Retained solely by the attorney and the firm. Terms hold for one year from signature.",
+          "links": [
+            {
+              "t": "Engagement letter",
+              "h": "https://bpettingill.com/wp-content/uploads/Pettingill-Engagement-Letter.pdf"
+            }
+          ]
+        },
+        {
+          "t": "Settle the retainer",
+          "d": "Work begins once the signed letter and the retainer are received."
+        }
+      ],
+      "termsLabel": "Terms of engagement",
+      "terms": [
+        {
+          "k": "Retainer",
+          "v": "$1,800, non-refundable"
+        },
+        {
+          "k": "Professional time",
+          "v": "$500 to $600 an hour, as set in the engagement letter"
+        },
+        {
+          "k": "Testimony",
+          "v": "Deposition, trial, mediation or arbitration. Three-hour minimum"
+        },
+        {
+          "k": "Cancellation",
+          "v": "Two hours, within 48 hours of the date"
+        },
+        {
+          "k": "Travel",
+          "v": "Portal to portal, with expenses as incurred"
+        }
+      ],
+      "cta": {
+        "t": "Settle the retainer",
+        "h": "https://bpettingill.com/pay-now/"
+      },
+      "ctaNote": "Payment through bpettingill.com.",
+      "alt": {
+        "t": "Discuss the matter first",
+        "h": "#inquiry"
+      },
+      "no": "02"
+    },
+    {
+      "type": "method",
+      "id": "disclosure",
+      "label": "For the file",
+      "title": "The expert disclosure, <t>in one place.</t>",
+      "intro": "The CV, the publications and the prior testimony listing.",
       "rows": [
-        {
-          "t": "Intake checklists",
-          "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)",
-          "icon": "check"
-        },
-        {
-          "t": "Terms and engagement letter",
-          "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. [Billing rates](https://bpettingill.com/new-case/billing-rates/)",
-          "icon": "sign"
-        },
         {
           "t": "Curriculum vitae",
           "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
           "icon": "cv"
+        },
+        {
+          "t": "Publications",
+          "d": "Papers from 1979 to 2025, each with its journal and identifier. [Publications](/pettingill/research)",
+          "icon": "doc"
         },
         {
           "t": "Testimony listing",
@@ -155,7 +219,7 @@
           "icon": "list"
         }
       ],
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "next",
@@ -345,7 +409,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "03"
+      "no": "04"
     }
   ]
 }
