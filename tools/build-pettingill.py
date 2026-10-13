@@ -113,6 +113,47 @@ base = sub1(r"""return'<section class="reserve paths-in" id="'\+esc\(s\.id\|\|'i
             """return(s.noform?'':'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+""", base, tag='inq-open')
 base = sub1(r"""'</div></div></section>'\+\n  '<footer class="kfoot">""",
             """'</div></div></section>')+\n  '<footer class="kfoot">""", base, tag='inq-close')
+PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
+    '<div class="pf-top" data-r2>'+
+      '<div class="pf-id">'+
+        (s.kick?'<div class="smallcap pf-kick wr">'+esc(s.kick)+'</div>':'')+
+        '<div class="fname pf-name wr">'+rich(s.name||'')+'</div>'+
+        (s.sub?'<p class="pf-sub wr">'+rich(s.sub)+'</p>':'')+
+      '</div>'+
+      (s.fcta?'<div class="pf-act wr"><a class="fcta" href="'+esc(s.fcta.h)+'">'+esc(s.fcta.t)+'</a></div>':'')+
+    '</div>'+
+    '<div class="pf-row wr" data-r1>'+
+      '<ul class="pf-contact">'+
+        (c.email?'<li><a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>':'')+
+        (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
+        (c.city?'<li>'+esc(c.city)+'</li>':'')+
+      '</ul>'+
+      '<ul class="pf-social">'+(s.social||[]).map(function(x){return'<li><a href="'+esc(x.h)+'" target="_blank" rel="noopener" aria-label="'+esc(x.t)+'" title="'+esc(x.t)+'">'+SOC[x.i]+'</a></li>'}).join('')+'</ul>'+
+    '</div>'+
+    (s.firm?'<div class="pf-firm wr" data-r1>'+
+      '<a class="pf-mark" href="'+esc(s.firm.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.firm.src)+'" alt="'+esc(s.firm.alt||'')+'"></a>'+
+      '<div class="pf-firmtx"><p>'+rich(s.firm.lede||'')+'</p>'+
+        '<a class="fplink" href="'+esc(s.firm.href)+'" target="_blank" rel="noopener">'+esc(s.firm.link||'Visit')+'</a></div>'+
+      '<ul class="pf-social">'+(s.firm.social||[]).map(function(x){return'<li><a href="'+esc(x.h)+'" target="_blank" rel="noopener" aria-label="'+esc(x.t)+'" title="'+esc(x.t)+'">'+SOC[x.i]+'</a></li>'}).join('')+'</ul>'+
+    '</div>':'')+
+    '<div class="pf-base">'+
+      '<span>'+esc(s.base||c.city||'')+'</span>'+
+      (s.fine?'<span>'+esc(s.fine)+'</span>':'')+
+    '</div>'+
+  '</div></footer>'+
+  (s.igy?'<section class="igy"><div class="wrap">'+
+    '<div class="igy-id wr"><span class="smallcap">'+esc(s.igy.label)+'</span>'+
+      '<a href="'+esc(s.igy.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.igy.logo)+'" alt="Ignite Yourself"></a>'+
+      '<a class="igylink" href="'+esc(s.igy.href)+'" target="_blank" rel="noopener">'+esc(s.igy.link)+'</a></div>'+
+    '<p class="igy-note wr">'+esc(s.igy.note)+'</p>'+
+  '</div></section>':'')}"""
+base = sub1(r"'<footer class=\"kfoot\"><div class=\"wrap\">'\+.*?'</div></footer>'\}", lambda m: PFOOT, base, flags=re.S, tag='pfoot')
+SOCJS = """var SOC={
+  linkedin:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
+  facebook:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
+  globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>'};
+"""
+base = sub1(r'var partials=\{', lambda m: SOCJS + m.group(0), base, tag='socjs')
 
 # -------- la ficha de firma: enlaces internos sin pestana nueva, con data-path
 base = sub1(r"""\(s\.social\|\|\[\]\)\.map\(function\(x\)\{return'<a class="go" href="'\+esc\(x\.h\)\+'" target="_blank" rel="noopener">'\+esc\(x\.t\)\+'</a>'\}\)\.join\(''\)\+""",
@@ -1289,6 +1330,52 @@ html.no-motion .scarr{display:none}
   .pcard li{font-size:13.5px}
   .rtcard dl{display:grid;grid-template-columns:1fr 1fr;column-gap:18px}
   .rtcard dl div:nth-child(odd):last-child{grid-column:1/-1}
+}
+
+/* ============ Iteracion 21: el cierre, como la apertura ============ */
+.kfoot.pf{padding:clamp(88px,12vh,140px) 0 clamp(30px,4vh,44px)}
+.pf-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.pf-kick{display:block;color:rgba(255,255,255,.55);margin-bottom:clamp(20px,3vh,30px)}
+#site .pf-name{font-family:var(--serif);font-weight:300;font-size:clamp(46px,5.6vw,92px);line-height:.94;letter-spacing:-.025em;max-width:11ch}
+.pf-name .it{font-style:italic;color:rgba(255,255,255,.6)}
+.pf-sub{margin-top:clamp(20px,3vh,30px);font-family:var(--serif);font-weight:300;font-size:clamp(19px,1.6vw,25px);line-height:1.25;max-width:24ch;color:rgba(255,255,255,.9)}
+.pf-sub .it{font-style:italic;color:rgba(255,255,255,.6)}
+.pf-act .fcta{margin-top:0}
+.pf-row{display:flex;justify-content:space-between;align-items:center;gap:24px 40px;flex-wrap:wrap;margin-top:clamp(56px,8vh,96px);
+  padding:24px 0;border-top:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+.pf-contact{list-style:none;display:flex;flex-wrap:wrap;gap:10px 36px;font-size:15px;color:rgba(255,255,255,.85)}
+.pf-contact a{border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px;transition:border-color .3s}
+.pf-contact a:hover{border-bottom-color:#fff}
+.pf-social{list-style:none;display:flex;gap:10px}
+.pf-social a{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.3);border-radius:50%;color:#fff;
+  transition:background .3s,border-color .3s,color .3s}
+.pf-social a:hover{background:#fff;color:var(--ink);border-color:#fff}
+.pf-social svg{width:16px;height:16px;display:block}
+.pf-firm{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:clamp(24px,4vw,64px);align-items:center;margin-top:clamp(44px,6vh,72px)}
+.pf-mark{display:block;transition:opacity .3s}
+.pf-mark:hover{opacity:.8}
+.pf-mark img{display:block;width:clamp(170px,15vw,230px);height:auto}
+.pf-firmtx p{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.72);max-width:52ch}
+.pf-firmtx .fplink{margin-top:12px;color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
+.pf-base{display:flex;justify-content:space-between;gap:16px 30px;flex-wrap:wrap;margin-top:clamp(52px,7vh,88px);padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.12);font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+/* la firma de Ignite Yourself: aparte, con su propio fondo */
+.igy{background:#0A0B0D;color:#fff;padding:clamp(60px,8vh,96px) 0;border-top:1px solid rgba(181,131,63,.55)}
+.igy .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:40px clamp(40px,6vw,100px);align-items:center}
+.igy-id .smallcap{display:block;color:rgba(255,255,255,.45);margin-bottom:20px}
+.igy-id img{display:block;width:clamp(170px,15vw,220px);height:auto}
+.igy-id .igylink{display:inline-block;margin-top:22px;color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
+.igy-note{font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.52);max-width:64ch;margin:0}
+@media(max-width:860px){
+  .kfoot.pf{padding:clamp(64px,9vh,88px) 0 28px}
+  #site .pf-name{font-size:clamp(40px,11.5vw,52px)}
+  .pf-sub{font-size:18px}
+  .pf-row{margin-top:40px;padding:20px 0}
+  .pf-contact{gap:8px 24px;font-size:14.5px}
+  .pf-firm{grid-template-columns:1fr;gap:18px;margin-top:36px}
+  .pf-mark img{width:170px}
+  .pf-base{margin-top:40px}
+  .igy .wrap{grid-template-columns:1fr;gap:26px}
 }
 
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
