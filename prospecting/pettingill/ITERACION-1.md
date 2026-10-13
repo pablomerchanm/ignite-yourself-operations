@@ -390,3 +390,5 @@ Comentario del usuario: la versión móvil es la que más le preocupa, sobre tod
 - Menos aire entre cabecera y contenido de cada sección.
 
 Resultado: la home móvil pasa de 10.100 a 8.400 px de alto con el mismo contenido. Verificado en 375×667, 390×844 y 430×932, sin desbordes ni errores.
+
+**Ajuste 20b.** El subtítulo del hero vuelve a "The economics of injury, loss and future care. Since 1985." La "J" de "Jr." se cortaba porque la máscara de la animación de entrada seguía recortando el trazo cursivo después de la animación. Ahora la máscara tiene más margen y, al terminar la entrada, deja de recortar.

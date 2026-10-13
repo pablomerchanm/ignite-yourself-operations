@@ -361,7 +361,8 @@ PETJS = r"""
         }else if(n.nodeType===1){walk(n)}
       });
     })(h);
-    if(ws.length)gsap.fromTo(ws,{yPercent:110},{yPercent:0,duration:1.25,ease:'expo.out',stagger:.09,delay:.3});
+    if(ws.length)gsap.fromTo(ws,{yPercent:110},{yPercent:0,duration:1.25,ease:'expo.out',stagger:.09,delay:.3,
+      onComplete:function(){h.querySelectorAll('.hwm').forEach(function(m){m.classList.add('open')})}});
   })();
 
   /* ===== las cifras cuentan hasta su valor ===== */
@@ -875,7 +876,8 @@ body{background:var(--bg)}
 
 /* ============ Iteracion 11: motion, iconos, lineas de tiempo, carril ============ */
 /* ---------- hero: el nombre sube linea a linea desde una mascara ---------- */
-.hwm{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.04em .18em .34em;margin:-.04em -.18em -.34em}
+.hwm{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.1em .32em .46em;margin:-.1em -.32em -.46em}
+.hwm.open{overflow:visible}
 .hw{display:inline-block;will-change:transform}
 .hcue{position:absolute;right:clamp(20px,5vw,80px);bottom:clamp(72px,11vh,132px);z-index:3;display:flex;flex-direction:column;
   align-items:center;gap:12px;color:rgba(255,255,255,.72)}
