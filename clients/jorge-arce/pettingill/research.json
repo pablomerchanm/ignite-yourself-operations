@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "title": "Publications — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "Papers from 1979 to 2025 on the cost of future care, life expectancy, household services and hospital pricing."
+  },
+  "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/pettingill"
+    },
+    {
+      "t": "Practice",
+      "h": "/pettingill/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "t": "Publications",
+      "h": "/pettingill/research"
+    },
+    {
+      "t": "CV",
+      "h": "/pettingill/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "research-open",
+      "label": "Publications",
+      "img": {
+        "src": "/pettingill/assets/papers.jpg",
+        "alt": "Hands, a pen and a report on a conference table at dusk",
+        "pos": "50% 40%"
+      },
+      "quote": "What care costs, <t>and how to project it.</t>",
+      "sub": "From Psychosomatics in 1979 to hospital inflation in 2025."
+    },
+    {
+      "type": "timeline",
+      "id": "research-years",
+      "label": "Publications",
+      "title": "Seven papers across <t>forty-six years.</t>",
+      "from": 1979,
+      "to": 2025,
+      "marks": [
+        {
+          "y": 1979,
+          "t": "Psychosomatics"
+        },
+        {
+          "y": 2019,
+          "t": "Household services",
+          "tier": "hi"
+        },
+        {
+          "y": 2024,
+          "t": "Three papers"
+        },
+        {
+          "y": 2025,
+          "t": "Two papers",
+          "tier": "lo"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "pubs",
+      "id": "publications",
+      "label": "1979 to 2025",
+      "title": "Selected <t>papers.</t>",
+      "items": [
+        {
+          "y": "2025",
+          "t": "The Resurgence of Hospital Inflation: Analysis and Implications for Forensic Practitioners",
+          "a": "Sean P. Escoffery, Bernard F. Pettingill",
+          "v": "Mega Journal of Case Reports, 8(1): 2001–2004, January 2025. Also published in Nursing & Primary Care, 9(1), 2025.",
+          "id": "DOI 10.5281/zenodo.14725046",
+          "h": "https://zenodo.org/records/14725046",
+          "why": "Medical inflation rates inside projections of future care costs."
+        },
+        {
+          "y": "2025",
+          "t": "The Physiatrist is Essential to Predicting Accurate Future Medical Care",
+          "a": "Craig H. Lichtblau, Bernard Pettingill",
+          "v": "International Journal of Physical Medicine & Rehabilitation, 13(S30).",
+          "id": "DOI 10.35248/2329-9096.25.S30.001",
+          "h": "https://www.longdom.org/open-access/the-physiatrist-is-the-gateway-to-predicting-accurate-future-medical-care-1102997.html",
+          "why": "How the treating physician's input shapes a life care plan projection."
+        },
+        {
+          "y": "2024",
+          "t": "Choosing the Correct Database for Measuring Life Expectancy",
+          "a": "Bernard F. Pettingill, Jr., Sean P. Escoffery",
+          "v": "Current Opinion, 4(6), 2024. The CV also lists it in The Forecast, National Association of Forensic Economics, Spring 2025.",
+          "id": "DOI 10.52845/currentopinion.v4i6.330",
+          "h": "https://currentopinion.be/index.php/co/en/article/view/330",
+          "why": "The life expectancy basis behind any lifetime damages figure."
+        },
+        {
+          "y": "2024",
+          "t": "The Role of Physiatrists in Ensuring Access to Appropriate Medical Care and Services in the Broken U.S. Healthcare System",
+          "a": "Craig H. Lichtblau, Bernard F. Pettingill",
+          "v": "International Journal of Physical Medicine & Rehabilitation, 12(4), 2024.",
+          "id": "DOI 10.35248/2329-9096.24.12.732",
+          "h": "https://www.longdom.org/open-access/the-role-of-physiatrists-in-ensuring-access-to-appropriate-medical-care-and-services-in-the-broken-usa-healthcare-system-108185.html",
+          "why": "Access to care as a factor in what future treatment will cost."
+        },
+        {
+          "y": "2024",
+          "t": "Why Hospitals Resist Disclosing the Absolute Costs of Their Procedures",
+          "a": "Bernard F. Pettingill, Jr.",
+          "v": "Journal of Clinical Medicine & Health Care, December 2024, per Crossref. The CV lists MEGA Journal of Case Reports, September 2024.",
+          "id": "DOI 10.61440/jcmhc.2024.v1.13",
+          "h": "https://doi.org/10.61440/jcmhc.2024.v1.13",
+          "why": "Hospital pricing opacity, a recurring problem when costing medical care."
+        },
+        {
+          "y": "2019",
+          "t": "Estimating the Full Value of Household Services Damages: Inclusion of Nighttime Protection and Care Services",
+          "a": "James A. Mills, Bernard F. Pettingill",
+          "v": "The Earnings Analyst, 16: 81–86, 2019.",
+          "id": "TEA vol. 16",
+          "h": "https://theearningsanalyst.com/product/tea-16-5/",
+          "why": "Valuing care and protection provided at night, often left out of household services claims."
+        },
+        {
+          "y": "1979",
+          "t": "Physicians’ Estimates of Disability vs Patients’ Reports of Pain",
+          "a": "B. F. Pettingill, Jr.",
+          "v": "Psychosomatics, 20(12): 827–830, December 1979.",
+          "id": "PMID 523599 · DOI 10.1016/S0033-3182(79)73722-4",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/523599/",
+          "why": "An early study of the gap between clinical assessment and patient experience."
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "research-cv",
+      "tint": true,
+      "label": "Further work",
+      "title": "Written for the courtroom, <t>and for the hospital.</t>",
+      "lede": "A selection from the CV.",
+      "groups": [
+        {
+          "label": "Damages, settlements and the courtroom",
+          "wide": true,
+          "names": [
+            "Estimating Future Medical Maintenance Expenses, with Warren A. Perrin — Louisiana Bar Journal, 1986",
+            "How an Economist Sets a Value on Human Life — Palm Beach Post, editorial, 1989",
+            "Case Management: Evaluating a Firm’s Caseload Using a Cost-Benefit Approach, with Michael Eriksen — The Trial Lawyer, 1999",
+            "What Attorneys Should Understand about Medicare Set-Aside Allocations, with Federico R. Tewes — Clinical Medicine and Medical Research, 2021",
+            "Attendant Care for Life Care Plans of Spinal Cord Injury Patients in the Last Years of Life, with Diana Santa Maria — The Trial Lawyer, 2022",
+            "Evolution of the Occupational Classification for Attendant Care, with Federico R. Tewes — The Trial Lawyer, 2022"
+          ]
+        },
+        {
+          "label": "Future care, life expectancy and health costs",
+          "wide": true,
+          "names": [
+            "Providing Economic Consulting Services to Health Professionals — Business Economics, 2004",
+            "Life Expectancy: A Brief International Comparison, with David I. Goldenberg and Federico R. Tewes — 2020",
+            "Analysis and Forecast of Nursing Care Costs, with Federico R. Tewes — 2020",
+            "Methodology for Defining the Cost of Future Medical Care, with Craig H. Lichtblau — International Journal of Physical Medicine & Rehabilitation, 2023",
+            "How Solvent Is the Medicare Trust Fund?, with Sanjiv Bhatia — Current Opinion, 2023"
+          ]
+        },
+        {
+          "label": "Early academic work",
+          "wide": true,
+          "names": [
+            "Wigan Community Health Council — in Community Health Councils: Four Case Studies, Centre for Studies in Social Policy, 1976",
+            "Doctoral thesis on the cost-benefit analysis of arthritis treatment — University of Manchester, 1977",
+            "Cost-Effectiveness Analysis in the Hospital — Dimensions in Health Service, 1978",
+            "Management of Diagnostic Related Groups, with Harriette Westell — Hospital Topics, 1984"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "CV",
+      "d": "Education, teaching and professional bodies since 1969.",
+      "h": "/pettingill/record"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "biffpett@gmail.com",
+        "phone": "(561) 622-0330",
+        "city": "Palm Beach Gardens, Florida"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A new matter — economic damages",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Business valuation, litigation support or analytics — Pettingill Analytics",
+            "btn": "Send to the firm",
+            "note": "Routed to Pettingill Analytics. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV, testimony listing or engagement terms",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "referral",
+            "t": "Checking a referral",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Who referred you, if you wish to say"
+              },
+              {
+                "n": "What you need to know",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
+      "name": "Bernard Pettingill",
+      "cred": "Ph.D. · MPH · MBA · BBA",
+      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
+        "Founder & President, Pettingill Analytics"
+      ],
+      "social": [
+        {
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/"
+        },
+        {
+          "t": "Pettingill Analytics",
+          "h": "https://www.pettingillanalytics.com/"
+        }
+      ],
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/pettingill/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
+      },
+      "mark": {
+        "label": "The firm",
+        "href": "https://www.pettingillanalytics.com/",
+        "src": "/pettingill/assets/pa-logo-white.png",
+        "alt": "Pettingill Analytics",
+        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
+        "meta": [
+          "Palm Beach Gardens, Florida",
+          "Bpett@pettingillanalytics.com"
+        ],
+        "link": "Visit pettingillanalytics.com"
+      },
+      "no": "04"
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "meta": {
+    "title": "Practice — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "Future care, lost earnings, wrongful death and household services, and how to start a case."
+  },
+  "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/pettingill"
+    },
+    {
+      "t": "Practice",
+      "h": "/pettingill/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "t": "Publications",
+      "h": "/pettingill/research"
+    },
+    {
+      "t": "CV",
+      "h": "/pettingill/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Practice",
+      "img": {
+        "src": "/pettingill/assets/room.jpg",
+        "alt": "A working session with counsel, seen from the corridor",
+        "pos": "62% 50%"
+      },
+      "quote": "Economic damages, <t>to present value.</t>",
+      "sub": "Personal injury, wrongful death and medical malpractice."
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Areas of practice",
+      "title": "Four areas <t>of damages.</t>",
+      "lede": "Each one backed by published research.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Life care plans",
+          "title": "What will future care cost?",
+          "desc": "Costing life care plans and reducing future care needs to present value. The specialty, and the subject of 2024 and 2025 papers on projecting medical care and hospital inflation.",
+          "items": [
+            "Future medical costs",
+            "Present-value reduction",
+            "Attendant and nursing care",
+            "Medical cost inflation"
+          ],
+          "cta": {
+            "t": "Discuss a life care plan matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "care"
+        },
+        {
+          "label": "Personal injury",
+          "title": "What earning capacity was lost?",
+          "desc": "Lost earnings, earning capacity, fringe benefits and household services, measured before and after the injury.",
+          "items": [
+            "Lost earnings",
+            "Earning capacity",
+            "Fringe benefits",
+            "Household services"
+          ],
+          "cta": {
+            "t": "Discuss an injury matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "earn"
+        },
+        {
+          "label": "Wrongful death",
+          "title": "What did the family lose?",
+          "desc": "Loss of support, household services and the life expectancy behind every lifetime figure, the subject of a 2024 paper.",
+          "items": [
+            "Loss of support",
+            "Life expectancy basis",
+            "Household services",
+            "Present value"
+          ],
+          "cta": {
+            "t": "Discuss a death matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "support"
+        },
+        {
+          "label": "Household services",
+          "title": "What is unpaid care worth?",
+          "desc": "Household services, care and support, including nighttime protection, the subject of a 2019 paper in The Earnings Analyst.",
+          "items": [
+            "Household services",
+            "Care and support",
+            "Nighttime protection",
+            "Injury and death claims"
+          ],
+          "cta": {
+            "t": "Discuss a matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "house"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "retain",
+      "id": "engage",
+      "label": "Retaining",
+      "title": "Retained by counsel, <t>in three steps.</t>",
+      "steps": [
+        {
+          "t": "Send the checklist",
+          "d": "Injury or death, completed by counsel with the report due date.",
+          "links": [
+            {
+              "t": "Injury checklist",
+              "h": "https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf"
+            },
+            {
+              "t": "Death checklist",
+              "h": "https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf"
+            }
+          ]
+        },
+        {
+          "t": "Sign the engagement letter",
+          "d": "Retained solely by the attorney and the firm. Terms hold for one year from signature.",
+          "links": [
+            {
+              "t": "Engagement letter",
+              "h": "https://bpettingill.com/wp-content/uploads/Pettingill-Engagement-Letter.pdf"
+            }
+          ]
+        },
+        {
+          "t": "Settle the retainer",
+          "d": "Work begins once the signed letter and the retainer are received."
+        }
+      ],
+      "termsLabel": "Terms of engagement",
+      "terms": [
+        {
+          "k": "Retainer",
+          "v": "$1,800, non-refundable"
+        },
+        {
+          "k": "Professional time",
+          "v": "$500 to $600 an hour, as set in the engagement letter"
+        },
+        {
+          "k": "Testimony",
+          "v": "Deposition, trial, mediation or arbitration. Three-hour minimum"
+        },
+        {
+          "k": "Cancellation",
+          "v": "Two hours, within 48 hours of the date"
+        },
+        {
+          "k": "Travel",
+          "v": "Portal to portal, with expenses as incurred"
+        }
+      ],
+      "cta": {
+        "t": "Settle the retainer",
+        "h": "https://bpettingill.com/pay-now/"
+      },
+      "ctaNote": "Payment through bpettingill.com.",
+      "alt": {
+        "t": "Discuss the matter first",
+        "h": "#inquiry"
+      },
+      "no": "02"
+    },
+    {
+      "type": "method",
+      "id": "disclosure",
+      "label": "For the file",
+      "title": "The expert disclosure, <t>in one place.</t>",
+      "intro": "The CV, the publications and the prior testimony listing.",
+      "rows": [
+        {
+          "t": "Curriculum vitae",
+          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
+          "icon": "cv"
+        },
+        {
+          "t": "Publications",
+          "d": "Papers from 1979 to 2025, each with its journal and identifier. [Publications](/pettingill/research)",
+          "icon": "doc"
+        },
+        {
+          "t": "Testimony listing",
+          "d": "Depositions and trials since 2017, with case, number and court. [Prior testimony](/pettingill/testimony)",
+          "icon": "list"
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Testimony",
+      "d": "Depositions and trials since 2017.",
+      "h": "/pettingill/testimony"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "biffpett@gmail.com",
+        "phone": "(561) 622-0330",
+        "city": "Palm Beach Gardens, Florida"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A new matter — economic damages",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or jurisdiction"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Business valuation, litigation support or analytics — Pettingill Analytics",
+            "btn": "Send to the firm",
+            "note": "Routed to Pettingill Analytics. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV, testimony listing or engagement terms",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "referral",
+            "t": "Checking a referral",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Who referred you, if you wish to say"
+              },
+              {
+                "n": "What you need to know",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Dr. Pettingill.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "fkick": "Economic damages in personal injury, wrongful death and medical malpractice.",
+      "name": "Bernard Pettingill",
+      "cred": "Ph.D. · MPH · MBA · BBA",
+      "roles": "Forensic Economist <t>and Expert Witness</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "affiliations": [
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
+        "Founder & President, Pettingill Analytics"
+      ],
+      "social": [
+        {
+          "t": "bpettingill.com",
+          "h": "https://bpettingill.com/"
+        },
+        {
+          "t": "Pettingill Analytics",
+          "h": "https://www.pettingillanalytics.com/"
+        }
+      ],
+      "note": "Private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session.",
+      "fine": "Private preview · Concept · Not indexed",
+      "igy": {
+        "label": "A commercial concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/pettingill/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "This page is a commercial concept prepared by Ignite Yourself for Dr. Bernard F. Pettingill, Jr., using only public information. It is not an official website, has not been reviewed or approved by Dr. Pettingill, and is not published, indexed or distributed."
+      },
+      "mark": {
+        "label": "The firm",
+        "href": "https://www.pettingillanalytics.com/",
+        "src": "/pettingill/assets/pa-logo-white.png",
+        "alt": "Pettingill Analytics",
+        "lede": "Business valuations, litigation support, structured settlements and analytics, through Pettingill Analytics. Founder and President.",
+        "meta": [
+          "Palm Beach Gardens, Florida",
+          "Bpett@pettingillanalytics.com"
+        ],
+        "link": "Visit pettingillanalytics.com"
+      },
+      "no": "04"
+    }
+  ]
+}
