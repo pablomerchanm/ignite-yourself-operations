@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Research — Bernard F. Pettingill, Jr., Ph.D.",
-    "description": "Selected publications from 1979 to 2025, each linked to a record outside his own websites, and further work listed on his CV."
+    "title": "Publications — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "Selected publications from 1979 to 2025, each linked to a record outside his own websites, further work listed on his CV, and notes for counsel from the firm."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -10,19 +10,19 @@
       "h": "/pettingill"
     },
     {
-      "t": "The Practice",
+      "t": "Practice",
       "h": "/pettingill/practice"
     },
     {
-      "t": "The Testimony",
+      "t": "Testimony",
       "h": "/pettingill/testimony"
     },
     {
-      "t": "The Research",
+      "t": "Publications",
       "h": "/pettingill/research"
     },
     {
-      "t": "The Record",
+      "t": "CV",
       "h": "/pettingill/record"
     },
     {
@@ -38,7 +38,7 @@
     {
       "type": "stmt",
       "id": "research-open",
-      "label": "The Research",
+      "label": "Publications",
       "img": {
         "src": "/pettingill/assets/papers.jpg",
         "alt": "Hands, a pen and a report on a conference table at dusk",
@@ -201,6 +201,55 @@
         }
       ],
       "no": "03"
+    },
+    {
+      "type": "notes",
+      "id": "firm-notes",
+      "tint": true,
+      "label": "Notes for counsel, from the firm",
+      "title": "Short notes on the questions <t>counsel ask.</t>",
+      "lede": "Published on the Pettingill Analytics blog. No author or date is shown on the posts, so they are listed as the firm’s, not as papers. Six of seventeen, chosen for litigation.",
+      "items": [
+        {
+          "t": "Rock the Culver II Boat: landmark case revisited",
+          "k": "Lost earnings · Maritime",
+          "h": "https://www.pettingillanalytics.com/rock-the-culver-ii-boat-landmark-case-revisited/"
+        },
+        {
+          "t": "Daubert meet Google Earth",
+          "k": "Admissibility of expert testimony",
+          "h": "https://www.pettingillanalytics.com/daubert-meet-google-earth/"
+        },
+        {
+          "t": "A new measure of pecuniary damages in wrongful death cases",
+          "k": "Wrongful death · Household services",
+          "h": "https://www.pettingillanalytics.com/a-new-measure-of-pecuniary-damages-in-wrongful-death-cases/"
+        },
+        {
+          "t": "What lawyers should know about telehealth and its impact on life care plans",
+          "k": "Life care plans",
+          "h": "https://www.pettingillanalytics.com/what-lawyers-should-know-about-telehealth-and-its-impact-on-life-care-plans/"
+        },
+        {
+          "t": "Dilemmas in attendant care for life care plans of spinal cord injury patients",
+          "k": "Life care plans · Attendant care",
+          "h": "https://www.pettingillanalytics.com/dilemmas-in-attendant-care-for-life-care-plans-of-spinal-cord-injury-patients/"
+        },
+        {
+          "t": "Implementing California Civil Code Section 3361",
+          "k": "Damages estimates · State law",
+          "h": "https://www.pettingillanalytics.com/implementing-california-civil-code-section-3361-ensuring-damages-estimates-comply-with-state-law/"
+        }
+      ],
+      "src": "Public document · pettingillanalytics.com/blog",
+      "no": "04"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "CV",
+      "d": "Education, appointments and professional bodies, on one line from 1969.",
+      "h": "/pettingill/record"
     },
     {
       "type": "inquiry",
@@ -383,7 +432,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "04"
+      "no": "05"
     }
   ]
 }

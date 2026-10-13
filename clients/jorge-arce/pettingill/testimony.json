@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Testimony — Bernard F. Pettingill, Jr., Ph.D.",
-    "description": "The three published testimony figures, what each counts, and a count of the public testimony listing since 2017."
+    "title": "Testimony — Bernard F. Pettingill, Jr., Ph.D.",
+    "description": "The three published testimony figures, what each counts, how to read the source tags, and a count of the public listing since 2017."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
   "nav": [
@@ -10,19 +10,19 @@
       "h": "/pettingill"
     },
     {
-      "t": "The Practice",
+      "t": "Practice",
       "h": "/pettingill/practice"
     },
     {
-      "t": "The Testimony",
+      "t": "Testimony",
       "h": "/pettingill/testimony"
     },
     {
-      "t": "The Research",
+      "t": "Publications",
       "h": "/pettingill/research"
     },
     {
-      "t": "The Record",
+      "t": "CV",
       "h": "/pettingill/record"
     },
     {
@@ -38,15 +38,15 @@
     {
       "type": "stmt",
       "id": "testimony-open",
-      "label": "The Testimony",
+      "label": "Testimony",
       "align": "right",
       "img": {
         "src": "/pettingill/assets/balance.jpg",
         "alt": "A brass balance on a stack of books, in window light",
         "pos": "0% 62%"
       },
-      "quote": "Three figures, two websites. <t>Each measures something different.</t>",
-      "sub": "Where each is published, what it counts, and the public listing behind them. No entry on this site describes the outcome of a case: a testimony listing records that testimony was given, not who prevailed or how a court weighed it."
+      "quote": "Three published figures. <t>What each one counts.</t>",
+      "sub": "1,500+ and 1,900+ both count cases with deposition or trial testimony, on two websites. 550+ counts trials only. None of them records an outcome."
     },
     {
       "type": "figs",
@@ -59,7 +59,7 @@
           "what": "Cases with deposition or trial testimony",
           "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
           "href": "https://bpettingill.com/services/forensic-consulting/",
-          "status": "Self-reported. The figure used on this site."
+          "status": "Self-reported. The figure used on this site until the current count is confirmed."
         },
         {
           "n": "550+",
@@ -70,14 +70,44 @@
         },
         {
           "n": "1,900+",
-          "what": "Cases or testimonies — unit not stated",
-          "where": "pettingillanalytics.com — home and team pages",
+          "what": "Cases with deposition or trial testimony",
+          "where": "pettingillanalytics.com — team page (“over 1900 cases in 29 states plus the US Virgin Islands”); the home page says “testimonies”",
           "href": "https://www.pettingillanalytics.com/our-team/",
-          "status": "Published by the firm. Period and unit to be confirmed.",
+          "status": "Published by the firm. Same unit as 1,500+, a higher count. Which figure is current: to be confirmed.",
           "pending": true
         }
       ],
       "no": "01"
+    },
+    {
+      "type": "legend",
+      "id": "sources",
+      "label": "How to read the figures",
+      "title": "Every claim carries <t>its source.</t>",
+      "lede": "An attorney retaining an expert needs to know what the expert states, what documents show, and what others have recorded. This site keeps the three apart, and says so beside every figure.",
+      "items": [
+        {
+          "k": "Self-reported",
+          "d": "Stated on bpettingill.com or in the curriculum vitae dated 7 July 2025. Shown as stated. Degrees, appointments and memberships are not checked against university or association records.",
+          "icon": "quote"
+        },
+        {
+          "k": "Public document",
+          "d": "A dated document published on bpettingill.com, such as the testimony listing. Linked, with its date. Deposition pages dated 20 February 2026; trial pages 26 August 2025.",
+          "icon": "doc"
+        },
+        {
+          "k": "Independent record",
+          "d": "A record kept outside the two Pettingill websites: a publisher, PubMed, Crossref or Zenodo. Linked to the source.",
+          "icon": "link"
+        },
+        {
+          "k": "Ignite count",
+          "d": "A figure counted by Ignite Yourself from a public document, with the method stated beside it.",
+          "icon": "tally"
+        }
+      ],
+      "no": "02"
     },
     {
       "type": "tally",
@@ -194,7 +224,7 @@
         ]
       },
       "fn": "Ignite count · Deposition pages dated 20 February 2026 and trial pages dated 26 August 2025, as published. 2017 starts in September. The 2026 figures stop in January. 2025 trial entries stop in May.",
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "band",
@@ -203,6 +233,13 @@
       "label": "Proposed, subject to review",
       "quote": "The same listing, searchable by year, jurisdiction and court, <t>once every line is checked.</t>",
       "who": "A concept for discussion. Nothing from the listing is republished here beyond the counts above."
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Publications",
+      "d": "Seven papers with an outside record, further work from the CV, and the firm’s notes for counsel.",
+      "h": "/pettingill/research"
     },
     {
       "type": "inquiry",
@@ -385,7 +422,7 @@
         ],
         "link": "Visit pettingillanalytics.com"
       },
-      "no": "03"
+      "no": "04"
     }
   ]
 }

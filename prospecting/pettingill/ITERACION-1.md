@@ -185,3 +185,22 @@ Lo que se mueve, y por qué. Todo respeta `prefers-reduced-motion`: sin motion, 
 - **Carril de secciones** a la derecha en escritorio: un punto por sección, el activo más grande, etiqueta al pasar el ratón, clic para saltar.
 
 Revisión a 1440 y 390 px con motion activo: sin desbordes ni errores de consola.
+
+---
+
+# Iteración 12 — curaduría y navegabilidad
+
+Análisis completo de bpettingill.com y pettingillanalytics.com en `CURADURIA-WEBS-ACTUALES.md`. Cambios en el preview:
+
+- **Home más corta y con mapa.** Hero → cifras → "In brief" (scrollytelling: desde 1985, formación, fuentes) → **índice de cuatro rutas** (Start a case, Prior testimony, CV and education, Publications) → práctica con foto → publicaciones con foto → firma → contacto. Sale la pantalla de formación, absorbida por "In brief".
+- **Botón "Start a case"** en el hero, hacia Practice.
+- **Etiquetas de fuente** explicadas una sola vez, en Testimony, junto a las cifras.
+- **Practice**: "Start a case in four documents", en el orden de bpettingill.com (checklists, retainer y tarifas, CV, listado).
+- **Testimony**: el 1,900+ ya tiene unidad según la página del equipo de la firma (casos con testimonio en deposición o juicio). Misma unidad que el 1,500+. Queda por confirmar cuál es la cifra vigente. Apertura reescrita: "Three published figures. What each one counts."
+- **Publications**: seis notas para abogados del blog de la firma, listadas como contenido de la firma (los posts no muestran autor ni fecha).
+- **Firma**: "Founded 1996, per the firm's founder page".
+- **Navegación**: Practice, Testimony, Publications, CV. Bloque "Next" al final de cada subpágina.
+
+Pendiente de permiso o confirmación: testimonios anónimos y cartas, fechas docentes cruzadas entre la página del fundador y el CV, cuál de los tres correos usar, y si el Bhatia coautor de 1982–1985 es el Dr. Sanjiv Bhatia del equipo.
+
+Revisión a 1440 y 390 px con motion: sin desbordes ni errores.

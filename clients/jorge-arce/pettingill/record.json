@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "The Record — Bernard F. Pettingill, Jr., Ph.D.",
+    "title": "CV — Bernard F. Pettingill, Jr., Ph.D.",
     "description": "Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics."
   },
   "logo": "BERNARD F. PETTINGILL, JR., PH.D.",
@@ -10,19 +10,19 @@
       "h": "/pettingill"
     },
     {
-      "t": "The Practice",
+      "t": "Practice",
       "h": "/pettingill/practice"
     },
     {
-      "t": "The Testimony",
+      "t": "Testimony",
       "h": "/pettingill/testimony"
     },
     {
-      "t": "The Research",
+      "t": "Publications",
       "h": "/pettingill/research"
     },
     {
-      "t": "The Record",
+      "t": "CV",
       "h": "/pettingill/record"
     },
     {
@@ -38,7 +38,7 @@
     {
       "type": "stmt",
       "id": "record-open",
-      "label": "The Record",
+      "label": "CV",
       "img": {
         "src": "/pettingill/assets/notes.jpg",
         "alt": "Taking notes during a working session at dusk",
@@ -233,6 +233,7 @@
         "role": "Founder & President",
         "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
         "meta": [
+          "Founded 1996, per the firm’s founder page",
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
         ],
@@ -258,6 +259,13 @@
         }
       ],
       "no": "05"
+    },
+    {
+      "type": "next",
+      "k": "Ready to begin",
+      "t": "Start a <t>case</t>",
+      "d": "The checklist for the type of matter, the retainer, the terms and the CV, in one place.",
+      "h": "/pettingill/practice#engage"
     },
     {
       "type": "inquiry",

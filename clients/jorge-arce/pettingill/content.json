@@ -52,8 +52,8 @@
           "primary": true
         },
         {
-          "t": "See the record",
-          "h": "/pettingill/testimony"
+          "t": "Start a case",
+          "h": "/pettingill/practice#engage"
         }
       ],
       "cred": "Ph.D. Economics · MPH · MBA"
@@ -122,12 +122,12 @@
     {
       "type": "stmt",
       "id": "s-research",
-      "label": "The research",
+      "label": "Publications",
       "quote": "Published from 1979 <t>to 2025.</t>",
       "sub": "Seven papers with an outside record, from Psychosomatics to hospital inflation.",
       "src": "Independent records · PubMed, Crossref, publishers",
       "more": {
-        "t": "The research",
+        "t": "The publications",
         "h": "/pettingill/research"
       },
       "img": {
@@ -139,14 +139,14 @@
     },
     {
       "type": "scrub",
-      "id": "how-to-read",
+      "id": "in-brief",
       "ink": true,
-      "label": "How to read this site",
-      "pin": 2.6,
+      "label": "In brief",
+      "pin": 2.2,
       "paras": [
-        "Every figure on this site carries a tag, and the tag names the kind of evidence behind it.",
-        "<t>Self-reported</t> is what the CV and bpettingill.com state. <t>Public document</t> is a dated file anyone can open. <t>Independent record</t> is kept by a publisher, PubMed or Crossref.",
-        "<t>Ignite count</t> is a number counted here from a public document, with the method stated beside it. Claim, document, record. Kept apart."
+        "Forensic economics since 1985, for counsel in injury and death cases.",
+        "Trained in health economics: a Master of Public Health from Tulane in 1973, a Ph.D. from Manchester in 1977. <t>Then retained to price it.</t>",
+        "Every figure on this site carries its source. <t>Claim, document, record. Kept apart.</t>"
       ],
       "keys": [
         "Self-reported",
@@ -155,9 +155,41 @@
         "Ignite count"
       ],
       "more": {
-        "t": "The four tags",
-        "h": "/pettingill/practice#sources"
+        "t": "What each tag means",
+        "h": "/pettingill/testimony#sources"
       }
+    },
+    {
+      "type": "index",
+      "id": "start-here",
+      "label": "What counsel usually needs",
+      "title": "Four routes, <t>one click each.</t>",
+      "cards": [
+        {
+          "icon": "check",
+          "t": "Start a case",
+          "d": "Injury and death checklists, the retainer and the published terms, in one place.",
+          "h": "/pettingill/practice#engage"
+        },
+        {
+          "icon": "list",
+          "t": "Prior testimony",
+          "d": "The public listing since 2017, counted by year, court and state.",
+          "h": "/pettingill/testimony#listing"
+        },
+        {
+          "icon": "cv",
+          "t": "CV and education",
+          "d": "Degrees, appointments and memberships, on one line from 1969.",
+          "h": "/pettingill/record"
+        },
+        {
+          "icon": "doc",
+          "t": "Publications",
+          "d": "Seven papers with an outside record, 1979 to 2025.",
+          "h": "/pettingill/research"
+        }
+      ]
     },
     {
       "type": "stmt",
@@ -184,6 +216,7 @@
         "role": "Founder & President",
         "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
         "meta": [
+          "Founded 1996, per the firm’s founder page",
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
         ],
@@ -212,7 +245,7 @@
     {
       "type": "stmt",
       "id": "practice-open",
-      "label": "The Practice",
+      "label": "Practice",
       "img": {
         "src": "/pettingill/assets/room.jpg",
         "alt": "A working session with counsel, seen from the corridor",
@@ -304,7 +337,7 @@
     {
       "type": "legend",
       "id": "sources",
-      "label": "How to read this record",
+      "label": "How to read the figures",
       "title": "Every claim carries <t>its source.</t>",
       "lede": "An attorney retaining an expert needs to know what the expert states, what documents show, and what others have recorded. This site keeps the three apart, and says so beside every figure.",
       "items": [
@@ -333,20 +366,10 @@
     {
       "type": "method",
       "id": "engage",
-      "label": "Starting an engagement",
-      "title": "What a paralegal needs, <t>in one place.</t>",
-      "intro": "Public documents, gathered and dated, so the current version is never in doubt.",
+      "label": "Starting a case",
+      "title": "Start a case <t>in four documents.</t>",
+      "intro": "The sequence bpettingill.com publishes for a new case: the checklist for the type of matter, the retainer, the terms, and the CV for the file. Public documents, linked at their source.",
       "rows": [
-        {
-          "t": "Curriculum vitae",
-          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
-          "icon": "cv"
-        },
-        {
-          "t": "Testimony listing",
-          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)",
-          "icon": "list"
-        },
         {
           "t": "Intake checklists",
           "d": "Separate checklists for personal injury and for death, completed by counsel and returned with a report due date. [Injury checklist](https://bpettingill.com/wp-content/uploads/Injury-Checklist.pdf) · [Death checklist](https://bpettingill.com/wp-content/uploads/Death-Checklist.pdf)",
@@ -356,21 +379,31 @@
           "t": "Terms and engagement letter",
           "d": "Billing rates, retainer and cancellation terms, with an engagement letter to download. Confirm current terms directly. [Published terms](https://bpettingill.com/new-case/billing-rates/)",
           "icon": "sign"
+        },
+        {
+          "t": "Curriculum vitae",
+          "d": "Eight pages: education, appointments, organizations and publications. Current PDF dated 7 July 2025. [Open the CV](https://www.bpettingill.com/wp-content/uploads/Bernard.Pettingill.Ph_.D.Vita_.pdf)",
+          "icon": "cv"
+        },
+        {
+          "t": "Testimony listing",
+          "d": "Depositions and trials since 2017, with case, number and court. [See the count](/pettingill/testimony)",
+          "icon": "list"
         }
       ]
     },
     {
       "type": "stmt",
       "id": "testimony-open",
-      "label": "The Testimony",
+      "label": "Testimony",
       "align": "right",
       "img": {
         "src": "/pettingill/assets/balance.jpg",
         "alt": "A brass balance on a stack of books, in window light",
         "pos": "0% 62%"
       },
-      "quote": "Three figures, two websites. <t>Each measures something different.</t>",
-      "sub": "Where each is published, what it counts, and the public listing behind them. No entry on this site describes the outcome of a case: a testimony listing records that testimony was given, not who prevailed or how a court weighed it."
+      "quote": "Three published figures. <t>What each one counts.</t>",
+      "sub": "1,500+ and 1,900+ both count cases with deposition or trial testimony, on two websites. 550+ counts trials only. None of them records an outcome."
     },
     {
       "type": "figs",
@@ -383,7 +416,7 @@
           "what": "Cases with deposition or trial testimony",
           "where": "bpettingill.com — home, biography and Forensic Economic Consulting pages",
           "href": "https://bpettingill.com/services/forensic-consulting/",
-          "status": "Self-reported. The figure used on this site."
+          "status": "Self-reported. The figure used on this site until the current count is confirmed."
         },
         {
           "n": "550+",
@@ -394,10 +427,10 @@
         },
         {
           "n": "1,900+",
-          "what": "Cases or testimonies — unit not stated",
-          "where": "pettingillanalytics.com — home and team pages",
+          "what": "Cases with deposition or trial testimony",
+          "where": "pettingillanalytics.com — team page (“over 1900 cases in 29 states plus the US Virgin Islands”); the home page says “testimonies”",
           "href": "https://www.pettingillanalytics.com/our-team/",
-          "status": "Published by the firm. Period and unit to be confirmed.",
+          "status": "Published by the firm. Same unit as 1,500+, a higher count. Which figure is current: to be confirmed.",
           "pending": true
         }
       ]
@@ -529,7 +562,7 @@
     {
       "type": "stmt",
       "id": "research-open",
-      "label": "The Research",
+      "label": "Publications",
       "img": {
         "src": "/pettingill/assets/papers.jpg",
         "alt": "Hands, a pen and a report on a conference table at dusk",
@@ -691,9 +724,50 @@
       ]
     },
     {
+      "type": "notes",
+      "id": "firm-notes",
+      "tint": true,
+      "label": "Notes for counsel, from the firm",
+      "title": "Short notes on the questions <t>counsel ask.</t>",
+      "lede": "Published on the Pettingill Analytics blog. No author or date is shown on the posts, so they are listed as the firm’s, not as papers. Six of seventeen, chosen for litigation.",
+      "items": [
+        {
+          "t": "Rock the Culver II Boat: landmark case revisited",
+          "k": "Lost earnings · Maritime",
+          "h": "https://www.pettingillanalytics.com/rock-the-culver-ii-boat-landmark-case-revisited/"
+        },
+        {
+          "t": "Daubert meet Google Earth",
+          "k": "Admissibility of expert testimony",
+          "h": "https://www.pettingillanalytics.com/daubert-meet-google-earth/"
+        },
+        {
+          "t": "A new measure of pecuniary damages in wrongful death cases",
+          "k": "Wrongful death · Household services",
+          "h": "https://www.pettingillanalytics.com/a-new-measure-of-pecuniary-damages-in-wrongful-death-cases/"
+        },
+        {
+          "t": "What lawyers should know about telehealth and its impact on life care plans",
+          "k": "Life care plans",
+          "h": "https://www.pettingillanalytics.com/what-lawyers-should-know-about-telehealth-and-its-impact-on-life-care-plans/"
+        },
+        {
+          "t": "Dilemmas in attendant care for life care plans of spinal cord injury patients",
+          "k": "Life care plans · Attendant care",
+          "h": "https://www.pettingillanalytics.com/dilemmas-in-attendant-care-for-life-care-plans-of-spinal-cord-injury-patients/"
+        },
+        {
+          "t": "Implementing California Civil Code Section 3361",
+          "k": "Damages estimates · State law",
+          "h": "https://www.pettingillanalytics.com/implementing-california-civil-code-section-3361-ensuring-damages-estimates-comply-with-state-law/"
+        }
+      ],
+      "src": "Public document · pettingillanalytics.com/blog"
+    },
+    {
       "type": "stmt",
       "id": "record-open",
-      "label": "The Record",
+      "label": "CV",
       "img": {
         "src": "/pettingill/assets/notes.jpg",
         "alt": "Taking notes during a working session at dusk",
@@ -884,6 +958,7 @@
         "role": "Founder & President",
         "desc": "A consultancy with a published team in forensic accounting, international finance and data analysis. Business valuations, litigation support, structured settlements and analytics, beyond the individual practice.",
         "meta": [
+          "Founded 1996, per the firm’s founder page",
           "Palm Beach Gardens, Florida",
           "Bpett@pettingillanalytics.com"
         ],

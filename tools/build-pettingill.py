@@ -155,6 +155,25 @@ scrub:function(s){
     '<div class="scsign">'+(s.keys?'<ul class="skeys astags">'+s.keys.map(function(k){return'<li><span class="src">'+esc(k)+'</span></li>'}).join('')+'</ul>':'')+
     (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+'</div>'+
   '</div></div></section>'},
+index:function(s){
+  return'<section class="ix" id="'+esc(s.id||'index')+'"><div class="wrap">'+
+  '<div class="ixhead" data-r2>'+(s.label?'<span class="smallcap wr">'+esc(s.label)+'</span>':'')+'<h2 class="d56 wr">'+rich(s.title)+'</h2></div>'+
+  '<div class="ixgrid" data-cards>'+(s.cards||[]).map(function(c,i){
+    return'<a class="ixc wr" href="'+esc(c.h)+'"><span class="ixn">0'+(i+1)+'</span><span class="ixico" aria-hidden="true">'+ico(c.icon)+'</span>'+
+      '<span class="ixt">'+esc(c.t)+'</span><span class="ixd">'+esc(c.d)+'</span><span class="ixgo" aria-hidden="true">&rarr;</span></a>'}).join('')+'</div>'+
+  '</div></section>'},
+notes:function(s){
+  return'<section class="nts'+(s.tint?' tint':'')+'" id="'+esc(s.id||'notes')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<ul class="ntlist" data-cards>'+(s.items||[]).map(function(n){
+    return'<li class="wr"><a href="'+esc(n.h)+'" target="_blank" rel="noopener"><span class="ntt">'+esc(n.t)+'</span><span class="ntk">'+esc(n.k)+'</span><span class="ntgo" aria-hidden="true">&nearr;</span></a></li>'}).join('')+'</ul>'+
+  (s.src?'<div class="tlsrc wr" data-r1><span class="src">'+esc(s.src)+'</span></div>':'')+
+  '</div></section>'},
+next:function(s){
+  return'<section class="nxt" id="next"><div class="wrap"><a class="nxa" href="'+esc(s.h)+'" data-r2>'+
+  '<span class="smallcap wr">'+esc(s.k||'Next')+'</span><span class="nxt-t wr">'+rich(s.t)+'<i aria-hidden="true">&rarr;</i></span>'+
+  (s.d?'<span class="nxd wr">'+esc(s.d)+'</span>':'')+'</a></div></section>'},
 timeline:function(s){
   var a=s.from,b=s.to,span=(b-a)||1;function pct(y){return((y-a)/span*100).toFixed(2)}
   var tiers=['hi','lo','up'];
@@ -376,11 +395,11 @@ PETJS = r"""
   /* ===== carril de secciones: donde estoy, y a donde puedo ir ===== */
   (function(){
     if(window.innerWidth<1100)return;
-    var secs=Array.prototype.filter.call(document.querySelectorAll('#site > section[id]'),function(s){return s.offsetHeight>160});
+    var secs=Array.prototype.filter.call(document.querySelectorAll('#site > section[id]'),function(s){return s.offsetHeight>160&&s.id!=='next'});
     if(secs.length<3)return;
     var nav=document.createElement('nav');nav.className='srail';nav.setAttribute('aria-label','Sections');
     secs.forEach(function(s){
-      var e=s.querySelector('.slab,.scl,.rlab .smallcap,.phead .smallcap,.nums .smallcap,.mlab .smallcap,.band .smallcap');
+      var e=s.querySelector('.slab,.scl,.ixhead .smallcap,.rlab .smallcap,.phead .smallcap,.nums .smallcap,.mlab .smallcap,.band .smallcap');
       var lab=s.classList.contains('hero')?'Overview':(e?e.textContent.trim():s.id);
       var a=document.createElement('a');a.href='#'+s.id;a.innerHTML='<i></i><span>'+esc(lab)+'</span>';
       a.addEventListener('click',function(ev){ev.preventDefault();
@@ -885,6 +904,50 @@ html.no-motion .scarr{display:none}
 .srail:hover a span{opacity:1;transform:none}
 @media(max-width:1100px){.srail{display:none}}
 
+/* ============ Iteracion 12: curaduria y navegacion ============ */
+/* ---------- index: las cuatro rutas de la home ---------- */
+.ix{padding:var(--sec) 0}
+.ixhead{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(40px,6vh,64px)}
+.ixgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink)}
+.ixc{position:relative;display:flex;flex-direction:column;gap:12px;padding:clamp(26px,3.6vh,40px) clamp(16px,2vw,32px) clamp(30px,4vh,44px);
+  border-right:1px solid var(--line);color:var(--ink);transition:background .35s}
+.ixc:first-child{padding-left:0}
+.ixc:last-child{border-right:0}
+.ixc:hover{background:rgba(181,131,63,.07)}
+.ixn{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:10.5px;letter-spacing:.12em;color:var(--gray)}
+.ixico{display:block;width:30px;height:30px;color:var(--brass);margin:6px 0 4px}
+.ixt{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,34px);line-height:1.05;letter-spacing:-.01em}
+.ixd{font-size:13.5px;line-height:1.6;color:#3c3f44;max-width:30ch}
+.ixgo{margin-top:auto;padding-top:10px;font-size:20px;transition:transform .35s}
+.ixc:hover .ixgo{transform:translateX(6px)}
+@media(max-width:980px){.ixgrid{grid-template-columns:1fr 1fr}.ixc:nth-child(2){border-right:0}.ixc:nth-child(3){padding-left:0}
+  .ixc:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:560px){.ixgrid{grid-template-columns:1fr}.ixc{border-right:0;padding-left:0!important;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 14px}
+  .ixc+.ixc{border-top:1px solid var(--line)}.ixn{display:none}.ixico{width:24px;height:24px;margin:0}
+  .ixt{font-size:24px;flex:1}.ixd{flex-basis:100%;max-width:none}.ixgo{position:absolute;right:0;top:28px;padding:0}}
+
+/* ---------- notes: notas de la firma ---------- */
+.nts{padding:var(--sec) 0}
+.nts.tint{background:#E4DED2}
+.ntlist{list-style:none;border-top:1px solid var(--ink)}
+.ntlist a{display:grid;grid-template-columns:minmax(0,1fr) clamp(180px,22vw,300px) 24px;gap:20px;align-items:baseline;
+  padding:20px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.ntt{font-family:var(--serif);font-weight:400;font-size:clamp(19px,1.7vw,26px);line-height:1.2;letter-spacing:-.005em}
+.ntk{font-size:12px;letter-spacing:.06em;color:var(--gray)}
+.ntgo{font-size:16px;color:var(--brass);transition:transform .3s}
+.ntlist a:hover .ntgo{transform:translate(3px,-3px)}
+.ntlist a:hover .ntt{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+@media(max-width:860px){.ntlist a{grid-template-columns:minmax(0,1fr) 20px;gap:6px 12px}.ntk{grid-column:1;grid-row:2}.ntgo{grid-row:1/3;grid-column:2}}
+
+/* ---------- next: la siguiente pagina, siempre a la vista ---------- */
+.nxt{padding:clamp(56px,9vh,104px) 0;border-top:1px solid var(--line)}
+.nxa{display:flex;flex-direction:column;gap:14px;color:var(--ink)}
+.nxt-t{font-family:var(--serif);font-weight:300;font-size:clamp(40px,6vw,92px);line-height:1;letter-spacing:-.02em;display:flex;align-items:baseline;gap:.3em}
+.nxt-t .it{font-style:italic}
+.nxt-t i{font-style:normal;font-size:.6em;color:var(--brass);transition:transform .4s}
+.nxa:hover .nxt-t i{transform:translateX(12px)}
+.nxd{font-size:14px;color:var(--gray);max-width:60ch}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -905,23 +968,23 @@ html.no-motion .scarr{display:none}
 # ------------------------------------------------------------- 7. navegacion
 NAV = [
     {"t": "Overview",      "h": "/pettingill"},
-    {"t": "The Practice",  "h": "/pettingill/practice"},
-    {"t": "The Testimony", "h": "/pettingill/testimony"},
-    {"t": "The Research",  "h": "/pettingill/research"},
-    {"t": "The Record",    "h": "/pettingill/record"},
+    {"t": "Practice",      "h": "/pettingill/practice"},
+    {"t": "Testimony",     "h": "/pettingill/testimony"},
+    {"t": "Publications",  "h": "/pettingill/research"},
+    {"t": "CV",            "h": "/pettingill/record"},
     {"t": "Enquiry",       "h": "#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
-TNAV = [("The Practice",  "/pettingill/practice",  "practice"),
-        ("The Testimony", "/pettingill/testimony", "testimony"),
-        ("The Research",  "/pettingill/research",  "research"),
-        ("The Record",    "/pettingill/record",    "record")]
+TNAV = [("Practice",      "/pettingill/practice",  "practice"),
+        ("Testimony",     "/pettingill/testimony", "testimony"),
+        ("Publications",  "/pettingill/research",  "research"),
+        ("CV",            "/pettingill/record",    "record")]
 TABS = [("Overview",  "/pettingill",           "home"),
         ("Practice",  "/pettingill/practice",  "practice"),
         ("Testimony", "/pettingill/testimony", "testimony"),
-        ("Research",  "/pettingill/research",  "research"),
-        ("Record",    "/pettingill/record",    "record")]
+        ("Publications", "/pettingill/research", "research"),
+        ("CV",        "/pettingill/record",    "record")]
 
 def topbar_html(active):
     ON = ' class="on"'
@@ -942,7 +1005,7 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
@@ -954,22 +1017,32 @@ def page(title, desc, secs):
 
 inq = lambda: deep('inquiry')
 
+NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
+T_PR = 'Practice — Bernard F. Pettingill, Jr., Ph.D.'
+T_TE = 'Testimony — Bernard F. Pettingill, Jr., Ph.D.'
+T_PU = 'Publications — Bernard F. Pettingill, Jr., Ph.D.'
+T_CV = 'CV — Bernard F. Pettingill, Jr., Ph.D.'
+
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('numbers'), deep('s-question'), deep('s-training'), deep('s-research'),
-         deep('how-to-read'), deep('s-firm'), deep('firm-home'), inq()]),
-    'practice': page('The Practice — Bernard F. Pettingill, Jr., Ph.D.',
-        'Four economic questions he is retained on, how to read the sources on this site, and the documents a paralegal needs to start an engagement.',
-        [deep('practice-open'), deep('routes'), deep('sources'), deep('engage'), inq()]),
-    'testimony': page('The Testimony — Bernard F. Pettingill, Jr., Ph.D.',
-        'The three published testimony figures, what each counts, and a count of the public testimony listing since 2017.',
-        [deep('testimony-open'), deep('figures'), deep('listing'), deep('band-register'), inq()]),
-    'research': page('The Research — Bernard F. Pettingill, Jr., Ph.D.',
-        'Selected publications from 1979 to 2025, each linked to a record outside his own websites, and further work listed on his CV.',
-        [deep('research-open'), deep('research-years'), deep('publications'), deep('research-cv'), inq()]),
-    'record': page('The Record — Bernard F. Pettingill, Jr., Ph.D.',
+        [deep('hero'), deep('numbers'), deep('in-brief'), deep('start-here'), deep('s-question'),
+         deep('s-research'), deep('s-firm'), deep('firm-home'), inq()]),
+    'practice': page(T_PR,
+        'The four economic questions in the practice, and the documents counsel needs to start a case.',
+        [deep('practice-open'), deep('routes'), deep('engage'),
+         NX('Next', 'Testimony', 'The three published figures, what each counts, and the public listing since 2017.', '/pettingill/testimony'), inq()]),
+    'testimony': page(T_TE,
+        'The three published testimony figures, what each counts, how to read the source tags, and a count of the public listing since 2017.',
+        [deep('testimony-open'), deep('figures'), deep('sources'), deep('listing'), deep('band-register'),
+         NX('Next', 'Publications', 'Seven papers with an outside record, further work from the CV, and the firm’s notes for counsel.', '/pettingill/research'), inq()]),
+    'research': page(T_PU,
+        'Selected publications from 1979 to 2025, each linked to a record outside his own websites, further work listed on his CV, and notes for counsel from the firm.',
+        [deep('research-open'), deep('research-years'), deep('publications'), deep('research-cv'), deep('firm-notes'),
+         NX('Next', 'CV', 'Education, appointments and professional bodies, on one line from 1969.', '/pettingill/record'), inq()]),
+    'record': page(T_CV,
         'Education, academic appointments and professional organizations as stated on his CV, and his firm, Pettingill Analytics.',
-        [deep('record-open'), deep('record-years'), deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'), inq()]),
+        [deep('record-open'), deep('record-years'), deep('record-education'), deep('record-academic'), deep('record-orgs'), deep('firm'),
+         NX('Ready to begin', 'Start a <t>case</t>', 'The checklist for the type of matter, the retainer, the terms and the CV, in one place.', '/pettingill/practice#engage'), inq()]),
 }
 
 os.makedirs(DST, exist_ok=True)
@@ -995,8 +1068,8 @@ def derive(json_path, title, ogurl, out_dir, active):
     print('  ', out_dir.replace(DST, 'pettingill') or 'pettingill', 'ok')
 
 derive('/pettingill/home.json', TITLE, URL, DST, None)
-derive('/pettingill/practice.json', 'The Practice — Bernard F. Pettingill, Jr., Ph.D.', URL + '/practice', DST + '/practice', 'practice')
-derive('/pettingill/testimony.json', 'The Testimony — Bernard F. Pettingill, Jr., Ph.D.', URL + '/testimony', DST + '/testimony', 'testimony')
-derive('/pettingill/research.json', 'The Research — Bernard F. Pettingill, Jr., Ph.D.', URL + '/research', DST + '/research', 'research')
-derive('/pettingill/record.json', 'The Record — Bernard F. Pettingill, Jr., Ph.D.', URL + '/record', DST + '/record', 'record')
+derive('/pettingill/practice.json', T_PR, URL + '/practice', DST + '/practice', 'practice')
+derive('/pettingill/testimony.json', T_TE, URL + '/testimony', DST + '/testimony', 'testimony')
+derive('/pettingill/research.json', T_PU, URL + '/research', DST + '/research', 'research')
+derive('/pettingill/record.json', T_CV, URL + '/record', DST + '/record', 'record')
 print('pettingill listo')
