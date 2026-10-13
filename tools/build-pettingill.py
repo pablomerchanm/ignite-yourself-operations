@@ -349,14 +349,6 @@ PETJS = r"""
     if(ws.length)gsap.fromTo(ws,{yPercent:110},{yPercent:0,duration:1.25,ease:'expo.out',stagger:.09,delay:.3});
   })();
 
-  /* ===== la senal de scroll en el hero, se apaga al bajar ===== */
-  (function(){
-    var hero=document.querySelector('.hero');if(!hero)return;
-    var c=document.createElement('div');c.className='hcue';c.setAttribute('aria-hidden','true');
-    c.innerHTML='<span>Scroll</span><i></i>';hero.appendChild(c);
-    gsap.to(c,{opacity:0,ease:'none',scrollTrigger:{trigger:hero,start:'top top',end:'25% top',scrub:true}});
-  })();
-
   /* ===== las cifras cuentan hasta su valor ===== */
   (function(){
     function fmt(v,comma){v=Math.round(v);var s=String(v);return comma?s.replace(/\B(?=(\d{3})+(?!\d))/g,','):s}
@@ -465,6 +457,9 @@ PETJS = r"""
       ScrollTrigger.create({trigger:s,start:'top 50%',end:'bottom 50%',
         onToggle:function(self){if(self.isActive){nav.querySelectorAll('a').forEach(function(x){x.classList.remove('on')});a.classList.add('on')}}});
     });
+    var hero=document.querySelector('.hero');
+    if(hero){nav.classList.add('away');
+      ScrollTrigger.create({trigger:hero,start:'top top',end:'bottom 40%',onToggle:function(self){nav.classList.toggle('away',self.isActive)}})}
     document.body.appendChild(nav);
   })();
 
@@ -865,7 +860,7 @@ body{background:var(--bg)}
 
 /* ============ Iteracion 11: motion, iconos, lineas de tiempo, carril ============ */
 /* ---------- hero: el nombre sube linea a linea desde una mascara ---------- */
-.hwm{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.14em;margin-bottom:-.14em}
+.hwm{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.04em .18em .34em;margin:-.04em -.18em -.34em}
 .hw{display:inline-block;will-change:transform}
 .hcue{position:absolute;right:clamp(20px,5vw,80px);bottom:clamp(72px,11vh,132px);z-index:3;display:flex;flex-direction:column;
   align-items:center;gap:12px;color:rgba(255,255,255,.72)}
@@ -1037,13 +1032,18 @@ html.no-motion .scarr{display:none}
 /* ============ Iteracion 17: refinamiento editorial ============ */
 /* ---------- primer impacto: sin precargador, hero mas limpio ---------- */
 #pre{display:none!important}
+.srail{transition:opacity .45s}
+.srail.away{opacity:0;pointer-events:none}
+.hero .hname{font-size:clamp(66px,11.2vw,204px)!important;line-height:.9!important;letter-spacing:-.028em;max-width:10ch!important}
+.hero .hname .it{color:rgba(255,255,255,.62)}
+.hero .hacts{margin-top:clamp(30px,4.4vh,46px)}
+@media(max-width:860px){.hero .hname{font-size:clamp(54px,15.4vw,86px)!important}}
 .hero::after{content:none}
-.hero .hname{font-size:clamp(58px,9.6vw,150px);line-height:.92}
 .hero .hkick{opacity:.85}
 .hero .hcred{font-size:11.5px;letter-spacing:.2em;color:rgba(255,255,255,.62);margin-top:clamp(44px,5.8vh,62px)}
 @media(max-width:860px){.hero .hcred{margin-top:26px}.hero .hkick{font-size:11px;letter-spacing:.14em}}
 .hero .hsub{font-family:var(--serif);font-weight:300;font-size:clamp(22px,2vw,31px);line-height:1.25;letter-spacing:-.005em;
-  max-width:24ch;color:rgba(255,255,255,.94);margin-top:clamp(20px,2.8vh,30px)}
+  max-width:26ch;color:rgba(255,255,255,.94);margin-top:clamp(34px,5vh,56px)}
 .hero .hsub .it{font-family:var(--serif);font-style:italic;font-weight:300;color:rgba(255,255,255,.62)}
 @media(max-width:860px){.hero .hsub{font-size:clamp(21px,5.8vw,25px);max-width:22ch}}
 
@@ -1191,7 +1191,6 @@ TABS = [("Overview",  "/pettingill",           "home"),
 def topbar_html(active):
     ON = ' class="on"'
     links = ''.join(f'<a href="{h}"{ON if k == active else ""}>{t}</a>' for t, h, k in TNAV)
-    links += '<a class="ext" href="https://www.pettingillanalytics.com/" target="_blank" rel="noopener">Pettingill Analytics ↗</a>'
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
