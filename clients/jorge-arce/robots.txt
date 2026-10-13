@@ -4,18 +4,21 @@ Disallow: /kappelman
 Disallow: /mark-cooke
 Disallow: /cooke
 Disallow: /pettingill
+Disallow: /bernard-pettingill
 
 User-agent: Bingbot
 Disallow: /kappelman
 Disallow: /mark-cooke
 Disallow: /cooke
 Disallow: /pettingill
+Disallow: /bernard-pettingill
 
 User-agent: DuckDuckBot
 Disallow: /kappelman
 Disallow: /mark-cooke
 Disallow: /cooke
 Disallow: /pettingill
+Disallow: /bernard-pettingill
 
 User-agent: *
 Allow: /$

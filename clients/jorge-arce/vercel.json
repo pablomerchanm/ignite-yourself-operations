@@ -78,6 +78,41 @@
       "source": "/Kappelman-Gareis",
       "destination": "/kappelman-gareis",
       "permanent": false
+    },
+    {
+      "source": "/bernard-pettingill",
+      "destination": "/pettingill",
+      "permanent": false
+    },
+    {
+      "source": "/Bernard-Pettingill",
+      "destination": "/pettingill",
+      "permanent": false
+    },
+    {
+      "source": "/BernardPettingill",
+      "destination": "/pettingill",
+      "permanent": false
+    },
+    {
+      "source": "/bernardpettingill",
+      "destination": "/pettingill",
+      "permanent": false
+    },
+    {
+      "source": "/Pettingill",
+      "destination": "/pettingill",
+      "permanent": false
+    },
+    {
+      "source": "/biff",
+      "destination": "/pettingill",
+      "permanent": false
+    },
+    {
+      "source": "/Biff",
+      "destination": "/pettingill",
+      "permanent": false
     }
   ],
   "rewrites": [
