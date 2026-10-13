@@ -49,31 +49,11 @@
       "sub": "Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court."
     },
     {
-      "type": "nums",
-      "id": "figures",
-      "ink": true,
-      "label": "Testimony, in numbers",
-      "items": [
-        {
-          "n": "1,500<sup>+</sup>",
-          "k": "Cases with deposition or trial testimony"
-        },
-        {
-          "n": "550<sup>+</sup>",
-          "k": "Trials"
-        },
-        {
-          "n": "29",
-          "k": "States, plus the U.S. Virgin Islands"
-        }
-      ]
-    },
-    {
       "type": "tally",
       "id": "listing",
       "label": "Prior testimony",
       "title": "329 testimonies <t>since 2017.</t>",
-      "lede": "Depositions and trials on the current testimony listing, year by year.",
+      "lede": "Depositions and trials on the current listing, through January 2026.",
       "doc": {
         "t": "The full listing (PDF)",
         "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
@@ -336,9 +316,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — CV",
-        "National Association of Forensic Economists — since 1989, CV",
-        "American Economic Association — since 1983, CV",
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [

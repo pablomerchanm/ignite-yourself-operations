@@ -229,3 +229,19 @@ Decisión de Pablo: el sitio es su marca personal, no un expediente. Habla de é
 **Lo que no cambia:** no se inventa ningún dato. Cada cifra y cada fecha siguen siendo las de sus webs, su CV y los registros externos. Las verificaciones pendientes salen de la página pero siguen en estas notas y en `CURADURIA-WEBS-ACTUALES.md`. Hay que cerrarlas con Biff antes de publicar: cifra vigente (1,500+ o 1,900+), fechas docentes, correo, títulos y membresías, permisos de fotos y cartas.
 
 `BRAND-DIRECTION.md` actualizado: sin línea de marca fija, y voz de marca personal sin etiquetas de fuente.
+
+---
+
+# Iteración 14 — solo lo que decide la contratación
+
+Filtro aplicado a cada frase: ¿le sirve a un abogado que evalúa a un perito en daños económicos? Los cinco puntos que deciden (qué daño cuantifica, si resiste un Daubert, experiencia en el estrado, que sigue activo, cómo contratarlo y armar la divulgación) quedan escritos en `BRAND-DIRECTION.md`, sección 2b.
+
+- **Hero:** "Life care plans, lost earnings and wrongful death damages. Since 1985."
+- **Cifras de la home:** 1,500+ casos con testimonio, 550+ juicios, 29 estados. La experiencia en juicio sube a la home. El año 1985 ya está en el hero.
+- **In brief:** fuera las preguntas retóricas. Tres hechos: la especialidad (life care plans a valor presente), la formación (Ph.D. Manchester, MPH Tulane, más de dos décadas de docencia) y la vigencia (publica sobre estos temas y sigue testificando en 2026, según el listado hasta enero).
+- **Práctica:** "Four areas of economic damages" en lugar de "One question, in four forms". La apertura de Practice dice "Economic damages, to present value" en lugar de "Four questions. One discipline."
+- **Contratación:** se nombra la divulgación del perito. CV, publicaciones y listado de testimonios previos son lo que pide.
+- **Testimony:** fuera el bloque de cifras repetido. El listado dice "through January 2026".
+- **Pie:** las afiliaciones ya no dicen "— CV".
+
+Revisión a 1440 y 390 px: sin desbordes ni errores.

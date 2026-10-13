@@ -44,16 +44,16 @@
         "alt": "A working session with counsel, seen from the corridor",
         "pos": "62% 50%"
       },
-      "quote": "Four questions. <t>One discipline.</t>",
-      "sub": "Future care, lost earnings, wrongful death and household services, reduced to present value."
+      "quote": "Economic damages, <t>to present value.</t>",
+      "sub": "Personal injury, wrongful death and medical malpractice."
     },
     {
       "type": "paths",
       "id": "routes",
       "nums": true,
-      "label": "Areas of retention",
-      "title": "What the loss is worth, <t>in four forms.</t>",
-      "lede": "Four economic questions, each backed by published research.",
+      "label": "Areas of practice",
+      "title": "Four areas <t>of damages.</t>",
+      "lede": "Each one backed by published research.",
       "cards": [
         {
           "lead": true,
@@ -132,7 +132,7 @@
       "id": "engage",
       "label": "Retaining",
       "title": "To start a case, <t>begin here.</t>",
-      "intro": "Checklists for injury and death, the retainer, the terms and the CV.",
+      "intro": "Checklists for injury and death, the retainer and the terms. For the expert disclosure: the CV, the publications and the prior testimony listing.",
       "rows": [
         {
           "t": "Intake checklists",
@@ -309,9 +309,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — CV",
-        "National Association of Forensic Economists — since 1989, CV",
-        "American Economic Association — since 1983, CV",
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [

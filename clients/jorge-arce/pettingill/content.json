@@ -44,7 +44,7 @@
       },
       "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "Economic damages in injury and death cases. <t>Since 1985.</t>",
+      "sub": "Life care plans, lost earnings and wrongful death damages. <t>Since 1985.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -62,15 +62,15 @@
       "type": "nums",
       "id": "numbers",
       "ink": true,
-      "label": "The record",
+      "label": "Testimony",
       "items": [
-        {
-          "n": "1985",
-          "k": "Forensic economics since"
-        },
         {
           "n": "1,500<sup>+</sup>",
           "k": "Cases with deposition or trial testimony"
+        },
+        {
+          "n": "550<sup>+</sup>",
+          "k": "Trials"
         },
         {
           "n": "29",
@@ -86,7 +86,7 @@
       "type": "stmt",
       "id": "s-question",
       "label": "The practice",
-      "quote": "One question, in four forms: <t>what is the loss worth?</t>",
+      "quote": "Four areas <t>of economic damages.</t>",
       "keys": [
         "Life care plans",
         "Lost earnings",
@@ -127,13 +127,13 @@
       "label": "In brief",
       "pin": 2.2,
       "paras": [
-        "What will future care cost? What earning capacity was lost? What did a family lose? <t>The questions counsel bring, answered in present value.</t>",
-        "Trained in health economics at Tulane and Manchester. Professor of economics for more than two decades. <t>Forensic economist since 1985.</t>",
-        "More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands. <t>State and federal.</t>"
+        "The specialty: costing life care plans and reducing future care to present value.",
+        "Ph.D. in Economics, Manchester. Master of Public Health in health economics, Tulane. <t>Professor of economics for more than two decades.</t>",
+        "Published on the cost of future care, life expectancy and hospital inflation. <t>Still testifying in 2026.</t>"
       ],
       "more": {
-        "t": "The practice",
-        "h": "/pettingill/practice"
+        "t": "Curriculum vitae",
+        "h": "/pettingill/record"
       }
     },
     {
@@ -173,7 +173,7 @@
       "id": "s-firm",
       "label": "Pettingill Analytics",
       "quote": "Founder and President <t>since 1996.</t>",
-      "sub": "Pettingill Analytics: forensic accounting, international finance and data analysis.",
+      "sub": "Business valuation, forensic accounting and data analysis, through the firm.",
       "img": {
         "src": "/pettingill/assets/team.jpg",
         "alt": "The founder marking a chart at a working session with the team",
@@ -194,16 +194,16 @@
         "alt": "A working session with counsel, seen from the corridor",
         "pos": "62% 50%"
       },
-      "quote": "Four questions. <t>One discipline.</t>",
-      "sub": "Future care, lost earnings, wrongful death and household services, reduced to present value."
+      "quote": "Economic damages, <t>to present value.</t>",
+      "sub": "Personal injury, wrongful death and medical malpractice."
     },
     {
       "type": "paths",
       "id": "routes",
       "nums": true,
-      "label": "Areas of retention",
-      "title": "What the loss is worth, <t>in four forms.</t>",
-      "lede": "Four economic questions, each backed by published research.",
+      "label": "Areas of practice",
+      "title": "Four areas <t>of damages.</t>",
+      "lede": "Each one backed by published research.",
       "cards": [
         {
           "lead": true,
@@ -281,7 +281,7 @@
       "id": "engage",
       "label": "Retaining",
       "title": "To start a case, <t>begin here.</t>",
-      "intro": "Checklists for injury and death, the retainer, the terms and the CV.",
+      "intro": "Checklists for injury and death, the retainer and the terms. For the expert disclosure: the CV, the publications and the prior testimony listing.",
       "rows": [
         {
           "t": "Intake checklists",
@@ -319,31 +319,11 @@
       "sub": "Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court."
     },
     {
-      "type": "nums",
-      "id": "figures",
-      "ink": true,
-      "label": "Testimony, in numbers",
-      "items": [
-        {
-          "n": "1,500<sup>+</sup>",
-          "k": "Cases with deposition or trial testimony"
-        },
-        {
-          "n": "550<sup>+</sup>",
-          "k": "Trials"
-        },
-        {
-          "n": "29",
-          "k": "States, plus the U.S. Virgin Islands"
-        }
-      ]
-    },
-    {
       "type": "tally",
       "id": "listing",
       "label": "Prior testimony",
       "title": "329 testimonies <t>since 2017.</t>",
-      "lede": "Depositions and trials on the current testimony listing, year by year.",
+      "lede": "Depositions and trials on the current listing, through January 2026.",
       "doc": {
         "t": "The full listing (PDF)",
         "h": "https://bpettingill.com/wp-content/uploads/BFP-Current-Cases.pdf"
@@ -468,7 +448,7 @@
     {
       "type": "timeline",
       "id": "research-years",
-      "label": "Publications with an outside record",
+      "label": "Publications",
       "title": "Seven papers across <t>forty-six years.</t>",
       "from": 1979,
       "to": 2025,
@@ -930,9 +910,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — CV",
-        "National Association of Forensic Economists — since 1989, CV",
-        "American Economic Association — since 1983, CV",
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [

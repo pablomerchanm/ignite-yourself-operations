@@ -1037,7 +1037,7 @@ PAGES = {
          NX('Next', 'Testimony', 'Depositions and trials since 2017.', '/pettingill/testimony'), inq()]),
     'testimony': page(T_TE,
         'More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands.',
-        [deep('testimony-open'), deep('figures'), deep('listing'),
+        [deep('testimony-open'), deep('listing'),
          NX('Next', 'Publications', 'Papers from 1979 to 2025.', '/pettingill/research'), inq()]),
     'research': page(T_PU,
         'Papers from 1979 to 2025 on the cost of future care, life expectancy, household services and hospital pricing.',

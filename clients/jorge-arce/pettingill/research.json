@@ -50,7 +50,7 @@
     {
       "type": "timeline",
       "id": "research-years",
-      "label": "Publications with an outside record",
+      "label": "Publications",
       "title": "Seven papers across <t>forty-six years.</t>",
       "from": 1979,
       "to": 2025,
@@ -344,9 +344,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — CV",
-        "National Association of Forensic Economists — since 1989, CV",
-        "American Economic Association — since 1983, CV",
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [

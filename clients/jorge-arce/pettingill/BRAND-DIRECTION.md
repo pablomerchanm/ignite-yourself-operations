@@ -52,6 +52,21 @@ datos en todo el sitio.
 
 ---
 
+## 2b. Para quién escribimos y qué necesita ver
+
+**El lector:** un abogado de lesiones personales, muerte injusta o mala praxis médica, o su paralegal, que evalúa a un perito en daños económicos. A veces un life care planner o una aseguradora. Llega desde una referencia o un listado de peritos y decide en minutos.
+
+**Lo que decide la contratación, en orden:**
+1. **Qué daño cuantifica.** Life care plans y reducción a valor presente (la especialidad), lucro cesante, muerte injusta y servicios del hogar.
+2. **Si resiste un Daubert.** Ph.D. en Economía, MPH en economía de la salud, más de dos décadas como profesor y publicaciones sobre exactamente estos temas.
+3. **Experiencia en el estrado.** Más de 1,500 casos con testimonio, más de 550 juicios, 29 estados más las Islas Vírgenes, cortes estatales y federales.
+4. **Que sigue activo.** Depositions listadas hasta enero de 2026.
+5. **Cómo contratarlo y armar la divulgación del perito.** Checklists, retainer, tarifas, CV, publicaciones y listado de testimonios previos, a un clic.
+
+**El filtro de cada frase:** si no responde a uno de esos cinco puntos, no va. Nada de preguntas retóricas, eslóganes, metáforas, explicaciones de fuentes ni contenido corporativo.
+
+---
+
 ## 3. Look & feel
 
 **Luz.** Chiaroscuro cálido. Una sola fuente lateral (ventana, lámpara de mesa).

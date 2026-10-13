@@ -44,7 +44,7 @@
       },
       "kick": "Forensic Economist · Expert Witness · Palm Beach Gardens, Florida",
       "name": "Bernard F. Pettingill, <t>Jr.</t>",
-      "sub": "Economic damages in injury and death cases. <t>Since 1985.</t>",
+      "sub": "Life care plans, lost earnings and wrongful death damages. <t>Since 1985.</t>",
       "actions": [
         {
           "t": "Discuss a matter",
@@ -62,15 +62,15 @@
       "type": "nums",
       "id": "numbers",
       "ink": true,
-      "label": "The record",
+      "label": "Testimony",
       "items": [
-        {
-          "n": "1985",
-          "k": "Forensic economics since"
-        },
         {
           "n": "1,500<sup>+</sup>",
           "k": "Cases with deposition or trial testimony"
+        },
+        {
+          "n": "550<sup>+</sup>",
+          "k": "Trials"
         },
         {
           "n": "29",
@@ -89,13 +89,13 @@
       "label": "In brief",
       "pin": 2.2,
       "paras": [
-        "What will future care cost? What earning capacity was lost? What did a family lose? <t>The questions counsel bring, answered in present value.</t>",
-        "Trained in health economics at Tulane and Manchester. Professor of economics for more than two decades. <t>Forensic economist since 1985.</t>",
-        "More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands. <t>State and federal.</t>"
+        "The specialty: costing life care plans and reducing future care to present value.",
+        "Ph.D. in Economics, Manchester. Master of Public Health in health economics, Tulane. <t>Professor of economics for more than two decades.</t>",
+        "Published on the cost of future care, life expectancy and hospital inflation. <t>Still testifying in 2026.</t>"
       ],
       "more": {
-        "t": "The practice",
-        "h": "/pettingill/practice"
+        "t": "Curriculum vitae",
+        "h": "/pettingill/record"
       }
     },
     {
@@ -134,7 +134,7 @@
       "type": "stmt",
       "id": "s-question",
       "label": "The practice",
-      "quote": "One question, in four forms: <t>what is the loss worth?</t>",
+      "quote": "Four areas <t>of economic damages.</t>",
       "keys": [
         "Life care plans",
         "Lost earnings",
@@ -173,7 +173,7 @@
       "id": "s-firm",
       "label": "Pettingill Analytics",
       "quote": "Founder and President <t>since 1996.</t>",
-      "sub": "Pettingill Analytics: forensic accounting, international finance and data analysis.",
+      "sub": "Business valuation, forensic accounting and data analysis, through the firm.",
       "img": {
         "src": "/pettingill/assets/team.jpg",
         "alt": "The founder marking a chart at a working session with the team",
@@ -330,9 +330,9 @@
         "h": "#inquiry"
       },
       "affiliations": [
-        "Referee, Journal of Forensic Economics — CV",
-        "National Association of Forensic Economists — since 1989, CV",
-        "American Economic Association — since 1983, CV",
+        "Referee, Journal of Forensic Economics",
+        "National Association of Forensic Economists — since 1989",
+        "American Economic Association — since 1983",
         "Founder & President, Pettingill Analytics"
       ],
       "social": [
