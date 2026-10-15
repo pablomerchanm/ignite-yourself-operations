@@ -40,17 +40,59 @@
       "img": {
         "src": "/vishwanathan/assets/hero.jpg",
         "mobile": "/vishwanathan/assets/hero-mobile.jpg",
-        "alt": "Priya Vishwanathan"
+        "alt": "Priya Vishwanathan (illustrative)"
       },
-      "name": "Priya Vishwanathan",
-      "sub": "She helped build and scale amã Stays & Trails. <t>Thirty-five years with IHCL.</t>",
+      "name": "Priya <t>Vishwanathan</t>",
+      "sub": "I helped build and scale amã Stays & Trails. <t>Thirty-five years with IHCL.</t>",
       "actions": [
         {
           "t": "Start a conversation",
           "h": "#inquiry",
           "primary": true
         }
-      ]
+      ],
+      "note": "अतिथि देवो भव · the guest is god"
+    },
+    {
+      "type": "marks",
+      "id": "marks",
+      "label": "Where I built my career",
+      "items": [
+        {
+          "logo": "/vishwanathan/assets/logos/taj.svg",
+          "ar": "12.82/11.26",
+          "h": 64,
+          "t": "Taj Hotels",
+          "k": "Thirty-five years"
+        },
+        {
+          "logo": "/vishwanathan/assets/logos/ihcl.svg",
+          "ar": "36.76/12.70",
+          "h": 34,
+          "t": "IHCL",
+          "k": "Business Excellence · amã Stays & Trails"
+        },
+        {
+          "logo": "/vishwanathan/assets/logos/tata.svg",
+          "ar": "451.3/414.5",
+          "h": 60,
+          "t": "Tata",
+          "k": "Senior Assessor, Tata Business Excellence Model"
+        },
+        {
+          "text": "St. James’ <t>Court</t>",
+          "k": "London, 1995 · a Taj hotel"
+        },
+        {
+          "text": "amã <t>Stays & Trails</t>",
+          "k": "General Manager"
+        },
+        {
+          "text": "HOSPI <t>Sigma</t>",
+          "k": "Board Advisor & Principal Consultant"
+        }
+      ],
+      "src": "Logos belong to their owners and appear here only to show where I have worked."
     },
     {
       "type": "brief",
@@ -59,7 +101,7 @@
       "items": [
         {
           "k": "A homestay brand, built and scaled.",
-          "t": "In her words, the most fulfilling chapter of thirty-five years with IHCL: helping build and scale amã Stays & Trails into a distinctive hospitality brand. As General Manager: the P&L, the owners and the guests, across India.",
+          "t": "The most fulfilling chapter of my thirty-five years with IHCL: helping build and scale amã Stays & Trails into a distinctive hospitality brand. As General Manager I held the P&L, the owners and the guests, across India.",
           "d": "From nine bungalows at launch to 370+ today. IHCL figures."
         },
         {
@@ -69,30 +111,36 @@
         },
         {
           "k": "Thirty-five years at the Taj.",
-          "t": "Joined IHCL in 1990 from IHM Pusa. St. James’ Court in London, the Taj Mahal in New Delhi, then eight years as Regional Manager for Karnataka.",
+          "t": "I joined IHCL in 1990 from IHM Pusa: St. James’ Court in London, the Taj Mahal in New Delhi, then eight years as Regional Manager for Karnataka.",
           "d": "Front office, club floors, quality and operations."
         }
       ]
     },
     {
-      "type": "nums",
-      "id": "numbers",
-      "ink": true,
-      "label": "The record",
-      "items": [
+      "type": "arch",
+      "id": "chapter",
+      "label": "The most fulfilling chapter",
+      "title": "amã Stays <t>& Trails.</t>",
+      "body": "Families came to us with houses their parents had left them. We listened to the owners, kept what made each house itself, and built a brand around it.",
+      "stats": [
+        {
+          "n": "9",
+          "k": "Coffee bungalows at launch, 2019"
+        },
         {
           "n": "370<sup>+</sup>",
-          "k": "amã Stays & Trails bungalows today, from nine at launch"
+          "k": "Bungalows across India today"
         },
         {
           "n": "35",
-          "k": "Years with the Taj and IHCL"
-        },
-        {
-          "n": "15",
-          "k": "Years in Business Excellence"
+          "k": "Years with IHCL"
         }
       ],
+      "src": "Bungalow counts are IHCL figures.",
+      "img": {
+        "src": "/vishwanathan/assets/chapter.jpg",
+        "alt": "A planter’s bungalow veranda at dawn (illustrative)"
+      },
       "more": {
         "t": "The career",
         "h": "/vishwanathan/track"
@@ -101,16 +149,16 @@
     {
       "type": "quote",
       "id": "quote",
-      "lead": "Her closing words on Inspire Someone Today, written down before the recording:",
+      "lead": "Something I wrote down before a conversation on Inspire Someone Today:",
       "q": "“Success is not measured by how many people know your name. It is measured by how many people are better because they crossed your path.”",
-      "who": "Priya Vishwanathan · Inspire Someone Today, episode 180, 2026"
+      "who": "Inspire Someone Today, episode 180, 2026"
     },
     {
       "type": "media",
       "id": "conversations",
       "ink": true,
       "label": "In conversation",
-      "title": "Hear it <t>from her.</t>",
+      "title": "Hear it <t>in my words.</t>",
       "lede": "Two long conversations recorded in 2026: one with a hotelier, one about a life in hospitality.",
       "items": [
         {
@@ -142,32 +190,10 @@
       }
     },
     {
-      "type": "stmt",
-      "id": "s-track",
-      "label": "Career",
-      "quote": "From a duty manager’s desk <t>to a national brand.</t>",
-      "sub": "Thirty-five years with IHCL, ending in what she calls its most fulfilling chapter: helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
-      "keys": [
-        "St. James’ Court, London",
-        "Taj Mahal, New Delhi",
-        "Business Excellence",
-        "amã Stays & Trails"
-      ],
-      "more": {
-        "t": "The career",
-        "h": "/vishwanathan/track"
-      },
-      "img": {
-        "src": "/vishwanathan/assets/career.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
-      }
-    },
-    {
       "type": "ideas",
       "id": "beliefs",
       "label": "Perspectives",
-      "title": "What she <t>believes.</t>",
+      "title": "What I <t>believe.</t>",
       "items": [
         {
           "t": "A complaint is a gift.",
@@ -192,11 +218,33 @@
     },
     {
       "type": "stmt",
+      "id": "s-track",
+      "label": "Career",
+      "quote": "From a duty manager’s desk <t>to a national brand.</t>",
+      "sub": "Thirty-five years with IHCL, ending in its most fulfilling chapter: helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
+      "keys": [
+        "St. James’ Court, London",
+        "Taj Mahal, New Delhi",
+        "Business Excellence",
+        "amã Stays & Trails"
+      ],
+      "more": {
+        "t": "The career",
+        "h": "/vishwanathan/track"
+      },
+      "img": {
+        "src": "/vishwanathan/assets/career.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
+      }
+    },
+    {
+      "type": "stmt",
       "id": "s-advisory",
       "label": "Advisory",
       "align": "right",
       "quote": "For owners, groups <t>and boards.</t>",
-      "sub": "“Advising, mentoring and helping hospitality businesses build for the future”: the work she took up after IHCL, in her own words.",
+      "sub": "“Advising, mentoring and helping hospitality businesses build for the future.” The work I took up after IHCL.",
       "keys": [
         "Homestays & villas",
         "Hotels & groups",
@@ -204,7 +252,7 @@
         "Masterclasses"
       ],
       "more": {
-        "t": "How she advises",
+        "t": "How I advise",
         "h": "/vishwanathan/practice"
       },
       "img": {
@@ -223,11 +271,6 @@
       "more": {
         "t": "Today’s roles",
         "h": "/vishwanathan/track#cv-today"
-      },
-      "img": {
-        "src": "/vishwanathan/assets/today.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
       }
     },
     {
@@ -235,7 +278,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start <t>a conversation.</t>",
-      "lede": "Tell her what you are building, running or planning, and where it stands.",
+      "lede": "Tell me what you are building, running or planning, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -405,7 +448,7 @@
         "href": "https://igniteyourself.co/",
         "logo": "/vishwanathan/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information and her recorded interviews for Ms. Vishwanathan’s review. Marked frames show where portraits will go. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+        "note": "A private concept by Ignite Yourself, prepared from public information and recorded interviews for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by her own portraits. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
       }
     }
   ]

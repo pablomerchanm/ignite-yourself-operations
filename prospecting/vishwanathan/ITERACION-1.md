@@ -66,3 +66,21 @@ Pablo pidió reestructurar toda la web para posicionarla como autoridad del sect
 **Imágenes:** se quitó el retrato generado con IA (no se parecía a ella) y las imágenes ilustrativas. La tarjeta para compartir ahora es tipográfica.
 
 **Para confirmar con ella:** las citas salen de transcripciones automáticas y pueden variar en alguna palabra; conviene que las revise. El NPS de 90+ sigue fuera de la página.
+
+## Iteración 4: piel de patrimonio indio y voz propia (15 de octubre de 2026)
+
+Pablo pidió un estilo gráfico mucho más elaborado y femenino, inspirado en sus referencias (Out of Office, Elysian Stays, Jokha, Latha Puttanna). Pidió también que el texto hable como su marca, en primera persona y sin "she", y que aparezcan los logos de donde trabajó, con el modelo de excelencia de Tata explicado.
+
+- **Paleta:** granate, terracota, espresso, crema y latón. Celosía (jali) muy tenue en las secciones oscuras; marcos finos de latón sobre las fotos.
+- **Tipografía:**
+  - Bodoni Moda en versalitas para el nombre.
+  - Pinyon Script (caligráfica) para "Vishwanathan" y acentos.
+  - Cormorant Garamond espaciada para los rótulos.
+  - Editors Note para los titulares.
+  - Tiro Devanagari para «अतिथि देवो भव · the guest is god», la frase que ella misma cita de su madre y del Taj.
+- **Arco mughal (cusped):** enmarca el retrato del hero y la foto del bloque de amã, con dos contornos de latón.
+- **Nuevo bloque amã (`arch`):** "the most fulfilling chapter" con 9 → 370+ bungalows (cifras de IHCL) y 35 años.
+- **Logos (`marks`):** Taj, IHCL y Tata (vectores de Wikimedia, teñidos en espresso). St. James' Court, amã y HOSPI Sigma van como texto, porque el logo de HOSPI disponible es de baja resolución. Nota: los logos son de sus dueños.
+- **Modelo Tata (`tbem`, en Career):** diagrama del Tata Business Excellence Model y su papel como Senior Assessor.
+- **Voz:** todo el sitio en primera persona.
+- **Fotos:** mientras llegan las de Pablo, vuelven las de Higgsfield.

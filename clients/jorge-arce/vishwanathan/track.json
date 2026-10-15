@@ -53,7 +53,7 @@
       "id": "track-ama",
       "label": "amã Stays & Trails",
       "title": "A brand, built <t>and scaled.</t>",
-      "lede": "“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays & Trails into a distinctive hospitality brand.” — Priya Vishwanathan, 2026. The figures below are IHCL’s.",
+      "lede": "“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays & Trails into a distinctive hospitality brand.” The figures below are IHCL’s.",
       "groups": [
         {
           "label": "Milestones",
@@ -66,7 +66,7 @@
           ]
         },
         {
-          "label": "In her words",
+          "label": "In my words",
           "wide": true,
           "names": [
             "“People came to us: can you take my home?” Families trusted the organisation with houses they had inherited.",
@@ -83,7 +83,7 @@
       "tint": true,
       "label": "Business Excellence",
       "title": "From isolated hotels <t>to one organisation.</t>",
-      "lede": "“We turned around the company, which was working in isolated hotels, to one organisation where everybody today has structured SOPs.” Priya Vishwanathan, HospeTalk, 2026.",
+      "lede": "“We turned around the company, which was working in isolated hotels, to one organisation where everybody today has structured SOPs.” On HospeTalk, 2026.",
       "groups": [
         {
           "label": "Fifteen years in quality and Business Excellence",
@@ -98,6 +98,30 @@
         }
       ],
       "no": "02"
+    },
+    {
+      "type": "tbem",
+      "id": "tbem",
+      "label": "A framework I assess with",
+      "logo": "/vishwanathan/assets/logos/tata.svg",
+      "title": "The Tata Business <t>Excellence Model.</t>",
+      "body": "The framework every Tata company is assessed against, adapted from the Malcolm Baldrige criteria. As a Senior Assessor I carried out eight external assessments of Tata companies, and it shapes how I look at any hotel: leadership, customers and people first, results as their consequence.",
+      "lead": [
+        "Leadership",
+        "Strategy",
+        "Customers"
+      ],
+      "center": "Integration",
+      "results": [
+        "People & Culture",
+        "Operations",
+        "Results"
+      ],
+      "foundation": "Data, Organisational Learning & Innovation",
+      "base": "Core Values & Concepts",
+      "top": "Organisational Profile",
+      "src": "Model structure: Tata Business Excellence Group.",
+      "no": "03"
     },
     {
       "type": "timeline",
@@ -137,14 +161,14 @@
         }
       ],
       "rlabel": "The IHCL years",
-      "no": "03"
+      "no": "04"
     },
     {
       "type": "exp",
       "id": "track-roles",
       "label": "Roles at IHCL",
       "title": "Operations, <t>then leadership.</t>",
-      "lede": "From her own account and public profiles.",
+      "lede": "From my own account and public profiles.",
       "groups": [
         {
           "label": "Operations",
@@ -165,7 +189,7 @@
           ]
         }
       ],
-      "no": "04"
+      "no": "05"
     },
     {
       "type": "exp",
@@ -184,7 +208,7 @@
           ]
         }
       ],
-      "no": "05"
+      "no": "06"
     },
     {
       "type": "exp",
@@ -209,13 +233,13 @@
           ]
         }
       ],
-      "no": "06"
+      "no": "07"
     },
     {
       "type": "next",
       "k": "Next",
       "t": "Perspectives",
-      "d": "Service, standards and the guest, in her own words.",
+      "d": "Service, standards and the guest, in my own words.",
       "h": "/vishwanathan/ideas",
       "alt": {
         "t": "Start a conversation",
@@ -227,7 +251,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start <t>a conversation.</t>",
-      "lede": "Tell her what you are building, running or planning, and where it stands.",
+      "lede": "Tell me what you are building, running or planning, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -397,10 +421,10 @@
         "href": "https://igniteyourself.co/",
         "logo": "/vishwanathan/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information and her recorded interviews for Ms. Vishwanathan’s review. Marked frames show where portraits will go. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+        "note": "A private concept by Ignite Yourself, prepared from public information and recorded interviews for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by her own portraits. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
       },
       "noform": true,
-      "no": "07"
+      "no": "08"
     }
   ]
 }
