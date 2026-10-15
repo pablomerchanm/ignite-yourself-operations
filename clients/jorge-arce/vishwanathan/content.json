@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Priya Vishwanathan — Hospitality Advisor · Hotels, Homestays & Guest Experience",
-    "description": "Priya Vishwanathan: thirty-five years with the Taj and IHCL, from the Taj Mahal Hotel to amã Stays & Trails."
+    "description": "Priya Vishwanathan: thirty-five years with IHCL, ending in helping build and scale amã Stays & Trails into a distinctive hospitality brand."
   },
   "logo": "PRIYA VISHWANATHAN",
   "nav": [
@@ -43,7 +43,7 @@
         "alt": "Priya Vishwanathan"
       },
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Since 1990.</t>",
+      "sub": "She helped build and scale amã Stays & Trails. <t>Thirty-five years with IHCL.</t>",
       "actions": [
         {
           "t": "Discuss a project",
@@ -58,18 +58,18 @@
       "label": "In brief",
       "items": [
         {
-          "k": "Thirty-five years at the Taj.",
-          "t": "Joined IHCL in 1990 from IHM Pusa. Duty Manager at the Taj Mahal Hotel; later Regional Manager for Karnataka, in Bengaluru.",
-          "d": "Operations in India and the United Kingdom."
+          "k": "A homestay brand, built and scaled.",
+          "t": "In her words, the most fulfilling chapter of thirty-five years with IHCL: helping build and scale amã Stays & Trails into a distinctive hospitality brand. As General Manager: the P&L, the owners and the guests, across India.",
+          "d": "From nine bungalows at launch to 370+ today. IHCL figures."
         },
         {
-          "k": "A homestay brand, from nine houses.",
-          "t": "General Manager of amã Stays & Trails, IHCL’s branded homestays: the P&L, the owners and the guests, across India.",
-          "d": "The brand counts 370+ bungalows today."
+          "k": "Thirty-five years at the Taj.",
+          "t": "Joined IHCL in 1990 from IHM Pusa. St. James’ Court in London, the Taj Mahal in New Delhi, then eight years as Regional Manager for Karnataka.",
+          "d": "Front office, club floors, quality and operations."
         },
         {
           "k": "Excellence you can measure.",
-          "t": "More than a decade in Business Excellence. Senior Assessor of the Tata Business Excellence Model, with eight external assessments of Tata companies.",
+          "t": "Fifteen years in Business Excellence, helping isolated hotels work as one organisation with common standards. Senior Assessor of the Tata Business Excellence Model.",
           "d": "Customer-satisfaction work across more than 100 hotels."
         }
       ]
@@ -81,16 +81,16 @@
       "label": "The record",
       "items": [
         {
+          "n": "370<sup>+</sup>",
+          "k": "amã Stays & Trails bungalows today, from nine at launch"
+        },
+        {
           "n": "35",
           "k": "Years with the Taj and IHCL"
         },
         {
           "n": "100<sup>+</sup>",
           "k": "Hotels, in customer-satisfaction work"
-        },
-        {
-          "n": "370<sup>+</sup>",
-          "k": "amã Stays & Trails bungalows today, from nine at launch"
         }
       ],
       "more": {
@@ -132,7 +132,7 @@
       "label": "Track record",
       "align": "right",
       "quote": "From a duty manager’s desk <t>to a national brand.</t>",
-      "sub": "Thirty-five years inside one of India’s great hotel companies, ending with the homestay brand she helped build.",
+      "sub": "Thirty-five years with IHCL, ending in what she calls its most fulfilling chapter: helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
       "keys": [
         "Taj Mahal Hotel",
         "Business Excellence",
@@ -381,7 +381,7 @@
         "pos": "50% 50%"
       },
       "quote": "Thirty-five years, <t>one company.</t>",
-      "sub": "From the Taj Mahal Hotel to a national homestay brand."
+      "sub": "From a duty manager’s desk in London to helping build a national homestay brand."
     },
     {
       "type": "timeline",
@@ -399,6 +399,10 @@
         {
           "y": 1990,
           "t": "Joins IHCL"
+        },
+        {
+          "y": 1995,
+          "t": "St. James’ Court, London"
         },
         {
           "y": 2019,
@@ -423,21 +427,24 @@
       "id": "track-roles",
       "label": "Roles at IHCL",
       "title": "Operations, excellence <t>and a new brand.</t>",
-      "lede": "In the order she held them.",
+      "lede": "In the order she held them, from her own account.",
       "groups": [
         {
           "label": "Operations",
           "wide": true,
           "names": [
             "Hotel Operations Management Trainee, IHCL — 1990",
-            "Duty Manager, Taj Mahal Hotel",
-            "Operations roles in India and the United Kingdom"
+            "Assistant Duty Manager, St. James’ Court Hotel, London — 1995",
+            "Manager, Club Floors, Taj Mahal, New Delhi — 1997",
+            "Duty Manager, Taj Mahal Hotel"
           ]
         },
         {
           "label": "Business Excellence",
           "wide": true,
           "names": [
+            "Assistant Manager, Quality, Taj Mahal, New Delhi — 1999",
+            "Manager, Quality, Corporate HR — 2001",
             "Corporate Manager, Business Process, South Region — Taj Hotels Resorts & Palaces",
             "Senior Assessor, Tata Business Excellence Model — eight external assessments of Tata companies",
             "Customer-satisfaction work across more than 100 hotels"
@@ -448,7 +455,7 @@
           "wide": true,
           "names": [
             "Regional Manager, Karnataka — eight years, Bengaluru",
-            "General Manager Operations, amã Stays & Trails — IHCL’s branded homestays, pan-India: P&L, owners and partners, guests and teams"
+            "General Manager, amã Stays & Trails — helping build and scale IHCL’s homestay brand, pan-India: P&L, owners and partners, guests and teams"
           ]
         }
       ]
@@ -456,10 +463,9 @@
     {
       "type": "exp",
       "id": "track-ama",
-      "tint": true,
       "label": "amã Stays & Trails",
-      "title": "A brand built <t>house by house.</t>",
-      "lede": "The public milestones of the brand she helped build. The figures are IHCL’s.",
+      "title": "A brand, built <t>and scaled.</t>",
+      "lede": "“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays & Trails into a distinctive hospitality brand.” — Priya Vishwanathan, 2026. The figures below are IHCL’s.",
       "groups": [
         {
           "label": "Milestones",

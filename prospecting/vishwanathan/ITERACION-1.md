@@ -36,3 +36,15 @@ Mismo sistema que el de Pettingill (`tools/build-vishwanathan.py`, derivado de `
 ## Verificación
 
 Las cinco páginas a 1440 y 390 px: sin desbordes ni errores de consola. Gradientes reforzados en las fotos claras (Track record, Hoy, CV, Voice) para que el texto se lea.
+
+## Iteración 2: amã en el centro (15 de octubre de 2026)
+
+Pablo marcó como clave su frase del post de los 35 años: *"helping build and scale ama Stays & Trails into a distinctive hospitality brand"*.
+
+- **Hero:** "She helped build and scale amã Stays & Trails. *Thirty-five years with IHCL.*"
+- **In brief:** amã pasa al primer lugar, citando la frase del post. Londres 1995 entra en la trayectoria. Business Excellence, quince años (dato de la entrevista de HospeTalk).
+- **Cifras:** 370+ (bungalows de amã, figura de IHCL) pasa al primer lugar.
+- **Track record (portada de inicio):** el texto cuenta amã como "el capítulo más gratificante", en sus palabras.
+- **Página Track record:** amã sube al primer bloque ("A brand, built and scaled."), con su cita. Se suman 1995 Londres, 1997 Club Floors, 1999 y 2001 Quality.
+- **Línea de tiempo:** se suma 1995. Se corrige el rótulo "IHCL (Taj Group)", que se salía por la izquierda; ahora va sobre la barra.
+- **Sin cambios:** el retrato sigue siendo ilustrativo. Antes de enviarle el preview, hay que quitarlo o reemplazarlo por una foto suya con permiso.
