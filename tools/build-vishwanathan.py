@@ -36,9 +36,9 @@ base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al c
                     '/* (heredado del concepto con fotografia; sin imagen no aplica)')
 
 # ------------------------------------------------------- 3. cabeza del documento
-TITLE = 'Priya Vishwanathan — Hospitality Advisor · Hotels, Homestays &amp; Guest Experience'
-DESC = ('Priya Vishwanathan: thirty-five years with the Taj and IHCL, from the Taj Mahal Hotel to amã Stays & Trails. '
-        'Greenfield development, guest experience and operations excellence for hotel and homestay owners.')
+TITLE = 'Priya Vishwanathan — Hospitality Advisor · Mentor · Juror'
+DESC = ('Priya Vishwanathan: thirty-five years with IHCL; she helped build and scale amã Stays & Trails. '
+        'Advisory for homestay and hotel owners, growing groups and boards, and conversations on service and leadership.')
 URL = 'https://igniteyourself.co/vishwanathan'
 
 base = sub1(r'<title>[^<]*</title>', f'<title>{TITLE}</title>', base, tag='title')
@@ -162,6 +162,32 @@ base = sub1(r"""\(s\.social\|\|\[\]\)\.map\(function\(x\)\{return'<a class="go" 
 
 # ---------------------------------------------------------- 5. partials propios
 PARTIALS = r"""
+media:function(s){
+  var play='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>';
+  return'<section class="mda'+(s.ink?' ink':'')+'" id="'+esc(s.id||'media')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="mdgrid" data-cards>'+(s.items||[]).map(function(m){
+    var yt='https://www.youtube.com/watch?v='+m.yt;
+    return'<article class="mdc wr"><a class="mdv" href="'+yt+'" target="_blank" rel="noopener" data-yt="'+esc(m.yt)+'" aria-label="Play: '+esc(m.t)+'">'+
+      '<img src="https://i.ytimg.com/vi/'+esc(m.yt)+'/maxresdefault.jpg" alt="" loading="lazy"><span class="mdplay">'+play+'</span></a>'+
+      '<div class="mdtx"><span class="smallcap mdshow">'+esc(m.show)+'<em>'+esc(m.ep||'')+'</em></span>'+
+      '<h3 class="mdt">'+esc(m.t)+'</h3><p class="mdd">'+esc(m.d)+'</p>'+
+      (m.q?'<p class="mdq">'+esc(m.q)+'</p>':'')+
+      '<div class="mdlinks"><a href="'+yt+'" target="_blank" rel="noopener">Watch on YouTube<i aria-hidden="true">&nearr;</i></a>'+
+      (m.links||[]).map(function(l){return'<a href="'+esc(l.h)+'" target="_blank" rel="noopener">'+esc(l.t)+'<i aria-hidden="true">&nearr;</i></a>'}).join('')+'</div></div></article>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
+ideas:function(s){
+  return'<section class="ids'+(s.tint?' tint':'')+'" id="'+esc(s.id||'ideas')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<ol class="idgrid'+((s.items||[]).length===3?' i3':'')+'" data-cards>'+(s.items||[]).map(function(it,i){
+    return'<li class="idc wr"><span class="idn">'+('0'+(i+1)).slice(-2)+'</span><h3 class="idt">'+rich(it.t)+'</h3>'+
+      '<blockquote class="idq">'+esc(it.q)+'</blockquote><span class="src">'+esc(it.s)+'</span></li>'}).join('')+'</ol>'+
+  (s.src?'<div class="tlsrc wr" data-r1><span class="src">'+esc(s.src)+'</span></div>':'')+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
 nums:function(s){
   return'<section class="nums'+(s.ink?' ink':'')+'" id="'+esc(s.id||'nums')+'"><div class="wrap">'+
   (s.label?'<div class="smallcap wr" data-r1>'+esc(s.label)+'</div>':'')+
@@ -207,12 +233,12 @@ brief:function(s){
   return'<section class="brf" id="'+esc(s.id||'brief')+'"><div class="wrap">'+
   (s.label?'<div class="smallcap brl wr" data-r1>'+esc(s.label)+'</div>':'')+
   '<div class="brgrid" data-cards>'+(s.items||[]).map(function(it,i){
-    return'<div class="bri wr"><span class="brn">0'+(i+1)+'</span><h3>'+rich(it.k)+'</h3><p class="brt">'+rich(it.t)+'</p>'+(it.d?'<p class="brd">'+rich(it.d)+'</p>':'')+'</div>'}).join('')+'</div>'+
+    return'<div class="bri wr"><span class="brn">0'+(i+1)+'</span><h3>'+rich(it.k)+'</h3>'+(it.t?'<p class="brt">'+rich(it.t)+'</p>':'')+(it.d?'<p class="brd">'+rich(it.d)+'</p>':'')+'</div>'}).join('')+'</div>'+
   '</div></section>'},
 quote:function(s){
   return'<section class="qt" id="'+esc(s.id||'quote')+'"><div class="wrap" data-r2>'+
   (s.lead?'<p class="qlead wr">'+esc(s.lead)+'</p>':'')+
-  '<blockquote class="qq wr">'+esc(s.q)+'</blockquote>'+
+  '<blockquote class="qq wr'+((s.q||'').length>90?' long':'')+'">'+esc(s.q)+'</blockquote>'+
   (s.who?'<p class="qwho wr">'+esc(s.who)+'</p>':'')+
   '</div></section>'},
 counsel:function(s){
@@ -247,7 +273,7 @@ retain:function(s){
         (st.links?'<div class="rtlinks">'+st.links.map(lk).join('')+'</div>':'')+'</div></li>'}).join('')+'</ol>'+
     '<aside class="rtcard wr" data-r1><span class="smallcap">'+esc(s.termsLabel||'Terms')+'</span>'+
       '<dl>'+(s.terms||[]).map(function(x){return'<div><dt>'+esc(x.k)+'</dt><dd>'+esc(x.v)+'</dd></div>'}).join('')+'</dl>'+
-      (s.cta?'<a class="rtcta" href="'+esc(s.cta.h)+'" target="_blank" rel="noopener">'+esc(s.cta.t)+'<span aria-hidden="true">&nearr;</span></a>':'')+
+      (s.cta?'<a class="rtcta" href="'+esc(s.cta.h)+'"'+(/^https?:/.test(s.cta.h)?' target="_blank" rel="noopener"':'')+'>'+esc(s.cta.t)+'<span aria-hidden="true">'+(/^https?:/.test(s.cta.h)?'&nearr;':'&rarr;')+'</span></a>':'')+
       (s.ctaNote?'<p class="rtnote">'+esc(s.ctaNote)+'</p>':'')+
       (s.alt?'<a class="rtalt" href="'+esc(s.alt.h)+'">'+esc(s.alt.t)+'</a>':'')+
     '</aside>'+
@@ -380,6 +406,21 @@ MOBJS = """<script>
 })();
 </script>"""
 base = sub1(r'</body>', MOBJS + '\n</body>', base, tag='mobjs')
+
+VIDJS = """<script>
+(function(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('.mdv[data-yt]');if(!a||e.metaKey||e.ctrlKey)return;
+    e.preventDefault();
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+a.getAttribute('data-yt')+'?autoplay=1&rel=0&modestbranding=1';
+    f.title=a.getAttribute('aria-label')||'Video';
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;
+    a.classList.add('on');a.innerHTML='';a.appendChild(f);a.removeAttribute('href');
+  });
+})();
+</script>"""
+base = sub1(r'</body>', VIDJS + '\n</body>', base, tag='vidjs')
 
 # ------------------------------------------------- 5b. motion propio (dentro de init, solo con MOTION)
 PETJS = r"""
@@ -1392,6 +1433,71 @@ html.no-motion .scarr{display:none}
   linear-gradient(90deg,rgba(14,16,19,.88) 0%,rgba(14,16,19,.62) 40%,rgba(14,16,19,.12) 72%),
   linear-gradient(180deg,rgba(14,16,19,.08) 0%,rgba(14,16,19,0) 45%,rgba(14,16,19,.55) 100%)}
 
+/* ---------- conversaciones: video que se reproduce en la pagina ---------- */
+.mda{padding:var(--sec) 0}
+.mda.ink{background:var(--ink);color:#fff}
+.mda.ink .smallcap{color:rgba(255,255,255,.5)}
+.mda.ink .rnum{color:rgba(255,255,255,.34)}
+.mda.ink .d56 .it{color:rgba(255,255,255,.5)}
+.mda.ink .elede{color:rgba(255,255,255,.7)}
+.mdgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px)}
+.mdc{display:flex;flex-direction:column}
+.mdv{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:#0c0d10;cursor:pointer}
+.mdv img{width:100%;height:100%;object-fit:cover;filter:saturate(.6) brightness(.82);transition:filter .5s var(--ease-out),transform .9s var(--ease-out)}
+.mdv:hover img{filter:saturate(.95) brightness(.95);transform:scale(1.02)}
+.mdv::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,0) 55%,rgba(14,16,19,.45) 100%);pointer-events:none}
+.mdplay{position:absolute;left:clamp(16px,1.8vw,26px);bottom:clamp(16px,1.8vw,26px);z-index:2;width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.94);color:var(--ink);
+  transition:transform .3s var(--ease-out),background .3s}
+.mdplay svg{width:20px;height:20px;margin-left:3px}
+.mdv:hover .mdplay{transform:scale(1.08);background:#fff}
+.mdv.on{cursor:default}.mdv.on::after{content:none}
+.mdv iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mdtx{padding-top:clamp(20px,2.6vh,30px);display:flex;flex-direction:column;flex:1}
+.mdshow{display:flex;flex-wrap:wrap;gap:6px 14px}
+.mdshow em{font-style:normal;opacity:.7}
+.mdt{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.1vw,34px);line-height:1.12;letter-spacing:-.005em;margin-top:12px;max-width:24ch}
+.mdd{margin-top:14px;font-size:clamp(15px,1.05vw,16.5px);line-height:1.6;max-width:46ch;opacity:.78}
+.mdq{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.4vw,22px);line-height:1.35;color:var(--brass)}
+.mdlinks{margin-top:auto;padding-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px}
+.mdlinks a{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding-bottom:4px;border-bottom:1px solid currentColor;opacity:.85}
+.mdlinks a:hover{opacity:1}
+.mdlinks i{font-style:normal;margin-left:6px}
+.mda:not(.ink) .mdd{color:#2b2e33;opacity:1}
+@media(max-width:860px){.mdgrid{grid-template-columns:1fr;gap:56px}.mdplay{width:50px;height:50px}.mdt{font-size:26px}}
+
+/* ---------- ideas: conviccion, cita y fuente ---------- */
+.ids{padding:var(--sec) 0}
+.ids.tint{background:#E4DED2}
+.idgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink);list-style:none}
+.idgrid.i3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.idc{padding:clamp(26px,3.4vh,40px) clamp(20px,2.6vw,44px) clamp(30px,4vh,46px) 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.idgrid:not(.i3) .idc:nth-child(2n){padding-left:clamp(20px,2.6vw,44px);border-left:1px solid var(--line)}
+.idgrid.i3 .idc+.idc{padding-left:clamp(20px,2.6vw,44px);border-left:1px solid var(--line)}
+.idn{font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;color:var(--brass);letter-spacing:.08em}
+.idt{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.1;letter-spacing:-.005em;margin-top:16px;max-width:16ch}
+.idq{margin-top:16px;font-size:clamp(15px,1.05vw,16.5px);line-height:1.6;color:#2b2e33;max-width:40ch;flex:1}
+.idc .src{margin-top:20px;align-self:flex-start}
+@media(max-width:860px){.idgrid,.idgrid.i3{grid-template-columns:1fr}
+  .idc,.idgrid:not(.i3) .idc:nth-child(2n),.idgrid.i3 .idc+.idc{padding:26px 0 30px;border-left:0}
+  .idt{font-size:26px}}
+
+/* sin numero de seccion, el rotulo no deja hueco */
+.rnum:empty{display:none}
+
+/* bloque a la derecha: todas las piezas arrancan en la misma columna */
+@media(min-width:861px){.stmt.tr .wrap{display:grid;grid-template-columns:minmax(0,1fr) min(100%,640px)}
+  .stmt.tr .wrap>*{grid-column:2;width:auto}}
+
+/* ---------- cita larga: mas ancha y mas baja ---------- */
+#site .qq.long{font-size:clamp(30px,3.1vw,50px);line-height:1.12;max-width:26ch}
+@media(max-width:860px){#site .qq.long{font-size:clamp(26px,7.4vw,34px)}}
+.ids .pmore a,.mda:not(.ink) .pmore a{color:var(--ink);border-color:rgba(20,22,26,.4)}
+.ids .pmore a:hover{border-color:var(--ink)}
+
+/* ---------- preguntas sin cuerpo: la pregunta es el contenido ---------- */
+#ideas-questions .bri h3{font-size:clamp(24px,2.2vw,34px);max-width:16ch}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -1411,24 +1517,24 @@ html.no-motion .scarr{display:none}
 
 # ------------------------------------------------------------- 7. navegacion
 NAV = [
-    {"t": "Overview",      "h": "/vishwanathan"},
-    {"t": "Practice",      "h": "/vishwanathan/practice"},
-    {"t": "Track record",  "h": "/vishwanathan/track"},
-    {"t": "Voice",         "h": "/vishwanathan/voice"},
-    {"t": "CV",            "h": "/vishwanathan/cv"},
-    {"t": "Enquiry",       "h": "/vishwanathan#inquiry"},
+    {"t": "Overview",       "h": "/vishwanathan"},
+    {"t": "Career",         "h": "/vishwanathan/track"},
+    {"t": "Perspectives",   "h": "/vishwanathan/ideas"},
+    {"t": "Conversations",  "h": "/vishwanathan/voice"},
+    {"t": "Advisory",       "h": "/vishwanathan/practice"},
+    {"t": "Contact",        "h": "/vishwanathan#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
-TNAV = [("Practice",      "/vishwanathan/practice",  "practice"),
-        ("Track record",  "/vishwanathan/track",     "track"),
-        ("Voice",         "/vishwanathan/voice",     "voice"),
-        ("CV",            "/vishwanathan/cv",        "cv")]
+TNAV = [("Career",         "/vishwanathan/track",     "track"),
+        ("Perspectives",   "/vishwanathan/ideas",     "ideas"),
+        ("Conversations",  "/vishwanathan/voice",     "voice"),
+        ("Advisory",       "/vishwanathan/practice",  "practice")]
 TABS = [("Overview",  "/vishwanathan",           "home"),
-        ("Practice",  "/vishwanathan/practice",  "practice"),
-        ("Track record", "/vishwanathan/track",  "track"),
-        ("Voice",     "/vishwanathan/voice",     "voice"),
-        ("CV",        "/vishwanathan/cv",        "cv")]
+        ("Career",    "/vishwanathan/track",     "track"),
+        ("Ideas",     "/vishwanathan/ideas",     "ideas"),
+        ("Talks",     "/vishwanathan/voice",     "voice"),
+        ("Advisory",  "/vishwanathan/practice",  "practice")]
 
 def topbar_html(active):
     ON = ' class="on"'
@@ -1438,7 +1544,7 @@ def topbar_html(active):
     return ('<div class="topbar">'
             '<a class="u11 smallcap tname" href="/vishwanathan" style="color:#fff">Vishwanathan</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
-            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/vishwanathan#inquiry"}" style="color:#fff">Discuss a project</a>'
+            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/vishwanathan#inquiry"}" style="color:#fff">Start a conversation</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
 # ---------------------------------------------------------- 8. reparto por pagina
@@ -1472,34 +1578,38 @@ inq = lambda: deep('inquiry')
 def foot():
     s = deep('inquiry'); s['noform'] = True
     return s
-ALT = {"t": "Discuss a project", "h": "/vishwanathan#inquiry"}
+ALT = {"t": "Start a conversation", "h": "/vishwanathan#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
-T_PR = 'Practice — Priya Vishwanathan'
-T_TE = 'Track record — Priya Vishwanathan'
-T_PU = 'Voice — Priya Vishwanathan'
-T_CV = 'CV — Priya Vishwanathan'
+T_PR = 'Advisory — Priya Vishwanathan'
+T_TE = 'Career — Priya Vishwanathan'
+T_ID = 'Perspectives — Priya Vishwanathan'
+T_PU = 'Conversations — Priya Vishwanathan'
 
+home = page(TITLE, DESC,
+    [deep('hero'), deep('in-brief'), deep('numbers'), deep('quote'), deep('conversations'),
+     deep('s-track'), deep('beliefs'), deep('s-advisory'), deep('s-now'), inq()])
+for _s in home['sections']:
+    _s.pop('no', None)
 PAGES = {
-    'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('in-brief'), deep('numbers'), deep('quote'), deep('s-practice'),
-         deep('s-track'), deep('for-owners'), deep('s-now'), inq()]),
-    'practice': page(T_PR,
-        'Greenfield development and hotel planning, guest experience, operations excellence and advisory, and how a project starts.',
-        [deep('practice-open'), deep('routes'), deep('engage'), deep('disclosure'),
-         dict(NX('Next', 'Track <t>record</t>', 'Thirty-five years with the Taj and IHCL.', '/vishwanathan/track'), alt=ALT), foot()], sub=True),
+    'home': home,
     'track': page(T_TE,
-        'Thirty-five years with the Taj and IHCL, from the Taj Mahal Hotel to amã Stays & Trails.',
-        [deep('track-open'), deep('track-ama'), deep('track-years'), deep('track-roles'),
-         dict(NX('Next', 'Voice', 'Service, dignity and the guest, in her own words.', '/vishwanathan/voice'), alt=ALT), foot()], sub=True),
+        'Thirty-five years with IHCL: St. James’ Court in London, the Taj Mahal in New Delhi, Business Excellence, Karnataka and amã Stays & Trails.',
+        [deep('track-open'), deep('track-ama'), deep('track-excellence'), deep('track-years'), deep('track-roles'),
+         deep('cv-today'), deep('cv-education'),
+         dict(NX('Next', 'Perspectives', 'Service, standards and the guest, in her own words.', '/vishwanathan/ideas'), alt=ALT), foot()], sub=True),
+    'ideas': page(T_ID,
+        'What thirty-five years taught Priya Vishwanathan about guests, teams and standards, in her own words.',
+        [deep('ideas-open'), deep('ideas-all'), deep('ideas-questions'), deep('ideas-guest'),
+         dict(NX('Next', 'Conversations', 'Podcasts, juries, forums and councils.', '/vishwanathan/voice'), alt=ALT), foot()], sub=True),
     'voice': page(T_PU,
-        'A podcast, forums and councils: what Priya Vishwanathan says about service, dignity and the guest.',
-        [deep('voice-open'), deep('voice-talks'), deep('voice-forums'),
-         dict(NX('Next', 'CV', 'Education, appointments and the roles she holds today.', '/vishwanathan/cv'), alt=ALT), foot()], sub=True),
-    'cv': page(T_CV,
-        'Education, appointments and the roles Priya Vishwanathan holds today.',
-        [deep('cv-open'), deep('cv-today'), deep('cv-education'),
-         dict(NX('Next', 'Start a <t>project</t>', 'A conversation, a site review and a scoped plan.', '/vishwanathan/practice#engage'), alt=ALT), foot()], sub=True),
+        'Podcasts, juries, forums and councils: where Priya Vishwanathan speaks about hospitality, service and leadership.',
+        [deep('voice-open'), deep('voice-media'), deep('voice-talks'), deep('voice-forums'),
+         dict(NX('Next', 'Advisory', 'For owners, growing groups and boards.', '/vishwanathan/practice'), alt=ALT), foot()], sub=True),
+    'practice': page(T_PR,
+        'Advisory for homestay and hotel owners, growing groups and boards; masterclasses, panels and juries; and how she works.',
+        [deep('practice-open'), deep('routes'), deep('engage'), deep('hospi'),
+         NX('Next', 'Start a <t>conversation</t>', 'Tell her what you are building, running or planning.', '/vishwanathan#inquiry'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)
@@ -1525,8 +1635,8 @@ def derive(json_path, title, ogurl, out_dir, active):
     print('  ', out_dir.replace(DST, 'vishwanathan') or 'vishwanathan', 'ok')
 
 derive('/vishwanathan/home.json', TITLE, URL, DST, None)
-derive('/vishwanathan/practice.json', T_PR, URL + '/practice', DST + '/practice', 'practice')
 derive('/vishwanathan/track.json', T_TE, URL + '/track', DST + '/track', 'track')
+derive('/vishwanathan/ideas.json', T_ID, URL + '/ideas', DST + '/ideas', 'ideas')
 derive('/vishwanathan/voice.json', T_PU, URL + '/voice', DST + '/voice', 'voice')
-derive('/vishwanathan/cv.json', T_CV, URL + '/cv', DST + '/cv', 'cv')
+derive('/vishwanathan/practice.json', T_PR, URL + '/practice', DST + '/practice', 'practice')
 print('vishwanathan listo')

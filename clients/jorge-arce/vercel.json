@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/vishwanathan/cv",
+      "destination": "/vishwanathan/track",
+      "permanent": false
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

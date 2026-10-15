@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Voice — Priya Vishwanathan",
-    "description": "A podcast, forums and councils: what Priya Vishwanathan says about service, dignity and the guest."
+    "title": "Conversations — Priya Vishwanathan",
+    "description": "Podcasts, juries, forums and councils: where Priya Vishwanathan speaks about hospitality, service and leadership."
   },
   "logo": "PRIYA VISHWANATHAN",
   "nav": [
@@ -10,28 +10,28 @@
       "h": "/vishwanathan"
     },
     {
-      "t": "Practice",
-      "h": "/vishwanathan/practice"
-    },
-    {
-      "t": "Track record",
+      "t": "Career",
       "h": "/vishwanathan/track"
     },
     {
-      "t": "Voice",
+      "t": "Perspectives",
+      "h": "/vishwanathan/ideas"
+    },
+    {
+      "t": "Conversations",
       "h": "/vishwanathan/voice"
     },
     {
-      "t": "CV",
-      "h": "/vishwanathan/cv"
+      "t": "Advisory",
+      "h": "/vishwanathan/practice"
     },
     {
-      "t": "Enquiry",
+      "t": "Contact",
       "h": "/vishwanathan#inquiry"
     }
   ],
   "navcta": {
-    "t": "Discuss a project",
+    "t": "Start a conversation",
     "h": "/vishwanathan#inquiry"
   },
   "sections": [
@@ -39,29 +39,52 @@
       "type": "stmt",
       "id": "voice-open",
       "opener": true,
-      "label": "Voice",
+      "label": "Conversations",
       "img": {
-        "src": "/vishwanathan/assets/notes.jpg",
-        "alt": "A notebook and reading glasses on a cane chair",
+        "src": "/vishwanathan/assets/voice.jpg",
+        "alt": "Photograph to come",
         "pos": "50% 50%"
       },
-      "quote": "Service, <t>without servility.</t>",
-      "sub": "What she says about guests, dignity and the work, in her own words."
+      "quote": "In <t>conversation.</t>",
+      "sub": "Podcasts, juries, forums and councils: where she speaks about hospitality, service and the people who deliver it."
+    },
+    {
+      "type": "media",
+      "id": "voice-media",
+      "label": "Watch and listen",
+      "title": "Two conversations, <t>2026.</t>",
+      "items": [
+        {
+          "yt": "QDKNt4len4Q",
+          "show": "HospeTalk with Vikas Mehra",
+          "ep": "Episode 35 · 2026",
+          "t": "Hotels Are Solving the Wrong Problem",
+          "d": "Data over instinct, improvement without overspending, Business Excellence at IHCL, and why a struggling culture is easier to fix than a struggling business.",
+          "q": "“The biggest misconception… improvement is spending.”"
+        },
+        {
+          "yt": "wg-QzplfT5M",
+          "show": "Inspire Someone Today with Srikanth",
+          "ep": "Episode 180 · 6 August 2026",
+          "t": "How Many People Are Better Because They Crossed Your Path?",
+          "d": "Day three at the Taj, homestays built with the families who own them, service without servility, and leaving at the top.",
+          "q": "“Complaint is a gift.”",
+          "links": [
+            {
+              "t": "Episode page",
+              "h": "https://inspiresomeonetoday.in/e180/"
+            }
+          ]
+        }
+      ],
+      "no": "01"
     },
     {
       "type": "pubs",
       "id": "voice-talks",
-      "label": "In conversation",
+      "label": "Talks and features",
       "title": "Heard <t>and read.</t>",
       "items": [
-        {
-          "y": "2026",
-          "t": "How Many People Are Better Because They Crossed Your Path?",
-          "a": "Inspire Someone Today, episode 180, with Srikanth",
-          "v": "Forty-eight minutes on hospitality as a way of living, complaints as gifts, homestays and leaving at the top. 6 August 2026.",
-          "h": "https://inspiresomeonetoday.in/e180/",
-          "why": "Her story, from day three at the Taj to amã."
-        },
         {
           "y": "2023",
           "t": "Reflections and Closing Remarks, Women Leadership Conclave",
@@ -79,14 +102,21 @@
           "why": "The career, told by her school."
         }
       ],
-      "no": "01"
+      "no": "02"
     },
     {
       "type": "exp",
       "id": "voice-forums",
       "label": "Forums",
-      "title": "Where she <t>speaks.</t>",
+      "title": "Where she <t>sits and speaks.</t>",
       "groups": [
+        {
+          "label": "Juries",
+          "wide": true,
+          "names": [
+            "Regional Jury (South) — 10th BW Hotelier Indian Hospitality Awards, 2026, with Dhunji Kavarana, PK Mohan Kumar and Subhra Banerjee; knowledge partner, Indian School of Hospitality"
+          ]
+        },
         {
           "label": "Guest speaker on service and operational excellence",
           "wide": true,
@@ -107,16 +137,16 @@
           ]
         }
       ],
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "next",
       "k": "Next",
-      "t": "CV",
-      "d": "Education, appointments and the roles she holds today.",
-      "h": "/vishwanathan/cv",
+      "t": "Advisory",
+      "d": "For owners, growing groups and boards.",
+      "h": "/vishwanathan/practice",
       "alt": {
-        "t": "Discuss a project",
+        "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
       }
     },
@@ -124,8 +154,8 @@
       "type": "inquiry",
       "id": "inquiry",
       "label": "Start a conversation",
-      "title": "Start with <t>the project.</t>",
-      "lede": "Tell her what you are building or running, and where it stands.",
+      "title": "Start <t>a conversation.</t>",
+      "lede": "Tell her what you are building, running or planning, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -135,7 +165,7 @@
         "paths": [
           {
             "v": "project",
-            "t": "A new hotel or homestay — greenfield or planning",
+            "t": "A homestay, villa or boutique hotel — new or existing",
             "btn": "Send enquiry",
             "note": "Please do not include confidential financial information.",
             "fields": [
@@ -156,7 +186,7 @@
                 "n": "Where is the property?"
               },
               {
-                "n": "Stage: land, plans, under construction or open"
+                "n": "Stage: idea, plans, under construction or open"
               },
               {
                 "n": "Brief description",
@@ -166,8 +196,8 @@
             ]
           },
           {
-            "v": "experience",
-            "t": "Guest experience or operations — an existing hotel",
+            "v": "standards",
+            "t": "Standards and guest experience — a hotel or a group",
             "btn": "Send enquiry",
             "fields": [
               {
@@ -184,10 +214,10 @@
                 "r": true
               },
               {
-                "n": "Number of keys"
+                "n": "Number of hotels or keys"
               },
               {
-                "n": "What is not working",
+                "n": "What you want to improve",
                 "ta": true,
                 "full": true
               }
@@ -219,6 +249,37 @@
             ]
           },
           {
+            "v": "speaking",
+            "t": "A masterclass, panel, jury or podcast",
+            "btn": "Send invitation",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Format"
+              },
+              {
+                "n": "Date and city"
+              },
+              {
+                "n": "Audience and brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
             "v": "other",
             "t": "Something else",
             "btn": "Send enquiry",
@@ -243,11 +304,11 @@
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Ms. Vishwanathan.",
         "fine": "Private concept: nothing is sent from this page."
       },
-      "kick": "Hospitality Advisor · Hotels, Homestays & Guest Experience",
+      "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Since 1990.</t>",
+      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
       "fcta": {
-        "t": "Discuss a project",
+        "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
       },
       "social": [
@@ -264,10 +325,10 @@
         "href": "https://igniteyourself.co/",
         "logo": "/vishwanathan/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+        "note": "A private concept by Ignite Yourself, prepared from public information and her recorded interviews for Ms. Vishwanathan’s review. Marked frames show where portraits will go. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
       },
       "noform": true,
-      "no": "03"
+      "no": "04"
     }
   ]
 }
