@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "title": "Voice — Priya Vishwanathan",
+    "description": "A podcast, forums and councils: what Priya Vishwanathan says about service, dignity and the guest."
+  },
+  "logo": "PRIYA VISHWANATHAN",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/vishwanathan"
+    },
+    {
+      "t": "Practice",
+      "h": "/vishwanathan/practice"
+    },
+    {
+      "t": "Track record",
+      "h": "/vishwanathan/track"
+    },
+    {
+      "t": "Voice",
+      "h": "/vishwanathan/voice"
+    },
+    {
+      "t": "CV",
+      "h": "/vishwanathan/cv"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/vishwanathan#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a project",
+    "h": "/vishwanathan#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "voice-open",
+      "opener": true,
+      "label": "Voice",
+      "img": {
+        "src": "/vishwanathan/assets/notes.jpg",
+        "alt": "A notebook and reading glasses on a cane chair",
+        "pos": "50% 50%"
+      },
+      "quote": "Service, <t>without servility.</t>",
+      "sub": "What she says about guests, dignity and the work, in her own words."
+    },
+    {
+      "type": "pubs",
+      "id": "voice-talks",
+      "label": "In conversation",
+      "title": "Heard <t>and read.</t>",
+      "items": [
+        {
+          "y": "2026",
+          "t": "How Many People Are Better Because They Crossed Your Path?",
+          "a": "Inspire Someone Today, episode 180, with Srikanth",
+          "v": "Forty-eight minutes on hospitality as a way of living, complaints as gifts, homestays and leaving at the top. 6 August 2026.",
+          "h": "https://inspiresomeonetoday.in/e180/",
+          "why": "Her story, from day three at the Taj to amã."
+        },
+        {
+          "y": "2023",
+          "t": "Reflections and Closing Remarks, Women Leadership Conclave",
+          "a": "G100 Women’s Week India, Bengaluru",
+          "v": "Hotel Lalit Ashok, 10 March 2023. Convenor, WICCI National Council for Diversity & Inclusion.",
+          "h": "https://www.g100.in/womens-week-india-meetings-bengaluru-kochi-8-15-march-2023/",
+          "why": "The closing word at a conclave of women leaders."
+        },
+        {
+          "y": "2021",
+          "t": "An alumni feature for International Women’s Day",
+          "a": "PIHMAA, the IHM Pusa alumni association",
+          "v": "From Duty Manager at the Taj Mahal Hotel to General Manager of IHCL’s homestays, with a message to young hoteliers: think big.",
+          "h": "https://www.linkedin.com/in/priyavishwanathan/",
+          "why": "The career, told by her school."
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "voice-forums",
+      "label": "Forums",
+      "title": "Where she <t>speaks.</t>",
+      "groups": [
+        {
+          "label": "Guest speaker on service and operational excellence",
+          "wide": true,
+          "names": [
+            "Confederation of Indian Industry (CII)",
+            "Women Economic Forum",
+            "Banks and hospitals"
+          ]
+        },
+        {
+          "label": "Councils and chapters",
+          "wide": true,
+          "names": [
+            "National Vice President, Diversity & Inclusion Council — WICCI, since 2020",
+            "India Chapter Chair for Employability — All Ladies League",
+            "Tata Network Forum South — member",
+            "Volunteer since 2012: employment for differently-abled and underprivileged people"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "CV",
+      "d": "Education, appointments and the roles she holds today.",
+      "h": "/vishwanathan/cv",
+      "alt": {
+        "t": "Discuss a project",
+        "h": "/vishwanathan#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the project.</t>",
+      "lede": "Tell her what you are building or running, and where it stands.",
+      "contact": {
+        "city": "Bengaluru, India"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "project",
+            "t": "A new hotel or homestay — greenfield or planning",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential financial information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company or family office",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Where is the property?"
+              },
+              {
+                "n": "Stage: land, plans, under construction or open"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "experience",
+            "t": "Guest experience or operations — an existing hotel",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Hotel or group",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Number of keys"
+              },
+              {
+                "n": "What is not working",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "advisory",
+            "t": "A board or advisory role",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "The role, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Ms. Vishwanathan.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "kick": "Hospitality Advisor · Hotels, Homestays & Guest Experience",
+      "name": "Priya Vishwanathan",
+      "sub": "Hotels, homestays and the guest experience. <t>Since 1990.</t>",
+      "fcta": {
+        "t": "Discuss a project",
+        "h": "/vishwanathan#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/priyavishwanathan/",
+          "i": "linkedin"
+        }
+      ],
+      "base": "Priya Vishwanathan · Bengaluru, India",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/vishwanathan/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+      },
+      "noform": true,
+      "no": "03"
+    }
+  ]
+}
