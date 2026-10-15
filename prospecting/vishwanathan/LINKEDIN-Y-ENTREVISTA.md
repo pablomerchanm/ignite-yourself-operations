@@ -130,3 +130,58 @@ Lo que hizo en IHCL (hoteles aislados convertidos en una organización con proce
 - Si podemos mencionar el proyecto de Shantiniketan, y cuáles otros tiene.
 - Permiso para usar su foto y las citas del podcast.
 - La finalista de Tata Innovista 2021 y el premio de la ISQ, con documento.
+- El NPS de 90+ de amã durante su gestión (lo dice en Inspire Someone Today).
+- Permiso para usar su frase de cierre de Inspire Someone Today como cita principal.
+
+---
+
+## 7. Segunda entrevista: Inspire Someone Today (episodio de los seis años)
+
+Fuente: la transcripción que pasó Pablo, de unos 48 minutos. El conductor es Srikanth y es el episodio del sexto aniversario del podcast; la página ya lo cita como E180. La transcripción automática venía en inglés escrito con caracteres devanagari; las citas de abajo están reconstruidas al inglés y pueden variar en alguna palabra.
+
+### La frase que ella escribió para cerrar (la mejor que tenemos)
+Dijo que la había escrito antes de grabar:
+> "Success is not measured by how many people know your name. It is measured by how many people are better because they crossed your path. Real work is people feel they matter. And that is what hospitality and leadership is."
+
+Es la cita ideal para la página: es suya, la pensó y la dijo en público. **Propuesta:** que sea la cita principal de la página, en lugar de "Complaint is a gift" o junto a ella.
+
+### amã, contado por ella (lo más útil para la oferta a propietarios)
+- **Los propietarios llegaban solos:** "People came to us: can you take my home?" Confiaban en IHCL y en Tata. "Property… in India is not one where you would easily give off your personal home to anybody."
+- **Su método con propietarios es escuchar y co-crear.** "You just got to be honest and truthful with them, and hearing them out, because these were their personal spaces." Cuenta el caso de una casa de lujo en Lonavala: el dueño no dejó quitar el escritorio de su padre en el dormitorio principal, y ella lo convirtió en parte de la historia de la casa. Los dueños estaban "very excited to co-create".
+- **Formó a dueñas que manejaban un negocio por primera vez:** "the house was owned by the man, the wives were left to deal with me because they were going to learn how to run a business for the first time."
+- **Sabe que un homestay es otro negocio:** "Hotels is a very different business and homestay is a completely different business… ownership is very different", y el huésped busca otra cosa.
+- **Lo que hace que una estadía pase de buena a excelente:**
+  - "Give free things — I never agreed with it… I was in a business, not a charity."
+  - "Good to great really happens when you do something that touches somebody's heart."
+  - Sin menú fijo: el cocinero cambia la receta según el huésped.
+  - Una estación de té y café pensada como el rincón de una casa, con la mejor cafetera, buen café y dulces y salados locales.
+  - Café en el jardín, fogata de noche, parrilla.
+  - Estándares que forman un equipo que se anticipa al huésped.
+- **"Our Net Promoter Score was always 90 plus"** mientras ella estuvo. Es una cifra fuerte, pero la dice ella y no está documentada. **No va en la página sin confirmarla con ella.**
+
+### Liderazgo y servicio
+- **Servicio no es servilismo:** "If you have to respect others, you've got to first respect yourself." El servilismo aparece cuando falta confianza en uno mismo. El código de conducta de IHCL funcionaba como un escudo para el personal.
+- **Honestidad y cuidado genuino** son lo que, según ella, construye lealtad. "If you tell one lie, you keep on continuing with it."
+- **Tres palabras que usaría su equipo para describirla:** tough, demanding… caring.
+- **Tres cosas que hace un gran anfitrión:** compassionate, caring, genuine.
+- **Tres preguntas que todo líder debería hacerle a su equipo:** What is going wrong? What can we do better? What can you do to make the wrong become better? Sirven tal cual para una sección de "Cómo pienso".
+- **Reinventarse para seguir vigente:** "Reinvention is the name of the game… understand who is the user and what their needs are, and then do the reinvention." Usa el ejemplo de la Enciclopedia Británica.
+
+### El huésped indio de hoy (útil para conferencias y para propietarios)
+- Ha viajado más que muchos extranjeros y exige autenticidad: "If you're serving a Mexican dish, it better be authentic."
+- "Ready to spend for experiences and not just for brands." Los hoteles indios hoy compiten por el viajero indio, no por el extranjero.
+- Hay más sensación de derecho ("entitlement"), y el personal joven necesita apoyo para poner límites.
+- En su promoción del IHM, unos 90 de cada 100 entraron a hoteles; hoy, según ella, es alrededor del 10 %. El talento es un problema del sector.
+
+### Su vida después de IHCL
+- Llevaba unos 14 meses fuera cuando grabó. Pasó por el agotamiento; necesitó unos meses para recuperarse, y luego hizo un curso de IA.
+- "I take up work which makes sense to me." Elige proyectos con sentido. Esto importa al proponerle algo: no la mueve el volumen.
+- Su madre, del Himachal, se volvió empresaria tras enviudar joven. Le enseñó a ser lógica y no solo emocional, y a irse en la cima: "Leave when you are at the height and everybody is happy with you." Así se fue ella de IHCL.
+- Personas que admira: Ratan Tata, su madre y su guru, Swami Chinmayananda. Es punjabi; su abuela vivió la Partición. Tiene un hijo de 22 años que estudia ingeniería informática.
+
+### Qué cambia
+1. **La cita de la página:** su frase de cierre ("Success is not measured by how many people know your name…").
+2. **La oferta a propietarios se apoya en su método,** con sus palabras: escuchar, co-crear la historia de la casa, formar a quienes la operarán y fijar estándares que se sientan de casa.
+3. **"Cómo pienso"** puede abrir con sus tres preguntas de líder.
+4. **El NPS de 90+** queda en la lista de cosas por confirmar con ella.
+5. **El tono de la propuesta:** acepta trabajos que le hagan sentido, así que el preview debe hablar de propósito y de impacto en las personas, no de volumen ni de fama. Su frase de cierre lo dice.
