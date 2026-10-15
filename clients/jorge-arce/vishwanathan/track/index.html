@@ -828,6 +828,10 @@ html.no-motion .strip .sph img,html.no-motion .band .bph img{height:100%;top:0}
 .hero .hnote .it{color:rgba(255,255,255,.58)}
 
 /* ============ Tipografia de marca: serif para afirmar, grotesca para probar ============ */
+@font-face{font-family:'Bodoni Moda';src:url(/vishwanathan/assets/fonts/BodoniModa.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/vishwanathan/assets/fonts/CormorantGaramond.woff2) format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Pinyon Script';src:url(/vishwanathan/assets/fonts/PinyonScript.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Tiro Devanagari';src:url(/vishwanathan/assets/fonts/TiroDevanagari.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Editors Note';src:url(/vishwanathan/assets/fonts/EditorsNote-Light.otf) format('opentype');font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:'Editors Note';src:url(/vishwanathan/assets/fonts/EditorsNote-Regular.otf) format('opentype');font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:'Editors Note';src:url(/vishwanathan/assets/fonts/EditorsNote-LightItalic.otf) format('opentype');font-weight:300;font-style:italic;font-display:swap}
@@ -1722,6 +1726,244 @@ html.no-motion .scarr{display:none}
 /* ---------- preguntas sin cuerpo: la pregunta es el contenido ---------- */
 #ideas-questions .bri h3{font-size:clamp(24px,2.2vw,34px);max-width:16ch}
 
+
+/* =====================================================================
+   PIEL: patrimonio indio. Terracota, granate, espresso y crema;
+   arco mughal, celosia, loto. Display Bodoni + caligrafia Pinyon;
+   rotulos en Cormorant espaciada. Sobre la estructura, no en lugar de ella.
+   ===================================================================== */
+:root{
+  --bg:#F3EADB; --paper2:#EADCC6; --ink:#2C1A12; --espresso:#2C1A12; --oxblood:#4C1A17; --maroon:#5E1F1B;
+  --terra:#A9573B; --terra-soft:#C98A6B; --gold:#C9A46A; --brass:#B08A55; --red:#A9573B;
+  --gray:#76604F; --line:rgba(44,26,18,.15); --cream:#F3EADB; --creamt:rgba(243,234,219,.78);
+  --caps:'Cormorant Garamond',Georgia,serif; --didone:'Bodoni Moda',Georgia,serif; --script:'Pinyon Script',cursive;
+}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:#3A271C}
+::selection{background:var(--terra);color:#fff}
+#site{background:var(--bg)}
+
+/* rotulos: versalitas de libro, con un rombo de laton */
+#site .smallcap,.topbar .u11{font-family:var(--caps);font-weight:600;font-size:13px;letter-spacing:.24em;color:var(--terra)}
+#site .rlab .smallcap::before,#site .slab::before,#site .brl::before,#site .cshead>.smallcap::before,#site .ixhead>.smallcap::before,#site .arkick::before{
+  content:'';display:inline-block;width:6px;height:6px;border:1px solid var(--brass);transform:rotate(45deg);margin:0 12px 2px 1px;vertical-align:middle}
+#site .rnum{font-family:var(--didone);font-weight:400;font-size:clamp(15px,1.3vw,18px);color:var(--terra-soft);letter-spacing:.04em}
+#site .src,#site .pid{font-family:var(--caps);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--terra);border:0;padding:0;background:none;border-radius:0}
+#site .src::before{content:'❦';margin-right:8px;color:var(--brass);letter-spacing:0;font-size:11px}
+
+/* titulares: italica en terracota, sin gris */
+#site .d56,#site .d80,#site .sq,#site .nxt-t,#site .arh{color:var(--ink)}
+#site .d56 .it,#site .d80 .it,#site .sq .it,#site .nxt-t .it,#site .arh .it,#site .qq .it{color:var(--terra)}
+#site .elede,#site .brt,#site .idq,#site .mdd,#site .pve,#site .rtsteps p{color:#4A372B}
+
+/* adorno de loto sobre la cita y el cierre */
+#site .qt .wrap::before,#site .nxt .wrap::before{content:'';display:block;width:120px;height:16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='16' viewBox='0 0 120 16'%3E%3Cpath d='M0 8 H44 M76 8 H120' stroke='%23B08A55' stroke-width='0.8'/%3E%3Cpath d='M60 1 C64 5 64 11 60 15 C56 11 56 5 60 1 Z' fill='none' stroke='%23B08A55' stroke-width='0.9'/%3E%3Cpath d='M60 8 C66 3 71 5 72 8 C71 11 66 13 60 8 Z M60 8 C54 3 49 5 48 8 C49 11 54 13 60 8 Z' fill='none' stroke='%23B08A55' stroke-width='0.8'/%3E%3C/svg%3E") center/contain no-repeat;margin:0 0 clamp(28px,4vh,40px)}
+
+/* ---------- barra superior ---------- */
+.topbar{mix-blend-mode:normal!important;color:var(--cream)!important;transition:background .45s,padding .45s,backdrop-filter .45s}
+html.scrolled .topbar{background:rgba(44,26,18,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding-top:16px;padding-bottom:16px}
+.topbar .tname{font-family:var(--didone)!important;font-weight:400!important;font-size:15px!important;letter-spacing:.32em!important}
+.tnav a{font-family:var(--caps);font-weight:600;font-size:13px;letter-spacing:.2em;opacity:.78}
+.tnav a.on{border-bottom-color:var(--gold)}
+.topbar .ncta{color:var(--cream)!important;border-bottom:1px solid var(--gold)!important}
+
+/* ---------- hero: granate profundo, retrato bajo un arco ---------- */
+#site .hero{background:radial-gradient(120% 90% at 78% 40%,#5A1E1A 0%,#3A1612 46%,#24130D 100%)!important}
+#site .hero::before{content:''!important;position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M22 2 L42 22 L22 42 L2 22 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.07' stroke-width='1'/%3E%3Ccircle cx='22' cy='22' r='2.2' fill='none' stroke='%23E9CFA0' stroke-opacity='0.08'/%3E%3Cpath d='M22 14 Q26 22 22 30 Q18 22 22 14 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.06'/%3E%3C/svg%3E");opacity:1;z-index:0;pointer-events:none}
+#site .hero::after{content:'';position:absolute;inset:clamp(12px,1.4vw,20px);border:1px solid rgba(201,164,106,.34);pointer-events:none;z-index:1;
+  left:clamp(12px,1.4vw,20px);right:clamp(12px,1.4vw,20px);top:clamp(12px,1.4vw,20px);height:auto;background:none}
+#site .hero .inr{position:relative;z-index:2}
+#site .hero.photo .ph{position:absolute;z-index:1;left:auto;right:clamp(56px,8vw,150px);top:clamp(104px,14vh,136px);bottom:auto;
+  height:calc(100% - clamp(104px,14vh,136px) - clamp(48px,8vh,90px));width:auto;aspect-ratio:216/312;overflow:visible;background:none}
+#site .hero.photo .ph::after{content:'';position:absolute;inset:-16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='none' stroke='%23C9A46A' stroke-width='0.9' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat;z-index:2;pointer-events:none;opacity:1}
+#site .hero.photo .ph::before{content:'';position:absolute;inset:-30px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='none' stroke='%23C9A46A' stroke-width='0.9' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat;opacity:.38;z-index:2;pointer-events:none}
+#site .hero.photo .ph picture,#site .hero.photo .ph img{position:absolute;inset:0;width:100%;height:100%;display:block}
+#site .hero.photo .ph img{object-fit:cover;object-position:50% 22%;filter:sepia(.12) saturate(.95) contrast(1.03);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='black'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='black'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+#site .hero .hname{font-family:var(--didone)!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.14em!important;
+  font-size:clamp(40px,4.6vw,78px)!important;line-height:1!important;max-width:none!important;color:var(--cream)}
+#site .hero .hname .it{display:block;font-family:var(--script)!important;font-style:normal!important;font-weight:400!important;text-transform:none;
+  letter-spacing:0!important;font-size:2.02em;line-height:1.02;color:#E7C99A!important;margin:-.12em 0 0 -.06em}
+#site .hero .hname .hwm{padding-bottom:.32em;margin-bottom:-.32em}
+#site .hero .hsub{font-family:var(--serif)!important;font-weight:300!important;font-size:clamp(20px,1.7vw,27px)!important;line-height:1.3!important;
+  color:var(--cream)!important;max-width:21em!important;margin-top:clamp(18px,3vh,30px)}
+#site .hero .hsub .it{color:rgba(231,201,154,.86)!important}
+#site .hero .hnote{font-family:'Tiro Devanagari',var(--caps)!important;font-size:clamp(15px,1.15vw,18px)!important;letter-spacing:.06em;color:rgba(231,201,154,.8)!important;
+  margin-top:clamp(26px,4vh,40px)!important;max-width:none!important}
+#site .hero .hnote::before{background:none!important;border:1px solid var(--gold);transform:rotate(45deg);width:6px;height:6px;margin-top:.62em}
+#site .hcta,#site .fcta{background:var(--cream)!important;color:var(--ink)!important;font-family:var(--caps);font-weight:700;font-size:13px!important;letter-spacing:.22em!important;padding:14px 30px!important}
+#site .hcta:hover,#site .fcta:hover{background:#E7C99A!important}
+#site .hero .hacts{margin-top:clamp(26px,4vh,40px)}
+
+/* ---------- en breve ---------- */
+#site .brf{background:var(--bg)}
+#site .brgrid{border-top-color:var(--ink)}
+#site .bri{border-color:var(--line)!important}
+#site .brn{font-family:var(--didone);font-size:13px;color:var(--terra);letter-spacing:.06em}
+#site .bri h3{color:var(--ink)}
+#site .brd{color:var(--gray);border-top-color:var(--line)}
+
+/* ---------- capitulo en arco (amã) ---------- */
+.arp{position:relative;padding:var(--sec) 0;background:var(--oxblood);color:var(--cream);overflow:hidden}
+.arp::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M22 2 L42 22 L22 42 L2 22 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.07' stroke-width='1'/%3E%3Ccircle cx='22' cy='22' r='2.2' fill='none' stroke='%23E9CFA0' stroke-opacity='0.08'/%3E%3Cpath d='M22 14 Q26 22 22 30 Q18 22 22 14 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.06'/%3E%3C/svg%3E");pointer-events:none}
+.arlay{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(40px,7vw,120px);align-items:center}
+#site .arp .smallcap{color:#E7C99A}
+.arh{font-family:var(--serif);font-weight:300;font-size:clamp(46px,5.6vw,92px);line-height:.98;letter-spacing:-.015em;margin-top:clamp(18px,3vh,28px)}
+#site .arp .arh{color:var(--cream)}
+#site .arp .arh .it{color:#E7C99A;font-family:var(--script);font-style:normal;font-size:.9em;letter-spacing:0}
+.arb{margin-top:clamp(22px,3.4vh,34px);font-family:var(--serif);font-weight:300;font-size:clamp(19px,1.5vw,24px);line-height:1.42;max-width:30em;color:var(--creamt)}
+.arst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(34px,5vh,54px);border-top:1px solid rgba(231,201,154,.32)}
+.arst>div{padding:22px 18px 0 0}
+.arst>div+div{padding-left:18px;border-left:1px solid rgba(231,201,154,.2)}
+#site .arst .nn{display:block;font-family:var(--didone);font-weight:400;font-size:clamp(38px,3.6vw,58px);line-height:1;color:var(--cream)}
+.arst .nn sup{font-size:.45em;color:#E7C99A;vertical-align:super}
+.ark{display:block;margin-top:12px;font-size:13.5px;line-height:1.45;color:var(--creamt);max-width:15em}
+.arfoot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px;margin-top:clamp(28px,4vh,40px)}
+#site .arp .src{color:rgba(231,201,154,.75)}
+#site .arp .smore{color:var(--cream);border-color:rgba(231,201,154,.6)}
+.arfig{position:relative;margin:0;justify-self:center;width:min(100%,460px)}
+.arimg{position:relative;aspect-ratio:216/312}
+.arimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:sepia(.1) saturate(.95);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='black'/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='black'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.arimg::after{content:'';position:absolute;inset:-16px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='none' stroke='%23C9A46A' stroke-width='0.9' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat;pointer-events:none}
+.arimg::before{content:'';position:absolute;inset:-32px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -12 216 312' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,118.00 A32.63,32.63 0 0 1 7.31,76.81 A32.63,32.63 0 0 1 28.36,40.66 A32.63,32.63 0 0 1 60.57,13.97 A35.99,35.99 0 0 0 100.00,-10.00 A35.99,35.99 0 0 0 139.43,13.97 A32.63,32.63 0 0 1 171.64,40.66 A32.63,32.63 0 0 1 192.69,76.81 A32.63,32.63 0 0 1 200.00,118.00 L200,300 Z' fill='none' stroke='%23C9A46A' stroke-width='0.9' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100% no-repeat;opacity:.35;pointer-events:none}
+@media(max-width:860px){.arlay{grid-template-columns:1fr}.arfig{order:-1;width:min(78vw,340px);margin-bottom:12px}
+  .arst{grid-template-columns:1fr 1fr 1fr}.arst>div{padding:18px 10px 0 0}.arst>div+div{padding-left:10px}.ark{font-size:12.5px}}
+
+/* ---------- cita ---------- */
+#site .qt{background:var(--bg)}
+#site .qq{color:var(--ink)}
+#site .qlead{color:var(--gray)}
+#site .qwho{color:var(--terra)}
+#site .qwho::before{background:var(--brass)}
+
+/* ---------- tinta: espresso y granate con celosia ---------- */
+#site .nums.ink,#site .mda.ink{position:relative;background:var(--espresso)}
+#site .mda.ink::before,#site .nums.ink::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M22 2 L42 22 L22 42 L2 22 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.07' stroke-width='1'/%3E%3Ccircle cx='22' cy='22' r='2.2' fill='none' stroke='%23E9CFA0' stroke-opacity='0.08'/%3E%3Cpath d='M22 14 Q26 22 22 30 Q18 22 22 14 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.06'/%3E%3C/svg%3E");pointer-events:none}
+#site .mda.ink .wrap,#site .nums.ink .wrap{position:relative}
+#site .mda.ink .smallcap{color:#E7C99A}
+#site .mda.ink .d56{color:var(--cream)}
+#site .mda.ink .d56 .it{color:#E7C99A}
+#site .mda.ink .elede,#site .mda.ink .mdd{color:var(--creamt)}
+#site .mdt{font-family:var(--serif)}
+#site .mdq{color:#E7C99A}
+#site .mda:not(.ink) .mdq{color:var(--terra)}
+#site .mdv{border-radius:2px;outline:1px solid rgba(201,164,106,.35);outline-offset:8px}
+#site .mdplay{background:var(--cream);color:var(--maroon)}
+
+/* ---------- fotos a sangre: velo calido y marco de laton ---------- */
+#site .stmt.withimg{position:relative}
+#site .stmt.withimg::after{content:'';position:absolute;inset:clamp(12px,1.4vw,20px);border:1px solid rgba(231,201,154,.3);pointer-events:none;z-index:3}
+#site .stmt.withimg .sph img{filter:sepia(.14) saturate(.92)}
+@media(min-width:861px){
+  #site .stmt.withimg .sph::after{background:linear-gradient(90deg,rgba(36,19,13,.9) 0%,rgba(36,19,13,.66) 40%,rgba(36,19,13,.12) 74%),
+    linear-gradient(180deg,rgba(36,19,13,.1) 0%,rgba(36,19,13,0) 45%,rgba(36,19,13,.5) 100%)!important}
+  #site .stmt.withimg.tr .sph::after{background:linear-gradient(270deg,rgba(36,19,13,.9) 0%,rgba(36,19,13,.66) 40%,rgba(36,19,13,.12) 74%),
+    linear-gradient(180deg,rgba(36,19,13,.1) 0%,rgba(36,19,13,0) 45%,rgba(36,19,13,.5) 100%)!important}}
+@media(max-width:860px){#site .stmt.withimg{background:var(--espresso)}
+  #site .stmt.withimg .sph::after{background:linear-gradient(180deg,rgba(44,26,18,0) 0%,rgba(44,26,18,0) 45%,rgba(44,26,18,.88) 80%,#2C1A12 100%)!important}}
+#site .stmt.withimg .slab{color:#E7C99A}
+#site .stmt.withimg .sq{color:var(--cream)}
+#site .stmt.withimg .sq .it{color:#E7C99A}
+#site .stmt.withimg .ssub{color:var(--creamt)}
+#site .stmt.withimg .skeys li{border-bottom-color:rgba(231,201,154,.22);color:var(--cream)}
+#site .stmt.withimg .skeys{border-top-color:rgba(231,201,154,.4)}
+#site .stmt.withimg .smore{color:var(--cream);border-color:rgba(231,201,154,.6)}
+#site .stmt:not(.withimg) .sq{color:var(--ink)}
+#site .stmt.compact:not(.withimg){background:var(--paper2)}
+
+/* ---------- secciones claras con tono ---------- */
+#site .tl.tint,#site .ids.tint,#site .exp.tint{background:var(--paper2)}
+#site .tl.tint .tldot{box-shadow:0 0 0 4px var(--paper2)}
+#site .tldot{background:var(--terra)}
+#site .tlbar{background:var(--terra)}
+#site .idn{font-family:var(--didone);color:var(--terra);font-size:13px}
+#site .idt{font-family:var(--serif)}
+#site .idgrid,#site .plist,#site .lgrid{border-top-color:var(--ink)}
+#site .pmore a,#site .smore{font-family:var(--caps);font-weight:700;font-size:12.5px;letter-spacing:.2em}
+#site .ids .pmore a,#site .brf .pmore a{color:var(--ink)}
+
+/* tarjetas de practica y pasos */
+#site .pcard.lead,#site .paths .lead{background:var(--oxblood)!important}
+#site .rtcard{background:var(--espresso)!important}
+#site .rtn-n{color:var(--terra)}
+#site .picon,#site .csico,#site .ixico{color:var(--terra)}
+
+/* formulario y pie */
+#site .reserve{background:var(--bg)}
+#site .kfoot.pf{position:relative;background:#26160F}
+#site .kfoot.pf::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath d='M22 2 L42 22 L22 42 L2 22 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.07' stroke-width='1'/%3E%3Ccircle cx='22' cy='22' r='2.2' fill='none' stroke='%23E9CFA0' stroke-opacity='0.08'/%3E%3Cpath d='M22 14 Q26 22 22 30 Q18 22 22 14 Z' fill='none' stroke='%23E9CFA0' stroke-opacity='0.06'/%3E%3C/svg%3E");pointer-events:none}
+#site .kfoot.pf .wrap{position:relative}
+#site .kfoot.pf .pf-kick{color:#E7C99A}
+#site .kfoot.pf .fname{font-family:var(--script);font-weight:400;font-size:clamp(54px,6vw,96px);letter-spacing:0;line-height:1.1;color:#E7C99A}
+#site .kfoot.pf .fname .it{color:#E7C99A;font-style:normal}
+#site .kfoot.pf .pf-sub{color:var(--creamt)}
+#site .igy{background:#1C100B}
+#site .nxt{background:var(--bg)}
+#site .nxt-t i{color:var(--terra)}
+
+
+/* ---------- donde construi mi carrera: logos en tinta espresso ---------- */
+.mks{padding:clamp(64px,10vh,110px) 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.mkhead{text-align:center;margin-bottom:clamp(30px,5vh,52px)}
+#site .mkhead .smallcap::before,#site .mkhead .smallcap::after{content:'';display:inline-block;width:40px;height:1px;background:var(--brass);vertical-align:middle;margin:0 16px 3px}
+.mkgrid{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:end}
+.mk{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:16px;text-align:center;padding:0 12px;min-height:118px}
+.mk+.mk{border-left:1px solid var(--line)}
+.mklogo{display:block;width:auto;max-width:100%;background:var(--ink);
+  -webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+.mktext{font-family:var(--didone);font-weight:400;font-size:clamp(18px,1.5vw,24px);letter-spacing:.06em;text-transform:none;line-height:1.2;color:var(--ink)}
+.mktext .it{display:block;font-family:var(--script);font-style:normal;text-transform:none;letter-spacing:0;font-size:1.5em;color:var(--terra);margin-top:-.1em}
+.mkk{font-family:var(--caps);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra);line-height:1.45;max-width:17em}
+.mksrc{margin-top:clamp(30px,4.6vh,46px);text-align:center;font-size:12px;color:var(--gray)}
+@media(max-width:1100px){.mkgrid{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}.mk:nth-child(4){border-left:0}}
+@media(max-width:600px){.mkgrid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px}.mk:nth-child(odd){border-left:0}.mk:nth-child(4){border-left:1px solid var(--line)}
+  .mk{min-height:104px}}
+
+/* ---------- el modelo Tata: hexagonos en granate ---------- */
+.tbm{padding:var(--sec) 0;background:var(--paper2)}
+.tblay{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,100px);align-items:center}
+.tbtx{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.tbtx .tblogo{margin-bottom:8px}
+#site .tbtx .elede{max-width:34em}
+.tbd{margin:0;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:clamp(22px,3vw,40px);border:1px solid rgba(169,87,59,.35);border-radius:50% / 14%;background:rgba(243,234,219,.55)}
+.tbtop,.tbfound,.tbbase{text-align:center;font-family:var(--caps);font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.tbtop{color:var(--terra)}
+.tbrow{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(8px,1.2vw,18px)}
+.tbtri{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tbtri .hx:first-child{grid-column:1 / span 2;justify-self:center;width:50%}
+.hx{display:flex;align-items:center;justify-content:center;aspect-ratio:1.12;background:var(--oxblood);color:var(--cream);
+  clip-path:polygon(25% 3%,75% 3%,100% 50%,75% 97%,25% 97%,0 50%);text-align:center;padding:0 14%}
+.tbtri+.tbint+.tbtri .hx{background:var(--terra)}
+.hx i{font-style:normal;font-family:var(--caps);font-weight:600;font-size:clamp(11.5px,.95vw,14px);letter-spacing:.06em;line-height:1.15}
+.tbint{display:flex;flex-direction:column;align-items:center;gap:4px;font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.3vw,20px);color:var(--ink)}
+.tbint span{color:var(--brass);font-style:normal}
+.tbfound{background:var(--espresso);color:var(--cream);padding:12px 14px;margin:6px 8% 0}
+.tbbase{color:var(--terra);font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:clamp(16px,1.3vw,20px)}
+@media(max-width:860px){.tblay{grid-template-columns:1fr}.tbd{border-radius:28px}.tbrow{grid-template-columns:1fr;gap:14px}
+  .tbtri{width:min(100%,300px);margin:0 auto}.tbint{flex-direction:row;gap:10px;justify-content:center}.hx i{font-size:12px}}
+
+/* ---------- movil ---------- */
+@media(max-width:860px){
+  .topbar{background:rgba(44,26,18,.94)!important}
+  html.athero .topbar{background:transparent!important}
+  #site .hero.photo{display:flex;flex-direction:column;justify-content:flex-start;min-height:100svh;padding:0 0 clamp(64px,9vh,96px)}
+  #site .hero.photo .ph{position:relative;inset:auto;right:auto;top:auto;bottom:auto;margin:calc(var(--barh) + 26px) auto 0;width:min(58vw,250px);height:auto}
+  #site .hero.photo .inr{padding-top:clamp(46px,6.5vh,60px)!important;text-align:center}
+  #site .hero .hnote::before{display:none}
+  .topbar .tname{font-size:12.5px!important;letter-spacing:.24em!important}
+  .topbar .u11{font-size:11px!important;letter-spacing:.14em!important;white-space:nowrap}
+  .tbot a{font-family:var(--caps);font-weight:600;font-size:12px!important;letter-spacing:.14em}
+  #site .hero .hname{font-size:clamp(30px,9vw,42px)!important;letter-spacing:.16em!important}
+  #site .hero .hname .it{font-size:1.9em;margin:-.08em 0 0}
+  #site .hero .hsub{font-size:18px!important;margin-left:auto;margin-right:auto;max-width:20em!important}
+  #site .hero .hnote{justify-content:center;font-size:14.5px!important}
+  #site .hero .hacts{justify-content:center}
+  #site .hero::after{inset:10px}
+  #site .kfoot.pf .fname{font-size:clamp(48px,14vw,64px)}
+}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -1771,7 +2013,7 @@ html.no-motion .scarr{display:none}
 <div class="topbar"><a class="u11 smallcap tname" href="/vishwanathan" style="color:#fff">Vishwanathan</a><nav class="tnav" aria-label="Primary"><a href="/vishwanathan/track" class="on">Career</a><a href="/vishwanathan/ideas">Perspectives</a><a href="/vishwanathan/voice">Conversations</a><a href="/vishwanathan/practice">Advisory</a></nav><a class="u11 smallcap ncta" id="ncta" href="/vishwanathan#inquiry" style="color:#fff">Start a conversation</a><nav class="tbot" aria-label="Primary"><a href="/vishwanathan">Overview</a><a href="/vishwanathan/track" class="on">Career</a><a href="/vishwanathan/ideas">Ideas</a><a href="/vishwanathan/voice">Talks</a><a href="/vishwanathan/practice">Advisory</a></nav></div>
 <button class="menuchip" id="mbtn" aria-expanded="false">Menu</button>
 <nav class="menupanel" id="nitems" aria-label="Site"><a href="/vishwanathan">Overview</a><a href="/vishwanathan/track">Career</a><a href="/vishwanathan/ideas">Perspectives</a><a href="/vishwanathan/voice">Conversations</a><a href="/vishwanathan/practice">Advisory</a><a href="/vishwanathan#inquiry">Contact</a></nav>
-<main id="site"><section class="stmt withimg opener" id="track-open"><div class="sph"><img src="/vishwanathan/assets/career.jpg" alt="Photograph to come" loading="lazy" style="object-position:50% 50%"></div><div class="wrap" data-r2=""><div class="slab smallcap wr">Career</div><h2 class="sq wr">Thirty-five years, <span class="it">one company.</span></h2><p class="ssub wr">From a duty manager’s desk in London to helping build a national homestay brand.</p><div class="sfoot wr"></div></div></section><section class="exp" id="track-ama"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">01</span><span class="smallcap wr">amã Stays &amp; Trails</span></div><div><h2 class="d56 wr">A brand, built <span class="it">and scaled.</span></h2><p class="elede wr">“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays &amp; Trails into a distinctive hospitality brand.” — Priya Vishwanathan, 2026. The figures below are IHCL’s.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Milestones</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">2019 — Launched by IHCL with nine Tata Coffee bungalows in Coorg and Chikmagalur</div><div class="lcell wr">2024 — 200+ bungalows, with 100+ under development</div><div class="lcell wr">2025 — 250 bungalows, ten times the launch portfolio</div><div class="lcell wr">2026 — 370+ bungalows across India</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">In her words</span><span class="lcount">03</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">“People came to us: can you take my home?” Families trusted the organisation with houses they had inherited.</div><div class="lcell wr">“Hotels is a very different business and homestay is a completely different business.”</div><div class="lcell wr">“Good to great really happens when you do something that touches somebody’s heart.”</div></div></div></div></section><section class="exp tint" id="track-excellence"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">02</span><span class="smallcap wr">Business Excellence</span></div><div><h2 class="d56 wr">From isolated hotels <span class="it">to one organisation.</span></h2><p class="elede wr">“We turned around the company, which was working in isolated hotels, to one organisation where everybody today has structured SOPs.” Priya Vishwanathan, HospeTalk, 2026.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Fifteen years in quality and Business Excellence</span><span class="lcount">05</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Assistant Manager, Quality, Taj Mahal, New Delhi — 1999</div><div class="lcell wr">Manager, Quality, Corporate HR — 2001</div><div class="lcell wr">Corporate Manager, Business Process, South Region — Taj Hotels Resorts &amp; Palaces</div><div class="lcell wr">Senior Assessor, Tata Business Excellence Model — eight external assessments of Tata companies</div><div class="lcell wr">Customer-satisfaction work across more than 100 hotels</div></div></div></div></section><section class="tl tint" id="track-years"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">03</span><span class="smallcap wr">The record, on one line</span></div><div><h2 class="d56 wr">From IHM Pusa in 1987 <span class="it">to the practice.</span></h2></div></div><div class="tlwrap wr" data-r1="" aria-hidden="true"><div class="tltrack"><span class="tlfill"></span></div><div class="tlmarks"><div class="tlm hi al" style="left:0.00%"><i class="tldot"></i><span class="tlyr">1987</span><span class="tlt">IHM Pusa, New Delhi</span></div><div class="tlm lo al" style="left:7.69%"><i class="tldot"></i><span class="tlyr">1990</span><span class="tlt">Joins IHCL</span></div><div class="tlm up" style="left:20.51%"><i class="tldot"></i><span class="tlyr">1995</span><span class="tlt">St. James’ Court, London</span></div><div class="tlm hi" style="left:82.05%"><i class="tldot"></i><span class="tlyr">2019</span><span class="tlt">amã Stays &amp; Trails launches</span></div><div class="tlm lo ar" style="left:100.00%"><i class="tldot"></i><span class="tlyr">2026</span><span class="tlt">HOSPI Sigma · BW Hotelier jury</span></div></div><div class="tlrs"><span class="smallcap tlrl">The IHCL years</span><div class="tlr labt" style="left:7.69%;width:89.74%"><i class="tlbar"></i><span class="tlrt">IHCL (Taj Group) <em>1990–2025</em></span></div></div></div><ul class="tllist wr" data-r1=""><li><b>1987</b>IHM Pusa, New Delhi</li><li><b>1990</b>Joins IHCL</li><li><b>1995</b>St. James’ Court, London</li><li><b>2019</b>amã Stays &amp; Trails launches</li><li><b>2026</b>HOSPI Sigma · BW Hotelier jury</li><li><b>1990–2025</b>IHCL (Taj Group)</li></ul></div></section><section class="exp" id="track-roles"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">04</span><span class="smallcap wr">Roles at IHCL</span></div><div><h2 class="d56 wr">Operations, <span class="it">then leadership.</span></h2><p class="elede wr">From her own account and public profiles.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Operations</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Hotel Operations Management Trainee, IHCL — 1990</div><div class="lcell wr">Duty Manager, Taj Mahal Hotel</div><div class="lcell wr">Assistant Duty Manager, St. James’ Court Hotel, London — 1995</div><div class="lcell wr">Manager, Club Floors, Taj Mahal, New Delhi — 1997</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Leadership</span><span class="lcount">02</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Regional Manager, Karnataka — eight years, Bengaluru</div><div class="lcell wr">General Manager, amã Stays &amp; Trails — helping build and scale IHCL’s homestay brand, pan-India: P&amp;L, owners and partners, guests and teams</div></div></div></div></section><section class="exp" id="cv-today"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">05</span><span class="smallcap wr">Today</span></div><div><h2 class="d56 wr">Advisor, juror <span class="it">and council member.</span></h2></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Appointments</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Board Advisor &amp; Principal Consultant — HOSPI Sigma™, a Lean Six Sigma capability framework for hospitality, Scotland</div><div class="lcell wr">Regional Jury (South) — 10th BW Hotelier Indian Hospitality Awards, 2026</div><div class="lcell wr">National Vice President, Diversity &amp; Inclusion Council — WICCI</div><div class="lcell wr">India Chapter Chair for Employability — All Ladies League</div></div></div></div></section><section class="exp tint" id="cv-education"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">06</span><span class="smallcap wr">Education</span></div><div><h2 class="d56 wr">Hotel management, <span class="it">from Pusa.</span></h2></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Degree</span><span class="lcount">01</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Hotel Management — Institute of Hotel Management, Catering &amp; Nutrition (IHM Pusa), New Delhi — 1987–1990</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Professional</span><span class="lcount">02</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Senior Assessor, Tata Business Excellence Model</div><div class="lcell wr">Member, Tata Network Forum South</div></div></div></div></section><section class="nxt" id="next"><div class="wrap"><a class="nxa" href="/vishwanathan/ideas" data-r2=""><span class="smallcap wr">Next</span><span class="nxt-t wr">Perspectives<i aria-hidden="true">→</i></span><span class="nxd wr">Service, standards and the guest, in her own words.</span></a><a class="nxalt" href="/vishwanathan#inquiry">Start a conversation</a></div></section><footer class="kfoot pf"><div class="wrap"><div class="pf-top" data-r2=""><div class="pf-id"><div class="smallcap pf-kick wr">Hospitality Advisor · Mentor · Juror</div><div class="fname pf-name wr">Priya Vishwanathan</div><p class="pf-sub wr">Hotels, homestays and the guest experience. <span class="it">Thirty-five years with IHCL.</span></p></div><div class="pf-act wr"><a class="fcta" href="/vishwanathan#inquiry">Start a conversation</a></div></div><div class="pf-row wr" data-r1=""><ul class="pf-contact"><li>Bengaluru, India</li></ul><ul class="pf-social"><li><a href="https://www.linkedin.com/in/priyavishwanathan/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></li></ul></div><div class="pf-base"><span>Priya Vishwanathan · Bengaluru, India</span><span>Private preview · Not indexed</span></div></div></footer><section class="igy"><div class="wrap" data-r2=""><div class="igy-id wr"><span class="smallcap">A concept by</span><a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/vishwanathan/assets/igy-logo.png" alt="Ignite Yourself"></a><a class="igylink" href="https://igniteyourself.co/" target="_blank" rel="noopener">Discover Ignite Yourself</a></div><p class="igy-note wr">A private concept by Ignite Yourself, prepared from public information and her recorded interviews for Ms. Vishwanathan’s review. Marked frames show where portraits will go. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed.</p></div></section></main>
+<main id="site"><section class="stmt withimg opener" id="track-open"><div class="sph"><img src="/vishwanathan/assets/career.jpg" alt="Photograph to come" loading="lazy" style="object-position:50% 50%"></div><div class="wrap" data-r2=""><div class="slab smallcap wr">Career</div><h2 class="sq wr">Thirty-five years, <span class="it">one company.</span></h2><p class="ssub wr">From a duty manager’s desk in London to helping build a national homestay brand.</p><div class="sfoot wr"></div></div></section><section class="exp" id="track-ama"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">01</span><span class="smallcap wr">amã Stays &amp; Trails</span></div><div><h2 class="d56 wr">A brand, built <span class="it">and scaled.</span></h2><p class="elede wr">“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays &amp; Trails into a distinctive hospitality brand.” The figures below are IHCL’s.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Milestones</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">2019 — Launched by IHCL with nine Tata Coffee bungalows in Coorg and Chikmagalur</div><div class="lcell wr">2024 — 200+ bungalows, with 100+ under development</div><div class="lcell wr">2025 — 250 bungalows, ten times the launch portfolio</div><div class="lcell wr">2026 — 370+ bungalows across India</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">In my words</span><span class="lcount">03</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">“People came to us: can you take my home?” Families trusted the organisation with houses they had inherited.</div><div class="lcell wr">“Hotels is a very different business and homestay is a completely different business.”</div><div class="lcell wr">“Good to great really happens when you do something that touches somebody’s heart.”</div></div></div></div></section><section class="exp tint" id="track-excellence"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">02</span><span class="smallcap wr">Business Excellence</span></div><div><h2 class="d56 wr">From isolated hotels <span class="it">to one organisation.</span></h2><p class="elede wr">“We turned around the company, which was working in isolated hotels, to one organisation where everybody today has structured SOPs.” On HospeTalk, 2026.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Fifteen years in quality and Business Excellence</span><span class="lcount">05</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Assistant Manager, Quality, Taj Mahal, New Delhi — 1999</div><div class="lcell wr">Manager, Quality, Corporate HR — 2001</div><div class="lcell wr">Corporate Manager, Business Process, South Region — Taj Hotels Resorts &amp; Palaces</div><div class="lcell wr">Senior Assessor, Tata Business Excellence Model — eight external assessments of Tata companies</div><div class="lcell wr">Customer-satisfaction work across more than 100 hotels</div></div></div></div></section><section class="tbm" id="tbem"><div class="wrap tblay"><div class="tbtx" data-r2=""><span class="mklogo tblogo wr" role="img" aria-label="Tata" style="--logo:url(/vishwanathan/assets/logos/tata.svg);aspect-ratio:451.3/414.5;height:54px"></span><span class="smallcap wr">A framework I assess with</span><h2 class="d56 wr">The Tata Business <span class="it">Excellence Model.</span></h2><p class="elede wr">The framework every Tata company is assessed against, adapted from the Malcolm Baldrige criteria. As a Senior Assessor I carried out eight external assessments of Tata companies, and it shapes how I look at any hotel: leadership, customers and people first, results as their consequence.</p><span class="src wr">Model structure: Tata Business Excellence Group.</span></div><figure class="tbd wr" data-r1="" aria-label="Diagram of the Tata Business Excellence Model"><div class="tbtop">Organisational Profile</div><div class="tbrow"><div class="tbtri"><span class="hx"><i>Leadership</i></span><span class="hx"><i>Strategy</i></span><span class="hx"><i>Customers</i></span></div><div class="tbint"><span>←</span>Integration<span>→</span></div><div class="tbtri"><span class="hx"><i>People &amp; Culture</i></span><span class="hx"><i>Operations</i></span><span class="hx"><i>Results</i></span></div></div><div class="tbfound">Data, Organisational Learning &amp; Innovation</div><div class="tbbase">Core Values &amp; Concepts</div></figure></div></section><section class="tl tint" id="track-years"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">04</span><span class="smallcap wr">The record, on one line</span></div><div><h2 class="d56 wr">From IHM Pusa in 1987 <span class="it">to the practice.</span></h2></div></div><div class="tlwrap wr" data-r1="" aria-hidden="true"><div class="tltrack"><span class="tlfill"></span></div><div class="tlmarks"><div class="tlm hi al" style="left:0.00%"><i class="tldot"></i><span class="tlyr">1987</span><span class="tlt">IHM Pusa, New Delhi</span></div><div class="tlm lo al" style="left:7.69%"><i class="tldot"></i><span class="tlyr">1990</span><span class="tlt">Joins IHCL</span></div><div class="tlm up" style="left:20.51%"><i class="tldot"></i><span class="tlyr">1995</span><span class="tlt">St. James’ Court, London</span></div><div class="tlm hi" style="left:82.05%"><i class="tldot"></i><span class="tlyr">2019</span><span class="tlt">amã Stays &amp; Trails launches</span></div><div class="tlm lo ar" style="left:100.00%"><i class="tldot"></i><span class="tlyr">2026</span><span class="tlt">HOSPI Sigma · BW Hotelier jury</span></div></div><div class="tlrs"><span class="smallcap tlrl">The IHCL years</span><div class="tlr labt" style="left:7.69%;width:89.74%"><i class="tlbar"></i><span class="tlrt">IHCL (Taj Group) <em>1990–2025</em></span></div></div></div><ul class="tllist wr" data-r1=""><li><b>1987</b>IHM Pusa, New Delhi</li><li><b>1990</b>Joins IHCL</li><li><b>1995</b>St. James’ Court, London</li><li><b>2019</b>amã Stays &amp; Trails launches</li><li><b>2026</b>HOSPI Sigma · BW Hotelier jury</li><li><b>1990–2025</b>IHCL (Taj Group)</li></ul></div></section><section class="exp" id="track-roles"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">05</span><span class="smallcap wr">Roles at IHCL</span></div><div><h2 class="d56 wr">Operations, <span class="it">then leadership.</span></h2><p class="elede wr">From my own account and public profiles.</p></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Operations</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Hotel Operations Management Trainee, IHCL — 1990</div><div class="lcell wr">Duty Manager, Taj Mahal Hotel</div><div class="lcell wr">Assistant Duty Manager, St. James’ Court Hotel, London — 1995</div><div class="lcell wr">Manager, Club Floors, Taj Mahal, New Delhi — 1997</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Leadership</span><span class="lcount">02</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Regional Manager, Karnataka — eight years, Bengaluru</div><div class="lcell wr">General Manager, amã Stays &amp; Trails — helping build and scale IHCL’s homestay brand, pan-India: P&amp;L, owners and partners, guests and teams</div></div></div></div></section><section class="exp" id="cv-today"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">06</span><span class="smallcap wr">Today</span></div><div><h2 class="d56 wr">Advisor, juror <span class="it">and council member.</span></h2></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Appointments</span><span class="lcount">04</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Board Advisor &amp; Principal Consultant — HOSPI Sigma™, a Lean Six Sigma capability framework for hospitality, Scotland</div><div class="lcell wr">Regional Jury (South) — 10th BW Hotelier Indian Hospitality Awards, 2026</div><div class="lcell wr">National Vice President, Diversity &amp; Inclusion Council — WICCI</div><div class="lcell wr">India Chapter Chair for Employability — All Ladies League</div></div></div></div></section><section class="exp tint" id="cv-education"><div class="wrap"><div class="shead rail" data-r2=""><div class="rlab"><span class="rnum wr">07</span><span class="smallcap wr">Education</span></div><div><h2 class="d56 wr">Hotel management, <span class="it">from Pusa.</span></h2></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Degree</span><span class="lcount">01</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Hotel Management — Institute of Hotel Management, Catering &amp; Nutrition (IHM Pusa), New Delhi — 1987–1990</div></div></div><div class="ledger" data-r1=""><div class="lhead"><span class="smallcap">Professional</span><span class="lcount">02</span></div><div class="lgrid wide" data-cards=""><div class="lcell wr">Senior Assessor, Tata Business Excellence Model</div><div class="lcell wr">Member, Tata Network Forum South</div></div></div></div></section><section class="nxt" id="next"><div class="wrap"><a class="nxa" href="/vishwanathan/ideas" data-r2=""><span class="smallcap wr">Next</span><span class="nxt-t wr">Perspectives<i aria-hidden="true">→</i></span><span class="nxd wr">Service, standards and the guest, in my own words.</span></a><a class="nxalt" href="/vishwanathan#inquiry">Start a conversation</a></div></section><footer class="kfoot pf"><div class="wrap"><div class="pf-top" data-r2=""><div class="pf-id"><div class="smallcap pf-kick wr">Hospitality Advisor · Mentor · Juror</div><div class="fname pf-name wr">Priya Vishwanathan</div><p class="pf-sub wr">Hotels, homestays and the guest experience. <span class="it">Thirty-five years with IHCL.</span></p></div><div class="pf-act wr"><a class="fcta" href="/vishwanathan#inquiry">Start a conversation</a></div></div><div class="pf-row wr" data-r1=""><ul class="pf-contact"><li>Bengaluru, India</li></ul><ul class="pf-social"><li><a href="https://www.linkedin.com/in/priyavishwanathan/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg></a></li></ul></div><div class="pf-base"><span>Priya Vishwanathan · Bengaluru, India</span><span>Private preview · Not indexed</span></div></div></footer><section class="igy"><div class="wrap" data-r2=""><div class="igy-id wr"><span class="smallcap">A concept by</span><a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/vishwanathan/assets/igy-logo.png" alt="Ignite Yourself"></a><a class="igylink" href="https://igniteyourself.co/" target="_blank" rel="noopener">Discover Ignite Yourself</a></div><p class="igy-note wr">A private concept by Ignite Yourself, prepared from public information and recorded interviews for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by her own portraits. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed.</p></div></section></main>
 <script src="/vendor/gsap.min.js"></script>
 <script src="/vendor/ScrollTrigger.min.js"></script>
 <script src="/vendor/lenis.min.js"></script>
@@ -1825,6 +2067,45 @@ var SOC={
   facebook:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
   globe:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>'};
 var partials={
+marks:function(s){
+  return'<section class="mks" id="'+esc(s.id||'marks')+'"><div class="wrap">'+
+  (s.label?'<div class="mkhead"><span class="smallcap wr" data-r1>'+esc(s.label)+'</span></div>':'')+
+  '<ul class="mkgrid" data-cards>'+(s.items||[]).map(function(m){
+    return'<li class="mk wr">'+(m.logo?'<span class="mklogo" role="img" aria-label="'+esc(m.t)+'" style="--logo:url('+esc(m.logo)+');aspect-ratio:'+esc(m.ar)+';height:'+(m.h||48)+'px"></span>'
+      :'<span class="mktext">'+rich(m.text)+'</span>')+'<span class="mkk">'+esc(m.k)+'</span></li>'}).join('')+'</ul>'+
+  (s.src?'<p class="mksrc wr" data-r1>'+esc(s.src)+'</p>':'')+
+  '</div></section>'},
+tbem:function(s){
+  function hx(a){return a.map(function(x){return'<span class="hx"><i>'+esc(x)+'</i></span>'}).join('')}
+  return'<section class="tbm" id="'+esc(s.id||'tbem')+'"><div class="wrap tblay">'+
+  '<div class="tbtx" data-r2>'+
+    (s.logo?'<span class="mklogo tblogo wr" role="img" aria-label="Tata" style="--logo:url('+esc(s.logo)+');aspect-ratio:451.3/414.5;height:54px"></span>':'')+
+    '<span class="smallcap wr">'+esc(s.label)+'</span>'+
+    '<h2 class="d56 wr">'+rich(s.title)+'</h2>'+
+    '<p class="elede wr">'+rich(s.body)+'</p>'+
+    (s.src?'<span class="src wr">'+esc(s.src)+'</span>':'')+
+  '</div>'+
+  '<figure class="tbd wr" data-r1 aria-label="Diagram of the Tata Business Excellence Model">'+
+    '<div class="tbtop">'+esc(s.top)+'</div>'+
+    '<div class="tbrow"><div class="tbtri">'+hx(s.lead)+'</div>'+
+      '<div class="tbint"><span>&larr;</span>'+esc(s.center)+'<span>&rarr;</span></div>'+
+      '<div class="tbtri">'+hx(s.results)+'</div></div>'+
+    '<div class="tbfound">'+esc(s.foundation)+'</div>'+
+    '<div class="tbbase">'+esc(s.base)+'</div>'+
+  '</figure>'+
+  '</div></section>'},
+arch:function(s){
+  return'<section class="arp" id="'+esc(s.id||'arch')+'"><div class="wrap arlay">'+
+  '<div class="artx" data-r2>'+
+    (s.label?'<span class="smallcap arkick wr">'+esc(s.label)+'</span>':'')+
+    '<h2 class="arh wr">'+rich(s.title)+'</h2>'+
+    (s.body?'<p class="arb wr">'+rich(s.body)+'</p>':'')+
+    (s.stats?'<div class="arst wr">'+s.stats.map(function(x){return'<div><span class="nn">'+rich(x.n)+'</span><span class="ark">'+esc(x.k)+'</span></div>'}).join('')+'</div>':'')+
+    '<div class="arfoot wr">'+(s.src?'<span class="src">'+esc(s.src)+'</span>':'')+
+    (s.more?'<a class="smore" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+'</div>'+
+  '</div>'+
+  (s.img?'<figure class="arfig wr" data-r1><div class="arimg"><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"></div></figure>':'')+
+  '</div></section>'},
 media:function(s){
   var play='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>';
   return'<section class="mda'+(s.ink?' ink':'')+'" id="'+esc(s.id||'media')+'"><div class="wrap">'+
@@ -2644,6 +2925,7 @@ function wireAnchors(lenis){
     var hero=document.querySelector('#site .hero');
     var at=window.innerWidth<=860&&hero&&hero.offsetHeight>0&&window.scrollY<hero.offsetHeight-140;
     html.classList.toggle('athero',!!at);
+    html.classList.toggle('scrolled',window.scrollY>40);
   }
   upd();addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);addEventListener('load',upd);
   var site=document.getElementById('site');
