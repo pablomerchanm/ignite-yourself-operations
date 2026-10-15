@@ -3,10 +3,10 @@ import fs from 'fs';
 const b=await chromium.launch({executablePath:'/opt/pw-browsers/chromium'});
 const D='/home/user/ignite-yourself-operations/clients/jorge-arce/vishwanathan';
 for (const [path,file] of [['/vishwanathan/',D+'/index.html'],
+                           ['/vishwanathan/ideas',D+'/ideas/index.html'],
                            ['/vishwanathan/practice',D+'/practice/index.html'],
                            ['/vishwanathan/track',D+'/track/index.html'],
-                           ['/vishwanathan/voice',D+'/voice/index.html'],
-                           ['/vishwanathan/cv',D+'/cv/index.html']]) {
+                           ['/vishwanathan/voice',D+'/voice/index.html']]) {
   const p=await (await b.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'})).newPage();
   await p.goto('http://127.0.0.1:8904'+path,{waitUntil:'networkidle'});
   await p.waitForTimeout(1000);

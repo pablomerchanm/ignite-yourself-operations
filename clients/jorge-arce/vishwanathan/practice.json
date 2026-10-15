@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Practice — Priya Vishwanathan",
-    "description": "Greenfield development and hotel planning, guest experience, operations excellence and advisory, and how a project starts."
+    "title": "Advisory — Priya Vishwanathan",
+    "description": "Advisory for homestay and hotel owners, growing groups and boards; masterclasses, panels and juries; and how she works."
   },
   "logo": "PRIYA VISHWANATHAN",
   "nav": [
@@ -10,28 +10,28 @@
       "h": "/vishwanathan"
     },
     {
-      "t": "Practice",
-      "h": "/vishwanathan/practice"
-    },
-    {
-      "t": "Track record",
+      "t": "Career",
       "h": "/vishwanathan/track"
     },
     {
-      "t": "Voice",
+      "t": "Perspectives",
+      "h": "/vishwanathan/ideas"
+    },
+    {
+      "t": "Conversations",
       "h": "/vishwanathan/voice"
     },
     {
-      "t": "CV",
-      "h": "/vishwanathan/cv"
+      "t": "Advisory",
+      "h": "/vishwanathan/practice"
     },
     {
-      "t": "Enquiry",
+      "t": "Contact",
       "h": "/vishwanathan#inquiry"
     }
   ],
   "navcta": {
-    "t": "Discuss a project",
+    "t": "Start a conversation",
     "h": "/vishwanathan#inquiry"
   },
   "sections": [
@@ -39,90 +39,90 @@
       "type": "stmt",
       "id": "practice-open",
       "opener": true,
-      "label": "Practice",
+      "label": "Advisory",
       "img": {
-        "src": "/vishwanathan/assets/courtyard.jpg",
-        "alt": "A heritage courtyard at dusk",
-        "pos": "50% 45%"
+        "src": "/vishwanathan/assets/advisory.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
       },
-      "quote": "Hotels and homestays, <t>planned to be lived in.</t>",
-      "sub": "Greenfield projects, guest experience and operations, for owners who are building or rebuilding."
+      "quote": "Built with owners, <t>not only for them.</t>",
+      "sub": "“Advising, mentoring and helping hospitality businesses build for the future.” The work she took up after thirty-five years with IHCL."
     },
     {
       "type": "paths",
       "id": "routes",
       "nums": true,
-      "label": "Areas of practice",
-      "title": "Four areas <t>of work.</t>",
-      "lede": "The four lines of her own headline.",
+      "label": "Who she works with",
+      "title": "Four kinds <t>of work.</t>",
+      "lede": "Each grows out of a chapter of her career.",
       "cards": [
         {
           "lead": true,
-          "label": "Greenfield & planning",
-          "title": "What should this hotel be?",
+          "label": "Owners: homestays, villas & boutique hotels",
+          "title": "What should this house become?",
           "icon": "house",
-          "desc": "Concept, planning and interiors for a new hotel or homestay, from the first site walk to the opening checklist. The lens is the guest’s day, not the brochure.",
+          "desc": "The amã chapter, applied to your property: hearing the owners out, building the guest experience around the story of the house, and setting standards that still feel like a home.",
           "items": [
-            "Concept and positioning",
-            "Hotel planning & interiors",
-            "Pre-opening",
-            "The owner’s brief"
+            "Concept and the story of the house",
+            "Pre-opening and standards",
+            "Training first-time operators",
+            "Choosing an operator or brand"
           ],
           "cta": {
-            "t": "Discuss a new project",
+            "t": "Discuss a property",
             "h": "/vishwanathan#inquiry",
             "path": "project"
           }
         },
         {
-          "label": "Guest experience",
-          "title": "What will a guest remember?",
-          "icon": "care",
-          "desc": "Designing the guest journey and the standards behind it, with the measures that keep them honest.",
-          "items": [
-            "Guest journey design",
-            "Service standards",
-            "Feedback and NPS",
-            "Complaint handling"
-          ],
-          "cta": {
-            "t": "Discuss guest experience",
-            "h": "/vishwanathan#inquiry",
-            "path": "experience"
-          }
-        },
-        {
-          "label": "Operations excellence",
-          "title": "What does it cost to be consistent?",
+          "label": "Hotels & growing groups",
+          "title": "How do many hotels work as one?",
           "icon": "tally",
-          "desc": "Processes, quality tools and business-excellence assessment, from a decade inside the Tata model.",
+          "desc": "Fifteen years in Business Excellence: common standards, quality systems and measures that make a portfolio consistent without making it identical.",
           "items": [
-            "Business process review",
-            "Quality systems",
-            "Excellence assessment",
-            "Owner and partner management"
+            "Standards and SOPs",
+            "Quality systems and KPIs",
+            "Guest feedback and NPS",
+            "Excellence assessment"
           ],
           "cta": {
-            "t": "Discuss operations",
+            "t": "Discuss standards",
             "h": "/vishwanathan#inquiry",
-            "path": "experience"
+            "path": "standards"
           }
         },
         {
-          "label": "Board & advisory",
+          "label": "Boards & founders",
           "title": "Who sits beside the owner?",
           "icon": "support",
-          "desc": "Advisory for boards, founders and family owners: growth, brand and the decisions a hotel cannot undo.",
+          "desc": "Advisory and board roles for founders, family owners and boards: growth, brand, people and the decisions a hotel cannot undo.",
           "items": [
             "Advisory boards",
-            "Growth strategy",
-            "Brand and portfolio",
-            "Mentoring leadership"
+            "Growth and brand",
+            "People and culture",
+            "Mentoring leaders"
           ],
           "cta": {
-            "t": "Discuss an advisory role",
+            "t": "Discuss a board role",
             "h": "/vishwanathan#inquiry",
             "path": "advisory"
+          }
+        },
+        {
+          "label": "Masterclasses, panels & juries",
+          "title": "What should a team hear?",
+          "icon": "quote",
+          "desc": "Masterclasses for hotel teams and hospitality institutes, conversations and panels, and award juries. Team capability programmes run through HOSPI Sigma.",
+          "items": [
+            "Masterclasses for hotel teams",
+            "Hospitality institutes",
+            "Panels and conversations",
+            "Award juries"
+          ],
+          "cta": {
+            "t": "Invite her",
+            "h": "/vishwanathan#inquiry",
+            "path": "speaking"
           }
         }
       ],
@@ -131,27 +131,35 @@
     {
       "type": "retain",
       "id": "engage",
-      "label": "Starting a project",
-      "title": "A project starts <t>in three steps.</t>",
+      "label": "How she works",
+      "title": "Listen first. <t>Then set the standard.</t>",
       "steps": [
         {
-          "t": "A conversation",
-          "d": "What you are building or running, where it is, and where it stands."
+          "t": "Listen",
+          "d": "A property is personal. The work starts by hearing the owners out: what the place is, what it means to them and what they want it to become."
         },
         {
-          "t": "A site or portfolio review",
-          "d": "A walk through the property, the plans or the numbers, with a written read-out."
+          "t": "Find the story",
+          "d": "The guest experience is built around what makes the place itself, not around a brochure."
         },
         {
-          "t": "A scope and a plan",
-          "d": "What the work is, how long it takes and who does what. Work begins once the scope is agreed in writing."
+          "t": "Set the standard",
+          "d": "Standards and measures the team can keep, so good service is consistent, not occasional."
+        },
+        {
+          "t": "Train the people who run it",
+          "d": "From first-time owner-operators to front-line teams: the confidence to serve well, and to draw a line."
         }
       ],
-      "termsLabel": "How she works",
+      "termsLabel": "Engagements",
       "terms": [
         {
-          "k": "Engagements",
-          "v": "Projects, retained advisory and board roles"
+          "k": "Formats",
+          "v": "Projects, retained advisory, board roles and masterclasses"
+        },
+        {
+          "k": "Team programmes",
+          "v": "Through HOSPI Sigma"
         },
         {
           "k": "Based in",
@@ -163,61 +171,36 @@
         }
       ],
       "cta": {
-        "t": "Discuss a project",
+        "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
       },
       "no": "02"
     },
     {
-      "type": "counsel",
-      "id": "disclosure",
-      "light": true,
-      "label": "For the file",
-      "title": "Her profile, <t>in one place.</t>",
-      "items": [
-        {
-          "icon": "cv",
-          "tag": "LinkedIn · Profile",
-          "t": "Profile",
-          "d": "Thirty-five years of roles, in her own words.",
-          "a": "View the profile",
-          "h": "https://www.linkedin.com/in/priyavishwanathan/"
-        },
-        {
-          "icon": "list",
-          "tag": "1990 – 2026",
-          "t": "Track record",
-          "d": "The Taj years, Business Excellence and amã Stays & Trails.",
-          "a": "See the record",
-          "h": "/vishwanathan/track"
-        },
-        {
-          "icon": "quote",
-          "tag": "Podcast · Forums",
-          "t": "Voice",
-          "d": "Service, dignity and the guest, in conversation.",
-          "a": "Listen and read",
-          "h": "/vishwanathan/voice"
-        }
-      ]
+      "type": "stmt",
+      "id": "hospi",
+      "compact": true,
+      "label": "Through HOSPI Sigma",
+      "quote": "Brand philosophy, <t>made measurable.</t>",
+      "sub": "Board Advisor and Principal Consultant to HOSPI Sigma, a Lean Six Sigma capability framework for hospitality. In the firm’s words, her perspective is on “translating brand philosophy into measurable standards and service behaviours.”",
+      "more": {
+        "t": "HOSPI Sigma",
+        "h": "https://www.hospisigma.com/"
+      }
     },
     {
       "type": "next",
       "k": "Next",
-      "t": "Track <t>record</t>",
-      "d": "Thirty-five years with the Taj and IHCL.",
-      "h": "/vishwanathan/track",
-      "alt": {
-        "t": "Discuss a project",
-        "h": "/vishwanathan#inquiry"
-      }
+      "t": "Start a <t>conversation</t>",
+      "d": "Tell her what you are building, running or planning.",
+      "h": "/vishwanathan#inquiry"
     },
     {
       "type": "inquiry",
       "id": "inquiry",
       "label": "Start a conversation",
-      "title": "Start with <t>the project.</t>",
-      "lede": "Tell her what you are building or running, and where it stands.",
+      "title": "Start <t>a conversation.</t>",
+      "lede": "Tell her what you are building, running or planning, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -227,7 +210,7 @@
         "paths": [
           {
             "v": "project",
-            "t": "A new hotel or homestay — greenfield or planning",
+            "t": "A homestay, villa or boutique hotel — new or existing",
             "btn": "Send enquiry",
             "note": "Please do not include confidential financial information.",
             "fields": [
@@ -248,7 +231,7 @@
                 "n": "Where is the property?"
               },
               {
-                "n": "Stage: land, plans, under construction or open"
+                "n": "Stage: idea, plans, under construction or open"
               },
               {
                 "n": "Brief description",
@@ -258,8 +241,8 @@
             ]
           },
           {
-            "v": "experience",
-            "t": "Guest experience or operations — an existing hotel",
+            "v": "standards",
+            "t": "Standards and guest experience — a hotel or a group",
             "btn": "Send enquiry",
             "fields": [
               {
@@ -276,10 +259,10 @@
                 "r": true
               },
               {
-                "n": "Number of keys"
+                "n": "Number of hotels or keys"
               },
               {
-                "n": "What is not working",
+                "n": "What you want to improve",
                 "ta": true,
                 "full": true
               }
@@ -311,6 +294,37 @@
             ]
           },
           {
+            "v": "speaking",
+            "t": "A masterclass, panel, jury or podcast",
+            "btn": "Send invitation",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Format"
+              },
+              {
+                "n": "Date and city"
+              },
+              {
+                "n": "Audience and brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
             "v": "other",
             "t": "Something else",
             "btn": "Send enquiry",
@@ -335,11 +349,11 @@
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Ms. Vishwanathan.",
         "fine": "Private concept: nothing is sent from this page."
       },
-      "kick": "Hospitality Advisor · Hotels, Homestays & Guest Experience",
+      "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Since 1990.</t>",
+      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
       "fcta": {
-        "t": "Discuss a project",
+        "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
       },
       "social": [
@@ -356,7 +370,7 @@
         "href": "https://igniteyourself.co/",
         "logo": "/vishwanathan/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+        "note": "A private concept by Ignite Yourself, prepared from public information and her recorded interviews for Ms. Vishwanathan’s review. Marked frames show where portraits will go. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
       },
       "noform": true,
       "no": "03"

@@ -48,3 +48,21 @@ Pablo marcó como clave su frase del post de los 35 años: *"helping build and s
 - **Página Track record:** amã sube al primer bloque ("A brand, built and scaled."), con su cita. Se suman 1995 Londres, 1997 Club Floors, 1999 y 2001 Quality.
 - **Línea de tiempo:** se suma 1995. Se corrige el rótulo "IHCL (Taj Group)", que se salía por la izquierda; ahora va sobre la barra.
 - **Sin cambios:** el retrato sigue siendo ilustrativo. Antes de enviarle el preview, hay que quitarlo o reemplazarlo por una foto suya con permiso.
+
+## Iteración 3: plataforma de autoridad (15 de octubre de 2026)
+
+Pablo pidió reestructurar toda la web para posicionarla como autoridad del sector, con enlaces a los videos, hablándole directo al público y con su trayectoria al frente. Las fotos las hace él; la página queda con espacios marcados (ver `FOTOS.md`).
+
+**Páginas:**
+- **Overview:** hero (amã), en breve, cifras (370+, 35, 15), su frase de cierre de Inspire Someone Today, los dos videos, Career, tres convicciones, Advisory, Today y el formulario.
+- **Career** (`/track`): amã con hitos y sus palabras, Business Excellence ("from isolated hotels to one organisation"), la línea de tiempo, cargos, cargos actuales y formación. Absorbe la antigua página CV; `/vishwanathan/cv` redirige aquí.
+- **Perspectives** (`/ideas`, página nueva): ocho convicciones con sus citas y la fuente de cada una, las tres preguntas de líder y el huésped indio de hoy.
+- **Conversations** (`/voice`): los dos episodios se reproducen en la misma página (youtube-nocookie), además de charlas y menciones, jurados, foros y consejos.
+- **Advisory** (`/practice`): cuatro líneas de trabajo según el cliente (propietarios; hoteles y grupos; consejos y fundadores; masterclasses, paneles y jurados), su método en cuatro pasos y el bloque de HOSPI Sigma.
+- **Formulario:** cinco rutas (propiedad, estándares, consejo, invitación, otro). El botón principal dice "Start a conversation".
+
+**Piezas nuevas de plantilla:** `media` (video que se reproduce en la página, con miniatura, programa, cita y enlaces) e `ideas` (convicción, cita y fuente).
+
+**Imágenes:** se quitó el retrato generado con IA (no se parecía a ella) y las imágenes ilustrativas. La tarjeta para compartir ahora es tipográfica.
+
+**Para confirmar con ella:** las citas salen de transcripciones automáticas y pueden variar en alguna palabra; conviene que las revise. El NPS de 90+ sigue fuera de la página.

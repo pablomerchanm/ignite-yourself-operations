@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Priya Vishwanathan — Hospitality Advisor · Hotels, Homestays & Guest Experience",
-    "description": "Priya Vishwanathan: thirty-five years with the Taj and IHCL, from the Taj Mahal Hotel to amã Stays & Trails. Greenfield development, guest experience and operations excellence for hotel and homestay owners."
+    "title": "Priya Vishwanathan — Hospitality Advisor · Mentor · Juror",
+    "description": "Priya Vishwanathan: thirty-five years with IHCL; she helped build and scale amã Stays & Trails. Advisory for homestay and hotel owners, growing groups and boards, and conversations on service and leadership."
   },
   "logo": "PRIYA VISHWANATHAN",
   "nav": [
@@ -10,28 +10,28 @@
       "h": "/vishwanathan"
     },
     {
-      "t": "Practice",
-      "h": "/vishwanathan/practice"
-    },
-    {
-      "t": "Track record",
+      "t": "Career",
       "h": "/vishwanathan/track"
     },
     {
-      "t": "Voice",
+      "t": "Perspectives",
+      "h": "/vishwanathan/ideas"
+    },
+    {
+      "t": "Conversations",
       "h": "/vishwanathan/voice"
     },
     {
-      "t": "CV",
-      "h": "/vishwanathan/cv"
+      "t": "Advisory",
+      "h": "/vishwanathan/practice"
     },
     {
-      "t": "Enquiry",
+      "t": "Contact",
       "h": "/vishwanathan#inquiry"
     }
   ],
   "navcta": {
-    "t": "Discuss a project",
+    "t": "Start a conversation",
     "h": "#inquiry"
   },
   "sections": [
@@ -46,7 +46,7 @@
       "sub": "She helped build and scale amã Stays & Trails. <t>Thirty-five years with IHCL.</t>",
       "actions": [
         {
-          "t": "Discuss a project",
+          "t": "Start a conversation",
           "h": "#inquiry",
           "primary": true
         }
@@ -63,14 +63,14 @@
           "d": "From nine bungalows at launch to 370+ today. IHCL figures."
         },
         {
+          "k": "From isolated hotels to one organisation.",
+          "t": "Fifteen years in Business Excellence, part of the work that moved IHCL from hotels run in isolation to one organisation with structured standards. Senior Assessor of the Tata Business Excellence Model.",
+          "d": "Customer-satisfaction work across more than 100 hotels."
+        },
+        {
           "k": "Thirty-five years at the Taj.",
           "t": "Joined IHCL in 1990 from IHM Pusa. St. James’ Court in London, the Taj Mahal in New Delhi, then eight years as Regional Manager for Karnataka.",
           "d": "Front office, club floors, quality and operations."
-        },
-        {
-          "k": "Excellence you can measure.",
-          "t": "Fifteen years in Business Excellence, helping isolated hotels work as one organisation with common standards. Senior Assessor of the Tata Business Excellence Model.",
-          "d": "Customer-satisfaction work across more than 100 hotels."
         }
       ]
     },
@@ -89,105 +89,129 @@
           "k": "Years with the Taj and IHCL"
         },
         {
-          "n": "100<sup>+</sup>",
-          "k": "Hotels, in customer-satisfaction work"
+          "n": "15",
+          "k": "Years in Business Excellence"
         }
       ],
       "more": {
-        "t": "Track record",
+        "t": "The career",
         "h": "/vishwanathan/track"
       }
     },
     {
       "type": "quote",
       "id": "quote",
-      "lead": "From a conversation on hospitality, service and dignity, recorded in 2026:",
-      "q": "“Complaint is a gift.”",
-      "who": "Priya Vishwanathan, on Inspire Someone Today"
+      "lead": "Her closing words on Inspire Someone Today, written down before the recording:",
+      "q": "“Success is not measured by how many people know your name. It is measured by how many people are better because they crossed your path.”",
+      "who": "Priya Vishwanathan · Inspire Someone Today, episode 180, 2026"
     },
     {
-      "type": "stmt",
-      "id": "s-practice",
-      "label": "The practice",
-      "quote": "Four ways <t>to work together.</t>",
-      "keys": [
-        "Greenfield & hotel planning",
-        "Guest experience design",
-        "Operations excellence",
-        "Board & advisory"
+      "type": "media",
+      "id": "conversations",
+      "ink": true,
+      "label": "In conversation",
+      "title": "Hear it <t>from her.</t>",
+      "lede": "Two long conversations recorded in 2026: one with a hotelier, one about a life in hospitality.",
+      "items": [
+        {
+          "yt": "QDKNt4len4Q",
+          "show": "HospeTalk with Vikas Mehra",
+          "ep": "Episode 35 · 2026",
+          "t": "Hotels Are Solving the Wrong Problem",
+          "d": "Data over instinct, improvement without overspending, Business Excellence at IHCL, and why a struggling culture is easier to fix than a struggling business.",
+          "q": "“The biggest misconception… improvement is spending.”"
+        },
+        {
+          "yt": "wg-QzplfT5M",
+          "show": "Inspire Someone Today with Srikanth",
+          "ep": "Episode 180 · 6 August 2026",
+          "t": "How Many People Are Better Because They Crossed Your Path?",
+          "d": "Day three at the Taj, homestays built with the families who own them, service without servility, and leaving at the top.",
+          "q": "“Complaint is a gift.”",
+          "links": [
+            {
+              "t": "Episode page",
+              "h": "https://inspiresomeonetoday.in/e180/"
+            }
+          ]
+        }
       ],
       "more": {
-        "t": "The practice",
-        "h": "/vishwanathan/practice"
-      },
-      "img": {
-        "src": "/vishwanathan/assets/veranda.jpg",
-        "alt": "A heritage veranda in the morning",
-        "pos": "50% 50%"
+        "t": "All conversations",
+        "h": "/vishwanathan/voice"
       }
     },
     {
       "type": "stmt",
       "id": "s-track",
-      "label": "Track record",
-      "align": "right",
+      "label": "Career",
       "quote": "From a duty manager’s desk <t>to a national brand.</t>",
       "sub": "Thirty-five years with IHCL, ending in what she calls its most fulfilling chapter: helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
       "keys": [
-        "Taj Mahal Hotel",
+        "St. James’ Court, London",
+        "Taj Mahal, New Delhi",
         "Business Excellence",
-        "Karnataka",
         "amã Stays & Trails"
       ],
       "more": {
-        "t": "The track record",
+        "t": "The career",
         "h": "/vishwanathan/track"
       },
       "img": {
-        "src": "/vishwanathan/assets/plans.jpg",
-        "alt": "Plans and swatches on a table",
+        "src": "/vishwanathan/assets/career.jpg",
+        "alt": "Photograph to come",
         "pos": "50% 50%"
       }
     },
     {
-      "type": "counsel",
-      "id": "for-owners",
-      "label": "For owners and boards",
-      "title": "What a project needs, <t>in one place.</t>",
+      "type": "ideas",
+      "id": "beliefs",
+      "label": "Perspectives",
+      "title": "What she <t>believes.</t>",
       "items": [
         {
-          "icon": "cv",
-          "tag": "LinkedIn · Profile",
-          "t": "Profile",
-          "d": "Thirty-five years of roles, in her own words.",
-          "a": "View the profile",
-          "h": "https://www.linkedin.com/in/priyavishwanathan/"
+          "t": "A complaint is a gift.",
+          "q": "“Every time a guest has complained and been not so polite to me, it was a learning: what we had to correct and what we did wrong.”",
+          "s": "Inspire Someone Today, 2026"
         },
         {
-          "icon": "list",
-          "tag": "1990 – 2026",
-          "t": "Track record",
-          "d": "The Taj years, Business Excellence and amã Stays & Trails.",
-          "a": "See the record",
-          "h": "/vishwanathan/track"
+          "t": "Respect yourself first.",
+          "q": "“If you have to respect others, you’ve got to first respect yourself.”",
+          "s": "Inspire Someone Today, 2026"
         },
         {
-          "icon": "quote",
-          "tag": "Podcast · Forums",
-          "t": "Voice",
-          "d": "Service, dignity and the guest, in conversation.",
-          "a": "Listen and read",
-          "h": "/vishwanathan/voice"
-        },
-        {
-          "icon": "check",
-          "tag": "Three steps",
-          "t": "Starting a project",
-          "d": "A conversation, a site review and a scoped plan.",
-          "a": "Start a project",
-          "h": "/vishwanathan/practice#engage"
+          "t": "Good to great touches the heart.",
+          "q": "“I was in a business, not in a charity. Good to great really happens when you do something that touches somebody’s heart.”",
+          "s": "Inspire Someone Today, 2026"
         }
-      ]
+      ],
+      "more": {
+        "t": "All perspectives",
+        "h": "/vishwanathan/ideas"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-advisory",
+      "label": "Advisory",
+      "align": "right",
+      "quote": "For owners, groups <t>and boards.</t>",
+      "sub": "“Advising, mentoring and helping hospitality businesses build for the future”: the work she took up after IHCL, in her own words.",
+      "keys": [
+        "Homestays & villas",
+        "Hotels & groups",
+        "Boards & founders",
+        "Masterclasses"
+      ],
+      "more": {
+        "t": "How she advises",
+        "h": "/vishwanathan/practice"
+      },
+      "img": {
+        "src": "/vishwanathan/assets/advisory.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
+      }
     },
     {
       "type": "stmt",
@@ -195,23 +219,23 @@
       "compact": true,
       "label": "Today",
       "quote": "Advisor, juror <t>and council member.</t>",
-      "sub": "Board Advisor and Principal Consultant at HOSPI Sigma. Regional jury, BW Hotelier Indian Hospitality Awards 2026. National Vice President, WICCI Diversity & Inclusion Council.",
+      "sub": "Board Advisor and Principal Consultant at HOSPI Sigma. Regional jury (South), BW Hotelier Indian Hospitality Awards 2026. National Vice President, WICCI Diversity & Inclusion Council.",
       "more": {
         "t": "Today’s roles",
-        "h": "/vishwanathan/cv"
+        "h": "/vishwanathan/track#cv-today"
       },
       "img": {
-        "src": "/vishwanathan/assets/table.jpg",
-        "alt": "A breakfast table set in a garden",
-        "pos": "50% 55%"
+        "src": "/vishwanathan/assets/today.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
       }
     },
     {
       "type": "inquiry",
       "id": "inquiry",
       "label": "Start a conversation",
-      "title": "Start with <t>the project.</t>",
-      "lede": "Tell her what you are building or running, and where it stands.",
+      "title": "Start <t>a conversation.</t>",
+      "lede": "Tell her what you are building, running or planning, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -221,7 +245,7 @@
         "paths": [
           {
             "v": "project",
-            "t": "A new hotel or homestay — greenfield or planning",
+            "t": "A homestay, villa or boutique hotel — new or existing",
             "btn": "Send enquiry",
             "note": "Please do not include confidential financial information.",
             "fields": [
@@ -242,7 +266,7 @@
                 "n": "Where is the property?"
               },
               {
-                "n": "Stage: land, plans, under construction or open"
+                "n": "Stage: idea, plans, under construction or open"
               },
               {
                 "n": "Brief description",
@@ -252,8 +276,8 @@
             ]
           },
           {
-            "v": "experience",
-            "t": "Guest experience or operations — an existing hotel",
+            "v": "standards",
+            "t": "Standards and guest experience — a hotel or a group",
             "btn": "Send enquiry",
             "fields": [
               {
@@ -270,10 +294,10 @@
                 "r": true
               },
               {
-                "n": "Number of keys"
+                "n": "Number of hotels or keys"
               },
               {
-                "n": "What is not working",
+                "n": "What you want to improve",
                 "ta": true,
                 "full": true
               }
@@ -305,6 +329,37 @@
             ]
           },
           {
+            "v": "speaking",
+            "t": "A masterclass, panel, jury or podcast",
+            "btn": "Send invitation",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Format"
+              },
+              {
+                "n": "Date and city"
+              },
+              {
+                "n": "Audience and brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
             "v": "other",
             "t": "Something else",
             "btn": "Send enquiry",
@@ -329,11 +384,11 @@
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Ms. Vishwanathan.",
         "fine": "Private concept: nothing is sent from this page."
       },
-      "kick": "Hospitality Advisor · Hotels, Homestays & Guest Experience",
+      "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Since 1990.</t>",
+      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
       "fcta": {
-        "t": "Discuss a project",
+        "t": "Start a conversation",
         "h": "#inquiry"
       },
       "social": [
@@ -350,9 +405,8 @@
         "href": "https://igniteyourself.co/",
         "logo": "/vishwanathan/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
-      },
-      "no": "01"
+        "note": "A private concept by Ignite Yourself, prepared from public information and her recorded interviews for Ms. Vishwanathan’s review. Marked frames show where portraits will go. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+      }
     }
   ]
 }
