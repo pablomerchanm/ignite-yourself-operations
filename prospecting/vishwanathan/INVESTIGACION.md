@@ -73,7 +73,7 @@ Son resúmenes del episodio, no citas textuales verificadas: **hay que escuchar 
 
 - **Finalista de Tata Innovista 2021** por el proyecto amã Stays & Trails, y **Quality Innovation Award** (Business Innovations) de la Indian Society for Quality. Solo aparecen en su perfil de LinkedIn; ninguna fuente externa lo confirma.
 - **Fechas exactas** de cada cargo y de su salida de IHCL.
-- **Qué hizo en el Reino Unido** (hotel y años).
+- ~~Qué hizo en el Reino Unido~~ **Resuelto:** Assistant Duty Manager, St. James' Court Hotel, Londres, 1995 (su post de LinkedIn; ver `LINKEDIN-Y-ENTREVISTA.md`).
 - **Las cifras de amã** durante su gestión: con cuántos bungalows empezó y con cuántos terminó.
 - **Su título vigente en HOSPI Sigma**: "Board Advisor & Principal Consultant" (anuncio) frente a "Principal Advisor" (jurado BW).
 - **WICCI**: "National Vice President" (web) frente a "National Vice Chair" (LinkedIn).
