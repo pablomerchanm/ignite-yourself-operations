@@ -21,9 +21,18 @@ Todo lo que sigue sale de ella misma o del anuncio de su firma. Esto cambia vari
 
 **Queda resuelto lo del Reino Unido:** fue el St. James' Court Hotel de Londres, en 1995.
 
-El post dice: "My 35 years with IHCL took me across diverse roles, functions and geographies… The journey culminated in one of the most fulfilling…" (el texto sigue cortado). Tiene **359 reacciones y 84 comentarios**: su red responde.
+**Texto completo del post** (hace 1 semana, **359 reacciones, 84 comentarios, 1 repost**):
 
-**Falta:** el resto del carrusel (2001 a 2025) y el texto completo del post.
+> "My 35 years with IHCL took me across diverse roles, functions and geographies—each experience bringing new lessons, challenges and possibilities. The journey culminated in one of the most fulfilling chapters of **helping build and scale ama Stays & Trails into a distinctive hospitality brand**. I look back with immense pride and gratitude and carry those experiences forward as I embraced my next innings last year of **advising, mentoring and helping hospitality businesses build for the future**. A legacy to cherish. A new journey to shape."
+
+Lo que confirma:
+- **Su papel en amã, en sus palabras:** "helping build and scale… into a distinctive hospitality brand". Esa es la formulación segura para la página; no "fundó" ni "creó".
+- **Salió de IHCL en 2025** ("my next innings last year"); desde entonces asesora.
+- **Su oferta actual, en sus palabras:** *advising, mentoring and helping hospitality businesses build for the future*. Son tres verbos que la página puede usar tal cual.
+- **Su titular de LinkedIn empieza con "Business Growth | Greenfield Development | Guest …".** Coincide con las rutas de la práctica (crecimiento, proyectos nuevos, experiencia del huésped).
+- **La lámina de portada es una pieza de IHCL**, con su logo, su foto y una cita suya: *"Embracing diverse roles and functions helps tread uncharted territories and uncover limitless possibilities."* Que la empresa le haya hecho la pieza de despedida es una señal de su peso en el grupo. La foto y la marca son de IHCL: no se usan sin permiso.
+
+**Falta:** el resto del carrusel (2001 a 2025).
 
 ### Lo que ella dice que logró (HospeTalk)
 - **15 años en la célula de Business Excellence** de IHCL.
@@ -71,6 +80,7 @@ Lo prueban tres cosas: Business Excellence (15 años), la unificación de IHCL c
 
 Frases candidatas para el hero:
 - *Brand promise, made measurable.*
+- Subtítulo con sus propias palabras: *Advising, mentoring and helping hospitality businesses build for the future.*
 - *From brand philosophy to service, every shift.*
 - *Hospitality, made consistent.*
 
@@ -116,7 +126,7 @@ Lo que hizo en IHCL (hoteles aislados convertidos en una organización con proce
 
 ## 6. Lo que falta pedir
 
-- El resto del carrusel (2001–2025) y el texto completo del post de los 35 años.
+- El resto del carrusel (2001–2025).
 - Si podemos mencionar el proyecto de Shantiniketan, y cuáles otros tiene.
 - Permiso para usar su foto y las citas del podcast.
 - La finalista de Tata Innovista 2021 y el premio de la ISQ, con documento.
