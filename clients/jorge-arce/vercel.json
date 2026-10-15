@@ -133,6 +133,41 @@
       "source": "/herencia-vl",
       "destination": "/herencia",
       "permanent": false
+    },
+    {
+      "source": "/priya",
+      "destination": "/vishwanathan",
+      "permanent": false
+    },
+    {
+      "source": "/Priya",
+      "destination": "/vishwanathan",
+      "permanent": false
+    },
+    {
+      "source": "/priya-vishwanathan",
+      "destination": "/vishwanathan",
+      "permanent": false
+    },
+    {
+      "source": "/Priya-Vishwanathan",
+      "destination": "/vishwanathan",
+      "permanent": false
+    },
+    {
+      "source": "/PriyaVishwanathan",
+      "destination": "/vishwanathan",
+      "permanent": false
+    },
+    {
+      "source": "/priyavishwanathan",
+      "destination": "/vishwanathan",
+      "permanent": false
+    },
+    {
+      "source": "/Vishwanathan",
+      "destination": "/vishwanathan",
+      "permanent": false
     }
   ],
   "rewrites": [

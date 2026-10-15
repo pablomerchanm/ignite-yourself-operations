@@ -1,0 +1,305 @@
+{
+  "meta": {
+    "title": "Track record — Priya Vishwanathan",
+    "description": "Thirty-five years with the Taj and IHCL, from the Taj Mahal Hotel to amã Stays & Trails."
+  },
+  "logo": "PRIYA VISHWANATHAN",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/vishwanathan"
+    },
+    {
+      "t": "Practice",
+      "h": "/vishwanathan/practice"
+    },
+    {
+      "t": "Track record",
+      "h": "/vishwanathan/track"
+    },
+    {
+      "t": "Voice",
+      "h": "/vishwanathan/voice"
+    },
+    {
+      "t": "CV",
+      "h": "/vishwanathan/cv"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/vishwanathan#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a project",
+    "h": "/vishwanathan#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "track-open",
+      "opener": true,
+      "label": "Track record",
+      "img": {
+        "src": "/vishwanathan/assets/plans.jpg",
+        "alt": "Plans and swatches on a table",
+        "pos": "50% 50%"
+      },
+      "quote": "Thirty-five years, <t>one company.</t>",
+      "sub": "From the Taj Mahal Hotel to a national homestay brand."
+    },
+    {
+      "type": "timeline",
+      "id": "track-years",
+      "tint": true,
+      "label": "The record, on one line",
+      "title": "From IHM Pusa in 1987 <t>to the practice.</t>",
+      "from": 1987,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1987,
+          "t": "IHM Pusa, New Delhi"
+        },
+        {
+          "y": 1990,
+          "t": "Joins IHCL"
+        },
+        {
+          "y": 2019,
+          "t": "amã Stays & Trails launches"
+        },
+        {
+          "y": 2026,
+          "t": "HOSPI Sigma · BW Hotelier jury"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1990,
+          "b": 2025,
+          "t": "IHCL (Taj Group)"
+        }
+      ],
+      "rlabel": "The IHCL years",
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "track-roles",
+      "label": "Roles at IHCL",
+      "title": "Operations, excellence <t>and a new brand.</t>",
+      "lede": "In the order she held them.",
+      "groups": [
+        {
+          "label": "Operations",
+          "wide": true,
+          "names": [
+            "Hotel Operations Management Trainee, IHCL — 1990",
+            "Duty Manager, Taj Mahal Hotel",
+            "Operations roles in India and the United Kingdom"
+          ]
+        },
+        {
+          "label": "Business Excellence",
+          "wide": true,
+          "names": [
+            "Corporate Manager, Business Process, South Region — Taj Hotels Resorts & Palaces",
+            "Senior Assessor, Tata Business Excellence Model — eight external assessments of Tata companies",
+            "Customer-satisfaction work across more than 100 hotels"
+          ]
+        },
+        {
+          "label": "Leadership",
+          "wide": true,
+          "names": [
+            "Regional Manager, Karnataka — eight years, Bengaluru",
+            "General Manager Operations, amã Stays & Trails — IHCL’s branded homestays, pan-India: P&L, owners and partners, guests and teams"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "track-ama",
+      "tint": true,
+      "label": "amã Stays & Trails",
+      "title": "A brand built <t>house by house.</t>",
+      "lede": "The public milestones of the brand she helped build. The figures are IHCL’s.",
+      "groups": [
+        {
+          "label": "Milestones",
+          "wide": true,
+          "names": [
+            "2019 — Launched by IHCL with nine Tata Coffee bungalows in Coorg and Chikmagalur",
+            "2024 — 200+ bungalows, with 100+ under development",
+            "2025 — 250 bungalows, ten times the launch portfolio",
+            "2026 — 370+ bungalows across India"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Voice",
+      "d": "Service, dignity and the guest, in her own words.",
+      "h": "/vishwanathan/voice",
+      "alt": {
+        "t": "Discuss a project",
+        "h": "/vishwanathan#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the project.</t>",
+      "lede": "Tell her what you are building or running, and where it stands.",
+      "contact": {
+        "city": "Bengaluru, India"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "project",
+            "t": "A new hotel or homestay — greenfield or planning",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential financial information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company or family office",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Where is the property?"
+              },
+              {
+                "n": "Stage: land, plans, under construction or open"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "experience",
+            "t": "Guest experience or operations — an existing hotel",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Hotel or group",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Number of keys"
+              },
+              {
+                "n": "What is not working",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "advisory",
+            "t": "A board or advisory role",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "The role, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Ms. Vishwanathan.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "kick": "Hospitality Advisor · Hotels, Homestays & Guest Experience",
+      "name": "Priya Vishwanathan",
+      "sub": "Hotels, homestays and the guest experience. <t>Since 1990.</t>",
+      "fcta": {
+        "t": "Discuss a project",
+        "h": "/vishwanathan#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/priyavishwanathan/",
+          "i": "linkedin"
+        }
+      ],
+      "base": "Priya Vishwanathan · Bengaluru, India",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/vishwanathan/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
+      },
+      "noform": true,
+      "no": "04"
+    }
+  ]
+}

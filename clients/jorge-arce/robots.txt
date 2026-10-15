@@ -5,6 +5,8 @@ Disallow: /mark-cooke
 Disallow: /cooke
 Disallow: /pettingill
 Disallow: /bernard-pettingill
+Disallow: /vishwanathan
+Disallow: /priya-vishwanathan
 Disallow: /herencia
 
 User-agent: Bingbot
@@ -13,6 +15,8 @@ Disallow: /mark-cooke
 Disallow: /cooke
 Disallow: /pettingill
 Disallow: /bernard-pettingill
+Disallow: /vishwanathan
+Disallow: /priya-vishwanathan
 Disallow: /herencia
 
 User-agent: DuckDuckBot
@@ -21,6 +25,8 @@ Disallow: /mark-cooke
 Disallow: /cooke
 Disallow: /pettingill
 Disallow: /bernard-pettingill
+Disallow: /vishwanathan
+Disallow: /priya-vishwanathan
 Disallow: /herencia
 
 User-agent: *
@@ -29,6 +35,7 @@ Allow: /igy-mobius
 Allow: /kappelman
 Allow: /mark-cooke
 Allow: /pettingill
+Allow: /vishwanathan
 Allow: /herencia
 # Trabajo interno y conceptos de plantilla: accesibles por enlace directo,
 # fuera del indice para que no compitan con la landing ni se confundan
