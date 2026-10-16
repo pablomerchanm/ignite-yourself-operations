@@ -162,6 +162,40 @@ base = sub1(r"""\(s\.social\|\|\[\]\)\.map\(function\(x\)\{return'<a class="go" 
 
 # ---------------------------------------------------------- 5. partials propios
 PARTIALS = r"""
+intro:function(s){
+  return'<section class="itr" id="'+esc(s.id||'intro')+'"><div class="wrap itlay">'+
+  (s.img?'<figure class="itfig wr" data-r1><img src="'+esc(s.img.src)+'" alt="'+esc(s.img.alt||'')+'" loading="lazy"></figure>':'')+
+  '<div class="ittx" data-r2>'+
+    (s.label?'<span class="smallcap slab wr">'+esc(s.label)+'</span>':'')+
+    '<h2 class="itst wr">'+rich(s.statement)+'</h2>'+
+    (s.body||[]).map(function(x){return'<p class="itb wr">'+rich(x)+'</p>'}).join('')+
+    (s.sign?'<p class="itsign wr">'+esc(s.sign)+'</p>':'')+
+    (s.more?'<a class="smore wr" href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a>':'')+
+  '</div></div></section>'},
+marquee:function(s){
+  var row=(s.items||[]).map(function(x){return'<span>'+esc(x)+'</span><i aria-hidden="true">&#10209;</i>'}).join('');
+  return'<section class="mq" id="'+esc(s.id||'marquee')+'" aria-label="'+esc((s.items||[]).join(', '))+'">'+
+  '<div class="mqtrack" aria-hidden="true"><div class="mqrow">'+row+row+'</div><div class="mqrow">'+row+row+'</div></div></section>'},
+situations:function(s){
+  return'<section class="sit" id="'+esc(s.id||'situations')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<ol class="sitlist" data-cards>'+(s.items||[]).map(function(x,i){
+    return'<li class="wr"><span class="sitn">'+('0'+(i+1)).slice(-2)+'</span><p>'+rich(x)+'</p></li>'}).join('')+'</ol>'+
+  '</div></section>'},
+offers:function(s){
+  return'<section class="ofr" id="'+esc(s.id||'offers')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="ofgrid" data-cards>'+(s.items||[]).map(function(o){
+    return'<article class="ofc wr">'+(o.img?'<div class="ofimg"><img src="'+esc(o.img)+'" alt="" loading="lazy"></div>':'')+
+      '<div class="oftx"><span class="smallcap offor">'+esc(o['for'])+'</span><h3 class="oft">'+rich(o.t)+'</h3>'+
+      '<p class="ofd">'+rich(o.d)+'</p>'+
+      (o.list?'<ul class="ofl">'+o.list.map(function(x){return'<li>'+esc(x)+'</li>'}).join('')+'</ul>':'')+
+      '<div class="offoot">'+(o.from?'<span class="src">'+esc(o.from)+'</span>':'')+
+      (o.h?'<a class="smore" href="'+esc(o.h)+'">Details</a>':'')+'</div></div></article>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
 marks:function(s){
   return'<section class="mks" id="'+esc(s.id||'marks')+'"><div class="wrap">'+
   (s.label?'<div class="mkhead"><span class="smallcap wr" data-r1>'+esc(s.label)+'</span></div>':'')+
@@ -273,6 +307,7 @@ brief:function(s){
   (s.label?'<div class="smallcap brl wr" data-r1>'+esc(s.label)+'</div>':'')+
   '<div class="brgrid" data-cards>'+(s.items||[]).map(function(it,i){
     return'<div class="bri wr"><span class="brn">0'+(i+1)+'</span><h3>'+rich(it.k)+'</h3>'+(it.t?'<p class="brt">'+rich(it.t)+'</p>':'')+(it.d?'<p class="brd">'+rich(it.d)+'</p>':'')+'</div>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
   '</div></section>'},
 quote:function(s){
   return'<section class="qt" id="'+esc(s.id||'quote')+'"><div class="wrap" data-r2>'+
@@ -1760,6 +1795,52 @@ html.scrolled .topbar{background:rgba(44,26,18,.94);-webkit-backdrop-filter:blur
 @media(max-width:860px){.tblay{grid-template-columns:1fr}.tbd{border-radius:28px}.tbrow{grid-template-columns:1fr;gap:14px}
   .tbtri{width:min(100%,300px);margin:0 auto}.tbint{flex-direction:row;gap:10px;justify-content:center}.hx i{font-size:12px}}
 
+
+/* ---------- estructura de landing (sobria: la piel definitiva vendra con las pautas de marca) ---------- */
+.itr{padding:var(--sec) 0;background:var(--bg)}
+.itlay{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,100px);align-items:center}
+.itfig{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:2px}
+.itfig img{width:100%;height:100%;object-fit:cover}
+.ittx{display:flex;flex-direction:column;align-items:flex-start}
+.itst{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.2vw,52px);line-height:1.12;letter-spacing:-.01em;color:var(--ink);margin-top:clamp(18px,3vh,28px);max-width:22em}
+#site .itst .it{color:var(--terra)}
+.itb{margin-top:clamp(16px,2.4vh,22px);font-size:clamp(15px,1.08vw,17px);line-height:1.65;color:#4A372B;max-width:38em}
+.itsign{margin-top:clamp(22px,3.4vh,32px);font-family:'Tiro Devanagari',var(--caps);font-size:16px;letter-spacing:.05em;color:var(--terra)}
+.ittx .smore{margin-top:clamp(24px,3.6vh,34px)}
+@media(max-width:860px){.itlay{grid-template-columns:1fr}.itfig{aspect-ratio:4/3}}
+
+.mq{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:18px 0}
+.mqtrack{display:flex;width:max-content}
+.mqrow{display:flex;align-items:center;flex:0 0 auto}
+.mqrow span{font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.8vw,28px);color:var(--ink);padding:0 22px;white-space:nowrap}
+.mqrow i{font-style:normal;color:var(--terra);font-size:14px}
+@media(prefers-reduced-motion:no-preference){.mqtrack{animation:mq 60s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}}
+
+.sit{padding:var(--sec) 0;background:var(--bg)}
+.sitlist{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
+.sitlist li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;padding:clamp(22px,3vh,32px) clamp(18px,2.4vw,40px) clamp(22px,3vh,32px) 0;border-bottom:1px solid var(--line)}
+.sitlist li:nth-child(2n){padding-left:clamp(18px,2.4vw,40px);border-left:1px solid var(--line)}
+.sitn{font-family:var(--didone);font-size:13px;color:var(--terra);padding-top:.5em}
+.sitlist p{font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.6vw,26px);line-height:1.3;color:var(--ink)}
+@media(max-width:860px){.sitlist{grid-template-columns:1fr}.sitlist li,.sitlist li:nth-child(2n){padding:20px 0;border-left:0}}
+
+.ofr{padding:var(--sec) 0;background:var(--paper2)}
+.ofgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,1.6vw,26px)}
+.ofc{display:flex;flex-direction:column;background:var(--bg);border:1px solid var(--line)}
+.ofimg{aspect-ratio:4/3;overflow:hidden}
+.ofimg img{width:100%;height:100%;object-fit:cover;filter:sepia(.1) saturate(.92)}
+.oftx{display:flex;flex-direction:column;flex:1;padding:clamp(20px,1.8vw,28px)}
+#site .offor{font-size:11.5px;letter-spacing:.16em;line-height:1.5}
+.oft{font-family:var(--serif);font-weight:300;font-size:clamp(24px,1.9vw,30px);line-height:1.08;margin-top:12px;color:var(--ink)}
+.ofd{margin-top:12px;font-size:14.5px;line-height:1.6;color:#4A372B}
+.ofl{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
+.ofl li{font-size:14px;padding:9px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.offoot{margin-top:auto;padding-top:20px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+#site .ofr .pmore a{color:var(--ink)}
+@media(max-width:1100px){.ofgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ofgrid{grid-template-columns:1fr}}
+#site .brf .pmore a{color:var(--ink);border-color:rgba(44,26,18,.4)}
+
 /* ---------- movil ---------- */
 @media(max-width:860px){
   .topbar{background:rgba(44,26,18,.94)!important}
@@ -1777,7 +1858,7 @@ html.scrolled .topbar{background:rgba(44,26,18,.94);-webkit-backdrop-filter:blur
   #site .hero .hnote{justify-content:center;font-size:14.5px!important}
   #site .hero .hacts{justify-content:center}
   #site .hero::after{inset:10px}
-  #site .kfoot.pf .fname{font-size:clamp(48px,14vw,64px)}
+  #site .kfoot.pf .fname{font-size:clamp(38px,10.5vw,54px)}
 }
 
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
@@ -1808,15 +1889,15 @@ NAV = [
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
-TNAV = [("Career",         "/vishwanathan/track",     "track"),
+TNAV = [("Advisory",       "/vishwanathan/practice",  "practice"),
+        ("Career",         "/vishwanathan/track",     "track"),
         ("Perspectives",   "/vishwanathan/ideas",     "ideas"),
-        ("Conversations",  "/vishwanathan/voice",     "voice"),
-        ("Advisory",       "/vishwanathan/practice",  "practice")]
+        ("Conversations",  "/vishwanathan/voice",     "voice")]
 TABS = [("Overview",  "/vishwanathan",           "home"),
+        ("Advisory",  "/vishwanathan/practice",  "practice"),
         ("Career",    "/vishwanathan/track",     "track"),
         ("Ideas",     "/vishwanathan/ideas",     "ideas"),
-        ("Talks",     "/vishwanathan/voice",     "voice"),
-        ("Advisory",  "/vishwanathan/practice",  "practice")]
+        ("Talks",     "/vishwanathan/voice",     "voice")]
 
 def topbar_html(active):
     ON = ' class="on"'
@@ -1869,8 +1950,8 @@ T_ID = 'Perspectives — Priya Vishwanathan'
 T_PU = 'Conversations — Priya Vishwanathan'
 
 home = page(TITLE, DESC,
-    [deep('hero'), deep('marks'), deep('in-brief'), deep('chapter'), deep('quote'), deep('conversations'),
-     deep('beliefs'), deep('s-track'), deep('s-advisory'), deep('s-now'), inq()])
+    [deep('hero'), deep('marks'), deep('intro'), deep('audiences'), deep('called-in'), deep('offers'), deep('engage'),
+     deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), deep('s-now'), inq()])
 for _s in home['sections']:
     _s.pop('no', None)
 PAGES = {
@@ -1890,7 +1971,7 @@ PAGES = {
          dict(NX('Next', 'Advisory', 'For owners, growing groups and boards.', '/vishwanathan/practice'), alt=ALT), foot()], sub=True),
     'practice': page(T_PR,
         'Advisory for homestay and hotel owners, growing groups and boards; masterclasses, panels and juries; and how I work.',
-        [deep('practice-open'), deep('routes'), deep('engage'), deep('hospi'),
+        [deep('practice-open'), deep('called-in'), deep('routes'), deep('engage'), deep('hospi'),
          NX('Next', 'Start a <t>conversation</t>', 'Tell me what you are building, running or planning.', '/vishwanathan#inquiry'), foot()], sub=True),
 }
 

@@ -18,15 +18,19 @@
         "alt": "Priya Vishwanathan (illustrative)"
       },
       "name": "Priya <t>Vishwanathan</t>",
-      "sub": "I helped build and scale amã Stays & Trails. <t>Thirty-five years with IHCL.</t>",
+      "sub": "I advise owners of homestays and hotels, growing groups and boards. <t>Thirty-five years with the Taj.</t>",
       "actions": [
         {
           "t": "Start a conversation",
           "h": "#inquiry",
           "primary": true
+        },
+        {
+          "t": "Explore my advisory",
+          "h": "#offers"
         }
       ],
-      "note": "अतिथि देवो भव · the guest is god"
+      "kick": "Hospitality Advisor · Mentor · Juror"
     },
     {
       "type": "marks",
@@ -70,26 +74,140 @@
       "src": "Logos belong to their owners and appear here only to show where I have worked."
     },
     {
-      "type": "brief",
-      "id": "in-brief",
-      "label": "In brief",
+      "type": "intro",
+      "id": "intro",
+      "label": "Hospitality, from the inside",
+      "statement": "I help owners turn beautiful properties into places guests remember, <t>and growing groups into one standard of service.</t>",
+      "body": [
+        "For thirty-five years I worked inside IHCL, the company behind the Taj: from a duty manager’s desk at St. James’ Court in London, through fifteen years in Business Excellence, to helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
+        "Today I advise, mentor and help hospitality businesses build for the future, bringing the discipline of a great hotel company to the property in front of me."
+      ],
+      "sign": "अतिथि देवो भव · the guest is god",
+      "img": {
+        "src": "/vishwanathan/assets/voice.jpg",
+        "alt": "A veranda set for conversation (illustrative)"
+      },
+      "more": {
+        "t": "My career",
+        "h": "/vishwanathan/track"
+      }
+    },
+    {
+      "type": "marquee",
+      "id": "audiences",
+      "items": [
+        "Homestays",
+        "Heritage villas",
+        "Boutique hotels",
+        "Hospitality groups",
+        "Boards & founders",
+        "Hospitality institutes"
+      ]
+    },
+    {
+      "type": "situations",
+      "id": "called-in",
+      "label": "Where I am called in",
+      "title": "Most engagements <t>begin with one of these.</t>",
+      "items": [
+        "A family home that could welcome guests, but has never been run as a business.",
+        "A beautiful property whose guests do not come back.",
+        "A team that serves well on good days, and only on good days.",
+        "A group that is growing faster than its standards.",
+        "A new hotel or homestay, still on paper, that needs an operator’s eye before it opens.",
+        "A board or founder who wants someone at the table who has run hotels."
+      ]
+    },
+    {
+      "type": "offers",
+      "id": "offers",
+      "label": "Advisory",
+      "title": "Four ways <t>I work with you.</t>",
+      "lede": "Each grows out of a chapter of my career.",
       "items": [
         {
-          "k": "A homestay brand, built and scaled.",
-          "t": "The most fulfilling chapter of my thirty-five years with IHCL: helping build and scale amã Stays & Trails into a distinctive hospitality brand. As General Manager I held the P&L, the owners and the guests, across India.",
-          "d": "From nine bungalows at launch to 370+ today. IHCL figures."
+          "t": "Owner Advisory",
+          "for": "Owners of homestays, villas & boutique hotels",
+          "img": "/vishwanathan/assets/today.jpg",
+          "d": "Concept, the story of the house, pre-opening and standards that still feel like a home.",
+          "list": [
+            "Concept & positioning",
+            "Pre-opening & standards",
+            "Training first-time operators"
+          ],
+          "from": "Built on the amã chapter",
+          "h": "/vishwanathan/practice#routes"
+        },
+        {
+          "t": "Service Excellence",
+          "for": "Hotels & growing groups",
+          "img": "/vishwanathan/assets/career.jpg",
+          "d": "Common standards, quality systems and the measures that make a portfolio consistent without making it identical.",
+          "list": [
+            "Standards & SOPs",
+            "Quality systems & KPIs",
+            "Guest feedback & NPS"
+          ],
+          "from": "Built on fifteen years in Business Excellence",
+          "h": "/vishwanathan/practice#routes"
+        },
+        {
+          "t": "Boards & Mentoring",
+          "for": "Boards, founders & family owners",
+          "img": "/vishwanathan/assets/advisory.jpg",
+          "d": "An operator’s eye at the table: growth, brand, people and the decisions a hotel cannot undo.",
+          "list": [
+            "Advisory boards",
+            "Growth & brand",
+            "Mentoring leaders"
+          ],
+          "from": "Built on thirty-five years of leadership at IHCL",
+          "h": "/vishwanathan/practice#routes"
+        },
+        {
+          "t": "Masterclasses & Juries",
+          "for": "Hotel teams, institutes & awards",
+          "img": "/vishwanathan/assets/ideas.jpg",
+          "d": "Masterclasses, panels and award juries. Team capability programmes run through HOSPI Sigma.",
+          "list": [
+            "Masterclasses for hotel teams",
+            "Panels & conversations",
+            "Award juries"
+          ],
+          "from": "Through HOSPI Sigma and the BW Hotelier jury",
+          "h": "/vishwanathan/practice#routes"
+        }
+      ],
+      "more": {
+        "t": "How I work",
+        "h": "#engage"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "Highlights",
+      "items": [
+        {
+          "k": "Senior Assessor, Tata Business Excellence Model.",
+          "t": "Eight external assessments of Tata companies against the framework every Tata company is measured by.",
+          "d": "The model, explained on my career page."
         },
         {
           "k": "From isolated hotels to one organisation.",
-          "t": "Fifteen years in Business Excellence, part of the work that moved IHCL from hotels run in isolation to one organisation with structured standards. Senior Assessor of the Tata Business Excellence Model.",
+          "t": "Fifteen years in Business Excellence, part of the work that gave IHCL structured standards across its hotels.",
           "d": "Customer-satisfaction work across more than 100 hotels."
         },
         {
-          "k": "Thirty-five years at the Taj.",
-          "t": "I joined IHCL in 1990 from IHM Pusa: St. James’ Court in London, the Taj Mahal in New Delhi, then eight years as Regional Manager for Karnataka.",
-          "d": "Front office, club floors, quality and operations."
+          "k": "On the jury, 2026.",
+          "t": "Regional jury (South) for the 10th BW Hotelier Indian Hospitality Awards, alongside leaders of WelcomHeritage, Turnstone and Encovate.",
+          "d": "Knowledge partner: Indian School of Hospitality."
         }
-      ]
+      ],
+      "more": {
+        "t": "My career",
+        "h": "/vishwanathan/track"
+      }
     },
     {
       "type": "arch",
@@ -162,78 +280,6 @@
       "more": {
         "t": "All conversations",
         "h": "/vishwanathan/voice"
-      }
-    },
-    {
-      "type": "stmt",
-      "id": "s-track",
-      "label": "Career",
-      "quote": "From a duty manager’s desk <t>to a national brand.</t>",
-      "sub": "Thirty-five years with IHCL, ending in its most fulfilling chapter: helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
-      "keys": [
-        "St. James’ Court, London",
-        "Taj Mahal, New Delhi",
-        "Business Excellence",
-        "amã Stays & Trails"
-      ],
-      "more": {
-        "t": "The career",
-        "h": "/vishwanathan/track"
-      },
-      "img": {
-        "src": "/vishwanathan/assets/career.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
-      }
-    },
-    {
-      "type": "ideas",
-      "id": "beliefs",
-      "label": "Perspectives",
-      "title": "What I <t>believe.</t>",
-      "items": [
-        {
-          "t": "A complaint is a gift.",
-          "q": "“Every time a guest has complained and been not so polite to me, it was a learning: what we had to correct and what we did wrong.”",
-          "s": "Inspire Someone Today, 2026"
-        },
-        {
-          "t": "Respect yourself first.",
-          "q": "“If you have to respect others, you’ve got to first respect yourself.”",
-          "s": "Inspire Someone Today, 2026"
-        },
-        {
-          "t": "Good to great touches the heart.",
-          "q": "“I was in a business, not in a charity. Good to great really happens when you do something that touches somebody’s heart.”",
-          "s": "Inspire Someone Today, 2026"
-        }
-      ],
-      "more": {
-        "t": "All perspectives",
-        "h": "/vishwanathan/ideas"
-      }
-    },
-    {
-      "type": "stmt",
-      "id": "s-advisory",
-      "label": "Advisory",
-      "align": "right",
-      "quote": "For owners, groups <t>and boards.</t>",
-      "sub": "“Advising, mentoring and helping hospitality businesses build for the future.” The work I took up after IHCL.",
-      "keys": [
-        "Homestays & villas",
-        "Hotels & groups",
-        "Boards & founders",
-        "Masterclasses"
-      ],
-      "more": {
-        "t": "How I advise",
-        "h": "/vishwanathan/practice"
-      },
-      "img": {
-        "src": "/vishwanathan/assets/advisory.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
       }
     },
     {
@@ -796,7 +842,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me what you are building, running or planning, and where it stands.",
+      "lede": "Tell me about the property, the group or the role, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },

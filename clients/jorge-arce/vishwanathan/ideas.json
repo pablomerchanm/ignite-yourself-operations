@@ -150,7 +150,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me what you are building, running or planning, and where it stands.",
+      "lede": "Tell me about the property, the group or the role, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },

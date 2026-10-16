@@ -49,6 +49,21 @@
       "sub": "“Advising, mentoring and helping hospitality businesses build for the future.” The work I took up after thirty-five years with IHCL."
     },
     {
+      "type": "situations",
+      "id": "called-in",
+      "label": "Where I am called in",
+      "title": "Most engagements <t>begin with one of these.</t>",
+      "items": [
+        "A family home that could welcome guests, but has never been run as a business.",
+        "A beautiful property whose guests do not come back.",
+        "A team that serves well on good days, and only on good days.",
+        "A group that is growing faster than its standards.",
+        "A new hotel or homestay, still on paper, that needs an operator’s eye before it opens.",
+        "A board or founder who wants someone at the table who has run hotels."
+      ],
+      "no": "01"
+    },
+    {
       "type": "paths",
       "id": "routes",
       "nums": true,
@@ -126,7 +141,7 @@
           }
         }
       ],
-      "no": "01"
+      "no": "02"
     },
     {
       "type": "retain",
@@ -174,7 +189,7 @@
         "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
       },
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "stmt",
@@ -200,7 +215,7 @@
       "id": "inquiry",
       "label": "Start a conversation",
       "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me what you are building, running or planning, and where it stands.",
+      "lede": "Tell me about the property, the group or the role, and where it stands.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -373,7 +388,7 @@
         "note": "A private concept by Ignite Yourself, prepared from public information and recorded interviews for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by her own portraits. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
       },
       "noform": true,
-      "no": "03"
+      "no": "04"
     }
   ]
 }
