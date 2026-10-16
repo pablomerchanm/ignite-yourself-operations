@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "title": "Career — Johan Nilsson",
+    "description": "Twenty-five years: EY and Cordial, strategy for SATS and Health & Fitness Nordic, ten years building Barry’s in the Nordics, Iberia, Switzerland and Finland."
+  },
+  "logo": "JOHAN NILSSON",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/nilsson"
+    },
+    {
+      "t": "Advisory",
+      "h": "/nilsson/practice"
+    },
+    {
+      "t": "Career",
+      "h": "/nilsson/track"
+    },
+    {
+      "t": "Press",
+      "h": "/nilsson/voice"
+    },
+    {
+      "t": "Contact",
+      "h": "/nilsson#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Start a conversation",
+    "h": "/nilsson#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "track-open",
+      "opener": true,
+      "label": "Career",
+      "img": {
+        "src": "/nilsson/assets/career.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
+      },
+      "quote": "From the strategy desk <t>to the studio floor.</t>",
+      "sub": "Consulting, then strategy for the Nordic market leader, then ten years building Barry’s across the Nordics and beyond."
+    },
+    {
+      "type": "exp",
+      "id": "track-barrys",
+      "label": "Barry’s",
+      "title": "Ten years, <t>three regions.</t>",
+      "lede": "Dates from public profiles; figures as reported in the trade press.",
+      "groups": [
+        {
+          "label": "Milestones",
+          "wide": true,
+          "names": [
+            "2016 — Chief Executive Officer, Barry’s Bootcamp Nordic AB, Stockholm",
+            "2022 — Merger with BB Norway AS: eight studios in six Nordic cities, around 250 people",
+            "2022 — Barry’s Iberia: licence for Spain, with José Daniel García and Kevin Triguero",
+            "2024 — CEO & Partner, Barry’s Bootcamp Nordic AB",
+            "2025 — Partner, Barry’s Switzerland: the first studio in Zürich opens in November",
+            "2026 — Barry’s Helsinki opens"
+          ]
+        },
+        {
+          "label": "On the record",
+          "wide": true,
+          "names": [
+            "“We share that vision for Barry’s future, and our role is more important than ever.” At the Nordic merger, 2022.",
+            "“Huge thanks to everyone who made this happen — it’s been an incredible team effort.” On Barry’s Helsinki, 2026."
+          ]
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "track-sats",
+      "tint": true,
+      "label": "SATS · Health & Fitness Nordic",
+      "title": "Strategy for <t>150 clubs.</t>",
+      "lede": "Five years with the Nordic market leader in fitness, before the move to operating and investing.",
+      "groups": [
+        {
+          "label": "Roles",
+          "wide": true,
+          "names": [
+            "Director, Strategy & Business Development, Health & Fitness Nordic — 2009–2014. A group with SEK 1.7 billion in revenue: SATS (Norway, Sweden, Denmark, Finland), Fresh Fitness (Norway, Denmark), Metropolis (Sweden) and SAFE (Sweden, Finland)",
+            "Strategy & Concept Director, SATS — 2014"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "timeline",
+      "id": "track-years",
+      "tint": true,
+      "label": "Timeline",
+      "title": "From EY, 1999, <t>to two boards in sport.</t>",
+      "from": 1999,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1999,
+          "t": "EY Management Consulting"
+        },
+        {
+          "y": 2001,
+          "t": "Cordial Business Advisers"
+        },
+        {
+          "y": 2009,
+          "t": "SATS · Health & Fitness Nordic"
+        },
+        {
+          "y": 2015,
+          "t": "Stockholm Leisure Partners"
+        },
+        {
+          "y": 2016,
+          "t": "Barry’s Bootcamp Nordic"
+        },
+        {
+          "y": 2022,
+          "t": "Nordic merger · Barry’s Iberia"
+        },
+        {
+          "y": 2025,
+          "t": "Barry’s Switzerland"
+        },
+        {
+          "y": 2026,
+          "t": "Svensk Innebandy · AIK"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 2016,
+          "b": 2026,
+          "t": "Barry’s"
+        }
+      ],
+      "rlabel": "The Barry’s years",
+      "no": "03"
+    },
+    {
+      "type": "exp",
+      "id": "track-roles",
+      "label": "Before Barry’s",
+      "title": "Consulting, <t>then strategy.</t>",
+      "lede": "Compiled from public profiles.",
+      "groups": [
+        {
+          "label": "Consulting",
+          "wide": true,
+          "names": [
+            "Senior Consultant, Ernst & Young Management Consulting — 1999–2001",
+            "Strategy Manager, Telia Sverige — 2001–2002",
+            "Partner, Cordial Business Advisers — 2001–2009",
+            "Strategy Department AB — management consulting, business development and interim management, since 2010"
+          ]
+        },
+        {
+          "label": "Investing",
+          "wide": true,
+          "names": [
+            "Founding Partner, Stockholm Leisure Partners — since 2015. An investor focused on the health and fitness industry; investments have included Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize"
+          ]
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "exp",
+      "id": "cv-today",
+      "label": "Appointments",
+      "title": "Current <t>roles.</t>",
+      "groups": [
+        {
+          "label": "Operating & investing",
+          "wide": true,
+          "names": [
+            "Partner, Barry’s Switzerland — Zürich, since May 2025",
+            "CEO & Partner, Barry’s Bootcamp Nordic AB — Stockholm, since January 2024",
+            "Partner & Active Board Member, Barry’s Iberia — since January 2023",
+            "Founding Partner, Stockholm Leisure Partners — since May 2015"
+          ]
+        },
+        {
+          "label": "Boards in sport",
+          "wide": true,
+          "names": [
+            "Member of the Board (Ledamot, Förbundsstyrelsen), Svenska Innebandyförbundet — elected June 2026",
+            "Board Member, AIK — since March 2026"
+          ]
+        }
+      ],
+      "no": "05"
+    },
+    {
+      "type": "exp",
+      "id": "cv-education",
+      "tint": true,
+      "label": "Education",
+      "title": "Stockholm <t>University.</t>",
+      "groups": [
+        {
+          "label": "Degree",
+          "wide": true,
+          "names": [
+            "Stockholm University — degree and years to be confirmed"
+          ]
+        }
+      ],
+      "no": "06"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Press",
+      "d": "Each market opened, as reported.",
+      "h": "/nilsson/voice",
+      "alt": {
+        "t": "Start a conversation",
+        "h": "/nilsson#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a brand, a market, an investment or a board role. A short note on where things stand is the best place to begin.",
+      "contact": {
+        "city": "Stockholm · Zürich"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "brand",
+            "t": "A brand entering a new market",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential financial information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Brand or company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Which market?"
+              },
+              {
+                "n": "Stage: exploring, partner search, licence signed or pre-opening"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "operator",
+            "t": "An operator scaling, merging or restructuring",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Number of sites and countries"
+              },
+              {
+                "n": "What you want to achieve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "founder",
+            "t": "A health or fitness concept seeking investment",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Stage and market"
+              },
+              {
+                "n": "The concept, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "board",
+            "t": "A board or advisory role",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "The role, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ]
+      },
+      "kick": "Operator & Investor in Premium Consumer Brands",
+      "name": "Johan Nilsson",
+      "sub": "Premium consumer brands, built in new markets. <t>Barry’s in the Nordics, Iberia and Switzerland.</t>",
+      "fcta": {
+        "t": "Start a conversation",
+        "h": "/nilsson#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/johannilsson24/",
+          "i": "linkedin"
+        }
+      ],
+      "base": "Johan Nilsson · Täby, Sweden",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/nilsson/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information and trade press for Mr. Nilsson’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Mr. Nilsson, and it is not indexed or distributed."
+      },
+      "noform": true,
+      "no": "07"
+    }
+  ]
+}
