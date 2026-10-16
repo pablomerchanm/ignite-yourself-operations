@@ -2100,6 +2100,10 @@ html.athero .topbar .tname{opacity:0;pointer-events:none}
 #site .hero .hsub{margin-top:clamp(28px,4.4vh,48px)!important}
 @media(max-width:860px){#site .hero.photo .inr{padding-bottom:72px!important}}
 
+/* boton de la tarjeta destacada: el acento de la marca, no blanco */
+#site .pcard.lead .pgo .mcta{background:var(--vermilion)!important;color:var(--paper)!important;font-family:var(--mono);font-weight:500;letter-spacing:.12em}
+#site .pcard.lead .pgo .mcta:hover{background:var(--coral)!important}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -2156,7 +2160,7 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel', 'tbem', 'marks', 'marquee'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
@@ -2189,8 +2193,8 @@ T_ID = 'Perspectives — Priya Vishwanathan'
 T_PU = 'Conversations — Priya Vishwanathan'
 
 home = page(TITLE, DESC,
-    [deep('hero'), deep('marks'), deep('intro'), deep('audiences'), deep('called-in'), deep('offers'), deep('engage'),
-     deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), deep('s-now'), inq()])
+    [deep('hero'), deep('marks'), deep('intro'), deep('audiences'), deep('called-in'), deep('offers'),
+     deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), inq()])
 for _s in home['sections']:
     _s.pop('no', None)
 PAGES = {

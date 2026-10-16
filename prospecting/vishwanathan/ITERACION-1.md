@@ -126,3 +126,7 @@ Pablo pidió quitar lo que se repetía. En el hero quedan solo el nombre, la fra
 - Fuera la lista (01) Advisory… (ya está en la barra), la ficha en mono (repetía la frase) y el botón (la barra ya tiene "Start a conversation").
 - El logotipo de la barra se oculta mientras el hero está a la vista y aparece al bajar, para no duplicar el nombre.
 - La frase de presentación de la sección siguiente deja de repetir "places guests remember": ahora es "The discipline of a great hotel company, *brought to the property in front of me.*", y su segundo párrafo ya no repite esa idea.
+
+## Iteración 10: curaduría para el envío (16 de octubre de 2026)
+
+Portada sin Method ni Today (repetían otras páginas), enlaces "The career" reducidos, numeración corrida en Career, Formación sin duplicados, tarjetas de Advisory con los mismos nombres que la portada, botón destacado en bermellón e imagen para compartir rehecha con la marca nueva. Detalle y lista de envío en `ENVIO.md`.

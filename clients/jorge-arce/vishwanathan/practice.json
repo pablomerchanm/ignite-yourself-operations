@@ -73,7 +73,7 @@
       "cards": [
         {
           "lead": true,
-          "label": "Owners: homestays, villas & boutique hotels",
+          "label": "Owner Advisory · Homestays, villas & boutique hotels",
           "title": "What should this house become?",
           "icon": "house",
           "desc": "The amã chapter, applied to your property: hearing the owners out, building the guest experience around the story of the house, and setting standards that still feel like a home.",
@@ -90,7 +90,7 @@
           }
         },
         {
-          "label": "Hotels & growing groups",
+          "label": "Service Excellence · Hotels & growing groups",
           "title": "How do many hotels work as one?",
           "icon": "tally",
           "desc": "Fifteen years in Business Excellence: common standards, quality systems and measures that make a portfolio consistent without making it identical.",
@@ -107,7 +107,7 @@
           }
         },
         {
-          "label": "Boards & founders",
+          "label": "Boards & Mentoring · Boards, founders & family owners",
           "title": "Who sits beside the owner?",
           "icon": "support",
           "desc": "Advisory and board roles for founders, family owners and boards: growth, brand, people and the decisions a hotel cannot undo.",
@@ -124,7 +124,7 @@
           }
         },
         {
-          "label": "Masterclasses, panels & juries",
+          "label": "Masterclasses & Juries · Hotel teams, institutes & awards",
           "title": "What should a team hear?",
           "icon": "quote",
           "desc": "Masterclasses for hotel teams and hospitality institutes, conversations and panels, and award juries. Team capability programmes run through HOSPI Sigma.",
