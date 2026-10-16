@@ -23,3 +23,14 @@ Dos fotos de Pablo. El retrato en estudio azul va al hero (escritorio y móvil) 
 Pablo señaló que la carrera está llena de aperturas y alianzas y que eso debía destacarse en la marca. Nueva sección **"Openings & partnerships"** en la portada (después del capítulo de Barry's) y en Career: "Ten studios, *five partnerships*", con tres libros: aperturas como socio (Estocolmo 2016, Gotemburgo, Barcelona y Madrid, Zúrich 2025, Helsinki 2026), estudios reunidos bajo una sola compañía (Oslo, Bergen, Sandvika, Copenhague, 2022) y los socios con nombre (Ingerslev; Herland y Flugeim; García y Triguero; Röthlisberger y Daur; la casa matriz de Barry's). Todo con fuente en `INVESTIGACION.md`.
 
 Fotografía: la tercera foto de Johan abre Career; las seis imágenes restantes se generaron con Higgsfield en el registro de sus fotos (`FOTOS.md`).
+
+## Iteración 5, la v2: socio de Barry's, no consultor (16 de octubre de 2026)
+
+Revisión honesta pedida por Pablo. El problema de la v1: la estructura heredada de Priya y Bernard lo vestía de consultor ("Advisory", cuatro áreas, método, formulario de cinco caminos) y dos de las áreas (Market Entry para marcas globales, Operations & Growth para operadores) se leían como una oferta a competidores de Barry's. Johan es socio de tres compañías de Barry's; la web tiene que traerle territorios a la marca, no competirle.
+
+- **Fuera:** "Advisory" y "The practice"; Market Entry y Operations & Growth como oferta; "interim management"; el método en cuatro pasos; el formulario de cinco caminos; las imágenes de las tarjetas.
+- **Reencuadre:** tres caminos ("Three ways to work together"): *Bringing Barry's to a new city* (emprendedores locales y socios de Barry's; el patrón Zúrich), *Investing in the next concepts* (SLP), *Boards & sport*. "Where it begins" abre con "You want to bring Barry's to your city". La cinta de públicos cambia a Barry's partners · Local entrepreneurs · Founders · Investors · Boards · Federations & clubs. La página pasa a llamarse "Partnerships".
+- **Dentro:** "In his words": cuatro posts suyos de LinkedIn tal cual (Helsinki, la junta de Innebandy en sueco con traducción, el arranque de la junta, Barry's x Balenciaga). El testimonio de Julia Röthlisberger en el bloque de cita. Un hueco visible para el párrafo personal que solo puede escribir él.
+- **Contacto:** una nota corta, cuatro caminos (ciudad, concepto, junta, otro), campos mínimos.
+
+Pendiente con él: el ángulo "socio de Barry's en Europa" y qué puede decir públicamente según su contrato; qué quiere que le llegue; su párrafo personal; su cargo exacto en Barry's Nordic; Barcelona.

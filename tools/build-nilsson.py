@@ -2273,23 +2273,30 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
   #site .hero .hkick{display:none!important}
   .topbar,html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 }
+
+/* ---------- sus palabras: los posts tal cual, con fecha ---------- */
+#site .ids .idq{font-family:var(--serif);font-weight:300;font-size:clamp(20px,1.7vw,26px);line-height:1.3;letter-spacing:-.005em}
+#site .ids .ids-s,#site .ids .idsrc{font-family:var(--mono)!important;font-size:11px!important;letter-spacing:.08em;color:var(--smoke)}
+#site .itb .it{font-style:italic;color:var(--smoke)}
+#site .ofgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:860px){#site .ofgrid{grid-template-columns:1fr}}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
 NAV = [
     {"t": "Overview",   "h": "/nilsson"},
-    {"t": "Advisory",   "h": "/nilsson/practice"},
+    {"t": "Partnerships", "h": "/nilsson/practice"},
     {"t": "Career",     "h": "/nilsson/track"},
     {"t": "Press",      "h": "/nilsson/voice"},
     {"t": "Contact",    "h": "/nilsson#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
-TNAV = [("Advisory", "/nilsson/practice", "practice"),
+TNAV = [("Partnerships", "/nilsson/practice", "practice"),
         ("Career",   "/nilsson/track",    "track"),
         ("Press",    "/nilsson/voice",    "voice")]
 TABS = [("Overview", "/nilsson",          "home"),
-        ("Advisory", "/nilsson/practice", "practice"),
+        ("Partnerships", "/nilsson/practice", "practice"),
         ("Career",   "/nilsson/track",    "track"),
         ("Press",    "/nilsson/voice",    "voice")]
 
@@ -2338,13 +2345,13 @@ def foot():
 ALT = {"t": "Start a conversation", "h": "/nilsson#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
-T_PR = 'Advisory — Johan Nilsson'
+T_PR = 'Working together — Johan Nilsson'
 T_TE = 'Career — Johan Nilsson'
 T_PU = 'Press — Johan Nilsson'
 
 home = page(TITLE, DESC,
     [deep('hero'), deep('marks'), deep('intro'), deep('audiences'), deep('called-in'), deep('numbers'), deep('offers'),
-     deep('chapter'), deep('openings'), deep('in-brief'), deep('quote'), deep('conversations'), inq()])
+     deep('chapter'), deep('openings'), deep('in-brief'), deep('quote'), deep('posts'), deep('conversations'), inq()])
 for _s in home['sections']:
     _s.pop('no', None)
 PAGES = {
@@ -2357,10 +2364,10 @@ PAGES = {
     'voice': page(T_PU,
         'A podcast on investing in fitness and the trade press in Sweden, Norway, Spain and Switzerland on Johan Nilsson and Barry’s.',
         [deep('voice-open'), deep('voice-talks'),
-         dict(NX('Next', 'Advisory', 'Market entry, growth, investment and boards.', '/nilsson/practice'), alt=ALT), foot()], sub=True),
+         dict(NX('Next', 'Working together', 'A city for Barry’s, a concept for SLP, a seat at the board.', '/nilsson/practice'), alt=ALT), foot()], sub=True),
     'practice': page(T_PR,
-        'Market entry and franchise partnerships, operations and growth, investment through Stockholm Leisure Partners, and board roles in business and sport.',
-        [deep('practice-open'), deep('called-in'), deep('routes'), deep('engage'), deep('slp'),
+        'Three ways to work with Johan Nilsson: bringing Barry’s to a new city, investment through Stockholm Leisure Partners, and board roles in business and sport.',
+        [deep('practice-open'), deep('called-in'), deep('routes'), deep('slp'), deep('posts'),
          NX('Next', 'Start a <t>conversation</t>', 'A short note on where things stand is the best place to begin.', '/nilsson#inquiry'), foot()], sub=True),
 }
 
