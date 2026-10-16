@@ -46,13 +46,13 @@
         "pos": "50% 50%"
       },
       "quote": "Service, <t>without servility.</t>",
-      "sub": "What thirty-five years taught me about guests, teams and standards, from two conversations recorded in 2026."
+      "sub": "Thirty-five years of guests, teams and standards, distilled from two conversations recorded in 2026."
     },
     {
       "type": "ideas",
       "id": "ideas-all",
       "label": "Convictions",
-      "title": "In my <t>own words.</t>",
+      "title": "Eight convictions, <t>on the record.</t>",
       "items": [
         {
           "t": "A complaint is a gift.",
@@ -101,7 +101,7 @@
     {
       "type": "brief",
       "id": "ideas-questions",
-      "label": "Three questions every leader should ask their team",
+      "label": "Three questions for every leader",
       "items": [
         {
           "k": "What is going wrong?"
@@ -117,7 +117,7 @@
     {
       "type": "brief",
       "id": "ideas-guest",
-      "label": "The Indian guest today",
+      "label": "On the Indian guest",
       "items": [
         {
           "k": "Better travelled.",
@@ -148,9 +148,9 @@
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Start a conversation",
-      "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me about the property, the group or the role, and where it stands.",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a property, a group or a board role. A short note on where things stand is the best place to begin.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -301,7 +301,7 @@
       },
       "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
+      "sub": "Hospitality advisory for owners, groups and boards. <t>Thirty-five years with the Taj.</t>",
       "fcta": {
         "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"

@@ -2199,7 +2199,7 @@ PAGES = {
         'Thirty-five years with IHCL: St. James’ Court in London, the Taj Mahal in New Delhi, Business Excellence, Karnataka and amã Stays & Trails.',
         [deep('track-open'), deep('track-ama'), deep('track-excellence'), deep('tbem'), deep('track-years'), deep('track-roles'),
          deep('cv-today'), deep('cv-education'),
-         dict(NX('Next', 'Perspectives', 'Service, standards and the guest, in my own words.', '/vishwanathan/ideas'), alt=ALT), foot()], sub=True),
+         dict(NX('Next', 'Perspectives', 'Service, standards and the guest, on the record.', '/vishwanathan/ideas'), alt=ALT), foot()], sub=True),
     'ideas': page(T_ID,
         'What thirty-five years taught Priya Vishwanathan about guests, teams and standards, in her own words.',
         [deep('ideas-open'), deep('ideas-all'), deep('ideas-questions'), deep('ideas-guest'),
@@ -2207,11 +2207,11 @@ PAGES = {
     'voice': page(T_PU,
         'Podcasts, juries, forums and councils: where Priya Vishwanathan speaks about hospitality, service and leadership.',
         [deep('voice-open'), deep('voice-media'), deep('voice-talks'), deep('voice-forums'),
-         dict(NX('Next', 'Advisory', 'For owners, growing groups and boards.', '/vishwanathan/practice'), alt=ALT), foot()], sub=True),
+         dict(NX('Next', 'Advisory', 'The practice: owners, groups in growth and boards.', '/vishwanathan/practice'), alt=ALT), foot()], sub=True),
     'practice': page(T_PR,
         'Advisory for homestay and hotel owners, growing groups and boards; masterclasses, panels and juries; and how I work.',
         [deep('practice-open'), deep('called-in'), deep('routes'), deep('engage'), deep('hospi'),
-         NX('Next', 'Start a <t>conversation</t>', 'Tell me what you are building, running or planning.', '/vishwanathan#inquiry'), foot()], sub=True),
+         NX('Next', 'Start a <t>conversation</t>', 'A short note on where things stand is the best place to begin.', '/vishwanathan#inquiry'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)

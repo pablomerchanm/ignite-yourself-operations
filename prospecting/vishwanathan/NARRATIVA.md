@@ -35,3 +35,25 @@ Fecha: 16 de octubre de 2026.
 - **Los nombres de las cuatro líneas de servicio** (Owner Advisory, Service Excellence, Boards & Mentoring, Masterclasses & Juries) son propuesta nuestra.
 - **Las seis situaciones** salen de sus entrevistas; conviene que las valide.
 - **Testimonios:** no hay ninguno. Hay que sumarlos con permiso (por ejemplo, sus recomendaciones de LinkedIn).
+
+
+## Revisión de voz (16 de octubre de 2026)
+
+Pablo: la primera persona en rótulos y títulos ("Where I built my career", "Four ways I work with you", "Hear it in my words") suena barata. Ahora los rótulos son sustantivos y los titulares afirmaciones nominales; la primera persona queda solo en las citas. Principales cambios:
+
+| Antes | Ahora |
+|---|---|
+| Where I built my career | Provenance |
+| Logos belong to their owners and appear here only to show where I have worked. | Marks shown for reference only; each belongs to its respective owner. |
+| Hospitality, from the inside · The discipline… brought to the property in front of me. | The practice · The rigour of a great hotel company, *at the scale of each property.* |
+| Where I am called in · Most engagements begin with one of these. | Engagements · Where the work *usually begins.* |
+| Four ways I work with you. · Each grows out of a chapter of my career. | Four areas *of practice.* · Each grounded in a chapter of the IHCL years. |
+| How I work | Method · Terms of engagement |
+| Highlights | Distinctions |
+| Hear it in my words. | On the *record.* |
+| Something I wrote down before a conversation… | Written before a conversation on Inspire Someone Today, 2026. |
+| In my own words. | Eight convictions, *on the record.* |
+| Where I sit and speak. | Juries, forums *and councils.* |
+| Who I work with · Four kinds of work. | Areas of practice · Who the practice *serves.* |
+| A framework I assess with | Framework |
+| Start a conversation · Tell me about… | Enquiries · Begin *a conversation.* · For a property, a group or a board role. A short note on where things stand is the best place to begin. |

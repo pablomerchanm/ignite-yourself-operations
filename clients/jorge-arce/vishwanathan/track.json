@@ -53,7 +53,7 @@
       "id": "track-ama",
       "label": "amã Stays & Trails",
       "title": "A brand, built <t>and scaled.</t>",
-      "lede": "“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays & Trails into a distinctive hospitality brand.” The figures below are IHCL’s.",
+      "lede": "“The journey culminated in one of the most fulfilling chapters of helping build and scale amã Stays & Trails into a distinctive hospitality brand.” Priya Vishwanathan, 2026. Figures: IHCL.",
       "groups": [
         {
           "label": "Milestones",
@@ -66,7 +66,7 @@
           ]
         },
         {
-          "label": "In my words",
+          "label": "On the record",
           "wide": true,
           "names": [
             "“People came to us: can you take my home?” Families trusted the organisation with houses they had inherited.",
@@ -83,7 +83,7 @@
       "tint": true,
       "label": "Business Excellence",
       "title": "From isolated hotels <t>to one organisation.</t>",
-      "lede": "“We turned around the company, which was working in isolated hotels, to one organisation where everybody today has structured SOPs.” On HospeTalk, 2026.",
+      "lede": "“We turned around the company, which was working in isolated hotels, to one organisation where everybody today has structured SOPs.” HospeTalk, 2026.",
       "groups": [
         {
           "label": "Fifteen years in quality and Business Excellence",
@@ -102,10 +102,10 @@
     {
       "type": "tbem",
       "id": "tbem",
-      "label": "A framework I assess with",
+      "label": "Framework",
       "logo": "/vishwanathan/assets/logos/tata.svg",
       "title": "The Tata Business <t>Excellence Model.</t>",
-      "body": "The framework every Tata company is assessed against, adapted from the Malcolm Baldrige criteria. As a Senior Assessor I carried out eight external assessments of Tata companies, and it shapes how I look at any hotel: leadership, customers and people first, results as their consequence.",
+      "body": "The framework every Tata company is assessed against, adapted from the Malcolm Baldrige criteria. Eight external assessments as Senior Assessor, and the lens behind every engagement since: leadership, customers and people first; results as their consequence.",
       "lead": [
         "Leadership",
         "Strategy",
@@ -127,8 +127,8 @@
       "type": "timeline",
       "id": "track-years",
       "tint": true,
-      "label": "The record, on one line",
-      "title": "From IHM Pusa in 1987 <t>to the practice.</t>",
+      "label": "Timeline",
+      "title": "From IHM Pusa, 1987, <t>to the practice.</t>",
       "from": 1987,
       "to": 2026,
       "marks": [
@@ -168,7 +168,7 @@
       "id": "track-roles",
       "label": "Roles at IHCL",
       "title": "Operations, <t>then leadership.</t>",
-      "lede": "From my own account and public profiles.",
+      "lede": "Compiled from public profiles and recorded interviews.",
       "groups": [
         {
           "label": "Operations",
@@ -194,7 +194,7 @@
     {
       "type": "exp",
       "id": "cv-today",
-      "label": "Today",
+      "label": "Appointments",
       "title": "Advisor, juror <t>and council member.</t>",
       "groups": [
         {
@@ -239,7 +239,7 @@
       "type": "next",
       "k": "Next",
       "t": "Perspectives",
-      "d": "Service, standards and the guest, in my own words.",
+      "d": "Service, standards and the guest, on the record.",
       "h": "/vishwanathan/ideas",
       "alt": {
         "t": "Start a conversation",
@@ -249,9 +249,9 @@
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Start a conversation",
-      "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me about the property, the group or the role, and where it stands.",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a property, a group or a board role. A short note on where things stand is the best place to begin.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -402,7 +402,7 @@
       },
       "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
+      "sub": "Hospitality advisory for owners, groups and boards. <t>Thirty-five years with the Taj.</t>",
       "fcta": {
         "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
