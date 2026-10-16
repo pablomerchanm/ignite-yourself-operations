@@ -17,3 +17,9 @@ Pablo pidió el logotipo original de Barry's en algún punto y "un poquito más 
 ## Iteración 3: las fotos de Johan (16 de octubre de 2026)
 
 Dos fotos de Pablo. El retrato en estudio azul va al hero (escritorio y móvil) y a la tarjeta social; la del gimnasio con su equipo abre Advisory y ocupa The practice en la portada. El hero de escritorio cambia de centrado a nombre a la izquierda, cara a la derecha, con velo lateral; en móvil se oculta el kicker. Revisado en 1440, 1920 y 390. Detalle en `FOTOS.md`.
+
+## Iteración 4: aperturas y alianzas, y el resto de la fotografía (16 de octubre de 2026)
+
+Pablo señaló que la carrera está llena de aperturas y alianzas y que eso debía destacarse en la marca. Nueva sección **"Openings & partnerships"** en la portada (después del capítulo de Barry's) y en Career: "Ten studios, *five partnerships*", con tres libros: aperturas como socio (Estocolmo 2016, Gotemburgo, Barcelona y Madrid, Zúrich 2025, Helsinki 2026), estudios reunidos bajo una sola compañía (Oslo, Bergen, Sandvika, Copenhague, 2022) y los socios con nombre (Ingerslev; Herland y Flugeim; García y Triguero; Röthlisberger y Daur; la casa matriz de Barry's). Todo con fuente en `INVESTIGACION.md`.
+
+Fotografía: la tercera foto de Johan abre Career; las seis imágenes restantes se generaron con Higgsfield en el registro de sus fotos (`FOTOS.md`).

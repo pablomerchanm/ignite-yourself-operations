@@ -38,8 +38,8 @@
       "label": "Career",
       "img": {
         "src": "/nilsson/assets/career.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
+        "alt": "Johan Nilsson at work in a studio",
+        "pos": "45% 40%"
       },
       "quote": "From the strategy desk <t>to the studio floor.</t>",
       "sub": "Consulting, then strategy for the Nordic market leader, then ten years building Barry’s across the Nordics and beyond."
@@ -76,6 +76,46 @@
     },
     {
       "type": "exp",
+      "id": "openings",
+      "label": "Openings & partnerships",
+      "title": "Ten studios, <t>five partnerships.</t>",
+      "lede": "The pattern of the career: a market opened with a local partner, a studio launched to the brand’s standard, and operators brought together under one company.",
+      "groups": [
+        {
+          "label": "Openings as partner",
+          "wide": true,
+          "names": [
+            "Stockholm — the first Barry’s in the Nordics, 2016",
+            "Gothenburg — the second Swedish studio",
+            "Barcelona and Madrid — Barry’s Iberia; Madrid opened in April 2025",
+            "Zürich — the first Barry’s in Switzerland, November 2025",
+            "Helsinki — Finland, 2026"
+          ]
+        },
+        {
+          "label": "Brought under one company",
+          "wide": true,
+          "names": [
+            "Oslo, Bergen, Sandvika and Copenhagen — the 2022 merger of the Swedish and Norwegian companies into the Nordics’ largest boutique operator"
+          ]
+        },
+        {
+          "label": "Partners",
+          "wide": true,
+          "names": [
+            "Rasmus Elmann Ingerslev — Barry’s Nordic, co-founder and chair",
+            "Linn Herland and Tage Flugeim — Barry’s Norway, merged in 2022",
+            "José Daniel García and Kevin Triguero — Barry’s Iberia, licence of 2022",
+            "Julia Röthlisberger, with Caro Daur as investor — Barry’s Switzerland, 2025",
+            "Barry’s headquarters, Los Angeles — franchise partner since 2016"
+          ]
+        }
+      ],
+      "fn": "Cities and dates from the trade press and public profiles; partners as named in the same coverage.",
+      "no": "02"
+    },
+    {
+      "type": "exp",
       "id": "track-sats",
       "tint": true,
       "label": "SATS · Health & Fitness Nordic",
@@ -91,7 +131,7 @@
           ]
         }
       ],
-      "no": "02"
+      "no": "03"
     },
     {
       "type": "timeline",
@@ -143,7 +183,7 @@
         }
       ],
       "rlabel": "The Barry’s years",
-      "no": "03"
+      "no": "04"
     },
     {
       "type": "exp",
@@ -170,7 +210,7 @@
           ]
         }
       ],
-      "no": "04"
+      "no": "05"
     },
     {
       "type": "exp",
@@ -197,7 +237,7 @@
           ]
         }
       ],
-      "no": "05"
+      "no": "06"
     },
     {
       "type": "exp",
@@ -214,7 +254,7 @@
           ]
         }
       ],
-      "no": "06"
+      "no": "07"
     },
     {
       "type": "next",
@@ -400,7 +440,7 @@
         "note": "A private concept by Ignite Yourself, prepared from public information and trade press for Mr. Nilsson’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Mr. Nilsson, and it is not indexed or distributed."
       },
       "noform": true,
-      "no": "07"
+      "no": "08"
     }
   ]
 }

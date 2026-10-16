@@ -2344,14 +2344,14 @@ T_PU = 'Press — Johan Nilsson'
 
 home = page(TITLE, DESC,
     [deep('hero'), deep('marks'), deep('intro'), deep('audiences'), deep('called-in'), deep('numbers'), deep('offers'),
-     deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), inq()])
+     deep('chapter'), deep('openings'), deep('in-brief'), deep('quote'), deep('conversations'), inq()])
 for _s in home['sections']:
     _s.pop('no', None)
 PAGES = {
     'home': home,
     'track': page(T_TE,
         'Twenty-five years: EY and Cordial, strategy for SATS and Health & Fitness Nordic, ten years building Barry’s in the Nordics, Iberia, Switzerland and Finland.',
-        [deep('track-open'), deep('track-barrys'), deep('track-sats'), deep('track-years'), deep('track-roles'),
+        [deep('track-open'), deep('track-barrys'), deep('openings'), deep('track-sats'), deep('track-years'), deep('track-roles'),
          deep('cv-today'), deep('cv-education'),
          dict(NX('Next', 'Press', 'Each market opened, as reported.', '/nilsson/voice'), alt=ALT), foot()], sub=True),
     'voice': page(T_PU,
