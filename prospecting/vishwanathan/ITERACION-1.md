@@ -119,3 +119,10 @@ Pablo mostró el hero de Tomi Lappi: el nombre gigante cruzando la foto, con la 
 - **Debajo:** la frase en gerundio (serif, mediana), la lista de secciones (01) Advisory · (02) Career · (03) Perspectives · (04) Conversations, la ficha en mono y el botón.
 - **Esquinas:** 12.9716° N · Bengaluru | India | Worldwide · 77.5946° E.
 - El template del hero gana `list` y `coords`. Revisado en 1440, 1920 y 390.
+
+## Iteración 9: hero sin redundancias (16 de octubre de 2026)
+
+Pablo pidió quitar lo que se repetía. En el hero quedan solo el nombre, la frase y las coordenadas:
+- Fuera la lista (01) Advisory… (ya está en la barra), la ficha en mono (repetía la frase) y el botón (la barra ya tiene "Start a conversation").
+- El logotipo de la barra se oculta mientras el hero está a la vista y aparece al bajar, para no duplicar el nombre.
+- La frase de presentación de la sección siguiente deja de repetir "places guests remember": ahora es "The discipline of a great hotel company, *brought to the property in front of me.*", y su segundo párrafo ya no repite esa idea.
