@@ -13,6 +13,7 @@ Fecha: 16 de octubre de 2026. Versión visual: `/vishwanathan/brand`. Borrador p
 ## Logotipo y monograma
 - **Logotipo:** su nombre en Instrument Serif mayúsculas, con tracking ligero. Va apilado o en una línea, con descriptor opcional en DM Mono. Archivos: `assets/brand/wordmark.svg` y `assets/brand/wordmark-stacked.svg` (trazos vectoriales que no dependen de la fuente).
 - **Monograma PV:** P recta y V itálica en un anillo fino (`assets/brand/monogram.svg`); también es el favicon.
+- **Firma del hero:** en la portada el nombre aparece como firma tipográfica gigante sobre la foto: "Priya" en itálica (papel) y "Vishwanathan" en redonda, caja alta y baja (coral). Es la única excepción a las mayúsculas del logotipo.
 - **Zona de respeto:** la altura de la P. **Tamaño mínimo:** 24 px apilado, 12 px en línea.
 
 ## Color
