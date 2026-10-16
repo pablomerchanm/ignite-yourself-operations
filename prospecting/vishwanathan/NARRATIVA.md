@@ -43,7 +43,7 @@ Pablo: la primera persona en rótulos y títulos ("Where I built my career", "Fo
 
 | Antes | Ahora |
 |---|---|
-| Where I built my career | Provenance |
+| Where I built my career | Track record |
 | Logos belong to their owners and appear here only to show where I have worked. | Marks shown for reference only; each belongs to its respective owner. |
 | Hospitality, from the inside · The discipline… brought to the property in front of me. | The practice · The rigour of a great hotel company, *at the scale of each property.* |
 | Where I am called in · Most engagements begin with one of these. | Engagements · Where the work *usually begins.* |

@@ -9,7 +9,7 @@ Fecha: 16 de octubre de 2026. Versión visual: `/vishwanathan/brand`. Borrador p
 - **Promesa:** lugares que los huéspedes recuerdan, y un solo estándar de servicio.
 - **Raíz:** atithi devo bhava, la frase de su madre y del Taj.
 - **Voz:** la de un expediente de autoridad, no la de un coach.
-  - **Rótulos:** un sustantivo, como en una monografía: Provenance, The practice, Engagements, Advisory, Method, Distinctions, Framework, Timeline, Appointments, Enquiries.
+  - **Rótulos:** un sustantivo, como en una monografía: Track record, The practice, Engagements, Advisory, Method, Distinctions, Framework, Timeline, Appointments, Enquiries.
   - **Titulares:** afirmaciones nominales, sin "I", "my" ni "you": "Where the work usually begins.", "Four areas of practice.", "On the record.". Los que dicen qué hace van en gerundio ("Helping owners of hotels and homestays build places guests remember.").
   - **Cuerpo:** frases editoriales y precisas, sin sujeto cuando se puede ("Thirty-five years inside IHCL…", "Today, an independent advisory practice for…").
   - **Primera persona:** solo dentro de sus citas, siempre con fuente.
