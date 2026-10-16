@@ -49,3 +49,16 @@ no people, no text, no logos, medium format look
 - **En el gimnasio, con dos entrenadores** (1774 × 887): `advisory.jpg` (portada de Advisory, a sangre) y `practice.jpg` (recorte 4:5 centrado en él, para The practice en la portada).
 
 Siguen con campos generados: `chapter.jpg`, `career.jpg`, `press.jpg` y las cuatro tarjetas.
+
+**16 de octubre de 2026, tercera entrega.** Pablo trajo una tercera foto de Johan (en un escritorio dentro del gimnasio, con un portátil y dos personas de espaldas): es la portada de Career (`career.jpg`). Las seis imágenes restantes se generaron con Higgsfield (GPT Image 2.5, calidad alta, 2K; unos 2 créditos en total) en el mismo registro que las fotos de Pablo: gimnasio de concreto e industrial, luz baja y cálida, sin personas, sin logos, sin texto.
+
+| Archivo | Toma generada |
+|---|---|
+| `chapter.jpg` | Fila de cintas de correr en una sala oscura con focos rojos: la "Red Room" |
+| `press.jpg` | Recepción y lounge de un gimnasio en un edificio industrial, sol bajo por los ventanales |
+| `card-entry.jpg` | Entrada acristalada de un estudio en una calle europea al anochecer, rojo al fondo |
+| `card-growth.jpg` | Estante de kettlebells y mancuernas bajo un haz de sol |
+| `card-invest.jpg` | Portátil, cuaderno y botella sobre una mesa de madera, rack fuera de foco |
+| `card-board.jpg` | Bola y pala de floorball sobre el suelo de un pabellón |
+
+Con esto no queda ningún campo de penumbra en la página. Todas las imágenes son provisionales y se ajustan con su input.
