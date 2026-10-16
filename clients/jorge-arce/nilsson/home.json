@@ -44,7 +44,8 @@
         "59.4439° N",
         "Täby | Stockholm | Europe",
         "18.0687° E"
-      ]
+      ],
+      "kick": "Operator & Investor · Premium Consumer Brands"
     },
     {
       "type": "marks",
@@ -52,7 +53,10 @@
       "label": "Track record",
       "items": [
         {
-          "text": "Barry’s",
+          "logo": "/nilsson/assets/logos/barrys.svg",
+          "ar": "73/15",
+          "h": 26,
+          "t": "Barry’s",
           "k": "Nordics · Iberia · Switzerland, since 2016"
         },
         {
@@ -122,6 +126,34 @@
         "A board that needs someone at the table who has carried a P&L.",
         "A federation or club that wants its elite game run with the discipline of a commercial brand."
       ]
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "In numbers",
+      "items": [
+        {
+          "n": "25",
+          "k": "Years in fitness, wellness, sport and hospitality"
+        },
+        {
+          "n": "10",
+          "k": "Years building Barry’s in the Nordics"
+        },
+        {
+          "n": "8",
+          "k": "Studios in six cities at the 2022 merger"
+        },
+        {
+          "n": "6",
+          "k": "Countries: Sweden, Norway, Denmark, Finland, Spain, Switzerland"
+        }
+      ],
+      "more": {
+        "t": "The career",
+        "h": "/nilsson/track"
+      }
     },
     {
       "type": "offers",

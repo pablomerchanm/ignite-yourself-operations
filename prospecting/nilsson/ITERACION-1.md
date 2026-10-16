@@ -1,0 +1,15 @@
+# Johan Nilsson — iteraciones
+
+## Iteración 1: el preview (16 de octubre de 2026)
+
+Narrativa de Vishwanathan (expediente de autoridad + landing), piel de Pettingill (tinta, hueso, Editors Note, grotesca para probar, mono para citar, un acento rojo). Cuatro páginas: Overview, Advisory, Career, Press. Sin fotografía real: campos de penumbra generados en su lugar (`FOTOS.md`).
+
+## Iteración 2: el logotipo de Barry's y el aire deportivo (16 de octubre de 2026)
+
+Pablo pidió el logotipo original de Barry's en algún punto y "un poquito más de vibes deportivos", porque esa es su industria.
+
+- **Logotipo.** El wordmark oficial de Barry's (la A en chevrón con estrella), tomado del sitio de la marca, en la fila de marcas de la portada, en tinta, como máscara CSS: `assets/logos/barrys.svg`. Las demás marcas siguen tipográficas. La nota "Marks shown for reference only" se mantiene.
+- **Hero.** Un kicker en mono rojo encima del nombre ("Operator & Investor · Premium Consumer Brands"); el apellido pasa de Light a Regular; el campo de fondo lleva más rojo de sala (el "Red Room" de Barry's) y tres reglas tenues de pista.
+- **Banda de cifras** en tinta, nueva, entre Engagements y Advisory: 25 años en la industria · 10 años construyendo Barry's · 8 estudios en la fusión de 2022 · 6 países. Cuatro columnas en escritorio.
+- **Cinta de públicos** como marcador: grotesca pesada en versales sobre tinta, puntos rojos entre términos.
+- **Rojo.** Los botones principales y el subrayado del botón de la barra pasan a rojo de señal; los números de sección y de lista ya iban en rojo. El resto de la piel no cambia.
