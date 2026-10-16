@@ -36,7 +36,7 @@
       "img": {
         "src": "/nilsson/assets/hero.jpg",
         "mobile": "/nilsson/assets/hero-mobile.jpg",
-        "alt": ""
+        "alt": "Johan Nilsson"
       },
       "name": "Johan <t>Nilsson</t>",
       "sub": "Building premium consumer brands <t>in new markets.</t>",
@@ -94,7 +94,7 @@
       "sign": "Stockholm · Zürich · Madrid · Helsinki",
       "img": {
         "src": "/nilsson/assets/practice.jpg",
-        "alt": "Photograph to come"
+        "alt": "Johan Nilsson in conversation with a studio team"
       },
       "more": {
         "t": "The career",
