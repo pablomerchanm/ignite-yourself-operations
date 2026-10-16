@@ -10,7 +10,7 @@
       "h": "/nilsson"
     },
     {
-      "t": "Advisory",
+      "t": "Partnerships",
       "h": "/nilsson/practice"
     },
     {
@@ -85,11 +85,12 @@
     {
       "type": "intro",
       "id": "intro",
-      "label": "The practice",
+      "label": "The work",
       "statement": "The discipline of a global brand, <t>built one market at a time.</t>",
       "body": [
         "Twenty-five years in business development, strategy and operations across fitness, wellness, sport and hospitality: strategy consulting at EY and Cordial, strategy and business development for SATS and Health & Fitness Nordic, then ten years building Barry’s in the Nordics as CEO and partner.",
-        "Today, a partner in Barry’s Iberia and Barry’s Switzerland, founding partner of Stockholm Leisure Partners, and a board member of Svensk Innebandy and AIK."
+        "Today, a partner in Barry’s Nordics, Iberia and Switzerland, founding partner of Stockholm Leisure Partners, and a board member of Svensk Innebandy and AIK.",
+        "<t>[A personal note in Johan’s own words to follow: where the sport began, and why fitness.]</t>"
       ],
       "sign": "Stockholm · Zürich · Madrid · Helsinki",
       "img": {
@@ -105,8 +106,8 @@
       "type": "marquee",
       "id": "audiences",
       "items": [
-        "Global consumer brands",
-        "Franchise partners",
+        "Barry’s partners",
+        "Local entrepreneurs",
         "Fitness & wellness founders",
         "Investors",
         "Boards",
@@ -116,14 +117,14 @@
     {
       "type": "situations",
       "id": "called-in",
-      "label": "Engagements",
-      "title": "Where the work <t>usually begins.</t>",
+      "label": "Where it begins",
+      "title": "Where the conversation <t>usually begins.</t>",
       "items": [
-        "A global brand that wants to enter the Nordics, or another European market, with a partner who has done it before.",
-        "A first studio that works, and a second, third and fourth that need to work the same way.",
-        "Two operators of one brand in neighbouring countries, and the case for becoming one company.",
-        "A founder with a fitness or wellness concept, looking for capital that understands the floor as well as the spreadsheet.",
-        "A board that needs someone at the table who has carried a P&L.",
+        "You want to bring Barry’s to your city, and need a partner who has opened one before.",
+        "A first Barry’s studio that works, and a second and third that need to work the same way.",
+        "Two operators of the brand in neighbouring countries, and the case for becoming one company.",
+        "A fitness or wellness concept looking for capital that understands the floor as well as the spreadsheet.",
+        "A board that wants someone at the table who has carried a P&L.",
         "A federation or club that wants its elite game run with the discipline of a commercial brand."
       ]
     },
@@ -158,65 +159,49 @@
     {
       "type": "offers",
       "id": "offers",
-      "label": "Advisory",
-      "title": "Four areas <t>of practice.</t>",
-      "lede": "Each grounded in a chapter of twenty-five years.",
+      "label": "Three ways in",
+      "title": "Three ways <t>to work together.</t>",
+      "lede": "Each one a chapter of the career, still open.",
       "items": [
         {
-          "t": "Market Entry & Partnerships",
-          "for": "Global brands & their franchise partners",
-          "img": "/nilsson/assets/card-entry.jpg",
-          "d": "Bringing an international brand into a new country: the partner, the site, the licence, the launch.",
+          "t": "Bringing Barry’s to a new city",
+          "for": "Local entrepreneurs & Barry’s partners",
+          "d": "The Zürich pattern: a local founder with the ambition, a partner with the experience, a studio opened to the brand’s standard.",
           "list": [
-            "Market assessment",
-            "Franchise & licence partnerships",
-            "Site, team and launch"
+            "Partner and structure",
+            "Site, team and launch",
+            "Operating as partner in the new company"
           ],
-          "from": "Grounded in Barry’s Nordics, Iberia and Switzerland",
+          "from": "Barry’s Nordics, Iberia and Switzerland",
           "h": "/nilsson/practice#routes"
         },
         {
-          "t": "Operations & Growth",
-          "for": "Studio & club operators",
-          "img": "/nilsson/assets/card-growth.jpg",
-          "d": "From one site to many: the standards, people and numbers that let a concept scale without losing what made it work.",
-          "list": [
-            "Multi-site operations",
-            "Mergers between operators",
-            "Profitable growth"
-          ],
-          "from": "Grounded in ten years as CEO of Barry’s Nordics",
-          "h": "/nilsson/practice#routes"
-        },
-        {
-          "t": "Investment",
+          "t": "Investing in the next concepts",
           "for": "Founders of health & fitness concepts",
-          "img": "/nilsson/assets/card-invest.jpg",
-          "d": "Capital with operating experience, through Stockholm Leisure Partners, an investor focused on the health and fitness industry.",
+          "d": "Capital with operating experience, through Stockholm Leisure Partners, an investor focused on the health and fitness industry since 2015.",
           "list": [
             "Early and growth stage",
-            "Operating partner",
+            "Operating partner on the board",
             "Nordic and European reach"
           ],
-          "from": "Through Stockholm Leisure Partners",
+          "from": "Playbook App, ClassPass Nordics, REPEAT Fitness, Challengize",
           "h": "/nilsson/practice#routes"
         },
         {
-          "t": "Boards & Sport",
+          "t": "Boards & sport",
           "for": "Boards, federations & clubs",
-          "img": "/nilsson/assets/card-board.jpg",
           "d": "An operator’s view at the board table, in business and in sport: strategy, commercial development and organisation.",
           "list": [
             "Board roles",
             "Sport governance",
-            "Commercial development"
+            "Commercial development of the elite game"
           ],
-          "from": "Grounded in the boards of Svensk Innebandy and AIK",
+          "from": "Svensk Innebandy and AIK, 2026",
           "h": "/nilsson/practice#routes"
         }
       ],
       "more": {
-        "t": "The practice",
+        "t": "Working together",
         "h": "/nilsson/practice"
       }
     },
@@ -314,9 +299,38 @@
     {
       "type": "quote",
       "id": "quote",
-      "lead": "On joining the board of Svensk Innebandy, 2026. Translated from Swedish.",
-      "q": "“Looking forward to contributing to the development of Swedish floorball, and not least to strengthening the elite game sportingly, commercially and organisationally.”",
-      "who": "Johan Nilsson"
+      "lead": "On finding a partner for the first Barry’s in Switzerland. Fitness Tribune, 2026; translated from German.",
+      "q": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.”",
+      "who": "Julia Röthlisberger, Barry’s Switzerland"
+    },
+    {
+      "type": "ideas",
+      "id": "posts",
+      "label": "In his words",
+      "title": "From his <t>LinkedIn.</t>",
+      "items": [
+        {
+          "t": "Barry’s Helsinki is open.",
+          "q": "“So proud to share that Barry’s Helsinki is officially open 🇫🇮🔥 Huge thanks to everyone who made this happen — it’s been an incredible team effort! See you on the treadmill.”",
+          "s": "LinkedIn, February 2026"
+        },
+        {
+          "t": "Elected to the board of Svensk Innebandy.",
+          "q": "“Jag är både stolt och ödmjuk över att i helgen ha blivit vald till ledamot i förbundsstyrelsen för Svensk Innebandy.”",
+          "s": "LinkedIn, July 2026 · “Both proud and humble to have been elected to the board of Svensk Innebandy this weekend.”"
+        },
+        {
+          "t": "A new board, a new season.",
+          "q": "“Inspirerande start med nya förbundsstyrelsen och Sportkontoret! Ser fram emot att bidra till utvecklingen av svensk innebandy – och inte minst till att stärka elitinnebandyn sportsligt, kommersiellt och organisatoriskt. Let’s go!”",
+          "s": "LinkedIn, September 2026 · “Looking forward to contributing to Swedish floorball, and not least to strengthening the elite game sportingly, commercially and organisationally.”"
+        },
+        {
+          "t": "Where luxury lives now.",
+          "q": "“Barry’s x Balenciaga 🙌” — sharing Daniel Rabinovich: “Luxury used to be defined entirely by what you wore to a fancy dinner. Today, it’s defined by where you sweat.”",
+          "s": "LinkedIn, July 2026"
+        }
+      ],
+      "src": "Posts quoted as published; translations in quotation marks are ours."
     },
     {
       "type": "pubs",
@@ -368,7 +382,7 @@
       "id": "inquiry",
       "label": "Enquiries",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a brand, a market, an investment or a board role. A short note on where things stand is the best place to begin.",
+      "lede": "For a city, a concept or a board. A short note on where things stand is the best place to begin.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
@@ -377,9 +391,9 @@
         "selectPlaceholder": "Select the nature of your enquiry",
         "paths": [
           {
-            "v": "brand",
-            "t": "A brand entering a new market",
-            "btn": "Send enquiry",
+            "v": "city",
+            "t": "Bringing Barry’s to a new city",
+            "btn": "Send a note",
             "note": "Please do not include confidential financial information.",
             "fields": [
               {
@@ -387,50 +401,15 @@
                 "r": true
               },
               {
-                "n": "Brand or company",
-                "r": true
-              },
-              {
                 "n": "Email",
                 "ty": "email",
                 "r": true
               },
               {
-                "n": "Which market?"
+                "n": "City and country"
               },
               {
-                "n": "Stage: exploring, partner search, licence signed or pre-opening"
-              },
-              {
-                "n": "Brief description",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "operator",
-            "t": "An operator scaling, merging or restructuring",
-            "btn": "Send enquiry",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Number of sites and countries"
-              },
-              {
-                "n": "What you want to achieve",
+                "n": "Where things stand",
                 "ta": true,
                 "full": true
               }
@@ -438,8 +417,8 @@
           },
           {
             "v": "founder",
-            "t": "A health or fitness concept seeking investment",
-            "btn": "Send enquiry",
+            "t": "A concept seeking investment",
+            "btn": "Send a note",
             "fields": [
               {
                 "n": "Name",
@@ -453,9 +432,6 @@
                 "n": "Email",
                 "ty": "email",
                 "r": true
-              },
-              {
-                "n": "Stage and market"
               },
               {
                 "n": "The concept, in brief",
@@ -467,7 +443,7 @@
           {
             "v": "board",
             "t": "A board or advisory role",
-            "btn": "Send enquiry",
+            "btn": "Send a note",
             "fields": [
               {
                 "n": "Name",
@@ -492,7 +468,7 @@
           {
             "v": "other",
             "t": "Something else",
-            "btn": "Send enquiry",
+            "btn": "Send a note",
             "fields": [
               {
                 "n": "Name",

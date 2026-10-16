@@ -10,7 +10,7 @@
       "h": "/nilsson"
     },
     {
-      "t": "Advisory",
+      "t": "Partnerships",
       "h": "/nilsson/practice"
     },
     {
@@ -117,8 +117,8 @@
     {
       "type": "next",
       "k": "Next",
-      "t": "Advisory",
-      "d": "Market entry, growth, investment and boards.",
+      "t": "Working together",
+      "d": "A city for Barry’s, a concept for SLP, a seat at the board.",
       "h": "/nilsson/practice",
       "alt": {
         "t": "Start a conversation",
@@ -130,7 +130,7 @@
       "id": "inquiry",
       "label": "Enquiries",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a brand, a market, an investment or a board role. A short note on where things stand is the best place to begin.",
+      "lede": "For a city, a concept or a board. A short note on where things stand is the best place to begin.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
@@ -139,9 +139,9 @@
         "selectPlaceholder": "Select the nature of your enquiry",
         "paths": [
           {
-            "v": "brand",
-            "t": "A brand entering a new market",
-            "btn": "Send enquiry",
+            "v": "city",
+            "t": "Bringing Barry’s to a new city",
+            "btn": "Send a note",
             "note": "Please do not include confidential financial information.",
             "fields": [
               {
@@ -149,50 +149,15 @@
                 "r": true
               },
               {
-                "n": "Brand or company",
-                "r": true
-              },
-              {
                 "n": "Email",
                 "ty": "email",
                 "r": true
               },
               {
-                "n": "Which market?"
+                "n": "City and country"
               },
               {
-                "n": "Stage: exploring, partner search, licence signed or pre-opening"
-              },
-              {
-                "n": "Brief description",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "operator",
-            "t": "An operator scaling, merging or restructuring",
-            "btn": "Send enquiry",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Number of sites and countries"
-              },
-              {
-                "n": "What you want to achieve",
+                "n": "Where things stand",
                 "ta": true,
                 "full": true
               }
@@ -200,8 +165,8 @@
           },
           {
             "v": "founder",
-            "t": "A health or fitness concept seeking investment",
-            "btn": "Send enquiry",
+            "t": "A concept seeking investment",
+            "btn": "Send a note",
             "fields": [
               {
                 "n": "Name",
@@ -215,9 +180,6 @@
                 "n": "Email",
                 "ty": "email",
                 "r": true
-              },
-              {
-                "n": "Stage and market"
               },
               {
                 "n": "The concept, in brief",
@@ -229,7 +191,7 @@
           {
             "v": "board",
             "t": "A board or advisory role",
-            "btn": "Send enquiry",
+            "btn": "Send a note",
             "fields": [
               {
                 "n": "Name",
@@ -254,7 +216,7 @@
           {
             "v": "other",
             "t": "Something else",
-            "btn": "Send enquiry",
+            "btn": "Send a note",
             "fields": [
               {
                 "n": "Name",
