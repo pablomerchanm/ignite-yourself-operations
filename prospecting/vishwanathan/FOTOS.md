@@ -19,3 +19,5 @@ Mientras llegan las fotos, la página usa las imágenes generadas con Higgsfield
 
 
 **16 de octubre de 2026:** `hero.jpg` (1672 × 941) y `hero-mobile.jpg` (recorte vertical centrado en ella) son ya su retrato real. `og.jpg` también lo usa. Siguen pendientes las fotos de ambiente (career, ideas, voice, advisory, today, chapter).
+
+**16 de octubre de 2026 (2):** dos fotos reales más. `priya-desk.jpg` (escribiendo en su escritorio, luz dorada) va en la portada de Advisory; su recorte 4:5 `priya-desk-portrait.jpg` va en The practice, en la portada del sitio. `priya-reflect.jpg` (en silueta junto a la ventana, escribiendo en un cuaderno) va en la portada de Perspectives. Siguen ilustrativas: career, voice, chapter, today y, en las tarjetas de Advisory de la portada, `advisory.jpg` (Boards & Mentoring) e `ideas.jpg` (Masterclasses & Juries).
