@@ -84,3 +84,15 @@ Pablo pidió un estilo gráfico mucho más elaborado y femenino, inspirado en su
 - **Modelo Tata (`tbem`, en Career):** diagrama del Tata Business Excellence Model y su papel como Senior Assessor.
 - **Voz:** todo el sitio en primera persona.
 - **Fotos:** mientras llegan las de Pablo, vuelven las de Higgsfield.
+
+## Iteración 6: pautas de marca v1 (16 de octubre de 2026)
+
+Con las referencias de Pablo (Caroline Nogueira, Wild Allo, Monolyth & Co.) se definió una línea gráfica nueva, que reemplaza la piel de patrimonio indio:
+- **Paleta:** vino, ciruela, bermellón y arena.
+- **Tipografía:** Instrument Serif en mayúsculas condensadas para el nombre y DM Mono para la ficha.
+- **Motivo:** la caléndula recortada.
+- **Marca:** monograma PV y logotipo vectorial.
+
+**Pautas:** `/vishwanathan/brand` (página) y `clients/jorge-arce/vishwanathan/BRAND-GUIDELINES.md` (texto).
+
+**El sitio:** aplica la nueva línea sin tocar la narrativa. El retrato va recto con una caléndula, el nombre en coral, la cinta de públicos en tipografía grande sobre ciruela y amã sobre ciruela.

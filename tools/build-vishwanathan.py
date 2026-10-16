@@ -679,6 +679,10 @@ CAL = """<style>
 .hero .hnote .it{color:rgba(255,255,255,.58)}
 
 /* ============ Tipografia de marca: serif para afirmar, grotesca para probar ============ */
+@font-face{font-family:'Instrument Serif';src:url(/vishwanathan/assets/fonts/InstrumentSerif-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Instrument Serif';src:url(/vishwanathan/assets/fonts/InstrumentSerif-Italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'DM Mono';src:url(/vishwanathan/assets/fonts/DMMono-Regular.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'DM Mono';src:url(/vishwanathan/assets/fonts/DMMono-Medium.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
 @font-face{font-family:'Bodoni Moda';src:url(/vishwanathan/assets/fonts/BodoniModa.woff2) format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
 @font-face{font-family:'Cormorant Garamond';src:url(/vishwanathan/assets/fonts/CormorantGaramond.woff2) format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
 @font-face{font-family:'Pinyon Script';src:url(/vishwanathan/assets/fonts/PinyonScript.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
@@ -1859,6 +1863,144 @@ html.scrolled .topbar{background:rgba(44,26,18,.94);-webkit-backdrop-filter:blur
   #site .hero .hacts{justify-content:center}
   #site .hero::after{inset:10px}
   #site .kfoot.pf .fname{font-size:clamp(38px,10.5vw,54px)}
+}
+
+
+/* =====================================================================
+   MARCA (pautas v1): vino, ciruela, bermellon y arena. Instrument Serif
+   en mayusculas condensadas para el nombre, DM Mono para la ficha,
+   la calendula como recorte. Sustituye a la piel anterior.
+   ===================================================================== */
+:root{
+  --wine:#3A0E12; --wine-deep:#2A090C; --plum:#5B2130; --brick:#8B2E22; --vermilion:#E2461E; --coral:#EC6440;
+  --sand:#E3D9C6; --sand-deep:#D6C8AF; --paper:#F2EEE7;
+  --bg:var(--sand); --paper2:var(--paper); --ink:var(--wine); --espresso:var(--wine); --oxblood:var(--plum); --maroon:var(--brick);
+  --terra:#C2401E; --terra-soft:var(--coral); --gold:var(--coral); --brass:var(--vermilion); --red:var(--vermilion);
+  --gray:#6E4A44; --line:rgba(58,14,18,.16); --cream:var(--paper); --creamt:rgba(242,238,231,.8);
+  --serif:'Instrument Serif',Georgia,serif; --didone:'Instrument Serif',Georgia,serif; --script:'Instrument Serif',Georgia,serif;
+  --caps:'DM Mono',ui-monospace,monospace; --mono:'DM Mono',ui-monospace,monospace;
+}
+body{background:var(--sand);color:#3A0E12}
+#site{background:var(--sand)}
+::selection{background:var(--vermilion);color:var(--paper)}
+
+/* tipografia: titulares en Instrument Serif, ficha en DM Mono */
+#site .d56,#site .d80,#site .sq,#site .qq,#site .nxt-t,#site .arh,#site .itst,#site .oft,#site .idt,#site .mdt,#site .bri h3,#site .sitlist p,#site .rtsteps h3,#site .tbint{font-family:var(--serif)!important;font-weight:400!important;letter-spacing:-.01em}
+#site .d56 .it,#site .d80 .it,#site .sq .it,#site .qq .it,#site .nxt-t .it,#site .arh .it,#site .itst .it{color:var(--vermilion);font-style:italic}
+#site .smallcap,.topbar .u11,#site .offor,#site .mkk,#site .tbtop,#site .tbfound{font-family:var(--mono)!important;font-weight:500!important;font-size:11px!important;letter-spacing:.12em!important;text-transform:uppercase;color:var(--brick)}
+#site .src,#site .pid{font-family:var(--mono)!important;font-weight:400!important;font-size:11px!important;letter-spacing:.08em!important;color:var(--brick)}
+#site .src::before{content:none!important}
+#site .rlab .smallcap::before,#site .slab::before,#site .brl::before,#site .cshead>.smallcap::before,#site .ixhead>.smallcap::before,#site .arkick::before{
+  width:7px!important;height:7px!important;border:0!important;border-radius:50%;background:var(--vermilion);transform:none!important;margin:0 10px 1px 0!important}
+#site .rnum,#site .brn,#site .idn,#site .sitn{font-family:var(--mono)!important;font-size:11px!important;color:var(--vermilion)!important;letter-spacing:.06em}
+#site .pmore a,#site .smore,#site .mdlinks a{font-family:var(--mono)!important;font-weight:500!important;font-size:11px!important;letter-spacing:.12em!important}
+#site .qt .wrap::before,#site .nxt .wrap::before{width:34px!important;height:34px!important;background:var(--vermilion)!important;
+  -webkit-mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat}
+
+/* barra */
+html.scrolled .topbar{background:rgba(42,9,12,.95)!important}
+.topbar .tname{font-family:var(--serif)!important;font-size:17px!important;letter-spacing:.18em!important}
+.tnav a{font-family:var(--mono)!important;font-weight:500!important;font-size:11px!important;letter-spacing:.12em!important}
+.tnav a.on,.topbar .ncta{border-bottom-color:var(--coral)!important}
+
+/* ---------- hero: vino, retrato recto, nombre en mayusculas que cruza la foto ---------- */
+#site .hero{background:var(--wine)!important}
+#site .hero::before{content:''!important;position:absolute;inset:auto auto -18% -10%;width:min(62vw,880px);aspect-ratio:1;background:var(--plum)!important;opacity:.55;
+  -webkit-mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;z-index:0}
+#site .hero::after{content:none!important}
+@media(min-width:861px){#site .hero.photo .ph{right:clamp(40px,6vw,110px);top:clamp(100px,13vh,128px);height:calc(100% - clamp(100px,13vh,128px) - clamp(56px,8vh,90px));aspect-ratio:3/4}}
+#site .hero.photo .ph img{-webkit-mask:none!important;mask:none!important;border-radius:1px;filter:saturate(.95) contrast(1.02)}
+#site .hero.photo .ph::before{content:none!important}
+#site .hero.photo .ph::after{content:''!important;inset:auto auto -9% -16%!important;width:44%;aspect-ratio:1;background:var(--vermilion)!important;opacity:1!important;
+  -webkit-mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;z-index:3}
+#site .hero .inr{z-index:4}
+#site .hero .hkick{font-family:var(--mono)!important;font-weight:500;font-size:11px!important;letter-spacing:.14em!important;color:rgba(242,238,231,.7)!important}
+#site .hero .hkick::before{background:var(--coral)!important}
+#site .hero .hname{font-family:var(--serif)!important;font-weight:400!important;text-transform:uppercase;letter-spacing:.005em!important;
+  font-size:clamp(58px,9.2vw,168px)!important;line-height:.84!important;color:var(--coral)!important}
+#site .hero .hname .it{display:block;font-family:var(--serif)!important;font-style:normal!important;font-size:1em!important;letter-spacing:.005em!important;
+  text-transform:uppercase;color:var(--coral)!important;margin:0!important;line-height:.84}
+#site .hero .hsub{font-family:var(--serif)!important;font-size:clamp(21px,1.75vw,28px)!important;color:var(--paper)!important;max-width:20em!important}
+#site .hero .hsub .it{color:var(--coral)!important;font-style:italic}
+#site .hcta,#site .fcta,#site .rtcta{background:var(--vermilion)!important;color:var(--paper)!important;font-family:var(--mono)!important;font-weight:500!important;font-size:11.5px!important;letter-spacing:.12em!important;border:0}
+#site .hcta:hover,#site .fcta:hover{background:var(--coral)!important}
+#site .hcta.alt{background:transparent!important;color:var(--paper)!important;box-shadow:inset 0 0 0 1px rgba(242,238,231,.55)}
+#site .hcta.alt:hover{box-shadow:inset 0 0 0 1px var(--paper)}
+
+/* ---------- logos ---------- */
+#site .mks{background:var(--sand)}
+#site .mktext{font-family:var(--serif);letter-spacing:.02em}
+#site .mktext .it{font-family:var(--serif);font-style:italic;font-size:1.1em;color:var(--vermilion)}
+#site .mkhead .smallcap::before,#site .mkhead .smallcap::after{background:var(--vermilion)}
+
+/* ---------- cinta: tipografia grande recortada sobre ciruela ---------- */
+#site .mq{background:var(--plum);border:0;padding:clamp(8px,1.4vh,14px) 0}
+#site .mqrow span{font-family:var(--serif);text-transform:uppercase;font-size:clamp(54px,7.4vw,128px);line-height:1;color:var(--coral);padding:0 .28em;letter-spacing:.005em}
+#site .mqrow i{display:inline-block;width:clamp(26px,3vw,46px);height:clamp(26px,3vw,46px);font-size:0;background:var(--vermilion);
+  -webkit-mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat}
+
+/* ---------- secciones claras ---------- */
+#site .itr,#site .sit,#site .brf,#site .qt,#site .reserve,#site .nxt{background:var(--sand)}
+#site .ofr,#site .stmt.compact:not(.withimg),#site .tl.tint,#site .ids.tint,#site .exp.tint,#site .tbm{background:var(--paper)}
+#site .ofc{background:var(--sand);border-color:var(--line)}
+#site .itfig{border-radius:1px}
+#site .itsign{color:var(--brick)}
+
+/* ---------- capitulo amã: ciruela, foto recta y calendula ---------- */
+#site .arp{background:var(--plum)}
+#site .arp::before{content:''!important;inset:auto -8% -22% auto;width:min(46vw,640px);aspect-ratio:1;background:var(--wine);opacity:.5;
+  -webkit-mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat}
+#site .arp .smallcap,#site .arp .arh .it{color:var(--coral)}
+#site .arp .arh .it{font-family:var(--serif);font-style:italic;font-size:1em}
+#site .arimg{aspect-ratio:3/4}
+#site .arimg img{-webkit-mask:none!important;mask:none!important}
+#site .arimg::before{content:none!important}
+#site .arimg::after{inset:auto -14% -10% auto!important;width:38%;aspect-ratio:1;background:var(--vermilion)!important;
+  -webkit-mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat;mask:url(/vishwanathan/assets/brand/marigold.svg) center/contain no-repeat}
+#site .arst{border-top-color:rgba(236,100,64,.45)}
+#site .arst>div+div{border-left-color:rgba(236,100,64,.25)}
+#site .arst .nn{font-family:var(--serif)!important;color:var(--paper)}
+#site .arst .nn sup{color:var(--coral)}
+#site .arp .src{color:rgba(242,238,231,.7)!important}
+
+/* ---------- oscuras ---------- */
+#site .mda.ink,#site .nums.ink{background:var(--wine)}
+#site .mda.ink::before,#site .nums.ink::before,#site .kfoot.pf::before{content:none!important}
+#site .mda.ink .smallcap,#site .mdq{color:var(--coral)!important}
+#site .mda.ink .d56 .it{color:var(--coral)}
+#site .mdv{outline-color:rgba(236,100,64,.4)}
+#site .mdplay{background:var(--vermilion);color:var(--paper)}
+#site .rtcard{background:var(--wine)!important}
+#site .pcard.lead,#site .paths .lead{background:var(--plum)!important}
+#site .stmt.withimg::after{content:none!important}
+@media(min-width:861px){
+  #site .stmt.withimg .sph::after{background:linear-gradient(90deg,rgba(42,9,12,.9) 0%,rgba(42,9,12,.64) 42%,rgba(42,9,12,.1) 76%)!important}
+  #site .stmt.withimg.tr .sph::after{background:linear-gradient(270deg,rgba(42,9,12,.9) 0%,rgba(42,9,12,.64) 42%,rgba(42,9,12,.1) 76%)!important}}
+@media(max-width:860px){#site .stmt.withimg{background:var(--wine)}
+  #site .stmt.withimg .sph::after{background:linear-gradient(180deg,rgba(58,14,18,0) 40%,rgba(58,14,18,.9) 80%,#3A0E12 100%)!important}}
+#site .stmt.withimg .slab,#site .stmt.withimg .sq .it{color:var(--coral)}
+#site .kfoot.pf{background:var(--wine-deep)}
+#site .kfoot.pf .pf-kick{color:var(--coral)}
+#site .kfoot.pf .fname{font-family:var(--serif)!important;text-transform:uppercase;font-size:clamp(48px,6.4vw,110px)!important;line-height:.86;letter-spacing:.005em;color:var(--coral)}
+#site .kfoot.pf .fname .it{font-style:normal;color:var(--coral)}
+#site .igy{background:#1F0709}
+
+/* modelo Tata */
+#site .tbd{border-color:rgba(194,64,30,.35);background:rgba(227,217,198,.5)}
+#site .tbtop,#site .tbbase{color:var(--brick)}
+#site .tbbase{font-family:var(--serif)!important;font-style:italic;text-transform:none;letter-spacing:0!important;font-size:19px!important}
+#site .hx i{font-family:var(--mono)!important;font-weight:500;font-size:clamp(10.5px,.82vw,12.5px)!important;letter-spacing:.04em}
+
+@media(max-width:860px){
+  #site .hero.photo .ph{position:relative!important;inset:auto!important;height:auto!important;width:min(74vw,310px)!important;aspect-ratio:3/4;margin:calc(var(--barh) + 22px) 0 0 clamp(18px,5vw,34px)!important}
+  #site .hero.photo .ph::after{width:38%;inset:auto -16% -7% auto!important}
+  #site .hero.photo .inr{text-align:left!important;margin-top:0!important;padding-top:clamp(44px,6vh,56px)!important}
+  #site .hero .hname{font-size:clamp(46px,13.2vw,62px)!important}
+  #site .hero .hsub{margin-left:0!important;font-size:19px!important}
+  #site .hero .hacts{justify-content:flex-start!important}
+  #site .hero::before{width:120vw;inset:auto auto -12% -30%}
+  #site .mqrow span{font-size:clamp(44px,13vw,64px)}
+  #site .kfoot.pf .fname{font-size:clamp(40px,12vw,58px)!important}
 }
 
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
