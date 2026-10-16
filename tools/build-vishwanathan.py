@@ -2092,6 +2092,14 @@ html.scrolled .topbar{background:rgba(42,9,12,.95)!important}
   #site .hcoords span:nth-child(2){display:none}
 }
 
+/* ---------- hero limpio: el logotipo de la barra aparece solo al bajar ---------- */
+.topbar .tname{transition:opacity .45s,transform .45s}
+html:not(.scrolled) .topbar .tname{opacity:0;transform:translateY(-6px);pointer-events:none}
+html.athero .topbar .tname{opacity:0;pointer-events:none}
+#site .hero .inr{padding-bottom:clamp(72px,10vh,110px)!important}
+#site .hero .hsub{margin-top:clamp(28px,4.4vh,48px)!important}
+@media(max-width:860px){#site .hero.photo .inr{padding-bottom:72px!important}}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}

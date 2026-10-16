@@ -44,32 +44,6 @@
       },
       "name": "Priya <t>Vishwanathan</t>",
       "sub": "Helping owners of hotels and homestays build places <t>guests remember.</t>",
-      "actions": [
-        {
-          "t": "Start a conversation",
-          "h": "#inquiry",
-          "primary": true
-        }
-      ],
-      "note": "Hospitality advisory for owners, growing groups and boards · Thirty-five years with the Taj",
-      "list": [
-        {
-          "t": "Advisory",
-          "h": "/vishwanathan/practice"
-        },
-        {
-          "t": "Career",
-          "h": "/vishwanathan/track"
-        },
-        {
-          "t": "Perspectives",
-          "h": "/vishwanathan/ideas"
-        },
-        {
-          "t": "Conversations",
-          "h": "/vishwanathan/voice"
-        }
-      ],
       "coords": [
         "12.9716° N",
         "Bengaluru | India | Worldwide",
@@ -121,10 +95,10 @@
       "type": "intro",
       "id": "intro",
       "label": "Hospitality, from the inside",
-      "statement": "Helping owners turn beautiful properties into places guests remember, <t>and growing groups into one standard of service.</t>",
+      "statement": "The discipline of a great hotel company, <t>brought to the property in front of me.</t>",
       "body": [
         "For thirty-five years I worked inside IHCL, the company behind the Taj: from a duty manager’s desk at St. James’ Court in London, through fifteen years in Business Excellence, to helping build and scale amã Stays & Trails into a distinctive hospitality brand.",
-        "Today I advise, mentor and help hospitality businesses build for the future, bringing the discipline of a great hotel company to the property in front of me."
+        "Today I advise, mentor and help hospitality businesses build for the future: owners of homestays and hotels, groups that are growing, and the boards that guide them."
       ],
       "sign": "अतिथि देवो भव · the guest is god",
       "img": {
