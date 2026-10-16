@@ -96,3 +96,13 @@ Con las referencias de Pablo (Caroline Nogueira, Wild Allo, Monolyth & Co.) se d
 **Pautas:** `/vishwanathan/brand` (página) y `clients/jorge-arce/vishwanathan/BRAND-GUIDELINES.md` (texto).
 
 **El sitio:** aplica la nueva línea sin tocar la narrativa. El retrato va recto con una caléndula, el nombre en coral, la cinta de públicos en tipografía grande sobre ciruela y amã sobre ciruela.
+
+## Iteración 7: hero statement (16 de octubre de 2026)
+
+Pablo pidió un hero mucho más impactante, al estilo de estherperel.com: la foto a sangre, una frase grande que diga de una vez qué hace, y después su nombre.
+
+- **Foto:** el retrato horizontal de Higgsfield a sangre, desaturado y con un velo de vino que se oscurece hacia abajo. La cara queda arriba, despejada; el texto va sobre el torso. En móvil, el retrato vertical.
+- **Frase:** "I help owners of hotels and homestays build places *guests remember.*" en Instrument Serif, centrada, en papel con la itálica en coral.
+- **Debajo:** una línea de texto (asesoría, públicos y los 35 años con el Taj), la ficha "PRIYA VISHWANATHAN · HOSPITALITY ADVISOR · BENGALURU" en DM Mono y un solo botón.
+- **Barra:** el nombre completo en serif, como logotipo, en vez de "VISHWANATHAN" en versalitas.
+- Se quitan la caléndula del hero y el botón secundario. Revisado en 1440, 1920 y 390.

@@ -40,22 +40,18 @@
       "img": {
         "src": "/vishwanathan/assets/hero.jpg",
         "mobile": "/vishwanathan/assets/hero-mobile.jpg",
-        "alt": "Priya Vishwanathan (illustrative)"
+        "alt": "Priya Vishwanathan (illustrative portrait)"
       },
-      "name": "Priya <t>Vishwanathan</t>",
-      "sub": "I advise owners of homestays and hotels, growing groups and boards. <t>Thirty-five years with the Taj.</t>",
+      "name": "I help owners of hotels and homestays build places <t>guests remember.</t>",
+      "sub": "Hospitality advisory for owners, growing groups and boards. Thirty-five years with the Taj; I helped build and scale amã Stays & Trails.",
       "actions": [
         {
           "t": "Start a conversation",
           "h": "#inquiry",
           "primary": true
-        },
-        {
-          "t": "Explore my advisory",
-          "h": "#offers"
         }
       ],
-      "kick": "Hospitality Advisor · Mentor · Juror"
+      "note": "Priya Vishwanathan · Hospitality Advisor · Bengaluru"
     },
     {
       "type": "marks",

@@ -2003,6 +2003,44 @@ html.scrolled .topbar{background:rgba(42,9,12,.95)!important}
   #site .kfoot.pf .fname{font-size:clamp(40px,12vw,58px)!important}
 }
 
+
+/* ---------- hero statement: la foto a sangre, la frase grande centrada, el nombre debajo ---------- */
+#site .hero{min-height:100svh!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:stretch!important}
+#site .hero .inr{margin-top:auto!important}
+@media(max-width:480px){.topbar .ncta{display:none!important}}
+#site .hero::before,#site .hero::after{content:none!important}
+@media(min-width:861px){#site .hero.photo .ph{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto!important}}
+#site .hero.photo .ph img{object-fit:cover;object-position:0% 18%;filter:saturate(.7) contrast(1.02) brightness(.9)!important;border-radius:0!important}
+#site .hero.photo .ph::after{content:''!important;position:absolute;inset:0!important;width:auto!important;aspect-ratio:auto!important;-webkit-mask:none!important;mask:none!important;opacity:1!important;
+  background:linear-gradient(180deg,rgba(42,9,12,.42) 0%,rgba(42,9,12,.08) 26%,rgba(42,9,12,.22) 55%,rgba(42,9,12,.9) 100%)!important}
+#site .hero .inr{position:relative;z-index:4;width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(44px,7vh,84px)!important;
+  display:flex;flex-direction:column;align-items:center;text-align:center}
+#site .hero .hname{font-family:var(--serif)!important;text-transform:none!important;letter-spacing:-.015em!important;font-size:clamp(38px,5.3vw,86px)!important;line-height:1!important;
+  color:var(--paper)!important;max-width:19ch!important;text-wrap:balance;text-shadow:0 2px 48px rgba(42,9,12,.45)}
+#site .hero .hname .it{display:inline!important;font-style:italic!important;text-transform:none!important;font-size:1em!important;letter-spacing:inherit!important;color:var(--coral)!important;margin:0!important}
+#site .hero .hsub{font-family:'Instrument Sans',system-ui,sans-serif!important;font-weight:400!important;font-size:clamp(15px,1.15vw,18px)!important;line-height:1.6!important;
+  color:rgba(242,238,231,.88)!important;max-width:40em!important;margin:clamp(20px,3vh,30px) auto 0!important}
+#site .hero .hsub .it{color:var(--coral)!important}
+#site .hero .hnote{display:block!important;font-family:var(--mono)!important;font-weight:500;font-size:11px!important;letter-spacing:.16em!important;text-transform:uppercase;
+  color:rgba(242,238,231,.72)!important;margin:clamp(18px,2.8vh,28px) 0 0!important;padding:0!important;max-width:none!important}
+#site .hero .hnote::before{display:none!important}
+#site .hero .hacts{justify-content:center;margin-top:clamp(22px,3.4vh,32px)!important}
+.topbar .tname{font-family:var(--serif)!important;font-size:clamp(18px,1.5vw,22px)!important;letter-spacing:0!important;text-transform:none!important}
+@media(max-width:860px){.topbar .tname{font-size:17px!important}}
+@media(max-width:860px){
+  #site .hero.photo{padding:0!important}
+  #site .hero.photo .ph{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;aspect-ratio:auto!important}
+  #site .hero.photo .ph img{object-position:50% 12%}
+  #site .hero.photo .ph::after{background:linear-gradient(180deg,rgba(42,9,12,.4) 0%,rgba(42,9,12,.05) 24%,rgba(42,9,12,.3) 50%,rgba(42,9,12,.94) 100%)!important}
+  #site .hero.photo .inr{padding:0 20px 48px!important;text-align:center!important;align-items:center}
+  #site .hero .hname{font-size:clamp(32px,9vw,40px)!important;max-width:15ch!important}
+  #site .hero .hsub{font-size:14.5px!important;margin-top:16px!important}
+  #site .hero .hnote{font-size:10px!important;margin-top:16px!important}
+  #site .hero .hacts{margin-top:18px!important}
+  #site .hero.photo .inr{padding-bottom:40px!important}
+  #site .hero .hacts{justify-content:center!important}
+}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -2047,7 +2085,7 @@ def topbar_html(active):
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
-            '<a class="u11 smallcap tname" href="/vishwanathan" style="color:#fff">Vishwanathan</a>'
+            '<a class="u11 smallcap tname" href="/vishwanathan" style="color:#fff">Priya Vishwanathan</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
             f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/vishwanathan#inquiry"}" style="color:#fff">Start a conversation</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
