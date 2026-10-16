@@ -106,3 +106,7 @@ Pablo pidió un hero mucho más impactante, al estilo de estherperel.com: la fot
 - **Debajo:** una línea de texto (asesoría, públicos y los 35 años con el Taj), la ficha "PRIYA VISHWANATHAN · HOSPITALITY ADVISOR · BENGALURU" en DM Mono y un solo botón.
 - **Barra:** el nombre completo en serif, como logotipo, en vez de "VISHWANATHAN" en versalitas.
 - Se quitan la caléndula del hero y el botón secundario. Revisado en 1440, 1920 y 390.
+
+## Iteración 7b: el nombre, protagonista (16 de octubre de 2026)
+
+Pablo pidió que su nombre tuviera el mismo protagonismo que la frase. Debajo de la frase (dos líneas en papel) va "PRIYA VISHWANATHAN" en Instrument Serif mayúsculas, en coral y algo más grande; después la descripción, la ficha ("Hospitality Advisor · Mentor · Juror · Bengaluru") y el botón. Revisado en 1440, 1920 y 390: la cara queda libre en los tres.
