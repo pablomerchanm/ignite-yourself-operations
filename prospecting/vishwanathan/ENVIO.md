@@ -20,7 +20,7 @@ Fecha: 16 de octubre de 2026. Link: https://igniteyourself.co/vishwanathan (priv
 
 ## Antes de enviárselo
 
-1. **Fotografía.** El retrato del hero y de la tarjeta para compartir ya es una foto real de ella (aportada por Pablo el 16 de octubre). Las demás imágenes (veranda, patio, planos, mesa) siguen siendo ilustrativas; la nota del pie lo dice. Confirmar que podemos usar su foto.
+1. **Fotografía.** El retrato del hero, la tarjeta para compartir, The practice (inicio) y las portadas de Advisory y Perspectives ya usan fotos reales de ella (aportadas por Pablo el 16 de octubre). Las demás imágenes (veranda, patio, planos, mesa) siguen siendo ilustrativas; la nota del pie lo dice. Confirmar que podemos usar sus fotos.
 2. **Citas.** Salen de transcripciones automáticas de HospeTalk e Inspire Someone Today; ella debe revisarlas.
 3. **Nombres de las cuatro líneas de servicio** y **las seis situaciones de "Engagements"**: son propuesta nuestra.
 4. **Cifras que dependen de ella:** "eight external assessments" (de su LinkedIn), "more than 100 hotels".

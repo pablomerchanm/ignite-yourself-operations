@@ -134,3 +134,8 @@ Portada sin Method ni Today (repetían otras páginas), enlaces "The career" red
 ## Iteración 11: su retrato real (16 de octubre de 2026)
 
 Pablo trajo una foto real de Priya. Reemplaza el retrato generado en el hero (escritorio y móvil) y en la tarjeta para compartir; el velo se ajustó porque la foto es más clara. La nota del pie aclara que el retrato es suyo y el resto de la fotografía es ilustrativa.
+
+
+## Iteración 12: dos fotos reales más (16 de octubre de 2026)
+
+Pablo trajo dos fotos más. La de Priya escribiendo en su escritorio ocupa The practice en la portada (recorte 4:5) y la portada de Advisory; la de Priya junto a la ventana, en silueta, abre Perspectives. Revisado en 1440 y 390: caras completas y texto legible sobre el velo. La nota del pie pasa a decir que los retratos son suyos y la fotografía de lugares es ilustrativa.
