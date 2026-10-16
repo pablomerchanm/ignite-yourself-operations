@@ -139,3 +139,7 @@ Pablo trajo una foto real de Priya. Reemplaza el retrato generado en el hero (es
 ## Iteración 12: dos fotos reales más (16 de octubre de 2026)
 
 Pablo trajo dos fotos más. La de Priya escribiendo en su escritorio ocupa The practice en la portada (recorte 4:5) y la portada de Advisory; la de Priya junto a la ventana, en silueta, abre Perspectives. Revisado en 1440 y 390: caras completas y texto legible sobre el velo. La nota del pie pasa a decir que los retratos son suyos y la fotografía de lugares es ilustrativa.
+
+## Iteración 13: hero móvil centrado (16 de octubre de 2026)
+
+En el móvil la foto del hero se veía corrida: la cara quedaba hacia la izquierda (al 34 % del ancho). `hero-mobile.jpg` se recortó de nuevo desde `hero.jpg` con el eje en el centro del óvalo de la cara y el collar (x = 822 de 1672). Revisado en 375, 390 y 430.
