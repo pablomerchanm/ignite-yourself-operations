@@ -4,8 +4,8 @@ Mientras llegan las fotos, la página usa las imágenes generadas con Higgsfield
 
 | # | Archivo | Tamaño | Dónde aparece | Qué debe mostrar | Dónde va el texto |
 |---|---|---|---|---|---|
-| 01 | `hero.jpg` | 1200 × 1600, vertical | Hero (escritorio), dentro del arco mughal | Retrato de tres cuartos, mirando fuera de cámara; luz cálida | El arco recorta la parte de arriba: dejar aire sobre la cabeza |
-| 02 | `hero-mobile.jpg` | 1200 × 1600, vertical | Hero (móvil), dentro del arco | Puede ser la misma foto que la 01 | El nombre va debajo del arco |
+| 01 | `hero.jpg` | 2400 × 1350, horizontal | Hero (escritorio), a sangre | Retrato de medio cuerpo con la cara en el tercio superior, a la derecha del centro; luz cálida | La frase grande va centrada sobre el torso: dejar la cara arriba y despejada |
+| 02 | `hero-mobile.jpg` | 1200 × 1600, vertical | Hero (móvil), a sangre | La misma sesión, vertical; la cara en el tercio superior | La frase va sobre la mitad inferior |
 | 08 | `chapter.jpg` | 1200 × 1800, vertical | Bloque de amã, dentro del arco | Una casa de homestay: veranda, plantación, detalle de servicio | Ninguno: la foto va sola |
 | 03 | `career.jpg` | 2000 × 1130 | Inicio (Career) y portada de Career | Trabajando: un lobby, una recepción o una propiedad patrimonial | Izquierda |
 | 04 | `ideas.jpg` | 2000 × 1130 | Portada de Perspectives | Espontánea, conversando: manos y expresión | Izquierda |
