@@ -46,13 +46,13 @@
         "pos": "50% 50%"
       },
       "quote": "Built with owners, <t>not only for them.</t>",
-      "sub": "“Advising, mentoring and helping hospitality businesses build for the future.” The work I took up after thirty-five years with IHCL."
+      "sub": "Advising, mentoring and helping hospitality businesses build for the future: the practice that followed thirty-five years with IHCL."
     },
     {
       "type": "situations",
       "id": "called-in",
-      "label": "Where I am called in",
-      "title": "Most engagements <t>begin with one of these.</t>",
+      "label": "Engagements",
+      "title": "Where the work <t>usually begins.</t>",
       "items": [
         "A family home that could welcome guests, but has never been run as a business.",
         "A beautiful property whose guests do not come back.",
@@ -67,9 +67,9 @@
       "type": "paths",
       "id": "routes",
       "nums": true,
-      "label": "Who I work with",
-      "title": "Four kinds <t>of work.</t>",
-      "lede": "Each grows out of a chapter of my career.",
+      "label": "Areas of practice",
+      "title": "Who the practice <t>serves.</t>",
+      "lede": "Each grounded in a chapter of the IHCL years.",
       "cards": [
         {
           "lead": true,
@@ -135,7 +135,7 @@
             "Award juries"
           ],
           "cta": {
-            "t": "Invite me",
+            "t": "Extend an invitation",
             "h": "/vishwanathan#inquiry",
             "path": "speaking"
           }
@@ -146,7 +146,7 @@
     {
       "type": "retain",
       "id": "engage",
-      "label": "How I work",
+      "label": "Method",
       "title": "Listen first. <t>Then set the standard.</t>",
       "steps": [
         {
@@ -166,7 +166,7 @@
           "d": "From first-time owner-operators to front-line teams: the confidence to serve well, and to draw a line."
         }
       ],
-      "termsLabel": "Engagements",
+      "termsLabel": "Terms of engagement",
       "terms": [
         {
           "k": "Formats",
@@ -197,7 +197,7 @@
       "compact": true,
       "label": "Through HOSPI Sigma",
       "quote": "Brand philosophy, <t>made measurable.</t>",
-      "sub": "I am Board Advisor and Principal Consultant to HOSPI Sigma, a Lean Six Sigma capability framework for hospitality. In the firm’s words, my perspective is on “translating brand philosophy into measurable standards and service behaviours.”",
+      "sub": "Board Advisor and Principal Consultant to HOSPI Sigma, a Lean Six Sigma capability framework for hospitality. In the firm’s words, a perspective on “translating brand philosophy into measurable standards and service behaviours.”",
       "more": {
         "t": "HOSPI Sigma",
         "h": "https://www.hospisigma.com/"
@@ -207,15 +207,15 @@
       "type": "next",
       "k": "Next",
       "t": "Start a <t>conversation</t>",
-      "d": "Tell me what you are building, running or planning.",
+      "d": "A short note on where things stand is the best place to begin.",
       "h": "/vishwanathan#inquiry"
     },
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Start a conversation",
-      "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me about the property, the group or the role, and where it stands.",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a property, a group or a board role. A short note on where things stand is the best place to begin.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -366,7 +366,7 @@
       },
       "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
+      "sub": "Hospitality advisory for owners, groups and boards. <t>Thirty-five years with the Taj.</t>",
       "fcta": {
         "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"

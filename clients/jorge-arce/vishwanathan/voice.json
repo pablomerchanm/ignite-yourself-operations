@@ -46,7 +46,7 @@
         "pos": "50% 50%"
       },
       "quote": "In <t>conversation.</t>",
-      "sub": "Podcasts, juries, forums and councils: where I speak about hospitality, service and the people who deliver it."
+      "sub": "Podcasts, juries, forums and councils: on hospitality, service and the people who deliver it."
     },
     {
       "type": "media",
@@ -99,7 +99,7 @@
           "a": "PIHMAA, the IHM Pusa alumni association",
           "v": "From Duty Manager at the Taj Mahal Hotel to General Manager of IHCL’s homestays, with a message to young hoteliers: think big.",
           "h": "https://www.linkedin.com/in/priyavishwanathan/",
-          "why": "My career, told by my school."
+          "why": "The career, as told by IHM Pusa."
         }
       ],
       "no": "02"
@@ -108,7 +108,7 @@
       "type": "exp",
       "id": "voice-forums",
       "label": "Forums",
-      "title": "Where I <t>sit and speak.</t>",
+      "title": "Juries, forums <t>and councils.</t>",
       "groups": [
         {
           "label": "Juries",
@@ -143,7 +143,7 @@
       "type": "next",
       "k": "Next",
       "t": "Advisory",
-      "d": "For owners, growing groups and boards.",
+      "d": "The practice: owners, groups in growth and boards.",
       "h": "/vishwanathan/practice",
       "alt": {
         "t": "Start a conversation",
@@ -153,9 +153,9 @@
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Start a conversation",
-      "title": "Start <t>a conversation.</t>",
-      "lede": "Tell me about the property, the group or the role, and where it stands.",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a property, a group or a board role. A short note on where things stand is the best place to begin.",
       "contact": {
         "city": "Bengaluru, India"
       },
@@ -306,7 +306,7 @@
       },
       "kick": "Hospitality Advisor · Mentor · Juror",
       "name": "Priya Vishwanathan",
-      "sub": "Hotels, homestays and the guest experience. <t>Thirty-five years with IHCL.</t>",
+      "sub": "Hospitality advisory for owners, groups and boards. <t>Thirty-five years with the Taj.</t>",
       "fcta": {
         "t": "Start a conversation",
         "h": "/vishwanathan#inquiry"
