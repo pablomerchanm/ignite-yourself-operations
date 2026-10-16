@@ -2195,6 +2195,39 @@ html.scrolled .topbar{background:rgba(42,9,12,.95)!important}
   #site .hero .hacts{justify-content:center!important}
 }
 
+
+/* ---------- hero statement II: el nombre cruza la foto; debajo, la frase, las secciones y la ficha ---------- */
+#site .hero .inr{align-items:stretch!important;max-width:none!important;padding:0 clamp(20px,3.4vw,48px) clamp(56px,7vh,72px)!important}
+#site .hero .inr>*{text-align:center}
+#site .hero .hname{order:1;display:block;width:max-content;max-width:100%!important;margin:0 auto!important;text-align:left!important;text-transform:none!important;font-style:italic;letter-spacing:-.01em!important;
+  font-size:clamp(44px,6.8vw,104px)!important;line-height:.9!important;color:var(--paper)!important;text-wrap:initial;padding-left:.04em}
+#site .hero .hname .it{display:block!important;text-align:left;font-style:normal!important;text-transform:none!important;color:var(--coral)!important;
+  font-size:clamp(50px,11.6vw,176px)!important;line-height:.86!important;letter-spacing:.004em!important;margin:.02em 0 0!important}
+#site .hero .hname .hwm{padding-bottom:.22em;margin-bottom:-.22em}
+#site .hero .hsub{order:2;font-family:var(--serif)!important;font-size:clamp(22px,2.3vw,34px)!important;line-height:1.15!important;color:var(--paper)!important;
+  max-width:28em!important;margin:clamp(26px,4vh,44px) auto 0!important;text-wrap:balance}
+#site .hero .hsub .it{color:var(--coral)!important;font-style:italic}
+#site .hlist{order:3;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px clamp(22px,3vw,44px);margin:clamp(20px,3vh,30px) 0 0}
+#site .hlist a{font-family:var(--serif);font-size:clamp(20px,1.7vw,26px);line-height:1.2;color:var(--paper)}
+#site .hlist a:hover{color:var(--coral)}
+#site .hlist i{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.06em;color:var(--coral);margin-right:8px;vertical-align:.35em}
+#site .hero .hnote{order:4;margin-top:clamp(22px,3.2vh,32px)!important}
+#site .hero .hacts{order:5;margin-top:clamp(18px,2.6vh,26px)!important}
+#site .hcoords{position:absolute;left:clamp(20px,3.4vw,48px);right:clamp(20px,3.4vw,48px);bottom:clamp(16px,2.4vh,24px);z-index:5;display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,238,231,.62)}
+#site .hcoords span:nth-child(2){text-align:center}
+@media(max-width:860px){
+  #site .hero.photo .inr{padding:0 18px 62px!important}
+  #site .hero .hname{font-size:clamp(40px,11vw,46px)!important;max-width:none!important}
+  #site .hero .hname .it{font-size:clamp(40px,11.2vw,46px)!important}
+  #site .hero .hsub{font-size:21px!important;margin-top:22px!important}
+  #site .hlist{gap:6px 18px;margin-top:16px}
+  #site .hlist a{font-size:17px}
+  #site .hero .hnote{font-size:10px!important;margin-top:18px!important}
+  #site .hcoords{font-size:9.5px;letter-spacing:.08em;left:18px;right:18px;bottom:16px}
+  #site .hcoords span:nth-child(2){display:none}
+}
+
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){
   .hcue i::after{animation:hcue 2.4s cubic-bezier(.7,0,.3,1) infinite}
@@ -2619,9 +2652,10 @@ hero:function(s){
   (s.cred?'<div class="hcred wr">'+esc(s.cred)+'</div>':'')+
   (s.sub?'<p class="hsub wr">'+rich(s.sub)+'</p>':'')+
   (s.note?'<p class="hnote wr">'+rich(s.note)+'</p>':'')+
+  (s.list?'<ol class="hlist wr">'+s.list.map(function(l,i){return'<li><a href="'+esc(l.h)+'"><i>(0'+(i+1)+')</i>'+esc(l.t)+'</a></li>'}).join('')+'</ol>':'')+
   ((s.actions||[]).length?'<div class="hacts wr">'+(s.actions||[]).map(function(a){
     return'<a class="hcta'+(a.primary?'':' alt')+'" href="'+esc(a.h)+'"'+(a.path?' data-path="'+esc(a.path)+'"':'')+'>'+esc(a.t)+'</a>'}).join('')+'</div>':'')+
-  '</div></section>'},
+  '</div>'+(s.coords?'<div class="hcoords">'+s.coords.map(function(c){return'<span>'+esc(c)+'</span>'}).join('')+'</div>':'')+'</section>'},
 mission:function(s){
   return'<section class="mission" id="'+esc(s.id||'mission')+'"><div class="wrap" data-r2>'+
   '<div class="mlab wr"><span class="rnum">'+esc(s.no||'')+'</span><span class="smallcap">'+esc(s.label)+'</span></div>'+

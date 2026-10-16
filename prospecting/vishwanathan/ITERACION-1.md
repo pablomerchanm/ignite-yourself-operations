@@ -110,3 +110,12 @@ Pablo pidió un hero mucho más impactante, al estilo de estherperel.com: la fot
 ## Iteración 7b: el nombre, protagonista (16 de octubre de 2026)
 
 Pablo pidió que su nombre tuviera el mismo protagonismo que la frase. Debajo de la frase (dos líneas en papel) va "PRIYA VISHWANATHAN" en Instrument Serif mayúsculas, en coral y algo más grande; después la descripción, la ficha ("Hospitality Advisor · Mentor · Juror · Bengaluru") y el botón. Revisado en 1440, 1920 y 390: la cara queda libre en los tres.
+
+## Iteración 8: el nombre como pieza tipográfica (16 de octubre de 2026)
+
+Pablo mostró el hero de Tomi Lappi: el nombre gigante cruzando la foto, con la lista de secciones y una frase pequeña debajo y las coordenadas en las esquinas. Pidió algo así, a menor escala.
+
+- **Nombre:** "Priya" en itálica (papel) y "Vishwanathan" en redonda coral, grande, cruzando el torso del retrato; el bloque va centrado y las dos líneas alineadas a la izquierda entre sí.
+- **Debajo:** la frase en gerundio (serif, mediana), la lista de secciones (01) Advisory · (02) Career · (03) Perspectives · (04) Conversations, la ficha en mono y el botón.
+- **Esquinas:** 12.9716° N · Bengaluru | India | Worldwide · 77.5946° E.
+- El template del hero gana `list` y `coords`. Revisado en 1440, 1920 y 390.
