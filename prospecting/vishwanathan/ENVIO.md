@@ -20,7 +20,7 @@ Fecha: 16 de octubre de 2026. Link: https://igniteyourself.co/vishwanathan (priv
 
 ## Antes de enviárselo
 
-1. **El retrato.** Las imágenes son ilustrativas (Higgsfield) y el retrato no es ella. En la misma página están las miniaturas de los videos con su cara real. La nota del pie lo aclara ("Photography is illustrative art direction, to be replaced by her own portraits"), pero conviene decirlo también en el mensaje.
+1. **Fotografía.** El retrato del hero y de la tarjeta para compartir ya es una foto real de ella (aportada por Pablo el 16 de octubre). Las demás imágenes (veranda, patio, planos, mesa) siguen siendo ilustrativas; la nota del pie lo dice. Confirmar que podemos usar su foto.
 2. **Citas.** Salen de transcripciones automáticas de HospeTalk e Inspire Someone Today; ella debe revisarlas.
 3. **Nombres de las cuatro líneas de servicio** y **las seis situaciones de "Engagements"**: son propuesta nuestra.
 4. **Cifras que dependen de ella:** "eight external assessments" (de su LinkedIn), "more than 100 hotels".

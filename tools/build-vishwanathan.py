@@ -2023,7 +2023,7 @@ html.scrolled .topbar{background:rgba(42,9,12,.95)!important}
 @media(max-width:480px){.topbar .ncta{display:none!important}}
 #site .hero::before,#site .hero::after{content:none!important}
 @media(min-width:861px){#site .hero.photo .ph{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;aspect-ratio:auto!important}}
-#site .hero.photo .ph img{object-fit:cover;object-position:0% 18%;filter:saturate(.7) contrast(1.02) brightness(.9)!important;border-radius:0!important}
+#site .hero.photo .ph img{object-fit:cover;object-position:52% 20%;filter:saturate(.7) contrast(1.02) brightness(.9)!important;border-radius:0!important}
 #site .hero.photo .ph::after{content:''!important;position:absolute;inset:0!important;width:auto!important;aspect-ratio:auto!important;-webkit-mask:none!important;mask:none!important;opacity:1!important;
   background:linear-gradient(180deg,rgba(42,9,12,.42) 0%,rgba(42,9,12,.08) 26%,rgba(42,9,12,.22) 55%,rgba(42,9,12,.9) 100%)!important}
 #site .hero .inr{position:relative;z-index:4;width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(44px,7vh,84px)!important;
@@ -2103,6 +2103,12 @@ html.athero .topbar .tname{opacity:0;pointer-events:none}
 /* boton de la tarjeta destacada: el acento de la marca, no blanco */
 #site .pcard.lead .pgo .mcta{background:var(--vermilion)!important;color:var(--paper)!important;font-family:var(--mono);font-weight:500;letter-spacing:.12em}
 #site .pcard.lead .pgo .mcta:hover{background:var(--coral)!important}
+
+/* retrato real: foto clara, el velo sostiene la lectura del nombre */
+#site .hero.photo .ph img{filter:saturate(.85) contrast(1.02) brightness(.82)!important}
+#site .hero.photo .ph::after{background:linear-gradient(180deg,rgba(42,9,12,.5) 0%,rgba(42,9,12,.12) 22%,rgba(42,9,12,.35) 48%,rgba(42,9,12,.88) 74%,rgba(42,9,12,.97) 100%)!important}
+@media(max-width:860px){#site .hero.photo .ph img{object-position:50% 14%}
+  #site .hero.photo .ph::after{background:linear-gradient(180deg,rgba(42,9,12,.45) 0%,rgba(42,9,12,.05) 22%,rgba(42,9,12,.35) 46%,rgba(42,9,12,.92) 70%,#2A090C 100%)!important}}
 
 /* ---------- reposo: lo que se mueve solo, despacio ---------- */
 @media(prefers-reduced-motion:no-preference){

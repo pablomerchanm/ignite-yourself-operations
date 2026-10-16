@@ -16,3 +16,6 @@ Mientras llegan las fotos, la página usa las imágenes generadas con Higgsfield
 **Estilo:** luz natural y cálida, paleta del sitio (granate, terracota, espresso, crema, latón), sin texto ni logos, con poco contraste en la zona donde va el texto.
 
 **Importante:** si las fotos de ella se generan con IA, deben partir de fotos reales suyas y parecerse a ella. Antes de publicar el sitio de verdad, ella debe aprobarlas. Las miniaturas de los videos ya muestran su cara real; un retrato que no se le parezca se notaría de inmediato.
+
+
+**16 de octubre de 2026:** `hero.jpg` (1672 × 941) y `hero-mobile.jpg` (recorte vertical centrado en ella) son ya su retrato real. `og.jpg` también lo usa. Siguen pendientes las fotos de ambiente (career, ideas, voice, advisory, today, chapter).
