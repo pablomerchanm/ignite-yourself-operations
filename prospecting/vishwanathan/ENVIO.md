@@ -34,3 +34,35 @@ Fecha: 16 de octubre de 2026. Link: https://igniteyourself.co/vishwanathan (priv
 > https://igniteyourself.co/vishwanathan
 >
 > It is a concept for your eyes only: not indexed, not shared, and nothing in it is final. The photography is placeholder art direction, and the quotes are taken from your HospeTalk and Inspire Someone Today conversations. We would value your reactions, above all on how the work is described.
+
+## Correo de envío (Pablo, 16 de octubre de 2026)
+
+Mismo formato que el de Bernard, más completo: sin llamadas, proceso por correo. La nota del pie de la página se cambió a "Photography and copy are provisional art direction, created from public material, and will be refined with her input." para que coincida con lo que dice el correo.
+
+> **Subject:** Your authority platform: a private preview
+>
+> Dear Priya,
+>
+> Thank you for your message. Rather than only sharing my thoughts, I put together a private preview of what your authority platform could look like:
+>
+> https://igniteyourself.co/vishwanathan
+>
+> Please take it as an example of a direction, not a finished site. I went through your publicly available background: your LinkedIn profile, your conversations on HospeTalk and Inspire Someone Today, and what has been published about your years with IHCL and amã Stays & Trails. Then I explored how thirty-five years in hospitality could come together in one platform that reflects the authority you have built, and makes it easy for the right people to understand how you can help them.
+>
+> Everything is provisional at this stage. The photography, imagery and copy were created by us from that public material, and every detail (dates, roles, quotes, images) would be validated with you before anything is published. The page is private and not indexed by search engines.
+>
+> The most important decision is the angle. A platform like this can be shaped around what you want it to bring you, for example:
+>
+> - More advisory and consulting work with owners of hotels and homestays
+> - Board and mentoring roles with founders and family-owned groups
+> - Speaking, masterclasses and award juries
+> - A considered record of your career and your contribution to Indian hospitality
+>
+> Each of these changes the emphasis, the language and the way people are invited to reach you. If you decide to move forward, we would build it around the opportunities you want to create and the way you want to be represented, with your own photography.
+>
+> The process is very straightforward and hands-off for you. I take care of the research, writing, design and development. We can handle everything over email, with short review checkpoints where you simply share feedback or approve the content. We then incorporate the revisions, finalize the imagery and publish the platform on your own domain.
+>
+> I'd love to hear your first impression, and which of those directions feels closest to where you want to go next. If you like it, I'd be happy to send over a simple fixed-price proposal and timeline.
+>
+> Warm regards,
+> Pablo M. / Ignite
