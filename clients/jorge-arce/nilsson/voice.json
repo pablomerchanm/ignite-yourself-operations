@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "Press — Johan Nilsson",
+    "description": "A podcast on investing in fitness and the trade press in Sweden, Norway, Spain and Switzerland on Johan Nilsson and Barry’s."
+  },
+  "logo": "JOHAN NILSSON",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/nilsson"
+    },
+    {
+      "t": "Advisory",
+      "h": "/nilsson/practice"
+    },
+    {
+      "t": "Career",
+      "h": "/nilsson/track"
+    },
+    {
+      "t": "Press",
+      "h": "/nilsson/voice"
+    },
+    {
+      "t": "Contact",
+      "h": "/nilsson#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Start a conversation",
+    "h": "/nilsson#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "voice-open",
+      "opener": true,
+      "label": "On the record",
+      "img": {
+        "src": "/nilsson/assets/press.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
+      },
+      "quote": "Heard <t>and read.</t>",
+      "sub": "A podcast on investing in fitness, and the trade press in Sweden, Norway, Spain and Switzerland on each market opened."
+    },
+    {
+      "type": "pubs",
+      "id": "voice-talks",
+      "label": "Coverage",
+      "title": "Each market, <t>reported.</t>",
+      "items": [
+        {
+          "y": "2026",
+          "t": "Barry’s erobert Zürich: the first Barry’s in Switzerland",
+          "a": "Fitness Tribune, interview with Julia Röthlisberger",
+          "v": "How a Zürich founder found her partner on Instagram and had an answer three hours later; the opening at Talstrasse 83 in November 2025; Geneva next.",
+          "h": "https://fitnesstribune.com/barrys-erobert-zuerich/",
+          "why": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.”"
+        },
+        {
+          "y": "2025",
+          "t": "Zürich: Fitnesskette Barry’s eröffnet erste Schweizer Filiale",
+          "a": "Immobilien Business",
+          "v": "The announcement of the first Swiss studio, in Zürich’s Kreis 1.",
+          "h": "https://www.immobilienbusiness.ch/en/regionen/2025-07-08/zuerich-fitnesskette-barrys-eroeffnet-erste-schweizer-filiale/",
+          "why": "Partners: Julia Röthlisberger and Johan Nilsson; Caro Daur as investor."
+        },
+        {
+          "y": "2024",
+          "t": "Barry’s aviserar ambitiösa tillväxtplaner",
+          "a": "Sweaty Business",
+          "v": "Barry’s global growth plans, with the Nordic franchise, studios in Stockholm, Gothenburg, Bergen, Oslo and Copenhagen, “with Johan Nilsson at the helm”.",
+          "h": "https://sweatybusiness.se/barrys-aviserar-ambitiosa-tillvaxtplaner-soker-nya-agare/"
+        },
+        {
+          "y": "2023",
+          "t": "Årsrapport 2022: Så gick det för Barry’s i Sverige",
+          "a": "Sweaty Business",
+          "v": "The Swedish company’s 2022 accounts: revenue up just over twenty per cent, two studios, Johan Nilsson as CEO.",
+          "h": "https://sweatybusiness.se/arsrapport-2022-sa-gick-det-for-barrys-i-sverige/"
+        },
+        {
+          "y": "2022",
+          "t": "La cadena de boutiques Barry’s aterriza en España con un club en Madrid",
+          "a": "2Playbook",
+          "v": "The licence for Spain, held with José Daniel García and Kevin Triguero; the first club in Madrid’s Salamanca district.",
+          "h": "https://www.2playbook.com/fitness/cadena-boutiques-barry-aterriza-en-espana-con-club-en-madrid_8027_102.html",
+          "why": "Named as managing director of the company in the Nordic countries."
+        },
+        {
+          "y": "2022",
+          "t": "Barry’s-franchisetagarna i Norden slås ihop och bildar regionens största boutiqueaktör",
+          "a": "Sweaty Business",
+          "v": "Eight studios, around 250 people, a revenue target of SEK 100 million for 2022 and a plan for sixteen studios in the Nordics.",
+          "h": "https://sweatybusiness.se/barrys-franchisetagarna-i-norden-slas-ihop-och-bildar-regionens-storsta-boutiqueaktor/",
+          "why": "“Proud and expectant to announce this merger.”"
+        },
+        {
+          "y": "2022",
+          "t": "Barry’s skaper Nordens største aktør innen boutique fitness",
+          "a": "Treningsindustrien",
+          "v": "The Norwegian trade press on the merger of the Swedish and Norwegian companies.",
+          "h": "https://t-i.no/barrys-skaper-nordens-storste-aktor-innen-boutique-fitness/"
+        },
+        {
+          "y": "2019",
+          "t": "Johan Nilsson — investerare & VD Barry’s Bootcamp Nordic",
+          "a": "Sweaty Business Podcast, episode 59",
+          "v": "An hour on strategy in the fitness sector, what an investor looks for in a concept, and Barry’s progress in the Nordics.",
+          "h": "https://podcasts.apple.com/gb/podcast/59-johan-nilsson-investerare-vd-barrys-bootcamp-nordic/id1239949569?i=1000459246365",
+          "why": "Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize, as investments through Stockholm Leisure Partners."
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Advisory",
+      "d": "Market entry, growth, investment and boards.",
+      "h": "/nilsson/practice",
+      "alt": {
+        "t": "Start a conversation",
+        "h": "/nilsson#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a brand, a market, an investment or a board role. A short note on where things stand is the best place to begin.",
+      "contact": {
+        "city": "Stockholm · Zürich"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "brand",
+            "t": "A brand entering a new market",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential financial information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Brand or company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Which market?"
+              },
+              {
+                "n": "Stage: exploring, partner search, licence signed or pre-opening"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "operator",
+            "t": "An operator scaling, merging or restructuring",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Number of sites and countries"
+              },
+              {
+                "n": "What you want to achieve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "founder",
+            "t": "A health or fitness concept seeking investment",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Stage and market"
+              },
+              {
+                "n": "The concept, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "board",
+            "t": "A board or advisory role",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "The role, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ]
+      },
+      "kick": "Operator & Investor in Premium Consumer Brands",
+      "name": "Johan Nilsson",
+      "sub": "Premium consumer brands, built in new markets. <t>Barry’s in the Nordics, Iberia and Switzerland.</t>",
+      "fcta": {
+        "t": "Start a conversation",
+        "h": "/nilsson#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/johannilsson24/",
+          "i": "linkedin"
+        }
+      ],
+      "base": "Johan Nilsson · Täby, Sweden",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/nilsson/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information and trade press for Mr. Nilsson’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Mr. Nilsson, and it is not indexed or distributed."
+      },
+      "noform": true,
+      "no": "02"
+    }
+  ]
+}

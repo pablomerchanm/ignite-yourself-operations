@@ -162,3 +162,35 @@ De `clients/jorge-arce/pettingill/BRAND-DIRECTION.md` se toma el sistema, no el 
 - stockholmleisurepartners.com (fragmentos; el sitio no respondía)
 - innebandymagazinet.se (columna, 16 oct 2026; solo contexto)
 - Captura de LinkedIn aportada por Pablo (16 oct 2026)
+
+---
+
+## 8. Experiencia completa (capturas de LinkedIn aportadas por Pablo, 16 de octubre de 2026)
+
+| Periodo | Cargo | Dónde |
+|---|---|---|
+| May 2025 – hoy | **Partner**, Barry's Switzerland | Zúrich |
+| Ene 2024 – hoy | **CEO & Partner**, Barrys Bootcamp Nordic AB | Estocolmo |
+| May 2016 – Ene 2024 | Chief Executive Officer, Barrys Bootcamp Nordic AB | Estocolmo |
+| Ene 2023 – hoy | **Partner & Active Board Member**, Barry's Iberia | — |
+| Jun 2026 – hoy | **Ledamot, Förbundsstyrelsen** (miembro de la junta), Svenska Innebandyförbundet | — |
+| Mar 2026 – hoy | **Board Member**, AIK | — |
+| Ago 2010 – hoy | Strategy Department AB (consultoría de gestión, desarrollo de negocio, interim management; el título quedó cortado en la captura) | Estocolmo |
+| May 2015 – hoy | **Founding Partner**, Stockholm Leisure Partners ("an investor focused on the health and fitness industry") | Estocolmo |
+| Ene 2014 – Ago 2014 | Strategy & Concept Director, SATS | — |
+| Ago 2009 – Ene 2014 | Director Strategy Business Development, Health & Fitness Nordic (1,7 BSEK de ingresos: SATS en Noruega, Suecia, Dinamarca y Finlandia; Fresh Fitness; Metropolis; SAFE) | — |
+| Feb 2001 – Abr 2009 | Partner, Cordial Business Advisers | — |
+| May 2001 – Sep 2002 | Strategy Manager, Telia Sverige | — |
+| Ene 1999 – Ene 2001 | Senior Consultant, Ernst & Young Management Consulting | — |
+
+**Posts (capturas):**
+- Hace 1 mes: *"Inspirerande start med nya förbundsstyrelsen och Sportkontoret! Ser fram emot att bidra till utvecklingen av svensk innebandy – och inte minst till att stärka elitinnebandyn sportsligt, kommersiellt och organisatoriskt. Let's Go!"*
+- Hace 3 meses: *"Jag är både stolt och ödmjuk över att i helgen ha blivit vald till ledamot i förbundsstyrelsen för Svensk Innebandy…"*
+- Hace 3 meses: repost "Barry's x Balenciaga 🙌".
+- Hace 8 meses: *"So proud to share that Barry's Helsinki is officially open 🇫🇮🔥 Huge thanks to everyone who made this happen — it's been an incredible team effort! See you on the treadmill."* (53 reacciones)
+
+**Lo que resuelve:** Cordial (2001–2009) y Strategy Department quedan confirmados por él mismo. Sigue abierto: qué estudió en Stockholm University, y cómo convive su "CEO & Partner" de Barry's Nordic (LinkedIn, 2024–) con Kevin Triguero como CEO nórdico (podcast, nov 2025). La página usa sus propias palabras de LinkedIn en la lista de cargos y "partner" en la narrativa.
+
+## 9. El preview
+
+Publicado en privado en **igniteyourself.co/nilsson** (Overview, Advisory, Career, Press), construido con `tools/build-nilsson.py` sobre la narrativa de Vishwanathan y la piel de Pettingill. Sin fotografía real todavía: ver `FOTOS.md`.
