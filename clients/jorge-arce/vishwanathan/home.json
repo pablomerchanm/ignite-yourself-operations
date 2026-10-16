@@ -197,55 +197,8 @@
         }
       ],
       "more": {
-        "t": "The method",
-        "h": "#engage"
-      }
-    },
-    {
-      "type": "retain",
-      "id": "engage",
-      "label": "Method",
-      "title": "Listen first. <t>Then set the standard.</t>",
-      "steps": [
-        {
-          "t": "Listen",
-          "d": "A property is personal. The work starts by hearing the owners out: what the place is, what it means to them and what they want it to become."
-        },
-        {
-          "t": "Find the story",
-          "d": "The guest experience is built around what makes the place itself, not around a brochure."
-        },
-        {
-          "t": "Set the standard",
-          "d": "Standards and measures the team can keep, so good service is consistent, not occasional."
-        },
-        {
-          "t": "Train the people who run it",
-          "d": "From first-time owner-operators to front-line teams: the confidence to serve well, and to draw a line."
-        }
-      ],
-      "termsLabel": "Terms of engagement",
-      "terms": [
-        {
-          "k": "Formats",
-          "v": "Projects, retained advisory, board roles and masterclasses"
-        },
-        {
-          "k": "Team programmes",
-          "v": "Through HOSPI Sigma"
-        },
-        {
-          "k": "Based in",
-          "v": "Bengaluru, India"
-        },
-        {
-          "k": "Scope",
-          "v": "Agreed in writing before work begins"
-        }
-      ],
-      "cta": {
-        "t": "Start a conversation",
-        "h": "#inquiry"
+        "t": "The practice",
+        "h": "/vishwanathan/practice"
       }
     },
     {
@@ -286,7 +239,7 @@
         {
           "k": "Senior Assessor, Tata Business Excellence Model.",
           "t": "Eight external assessments of Tata companies against the framework every Tata company is measured by.",
-          "d": "The model is set out on the career page."
+          "d": "The model is set out on the [career page](/vishwanathan/track#tbem)."
         },
         {
           "k": "From isolated hotels to one organisation.",
@@ -298,11 +251,7 @@
           "t": "Regional jury (South) for the 10th BW Hotelier Indian Hospitality Awards, alongside leaders of WelcomHeritage, Turnstone and Encovate.",
           "d": "Knowledge partner: Indian School of Hospitality."
         }
-      ],
-      "more": {
-        "t": "The career",
-        "h": "/vishwanathan/track"
-      }
+      ]
     },
     {
       "type": "quote",
@@ -345,18 +294,6 @@
       "more": {
         "t": "All conversations",
         "h": "/vishwanathan/voice"
-      }
-    },
-    {
-      "type": "stmt",
-      "id": "s-now",
-      "compact": true,
-      "label": "Today",
-      "quote": "Advisor, juror <t>and council member.</t>",
-      "sub": "Board Advisor and Principal Consultant at HOSPI Sigma. Regional jury (South), BW Hotelier Indian Hospitality Awards 2026. National Vice President, WICCI Diversity & Inclusion Council.",
-      "more": {
-        "t": "Current appointments",
-        "h": "/vishwanathan/track#cv-today"
       }
     },
     {

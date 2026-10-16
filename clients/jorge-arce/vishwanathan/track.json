@@ -120,8 +120,7 @@
       "foundation": "Data, Organisational Learning & Innovation",
       "base": "Core Values & Concepts",
       "top": "Organisational Profile",
-      "src": "Model structure: Tata Business Excellence Group.",
-      "no": "03"
+      "src": "Model structure: Tata Business Excellence Group."
     },
     {
       "type": "timeline",
@@ -161,7 +160,7 @@
         }
       ],
       "rlabel": "The IHCL years",
-      "no": "04"
+      "no": "03"
     },
     {
       "type": "exp",
@@ -189,7 +188,7 @@
           ]
         }
       ],
-      "no": "05"
+      "no": "04"
     },
     {
       "type": "exp",
@@ -208,7 +207,7 @@
           ]
         }
       ],
-      "no": "06"
+      "no": "05"
     },
     {
       "type": "exp",
@@ -223,17 +222,9 @@
           "names": [
             "Hotel Management — Institute of Hotel Management, Catering & Nutrition (IHM Pusa), New Delhi — 1987–1990"
           ]
-        },
-        {
-          "label": "Professional",
-          "wide": true,
-          "names": [
-            "Senior Assessor, Tata Business Excellence Model",
-            "Member, Tata Network Forum South"
-          ]
         }
       ],
-      "no": "07"
+      "no": "06"
     },
     {
       "type": "next",
@@ -424,7 +415,7 @@
         "note": "A private concept by Ignite Yourself, prepared from public information and recorded interviews for Ms. Vishwanathan’s review. Photography is illustrative art direction, to be replaced by her own portraits. Recordings and their thumbnails belong to their publishers. This is not an official website: it has not been reviewed or approved by Ms. Vishwanathan, and it is not indexed or distributed."
       },
       "noform": true,
-      "no": "08"
+      "no": "07"
     }
   ]
 }
