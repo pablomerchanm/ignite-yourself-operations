@@ -130,3 +130,7 @@ Pablo pidió quitar lo que se repetía. En el hero quedan solo el nombre, la fra
 ## Iteración 10: curaduría para el envío (16 de octubre de 2026)
 
 Portada sin Method ni Today (repetían otras páginas), enlaces "The career" reducidos, numeración corrida en Career, Formación sin duplicados, tarjetas de Advisory con los mismos nombres que la portada, botón destacado en bermellón e imagen para compartir rehecha con la marca nueva. Detalle y lista de envío en `ENVIO.md`.
+
+## Iteración 11: su retrato real (16 de octubre de 2026)
+
+Pablo trajo una foto real de Priya. Reemplaza el retrato generado en el hero (escritorio y móvil) y en la tarjeta para compartir; el velo se ajustó porque la foto es más clara. La nota del pie aclara que el retrato es suyo y el resto de la fotografía es ilustrativa.
