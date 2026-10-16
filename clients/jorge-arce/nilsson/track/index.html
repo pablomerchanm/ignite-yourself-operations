@@ -2366,7 +2366,9 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .hero .hkick{display:block!important;order:0;font-family:var(--mono)!important;font-weight:500;font-size:11px!important;letter-spacing:.2em!important;text-transform:uppercase;color:var(--signal-soft)!important;margin:0 0 clamp(18px,2.6vh,28px)!important;text-align:center}
 #site .hero .hkick::before{content:none!important}
 #site .hero .hname .it{font-weight:400!important}
-#site .hero.photo .ph img{filter:saturate(1.05) contrast(1.06) brightness(.95)!important}
+#site .hero.photo .ph img{filter:saturate(.95) contrast(1.04) brightness(.92)!important;object-position:50% 25%!important}
+@media(max-width:860px){#site .hero.photo .ph img{object-position:50% 20%!important}}
+#site .hero.photo .ph::after{background:linear-gradient(180deg,rgba(14,16,19,.3) 0%,rgba(14,16,19,.05) 20%,rgba(14,16,19,.25) 45%,rgba(14,16,19,.86) 74%,rgba(14,16,19,.97) 100%)!important}
 #site .hcta,#site .fcta,#site .rtcta,#site .pcard.lead .pgo .mcta{background:var(--signal)!important;color:var(--bone)!important}
 #site .hcta:hover,#site .fcta:hover,#site .rtcta:hover,#site .pcard.lead .pgo .mcta:hover{background:var(--signal-soft)!important}
 .topbar .ncta{border-bottom-color:var(--signal-soft)!important}
@@ -2395,6 +2397,21 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .pnum{color:rgba(237,231,220,.22)}
 #site .arst .nn{font-size:clamp(56px,6vw,96px)!important}
 #site .rtsteps .rtn,#site .rtsteps i{color:var(--signal)}
+
+/* ---------- retrato real: el nombre a la izquierda, la cara a la derecha (patron Pettingill) ---------- */
+@media(min-width:861px){
+  #site .hero .inr{align-items:flex-start!important;padding-left:clamp(28px,5vw,80px)!important;padding-right:clamp(28px,5vw,80px)!important}
+  #site .hero .inr>*{text-align:left!important}
+  #site .hero .hname{margin:0!important;padding-left:0}
+  #site .hero .hkick{text-align:left}
+  #site .hero .hsub{margin-left:0!important;margin-right:0!important}
+  #site .hero.photo .ph img{object-position:62% 25%!important}
+  #site .hero.photo .ph::after{background:linear-gradient(90deg,rgba(14,16,19,.72) 0%,rgba(14,16,19,.35) 38%,rgba(14,16,19,.05) 70%),linear-gradient(180deg,rgba(14,16,19,.3) 0%,rgba(14,16,19,0) 30%,rgba(14,16,19,.9) 100%)!important}
+}
+@media(max-width:860px){
+  #site .hero .hkick{display:none!important}
+  .topbar,html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
+}
 </style>
 </head>
 <body>

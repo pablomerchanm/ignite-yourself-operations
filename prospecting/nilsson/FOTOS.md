@@ -40,3 +40,12 @@ no people, no text, no logos, medium format look
 
 ## C. Tarjeta social
 `og.jpg` (1200 × 630) ya existe: tinta, el nombre en Editors Note y la frase. Se rehace con el retrato cuando llegue.
+
+---
+
+**16 de octubre de 2026, segunda entrega.** Pablo trajo dos fotos de Johan (hechas con IA a partir de su foto pública, como con Priya; se validan con él antes de publicar de verdad):
+
+- **Retrato en estudio azul** (1672 × 941): `hero.jpg` (escritorio) y `hero-mobile.jpg` (recorte 3:4 con el eje en la cara, x = 0,62). Graduada al 72 % de saturación, con grano, para que el azul lea como acero y no pelee con el rojo de la piel. En escritorio el nombre pasa a la izquierda y la cara queda a la derecha (patrón Pettingill). También rehace `og.jpg`.
+- **En el gimnasio, con dos entrenadores** (1774 × 887): `advisory.jpg` (portada de Advisory, a sangre) y `practice.jpg` (recorte 4:5 centrado en él, para The practice en la portada).
+
+Siguen con campos generados: `chapter.jpg`, `career.jpg`, `press.jpg` y las cuatro tarjetas.

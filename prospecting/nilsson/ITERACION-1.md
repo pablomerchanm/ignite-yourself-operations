@@ -13,3 +13,7 @@ Pablo pidió el logotipo original de Barry's en algún punto y "un poquito más 
 - **Banda de cifras** en tinta, nueva, entre Engagements y Advisory: 25 años en la industria · 10 años construyendo Barry's · 8 estudios en la fusión de 2022 · 6 países. Cuatro columnas en escritorio.
 - **Cinta de públicos** como marcador: grotesca pesada en versales sobre tinta, puntos rojos entre términos.
 - **Rojo.** Los botones principales y el subrayado del botón de la barra pasan a rojo de señal; los números de sección y de lista ya iban en rojo. El resto de la piel no cambia.
+
+## Iteración 3: las fotos de Johan (16 de octubre de 2026)
+
+Dos fotos de Pablo. El retrato en estudio azul va al hero (escritorio y móvil) y a la tarjeta social; la del gimnasio con su equipo abre Advisory y ocupa The practice en la portada. El hero de escritorio cambia de centrado a nombre a la izquierda, cara a la derecha, con velo lateral; en móvil se oculta el kicker. Revisado en 1440, 1920 y 390. Detalle en `FOTOS.md`.
