@@ -8,7 +8,7 @@ Fecha: 16 de octubre de 2026. Versión visual: `/vishwanathan/brand`. Borrador p
 - **Posicionamiento:** asesora de hospitalidad para propietarios de homestays y hoteles, grupos en crecimiento y consejos.
 - **Promesa:** lugares que los huéspedes recuerdan, y un solo estándar de servicio.
 - **Raíz:** atithi devo bhava, la frase de su madre y del Taj.
-- **Voz:** primera persona, elegante, precisa, cálida. Nada de entusiasmo de coach, "she", promesas de resultado ni cifras sin fuente.
+- **Voz:** primera persona, elegante, precisa, cálida. Los titulares que describen lo que hace van en gerundio, sin sujeto ("Helping owners of hotels and homestays build places guests remember."): es más elegante que "I help…". El cuerpo sí habla en primera persona. Nada de entusiasmo de coach, "she", promesas de resultado ni cifras sin fuente.
 
 ## Logotipo y monograma
 - **Logotipo:** su nombre en Instrument Serif mayúsculas, con tracking ligero. Va apilado o en una línea, con descriptor opcional en DM Mono. Archivos: `assets/brand/wordmark.svg` y `assets/brand/wordmark-stacked.svg` (trazos vectoriales que no dependen de la fuente).

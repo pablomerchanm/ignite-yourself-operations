@@ -2,7 +2,7 @@
 
 Fecha: 16 de octubre de 2026.
 
-**Decisión de Pablo:** la página es una mezcla de expediente de autoridad y landing. Debe ser profesional y elevada, mostrar su historia, sus logros y su recorrido, y dejar claro qué hace hoy y cómo puede ayudar a quien llega. El tono es elegante: nada de "so glad you're here" ni conversación gratuita. La voz es en primera persona, como su marca. La referencia de estructura fue heytheremolly.squarespace.com, adaptada a una marca con autoridad construida, no a una marca joven.
+**Decisión de Pablo:** la página es una mezcla de expediente de autoridad y landing. Debe ser profesional y elevada, mostrar su historia, sus logros y su recorrido, y dejar claro qué hace hoy y cómo puede ayudar a quien llega. El tono es elegante: nada de "so glad you're here" ni conversación gratuita. La voz es en primera persona, como su marca; los titulares que dicen qué hace van en gerundio, sin sujeto ("Helping…"), que suena más elegante que "I help…". La referencia de estructura fue heytheremolly.squarespace.com, adaptada a una marca con autoridad construida, no a una marca joven.
 
 **El estilo gráfico se rehará con pautas de marca.** Esta versión solo fija la narrativa y la estructura; las piezas nuevas son sobrias a propósito.
 
@@ -10,9 +10,9 @@ Fecha: 16 de octubre de 2026.
 
 | # | Bloque | Función | Texto clave |
 |---|---|---|---|
-| 1 | Hero | Qué hace y para quién, con la autoridad debajo | "I advise owners of homestays and hotels, growing groups and boards. *Thirty-five years with the Taj.*" · botones: Start a conversation / Explore my advisory |
+| 1 | Hero | Qué hace y para quién, con la autoridad debajo | "Helping owners of hotels and homestays build places *guests remember.*" sobre la foto a sangre; debajo, PRIYA VISHWANATHAN en grande, la descripción, la ficha y un botón |
 | 2 | Logos | Autoridad inmediata | Taj, IHCL, Tata, St. James' Court, amã, HOSPI Sigma |
-| 3 | "I help…" | La promesa, con su trayectoria en dos párrafos | "I help owners turn beautiful properties into places guests remember, *and growing groups into one standard of service.*" |
+| 3 | "I help…" | La promesa, con su trayectoria en dos párrafos | "Helping owners turn beautiful properties into places guests remember, *and growing groups into one standard of service.*" |
 | 4 | Cinta de públicos | A quién sirve | Homestays · Heritage villas · Boutique hotels · Hospitality groups · Boards & founders · Hospitality institutes |
 | 5 | Where I am called in | El visitante se reconoce en su situación | Seis situaciones: la casa familiar que nunca funcionó como negocio; huéspedes que no vuelven; servicio que solo es bueno en los días buenos; un grupo que crece más rápido que sus estándares; un proyecto en papel; un consejo que quiere a alguien que ha operado hoteles |
 | 6 | Four ways I work with you | Los servicios, claros | Owner Advisory · Service Excellence · Boards & Mentoring · Masterclasses & Juries. Cada uno indica para quién es, qué incluye y de qué capítulo de su carrera viene |

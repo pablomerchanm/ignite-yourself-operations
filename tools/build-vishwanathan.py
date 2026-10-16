@@ -2016,7 +2016,7 @@ html.scrolled .topbar{background:rgba(42,9,12,.95)!important}
 #site .hero .inr{position:relative;z-index:4;width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,48px) clamp(44px,7vh,84px)!important;
   display:flex;flex-direction:column;align-items:center;text-align:center}
 #site .hero .hname{font-family:var(--serif)!important;text-transform:none!important;letter-spacing:-.015em!important;font-size:clamp(30px,4vw,64px)!important;line-height:1.02!important;
-  color:var(--paper)!important;max-width:34ch!important;text-wrap:balance;text-shadow:0 2px 48px rgba(42,9,12,.45)}
+  color:var(--paper)!important;max-width:36ch!important;text-wrap:balance;text-shadow:0 2px 48px rgba(42,9,12,.45)}
 #site .hero .hname .it{display:inline!important;font-style:italic!important;text-transform:none!important;font-size:1em!important;letter-spacing:inherit!important;color:var(--coral)!important;margin:0!important}
 #site .hero .hsub{font-family:'Instrument Sans',system-ui,sans-serif!important;font-weight:400!important;font-size:clamp(15px,1.15vw,18px)!important;line-height:1.6!important;
   color:rgba(242,238,231,.88)!important;max-width:40em!important;margin:clamp(20px,3vh,30px) auto 0!important}
