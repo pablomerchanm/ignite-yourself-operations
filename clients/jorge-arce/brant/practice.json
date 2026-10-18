@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "title": "Working together — Patrick Brant",
+    "description": "Three ways to work with Patrick Brant: expert witness and technical counsel, R&D advisory from catalyst to product, and ventures and research."
+  },
+  "logo": "PATRICK BRANT",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/brant"
+    },
+    {
+      "t": "Work",
+      "h": "/brant/practice"
+    },
+    {
+      "t": "Career",
+      "h": "/brant/track"
+    },
+    {
+      "t": "Record",
+      "h": "/brant/voice"
+    },
+    {
+      "t": "Contact",
+      "h": "/brant#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Start a conversation",
+    "h": "/brant#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "opener": true,
+      "label": "Working together",
+      "img": {
+        "src": "/brant/assets/work.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
+      },
+      "quote": "A material is chemistry <t>until it ships.</t>",
+      "sub": "Three ways in: a patent matter, a product that has to scale, a venture or a research question."
+    },
+    {
+      "type": "situations",
+      "id": "called-in",
+      "label": "Where it begins",
+      "title": "Where the conversation <t>usually begins.</t>",
+      "items": [
+        "A patent dispute over a polyolefin, a catalyst or a film, and counsel who need an expert who has invented in that field.",
+        "A product that works in the pilot plant and not in the world-scale reactor.",
+        "A film, membrane or adhesive that fails at the customer, and nobody can say why.",
+        "A composite or nanocomposite that needs coupling chemistry to hold.",
+        "An R&D team that needs a mentor who has carried programmes from idea to commercial product.",
+        "A symposium or conference that needs someone to shape the programme."
+      ],
+      "no": "01"
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Three ways in",
+      "title": "Three ways <t>to work together.</t>",
+      "lede": "Each one a chapter of forty years, still open.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Expert witness & technical counsel · Patent counsel & legal teams",
+          "title": "Who has invented in this field?",
+          "icon": "doc",
+          "desc": "Olefin polymerisation catalysis, structure–property relationships and product design, explained to a tribunal by someone named on more than 150 US patents and thirty-seven years inside the company that commercialised the chemistry.",
+          "items": [
+            "Patent litigation: infringement and validity",
+            "Technical due diligence",
+            "Claim and prior-art analysis",
+            "Independent since 2019"
+          ],
+          "cta": {
+            "t": "Discuss a matter",
+            "h": "/brant#inquiry",
+            "path": "matter"
+          }
+        },
+        {
+          "label": "R&D advisory · R&D leaders, converters & brand owners",
+          "title": "Why does it work in the pilot plant and not in the reactor?",
+          "icon": "tally",
+          "desc": "From catalyst to product: synthesis and functionalisation, scale-up, plant and customer troubleshooting, and the structure–property and rheology work that decides whether a material performs.",
+          "items": [
+            "Scale-up and commercialisation",
+            "Plant and customer troubleshooting",
+            "Structure–property and rheology",
+            "Films, membranes, adhesives, elastomers"
+          ],
+          "cta": {
+            "t": "Discuss a product",
+            "h": "/brant#inquiry",
+            "path": "product"
+          }
+        },
+        {
+          "label": "Ventures & research · Founders, investors & universities",
+          "title": "What holds a composite together?",
+          "icon": "link",
+          "desc": "Molecular Joinery, LLC, for composite and nanocomposite design and coupling-agent chemistry; research with the University of Houston and Baylor University; ROMP chemistry for the oil field.",
+          "items": [
+            "Coupling agents for composites",
+            "High-throughput grafting to hard substrates",
+            "Grubbs-type ROMP for plugging wells",
+            "Programme and symposium design"
+          ],
+          "cta": {
+            "t": "Discuss a venture",
+            "h": "/brant#inquiry",
+            "path": "venture"
+          }
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "stmt",
+      "id": "slp",
+      "compact": true,
+      "label": "Through Molecular Joinery",
+      "quote": "Composites that <t>hold together.</t>",
+      "sub": "Founded in Seabrook, Texas: proprietary composite and nanocomposite design, coupling-agent chemistry and coatings. Current interests include high-throughput methods for grafting polymers to hard substrates and Grubbs-type ROMP chemistry for plugging abandoned wells and backing up blow-out control offshore."
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Start a <t>conversation</t>",
+      "d": "A short note on where things stand is the best place to begin.",
+      "h": "/brant#inquiry"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a matter, a product or a venture. A short note on where things stand is the best place to begin.",
+      "contact": {
+        "city": "Houston, Texas"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A patent matter or technical dispute",
+            "btn": "Send a note",
+            "note": "Please do not include privileged or confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Jurisdiction and stage"
+              },
+              {
+                "n": "The matter, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "product",
+            "t": "A product, process or material",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Where things stand",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "venture",
+            "t": "A venture, investment or research question",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "In brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ]
+      },
+      "kick": "Consultant · Expert in Polyolefins",
+      "name": "Patrick Brant",
+      "sub": "Polyolefin science, <t>from catalyst to product.</t>",
+      "fcta": {
+        "t": "Start a conversation",
+        "h": "/brant#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/patrick-brant-b7785b16/",
+          "i": "linkedin"
+        }
+      ],
+      "base": "Patrick Brant · Houston, Texas",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/brant/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information, speaker biographies and the published record for Dr. Brant’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Dr. Brant, and it is not indexed or distributed."
+      },
+      "noform": true,
+      "no": "03"
+    }
+  ]
+}
