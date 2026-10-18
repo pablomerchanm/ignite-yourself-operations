@@ -138,3 +138,11 @@ Pettingill casi sin cambios: es el perfil que mejor le queda. Materia: vidrio de
 - patents.google.com y patents.justia.com/inventor/patrick-brant
 - egr.uh.edu/news/202108 (Karim); zoominfo.com (Molecular Joinery)
 - Captura de LinkedIn aportada por Pablo (18 oct 2026)
+
+## 7. Conscience VC (18 de octubre de 2026)
+
+Pablo preguntó si es el fundador de Conscience (conscience.vc), porque el logo de Conscience aparece junto a su entrada "Consultant and Entrepreneur · Self-Employed · Contract" en LinkedIn.
+
+- **No es el fundador.** Conscience VC es un fondo de capital riesgo fundado en 2020 por **Ariana Thacker**, ingeniera química, socia única ("Investing in science empowering humanity": empresas de consumo basadas en ciencia). Él no aparece en su web ni en los directorios del fondo (VCBeast, Tracxn, StartupIntros, Venture Capital Archive).
+- **La descripción de esa entrada no menciona a Conscience** en ninguna línea (es su resumen de 37 años en poliolefinas). El logo sale porque la experiencia "Self-Employed" quedó vinculada a la página de empresa de Conscience: o un cruce de LinkedIn, o una colaboración por contrato (asesor científico, venture partner) que él no ha escrito.
+- **Decisión:** no va a la página. Queda como pregunta para él: "¿Colabora con Conscience VC? ¿En qué calidad?". Si la respuesta es sí, encaja en el tercer camino (Ventures & research) y en la cinta de públicos ("Investors").
