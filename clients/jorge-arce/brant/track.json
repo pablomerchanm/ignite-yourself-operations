@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "title": "Career — Patrick Brant",
+    "description": "From inorganic chemistry at Arizona and Purdue to thirty-seven years at ExxonMobil Chemical, and an independent practice in polyolefins since 2019."
+  },
+  "logo": "PATRICK BRANT",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/brant"
+    },
+    {
+      "t": "Work",
+      "h": "/brant/practice"
+    },
+    {
+      "t": "Career",
+      "h": "/brant/track"
+    },
+    {
+      "t": "Record",
+      "h": "/brant/voice"
+    },
+    {
+      "t": "Contact",
+      "h": "/brant#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Start a conversation",
+    "h": "/brant#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "track-open",
+      "opener": true,
+      "label": "Career",
+      "img": {
+        "src": "/brant/assets/career.jpg",
+        "alt": "Photograph to come",
+        "pos": "50% 50%"
+      },
+      "quote": "From inorganic chemistry <t>to the reactor floor.</t>",
+      "sub": "Arizona, Purdue and the Naval Research Laboratory; then thirty-seven years at ExxonMobil Chemical; then a practice of his own."
+    },
+    {
+      "type": "exp",
+      "id": "track-exxon",
+      "label": "ExxonMobil Chemical",
+      "title": "Thirty-seven years, <t>two chairs.</t>",
+      "lede": "Dates from his public profile; the work as described in his speaker biographies.",
+      "groups": [
+        {
+          "label": "Roles",
+          "wide": true,
+          "names": [
+            "Chief Polymer Science Advisor, ExxonMobil Chemical Company — June 2011 to December 2018, Houston and Baytown",
+            "Chief Scientist, Global R&D, ExxonMobil Chemical — April 2000 to June 2011: technical and organisation leadership",
+            "Research and leadership roles from 1981, Exxon Chemical Company, Baytown: input, guidance and stewardship of the polyolefins R&D portfolio; programme initiation, management and team leadership"
+          ]
+        },
+        {
+          "label": "The work",
+          "wide": true,
+          "names": [
+            "Supported metallocene catalyst design, synthesis, characterisation and operation in gas-phase reactors: the research behind the commercialisation of metallocene polyethylenes",
+            "Structure–property relationships in the solid and melt state; polyolefin blends, including impact copolymers",
+            "Synthesis and functionalisation of new polyolefins, from laboratory to scale-up and commercialisation",
+            "Separator design and fabrication for lithium-ion batteries, from consumer electronics to transportation formats: the 2008 ICIS Innovation Award",
+            "Markets and applications: packaging, automotive, adhesives, engine-oil additives; plant and customer troubleshooting"
+          ]
+        },
+        {
+          "label": "In public",
+          "wide": true,
+          "names": [
+            "More than 25 interviews with print and television media, a commercial, and ExxonMobil speaker at internal and external functions, 2006–2010",
+            "Invited speaker in academic and industrial formats; co-organiser of ISPAC 2015, Houston"
+          ]
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "timeline",
+      "id": "track-years",
+      "tint": true,
+      "label": "Timeline",
+      "title": "From George Mason, 1972, <t>to a practice of his own.</t>",
+      "from": 1972,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1972,
+          "t": "B.Sc. Chemistry, George Mason"
+        },
+        {
+          "y": 1977,
+          "t": "Ph.D. Arizona · post-doc Purdue"
+        },
+        {
+          "y": 1978,
+          "t": "NRC Fellow, Naval Research Laboratory"
+        },
+        {
+          "y": 1981,
+          "t": "Exxon Chemical, Baytown"
+        },
+        {
+          "y": 2000,
+          "t": "Chief Scientist, Global R&D"
+        },
+        {
+          "y": 2008,
+          "t": "ICIS Innovation Award"
+        },
+        {
+          "y": 2011,
+          "t": "Chief Polymer Science Advisor"
+        },
+        {
+          "y": 2019,
+          "t": "Independent practice · Molecular Joinery"
+        },
+        {
+          "y": 2025,
+          "t": "Symposium Chair, TechConnect World"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1981,
+          "b": 2018,
+          "t": "ExxonMobil Chemical"
+        }
+      ],
+      "rlabel": "The ExxonMobil years",
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "cv-today",
+      "label": "Appointments",
+      "title": "Current <t>roles.</t>",
+      "groups": [
+        {
+          "label": "Practice",
+          "wide": true,
+          "names": [
+            "Consultant and Entrepreneur, self-employed — Houston, since January 2019",
+            "Expert witness in patent matters, occasional, since 2019",
+            "Founder, Molecular Joinery, LLC — Seabrook, Texas: composite and nanocomposite design, coupling-agent chemistry, coatings"
+          ]
+        },
+        {
+          "label": "Research & programmes",
+          "wide": true,
+          "names": [
+            "Research collaborator, University of Houston — semi-crystalline polyolefins, with the Karim group",
+            "Research collaborator, Baylor University — Grubbs-catalysed ROMP for oil-field applications, with David Jack",
+            "Symposium Chair, Polymers: sustainability, processes, applications & characterization — TechConnect World, Austin, 2025",
+            "Speaker, Orphan & Idle Wells 2026 — plugging abandoned wells with ROMP chemistry"
+          ]
+        },
+        {
+          "label": "Societies",
+          "wide": true,
+          "names": [
+            "American Chemical Society",
+            "American Physical Society",
+            "Society of Plastics Engineers"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "exp",
+      "id": "cv-education",
+      "tint": true,
+      "label": "Education",
+      "title": "Inorganic chemistry, <t>Arizona and Purdue.</t>",
+      "groups": [
+        {
+          "label": "Degrees and fellowships",
+          "wide": true,
+          "names": [
+            "Ph.D., Inorganic Chemistry — University of Arizona, 1972–1977",
+            "Post-doctoral research, inorganic and organometallic chemistry — Purdue University, 1977",
+            "National Research Council Fellowship — Naval Research Laboratory, Washington, D.C., 1978",
+            "B.Sc., Chemistry — George Mason University, 1972"
+          ]
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "The record",
+      "d": "Selected publications and patent families.",
+      "h": "/brant/voice",
+      "alt": {
+        "t": "Start a conversation",
+        "h": "/brant#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a matter, a product or a venture. A short note on where things stand is the best place to begin.",
+      "contact": {
+        "city": "Houston, Texas"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A patent matter or technical dispute",
+            "btn": "Send a note",
+            "note": "Please do not include privileged or confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Jurisdiction and stage"
+              },
+              {
+                "n": "The matter, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "product",
+            "t": "A product, process or material",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Where things stand",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "venture",
+            "t": "A venture, investment or research question",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "In brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Something else",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ]
+      },
+      "kick": "Consultant · Expert in Polyolefins",
+      "name": "Patrick Brant",
+      "sub": "Polyolefin science, <t>from catalyst to product.</t>",
+      "fcta": {
+        "t": "Start a conversation",
+        "h": "/brant#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/patrick-brant-b7785b16/",
+          "i": "linkedin"
+        }
+      ],
+      "base": "Patrick Brant · Houston, Texas",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/brant/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information, speaker biographies and the published record for Dr. Brant’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Dr. Brant, and it is not indexed or distributed."
+      },
+      "noform": true,
+      "no": "05"
+    }
+  ]
+}
