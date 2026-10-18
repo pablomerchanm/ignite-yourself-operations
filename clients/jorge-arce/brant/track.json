@@ -36,11 +36,6 @@
       "id": "track-open",
       "opener": true,
       "label": "Career",
-      "img": {
-        "src": "/brant/assets/career.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
-      },
       "quote": "From inorganic chemistry <t>to the reactor floor.</t>",
       "sub": "Arizona, Purdue and the Naval Research Laboratory; then thirty-seven years at ExxonMobil Chemical; then a practice of his own."
     },

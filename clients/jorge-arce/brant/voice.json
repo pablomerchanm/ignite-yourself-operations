@@ -36,11 +36,6 @@
       "id": "voice-open",
       "opener": true,
       "label": "The record",
-      "img": {
-        "src": "/brant/assets/record.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
-      },
       "quote": "Written down, <t>and granted.</t>",
       "sub": "Selected publications, patent families and talks. More than 75 publications and 150 US patents in all."
     },

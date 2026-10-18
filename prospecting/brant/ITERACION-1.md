@@ -13,3 +13,15 @@ Tercer preview de la serie: narrativa de Vishwanathan, piel de Pettingill con ac
 Las capturas de Experience y Education de Pablo resolvieron el PhD (**University of Arizona**, Química Inorgánica, 1972–1977; Purdue es el posdoctorado de 1977) y las fechas exactas de los cargos (Chief Scientist abr 2000–jun 2011; Chief Polymer Science Advisor jun 2011–dic 2018; consultor y emprendedor desde ene 2019). Su propio LinkedIn dice "over 120 granted US patents" y "over 60 publications" (texto antiguo); la página usa las cifras de sus bios de 2025–2026 (150+, 75+).
 
 Pendiente con él: la cifra de patentes que quiere publicar; qué puede decir de ExxonMobil; a quién quiere llegar; su párrafo personal; un retrato real.
+
+## Iteración 2: sin fotografía, como un expediente académico (18 de octubre de 2026)
+
+Pablo: "con todas esas fotos se ve más como la página de un laboratorio que de un científico; no se siente serio ni académico, sino como un juego". Se retira toda la fotografía generada.
+
+- **Hero:** campo de tinta con una regla fina y un leve ámbar en la esquina, el nombre a la izquierda en Editors Note Light, la frase debajo; sin imagen.
+- **The work** y **el capítulo de los metalocenos** pasan a una sola columna de lectura (62–68 caracteres), sin figura.
+- **Portadas de Career, Record y Work:** tinta, la frase y una regla; sin imagen.
+- **Lenguaje:** "Where it begins" → "Engagements · Where an engagement usually begins"; "Three ways in" → "Practice · Three areas of practice"; la portada de Work se llama "The practice". Sustantivos, no lenguaje de landing.
+- `og.jpg` rehecha en tinta, sin fotografía.
+
+Pendiente con él: un retrato real; la cifra de patentes; qué puede decir de ExxonMobil; Conscience VC.
