@@ -2280,6 +2280,35 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .itb .it{font-style:italic;color:var(--smoke)}
 #site .ofgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:860px){#site .ofgrid{grid-template-columns:1fr}}
+
+/* ---------- expediente sin fotografia: campo de tinta, una regla, la tipografia manda ---------- */
+#site .hero{background:var(--ink)!important;min-height:92svh!important}
+#site .hero::before{content:''!important;position:absolute;inset:0;background:
+  radial-gradient(110% 80% at 85% 10%,rgba(184,121,47,.10),rgba(184,121,47,0) 60%),
+  linear-gradient(180deg,rgba(255,255,255,.035) 0%,rgba(255,255,255,0) 32%)!important;opacity:1!important;z-index:0;
+  -webkit-mask:none!important;mask:none!important;width:auto!important;aspect-ratio:auto!important}
+#site .hero::after{content:''!important;position:absolute;left:clamp(28px,5vw,80px);right:clamp(28px,5vw,80px);top:clamp(96px,13vh,150px);height:1px;
+  background:rgba(237,231,220,.14)!important;border:0!important;inset:auto;z-index:1}
+@media(min-width:861px){
+  #site .hero .inr{align-items:flex-start!important;padding-left:clamp(28px,5vw,80px)!important;padding-right:clamp(28px,5vw,80px)!important}
+  #site .hero .inr>*{text-align:left!important}
+  #site .hero .hname{margin:0!important;padding-left:0}
+  #site .hero .hkick{text-align:left}
+  #site .hero .hsub{margin-left:0!important}
+}
+#site .hero .hname{font-size:clamp(56px,9.6vw,150px)!important}
+#site .hero .hname .it{font-size:clamp(56px,11vw,176px)!important}
+/* sin figura, el texto ocupa el ancho de lectura */
+#site .itlay:not(:has(.itfig)){grid-template-columns:minmax(0,1fr)}
+#site .itlay:not(:has(.itfig)) .ittx{max-width:62ch}
+#site .arlay:not(:has(.arfig)){grid-template-columns:minmax(0,1fr)}
+#site .arlay:not(:has(.arfig)) .artx{max-width:68ch}
+#site .arlay:not(:has(.arfig)) .arst{max-width:40em}
+/* portadas de pagina sin imagen: tinta, la frase y una regla */
+#site .stmt.opener:not(.withimg){background:var(--ink);color:var(--bone);padding:calc(var(--barh) + clamp(72px,10vh,120px)) 0 clamp(72px,10vh,120px)}
+#site .stmt.opener:not(.withimg) .slab{color:rgba(237,231,220,.55)!important}
+#site .stmt.opener:not(.withimg) .sq{color:var(--bone)}
+#site .stmt.opener:not(.withimg) .ssub,#site .stmt.opener:not(.withimg) p{color:rgba(237,231,220,.8)}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion

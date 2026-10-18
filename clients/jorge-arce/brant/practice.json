@@ -35,20 +35,15 @@
       "type": "stmt",
       "id": "practice-open",
       "opener": true,
-      "label": "Working together",
-      "img": {
-        "src": "/brant/assets/work.jpg",
-        "alt": "Photograph to come",
-        "pos": "50% 50%"
-      },
+      "label": "The practice",
       "quote": "A material is chemistry <t>until it ships.</t>",
-      "sub": "Three ways in: a patent matter, a product that has to scale, a venture or a research question."
+      "sub": "Expert testimony, R&D advisory, and the ventures and research that followed thirty-seven years at ExxonMobil Chemical."
     },
     {
       "type": "situations",
       "id": "called-in",
-      "label": "Where it begins",
-      "title": "Where the conversation <t>usually begins.</t>",
+      "label": "Engagements",
+      "title": "Where an engagement <t>usually begins.</t>",
       "items": [
         "A patent dispute over a polyolefin, a catalyst or a film, and counsel who need an expert who has invented in that field.",
         "A product that works in the pilot plant and not in the world-scale reactor.",
@@ -63,9 +58,9 @@
       "type": "paths",
       "id": "routes",
       "nums": true,
-      "label": "Three ways in",
-      "title": "Three ways <t>to work together.</t>",
-      "lede": "Each one a chapter of forty years, still open.",
+      "label": "Areas of practice",
+      "title": "Three areas <t>of practice.</t>",
+      "lede": "Each grounded in a chapter of forty years.",
       "cards": [
         {
           "lead": true,

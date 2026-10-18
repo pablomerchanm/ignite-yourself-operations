@@ -33,11 +33,6 @@
   "sections": [
     {
       "type": "hero",
-      "img": {
-        "src": "/brant/assets/hero.jpg",
-        "mobile": "/brant/assets/hero-mobile.jpg",
-        "alt": ""
-      },
       "kick": "Polyolefins · Catalysis · Materials Design",
       "name": "Patrick <t>Brant</t>",
       "sub": "Turning polyolefin science <t>into products that ship.</t>",
@@ -89,11 +84,7 @@
         "Since 2019, an independent practice in polyolefins: consulting, expert testimony in patent matters, research with the University of Houston and Baylor University, and a company of his own, Molecular Joinery, for composite design and coupling chemistry.",
         "<t>[A personal note in Dr. Brant’s own words to follow: how the chemistry began, and why polyolefins.]</t>"
       ],
-      "sign": "Houston · Baytown · Seabrook",
-      "img": {
-        "src": "/brant/assets/practice.jpg",
-        "alt": "Photograph to come"
-      },
+      "sign": "Houston, Texas",
       "more": {
         "t": "The career",
         "h": "/brant/track"
@@ -142,8 +133,8 @@
     {
       "type": "situations",
       "id": "called-in",
-      "label": "Where it begins",
-      "title": "Where the conversation <t>usually begins.</t>",
+      "label": "Engagements",
+      "title": "Where an engagement <t>usually begins.</t>",
       "items": [
         "A patent dispute over a polyolefin, a catalyst or a film, and counsel who need an expert who has invented in that field.",
         "A product that works in the pilot plant and not in the world-scale reactor.",
@@ -156,9 +147,9 @@
     {
       "type": "offers",
       "id": "offers",
-      "label": "Three ways in",
-      "title": "Three ways <t>to work together.</t>",
-      "lede": "Each one a chapter of forty years, still open.",
+      "label": "Practice",
+      "title": "Three areas <t>of practice.</t>",
+      "lede": "Each grounded in a chapter of forty years.",
       "items": [
         {
           "t": "Expert witness & technical counsel",
@@ -223,10 +214,6 @@
         }
       ],
       "src": "Dates from ExxonMobil filings and ICIS; patent count from his speaker biographies.",
-      "img": {
-        "src": "/brant/assets/chapter.jpg",
-        "alt": "Photograph to come"
-      },
       "more": {
         "t": "The career",
         "h": "/brant/track"
