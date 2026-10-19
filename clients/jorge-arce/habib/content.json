@@ -1,0 +1,782 @@
+{
+  "meta": {
+    "title": "Nagy Habib — Hepatobiliary Surgeon, Translational Researcher, Founder",
+    "description": "Professor Nagy Habib: hepatobiliary surgeon at Imperial College London since 2003; radiofrequency liver resection and the Habib devices; first clinical trials in gene therapy, stem cells and saRNA for liver disease; founder of EMcision and co-founder of MiNA Therapeutics."
+  },
+  "logo": "NAGY HABIB",
+  "nav": [],
+  "navcta": {
+    "t": "Begin a conversation",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "kick": "Hepatobiliary Surgery · Translational Research · Life-Science Ventures",
+      "name": "Nagy <t>Habib</t>",
+      "sub": "Bringing new treatments for the liver <t>from the laboratory to the operating theatre.</t>",
+      "coords": [
+        "51.5171° N",
+        "London | Hammersmith | Worldwide",
+        "0.2359° W"
+      ]
+    },
+    {
+      "type": "marks",
+      "id": "marks",
+      "label": "Track record",
+      "items": [
+        {
+          "text": "Imperial College <t>London</t>",
+          "k": "Professor of Hepatobiliary Surgery, since 2003"
+        },
+        {
+          "text": "Hammersmith <t>Hospital</t>",
+          "k": "Hepatopancreatobiliary unit"
+        },
+        {
+          "text": "Académie Nationale <t>de Chirurgie</t>",
+          "k": "Elected member, 2015"
+        },
+        {
+          "text": "EMcision",
+          "k": "Founder · acquired by Boston Scientific, 2018"
+        },
+        {
+          "text": "MiNA <t>Therapeutics</t>",
+          "k": "Co-founder · RNA activation"
+        },
+        {
+          "text": "Royal College of Surgeons <t>of Edinburgh</t>",
+          "k": "Fellow, 1981"
+        }
+      ],
+      "src": "Marks shown for reference only; each belongs to its respective owner."
+    },
+    {
+      "type": "intro",
+      "id": "intro",
+      "label": "The work",
+      "statement": "Four decades between the operating theatre <t>and the laboratory.</t>",
+      "body": [
+        "A surgeon of the liver, the pancreas and the bile ducts, trained with Henri Bismuth and Thomas Starzl, and Professor of Hepatobiliary Surgery at Imperial College London since 2003. In 1993, the first living-related liver transplant in Africa and the Middle East.",
+        "Alongside the operating list, a run of first clinical trials for liver disease: adenovirus and plasmid gene therapy, autologous bone-marrow stem cells, and small activating RNA. And the instruments that came out of the theatre: radiofrequency devices for a near-bloodless liver resection, taken to market by AngioDynamics and Boston Scientific.",
+        "<t>[A personal note in Professor Habib’s own words to follow: why the liver, and what keeps the work moving between the theatre, the laboratory and the companies.]</t>"
+      ],
+      "sign": "London",
+      "more": {
+        "t": "The career",
+        "h": "/habib/track"
+      }
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "In numbers",
+      "items": [
+        {
+          "n": "430",
+          "k": "Journal articles in his ORCID record"
+        },
+        {
+          "n": "70,000",
+          "k": "Habib 4X devices sold worldwide, by 2018"
+        },
+        {
+          "n": "7",
+          "k": "Life-science companies founded or co-founded"
+        },
+        {
+          "n": "4",
+          "k": "Honorary professorships: Egypt, China, Romania, Greece"
+        }
+      ],
+      "more": {
+        "t": "The record",
+        "h": "/habib/voice"
+      }
+    },
+    {
+      "type": "marquee",
+      "id": "audiences",
+      "items": [
+        "Co-founders & investors",
+        "Pharmaceutical partners",
+        "Referring clinicians",
+        "Universities & spin-outs",
+        "Congress programmes",
+        "Award committees",
+        "Science journalists"
+      ]
+    },
+    {
+      "type": "situations",
+      "id": "called-in",
+      "label": "Engagements",
+      "title": "Where a conversation <t>usually begins.</t>",
+      "items": [
+        "A liver, pancreatic or bile-duct case, and a referring clinician who wants the view of a surgeon who has operated on these organs for four decades.",
+        "A surgical device that works in the prototype, and a team that needs someone who has taken two from the theatre to the global market.",
+        "An RNA or gene-therapy programme for the liver that needs translational and clinical experience in the room.",
+        "A university spin-out facing licensing, regulation and its first partner, and a founder who has been through each.",
+        "A congress or symposium on hepatobiliary surgery, regenerative medicine or oligonucleotide therapeutics.",
+        "A journalist or a committee that needs the record in order, with dates and sources."
+      ]
+    },
+    {
+      "type": "offers",
+      "id": "offers",
+      "label": "Practice",
+      "title": "Three lines <t>of work.</t>",
+      "lede": "One body of work, seen from three sides.",
+      "items": [
+        {
+          "t": "Surgery",
+          "for": "Patients & referring clinicians",
+          "d": "Liver, pancreas and bile ducts at Hammersmith Hospital, with the radiofrequency technique for near-bloodless liver resection that carries his name.",
+          "list": [
+            "Liver and pancreatic resection",
+            "Bile-duct surgery",
+            "Radiofrequency-assisted resection"
+          ],
+          "from": "Professor of Hepatobiliary Surgery, Imperial College London",
+          "h": "/habib/practice#routes"
+        },
+        {
+          "t": "Devices & ventures",
+          "for": "Founders, investors & industry",
+          "d": "From an idea in the theatre to an instrument on the market: EMcision and the Habib devices, and the companies that followed in RNA, aptamers and gene therapy.",
+          "list": [
+            "Habib 4X · AngioDynamics",
+            "Habib EndoHPB · Boston Scientific",
+            "MiNA, Apterna, Dawn Therapeutics"
+          ],
+          "from": "Former Pro-Rector for Commercial Affairs, Imperial",
+          "h": "/habib/practice#routes"
+        },
+        {
+          "t": "Research & therapeutics",
+          "for": "Universities, pharma & congresses",
+          "d": "Translational research in liver cancer and liver failure: gene therapy, stem cells, and small activating RNA, from the first trials in patients to the companies that develop them.",
+          "list": [
+            "saRNA and RNA activation",
+            "Cell and gene therapy",
+            "Clinical trial design"
+          ],
+          "from": "Centre for Advanced Therapeutics, Imperial",
+          "h": "/habib/practice#routes"
+        }
+      ],
+      "more": {
+        "t": "The work in full",
+        "h": "/habib/practice"
+      }
+    },
+    {
+      "type": "arch",
+      "id": "chapter",
+      "label": "The defining chapter",
+      "title": "A cut that <t>barely bleeds.</t>",
+      "body": "The liver bleeds when it is cut, and blood loss shapes what follows: transfusions, intensive care, recurrence. The answer from Hammersmith was to seal the tissue with radiofrequency energy before dividing it. The technique was published in 2002; the Habib 4X followed, built with Imperial’s Department of Engineering through EMcision, a spin-out from the college. An endoscopic version, the Habib EndoHPB, took the same energy inside the bile duct to treat tumours that block it.",
+      "stats": [
+        {
+          "n": "2002",
+          "k": "The technique, published in Annals of Surgery"
+        },
+        {
+          "n": "2005",
+          "k": "Habib 4X launched, with FDA clearance and CE mark"
+        },
+        {
+          "n": "2018",
+          "k": "Boston Scientific acquires EMcision and the EndoHPB"
+        }
+      ],
+      "src": "Annals of Surgery 236:560–563; Imperial College London, Surgery & Cancer blog, March 2018; Boston Scientific, 5 March 2018.",
+      "more": {
+        "t": "The work in full",
+        "h": "/habib/practice"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "Distinctions",
+      "items": [
+        {
+          "k": "Académie Nationale de Chirurgie, 2015.",
+          "t": "Elected member of the French national academy of surgery.",
+          "d": "Also honorary professorships in Egypt, China, Romania and Greece."
+        },
+        {
+          "k": "Takreem Laureate, 2012.",
+          "t": "For his work on liver cancer and on radiofrequency liver resection.",
+          "d": "Also a Gold award from the Advisory Committee on Clinical Excellence Awards."
+        },
+        {
+          "k": "A first transplant, 1993.",
+          "t": "The first living-related liver transplant in Africa and the Middle East, reported in International Surgery the same year.",
+          "d": "In 2016, invited by the Vatican to advise on regenerative medicine."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "id": "quote",
+      "lead": "From an interview with the Oligonucleotide Therapeutics Society.",
+      "q": "“I practice yoga every day before I start work, as I find it opens both the body and the mind.”",
+      "who": "Nagy Habib"
+    },
+    {
+      "type": "pubs",
+      "id": "conversations",
+      "label": "On the record",
+      "title": "Firsts, <t>written down.</t>",
+      "lede": "Six papers from three decades, each the record of a first step.",
+      "items": [
+        {
+          "y": "2020",
+          "t": "MTL-CEBPA, a small activating RNA therapeutic upregulating C/EBP-α, in patients with advanced liver cancer: a first-in-human, multicenter, open-label, phase I trial",
+          "a": "Clinical Cancer Research 26:3936–3946 · senior author",
+          "v": "The first small activating RNA drug given to patients.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/32357963/"
+        },
+        {
+          "y": "2018",
+          "t": "Gene activation of CEBPA using saRNA: preclinical studies of the first in human saRNA drug candidate for liver cancer",
+          "a": "Oncogene 37:3216–3228 · senior author",
+          "v": "The laboratory work behind that first trial.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/29511346/"
+        },
+        {
+          "y": "2006",
+          "t": "Characterization and clinical application of human CD34+ stem/progenitor cell populations mobilized into the blood by G-CSF",
+          "a": "Stem Cells 24:1822–1830 · senior author",
+          "v": "Patients’ own bone-marrow stem cells, returned to the liver.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/16556705/"
+        },
+        {
+          "y": "2002",
+          "t": "New technique for liver resection using heat coagulative necrosis",
+          "a": "Annals of Surgery 236:560–563 · senior author",
+          "v": "The radiofrequency resection behind the Habib devices.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/12409660/"
+        },
+        {
+          "y": "2001",
+          "t": "E1B-deleted adenovirus (dl1520) gene therapy for patients with primary and secondary liver tumors",
+          "a": "Human Gene Therapy 12:219–226 · first author",
+          "v": "A virus engineered to attack tumour cells, given to patients with liver cancer.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/11177559/"
+        },
+        {
+          "y": "1993",
+          "t": "Living-related liver transplantation in Africa",
+          "a": "International Surgery 78:121–123 · first author",
+          "v": "The report of the first such transplant on the continent.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/8354607/"
+        }
+      ],
+      "more": {
+        "t": "The record",
+        "h": "/habib/voice"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "track-open",
+      "opener": true,
+      "label": "Career",
+      "quote": "From Cairo <t>to Hammersmith.</t>",
+      "sub": "Ain Shams, Edinburgh and Bristol; training with Henri Bismuth and Thomas Starzl; then four decades of surgery, research and invention, at Imperial College London since 2003."
+    },
+    {
+      "type": "exp",
+      "id": "track-imperial",
+      "label": "Imperial College London",
+      "title": "Surgeon, professor, <t>Pro-Rector.</t>",
+      "lede": "Roles as listed by Imperial College London and in his own signature.",
+      "groups": [
+        {
+          "label": "Roles",
+          "wide": true,
+          "names": [
+            "Professor of Hepatobiliary Surgery, Department of Surgery & Cancer, Faculty of Medicine — since 1 June 2003",
+            "Academic Head of HPB Surgery, Imperial College London",
+            "Pro-Rector for Commercial Affairs and member of the College Management Board — from June 2007",
+            "Centre for Advanced Therapeutics, Imperial College London"
+          ]
+        },
+        {
+          "label": "In the theatre",
+          "wide": true,
+          "names": [
+            "Liver, pancreas and biliary surgery at Hammersmith Hospital",
+            "Radiofrequency-assisted, near-bloodless liver resection",
+            "First living-related liver transplant in Africa and the Middle East, 1993"
+          ]
+        },
+        {
+          "label": "In the laboratory",
+          "wide": true,
+          "names": [
+            "First clinical trial of adenovirus and plasmid gene therapy for liver cancer; plasmid gene therapy by hydrodynamic delivery",
+            "First in the West to publish a clinical trial of autologous adult bone-marrow stem cells for liver insufficiency",
+            "Small activating RNA: from the preclinical work to the first-in-human trial of MTL-CEBPA, 2020"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "timeline",
+      "id": "track-years",
+      "tint": true,
+      "label": "Timeline",
+      "title": "From Ain Shams, 1977, <t>to the present.</t>",
+      "from": 1977,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1977,
+          "t": "MBBCh, Ain Shams, Cairo"
+        },
+        {
+          "y": 1981,
+          "t": "FRCS, Edinburgh"
+        },
+        {
+          "y": 1993,
+          "t": "First living-related liver transplant in Africa"
+        },
+        {
+          "y": 2001,
+          "t": "Adenovirus trial · EMcision"
+        },
+        {
+          "y": 2003,
+          "t": "Professor, Imperial"
+        },
+        {
+          "y": 2007,
+          "t": "Pro-Rector, Imperial"
+        },
+        {
+          "y": 2013,
+          "t": "MiNA Therapeutics"
+        },
+        {
+          "y": 2018,
+          "t": "EMcision to Boston Scientific"
+        },
+        {
+          "y": 2020,
+          "t": "First saRNA trial in patients"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 2003,
+          "b": 2026,
+          "t": "Imperial College London"
+        }
+      ],
+      "rlabel": "The Imperial years"
+    },
+    {
+      "type": "exp",
+      "id": "cv-today",
+      "label": "Appointments",
+      "title": "Current <t>roles.</t>",
+      "groups": [
+        {
+          "label": "Academic & clinical",
+          "wide": true,
+          "names": [
+            "Academic Head of HPB Surgery, Imperial College London",
+            "Hepatopancreatobiliary surgery, Hammersmith Hospital"
+          ]
+        },
+        {
+          "label": "Committees & boards",
+          "wide": true,
+          "names": [
+            "Member, Académie Nationale de Chirurgie, France",
+            "Member, Research & Funding Sub-Committee, Royal College of Surgeons of Edinburgh — 2026 to 2028",
+            "Member, Advisory Committee on Clinical Impact Awards (ACCIA)",
+            "Charity Board Trustee, MPS Society (mucopolysaccharidosis diseases), UK — since 2026",
+            "Scientific Advisory Board, MiNA Therapeutics"
+          ]
+        },
+        {
+          "label": "Honorary",
+          "wide": true,
+          "names": [
+            "Honorary professorships in Egypt, China, Romania and Greece"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "cv-education",
+      "tint": true,
+      "label": "Education",
+      "title": "Cairo, Edinburgh <t>and Bristol.</t>",
+      "groups": [
+        {
+          "label": "Degrees and fellowships",
+          "wide": true,
+          "names": [
+            "ChM, University of Bristol",
+            "FRCS, Royal College of Surgeons of Edinburgh — 1981",
+            "MBBCh, Ain Shams University, Cairo — 1972 to 1977"
+          ]
+        },
+        {
+          "label": "Training",
+          "wide": true,
+          "names": [
+            "With Professor Henri Bismuth and Professor Thomas Starzl",
+            "Arabic, French and English, at full professional level"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "voice-open",
+      "opener": true,
+      "label": "The record",
+      "quote": "Firsts, <t>written down.</t>",
+      "sub": "Selected papers, a book and invited lectures. 430 journal articles, 27 book chapters and 9 books in his ORCID record."
+    },
+    {
+      "type": "pubs",
+      "id": "voice-talks",
+      "label": "Selected",
+      "title": "Papers, a book <t>and lectures.</t>",
+      "lede": "Each linked to its record in PubMed or to its source. The full list is in his ORCID record, 0000-0003-4920-4154.",
+      "items": [
+        {
+          "y": "2024",
+          "t": "Invited speaker",
+          "a": "American Association of Cell & Gene Therapy, annual meeting",
+          "v": "As listed by Imperial College London.",
+          "h": "https://profiles.imperial.ac.uk/nagy.habib"
+        },
+        {
+          "y": "2021",
+          "t": "RNA activation: a novel approach to therapeutically upregulate gene transcription",
+          "a": "Molecules 26 · senior author",
+          "v": "A review of the field he helped bring to the clinic.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/34770939/"
+        },
+        {
+          "y": "2020",
+          "t": "MTL-CEBPA, a small activating RNA therapeutic upregulating C/EBP-α, in patients with advanced liver cancer: a first-in-human, multicenter, open-label, phase I trial",
+          "a": "Clinical Cancer Research 26:3936–3946 · senior author",
+          "v": "The first small activating RNA drug given to patients.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/32357963/"
+        },
+        {
+          "y": "2018",
+          "t": "Gene activation of CEBPA using saRNA: preclinical studies of the first in human saRNA drug candidate for liver cancer",
+          "a": "Oncogene 37:3216–3228 · senior author",
+          "v": "The laboratory work behind the first trial.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/29511346/"
+        },
+        {
+          "y": "2014",
+          "t": "Novel RNA oligonucleotide improves liver function and inhibits liver carcinogenesis in vivo",
+          "a": "Hepatology 59:216–227",
+          "v": "The first evidence in vivo for the CEBPA approach.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/23929703/"
+        },
+        {
+          "y": "2012",
+          "t": "Use of bipolar radiofrequency in parenchymal transection of the liver, pancreas and kidney",
+          "a": "Digestive Surgery 29:43–47",
+          "v": "The same energy, applied beyond the liver.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/22441619/"
+        },
+        {
+          "y": "2011",
+          "t": "Invited speaker",
+          "a": "Henri Bismuth Symposium, Jerusalem",
+          "v": "A symposium in honour of one of his teachers.",
+          "h": "https://profiles.imperial.ac.uk/nagy.habib"
+        },
+        {
+          "y": "2008",
+          "t": "Autologous infusion of expanded mobilized adult bone marrow-derived CD34+ cells into patients with alcoholic liver cirrhosis",
+          "a": "American Journal of Gastroenterology 103:1952–1958 · senior author",
+          "v": "Stem cells for liver failure, in patients.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/18637092/"
+        },
+        {
+          "y": "2008",
+          "t": "Minimally invasive and selective hydrodynamic gene therapy of liver segments in the pig and human",
+          "a": "Cancer Gene Therapy 15:225–230",
+          "v": "Delivering genes to a single segment of the liver.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/18259214/"
+        },
+        {
+          "y": "2006",
+          "t": "Characterization and clinical application of human CD34+ stem/progenitor cell populations mobilized into the blood by G-CSF",
+          "a": "Stem Cells 24:1822–1830 · senior author",
+          "v": "Patients’ own bone-marrow stem cells, returned to the liver.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/16556705/"
+        },
+        {
+          "y": "2002",
+          "t": "New technique for liver resection using heat coagulative necrosis",
+          "a": "Annals of Surgery 236:560–563 · senior author",
+          "v": "The radiofrequency resection behind the Habib devices.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/12409660/"
+        },
+        {
+          "y": "2002",
+          "t": "Clinical trial of E1B-deleted adenovirus (dl1520) gene therapy for hepatocellular carcinoma",
+          "a": "Cancer Gene Therapy 9:254–259 · first author",
+          "v": "The trial in primary liver cancer.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/11896441/"
+        },
+        {
+          "y": "2001",
+          "t": "E1B-deleted adenovirus (dl1520) gene therapy for patients with primary and secondary liver tumors",
+          "a": "Human Gene Therapy 12:219–226 · first author",
+          "v": "The first trial of its kind in liver cancer.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/11177559/"
+        },
+        {
+          "y": "2000",
+          "t": "Hepatocellular Carcinoma: Methods and Protocols",
+          "a": "Humana Press, Methods in Molecular Medicine · editor",
+          "v": "Laboratory methods for liver-cancer research, in one volume.",
+          "h": "https://en.wikipedia.org/wiki/Nagy_Habib"
+        },
+        {
+          "y": "1993",
+          "t": "Living-related liver transplantation in Africa",
+          "a": "International Surgery 78:121–123 · first author",
+          "v": "The report of the first such transplant on the continent.",
+          "h": "https://pubmed.ncbi.nlm.nih.gov/8354607/"
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "opener": true,
+      "label": "The work",
+      "quote": "Three sides of <t>one body of work.</t>",
+      "sub": "The surgery, the instruments and companies that came out of it, and the research that keeps feeding both."
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Lines of work",
+      "title": "Three lines <t>of work.</t>",
+      "lede": "Each grounded in four decades at the same table.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Surgery · Patients & referring clinicians",
+          "title": "What can be done for this liver?",
+          "icon": "doc",
+          "desc": "Liver, pancreatic and bile-duct surgery at Hammersmith Hospital, by the surgeon whose radiofrequency technique made liver resection near-bloodless, and who performed the first living-related liver transplant in Africa and the Middle East.",
+          "items": [
+            "Liver and pancreatic resection",
+            "Bile-duct surgery",
+            "Radiofrequency-assisted resection",
+            "Arabic, French and English"
+          ],
+          "cta": {
+            "t": "A clinical referral",
+            "h": "#inquiry",
+            "path": "referral"
+          }
+        },
+        {
+          "label": "Devices & ventures · Founders, investors & industry",
+          "title": "How does an idea leave the theatre?",
+          "icon": "tally",
+          "desc": "EMcision, a spin-out from Imperial, took two radiofrequency devices to market: the Habib 4X, with some 70,000 units sold, and the Habib EndoHPB, acquired with the company by Boston Scientific in 2018. Then companies in RNA activation, aptamers and gene therapy.",
+          "items": [
+            "EMcision · Boston Scientific, 2018",
+            "MiNA Therapeutics · RNA activation",
+            "Apterna · aptamers",
+            "Dawn Therapeutics · gene therapy"
+          ],
+          "cta": {
+            "t": "A device or venture",
+            "h": "#inquiry",
+            "path": "venture"
+          }
+        },
+        {
+          "label": "Research & therapeutics · Universities, pharma & congresses",
+          "title": "What comes after the first trial?",
+          "icon": "link",
+          "desc": "Translational research in liver cancer and liver failure: adenovirus and plasmid gene therapy, autologous stem cells, and small activating RNA, from the first trials in patients to the companies that carry them forward.",
+          "items": [
+            "Small activating RNA",
+            "Cell and gene therapy",
+            "Clinical trial design",
+            "Lectures and symposia"
+          ],
+          "cta": {
+            "t": "Research or a lecture",
+            "h": "#inquiry",
+            "path": "research"
+          }
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "slp",
+      "compact": true,
+      "label": "Through MiNA Therapeutics",
+      "quote": "Switching a gene <t>back on.</t>",
+      "sub": "Co-founded with Robert Habib, its founding Chief Executive since 2013. Small activating RNA raises the activity of a gene instead of silencing it; MTL-CEBPA, designed to restore C/EBP-α in the liver, was the first drug of its kind given to patients, in a phase I trial published in 2020. Professor Habib serves on the company’s Scientific Advisory Board."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Enquiries",
+      "title": "Begin <t>a conversation.</t>",
+      "lede": "For a referral, a venture, a research question or a lecture. A short note on where things stand is the best place to begin.",
+      "contact": {
+        "city": "London"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "referral",
+            "t": "A clinical referral",
+            "btn": "Send a note",
+            "note": "Please do not include patient-identifiable information. In an emergency, contact your local hospital.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Referring clinician or hospital"
+              },
+              {
+                "n": "The case, in brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "venture",
+            "t": "A device, venture or investment",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Company",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Where things stand",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "research",
+            "t": "Research, a lecture or a committee",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organisation",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "In brief",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "other",
+            "t": "Press or something else",
+            "btn": "Send a note",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Message",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ]
+      },
+      "kick": "Surgeon · Researcher · Founder",
+      "name": "Nagy Habib",
+      "sub": "Surgery of the liver, <t>and what comes after it.</t>",
+      "fcta": {
+        "t": "Begin a conversation",
+        "h": "#inquiry"
+      },
+      "social": [
+        {
+          "t": "Imperial College London profile",
+          "h": "https://profiles.imperial.ac.uk/nagy.habib",
+          "i": "globe"
+        }
+      ],
+      "base": "Professor Nagy Habib · London",
+      "fine": "Private preview · Not indexed",
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/habib/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information, Imperial College London and the published record for Professor Habib’s review. Copy is provisional and will be refined with his input. This is not an official website: it has not been reviewed or approved by Professor Habib, and it is not indexed or distributed."
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Habib — iteración 1
+
+Preview privado en **igniteyourself.co/habib** (noindex). Construido el 19 oct 2026 sobre la base de Brant.
+
+## Decisiones
+
+- **Base:** dossier académico de Brant, piel Pettingill (tinta, hueso, Editors Note). Sin fotografía: solo entraría un retrato real con permiso.
+- **Acento:** verde de quirófano, `#2F776D` sobre claro y `#5FAE9F` sobre oscuro. Distinto del rojo de Nilsson y del ámbar de Brant.
+- **Hero:** "Bringing new treatments for the liver from the laboratory to the operating theatre." Coordenadas de Hammersmith Hospital.
+- **Páginas:** Overview, Work (las tres líneas: cirugía, dispositivos y empresas, investigación), Career, Record.
+- **Capítulo:** la resección casi sin sangrado por radiofrecuencia, de la técnica de 2002 a la compra de EMcision por Boston Scientific en 2018.
+- **Cita:** la del yoga, de su entrevista con la Oligonucleotide Therapeutics Society. Es la única en primera persona y tiene fuente.
+- **Publicaciones:** 6 en la home y 15 en Record, cada una enlazada a PubMed o a su fuente.
+
+## Lo que la página no dice, a propósito
+
+- Que AngioDynamics "adquirió" el Habib 4X: solo hay fuente independiente de licencia y distribución.
+- El Edison Gold Award 2020: solo aparece en su perfil de Imperial.
+- "Top five global HPB surgeons": autodescripción y adjetivo de rango.
+- Eficacia clínica de cualquier terapia. La fase II con adenovirus no mostró eficacia, y MTL-CEBPA no tiene resultados de fases avanzadas publicados.
+- Práctica privada: no sabemos si atiende pacientes privados. La ruta de "referral" queda genérica.
+
+## Pendiente con él
+
+1. Nota personal en sus palabras (marcador en la introducción).
+2. Royal College of Surgeons of Edinburgh o Royal Society of Edinburgh: la página usa la del perfil de Imperial.
+3. Las 7 empresas: une su lista (EMcision, OmniCyte, MiNA, Apterna, Medeva, Bioenvision) con Dawn Therapeutics, que menciona Imperial. Confirmar.
+4. Año de fundación de MiNA: la página usa 2013, cuando Robert Habib entró como CEO fundador.
+5. Fecha del ChM de Bristol (el perfil de Imperial trae fechas imposibles).
+6. Retrato y permiso.
+7. Si quiere un canal para pacientes internacionales.
