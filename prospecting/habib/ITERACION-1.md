@@ -49,3 +49,26 @@ Pedido de Pablo: la página debe ser 0 venta y 0 llamadas a la acción, un exped
 - **Tarjeta social:** el retrato con su nombre.
 - **Pie:** la nota dice ahora que la fotografía y el texto son dirección de arte provisional, como en Priya.
 - **Riesgo a vigilar:** es una imagen generada de una persona real. En el correo conviene decir que la fotografía es provisional y pedirle una suya o su permiso.
+
+## Iteración 4 — expediente editorial (19 oct 2026)
+
+Pedido de Pablo: menos narrativa y menos tono comercial; un expediente académico de su trayectoria. Se queda el retrato.
+
+**Ángulo: el registro, no la historia.** Referencias: la ficha de la Académie, las memorias biográficas de la Royal Society, un currículum académico editado. La autoridad se documenta, no se argumenta. Este formato es para perfiles consolidados; el de llamadas a la acción queda para perfiles jóvenes.
+
+**Reglas de escritura**
+- Tercera persona, registro de enciclopedia.
+- Entradas fechadas con fuente; un solo párrafo en toda la página (la nota biográfica).
+- Títulos como rótulos de currículum: Appointments, Chronology, Clinical work, Research, Instruments and companies, Honours, Publications, Education and training, Sources.
+- Sin metáforas ni verbos de transformación; sin cifras comerciales (fuera "70,000 devices sold").
+- Fuente al pie de cada sección y lista de fuentes numerada al final.
+- Fuera: la frase del hero, "A cut that barely bleeds", "Switching a gene back on", la cita del yoga, "Worldwide".
+
+**Diseño**
+- Una sola página. Ya no usa la plantilla de Mark Cooke: `tools/build-habib.py` compone HTML estático desde `habib/content.json`, sin JavaScript de render ni prerender.
+- Hero: el retrato a sangre; encabezado como su firma: Professor, Nagy Habib, MD · FRCS · ChM, el cargo; tres datos al pie (nacimiento, cátedra, Académie). En móvil la foto arriba y el texto debajo.
+- Cabecera del expediente con índice numerado de diez secciones.
+- Cada sección: carril lateral fijo con "§ 01" y rótulo; cuerpo en nueve columnas; título grande en Editors Note con cursiva atenuada.
+- Componentes: nota con capitular y ficha lateral; tablas de cargos; cronología a dos columnas; primeros con el año en grande; dos láminas oscuras para los instrumentos; cifras de ORCID; publicaciones con enlace a PubMed.
+- Barra fina que aparece al dejar el retrato, con anclas a las secciones.
+- Las rutas antiguas /habib/practice, /track y /voice redirigen a su sección.
