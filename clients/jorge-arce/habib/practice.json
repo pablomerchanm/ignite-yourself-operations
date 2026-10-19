@@ -117,14 +117,19 @@
       "contact": {
         "city": "London"
       },
-      "kick": "Surgeon · Researcher · Founder",
-      "name": "Nagy Habib",
+      "kick": "Professor of Hepatobiliary Surgery · Imperial College London",
+      "name": "Professor <t>Nagy Habib</t>",
       "sub": "Surgery of the liver, <t>and what comes after it.</t>",
       "social": [
         {
           "t": "Imperial College London profile",
           "h": "https://profiles.imperial.ac.uk/nagy.habib",
           "i": "globe"
+        },
+        {
+          "t": "Wikipedia",
+          "h": "https://en.wikipedia.org/wiki/Nagy_Habib",
+          "i": "wiki"
         }
       ],
       "base": "Professor Nagy Habib · London",
