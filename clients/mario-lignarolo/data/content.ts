@@ -18,7 +18,8 @@ export const site = {
   /** Mientras sea `true`: cinta «Borrador», marcas de contenido de muestra
    *  visibles y `noindex`. Pasar a `false` cuando Mario apruebe. */
   draft: true,
-  url: "https://mariolignarolo.com",
+  // dominio principal en Vercel: www (mariolignarolo.com redirige aquí)
+  url: "https://www.mariolignarolo.com",
   name: "Mario Lignarolo",
   // [HIPÓTESIS] metadatos provisionales
   title: "Mario Lignarolo — Cuerpo, mente, identidad y expansión",

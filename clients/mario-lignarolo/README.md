@@ -48,5 +48,7 @@ Proyecto propio en Vercel (como cada cliente de `operations`), con dominio `mari
 - vercel.com/new → Import `ignite-yourself-operations` → **Root Directory = `clients/mario-lignarolo`** → Deploy.
 - Production Branch: `main` (la regla del repo: todo lo terminado vive en `main`).
 - Cada push a `main` que toque esta carpeta redespliega solo.
+- Dominio conectado (19 oct 2026): principal **`www.mariolignarolo.com`**; `mariolignarolo.com` redirige a www (308). `site.url` y `public/links` usan www.
+- DNS en Namecheap (*Advanced DNS*): `A @ → 76.76.21.21` y `CNAME www → cname.vercel-dns.com`. No cambiar los nameservers: el reenvío de correo de Namecheap (MX `eforward*`) sigue activo.
 
 Por CLI, con `VERCEL_TOKEN` en el entorno: `cd clients/mario-lignarolo && npx vercel deploy --prod --yes`.
