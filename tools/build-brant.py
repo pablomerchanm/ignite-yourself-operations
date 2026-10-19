@@ -18,19 +18,16 @@ def rich(s):
 
 # La jerarquia responde a quien lee: abogados que buscan perito, directores de I+D, socios.
 # Primero en que es autoridad (y la prueba), luego que hace hoy, luego donde lo gano.
-SECTIONS = [C[k] for k in ('expertise', 'present', 'exxonmobil', 'patents', 'publications',
-                           'distinctions', 'education', 'notice', 'sources')]
-NO = {s['id']: f'{i + 1:02d}' for i, s in enumerate(SECTIONS)}
-
 def ext(h, label='Record'):
     if not h:
         return ''
     return f'<a class="go" href="{esc(h)}" target="_blank" rel="noopener" aria-label="{esc(label)}">↗</a>'
 
 def head(s, lede=True):
-    return (f'<header class="rail rv"><span class="no">§&#8239;{NO[s["id"]]}</span>'
-            f'<span class="lab">{esc(s["label"])}</span></header>'
-            f'<div class="body"><h2 class="h2 rv">{rich(s["title"])}</h2>'
+    logos = ''.join(f'<img src="{esc(l["src"])}" alt="{esc(l["alt"])}" width="{l["w"]}" loading="lazy">'
+                    for l in s.get('logos', []))
+    return ((f'<aside class="rail rv">{logos}</aside>' if logos else '')
+            + f'<div class="body"><h2 class="h2 rv">{rich(s["title"])}</h2>'
             + (f'<p class="lede rv">{rich(s["lede"])}</p>' if lede and s.get('lede') else ''))
 
 def src(s):
@@ -57,10 +54,10 @@ def expertise(s):
         inner = f'<span>{esc(name)}</span><span class="fy">{esc(year)}{" ↗" if h else ""}</span>'
         return (f'<li><a href="{esc(h)}" target="_blank" rel="noopener">{inner}</a></li>' if h
                 else f'<li><span class="fe">{inner}</span></li>')
-    rows = ''.join(f'<li class="rv"><span class="fno">{i + 1:02d}</span><h3>{esc(x["t"])}</h3>'
+    rows = ''.join(f'<li class="rv"><h3>{esc(x["t"])}</h3>'
                    f'<p>{rich(x["d"])}</p><ul class="fev">{"".join(ev(e) for e in x["ev"])}</ul></li>'
-                   for i, x in enumerate(s['items']))
-    return section(s, '<div class="fthead"><span></span><span>Field</span><span>Scope</span><span>On the record</span></div>'
+                   for x in s['items'])
+    return section(s, '<div class="fthead"><span>Field</span><span>Scope</span><span>On the record</span></div>'
                       f'<ol class="fields">{rows}</ol>', tint=True)
 
 def present(s):
@@ -104,9 +101,9 @@ def short(h):
     return re.sub(r'^https?://(www\.)?', '', h).rstrip('/')
 
 def sources(s):
-    rows = ''.join(f'<li class="rv"><span class="sn">{i + 1}</span><span class="st">{esc(t)}</span>'
+    rows = ''.join(f'<li class="rv"><span class="st">{esc(t)}</span>'
                    f'<a class="su" href="{esc(h)}" target="_blank" rel="noopener">{esc(short(h))}</a></li>'
-                   for i, (t, h) in enumerate(s['items']))
+                   for t, h in s['items'])
     return section(s, f'<ol class="srcs">{rows}</ol>', tint=True)
 
 # ------------------------------------------------------------------ cabecera
@@ -114,11 +111,11 @@ H = C['hero']
 facts = ''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in H['facts'])
 hero = f'''<section class="hero" id="top">
   <picture class="hph"><source media="(max-width:760px)" srcset="{H["imgMobile"]}"><img src="{H["img"]}" alt="Patrick Brant, portrait (provisional art direction)" fetchpriority="high"></picture>
+  <div class="wrap htop"><p class="hk">{esc(H["kick"])}</p><p class="hplace">{esc(H["place"])}</p></div>
   <div class="wrap hin">
-    <p class="hk">{esc(H["kick"])}</p>
     <h1 class="hn">{rich(H["name"])}</h1>
     <p class="hp">{esc(H["post"])}</p>
-    <p class="hr">{esc(H["role"])}</p>
+    <p class="hr"><span class="rl">{esc(H["role"])}</span><span class="rs">{esc(H["roleShort"])}</span></p>
   </div>
   <div class="wrap hfoot"><dl class="hfacts">{facts}</dl><p class="hcap">{esc(H["caption"])}</p></div>
 </section>'''
@@ -143,7 +140,8 @@ footer = f'''<footer class="foot"><div class="wrap">
   <p>{esc(F["igy"])}</p></div></aside>'''
 
 bar = ('<header class="bar" id="bar"><div class="wrap barin"><a class="bname" href="#top">Dr. Patrick Brant</a>'
-       '<nav class="blinks" aria-label="Sections">'
+       '<button class="bmenu" type="button" aria-expanded="false" aria-controls="blinks">Contents</button>'
+       '<nav class="blinks" id="blinks" aria-label="Sections">'
        + ''.join(f'<a href="#{k}">{t}</a>' for k, t in [('expertise', 'Expertise'), ('present', 'Present'), ('exxonmobil', 'ExxonMobil'),
                                                           ('patents', 'Patents'), ('publications', 'Papers'), ('notice', 'Note'), ('sources', 'Sources')])
        + '</nav></div></header>')
@@ -173,7 +171,7 @@ img{display:block;max-width:100%}
 ::selection{background:var(--ink);color:var(--bone)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .it{font-style:italic}
-.mlab,.lab,.thead span,.fthead span,.rf,.sub,.hk,.fl,.bname,.blinks a,.hfacts dt,.glance dt,.fk,.hcap,.bcap,.fbase{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.mlab,.hplace,.bmenu,.thead span,.fthead span,.rf,.sub,.hk,.fl,.bname,.blinks a,.hfacts dt,.glance dt,.fk,.hcap,.bcap,.fbase{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
 
 /* barra: aparece al dejar el retrato */
 .bar{position:fixed;inset:0 0 auto;z-index:20;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.7,.2,1);background:rgba(20,22,26,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--bone)}
@@ -182,14 +180,17 @@ img{display:block;max-width:100%}
 .bname{font-family:var(--display);font-weight:400;font-size:14px;letter-spacing:.14em;text-decoration:none}
 .blinks{display:flex;gap:clamp(16px,2.2vw,34px)}
 .blinks a{text-decoration:none;color:rgba(237,231,220,.7);transition:color .2s}
-.blinks a:hover{color:var(--bone)}
+.blinks a:hover,.blinks a.on{color:var(--bone)}
+.blinks a.on{text-decoration:underline;text-decoration-color:var(--amber2);text-underline-offset:7px}
+.bmenu{display:none;background:none;border:0;color:var(--bone);cursor:pointer;padding:10px 0}
 
 /* retrato: el rostro a la derecha, el nombre a la izquierda */
 .hero{position:relative;min-height:100svh;background:var(--ink);color:var(--bone);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
 .hph,.hph img{position:absolute;inset:0;width:100%;height:100%}
 .hph img{object-fit:cover;object-position:72% 30%}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,19,.72) 0%,rgba(14,16,19,.34) 42%,rgba(14,16,19,0) 62%),linear-gradient(180deg,rgba(14,16,19,.3) 0%,rgba(14,16,19,0) 22%,rgba(14,16,19,0) 55%,rgba(14,16,19,.9) 100%)}
-.hin,.hfoot{position:relative;z-index:2;width:100%}
+.htop,.hin,.hfoot{position:relative;z-index:2;width:100%}
+.hplace,.hr .rs{display:none}
 .hin{padding-bottom:clamp(48px,8vh,96px)}
 .hk{color:var(--amber2);margin-bottom:clamp(14px,2vh,22px)}
 .hn{font:300 clamp(64px,11vw,184px)/.9 var(--display);letter-spacing:-.03em}
@@ -210,9 +211,8 @@ img{display:block;max-width:100%}
 .mlab::before{content:'';display:inline-block;width:22px;height:1px;background:var(--amber);vertical-align:middle;margin-right:12px}
 .sec{padding:clamp(80px,11vh,140px) 0;border-bottom:1px solid var(--rule)}
 .sec.tint{background:var(--paper)}
-.rail{grid-column:1/4;align-self:start;position:sticky;top:96px;display:flex;flex-direction:column;gap:10px}
-.no{font:400 13px/1 var(--mono);color:var(--amber);letter-spacing:.04em}
-.lab{color:var(--smoke)}
+.rail{grid-column:1/4;align-self:start;position:sticky;top:112px;display:flex;flex-direction:column;align-items:flex-start;gap:28px;padding-top:22px}
+.rail img{height:auto;opacity:.88}
 .body{grid-column:4/13;min-width:0}
 .h2{font:300 clamp(42px,5vw,80px)/1 var(--display);letter-spacing:-.025em;color:var(--ink);max-width:14em}
 .h2 .it{opacity:.6}
@@ -221,10 +221,9 @@ img{display:block;max-width:100%}
 .sub{color:var(--smoke);margin:clamp(48px,7vh,72px) 0 18px}
 
 /* campos de experticia: el campo, su alcance y la prueba */
-.fthead,.fields>li{display:grid;grid-template-columns:44px minmax(0,.95fr) minmax(0,1.15fr) minmax(180px,.8fr);gap:clamp(16px,2vw,32px)}
+.fthead,.fields>li{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr) minmax(180px,.8fr);gap:clamp(16px,2vw,32px)}
 .fthead{margin-top:clamp(40px,6vh,60px);padding-bottom:12px;border-bottom:1px solid var(--ink);color:var(--smoke)}
 .fields>li{padding:clamp(22px,3vh,30px) 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.fno{font:400 12px/1 var(--mono);color:var(--amber)}
 .fields h3{font:300 clamp(22px,1.8vw,28px)/1.15 var(--display);color:var(--ink);letter-spacing:-.015em}
 .fields p{font-size:15px;line-height:1.55;color:#4A4743;max-width:32em}
 .fev{display:flex;flex-direction:column;gap:7px}
@@ -297,8 +296,7 @@ img{display:block;max-width:100%}
 
 /* fuentes */
 .srcs{margin-top:clamp(40px,6vh,64px);border-top:1px solid var(--ink)}
-.srcs li{display:grid;grid-template-columns:40px minmax(0,1fr) minmax(0,.9fr);gap:20px;padding:15px 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.sn{font:400 12px/1 var(--mono);color:var(--amber)}
+.srcs li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:20px;padding:15px 0;border-bottom:1px solid var(--rule);align-items:baseline}
 .st{font-size:15px;color:var(--ink)}
 .su{font:400 12px/1.4 var(--mono);color:var(--smoke);text-decoration:none;word-break:break-all}
 .su:hover{color:var(--amber)}
@@ -327,10 +325,11 @@ img{display:block;max-width:100%}
 
 /* tableta */
 @media(max-width:1080px){
+  .rail{grid-column:1/-1;position:static;flex-direction:row;flex-wrap:wrap;align-items:center;gap:20px 36px;padding-top:0;margin-bottom:32px}
+  .body{grid-column:1/-1}
   .fthead{display:none}
   .fields{margin-top:clamp(40px,6vh,60px);border-top:1px solid var(--ink)}
-  .fields>li{grid-template-columns:44px minmax(0,1fr);row-gap:10px}
-  .fields p,.fev{grid-column:2}
+  .fields>li{grid-template-columns:minmax(0,1fr);row-gap:10px}
   .fev{max-width:420px;margin-top:6px}
   .notice{grid-template-columns:1fr}
   .glance{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
@@ -338,23 +337,37 @@ img{display:block;max-width:100%}
 /* movil */
 @media(max-width:760px){
   html{scroll-padding-top:60px}
+  .bmenu{display:block}
   .blinks{display:none}
-  .hero{min-height:0;padding-top:58svh}
-  .hph{height:70svh;bottom:auto}
-  .hph img{object-position:50% 12%}
-  .hero::after{height:70svh;bottom:auto;background:linear-gradient(180deg,rgba(14,16,19,.2) 0%,rgba(14,16,19,0) 18%,rgba(14,16,19,.15) 52%,rgba(20,22,26,.92) 84%,#14161A 100%)}
+  .bar.open .blinks{display:flex;flex-direction:column;gap:0;position:absolute;top:56px;left:0;right:0;padding:4px var(--gut) 18px;background:var(--ink);box-shadow:0 24px 40px rgba(14,16,19,.35)}
+  .bar.open .blinks a{padding:13px 0;border-bottom:1px solid rgba(237,231,220,.1);font-size:12px}
+  .hero{min-height:100svh;padding-top:calc(117.6vw - 150px);justify-content:flex-end}
+  .hph{position:absolute;inset:0 0 auto 0;height:auto}
+  .hph img{position:static;height:auto}
+  .hph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,.55) 0%,rgba(14,16,19,0) 18%,rgba(14,16,19,0) 48%,rgba(20,22,26,.86) 82%,#14161A 100%)}
+  .hero::after{display:none}
+  .htop{position:absolute;inset:0 0 auto 0;display:flex;justify-content:space-between;align-items:baseline;padding-top:calc(env(safe-area-inset-top,0px) + 22px)}
+  .hk{margin:0}
+  .hplace{display:block;color:rgba(237,231,220,.66)}
   .hin{padding-bottom:22px}
-  .hn{font-size:clamp(58px,17vw,84px)}
-  .hfoot{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:22px}
-  .hfacts{grid-template-columns:1fr;width:100%;padding-top:10px}
-  .hfacts div{padding:9px 0!important;border-left:0!important;border-bottom:1px solid rgba(237,231,220,.1);display:flex;justify-content:space-between;align-items:baseline;gap:16px}
-  .hfacts dt{margin:0}
-  .hfacts dd{text-align:right;font-size:16px}
-  .rail{grid-column:1/-1;position:static;flex-direction:row;align-items:baseline;gap:14px;margin-bottom:22px}
-  .body{grid-column:1/-1}
+  .hn{font-size:clamp(48px,16.5vw,72px);line-height:.95}
+  .hn .it{display:inline}
+  .hp{font-size:10.5px;letter-spacing:.12em;margin-top:14px}
+  .hr{font-size:19px;line-height:1.3;margin-top:10px}
+  .hr .rl{display:none}
+  .hr .rs{display:inline}
+  .hfoot{display:block;position:static;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 56px)}
+  .hfacts{position:relative;z-index:2;grid-template-columns:repeat(3,minmax(0,1fr));padding-top:16px}
+  .hfacts div{display:flex;flex-direction:column;padding:0 0 0 14px}
+  .hfacts div:first-child{padding-left:0}
+  .hfacts div+div{padding-left:14px}
+  .hfacts dt{order:2;margin:7px 0 0;font-size:9.5px;letter-spacing:.1em;line-height:1.35}
+  .hfacts dd{order:1;font-size:28px;line-height:1}
+  .hcap{position:absolute;z-index:2;right:6px;top:calc(env(safe-area-inset-top,0px) + 64px);writing-mode:vertical-rl;font-size:9px;letter-spacing:.14em}
+  .rail{gap:20px 28px;margin-bottom:30px}
+  .rail img{max-width:44%}
   .h2{font-size:clamp(38px,11vw,52px)}
   .glance{grid-template-columns:1fr}
-  .fields>li{grid-template-columns:32px minmax(0,1fr)}
   .thead{display:none}
   .appt li{grid-template-columns:1fr;gap:4px}
   .ay{text-align:left}
@@ -376,8 +389,7 @@ img{display:block;max-width:100%}
   .figs div{padding-bottom:20px}
   .pubs li{grid-template-columns:52px minmax(0,1fr);gap:14px}
   .pubs .go{grid-column:2;justify-self:start}
-  .srcs li{grid-template-columns:28px minmax(0,1fr);gap:4px 14px}
-  .srcs .su{grid-column:2}
+  .srcs li{grid-template-columns:minmax(0,1fr);gap:4px}
   .flinks{width:100%}
   .fbase{flex-direction:column;gap:8px}
   .igyin{grid-template-columns:1fr;gap:24px}}
@@ -389,6 +401,15 @@ document.documentElement.classList.add('js');
   var bar=document.getElementById('bar'),hero=document.getElementById('top');
   function onScroll(){bar.classList.toggle('on',window.scrollY>hero.offsetHeight-80)}
   window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var menu=bar.querySelector('.bmenu');
+  function close(){bar.classList.remove('open');menu.setAttribute('aria-expanded','false')}
+  menu.addEventListener('click',function(){var o=bar.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false')});
+  var links=bar.querySelectorAll('.blinks a');
+  links.forEach(function(a){a.addEventListener('click',close)});
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)spy.observe(t)});
+  }
   var els=document.querySelectorAll('.rv');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
