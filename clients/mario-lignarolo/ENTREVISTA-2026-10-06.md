@@ -1,14 +1,17 @@
 # Mario Lignarolo — Entrevista de marca (6 oct 2026)
 
-Fuente: dos grabaciones de 15 min cada una, transcritas con UniScribe (versión gratuita). **Actualización del 19 oct:** el audio completo de la primera grabación (`mario_1.MP3`, 30 min, en español) se transcribió con Whisper (modelo *medium*) y completa la historia que se había cortado: ver **§ 7b**.
+Fuente: dos grabaciones de 15 min cada una, transcritas con UniScribe (versión gratuita). **Actualización del 19 oct:** los dos audios completos se transcribieron con Whisper (modelo *medium*), en español:
+
+- `mario_1.MP3` (30 min) completa la historia que se había cortado: ver **§ 7b**.
+- El segundo audio (38 min) continúa justo donde termina el primero. Trae el original en español de la parte 2 y una parte nueva (rutina, eventos, dinero, comunicación y su opinión sobre el borrador): ver **§ 10–13**.
 
 **Límites de la fuente**
 
-- Cada archivo se cortó a los 15 minutos. El audio completo de la parte 1 ya resuelve el *breaking point* (§ 7b). Siguen sin respuesta las oportunidades ideales (TED, etc.) más allá de su tema.
-- La parte 1 está en español (citable con cuidado). La parte 2 salió **traducida automáticamente al inglés**: de ahí se toman ideas, **nunca citas textuales**.
-- Nombres propios dudosos por la transcripción: «Diego Greifeld» (referente con app de comunidad), «Nacho Muñoz» (máster de respiración), «Alejo Jaramillo» (mentor). Confirmar ortografía antes de publicar cualquiera.
+- La transcripción es automática: las frases entre comillas hay que revisarlas antes de citarlas, y los nombres propios pueden estar mal escritos.
+- La parte 2 de UniScribe salió **traducida al inglés**; ahora existe el original en español (segundo audio), así que lo de § 3, 4 y 8 ya se puede citar con el mismo cuidado que la parte 1.
+- Nombres propios dudosos por la transcripción: «Diego Greifeld» (referente con app de comunidad), «Nacho Muñoz» (máster de respiración), «Alejo Jaramillo» (mentor), «Dan Koe» (referente de escritura). Confirmar ortografía antes de publicar cualquiera.
 
-Leyenda: **[P1]** parte 1, español · **[P2]** parte 2, traducción automática · **[CONFIRMAR]** pedir a Mario.
+Leyenda: **[P1]** parte 1, español · **[P2]** parte 2 (antes traducción automática; original en el segundo audio) · **[A2]** segundo audio, parte nueva · **[CONFIRMAR]** pedir a Mario.
 
 ---
 
@@ -39,11 +42,11 @@ Leyenda: **[P1]** parte 1, español · **[P2]** parte 2, traducción automática
 
 ## 4. Psico-Cibernética: origen [P2]
 
-- Nació hace unos 3 meses, ya en su etapa actual. [CONFIRMAR ciudad: la transcripción sugiere Madrid]
-- Hizo un **máster de respiración** («más fuerte, proceso más largo») y se certificó. [CONFIRMAR nombre del máster y de quien lo dicta]
-- Vende con coherencia porque el proceso le cambió la vida: «la respiración no es ayahuasca, pero es transformadora».
-- El concepto es de **Maxwell Maltz**: *cibernética* = cómo un organismo se retroalimenta para lograr un objetivo; *psico* = mente. Es de uso libre.
-- **Ha pensado crear un nombre propio (IP)** para no depender de Maltz. Oportunidad de branding a trabajar con él.
+- Nació **en Madrid, hace unos tres meses**: «Acá en Madrid. Nació hace tres meses, de hecho.» Entonces tenía unos dos mil seguidores en Instagram; el salto lo dio estando allí.
+- Al llegar a Madrid hizo un **máster de respiración consciente con Nacho Muñoz** («respiraciones más fuertes y un proceso más fuerte, más largo») y se **certificó**. [CONFIRMAR nombre exacto del máster]
+- Vende con coherencia porque el proceso le cambió la vida: «la respiración obviamente no es ayahuasca, pero es transformadora… yo sé que este proceso a las personas les va a cambiar la vida. ¿Por qué? Porque a mí me cambió la vida.»
+- El concepto es de **Maxwell Maltz**: *cibernética* = cómo un organismo «biológico o tecnológico» se retroalimenta para lograr un objetivo; *psico* = mente. Es de uso libre.
+- **Ha pensado crear un nombre propio (IP)** para no depender de Maltz: «Sí lo he pensado. Se puede crear algo más coherente con lo que es uno.» Oportunidad de branding a trabajar con él.
 
 ## 5. El hilo que conecta todo [P1]
 
@@ -93,6 +96,39 @@ Del minuto 15 al 30, en español. Las frases entre comillas son suyas, transcrit
 
 - **Ha recibido invitaciones** (lives, colaboraciones) y **nunca ha dicho que sí**, por decisión propia: quiere seguir construyendo «tan fuerte que llegue una persona que yo diga: con este sí quiero».
 - **No hay charlas ni podcasts previos que listar.** La sección «Invitar» no debe afirmar ninguno.
+- [A2] Solo ha hablado en público una vez, «como diez minuticos». **Da clases todos los jueves** (una hora, hora y media): «al principio para mí era complejo… ya tengo la evidencia de que puedo».
+- [A2] **Su siguiente nivel:** eventos presenciales propios, de respiración y desarrollo personal («ponerlos a respirar, darles una mentoría, una charla»). Al principio, de **medio día (tres o cuatro horas)**, quizá un retiro. Su comunidad ya le pregunta cuándo habrá uno.
+- [A2] TED y podcasts siguen siendo el sueño, pero «no dependen de mí, tienen que invitarme». El evento presencial sí depende de él.
+
+## 10. Su día [A2]
+
+- Lo primero al despertar: **meditar o hacer respiración consciente, todos los días**.
+- Luego escribe, trabaja y estudia: genera ideas, escribe guiones y newsletters. Entrena (antes o después de grabar guiones), camina, desayuna y vuelve a estudiar.
+- Por la tarde, reuniones; hacia las 7 u 8, descansa. Casi no ve entretenimiento: algún podcast.
+- Le gusta cocinar, pero ahora pide domicilio más a menudo: «el tiempo ahorita para mí es esencial».
+
+## 11. Ambición, calma y dinero [A2]
+
+- **Ambición:** no hay que hacer las paces con ella; «el querer más no es algo malo». Lo malo es querer desde la insuficiencia: «en el momento en que no te llegue, sufres». Un objetivo no es para sentirse suficiente al lograrlo, sino para preguntar «¿qué sigue?».
+- **La calma como medida:** «¿En qué tanto caos puedes soportar y mantener la calma ahí? … Esa es la verdadera hipertrofia del ser.» «¿Cómo manejar tu ansiedad? Respirando.» La ansiedad es la mente en el futuro; la respiración te trae al presente, «porque es lo único que puedes controlar».
+- **Dinero:** en Madrid dio «un salto cuántico» en lo económico. Ve el dinero como energía de valor: «a medida que tú expandes el contenedor a través de la respiración consciente… te das el permiso de que más energía entre». Lo usa «para mi expansión» y para experiencias, «de manera coherente».
+
+**Implicación web:** la frase de la calma es de las más fuertes que ha dicho sobre su método y sirve como idea en «Punto de vista». Lo del dinero, solo si él quiere hablar de eso en público.
+
+## 12. Cómo quiere comunicarse [A2]
+
+- **Palabras que deben estar:** «Hipertrofia del Ser» («tiene que estar muy arraigado ahí»), los **tres o cuatro planos de existencia** y **expansión**. «Más que todo eso; creo que el resto está chévere.»
+- **Referentes:** **Dan Koe** (lo ha mentorizado a través de la escritura; le ha pagado cursos; «fiel promotor de escribir»). Pero Dan es muy sobrio, solo texto, y Mario no es de ese estilo: «a mí me gusta la moda, me gusta que sea más estético». Propone combinarlo con la estética de **Lignarolo**: «muy clásica», *preppy posh*.
+- **Contenido con IA:** no le molesta, «desde que se vea lo más real, coherente». Tiene material de Lignarolo; fotos propias tiene pocas; video sí, en el celular.
+
+## 13. Lo que dijo del borrador [A2]
+
+Pablo le mostró el primer borrador de la web y el *linktree* de Ignite Yourself.
+
+- **Le gustó:** la fotografía, las imágenes, «todo me pareció muy bacano». En particular, la foto de los zapatos al final, con los enlaces a YouTube, TikTok y Lignarolo.
+- **El color:** «el verde es lo único que no me mata 100 %». Lo ve «muy energético»: prefiere algo «más sobrio, más *muted*, colores más neutrales». Le gusta mucho el **azul**, «más místico», como el de la página de Psico-Cibernética.
+- Pablo le explicó que evitó el azul a propósito: la marca de Mario va en una línea gráfica y sus productos (Psico-Cibernética, Hipertrofia, Lignarolo) en otra, para que Mario quede en el centro. Quedaron en que **los colores todavía se pueden explorar**.
+- Del lado comercial quedó: que la web lleve rápido a Skool o al Substack según lo «caliente» que llegue cada persona; suscripción gratuita al Substack; y dejar abierta la puerta a TED, podcasts y conferencias.
 
 ---
 
@@ -103,17 +139,20 @@ Del minuto 15 al 30, en español. Las frases entre comillas son suyas, transcrit
 - Cifras de facturación de Lignarolo y precios (mentorías, procesos) hasta que él las apruebe.
 - Casos de clientes (la clienta en crisis, el cliente de México).
 - Cifras de seguidores y precios de referentes.
+- [A2] La experiencia del colegio y la «herida de exposición» que menciona al hablar de eventos.
 
 ## Preguntas abiertas para Mario
 
 1. ~~¿Cuál fue el detonante?~~ **Resuelto en § 7b.** Falta que apruebe qué se cuenta: ¿se menciona Coca-Cola, el dropshipping, volver a empezar de cero? ¿Algo de la experiencia ceremonial?
-2. ¿Ciudad actual (¿Madrid?) y si se publica?
-3. Respiración: su referente es **Nacho Muñoz** (§ 7b). Falta el nombre exacto del programa o máster y si se menciona como formación.
+2. ~~¿Ciudad actual?~~ **Madrid** (§ 4). Falta saber si se publica.
+3. Respiración: hizo el **máster con Nacho Muñoz y se certificó** (§ 4). Falta el nombre exacto y si se menciona como formación.
 4. ~~Rol en Lignarolo.~~ **En parte resuelto (§ 7b):** entró a hacer el marketing de la marca de Giorgio y la hicieron crecer. Confirmar su cargo, quién es Giorgio y si se publica la cifra de los primeros dos meses.
-5. ¿Quiere crear un nombre propio para su método en vez de «Psico-Cibernética»?
+5. Nombre propio para su método en vez de «Psico-Cibernética»: **sí lo ha pensado** (§ 4). Falta decidir si lo trabajamos ahora.
 6. Correo de prensa / colaboraciones.
 7. «8 semanas» (Skool) vs «40 días» (bio, Substack).
-8. Ortografía de los nombres que salen en § 7b: Javi Rodríguez, Alejandro Jaramillo, Nacho Muñoz, Giorgio.
+8. Ortografía de los nombres que salen en § 7b y § 12: Javi Rodríguez, Alejandro Jaramillo, Nacho Muñoz, Giorgio, Dan Koe.
+9. **Color** (§ 13): ¿verde más sobrio, azul o neutros?
+10. Eventos presenciales (§ 9): ¿se anuncian ya en la web («próximamente», lista de espera) o todavía no?
 
 ## Cambios aplicados a la web con esta entrevista
 
