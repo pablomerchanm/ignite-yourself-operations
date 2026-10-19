@@ -29,6 +29,13 @@
     {
       "type": "marks",
       "id": "marks",
+      "label": "Companies & boards",
+      "feature": {
+        "logo": "/nilsson/assets/logos/barrys.svg",
+        "ar": "73/15",
+        "t": "Barry’s",
+        "k": "Partner · Nordics · Iberia · Switzerland · since 2016"
+      },
       "items": [
         {
           "text": "Stockholm <t>Leisure Partners</t>",
@@ -43,13 +50,7 @@
           "k": "Board member, since 2026"
         }
       ],
-      "src": "Marks belong to their owners. No endorsement implied.",
-      "feature": {
-        "logo": "/nilsson/assets/logos/barrys.svg",
-        "ar": "73/15",
-        "t": "Barry’s",
-        "k": "Partner · Nordics · Iberia · Switzerland · since 2016"
-      }
+      "src": "Marks belong to their owners. No endorsement implied."
     },
     {
       "type": "intro",
