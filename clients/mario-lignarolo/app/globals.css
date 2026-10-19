@@ -118,8 +118,13 @@ section[id] {
    ════════════════════════════════════════════════════════════ */
 .hero {
   position: relative;
-  padding-top: calc(var(--nav-h) + 0.75rem);
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100svh;
+  /* El retrato ocupa el ancho arriba; el texto empieza sobre sus hombros. */
+  padding-top: calc(117vw - 9rem);
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 3.25rem);
   overflow: hidden;
   background: var(--color-ink);
 }
@@ -131,40 +136,39 @@ section[id] {
   order: 1;
   position: relative;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
+  display: block;
   padding-inline: var(--gutter);
   color: var(--color-acid);
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: min(calc((100vw - 2 * var(--gutter)) / 3.42), 15svh);
-  line-height: 0.9;
+  /* «Mario Lignarolo.» en una sola línea, a todo el ancho */
+  font-size: calc((100vw - 2 * var(--gutter)) / 5.9);
+  line-height: 1;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 .hero__first,
 .hero__last {
-  display: block;
+  display: inline-block;
   overflow: hidden;
   padding-bottom: 0.2em;
   margin-bottom: -0.2em;
-}
-.hero__last {
-  align-self: flex-end;
+  vertical-align: bottom;
 }
 .hero__name i {
   font-style: italic;
 }
 .hero__media {
-  order: 2;
-  position: relative;
+  position: absolute;
   z-index: 1;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  max-height: 74svh;
-  margin-top: -0.9rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 128vw;
+  max-height: 82svh;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 72%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0, #000 62%, transparent 100%);
 }
 .hero__settle,
 .hero__drift {
@@ -175,21 +179,22 @@ section[id] {
   object-fit: cover;
   object-position: 47.5% 30%;
 }
+/* Los cuatro territorios, arriba a la izquierda, a la altura del «Menú». */
 .hero__words {
-  order: 3;
-  position: relative;
+  position: absolute;
   z-index: 3;
+  top: 0;
+  left: 0;
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 0.45em;
-  margin-top: -2.6rem;
+  height: var(--nav-h);
   padding-inline: var(--gutter);
   color: var(--color-acid);
   font-family: var(--font-serif);
-  /* los cuatro territorios en una sola línea, a todo el ancho */
-  font-size: min(1.75rem, calc((100vw - 2 * var(--gutter)) / 19));
+  font-size: min(0.95rem, calc((100vw - 2 * var(--gutter) - 4.5rem) / 23));
   line-height: 1;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -198,22 +203,18 @@ section[id] {
   margin-right: 0.45em;
 }
 .hero__statement {
-  order: 4;
+  order: 2;
   position: relative;
   z-index: 3;
-  align-self: flex-end;
-  margin-top: 1.75rem;
+  max-width: 24rem;
+  margin-top: 1rem;
   padding-inline: var(--gutter);
   color: var(--color-acid);
-  font-size: clamp(0.95rem, 0.8rem + 0.7vw, 1.25rem);
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.15rem);
   font-weight: 300;
-  line-height: 1.04;
-  letter-spacing: -0.028em;
-  text-align: right;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-}
-.hero__statement span {
-  display: block;
 }
 .hero__scroll {
   display: none;
@@ -242,6 +243,7 @@ section[id] {
   .hero__media {
     position: absolute;
     inset: 0;
+    height: auto;
     max-height: none;
     aspect-ratio: auto;
     margin: 0;
@@ -257,6 +259,7 @@ section[id] {
     padding: 0;
     font-size: var(--F);
     line-height: 1;
+    white-space: normal;
   }
   .hero__first,
   .hero__last {
@@ -275,6 +278,7 @@ section[id] {
     left: max(1.25rem, 5.68cqw);
     top: max(calc(var(--nav-h) + 0.5rem), 9.4cqh);
     display: block;
+    height: auto;
     margin: 0;
     padding: 0;
     font-size: max(0.95rem, 45.8 * var(--u));
@@ -302,9 +306,16 @@ section[id] {
     position: absolute;
     right: max(1.25rem, 7.25cqw);
     bottom: 9.26cqh;
+    max-width: none;
     margin: 0;
     padding: 0;
+    line-height: 1.04;
+    letter-spacing: -0.028em;
+    text-align: right;
     font-size: max(0.8rem, 45.4 * var(--u));
+  }
+  .hero__statement span {
+    display: block;
   }
   .hero__scroll {
     position: absolute;

@@ -1,4 +1,3 @@
-import AboutMario from "@/components/AboutMario";
 import Connect from "@/components/Connect";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -8,17 +7,19 @@ import Lignarolo from "@/components/Lignarolo";
 import Motion from "@/components/Motion";
 import OriginStory from "@/components/OriginStory";
 import PointOfView from "@/components/PointOfView";
-import Speaking from "@/components/Speaking";
 import Psicocibernetica from "@/components/Psicocibernetica";
-import Territories from "@/components/Territories";
+import Ser from "@/components/Ser";
+import Sostener from "@/components/Sostener";
 import Testimonials from "@/components/Testimonials";
 import Watch from "@/components/Watch";
 import Writing from "@/components/Writing";
 import { about, channels, site } from "@/data/content";
 
 /**
- * Orden de la experiencia (no reordenar a «producto → comprar»):
- * PERSONA → PREGUNTA → HISTORIA → VISIÓN → IDEAS → PRODUCTO → EMPRENDER → CONTENIDO → PRUEBA → PLATAFORMA → CONEXIÓN
+ * Orden de la experiencia, pensado para quien llega (un emprendedor que ya
+ * logró cosas y se siente estancado), no como «producto → comprar»:
+ * PERSONA → SU MOMENTO Y LA PREGUNTA → MÉTODO → CÓMO EMPEZAR (programa · «SER»)
+ * → PRUEBA → QUIÉN ES MARIO (historia · hoy · Lignarolo) → IDEAS → ESCRITOS → VIDEOS → CONEXIÓN
  */
 export default function Home() {
   // schema.org: solo perfiles confirmados (los que tienen URL) y sin credenciales.
@@ -45,26 +46,20 @@ export default function Home() {
       <Header />
       <main id="contenido" tabIndex={-1} className="outline-none">
         <Hero />
-        <OriginStory />
-        <Territories />
+        <Sostener />
         <Hipertrofia />
-        <PointOfView />
         <Psicocibernetica />
+        <Ser />
+        <Testimonials />
+        <OriginStory />
         <Lignarolo />
+        <PointOfView />
         <Writing />
         <Watch />
-        <Testimonials />
-        <AboutMario />
-        <Speaking />
         <Connect />
       </main>
       <Footer />
       <Motion />
-      {site.draft && (
-        <p className="caps pointer-events-none fixed bottom-3 left-3 z-40 rounded-full bg-bone/90 px-3 py-1.5 text-[0.6rem] text-ink shadow-sm">
-          Borrador<span className="hidden sm:inline"> · vista previa</span>
-        </p>
-      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }} />
     </>
   );

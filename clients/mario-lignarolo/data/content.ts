@@ -42,14 +42,13 @@ export const psicoUrl = "https://www.skool.com/psico-cibernetica-7760/about";
 /** [CONFIRMAR] correo público: dejar vacío si Mario no quiere publicarlo. */
 export const publicEmail = "";
 
+// Cinco destinos, en el orden en que los necesita quien llega: el método,
+// cómo empezar, quién es Mario, lo que escribe y cómo seguirlo.
 export const nav = [
-  { label: "Mario", href: "#mario" },
-  { label: "Ideas", href: "#ideas" },
+  { label: "Método", href: "#metodo" },
   { label: "Psico-Cibernética", href: "#psicocibernetica" },
-  { label: "Lignarolo", href: "#lignarolo" },
+  { label: "Mario", href: "#mario" },
   { label: "Escritos", href: "#escritos" },
-  { label: "Videos", href: "#videos" },
-  { label: "Invitar", href: "#invitar" },
   { label: "Conecta", href: "#conecta" },
 ];
 
@@ -75,12 +74,29 @@ export const hero = {
   },
 };
 
+/* ── 02 SOSTENER: lo primero que ve quien llega ──────────── */
+// Para el emprendedor que ya logró cosas y se siente estancado (cliente ideal
+// de la entrevista del 6 oct). Copy del estudio [HIPÓTESIS] sobre la idea del
+// termostato que Mario explicó en la parte 2 (traducida: idea, no cita). La
+// pregunta es la del estudio; la frase final es de Mario [MARIO].
+export const sostener = {
+  eyebrow: "Si ya lograste cosas",
+  headline: ["Lograrlo", "no era", "el problema."],
+  headlineItalicLine: 2,
+  lead: "Sostenerlo, sí.",
+  text: "Te pusiste una meta, la alcanzaste y, con el tiempo, volviste a los mismos patrones. No es falta de disciplina: tu autoconcepto funciona como un termostato y te devuelve a la persona que crees ser.",
+  question:
+    "¿Qué tiene que cambiar dentro de una persona para que pueda sostener una realidad diferente afuera?",
+  // [MARIO] su frase firma: el «Ser» de Hipertrofia del Ser.
+  answer: { before: "No se trata de hacer más.", em: "Se trata de ser más." },
+};
+
 /* ── 02 ORIGEN ───────────────────────────────────────────── */
 // Las frases marcadas [MARIO] son textuales de su publicación de Instagram
 // del 17 oct 2025 («Antes / Ahora»). El resto es tejido conectivo del
 // estudio [HIPÓTESIS], a confirmar en la entrevista.
 export const origin = {
-  eyebrow: "El punto de partida",
+  eyebrow: "Quién es Mario",
   // [HIPÓTESIS] apoyada en su «Antes / Ahora»: el cuerpo fue donde el cambio se hizo visible.
   headline: ["El cuerpo fue", "el primer", "laboratorio."],
   headlineItalicLine: 2,
@@ -137,73 +153,23 @@ export const origin = {
       photo: null,
     },
   ],
+  // En la página se cuentan cuatro capítulos; el resto queda guardado aquí.
+  show: ["El camino tradicional", "Perdido", "El fondo", "El niño interior"],
   // [CONFIRMADO] Su propio «Antes / Ahora» (carrusel del 17 oct 2025), como
   // momento visual a todo el ancho tras el capítulo «El fondo».
   diptych: {
-    afterChapter: 5,
+    afterTitle: "El fondo",
     before: { src: "/mario/antes.jpg", alt: "Mario, antes: de perfil, con una botella en la mano.", label: "Antes" },
     after: { src: "/mario/entreno-curl.jpg", alt: "Mario, ahora: entrenando bíceps con mancuerna.", label: "Ahora" },
     caption: "El cuerpo fue el primer lugar donde el cambio se hizo visible.",
   },
-  // [HIPÓTESIS] puente del estudio hacia la pregunta que organiza el sitio.
-  bridge:
-    "Después, todo lo que explora (cuerpo, mente, identidad, creación) apunta a una misma pregunta:",
-  question:
-    "¿Qué tiene que cambiar dentro de una persona para que pueda sostener una realidad diferente afuera?",
-};
-
-/* ── 03 TERRITORIOS ──────────────────────────────────────── */
-// [HIPÓTESIS] Cuerpo / Mente / Identidad / Expansión como arquitectura final.
-export const territories = {
-  eyebrow: "El territorio",
-  title: "Cuatro palabras. Una sola exploración.",
-  items: [
-    {
-      n: "01",
-      word: "Cuerpo",
-      italic: false,
-      text: "El cuerpo como práctica, disciplina, presencia y retroalimentación.",
-    },
-    {
-      n: "02",
-      word: "Mente",
-      italic: false,
-      text: "Atención, percepción, creencias y observación.",
-    },
-    {
-      n: "03",
-      word: "Identidad",
-      italic: true,
-      text: "Autoconcepto, patrones y la persona que creemos ser.",
-    },
-    {
-      n: "04",
-      word: "Expansión",
-      italic: false,
-      text: "Acción, exposición, creación y la capacidad de sostener más.",
-    },
-  ],
 };
 
 /* ── 04 HIPERTROFIA DEL SER ──────────────────────────────── */
 // [CONFIRMADO] «Hipertrofia del Ser» es el nombre real de su Substack.
 export const hipertrofia = {
-  eyebrow: "Diario de ideas · por Mario Lignarolo",
+  eyebrow: "El método",
   name: { before: "Hipertrofia", italic: "del", after: "Ser" },
-  // [MARIO] su frase firma: el «Ser» de Hipertrofia del Ser.
-  headline: { before: "No se trata de hacer más.", em: "Se trata de ser más." },
-  // [HIPÓTESIS] alternativa del brief: «Entrenar no solamente el cuerpo, sino la persona que lo habita.»
-  intro:
-    "Un lugar para ideas en evolución sobre identidad, cuerpo, trabajo interior, espiritualidad, creación, emprendimiento y ejecución.",
-  topics: [
-    "Identidad",
-    "Cuerpo",
-    "Trabajo interior",
-    "Espiritualidad",
-    "Creación",
-    "Emprendimiento",
-    "Ejecución",
-  ],
   // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] su método: hipertrofiar el ser en tres planos (parafraseado).
   planesLabel: "Los tres planos",
   planesTitle: "El ser también es un músculo.",
@@ -213,8 +179,6 @@ export const hipertrofia = {
     { name: "Mental", text: "Leer, escribir, crear ideas nuevas y desarrollar las habilidades que te faltan." },
     { name: "Físico", text: "Lo que presentas al mundo: tus acciones, cómo hablas, cómo vistes. Ahí se genera la evidencia." },
   ],
-  latestLabel: "Último escrito",
-  subscribe: "Suscribirme",
   image: { src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio, de espaldas." },
 };
 
@@ -226,6 +190,8 @@ export const hipertrofia = {
 export const pointOfView = {
   eyebrow: "Punto de vista",
   title: "Ideas a las que vuelvo.",
+  // En la página, cuatro: las que más hablan a quien ya logró cosas y se estancó.
+  show: ["Información", "Poder", "Responsabilidad", "Autenticidad"],
   sourceNote: "Palabras de Mario, de sus publicaciones y de una conversación con el estudio.",
   ideas: [
     {
@@ -265,7 +231,7 @@ export const pointOfView = {
 
 /* ── 06 PSICO-CIBERNÉTICA ────────────────────────────────── */
 export const psico = {
-  eyebrow: "El proyecto actual",
+  eyebrow: "Para empezar",
   name: "Psico-Cibernética",
   // [CONFIRMADO] encuadre público actual (Instagram). Mario aprueba el claim final.
   positioning: "Breathwork + reprogramación del subconsciente.",
@@ -298,14 +264,12 @@ export const psico = {
 // descripción y claims de portada). [CONFIRMAR] el rol exacto de Mario en
 // Lignarolo: por eso la etiqueta no le atribuye cargo.
 export const lignarolo = {
-  eyebrow: "Emprender · Calzado",
+  eyebrow: "Emprender",
   name: "Lignarolo",
   tagline: "Ereditá di Famiglia",
   // [MARIO] textual (carrusel del 17 oct 2025).
   quote: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido: sentir el placer de crear.",
-  description:
-    "Zapatos y botas artesanales en cuero italiano de plena flor, con construcción Blake Stitch, hechos a mano en Bogotá. Venta directa, sin intermediarios.",
-  facts: ["Cuero italiano", "Hecho a mano en Bogotá", "Venta directa", "Producción limitada"],
+  description: "Zapatos y botas artesanales en cuero italiano, hechos a mano en Bogotá.",
   cta: "Visitar lignarolo.com",
   href: "https://www.lignarolo.com",
   // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] [MARIO] textual (parte en español), con recortes mínimos.
@@ -317,46 +281,12 @@ export const lignarolo = {
   image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo. Blanco y negro." },
 };
 
-/* ── 10b INVITAR (charlas · podcasts · entrevistas) ──────── */
-// [HIPÓTESIS] Plataforma para que organizadores y podcasts lo inviten.
-// Los temas salen de su propio contenido; no se afirma ningún evento pasado.
-export const speaking = {
-  eyebrow: "Charlas · Podcasts · Entrevistas",
-  title: ["Lleva esta conversación", "a tu escenario."],
-  titleItalicLine: 1,
-  // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] su tema central: transformación de identidad, «no desde el misticismo».
-  intro:
-    "Su tema es la transformación de identidad, no desde el misticismo sino desde la práctica: cuerpo, mente y espíritu trabajando a la vez.",
-  topicsLabel: "Temas de conversación",
-  topics: [
-    { title: "Transformación de identidad", text: "Cómo dejar morir una versión de ti y sostener la siguiente, en tres planos." },
-    { title: "Psico-Cibernética", text: "La imaginación como sistema de dirección: el fracaso es solo información." },
-    { title: "Hipertrofia del Ser", text: "El ser también es un músculo. Lograr no basta: hay que poder sostenerlo." },
-    { title: "Emprender es aprender", text: "Vender desde la coherencia: ofrecer lo que a uno le cambió la vida." },
-  ],
-  formats: ["Conferencia", "Podcast", "Taller de respiración", "Entrevista"],
-  inviteLabel: "Para invitarlo",
-  // [ENTREVISTA] elige con cuidado sus colaboraciones: todavía no ha aceptado ninguna.
-  inviteText: "Mario elige con cuidado sus conversaciones. Cuéntale de tu evento, podcast o medio por mensaje directo.",
-  inviteCta: "Escribir por Instagram",
-  inviteHref: "https://ig.me/m/mariolignarolo",
-  // [CONFIRMAR] correo público para prensa: mientras no exista, se muestra pendiente.
-  emailPending: "Correo de prensa · pendiente",
-  bioLabel: "Bio corta para presentarlo",
-  photosLabel: "Fotos para prensa",
-  photos: [
-    { label: "Retrato (color, horizontal)", href: "/mario/hero.jpg" },
-    { label: "Retrato (blanco y negro)", href: "/mario/lignarolo.jpg" },
-  ],
-};
-
 /* ── 07 ESCRITOS ─────────────────────────────────────────── */
 export const writing = {
   eyebrow: "Hipertrofia del Ser — Escritos",
   title: ["Escribo para", "entender."],
   read: "Leer",
   ctaRead: "Leer en Substack",
-  ctaSubscribe: "Suscribirme",
 };
 
 /* ── 08 VIDEOS ───────────────────────────────────────────── */
@@ -392,8 +322,6 @@ export const about = {
   // Universidad de La Sabana, pero lo narra como «algo que no era lo mío»:
   // no se usa como credencial.
   bio: "Mario Lignarolo explora la relación entre cuerpo, mente, identidad y acción. Escribe Hipertrofia del Ser y guía Psico-Cibernética, un proceso de 40 días de breathwork y trabajo con el autoconcepto.",
-  focusLabel: "Ahora",
-  focus: ["Psico-Cibernética", "Hipertrofia del Ser", "Contenido en Instagram, YouTube y TikTok"],
   // [CONFIRMAR] ciudad: solo si Mario aprueba publicarla.
   location: "",
   // Recorte cerrado del retrato del hero, en B/N (la foto sentada vive en #lignarolo).
@@ -408,6 +336,7 @@ export const connect = {
   eyebrow: "Conecta",
   // [MARIO] su llamada a la acción real (carrusel del 17 oct 2025).
   ser: {
+    eyebrow: "O habla primero con Mario",
     keyword: "SER",
     text: "Si eres emprendedor y quieres volver a conectar con tu esencia para, desde ahí, impactar con autenticidad y escalar tus resultados, escríbeme «SER» por mensaje directo y te cuento cómo te puedo ayudar.",
     cta: "Escribir «SER» por Instagram",
@@ -419,4 +348,12 @@ export const connect = {
   newsletterPlaceholder: "tu@correo.com",
   newsletterCta: "Suscribirme",
   newsletterNote: "La suscripción se gestiona en Substack.",
+  // Lo que quedaba de «Invitar» (charlas · podcasts): una línea, sin kit de prensa
+  // ni correo pendiente. [ENTREVISTA] no ha aceptado ninguna invitación todavía.
+  invite: {
+    label: "Charlas · podcasts · entrevistas",
+    text: "Mario elige con cuidado sus conversaciones. Cuéntale de tu evento, podcast o medio por mensaje directo.",
+    cta: "Escribir por Instagram",
+    href: "https://ig.me/m/mariolignarolo",
+  },
 };
