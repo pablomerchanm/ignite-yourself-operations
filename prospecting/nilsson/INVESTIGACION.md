@@ -194,3 +194,19 @@ De `clients/jorge-arce/pettingill/BRAND-DIRECTION.md` se toma el sistema, no el 
 ## 9. El preview
 
 Publicado en privado en **igniteyourself.co/nilsson** (Overview, Advisory, Career, Press), construido con `tools/build-nilsson.py` sobre la narrativa de Vishwanathan y la piel de Pettingill. Sin fotografía real todavía: ver `FOTOS.md`.
+
+## 10. Verificación del 19 de octubre de 2026 (antes de compartir el preview)
+
+| Afirmación | Resultado | Fuente |
+|---|---|---|
+| Fusión de enero de 2022: 8 estudios en Oslo, Bergen, Sandvika, Estocolmo, Gotemburgo y Copenhague; 250 empleados; meta de 100 MSEK; 16 estudios | Confirmado. Él firma como "VD & delägare i Barry's Nordic". Linn Herland y Tage Flugeim, "delägare i Barry's Norway", dicen llevar "10 años" en el proyecto | sweatybusiness.se, 21 ene 2022 |
+| Copenhague | La abrió la compañía sueca durante la pandemia: "Trots de osäkra tiderna under pandemin har vi framgångsrikt lanserat en ny studio i Köpenhamn" (cita suya) | ídem |
+| Estocolmo, primer estudio | **2017**, no 2016 (la sociedad y su cargo de CEO sí son de 2016). No hay fuente para "el primer Barry's de los nórdicos": Noruega es anterior | Dagens PS, 2017 |
+| Licencia de España | Confirmado: "José Daniel García, presidente de la filial ibérica, Kevin Triguero y Johan Nilsson, director general de la compañía en los países nórdicos". Madrid primero, barrio de Salamanca | 2playbook.com, 11 may 2022 |
+| Madrid, 28 abr 2025 | **No confirmado**: Athletech lo sitúa en el segundo semestre de 2025. La página dice solo "Barcelona and Madrid" | athletechnews.com, 23 feb 2026 |
+| Zúrich | Confirmado: "meinen heutigen Geschäftspartner Johan Nilsson"; abrió a mediados de noviembre de 2025; Ginebra es lo siguiente. "Erfolgreichster Start" lo dice Röthlisberger, no Barry's. Caro Daur no aparece en este artículo | fitnesstribune.com, 20 feb 2026 |
+| Helsinki | Barry's Nordic, Mikonkatu 7; "kommande" en nov 2025; Athletech lo cuenta entre las aperturas del segundo semestre de 2025. Johan no aparece en esa prensa (solo en su post) | sweatybusiness.se, 13 nov 2025 |
+| CEO de Barry's Nordic | **En conflicto**: Kevin Triguero es "vd för hela Norden" (podcast, nov 2025); el registro sueco sigue nombrando VD a Lars Johan Nilsson; su LinkedIn dice "CEO & Partner" desde 2024 | sweatybusiness.se; allabolag.se |
+| Stockholm Leisure Partners | Las cuatro inversiones están en la descripción del podcast #59 (2019): "Via sitt investmentbolag, Stockholm Leisure Partners, har han investerat i koncept som Playbook App, ClassPass Nordics, REPEAT Fitness och Challengize." Sin evidencia de actividad inversora actual. El dominio tiene un certificado SSL inválido | podcasts.apple.com |
+| AIK, SATS (150 clubes, 1,7 BSEK) | Sin fuente pública fuera de su LinkedIn | — |
+| Svensk Innebandy | La elección de "Johan Nilsson" el 14 jun 2026 está confirmada; que sea él lo confirman sus propios posts | innebandy.se |

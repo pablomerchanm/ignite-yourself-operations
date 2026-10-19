@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Working together — Johan Nilsson",
-    "description": "Three ways to work with Johan Nilsson: bringing Barry’s to a new city, investment through Stockholm Leisure Partners, and board roles in business and sport."
+    "title": "The work — Johan Nilsson",
+    "description": "Operator, partner and investor: Barry’s in the Nordics, Iberia and Switzerland, Stockholm Leisure Partners, and boards in Swedish sport."
   },
   "logo": "JOHAN NILSSON",
   "nav": [
@@ -10,7 +10,7 @@
       "h": "/nilsson"
     },
     {
-      "t": "Partnerships",
+      "t": "The work",
       "h": "/nilsson/practice"
     },
     {
@@ -27,7 +27,7 @@
     }
   ],
   "navcta": {
-    "t": "Start a conversation",
+    "t": "Contact",
     "h": "/nilsson#inquiry"
   },
   "sections": [
@@ -35,103 +35,73 @@
       "type": "stmt",
       "id": "practice-open",
       "opener": true,
-      "label": "Working together",
+      "label": "The work",
       "img": {
         "src": "/nilsson/assets/advisory.jpg",
-        "alt": "Johan Nilsson in conversation with a studio team",
+        "alt": "Johan Nilsson in conversation with a studio team (provisional art direction)",
         "pos": "55% 40%"
       },
-      "quote": "A brand is global. <t>A market is local.</t>",
-      "sub": "Three ways in: a new city for Barry’s, a concept for Stockholm Leisure Partners, a seat at the board."
-    },
-    {
-      "type": "situations",
-      "id": "called-in",
-      "label": "Where it begins",
-      "title": "Where the conversation <t>usually begins.</t>",
-      "items": [
-        "You want to bring Barry’s to your city, and need a partner who has opened one before.",
-        "A first Barry’s studio that works, and a second and third that need to work the same way.",
-        "Two operators of the brand in neighbouring countries, and the case for becoming one company.",
-        "A fitness or wellness concept looking for capital that understands the floor as well as the spreadsheet.",
-        "A board that wants someone at the table who has carried a P&L.",
-        "A federation or club that wants its elite game run with the discipline of a commercial brand."
-      ],
-      "no": "01"
+      "quote": "Operator, partner, <t>investor.</t>",
+      "sub": "Three lines of one career: Barry’s as CEO and partner, health and fitness through Stockholm Leisure Partners, and board work in Swedish sport."
     },
     {
       "type": "paths",
-      "id": "routes",
+      "id": "dims",
       "nums": true,
-      "label": "Three ways in",
-      "title": "Three ways <t>to work together.</t>",
-      "lede": "Each one a chapter of the career, still open.",
+      "label": "Three dimensions",
+      "title": "Experience across operations, <t>investment and sport.</t>",
+      "lede": "Each one documented in public sources.",
       "cards": [
         {
           "lead": true,
-          "label": "Bringing Barry’s to a new city · Local entrepreneurs & Barry’s partners",
-          "title": "Who opens Barry’s in your city?",
+          "label": "Operating & partnering · Barry’s",
+          "title": "Barry’s, market by market.",
           "icon": "house",
-          "desc": "The Zürich pattern, applied to a new market: a local founder with the ambition, a partner with the experience of ten studios, and a launch run to the brand’s standard, in a way its headquarters can trust.",
+          "desc": "Ten years with the boutique fitness brand from Los Angeles: CEO of Barry’s Bootcamp Nordic from 2016, through the 2022 merger with the Norwegian franchisee, and partner in the Barry’s companies in Iberia and Switzerland.",
           "items": [
-            "Partner and structure for the new company",
-            "Site, team and launch",
-            "Operating as partner after opening",
-            "Nordics, Iberia and Switzerland so far"
-          ],
-          "cta": {
-            "t": "Discuss a city",
-            "h": "/nilsson#inquiry",
-            "path": "city"
-          }
+            "CEO & Partner, Barry’s Bootcamp Nordic AB",
+            "Partner & Board Member, Barry’s Iberia",
+            "Partner, Barry’s Switzerland",
+            "Studios in Sweden, Norway, Denmark, Finland, Spain and Switzerland"
+          ]
         },
         {
-          "label": "Investing in the next concepts · Founders of health & fitness concepts",
-          "title": "Whose capital has run the floor?",
+          "label": "Investing · Stockholm Leisure Partners",
+          "title": "Capital for health and fitness.",
           "icon": "earn",
-          "desc": "Through Stockholm Leisure Partners, an investor focused on the health and fitness industry: capital with operating experience, from the first studio to the Nordic and European market.",
+          "desc": "Founding partner, since 2015, of Stockholm Leisure Partners, an investor focused on the health and fitness industry.",
           "items": [
-            "Early and growth stage",
-            "Operating partner on the board",
-            "Nordic and European reach",
-            "Investments have included Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize"
-          ],
-          "cta": {
-            "t": "Discuss a concept",
-            "h": "/nilsson#inquiry",
-            "path": "founder"
-          }
+            "Playbook App",
+            "ClassPass Nordics",
+            "REPEAT Fitness",
+            "Challengize"
+          ]
         },
         {
-          "label": "Boards & sport · Boards, federations & clubs",
-          "title": "Who sits at the table?",
+          "label": "Sport · Boards",
+          "title": "A seat in Swedish sport.",
           "icon": "support",
-          "desc": "Board roles in business and in sport: strategy, commercial development and organisation, with the view of someone who has carried a P&L.",
+          "desc": "Elected to the board of Svensk Innebandy in June 2026; a board member of AIK since March 2026.",
           "items": [
-            "Board roles",
-            "Sport governance",
-            "Commercial development of the elite game",
-            "Strategy and organisation"
-          ],
-          "cta": {
-            "t": "Discuss a board role",
-            "h": "/nilsson#inquiry",
-            "path": "board"
-          }
+            "Svenska Innebandyförbundet — board member",
+            "AIK — board member",
+            "His stated aim: a stronger elite game, sportingly, commercially and organisationally"
+          ]
         }
       ],
-      "no": "02"
+      "fn": "Roles as listed on his public profile; investments as named on the Sweaty Business Podcast, 2019.",
+      "no": "01"
     },
     {
       "type": "stmt",
-      "id": "slp",
+      "id": "podcast",
       "compact": true,
-      "label": "Through Stockholm Leisure Partners",
-      "quote": "Capital that has <t>run the floor.</t>",
-      "sub": "Founding partner of Stockholm Leisure Partners, an investor focused on the health and fitness industry since 2015. Investments have included Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize.",
+      "label": "On the record · 2019",
+      "quote": "What an investor looks for <t>in a fitness concept.</t>",
+      "sub": "One of the subjects of an hour-long conversation on the Sweaty Business Podcast, with strategy for the fitness sector and Barry’s progress in the Nordics. In Swedish.",
       "more": {
-        "t": "Stockholm Leisure Partners",
-        "h": "https://stockholmleisurepartners.com/"
+        "t": "Listen to episode 59",
+        "h": "https://podcasts.apple.com/gb/podcast/59-johan-nilsson-investerare-vd-barrys-bootcamp-nordic/id1239949569?i=1000459246365"
       }
     },
     {
@@ -143,152 +113,63 @@
         {
           "t": "Barry’s Helsinki is open.",
           "q": "“So proud to share that Barry’s Helsinki is officially open 🇫🇮🔥 Huge thanks to everyone who made this happen — it’s been an incredible team effort! See you on the treadmill.”",
-          "s": "LinkedIn, February 2026"
+          "s": "LinkedIn, early 2026"
         },
         {
           "t": "Elected to the board of Svensk Innebandy.",
           "q": "“Jag är både stolt och ödmjuk över att i helgen ha blivit vald till ledamot i förbundsstyrelsen för Svensk Innebandy.”",
-          "s": "LinkedIn, July 2026 · “Both proud and humble to have been elected to the board of Svensk Innebandy this weekend.”"
+          "s": "LinkedIn, June 2026 · “Both proud and humble to have been elected to the board of Svensk Innebandy this weekend.”"
         },
         {
           "t": "A new board, a new season.",
           "q": "“Inspirerande start med nya förbundsstyrelsen och Sportkontoret! Ser fram emot att bidra till utvecklingen av svensk innebandy – och inte minst till att stärka elitinnebandyn sportsligt, kommersiellt och organisatoriskt. Let’s go!”",
           "s": "LinkedIn, September 2026 · “Looking forward to contributing to Swedish floorball, and not least to strengthening the elite game sportingly, commercially and organisationally.”"
-        },
-        {
-          "t": "Where luxury lives now.",
-          "q": "“Barry’s x Balenciaga 🙌” — sharing Daniel Rabinovich: “Luxury used to be defined entirely by what you wore to a fancy dinner. Today, it’s defined by where you sweat.”",
-          "s": "LinkedIn, July 2026"
         }
       ],
       "src": "Posts quoted as published; translations in quotation marks are ours.",
-      "no": "03"
+      "no": "02"
     },
     {
       "type": "next",
       "k": "Next",
-      "t": "Start a <t>conversation</t>",
-      "d": "A short note on where things stand is the best place to begin.",
-      "h": "/nilsson#inquiry"
+      "t": "Career",
+      "d": "From the strategy desk to the studio floor.",
+      "h": "/nilsson/track"
     },
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Enquiries",
+      "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a city, a concept or a board. A short note on where things stand is the best place to begin.",
+      "lede": "How people reach Johan is his decision. On the finished platform this becomes a short enquiry, routed by subject; here it is shown as it would work, and it is not switched on.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
-      "form": {
-        "selectLabel": "What would you like to discuss?",
-        "selectPlaceholder": "Select the nature of your enquiry",
-        "paths": [
+      "demo": {
+        "badge": "Preview · Enquiries not yet active",
+        "steps": [
           {
-            "v": "city",
-            "t": "Bringing Barry’s to a new city",
-            "btn": "Send a note",
-            "note": "Please do not include confidential financial information.",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "City and country"
-              },
-              {
-                "n": "Where things stand",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "A short note, by subject",
+            "d": "The subjects, and how they are worded, are agreed with Johan before launch."
           },
           {
-            "v": "founder",
-            "t": "A concept seeking investment",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "The concept, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "Routed to the right inbox",
+            "d": "Read by Johan or his office. Nothing confidential is asked for at first contact."
           },
           {
-            "v": "board",
-            "t": "A board or advisory role",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Organisation",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "The role, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "other",
-            "t": "Something else",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Message",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "Answered on his terms",
+            "d": "What is welcome, and how quickly, stays his decision. The platform only makes the first step clear."
           }
-        ]
+        ],
+        "note": "Nothing on this preview sends a message or collects information.",
+        "link": {
+          "t": "Johan Nilsson on LinkedIn",
+          "h": "https://www.linkedin.com/in/johannilsson24/"
+        }
       },
       "kick": "Operator & Investor in Premium Consumer Brands",
       "name": "Johan Nilsson",
       "sub": "Premium consumer brands, built in new markets. <t>Barry’s in the Nordics, Iberia and Switzerland.</t>",
-      "fcta": {
-        "t": "Start a conversation",
-        "h": "/nilsson#inquiry"
-      },
       "social": [
         {
           "t": "LinkedIn",
@@ -297,16 +178,16 @@
         }
       ],
       "base": "Johan Nilsson · Täby, Sweden",
-      "fine": "Private preview · Not indexed",
+      "fine": "Concept preview · Not indexed by search engines",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/nilsson/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information and trade press for Mr. Nilsson’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Mr. Nilsson, and it is not indexed or distributed."
+        "note": "A concept prepared by Ignite Yourself from public sources, his LinkedIn profile and the trade press, for Johan Nilsson’s review. It is not his official website and has not been reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs; they do not record real events or places. Copy, figures and photography remain subject to his validation. The page is excluded from search engines."
       },
       "noform": true,
-      "no": "04"
+      "no": "03"
     }
   ]
 }

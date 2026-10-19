@@ -10,7 +10,7 @@
       "h": "/nilsson"
     },
     {
-      "t": "Partnerships",
+      "t": "The work",
       "h": "/nilsson/practice"
     },
     {
@@ -27,7 +27,7 @@
     }
   ],
   "navcta": {
-    "t": "Start a conversation",
+    "t": "Contact",
     "h": "/nilsson#inquiry"
   },
   "sections": [
@@ -38,7 +38,7 @@
       "label": "On the record",
       "img": {
         "src": "/nilsson/assets/press.jpg",
-        "alt": "Photograph to come",
+        "alt": "A studio lounge in low light (provisional art direction)",
         "pos": "50% 50%"
       },
       "quote": "Heard <t>and read.</t>",
@@ -54,30 +54,22 @@
           "y": "2026",
           "t": "Barry’s erobert Zürich: the first Barry’s in Switzerland",
           "a": "Fitness Tribune, interview with Julia Röthlisberger",
-          "v": "How a Zürich founder found her partner on Instagram and had an answer three hours later; the opening at Talstrasse 83 in November 2025; Geneva next.",
+          "v": "How a Zürich founder found her business partner on Instagram and had an answer three hours later; the opening in November 2025; Geneva next.",
           "h": "https://fitnesstribune.com/barrys-erobert-zuerich/",
-          "why": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.”"
+          "why": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.” Translated from German."
         },
         {
           "y": "2025",
           "t": "Zürich: Fitnesskette Barry’s eröffnet erste Schweizer Filiale",
           "a": "Immobilien Business",
           "v": "The announcement of the first Swiss studio, in Zürich’s Kreis 1.",
-          "h": "https://www.immobilienbusiness.ch/en/regionen/2025-07-08/zuerich-fitnesskette-barrys-eroeffnet-erste-schweizer-filiale/",
-          "why": "Partners: Julia Röthlisberger and Johan Nilsson; Caro Daur as investor."
-        },
-        {
-          "y": "2024",
-          "t": "Barry’s aviserar ambitiösa tillväxtplaner",
-          "a": "Sweaty Business",
-          "v": "Barry’s global growth plans, with the Nordic franchise, studios in Stockholm, Gothenburg, Bergen, Oslo and Copenhagen, “with Johan Nilsson at the helm”.",
-          "h": "https://sweatybusiness.se/barrys-aviserar-ambitiosa-tillvaxtplaner-soker-nya-agare/"
+          "h": "https://www.immobilienbusiness.ch/en/regionen/2025-07-08/zuerich-fitnesskette-barrys-eroeffnet-erste-schweizer-filiale/"
         },
         {
           "y": "2023",
           "t": "Årsrapport 2022: Så gick det för Barry’s i Sverige",
           "a": "Sweaty Business",
-          "v": "The Swedish company’s 2022 accounts: revenue up just over twenty per cent, two studios, Johan Nilsson as CEO.",
+          "v": "The Swedish company’s 2022 accounts: two studios in Sweden, with Johan Nilsson as CEO.",
           "h": "https://sweatybusiness.se/arsrapport-2022-sa-gick-det-for-barrys-i-sverige/"
         },
         {
@@ -94,7 +86,7 @@
           "a": "Sweaty Business",
           "v": "Eight studios, around 250 people, a revenue target of SEK 100 million for 2022 and a plan for sixteen studios in the Nordics.",
           "h": "https://sweatybusiness.se/barrys-franchisetagarna-i-norden-slas-ihop-och-bildar-regionens-storsta-boutiqueaktor/",
-          "why": "“Proud and expectant to announce this merger.”"
+          "why": "“I am proud and expectant to announce this merger.” Translated from Swedish."
         },
         {
           "y": "2022",
@@ -107,9 +99,9 @@
           "y": "2019",
           "t": "Johan Nilsson — investerare & VD Barry’s Bootcamp Nordic",
           "a": "Sweaty Business Podcast, episode 59",
-          "v": "An hour on strategy in the fitness sector, what an investor looks for in a concept, and Barry’s progress in the Nordics.",
+          "v": "An hour on strategy in the fitness sector, what he looks at when assessing a potential investment, and Barry’s progress in the Nordics.",
           "h": "https://podcasts.apple.com/gb/podcast/59-johan-nilsson-investerare-vd-barrys-bootcamp-nordic/id1239949569?i=1000459246365",
-          "why": "Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize, as investments through Stockholm Leisure Partners."
+          "why": "Investments named through Stockholm Leisure Partners: Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize."
         }
       ],
       "no": "01"
@@ -117,132 +109,44 @@
     {
       "type": "next",
       "k": "Next",
-      "t": "Working together",
-      "d": "A city for Barry’s, a concept for SLP, a seat at the board.",
-      "h": "/nilsson/practice",
-      "alt": {
-        "t": "Start a conversation",
-        "h": "/nilsson#inquiry"
-      }
+      "t": "The work",
+      "d": "Operating, investing and sport.",
+      "h": "/nilsson/practice"
     },
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Enquiries",
+      "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a city, a concept or a board. A short note on where things stand is the best place to begin.",
+      "lede": "How people reach Johan is his decision. On the finished platform this becomes a short enquiry, routed by subject; here it is shown as it would work, and it is not switched on.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
-      "form": {
-        "selectLabel": "What would you like to discuss?",
-        "selectPlaceholder": "Select the nature of your enquiry",
-        "paths": [
+      "demo": {
+        "badge": "Preview · Enquiries not yet active",
+        "steps": [
           {
-            "v": "city",
-            "t": "Bringing Barry’s to a new city",
-            "btn": "Send a note",
-            "note": "Please do not include confidential financial information.",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "City and country"
-              },
-              {
-                "n": "Where things stand",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "A short note, by subject",
+            "d": "The subjects, and how they are worded, are agreed with Johan before launch."
           },
           {
-            "v": "founder",
-            "t": "A concept seeking investment",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "The concept, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "Routed to the right inbox",
+            "d": "Read by Johan or his office. Nothing confidential is asked for at first contact."
           },
           {
-            "v": "board",
-            "t": "A board or advisory role",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Organisation",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "The role, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "other",
-            "t": "Something else",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Message",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "Answered on his terms",
+            "d": "What is welcome, and how quickly, stays his decision. The platform only makes the first step clear."
           }
-        ]
+        ],
+        "note": "Nothing on this preview sends a message or collects information.",
+        "link": {
+          "t": "Johan Nilsson on LinkedIn",
+          "h": "https://www.linkedin.com/in/johannilsson24/"
+        }
       },
       "kick": "Operator & Investor in Premium Consumer Brands",
       "name": "Johan Nilsson",
       "sub": "Premium consumer brands, built in new markets. <t>Barry’s in the Nordics, Iberia and Switzerland.</t>",
-      "fcta": {
-        "t": "Start a conversation",
-        "h": "/nilsson#inquiry"
-      },
       "social": [
         {
           "t": "LinkedIn",
@@ -251,13 +155,13 @@
         }
       ],
       "base": "Johan Nilsson · Täby, Sweden",
-      "fine": "Private preview · Not indexed",
+      "fine": "Concept preview · Not indexed by search engines",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/nilsson/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information and trade press for Mr. Nilsson’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Mr. Nilsson, and it is not indexed or distributed."
+        "note": "A concept prepared by Ignite Yourself from public sources, his LinkedIn profile and the trade press, for Johan Nilsson’s review. It is not his official website and has not been reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs; they do not record real events or places. Copy, figures and photography remain subject to his validation. The page is excluded from search engines."
       },
       "noform": true,
       "no": "02"
