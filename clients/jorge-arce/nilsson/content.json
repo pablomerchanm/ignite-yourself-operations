@@ -15,7 +15,7 @@
       "img": {
         "src": "/nilsson/assets/hero.jpg",
         "mobile": "/nilsson/assets/hero-mobile.jpg",
-        "alt": "Portrait of Johan Nilsson (provisional art direction)"
+        "alt": "Portrait of Johan Nilsson"
       },
       "name": "Johan <t>Nilsson</t>",
       "sub": "Building premium consumer brands <t>in new markets.</t>",
@@ -69,7 +69,7 @@
       "sign": "Stockholm · Zürich · Madrid · Helsinki",
       "img": {
         "src": "/nilsson/assets/practice.jpg",
-        "alt": "Johan Nilsson with a studio team (provisional art direction)"
+        "alt": "Johan Nilsson with a studio team"
       },
       "more": {
         "t": "The career",
@@ -134,7 +134,7 @@
       "src": "Sweaty Business, January 2022",
       "img": {
         "src": "/nilsson/assets/chapter.jpg",
-        "alt": "Treadmills in a dark studio under red light (provisional art direction)"
+        "alt": "Treadmills in a dark studio under red light"
       },
       "more": {
         "t": "The career",
@@ -296,7 +296,7 @@
       "label": "Career",
       "img": {
         "src": "/nilsson/assets/career.jpg",
-        "alt": "Johan Nilsson at a desk in a studio (provisional art direction)",
+        "alt": "Johan Nilsson at a desk in a studio",
         "pos": "45% 40%"
       },
       "quote": "From the strategy desk <t>to the studio floor.</t>",
@@ -494,7 +494,7 @@
       "label": "On the record",
       "img": {
         "src": "/nilsson/assets/press.jpg",
-        "alt": "A studio lounge in low light (provisional art direction)",
+        "alt": "A studio lounge in low light",
         "pos": "50% 50%"
       },
       "quote": "Heard <t>and read.</t>",
@@ -568,7 +568,7 @@
       "label": "The work",
       "img": {
         "src": "/nilsson/assets/advisory.jpg",
-        "alt": "Johan Nilsson in conversation with a studio team (provisional art direction)",
+        "alt": "Johan Nilsson in conversation with a studio team",
         "pos": "55% 40%"
       },
       "quote": "Operator, partner, <t>investor.</t>",
