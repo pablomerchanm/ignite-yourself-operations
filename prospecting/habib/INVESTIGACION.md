@@ -1,6 +1,6 @@
 # Prof. Nagy Habib — investigación
 
-Estado: **lead caliente**. Contestó el 16 oct 2026 al segundo correo de Pablo con una sola línea: "What are you proposing?". Nada construido ni enviado todavía. Privado.
+Estado: **lead caliente**. Contestó el 16 oct 2026 al segundo correo de Pablo con una sola línea: "What are you proposing?". Preview construido en igniteyourself.co/habib (19 oct 2026, noindex). Nada enviado todavía. Privado.
 
 ## 1. Hilo de correo
 
@@ -42,11 +42,11 @@ Estado: **lead caliente**. Contestó el 16 oct 2026 al segundo correo de Pablo c
 - Terapia génica con plásmido por entrega hidrodinámica.
 - Primero en Occidente en publicar un ensayo con células madre autólogas de médula ósea para insuficiencia hepática (2004).
 - MTL-CEBPA: primer fármaco saRNA en humanos. Fase I publicada en Clinical Cancer Research (2020), Habib autor senior. Preclínico en Oncogene (2018). Estudio combinado en Singapur (2021). **Sin resultados de fase avanzada publicados.** Habib declara ser accionista de MiNA.
-- Más de 290 publicaciones según un perfil de conferencia; verificar en ORCID 0000-0003-4920-4154.
+- ORCID 0000-0003-4920-4154 (consultado 19 oct 2026): 430 artículos de revista, 102 ponencias, 27 capítulos, 9 libros, 5 patentes.
 
 ### Dispositivos
-- Habib 4X, resección bipolar por radiofrecuencia. Adquirido por AngioDynamics en 2015 (perfil de Imperial).
-- Habib EndoHPB, endoscopia intervencionista. Adquirido por Boston Scientific en 2018 y Edison Gold Award 2020 (perfil de Imperial; **no encontré fuente independiente**).
+- Habib 4X, resección bipolar por radiofrecuencia. Lanzado en 2005 con Imperial Engineering, aprobación FDA y marca CE. Licenciado en exclusiva a Rita Medical, hoy AngioDynamics; unas 70,000 unidades vendidas (blog de Imperial, marzo 2018). Los 10-K de AngioDynamics de 2009–2010 lo describen como acuerdo de distribución con EMcision. **El perfil de Imperial dice "acquired by AngioDynamics in 2015"; no encontré fuente independiente de esa compra. La página dice "taken to market by AngioDynamics", no "acquired".**
+- Habib EndoHPB, sonda endoscópica bipolar de radiofrecuencia para tumores que obstruyen la vía biliar. **Boston Scientific compró EMcision el 5 de marzo de 2018** (comunicado de Boston Scientific; confirmado). Edison Gold Award 2020 solo en el perfil de Imperial: no se usa en la página.
 - Él: "the inventor and co-author on the first publication to describe the use of radiofrequency energy in devices for liver surgery" (entrevista OTS).
 
 ### Empresas
@@ -103,7 +103,7 @@ El ángulo del primer correo es exacto: cuatro audiencias, cuatro sitios, ningun
 ## 9. Pendiente de verificar con él
 
 1. Royal Society of Edinburgh o Royal College of Surgeons of Edinburgh.
-2. Edison Gold Award 2020 y la adquisición de Boston Scientific.
+2. Edison Gold Award 2020, y si AngioDynamics compró el Habib 4X en 2015 o solo lo licenció.
 3. Fecha de fundación de EMcision.
 4. Su rol actual en MiNA y en Dawn Therapeutics.
 5. Recuento de publicaciones.
@@ -119,5 +119,8 @@ El ángulo del primer correo es exacto: cuatro audiencias, cuatro sitios, ningun
 - Equipo de MiNA: https://minatx.com/about/the-team/
 - Blog Imperial Surgery & Cancer: https://blogs.imperial.ac.uk/surgeryandcancer/?p=2420
 - Fase I MTL-CEBPA: https://pmc.ncbi.nlm.nih.gov/articles/PMC6204661
+- Boston Scientific, 5 mar 2018: https://news.bostonscientific.com/2018-03-05-Boston-Scientific-Announces-Acquisition-of-EMcision-Limited
+- AngioDynamics 10-K FY2009: https://www.sec.gov/Archives/edgar/data/0001275187/000119312509175543/d10k.htm
+- ORCID: https://orcid.org/0000-0003-4920-4154
 - Singapur 2021: https://www.businesswire.com/news/home/20211130005712/en/
 - Directorio NHS (403 al consultar): https://www.imperial.nhs.uk/consultant-directory/nagy-habib
