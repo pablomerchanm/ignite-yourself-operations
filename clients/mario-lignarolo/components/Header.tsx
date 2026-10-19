@@ -91,7 +91,7 @@ export default function Header() {
 
       <div
         id="menu-movil"
-        className={`grain fixed inset-0 bg-ink transition-opacity duration-500 lg:hidden ${
+        className={`fixed inset-0 bg-ink transition-opacity duration-500 lg:hidden ${
           open ? "opacity-100" : "pointer-events-none invisible opacity-0"
         }`}
       >
