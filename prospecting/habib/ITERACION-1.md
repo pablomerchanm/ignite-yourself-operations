@@ -78,3 +78,13 @@ Pedido de Pablo: menos narrativa y menos tono comercial; un expediente académic
 - **Franja "Institutions and affiliations"** justo después del retrato: seis logos oficiales a una sola tinta, cada uno con su relación con él.
 - **Procedencia de los logos:** Imperial (SVG de imperial.ac.uk), Académie Nationale de Chirurgie (logo de academie-chirurgie.fr), Royal College of Surgeons of Edinburgh (rcsed.ac.uk), MiNA Therapeutics (minatx.com), Boston Scientific (SVG de bostonscientific.com), AngioDynamics (angiodynamics.com). Pasados a tinta #14161A, sin alterar la forma. Nota: "Marks shown for reference only; each belongs to its respective owner."
 - **Hero:** más margen entre el cargo y los datos, y entre los datos y el borde inferior.
+
+## Iteración 6 — conferencias, entrevistas y prensa (19 oct 2026)
+
+- **Nueva sección § 09 "Lectures, interviews and press"**, después de Publications.
+- **Conferencias grabadas:** cuatro tarjetas con miniatura y enlace a YouTube: WORLD 2023 (saRNA para enfermedades monogénicas raras), Cancer Virtual 2020 (United Research Forum), 4th International Conference on Tissue Science and Regenerative Medicine, Roma 2015, y la película de laureado de Takreem 2012. Las miniaturas se descargaron y se atenuaron de color; los títulos y canales vienen del servicio oEmbed de YouTube.
+- **Cita:** "I know my patients but I know little molecular biology.", del reportaje "Next-generation medicines" de Imperial. Sustituye en espíritu a la cita del yoga: es profesional y tiene fuente.
+- **Cobertura con enlace directo:** LarissaPress (doctorado honoris causa, 21 sep 2023, con vídeo), Healio (Boston Scientific compra EMcision, 8 mar 2018), blog de Imperial (marzo 2018), "Next-generation medicines" (Imperial), entrevista de la Oligonucleotide Therapeutics Society, entrevista de Drug Target Review, HSTalks.
+- **Nuevo honor verificado:** doctorado honoris causa, Departamento de Medicina, Universidad de Tesalia, septiembre de 2023. Añadido a Honours y Chronology.
+- **Descartados como tarjeta:** los vídeos griegos de la ceremonia y de LarissaPress, porque su miniatura muestra a otras personas.
+- **Pendiente:** fecha de la entrevista de Drug Target Review (la web pide verificación humana).
