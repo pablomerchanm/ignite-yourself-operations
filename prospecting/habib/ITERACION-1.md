@@ -72,3 +72,9 @@ Pedido de Pablo: menos narrativa y menos tono comercial; un expediente académic
 - Componentes: nota con capitular y ficha lateral; tablas de cargos; cronología a dos columnas; primeros con el año en grande; dos láminas oscuras para los instrumentos; cifras de ORCID; publicaciones con enlace a PubMed.
 - Barra fina que aparece al dejar el retrato, con anclas a las secciones.
 - Las rutas antiguas /habib/practice, /track y /voice redirigen a su sección.
+
+## Iteración 5 — logos reales y aire en el hero (19 oct 2026)
+
+- **Franja "Institutions and affiliations"** justo después del retrato: seis logos oficiales a una sola tinta, cada uno con su relación con él.
+- **Procedencia de los logos:** Imperial (SVG de imperial.ac.uk), Académie Nationale de Chirurgie (logo de academie-chirurgie.fr), Royal College of Surgeons of Edinburgh (rcsed.ac.uk), MiNA Therapeutics (minatx.com), Boston Scientific (SVG de bostonscientific.com), AngioDynamics (angiodynamics.com). Pasados a tinta #14161A, sin alterar la forma. Nota: "Marks shown for reference only; each belongs to its respective owner."
+- **Hero:** más margen entre el cargo y los datos, y entre los datos y el borde inferior.

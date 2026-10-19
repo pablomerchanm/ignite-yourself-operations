@@ -128,6 +128,13 @@ hero = f'''<section class="hero" id="top">
   <div class="wrap hfoot"><dl class="hfacts">{facts}</dl><p class="hcap">{esc(H["caption"])}</p></div>
 </section>'''
 
+A = C['affiliations']
+aff = ''.join(f'<li class="rv"><span class="alogo"><img src="{esc(x["logo"])}" alt="{esc(x["name"])}" style="height:{x["h"]}px" loading="lazy"></span>'
+              f'<span class="ak">{esc(x["k"])}</span></li>' for x in A['items'])
+affiliations = f'''<section class="aff" aria-label="{esc(A["label"])}"><div class="wrap">
+  <span class="mlab rv">{esc(A["label"])}</span><ul class="agrid">{aff}</ul><p class="anote rv">{esc(A["note"])}</p>
+</div></section>'''
+
 M = C['masthead']
 toc = ''.join(f'<li><a href="#{s["id"]}"><span class="tn">{NO[s["id"]]}</span><span class="tt">{esc(s["label"])}</span>'
               f'<span class="tl" aria-hidden="true"></span></a></li>' for s in SECTIONS)
@@ -153,7 +160,7 @@ bar = ('<header class="bar" id="bar"><div class="wrap barin"><a class="bname" hr
                                                           ('instruments', 'Instruments'), ('publications', 'Publications'), ('sources', 'Sources')])
        + '</nav></div></header>')
 
-body = (hero + masthead + notice(C['notice']) + appointments(C['appointments']) + chronology(C['chronology'])
+body = (hero + affiliations + masthead + notice(C['notice']) + appointments(C['appointments']) + chronology(C['chronology'])
         + clinical(C['clinical']) + research(C['research']) + instruments(C['instruments'])
         + honours(C['honours']) + publications(C['publications']) + education(C['education'])
         + sources(C['sources']))
@@ -196,19 +203,29 @@ img{display:block;max-width:100%}
 .hph img{object-fit:cover;object-position:70% 30%}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,19,.62) 0%,rgba(14,16,19,.25) 42%,rgba(14,16,19,0) 64%),linear-gradient(180deg,rgba(14,16,19,.3) 0%,rgba(14,16,19,0) 22%,rgba(14,16,19,0) 55%,rgba(14,16,19,.9) 100%)}
 .hin,.hfoot{position:relative;z-index:2;width:100%}
-.hin{padding-bottom:clamp(40px,7vh,84px)}
+.hin{padding-bottom:clamp(48px,8vh,96px)}
 .hk{color:var(--teal2);margin-bottom:clamp(14px,2vh,22px)}
 .hn{font:300 clamp(64px,11vw,184px)/.9 var(--display);letter-spacing:-.025em}
 .hn .it{display:block;opacity:.94}
 .hp{font:400 clamp(13px,1.1vw,16px)/1 var(--mono);letter-spacing:.24em;margin-top:clamp(22px,3vh,34px);color:rgba(237,231,220,.86)}
 .hr{font:300 italic clamp(20px,1.9vw,30px)/1.25 var(--display);margin-top:12px;color:rgba(237,231,220,.78);max-width:24em}
-.hfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:28px}
-.hfacts{display:grid;grid-template-columns:repeat(3,minmax(0,auto));gap:0;border-top:1px solid rgba(237,231,220,.22);padding-top:16px}
+.hfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:clamp(48px,8vh,88px)}
+.hfacts{display:grid;grid-template-columns:repeat(3,minmax(0,auto));gap:0;border-top:1px solid rgba(237,231,220,.22);padding-top:22px}
 .hfacts div{padding-right:clamp(24px,4vw,64px)}
 .hfacts div+div{padding-left:clamp(16px,2vw,28px);border-left:1px solid rgba(237,231,220,.16)}
 .hfacts dt{color:rgba(237,231,220,.5);margin-bottom:6px}
 .hfacts dd{font:300 clamp(16px,1.3vw,20px)/1.3 var(--display)}
 .hcap{color:rgba(237,231,220,.42);font-size:10px;white-space:nowrap}
+
+/* instituciones: una franja de logos reales a una tinta */
+.aff{background:var(--paper);padding:clamp(56px,8vh,88px) 0 clamp(40px,6vh,64px);border-bottom:1px solid var(--rule)}
+.agrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:4px}
+.agrid li{display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:28px clamp(14px,1.6vw,24px) 24px;border-left:1px solid var(--rule)}
+.agrid li:first-child{border-left:0;padding-left:0}
+.alogo{height:56px;display:flex;align-items:center}
+.alogo img{width:auto;max-width:100%;object-fit:contain;opacity:.86}
+.ak{font-size:13px;line-height:1.45;color:#55524D}
+.anote{margin-top:18px;font:400 11px/1.5 var(--mono);color:var(--smoke);letter-spacing:.04em}
 
 /* cabecera del expediente e indice */
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,32px)}
@@ -352,6 +369,9 @@ img{display:block;max-width:100%}
 
 /* tableta */
 @media(max-width:1080px){
+  .agrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .agrid li:nth-child(4){border-left:0;padding-left:0}
+  .agrid li:nth-child(n+4){border-top:1px solid var(--rule)}
   .notice{grid-template-columns:1fr}
   .glance{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
   .chron{columns:1}}
@@ -371,6 +391,11 @@ img{display:block;max-width:100%}
   .hfacts div{padding:8px 0!important;border-left:0!important;border-bottom:1px solid rgba(237,231,220,.1);display:flex;justify-content:space-between;gap:16px}
   .hfacts dt{margin:0}
   .hfacts dd{text-align:right;font-size:15px}
+  .agrid{grid-template-columns:1fr 1fr}
+  .agrid li{padding-left:16px!important;border-left:1px solid var(--rule)!important;border-top:1px solid var(--rule)}
+  .agrid li:nth-child(odd){padding-left:0!important;border-left:0!important}
+  .agrid li:nth-child(-n+2){border-top:0}
+  .alogo{height:48px}
   .mleft,.toc{grid-column:1/-1}
   .toc{margin-top:48px}
   .rail{grid-column:1/-1;position:static;flex-direction:row;align-items:baseline;gap:14px;margin-bottom:22px}
