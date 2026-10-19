@@ -2313,6 +2313,11 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .nums .nn{font-size:clamp(52px,5.6vw,92px)!important}
 #site .arlay:not(:has(.arfig)) .arst{max-width:52em}
 #site .arst .nn{font-size:clamp(44px,4.4vw,72px)!important}
+/* barra sin boton de contacto: el menu sigue centrado */
+@media(min-width:861px){.topbar .tnav{position:absolute;left:50%;transform:translateX(-50%)}}
+/* primeros: el ano en negrita, la revista como cita */
+#site .sitlist p b{font-weight:400}
+#site .sitlist p .it{display:block;margin-top:.35em;font-family:var(--caps)!important;font-style:normal!important;font-weight:400!important;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke);opacity:1!important}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
@@ -2321,7 +2326,6 @@ NAV = [
     {"t": "Work",     "h": "/habib/practice"},
     {"t": "Career",   "h": "/habib/track"},
     {"t": "Record",   "h": "/habib/voice"},
-    {"t": "Contact",  "h": "/habib#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
@@ -2341,7 +2345,6 @@ def topbar_html(active):
     return ('<div class="topbar">'
             '<a class="u11 smallcap tname" href="/habib" style="color:#fff">Nagy Habib</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
-            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/habib#inquiry"}" style="color:#fff">Begin a conversation</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
 # ---------------------------------------------------------- 8. reparto por pagina
@@ -2365,9 +2368,9 @@ def homeward(o):
     return o
 
 def page(title, desc, secs, sub=False):
-    nc = dict(full['navcta'])
+    nc = None
     if sub:
-        secs = homeward(secs); nc['h'] = '/habib#inquiry'
+        secs = homeward(secs)
     return {"meta": {"title": title, "description": desc},
             "logo": full['logo'], "nav": NAV, "navcta": nc, "sections": renum(secs)}
 
@@ -2375,7 +2378,6 @@ inq = lambda: deep('inquiry')
 def foot():
     s = deep('inquiry'); s['noform'] = True
     return s
-ALT = {"t": "Begin a conversation", "h": "/habib#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
 T_PR = 'The work — Nagy Habib'
@@ -2383,8 +2385,8 @@ T_TE = 'Career — Nagy Habib'
 T_PU = 'The record — Nagy Habib'
 
 home = page(TITLE, DESC,
-    [deep('hero'), deep('marks'), deep('intro'), deep('numbers'), deep('audiences'), deep('called-in'), deep('offers'),
-     deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), inq()])
+    [deep('hero'), deep('marks'), deep('intro'), deep('numbers'), deep('firsts'), deep('body'),
+     deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), foot()])
 for _s in home['sections']:
     _s.pop('no', None)
 PAGES = {
@@ -2392,15 +2394,15 @@ PAGES = {
     'track': page(T_TE,
         'From Ain Shams, Edinburgh and Bristol, and training with Henri Bismuth and Thomas Starzl, to Imperial College London since 2003: the career of Professor Nagy Habib.',
         [deep('track-open'), deep('track-imperial'), deep('track-years'), deep('cv-today'), deep('cv-education'),
-         dict(NX('Next', 'The record', 'Selected papers, a book and lectures.', '/habib/voice'), alt=ALT), foot()], sub=True),
+         NX('Next', 'The record', 'Selected papers, a book and lectures.', '/habib/voice'), foot()], sub=True),
     'voice': page(T_PU,
         'Selected papers, a book and invited lectures by Professor Nagy Habib: first trials in gene therapy, stem cells and small activating RNA, and radiofrequency liver resection.',
         [deep('voice-open'), deep('voice-talks'),
-         dict(NX('Next', 'The work', 'Surgery, devices and ventures, research.', '/habib/practice'), alt=ALT), foot()], sub=True),
+         NX('Next', 'The work', 'Surgery, instruments and companies, research.', '/habib/practice'), foot()], sub=True),
     'practice': page(T_PR,
-        'Three lines of work of Professor Nagy Habib: hepatobiliary surgery, devices and life-science ventures, and translational research in liver disease.',
-        [deep('practice-open'), deep('called-in'), deep('routes'), deep('slp'),
-         NX('Next', 'Begin a <t>conversation</t>', 'A short note on where things stand is the best place to begin.', '/habib#inquiry'), foot()], sub=True),
+        'The body of work of Professor Nagy Habib: hepatobiliary surgery, the Habib radiofrequency instruments and the companies behind them, and translational research in liver disease.',
+        [deep('practice-open'), deep('firsts'), deep('work-detail'), deep('slp'),
+         NX('Next', 'The career', 'From Cairo to Hammersmith.', '/habib/track'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)
