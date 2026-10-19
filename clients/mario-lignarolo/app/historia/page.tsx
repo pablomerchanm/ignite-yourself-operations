@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Motion from "@/components/Motion";
 import StoryBar from "@/components/StoryBar";
 import VideoPlayer from "@/components/VideoPlayer";
@@ -53,18 +53,18 @@ function Media({ media, sizes }: { media: NonNullable<StorySection["media"]>; si
         poster={psico.video.poster}
         duration={psico.video.duration}
         label={psico.video.label}
-        className="aspect-video w-full"
+        className="frame aspect-video w-full"
       />
     );
   }
   if (media.kind === "diptych") {
     const d = origin.diptych;
     return (
-      <figure className="grid grid-cols-2 gap-3 sm:gap-6">
+      <figure className="grid grid-cols-2 gap-3 sm:gap-6 lg:max-w-[52rem]">
         {[d.before, d.after].map((ph) => (
           <div key={ph.label}>
-            <div className="relative aspect-[4/5] overflow-hidden bg-charcoal/10">
-              <Image src={ph.src} alt={ph.alt} fill sizes="(min-width: 1024px) 38vw, 50vw" className="object-cover" />
+            <div className="frame relative aspect-square">
+              <Image src={ph.src} alt={ph.alt} fill sizes="(min-width: 1024px) 26rem, 50vw" className="object-cover" />
             </div>
             <span className="caps mt-3 block text-charcoal/60">{ph.label}</span>
           </div>
@@ -76,7 +76,7 @@ function Media({ media, sizes }: { media: NonNullable<StorySection["media"]>; si
     );
   }
   return (
-    <div className="relative overflow-hidden bg-charcoal/10" style={{ aspectRatio: media.ratio }}>
+    <div className="frame relative" style={{ aspectRatio: media.ratio }}>
       <Image src={media.src} alt={media.alt} fill sizes={sizes} className="object-cover" />
     </div>
   );
@@ -84,17 +84,17 @@ function Media({ media, sizes }: { media: NonNullable<StorySection["media"]>; si
 
 function Section({ s, flip }: { s: StorySection; flip: boolean }) {
   const heading = s.title && (
-    <h2 className="display mb-7 text-[clamp(2.2rem,1.5rem+2.4vw,3.6rem)] leading-[1] text-charcoal">{s.title}</h2>
+    <h2 className="title mb-7 text-[clamp(2rem,1.4rem+2.2vw,3.3rem)] font-medium text-charcoal">{s.title}</h2>
   );
   const body = <div className={prose}>{s.paras.map((p, i) => <p key={i}>{rich(p)}</p>)}</div>;
 
   if (s.layout === "side" && s.media) {
     return (
       <section id={s.id} className={`${wrap} grid grid-cols-1 gap-y-8 lg:grid-cols-12 lg:items-start lg:gap-x-6`}>
-        <div data-reveal="up" className={`lg:sticky lg:top-10 lg:col-span-5 ${flip ? "lg:order-2 lg:col-start-8" : ""}`}>
-          <Media media={s.media} sizes="(min-width: 1024px) 40vw, 100vw" />
+        <div data-reveal="up" className={`lg:sticky lg:top-24 lg:col-span-4 ${flip ? "lg:order-2 lg:col-start-9" : ""}`}>
+          <Media media={s.media} sizes="(min-width: 1024px) 28vw, 100vw" />
         </div>
-        <div data-reveal="up" className={`lg:col-span-6 ${flip ? "lg:order-1" : "lg:col-start-7"} lg:pt-2`}>
+        <div data-reveal="up" className={`lg:col-span-7 ${flip ? "lg:order-1 lg:col-start-1" : "lg:col-start-6"} lg:pt-2`}>
           {heading}
           {body}
         </div>
@@ -136,28 +136,19 @@ export default function Historia() {
   let side = 0;
   return (
     <>
-      <header className="bg-ink text-bone">
-        <div className="gutter flex h-[var(--nav-h)] items-center justify-between gap-6">
-          <Link href="/" className="display text-[1.35rem] leading-none" aria-label={`${site.name} — inicio`}>
-            Mario Lignarolo<span className="text-acid">.</span>
-          </Link>
-          <Link href="/" className="caps link-line text-bone/80 transition-colors hover:text-acid">
-            Volver al inicio
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       <main id="contenido" className="bg-paper pb-[clamp(4rem,8vw,7rem)] text-charcoal">
         <article>
-          <header data-story-top className={`${wrap} pt-[clamp(3.5rem,8vw,7rem)] pb-[clamp(3rem,6vw,5rem)]`}>
+          <header data-story-top className={`${wrap} pt-[calc(var(--nav-h)+clamp(2.5rem,6vw,5rem))] pb-[clamp(3rem,6vw,5rem)]`}>
             <Eyebrow className="mb-8 text-charcoal/70">{historia.eyebrow}</Eyebrow>
-            <h1 className="display max-w-[64rem] text-[clamp(3rem,1.4rem+6.4vw,7.5rem)] leading-[0.9]">
+            <h1 className="title max-w-[64rem] text-[clamp(2.8rem,1.3rem+6vw,7rem)]">
               {historia.title.map((l) => (
                 <span key={l} className="block">
                   {l}
                 </span>
               ))}
-              <span className="mt-2 block text-[0.62em] leading-[1] italic text-charcoal/75">{historia.titleItalic}</span>
+              <b className="mt-2 block text-[0.62em]">{historia.titleItalic}</b>
             </h1>
             <p className="mt-10 max-w-[46rem] text-[1.1875rem] leading-[1.6] text-charcoal/80 lg:text-[1.3125rem] [&_strong]:font-semibold [&_strong]:text-charcoal">
               {rich(historia.dek)}
@@ -182,11 +173,11 @@ export default function Historia() {
         <section
           id="construi"
           data-bar-hide
-          className="mt-[clamp(5rem,10vw,9rem)] bg-ink py-[clamp(4.5rem,9vw,8rem)] text-bone"
+          className="grain mt-[clamp(5rem,10vw,9rem)] bg-ink py-[clamp(4.5rem,9vw,8rem)] text-bone"
         >
           <div className={wrap}>
-            <h2 data-reveal="up" className="display text-[clamp(2.6rem,1.6rem+3.6vw,5rem)] leading-[0.95]">
-              {historia.built.title}
+            <h2 data-reveal="up" className="title text-[clamp(2.6rem,1.6rem+3.6vw,5rem)]">
+              {historia.built.title.before} <b>{historia.built.title.strong}</b>
             </h2>
             <p
               data-reveal="up"
@@ -203,13 +194,13 @@ export default function Historia() {
                   className="flex flex-col border-t border-bone/15 pt-6"
                 >
                   <span className="caps text-acid">{it.kicker}</span>
-                  <h3 className="display mt-3 text-[clamp(2.2rem,1.7rem+1.6vw,3.2rem)] leading-none">{it.name}</h3>
+                  <h3 className="title mt-3 text-[clamp(2rem,1.6rem+1.4vw,2.8rem)]"><b>{it.name}</b></h3>
                   <p className="mt-4 max-w-[30rem] flex-1 text-[1.0625rem] leading-relaxed text-bone/75">{it.text}</p>
                   <a
                     href={it.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="caps link-line mt-6 inline-flex w-fit items-center gap-2 text-bone transition-colors hover:text-acid"
+                    className="btn btn--paper btn--sm mt-6 w-fit"
                   >
                     {it.cta} <Arrow diagonal />
                   </a>
@@ -225,7 +216,7 @@ export default function Historia() {
             <Eyebrow className="mb-8 text-charcoal/70">{testimonialsSection.eyebrow}</Eyebrow>
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
               {testimonials.map((t) => (
-                <figure key={t.quote} data-reveal="up" className="border-l-2 border-acid bg-cream px-6 py-5">
+                <figure key={t.quote} data-reveal="up" className="card px-6 py-5">
                   <blockquote className="display text-[clamp(1.4rem,1.2rem+0.8vw,1.9rem)] leading-[1.15]">«{t.quote}»</blockquote>
                   <figcaption className="caps mt-4 text-charcoal/60">
                     {t.name}

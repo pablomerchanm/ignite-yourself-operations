@@ -1,61 +1,67 @@
+import Image from "next/image";
 import type { CSSProperties } from "react";
-import { hipertrofia } from "@/data/content";
-import { Eyebrow, ImageSlot, Lines } from "./ui";
+import { channels, hipertrofia, home, lignarolo, psico } from "@/data/content";
+import { Arrow } from "./ui";
+
+// Una foto por plano: la del retrato azul (espiritual), la del taller
+// (mental: crear, construir) y la del entreno (físico).
+const photos = [psico.image, lignarolo.image, hipertrofia.image];
 
 /**
- * 03 — El método: Hipertrofia del Ser, en tres planos. Responde a la
- * pregunta de «Sostener»; lo que escribe con ese nombre vive en «Escritos».
+ * 07 — El método: Hipertrofia del Ser en tres planos, como tres tarjetas con
+ * foto. En móvil se deslizan; en escritorio van en fila.
  */
 export default function Hipertrofia() {
   return (
-    <section id="metodo" aria-labelledby="hipertrofia-title" className="gutter bg-paper py-[clamp(4.5rem,3rem+7vw,9.5rem)] text-charcoal">
-      <div className="border-b border-charcoal pb-4">
-        <Eyebrow className="text-charcoal/70">{hipertrofia.eyebrow}</Eyebrow>
-      </div>
-
-      <Lines
-        id="hipertrofia-title"
-        lines={[
-          <>
-            {hipertrofia.name.before} <em>{hipertrofia.name.italic}</em> {hipertrofia.name.after}
-          </>,
-        ]}
-        className="display py-[clamp(1.5rem,3vw,3rem)] text-[clamp(3.4rem,0.6rem+10.4vw,13rem)] leading-[0.86]"
-      />
-
-      <div className="grid grid-cols-1 gap-y-12 border-t border-charcoal/20 pt-[clamp(2.5rem,5vw,4.5rem)] lg:grid-cols-12 lg:gap-x-6">
-        <div className="lg:col-span-4">
-          <p data-reveal="up" className="display text-[clamp(2rem,1.4rem+2.1vw,3.4rem)] leading-[1.02]">
-            {hipertrofia.planesTitle}
+    <section id="metodo" aria-labelledby="metodo-title" className="gutter py-[clamp(4.5rem,3rem+7vw,9rem)]">
+      <div className="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p data-reveal="up" className="caps text-stone">
+            {hipertrofia.eyebrow} · {hipertrofia.name.before} {hipertrofia.name.italic} {hipertrofia.name.after}
           </p>
-          <p data-reveal="up" className="mt-6 max-w-[28rem] text-[1.0625rem] leading-relaxed text-charcoal/80">
-            {hipertrofia.planesIntro}
-          </p>
-          <div data-reveal="up" className="mt-10 hidden lg:block">
-            <ImageSlot
-              src={hipertrofia.image.src}
-              alt={hipertrofia.image.alt}
-              pendingLabel="Entreno"
-              sizes="25vw"
-              className="aspect-[4/5] w-full max-w-[20rem]"
-            />
-          </div>
+          <h2 id="metodo-title" data-reveal="up" className="title mt-4 text-[clamp(2.6rem,1.6rem+3.6vw,5rem)]">
+            {home.metodo.title.before} <b>{home.metodo.title.strong}</b>
+          </h2>
         </div>
-
-        <ol className="grid grid-cols-1 content-start gap-y-6 lg:col-span-7 lg:col-start-6">
-          {hipertrofia.planes.map((pl, i) => (
-            <li
-              key={pl.name}
-              data-reveal="up"
-              style={{ "--delay": `${i * 0.08}s` } as CSSProperties}
-              className="grid grid-cols-1 gap-y-3 border-t border-charcoal/20 pt-6 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] sm:gap-x-6"
-            >
-              <h3 className="display text-[clamp(2.4rem,1.6rem+2.6vw,4.4rem)] leading-none">{pl.name}</h3>
-              <p className="text-[1.0625rem] leading-relaxed text-charcoal/75 sm:pt-3">{pl.text}</p>
-            </li>
-          ))}
-        </ol>
+        <p data-reveal="up" className="max-w-[26rem] text-[1.0625rem] leading-[1.55] text-charcoal/75">
+          {hipertrofia.planesIntro}
+        </p>
       </div>
+
+      <ol className="rail rail--wide rail--grid mt-10">
+        {hipertrofia.planes.map((pl, i) => (
+          <li
+            key={pl.name}
+            data-reveal="up"
+            style={{ "--delay": `${i * 0.08}s` } as CSSProperties}
+            className="card flex flex-col overflow-hidden"
+          >
+            <div className="p-6 pb-5">
+              <p className="caps text-stone">0{i + 1}</p>
+              <h3 className="title mt-3 text-[clamp(1.9rem,1.5rem+1.2vw,2.6rem)]">
+                <b>{pl.name}</b>
+              </h3>
+              <p className="mt-3 min-h-[3.2em] text-[0.975rem] leading-[1.5] text-charcoal/75">{pl.text}</p>
+            </div>
+            <div className="relative mt-auto aspect-[4/3] overflow-hidden">
+              <div className="sd-zoom absolute inset-0">
+                <Image src={photos[i].src} alt={photos[i].alt} fill sizes="(min-width: 1024px) 30vw, 84vw" className="object-cover" />
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <p data-reveal="up" className="mt-8">
+        <a
+          href={channels.substack.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-line inline-flex items-center gap-2 text-[0.9rem] font-medium"
+        >
+          Leer Hipertrofia del Ser en Substack <Arrow diagonal />
+        </a>
+      </p>
     </section>
   );
 }

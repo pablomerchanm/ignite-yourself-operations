@@ -1,112 +1,70 @@
-import type { CSSProperties } from "react";
 import { psico, psicoUrl } from "@/data/content";
-import { Arrow, Eyebrow, ImageSlot, Lines, SmartLink } from "./ui";
+import { Arrow } from "./ui";
 import VideoPlayer from "./VideoPlayer";
 
 /**
- * 06 — El producto actual, como consecuencia de la visión (no como página
- * de ventas). Módulo propio: el verde de la pared del retrato.
+ * 03 — La oferta principal, como un bloque de producto. A la izquierda, el
+ * aura que respira (el azul es del programa, no de la marca de Mario); al
+ * pulsar, ahí mismo se reproduce el video con el que él lo presenta.
  */
 export default function Psicocibernetica() {
   return (
-    <section
-      id="psicocibernetica"
-      aria-labelledby="psico-title"
-      className="gutter grain overflow-hidden bg-ink-2 py-[clamp(5rem,4rem+8vw,11rem)] text-bone"
-    >
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-bone/15 pb-5">
-        <Eyebrow className="text-fog">{psico.eyebrow}</Eyebrow>
-        <p className="caps text-acid">{psico.positioning}</p>
-      </div>
-
-      <div className="relative grid grid-cols-1 items-end gap-y-6 pt-[clamp(2.5rem,5vw,4.5rem)] lg:grid-cols-12 lg:gap-x-6">
-        <Lines
-          id="psico-title"
-          lines={["Psico-", "Cibernética"]}
-          className="display text-[clamp(3.2rem,0.4rem+10.2vw,12.5rem)] leading-[0.84] uppercase lg:col-span-8"
-        />
-        <p
-          data-reveal="up"
-          className="flex items-baseline gap-3 lg:col-span-4 lg:justify-end"
-          aria-label={`${psico.days} días`}
-        >
-          <span
-            aria-hidden="true"
-            className="display text-[clamp(7rem,3rem+14vw,17rem)] leading-[0.8] text-transparent [-webkit-text-stroke:1px_var(--color-acid)]"
-          >
-            {psico.days}
-          </span>
-          <span aria-hidden="true" className="display text-[clamp(1.8rem,1.2rem+1.8vw,3rem)] italic">
-            días
-          </span>
-        </p>
-      </div>
-
-      {/* El video con el que Mario presenta el proceso, y su retrato en azul. */}
-      <div className="mt-[clamp(3rem,6vw,5.5rem)] grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-stretch">
-        <div data-reveal="up" className="lg:col-span-8">
+    <section id="psicocibernetica" aria-labelledby="psico-title" className="gutter bg-sky py-[clamp(4rem,3rem+6vw,8rem)]">
+      <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-12 lg:items-center lg:gap-x-10">
+        <div data-reveal="up" className="lg:col-span-6">
           <VideoPlayer
             src={psico.video.src}
             poster={psico.video.poster}
             duration={psico.video.duration}
             label={psico.video.label}
-            className="aspect-video w-full"
+            className="frame aspect-square w-full data-[playing]:aspect-video lg:aspect-[4/5]"
+            cover={
+              <div className="aura pointer-events-none absolute inset-0" aria-hidden="true">
+                <span className="aura__word display">[{psico.auraWord}]</span>
+              </div>
+            }
           />
         </div>
-        <div data-reveal="up" className="hidden lg:col-span-4 lg:block">
-          <ImageSlot
-            src={psico.image.src}
-            alt={psico.image.alt}
-            pendingLabel="Retrato"
-            sizes="(min-width: 1024px) 33vw, 100vw"
-            tone="dark"
-            className="aspect-[4/5] w-full lg:aspect-auto lg:h-full"
-          />
-        </div>
-      </div>
 
-      <div className="mt-[clamp(3rem,6vw,5.5rem)] grid grid-cols-1 gap-y-12 lg:grid-cols-12 lg:gap-x-6">
-        <div className="lg:col-span-5">
-          <p data-reveal="up" className="display text-[clamp(2rem,1.4rem+2vw,3.3rem)] leading-[1.02]">
-            {psico.promise}
+        <div className="lg:col-span-6 lg:pl-2">
+          <p data-reveal="up" className="caps text-stone">
+            {psico.eyebrow} · {psico.days} días
           </p>
-          <p data-reveal="up" className="mt-6 max-w-[30rem] text-[1.0625rem] leading-relaxed text-bone/80">
-            {psico.born}
+          <h2 id="psico-title" data-reveal="up" className="title mt-4 text-[clamp(2.6rem,1.6rem+3.6vw,5rem)]">
+            Psico-<b>Cibernética</b>
+          </h2>
+          <p data-reveal="up" className="mt-4 max-w-[30rem] text-[1.125rem] leading-[1.5] text-charcoal/80 lg:text-[1.25rem]">
+            <b className="font-semibold text-charcoal">{psico.positioning}</b> {psico.promise}
           </p>
-          <div data-reveal="up" className="mt-8 max-w-[30rem] border-l border-bone/20 pl-5">
-            <p className="caps text-fog">{psico.originLabel}</p>
-            <p className="mt-3 text-[0.975rem] leading-relaxed text-bone/75">{psico.origin}</p>
-            <p className="display mt-4 text-[clamp(1.3rem,1.1rem+0.6vw,1.6rem)] leading-[1.12] italic text-bone/90">
-              «{psico.originQuote}»
-            </p>
-          </div>
-          <div data-reveal="up" className="mt-10 flex flex-col items-start gap-5">
-            <SmartLink
-              href={psicoUrl}
-              className="caps inline-flex items-center gap-3 bg-acid px-7 py-[1.1rem] font-medium text-ink transition-colors hover:bg-bone"
-            >
-              {psico.cta} <Arrow diagonal />
-            </SmartLink>
-            <p className="max-w-[24rem] text-[0.8125rem] leading-relaxed text-fog">{psico.note}</p>
-          </div>
-        </div>
 
-        <div className="lg:col-span-6 lg:col-start-7">
-          <p data-reveal="up" className="caps text-fog">
-            {psico.intro}
-          </p>
-          <ol className="mt-6 border-b border-bone/15">
-            {psico.explores.map((item, i) => (
-              <li
-                key={item}
-                data-reveal="up"
-                style={{ "--delay": `${i * 0.06}s` } as CSSProperties}
-                className="border-t border-bone/15 py-4"
-              >
-                <span className="display text-[clamp(1.6rem,1.2rem+1.2vw,2.3rem)] leading-tight">{item}</span>
+          <ul data-reveal="up" className="mt-6 flex flex-wrap gap-2" aria-label={psico.intro}>
+            {psico.explores.map((item) => (
+              <li key={item} className="chip bg-paper">
+                {item}
               </li>
             ))}
-          </ol>
+          </ul>
+
+          <div data-reveal="up" className="mt-8 flex flex-wrap items-center gap-4">
+            <a href={psicoUrl} target="_blank" rel="noopener noreferrer" className="btn btn--ink">
+              {psico.cta} <Arrow />
+            </a>
+            <p className="max-w-[18rem] text-[0.8125rem] leading-snug text-stone">{psico.note}</p>
+          </div>
+
+          <details data-reveal="up" className="acc mt-8 max-w-[32rem] border-t border-charcoal/15">
+            <summary className="flex items-center justify-between gap-4 py-4 text-[0.95rem] font-medium">
+              {psico.originLabel}
+              <span className="acc__plus text-[1.4rem] leading-none font-light" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div className="pb-5">
+              <p className="text-[0.95rem] leading-relaxed text-charcoal/75">{psico.born}</p>
+              <p className="mt-3 text-[0.95rem] leading-relaxed text-charcoal/75">{psico.origin}</p>
+              <p className="display mt-4 text-[1.35rem] leading-[1.12] italic">«{psico.originQuote}»</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>

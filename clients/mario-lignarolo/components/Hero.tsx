@@ -1,61 +1,44 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { CSSProperties } from "react";
-import { hero } from "@/data/content";
+import { hero, home } from "@/data/content";
+import { Arrow } from "./ui";
 
 const d = (s: number) => ({ "--delay": `${s}s` }) as CSSProperties;
 
-/** 01 — Portada editorial. La geometría vive en globals.css (.hero*). */
+/** 01 — Portada: su retrato a sangre y, abajo, el titular con los dos caminos. */
 export default function Hero() {
+  const { kicker, title, sub, primary, secondary } = home.hero;
   return (
-    <section id="top" className="hero grain" aria-label="Portada">
-      <div className="hero__stage">
-        <div className="hero__media">
-          <div className="hero__settle">
-            <div className="hero__drift">
-              <Image
-                src={hero.image.src}
-                alt={hero.image.alt}
-                fill
-                priority
-                quality={85}
-                sizes="100vw"
-                className="hero__img"
-              />
-            </div>
+    <section id="top" className="hero" aria-label="Portada">
+      <div className="hero__media">
+        <div className="hero__settle absolute inset-0">
+          <div className="hero__drift absolute inset-0">
+            <Image src={hero.image.src} alt={hero.image.alt} fill priority quality={85} sizes="100vw" className="hero__img" />
           </div>
         </div>
+      </div>
+      <div className="hero__shade" aria-hidden="true" />
 
-        <h1 className="hero__name">
-          <span className="hero__first">
-            <span className="rise" style={d(0.35)}>
-              Mario
-            </span>
-          </span>{" "}
-          <span className="hero__last">
-            <span className="rise" style={d(0.5)}>
-              Li<i>gn</i>arolo.
-            </span>
-          </span>
-        </h1>
-
-        <ul className="hero__words fade-up" style={d(1.05)} aria-label="Territorios">
-          {hero.territories.map((t) => (
-            <li key={t.word} className={t.italic ? "italic" : undefined}>
-              {t.word}
-            </li>
-          ))}
-        </ul>
-
-        <p className="hero__statement fade-up" style={d(1.25)}>
-          {hero.statement.map((line) => (
-            <span key={line}>{line} </span>
-          ))}
+      <div className="hero__body gutter">
+        <p className="caps fade-up text-bone/80" style={d(0.3)}>
+          {kicker}
         </p>
-
-        <a href="#sostener" className="hero__scroll caps fade-up" style={d(1.6)}>
-          <span className="scroll-line" aria-hidden="true" />
-          Desliza
-        </a>
+        <h1 className="title fade-up mt-5 max-w-[14ch] text-[clamp(2.7rem,1.3rem+6vw,6.5rem)] text-paper" style={d(0.45)}>
+          <span className="sr-only">Mario Lignarolo. </span>
+          {title.before} <b>{title.strong}</b> {title.after}
+        </h1>
+        <div className="fade-up mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between" style={d(0.7)}>
+          <p className="max-w-[30rem] text-[1.0625rem] leading-[1.5] text-bone/80 lg:text-[1.125rem]">{sub}</p>
+          <div className="flex flex-wrap gap-3">
+            <a href={primary.href} target="_blank" rel="noopener noreferrer" className="btn btn--paper">
+              {primary.label} <Arrow />
+            </a>
+            <Link href={secondary.href} className="btn btn--ghost text-bone">
+              {secondary.label}
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

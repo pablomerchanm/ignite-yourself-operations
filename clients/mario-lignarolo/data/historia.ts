@@ -18,7 +18,7 @@
 import { channels, connect, lignarolo, psico, psicoUrl } from "./content";
 
 export type StoryMedia =
-  | { kind: "image"; src: string; alt: string; ratio: "4/5" | "4/3" | "16/9" }
+  | { kind: "image"; src: string; alt: string; ratio: "1/1" | "4/5" | "4/3" | "16/9" }
   | { kind: "video" }
   | { kind: "diptych" };
 
@@ -51,7 +51,7 @@ export const historia = {
     {
       id: "empieza",
       layout: "side",
-      media: { kind: "image", src: "/mario/hero.jpg", alt: "Mario Lignarolo, retrato sobre fondo verde oscuro.", ratio: "4/5" },
+      media: { kind: "image", src: "/mario/hero.jpg", alt: "Mario Lignarolo, retrato sobre fondo verde oscuro.", ratio: "1/1" },
       paras: [
         // [ENTREVISTA] «Mi historia empieza cuando empecé a compararme con las personas… unos 16 años».
         "Mi historia empieza cuando **empecé a compararme con las personas**. Tenía unos 16 años y miraba a la gente que se movía en redes. Quería algo, quería ser alguien, **sin entender para qué**.",
@@ -59,8 +59,6 @@ export const historia = {
         "Siempre me encantó **crear desde mi esencia**. Emprender, construir, explorar mi creatividad… eso me hacía sentir vivo. Pero tenía una creencia que me limitaba: «Eso no aporta. Eso no tiene valor».",
         // [MARIO]
         "Ser el menor de cinco hermanos me hizo creer que tenía que **seguir el camino tradicional**. Empecé mis estudios no porque me gustaran, sino porque sentía que debía seguir la tradición familiar. Y ahí empezó todo: **la búsqueda de validación y aprobación externa**, porque no sabía lo que quería.",
-        // [ENTREVISTA] los zapatos en pandemia y el fitness.
-        "En la pandemia pintaba zapatos porque quería crear algo, pero me decía: «esto no me va a hacer famoso». **Estaba concentrado en el resultado, más que en el aporte.** Con el fitness me pasó igual: quería que me vieran, que me validaran. Y eso terminaba siendo **un cuchillo de doble filo que me estaba apuñalando**.",
       ],
     },
     {
@@ -97,8 +95,6 @@ export const historia = {
       paras: [
         // [MARIO]
         "Hasta que decidí que algo tenía que cambiar. **Empecé a invertir en mi crecimiento.** Mejoré mi entorno. Dejé ir lo que no servía.",
-        // [ENTREVISTA]
-        "Me metí en la espiritualidad, en la conciencia, y empecé a leer muchísimo. Mi primera inversión fue una mentoría de un año: trabajo de identidad.",
         // [ENTREVISTA] «Yo me desaparecía, no me conectaba a las clases… todo es interno».
         "Aun así había días en que me desaparecía, en que no me conectaba a las clases. Ahí lo entendí: **todo es interno. Todo es dentro de mí.**",
       ],
@@ -119,16 +115,14 @@ export const historia = {
       id: "respirar",
       title: "Lo que nunca había sentido",
       layout: "side",
-      media: { kind: "image", src: psico.image.src, alt: psico.image.alt, ratio: "4/5" },
+      media: { kind: "image", src: psico.image.src, alt: psico.image.alt, ratio: "1/1" },
       paras: [
         // [ENTREVISTA] el anuncio de respiración consciente (programa de unos 11 días).
         "Un día vi un anuncio de respiración consciente y me sentí identificado: lo que yo estaba viviendo, ese hombre ya lo había vivido. Compré el programa y empecé a respirar. **Nunca lo había sentido en mi vida.**",
         // [ENTREVISTA]
         "El cambio no llegó de golpe. Pero empecé a juntar todo lo que había aprendido: marketing, marca personal, respiración, desarrollo personal. Y dije: **aquí hay algo.**",
-        // [ENTREVISTA, segundo audio] [CONFIRMAR] nombre exacto del máster.
-        "Después hice el máster de respiración consciente con Nacho Muñoz y me certifiqué. Hoy respiro o medito todos los días; es lo primero que hago al despertar.",
         // [ENTREVISTA, segundo audio] editado.
-        "¿Cómo manejar la ansiedad? **Respirando.** La ansiedad es tu mente en el futuro. La respiración te trae al presente, porque es lo único que puedes controlar.",
+        "Después me certifiqué en respiración consciente. Hoy es lo primero que hago al despertar. ¿Cómo manejar la ansiedad? **Respirando.** La ansiedad es tu mente en el futuro; la respiración te trae al presente, porque es lo único que puedes controlar.",
       ],
     },
     {
@@ -149,14 +143,12 @@ export const historia = {
       id: "ser",
       title: "El ser también es un músculo",
       layout: "side",
-      media: { kind: "image", src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio, de espaldas.", ratio: "4/5" },
+      media: { kind: "image", src: "/mario/entreno-banco.jpg", alt: "Mario entrenando en el gimnasio, de espaldas.", ratio: "1/1" },
       paras: [
         // [ENTREVISTA, segundo audio]
         "La gente se pone un objetivo porque llega el verano: me voy al gimnasio porque quiero estar bien para la playa. ¿Y qué pasa después de la playa? **Vuelven a sus viejos patrones**, porque se enfocaron en un resultado y no en sostener una identidad.",
         // [ESTUDIO] la idea central del método.
         "Por eso lograrlo no basta: **hay que convertirse en alguien capaz de sostenerlo.** Trabajo el ser en tres planos: espiritual, mental y físico.",
-        // [ENTREVISTA, segundo audio] el origen del nombre.
-        "Hipertrofia del Ser era un concepto que tenía guardado hace mucho. Cuando armé mi mentoría, me sugirieron llamarla «Maestría del Ser», y así quedó un tiempo. Pero no: **es hipertrofia.** Así se llama hoy lo que escribo.",
         // [ENTREVISTA, segundo audio]
         "¿En qué tanto caos puedes mantener la calma? **Esa es la verdadera hipertrofia del ser.**",
       ],
@@ -164,7 +156,7 @@ export const historia = {
   ] satisfies StorySection[],
 
   built: {
-    title: "Y esto es lo que construí",
+    title: { before: "Y esto es lo que", strong: "construí." },
     // [ESTUDIO]
     intro: "Lo que empezó como mi propio proceso hoy es un camino para emprendedores que ya lograron cosas y quieren el siguiente nivel, **sin volver a sus viejos patrones**.",
     items: [
@@ -203,10 +195,8 @@ export const historia = {
     paras: [
       // [ENTREVISTA] cierre del primer audio.
       "Tenía que ser como tenía que ser. Para darme el permiso de encontrar las cosas que me gustan y, como consecuencia, **poder aportar valor a las personas, porque lo viví.**",
-      // [MARIO] cierre de su carrusel.
-      "Hoy estoy conectado con mi esencia, con esa versión de mí que no necesita validación externa. Porque aprendí que **el poder nunca estuvo afuera. Siempre estuvo dentro.**",
-      // [ESTUDIO]
-      "Si llegaste hasta aquí, empieza por donde te llame: los 40 días de Psico-Cibernética, lo que escribo o una conversación conmigo.",
+      // [MARIO] remate de su carrusel + [ESTUDIO].
+      "Aprendí que **el poder nunca estuvo afuera. Siempre estuvo dentro.** Si llegaste hasta aquí, empieza por donde te llame: los 40 días, lo que escribo o una conversación conmigo.",
     ],
     signature: "Mario Lignarolo",
   },
