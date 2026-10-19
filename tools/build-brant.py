@@ -1,5 +1,5 @@
 # Dr. Patrick Brant — expediente de autoridad, preview no indexado.
-# Una sola pagina estatica y editorial, en el registro de Habib: el registro, no la venta.
+# Una sola pagina estatica y editorial; el sistema grafico de Habib, con su propia jerarquia.
 # Tercera persona, entradas fechadas, fuentes visibles. Sin llamadas a la accion ni formulario.
 # Todo el texto vive en brant/content.json; este script solo compone el HTML.
 import json, html, os, re
@@ -16,8 +16,10 @@ def rich(s):
     s = s.replace('&lt;b&gt;', '<b>').replace('&lt;/b&gt;', '</b>')
     return s
 
-SECTIONS = [C[k] for k in ('notice', 'appointments', 'chronology', 'work', 'research',
-                           'patents', 'honours', 'lectures', 'education', 'sources')]
+# La jerarquia responde a quien lee: abogados que buscan perito, directores de I+D, socios.
+# Primero en que es autoridad (y la prueba), luego que hace hoy, luego donde lo gano.
+SECTIONS = [C[k] for k in ('expertise', 'present', 'exxonmobil', 'patents', 'publications',
+                           'distinctions', 'education', 'notice', 'sources')]
 NO = {s['id']: f'{i + 1:02d}' for i, s in enumerate(SECTIONS)}
 
 def ext(h, label='Record'):
@@ -38,37 +40,35 @@ def section(s, inner, tint=False):
     return (f'<section class="sec{" tint" if tint else ""}" id="{s["id"]}"><div class="wrap grid">'
             + head(s) + inner + src(s) + '</div></div></section>')
 
+def table(rows, cols=('Role', 'Institution', 'Years')):
+    items = ''.join(f'<li class="rv"><span class="ar">{rich(r)}</span><span class="ai">{esc(i)}</span>'
+                    f'<span class="ay">{esc(y)}</span></li>' for r, i, y in rows)
+    return ('<div class="table"><div class="thead">' + ''.join(f'<span>{c}</span>' for c in cols)
+            + f'</div><ol class="appt">{items}</ol></div>')
+
+def ledger(items):
+    return ''.join(f'<li class="rv"><span class="ly">{esc(y)}</span><span class="lt">{rich(t)}</span>'
+                   f'<span class="lb">{rich(b)}</span></li>' for y, t, b in items)
+
 # ------------------------------------------------------------------ secciones
-def notice(s):
-    glance = ''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in s['glance'])
-    return section(s, f'<div class="notice"><p class="ntext rv">{rich(s["text"])}</p>'
-                      f'<dl class="glance rv">{glance}</dl></div>')
+def expertise(s):
+    def ev(e):
+        name, year, h = e
+        inner = f'<span>{esc(name)}</span><span class="fy">{esc(year)}{" ↗" if h else ""}</span>'
+        return (f'<li><a href="{esc(h)}" target="_blank" rel="noopener">{inner}</a></li>' if h
+                else f'<li><span class="fe">{inner}</span></li>')
+    rows = ''.join(f'<li class="rv"><span class="fno">{i + 1:02d}</span><h3>{esc(x["t"])}</h3>'
+                   f'<p>{rich(x["d"])}</p><ul class="fev">{"".join(ev(e) for e in x["ev"])}</ul></li>'
+                   for i, x in enumerate(s['items']))
+    return section(s, '<div class="fthead"><span></span><span>Field</span><span>Scope</span><span>On the record</span></div>'
+                      f'<ol class="fields">{rows}</ol>', tint=True)
 
-def appointments(s):
-    def rows(items):
-        return ''.join(f'<li class="rv"><span class="ar">{rich(r)}</span><span class="ai">{esc(i)}</span>'
-                       f'<span class="ay">{esc(y)}</span></li>' for r, i, y in items)
-    return section(s, '<div class="table"><div class="thead"><span>Role</span><span>Institution</span><span>Years</span></div>'
-                      f'<ol class="appt">{rows(s["current"])}</ol>'
-                      f'<h3 class="sub rv">Past</h3><ol class="appt">{rows(s["past"])}</ol></div>', tint=True)
+def present(s):
+    return section(s, table(s['rows']))
 
-def chronology(s):
-    rows = ''.join(f'<li class="rv"><span class="cy">{esc(y)}</span><span class="ct">{rich(t)}</span></li>'
-                   for y, t in s['items'])
-    return section(s, f'<ol class="chron">{rows}</ol>')
-
-def work(s):
-    rows = ''.join(f'<li class="rv"><span class="cn">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{rich(d)}</p></li>'
-                   for i, (t, d) in enumerate(s['items']))
-    return section(s, f'<ol class="clin">{rows}</ol>', tint=True)
-
-def research(s):
-    rows = ''.join(
-        f'<li class="rv"><span class="ry">{esc(x["y"])}</span><div class="rx">'
-        f'<span class="rf">{esc(x["field"])}</span><h3>{esc(x["t"])}</h3>'
-        f'<p class="cite"><span>{esc(x["c"])}</span>{ext(x["h"], "Publisher record")}</p><p class="auth">{esc(x["role"])}</p></div></li>'
-        for x in s['items'])
-    return section(s, f'<ol class="firsts">{rows}</ol>')
+def exxonmobil(s):
+    return section(s, table(s['rows'], ('Position', 'Company', 'Years'))
+                      + f'<h3 class="sub rv">Milestones</h3><ol class="ledger">{ledger(s["milestones"])}</ol>', tint=True)
 
 def patents(s):
     figs = ''.join(f'<div class="rv"><span class="fn">{esc(n)}</span><span class="fk">{esc(k)}</span></div>'
@@ -78,20 +78,27 @@ def patents(s):
         f'<p class="cite"><span>{esc(x["c"])}</span><span>{esc(x["role"])}</span></p></div>{ext(x["h"], "Patent record")}</li>'
         for x in s['items'])
     return section(s, f'<div class="figs">{figs}</div><p class="figsrc rv">{esc(s["figsrc"])}</p>'
-                      f'<ol class="pubs">{rows}</ol>', tint=True)
+                      f'<ol class="pubs">{rows}</ol>')
 
-def ledger(items):
-    return ''.join(f'<li class="rv"><span class="ly">{esc(y)}</span><span class="lt">{rich(t)}</span>'
-                   f'<span class="lb">{esc(b)}</span></li>' for y, t, b in items)
+def publications(s):
+    rows = ''.join(
+        f'<li class="rv"><span class="ry">{esc(x["y"])}</span><div class="rx">'
+        f'<span class="rf">{esc(x["field"])}</span><h3>{esc(x["t"])}</h3>'
+        f'<p class="cite"><span>{esc(x["c"])}</span>{ext(x["h"], "Publisher record")}</p><p class="auth">{esc(x["role"])}</p></div></li>'
+        for x in s['items'])
+    return section(s, f'<ol class="firsts">{rows}</ol>', tint=True)
 
-def honours(s):
-    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>')
-
-def lectures(s):
-    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>', tint=True)
+def distinctions(s):
+    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>'
+                      f'<h3 class="sub rv">Lectures</h3><ol class="ledger">{ledger(s["lectures"])}</ol>')
 
 def education(s):
-    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>')
+    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>', tint=True)
+
+def notice(s):
+    glance = ''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k, v in s['glance'])
+    return section(s, f'<div class="notice"><p class="ntext rv">{rich(s["text"])}</p>'
+                      f'<dl class="glance rv">{glance}</dl></div>')
 
 def short(h):
     return re.sub(r'^https?://(www\.)?', '', h).rstrip('/')
@@ -116,22 +123,6 @@ hero = f'''<section class="hero" id="top">
   <div class="wrap hfoot"><dl class="hfacts">{facts}</dl><p class="hcap">{esc(H["caption"])}</p></div>
 </section>'''
 
-# instituciones: nombres compuestos en la serif, sin logotipos (solo con permiso)
-A = C['affiliations']
-aff = ''.join(f'<li class="rv"><span class="aname">{rich(x["name"])}</span>'
-              f'<span class="ak">{esc(x["k"])}</span></li>' for x in A['items'])
-affiliations = f'''<section class="aff" aria-label="{esc(A["label"])}"><div class="wrap">
-  <span class="mlab rv">{esc(A["label"])}</span><ul class="agrid">{aff}</ul><p class="anote rv">{esc(A["note"])}</p>
-</div></section>'''
-
-M = C['masthead']
-toc = ''.join(f'<li><a href="#{s["id"]}"><span class="tn">{NO[s["id"]]}</span><span class="tt">{esc(s["label"])}</span>'
-              f'<span class="tl" aria-hidden="true"></span></a></li>' for s in SECTIONS)
-masthead = f'''<section class="mast" id="contents"><div class="wrap grid">
-  <div class="mleft rv"><span class="mlab">{esc(M["label"])}</span><h2 class="mt">{rich(M["title"])}</h2><p class="mnote">{esc(M["note"])}</p></div>
-  <nav class="toc rv" aria-label="Contents"><span class="mlab">Contents</span><ol>{toc}</ol></nav>
-</div></section>'''
-
 # lamina: la escena del escritorio, con el titulo de su seminario de Purdue
 B = C['band']
 band = f'''<figure class="band" aria-label="{esc(B["by"])}">
@@ -153,14 +144,13 @@ footer = f'''<footer class="foot"><div class="wrap">
 
 bar = ('<header class="bar" id="bar"><div class="wrap barin"><a class="bname" href="#top">Dr. Patrick Brant</a>'
        '<nav class="blinks" aria-label="Sections">'
-       + ''.join(f'<a href="#{k}">{t}</a>' for k, t in [('notice', 'Note'), ('chronology', 'Chronology'), ('work', 'Work'),
-                                                          ('research', 'Research'), ('patents', 'Patents'), ('lectures', 'Lectures'), ('sources', 'Sources')])
+       + ''.join(f'<a href="#{k}">{t}</a>' for k, t in [('expertise', 'Expertise'), ('present', 'Present'), ('exxonmobil', 'ExxonMobil'),
+                                                          ('patents', 'Patents'), ('publications', 'Papers'), ('notice', 'Note'), ('sources', 'Sources')])
        + '</nav></div></header>')
 
-body = (hero + affiliations + masthead + notice(C['notice']) + appointments(C['appointments']) + chronology(C['chronology'])
-        + work(C['work']) + band + research(C['research']) + patents(C['patents'])
-        + honours(C['honours']) + lectures(C['lectures']) + education(C['education'])
-        + sources(C['sources']))
+body = (hero + expertise(C['expertise']) + present(C['present']) + exxonmobil(C['exxonmobil']) + band
+        + patents(C['patents']) + publications(C['publications']) + distinctions(C['distinctions'])
+        + education(C['education']) + notice(C['notice']) + sources(C['sources']))
 
 CSS = r'''
 @font-face{font-family:'Editors Note';src:url(/brant/assets/fonts/EditorsNote-Light.otf) format('opentype');font-weight:300;font-style:normal;font-display:swap}
@@ -183,7 +173,7 @@ img{display:block;max-width:100%}
 ::selection{background:var(--ink);color:var(--bone)}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .it{font-style:italic}
-.mlab,.lab,.thead span,.rf,.sub,.hk,.fl,.bname,.blinks a,.hfacts dt,.glance dt,.fk,.hcap,.bcap,.fbase{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.mlab,.lab,.thead span,.fthead span,.rf,.sub,.hk,.fl,.bname,.blinks a,.hfacts dt,.glance dt,.fk,.hcap,.bcap,.fbase{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
 
 /* barra: aparece al dejar el retrato */
 .bar{position:fixed;inset:0 0 auto;z-index:20;transform:translateY(-100%);transition:transform .45s cubic-bezier(.2,.7,.2,1);background:rgba(20,22,26,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--bone)}
@@ -214,35 +204,10 @@ img{display:block;max-width:100%}
 .hfacts dd{font:300 clamp(16px,1.3vw,20px)/1.3 var(--display)}
 .hcap{color:rgba(237,231,220,.42);font-size:10px;white-space:nowrap}
 
-/* instituciones: nombres en la serif, a una tinta */
-.aff{background:var(--paper);padding:clamp(56px,8vh,88px) 0 clamp(40px,6vh,64px);border-bottom:1px solid var(--rule)}
-.agrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--ink);margin-top:4px}
-.agrid li{display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:28px clamp(14px,1.6vw,24px) 24px;border-left:1px solid var(--rule)}
-.agrid li:first-child{border-left:0;padding-left:0}
-.aname{min-height:56px;display:flex;flex-direction:column;justify-content:center;font:400 clamp(19px,1.5vw,23px)/1.05 var(--display);letter-spacing:-.01em;color:var(--ink)}
-.aname .it{display:block;font-weight:300;color:#55524D}
-.agrid li:first-child .aname{font-size:clamp(21px,1.75vw,27px)}
-.ak{font-size:13px;line-height:1.45;color:#55524D}
-.anote{margin-top:18px;font:400 11px/1.5 var(--mono);color:var(--smoke);letter-spacing:.02em}
-
-/* cabecera del expediente e indice */
+/* sistema de seccion: carril lateral fijo, cuerpo en nueve columnas */
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2vw,32px)}
-.mast{background:var(--bone);padding:clamp(80px,12vh,150px) 0 clamp(72px,10vh,120px);border-bottom:1px solid var(--rule)}
-.mleft{grid-column:1/6}
 .mlab{display:block;color:var(--smoke);margin-bottom:22px}
 .mlab::before{content:'';display:inline-block;width:22px;height:1px;background:var(--amber);vertical-align:middle;margin-right:12px}
-.mt{font:300 clamp(36px,3.8vw,60px)/1.04 var(--display);letter-spacing:-.02em;color:var(--ink)}
-.mt .it{opacity:.62}
-.mnote{margin-top:28px;color:var(--smoke);max-width:30em;font-size:15px}
-.toc{grid-column:7/13}
-.toc ol{border-top:1px solid var(--ink)}
-.toc a{display:flex;align-items:baseline;gap:18px;padding:13px 0;border-bottom:1px solid var(--rule);text-decoration:none;transition:padding .25s,color .25s}
-.toc a:hover{padding-left:8px;color:var(--amber)}
-.tn{font:400 12px/1 var(--mono);color:var(--amber);width:24px}
-.tt{font:300 clamp(20px,1.6vw,25px)/1.2 var(--display);color:var(--ink)}
-.tl{flex:1;border-bottom:1px dotted rgba(20,22,26,.28);transform:translateY(-5px)}
-
-/* sistema de seccion: carril lateral fijo, cuerpo en nueve columnas */
 .sec{padding:clamp(80px,11vh,140px) 0;border-bottom:1px solid var(--rule)}
 .sec.tint{background:var(--paper)}
 .rail{grid-column:1/4;align-self:start;position:sticky;top:96px;display:flex;flex-direction:column;gap:10px}
@@ -254,6 +219,19 @@ img{display:block;max-width:100%}
 .lede{margin-top:22px;max-width:40em;font-size:17px;color:#55524D}
 .src{margin-top:clamp(36px,5vh,56px);font:400 11.5px/1.5 var(--mono);letter-spacing:.04em;color:var(--smoke);padding-top:14px;border-top:1px solid var(--rule2)}
 .sub{color:var(--smoke);margin:clamp(48px,7vh,72px) 0 18px}
+
+/* campos de experticia: el campo, su alcance y la prueba */
+.fthead,.fields>li{display:grid;grid-template-columns:44px minmax(0,.95fr) minmax(0,1.15fr) minmax(180px,.8fr);gap:clamp(16px,2vw,32px)}
+.fthead{margin-top:clamp(40px,6vh,60px);padding-bottom:12px;border-bottom:1px solid var(--ink);color:var(--smoke)}
+.fields>li{padding:clamp(22px,3vh,30px) 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.fno{font:400 12px/1 var(--mono);color:var(--amber)}
+.fields h3{font:300 clamp(22px,1.8vw,28px)/1.15 var(--display);color:var(--ink);letter-spacing:-.015em}
+.fields p{font-size:15px;line-height:1.55;color:#4A4743;max-width:32em}
+.fev{display:flex;flex-direction:column;gap:7px}
+.fev a,.fev .fe{display:flex;justify-content:space-between;gap:14px;padding-bottom:7px;border-bottom:1px solid var(--rule2);font:400 12px/1.35 var(--mono);color:var(--ink);text-decoration:none}
+.fev .fy{color:var(--smoke);white-space:nowrap}
+.fev a .fy{color:var(--amber)}
+.fev a:hover span:first-child{color:var(--amber)}
 
 /* nota biografica */
 .notice{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:clamp(36px,5vw,88px);margin-top:clamp(40px,6vh,64px)}
@@ -271,23 +249,6 @@ img{display:block;max-width:100%}
 .ar{font:300 clamp(19px,1.5vw,23px)/1.25 var(--display);color:var(--ink)}
 .ai{font-size:15px;color:#4A4743}
 .ay{font:400 12.5px/1 var(--mono);color:var(--smoke);text-align:right}
-
-/* cronologia: dos columnas de registro */
-.chron{margin-top:clamp(40px,6vh,64px);columns:2;column-gap:clamp(40px,5vw,88px);border-top:1px solid var(--ink)}
-.chron li{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;padding:15px 0;border-bottom:1px solid var(--rule);break-inside:avoid}
-.cy{font:300 24px/1.1 var(--display);color:var(--amber);font-variant-numeric:lining-nums tabular-nums}
-.ct{font-size:15.5px;line-height:1.5;color:var(--ink)}
-.ct .it{font-family:var(--display);font-size:1.1em}
-
-/* trabajo cientifico */
-.clin{margin-top:clamp(40px,6vh,64px);display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
-.clin li{padding:28px 0 32px;border-bottom:1px solid var(--rule)}
-.clin li:nth-child(odd){padding-right:clamp(24px,3vw,48px);border-right:1px solid var(--rule)}
-.clin li:nth-child(even){padding-left:clamp(24px,3vw,48px)}
-.cn{font:400 12px/1 var(--mono);color:var(--amber)}
-.clin h3{font:300 clamp(24px,2vw,32px)/1.12 var(--display);color:var(--ink);margin:14px 0 12px;letter-spacing:-.015em}
-.clin p{font-size:15.5px;color:#4A4743;max-width:30em}
-.clin p .it,.cite .it{font-family:var(--display);font-size:1.08em}
 
 /* lamina: escena del escritorio y el titulo del seminario */
 .band{position:relative;background:var(--ink);color:var(--bone);min-height:clamp(520px,56.3vw,1000px);display:flex;align-items:center;overflow:hidden}
@@ -366,12 +327,13 @@ img{display:block;max-width:100%}
 
 /* tableta */
 @media(max-width:1080px){
-  .agrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .agrid li:nth-child(4){border-left:0;padding-left:0}
-  .agrid li:nth-child(n+4){border-top:1px solid var(--rule)}
+  .fthead{display:none}
+  .fields{margin-top:clamp(40px,6vh,60px);border-top:1px solid var(--ink)}
+  .fields>li{grid-template-columns:44px minmax(0,1fr);row-gap:10px}
+  .fields p,.fev{grid-column:2}
+  .fev{max-width:420px;margin-top:6px}
   .notice{grid-template-columns:1fr}
   .glance{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
-  .chron{columns:1}
   .bq{grid-column:7/13}}
 /* movil */
 @media(max-width:760px){
@@ -382,26 +344,20 @@ img{display:block;max-width:100%}
   .hph img{object-position:50% 12%}
   .hero::after{height:70svh;bottom:auto;background:linear-gradient(180deg,rgba(14,16,19,.2) 0%,rgba(14,16,19,0) 18%,rgba(14,16,19,.15) 52%,rgba(20,22,26,.92) 84%,#14161A 100%)}
   .hin{padding-bottom:22px}
-  .hfacts{display:none!important}
   .hn{font-size:clamp(58px,17vw,84px)}
   .hfoot{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:22px}
-  .agrid{grid-template-columns:1fr 1fr}
-  .agrid li{padding-left:16px!important;border-left:1px solid var(--rule)!important;border-top:1px solid var(--rule)}
-  .agrid li:nth-child(odd){padding-left:0!important;border-left:0!important}
-  .agrid li:nth-child(-n+2){border-top:0}
-  .aname{min-height:48px}
-  .mleft,.toc{grid-column:1/-1}
-  .toc{margin-top:48px}
+  .hfacts{grid-template-columns:1fr;width:100%;padding-top:10px}
+  .hfacts div{padding:9px 0!important;border-left:0!important;border-bottom:1px solid rgba(237,231,220,.1);display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .hfacts dt{margin:0}
+  .hfacts dd{text-align:right;font-size:16px}
   .rail{grid-column:1/-1;position:static;flex-direction:row;align-items:baseline;gap:14px;margin-bottom:22px}
   .body{grid-column:1/-1}
   .h2{font-size:clamp(38px,11vw,52px)}
   .glance{grid-template-columns:1fr}
+  .fields>li{grid-template-columns:32px minmax(0,1fr)}
   .thead{display:none}
   .appt li{grid-template-columns:1fr;gap:4px}
   .ay{text-align:left}
-  .clin{grid-template-columns:1fr}
-  .clin li:nth-child(odd){padding-right:0;border-right:0}
-  .clin li:nth-child(even){padding-left:0}
   .band{display:block;min-height:0}
   .bph{position:relative;display:block;height:auto;aspect-ratio:1/1}
   .bph img{position:absolute}
@@ -479,7 +435,7 @@ page = f'''<!doctype html>
 open(DST + '/index.html', 'w', encoding='utf-8').write(page)
 
 # Las paginas antiguas pasan a ser anclas del expediente.
-for path, anchor in [('practice', 'work'), ('track', 'chronology'), ('voice', 'research')]:
+for path, anchor in [('practice', 'expertise'), ('track', 'exxonmobil'), ('voice', 'publications')]:
     os.makedirs(f'{DST}/{path}', exist_ok=True)
     open(f'{DST}/{path}/index.html', 'w', encoding='utf-8').write(
         f'<!doctype html><html lang="en-US"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">'
