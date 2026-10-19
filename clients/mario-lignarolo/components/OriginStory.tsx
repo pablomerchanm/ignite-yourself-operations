@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { CSSProperties } from "react";
 import { about, origin } from "@/data/content";
 import Timeline from "./Timeline";
-import { Eyebrow, Lines } from "./ui";
+import { Arrow, Eyebrow, Lines } from "./ui";
 
 /**
  * 06 — Quién es Mario: su recorrido como una curva (Timeline), su «Antes /
@@ -77,6 +78,13 @@ export default function OriginStory() {
           <p data-reveal="up" className="mt-8 max-w-[36rem] text-[1.0625rem] leading-relaxed text-charcoal/80">
             {about.bio}
           </p>
+          <Link
+            href="/historia"
+            data-reveal="up"
+            className="caps link-line mt-10 inline-flex items-center gap-2 text-charcoal transition-colors hover:text-charcoal/60"
+          >
+            {about.storyCta} <Arrow />
+          </Link>
         </div>
       </div>
     </section>

@@ -18,6 +18,7 @@ npm run typecheck
 | Artículos de Substack (mock editable) | `data/articles.ts` |
 | Videos de YouTube | `data/videos.ts` |
 | Testimonios (solo reales; vacío = sección oculta) | `data/testimonials.ts` |
+| «Mi historia» (`/historia`, carta en primera persona) | `data/historia.ts` |
 | Paleta, tipografías, geometría del hero, motion | `app/globals.css` |
 | Fotos | `public/mario/` |
 

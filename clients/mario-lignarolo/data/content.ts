@@ -361,6 +361,8 @@ export const about = {
   bio: "Mario Lignarolo explora la relación entre cuerpo, mente, identidad y acción. Escribe Hipertrofia del Ser y guía Psico-Cibernética, un proceso de 40 días de breathwork y trabajo con el autoconcepto.",
   // [CONFIRMAR] ciudad: solo si Mario aprueba publicarla.
   location: "",
+  // Enlace a /historia, su carta completa en primera persona (data/historia.ts).
+  storyCta: "Leer su historia completa",
   // Recorte cerrado del retrato del hero, en B/N (la foto sentada vive en #lignarolo).
   image: {
     src: "/mario/hero.jpg",
