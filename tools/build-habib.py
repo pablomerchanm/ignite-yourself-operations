@@ -2313,6 +2313,17 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .nums .nn{font-size:clamp(52px,5.6vw,92px)!important}
 #site .arlay:not(:has(.arfig)) .arst{max-width:52em}
 #site .arst .nn{font-size:clamp(44px,4.4vw,72px)!important}
+/* ---------- retrato: la foto manda; la cara a la derecha, el nombre a la izquierda ---------- */
+#site .hero.photo::before{content:none!important}
+#site .hero.photo::after{z-index:2}
+#site .hero.photo .ph img{filter:none!important;object-position:70% 30%!important}
+@media(min-width:861px){
+  #site .hero.photo .ph::after{background:linear-gradient(90deg,rgba(14,16,19,.55) 0%,rgba(14,16,19,.2) 40%,rgba(14,16,19,0) 62%),linear-gradient(180deg,rgba(14,16,19,.35) 0%,rgba(14,16,19,0) 24%,rgba(14,16,19,0) 60%,rgba(14,16,19,.85) 100%)!important}
+}
+@media(max-width:860px){
+  #site .hero.photo .ph img{object-position:50% 20%!important}
+  #site .hero.photo .ph::after{background:linear-gradient(180deg,rgba(14,16,19,.25) 0%,rgba(14,16,19,0) 18%,rgba(14,16,19,.15) 42%,rgba(14,16,19,.88) 68%,#0E1013 100%)!important}
+}
 /* barra sin boton de contacto: el menu sigue centrado */
 @media(min-width:861px){.topbar .tnav{position:absolute;left:50%;transform:translateX(-50%)}}
 /* primeros: el ano en negrita, la revista como cita */
