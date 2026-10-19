@@ -129,6 +129,15 @@ export const origin = {
       photo: null,
     },
     {
+      // [ENTREVISTA, audio completo de la parte 1, ver ENTREVISTA-2026-10-06.md § 7b]
+      // [MARIO] palabras suyas transcritas, con recortes mínimos. [CONFIRMAR] que
+      // apruebe contarlo así (Coca-Cola y el dropshipping, sin el producto ni la ceremonia).
+      title: "Desconectado",
+      pull: "Todos los aspectos de mi vida estaban mal.",
+      text: "Después de graduarme trabajé en Coca-Cola. No me gustó: yo quería emprender, ser mi propio jefe. Empecé en el mundo del dropshipping, del marketing. Aprendí, pero estaba vendiendo algo que ni siquiera me gustaba, que no me conectaba. La desconexión de eso es brutal.",
+      photo: null,
+    },
+    {
       title: "El vacío",
       text: "Intenté llenar el vacío con alcohol y comida chatarra. Buscaba llenar por fuera lo que faltaba por dentro. Pero solo me hundía más.",
       photo: null,
@@ -154,7 +163,7 @@ export const origin = {
     },
   ],
   // En la página se cuentan cuatro capítulos; el resto queda guardado aquí.
-  show: ["El camino tradicional", "Perdido", "El fondo", "El niño interior"],
+  show: ["El camino tradicional", "Perdido", "Desconectado", "El fondo", "El niño interior"],
   // [CONFIRMADO] Su propio «Antes / Ahora» (carrusel del 17 oct 2025), como
   // momento visual a todo el ancho tras el capítulo «El fondo».
   diptych: {
@@ -248,6 +257,9 @@ export const psico = {
   ],
   cta: "Conocer Psico-Cibernética",
   // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] de dónde viene el concepto (Maxwell Maltz). [MARIO] la última frase es textual.
+  // [ENTREVISTA § 7b] de dónde nace el programa: de su propio proceso
+  // («vamos a empaquetar toda esta vuelta y volverla un producto»). [CONFIRMAR]
+  born: "Nació de su propio proceso: juntó lo que había aprendido de marketing, marca personal, respiración consciente y desarrollo personal, y lo convirtió en un camino para otros.",
   originLabel: "De dónde viene",
   origin:
     "El término es de Maxwell Maltz: la cibernética estudia cómo un sistema se retroalimenta para llegar a un objetivo. Aplicado a la mente, la imaginación diseña el autoconcepto y cada intento corrige el rumbo.",
@@ -269,6 +281,9 @@ export const lignarolo = {
   tagline: "Ereditá di Famiglia",
   // [MARIO] textual (carrusel del 17 oct 2025).
   quote: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido: sentir el placer de crear.",
+  // [ENTREVISTA § 7b] entró a llevar el marketing de la marca. [CONFIRMAR] su cargo;
+  // la cifra de los primeros meses no se publica sin su aprobación.
+  role: "Entró a Lignarolo para llevar su marketing. Ahí aprendió cómo funciona una empresa: crear producto, venderlo y construir una marca.",
   description: "Zapatos y botas artesanales en cuero italiano, hechos a mano en Bogotá.",
   cta: "Visitar lignarolo.com",
   href: "https://www.lignarolo.com",

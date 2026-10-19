@@ -122,3 +122,11 @@ Del minuto 15 al 30, en español. Las frases entre comillas son suyas, transcrit
 - **Lignarolo / Emprender:** su tesis «Emprender es aprender».
 - **Punto de vista:** dos ideas nuevas de la parte 1.
 - **Invitar:** temas reescritos desde su posicionamiento real (transformación de identidad) y tono de colaboración selectiva.
+
+## Cambios aplicados a la web con el audio completo (19 oct)
+
+Todo queda marcado como **[CONFIRMAR]** en `data/content.ts` hasta que Mario lo apruebe; el sitio sigue en borrador y sin indexar.
+
+- **Quién es Mario:** el capítulo «Desconectado», entre «Perdido» y «El fondo», con sus palabras: Coca-Cola, el dropshipping y la desconexión. No menciona el producto que vendía ni la ceremonia.
+- **Lignarolo:** su rol, «entró a Lignarolo para llevar su marketing» y lo que aprendió ahí. Sin la cifra de los primeros meses.
+- **Psico-Cibernética:** de dónde nace, de su propio proceso (marketing, marca personal, respiración consciente y desarrollo personal).
