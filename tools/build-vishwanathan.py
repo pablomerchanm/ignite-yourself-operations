@@ -157,7 +157,8 @@ PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
   (s.igy?'<section class="igy"><div class="wrap" data-r2>'+
     '<div class="igy-id wr"><span class="smallcap">'+esc(s.igy.label)+'</span>'+
       '<a href="'+esc(s.igy.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.igy.logo)+'" alt="Ignite Yourself"></a>'+
-      '<a class="igylink" href="'+esc(s.igy.href)+'" target="_blank" rel="noopener">'+esc(s.igy.link)+'</a></div>'+
+      '<a class="igylink" href="'+esc(s.igy.href)+'" target="_blank" rel="noopener">'+esc(s.igy.link)+'</a>'+
+      (s.igy.proposal?'<a class="igylink igyprop-link" href="'+esc(s.igy.proposal.h)+'">'+esc(s.igy.proposal.t)+'</a>':'')+'</div>'+
     '<p class="igy-note wr">'+esc(s.igy.note)+'</p>'+
   '</div></section>':'')}"""
 base = sub1(r"'<footer class=\"kfoot\"><div class=\"wrap\">'\+.*?'</div></footer>'\}", lambda m: PFOOT, base, flags=re.S, tag='pfoot')
@@ -2231,6 +2232,29 @@ for name, data in PAGES.items():
         f.write('\n')
 
 # ------------------------------------------------------------- 9. derivar HTML
+# ------------------------------------------------- 10. la propuesta de Ignite, encima del preview
+# Capa de Ignite (no de la marca de Priya): un boton fijo abajo a la derecha que lleva a /vishwanathan/proposal.
+PROP_HTML = ('<a class="igyprop" href="/vishwanathan/proposal">'
+             '<span class="igyprop-i"><img src="/vishwanathan/proposal/assets/spark.png" alt=""></span>'
+             '<span class="igyprop-t">Your proposal</span><i aria-hidden="true">&rarr;</i></a>')
+PROP_CSS = """<style>
+.igyprop{position:fixed;right:22px;bottom:22px;z-index:70;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 6px;
+  border-radius:999px;background:#080807;color:#fff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:.005em;
+  text-decoration:none;box-shadow:0 10px 30px rgba(8,8,7,.28),0 0 0 1px rgba(255,255,255,.08) inset;
+  animation:igyprop-in .7s cubic-bezier(.2,.7,.2,1) 1.2s both;transition:background .25s,transform .25s}
+.igyprop:hover{background:#FF6A00;transform:translateY(-2px)}
+.igyprop-i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;
+  background:radial-gradient(circle at 50% 40%,#FF9A2E 0%,#FF6A00 60%,#C94A04 100%)}
+.igyprop-i img{width:18px;height:auto;display:block}
+.igyprop i{font-style:normal;opacity:.8}
+@keyframes igyprop-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(max-width:860px){.igyprop{right:14px;bottom:14px;height:44px;font-size:13px;padding-right:15px}.igyprop-i{width:32px;height:32px}}
+@media(prefers-reduced-motion:reduce){.igyprop{animation:none}}
+@media print{.igyprop{display:none}}
+#site .igy .igyprop-link{margin-left:22px;border-bottom-color:#FF6A00}
+@media(max-width:560px){#site .igy .igyprop-link{margin-left:0;display:block;width:max-content}}
+</style>"""
+
 def derive(json_path, title, ogurl, out_dir, active):
     h = base
     h = sub1(r'<title>[^<]*</title>', f'<title>{title}</title>', h, tag='t-' + (active or 'home'))
@@ -2241,7 +2265,8 @@ def derive(json_path, title, ogurl, out_dir, active):
     h = sub1(r'<nav class="menupanel"[^>]*>.*?</nav>', NAVHTML, h, flags=re.S, tag='nav')
     h = sub1(r'<main id="site">.*?</main>', '<main id="site"></main>', h, flags=re.S, tag='main')
     h = sub1(r'(<meta name="robots"[^>]*>)', lambda m: m.group(1) + '\n<meta name="theme-color" content="#14161A">', h, tag='theme')
-    h = sub1(r'</head>', CAL + '\n</head>', h, tag='css')
+    h = sub1(r'</head>', CAL + PROP_CSS + '\n</head>', h, tag='css')
+    h = sub1(r'</body>', PROP_HTML + '\n</body>', h, tag='prop')
     os.makedirs(out_dir, exist_ok=True)
     open(out_dir + '/index.html', 'w', encoding='utf-8').write(h)
     print('  ', out_dir.replace(DST, 'vishwanathan') or 'vishwanathan', 'ok')

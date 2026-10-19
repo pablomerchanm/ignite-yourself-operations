@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Authority Platform — Proposal for Priya Vishwanathan</title>
+<style>
+@font-face{font-family:'Arimo';font-style:normal;font-weight:400 700;src:url('../../../clients/jorge-arce/vishwanathan/proposal/assets/fonts/Arimo-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Arimo';font-style:italic;font-weight:400 700;src:url('../../../clients/jorge-arce/vishwanathan/proposal/assets/fonts/Arimo-400-italic.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('../../../clients/jorge-arce/vishwanathan/proposal/assets/fonts/IBMPlexMono-400-normal.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url('../../../clients/jorge-arce/vishwanathan/proposal/assets/fonts/IBMPlexMono-500-normal.woff2') format('woff2');}
+</style>
+<style>
+  @page { size: A4; margin: 0; }
+  :root{
+    --ink:#080807; --card:#181715; --ink-2:#393632;
+    --beige:#e8e8e3; --beige-2:#ddddd5; --beige-3:#d1d1c7;
+    --mute:#938f8a; --mute-2:#6b645c;
+    --orange:#FF6A00;
+    --sans:'Arimo','Helvetica Neue',Helvetica,Arial,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--ink)}
+  body{font-family:var(--sans);color:var(--beige);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;padding:18mm 18mm 16mm}
+  .page:last-child{page-break-after:auto;break-after:auto}
+  .mono{font-family:var(--mono);font-size:7.6pt;letter-spacing:.08em;text-transform:uppercase}
+
+  /* cabecera y pie de las paginas interiores */
+  .top{display:flex;justify-content:space-between;align-items:center}
+  .top img{height:9mm;width:auto}
+  .foot{position:absolute;left:18mm;right:18mm;bottom:11mm;display:flex;justify-content:space-between;color:var(--mute)}
+  .light .foot{color:var(--mute-2)}
+  .kicker{display:flex;align-items:center;gap:3mm;color:var(--mute)}
+  .kicker::before{content:'';width:2mm;height:2mm;border-radius:50%;background:var(--orange)}
+  h2{font-weight:500;font-size:30pt;line-height:1.04;letter-spacing:-.02em;margin-top:7mm;max-width:150mm}
+  p{font-size:10.6pt;line-height:1.55}
+
+  /* ---------- portada ---------- */
+  .cover{padding:0;color:#fff;
+    background:
+      radial-gradient(46% 30% at 50% 22%, rgba(255,214,150,.42) 0%, rgba(255,214,150,0) 70%),
+      radial-gradient(120% 90% at 50% 30%, #FF9A2E 0%, #FF7410 32%, #EE5A06 58%, #B83D04 82%, #6E2303 100%);}
+  .cover .ctop{position:absolute;top:16mm;left:18mm;right:18mm;display:flex;justify-content:space-between;align-items:center}
+  .cover .ctop img{height:10mm}
+  .cover .ctop .mono{color:rgba(255,255,255,.9)}
+  .cover .spark{position:absolute;top:58mm;left:50%;width:15mm;transform:translateX(-50%)}
+  .cover .ctext{position:absolute;top:84mm;left:0;right:0;text-align:center;padding:0 24mm}
+  .cover .ctext .mono{color:#fff;font-weight:500;font-size:8.4pt;letter-spacing:.14em;background:rgba(80,24,2,.22);padding:1.6mm 3.6mm;border-radius:10mm}
+  .cover h1{font-weight:600;font-size:21pt;line-height:1.28;letter-spacing:-.01em;margin-top:6mm}
+  .cover .for{margin-top:9mm;font-size:12pt;line-height:1.5;color:rgba(255,255,255,.92)}
+  .cover .for b{font-weight:600}
+  .cover .mark{position:absolute;left:12mm;right:12mm;bottom:30mm}
+  .cover .mark img{width:100%;height:auto;display:block}
+  .cover .cfoot{position:absolute;left:18mm;right:18mm;bottom:13mm;display:flex;justify-content:space-between;color:rgba(255,255,255,.85)}
+
+  /* ---------- carta ---------- */
+  .letter .body{margin-top:9mm;display:grid;gap:4.2mm;max-width:156mm;color:#d7d6cf}
+  .letter .body p:first-child{color:var(--beige)}
+  .shot{margin-top:10mm;border-radius:3mm;overflow:hidden;border:1px solid rgba(232,232,227,.14)}
+  .shot img{display:block;width:100%;height:auto}
+  .cap{margin-top:3.5mm;display:flex;justify-content:space-between;color:var(--mute)}
+
+  /* ---------- lo que incluye ---------- */
+  .light{background:var(--beige);color:var(--ink)}
+  .light .kicker{color:var(--mute-2)}
+  .light .top img{filter:brightness(0)}
+  .grid{margin-top:10mm;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(8,8,7,.85)}
+  .item{padding:5mm 6mm 5.5mm 0;border-bottom:1px solid rgba(8,8,7,.16);display:grid;grid-template-columns:11mm 1fr;align-items:start}
+  .item:nth-child(even){padding-left:6mm;border-left:1px solid rgba(8,8,7,.16)}
+  .item .n{font-family:var(--mono);font-size:8pt;color:var(--orange);padding-top:1.2mm}
+  .item h3{font-weight:600;font-size:12.5pt;letter-spacing:-.005em;line-height:1.25}
+  .item p{font-size:9.6pt;line-height:1.5;color:var(--ink-2);margin-top:1.6mm}
+  .gift{margin-top:10mm;background:var(--ink);color:var(--beige);border-radius:3mm;padding:9mm 9mm 8.5mm;position:relative;overflow:hidden}
+  .gift::after{content:'';position:absolute;right:-30mm;top:-34mm;width:90mm;height:90mm;border-radius:50%;
+    background:radial-gradient(circle, rgba(255,122,16,.55) 0%, rgba(255,122,16,0) 68%)}
+  .gift .spark{position:absolute;right:9mm;top:8mm;width:10mm;z-index:1}
+  .gift .mono{color:#FF9A4D}
+  .gift h3{font-weight:500;font-size:19pt;letter-spacing:-.015em;line-height:1.12;margin-top:4mm;max-width:120mm}
+  .gift p{margin-top:4mm;color:#cfcec7;max-width:140mm;font-size:10.2pt}
+  .gift .uses{margin-top:5mm;display:flex;flex-wrap:wrap;gap:2mm}
+  .gift .uses span{font-family:var(--mono);font-size:7.4pt;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(232,232,227,.25);border-radius:10mm;padding:1.4mm 3.2mm;color:var(--beige)}
+  .goal{margin-top:8mm;font-size:11.5pt;line-height:1.5;color:var(--ink);max-width:160mm}
+
+  /* ---------- inversion ---------- */
+  .price{margin-top:10mm;display:grid;grid-template-columns:1.05fr 1fr;gap:8mm;align-items:end;border-bottom:1px solid rgba(232,232,227,.16);padding-bottom:9mm}
+  .price .amt{font-weight:500;font-size:54pt;letter-spacing:-.035em;line-height:.9;color:#fff}
+  .price .amt small{font-size:15pt;letter-spacing:.02em;margin-right:2mm;color:var(--beige);vertical-align:.95em;font-weight:500}
+  .price .lbl{margin-top:4mm;color:var(--mute)}
+  .price ul{list-style:none;display:grid;gap:2.6mm}
+  .price li{display:flex;gap:3mm;font-size:10.4pt;line-height:1.4;color:#d7d6cf}
+  .price li::before{content:'';flex:0 0 1.6mm;height:1.6mm;margin-top:1.9mm;border-radius:50%;background:var(--orange)}
+  .plan{margin-top:8mm}
+  .plan .row{display:grid;grid-template-columns:12mm 1fr auto;align-items:baseline;padding:4.4mm 0;border-bottom:1px solid rgba(232,232,227,.12)}
+  .plan .row .n{font-family:var(--mono);font-size:8pt;color:var(--orange)}
+  .plan .row .t{font-size:11pt}
+  .plan .row .t span{display:block;color:var(--mute);font-size:9pt;margin-top:1mm}
+  .plan .row .v{font-weight:500;font-size:14pt;letter-spacing:-.01em;color:#fff}
+  .note{margin-top:4.5mm;color:var(--mute)}
+  .steps{margin-top:10mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+  .steps div{border-top:1px solid rgba(232,232,227,.3);padding-top:3.5mm}
+  .steps .mono{color:var(--orange)}
+  .steps h4{font-weight:600;font-size:10.8pt;margin-top:2.4mm;line-height:1.3}
+  .steps p{font-size:9pt;line-height:1.5;color:#b9b8b1;margin-top:1.6mm}
+  .sign{margin-top:11mm;display:flex;justify-content:space-between;align-items:flex-end}
+  .sign p{font-size:11.5pt;color:var(--beige);max-width:110mm}
+  .sign .who{margin-top:4mm;font-size:10.4pt;color:#d7d6cf;line-height:1.5}
+  .sign .who b{color:#fff;font-weight:600}
+  .sign img{height:15mm}
+</style>
+</head>
+<body>
+
+<!-- 1 · portada -->
+<section class="page cover">
+  <div class="ctop">
+    <img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/logo-igy.png" alt="igy">
+    <span class="mono">Proposal · October 2026</span>
+  </div>
+  <img class="spark" src="../../../clients/jorge-arce/vishwanathan/proposal/assets/spark.png" alt="">
+  <div class="ctext">
+    <span class="mono">Authority Platform</span>
+    <h1>A complete, done-for-you personal website,<br>built around your story, expertise and services.</h1>
+    <p class="for">Prepared for <b>Priya Vishwanathan</b></p>
+  </div>
+  <div class="mark"><img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/logo-stacked.png" alt="ignite yourself"></div>
+  <div class="cfoot mono"><span>Ignite Yourself</span><span>igniteyourself.co</span></div>
+</section>
+
+<!-- 2 · carta -->
+<section class="page letter">
+  <div class="top"><img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/logo-igy.png" alt="igy"><span class="mono" style="color:var(--mute)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">01 — The proposal</span></div>
+  <h2>A strong, independent presence for your next chapter.</h2>
+  <div class="body">
+    <p>Dear Priya, thank you so much for your lovely message. We're really happy you liked the direction we've created for you.</p>
+    <p>We completely understand that you're entering an exciting new chapter in your professional career, and we'd love to help you build a strong, independent presence that reflects your experience and the advisory work you're doing today.</p>
+    <p>What we're proposing is our Authority Platform: a complete, done-for-you personal website built around your professional story, expertise and services. We'd build on the preview you've already seen, refining every detail together with you to ensure it reflects your vision and the opportunities you'd like to pursue.</p>
+  </div>
+  <div class="shot"><img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/preview.jpg" alt="Priya Vishwanathan preview"></div>
+  <div class="cap mono"><span>Your preview</span><span>igniteyourself.co/vishwanathan</span></div>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Priya Vishwanathan</span><span>02</span></div>
+</section>
+
+<!-- 3 · lo que incluye -->
+<section class="page light">
+  <div class="top"><img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/logo-igy.png" alt="igy"><span class="mono" style="color:var(--mute-2)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">02 — What's included</span></div>
+  <h2>Our team takes care of the entire process.</h2>
+  <div class="grid">
+    <div class="item"><span class="n">01</span><div><h3>Research</h3><p>Researching and organising your career into a clear story.</p></div></div>
+    <div class="item"><span class="n">02</span><div><h3>Narrative &amp; positioning</h3><p>Developing your narrative and positioning around the work you do today.</p></div></div>
+    <div class="item"><span class="n">03</span><div><h3>Content</h3><p>Writing the content for every page of your platform.</p></div></div>
+    <div class="item"><span class="n">04</span><div><h3>Visual identity</h3><p>Creating a visual identity that is recognisably yours.</p></div></div>
+    <div class="item"><span class="n">05</span><div><h3>Design &amp; development</h3><p>Designing the website and getting everything fully developed.</p></div></div>
+    <div class="item"><span class="n">06</span><div><h3>Live on your domain</h3><p>Launched under your own domain, with hosting for the first year.</p></div></div>
+  </div>
+  <div class="gift">
+    <img class="spark" src="../../../clients/jorge-arce/vishwanathan/proposal/assets/spark.png" alt="">
+    <span class="mono">Included at no additional cost</span>
+    <h3>Your personal branding asset kit.</h3>
+    <p>Because you're building your independent advisory practice, we'll also give you the visual elements, graphics and brand guidelines we create for your website, prepared in reusable formats, so you can carry the same identity into your own materials and everything feels consistent and recognisably yours.</p>
+    <div class="uses"><span>Presentations</span><span>Advisory decks</span><span>Client proposals</span><span>Professional materials</span></div>
+  </div>
+  <p class="goal">Our goal is for you to walk away not just with a beautiful website, but with a cohesive professional identity and the tools to confidently present your work wherever new opportunities arise.</p>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Priya Vishwanathan</span><span>03</span></div>
+</section>
+
+<!-- 4 · inversion -->
+<section class="page">
+  <div class="top"><img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/logo-igy.png" alt="igy"><span class="mono" style="color:var(--mute)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">03 — Investment</span></div>
+  <h2>One complete investment.</h2>
+  <div class="price">
+    <div>
+      <div class="amt"><small>USD</small>3,000</div>
+      <div class="lbl mono">Complete investment</div>
+    </div>
+    <ul>
+      <li>The full website, designed, written and developed</li>
+      <li>Your personal domain</li>
+      <li>Hosting for the first year</li>
+      <li>Personal branding asset kit, at no additional cost</li>
+    </ul>
+  </div>
+  <div class="plan">
+    <span class="mono" style="color:var(--mute)">In two payments</span>
+    <div class="row" style="margin-top:2mm"><span class="n">01</span><span class="t">To get started</span><span class="v">USD 1,500</span></div>
+    <div class="row"><span class="n">02</span><span class="t">Once everything is completed and ready to launch</span><span class="v">USD 1,500</span></div>
+    <p class="note mono">No mandatory monthly subscription · Domain and first year of hosting included</p>
+  </div>
+  <div class="steps">
+    <div><span class="mono">Step 01</span><h4>A few questions</h4><p>We send you a short set of questions by email. Answer in writing or by voice note, whichever is easier.</p></div>
+    <div><span class="mono">Step 02</span><h4>Refined together</h4><p>We build on your preview and refine every detail with you, in a couple of rounds.</p></div>
+    <div><span class="mono">Step 03</span><h4>Live and yours</h4><p>Your platform goes live under your own domain, ready to share.</p></div>
+  </div>
+  <div class="sign">
+    <div>
+      <p>We'd be delighted to bring this to life with you, Priya. We'd love to hear what you think.</p>
+      <p class="who">Warm regards,<br><b>Juanita</b><br>Ignite Yourself · igniteyourself.co</p>
+    </div>
+    <img src="../../../clients/jorge-arce/vishwanathan/proposal/assets/logo-stacked.png" alt="ignite yourself" style="filter:none;opacity:.95">
+  </div>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Priya Vishwanathan</span><span>04</span></div>
+</section>
+
+</body>
+</html>
