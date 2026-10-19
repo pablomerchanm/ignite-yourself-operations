@@ -1,9 +1,19 @@
 # Patrick Brant — fotografía
 
-Fecha: 18 de octubre de 2026.
+Fecha: 19 de octubre de 2026.
 
-**Decisión de Pablo (iteración 2):** la página va **sin fotografía**. Los seis bodegones de laboratorio generados en la iteración 1 (pellets, cuaderno, reactor, mesa, carpetas, film) hacían que la página pareciera la de un laboratorio y no la de un científico, y le quitaban seriedad. Se retiraron de `assets/`. El expediente se sostiene en tipografía, cifras y el registro de publicaciones y patentes, como la calibración "sin fotografía" de Pettingill.
+**Iteración 2:** la página fue **sin fotografía**. Los seis bodegones de laboratorio generados en la iteración 1 (pellets, cuaderno, reactor, mesa, carpetas, film) hacían que pareciera la página de un laboratorio y no la de un científico.
 
-**Lo único que entra, cuando exista:** un retrato real suyo, con permiso, para el hero (3/4 de perfil, luz lateral, fondo oscuro, polo o camisa oscura) y, si acaso, una segunda toma sentado para "The work". Nada escenificado, nada generado.
+**Iteración 4:** Pablo envió dos retratos de dirección de arte (generados, no fotografías de Brant). Entran como en `/habib`, con el rótulo "provisional art direction" en la imagen y en la nota del pie, hasta que haya retratos reales aprobados por él.
 
-`og.jpg` es una tarjeta en tinta con el nombre y la frase; `icon.svg`, el monograma PB.
+| Archivo | Uso | Tamaño |
+|---|---|---|
+| `assets/hero.jpg` | Hero, escritorio: perfil 3/4, polo negro, gafas, luz desde la izquierda, fondo azul tinta; el rostro a la derecha | 1672 × 941 |
+| `assets/hero-mobile.jpg` | Hero, móvil: recorte vertical del mismo retrato centrado en el rostro | 600 × 941 |
+| `assets/desk.jpg` | Lámina entre "Scientific work" y "Research": traje, escribiendo bajo una lámpara de mesa; el lado derecho, oscuro, lleva el título del seminario de Purdue | 1672 × 941 |
+| `assets/desk-mobile.jpg` | La lámina en móvil, recorte cuadrado de la figura; la cita va debajo | 800 × 800 |
+| `assets/og.jpg` | Tarjeta social: el retrato, el nombre y "Chief Scientist and Chief Polymer Science Advisor, ExxonMobil Chemical, 2000–2018" | 1200 × 630 |
+
+La escena del escritorio no describe un lugar ni un momento reales: no lleva pie de lugar ni fecha. `hero.jpg` y `desk.jpg` son los originales a tamaño completo; los dos recortes móviles salen de ellos (x 830–1430 del retrato; x 90–890, y 110–910 del escritorio).
+
+`icon.svg` sigue siendo el monograma PB con la regla ámbar.

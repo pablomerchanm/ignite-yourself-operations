@@ -1,658 +1,211 @@
 {
   "meta": {
-    "title": "Patrick Brant — Polyolefins: Consultant, Expert Witness, Inventor",
-    "description": "Patrick Brant: thirty-seven years at ExxonMobil Chemical, Chief Scientist and Chief Polymer Science Advisor; metallocene catalysis at world scale; more than 150 US patents. Independent consulting and expert testimony in polyolefins since 2019."
+    "title": "Dr. Patrick Brant — Polymer Scientist; formerly Chief Scientist, ExxonMobil Chemical",
+    "description": "A record of the career of Dr. Patrick Brant: Chief Scientist and Chief Polymer Science Advisor at ExxonMobil Chemical, 2000–2018; inventor on more than 150 US patents. Appointments, chronology, scientific work, selected papers and patents, with sources.",
+    "url": "https://igniteyourself.co/brant"
   },
-  "logo": "PATRICK BRANT",
-  "nav": [],
-  "navcta": {
-    "t": "Contact",
-    "h": "#inquiry"
+  "hero": {
+    "kick": "Polymer scientist",
+    "name": "Patrick <t>Brant</t>",
+    "post": "Ph.D. · Polyolefins · Catalysis",
+    "role": "Chief Scientist and Chief Polymer Science Advisor, ExxonMobil Chemical, 2000–2018",
+    "facts": [
+      ["Ph.D.", "University of Arizona, 1977"],
+      ["ExxonMobil Chemical", "1981–2018"],
+      ["Patents", "More than 150, United States"]
+    ],
+    "img": "/brant/assets/hero.jpg",
+    "imgMobile": "/brant/assets/hero-mobile.jpg",
+    "caption": "Portrait: provisional art direction"
   },
-  "sections": [
-    {
-      "type": "hero",
-      "kick": "Polyolefins · Catalysis · Materials Design",
-      "name": "Patrick <t>Brant</t>",
-      "sub": "Turning polyolefin science <t>into products that ship.</t>",
-      "coords": [
-        "29.7604° N",
-        "Houston | Texas | Worldwide",
-        "95.3698° W"
-      ]
-    },
-    {
-      "type": "marks",
-      "id": "marks",
-      "label": "Industry & research",
-      "feature": {
-        "text": "ExxonMobil <t>Chemical</t>",
-        "t": "ExxonMobil Chemical",
-        "k": "Chief Scientist · Chief Polymer Science Advisor · 1981 – 2018"
-      },
-      "items": [
-        {
-          "text": "Molecular <t>Joinery</t>",
-          "k": "Founder · Seabrook, Texas"
-        },
-        {
-          "text": "Houston <t>& Baylor</t>",
-          "k": "Research collaborations"
-        },
-        {
-          "text": "TechConnect <t>World</t>",
-          "k": "Symposium Chair, 2025"
-        }
-      ],
-      "src": "Marks belong to their owners. No endorsement implied."
-    },
-    {
-      "type": "intro",
-      "id": "intro",
-      "label": "The work",
-      "statement": "Forty years between the catalyst <t>and the reactor.</t>",
-      "body": [
-        "Thirty-seven years at ExxonMobil Chemical in Baytown, Texas: eleven as Chief Scientist of global R&D, seven as Chief Polymer Science Advisor. Research that helped carry metallocene catalysis from the laboratory bench into world-scale reactors, and the products built on it: films, packaging, elastomers, adhesives, engine-oil additives and the separator membranes inside lithium-ion batteries.",
-        "Since 2019, an independent practice in polyolefins: consulting, expert testimony in patent matters, research with the University of Houston and Baylor University, and a company of his own, Molecular Joinery, for composite design and coupling chemistry."
-      ],
-      "sign": "Houston, Texas",
-      "more": {
-        "t": "The career",
-        "h": "/brant/track"
-      }
-    },
-    {
-      "type": "nums",
-      "id": "numbers",
-      "ink": true,
-      "label": "In numbers",
-      "items": [
-        {
-          "n": "37",
-          "k": "Years at ExxonMobil Chemical"
-        },
-        {
-          "n": "150<sup>+</sup>",
-          "k": "US granted patents, as inventor or co-inventor"
-        },
-        {
-          "n": "75<sup>+</sup>",
-          "k": "Publications, including Science and JACS"
-        },
-        {
-          "n": "44",
-          "k": "h-index; more than 6,000 citations"
-        }
-      ],
-      "more": {
-        "t": "The record",
-        "h": "/brant/voice"
-      }
-    },
-    {
-      "type": "situations",
-      "id": "called-in",
-      "label": "Engagements",
-      "title": "Where an engagement <t>usually begins.</t>",
-      "items": [
-        "A patent dispute over a polyolefin, a catalyst or a film, and counsel who need an expert who has invented in that field.",
-        "A product that works in the pilot plant and not in the world-scale reactor.",
-        "A film, membrane or adhesive that fails at the customer, and nobody can say why.",
-        "A composite or nanocomposite that needs coupling chemistry to hold.",
-        "An R&D team that needs a mentor who has carried programmes from idea to commercial product.",
-        "A symposium or conference that needs someone to shape the programme."
-      ]
-    },
-    {
-      "type": "offers",
-      "id": "offers",
-      "label": "Practice",
-      "title": "Three areas <t>of practice.</t>",
-      "lede": "Each grounded in a chapter of forty years.",
-      "items": [
-        {
-          "t": "Expert witness & technical counsel",
-          "for": "Patent counsel & corporate legal teams",
-          "d": "Olefin polymerisation catalysis, structure–property relationships and product design, explained to a tribunal by someone named on more than 150 US patents.",
-          "list": [
-            "Patent litigation",
-            "Technical due diligence",
-            "Claim and prior-art analysis"
-          ],
-          "from": "Occasional expert witness since 2019",
-          "h": "/brant/practice#routes"
-        },
-        {
-          "t": "R&D advisory",
-          "for": "R&D leaders, converters & brand owners",
-          "d": "From catalyst to product: synthesis, scale-up, plant and customer troubleshooting, and the structure–property work that decides whether a material performs.",
-          "list": [
-            "Scale-up & commercialisation",
-            "Plant & customer troubleshooting",
-            "Structure–property & rheology"
-          ],
-          "from": "Thirty-seven years at ExxonMobil Chemical",
-          "h": "/brant/practice#routes"
-        },
-        {
-          "t": "Ventures & research",
-          "for": "Founders, investors & universities",
-          "d": "Molecular Joinery, for composite design and coupling-agent chemistry; research with the University of Houston and Baylor University; ROMP chemistry for plugging abandoned wells.",
-          "list": [
-            "Coupling agents for composites",
-            "Polymer grafting to hard substrates",
-            "Grubbs-type ROMP for downhole use"
-          ],
-          "from": "Molecular Joinery · University of Houston · Baylor",
-          "h": "/brant/practice#routes"
-        }
-      ],
-      "more": {
-        "t": "The practice",
-        "h": "/brant/practice"
-      }
-    },
-    {
-      "type": "arch",
-      "id": "chapter",
-      "label": "The defining chapter",
-      "title": "Metallocenes, <t>at world scale.</t>",
-      "body": "A new family of catalysts promised polyethylenes with properties the old chemistry could not reach. The work at ExxonMobil Chemical took them from the bench to supported catalysts running in gas-phase reactors, and into the products built on them. Two decades on, the same discipline produced the separator membranes inside lithium-ion batteries.",
-      "stats": [
-        {
-          "n": "1995",
-          "k": "US 5,475,075: one of the early metallocene copolymer patents"
-        },
-        {
-          "n": "2008",
-          "k": "ICIS Innovation Award for the battery separator film"
-        },
-        {
-          "n": "150<sup>+</sup>",
-          "k": "US granted patents"
-        }
-      ],
-      "src": "Google Patents · ICIS, 2008",
-      "more": {
-        "t": "The career",
-        "h": "/brant/track"
-      }
-    },
-    {
-      "type": "brief",
-      "id": "in-brief",
-      "label": "Distinctions",
-      "items": [
-        {
-          "k": "ICIS Innovation Award, 2008.",
-          "t": "Best Product Innovation, for the lithium-ion battery separator film developed with Tonen Chemical; on the shortlist as Dr Patrick Brant.",
-          "d": "Also ExxonMobil’s Outstanding Scientist award."
-        },
-        {
-          "k": "Published in Science, 2000.",
-          "t": "“High-strength welds in metallocene polypropylene/polyethylene laminates”, with more than 130 citations; in all, more than 6,000 citations and an h-index of 44.",
-          "d": "Google Scholar, October 2026."
-        },
-        {
-          "k": "The public face of the science, 2006–2010.",
-          "t": "More than 25 print and television interviews, a commercial and invited talks on energy and transportation for ExxonMobil, in part on the strength of the battery-membrane work.",
-          "d": "Co-organiser, ISPAC 2015, Houston. Symposium Chair, TechConnect World 2025."
-        }
-      ]
-    },
-    {
-      "type": "quote",
-      "id": "quote",
-      "lead": "Purdue University, 2017 · seminar title",
-      "q": "“Polyolefins: mass-produced molecular masterpieces.”",
-      "who": "Patrick Brant"
-    },
-    {
-      "type": "pubs",
-      "id": "conversations",
-      "label": "On the record",
-      "title": "Written down, <t>and granted.</t>",
-      "items": [
-        {
-          "y": "2000",
-          "t": "High-strength welds in metallocene polypropylene/polyethylene laminates",
-          "a": "Science",
-          "v": "Why two polyolefins that should not bond can be welded, and what the metallocene chemistry changes at the interface.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "More than 130 citations."
-        },
-        {
-          "y": "2001",
-          "t": "Effect of short chain branching on the coil dimensions of polyolefins in dilute solution",
-          "a": "Macromolecules",
-          "v": "The most cited paper: how branching reshapes the polymer coil, and so the material.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "More than 200 citations."
-        },
-        {
-          "y": "2005",
-          "t": "Metal and ligand K-edge XAS of organotitanium complexes",
-          "a": "Journal of the American Chemical Society",
-          "v": "Spectroscopy of the catalyst itself: what the metal and the ligand each contribute to bonding.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "Nearly 190 citations."
-        },
-        {
-          "y": "2015",
-          "t": "Linear rheology and structure of molecular bottlebrushes with very short side chains",
-          "a": "Journal of Rheology, with López-Barrón, Eberle and Crowther",
-          "v": "How very short side chains change the flow of a polymer melt.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ"
-        },
-        {
-          "y": "2008",
-          "t": "Polymer production at supercritical conditions",
-          "a": "US Patent 7,354,979 and family, ExxonMobil Chemical Patents",
-          "v": "Polymerisation above the critical point, with Luft, Shutt, Smith, McLain and Burkhardt.",
-          "h": "https://patents.google.com/patent/US7354979B2/en"
-        },
-        {
-          "y": "2021",
-          "t": "Catalysts that produce polyethylene with broad, bimodal molecular weight distribution",
-          "a": "US Patent 10,882,925, ExxonMobil Chemical Patents",
-          "v": "With Yang, Karahalis, Hagadorn, Boller and Morris.",
-          "h": "https://patents.google.com/patent/US10882925B2/en"
-        }
-      ],
-      "more": {
-        "t": "The record",
-        "h": "/brant/voice"
-      }
-    },
-    {
-      "type": "stmt",
-      "id": "track-open",
-      "opener": true,
-      "label": "Career",
-      "quote": "From inorganic chemistry <t>to the reactor floor.</t>",
-      "sub": "Arizona, Purdue and the Naval Research Laboratory; then thirty-seven years at ExxonMobil Chemical; then a practice of his own."
-    },
-    {
-      "type": "exp",
-      "id": "track-exxon",
-      "label": "ExxonMobil Chemical",
-      "title": "Thirty-seven years, <t>two chairs.</t>",
-      "groups": [
-        {
-          "label": "Roles",
-          "wide": true,
-          "names": [
-            "Chief Polymer Science Advisor, ExxonMobil Chemical Company — June 2011 to December 2018, Houston and Baytown",
-            "Chief Scientist, Global R&D, ExxonMobil Chemical — April 2000 to June 2011: technical and organisation leadership",
-            "Research and leadership roles from 1981, Exxon Chemical Company, Baytown: input, guidance and stewardship of the polyolefins R&D portfolio; programme initiation, management and team leadership"
-          ]
-        },
-        {
-          "label": "The work",
-          "wide": true,
-          "names": [
-            "Supported metallocene catalyst design, synthesis, characterisation and operation in gas-phase reactors: the research behind the commercialisation of metallocene polyethylenes",
-            "Structure–property relationships in the solid and melt state; polyolefin blends, including impact copolymers",
-            "Synthesis and functionalisation of new polyolefins, from laboratory to scale-up and commercialisation",
-            "Separator design and fabrication for lithium-ion batteries, from consumer electronics to transportation formats: the 2008 ICIS Innovation Award",
-            "Markets and applications: packaging, automotive, adhesives, engine-oil additives; plant and customer troubleshooting"
-          ]
-        },
-        {
-          "label": "In public",
-          "wide": true,
-          "names": [
-            "More than 25 interviews with print and television media, a commercial, and ExxonMobil speaker at internal and external functions, 2006–2010",
-            "Invited speaker in academic and industrial formats; co-organiser of ISPAC 2015, Houston"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "timeline",
-      "id": "track-years",
-      "tint": true,
-      "label": "Timeline",
-      "title": "From George Mason, 1972, <t>to a practice of his own.</t>",
-      "from": 1972,
-      "to": 2026,
-      "marks": [
-        {
-          "y": 1972,
-          "t": "B.Sc. Chemistry, George Mason"
-        },
-        {
-          "y": 1977,
-          "t": "Ph.D. Arizona · post-doc Purdue"
-        },
-        {
-          "y": 1978,
-          "t": "NRC Fellow, Naval Research Laboratory"
-        },
-        {
-          "y": 1981,
-          "t": "Exxon Chemical, Baytown"
-        },
-        {
-          "y": 2000,
-          "t": "Chief Scientist, Global R&D"
-        },
-        {
-          "y": 2008,
-          "t": "ICIS Innovation Award"
-        },
-        {
-          "y": 2011,
-          "t": "Chief Polymer Science Advisor"
-        },
-        {
-          "y": 2019,
-          "t": "Independent practice · Molecular Joinery"
-        },
-        {
-          "y": 2025,
-          "t": "Symposium Chair, TechConnect World"
-        }
-      ],
-      "ranges": [
-        {
-          "a": 1981,
-          "b": 2018,
-          "t": "ExxonMobil Chemical"
-        }
-      ],
-      "rlabel": "The ExxonMobil years"
-    },
-    {
-      "type": "exp",
-      "id": "cv-today",
-      "label": "Appointments",
-      "title": "Current <t>roles.</t>",
-      "groups": [
-        {
-          "label": "Practice",
-          "wide": true,
-          "names": [
-            "Consultant and Entrepreneur, self-employed — Houston, since January 2019",
-            "Expert witness in patent matters, occasional, since 2019",
-            "Founder, Molecular Joinery, LLC — Seabrook, Texas: composite and nanocomposite design, coupling-agent chemistry, coatings"
-          ]
-        },
-        {
-          "label": "Research & programmes",
-          "wide": true,
-          "names": [
-            "Research collaborator, University of Houston — semi-crystalline polyolefins, with the Karim group",
-            "Research collaborator, Baylor University — Grubbs-catalysed ROMP for oil-field applications, with David Jack",
-            "Symposium Chair, Polymers: sustainability, processes, applications & characterization — TechConnect World, Austin, 2025",
-            "Speaker, Orphan & Idle Wells 2026 — plugging abandoned wells with ROMP chemistry"
-          ]
-        },
-        {
-          "label": "Societies",
-          "wide": true,
-          "names": [
-            "American Chemical Society",
-            "American Physical Society",
-            "Society of Plastics Engineers"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "exp",
-      "id": "cv-education",
-      "tint": true,
-      "label": "Education",
-      "title": "Inorganic chemistry, <t>Arizona and Purdue.</t>",
-      "groups": [
-        {
-          "label": "Degrees and fellowships",
-          "wide": true,
-          "names": [
-            "Ph.D., Inorganic Chemistry — University of Arizona, 1972–1977",
-            "Post-doctoral research, inorganic and organometallic chemistry — Purdue University, 1977",
-            "National Research Council Fellowship — Naval Research Laboratory, Washington, D.C., 1978",
-            "B.Sc., Chemistry — George Mason University, 1972"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "stmt",
-      "id": "voice-open",
-      "opener": true,
-      "label": "The record",
-      "quote": "Written down, <t>and granted.</t>",
-      "sub": "Selected publications, patent families and talks. More than 75 publications and 150 US patents in all."
-    },
-    {
-      "type": "pubs",
-      "id": "voice-talks",
-      "label": "Selected",
-      "title": "Papers, patents <t>and talks.</t>",
-      "lede": "Citations: Google Scholar, October 2026.",
-      "items": [
-        {
-          "y": "2026",
-          "t": "Plugging abandoned wells with ROMP chemistry",
-          "a": "Orphan & Idle Wells 2026, speaker",
-          "v": "Grubbs-type ring-opening metathesis polymerisation as an alternative, or complement, to cement; back-up control of offshore blow-outs.",
-          "h": "https://www.orphan-idle-wells.com/speaker/patrick-brant"
-        },
-        {
-          "y": "2025",
-          "t": "Polymers: sustainability, processes, applications & characterization",
-          "a": "TechConnect World, Austin — Symposium Chair, with Alamgir Karim",
-          "v": "Sustainable plastics, separation and filtration, catalysis, structural materials, polyolefin synthesis.",
-          "h": "https://techconnectworld.com/World2025/sym/Materials_Polymers_Chemicals.html"
-        },
-        {
-          "y": "2021",
-          "t": "Catalysts that produce polyethylene with broad, bimodal molecular weight distribution",
-          "a": "US Patent 10,882,925, ExxonMobil Chemical Patents",
-          "v": "With Yang, Karahalis, Hagadorn, Boller and Morris.",
-          "h": "https://patents.google.com/patent/US10882925B2/en"
-        },
-        {
-          "y": "2017",
-          "t": "Polyolefins: Mass Produced Molecular Masterpieces",
-          "a": "Davidson School of Chemical Engineering, Purdue University — seminar",
-          "v": "An invited seminar on what forty years of polyolefin science amount to.",
-          "h": "https://engineering.purdue.edu/ChE/events/2017/seminar-dr-pat-brant"
-        },
-        {
-          "y": "2015",
-          "t": "Linear rheology and structure of molecular bottlebrushes with very short side chains",
-          "a": "Journal of Rheology 59, 865–883, with López-Barrón, Eberle and Crowther",
-          "v": "How very short side chains change the flow of a polymer melt.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ"
-        },
-        {
-          "y": "2013",
-          "t": "High vinyl terminated propylene based oligomers",
-          "a": "US Patent 8,372,930, ExxonMobil Chemical Patents",
-          "v": "Functionalisable building blocks from propylene.",
-          "h": "https://patents.google.com/patent/US8372930B2/en",
-          "why": "More than 100 citations."
-        },
-        {
-          "y": "2008",
-          "t": "Polymer production at supercritical conditions",
-          "a": "US Patent 7,354,979 and family, ExxonMobil Chemical Patents",
-          "v": "Polymerisation above the critical point, with Luft, Shutt, Smith, McLain and Burkhardt.",
-          "h": "https://patents.google.com/patent/US7354979B2/en"
-        },
-        {
-          "y": "2005",
-          "t": "Metal and ligand K-edge XAS of organotitanium complexes",
-          "a": "Journal of the American Chemical Society",
-          "v": "Spectroscopy of the catalyst itself: metal 4p and 3d contributions to pre-edge intensity and to bonding.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "Nearly 190 citations."
-        },
-        {
-          "y": "2002",
-          "t": "Prediction of melt state poly(α-olefin) rheological properties",
-          "a": "Macromolecules",
-          "v": "The unsuspected role of the average molecular weight per backbone bond.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "150 citations."
-        },
-        {
-          "y": "2001",
-          "t": "Effect of short chain branching on the coil dimensions of polyolefins in dilute solution",
-          "a": "Macromolecules",
-          "v": "The most cited paper: how branching reshapes the polymer coil.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "More than 200 citations."
-        },
-        {
-          "y": "2000",
-          "t": "High-strength welds in metallocene polypropylene/polyethylene laminates",
-          "a": "Science",
-          "v": "Why two polyolefins that should not bond can be welded.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "More than 130 citations."
-        },
-        {
-          "y": "1998",
-          "t": "Polymerization process",
-          "a": "US Patent 5,712,352, Exxon Chemical Patents",
-          "v": "Halogen-substituted metallocene compounds for olefin polymerisation, with Griffin, Muhle, Litteer and Renola.",
-          "h": "https://patents.google.com/patent/US5712352A/en"
-        },
-        {
-          "y": "1995",
-          "t": "Ethylene/longer α-olefin copolymers",
-          "a": "US Patent 5,475,075, Exxon Chemical Patents",
-          "v": "One of the early metallocene copolymer patents.",
-          "h": "https://patents.google.com/patent/US5475075A/en",
-          "why": "More than 120 citations."
-        },
-        {
-          "y": "1982",
-          "t": "XPS studies of core binding energies in transition metal complexes. 2. Ligand group shifts",
-          "a": "Journal of the American Chemical Society",
-          "v": "The inorganic chemistry the career began with.",
-          "h": "https://scholar.google.com/citations?user=qBtPhdcAAAAJ",
-          "why": "110 citations."
-        }
-      ]
-    },
-    {
-      "type": "stmt",
-      "id": "practice-open",
-      "opener": true,
-      "label": "The practice",
-      "quote": "A material is chemistry <t>until it ships.</t>",
-      "sub": "Expert testimony, R&D advisory, and the ventures and research that followed thirty-seven years at ExxonMobil Chemical."
-    },
-    {
-      "type": "paths",
-      "id": "routes",
-      "nums": true,
-      "label": "Areas of practice",
-      "title": "Three areas <t>of practice.</t>",
-      "lede": "Each grounded in a chapter of forty years.",
-      "cards": [
-        {
-          "lead": true,
-          "label": "Expert witness & technical counsel · Patent counsel & legal teams",
-          "title": "Who has invented in this field?",
-          "icon": "doc",
-          "desc": "Olefin polymerisation catalysis, structure–property relationships and product design, explained to a tribunal by someone named on more than 150 US patents and thirty-seven years inside the company that commercialised the chemistry.",
-          "items": [
-            "Patent litigation: infringement and validity",
-            "Technical due diligence",
-            "Claim and prior-art analysis",
-            "Independent since 2019"
-          ]
-        },
-        {
-          "label": "R&D advisory · R&D leaders, converters & brand owners",
-          "title": "Why does it work in the pilot plant and not in the reactor?",
-          "icon": "tally",
-          "desc": "From catalyst to product: synthesis and functionalisation, scale-up, plant and customer troubleshooting, and the structure–property and rheology work that decides whether a material performs.",
-          "items": [
-            "Scale-up and commercialisation",
-            "Plant and customer troubleshooting",
-            "Structure–property and rheology",
-            "Films, membranes, adhesives, elastomers"
-          ]
-        },
-        {
-          "label": "Ventures & research · Founders, investors & universities",
-          "title": "What holds a composite together?",
-          "icon": "link",
-          "desc": "Molecular Joinery, LLC, for composite and nanocomposite design and coupling-agent chemistry; research with the University of Houston and Baylor University; ROMP chemistry for the oil field.",
-          "items": [
-            "Coupling agents for composites",
-            "High-throughput grafting to hard substrates",
-            "Grubbs-type ROMP for plugging wells",
-            "Programme and symposium design"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "stmt",
-      "id": "slp",
-      "compact": true,
-      "label": "Through Molecular Joinery",
-      "quote": "Composites that <t>hold together.</t>",
-      "sub": "Founded in Seabrook, Texas: proprietary composite and nanocomposite design, coupling-agent chemistry and coatings. Current interests include high-throughput methods for grafting polymers to hard substrates and Grubbs-type ROMP chemistry for plugging abandoned wells and backing up blow-out control offshore."
-    },
-    {
-      "type": "inquiry",
-      "id": "inquiry",
-      "label": "Contact",
-      "title": "Begin <t>a conversation.</t>",
-      "lede": "One clear first step, set up with Dr. Brant before launch.",
-      "contact": {
-        "city": "Houston, Texas"
-      },
-      "kick": "Consultant · Expert in Polyolefins",
-      "name": "Patrick Brant",
-      "sub": "Polyolefin science, <t>from catalyst to product.</t>",
-      "social": [
-        {
-          "t": "LinkedIn",
-          "h": "https://www.linkedin.com/in/patrick-brant-b7785b16/",
-          "i": "linkedin"
-        }
-      ],
-      "base": "Patrick Brant · Houston, Texas",
-      "fine": "Concept preview · Not indexed",
-      "igy": {
-        "label": "A concept by",
-        "href": "https://igniteyourself.co/",
-        "logo": "/brant/assets/igy-logo.png",
-        "link": "Discover Ignite Yourself",
-        "note": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. Not his official website, and not reviewed or approved by him. Copy and figures are subject to his validation. Excluded from search engines."
-      },
-      "demo": {
-        "badge": "Preview · Not yet active",
-        "steps": [
-          {
-            "t": "A short note, by subject",
-            "d": "A matter, a product or a venture. Subjects and wording agreed with Dr. Brant."
-          },
-          {
-            "t": "Read by Dr. Brant",
-            "d": "Nothing confidential or privileged is asked for at first contact."
-          },
-          {
-            "t": "On his terms",
-            "d": "What is welcome, and when, stays his call."
-          }
-        ],
-        "note": "This preview sends nothing and stores nothing.",
-        "link": {
-          "t": "LinkedIn",
-          "h": "https://www.linkedin.com/in/patrick-brant-b7785b16/"
-        }
-      }
-    }
-  ]
+  "affiliations": {
+    "label": "Institutions and affiliations",
+    "items": [
+      {"name": "ExxonMobil <t>Chemical</t>", "k": "Chief Scientist, 2000–2011; Chief Polymer Science Advisor, 2011–2018"},
+      {"name": "University <t>of Houston</t>", "k": "Research collaborator"},
+      {"name": "Baylor <t>University</t>", "k": "Research collaborator"},
+      {"name": "TechConnect <t>World</t>", "k": "Symposium Chair, 2025"},
+      {"name": "Molecular <t>Joinery</t>", "k": "Founder, Seabrook, Texas"},
+      {"name": "University <t>of Arizona</t>", "k": "Ph.D., Inorganic Chemistry, 1977"}
+    ],
+    "note": "Names shown for reference only; each belongs to its respective owner."
+  },
+  "masthead": {
+    "label": "The record",
+    "title": "A record of the career of <t>Dr. Patrick Brant.</t>",
+    "note": "Compiled from speaker biographies, the published literature, patent records and public sources. October 2026."
+  },
+  "notice": {
+    "id": "notice",
+    "label": "Biographical note",
+    "title": "Biographical <t>note</t>",
+    "text": "Patrick Brant is a polymer chemist and consultant in polyolefins, based in Houston, Texas. He studied chemistry at George Mason University and took a Ph.D. in inorganic chemistry at the University of Arizona in 1977, followed by post-doctoral research at Purdue University and a National Research Council fellowship at the Naval Research Laboratory in Washington, D.C. He joined Exxon Chemical Company in Baytown, Texas, in 1981, and served ExxonMobil Chemical as Chief Scientist from 2000 to 2011 and as Chief Polymer Science Advisor from 2011 to 2018. His work there included supported metallocene catalysts for gas-phase reactors, the structure–property relationships of polyolefins, and separator film for lithium-ion batteries, developed by a team he led and recognised with the ICIS award for Best Product Innovation in 2008. He is named as inventor on more than 150 US patents and is the author of more than 75 publications. Since 2019 he has worked as an independent consultant and occasional expert witness, collaborates in research with the University of Houston and Baylor University, and founded Molecular Joinery, LLC.",
+    "glance": [
+      ["Based", "Houston, Texas"],
+      ["Doctorate", "Ph.D., Inorganic Chemistry, University of Arizona, 1977"],
+      ["ExxonMobil Chemical", "1981–2018: Chief Scientist, 2000–2011; Chief Polymer Science Advisor, 2011–2018"],
+      ["Patents", "More than 150 US patents, as inventor or co-inventor"],
+      ["Since 2019", "Independent consultant; occasional expert witness"],
+      ["Societies", "American Chemical Society; American Physical Society; Society of Plastics Engineers"]
+    ],
+    "src": "Sources 1, 3, 5, 8."
+  },
+  "appointments": {
+    "id": "appointments",
+    "label": "Appointments",
+    "title": "Appointments",
+    "current": [
+      ["Consultant in polyolefins; occasional expert witness", "Independent practice, Houston, Texas", "2019–"],
+      ["Founder", "Molecular Joinery, LLC, Seabrook, Texas", ""],
+      ["Research collaborator", "University of Houston", ""],
+      ["Research collaborator", "Baylor University", ""]
+    ],
+    "past": [
+      ["Chief Polymer Science Advisor", "ExxonMobil Chemical Company", "2011–2018"],
+      ["Chief Scientist, Global Research and Development", "ExxonMobil Chemical", "2000–2011"],
+      ["Research and research leadership in polyolefins", "Exxon Chemical Company, Baytown, Texas", "1981–2000"]
+    ],
+    "src": "Sources 1, 2, 3, 8."
+  },
+  "chronology": {
+    "id": "chronology",
+    "label": "Chronology",
+    "title": "Chronology, <t>1972–2026</t>",
+    "items": [
+      ["1972", "B.Sc. in Chemistry, George Mason University."],
+      ["1977", "Ph.D. in inorganic chemistry, University of Arizona. Post-doctoral research, Purdue University."],
+      ["1978", "National Research Council fellowship, Naval Research Laboratory, Washington, D.C."],
+      ["1981", "Joins Exxon Chemical Company, Baytown, Texas."],
+      ["1982", "“XPS studies of core binding energies in transition metal complexes”, with Robert D. Feltham, <t>Journal of the American Chemical Society</t>."],
+      ["1995", "US Patent 5,475,075, ethylene/longer α-olefin copolymers, with Jo Ann M. Canich; Exxon Chemical Patents."],
+      ["2000", "Chief Scientist, Global Research and Development, ExxonMobil Chemical. “High-strength welds in metallocene polypropylene/polyethylene laminates”, <t>Science</t>."],
+      ["2006", "Speaks for ExxonMobil on energy and transportation, to 2010: more than 25 print and television interviews."],
+      ["2008", "Separator film for lithium-ion batteries, developed by a team he led, receives the ICIS award for Best Product Innovation."],
+      ["2011", "Chief Polymer Science Advisor, ExxonMobil Chemical Company."],
+      ["2015", "Co-organiser, ISPAC 2015, Houston."],
+      ["2017", "Seminar at the Davidson School of Chemical Engineering, Purdue University: “Polyolefins: Mass Produced Molecular Masterpieces”."],
+      ["2018", "Retires from ExxonMobil Chemical after thirty-seven years."],
+      ["2019", "Independent consultant in polyolefins and occasional expert witness, Houston."],
+      ["2021", "US Patent 10,882,925, catalysts for polyethylene with broad, bimodal molecular weight distribution."],
+      ["2025", "Symposium Chair, TechConnect World, Austin, with Alamgir Karim."],
+      ["2026", "Speaker, Orphan & Idle Wells 2026, on ring-opening metathesis polymerisation for plugging abandoned wells."]
+    ],
+    "src": "Sources 1–8."
+  },
+  "work": {
+    "id": "work",
+    "label": "Scientific work",
+    "title": "Scientific <t>work</t>",
+    "items": [
+      ["Metallocene catalysis", "Design, synthesis, characterisation and operation of supported metallocene catalysts in gas-phase reactors: the research behind the commercialisation of metallocene linear low-density polyethylenes."],
+      ["Structure and properties of polyolefins", "The solid and melt state, blends and impact copolymers; chain branching, coil dimensions and melt rheology, published in <t>Macromolecules</t>, 2001 and 2002."],
+      ["Battery separator film", "Separator design and fabrication for lithium-ion batteries, from consumer electronics to transportation. ICIS award for Best Product Innovation, 2008."],
+      ["Composites and coupling chemistry", "Composite and nanocomposite design, coupling agents and coatings at Molecular Joinery; Grubbs-type ring-opening metathesis polymerisation for plugging abandoned wells, with Baylor University."]
+    ],
+    "src": "Sources 1, 3, 4, 5."
+  },
+  "band": {
+    "img": "/brant/assets/desk.jpg",
+    "imgMobile": "/brant/assets/desk-mobile.jpg",
+    "q": "Polyolefins: mass-produced molecular masterpieces.",
+    "by": "Seminar title, Davidson School of Chemical Engineering, Purdue University, 2017",
+    "caption": "Provisional art direction"
+  },
+  "research": {
+    "id": "research",
+    "label": "Research",
+    "title": "Research: <t>selected papers</t>",
+    "lede": "Six papers from more than 75, from the inorganic chemistry of the doctorate to the rheology of polyolefin melts.",
+    "items": [
+      {"y": "1982", "field": "Inorganic chemistry", "t": "XPS studies of core binding energies in transition metal complexes. 2. Ligand group shifts", "c": "Journal of the American Chemical Society 104:641–645", "role": "With R. D. Feltham", "h": "https://doi.org/10.1021/ja00367a001"},
+      {"y": "2000", "field": "Polymer interfaces", "t": "High-strength welds in metallocene polypropylene/polyethylene laminates", "c": "Science 288:2187–2190", "role": "With K. A. Chaffin, J. S. Knutsen and F. S. Bates", "h": "https://doi.org/10.1126/science.288.5474.2187"},
+      {"y": "2001", "field": "Polymer physics", "t": "Effect of short chain branching on the coil dimensions of polyolefins in dilute solution", "c": "Macromolecules 34:6812–6820", "role": "With T. Sun, R. R. Chance and W. W. Graessley", "h": "https://doi.org/10.1021/ma010718e"},
+      {"y": "2002", "field": "Rheology", "t": "Prediction of melt state poly(α-olefin) rheological properties: the unsuspected role of the average molecular weight per backbone bond", "c": "Macromolecules 35:10096–10101", "role": "With L. J. Fetters, D. J. Lohse, C. A. García-Franco and D. Richter", "h": "https://doi.org/10.1021/ma025659z"},
+      {"y": "2005", "field": "Catalyst spectroscopy", "t": "Metal and ligand K-edge XAS of organotitanium complexes: metal 4p and 3d contributions to pre-edge intensity and their contributions to bonding", "c": "Journal of the American Chemical Society 127:667–674", "role": "With S. DeBeer George and E. I. Solomon", "h": "https://doi.org/10.1021/ja044827v"},
+      {"y": "2015", "field": "Rheology", "t": "Linear rheology and structure of molecular bottlebrushes with short side chains", "c": "Journal of Rheology 59:865–883", "role": "With C. R. López-Barrón, A. P. R. Eberle and D. J. Crowther", "h": "https://doi.org/10.1122/1.4918977"}
+    ],
+    "src": "Source 6; records on the publishers’ sites."
+  },
+  "patents": {
+    "id": "patents",
+    "label": "Patents",
+    "title": "Selected <t>patents</t>",
+    "figures": [
+      ["150+", "US patents granted"],
+      ["75+", "Publications"],
+      ["6,198", "Citations"],
+      ["44", "h-index"]
+    ],
+    "figsrc": "Patents and publications: speaker biography, TechConnect World 2026. Citations and h-index: Google Scholar, October 2026, patents included.",
+    "items": [
+      {"y": "2021", "t": "Catalysts that produce polyethylene with broad, bimodal molecular weight distribution", "c": "US 10,882,925", "role": "ExxonMobil Chemical Patents", "h": "https://patents.google.com/patent/US10882925B2/en"},
+      {"y": "2013", "t": "High vinyl terminated propylene based oligomers", "c": "US 8,372,930", "role": "ExxonMobil Chemical Patents", "h": "https://patents.google.com/patent/US8372930B2/en"},
+      {"y": "2010", "t": "Polyolefin adhesive compositions and articles made therefrom", "c": "US 7,700,707", "role": "ExxonMobil Chemical Patents", "h": "https://patents.google.com/patent/US7700707B2/en"},
+      {"y": "2008", "t": "Polymer production at supercritical conditions", "c": "US 7,354,979", "role": "ExxonMobil Chemical Patents", "h": "https://patents.google.com/patent/US7354979B2/en"},
+      {"y": "1995", "t": "Ethylene/longer α-olefin copolymers", "c": "US 5,475,075", "role": "Exxon Chemical Patents", "h": "https://patents.google.com/patent/US5475075A/en"}
+    ],
+    "src": "Sources 1, 6, 7."
+  },
+  "honours": {
+    "id": "honours",
+    "label": "Honours and service",
+    "title": "Honours <t>and service</t>",
+    "items": [
+      ["2025", "Symposium Chair, <t>Polymers: sustainability, processes, applications & characterization</t>", "TechConnect World, Austin, Texas"],
+      ["2015", "Co-organiser, ISPAC 2015", "Houston, Texas"],
+      ["2008", "ICIS award for Best Product Innovation, for battery separator film", "ICIS Chemical Business"],
+      ["", "Outstanding Scientist Award", "ExxonMobil"]
+    ],
+    "src": "Sources 1, 2, 5, 8."
+  },
+  "lectures": {
+    "id": "lectures",
+    "label": "Lectures",
+    "title": "Lectures <t>and public speaking</t>",
+    "items": [
+      ["2026", "Orphan & Idle Wells 2026: ring-opening metathesis polymerisation for plugging abandoned wells", "Speaker"],
+      ["2017", "Davidson School of Chemical Engineering, Purdue University: <t>Polyolefins: Mass Produced Molecular Masterpieces</t>", "Seminar"],
+      ["2006–2010", "Energy and transportation, for ExxonMobil: more than 25 print and television interviews and invited talks", "Speaker for ExxonMobil"]
+    ],
+    "src": "Sources 1, 3, 4, 8."
+  },
+  "education": {
+    "id": "education",
+    "label": "Education and training",
+    "title": "Education <t>and training</t>",
+    "items": [
+      ["1972", "B.Sc., Chemistry", "George Mason University"],
+      ["1972–1977", "Ph.D., Inorganic Chemistry", "University of Arizona"],
+      ["1977", "Post-doctoral research", "Purdue University"],
+      ["1978", "National Research Council fellowship", "Naval Research Laboratory, Washington, D.C."]
+    ],
+    "src": "Sources 1, 3, 8."
+  },
+  "sources": {
+    "id": "sources",
+    "label": "Sources",
+    "title": "Sources",
+    "items": [
+      ["TechConnect World 2026, speaker biography of Dr. Patrick Brant", "https://techconnectworld.com/World2026/bio.php?i=81"],
+      ["TechConnect World 2025, symposium on polymers: chairs and programme", "https://techconnectworld.com/World2025/sym/Materials_Polymers_Chemicals.html"],
+      ["Purdue University, Davidson School of Chemical Engineering, seminar by Dr. Pat Brant, 2017", "https://engineering.purdue.edu/ChE/events/2017/seminar-dr-pat-brant"],
+      ["Orphan & Idle Wells 2026, speaker profile", "https://www.orphan-idle-wells.com/speaker/patrick-brant"],
+      ["ExxonMobil Chemical, announcement of the 2008 ICIS award for battery separator film, 13 October 2008", "https://www.chemicalonline.com/doc/exxonmobil-wins-innovation-award-for-battery-0001"],
+      ["Google Scholar, profile of Patrick Brant, October 2026", "https://scholar.google.com/citations?user=qBtPhdcAAAAJ"],
+      ["Google Patents and Justia, patents naming Patrick Brant as inventor", "https://patents.justia.com/inventor/patrick-brant"],
+      ["LinkedIn, professional profile of Patrick Brant", "https://www.linkedin.com/in/patrick-brant-b7785b16/"]
+    ]
+  },
+  "footer": {
+    "name": "Patrick <t>Brant</t>",
+    "line": "Polymer scientist · Houston, Texas",
+    "links": [
+      ["LinkedIn", "https://www.linkedin.com/in/patrick-brant-b7785b16/"],
+      ["Google Scholar", "https://scholar.google.com/citations?user=qBtPhdcAAAAJ"],
+      ["Patents", "https://patents.justia.com/inventor/patrick-brant"]
+    ],
+    "base": "Houston, Texas",
+    "fine": "Concept preview · Not indexed",
+    "igy": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. The portraits are provisional art direction, not photographs, and will be replaced with photography he approves. This is not his official website: it has not been reviewed or approved by him, and copy and figures are subject to his validation. Excluded from search engines."
+  }
 }
