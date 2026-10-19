@@ -301,6 +301,11 @@
           "t": "Imperial College London profile",
           "h": "https://profiles.imperial.ac.uk/nagy.habib",
           "i": "globe"
+        },
+        {
+          "t": "Wikipedia",
+          "h": "https://en.wikipedia.org/wiki/Nagy_Habib",
+          "i": "wiki"
         }
       ],
       "base": "Professor Nagy Habib · London",
