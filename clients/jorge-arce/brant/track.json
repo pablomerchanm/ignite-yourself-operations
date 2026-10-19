@@ -27,7 +27,7 @@
     }
   ],
   "navcta": {
-    "t": "Start a conversation",
+    "t": "Contact",
     "h": "/brant#inquiry"
   },
   "sections": [
@@ -44,7 +44,6 @@
       "id": "track-exxon",
       "label": "ExxonMobil Chemical",
       "title": "Thirty-seven years, <t>two chairs.</t>",
-      "lede": "Dates from his public profile; the work as described in his speaker biographies.",
       "groups": [
         {
           "label": "Roles",
@@ -195,134 +194,20 @@
       "k": "Next",
       "t": "The record",
       "d": "Selected publications and patent families.",
-      "h": "/brant/voice",
-      "alt": {
-        "t": "Start a conversation",
-        "h": "/brant#inquiry"
-      }
+      "h": "/brant/voice"
     },
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Enquiries",
+      "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a matter, a product or a venture. A short note on where things stand is the best place to begin.",
+      "lede": "One clear first step, set up with Dr. Brant before launch.",
       "contact": {
         "city": "Houston, Texas"
-      },
-      "form": {
-        "selectLabel": "What would you like to discuss?",
-        "selectPlaceholder": "Select the nature of your enquiry",
-        "paths": [
-          {
-            "v": "matter",
-            "t": "A patent matter or technical dispute",
-            "btn": "Send a note",
-            "note": "Please do not include privileged or confidential information.",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Firm",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Jurisdiction and stage"
-              },
-              {
-                "n": "The matter, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "product",
-            "t": "A product, process or material",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Where things stand",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "venture",
-            "t": "A venture, investment or research question",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Organisation",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "In brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "other",
-            "t": "Something else",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Message",
-                "ta": true,
-                "full": true
-              }
-            ]
-          }
-        ]
       },
       "kick": "Consultant · Expert in Polyolefins",
       "name": "Patrick Brant",
       "sub": "Polyolefin science, <t>from catalyst to product.</t>",
-      "fcta": {
-        "t": "Start a conversation",
-        "h": "/brant#inquiry"
-      },
       "social": [
         {
           "t": "LinkedIn",
@@ -331,13 +216,35 @@
         }
       ],
       "base": "Patrick Brant · Houston, Texas",
-      "fine": "Private preview · Not indexed",
+      "fine": "Concept preview · Not indexed",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/brant/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information, speaker biographies and the published record for Dr. Brant’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Dr. Brant, and it is not indexed or distributed."
+        "note": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. Not his official website, and not reviewed or approved by him. Copy and figures are subject to his validation. Excluded from search engines."
+      },
+      "demo": {
+        "badge": "Preview · Not yet active",
+        "steps": [
+          {
+            "t": "A short note, by subject",
+            "d": "A matter, a product or a venture. Subjects and wording agreed with Dr. Brant."
+          },
+          {
+            "t": "Read by Dr. Brant",
+            "d": "Nothing confidential or privileged is asked for at first contact."
+          },
+          {
+            "t": "On his terms",
+            "d": "What is welcome, and when, stays his call."
+          }
+        ],
+        "note": "This preview sends nothing and stores nothing.",
+        "link": {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/patrick-brant-b7785b16/"
+        }
       },
       "noform": true,
       "no": "05"

@@ -25,3 +25,21 @@ Pablo: "con todas esas fotos se ve más como la página de un laboratorio que de
 - `og.jpg` rehecha en tinta, sin fotografía.
 
 Pendiente con él: un retrato real; la cifra de patentes; qué puede decir de ExxonMobil; Conscience VC.
+
+## Iteración 3: los criterios de Nilsson, aplicados a Brant (19 de octubre de 2026)
+
+Mismo pase que Johan Nilsson (iteraciones 6 y 7 de `prospecting/nilsson/ITERACION-1.md`), adaptado a Brant.
+
+- **Nota provisional fuera:** "[A personal note in Dr. Brant's own words to follow…]".
+- **Franja de marcas estratégica:** se llama "Industry & research". **ExxonMobil Chemical** va al frente, tipográfica y grande (el logotipo solo con permiso), con "Chief Scientist · Chief Polymer Science Advisor · 1981 – 2018". Debajo, lo que hace hoy: Molecular Joinery (fundador), Houston & Baylor (investigación) y TechConnect World (Symposium Chair, 2025). Arizona, Purdue y el Naval Research Laboratory (1977–1978) salen de la franja; siguen en Career.
+- **Sin narrar la fuente:** fuera "Dates from his public profile…", "From his public profile", "Four of the most cited papers…" y la etiqueta "In short". Lo que importa queda como crédito corto: "Google Patents · ICIS, 2008", "Purdue University, 2017 · seminar title", "Citations: Google Scholar, October 2026".
+- **Dato corregido:** "1995 — ExxonMobil pioneers metallocene catalysts…" (ExxonMobil no existía en 1995: la fusión es de 1999) pasa a "US 5,475,075: one of the early metallocene copolymer patents", con fuente propia.
+- **Cinta de públicos fuera** ("Patent counsel · R&D leaders · …"): "Where an engagement usually begins" ya dice para quién es.
+- **Contacto:** sin formulario. Vista previa de cómo funcionaría ("Preview · Not yet active", tres pasos, "This preview sends nothing and stores nothing", su LinkedIn). "Start a conversation" pasa a "Contact"; las tarjetas de la práctica pierden los botones "Discuss a matter / product / venture".
+- **Nota del pie:** ya no habla de fotografía (la página no tiene). "Concept preview · Not indexed".
+- **Capítulo:** las tres cifras (1995 · 2008 · 150+) se tocaban; el bloque es más ancho y las cifras, algo menores.
+- **Menos espacio entre letras** (preferencia de Pablo): rótulos, barra, botones y titulares.
+
+QA: cuatro páginas en 390, 768, 1440 y 1920 px; sin desbordamiento, sin errores de consola, sin imágenes rotas; auditoría de texto sin notas internas ni frases que narren la fuente.
+
+Pendiente con él (sin cambios): la cifra de patentes (125, 150 o 175 según la fuente), qué puede decir de ExxonMobil, a quién quiere llegar, un retrato real y Conscience VC.

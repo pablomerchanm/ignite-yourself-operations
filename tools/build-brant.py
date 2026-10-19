@@ -47,8 +47,7 @@ base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al c
 
 # ------------------------------------------------------- 3. cabeza del documento
 TITLE = 'Patrick Brant — Polyolefins: Consultant, Expert Witness, Inventor'
-DESC = ('Patrick Brant: thirty-seven years at ExxonMobil Chemical, Chief Scientist and Chief Polymer Science Advisor; metallocene catalysis at world scale; '
-        'more than 150 US patents. Independent consulting and expert testimony in polyolefins since 2019.')
+DESC = full['meta']['description']
 URL = 'https://igniteyourself.co/brant'
 
 base = sub1(r'<title>[^<]*</title>', f'<title>{TITLE}</title>', base, tag='title')
@@ -89,6 +88,15 @@ function rich(s){return rich0(s)
   .replace(/&lt;sup&gt;/g,'<sup>').replace(/&lt;\/sup&gt;/g,'</sup>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,function(m,t,u){var ext=/^https?:/.test(u);
     return'<a class="ilink" href="'+u+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+t+'</a>'})}
+/* Contacto en vista previa: como funcionaria la consulta, sin campos ni botones que prometan un envio. */
+function idemo(d){
+  return'<div class="idemo wr">'+
+    (d.badge?'<span class="idbadge">'+esc(d.badge)+'</span>':'')+
+    '<ol class="idsteps">'+(d.steps||[]).map(function(x,i){
+      return'<li><span class="idsn">'+('0'+(i+1)).slice(-2)+'</span><div><h3>'+rich(x.t)+'</h3><p>'+rich(x.d)+'</p></div></li>'}).join('')+'</ol>'+
+    (d.note?'<p class="idnote">'+rich(d.note)+'</p>':'')+
+    (d.link?'<a class="idlink" href="'+esc(d.link.h)+'" target="_blank" rel="noopener">'+esc(d.link.t)+' \u2197</a>':'')+
+  '</div>'}
 /* Iconos de linea del oficio. Un trazo por icono se mueve en reposo (clase idraw / ifade / ispin / ihand). */
 var ICONS={
   care:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path class="idraw" d="M8.5 15h2l1.5-3 2 6 1.5-3h2"/>',
@@ -123,6 +131,9 @@ base = sub1(r"""return'<section class="reserve paths-in" id="'\+esc\(s\.id\|\|'i
             """return(s.noform?'':'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+""", base, tag='inq-open')
 base = sub1(r"""'</div></div></section>'\+\n  '<footer class="kfoot">""",
             """'</div></div></section>')+\n  '<footer class="kfoot">""", base, tag='inq-close')
+# -------- contacto: con s.demo, una vista de como funcionaria la consulta en lugar del formulario
+base = sub1(r"""'<form class="rform iform wr" id="iform" novalidate>'\+.*?'</form>'\+""",
+            lambda m: '(s.demo?idemo(s.demo):(' + m.group(0)[:-1] + '))+', base, flags=re.S, tag='inq-demo')
 PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
     '<div class="pf-top" data-r2>'+
       '<div class="pf-id">'+
@@ -209,7 +220,11 @@ offers:function(s){
 marks:function(s){
   return'<section class="mks" id="'+esc(s.id||'marks')+'"><div class="wrap">'+
   (s.label?'<div class="mkhead"><span class="smallcap wr" data-r1>'+esc(s.label)+'</span></div>':'')+
-  '<ul class="mkgrid" data-cards>'+(s.items||[]).map(function(m){
+  (s.feature?'<div class="mkfeat wr" data-r1>'+
+    (s.feature.logo?'<span class="mklogo" role="img" aria-label="'+esc(s.feature.t)+'" style="--logo:url('+esc(s.feature.logo)+');aspect-ratio:'+esc(s.feature.ar)+'"></span>'
+      :'<span class="mkftext">'+rich(s.feature.text)+'</span>')+
+    '<span class="mkfk">'+esc(s.feature.k)+'</span></div>':'')+
+  '<ul class="mkgrid'+(s.feature?' mksub':'')+'" data-cards>'+(s.items||[]).map(function(m){
     return'<li class="mk wr">'+(m.logo?'<span class="mklogo" role="img" aria-label="'+esc(m.t)+'" style="--logo:url('+esc(m.logo)+');aspect-ratio:'+esc(m.ar)+';height:'+(m.h||48)+'px"></span>'
       :'<span class="mktext">'+rich(m.text)+'</span>')+'<span class="mkk">'+esc(m.k)+'</span></li>'}).join('')+'</ul>'+
   (s.src?'<p class="mksrc wr" data-r1>'+esc(s.src)+'</p>':'')+
@@ -451,7 +466,7 @@ pubs:function(s){
       '<span class="pyr">'+esc(p.y)+'</span>'+
       '<div class="pmain"><h3><a href="'+esc(p.h)+'" target="_blank" rel="noopener">'+esc(p.t)+'</a></h3>'+
         '<p class="pau">'+esc(p.a)+'</p><p class="pve">'+esc(p.v)+'</p>'+
-        (p.why?'<p class="pwhy"><span class="smallcap">In short</span>'+esc(p.why)+'</p>':'')+'</div>'+
+        (p.why?'<p class="pwhy">'+esc(p.why)+'</p>':'')+'</div>'+
       '<div class="pside">'+(p.src?'<span class="src">'+esc(p.src)+'</span>':'')+'<span class="pid">'+esc(p.id)+'</span></div>'+
     '</li>'}).join('')+'</ol>'+
   '</div></section>'},
@@ -2309,6 +2324,50 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .stmt.opener:not(.withimg) .slab{color:rgba(237,231,220,.55)!important}
 #site .stmt.opener:not(.withimg) .sq{color:var(--bone)}
 #site .stmt.opener:not(.withimg) .ssub,#site .stmt.opener:not(.withimg) p{color:rgba(237,231,220,.8)}
+
+/* ---------- revision: ExxonMobil al frente; debajo, la practica y la investigacion de hoy ---------- */
+#site .mkfeat{display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2vh,20px);text-align:center}
+#site .mkftext{font-family:var(--serif);font-weight:300;font-size:clamp(40px,5.2vw,72px);line-height:1;letter-spacing:-.025em;color:var(--ink)}
+#site .mkftext .it{font-style:italic}
+#site .mkfk{font-family:var(--caps);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+#site .mkgrid.mksub{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px;margin:clamp(40px,6vh,64px) auto 0;
+  padding-top:clamp(28px,4vh,40px);border-top:1px solid var(--line);align-items:start}
+#site .mksub .mk{min-height:0;justify-content:flex-start;gap:12px}
+#site .mksub .mktext{font-size:clamp(17px,1.35vw,21px)}
+#site .mksub .mkk{font-size:11px}
+@media(max-width:1100px){#site .mksub .mk:nth-child(4){border-left:1px solid var(--line)}}
+@media(max-width:600px){#site .mkgrid.mksub{grid-template-columns:1fr;row-gap:0;padding-top:0}
+  #site .mksub .mk{border-left:0!important;border-bottom:1px solid var(--line);padding:18px 0;flex-direction:row;justify-content:space-between;align-items:baseline;text-align:left;gap:16px}
+  #site .mksub .mktext{font-size:19px}#site .mksub .mktext .it{display:inline}
+  #site .mksub .mkk{text-align:right;max-width:13em}
+  #site .mkfk{font-size:11px;line-height:1.7;max-width:24em}}
+
+/* el capitulo: las tres cifras caben sin tocarse */
+#site .arlay:not(:has(.arfig)) .arst{max-width:52em}
+#site .arst .nn{font-size:clamp(48px,5vw,80px)!important}
+
+/* contacto en vista previa: como funcionaria, sin campos ni botones */
+#site .idemo{border-top:1px solid var(--ink);padding-top:clamp(18px,2.4vh,24px)}
+#site .idbadge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--smoke)}
+#site .idbadge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--signal)}
+#site .idsteps{list-style:none;margin:clamp(14px,2vh,20px) 0 0;padding:0}
+#site .idsteps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 12px;padding:clamp(16px,2.2vh,22px) 0;border-bottom:1px solid var(--line)}
+#site .idsn{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--signal);padding-top:.5em}
+#site .idsteps h3{font-family:var(--serif);font-weight:300;font-size:clamp(21px,1.8vw,27px);line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin:0}
+#site .idsteps p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--gray);max-width:46ch}
+#site .idnote{margin:clamp(18px,2.4vh,24px) 0 0;font-size:13px;line-height:1.6;color:var(--smoke)}
+#site .idlink{display:inline-block;margin-top:clamp(16px,2.2vh,22px);font-family:var(--caps);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);
+  border-bottom:1px solid var(--signal);padding-bottom:4px}
+#site .idlink:hover{color:var(--signal)}
+@media(max-width:860px){#site .idsteps li{grid-template-columns:36px minmax(0,1fr)}}
+
+/* menos espacio entre letras: rotulos, botones, barra y cifras */
+#site .smallcap,.topbar .u11,#site .mkk,#site .src,#site .smore,#site .pmore a{letter-spacing:.07em!important}
+.tnav a,.tbot a{letter-spacing:.07em!important}
+#site .hero .hkick,#site .hero .hcoords span,#site .itsign{letter-spacing:.06em!important}
+#site .hcta,#site .fcta,#site .rtcta,#site .pcard .pgo a{letter-spacing:.06em!important}
+#site .d56,#site .d80,#site .sq,#site .arh,#site .hero .hsub,#site .itst{letter-spacing:-.02em!important}
+#site .nums .nn,#site .arst .nn{letter-spacing:-.045em!important}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
@@ -2337,7 +2396,7 @@ def topbar_html(active):
     return ('<div class="topbar">'
             '<a class="u11 smallcap tname" href="/brant" style="color:#fff">Patrick Brant</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
-            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/brant#inquiry"}" style="color:#fff">Start a conversation</a>'
+            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/brant#inquiry"}" style="color:#fff">Contact</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
 # ---------------------------------------------------------- 8. reparto por pagina
@@ -2371,15 +2430,13 @@ inq = lambda: deep('inquiry')
 def foot():
     s = deep('inquiry'); s['noform'] = True
     return s
-ALT = {"t": "Start a conversation", "h": "/brant#inquiry"}
-
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
-T_PR = 'Working together — Patrick Brant'
+T_PR = 'The practice — Patrick Brant'
 T_TE = 'Career — Patrick Brant'
 T_PU = 'The record — Patrick Brant'
 
 home = page(TITLE, DESC,
-    [deep('hero'), deep('marks'), deep('intro'), deep('numbers'), deep('audiences'), deep('called-in'), deep('offers'),
+    [deep('hero'), deep('marks'), deep('intro'), deep('numbers'), deep('called-in'), deep('offers'),
      deep('chapter'), deep('in-brief'), deep('quote'), deep('conversations'), inq()])
 for _s in home['sections']:
     _s.pop('no', None)
@@ -2388,15 +2445,15 @@ PAGES = {
     'track': page(T_TE,
         'From inorganic chemistry at Arizona and Purdue to thirty-seven years at ExxonMobil Chemical, and an independent practice in polyolefins since 2019.',
         [deep('track-open'), deep('track-exxon'), deep('track-years'), deep('cv-today'), deep('cv-education'),
-         dict(NX('Next', 'The record', 'Selected publications and patent families.', '/brant/voice'), alt=ALT), foot()], sub=True),
+         NX('Next', 'The record', 'Selected publications and patent families.', '/brant/voice'), foot()], sub=True),
     'voice': page(T_PU,
         'Selected publications, patent families and talks by Patrick Brant: forty years of polyolefin science.',
         [deep('voice-open'), deep('voice-talks'),
-         dict(NX('Next', 'Working together', 'A matter, a product or a venture.', '/brant/practice'), alt=ALT), foot()], sub=True),
+         NX('Next', 'The practice', 'Expert testimony, R&D advisory, ventures and research.', '/brant/practice'), foot()], sub=True),
     'practice': page(T_PR,
-        'Three ways to work with Patrick Brant: expert witness and technical counsel, R&D advisory from catalyst to product, and ventures and research.',
+        'The practice of Patrick Brant: expert witness and technical counsel, R&D advisory from catalyst to product, and ventures and research.',
         [deep('practice-open'), deep('called-in'), deep('routes'), deep('slp'),
-         NX('Next', 'Start a <t>conversation</t>', 'A short note on where things stand is the best place to begin.', '/brant#inquiry'), foot()], sub=True),
+         NX('Next', 'Career', 'From inorganic chemistry to the reactor floor.', '/brant/track'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)
