@@ -1,10 +1,10 @@
 # Mario Lignarolo — Entrevista de marca (6 oct 2026)
 
-Fuente: dos grabaciones de 15 min cada una, transcritas con UniScribe (versión gratuita).
+Fuente: dos grabaciones de 15 min cada una, transcritas con UniScribe (versión gratuita). **Actualización del 19 oct:** el audio completo de la primera grabación (`mario_1.MP3`, 30 min, en español) se transcribió con Whisper (modelo *medium*) y completa la historia que se había cortado: ver **§ 7b**.
 
 **Límites de la fuente**
 
-- Cada archivo se cortó a los 15 minutos. Quedaron sin respuesta: el *breaking point* que lo llevó al autoconocimiento y las oportunidades ideales (TED, etc.).
+- Cada archivo se cortó a los 15 minutos. El audio completo de la parte 1 ya resuelve el *breaking point* (§ 7b). Siguen sin respuesta las oportunidades ideales (TED, etc.) más allá de su tema.
 - La parte 1 está en español (citable con cuidado). La parte 2 salió **traducida automáticamente al inglés**: de ahí se toman ideas, **nunca citas textuales**.
 - Nombres propios dudosos por la transcripción: «Diego Greifeld» (referente con app de comunidad), «Nacho Muñoz» (máster de respiración), «Alejo Jaramillo» (mentor). Confirmar ortografía antes de publicar cualquiera.
 
@@ -69,6 +69,20 @@ Leyenda: **[P1]** parte 1, español · **[P2]** parte 2, traducción automática
 
 Edad actual: **30 años**.
 
+## 7b. La historia completa (audio de 30 min) [P1 completo]
+
+Del minuto 15 al 30, en español. Las frases entre comillas son suyas, transcritas automáticamente: revisar la redacción antes de citarlas.
+
+1. **Antes del desarrollo personal:** al graduarse de la universidad trabajó en **Coca-Cola**; no le gustó, quería emprender y ser su propio jefe. Vivía en **Medellín** y montó una empresa de **dropshipping** con un socio, su mejor amigo de entonces. Aprendió marketing, pero vendía algo que no le gustaba ni le conectaba: «la desconexión de eso es brutal».
+2. **El detonante:** «Todos los aspectos de mi vida estaban mal»; se sentía desconectado y fuera de forma. Una experiencia ceremonial le confirmó «tú estás donde no tienes que estar»: «toda mi identidad se cayó». Cerró el negocio y **volvió a empezar de cero** en casa de su mamá, en Bogotá. «El Mario de ahí estaba demasiado perdido.»
+3. **La primera inversión en sí mismo:** un programa de mentoría de un año con **Javi Rodríguez** (español, al que seguía en Instagram), pagado con dinero que pidió prestado a su familia. Trabajo de identidad y de conexión con Dios. Hace unos tres años. Aun así: «no sabía qué hacer… estaba en esa insuficiencia».
+4. **Lignarolo:** **Giorgio**, que tenía la marca de zapatos desde hacía unos cuatro años «como un hobby», lo invitó a entrar porque Mario sabía de marketing. Con los dos trabajando a fondo, la marca «pasó de cero a 40, 50 millones en los primeros dos meses» y entró un inversor de la familia. Ahí aprendió cómo funciona una empresa, crear producto y marketing.
+5. **Marca personal:** su segundo mentor, **Alejandro (Alejo) Jaramillo** (Medellín), le escribió cuando Mario tenía «mil y pico» seguidores y publicaba sobre todo fitness. Le dio claridad en la oferta, el contenido y el precio. Ahí apareció otra vez la insuficiencia: no se sentía coherente cobrando por un proceso, y se desaparecía de las clases. «Todo es interno.»
+6. **La respiración:** **Nacho Muñoz** (español, respiración consciente). Por un anuncio en Instagram compró su programa de respiración (unos 11 días): «nunca lo había sentido en mi vida». Juntó marketing, marca personal, respiración y desarrollo personal: «vamos a empaquetar toda esta vuelta y volverla un producto». Así llegó su **primer cliente**.
+7. **Cierre:** «Tenía que ser como tenía que ser, para que yo me diera el permiso de encontrar las cosas que a mí me gustan… y como consecuencia poder aportar valor a las personas, porque lo viví.» La grabación se corta cuando explica qué puede recomendar a otros y qué no.
+
+**Implicación web:** el capítulo que faltaba en «Quién es Mario» existe y es fuerte para su audiencia: un emprendedor que lo hizo todo «bien» (universidad, Coca-Cola, su propia empresa) y aun así estaba perdido. Lignarolo deja de ser solo «volver a casa»: es donde aprendió a construir una empresa. Nada de esto se publica sin que Mario apruebe qué contar y con qué palabras.
+
 ## 8. Cliente ideal [P2]
 
 - Persona **ambiciosa**, que **emprende**, que ya tiene resultados pero se siente estancada y quiere el siguiente nivel.
@@ -85,18 +99,21 @@ Edad actual: **30 años**.
 ## No publicar (privado)
 
 - Comentarios sobre orientación sexual o energía masculina/femenina de su audiencia.
+- Lo personal de § 7b: ceremonias con sustancias, adicciones, la ruptura de pareja, el dinero prestado y el producto que vendía en el dropshipping.
+- Cifras de facturación de Lignarolo y precios (mentorías, procesos) hasta que él las apruebe.
 - Casos de clientes (la clienta en crisis, el cliente de México).
 - Cifras de seguidores y precios de referentes.
 
 ## Preguntas abiertas para Mario
 
-1. ¿Cuál fue el detonante (el *breaking point*) del cambio? Se cortó la grabación.
+1. ~~¿Cuál fue el detonante?~~ **Resuelto en § 7b.** Falta que apruebe qué se cuenta: ¿se menciona Coca-Cola, el dropshipping, volver a empezar de cero? ¿Algo de la experiencia ceremonial?
 2. ¿Ciudad actual (¿Madrid?) y si se publica?
-3. Nombre exacto del máster de respiración y si se menciona como formación.
-4. Rol en Lignarolo (fundador, socio, marca familiar).
+3. Respiración: su referente es **Nacho Muñoz** (§ 7b). Falta el nombre exacto del programa o máster y si se menciona como formación.
+4. ~~Rol en Lignarolo.~~ **En parte resuelto (§ 7b):** entró a hacer el marketing de la marca de Giorgio y la hicieron crecer. Confirmar su cargo, quién es Giorgio y si se publica la cifra de los primeros dos meses.
 5. ¿Quiere crear un nombre propio para su método en vez de «Psico-Cibernética»?
 6. Correo de prensa / colaboraciones.
 7. «8 semanas» (Skool) vs «40 días» (bio, Substack).
+8. Ortografía de los nombres que salen en § 7b: Javi Rodríguez, Alejandro Jaramillo, Nacho Muñoz, Giorgio.
 
 ## Cambios aplicados a la web con esta entrevista
 
