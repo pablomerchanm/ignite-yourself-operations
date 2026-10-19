@@ -34,6 +34,9 @@ export default function Lignarolo() {
               {lignarolo.quote}
             </p>
             <p data-reveal="up" className="mt-7 max-w-[30rem] text-[1.0625rem] leading-relaxed text-charcoal/80">
+              {lignarolo.role}
+            </p>
+            <p data-reveal="up" className="mt-4 max-w-[30rem] text-[0.975rem] leading-relaxed text-charcoal/60">
               {lignarolo.description}
             </p>
             <div data-reveal="up" className="mt-10">
