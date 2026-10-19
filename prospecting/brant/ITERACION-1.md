@@ -88,3 +88,31 @@ Pablo: le gusta la dirección gráfica, pero no debe quedar igual que la de Nagy
 5. **§ 04 Patents · § 05 Selected papers · § 06 Distinctions and lectures · § 07 Education and training · § 08 Biographical note · § 09 Sources.**
 
 **Fuera:** la franja de seis instituciones (diluía a ExxonMobil, que ahora está en el header y tiene su propia sección), el bloque "A record of the career of…" con su índice (la barra fija ya navega) y la cronología 1972–2026 (su contenido queda repartido entre ExxonMobil, el presente y la formación). `/brant/practice`, `/track` y `/voice` llevan ahora a `#expertise`, `#exxonmobil` y `#publications`.
+
+## Iteración 6: quitar lo que no aporta, logos reales y la primera pantalla en móvil (19 de octubre de 2026)
+
+Pablo pidió revisar dónde caben logos, íconos y detalles de diseño. Al ver la página: "no he podido entender esos íconos, qué son; quitemos todo lo que no aporte valor" (eran los "§ 01" de las secciones). Después, con una captura del iPhone: aprovechar mejor la primera pantalla en móvil.
+
+**Fuera:**
+- los "§ 01 … § 09" y el rótulo repetido de cada sección en el margen;
+- la numeración 01–06 de los campos de experticia;
+- las referencias numéricas por sección ("Sources 1, 3, 5, 8") y los números de la lista de fuentes, que queda como lista simple al final. Las pruebas siguen enlazadas donde se leen: campos, patentes y artículos.
+
+**Logos, solo donde se reconocen al instante.** ExxonMobil al margen de su sección; University of Houston y Baylor al margen de "Present work". Los tres son vectores oficiales pasados a una sola tinta (`assets/logos/`): el de ExxonMobil y el de Houston, de worldvectorlogo; el de Baylor, de baylor.edu. La nota del pie dice que las marcas se muestran como referencia y pertenecen a sus dueños. Se descartaron los de Arizona (su sello no se lee a ese tamaño), Purdue y George Mason (formación: no suman jerarquía) y el Naval Research Laboratory (su sitio bloquea la descarga). Sin íconos dibujados: no se entendían.
+
+**Interfaz:**
+- la barra fija marca la sección en la que se está;
+- en móvil, la barra tiene un botón "Contents" que despliega las siete secciones, porque antes no había forma de navegar en el teléfono;
+- en tableta (hasta 1080 px), el contenido usa todo el ancho y los logos van en fila sobre el título.
+
+**Primera pantalla en móvil.**
+- **Antes:** la foto ocupaba media pantalla, el nombre iba en dos líneas, el cargo en cuatro y las cifras quedaban bajo la barra de Safari.
+- **Ahora** todo cabe en la primera vista (393 × 700):
+  - arriba, sobre la foto: "Polymer scientist" y "Houston, Texas";
+  - el retrato en un recorte más abierto, con el rostro en la mitad superior;
+  - "Patrick *Brant*" en una sola línea;
+  - el cargo corto en dos líneas: "Formerly Chief Scientist, ExxonMobil Chemical. Independent consultant in polyolefins since 2019.";
+  - tres cifras en fila: 37 years · 150+ · 75+;
+  - el aviso de dirección de arte, en vertical junto al borde derecho;
+  - margen inferior para la barra flotante de Safari.
+- **Escritorio:** las cifras del header pasan a ser las mismas (37 years en ExxonMobil Chemical · 150+ patentes · 75+ publicaciones).

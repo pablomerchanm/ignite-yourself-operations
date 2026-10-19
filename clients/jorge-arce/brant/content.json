@@ -12,20 +12,22 @@
     "facts": [
       [
         "ExxonMobil Chemical",
-        "1981–2018"
+        "37 years"
       ],
       [
         "US patents",
-        "More than 150"
+        "150+"
       ],
       [
-        "Independent",
-        "Since 2019, Houston"
+        "Publications",
+        "75+"
       ]
     ],
     "img": "/brant/assets/hero.jpg",
     "imgMobile": "/brant/assets/hero-mobile.jpg",
-    "caption": "Portrait: provisional art direction"
+    "caption": "Portrait: provisional art direction",
+    "roleShort": "Formerly Chief Scientist, ExxonMobil Chemical. Independent consultant in polyolefins since 2019.",
+    "place": "Houston, Texas"
   },
   "expertise": {
     "id": "expertise",
@@ -139,8 +141,7 @@
           ]
         ]
       }
-    ],
-    "src": "Sources 1, 3, 4, 5, 6, 7."
+    ]
   },
   "present": {
     "id": "present",
@@ -168,7 +169,18 @@
         ""
       ]
     ],
-    "src": "Sources 1, 4, 8."
+    "logos": [
+      {
+        "src": "/brant/assets/logos/houston.svg",
+        "alt": "University of Houston",
+        "w": 168
+      },
+      {
+        "src": "/brant/assets/logos/baylor.svg",
+        "alt": "Baylor University",
+        "w": 150
+      }
+    ]
   },
   "exxonmobil": {
     "id": "exxonmobil",
@@ -219,7 +231,13 @@
         ""
       ]
     ],
-    "src": "Sources 1, 3, 5, 8."
+    "logos": [
+      {
+        "src": "/brant/assets/logos/exxonmobil.svg",
+        "alt": "ExxonMobil",
+        "w": 150
+      }
+    ]
   },
   "band": {
     "img": "/brant/assets/desk.jpg",
@@ -287,8 +305,7 @@
         "role": "Exxon Chemical Patents",
         "h": "https://patents.google.com/patent/US5475075A/en"
       }
-    ],
-    "src": "Sources 1, 6, 7."
+    ]
   },
   "publications": {
     "id": "publications",
@@ -344,8 +361,7 @@
         "role": "With C. R. López-Barrón, A. P. R. Eberle and D. J. Crowther",
         "h": "https://doi.org/10.1122/1.4918977"
       }
-    ],
-    "src": "Source 6; records on the publishers’ sites."
+    ]
   },
   "distinctions": {
     "id": "distinctions",
@@ -384,8 +400,7 @@
         "Davidson School of Chemical Engineering, Purdue University: <t>Polyolefins: Mass Produced Molecular Masterpieces</t>",
         "Seminar"
       ]
-    ],
-    "src": "Sources 1, 2, 3, 4, 5, 8."
+    ]
   },
   "education": {
     "id": "education",
@@ -412,8 +427,7 @@
         "National Research Council fellowship",
         "Naval Research Laboratory, Washington, D.C."
       ]
-    ],
-    "src": "Sources 1, 3, 8."
+    ]
   },
   "notice": {
     "id": "notice",
@@ -445,8 +459,7 @@
         "Societies",
         "American Chemical Society; American Physical Society; Society of Plastics Engineers"
       ]
-    ],
-    "src": "Sources 1, 3, 5, 8."
+    ]
   },
   "sources": {
     "id": "sources",
@@ -506,6 +519,6 @@
     ],
     "base": "Houston, Texas",
     "fine": "Concept preview · Not indexed",
-    "igy": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. The portraits are provisional art direction, not photographs, and will be replaced with photography he approves. This is not his official website: it has not been reviewed or approved by him, and copy and figures are subject to his validation. Excluded from search engines."
+    "igy": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. The portraits are provisional art direction, not photographs, and will be replaced with photography he approves. This is not his official website: it has not been reviewed or approved by him, and copy and figures are subject to his validation. Institutional marks are shown for reference only and belong to their owners. Excluded from search engines."
   }
 }
