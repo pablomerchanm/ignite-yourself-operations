@@ -6,7 +6,7 @@
   "logo": "PATRICK BRANT",
   "nav": [],
   "navcta": {
-    "t": "Start a conversation",
+    "t": "Contact",
     "h": "#inquiry"
   },
   "sections": [
@@ -24,34 +24,27 @@
     {
       "type": "marks",
       "id": "marks",
-      "label": "Track record",
+      "label": "Industry & research",
+      "feature": {
+        "text": "ExxonMobil <t>Chemical</t>",
+        "t": "ExxonMobil Chemical",
+        "k": "Chief Scientist · Chief Polymer Science Advisor · 1981 – 2018"
+      },
       "items": [
         {
-          "text": "ExxonMobil <t>Chemical</t>",
-          "k": "Chief Scientist · Chief Polymer Science Advisor, 1981 – 2018"
-        },
-        {
-          "text": "Naval Research <t>Laboratory</t>",
-          "k": "National Research Council Fellow, 1978"
-        },
-        {
-          "text": "University <t>of Arizona</t>",
-          "k": "Ph.D., Inorganic Chemistry, 1977"
-        },
-        {
-          "text": "Purdue",
-          "k": "Post-doctoral research, 1977"
+          "text": "Molecular <t>Joinery</t>",
+          "k": "Founder · Seabrook, Texas"
         },
         {
           "text": "Houston <t>& Baylor</t>",
-          "k": "Research collaborations, since 2019"
+          "k": "Research collaborations"
         },
         {
-          "text": "Molecular <t>Joinery</t>",
-          "k": "Founder"
+          "text": "TechConnect <t>World</t>",
+          "k": "Symposium Chair, 2025"
         }
       ],
-      "src": "Marks shown for reference only; each belongs to its respective owner."
+      "src": "Marks belong to their owners. No endorsement implied."
     },
     {
       "type": "intro",
@@ -60,8 +53,7 @@
       "statement": "Forty years between the catalyst <t>and the reactor.</t>",
       "body": [
         "Thirty-seven years at ExxonMobil Chemical in Baytown, Texas: eleven as Chief Scientist of global R&D, seven as Chief Polymer Science Advisor. Research that helped carry metallocene catalysis from the laboratory bench into world-scale reactors, and the products built on it: films, packaging, elastomers, adhesives, engine-oil additives and the separator membranes inside lithium-ion batteries.",
-        "Since 2019, an independent practice in polyolefins: consulting, expert testimony in patent matters, research with the University of Houston and Baylor University, and a company of his own, Molecular Joinery, for composite design and coupling chemistry.",
-        "<t>[A personal note in Dr. Brant’s own words to follow: how the chemistry began, and why polyolefins.]</t>"
+        "Since 2019, an independent practice in polyolefins: consulting, expert testimony in patent matters, research with the University of Houston and Baylor University, and a company of his own, Molecular Joinery, for composite design and coupling chemistry."
       ],
       "sign": "Houston, Texas",
       "more": {
@@ -96,18 +88,6 @@
         "t": "The record",
         "h": "/brant/voice"
       }
-    },
-    {
-      "type": "marquee",
-      "id": "audiences",
-      "items": [
-        "Patent counsel",
-        "R&D leaders",
-        "Converters & brand owners",
-        "Materials start-ups",
-        "Universities",
-        "Conference programmes"
-      ]
     },
     {
       "type": "situations",
@@ -168,7 +148,7 @@
         }
       ],
       "more": {
-        "t": "Working together",
+        "t": "The practice",
         "h": "/brant/practice"
       }
     },
@@ -181,7 +161,7 @@
       "stats": [
         {
           "n": "1995",
-          "k": "ExxonMobil pioneers metallocene catalysts for polyethylene and polypropylene"
+          "k": "US 5,475,075: one of the early metallocene copolymer patents"
         },
         {
           "n": "2008",
@@ -192,7 +172,7 @@
           "k": "US granted patents"
         }
       ],
-      "src": "Dates from ExxonMobil filings and ICIS; patent count from his speaker biographies.",
+      "src": "Google Patents · ICIS, 2008",
       "more": {
         "t": "The career",
         "h": "/brant/track"
@@ -223,7 +203,7 @@
     {
       "type": "quote",
       "id": "quote",
-      "lead": "The title of a seminar at Purdue University, 2017.",
+      "lead": "Purdue University, 2017 · seminar title",
       "q": "“Polyolefins: mass-produced molecular masterpieces.”",
       "who": "Patrick Brant"
     },
@@ -232,7 +212,6 @@
       "id": "conversations",
       "label": "On the record",
       "title": "Written down, <t>and granted.</t>",
-      "lede": "Four of the most cited papers and two patent families, from forty years.",
       "items": [
         {
           "y": "2000",
@@ -298,7 +277,6 @@
       "id": "track-exxon",
       "label": "ExxonMobil Chemical",
       "title": "Thirty-seven years, <t>two chairs.</t>",
-      "lede": "Dates from his public profile; the work as described in his speaker biographies.",
       "groups": [
         {
           "label": "Roles",
@@ -453,7 +431,7 @@
       "id": "voice-talks",
       "label": "Selected",
       "title": "Papers, patents <t>and talks.</t>",
-      "lede": "Citation counts from Google Scholar, October 2026. The full record runs to more than 75 publications and 150 US granted patents.",
+      "lede": "Citations: Google Scholar, October 2026.",
       "items": [
         {
           "y": "2026",
@@ -589,12 +567,7 @@
             "Technical due diligence",
             "Claim and prior-art analysis",
             "Independent since 2019"
-          ],
-          "cta": {
-            "t": "Discuss a matter",
-            "h": "#inquiry",
-            "path": "matter"
-          }
+          ]
         },
         {
           "label": "R&D advisory · R&D leaders, converters & brand owners",
@@ -606,12 +579,7 @@
             "Plant and customer troubleshooting",
             "Structure–property and rheology",
             "Films, membranes, adhesives, elastomers"
-          ],
-          "cta": {
-            "t": "Discuss a product",
-            "h": "#inquiry",
-            "path": "product"
-          }
+          ]
         },
         {
           "label": "Ventures & research · Founders, investors & universities",
@@ -623,12 +591,7 @@
             "High-throughput grafting to hard substrates",
             "Grubbs-type ROMP for plugging wells",
             "Programme and symposium design"
-          ],
-          "cta": {
-            "t": "Discuss a venture",
-            "h": "#inquiry",
-            "path": "venture"
-          }
+          ]
         }
       ]
     },
@@ -643,125 +606,15 @@
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Enquiries",
+      "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a matter, a product or a venture. A short note on where things stand is the best place to begin.",
+      "lede": "One clear first step, set up with Dr. Brant before launch.",
       "contact": {
         "city": "Houston, Texas"
-      },
-      "form": {
-        "selectLabel": "What would you like to discuss?",
-        "selectPlaceholder": "Select the nature of your enquiry",
-        "paths": [
-          {
-            "v": "matter",
-            "t": "A patent matter or technical dispute",
-            "btn": "Send a note",
-            "note": "Please do not include privileged or confidential information.",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Firm",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Jurisdiction and stage"
-              },
-              {
-                "n": "The matter, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "product",
-            "t": "A product, process or material",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Where things stand",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "venture",
-            "t": "A venture, investment or research question",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Organisation",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "In brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "other",
-            "t": "Something else",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Message",
-                "ta": true,
-                "full": true
-              }
-            ]
-          }
-        ]
       },
       "kick": "Consultant · Expert in Polyolefins",
       "name": "Patrick Brant",
       "sub": "Polyolefin science, <t>from catalyst to product.</t>",
-      "fcta": {
-        "t": "Start a conversation",
-        "h": "#inquiry"
-      },
       "social": [
         {
           "t": "LinkedIn",
@@ -770,13 +623,35 @@
         }
       ],
       "base": "Patrick Brant · Houston, Texas",
-      "fine": "Private preview · Not indexed",
+      "fine": "Concept preview · Not indexed",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/brant/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information, speaker biographies and the published record for Dr. Brant’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Dr. Brant, and it is not indexed or distributed."
+        "note": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. Not his official website, and not reviewed or approved by him. Copy and figures are subject to his validation. Excluded from search engines."
+      },
+      "demo": {
+        "badge": "Preview · Not yet active",
+        "steps": [
+          {
+            "t": "A short note, by subject",
+            "d": "A matter, a product or a venture. Subjects and wording agreed with Dr. Brant."
+          },
+          {
+            "t": "Read by Dr. Brant",
+            "d": "Nothing confidential or privileged is asked for at first contact."
+          },
+          {
+            "t": "On his terms",
+            "d": "What is welcome, and when, stays his call."
+          }
+        ],
+        "note": "This preview sends nothing and stores nothing.",
+        "link": {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/patrick-brant-b7785b16/"
+        }
       }
     }
   ]
