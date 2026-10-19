@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Nagy Habib — Hepatobiliary Surgeon, Translational Researcher, Founder",
+    "title": "Professor Nagy Habib — Professor of Hepatobiliary Surgery, Imperial College London",
     "description": "Professor Nagy Habib: hepatobiliary surgeon at Imperial College London since 2003; radiofrequency liver resection and the Habib devices; first clinical trials in gene therapy, stem cells and saRNA for liver disease; founder of EMcision and co-founder of MiNA Therapeutics."
   },
   "logo": "NAGY HABIB",
@@ -9,7 +9,7 @@
   "sections": [
     {
       "type": "hero",
-      "kick": "Hepatobiliary Surgery · Translational Research · Life-Science Ventures",
+      "kick": "Professor of Hepatobiliary Surgery · Imperial College London",
       "name": "Nagy <t>Habib</t>",
       "sub": "Bringing new treatments for the liver <t>from the laboratory to the operating theatre.</t>",
       "coords": [
@@ -61,7 +61,7 @@
       "label": "The work",
       "statement": "Four decades between the operating theatre <t>and the laboratory.</t>",
       "body": [
-        "A surgeon of the liver, the pancreas and the bile ducts, trained with Henri Bismuth and Thomas Starzl, and Professor of Hepatobiliary Surgery at Imperial College London since 2003. In 1993, the first living-related liver transplant in Africa and the Middle East.",
+        "Professor of Hepatobiliary Surgery at Imperial College London since 2003, and a surgeon of the liver, the pancreas and the bile ducts, trained with Henri Bismuth and Thomas Starzl. In 1993, the first living-related liver transplant in Africa and the Middle East.",
         "Alongside the operating list, a run of first clinical trials for liver disease: adenovirus and plasmid gene therapy, autologous bone-marrow stem cells, and small activating RNA. And the instruments that came out of the theatre: radiofrequency devices for a near-bloodless liver resection, taken to market by AngioDynamics and Boston Scientific.",
         "<t>[A personal note in Professor Habib’s own words to follow: why the liver, and what keeps the work moving between the theatre, the laboratory and the companies.]</t>"
       ],
@@ -621,8 +621,8 @@
       "contact": {
         "city": "London"
       },
-      "kick": "Surgeon · Researcher · Founder",
-      "name": "Nagy Habib",
+      "kick": "Professor of Hepatobiliary Surgery · Imperial College London",
+      "name": "Professor <t>Nagy Habib</t>",
       "sub": "Surgery of the liver, <t>and what comes after it.</t>",
       "social": [
         {

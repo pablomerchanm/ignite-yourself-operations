@@ -77,7 +77,9 @@ El perfil de Imperial se describe como "one of the top five global leading HPB a
 - Directorio NHS: para pacientes.
 - Wikipedia: corta, centrada en 2001–2012.
 - HS Talks, páginas de conferencias, agregadores (AMiner, prezlo, bornglorious). Ninguno lo controla él.
-- **No encontré dominio propio ni LinkedIn.**
+- **LinkedIn (captura de Pablo, 19 oct 2026):** perfil verificado. Titular: "Professor of Hepatobiliary Surgery at Imperial College London". Londres. 259 conexiones, 288 seguidores, sin publicaciones recientes y una sola experiencia: Professor of Hepatobiliary Surgery, Imperial College London, tiempo completo. Tercer grado de Pablo. URL pendiente: no apareció en búsqueda.
+- **Él se presenta primero como Professor.** La página pone ese título por delante: hero, introducción, pie y tarjeta social.
+- **No encontré dominio propio.** Su LinkedIn existe pero está vacío: no cuenta los dispositivos, las empresas ni los primeros. Es otro argumento para la página.
 
 El ángulo del primer correo es exacto: cuatro audiencias, cuatro sitios, ninguno cuenta la obra completa.
 

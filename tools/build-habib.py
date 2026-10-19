@@ -46,8 +46,8 @@ base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al c
                     '/* (heredado del concepto con fotografia; sin imagen no aplica)')
 
 # ------------------------------------------------------- 3. cabeza del documento
-TITLE = 'Nagy Habib — Hepatobiliary Surgeon, Translational Researcher, Founder'
-DESC = ('Professor Nagy Habib: hepatobiliary surgeon at Imperial College London since 2003; radiofrequency liver resection and the Habib devices; '
+TITLE = 'Professor Nagy Habib — Professor of Hepatobiliary Surgery, Imperial College London'
+DESC = ('Professor Nagy Habib: Professor of Hepatobiliary Surgery at Imperial College London since 2003; radiofrequency liver resection and the Habib devices; '
         'first clinical trials in gene therapy, stem cells and saRNA for liver disease; founder of EMcision and co-founder of MiNA Therapeutics.')
 URL = 'https://igniteyourself.co/habib'
 
@@ -2354,7 +2354,7 @@ def topbar_html(active):
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
-            '<a class="u11 smallcap tname" href="/habib" style="color:#fff">Nagy Habib</a>'
+            '<a class="u11 smallcap tname" href="/habib" style="color:#fff">Professor Nagy Habib</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
