@@ -116,3 +116,9 @@ Pablo pidió revisar dónde caben logos, íconos y detalles de diseño. Al ver l
   - el aviso de dirección de arte, en vertical junto al borde derecho;
   - margen inferior para la barra flotante de Safari.
 - **Escritorio:** las cifras del header pasan a ser las mismas (37 years en ExxonMobil Chemical · 150+ patentes · 75+ publicaciones).
+
+## Iteración 7: la propuesta, lista pero apagada (19 de octubre de 2026)
+
+Pablo: "hagamos lo mismo que con Priya", con la propuesta dentro de la página y el PDF, sin el brand kit y con un ángulo propio: las oportunidades que le trae consolidar su trayectoria. Después: "dejémoslo listo para cuando él muestre interés, pero todavía no le demos la opción de ver el precio".
+
+La propuesta (página y PDF de cinco páginas) vive en `prospecting/brant/propuesta/web/` y no se publica. En `content.json`, `proposal.active` en `true` la publica en `/brant/proposal` y añade el botón "Your proposal" y el enlace del pie. Se probó la activación en local (móvil y escritorio, botón, enlace, página y PDF) y se dejó en `false`. Todo está en `prospecting/brant/PROPUESTA.md`.
