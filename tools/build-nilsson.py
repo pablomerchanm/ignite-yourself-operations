@@ -47,8 +47,7 @@ base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al c
 
 # ------------------------------------------------------- 3. cabeza del documento
 TITLE = 'Johan Nilsson — Operator &amp; Investor in Premium Consumer Brands'
-DESC = ('Johan Nilsson: twenty-five years building premium consumer brands in fitness, wellness, sport and hospitality. '
-        'Barry’s in the Nordics, Iberia and Switzerland; Stockholm Leisure Partners; boards of Svensk Innebandy and AIK.')
+DESC = full['meta']['description']
 URL = 'https://igniteyourself.co/nilsson'
 
 base = sub1(r'<title>[^<]*</title>', f'<title>{TITLE}</title>', base, tag='title')
@@ -89,6 +88,15 @@ function rich(s){return rich0(s)
   .replace(/&lt;sup&gt;/g,'<sup>').replace(/&lt;\/sup&gt;/g,'</sup>')
   .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,function(m,t,u){var ext=/^https?:/.test(u);
     return'<a class="ilink" href="'+u+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+t+'</a>'})}
+/* Contacto en vista previa: como funcionaria la consulta, sin campos ni botones que prometan un envio. */
+function idemo(d){
+  return'<div class="idemo wr">'+
+    (d.badge?'<span class="idbadge">'+esc(d.badge)+'</span>':'')+
+    '<ol class="idsteps">'+(d.steps||[]).map(function(x,i){
+      return'<li><span class="idsn">'+('0'+(i+1)).slice(-2)+'</span><div><h3>'+rich(x.t)+'</h3><p>'+rich(x.d)+'</p></div></li>'}).join('')+'</ol>'+
+    (d.note?'<p class="idnote">'+rich(d.note)+'</p>':'')+
+    (d.link?'<a class="idlink" href="'+esc(d.link.h)+'" target="_blank" rel="noopener">'+esc(d.link.t)+' ↗</a>':'')+
+  '</div>'}
 /* Iconos de linea del oficio. Un trazo por icono se mueve en reposo (clase idraw / ifade / ispin / ihand). */
 var ICONS={
   care:'<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path class="idraw" d="M8.5 15h2l1.5-3 2 6 1.5-3h2"/>',
@@ -123,6 +131,9 @@ base = sub1(r"""return'<section class="reserve paths-in" id="'\+esc\(s\.id\|\|'i
             """return(s.noform?'':'<section class="reserve paths-in" id="'+esc(s.id||'inquiry')+'"><div class="wrap">'+""", base, tag='inq-open')
 base = sub1(r"""'</div></div></section>'\+\n  '<footer class="kfoot">""",
             """'</div></div></section>')+\n  '<footer class="kfoot">""", base, tag='inq-close')
+# -------- contacto: con s.demo, una vista de como funcionaria la consulta en lugar del formulario
+base = sub1(r"""'<form class="rform iform wr" id="iform" novalidate>'\+.*?'</form>'\+""",
+            lambda m: '(s.demo?idemo(s.demo):(' + m.group(0)[:-1] + '))+', base, flags=re.S, tag='inq-demo')
 PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
     '<div class="pf-top" data-r2>'+
       '<div class="pf-id">'+
@@ -197,7 +208,7 @@ offers:function(s){
   return'<section class="ofr" id="'+esc(s.id||'offers')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
   '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
-  '<div class="ofgrid" data-cards>'+(s.items||[]).map(function(o){
+  '<div class="ofgrid'+((s.items||[]).length===2?' two':'')+'" data-cards>'+(s.items||[]).map(function(o){
     return'<article class="ofc wr">'+(o.img?'<div class="ofimg"><img src="'+esc(o.img)+'" alt="" loading="lazy"></div>':'')+
       '<div class="oftx"><span class="smallcap offor">'+esc(o['for'])+'</span><h3 class="oft">'+rich(o.t)+'</h3>'+
       '<p class="ofd">'+rich(o.d)+'</p>'+
@@ -451,7 +462,7 @@ pubs:function(s){
       '<span class="pyr">'+esc(p.y)+'</span>'+
       '<div class="pmain"><h3><a href="'+esc(p.h)+'" target="_blank" rel="noopener">'+esc(p.t)+'</a></h3>'+
         '<p class="pau">'+esc(p.a)+'</p><p class="pve">'+esc(p.v)+'</p>'+
-        (p.why?'<p class="pwhy"><span class="smallcap">In short</span>'+esc(p.why)+'</p>':'')+'</div>'+
+        (p.why?'<p class="pwhy">'+esc(p.why)+'</p>':'')+'</div>'+
       '<div class="pside">'+(p.src?'<span class="src">'+esc(p.src)+'</span>':'')+'<span class="pid">'+esc(p.id)+'</span></div>'+
     '</li>'}).join('')+'</ol>'+
   '</div></section>'},
@@ -2279,24 +2290,52 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .ids .ids-s,#site .ids .idsrc{font-family:var(--mono)!important;font-size:11px!important;letter-spacing:.08em;color:var(--smoke)}
 #site .itb .it{font-style:italic;color:var(--smoke)}
 #site .ofgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media(max-width:860px){#site .ofgrid{grid-template-columns:1fr}}
+#site .ofgrid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:860px){#site .ofgrid,#site .ofgrid.two{grid-template-columns:1fr}}
+
+/* ---------- revision: cinco marcas en una fila; la cinta de ciudades, mas ligera que la de publicos ---------- */
+#site .mkgrid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1100px){#site .mkgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){#site .mkgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #site .mk:nth-child(5):last-child{grid-column:1/-1;border-left:0}}
+#site .mq#cities .mqrow span{font-family:var(--serif)!important;font-weight:300!important;text-transform:none;letter-spacing:-.01em!important;font-size:clamp(30px,3.6vw,58px)!important}
+
+/* retrato: acero en lugar de teal, sin contraste extra; las sombras siguen siendo sombras */
+#site .hero.photo .ph img{filter:saturate(.8) contrast(.99) brightness(.93)!important}
+/* movimiento reducido: los anclajes saltan, no se deslizan */
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* ---------- contacto en vista previa: como funcionaria, sin campos ni botones ---------- */
+#site .idemo{border-top:1px solid var(--ink);padding-top:clamp(18px,2.4vh,24px)}
+#site .idbadge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--smoke)}
+#site .idbadge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--signal)}
+#site .idsteps{list-style:none;margin:clamp(14px,2vh,20px) 0 0;padding:0}
+#site .idsteps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 12px;padding:clamp(16px,2.2vh,22px) 0;border-bottom:1px solid var(--line)}
+#site .idsn{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--signal);padding-top:.5em}
+#site .idsteps h3{font-family:var(--serif);font-weight:300;font-size:clamp(21px,1.8vw,27px);line-height:1.15;letter-spacing:-.005em;color:var(--ink);margin:0}
+#site .idsteps p{margin:8px 0 0;font-size:14.5px;line-height:1.6;color:var(--gray);max-width:46ch}
+#site .idnote{margin:clamp(18px,2.4vh,24px) 0 0;font-size:13px;line-height:1.6;color:var(--smoke)}
+#site .idlink{display:inline-block;margin-top:clamp(16px,2.2vh,22px);font-family:var(--caps);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);
+  border-bottom:1px solid var(--signal-soft);padding-bottom:4px}
+#site .idlink:hover{color:var(--signal)}
+@media(max-width:860px){#site .idsteps li{grid-template-columns:36px minmax(0,1fr)}}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
 NAV = [
     {"t": "Overview",   "h": "/nilsson"},
-    {"t": "Partnerships", "h": "/nilsson/practice"},
+    {"t": "The work",   "h": "/nilsson/practice"},
     {"t": "Career",     "h": "/nilsson/track"},
     {"t": "Press",      "h": "/nilsson/voice"},
     {"t": "Contact",    "h": "/nilsson#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
-TNAV = [("Partnerships", "/nilsson/practice", "practice"),
+TNAV = [("The work", "/nilsson/practice", "practice"),
         ("Career",   "/nilsson/track",    "track"),
         ("Press",    "/nilsson/voice",    "voice")]
 TABS = [("Overview", "/nilsson",          "home"),
-        ("Partnerships", "/nilsson/practice", "practice"),
+        ("The work", "/nilsson/practice", "practice"),
         ("Career",   "/nilsson/track",    "track"),
         ("Press",    "/nilsson/voice",    "voice")]
 
@@ -2308,7 +2347,7 @@ def topbar_html(active):
     return ('<div class="topbar">'
             '<a class="u11 smallcap tname" href="/nilsson" style="color:#fff">Johan Nilsson</a>'
             f'<nav class="tnav" aria-label="Primary">{links}</nav>'
-            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/nilsson#inquiry"}" style="color:#fff">Start a conversation</a>'
+            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/nilsson#inquiry"}" style="color:#fff">Contact</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
 # ---------------------------------------------------------- 8. reparto por pagina
@@ -2342,33 +2381,32 @@ inq = lambda: deep('inquiry')
 def foot():
     s = deep('inquiry'); s['noform'] = True
     return s
-ALT = {"t": "Start a conversation", "h": "/nilsson#inquiry"}
-
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
-T_PR = 'Working together — Johan Nilsson'
+T_PR = 'The work — Johan Nilsson'
 T_TE = 'Career — Johan Nilsson'
 T_PU = 'Press — Johan Nilsson'
 
+# Portada: quien es, el trabajo que lo define, lo que hay mas alla, sus palabras, el contacto.
 home = page(TITLE, DESC,
-    [deep('hero'), deep('marks'), deep('intro'), deep('audiences'), deep('called-in'), deep('numbers'), deep('offers'),
-     deep('chapter'), deep('openings'), deep('in-brief'), deep('quote'), deep('posts'), deep('conversations'), inq()])
+    [deep('hero'), deep('marks'), deep('intro'), deep('numbers'), deep('quote'),
+     deep('chapter'), deep('cities'), deep('openings'), deep('beyond'), deep('posts'), deep('conversations'), inq()])
 for _s in home['sections']:
     _s.pop('no', None)
 PAGES = {
     'home': home,
     'track': page(T_TE,
-        'Twenty-five years: EY and Cordial, strategy for SATS and Health & Fitness Nordic, ten years building Barry’s in the Nordics, Iberia, Switzerland and Finland.',
-        [deep('track-open'), deep('track-barrys'), deep('openings'), deep('track-sats'), deep('track-years'), deep('track-roles'),
-         deep('cv-today'), deep('cv-education'),
-         dict(NX('Next', 'Press', 'Each market opened, as reported.', '/nilsson/voice'), alt=ALT), foot()], sub=True),
+        'From strategy consulting at EY and Cordial to Health & Fitness Nordic and SATS, and ten years with Barry’s in the Nordics, Iberia and Switzerland.',
+        [deep('track-open'), deep('track-barrys'), deep('track-openings'), deep('track-sats'), deep('track-years'), deep('track-roles'),
+         deep('cv-today'),
+         NX('Next', 'Press', 'The trade press, from Stockholm to Zürich.', '/nilsson/voice'), foot()], sub=True),
     'voice': page(T_PU,
         'A podcast on investing in fitness and the trade press in Sweden, Norway, Spain and Switzerland on Johan Nilsson and Barry’s.',
         [deep('voice-open'), deep('voice-talks'),
-         dict(NX('Next', 'Working together', 'A city for Barry’s, a concept for SLP, a seat at the board.', '/nilsson/practice'), alt=ALT), foot()], sub=True),
+         NX('Next', 'The work', 'Operating, investing and sport.', '/nilsson/practice'), foot()], sub=True),
     'practice': page(T_PR,
-        'Three ways to work with Johan Nilsson: bringing Barry’s to a new city, investment through Stockholm Leisure Partners, and board roles in business and sport.',
-        [deep('practice-open'), deep('called-in'), deep('routes'), deep('slp'), deep('posts'),
-         NX('Next', 'Start a <t>conversation</t>', 'A short note on where things stand is the best place to begin.', '/nilsson#inquiry'), foot()], sub=True),
+        'Operator, partner and investor: Barry’s in the Nordics, Iberia and Switzerland, Stockholm Leisure Partners, and boards in Swedish sport.',
+        [deep('practice-open'), deep('dims'), deep('podcast'), deep('posts'),
+         NX('Next', 'Career', 'From the strategy desk to the studio floor.', '/nilsson/track'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)

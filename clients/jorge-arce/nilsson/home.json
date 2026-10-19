@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Johan Nilsson — Operator &amp; Investor in Premium Consumer Brands",
-    "description": "Johan Nilsson: twenty-five years building premium consumer brands in fitness, wellness, sport and hospitality. Barry’s in the Nordics, Iberia and Switzerland; Stockholm Leisure Partners; boards of Svensk Innebandy and AIK."
+    "description": "Johan Nilsson: operator, partner and investor in premium consumer brands. Ten years with Barry’s in the Nordics, Iberia and Switzerland; founding partner of Stockholm Leisure Partners; board member of Svensk Innebandy and AIK."
   },
   "logo": "JOHAN NILSSON",
   "nav": [
@@ -10,7 +10,7 @@
       "h": "/nilsson"
     },
     {
-      "t": "Partnerships",
+      "t": "The work",
       "h": "/nilsson/practice"
     },
     {
@@ -27,7 +27,7 @@
     }
   ],
   "navcta": {
-    "t": "Start a conversation",
+    "t": "Contact",
     "h": "#inquiry"
   },
   "sections": [
@@ -36,7 +36,7 @@
       "img": {
         "src": "/nilsson/assets/hero.jpg",
         "mobile": "/nilsson/assets/hero-mobile.jpg",
-        "alt": "Johan Nilsson"
+        "alt": "Portrait of Johan Nilsson"
       },
       "name": "Johan <t>Nilsson</t>",
       "sub": "Building premium consumer brands <t>in new markets.</t>",
@@ -45,7 +45,7 @@
         "Täby | Stockholm | Europe",
         "18.0687° E"
       ],
-      "kick": "Operator & Investor · Premium Consumer Brands"
+      "kick": "Operator · Partner · Investor"
     },
     {
       "type": "marks",
@@ -74,59 +74,28 @@
         {
           "text": "AIK",
           "k": "Board member, since 2026"
-        },
-        {
-          "text": "EY",
-          "k": "Management Consulting, 1999 – 2001"
         }
       ],
-      "src": "Marks shown for reference only; each belongs to its respective owner."
+      "src": "Marks belong to their owners. No endorsement implied."
     },
     {
       "type": "intro",
       "id": "intro",
-      "label": "The work",
+      "label": "The operator",
       "statement": "The discipline of a global brand, <t>built one market at a time.</t>",
       "body": [
-        "Twenty-five years in business development, strategy and operations across fitness, wellness, sport and hospitality: strategy consulting at EY and Cordial, strategy and business development for SATS and Health & Fitness Nordic, then ten years building Barry’s in the Nordics as CEO and partner.",
-        "Today, a partner in Barry’s Nordics, Iberia and Switzerland, founding partner of Stockholm Leisure Partners, and a board member of Svensk Innebandy and AIK.",
-        "<t>[A personal note in Johan’s own words to follow: where the sport began, and why fitness.]</t>"
+        "A career that began in strategy, at Ernst & Young, Cordial Business Advisers and Telia, and moved into fitness in 2009 with Health & Fitness Nordic, the group behind SATS, as director of strategy and business development. In 2016 came Barry’s: CEO of Barry’s Bootcamp Nordic in Stockholm, and a decade of taking the brand into new markets with local partners.",
+        "Today a partner in the Barry’s companies in the Nordics, Iberia and Switzerland; founding partner of Stockholm Leisure Partners, an investor in health and fitness; and, since 2026, a board member of Svensk Innebandy and AIK."
       ],
       "sign": "Stockholm · Zürich · Madrid · Helsinki",
       "img": {
         "src": "/nilsson/assets/practice.jpg",
-        "alt": "Johan Nilsson in conversation with a studio team"
+        "alt": "Johan Nilsson with a studio team"
       },
       "more": {
         "t": "The career",
         "h": "/nilsson/track"
       }
-    },
-    {
-      "type": "marquee",
-      "id": "audiences",
-      "items": [
-        "Barry’s partners",
-        "Local entrepreneurs",
-        "Fitness & wellness founders",
-        "Investors",
-        "Boards",
-        "Federations & clubs"
-      ]
-    },
-    {
-      "type": "situations",
-      "id": "called-in",
-      "label": "Where it begins",
-      "title": "Where the conversation <t>usually begins.</t>",
-      "items": [
-        "You want to bring Barry’s to your city, and need a partner who has opened one before.",
-        "A first Barry’s studio that works, and a second and third that need to work the same way.",
-        "Two operators of the brand in neighbouring countries, and the case for becoming one company.",
-        "A fitness or wellness concept looking for capital that understands the floor as well as the spreadsheet.",
-        "A board that wants someone at the table who has carried a P&L.",
-        "A federation or club that wants its elite game run with the discipline of a commercial brand."
-      ]
     },
     {
       "type": "nums",
@@ -135,20 +104,20 @@
       "label": "In numbers",
       "items": [
         {
-          "n": "25",
-          "k": "Years in fitness, wellness, sport and hospitality"
+          "n": "25<sup>+</sup>",
+          "k": "Years in business, since 1999"
+        },
+        {
+          "n": "17",
+          "k": "Years in fitness and wellness, since 2009"
         },
         {
           "n": "10",
-          "k": "Years building Barry’s in the Nordics"
+          "k": "Years with Barry’s, since 2016"
         },
         {
-          "n": "8",
-          "k": "Studios in six cities at the 2022 merger"
-        },
-        {
-          "n": "6",
-          "k": "Countries: Sweden, Norway, Denmark, Finland, Spain, Switzerland"
+          "n": "11",
+          "k": "Years as an investor, since 2015"
         }
       ],
       "more": {
@@ -157,78 +126,36 @@
       }
     },
     {
-      "type": "offers",
-      "id": "offers",
-      "label": "Three ways in",
-      "title": "Three ways <t>to work together.</t>",
-      "lede": "Each one a chapter of the career, still open.",
-      "items": [
-        {
-          "t": "Bringing Barry’s to a new city",
-          "for": "Local entrepreneurs & Barry’s partners",
-          "d": "The Zürich pattern: a local founder with the ambition, a partner with the experience, a studio opened to the brand’s standard.",
-          "list": [
-            "Partner and structure",
-            "Site, team and launch",
-            "Operating as partner in the new company"
-          ],
-          "from": "Barry’s Nordics, Iberia and Switzerland",
-          "h": "/nilsson/practice#routes"
-        },
-        {
-          "t": "Investing in the next concepts",
-          "for": "Founders of health & fitness concepts",
-          "d": "Capital with operating experience, through Stockholm Leisure Partners, an investor focused on the health and fitness industry since 2015.",
-          "list": [
-            "Early and growth stage",
-            "Operating partner on the board",
-            "Nordic and European reach"
-          ],
-          "from": "Playbook App, ClassPass Nordics, REPEAT Fitness, Challengize",
-          "h": "/nilsson/practice#routes"
-        },
-        {
-          "t": "Boards & sport",
-          "for": "Boards, federations & clubs",
-          "d": "An operator’s view at the board table, in business and in sport: strategy, commercial development and organisation.",
-          "list": [
-            "Board roles",
-            "Sport governance",
-            "Commercial development of the elite game"
-          ],
-          "from": "Svensk Innebandy and AIK, 2026",
-          "h": "/nilsson/practice#routes"
-        }
-      ],
-      "more": {
-        "t": "Working together",
-        "h": "/nilsson/practice"
-      }
+      "type": "quote",
+      "id": "quote",
+      "lead": "Fitness Tribune, 2026 · translated from German",
+      "q": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.”",
+      "who": "Julia Röthlisberger, Barry’s Switzerland"
     },
     {
       "type": "arch",
       "id": "chapter",
-      "label": "The defining chapter",
-      "title": "Barry’s <t>in the Nordics.</t>",
-      "body": "A boutique fitness brand from Los Angeles, brought to Stockholm in 2016 and built studio by studio. In January 2022 the Swedish and Norwegian companies merged into the region’s largest boutique operator; the work then moved on to Spain, Switzerland and Finland.",
+      "label": "The defining work",
+      "title": "Barry’s, <t>market by market.</t>",
+      "body": "The boutique fitness brand from Los Angeles came to Sweden through Barry’s Bootcamp Nordic, with Johan Nilsson as CEO from 2016. Studios followed in Stockholm, Gothenburg and Copenhagen; in January 2022 the company merged with the Norwegian franchisee into what the trade press called the region’s largest boutique fitness operator. Since then: partnerships in Spain and Switzerland, and a first studio in Finland.",
       "stats": [
         {
           "n": "8",
-          "k": "Studios in six Nordic cities at the merger, 2022"
+          "k": "Studios in six cities at the 2022 merger"
         },
         {
           "n": "250",
-          "k": "People across the merged company"
+          "k": "People in the merged company"
         },
         {
           "n": "3",
-          "k": "Markets opened since: Iberia, Switzerland, Finland"
+          "k": "Barry’s companies, as partner: Nordics, Iberia, Switzerland"
         }
       ],
-      "src": "Studio and headcount figures as reported at the 2022 merger.",
+      "src": "Sweaty Business, January 2022",
       "img": {
         "src": "/nilsson/assets/chapter.jpg",
-        "alt": "Photograph to come"
+        "alt": "Treadmills in a dark studio under red light"
       },
       "more": {
         "t": "The career",
@@ -236,116 +163,122 @@
       }
     },
     {
+      "type": "marquee",
+      "id": "cities",
+      "items": [
+        "Stockholm",
+        "Gothenburg",
+        "Copenhagen",
+        "Oslo",
+        "Bergen",
+        "Sandvika",
+        "Helsinki",
+        "Barcelona",
+        "Madrid",
+        "Zürich"
+      ]
+    },
+    {
       "type": "exp",
       "id": "openings",
       "label": "Openings & partnerships",
-      "title": "Ten studios, <t>five partnerships.</t>",
-      "lede": "The pattern of the career: a market opened with a local partner, a studio launched to the brand’s standard, and operators brought together under one company.",
+      "title": "A decade of openings <t>and partnerships.</t>",
+      "lede": "Each one opened with a local partner and a studio team.",
       "groups": [
         {
-          "label": "Openings as partner",
+          "label": "Openings",
           "wide": true,
           "names": [
-            "Stockholm — the first Barry’s in the Nordics, 2016",
-            "Gothenburg — the second Swedish studio",
-            "Barcelona and Madrid — Barry’s Iberia; Madrid opened in April 2025",
-            "Zürich — the first Barry’s in Switzerland, November 2025",
-            "Helsinki — Finland, 2026"
+            "Stockholm, 2017 — Barry’s Bootcamp Nordic’s first studio",
+            "Gothenburg — the company’s second Swedish city",
+            "Copenhagen — opened during the pandemic, before the 2022 merger",
+            "Barcelona and Madrid — Barry’s Iberia, under the licence of 2022",
+            "Zürich, November 2025 — the first Barry’s in Switzerland, with Julia Röthlisberger",
+            "Helsinki — Barry’s Nordic’s first studio in Finland"
           ]
         },
         {
-          "label": "Brought under one company",
+          "label": "The 2022 merger",
           "wide": true,
           "names": [
-            "Oslo, Bergen, Sandvika and Copenhagen — the 2022 merger of the Swedish and Norwegian companies into the Nordics’ largest boutique operator"
+            "Barry’s Bootcamp Nordic AB and BB Norway AS merge: eight studios in Stockholm, Gothenburg, Copenhagen, Oslo, Bergen and Sandvika, around 250 people"
           ]
-        },
-        {
-          "label": "Partners",
-          "wide": true,
-          "names": [
-            "Rasmus Elmann Ingerslev — Barry’s Nordic, co-founder and chair",
-            "Linn Herland and Tage Flugeim — Barry’s Norway, merged in 2022",
-            "José Daniel García and Kevin Triguero — Barry’s Iberia, licence of 2022",
-            "Julia Röthlisberger, with Caro Daur as investor — Barry’s Switzerland, 2025",
-            "Barry’s headquarters, Los Angeles — franchise partner since 2016"
-          ]
-        }
-      ],
-      "fn": "Cities and dates from the trade press and public profiles; partners as named in the same coverage."
-    },
-    {
-      "type": "brief",
-      "id": "in-brief",
-      "label": "Distinctions",
-      "items": [
-        {
-          "k": "The largest boutique fitness operator in the Nordics.",
-          "t": "January 2022: Barry’s Bootcamp Nordic AB and BB Norway AS merge into one company, with eight studios in Oslo, Bergen, Sandvika, Stockholm, Gothenburg and Copenhagen.",
-          "d": "As CEO and partner of the merged company."
-        },
-        {
-          "k": "Three European markets opened as partner.",
-          "t": "Barry’s Iberia, licensed in 2022; the first Barry’s in Switzerland, Zürich, 2025; Barry’s Helsinki, 2026.",
-          "d": "Zürich was reported as the strongest launch of any Barry’s club."
-        },
-        {
-          "k": "Two boards in Swedish sport, 2026.",
-          "t": "Elected to the board of Svensk Innebandy at the federation’s annual meeting in Uppsala, June 2026. Board member of AIK since March 2026.",
-          "d": "The brief, in his words: strengthening the elite game sportingly, commercially and organisationally."
         }
       ]
     },
     {
-      "type": "quote",
-      "id": "quote",
-      "lead": "On finding a partner for the first Barry’s in Switzerland. Fitness Tribune, 2026; translated from German.",
-      "q": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.”",
-      "who": "Julia Röthlisberger, Barry’s Switzerland"
+      "type": "offers",
+      "id": "beyond",
+      "label": "Beyond Barry’s",
+      "title": "Capital, <t>and a seat in sport.</t>",
+      "lede": "An investor in health and fitness since 2015. A board member in Swedish sport since 2026.",
+      "items": [
+        {
+          "t": "Stockholm Leisure Partners",
+          "for": "Investing · since 2015",
+          "d": "Founding partner of Stockholm Leisure Partners, an investor focused on the health and fitness industry.",
+          "list": [
+            "Playbook App",
+            "ClassPass Nordics",
+            "REPEAT Fitness",
+            "Challengize"
+          ],
+          "from": "Portfolio, 2019"
+        },
+        {
+          "t": "Boards in Swedish sport",
+          "for": "Sport · since 2026",
+          "d": "Elected to the board of Svensk Innebandy, the Swedish floorball federation, at its annual meeting in Uppsala in June 2026. A board member of AIK since March 2026.",
+          "list": [
+            "Svenska Innebandyförbundet — board member",
+            "AIK — board member"
+          ],
+          "from": "Focus: the elite game — sporting, commercial, organisational"
+        }
+      ],
+      "more": {
+        "t": "The work",
+        "h": "/nilsson/practice"
+      }
     },
     {
       "type": "ideas",
       "id": "posts",
       "label": "In his words",
-      "title": "From his <t>LinkedIn.</t>",
+      "title": "A year <t>of firsts.</t>",
       "items": [
         {
           "t": "Barry’s Helsinki is open.",
           "q": "“So proud to share that Barry’s Helsinki is officially open 🇫🇮🔥 Huge thanks to everyone who made this happen — it’s been an incredible team effort! See you on the treadmill.”",
-          "s": "LinkedIn, February 2026"
+          "s": "LinkedIn, early 2026"
         },
         {
           "t": "Elected to the board of Svensk Innebandy.",
           "q": "“Jag är både stolt och ödmjuk över att i helgen ha blivit vald till ledamot i förbundsstyrelsen för Svensk Innebandy.”",
-          "s": "LinkedIn, July 2026 · “Both proud and humble to have been elected to the board of Svensk Innebandy this weekend.”"
+          "s": "LinkedIn, June 2026 · “Both proud and humble to have been elected to the board of Svensk Innebandy this weekend.”"
         },
         {
           "t": "A new board, a new season.",
           "q": "“Inspirerande start med nya förbundsstyrelsen och Sportkontoret! Ser fram emot att bidra till utvecklingen av svensk innebandy – och inte minst till att stärka elitinnebandyn sportsligt, kommersiellt och organisatoriskt. Let’s go!”",
           "s": "LinkedIn, September 2026 · “Looking forward to contributing to Swedish floorball, and not least to strengthening the elite game sportingly, commercially and organisationally.”"
-        },
-        {
-          "t": "Where luxury lives now.",
-          "q": "“Barry’s x Balenciaga 🙌” — sharing Daniel Rabinovich: “Luxury used to be defined entirely by what you wore to a fancy dinner. Today, it’s defined by where you sweat.”",
-          "s": "LinkedIn, July 2026"
         }
       ],
-      "src": "Posts quoted as published; translations in quotation marks are ours."
+      "src": "Translations from Swedish are ours."
     },
     {
       "type": "pubs",
       "id": "conversations",
       "label": "On the record",
       "title": "Heard <t>and read.</t>",
-      "lede": "A podcast on investing in fitness, and the trade press on each market opened.",
+      "lede": "A podcast, and the trade press from Stockholm to Zürich.",
       "items": [
         {
           "y": "2026",
           "t": "Barry’s erobert Zürich: the first Barry’s in Switzerland",
           "a": "Fitness Tribune, interview with Julia Röthlisberger",
-          "v": "How a Zürich founder found her partner, the opening at Talstrasse 83 in November 2025, and the plan for Geneva.",
+          "v": "How a Zürich founder found her business partner on Instagram, the opening in November 2025, and Geneva next.",
           "h": "https://fitnesstribune.com/barrys-erobert-zuerich/",
-          "why": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.”"
+          "why": "“He has enormous experience and has helped build Barry’s studios in several regions of the world.” Translated from German."
         },
         {
           "y": "2022",
@@ -353,7 +286,7 @@
           "a": "2Playbook",
           "v": "The licence for Spain, held with José Daniel García and Kevin Triguero; the first club in Madrid’s Salamanca district.",
           "h": "https://www.2playbook.com/fitness/cadena-boutiques-barry-aterriza-en-espana-con-club-en-madrid_8027_102.html",
-          "why": "Named as managing director of the company in the Nordic countries."
+          "why": "Managing director, Barry’s Nordics."
         },
         {
           "y": "2022",
@@ -361,15 +294,15 @@
           "a": "Sweaty Business",
           "v": "Eight studios, around 250 people, a revenue target of SEK 100 million for 2022 and a plan for sixteen studios.",
           "h": "https://sweatybusiness.se/barrys-franchisetagarna-i-norden-slas-ihop-och-bildar-regionens-storsta-boutiqueaktor/",
-          "why": "“Proud and expectant to announce this merger.”"
+          "why": "“I am proud and expectant to announce this merger.” Translated from Swedish."
         },
         {
           "y": "2019",
           "t": "Investor and CEO of Barry’s Bootcamp Nordic",
           "a": "Sweaty Business Podcast, episode 59",
-          "v": "An hour on strategy in the fitness sector, what an investor looks for in a concept, and Barry’s progress in the Nordics.",
+          "v": "An hour on strategy in the fitness sector, what he looks at when assessing a potential investment, and Barry’s progress in the Nordics.",
           "h": "https://podcasts.apple.com/gb/podcast/59-johan-nilsson-investerare-vd-barrys-bootcamp-nordic/id1239949569?i=1000459246365",
-          "why": "Playbook App, ClassPass Nordics, REPEAT Fitness and Challengize, as investments."
+          "why": "Playbook App · ClassPass Nordics · REPEAT Fitness · Challengize"
         }
       ],
       "more": {
@@ -380,121 +313,37 @@
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Enquiries",
+      "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "For a city, a concept or a board. A short note on where things stand is the best place to begin.",
+      "lede": "One clear first step, set up with Johan before launch.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
-      "form": {
-        "selectLabel": "What would you like to discuss?",
-        "selectPlaceholder": "Select the nature of your enquiry",
-        "paths": [
+      "demo": {
+        "badge": "Preview · Not yet active",
+        "steps": [
           {
-            "v": "city",
-            "t": "Bringing Barry’s to a new city",
-            "btn": "Send a note",
-            "note": "Please do not include confidential financial information.",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "City and country"
-              },
-              {
-                "n": "Where things stand",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "A short note, by subject",
+            "d": "Subjects and wording agreed with Johan."
           },
           {
-            "v": "founder",
-            "t": "A concept seeking investment",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Company",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "The concept, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "To the right inbox",
+            "d": "Read by Johan or his office."
           },
           {
-            "v": "board",
-            "t": "A board or advisory role",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Organisation",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "The role, in brief",
-                "ta": true,
-                "full": true
-              }
-            ]
-          },
-          {
-            "v": "other",
-            "t": "Something else",
-            "btn": "Send a note",
-            "fields": [
-              {
-                "n": "Name",
-                "r": true
-              },
-              {
-                "n": "Email",
-                "ty": "email",
-                "r": true
-              },
-              {
-                "n": "Message",
-                "ta": true,
-                "full": true
-              }
-            ]
+            "t": "On his terms",
+            "d": "What is welcome, and when, stays his call."
           }
-        ]
+        ],
+        "note": "This preview sends nothing and stores nothing.",
+        "link": {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/johannilsson24/"
+        }
       },
       "kick": "Operator & Investor in Premium Consumer Brands",
       "name": "Johan Nilsson",
       "sub": "Premium consumer brands, built in new markets. <t>Barry’s in the Nordics, Iberia and Switzerland.</t>",
-      "fcta": {
-        "t": "Start a conversation",
-        "h": "#inquiry"
-      },
       "social": [
         {
           "t": "LinkedIn",
@@ -503,13 +352,13 @@
         }
       ],
       "base": "Johan Nilsson · Täby, Sweden",
-      "fine": "Private preview · Not indexed",
+      "fine": "Concept preview · Not indexed",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/nilsson/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information and trade press for Mr. Nilsson’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Mr. Nilsson, and it is not indexed or distributed."
+        "note": "A concept by Ignite Yourself, prepared from public sources for Johan Nilsson’s review. Not his official website, and not reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs, not records of real events. Copy, figures and photography are subject to his validation. Excluded from search engines."
       }
     }
   ]
