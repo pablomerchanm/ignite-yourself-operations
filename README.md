@@ -55,3 +55,10 @@ ignite-yourself-operations/
 ## Deploy
 
 Vercel / Netlify. Un proyecto por sitio, apuntando a la carpeta del cliente correspondiente. Al conectar el repo a Vercel, cada push redespliega automáticamente.
+
+---
+
+## Inteligencia de mercado y oportunidades (2026)
+
+- [Trend-to-Service Radar](strategy/10_TREND_TO_SERVICE_RADAR.md): señales verificadas, seis hipótesis de oferta, SEO/AEO, canales LinkedIn/X/Reddit, benchmark Arvow y protocolo para validar demanda antes de construir. **Documento de investigación, no catálogo comercial aprobado.**
+- **Fuente de verdad:** los documentos actuales del proyecto Ignite Yourself 2.0 (Business Context, Products & Offers, Decisions & Experiments) y las decisiones explícitas recientes prevalecen sobre los precios y nombres históricos de este README.
