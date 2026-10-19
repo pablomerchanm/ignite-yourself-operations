@@ -43,3 +43,26 @@ Mismo pase que Johan Nilsson (iteraciones 6 y 7 de `prospecting/nilsson/ITERACIO
 QA: cuatro páginas en 390, 768, 1440 y 1920 px; sin desbordamiento, sin errores de consola, sin imágenes rotas; auditoría de texto sin notas internas ni frases que narren la fuente.
 
 Pendiente con él (sin cambios): la cifra de patentes (125, 150 o 175 según la fuente), qué puede decir de ExxonMobil, a quién quiere llegar, un retrato real y Conscience VC.
+
+## Iteración 4: el registro de Nagy Habib (19 de octubre de 2026)
+
+Pablo: "el tono tiene que ser un poco más como la de Nagy, más elegante, menos vendedor, es más de autoridad". La página deja de ser una landing de servicios y pasa a ser un expediente, con el mismo sistema que `/habib` (`tools/build-habib.py`, iteración 4 de `prospecting/habib/ITERACION-1.md`).
+
+- **Una sola página.** `/brant/practice`, `/brant/track` y `/brant/voice` redirigen a anclas (`#work`, `#chronology`, `#research`). Se retiran `home/practice/track/voice.json` y `tools/prerender-brant.mjs`: el generador nuevo escribe HTML estático, sin plantilla ni prerender.
+- **Registro:** tercera persona, entradas fechadas, rótulos de currículum (Biographical note, Appointments, Chronology, Scientific work, Research, Patents, Honours and service, Lectures, Education and training, Sources), una fuente al pie de cada sección y una lista numerada de ocho fuentes. Un solo párrafo, la nota biográfica.
+- **Fuera:** "Where an engagement usually begins", las tres áreas de práctica, "Begin a conversation" y la vista previa del contacto, las cifras como argumento de venta y la frase "Turning polyolefin science into products that ship". El pie solo enlaza LinkedIn, Google Scholar y sus patentes.
+- **Retratos** (los dos que envió Pablo, ver `FOTOS.md`): el perfil 3/4 es el hero, con el rostro a la derecha y el nombre a la izquierda, como Habib; la escena del escritorio es una lámina a sangre entre "Scientific work" y "Research", con el título de su seminario de Purdue de 2017. Ambos llevan "provisional art direction" y la nota del pie lo dice. `og.jpg` rehecha con el retrato.
+- **Instituciones:** ExxonMobil Chemical, University of Houston, Baylor, TechConnect World, Molecular Joinery, University of Arizona; nombres en la serif, sin logotipos (solo con permiso).
+- **Acento ámbar** en dos tonos: `#8C5A1C` sobre papel (contraste 4,75:1 en los números pequeños; el `#B8792F` original daba 2,9:1) y `#D4974A` sobre tinta.
+
+**Datos verificados en esta pasada:**
+
+| Dato | Fuente |
+|---|---|
+| Los seis artículos de "Research", con revista, volumen, páginas, coautores y DOI | Crossref |
+| US 5,475,075 (1995, con Jo Ann M. Canich), 7,354,979 (2008), 7,700,707 (2010), 8,372,930 (2013), 10,882,925 (2021) | Google Patents |
+| La membrana de baterías: "pioneered by a team of ExxonMobil scientists led by Dr. Pat Brant"; premio ICIS Chemical Business a Best Product Innovation 2008 | Anuncio de ExxonMobil Chemical, 13 oct 2008 (Chemical Online) |
+
+US 5,712,352 y US 7,589,145 no se pudieron comprobar (Google Patents devolvía 503) y no entran. El título del artículo de 2015 es "…with short side chains" (Crossref), no "very short". La colaboración con el grupo de Karim en Houston queda como "Research collaborator, University of Houston" porque no se encontró la URL exacta de la noticia de 2021.
+
+Pendiente con él (sin cambios): la cifra de patentes (125, 150 o 175 según la fuente), qué puede decir de ExxonMobil, retratos reales, Conscience VC y el año del Outstanding Scientist Award.
