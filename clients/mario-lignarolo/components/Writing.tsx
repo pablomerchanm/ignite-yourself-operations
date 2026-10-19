@@ -4,12 +4,11 @@ import { channels, writing } from "@/data/content";
 import { Arrow, Eyebrow, Lines, SampleTag, SmartLink } from "./ui";
 import { formatDate } from "./format";
 
-/** 07 — Escritos: lista editorial fuerte (sin rejilla de tarjetas). */
+/** 08 — Escritos: los cuatro más recientes de Hipertrofia del Ser, en lista editorial. */
 export default function Writing() {
-  // El más reciente ya se destaca en «Hipertrofia del Ser».
-  const list = (articles.length > 1 ? articles.slice(1) : articles).slice(0, 5);
+  const list = articles.slice(0, 4);
   return (
-    <section id="escritos" aria-labelledby="writing-title" className="gutter bg-cream py-[clamp(5rem,4rem+8vw,11rem)] text-charcoal">
+    <section id="escritos" aria-labelledby="writing-title" className="gutter bg-cream py-[clamp(4.5rem,3rem+7vw,9.5rem)] text-charcoal">
       <div className="grid grid-cols-1 items-end gap-y-10 lg:grid-cols-12 lg:gap-x-6">
         <div className="lg:col-span-8">
           <Eyebrow className="mb-8 text-charcoal/70">{writing.eyebrow}</Eyebrow>
@@ -26,12 +25,6 @@ export default function Writing() {
             className="caps inline-flex items-center gap-3 bg-charcoal px-6 py-4 text-cream transition-colors hover:bg-ink"
           >
             {writing.ctaRead} <Arrow diagonal />
-          </SmartLink>
-          <SmartLink
-            href={channels.substack.href}
-            className="caps inline-flex items-center gap-3 border border-charcoal px-6 py-4 transition-colors hover:bg-charcoal hover:text-cream"
-          >
-            {writing.ctaSubscribe}
           </SmartLink>
         </div>
       </div>

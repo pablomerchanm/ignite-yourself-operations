@@ -53,7 +53,7 @@ export default function Psicocibernetica() {
             className="aspect-video w-full"
           />
         </div>
-        <div data-reveal="up" className="lg:col-span-4">
+        <div data-reveal="up" className="hidden lg:col-span-4 lg:block">
           <ImageSlot
             src={psico.image.src}
             alt={psico.image.alt}
@@ -98,9 +98,8 @@ export default function Psicocibernetica() {
                 key={item}
                 data-reveal="up"
                 style={{ "--delay": `${i * 0.06}s` } as CSSProperties}
-                className="flex items-baseline gap-6 border-t border-bone/15 py-4"
+                className="border-t border-bone/15 py-4"
               >
-                <span className="caps w-6 text-acid">{String(i + 1).padStart(2, "0")}</span>
                 <span className="display text-[clamp(1.6rem,1.2rem+1.2vw,2.3rem)] leading-tight">{item}</span>
               </li>
             ))}

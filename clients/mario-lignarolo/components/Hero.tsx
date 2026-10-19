@@ -52,7 +52,7 @@ export default function Hero() {
           ))}
         </p>
 
-        <a href="#mario" className="hero__scroll caps fade-up" style={d(1.6)}>
+        <a href="#sostener" className="hero__scroll caps fade-up" style={d(1.6)}>
           <span className="scroll-line" aria-hidden="true" />
           Desliza
         </a>

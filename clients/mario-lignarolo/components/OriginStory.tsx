@@ -1,15 +1,16 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { origin } from "@/data/content";
+import { about, origin } from "@/data/content";
 import { Eyebrow, ImageSlot, Lines } from "./ui";
 
 /**
- * 02 — El punto de partida. La historia de Mario en capítulos, con sus
- * palabras textuales. Los capítulos sin foto son tipográficos (sin huecos);
- * su «Antes / Ahora» entra como díptico a todo el ancho tras «El fondo».
+ * 06 — Quién es Mario: su historia en cuatro capítulos, con sus palabras
+ * textuales; su «Antes / Ahora» a todo el ancho tras «El fondo», y al final
+ * quién es hoy. Llega después del método: es la prueba vivida, no la portada.
  */
 export default function OriginStory() {
   const { diptych } = origin;
+  const chapters = origin.chapters.filter((c) => origin.show.includes(c.title));
   return (
     <section id="mario" className="gutter bg-cream py-[clamp(5rem,4rem+8vw,11rem)] text-charcoal">
       <header className="grid grid-cols-1 gap-y-10 lg:grid-cols-12 lg:gap-x-6">
@@ -30,15 +31,13 @@ export default function OriginStory() {
       </header>
 
       <ol className="mt-[clamp(3rem,6vw,5.5rem)] border-b border-charcoal/20">
-        {origin.chapters.map((c, i) => {
-          const n = i + 1;
+        {chapters.map((c) => {
           const hasPhoto = Boolean(c.photo?.src);
           const wide = Boolean(c.photo && "wide" in c.photo && c.photo.wide);
           return (
             <li key={c.title} className="border-t border-charcoal/20">
               <div className="grid grid-cols-1 gap-y-5 py-[clamp(1.75rem,3vw,2.75rem)] lg:grid-cols-12 lg:gap-x-6">
-                <div data-reveal="up" className="flex items-baseline gap-4 lg:col-span-3 lg:flex-col lg:gap-3">
-                  <span className="caps text-charcoal/55">{String(n).padStart(2, "0")}</span>
+                <div data-reveal="up" className="lg:col-span-3">
                   <h3 className="display text-[clamp(1.6rem,1.3rem+1vw,2.3rem)] leading-none">{c.title}</h3>
                 </div>
 
@@ -80,7 +79,7 @@ export default function OriginStory() {
               </div>
 
               {/* Díptico «Antes / Ahora»: el único momento fotográfico a todo el ancho. */}
-              {diptych && n === diptych.afterChapter && (
+              {diptych && c.title === diptych.afterTitle && (
                 <figure className="grid grid-cols-2 gap-3 pb-[clamp(2rem,4vw,3.5rem)] sm:gap-6 lg:grid-cols-12 lg:gap-x-6">
                   {[diptych.before, diptych.after].map((ph, k) => (
                     <div
@@ -110,16 +109,20 @@ export default function OriginStory() {
         })}
       </ol>
 
-      <div className="mt-[clamp(3rem,6vw,5.5rem)] grid grid-cols-1 lg:grid-cols-12 lg:gap-x-6">
-        <div className="lg:col-span-7 lg:col-start-4">
-          <p data-reveal="up" className="max-w-[34rem] text-[1.0625rem] leading-relaxed text-charcoal/60">
-            {origin.bridge}
+      {/* Mario, hoy: el cierre de su propio relato y la bio corta. */}
+      <div className="mt-[clamp(3rem,6vw,5.5rem)] grid grid-cols-1 gap-y-8 lg:grid-cols-12 lg:gap-x-6">
+        <p data-reveal="up" className="caps text-charcoal/60 lg:col-span-3">
+          {about.eyebrow}
+        </p>
+        <div className="lg:col-span-8 lg:col-start-4">
+          <p data-reveal="up" className="display text-[clamp(1.8rem,1.3rem+1.9vw,3.1rem)] leading-[1.04]">
+            {about.quote}
           </p>
-          <p
-            data-reveal="up"
-            className="display mt-8 border-l border-charcoal/25 pl-6 text-[clamp(1.9rem,1.3rem+2vw,3.1rem)] leading-[1.04] italic"
-          >
-            {origin.question}
+          <p data-reveal="up" className="display mt-6 max-w-[36rem] text-[clamp(1.4rem,1.1rem+1vw,2rem)] leading-[1.1] italic text-charcoal/75">
+            {about.quoteEnd}
+          </p>
+          <p data-reveal="up" className="mt-8 max-w-[36rem] text-[1.0625rem] leading-relaxed text-charcoal/80">
+            {about.bio}
           </p>
         </div>
       </div>

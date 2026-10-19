@@ -3,12 +3,12 @@ import { lignarolo } from "@/data/content";
 import { Arrow, Eyebrow, Lines, SmartLink } from "./ui";
 
 /**
- * 06b — Lignarolo: la capa de emprendimiento. Mario como constructor de
- * una marca real, en sus palabras y con lo que la marca dice de sí misma.
+ * 06b — Lignarolo: Mario como emprendedor de una marca real (credencial para
+ * una audiencia de emprendedores), en sus palabras, y su tesis sobre emprender.
  */
 export default function Lignarolo() {
   return (
-    <section id="lignarolo" aria-labelledby="lignarolo-title" className="gutter bg-paper py-[clamp(5rem,4rem+8vw,11rem)] text-charcoal">
+    <section id="lignarolo" aria-labelledby="lignarolo-title" className="gutter bg-paper py-[clamp(4.5rem,3rem+7vw,9.5rem)] text-charcoal">
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-charcoal/20 pb-5">
         <Eyebrow className="text-charcoal/70">{lignarolo.eyebrow}</Eyebrow>
         <SmartLink href={lignarolo.href} className="caps link-line hidden items-center gap-2 pb-0.5 text-charcoal/70 sm:inline-flex">
@@ -22,7 +22,7 @@ export default function Lignarolo() {
             <Lines
               id="lignarolo-title"
               lines={[lignarolo.name]}
-              className="display text-[clamp(3.6rem,1rem+9vw,10rem)] leading-[0.86]"
+              className="display text-[clamp(3rem,1rem+6vw,7.5rem)] leading-[0.86]"
             />
             <p data-reveal="up" className="display mt-3 text-[clamp(1.4rem,1.1rem+1.1vw,2.1rem)] italic text-charcoal/70">
               {lignarolo.tagline}
@@ -36,14 +36,6 @@ export default function Lignarolo() {
             <p data-reveal="up" className="mt-7 max-w-[30rem] text-[1.0625rem] leading-relaxed text-charcoal/80">
               {lignarolo.description}
             </p>
-            <ul data-reveal="up" className="caps mt-7 flex flex-wrap gap-x-3 gap-y-2 text-charcoal/60">
-              {lignarolo.facts.map((f, i) => (
-                <li key={f}>
-                  {i > 0 && <span aria-hidden="true" className="mr-3">·</span>}
-                  {f}
-                </li>
-              ))}
-            </ul>
             <div data-reveal="up" className="mt-10">
               <SmartLink
                 href={lignarolo.href}
