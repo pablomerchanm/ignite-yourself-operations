@@ -2,7 +2,7 @@
 # Una sola pagina estatica y editorial; el sistema grafico de Habib, con su propia jerarquia.
 # Tercera persona, entradas fechadas, fuentes visibles. Sin llamadas a la accion ni formulario.
 # Todo el texto vive en brant/content.json; este script solo compone el HTML.
-import json, html, os, re
+import json, html, os, re, shutil
 
 DST = '/home/user/ignite-yourself-operations/clients/jorge-arce/brant'
 C = json.load(open(DST + '/content.json', encoding='utf-8'))
@@ -128,6 +128,19 @@ band = f'''<figure class="band" aria-label="{esc(B["by"])}">
   <p class="bcap">{esc(B["caption"])}</p>
 </figure>'''
 
+# ------------------------------------------------------------------ propuesta
+# Lista pero apagada hasta que el muestre interes: con proposal.active en true se publica
+# /brant/proposal (desde prospecting/brant/propuesta/web) y aparecen el boton fijo y el enlace del pie.
+P = C.get('proposal', {})
+PROP_SRC = '/home/user/ignite-yourself-operations/prospecting/brant/propuesta/web'
+if P.get('active'):
+    PROP_LINK = f' <a class="igyprop-link" href="{esc(P["href"])}">{esc(P["link"])} &rarr;</a>'
+    PROP_HTML = (f'<a class="igyprop" href="{esc(P["href"])}">'
+                 '<span class="igyprop-i"><img src="/brant/proposal/assets/spark.png" alt=""></span>'
+                 f'<span>{esc(P["button"])}</span><i aria-hidden="true">&rarr;</i></a>')
+else:
+    PROP_LINK = PROP_HTML = ''
+
 F = C['footer']
 links = ''.join(f'<li><a href="{esc(h)}" target="_blank" rel="noopener">{esc(t)} <i aria-hidden="true">↗</i></a></li>' for t, h in F['links'])
 footer = f'''<footer class="foot"><div class="wrap">
@@ -137,7 +150,7 @@ footer = f'''<footer class="foot"><div class="wrap">
 </div></footer>
 <aside class="igy"><div class="wrap igyin"><div><span class="mlab">A concept by</span>
   <a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/brant/assets/igy-logo.png" alt="Ignite Yourself" width="150"></a></div>
-  <p>{esc(F["igy"])}</p></div></aside>'''
+  <p>{esc(F["igy"])}{PROP_LINK}</p></div></aside>'''
 
 bar = ('<header class="bar" id="bar"><div class="wrap barin"><a class="bname" href="#top">Dr. Patrick Brant</a>'
        '<button class="bmenu" type="button" aria-expanded="false" aria-controls="blinks">Contents</button>'
@@ -318,7 +331,20 @@ img{display:block;max-width:100%}
 .igy .mlab::before{background:var(--amber2)}
 .igy p{font-size:13px;line-height:1.6;max-width:44em}
 
+/* propuesta de Ignite: boton fijo y enlace del pie (solo con proposal.active) */
+.igyprop{position:fixed;right:22px;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:30;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 6px;
+  border-radius:999px;background:#080807;color:#fff;font:600 14px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.005em;text-decoration:none;
+  box-shadow:0 10px 30px rgba(8,8,7,.28),0 0 0 1px rgba(255,255,255,.1) inset;animation:igyprop-in .7s cubic-bezier(.2,.7,.2,1) 1.2s both;transition:background .25s,transform .25s}
+.igyprop:hover{background:#FF6A00;transform:translateY(-2px)}
+.igyprop-i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#FF9A2E 0%,#FF6A00 60%,#C94A04 100%)}
+.igyprop-i img{width:18px;height:auto}
+.igyprop i{font-style:normal;opacity:.8}
+@keyframes igyprop-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.igyprop-link{display:inline-block;margin-left:6px;color:var(--bone);text-decoration:none;border-bottom:1px solid #FF6A00}
+@media print{.igyprop{display:none}}
+
 /* entrada suave, solo con JS y sin preferencia de movimiento reducido */
+@media(prefers-reduced-motion:reduce){.igyprop{animation:none}}
 @media(prefers-reduced-motion:no-preference){
   .js .rv{opacity:0;transform:translateY(14px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .js .rv.in{opacity:1;transform:none}}
@@ -392,7 +418,10 @@ img{display:block;max-width:100%}
   .srcs li{grid-template-columns:minmax(0,1fr);gap:4px}
   .flinks{width:100%}
   .fbase{flex-direction:column;gap:8px}
-  .igyin{grid-template-columns:1fr;gap:24px}}
+  .igyin{grid-template-columns:1fr;gap:24px}
+  .igyprop{right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);height:44px;font-size:13px;padding-right:15px}
+  .igyprop-i{width:32px;height:32px}
+  .hasprop .hfoot{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 78px)}}
 '''
 
 JS = r'''
@@ -443,12 +472,13 @@ page = f'''<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 </head>
-<body>
+<body{' class="hasprop"' if P.get('active') else ''}>
 {bar}
 <main>
 {body}
 </main>
 {footer}
+{PROP_HTML}
 <script>{JS}</script>
 </body>
 </html>
@@ -465,4 +495,8 @@ for path, anchor in [('practice', 'expertise'), ('track', 'exxonmobil'), ('voice
 for old in ('home.json', 'track.json', 'voice.json', 'practice.json'):
     if os.path.exists(f'{DST}/{old}'):
         os.remove(f'{DST}/{old}')
-print('brant listo')
+if P.get('active'):
+    shutil.copytree(PROP_SRC, f'{DST}/proposal', dirs_exist_ok=True)
+elif os.path.isdir(f'{DST}/proposal'):
+    shutil.rmtree(f'{DST}/proposal')
+print('brant listo' + (' · propuesta publicada' if P.get('active') else ''))
