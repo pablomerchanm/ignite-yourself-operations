@@ -43,7 +43,7 @@ export default function Hipertrofia() {
               </h3>
               <p className="mt-3 min-h-[3.2em] text-[0.975rem] leading-[1.5] text-charcoal/75">{pl.text}</p>
             </div>
-            <div className="relative mt-auto aspect-[4/3] overflow-hidden">
+            <div className="duo relative mt-auto aspect-[4/3] overflow-hidden">
               <div className="sd-zoom absolute inset-0">
                 <Image src={photos[i].src} alt={photos[i].alt} fill sizes="(min-width: 1024px) 30vw, 84vw" className="object-cover" />
               </div>

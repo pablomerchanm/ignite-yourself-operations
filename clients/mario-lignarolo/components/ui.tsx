@@ -53,7 +53,7 @@ export function SmartLink({
 export function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <p className={`caps flex items-center gap-3 ${className}`}>
-      <span aria-hidden="true" className="inline-block size-1.5 rounded-full bg-acid" />
+      <span aria-hidden="true" className="inline-block size-1.5 rounded-full bg-accent" />
       {children}
     </p>
   );

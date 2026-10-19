@@ -37,7 +37,7 @@ export default function Home() {
     <>
       <a
         href="#contenido"
-        className="caps sr-only z-[60] bg-acid px-4 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        className="caps sr-only z-[60] bg-accent px-4 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
       >
         Saltar al contenido
       </a>

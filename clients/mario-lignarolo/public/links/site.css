@@ -1,5 +1,5 @@
 /* Mini web de Mario Lignarolo — tablero de tarjetas.
-   Misma familia que mariolignarolo.com: verde-negro, verde ácido, crema,
+   Misma familia que mariolignarolo.com: azul-noche, azul de la marca, azul pálido,
    Instrument Serif + Inter Tight. Escala de 8 px, contenedor 1120. */
 
 @font-face { font-family: "Instrument Serif"; src: url(/links/fonts/InstrumentSerif-Regular.woff2) format("woff2"); font-weight: 400; font-display: swap; }
@@ -7,13 +7,13 @@
 @font-face { font-family: "Inter Tight"; src: url(/links/fonts/InterTight-Variable.woff2) format("woff2"); font-weight: 200 600; font-display: swap; }
 
 :root {
-  --ink: #0a1615;
-  --ink-2: #0c201a;
-  --acid: #2ee25e;
-  --cream: #efe9dd;
-  --charcoal: #1b1e1c;
-  --bone: #ece8de;
-  --fog: #9aa39d;
+  --ink: #070f33;
+  --ink-2: #0b1a52;
+  --acid: #8fb3ff;
+  --cream: #e3e9f6;
+  --charcoal: #0f1633;
+  --bone: #e9edf7;
+  --fog: #93a0c4;
   --serif: "Instrument Serif", "Times New Roman", serif;
   --sans: "Inter Tight", system-ui, sans-serif;
   --gap: 10px;

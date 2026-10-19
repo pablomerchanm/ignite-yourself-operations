@@ -99,7 +99,7 @@ export default function Timeline() {
   }, [n]);
 
   return (
-    <section id="recorrido" ref={outer} className="tl grain" style={{ "--n": n } as CSSProperties} aria-labelledby="recorrido-title">
+    <section id="recorrido" ref={outer} className="tl glow glow--dark grain" style={{ "--n": n } as CSSProperties} aria-labelledby="recorrido-title">
       <div className="tl__sticky">
         <div className="gutter flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
           <div>
@@ -111,7 +111,7 @@ export default function Timeline() {
           <p className="tl__hint caps text-fog" aria-hidden="true">
             {timeline.hint} →
           </p>
-          <Link href={timeline.cta.href} className="btn btn--paper hidden lg:inline-flex">
+          <Link href={timeline.cta.href} className="btn btn--glass hidden lg:inline-flex">
             {timeline.cta.label} <Arrow />
           </Link>
         </div>
@@ -151,7 +151,7 @@ export default function Timeline() {
         </div>
 
         <div className="gutter mt-6 lg:hidden">
-          <Link href={timeline.cta.href} className="btn btn--paper">
+          <Link href={timeline.cta.href} className="btn btn--glass">
             {timeline.cta.label} <Arrow />
           </Link>
         </div>

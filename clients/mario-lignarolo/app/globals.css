@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
 /* ════════════════════════════════════════════════════════════
-   LÍNEA GRÁFICA — joven, limpia y navegable
-   · fondo claro, tarjetas suaves, navegación en píldora
-   · verde-negro para la portada, el recorrido y el pie;
-     verde ácido solo como firma (el punto, la curva)
+   LÍNEA GRÁFICA — azul, joven y navegable
+   · fondo claro y frío, tarjetas suaves, navegación en píldora
+   · azul de la marca en degradados con grano, cristal (glass) y
+     azul-noche para la portada, el recorrido y el pie
+   · el retrato en duotono azul; el aura que respira en Psico-Cibernética
    · Inter Tight fina + negrita para los titulares (`.title`)
    · Instrument Serif para su nombre y sus palabras (citas)
    ════════════════════════════════════════════════════════════ */
+/* Colores en @theme (no inline): las utilidades usan var(--color-…), así una
+   zona oscura puede redefinir --color-accent y todo lo que va dentro cambia. */
+@theme {
+  --color-blue: #1b3fd1; /* el azul de la marca */
+  --color-blue-deep: #0a1f6e; /* fondo de los degradados */
+  --color-ink: #070f33; /* azul-noche: portada, recorrido y pie */
+  --color-ink-2: #0b1a52; /* azul profundo */
+  --color-accent: #1b3fd1; /* firma sobre claro (el punto, la curva) */
+  --color-accent-light: #8fb3ff; /* firma sobre oscuro */
+  --color-cream: #e3e9f6; /* azul muy pálido */
+  --color-paper: #f5f6fa; /* fondo de la página (frío) */
+  --color-mist: #eceff6; /* superficie de tarjeta */
+  --color-sky: #e4ecf9; /* el módulo de Psico-Cibernética */
+  --color-charcoal: #0f1633; /* texto sobre claro */
+  --color-bone: #e9edf7; /* texto sobre oscuro */
+  --color-stone: #5c6480; /* texto secundario sobre claro */
+  --color-fog: #93a0c4; /* texto secundario sobre oscuro */
+}
 @theme inline {
-  --color-ink: #0a1615; /* verde-negro de la portada */
-  --color-ink-2: #0c201a; /* verde de la pared */
-  --color-acid: #2ee25e; /* verde ácido: firma */
-  --color-cream: #efe9dd; /* crema cálida */
-  --color-paper: #f7f6f2; /* fondo de la página */
-  --color-mist: #edece7; /* superficie de tarjeta */
-  --color-sky: #e9f0f7; /* el módulo de Psico-Cibernética: azul pálido */
-  --color-charcoal: #1b1e1c; /* texto sobre claro */
-  --color-bone: #ece8de; /* texto sobre oscuro */
-  --color-stone: #6b6d66; /* texto secundario sobre claro */
-  --color-fog: #9aa39d; /* texto secundario sobre oscuro */
-
   --font-serif: var(--font-instrument), "Times New Roman", serif;
   --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
 
@@ -51,8 +58,15 @@ body {
   overflow-x: clip;
 }
 ::selection {
-  background: var(--color-acid);
-  color: var(--color-ink);
+  background: var(--color-blue);
+  color: #fff;
+}
+/* Zonas oscuras: la firma pasa al azul claro. */
+.tl,
+.card--ink,
+.card--blue,
+.dark {
+  --color-accent: var(--color-accent-light);
 }
 :focus-visible {
   outline: 2px solid currentColor;
@@ -106,6 +120,34 @@ section[id] {
   pointer-events: none;
   opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.grain--strong::after {
+  opacity: 0.16;
+  mix-blend-mode: soft-light;
+}
+
+/* Resplandor azul con grano, detrás de una sección clara u oscura. */
+.glow {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 32% at 88% 10%, color-mix(in srgb, var(--color-blue) 26%, transparent), transparent 70%),
+    radial-gradient(30% 28% at 6% 95%, color-mix(in srgb, var(--color-blue) 14%, transparent), transparent 70%);
+  filter: blur(28px);
+}
+.glow--dark::before {
+  background:
+    radial-gradient(42% 36% at 82% 8%, color-mix(in srgb, var(--color-blue) 70%, transparent), transparent 70%),
+    radial-gradient(34% 30% at 8% 100%, color-mix(in srgb, var(--color-blue) 45%, transparent), transparent 70%);
 }
 
 /* Enlace pendiente de URL (contenido por confirmar). */
@@ -172,6 +214,31 @@ section[id] {
   padding: 0.65rem 1rem;
   font-size: 0.75rem;
 }
+/* Píldora azul con volumen y píldora de cristal (sobre foto o degradado). */
+.btn--blue {
+  background: linear-gradient(180deg, #3560f2 0%, var(--color-blue) 60%, #1735b4 100%);
+  color: #fff;
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, #fff 35%, transparent),
+    0 12px 26px -12px color-mix(in srgb, var(--color-blue) 80%, transparent);
+}
+.btn--blue:hover {
+  background: linear-gradient(180deg, #4a70ff 0%, #2550e6 60%, var(--color-blue) 100%);
+}
+.btn--glass,
+.chip--glass {
+  color: #fff;
+  background: color-mix(in srgb, #fff 14%, transparent);
+  border: 1px solid color-mix(in srgb, #fff 38%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, #fff 45%, transparent),
+    0 10px 28px -14px color-mix(in srgb, var(--color-blue-deep) 70%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.btn--glass:hover {
+  background: color-mix(in srgb, #fff 24%, transparent);
+}
 .chip {
   display: inline-flex;
   align-items: center;
@@ -206,6 +273,24 @@ section[id] {
 .card--ink {
   background: var(--color-ink);
   color: var(--color-bone);
+}
+/* Tarjeta azul: degradado con grano, como un póster. */
+.card--blue {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #fff;
+  background: radial-gradient(120% 95% at 18% 0%, #3f6bff 0%, var(--color-blue) 42%, var(--color-blue-deep) 100%);
+}
+.card--blue::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.18;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 .frame {
   border-radius: var(--radius);
@@ -292,11 +377,28 @@ section[id] {
 .hero__img {
   object-fit: cover;
   object-position: 47% 22%;
+  filter: grayscale(1) contrast(1.08);
+}
+/* Duotono azul: multiply tiñe las luces de azul claro; screen sube las sombras a azul profundo. */
+.hero__tint,
+.hero__lift {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero__tint {
+  background: #a9c4ff;
+  mix-blend-mode: multiply;
+}
+.hero__lift {
+  background: var(--color-blue-deep);
+  mix-blend-mode: screen;
 }
 .hero__shade {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 2;
   background: linear-gradient(
     to top,
     color-mix(in srgb, var(--color-ink) 92%, transparent) 0%,
@@ -306,7 +408,7 @@ section[id] {
 }
 .hero__body {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding-top: calc(var(--nav-h) + 40svh);
   padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 2rem);
 }
@@ -441,8 +543,8 @@ section[id] {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #e4eef9;
-  color: #eaf2fb;
+  background: #e4ecf9;
+  color: #eef3ff;
 }
 .aura::before {
   content: "";
@@ -450,12 +552,12 @@ section[id] {
   inset: -12%;
   background: radial-gradient(
     circle at 50% 50%,
-    #08132a 0%,
-    #0b2a63 16%,
-    #0d4fb3 32%,
-    #3a8ae3 48%,
-    #9fcaf3 64%,
-    #d6e8f8 76%,
+    #050c2e 0%,
+    var(--color-blue-deep) 16%,
+    var(--color-blue) 34%,
+    #4f82f0 50%,
+    #a9c4ff 66%,
+    #dbe6fb 78%,
     transparent 86%
   );
   filter: blur(6px);
@@ -494,6 +596,46 @@ section[id] {
   50% {
     opacity: 1;
     transform: scale(1.03);
+  }
+}
+
+/* ── El anillo: Cuerpo · Mente · Identidad · Expansión ───── */
+.territories__orbit {
+  transform-origin: 260px 200px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .territories__orbit {
+    animation: orbit 28s linear infinite;
+  }
+}
+
+/* Duotono azul para fotos (misma receta que la portada). */
+.duo {
+  position: relative;
+  isolation: isolate;
+}
+.duo img {
+  filter: grayscale(1) contrast(1.08);
+}
+.duo::before,
+.duo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.duo::before {
+  background: #a9c4ff;
+  mix-blend-mode: multiply;
+}
+.duo::after {
+  background: var(--color-blue-deep);
+  mix-blend-mode: screen;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -577,7 +719,7 @@ section[id] {
   stroke-dasharray: 2 7;
 }
 .tl__line {
-  stroke: var(--color-acid);
+  stroke: var(--color-accent);
   stroke-width: 2.5;
   stroke-linecap: round;
 }
@@ -600,7 +742,7 @@ section[id] {
   height: 0.85rem;
   border-radius: 999px;
   background: var(--color-ink);
-  border: 2px solid var(--color-acid);
+  border: 2px solid var(--color-accent);
   transform: translate(-50%, -50%);
   transition:
     background-color 0.5s,
@@ -618,11 +760,11 @@ section[id] {
   background: color-mix(in srgb, var(--color-bone) 16%, transparent);
 }
 .tl__step:not([data-off]) .tl__dot {
-  background: var(--color-acid);
+  background: var(--color-accent);
 }
 .tl__step.is-now:not([data-off]) .tl__dot {
   transform: translate(-50%, -50%) scale(1.5);
-  box-shadow: 0 0 0 8px color-mix(in srgb, var(--color-acid) 18%, transparent);
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 .tl__step[data-off] .tl__dot {
   border-color: color-mix(in srgb, var(--color-bone) 35%, transparent);
@@ -638,7 +780,7 @@ section[id] {
   transform: translate3d(0, 0.5rem, 0);
 }
 .tl__when {
-  color: var(--color-acid);
+  color: var(--color-accent);
 }
 .tl__title {
   margin-top: 0.75rem;
@@ -650,7 +792,7 @@ section[id] {
   font-style: italic;
 }
 .tl__step.is-now:not([data-off]) .tl__title {
-  color: var(--color-acid);
+  color: var(--color-accent);
 }
 .tl__quote {
   margin-top: 0.8rem;

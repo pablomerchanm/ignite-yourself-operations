@@ -24,18 +24,18 @@ export default function Empezar() {
             key={it.name}
             data-reveal="up"
             style={{ "--delay": `${i * 0.08}s` } as CSSProperties}
-            className={`card flex flex-col p-6 md:p-7 ${i === 0 ? "card--ink" : ""}`}
+            className={`card flex flex-col p-6 md:p-7 ${i === 0 ? "card--blue" : ""}`}
           >
-            <p className={`caps ${i === 0 ? "text-acid" : "text-stone"}`}>{it.kicker}</p>
+            <p className={`caps ${i === 0 ? "text-white/80" : "text-stone"}`}>{it.kicker}</p>
             <h3 className="title mt-8 text-[clamp(2rem,1.6rem+1.4vw,2.8rem)]">
               <b>{it.name}</b>
             </h3>
-            <p className={`mt-3 flex-1 text-[0.975rem] leading-[1.5] ${i === 0 ? "text-bone/75" : "text-charcoal/75"}`}>{it.text}</p>
+            <p className={`mt-3 flex-1 text-[0.975rem] leading-[1.5] ${i === 0 ? "text-white/85" : "text-charcoal/75"}`}>{it.text}</p>
             <a
               href={it.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`btn mt-8 w-fit ${i === 0 ? "btn--paper" : "btn--ink"}`}
+              className={`btn mt-8 w-fit ${i === 0 ? "btn--glass" : "btn--ink"}`}
             >
               {it.cta} <Arrow diagonal />
             </a>
@@ -51,7 +51,7 @@ export default function Empezar() {
         data-reveal="up"
         className="card group mt-4 grid grid-cols-1 overflow-hidden md:grid-cols-12"
       >
-        <span className="relative block aspect-[16/9] md:col-span-5 md:aspect-auto md:min-h-[18rem]">
+        <span className="duo relative block aspect-[16/9] md:col-span-5 md:aspect-auto md:min-h-[18rem]">
           <Image
             src={lignarolo.image.src}
             alt={lignarolo.image.alt}

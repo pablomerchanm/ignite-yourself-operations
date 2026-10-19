@@ -59,7 +59,7 @@ export default function StoryBar() {
           target="_blank"
           rel="noopener noreferrer"
           tabIndex={show ? 0 : -1}
-          className="caps inline-flex shrink-0 items-center gap-2 bg-acid px-5 py-3 text-ink transition-opacity hover:opacity-85"
+          className="btn btn--blue btn--sm shrink-0"
         >
           {bar.cta} <Arrow />
         </a>

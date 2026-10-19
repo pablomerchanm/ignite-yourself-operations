@@ -46,7 +46,7 @@ export default function Psicocibernetica() {
           </ul>
 
           <div data-reveal="up" className="mt-8 flex flex-wrap items-center gap-4">
-            <a href={psicoUrl} target="_blank" rel="noopener noreferrer" className="btn btn--ink">
+            <a href={psicoUrl} target="_blank" rel="noopener noreferrer" className="btn btn--blue">
               {psico.cta} <Arrow />
             </a>
             <p className="max-w-[18rem] text-[0.8125rem] leading-snug text-stone">{psico.note}</p>

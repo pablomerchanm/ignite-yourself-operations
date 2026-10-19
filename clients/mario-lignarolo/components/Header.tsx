@@ -32,7 +32,7 @@ export default function Header() {
       <div className="nav">
         <div className="nav__row">
           <Link href="/" aria-label={`${site.name} — inicio`} className="display text-[1.3rem] leading-none">
-            Mario Lignarolo<span className="text-acid">.</span>
+            Mario Lignarolo<span className="text-accent">.</span>
           </Link>
 
           <nav aria-label="Principal" className="nav__links hidden lg:block">
@@ -46,7 +46,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-1">
-            <a href={navCta.href} target="_blank" rel="noopener noreferrer" className="btn btn--ink btn--sm">
+            <a href={navCta.href} target="_blank" rel="noopener noreferrer" className="btn btn--blue btn--sm">
               {navCta.label} <Arrow />
             </a>
             <button
@@ -94,7 +94,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
           tabIndex={open ? 0 : -1}
-          className="btn btn--ink mt-10 w-fit"
+          className="btn btn--blue mt-10 w-fit"
         >
           {navCta.label} Psico-Cibernética <Arrow />
         </a>
