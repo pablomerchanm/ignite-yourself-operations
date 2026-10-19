@@ -162,8 +162,8 @@ export const origin = {
       photo: null,
     },
   ],
-  // En la página se cuentan cuatro capítulos; el resto queda guardado aquí.
-  show: ["El camino tradicional", "Perdido", "Desconectado", "El fondo", "El niño interior"],
+  // En la página la historia se cuenta como una curva (`timeline`, más abajo);
+  // los capítulos completos quedan aquí como fuente de sus palabras.
   // [CONFIRMADO] Su propio «Antes / Ahora» (carrusel del 17 oct 2025), como
   // momento visual a todo el ancho tras el capítulo «El fondo».
   diptych: {
@@ -172,6 +172,27 @@ export const origin = {
     after: { src: "/mario/entreno-curl.jpg", alt: "Mario, ahora: entrenando bíceps con mancuerna.", label: "Ahora" },
     caption: "El cuerpo fue el primer lugar donde el cambio se hizo visible.",
   },
+};
+
+/* ── 06a EL RECORRIDO: su historia como una curva ────────── */
+// Cada punto, en sus palabras (Instagram del 17 oct 2025 o la entrevista,
+// ver ENTREVISTA-2026-10-06.md). `depth` es lo hondo que estaba: 0 arriba,
+// 1 el fondo. Sin años inventados: solo los que él da. [CONFIRMAR] el recorrido completo.
+export const timeline = {
+  label: "El recorrido",
+  hint: "Desliza",
+  steps: [
+    { when: "16 años", title: "Compararme", quote: "Mi historia empieza cuando empecé a compararme con las personas.", depth: 0.24 },
+    { when: "La universidad", title: "El camino tradicional", quote: "Me gradué de algo que no era lo mío.", depth: 0.4 },
+    { when: "Al graduarse", title: "Coca-Cola", quote: "No me gustó: yo quería emprender, ser mi propio jefe.", depth: 0.52 },
+    { when: "Medellín", title: "Emprender desconectado", quote: "Estaba vendiendo algo que ni siquiera me gustaba.", depth: 0.72 },
+    { when: "El quiebre", title: "Tocar fondo", quote: "Toqué fondo varias veces.", depth: 1 },
+    { when: "De cero", title: "Invertir en mí", quote: "Empecé a invertir en mi crecimiento.", depth: 0.78 },
+    { when: "Lignarolo", title: "Volver a crear", quote: "Sentir el placer de crear. Era como volver a casa.", depth: 0.56 },
+    { when: "Respiración consciente", title: "Respirar", quote: "Nunca lo había sentido en mi vida.", depth: 0.36 },
+    { when: "2026", title: "Psico-Cibernética", quote: "Les va a cambiar la vida. ¿Por qué? Porque a mí me cambió la vida.", depth: 0.16 },
+    { when: "Hoy", title: "Hipertrofia del Ser", quote: "El poder nunca estuvo afuera. Siempre estuvo dentro.", depth: 0 },
+  ],
 };
 
 /* ── 04 HIPERTROFIA DEL SER ──────────────────────────────── */
