@@ -50,22 +50,11 @@
     {
       "type": "marks",
       "id": "marks",
-      "label": "Track record",
+      "label": "Today",
       "items": [
         {
-          "logo": "/nilsson/assets/logos/barrys.svg",
-          "ar": "73/15",
-          "h": 26,
-          "t": "Barry’s",
-          "k": "Nordics · Iberia · Switzerland, since 2016"
-        },
-        {
-          "text": "SATS",
-          "k": "Strategy & Business Development, 2009 – 2014"
-        },
-        {
           "text": "Stockholm <t>Leisure Partners</t>",
-          "k": "Founding Partner, since 2015"
+          "k": "Founding partner, since 2015"
         },
         {
           "text": "Svensk <t>Innebandy</t>",
@@ -76,7 +65,13 @@
           "k": "Board member, since 2026"
         }
       ],
-      "src": "Marks belong to their owners. No endorsement implied."
+      "src": "Marks belong to their owners. No endorsement implied.",
+      "feature": {
+        "logo": "/nilsson/assets/logos/barrys.svg",
+        "ar": "73/15",
+        "t": "Barry’s",
+        "k": "Partner · Nordics · Iberia · Switzerland · since 2016"
+      }
     },
     {
       "type": "intro",
