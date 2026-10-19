@@ -29,3 +29,15 @@ Preview privado en **igniteyourself.co/habib** (noindex). Construido el 19 oct 2
 5. Fecha del ChM de Bristol (el perfil de Imperial trae fechas imposibles).
 6. Retrato y permiso.
 7. Si quiere un canal para pacientes internacionales.
+
+## Iteración 2 — expediente sin venta (19 oct 2026)
+
+Pedido de Pablo: la página debe ser 0 venta y 0 llamadas a la acción, un expediente de autoridad.
+
+- **Fuera:** botón "Begin a conversation" de la barra y del pie, formulario de contacto, cinta de audiencias, sección "Where a conversation usually begins", tarjetas con botones ("A clinical referral", "A device or venture", "Research or a lecture") y enlaces "Details".
+- **Nuevo:** "A record of firsts", seis primeros con año y revista (1993, 2001, 2002, 2006, 2008, 2020), en la home y en Work.
+- **Reescrito:** "Three lines, one body of work" sin audiencias ni enlaces; cada tarjeta lleva su periodo y su fuente.
+- **Work:** pasa a ser un expediente en detalle: cirugía, instrumentos, empresas e investigación, cada línea con su fuente.
+- **Navegación:** Overview, Work, Career, Record. Los "Next" al final de cada página llevan a la siguiente sección del expediente, nunca a contacto.
+- **Pie:** nombre, Londres, enlace a su perfil de Imperial como fuente, y la nota de preview privado.
+- **Pendiente:** la foto del hero no llegó adjunta. Cuando llegue, se integra con el tratamiento de Johan: cara a la derecha, nombre a la izquierda.
