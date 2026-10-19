@@ -1,24 +1,28 @@
 "use client";
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { useRef, useState } from "react";
 
 /**
  * Video propio (alojado en el sitio): portada con botón; al pulsar se
  * reproduce con los controles nativos y, al terminar, vuelve a la portada.
  * Sin carga previa: el mp4 solo se pide cuando alguien lo reproduce.
+ * `cover` sustituye la foto de portada por cualquier otra cosa (p. ej. el aura).
  */
 export default function VideoPlayer({
   src,
   poster,
   duration,
   label,
+  cover,
   className = "",
 }: {
   src: string;
   poster: string;
   duration: string;
   label: string;
+  cover?: ReactNode;
   className?: string;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
@@ -34,7 +38,7 @@ export default function VideoPlayer({
   };
 
   return (
-    <div className={`relative overflow-hidden bg-black ${className}`}>
+    <div className={`relative overflow-hidden ${playing ? "bg-black" : ""} ${className}`} data-playing={playing || undefined}>
       <video
         ref={ref}
         preload="none"
@@ -49,22 +53,18 @@ export default function VideoPlayer({
 
       {!playing && (
         <>
-          <Image src={poster} alt="" fill sizes="(min-width: 1024px) 66vw, 100vw" className="object-cover" />
+          {cover ?? <Image src={poster} alt="" fill sizes="(min-width: 1024px) 66vw, 100vw" className="object-cover" />}
           <button
             type="button"
             onClick={play}
             aria-label={`Reproducir: ${label}`}
-            className="group absolute inset-0 flex items-end justify-between bg-ink/15 p-5 text-left transition-colors hover:bg-ink/5 sm:p-7"
+            className="group absolute inset-0 z-10 flex items-end p-4 text-left sm:p-5"
           >
-            <span className="caps max-w-[22rem] text-bone">{label}</span>
-            <span className="caps text-bone/80">{duration}</span>
-            <span
-              aria-hidden="true"
-              className="absolute left-1/2 top-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-acid text-ink shadow-[0_12px_40px_rgba(0,0,0,0.4)] transition-transform duration-500 group-hover:scale-110 sm:size-20"
-            >
-              <svg viewBox="0 0 16 16" className="ml-1 size-6" fill="currentColor">
+            <span className="btn btn--paper btn--sm shadow-lg">
+              <svg viewBox="0 0 16 16" className="size-3" fill="currentColor" aria-hidden="true">
                 <path d="M3 1.5v13L14 8z" />
               </svg>
+              {label} · {duration}
             </span>
           </button>
         </>

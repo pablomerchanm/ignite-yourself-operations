@@ -153,6 +153,7 @@ Pablo le mostró el primer borrador de la web y el *linktree* de Ignite Yourself
 8. Ortografía de los nombres que salen en § 7b y § 12: Javi Rodríguez, Alejandro Jaramillo, Nacho Muñoz, Giorgio, Dan Koe.
 9. **Color** (§ 13): ¿verde más sobrio, azul o neutros?
 10. Eventos presenciales (§ 9): ¿se anuncian ya en la web («próximamente», lista de espera) o todavía no?
+11. **Testimonios (pendiente para meter en la web):** 3–5 reales, con permiso de cada persona: la frase, el nombre o las iniciales y el contexto (p. ej. «Psico-Cibernética, 2026»). Fuentes posibles: el destacado «Testimonios» de su Instagram, Skool y mensajes de clientes. La sección ya existe (`data/testimonials.ts`, entre «Cómo empezar» y «Quién es Mario»): aparece sola en cuanto haya al menos uno.
 
 ## Cambios aplicados a la web con esta entrevista
 

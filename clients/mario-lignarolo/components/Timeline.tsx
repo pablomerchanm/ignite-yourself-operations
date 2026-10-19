@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import type { CSSProperties } from "react";
 import { timeline } from "@/data/content";
-import { Eyebrow } from "./ui";
+import { Arrow, Eyebrow } from "./ui";
 
 type Point = [number, number];
 
@@ -30,7 +31,7 @@ function smoothPath(p: Point[]) {
  * Sin JS, la curva y los textos se ven completos.
  */
 export default function Timeline() {
-  const outer = useRef<HTMLDivElement>(null);
+  const outer = useRef<HTMLElement>(null);
   const scroller = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);
   const inner = useRef<HTMLDivElement>(null);
@@ -75,7 +76,8 @@ export default function Timeline() {
       }
     };
     const size = () => {
-      o.style.height = pin.matches ? `${window.innerHeight + t.scrollWidth - window.innerWidth}px` : "";
+      // La pista avanza más rápido que el scroll (0.55): unas dos pantallas en total.
+      o.style.height = pin.matches ? `${window.innerHeight + (t.scrollWidth - window.innerWidth) * 0.55}px` : "";
       update();
     };
     const onScroll = () => {
@@ -97,13 +99,21 @@ export default function Timeline() {
   }, [n]);
 
   return (
-    <div ref={outer} className="tl grain" style={{ "--n": n } as CSSProperties}>
+    <section id="recorrido" ref={outer} className="tl grain" style={{ "--n": n } as CSSProperties} aria-labelledby="recorrido-title">
       <div className="tl__sticky">
-        <div className="gutter flex items-center justify-between gap-6">
-          <Eyebrow className="text-fog">{timeline.label}</Eyebrow>
+        <div className="gutter flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
+          <div>
+            <Eyebrow className="text-fog">{timeline.label}</Eyebrow>
+            <h2 id="recorrido-title" className="title mt-3 text-[clamp(2.2rem,1.4rem+2.8vw,4rem)]">
+              {timeline.title.before} <b>{timeline.title.strong}</b>
+            </h2>
+          </div>
           <p className="tl__hint caps text-fog" aria-hidden="true">
             {timeline.hint} →
           </p>
+          <Link href={timeline.cta.href} className="btn btn--paper hidden lg:inline-flex">
+            {timeline.cta.label} <Arrow />
+          </Link>
         </div>
 
         <div ref={scroller} className="tl__scroller">
@@ -139,7 +149,13 @@ export default function Timeline() {
             </div>
           </div>
         </div>
+
+        <div className="gutter mt-6 lg:hidden">
+          <Link href={timeline.cta.href} className="btn btn--paper">
+            {timeline.cta.label} <Arrow />
+          </Link>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

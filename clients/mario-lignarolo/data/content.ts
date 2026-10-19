@@ -18,7 +18,8 @@ export const site = {
   /** Mientras sea `true`: cinta «Borrador», marcas de contenido de muestra
    *  visibles y `noindex`. Pasar a `false` cuando Mario apruebe. */
   draft: true,
-  url: "https://mariolignarolo.com",
+  // dominio principal en Vercel: www (mariolignarolo.com redirige aquí)
+  url: "https://www.mariolignarolo.com",
   name: "Mario Lignarolo",
   // [HIPÓTESIS] metadatos provisionales
   title: "Mario Lignarolo — Cuerpo, mente, identidad y expansión",
@@ -42,15 +43,49 @@ export const psicoUrl = "https://www.skool.com/psico-cibernetica-7760/about";
 /** [CONFIRMAR] correo público: dejar vacío si Mario no quiere publicarlo. */
 export const publicEmail = "";
 
-// Cinco destinos, en el orden en que los necesita quien llega: el método,
-// cómo empezar, quién es Mario, lo que escribe y cómo seguirlo.
+// Navegación en píldora: cinco destinos y un botón («Empezar» → Psico-Cibernética).
 export const nav = [
-  { label: "Método", href: "#metodo" },
   { label: "Psico-Cibernética", href: "#psicocibernetica" },
-  { label: "Mario", href: "#mario" },
+  { label: "Recorrido", href: "#recorrido" },
+  { label: "Método", href: "#metodo" },
   { label: "Escritos", href: "#escritos" },
-  { label: "Conecta", href: "#conecta" },
+  { label: "Historia", href: "/historia" },
 ];
+export const navCta = { label: "Empezar", href: psicoUrl };
+
+/* ── 00 HOME: portada y títulos de sección ───────────────── */
+// Línea gráfica joven y navegable (referencia: usecadence.com): portada a
+// sangre con el titular abajo, titulares en Inter Tight fina + negrita
+// (`strong`), tarjetas, chips, carruseles y el nombre gigante en el pie.
+export const home = {
+  hero: {
+    // [CONFIRMADO] territorios del header aprobado.
+    kicker: "Cuerpo · Mente · Identidad · Expansión",
+    // [HIPÓTESIS] la frase del header aprobado, más corta.
+    title: { before: "Cambiar quién eres", strong: "transforma", after: "lo que construyes." },
+    // [CONFIRMADO] su encuadre público + [ENTREVISTA] su cliente ideal.
+    sub: "Breathwork y reprogramación del subconsciente para emprendedores que ya lograron cosas y quieren sostenerlas.",
+    primary: { label: "Empezar Psico-Cibernética", href: psicoUrl },
+    secondary: { label: "Mi historia", href: "/historia" },
+  },
+  metodo: { title: { before: "El ser también", strong: "es un músculo." } },
+  contenido: {
+    eyebrow: "Hipertrofia del Ser",
+    title: { before: "Lo que", strong: "escribo y grabo." },
+    tabs: { articles: "Escritos", videos: "Videos" },
+    allArticles: "Todo en Substack",
+    allVideos: "Todo en YouTube",
+  },
+  empezar: {
+    eyebrow: "Empieza por donde te llame",
+    title: { before: "Tres formas", strong: "de empezar." },
+    items: [
+      { kicker: "Empieza aquí", name: "Psico-Cibernética", text: "40 días de breathwork y reprogramación del subconsciente. El proceso que a él le cambió la vida.", cta: "Conocer el programa", href: psicoUrl },
+      { kicker: "Uno a uno", name: "«SER»", text: "Si eres emprendedor y quieres volver a conectar con tu esencia, escríbele «SER» por mensaje directo.", cta: "Escribir «SER»", href: "https://ig.me/m/mariolignarolo" },
+      { kicker: "Gratis", name: "Hipertrofia del Ser", text: "Lo que escribe sobre identidad, cuerpo y expansión, cada semana en Substack.", cta: "Leer en Substack", href: "https://mariolignarolo.substack.com" },
+    ],
+  },
+};
 
 /* ── 01 HERO ─────────────────────────────────────────────── */
 export const hero = {
@@ -180,7 +215,9 @@ export const origin = {
 // 1 el fondo. Sin años inventados: solo los que él da. [CONFIRMAR] el recorrido completo.
 export const timeline = {
   label: "El recorrido",
+  title: { before: "Su historia,", strong: "en diez momentos." },
   hint: "Desliza",
+  cta: { label: "Leer la historia completa", href: "/historia" },
   steps: [
     { when: "16 años", title: "Compararme", quote: "Mi historia empieza cuando empecé a compararme con las personas.", depth: 0.24 },
     { when: "La universidad", title: "El camino tradicional", quote: "Me gradué de algo que no era lo mío.", depth: 0.4 },
@@ -220,8 +257,8 @@ export const hipertrofia = {
 export const pointOfView = {
   eyebrow: "Punto de vista",
   title: "Ideas a las que vuelvo.",
-  // En la página, cuatro: las que más hablan a quien ya logró cosas y se estancó.
-  show: ["Información", "Poder", "Responsabilidad", "Autenticidad"],
+  // En la home, una franja en movimiento con las más cortas.
+  show: ["Poder", "Información", "Creación", "Sacudidas"],
   sourceNote: "Palabras de Mario, de sus publicaciones y de una conversación con el estudio.",
   ideas: [
     {
@@ -277,6 +314,8 @@ export const psico = {
     "Práctica diaria",
   ],
   cta: "Conocer Psico-Cibernética",
+  // La palabra en el centro del aura que respira (referencia visual de Pablo).
+  auraWord: "respira",
   // [ENTREVISTA 6 oct 2026, ver ENTREVISTA-2026-10-06.md] de dónde viene el concepto (Maxwell Maltz). [MARIO] la última frase es textual.
   // [ENTREVISTA § 7b] de dónde nace el programa: de su propio proceso
   // («vamos a empaquetar toda esta vuelta y volverla un producto»). [CONFIRMAR]
