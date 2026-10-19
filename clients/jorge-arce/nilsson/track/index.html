@@ -2421,11 +2421,21 @@ html.scrolled .topbar{background:rgba(20,22,26,.94)!important}
 #site .ofgrid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:860px){#site .ofgrid,#site .ofgrid.two{grid-template-columns:1fr}}
 
-/* ---------- revision: cinco marcas en una fila; la cinta de ciudades, mas ligera que la de publicos ---------- */
-#site .mkgrid{grid-template-columns:repeat(5,minmax(0,1fr))}
-@media(max-width:1100px){#site .mkgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:600px){#site .mkgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #site .mk:nth-child(5):last-child{grid-column:1/-1;border-left:0}}
+/* ---------- revision: Barry's al frente, grande; debajo, solo lo que hace hoy ---------- */
+#site .mkfeat{display:flex;flex-direction:column;align-items:center;gap:clamp(16px,2.2vh,22px);text-align:center}
+#site .mkfeat .mklogo{height:clamp(42px,5.4vw,78px)}
+#site .mkfk{font-family:var(--caps);font-weight:600;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+#site .mkgrid.mksub{grid-template-columns:repeat(3,minmax(0,1fr));max-width:900px;margin:clamp(40px,6vh,64px) auto 0;
+  padding-top:clamp(28px,4vh,40px);border-top:1px solid var(--line);align-items:start}
+#site .mksub .mk{min-height:0;justify-content:flex-start;gap:12px}
+#site .mksub .mktext{font-size:clamp(17px,1.35vw,21px)}
+#site .mksub .mkk{font-size:11px}
+@media(max-width:1100px){#site .mksub .mk:nth-child(4){border-left:1px solid var(--line)}}
+@media(max-width:600px){#site .mkgrid.mksub{grid-template-columns:1fr;row-gap:0;padding-top:0}
+  #site .mksub .mk{border-left:0!important;border-bottom:1px solid var(--line);padding:18px 0;flex-direction:row;justify-content:space-between;align-items:baseline;text-align:left;gap:16px}
+  #site .mksub .mktext{font-size:19px}#site .mksub .mktext .it{display:inline}
+  #site .mksub .mkk{text-align:right;max-width:13em}
+  #site .mkfk{font-size:11px;letter-spacing:.14em;line-height:1.7;max-width:22em}}
 #site .mq#cities .mqrow span{font-family:var(--serif)!important;font-weight:300!important;text-transform:none;letter-spacing:-.01em!important;font-size:clamp(30px,3.6vw,58px)!important}
 
 /* retrato: acero en lugar de teal, sin contraste extra; las sombras siguen siendo sombras */
@@ -2581,7 +2591,10 @@ offers:function(s){
 marks:function(s){
   return'<section class="mks" id="'+esc(s.id||'marks')+'"><div class="wrap">'+
   (s.label?'<div class="mkhead"><span class="smallcap wr" data-r1>'+esc(s.label)+'</span></div>':'')+
-  '<ul class="mkgrid" data-cards>'+(s.items||[]).map(function(m){
+  (s.feature?'<div class="mkfeat wr" data-r1>'+
+    '<span class="mklogo" role="img" aria-label="'+esc(s.feature.t)+'" style="--logo:url('+esc(s.feature.logo)+');aspect-ratio:'+esc(s.feature.ar)+'"></span>'+
+    '<span class="mkfk">'+esc(s.feature.k)+'</span></div>':'')+
+  '<ul class="mkgrid'+(s.feature?' mksub':'')+'" data-cards>'+(s.items||[]).map(function(m){
     return'<li class="mk wr">'+(m.logo?'<span class="mklogo" role="img" aria-label="'+esc(m.t)+'" style="--logo:url('+esc(m.logo)+');aspect-ratio:'+esc(m.ar)+';height:'+(m.h||48)+'px"></span>'
       :'<span class="mktext">'+rich(m.text)+'</span>')+'<span class="mkk">'+esc(m.k)+'</span></li>'}).join('')+'</ul>'+
   (s.src?'<p class="mksrc wr" data-r1>'+esc(s.src)+'</p>':'')+
