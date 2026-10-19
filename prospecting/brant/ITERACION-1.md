@@ -66,3 +66,25 @@ Pablo: "el tono tiene que ser un poco más como la de Nagy, más elegante, menos
 US 5,712,352 y US 7,589,145 no se pudieron comprobar (Google Patents devolvía 503) y no entran. El título del artículo de 2015 es "…with short side chains" (Crossref), no "very short". La colaboración con el grupo de Karim en Houston queda como "Research collaborator, University of Houston" porque no se encontró la URL exacta de la noticia de 2021.
 
 Pendiente con él (sin cambios): la cifra de patentes (125, 150 o 175 según la fuente), qué puede decir de ExxonMobil, retratos reales, Conscience VC y el año del Outstanding Scientist Award.
+
+## Iteración 5: una jerarquía propia para Brant (19 de octubre de 2026)
+
+Pablo: le gusta la dirección gráfica, pero no debe quedar igual que la de Nagy; hay que pensar qué es lo más estratégico justo después del header y ordenar la página según la información que tenemos y la audiencia que él va a generar.
+
+**El razonamiento.** A Nagy lo leen pares académicos y médicos, y a ellos los convence la institución: por eso su página abre con logotipos e índice. A Brant lo van a leer, en este orden, abogados de patentes que buscan un perito, directores de I+D y de producto, y socios o inversores. Los tres llegan con una pregunta técnica concreta: ¿sabe de *mi* tema y lo puede demostrar? Así que lo primero después del header son **sus campos de experticia, cada uno con su prueba**. Luego, qué hace hoy (que es independiente); luego, dónde se ganó la autoridad (ExxonMobil). Las patentes van antes que los papers porque es lo que revisa el perito. La nota biográfica pasa al final, como texto de referencia para quien necesite citarlo.
+
+**Orden nuevo:**
+
+1. **Header:** "Chief Scientist and Chief Polymer Science Advisor, ExxonMobil Chemical, 2000–2018. Independent consultant in polyolefins since 2019." Tres datos: ExxonMobil Chemical 1981–2018 · más de 150 patentes de EE. UU. · independiente desde 2019. Ahora también se ven en móvil.
+2. **§ 01 Fields of expertise:** seis campos en una matriz de campo, alcance y registro, con cada prueba enlazada a su patente, DOI o anuncio:
+   - catálisis de polimerización de olefinas;
+   - procesos y escalado;
+   - estructura, propiedades y reología;
+   - films y separadores de baterías;
+   - adhesivos y poliolefinas funcionales;
+   - interfaces, composites y química de acoplamiento.
+3. **§ 02 Present work:** consultor y perito ocasional desde 2019, Molecular Joinery, University of Houston, Baylor.
+4. **§ 03 ExxonMobil Chemical, 1981–2018:** los tres cargos y cinco hitos (1995, 2000, 2006–2010, 2008, 2018). Después, la lámina del escritorio con la frase de Purdue.
+5. **§ 04 Patents · § 05 Selected papers · § 06 Distinctions and lectures · § 07 Education and training · § 08 Biographical note · § 09 Sources.**
+
+**Fuera:** la franja de seis instituciones (diluía a ExxonMobil, que ahora está en el header y tiene su propia sección), el bloque "A record of the career of…" con su índice (la barra fija ya navega) y la cronología 1972–2026 (su contenido queda repartido entre ExxonMobil, el presente y la formación). `/brant/practice`, `/track` y `/voice` llevan ahora a `#expertise`, `#exxonmobil` y `#publications`.
