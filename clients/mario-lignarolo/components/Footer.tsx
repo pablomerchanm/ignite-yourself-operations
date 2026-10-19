@@ -5,7 +5,7 @@ import { Arrow, SmartLink } from "./ui";
 export default function Footer() {
   const substack = channels.substack.href.replace(/\/$/, "");
   return (
-    <footer id="conecta" className="gutter grain bg-ink pt-[clamp(4rem,3rem+6vw,7rem)] pb-8 text-bone">
+    <footer id="conecta" className="dark glow glow--dark gutter grain bg-ink pt-[clamp(4rem,3rem+6vw,7rem)] pb-8 text-bone">
       <div className="grid grid-cols-1 gap-y-12 lg:grid-cols-12 lg:gap-x-6">
         <div className="lg:col-span-5">
           <p className="title text-[clamp(1.9rem,1.5rem+1.4vw,2.8rem)]">
@@ -24,7 +24,7 @@ export default function Footer() {
               placeholder={connect.newsletterPlaceholder}
               className="min-w-0 flex-1 rounded-full border border-bone/20 bg-transparent px-5 py-3 text-[0.95rem] text-bone placeholder:text-bone/40 focus:border-bone/60 focus:outline-none"
             />
-            <button type="submit" className="btn btn--paper">
+            <button type="submit" className="btn btn--blue">
               {connect.newsletterCta} <Arrow />
             </button>
           </form>
@@ -67,7 +67,7 @@ export default function Footer() {
       </div>
 
       <p className="giant mt-[clamp(3rem,6vw,5rem)] text-bone" aria-hidden="true">
-        Mario Lignarolo<span className="text-acid">.</span>
+        Mario Lignarolo<span className="text-accent">.</span>
       </p>
 
       <div className="caps mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-bone/15 pt-5 text-fog">

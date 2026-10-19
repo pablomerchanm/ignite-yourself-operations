@@ -9,7 +9,7 @@ export default function Marquee() {
       {ideas.map((i) => (
         <span key={i.word} className="inline-flex items-center gap-12">
           <span className="display text-[clamp(1.5rem,1.2rem+1.2vw,2.3rem)] italic">«{i.quote}»</span>
-          <span aria-hidden="true" className="inline-block size-1.5 rounded-full bg-acid" />
+          <span aria-hidden="true" className="inline-block size-1.5 rounded-full bg-accent" />
         </span>
       ))}
     </span>

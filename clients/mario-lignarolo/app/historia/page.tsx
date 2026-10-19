@@ -173,7 +173,7 @@ export default function Historia() {
         <section
           id="construi"
           data-bar-hide
-          className="grain mt-[clamp(5rem,10vw,9rem)] bg-ink py-[clamp(4.5rem,9vw,8rem)] text-bone"
+          className="dark glow glow--dark grain mt-[clamp(5rem,10vw,9rem)] bg-ink py-[clamp(4.5rem,9vw,8rem)] text-bone"
         >
           <div className={wrap}>
             <h2 data-reveal="up" className="title text-[clamp(2.6rem,1.6rem+3.6vw,5rem)]">
@@ -193,14 +193,14 @@ export default function Historia() {
                   style={{ "--delay": `${(i % 2) * 0.08}s` } as CSSProperties}
                   className="flex flex-col border-t border-bone/15 pt-6"
                 >
-                  <span className="caps text-acid">{it.kicker}</span>
+                  <span className="caps text-accent">{it.kicker}</span>
                   <h3 className="title mt-3 text-[clamp(2rem,1.6rem+1.4vw,2.8rem)]"><b>{it.name}</b></h3>
                   <p className="mt-4 max-w-[30rem] flex-1 text-[1.0625rem] leading-relaxed text-bone/75">{it.text}</p>
                   <a
                     href={it.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn--paper btn--sm mt-6 w-fit"
+                    className="btn btn--glass btn--sm mt-6 w-fit"
                   >
                     {it.cta} <Arrow diagonal />
                   </a>

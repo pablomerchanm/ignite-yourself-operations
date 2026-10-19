@@ -29,13 +29,14 @@ Un enlace con `href: ""` se muestra como pendiente y no navega.
 
 La marca Ignite no aparece en el sitio: es 100 % de Mario.
 
-## Línea gráfica (19 oct 2026: joven, limpia y navegable)
+## Línea gráfica (19 oct 2026: azul, joven y navegable)
 
 Referencia de Pablo: usecadence.com. La home es una portada que lleva a cada cosa, no una página donde está todo (~8 pantallas).
 
 - Fondo claro (`paper`), tarjetas suaves (`mist`), navegación en píldora flotante con «Empezar», chips, carruseles y el nombre gigante en el pie.
-- Verde-negro `#0a1615` solo en portada, recorrido y pie; verde ácido `#2ee25e` como firma (el punto del nombre, la curva). El color sigue abierto con Mario (prefiere algo más sobrio; ver ENTREVISTA § 13).
-- Azul reservado para Psico-Cibernética: el módulo `sky` y el **aura que respira** (`.aura`, inhala 4 s · exhala 4 s) con «[respira]» en el centro; al pulsar, ahí mismo se reproduce su video.
+- **Azul de la marca** `#1b3fd1` (Mario lo prefiere al verde; ENTREVISTA § 13), azul profundo `#0a1f6e` para degradados y azul-noche `#070f33` en portada, recorrido y pie. Firma: azul sobre claro, azul claro `#8fb3ff` sobre oscuro (`--color-accent`, que las zonas oscuras redefinen). Referencias de Pablo: ZERONODE (degradados con grano, píldoras de cristal) y el aura «[breathe]».
+- Degradados con grano (`.card--blue`, `.glow`, `.grain--strong`), botones azules con volumen (`.btn--blue`) y de cristal (`.btn--glass`). El retrato de la portada va en **duotono azul** por CSS (la foto es la real). El anillo de los cuatro territorios (`Ring.tsx`) es el gráfico de marca y el favicon (`app/icon.svg`).
+- Psico-Cibernética: el módulo `sky` y el **aura que respira** (`.aura`, inhala 4 s · exhala 4 s) con «[respira]» en el centro; al pulsar, ahí mismo se reproduce su video.
 - **Inter Tight** fina + negrita para titulares (`.title`, con `<b>` para la palabra fuerte) y para el texto. **Instrument Serif** para su nombre y sus palabras (citas, la franja de ideas). Ambas OFL, en `app/fonts/`.
 - Motion sin librerías: entrada por `fade-up`, revelado con IntersectionObserver, el recorrido fijado al scroll y efectos con `animation-timeline` como mejora progresiva. Respeta `prefers-reduced-motion`.
 
