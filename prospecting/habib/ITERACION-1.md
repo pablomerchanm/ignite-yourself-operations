@@ -41,3 +41,11 @@ Pedido de Pablo: la página debe ser 0 venta y 0 llamadas a la acción, un exped
 - **Navegación:** Overview, Work, Career, Record. Los "Next" al final de cada página llevan a la siguiente sección del expediente, nunca a contacto.
 - **Pie:** nombre, Londres, enlace a su perfil de Imperial como fuente, y la nota de preview privado.
 - **Pendiente:** la foto del hero no llegó adjunta. Cuando llegue, se integra con el tratamiento de Johan: cara a la derecha, nombre a la izquierda.
+
+## Iteración 3 — retrato en el hero (19 oct 2026)
+
+- **Foto:** retrato generado por Pablo en ChatGPT a partir de sus fotos públicas. Traje oscuro, fondo negro, luz lateral, sin logos ni escena inventada.
+- **Hero:** la cara a la derecha y el nombre a la izquierda, con un velo lateral, como en Johan. En móvil, un recorte vertical con la cara arriba y el nombre sobre el traje.
+- **Tarjeta social:** el retrato con su nombre.
+- **Pie:** la nota dice ahora que la fotografía y el texto son dirección de arte provisional, como en Priya.
+- **Riesgo a vigilar:** es una imagen generada de una persona real. En el correo conviene decir que la fotografía es provisional y pedirle una suya o su permiso.
