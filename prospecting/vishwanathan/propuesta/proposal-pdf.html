@@ -21,10 +21,10 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{background:var(--ink)}
-  body{font-family:var(--sans);color:var(--beige);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:var(--sans);color:var(--beige);letter-spacing:-.01em;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;padding:18mm 18mm 16mm}
   .page:last-child{page-break-after:auto;break-after:auto}
-  .mono{font-family:var(--mono);font-size:7.6pt;letter-spacing:.08em;text-transform:uppercase}
+  .mono{font-family:var(--mono);font-size:7.6pt;letter-spacing:.02em;text-transform:uppercase}
 
   /* cabecera y pie de las paginas interiores */
   .top{display:flex;justify-content:space-between;align-items:center}
@@ -33,7 +33,7 @@
   .light .foot{color:var(--mute-2)}
   .kicker{display:flex;align-items:center;gap:3mm;color:var(--mute)}
   .kicker::before{content:'';width:2mm;height:2mm;border-radius:50%;background:var(--orange)}
-  h2{font-weight:500;font-size:30pt;line-height:1.04;letter-spacing:-.02em;margin-top:7mm;max-width:150mm}
+  h2{font-weight:500;font-size:30pt;line-height:1.04;letter-spacing:-.04em;margin-top:7mm;max-width:150mm}
   p{font-size:10.6pt;line-height:1.55}
 
   /* ---------- portada ---------- */
@@ -46,12 +46,12 @@
   .cover .ctop .mono{color:rgba(255,255,255,.9)}
   .cover .spark{position:absolute;top:58mm;left:50%;width:15mm;transform:translateX(-50%)}
   .cover .ctext{position:absolute;top:84mm;left:0;right:0;text-align:center;padding:0 24mm}
-  .cover .ctext .mono{color:#fff;font-weight:500;font-size:8.4pt;letter-spacing:.14em;background:rgba(80,24,2,.22);padding:1.6mm 3.6mm;border-radius:10mm}
-  .cover h1{font-weight:600;font-size:21pt;line-height:1.28;letter-spacing:-.01em;margin-top:6mm}
+  .cover .ctext .mono{color:#fff;font-weight:500;font-size:8.4pt;letter-spacing:.04em;background:rgba(80,24,2,.22);padding:1.6mm 3.6mm;border-radius:10mm}
+  .cover h1{font-weight:600;font-size:21pt;line-height:1.28;letter-spacing:-.03em;margin-top:6mm}
   .cover .for{margin-top:9mm;font-size:12pt;line-height:1.5;color:rgba(255,255,255,.92)}
   .cover .for b{font-weight:600}
-  .cover .mark{position:absolute;left:12mm;right:12mm;bottom:30mm}
-  .cover .mark img{width:100%;height:auto;display:block}
+  .cover .mark{position:absolute;left:0;right:0;bottom:30mm;display:flex;justify-content:center}
+  .cover .mark img{width:88mm;height:auto;display:block}
   .cover .cfoot{position:absolute;left:18mm;right:18mm;bottom:13mm;display:flex;justify-content:space-between;color:rgba(255,255,255,.85)}
 
   /* ---------- carta ---------- */
@@ -69,23 +69,23 @@
   .item{padding:5mm 6mm 5.5mm 0;border-bottom:1px solid rgba(8,8,7,.16);display:grid;grid-template-columns:11mm 1fr;align-items:start}
   .item:nth-child(even){padding-left:6mm;border-left:1px solid rgba(8,8,7,.16)}
   .item .n{font-family:var(--mono);font-size:8pt;color:var(--orange);padding-top:1.2mm}
-  .item h3{font-weight:600;font-size:12.5pt;letter-spacing:-.005em;line-height:1.25}
+  .item h3{font-weight:600;font-size:12.5pt;letter-spacing:-.025em;line-height:1.25}
   .item p{font-size:9.6pt;line-height:1.5;color:var(--ink-2);margin-top:1.6mm}
   .gift{margin-top:10mm;background:var(--ink);color:var(--beige);border-radius:3mm;padding:9mm 9mm 8.5mm;position:relative;overflow:hidden}
   .gift::after{content:'';position:absolute;right:-30mm;top:-34mm;width:90mm;height:90mm;border-radius:50%;
     background:radial-gradient(circle, rgba(255,122,16,.55) 0%, rgba(255,122,16,0) 68%)}
   .gift .spark{position:absolute;right:9mm;top:8mm;width:10mm;z-index:1}
   .gift .mono{color:#FF9A4D}
-  .gift h3{font-weight:500;font-size:19pt;letter-spacing:-.015em;line-height:1.12;margin-top:4mm;max-width:120mm}
+  .gift h3{font-weight:500;font-size:19pt;letter-spacing:-.035em;line-height:1.12;margin-top:4mm;max-width:120mm}
   .gift p{margin-top:4mm;color:#cfcec7;max-width:140mm;font-size:10.2pt}
   .gift .uses{margin-top:5mm;display:flex;flex-wrap:wrap;gap:2mm}
-  .gift .uses span{font-family:var(--mono);font-size:7.4pt;letter-spacing:.06em;text-transform:uppercase;border:1px solid rgba(232,232,227,.25);border-radius:10mm;padding:1.4mm 3.2mm;color:var(--beige)}
+  .gift .uses span{font-family:var(--mono);font-size:7.4pt;letter-spacing:.01em;text-transform:uppercase;border:1px solid rgba(232,232,227,.25);border-radius:10mm;padding:1.4mm 3.2mm;color:var(--beige)}
   .goal{margin-top:8mm;font-size:11.5pt;line-height:1.5;color:var(--ink);max-width:160mm}
 
   /* ---------- inversion ---------- */
   .price{margin-top:10mm;display:grid;grid-template-columns:1.05fr 1fr;gap:8mm;align-items:end;border-bottom:1px solid rgba(232,232,227,.16);padding-bottom:9mm}
-  .price .amt{font-weight:500;font-size:54pt;letter-spacing:-.035em;line-height:.9;color:#fff}
-  .price .amt small{font-size:15pt;letter-spacing:.02em;margin-right:2mm;color:var(--beige);vertical-align:.95em;font-weight:500}
+  .price .amt{font-weight:500;font-size:54pt;letter-spacing:-.055em;line-height:.9;color:#fff}
+  .price .amt small{font-size:15pt;letter-spacing:0;margin-right:2mm;color:var(--beige);vertical-align:.95em;font-weight:500}
   .price .lbl{margin-top:4mm;color:var(--mute)}
   .price ul{list-style:none;display:grid;gap:2.6mm}
   .price li{display:flex;gap:3mm;font-size:10.4pt;line-height:1.4;color:#d7d6cf}
@@ -95,7 +95,7 @@
   .plan .row .n{font-family:var(--mono);font-size:8pt;color:var(--orange)}
   .plan .row .t{font-size:11pt}
   .plan .row .t span{display:block;color:var(--mute);font-size:9pt;margin-top:1mm}
-  .plan .row .v{font-weight:500;font-size:14pt;letter-spacing:-.01em;color:#fff}
+  .plan .row .v{font-weight:500;font-size:14pt;letter-spacing:-.025em;color:#fff}
   .note{margin-top:4.5mm;color:var(--mute)}
   .steps{margin-top:10mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
   .steps div{border-top:1px solid rgba(232,232,227,.3);padding-top:3.5mm}
