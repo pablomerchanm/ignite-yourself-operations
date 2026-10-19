@@ -50,7 +50,6 @@
     {
       "type": "marks",
       "id": "marks",
-      "label": "Today",
       "items": [
         {
           "text": "Stockholm <t>Leisure Partners</t>",
