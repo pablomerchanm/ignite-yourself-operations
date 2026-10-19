@@ -49,7 +49,6 @@
       "id": "track-barrys",
       "label": "Barry’s",
       "title": "Ten years, <t>three regions.</t>",
-      "lede": "Dates from his public profile; figures as reported in the trade press.",
       "groups": [
         {
           "label": "Milestones",
@@ -64,7 +63,7 @@
           ]
         },
         {
-          "label": "On the record",
+          "label": "In his words",
           "wide": true,
           "names": [
             "“We share that vision for Barry’s future, and our role is more important than ever.” At the Nordic merger, 2022; translated from Swedish.",
@@ -79,10 +78,10 @@
       "id": "track-openings",
       "label": "Openings & partnerships",
       "title": "A decade of openings <t>and partnerships.</t>",
-      "lede": "Company milestones, reached with local partners and studio teams: studios opened as CEO or partner, two franchisees brought together, and the partners named in each market.",
+      "lede": "Each one opened with a local partner and a studio team.",
       "groups": [
         {
-          "label": "Studios opened, as CEO or partner",
+          "label": "Openings",
           "wide": true,
           "names": [
             "Stockholm, 2017 — Barry’s Bootcamp Nordic’s first studio",
@@ -94,14 +93,14 @@
           ]
         },
         {
-          "label": "Brought together, 2022",
+          "label": "The 2022 merger",
           "wide": true,
           "names": [
             "Barry’s Bootcamp Nordic AB and BB Norway AS merge: eight studios in Stockholm, Gothenburg, Copenhagen, Oslo, Bergen and Sandvika, around 250 people"
           ]
         },
         {
-          "label": "Partners, as named in the press",
+          "label": "Partners",
           "wide": true,
           "names": [
             "Rasmus Elmann Ingerslev — Barry’s Bootcamp Nordic, chair of the board",
@@ -111,7 +110,6 @@
           ]
         }
       ],
-      "fn": "Cities, dates and partners from the trade press and his public profile. Openings are company milestones, achieved with partners and studio teams.",
       "no": "02"
     },
     {
@@ -190,7 +188,6 @@
       "id": "track-roles",
       "label": "Before Barry’s",
       "title": "Consulting, <t>then strategy.</t>",
-      "lede": "From his public profile.",
       "groups": [
         {
           "label": "Consulting",
@@ -216,7 +213,6 @@
       "id": "cv-today",
       "label": "Appointments",
       "title": "Current <t>roles.</t>",
-      "lede": "As listed on his public profile.",
       "groups": [
         {
           "label": "Operating & investing",
@@ -243,7 +239,7 @@
       "type": "next",
       "k": "Next",
       "t": "Press",
-      "d": "Each market opened, as reported.",
+      "d": "The trade press, from Stockholm to Zürich.",
       "h": "/nilsson/voice"
     },
     {
@@ -251,29 +247,29 @@
       "id": "inquiry",
       "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "How people reach Johan is his decision. On the finished platform this becomes a short enquiry, routed by subject; here it is shown as it would work, and it is not switched on.",
+      "lede": "One clear first step, set up with Johan before launch.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
       "demo": {
-        "badge": "Preview · Enquiries not yet active",
+        "badge": "Preview · Not yet active",
         "steps": [
           {
             "t": "A short note, by subject",
-            "d": "The subjects, and how they are worded, are agreed with Johan before launch."
+            "d": "Subjects and wording agreed with Johan."
           },
           {
-            "t": "Routed to the right inbox",
-            "d": "Read by Johan or his office. Nothing confidential is asked for at first contact."
+            "t": "To the right inbox",
+            "d": "Read by Johan or his office."
           },
           {
-            "t": "Answered on his terms",
-            "d": "What is welcome, and how quickly, stays his decision. The platform only makes the first step clear."
+            "t": "On his terms",
+            "d": "What is welcome, and when, stays his call."
           }
         ],
-        "note": "Nothing on this preview sends a message or collects information.",
+        "note": "This preview sends nothing and stores nothing.",
         "link": {
-          "t": "Johan Nilsson on LinkedIn",
+          "t": "LinkedIn",
           "h": "https://www.linkedin.com/in/johannilsson24/"
         }
       },
@@ -288,13 +284,13 @@
         }
       ],
       "base": "Johan Nilsson · Täby, Sweden",
-      "fine": "Concept preview · Not indexed by search engines",
+      "fine": "Concept preview · Not indexed",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/nilsson/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A concept prepared by Ignite Yourself from public sources, his LinkedIn profile and the trade press, for Johan Nilsson’s review. It is not his official website and has not been reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs; they do not record real events or places. Copy, figures and photography remain subject to his validation. The page is excluded from search engines."
+        "note": "A concept by Ignite Yourself, prepared from public sources for Johan Nilsson’s review. Not his official website, and not reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs, not records of real events. Copy, figures and photography are subject to his validation. Excluded from search engines."
       },
       "noform": true,
       "no": "07"

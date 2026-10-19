@@ -462,7 +462,7 @@ pubs:function(s){
       '<span class="pyr">'+esc(p.y)+'</span>'+
       '<div class="pmain"><h3><a href="'+esc(p.h)+'" target="_blank" rel="noopener">'+esc(p.t)+'</a></h3>'+
         '<p class="pau">'+esc(p.a)+'</p><p class="pve">'+esc(p.v)+'</p>'+
-        (p.why?'<p class="pwhy"><span class="smallcap">In short</span>'+esc(p.why)+'</p>':'')+'</div>'+
+        (p.why?'<p class="pwhy">'+esc(p.why)+'</p>':'')+'</div>'+
       '<div class="pside">'+(p.src?'<span class="src">'+esc(p.src)+'</span>':'')+'<span class="pid">'+esc(p.id)+'</span></div>'+
     '</li>'}).join('')+'</ol>'+
   '</div></section>'},
@@ -2398,7 +2398,7 @@ PAGES = {
         'From strategy consulting at EY and Cordial to Health & Fitness Nordic and SATS, and ten years with Barry’s in the Nordics, Iberia and Switzerland.',
         [deep('track-open'), deep('track-barrys'), deep('track-openings'), deep('track-sats'), deep('track-years'), deep('track-roles'),
          deep('cv-today'),
-         NX('Next', 'Press', 'Each market opened, as reported.', '/nilsson/voice'), foot()], sub=True),
+         NX('Next', 'Press', 'The trade press, from Stockholm to Zürich.', '/nilsson/voice'), foot()], sub=True),
     'voice': page(T_PU,
         'A podcast on investing in fitness and the trade press in Sweden, Norway, Spain and Switzerland on Johan Nilsson and Barry’s.',
         [deep('voice-open'), deep('voice-talks'),

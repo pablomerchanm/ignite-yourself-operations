@@ -50,7 +50,6 @@
       "nums": true,
       "label": "Three dimensions",
       "title": "Experience across operations, <t>investment and sport.</t>",
-      "lede": "Each one documented in public sources.",
       "cards": [
         {
           "lead": true,
@@ -85,11 +84,10 @@
           "items": [
             "Svenska Innebandyförbundet — board member",
             "AIK — board member",
-            "His stated aim: a stronger elite game, sportingly, commercially and organisationally"
+            "Focus: the elite game — sporting, commercial, organisational"
           ]
         }
       ],
-      "fn": "Roles as listed on his public profile; investments as named on the Sweaty Business Podcast, 2019.",
       "no": "01"
     },
     {
@@ -98,7 +96,7 @@
       "compact": true,
       "label": "On the record · 2019",
       "quote": "What an investor looks for <t>in a fitness concept.</t>",
-      "sub": "One of the subjects of an hour-long conversation on the Sweaty Business Podcast, with strategy for the fitness sector and Barry’s progress in the Nordics. In Swedish.",
+      "sub": "An hour on the Sweaty Business Podcast: strategy for the fitness sector, how he assesses an investment, and Barry’s in the Nordics. In Swedish.",
       "more": {
         "t": "Listen to episode 59",
         "h": "https://podcasts.apple.com/gb/podcast/59-johan-nilsson-investerare-vd-barrys-bootcamp-nordic/id1239949569?i=1000459246365"
@@ -108,7 +106,7 @@
       "type": "ideas",
       "id": "posts",
       "label": "In his words",
-      "title": "From his <t>LinkedIn.</t>",
+      "title": "A year <t>of firsts.</t>",
       "items": [
         {
           "t": "Barry’s Helsinki is open.",
@@ -126,7 +124,7 @@
           "s": "LinkedIn, September 2026 · “Looking forward to contributing to Swedish floorball, and not least to strengthening the elite game sportingly, commercially and organisationally.”"
         }
       ],
-      "src": "Posts quoted as published; translations in quotation marks are ours.",
+      "src": "Translations from Swedish are ours.",
       "no": "02"
     },
     {
@@ -141,29 +139,29 @@
       "id": "inquiry",
       "label": "Contact",
       "title": "Begin <t>a conversation.</t>",
-      "lede": "How people reach Johan is his decision. On the finished platform this becomes a short enquiry, routed by subject; here it is shown as it would work, and it is not switched on.",
+      "lede": "One clear first step, set up with Johan before launch.",
       "contact": {
         "city": "Stockholm · Zürich"
       },
       "demo": {
-        "badge": "Preview · Enquiries not yet active",
+        "badge": "Preview · Not yet active",
         "steps": [
           {
             "t": "A short note, by subject",
-            "d": "The subjects, and how they are worded, are agreed with Johan before launch."
+            "d": "Subjects and wording agreed with Johan."
           },
           {
-            "t": "Routed to the right inbox",
-            "d": "Read by Johan or his office. Nothing confidential is asked for at first contact."
+            "t": "To the right inbox",
+            "d": "Read by Johan or his office."
           },
           {
-            "t": "Answered on his terms",
-            "d": "What is welcome, and how quickly, stays his decision. The platform only makes the first step clear."
+            "t": "On his terms",
+            "d": "What is welcome, and when, stays his call."
           }
         ],
-        "note": "Nothing on this preview sends a message or collects information.",
+        "note": "This preview sends nothing and stores nothing.",
         "link": {
-          "t": "Johan Nilsson on LinkedIn",
+          "t": "LinkedIn",
           "h": "https://www.linkedin.com/in/johannilsson24/"
         }
       },
@@ -178,13 +176,13 @@
         }
       ],
       "base": "Johan Nilsson · Täby, Sweden",
-      "fine": "Concept preview · Not indexed by search engines",
+      "fine": "Concept preview · Not indexed",
       "igy": {
         "label": "A concept by",
         "href": "https://igniteyourself.co/",
         "logo": "/nilsson/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A concept prepared by Ignite Yourself from public sources, his LinkedIn profile and the trade press, for Johan Nilsson’s review. It is not his official website and has not been reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs; they do not record real events or places. Copy, figures and photography remain subject to his validation. The page is excluded from search engines."
+        "note": "A concept by Ignite Yourself, prepared from public sources for Johan Nilsson’s review. Not his official website, and not reviewed or approved by him. Portraits and studio scenes are AI-generated art direction based on public photographs, not records of real events. Copy, figures and photography are subject to his validation. Excluded from search engines."
       },
       "noform": true,
       "no": "03"
