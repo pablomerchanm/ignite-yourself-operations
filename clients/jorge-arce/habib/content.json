@@ -232,6 +232,10 @@
         "First-in-human trial of MTL-CEBPA, <t>Clinical Cancer Research</t>."
       ],
       [
+        "2023",
+        "Honorary doctorate, University of Thessaly."
+      ],
+      [
         "2024",
         "Invited speaker, American Association of Cell & Gene Therapy."
       ],
@@ -402,6 +406,11 @@
     "title": "Honours",
     "items": [
       [
+        "2023",
+        "Honorary doctorate, Department of Medicine",
+        "University of Thessaly, Greece"
+      ],
+      [
         "2016",
         "Invited by the Vatican to advise on regenerative medicine",
         "Holy See"
@@ -427,7 +436,7 @@
         "Egypt, China, Romania and Greece"
       ]
     ],
-    "src": "Sources 1, 6."
+    "src": "Sources 1, 6, 11."
   },
   "publications": {
     "id": "publications",
@@ -545,6 +554,102 @@
         "h": "https://pubmed.ncbi.nlm.nih.gov/8354607/"
       }
     ],
+    "src": "Sources 1, 4, 5, 6."
+  },
+  "press": {
+    "id": "press",
+    "label": "Lectures and press",
+    "title": "Lectures, interviews <t>and press</t>",
+    "lede": "Recorded lectures, interviews and coverage, each linked to its original.",
+    "videos": [
+      {
+        "y": "2023",
+        "t": "saRNA treatment for rare monogenic diseases",
+        "v": "WORLD 2023 · presenting for MiNA Therapeutics",
+        "d": "17:57",
+        "h": "https://www.youtube.com/watch?v=5sFLJkoFXfY",
+        "img": "/habib/assets/press/5sFLJkoFXfY.jpg"
+      },
+      {
+        "y": "2020",
+        "t": "Academic and translational medicine",
+        "v": "Cancer Virtual 2020 · United Research Forum",
+        "d": "25:05",
+        "h": "https://www.youtube.com/watch?v=HCNXVXKgN8c",
+        "img": "/habib/assets/press/HCNXVXKgN8c.jpg"
+      },
+      {
+        "y": "2015",
+        "t": "Tissue Science and Regenerative Medicine",
+        "v": "4th International Conference, Rome",
+        "d": "22:02",
+        "h": "https://www.youtube.com/watch?v=bFYdWoNzA3A",
+        "img": "/habib/assets/press/bFYdWoNzA3A.jpg"
+      },
+      {
+        "y": "2012",
+        "t": "Scientific and Technological Achievement",
+        "v": "Takreem Foundation · laureate film",
+        "d": "1:28",
+        "h": "https://www.youtube.com/watch?v=DbGRd5j1lbo",
+        "img": "/habib/assets/press/DbGRd5j1lbo.jpg"
+      }
+    ],
+    "quote": {
+      "q": "I know my patients but I know little molecular biology.",
+      "by": "Nagy Habib, in “Next-generation medicines”, Imperial College London"
+    },
+    "articles": [
+      {
+        "y": "2023",
+        "t": "Honorary doctorate of the University of Thessaly conferred on Professor of Surgery Nagy Habib",
+        "o": "LarissaPress, 21 September 2023 · in Greek",
+        "h": "https://www.larissapress.gr/2023/09/21/epitimos-didaktor-tou-panepistimiou-thessalias-anagoreftike-o-kathigitis-cheirourgikis-nagy-habib/",
+        "v": "https://www.youtube.com/watch?v=kevwzotedFs"
+      },
+      {
+        "y": "2018",
+        "t": "Boston Scientific acquires EMcision, expands endoscopy portfolio",
+        "o": "Healio, 8 March 2018",
+        "h": "https://www.healio.com/news/gastroenterology/20180308/boston-scientific-acquires-emcision-expands-endoscopy-portfolio",
+        "v": ""
+      },
+      {
+        "y": "2018",
+        "t": "On EMcision, the Habib 4X and the Habib EndoHPB",
+        "o": "Department of Surgery and Cancer blog, Imperial College London, March 2018",
+        "h": "https://blogs.imperial.ac.uk/surgeryandcancer/?p=2420",
+        "v": ""
+      },
+      {
+        "y": "",
+        "t": "Next-generation medicines",
+        "o": "Imperial College London, feature by Nic Fleming",
+        "h": "https://www.imperial.ac.uk/stories/advanced-therapies/",
+        "v": ""
+      },
+      {
+        "y": "",
+        "t": "Interview with Nagy Habib, ChM, FRCS",
+        "o": "Oligonucleotide Therapeutics Society",
+        "h": "https://oligotherapeutics.org/interview-with-nagy-habib/",
+        "v": ""
+      },
+      {
+        "y": "",
+        "t": "Exclusive speaker interview with Professor Nagy Habib",
+        "o": "Drug Target Review",
+        "h": "https://www.drugtargetreview.com/news/27421/exclusive-speaker-interview-with-professor-nagy-habib-mina-therapeuticsimperial-college-london/",
+        "v": ""
+      },
+      {
+        "y": "",
+        "t": "Prof. Nagy Habib, expert lectures",
+        "o": "HSTalks, The Biomedical & Life Sciences Collection",
+        "h": "https://hstalks.com/expert/230/prof-nagy-habib/",
+        "v": ""
+      }
+    ],
     "lectures": [
       [
         "2024",
@@ -557,7 +662,7 @@
         "Invited speaker"
       ]
     ],
-    "src": "Sources 1, 4, 5, 6."
+    "src": "Sources 1, 2, 7, 10, 11, 12. Video records on YouTube."
   },
   "education": {
     "id": "education",
@@ -627,6 +732,18 @@
       [
         "AngioDynamics, Form 10-K, fiscal year 2009",
         "https://www.sec.gov/Archives/edgar/data/0001275187/000119312509175543/d10k.htm"
+      ],
+      [
+        "Imperial College London, “Next-generation medicines”, feature by Nic Fleming",
+        "https://www.imperial.ac.uk/stories/advanced-therapies/"
+      ],
+      [
+        "LarissaPress, 21 September 2023",
+        "https://www.larissapress.gr/2023/09/21/epitimos-didaktor-tou-panepistimiou-thessalias-anagoreftike-o-kathigitis-cheirourgikis-nagy-habib/"
+      ],
+      [
+        "Healio, 8 March 2018",
+        "https://www.healio.com/news/gastroenterology/20180308/boston-scientific-acquires-emcision-expands-endoscopy-portfolio"
       ]
     ]
   },

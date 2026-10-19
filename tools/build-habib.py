@@ -17,7 +17,7 @@ def rich(s):
     return s
 
 SECTIONS = [C[k] for k in ('notice', 'appointments', 'chronology', 'clinical', 'research',
-                           'instruments', 'honours', 'publications', 'education', 'sources')]
+                           'instruments', 'honours', 'publications', 'press', 'education', 'sources')]
 NO = {s['id']: f'{i + 1:02d}' for i, s in enumerate(SECTIONS)}
 
 def ext(h, label='Record'):
@@ -97,13 +97,29 @@ def publications(s):
         f'<li class="rv"><span class="py">{esc(x["y"])}</span><div class="px"><h3>{esc(x["t"])}</h3>'
         f'<p class="cite"><span>{esc(x["c"])}</span><span>{esc(x["role"])}</span></p></div>{ext(x["h"], "PubMed record")}</li>'
         for x in s['items'])
-    lect = ledger(s['lectures'])
     return section(s, f'<div class="figs">{figs}</div><p class="figsrc rv">{esc(s["figsrc"])}</p>'
-                      f'<ol class="pubs">{rows}</ol>'
-                      f'<h3 class="sub rv">Invited lectures</h3><ol class="ledger">{lect}</ol>', tint=True)
+                      f'<ol class="pubs">{rows}</ol>', tint=True)
+
+def press(s):
+    vids = ''.join(
+        f'<li class="rv"><a class="vcard" href="{esc(v["h"])}" target="_blank" rel="noopener">'
+        f'<span class="vimg"><img src="{esc(v["img"])}" alt="" loading="lazy"><i class="vplay" aria-hidden="true"></i><span class="vdur">{esc(v["d"])}</span></span>'
+        f'<span class="vy">{esc(v["y"])}</span><span class="vt">{esc(v["t"])}</span><span class="vv">{esc(v["v"])}</span></a></li>'
+        for v in s['videos'])
+    arts = ''.join(
+        f'<li class="rv"><span class="ly">{esc(a["y"])}</span><div class="px"><h3><a href="{esc(a["h"])}" target="_blank" rel="noopener">{esc(a["t"])}</a></h3>'
+        f'<p class="cite"><span>{esc(a["o"])}</span>' + (f'<a class="vlink" href="{esc(a["v"])}" target="_blank" rel="noopener">Video ↗</a>' if a.get('v') else '') + '</p></div>'
+        f'{ext(a["h"], "Article")}</li>' for a in s['articles'])
+    q = s['quote']
+    return section(s, '<h3 class="sub rv first">Recorded lectures</h3>'
+                      f'<ol class="vids">{vids}</ol>'
+                      f'<figure class="pull rv"><blockquote>“{esc(q["q"])}”</blockquote><figcaption>{esc(q["by"])}</figcaption></figure>'
+                      '<h3 class="sub rv">Interviews and coverage</h3>'
+                      f'<ol class="arts">{arts}</ol>'
+                      f'<h3 class="sub rv">Invited lectures</h3><ol class="ledger">{ledger(s["lectures"])}</ol>')
 
 def education(s):
-    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>')
+    return section(s, f'<ol class="ledger">{ledger(s["items"])}</ol>', tint=True)
 
 def short(h):
     return re.sub(r'^https?://(www\.)?', '', h).rstrip('/')
@@ -112,7 +128,7 @@ def sources(s):
     rows = ''.join(f'<li class="rv"><span class="sn">{i + 1}</span><span class="st">{esc(t)}</span>'
                    f'<a class="su" href="{esc(h)}" target="_blank" rel="noopener">{esc(short(h))}</a></li>'
                    for i, (t, h) in enumerate(s['items']))
-    return section(s, f'<ol class="srcs">{rows}</ol>', tint=True)
+    return section(s, f'<ol class="srcs">{rows}</ol>')
 
 # ------------------------------------------------------------------ cabecera
 H = C['hero']
@@ -157,12 +173,12 @@ footer = f'''<footer class="foot"><div class="wrap">
 bar = ('<header class="bar" id="bar"><div class="wrap barin"><a class="bname" href="#top">Professor Nagy Habib</a>'
        '<nav class="blinks" aria-label="Sections">'
        + ''.join(f'<a href="#{k}">{t}</a>' for k, t in [('notice', 'Note'), ('chronology', 'Chronology'), ('research', 'Research'),
-                                                          ('instruments', 'Instruments'), ('publications', 'Publications'), ('sources', 'Sources')])
+                                                          ('instruments', 'Instruments'), ('publications', 'Publications'), ('press', 'Press'), ('sources', 'Sources')])
        + '</nav></div></header>')
 
 body = (hero + affiliations + masthead + notice(C['notice']) + appointments(C['appointments']) + chronology(C['chronology'])
         + clinical(C['clinical']) + research(C['research']) + instruments(C['instruments'])
-        + honours(C['honours']) + publications(C['publications']) + education(C['education'])
+        + honours(C['honours']) + publications(C['publications']) + press(C['press']) + education(C['education'])
         + sources(C['sources']))
 
 CSS = r'''
@@ -337,6 +353,30 @@ img{display:block;max-width:100%}
 .px h3{font:300 clamp(18px,1.4vw,22px)/1.32 var(--display);color:var(--ink);max-width:40em}
 .px .cite{margin-top:8px}
 
+/* prensa: conferencias grabadas, cita, cobertura */
+.sub.first{margin-top:clamp(40px,6vh,64px)}
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3vw,44px) clamp(20px,2.4vw,36px);border-top:1px solid var(--ink);padding-top:clamp(24px,3vh,32px)}
+.vcard{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+.vimg{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;background:var(--ink)}
+.vimg img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .4s;filter:saturate(.7)}
+.vcard:hover .vimg img{transform:scale(1.03);filter:saturate(1)}
+.vimg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,0) 55%,rgba(14,16,19,.55) 100%)}
+.vplay{position:absolute;left:18px;bottom:16px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(237,231,220,.7);background:rgba(14,16,19,.35)}
+.vplay::before{content:'';position:absolute;left:17px;top:14px;border-left:12px solid var(--bone);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.vdur{position:absolute;right:16px;bottom:18px;z-index:2;font:400 12px/1 var(--mono);color:var(--bone);letter-spacing:.06em}
+.vy{font:400 12px/1 var(--mono);color:var(--teal);margin-top:18px}
+.vt{font:300 clamp(21px,1.7vw,27px)/1.22 var(--display);color:var(--ink);margin-top:8px}
+.vv{font-size:14px;color:#55524D;margin-top:6px}
+.pull{margin:clamp(56px,8vh,96px) 0 0;padding:clamp(28px,4vh,40px) 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);max-width:44em}
+.pull blockquote{font:300 italic clamp(26px,2.6vw,40px)/1.22 var(--display);color:var(--ink);letter-spacing:-.01em}
+.pull figcaption{margin-top:16px;font:400 11.5px/1.5 var(--mono);color:var(--smoke);letter-spacing:.04em}
+.arts{border-top:1px solid var(--ink)}
+.arts li{display:grid;grid-template-columns:120px minmax(0,1fr) 28px;gap:24px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.arts h3{font:300 clamp(19px,1.5vw,23px)/1.3 var(--display);color:var(--ink)}
+.arts h3 a{text-decoration:none;background:linear-gradient(var(--teal),var(--teal)) 0 100%/0 1px no-repeat;transition:background-size .35s}
+.arts h3 a:hover{background-size:100% 1px}
+.vlink{color:var(--teal);text-decoration:none}
+
 /* fuentes */
 .srcs{margin-top:clamp(40px,6vh,64px);border-top:1px solid var(--ink);counter-reset:s}
 .srcs li{display:grid;grid-template-columns:40px minmax(0,1fr) minmax(0,.9fr);gap:20px;padding:15px 0;border-bottom:1px solid var(--rule);align-items:baseline}
@@ -419,6 +459,9 @@ img{display:block;max-width:100%}
   .figs div:nth-child(3){padding-left:0;border-left:0}
   .figs div{padding-bottom:20px}
   .pubs li{grid-template-columns:52px minmax(0,1fr);gap:14px}
+  .vids{grid-template-columns:1fr}
+  .arts li{grid-template-columns:64px minmax(0,1fr);gap:6px 16px}
+  .arts .go{display:none}
   .pubs .go{grid-column:2;justify-self:start}
   .srcs li{grid-template-columns:28px minmax(0,1fr);gap:4px 14px}
   .srcs .su{grid-column:2}
