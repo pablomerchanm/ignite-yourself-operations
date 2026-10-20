@@ -350,6 +350,30 @@ section{padding:clamp(96px,12vh,150px) 0}
 .footer .flinks a:hover{color:var(--orange)}
 .footer .bottom{padding-top:26px;font-family:var(--mono);font-size:11.5px;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
+/* insights strip — últimos artículos (lo genera tools/build-insights.py) */
+.insights-strip{background:var(--paper);padding:clamp(80px,10vh,120px) 0}
+.insights-strip .ish{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px 40px;align-items:end}
+.insights-strip .eyebrow{grid-column:1/-1;display:flex;align-items:center;gap:10px}
+.insights-strip .eyebrow .lspark{width:15px;filter:var(--spark-o)}
+.insights-strip h2{font-weight:800;letter-spacing:-.04em;line-height:.98;font-size:clamp(30px,4vw,56px);max-width:18ch}
+.insights-strip h2 .og{display:inline}
+.insights-strip .islink{justify-self:start;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;border-bottom:2px solid var(--orange);padding-bottom:3px;white-space:nowrap}
+.insights-strip .islink:hover{color:var(--o-deep)}
+.isl{list-style:none;margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--black)}
+.isl li+li{border-left:1px solid var(--line)}
+.isl a{display:flex;flex-direction:column;gap:14px;height:100%;padding:28px 28px 34px 0}
+.isl li+li a{padding-left:28px}
+.isl .ik{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#B35300}
+.isl .it{font-weight:800;font-size:clamp(20px,1.9vw,26px);letter-spacing:-.03em;line-height:1.08;transition:color .2s}
+.isl .im{margin-top:auto;font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--gray2)}
+.isl a:hover .it{color:var(--o-deep)}
+@media (max-width:900px){
+  .insights-strip .ish{grid-template-columns:1fr}
+  .isl{grid-template-columns:1fr}
+  .isl li+li{border-left:0;border-top:1px solid var(--line)}
+  .isl a,.isl li+li a{padding:24px 0}
+}
+
 .wr{opacity:0}
 html.no-motion .wr{opacity:1}
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
@@ -379,6 +403,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
     <a class="nlink" href="#how-it-works">How It Works</a>
     <a class="nlink" href="#investment">Investment</a>
     <a class="nlink" href="#about">About</a>
+    <a class="nlink" href="/insights">Insights</a>
     <a class="ncta" href="#contact">Request a Private Preview</a>
     <button class="nburger" id="nburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nmenu"><span></span><span></span><span></span></button>
   </div>
@@ -389,6 +414,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   <a href="#how-it-works">How It Works</a>
   <a href="#investment">Investment</a>
   <a href="#about">About</a>
+  <a href="/insights">Insights</a>
   <a class="ncta" href="#contact">Request a Private Preview</a>
 </div>
 
@@ -638,6 +664,21 @@ The platform, narrative, core copy, and digital asset are built around your name
     <p class="micro wr" data-reveal>A focused conversation · No pressure · No manufactured persona</p>
   </div></section>
 
+  <!-- insights:latest:start -->
+  <section class="insights-strip" aria-labelledby="insights-strip-t"><div class="wrap">
+    <div class="ish">
+      <div class="eyebrow"><img class="lspark" src="/igy/assets/spark.png" alt="">Insights · The Authority Gap</div>
+      <h2 id="insights-strip-t">Not ready to talk yet? <span class="og">Start with the thinking.</span></h2>
+      <a class="islink" href="/insights">All Insights <span aria-hidden="true">→</span></a>
+    </div>
+    <ul class="isl">
+      <li><a href="/insights/going-independent-after-corporate"><span class="ik">Independent Consulting</span><span class="it">Leaving Corporate Life to Consult Independently? Start With This</span><span class="im">4 min read <span aria-hidden="true">→</span></span></a></li>
+      <li><a href="/insights/linkedin-vs-personal-website"><span class="ik">Owned Presence</span><span class="it">LinkedIn vs. a Personal Website: What Established Professionals Actually Need</span><span class="im">5 min read <span aria-hidden="true">→</span></span></a></li>
+      <li><a href="/insights/expert-witness-website"><span class="ik">Professional Credibility</span><span class="it">What Should an Expert Witness Website Include?</span><span class="im">4 min read <span aria-hidden="true">→</span></span></a></li>
+    </ul>
+  </div></section>
+  <!-- insights:latest:end -->
+
 </main>
 
 <footer class="footer"><div class="wrap">
@@ -657,6 +698,7 @@ The platform, narrative, core copy, and digital asset are built around your name
       <a href="#how-it-works">How It Works</a>
       <a href="#investment">Investment</a>
       <a href="#about">About</a>
+      <a href="/insights">Insights</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>

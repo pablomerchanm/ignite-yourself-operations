@@ -20,6 +20,15 @@ Defined by professional stage, not industry or age. Surgeons, founders, executiv
 
 - [Ignite Yourself — The Authority Platform](https://igniteyourself.co/): the studio's commercial site — what an Authority Platform is, who it is for, what is built, the process, the investment, and how to request a private preview.
 
+## Insights
+
+<!-- insights:start -->
+- [Insights: The Authority Gap](https://igniteyourself.co/insights): practical guides for established professionals on independent consulting, professional credibility, and owned professional presence.
+- [Leaving Corporate Life to Consult Independently? Start With This](https://igniteyourself.co/insights/going-independent-after-corporate): After 20 years inside a firm, how do you explain your value as an independent advisor? Start with buyers, problems, proof and an owned professional presence.
+- [LinkedIn vs. a Personal Website: What Established Professionals Actually Need](https://igniteyourself.co/insights/linkedin-vs-personal-website): When does a senior consultant or expert need a website beyond LinkedIn? Compare what each does well and where each falls short—and decide what to build first.
+- [What Should an Expert Witness Website Include?](https://igniteyourself.co/insights/expert-witness-website): A checklist for expert witnesses: how to present expertise, credentials, publications, appropriate public testimony and contact information responsibly.
+<!-- insights:end -->
+
 ## Contact
 
 pablo@igniteyourself.co — Pablo Merchán, founder. Built remotely, working worldwide.
