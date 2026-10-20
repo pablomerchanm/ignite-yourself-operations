@@ -14,7 +14,7 @@ Hay **dos repositorios** en GitHub. Son dos cajas fuertes distintas:
 | Repositorio | Qué guarda |
 |---|---|
 | `pablomerchanm/ignite-yourself-operations` | El trabajo con clientes: plantillas, previews, prospección |
-| `pablomerchanm/ignite-yourself` | La marca propia: la web de Ignite, Ignited, Perdón Práctico |
+| `pablomerchanm/ignite-yourself` | La marca propia: Ignited, Perdón Práctico y versiones viejas de la web de Ignite (**la web viva de igniteyourself.co NO sale de aquí**: sale de `ignite-yourself-operations`, ver abajo) |
 
 **Nada de lo que esté en GitHub se pierde jamás.** Git guarda cada versión de cada
 archivo desde el día que se creó. Aunque borres algo hoy, sigue recuperable.
@@ -69,6 +69,17 @@ puede volver a usar en otro sitio sin arrastrar nada.
 `TEMPLATES.md` es el playbook del negocio: el intake que se le pide a cada médico,
 y el modelo (outreach → intake → elegir plantilla → verter contenido → deploy).
 Cada sitio nuevo es un fork con find-replace, no un rediseño.
+
+### Insights — la biblioteca editorial (igniteyourself.co/insights)
+
+| Dónde | Qué es |
+|---|---|
+| `editorial/insights/*.md` | **El texto de los artículos** (Markdown con cabecera). Fuera de lo publicado |
+| `editorial/insights/README.md` | **Cómo publicar un artículo nuevo** |
+| `tools/build-insights.py` | Genera las páginas, el bloque de la home, `sitemap.xml` y `llms.txt` |
+| `tools/og-insights.mjs` | Tarjetas para compartir (1200×630) |
+| `tools/serve-site.py` | Servidor local que imita a Vercel (`/` → igy-mobius, cleanUrls, sin barra final) |
+| `clients/jorge-arce/insights/` | Lo publicado (generado: no se edita a mano) |
 
 ### El producto Profiles
 
