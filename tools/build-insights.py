@@ -247,8 +247,9 @@ def og_image(slug=None):
 
 
 # ─────────────────────────────────────────────── piezas compartidas
-NAV_LINKS = [('/#platform', 'The Platform'), ('/#how-it-works', 'How It Works'),
-             ('/#investment', 'Investment'), ('/#about', 'About'), ('/insights', 'Insights')]
+# «The Platform» no va aquí: la píldora «The Authority Platform» ya lleva a /#platform.
+NAV_LINKS = [('/#how-it-works', 'How It Works'), ('/#investment', 'Investment'),
+             ('/#about', 'About'), ('/insights', 'Insights')]
 
 
 def nav(light=True):
@@ -509,7 +510,7 @@ def index_page(posts, cfg):
   <div class="filters wrap" role="group" aria-label="Filter by topic" hidden>{chips}</div>
   {feat}
   <section class="list wrap" aria-labelledby="list-t">
-    <div class="list__h"><h2 id="list-t">All articles</h2><p>{len(live)} {"guide" if len(live) == 1 else "guides"} · New articles weekly</p></div>
+    <div class="list__h"><h2 id="list-t">All articles</h2><p>{len(live)} {"guide" if len(live) == 1 else "guides"}</p></div>
     <ol class="rows">{rows}</ol>
     <p class="empty" hidden>No articles in this topic yet.</p>
   </section>
