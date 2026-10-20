@@ -125,10 +125,11 @@ van sin barra final (`/insights/slug`), igual que las URL reales del sitio.
 
 ## Después de publicar
 
-1. **Search Console** (una vez): verificar la propiedad de dominio `igniteyourself.co`
-   por DNS y enviar `https://igniteyourself.co/sitemap.xml`. Después, por cada artículo
-   nuevo: «Inspeccionar URL» → «Solicitar indexación». Google no garantiza indexar
-   ni posicionar nada; no lo prometas.
+1. **Avisar a los buscadores:** `python3 tools/indexnow.py /insights/<slug>` (Bing y
+   compañía, que alimentan ChatGPT y Copilot) y, en **Search Console**, «Inspeccionar
+   URL» → «Solicitar indexación». La configuración única (verificar el dominio, enviar
+   el sitemap, Bing Webmaster Tools) está en `editorial/BUSCADORES.md`. Google no
+   garantiza indexar ni posicionar nada; no lo prometas.
 2. **Compartir** con UTM, p. ej.
    `…/insights/<slug>?utm_source=linkedin&utm_medium=organic&utm_campaign=authority_gap`.
 3. **Medir** lo que importa: conversaciones cualificadas, propuestas y ventas, y

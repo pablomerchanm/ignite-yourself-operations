@@ -80,6 +80,8 @@ Cada sitio nuevo es un fork con find-replace, no un rediseño.
 | `tools/og-insights.mjs` | Tarjetas para compartir (1200×630) |
 | `tools/serve-site.py` | Servidor local que imita a Vercel (`/` → igy-mobius, cleanUrls, sin barra final) |
 | `clients/jorge-arce/insights/` | Lo publicado (generado: no se edita a mano) |
+| `editorial/BUSCADORES.md` | **Buscadores e IA**: qué es público, `robots.txt`, `noindex`, IndexNow y Search Console |
+| `tools/indexnow.py` | Avisa a Bing y compañía de URLs nuevas tras publicar |
 
 ### El producto Profiles
 

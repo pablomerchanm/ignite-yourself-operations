@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Ignite Yourself</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/igy/assets/icon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/igy/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/igy/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;800&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --warm: #100C07; --paper: #FBF9F6; --muted: rgba(251, 249, 246, .62); --orange: #F57900; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--warm); color: var(--paper);
+    font: 400 17px/1.6 Inter, system-ui, sans-serif;
+    display: flex; flex-direction: column; min-height: 100vh; position: relative;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(circle at 88% 0%, rgba(245, 121, 0, .40), rgba(245, 121, 0, 0) 42%);
+  }
+  header, main, footer { position: relative; padding-left: 22px; padding-right: 22px; width: 100%; max-width: 1180px; margin: 0 auto; }
+  header { padding-top: 28px; }
+  header img { display: block; width: 36px; height: auto; }
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: 72px; padding-bottom: 72px; }
+  .kicker { font: 500 12px/1 "IBM Plex Mono", monospace; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); display: flex; align-items: center; gap: 10px; }
+  .kicker img { width: 14px; height: auto; }
+  h1 { font: 800 clamp(44px, 8vw, 104px)/.95 "Inter Tight", sans-serif; letter-spacing: -.045em; margin: 22px 0 22px; max-width: 12ch; }
+  h1 span { background: linear-gradient(100deg, #FF9A1F, #F57900 55%, #D85F00); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  p { color: var(--muted); max-width: 46ch; font-size: clamp(17px, 2vw, 19px); }
+  nav { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 36px; align-items: center; }
+  .btn { display: inline-block; background: var(--orange); color: #fff; font: 700 14px/1 "Inter Tight", sans-serif; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; padding: 17px 26px; border-radius: 999px; }
+  .btn:hover { background: #ff8a14; }
+  .lnk { color: var(--paper); font: 700 14px/1 "Inter Tight", sans-serif; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; border-bottom: 2px solid var(--orange); padding-bottom: 6px; }
+  .lnk:hover { color: var(--orange); }
+  footer { padding-top: 22px; padding-bottom: 28px; border-top: 1px solid rgba(251, 249, 246, .12); color: var(--muted); font: 500 12px/1.6 "IBM Plex Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+  footer a { color: var(--paper); text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
+</style>
+</head>
+<body>
+<header><a href="/" aria-label="Ignite Yourself home"><img src="/igy/assets/logo-igy.png" alt="Ignite Yourself" width="36" height="27"></a></header>
+<main>
+  <div class="kicker"><img src="/igy/assets/spark.png" alt="" width="14" height="14">Error 404</div>
+  <h1>This page isn&rsquo;t <span>here.</span></h1>
+  <p>The link may be old, or the address may have a typo. Everything public about Ignite Yourself lives on the home page and in Insights.</p>
+  <nav aria-label="Where to go next">
+    <a class="btn" href="/">Go to the home page</a>
+    <a class="lnk" href="/insights">Read Insights &rarr;</a>
+    <a class="lnk" href="/#contact">Contact us &rarr;</a>
+  </nav>
+</main>
+<footer>Ignite Yourself &middot; <a href="mailto:pablo@igniteyourself.co">pablo@igniteyourself.co</a></footer>
+</body>
+</html>

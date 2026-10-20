@@ -317,7 +317,9 @@ def head(title, desc, canonical, og, og_type='website', extra='', robots='index,
 <meta name="twitter:title" content="{esc(title.replace(" | Ignite Yourself", ""))}">
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{og}">
-<link rel="icon" href="/igy/assets/spark.png" type="image/png">
+<link rel="icon" href="/igy/assets/icon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/igy/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/igy/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONTS}" rel="stylesheet">
