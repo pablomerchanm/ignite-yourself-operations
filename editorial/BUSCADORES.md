@@ -52,8 +52,11 @@ clientes, conceptos de plantilla (`/v2`…`/v37-…`), versiones viejas de la ho
 ## Configuración única (la hace Pablo)
 
 1. **Google Search Console:** añadir la propiedad de dominio `igniteyourself.co`,
-   verificarla con el registro TXT que da Google en el DNS, y enviar
-   `https://igniteyourself.co/sitemap.xml`.
+   verificarla con el registro TXT que da Google en el DNS (el DNS está en
+   **Hostinger**, no en Vercel), y enviar `https://igniteyourself.co/sitemap.xml`.
+   La home lleva además la etiqueta `google-site-verification` para la propiedad
+   «Prefijo de la URL»: **no la borres**, o Google retira el acceso. Tampoco borres
+   los TXT que ya hay en Hostinger (otra verificación de Google y el SPF del correo).
 2. **Bing Webmaster Tools:** entrar con la cuenta de Google e importar el sitio desde
    Search Console (un clic). Ahí se ve también lo que llega por IndexNow.
 3. **Perfiles oficiales:** cuando existan la página de empresa de Ignite Yourself
