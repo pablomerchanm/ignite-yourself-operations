@@ -1,54 +1,64 @@
-# Los buscadores no deben indexar el preview privado del cliente.
+# robots.txt de igniteyourself.co
+#
+# Lo público e indexable es solo la home (/) y la biblioteca /insights.
+# Todo lo demás (previews privados de clientes, conceptos de plantilla,
+# versiones internas y documentos) no debe aparecer en buscadores ni en IA.
+# vercel.json manda además «X-Robots-Tag: noindex» en todo eso.
+#
+# 1) Buscadores y rastreadores de IA: lista blanca. Solo ven lo público y
+#    los recursos que lo pintan. Si algún día hay otra página pública,
+#    añade aquí su «Allow» (y quítala del noindex de vercel.json).
+# 2) El resto (*) incluye los bots que generan la tarjeta de un enlace en
+#    WhatsApp, LinkedIn, Slack o iMessage: pueden abrir los previews de
+#    clientes para que el enlace se vea bien al enviarlo.
+#
+# Ojo: en robots.txt un grupo con nombre NO hereda las reglas de «*».
+
 User-agent: Googlebot
-Disallow: /kappelman
-Disallow: /mark-cooke
-Disallow: /cooke
-Disallow: /pettingill
-Disallow: /bernard-pettingill
-Disallow: /vishwanathan
-Disallow: /priya-vishwanathan
-Disallow: /herencia
-
+User-agent: Googlebot-Image
 User-agent: Bingbot
-Disallow: /kappelman
-Disallow: /mark-cooke
-Disallow: /cooke
-Disallow: /pettingill
-Disallow: /bernard-pettingill
-Disallow: /vishwanathan
-Disallow: /priya-vishwanathan
-Disallow: /herencia
-
 User-agent: DuckDuckBot
-Disallow: /kappelman
-Disallow: /mark-cooke
-Disallow: /cooke
-Disallow: /pettingill
-Disallow: /bernard-pettingill
-Disallow: /vishwanathan
-Disallow: /priya-vishwanathan
-Disallow: /herencia
+User-agent: Applebot
+User-agent: YandexBot
+User-agent: Baiduspider
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: Bytespider
+User-agent: cohere-ai
+Allow: /$
+Allow: /insights
+Allow: /llms.txt
+Allow: /sitemap.xml
+Allow: /igy/assets/
+Allow: /igy-mobius/assets/
+Allow: /vendor/
+Allow: /43a46c0f69f79d883c72b78ba8cbfd48.txt
+Disallow: /
 
 User-agent: *
 Allow: /$
 Allow: /igy-mobius
-Allow: /kappelman
-Allow: /mark-cooke
-Allow: /pettingill
-Allow: /vishwanathan
-Allow: /herencia
+Allow: /igy/assets/
+Disallow: /*.md$
 # Trabajo interno y conceptos de plantilla: accesibles por enlace directo,
-# fuera del indice para que no compitan con la landing ni se confundan
-# con sitios oficiales de terceros.
+# fuera del índice para que no compitan con la home ni se confundan con
+# sitios oficiales de terceros.
 Disallow: /arce
 Disallow: /catalogo
 Disallow: /enlaces
 Disallow: /igy
-Disallow: /igy2
 Disallow: /base
-Disallow: /base-jorge
 Disallow: /lab
-Disallow: /p
+Disallow: /p/
+Disallow: /p$
 Disallow: /refs
 Disallow: /templates
 Disallow: /v2
@@ -69,16 +79,6 @@ Disallow: /v16-handx
 Disallow: /v17-everswap
 Disallow: /v18-mindmarket
 Disallow: /v19-cunliffe
-Disallow: /v20-vast
-Disallow: /v21-getty
-Disallow: /v22-sacred
-Disallow: /v23-pacifica
-Disallow: /v24-ilcapo
-Disallow: /v25-gecko
-Disallow: /v26-wolverine
-Disallow: /v27-genesis
-Disallow: /v28-tuesday
-Disallow: /v29-heritage
 Disallow: /v30-capri
 Disallow: /v31-chronicle
 Disallow: /v32-alora
