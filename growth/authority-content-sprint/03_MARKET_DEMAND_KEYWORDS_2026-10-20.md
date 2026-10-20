@@ -1,4 +1,34 @@
 # IGNITE YOURSELF — Market Demand Map: Experience → Opportunity
+
+> **STRATEGIC CORRECTION — 20 OCT 2026 (USER FEEDBACK):** Do **NOT** position Ignite Yourself mainly around fractional executives, career pivots, layoffs, or building consulting businesses. Earlier research over-weighted fractional because survey data were readily available; that was a **research-sampling bias, not an approved ICP decision**. Fractional is just ONE illustrative use case alongside established doctors, surgeons, scientists, academics, expert witnesses, lawyers, executives, founders, authors, speakers and other accomplished professionals. The central idea is enabling **new opportunities from already-earned expertise and reputation**, not turning everyone into a fractional consultant or side-hustler. No segment is approved as THE primary buyer merely because we have a survey. Research markets in PARALLEL across distinct opportunity moments and validate urgency, budgets, accessible buyers and fit with actual delivery.
+
+## Revised framing: opportunities, not an occupational vertical
+
+**Core question:** *What could become possible for a professional when more of their existing work, knowledge, expertise, reputation and convictions is discoverable, understandable and useful to others?*
+
+A professional may be **happy in their current career** and still want broader visibility or more purposeful opportunities. Examples (opportunities, not promised results):
+
+| Opportunity moment / job-to-be-done | Examples | Real friction to investigate | Likely starting deliverable |
+|---|---|---|---|
+| **Be recognized and evaluated for existing expertise** | Medical specialist, expert witness, academic, technical expert | Record scattered; specialized credibility hard to assess; outdated institutional pages | Authority Platform, professional profile, source-backed evidence hub |
+| **Get invited and participate beyond the day job** | Surgeon invited to speak, scientist approached for a podcast, author invited to events | No accessible speaking topics, public biography, media credentials or professional contact | Speaker/media kit, speaking page, expert profile |
+| **Broaden professional relationships and collaborations** | Researcher seeking research partners; founder seeking boards, industry advisor, physician building professional peer networks | Unclear current interests, difficulty showing previous work and reaching the right person | Role-specific bio, professional presence and tailored distribution |
+| **Attract better-suited clients/engagements** | Specialist lawyer, surgeon (regulated practice), independent consultant, forensic economist | Evaluator cannot find evidence or specialty; referral can't explain work easily | Authority Platform, referral-ready profile; regulated profession caveats |
+| **Evolve into a new professional chapter** | Executive entering advisory/board work, senior specialist publishing/teaching, *some* consultants/fractional executives | Professional identity tied to employer; relevance of experience to new role unclear | Positioning, professional narrative, service/offer clarity, platform |
+| **Share a point of view and contribute knowledge** | Experienced expert, doctor, scientist, teacher, founder | Valuable ideas not articulated/distributed or publicly documented | Editorial strategy, expert-led content, IGNITED hypothesis |
+
+**Mature editorial tone:** respectful, thoughtful, affirmative, sophisticated and specific. Avoid “quit your job,” “AI will replace you,” “get rich on side hustles,” and “stop waiting for permission” as dominant messages. Do not presume the reader needs reinvention, has poor visibility, or wants a business; diagnose what they actually want.
+
+### Revised research approach
+- Collect search signals **by opportunity and desired outcome**, not by a single job title.
+- In parallel compare searches by `doctor/surgeon speaker bio`, `expert witness credentials/website`, `executive board bio`, `scientist industry advisor`, `author podcast guest media kit`, `consultant services website`.
+- Score cases on observed pain, decision trigger, purchase urgency, existing spend, ability to reach buyer, Ignite delivery fit; no automatic winner before buyer validation.
+- Keep Google/Youtube/Reddit/X evidence separately with source, dates and caveats. Do not claim a phrase is trending without comparable time-series/search volume data.
+- Distinguish **brand belief (experience as a professional asset)** from **buyer jobs-to-be-done (speaking, referrals, clients, partnerships, visibility, opportunities)** from **deliverables (platform, kit, editorial support)**.
+- **Fractional executive work:** one optional niche to evaluate, **not** editorial center, not default headline or main product ICP.
+
+---
+
 **Research snapshot: 20 Oct 2026 | Geographic emphasis: US / English-language market**
 **Status: RESEARCH, not an approved pivot or validated keyword volume.**
 **Thesis:** A professional's experience, expertise, work and relationships can be packaged, articulated, verified and made accessible to relevant buyers, collaborators, media, boards and peers, opening new options without requiring a career change.
