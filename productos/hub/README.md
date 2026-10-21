@@ -22,18 +22,23 @@ tools/build-hub.mjs      ← content.json → index.html (valida; sin dependenci
 tools/check-hub.mjs      ← control de calidad en Chromium (+ capturas)
 ```
 
+Los hubs de propuesta para prospectos reales (Eugenia Robledo, Martín Mendoza, Cormac Hayden,
+Greg LaVecchia, Iman Gadzhi) viven en `clients/jorge-arce/hub/<slug>/` y su estrategia en
+**[casos/](casos/README.md)**.
+
 Las dos demos son **personas ficticias** con fotos en hueco y enlaces a
 `example.com`. Sirven para ver el sistema completo y para enseñarlo; no se
 publican como caso.
 
 ## De dónde sale
 
-De los tres hubs que ya hicimos a mano, y de lo que Pablo fue aprobando en ellos:
+De los cuatro hubs que ya hicimos a mano, y de lo que Pablo fue aprobando en ellos:
 
 | Hub | Dónde | Qué aportó |
 |---|---|---|
 | Perdón Práctico `/links` | repo `ignite-yourself`, `perdonpractico/links.html` (doc: `docs/pp/DIOS-SIN-IGLESIA-WEB.md` §8.6–8.7) | Lógica de app: barra inferior con la acción principal, tarjetas con el título a dos tonos, DM que funciona dentro de Instagram, UTM hasta el checkout, la raíz del dominio abre el hub en el celular. La curaduría: «el hub no explica, dirige». |
 | Mario Lignarolo `/links` | `clients/mario-lignarolo/public/links/` | El tablero (bento) en escritorio, el video con reproductor propio, la historia en una sola tarjeta con frases suyas. |
+| Dr. Jorge Arce `/enlaces/arce` | `clients/jorge-arce/enlaces/arce/` («Private Index», jul 2026) | Las rutas agrupadas **por audiencia** como capítulos («For patients», «For referring colleagues», «The record»): el hub enruta según quién llega. |
 | Adriana Mejía Cuartas `/links` | adrianamejiacuartas.com/links (publicado; su código no vive en este repo) | El registro editorial: retrato + cargos, la tarjeta «Nuevo», prensa con medio y año, afiliaciones con miniatura, monograma al pie. |
 
 ## Hacer un hub nuevo

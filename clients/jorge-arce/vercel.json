@@ -183,7 +183,7 @@
   ],
   "headers": [
     {
-      "source": "/:dir(adriana|adriana-gareis|arce|base|base-jorge|brant|catalogo|enlaces|freudenthal|habib|herencia|igy2|igy-hanza|igy-next|igy-pacifica|igy-v3|kappelman|kappelman-gareis|kappelman-getty|lab|mark-cooke|nilsson|p|pettingill|profiles|refs|templates|vishwanathan|v\\d+(?:-[a-z]+)?)/:path*",
+      "source": "/:dir(adriana|adriana-gareis|arce|base|base-jorge|brant|catalogo|enlaces|freudenthal|habib|herencia|hub|igy2|igy-hanza|igy-next|igy-pacifica|igy-v3|kappelman|kappelman-gareis|kappelman-getty|lab|mark-cooke|nilsson|p|pettingill|profiles|refs|templates|vishwanathan|v\\d+(?:-[a-z]+)?)/:path*",
       "headers": [
         {
           "key": "X-Robots-Tag",

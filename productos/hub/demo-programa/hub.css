@@ -94,7 +94,8 @@ a.c:hover{transform:translateY(-3px);box-shadow:var(--lift)}
 /* ── vocabulario de texto ── */
 .kick{display:block;font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;line-height:1.3;opacity:.72}
 .ttl{display:block;font-family:var(--display);font-weight:var(--title-weight);letter-spacing:var(--title-track);
-  line-height:var(--title-lead);text-wrap:balance}
+  line-height:var(--title-lead);text-wrap:balance;text-transform:var(--title-case,none)}
+.wm,.btn,.pill,.bar__cta,.row__tx b,.rail__tx b{text-transform:var(--title-case,none)}
 .ttl i{font-style:var(--acc-style);color:var(--c-acc)}
 .ttl i.nl{display:block}
 .sub{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;line-height:1.2;
@@ -105,7 +106,7 @@ a.c:hover{transform:translateY(-3px);box-shadow:var(--lift)}
 
 /* botón: toma el remate de su tarjeta y el fondo como texto */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.4rem;border-radius:var(--btn-radius);
-  background:var(--c-acc);color:var(--c-bg);font-family:var(--display);font-weight:var(--title-weight);font-size:1.02rem;
+  background:var(--c-acc);color:var(--c-bg);font-family:var(--btn-font,var(--display));font-weight:var(--btn-weight,var(--title-weight));font-size:1.02rem;
   letter-spacing:-.015em;line-height:1;transition:transform .3s var(--ease)}
 .btn:hover{transform:translateY(-2px)}
 .btn--full{width:100%;max-width:26rem}
@@ -147,12 +148,12 @@ a.who:hover{background:color-mix(in srgb,var(--c-fg) 15%,transparent)}
 
 /* ═══ portrait: la foto manda; el nombre (si va) abajo, a dos tonos ═══ */
 .c--portrait{min-height:0}
-.c--portrait .box{aspect-ratio:4/5;justify-content:flex-end;gap:.6rem;padding:1.2rem}
+.c--portrait .box{aspect-ratio:var(--p-ratio,4/5);justify-content:flex-end;gap:.6rem;padding:1.2rem}
 .c--portrait.has-name::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background:linear-gradient(to top,color-mix(in srgb,var(--c-bg) 92%,transparent) 0%,color-mix(in srgb,var(--c-bg) 30%,transparent) 42%,transparent 70%)}
 .portrait__name{font-size:3rem;font-size:clamp(2.8rem,calc(16cqi * var(--scale)),8rem)}
 @container(min-width:40rem){
-  .c--portrait .box{aspect-ratio:16/9;padding:1.8rem 2rem}
+  .c--portrait .box{aspect-ratio:var(--p-ratio,16/9);padding:1.8rem 2rem}
   .portrait__name{font-size:clamp(3rem,calc(10cqi * var(--scale)),8rem)}
 }
 @media(min-width:60rem){
@@ -197,11 +198,16 @@ a.f__media:hover img{transform:scale(1.03)}
   .f__media.fade img{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
   .f__body{justify-content:center;padding:2.2rem 2.4rem}
 }
+/* sin foto: la oferta es solo texto y botón */
+.c--feature.no-media .box{display:flex}
+.no-media .f__body{padding:clamp(1.5rem,1.2rem + 2cqi,2.6rem)}
+.no-media .f__body .f__ttl{font-size:clamp(2rem,calc(11cqi * var(--scale)),4.4rem);max-width:16ch}
 
 /* ═══ tile: tarjeta chica de color (producto, idea, canal) ═══ */
 .c--tile .box{justify-content:space-between;gap:1.2rem;padding:1.05rem 1.05rem 1rem}
 .c--tile .kick{padding-right:2.8rem}
-.tile__t{font-size:1.6rem;font-size:clamp(1.4rem,calc(11.5cqi * var(--scale)),2.7rem);max-width:90%}
+.is-pending .kick{padding-right:7.5rem}
+.tile__t{font-size:1.5rem;font-size:clamp(1.25rem,calc(11.5cqi * var(--scale)),2.7rem);max-width:90%}
 .c--tile .txt{margin-top:-.6rem;max-width:30ch}
 .tile__gl{position:absolute;z-index:0;right:-16%;bottom:-20%;width:50%;height:auto;aspect-ratio:1;color:var(--c-acc);pointer-events:none}
 .has-gl .tile__t{max-width:74%}
@@ -218,6 +224,18 @@ a.c:hover .stk{transform:rotate(0) translateY(-3px)}
   .tile__gl{width:30%;right:-5%;bottom:-22%}
   .c--tile .txt{max-width:46%}
 }
+
+/* arte propio de la marca (un SVG o una imagen) detrás del texto de una tile o una story */
+.c__art{position:absolute;z-index:0;pointer-events:none;right:0;bottom:0;width:100%;height:auto;opacity:var(--art-o,1)}
+.c__art--cover{inset:0;height:100%;object-fit:cover}
+.c__art--right{top:0;left:auto;width:auto;height:100%;max-width:60%;object-fit:contain;object-position:right center}
+
+/* marca de video sobre una foto (un reel que vive en otra parte) */
+.play{position:absolute;z-index:2;display:grid;place-items:center;border-radius:50%;color:#fff;
+  background:rgba(0,0,0,.42);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);pointer-events:none}
+.play svg{width:42%;height:42%;margin-left:8%}
+.c--photo .play{top:50%;left:50%;width:3.4rem;height:3.4rem;transform:translate(-50%,-50%)}
+.rail__img .play{top:.55rem;left:.55rem;width:1.9rem;height:1.9rem}
 
 /* ═══ photo: foto a sangre con el texto abajo ═══ */
 .c--photo{min-height:15rem}
@@ -294,12 +312,33 @@ a.row:hover .ar{transform:translate(2px,-2px)}
 .rows--people .row__tx small{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.35rem}
 @container(min-width:44rem){.rows--people{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
+/* ═══ rail: carrusel horizontal (series, episodios, guías, productos) ═══
+   Se sale por la derecha a propósito: la tarjeta cortada dice «hay más, desliza». */
+.c--rail{min-height:0}
+.c--rail .box{gap:.85rem;padding:1.2rem 0 1.25rem 1.2rem}
+.t-0.c--rail .box{padding:1.4rem 0 .4rem}
+.c--rail .list__hd,.c--rail .list__t{margin-right:1.2rem}
+.t-0.c--rail .list__hd,.t-0.c--rail .list__t{margin-right:0}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(9.5rem,40cqi,14rem);gap:.7rem;overflow-x:auto;
+  scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;padding-right:1.2rem;scroll-padding-left:0}
+.rail::-webkit-scrollbar{display:none}
+.rail--wide{grid-auto-columns:clamp(14rem,62cqi,22rem)}
+.rail > li{scroll-snap-align:start;min-width:0}
+.rail__it{display:flex;flex-direction:column;gap:.6rem}
+.rail__img{position:relative;display:block;aspect-ratio:var(--rail-ratio,4/5);overflow:hidden;border-radius:calc(var(--radius) * .7);
+  background:color-mix(in srgb,var(--c-fg) 10%,var(--c-bg))}
+.rail__img img{width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 50%);transition:transform .9s var(--ease)}
+a.rail__it:hover .rail__img img{transform:scale(1.04)}
+.rail__tx b{display:block;font-family:var(--display);font-weight:var(--title-weight);font-size:1.02rem;letter-spacing:calc(var(--title-track) / 2);line-height:1.15}
+.rail__tx small{display:block;font-size:.78rem;line-height:1.3;opacity:.7;margin-top:.2rem}
+@container(min-width:44rem){.rail{grid-auto-columns:clamp(10rem,22cqi,14rem)}.rail--wide{grid-auto-columns:clamp(16rem,34cqi,22rem)}}
+
 /* ═══ pills: botones sueltos (canales, contacto) ═══ */
 .c--pills{min-height:0;background:none;border:0;overflow:visible;border-radius:0}
-.c--pills .box{display:grid;grid-template-columns:repeat(var(--cols,1),minmax(0,1fr));gap:.65rem}
+.c--pills .box{display:grid;grid-template-columns:repeat(var(--cols,1),minmax(0,1fr));gap:.65rem;align-content:start}
 @container(max-width:30rem){.c--pills .box{grid-template-columns:minmax(0,1fr)}}
 .pill{display:flex;align-items:center;justify-content:space-between;gap:.6rem;min-height:3.3rem;padding:.9rem 1.25rem;border-radius:var(--btn-radius);
-  background:var(--c-bg);color:var(--c-fg);border:1px solid var(--c-line);font-family:var(--display);font-weight:var(--title-weight);font-size:1rem;
+  background:var(--c-bg);color:var(--c-fg);border:1px solid var(--c-line);font-family:var(--btn-font,var(--display));font-weight:var(--btn-weight,var(--title-weight));font-size:1rem;
   letter-spacing:-.015em;line-height:1.15;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 a.pill:hover{transform:translateY(-2px);box-shadow:var(--lift)}
 .pill__l{display:inline-flex;align-items:center;gap:.6rem}
@@ -336,13 +375,13 @@ a.pill:hover .ar{transform:translate(2px,-2px)}
 .bar__gl{width:1.05rem;height:1.05rem;color:var(--bar-acc)}
 .bar__it span{font-family:var(--mono);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;line-height:1}
 .bar__cta{margin-left:auto;display:inline-flex;align-items:center;padding:.85rem 1.15rem;border-radius:3rem;background:var(--bar-acc);color:var(--bar-bg);
-  font-family:var(--display);font-weight:var(--title-weight);font-size:.95rem;letter-spacing:-.015em;line-height:1;white-space:nowrap}
+  font-family:var(--btn-font,var(--display));font-weight:var(--btn-weight,var(--title-weight));font-size:.95rem;letter-spacing:-.015em;line-height:1;white-space:nowrap}
 .has-bar .hub{padding-bottom:6rem}
 @media(min-width:48rem){.bar{display:none}.has-bar .hub{padding-bottom:2rem}}
 
 /* borrador / demo: una cinta arriba al centro */
-.ribbon{position:fixed;top:0;left:50%;z-index:60;transform:translateX(-50%);padding:.3rem .8rem;border-radius:0 0 .5rem .5rem;
-  background:#111;color:#fff;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;pointer-events:none}
+.ribbon{position:relative;z-index:2;padding:.4rem var(--gutter);text-align:center;
+  background:#111;color:#fff;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}
 
 /* ── entrada en cascada: la pone hub.js; sin JS o con reduced-motion todo se ve ── */
 .js .rv{opacity:0;transform:translateY(16px)}

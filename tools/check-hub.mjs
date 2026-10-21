@@ -28,9 +28,15 @@ try { pw = req('playwright'); } catch { pw = createRequire(execSync('npm root -g
 const exe = '/opt/pw-browsers/chromium';
 const browser = await pw.chromium.launch(fs.existsSync(exe) && fs.statSync(exe).isFile() ? { executablePath: exe } : {});
 
+// si el hub se publica en una subruta (meta.base, p. ej. /hub/cormac/), se sirve en esa misma ruta
+let PREFIX = '/';
+try { PREFIX = JSON.parse(fs.readFileSync(path.join(DIR, 'content.json'), 'utf8')).meta?.base || '/'; } catch {}
+if (!PREFIX.startsWith('/')) PREFIX = '/';
+
 const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.woff2': 'font/woff2' };
 const server = http.createServer((q, r) => {
   let p = decodeURIComponent(new URL(q.url, 'http://x').pathname);
+  if (p.startsWith(PREFIX)) p = '/' + p.slice(PREFIX.length);
   if (p.endsWith('/')) p += 'index.html';
   const f = path.join(DIR, p);
   if (!f.startsWith(DIR) || !fs.existsSync(f)) { r.writeHead(404); return r.end(); }
@@ -50,7 +56,7 @@ async function open(opts, query = '') {
   page.on('pageerror', e => errs.push(e.message));
   page.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
   page.on('response', r => { if (r.url().startsWith(ORIGIN) && r.status() >= 400) errs.push(`${r.status()} ${r.url()}`); });
-  await page.goto(ORIGIN + '/' + query, { waitUntil: 'networkidle' });
+  await page.goto(ORIGIN + PREFIX + query, { waitUntil: 'networkidle' });
   await page.waitForTimeout(300);
   return { ctx, page, errs };
 }

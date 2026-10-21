@@ -23,6 +23,10 @@ const C = JSON.parse(fs.readFileSync(path.join(DIR, 'content.json'), 'utf8'));
 const meta = C.meta || {};
 const DRAFT = meta.draft !== false;
 const BASE = meta.base || '';
+// textos de la interfaz en el idioma del hub (meta.lang)
+const L = String(meta.lang || 'es').startsWith('en')
+  ? { pending: 'Link pending', photo: 'Photo needed', product: 'Product photo', video: 'Video pending', play: 'Play', links: 'Links', outs: 'Elsewhere', bar: 'Shortcuts', legal: 'Legal', draft: 'Draft' }
+  : { pending: 'Enlace pendiente', photo: 'Foto pendiente', product: 'Foto de producto', video: 'Video pendiente', play: 'Reproducir', links: 'Enlaces', outs: 'Salidas', bar: 'Atajos', legal: 'Legal', draft: 'Borrador' };
 const errors = [], warns = [], pending = [];
 
 // ── utilidades ────────────────────────────────────────────────────
@@ -89,7 +93,7 @@ function exists(p, where) {
 function pic(im, where, o = {}) {
   if (!im || !im.src) {
     placeholders.push(where);
-    return `<span class="ph"><span>${esc(im?.label || 'Foto pendiente')}</span></span>`;
+    return `<span class="ph"><span>${esc(im?.label || L.photo)}</span></span>`;
   }
   exists(im.src, where);
   if (im.srcWide) exists(im.srcWide, where);
@@ -100,26 +104,35 @@ function pic(im, where, o = {}) {
   return im.srcWide ? `<picture><source media="(min-width:42rem)" srcset="${esc(url(im.srcWide))}">${img}</picture>` : img;
 }
 const kick = t => (t ? `<span class="kick">${esc(t)}</span>` : '');
+const playMark = () => `<span class="play" aria-hidden="true">${icon('play', '')}</span>`;
+// arte propio de la marca detrás del texto: { src, fit: "bottom" | "cover" | "right" }
+function art(a, where) {
+  if (!a) return '';
+  const o = typeof a === 'string' ? { src: a } : a;
+  exists(o.src, where);
+  return `<img class="c__art${o.fit && o.fit !== 'bottom' ? ` c__art--${esc(o.fit)}` : ''}" src="${esc(url(o.src))}" alt="" aria-hidden="true" loading="lazy">`;
+}
 
 // ── tallas y tonos por tipo ───────────────────────────────────────
 const TYPES = {
   intro: { size: 'full', tone: 0, sizes: ['full', 'wide', 'xl'] },
   portrait: { size: 'full', tone: 1, sizes: ['full', 'xl', 'big', 'tall', 'half'] },
-  feature: { size: 'full', tone: 1, sizes: ['full', 'xl', 'wide'] },
+  feature: { size: 'full', tone: 1, sizes: ['full', 'xl', 'wide', 'big'] },
   tile: { size: 'half', tone: 2, sizes: ['half', 'wide', 'full', 'tall'] },
   photo: { size: 'half', tone: 1, sizes: ['half', 'tall', 'wide', 'full', 'big'] },
-  video: { size: 'full', tone: 1, sizes: ['full', 'wide', 'half', 'tall', 'big'] },
+  video: { size: 'full', tone: 1, sizes: ['full', 'xl', 'wide', 'half', 'tall', 'big'] },
   story: { size: 'full', tone: 1, sizes: ['full', 'wide', 'big'] },
   list: { size: 'full', tone: 1, sizes: ['full', 'wide', 'big'] },
   pills: { size: 'full', tone: 1, sizes: ['full', 'wide'] },
   ticker: { size: 'full', tone: 1, sizes: ['full'] },
+  rail: { size: 'full', tone: 0, sizes: ['full', 'wide', 'big'] },
 };
 
 // envoltorio de una tarjeta de un solo destino: <a> si hay enlace, pendiente si está vacío, <section> si no lleva
 function wrap(c, k, inner, label) {
   if (!('href' in c)) return `<section ${k.attrs}${label ? ` aria-label="${esc(label)}"` : ''}>${inner}</section>`;
   const a = la(c.href, k.id, { track: c.track, utm: c.utm });
-  if (!a) return `<div ${k.attrs.replace('class="', 'class="is-pending ')} aria-disabled="true">${inner}${DRAFT ? '<span class="pend">Enlace pendiente</span>' : ''}</div>`;
+  if (!a) return `<div ${k.attrs.replace('class="', 'class="is-pending ')} aria-disabled="true">${inner}${DRAFT ? `<span class="pend">${L.pending}</span>` : ''}</div>`;
   return `<a ${k.attrs} ${a}>${inner}<span class="act">${arrow(c.href)}</span></a>`;
 }
 
@@ -148,21 +161,25 @@ const R = {
     const H = k.h1 ? 'h1' : 'h2';
     const name = c.title ? `${kick(c.kicker)}<${H} class="ttl portrait__name">${ttl(c.title, c.accent)}</${H}>${c.sub ? `<p class="sub">${esc(c.sub)}</p>` : ''}` : '';
     if (c.title) k.attrs = k.attrs.replace('class="', 'class="has-name ');
+    // proporción fija (p. ej. una foto apaisada con el nombre ya dentro); si no, 4:5 en el celular y 16:9 a lo ancho
+    if (c.ratio) k.attrs += ` style="--p-ratio:${esc(String(c.ratio).replace(':', '/'))}"`;
     const inner = `<span class="media">${pic(c.image, `${k.id}.image`, { eager: true })}</span><div class="box">${name}</div>`;
     return wrap(c, k, inner, c.image?.alt || plain(c.title, c.accent));
   },
 
   feature(c, k) {
-    const onBody = c.titleOn === 'body';
+    const noMedia = c.image === false;   // la oferta sin foto: solo texto y botón
+    const onBody = noMedia || c.titleOn === 'body';
+    if (noMedia) k.attrs = k.attrs.replace('class="', 'class="no-media ');
     long(plain(c.title, c.accent), onBody ? 70 : 28, `${k.id}.title`);
     long(c.cta?.text, 28, `${k.id}.cta.text`);
     const title = `<h2 class="ttl f__ttl">${ttl(c.title, c.accent)}</h2>`;
     const over = onBody ? '' : `<span class="f__over">${kick(c.kicker)}${title}</span>`;
     const mediaHref = c.href ?? c.cta?.href;
-    const ma = mediaHref ? la(mediaHref, `${k.id}_img`, { track: c.track }) : null;
+    const ma = mediaHref && !noMedia ? la(mediaHref, `${k.id}_img`, { track: c.track }) : null;
     const mcls = `f__media${onBody ? '' : ' f__media--over'}${c.image?.fade === false ? '' : ' fade'}`;
-    const inner = `${pic(c.image, `${k.id}.image`, { eager: k.eager })}${over}`;
-    const media = ma ? `<a class="${mcls}" ${ma}>${inner}</a>` : `<div class="${mcls}">${inner}</div>`;
+    const inner = noMedia ? '' : `${pic(c.image, `${k.id}.image`, { eager: k.eager })}${over}`;
+    const media = noMedia ? '' : ma ? `<a class="${mcls}" ${ma}>${inner}</a>` : `<div class="${mcls}">${inner}</div>`;
     const chips = (c.chips || []).length ? `<ul class="chips">${c.chips.map(ch => `<li class="chip${ch.live ? ' chip--live' : ''}">${esc(ch.text ?? ch)}</li>`).join('')}</ul>` : '';
     let cta = '';
     if (c.cta) {
@@ -193,18 +210,19 @@ const R = {
       k.attrs = k.attrs.replace('class="', 'class="has-stk ');
       const r = k.stickerFlip ? ' stk--r' : '';
       if (c.sticker.src) { exists(c.sticker.src, `${k.id}.sticker`); deco = `<img class="stk${r}" src="${esc(url(c.sticker.src))}" alt="${esc(c.sticker.alt || '')}" loading="lazy">`; }
-      else { placeholders.push(`${k.id}.sticker`); deco = `<span class="stk stk--ph${r}"><span>${esc(c.sticker.label || 'Foto de producto')}</span></span>`; }
+      else { placeholders.push(`${k.id}.sticker`); deco = `<span class="stk stk--ph${r}"><span>${esc(c.sticker.label || L.product)}</span></span>`; }
     } else if (c.glyph) {
       k.attrs = k.attrs.replace('class="', 'class="has-gl ');
       deco = icon(c.glyph, 'tile__gl');
     }
+    deco = art(c.art, `${k.id}.art`) + deco;
     const inner = `<div class="box">${kick(c.kicker)}<span class="ttl tile__t">${ttl(c.title, c.accent)}</span>${c.text ? `<span class="txt">${esc(c.text)}</span>` : ''}</div>${deco}`;
     return wrap(c, k, inner);
   },
 
   photo(c, k) {
     if (!('href' in c)) c.href = '';
-    const inner = `<span class="media">${pic(c.image, `${k.id}.image`, { eager: k.eager })}</span><div class="box">${kick(c.kicker)}${c.title ? `<span class="ttl photo__t">${ttl(c.title, c.accent)}</span>` : ''}${c.sub ? `<span class="txt">${esc(c.sub)}</span>` : ''}</div>`;
+    const inner = `<span class="media">${pic(c.image, `${k.id}.image`, { eager: k.eager })}</span>${c.play ? playMark() : ''}<div class="box">${kick(c.kicker)}${c.title ? `<span class="ttl photo__t">${ttl(c.title, c.accent)}</span>` : ''}${c.sub ? `<span class="txt">${esc(c.sub)}</span>` : ''}</div>`;
     return wrap(c, k, inner);
   },
 
@@ -217,10 +235,10 @@ const R = {
     let media;
     if (c.src) media = `<video preload="none" playsinline${poster ? ` poster="${esc(poster)}"` : ''}><source src="${esc(url(c.src))}" type="video/mp4"></video>`;
     else if (poster) media = `<img class="v__poster" src="${esc(poster)}" alt="" loading="lazy">`;
-    else { placeholders.push(`${k.id}.poster`); media = `<span class="ph"><span>${esc(c.poster?.label || 'Video pendiente')}</span></span>`; }
+    else { placeholders.push(`${k.id}.poster`); media = `<span class="ph"><span>${esc(c.poster?.label || L.video)}</span></span>`; }
     const playable = !!(c.src || c.youtube);
     if (!playable) pending.push(k.id);
-    const btn = playable ? `<button type="button" class="v__play" aria-label="Reproducir: ${esc(name)}"><span class="v__dot" aria-hidden="true"></span></button>` : '';
+    const btn = playable ? `<button type="button" class="v__play" aria-label="${L.play}: ${esc(name)}"><span class="v__dot" aria-hidden="true"></span></button>` : '';
     const cap = c.kicker || c.title ? `<span class="v__cap">${kick(c.kicker)}${c.title ? `<span class="ttl v__t">${ttl(c.title, c.accent)}</span>` : ''}</span>` : '';
     const attrs = playable ? k.attrs : k.attrs.replace('class="', 'class="is-pending ');
     return `<section ${attrs} aria-label="Video: ${esc(name)}"><div class="box" data-player${c.youtube ? ` data-yt="${esc(c.youtube)}"` : ''} style="--ratio:${esc(ratio)}">${media}${btn}${cap}</div></section>`;
@@ -229,7 +247,7 @@ const R = {
   story(c, k) {
     const link = c.link ? (a => (a ? `<a class="alt" ${a}>${esc(c.link.text)} ${arrow(c.link.href)}</a>` : ''))(la(c.link.href, `${k.id}_link`)) : '';
     const close = c.close ? `<p class="story__close">${esc(c.close)}${c.closeAccent ? ` <em>${esc(c.closeAccent)}</em>` : ''}</p>` : '';
-    return `<section ${k.attrs}><div class="box">${kick(c.kicker)}<h2 class="ttl story__t">${ttl(c.title, c.accent)}</h2>${(c.lines || []).map(l => `<p class="story__line">${esc(l)}</p>`).join('')}${close}${link}</div></section>`;
+    return `<section ${k.attrs}>${art(c.art, `${k.id}.art`)}<div class="box">${kick(c.kicker)}<h2 class="ttl story__t">${ttl(c.title, c.accent)}</h2>${(c.lines || []).map(l => `<p class="story__line">${esc(l)}</p>`).join('')}${close}${link}</div></section>`;
   },
 
   list(c, k) {
@@ -267,7 +285,7 @@ const R = {
       return a ? `<a class="pill" ${a}>${l}${arrow(it.href)}</a>` : `<span class="pill is-pending" aria-disabled="true">${l}</span>`;
     }).join('');
     const cols = Math.min(Math.max(c.cols || (c.items || []).length, 1), 3);
-    return `<nav ${k.attrs} aria-label="${esc(c.label || 'Enlaces')}" style="--cols:${cols}"><div class="box">${items}</div></nav>`;
+    return `<nav ${k.attrs} aria-label="${esc(c.label || L.links)}" style="--cols:${cols}"><div class="box">${items}</div></nav>`;
   },
 
   ticker(c, k) {
@@ -276,6 +294,22 @@ const R = {
     const chars = items.join('').length || 1;
     const one = items.map(t => `<span>${esc(t)}${icon(g, 'tk__gl')}</span>`).join('').repeat(Math.max(1, Math.ceil(90 / chars)));
     return `<div ${k.attrs} aria-hidden="true"${c.speed ? ` style="--tk-speed:${Number(c.speed)}s"` : ''}><div class="tk"><div class="tk__in">${one}${one}</div></div></div>`;
+  },
+
+  rail(c, k) {
+    const items = c.items || [];
+    const ratio = String(c.ratio || '4:5').replace(':', '/');
+    const lis = items.map((it, i) => {
+      const loc = `${k.id}_${i + 1}`;
+      const a = 'href' in it ? la(it.href, loc, { track: it.track }) : null;
+      const img = `<span class="rail__img">${pic(it.image, `${loc}.image`)}${it.play ? playMark() : ''}</span>`;
+      const tx = it.title || it.sub ? `<span class="rail__tx">${it.title ? `<b>${esc(it.title)}</b>` : ''}${it.sub ? `<small>${esc(it.sub)}</small>` : ''}</span>` : '';
+      return `<li>${a ? `<a class="rail__it" ${a}>` : '<div class="rail__it">'}${img}${tx}${a ? '</a>' : '</div>'}</li>`;
+    }).join('');
+    const count = c.count ? `<span class="kick">${String(items.length).padStart(2, '0')}</span>` : '';
+    const hd = c.kicker || count ? `<div class="list__hd">${kick(c.kicker) || '<span></span>'}${count}</div>` : '';
+    const title = c.title ? `<h2 class="ttl list__t">${ttl(c.title, c.accent)}</h2>` : '';
+    return `<section ${k.attrs}${!c.title && c.kicker ? ` aria-label="${esc(c.kicker)}"` : ''} style="--rail-ratio:${esc(ratio)}"><div class="box">${hd}${title}<ul class="rail${c.wide ? ' rail--wide' : ''}">${lis}</ul></div></section>`;
   },
 };
 
@@ -316,16 +350,16 @@ const decor = (C.decor || []).length
   : '';
 
 const top = C.top
-  ? `<header class="top">${C.top.href ? `<a class="wm" ${la(C.top.href, 'top_wm')}>` : '<span class="wm">'}${esc(C.top.wordmark || meta.siteName || '')}${C.top.href ? '</a>' : '</span>'}${(C.top.links || []).length ? `<nav aria-label="Salidas">${C.top.links.map(l => (a => (a ? `<a ${a}>${esc(l.label)} ${arrow(l.href)}</a>` : ''))(la(l.href, `top_${l.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`))).join('')}</nav>` : ''}</header>`
+  ? `<header class="top">${C.top.href ? `<a class="wm" ${la(C.top.href, 'top_wm')}>` : '<span class="wm">'}${esc(C.top.wordmark || meta.siteName || '')}${C.top.href ? '</a>' : '</span>'}${(C.top.links || []).length ? `<nav aria-label="${L.outs}">${C.top.links.map(l => (a => (a ? `<a ${a}>${esc(l.label)} ${arrow(l.href)}</a>` : ''))(la(l.href, `top_${l.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`))).join('')}</nav>` : ''}</header>`
   : '';
 
 const F = C.footer || {};
 const year = new Date().getFullYear();
-const foot = `<footer class="foot${F.mark ? ' foot--mark' : ''}">${F.mark ? `<span class="foot__mark" aria-hidden="true">${esc(F.mark)}</span>` : ''}${F.name && !F.mark ? `<span>${esc(F.name)}</span>` : ''}${(F.links || []).length ? `<nav aria-label="Legal">${F.links.map(l => (a => (a ? `<a ${a}>${esc(l.label)}</a>` : ''))(la(l.href, `foot_${l.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`))).join('')}</nav>` : ''}<span>${esc(F.note || `© ${year} ${F.mark ? F.name || '' : ''}`.trim())}</span></footer>`;
+const foot = `<footer class="foot${F.mark ? ' foot--mark' : ''}">${F.mark ? `<span class="foot__mark" aria-hidden="true">${esc(F.mark)}</span>` : ''}${F.name && !F.mark ? `<span>${esc(F.name)}</span>` : ''}${(F.links || []).length ? `<nav aria-label="${L.legal}">${F.links.map(l => (a => (a ? `<a ${a}>${esc(l.label)}</a>` : ''))(la(l.href, `foot_${l.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`))).join('')}</nav>` : ''}<span>${esc(F.note || `© ${year} ${F.mark ? F.name || '' : ''}`.trim())}</span></footer>`;
 
 const B = C.bar;
 const bar = B
-  ? `<nav class="bar" aria-label="Atajos">${(B.items || []).map(it => (a => (a ? `<a class="bar__it" ${a}>${icon(it.icon || 'circulo', 'bar__gl')}<span>${esc(it.label)}</span></a>` : ''))(la(it.href, `bar_${it.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`))).join('')}${B.cta ? (a => (a ? `<a class="bar__cta" ${a}>${esc(B.cta.text)}</a>` : ''))(la(B.cta.href, 'bar_cta', { track: B.cta.track || 'cta_click', utm: B.cta.utm })) : ''}</nav>`
+  ? `<nav class="bar" aria-label="${L.bar}">${(B.items || []).map(it => (a => (a ? `<a class="bar__it" ${a}>${icon(it.icon || 'circulo', 'bar__gl')}<span>${esc(it.label)}</span></a>` : ''))(la(it.href, `bar_${it.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`))).join('')}${B.cta ? (a => (a ? `<a class="bar__cta" ${a}>${esc(B.cta.text)}</a>` : ''))(la(B.cta.href, 'bar_cta', { track: B.cta.track || 'cta_click', utm: B.cta.utm })) : ''}</nav>`
   : '';
 
 if (!h1Done) warns.push('sin intro ni portrait con título: se pone un h1 oculto con meta.siteName');
@@ -380,7 +414,7 @@ ${meta.headHtml || ''}
 <!-- Generado por tools/build-hub.mjs desde content.json: no se edita a mano. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">${[...used].map(n => SYM[n]).join('')}</svg>
 ${decor}
-${DRAFT && meta.ribbon !== false ? `<div class="ribbon">${esc(meta.ribbon || 'Borrador')}</div>\n` : ''}<div class="hub hub--${layout}" id="top">
+${DRAFT && meta.ribbon !== false ? `<div class="ribbon">${esc(meta.ribbon || L.draft)}</div>\n` : ''}<div class="hub hub--${layout}" id="top">
 ${top}
 <main class="grid">
 ${h1}${body}

@@ -120,10 +120,12 @@ propuestos y no se publica.
 | `productos/hub/demo-autoridad/` | Demo editorial (autoridad). Persona ficticia |
 | `tools/build-hub.mjs` | `content.json` → `index.html` (valida; sin dependencias) |
 | `tools/check-hub.mjs` | Control de calidad en Chromium, con capturas |
+| `productos/hub/casos/` | **La estrategia de cada hub de propuesta**: ICP, el hueco, la acción principal, qué es textual y qué es copy nuestro, qué verificar |
+| `clients/jorge-arce/hub/<slug>/` | **Los hubs de propuesta** para prospectos reales (Eugenia Robledo, Martín Mendoza, Cormac Hayden, Greg LaVecchia, Iman Gadzhi) → igniteyourself.co/hub/<slug>, con `noindex` |
 
-Sale de los tres hubs hechos a mano: Perdón Práctico (`perdonpractico/links.html`
-en el repo 2), Mario (`clients/mario-lignarolo/public/links/`) y Adriana
-(adrianamejiacuartas.com/links).
+Sale de los hubs hechos a mano: Perdón Práctico (`perdonpractico/links.html`
+en el repo 2), Mario (`clients/mario-lignarolo/public/links/`), el Dr. Arce
+(`clients/jorge-arce/enlaces/arce/`) y Adriana (adrianamejiacuartas.com/links).
 
 ### Clientes y prospectos
 

@@ -78,7 +78,7 @@ color (o en itálica, en el registro editorial):
 |---|---|
 | `meta.title` | **Obligatorio.** `<title>`. ≤ 60. Patrón: «Nombre — Categoría». |
 | `meta.description` | **Obligatorio.** ≤ 160. |
-| `meta.lang`, `meta.locale` | `"es"`, `"es_CO"`. |
+| `meta.lang`, `meta.locale` | `"es"`, `"es_CO"`. Con `"en"` los textos de la interfaz (pendiente, reproducir, etiquetas para lectores de pantalla) salen en inglés. |
 | `meta.siteName` | Nombre para compartir (Open Graph). |
 | `meta.canonical`, `meta.image`, `meta.imageAlt` | URL pública del hub y la imagen para compartir (1200×630). |
 | `meta.icon` | Favicon (ruta local o URL). |
@@ -95,6 +95,10 @@ color (o en itálica, en el registro editorial):
 | `top` | Barra superior: `{ "wordmark", "href", "links": [{label, href}] }`. ≤ 2 enlaces. Opcional. |
 | `bar` | Barra inferior del móvil: `{ "items": [{label, href, icon}], "cta": {text, href, utm} }`. ≤ 3 atajos; `cta.text` ≤ 18. Es **la acción principal**. |
 | `footer` | `{ "name", "mark", "links": [{label, href}], "note" }`. `mark` es un monograma grande de línea (registro editorial). |
+
+**Tokens que cambian el registro** (en `tokens.css`): `--title-case: uppercase` (titula en mayúscula),
+`--btn-font` / `--btn-weight` (la letra de botones y píldoras; en registros serif, la sans),
+`--acc-style: italic` (el remate en itálica), `--scale` (tamaño de los títulos grandes).
 
 **Glifos** (`decor`, `tile.glyph`, `pills.items[].glyph`, `ticker.glyph`, `bar.items[].icon`):
 `star`, `ast`, `diana`, `ojo`, `arco`, `circulo`, y los íconos `up`, `ne`, `e`, `chat`, `bag`, `play`.
@@ -124,9 +128,12 @@ Variante editorial: `claim` = el nombre, sin `name` (ver `demo-autoridad`).
 Talla `full`, `xl`, `big`, `tall`, `half`. `image`, y opcionales `kicker`,
 `title` + `accent` (el nombre sobre la foto, con degradado), `sub`, `href`.
 Sin `title` es solo la foto (el nombre va en la `intro` de al lado).
+`ratio` (`"512:269"`) fija la proporción en todos los anchos: para una foto apaisada
+con el nombre ya dentro, que en 4:5 se cortaría.
 
 ### `feature` — la oferta principal
-Talla `full`, `xl` o `wide`. Una por hub, dos como mucho (la oferta y el 1:1).
+Talla `full`, `xl`, `wide` o `big`. Con `"image": false` es solo texto y botón
+(dos puertas lado a lado, como en Martín Mendoza). Una por hub, dos como mucho (la oferta y el 1:1).
 
 | Campo | Qué es |
 |---|---|
@@ -148,12 +155,17 @@ Talla `half` (o `wide`, `full`, `tall`). `kicker`, `title` + `accent` (≤ 40),
 `text`, `href` (vacío = pendiente) y **uno** de:
 `sticker` (`{ src, alt, label }`: foto de producto colgando, girada) o
 `glyph` (forma grande que se sale por la esquina).
+Opcional `art` (`"art/x.svg"` o `{ src, fit: "bottom" | "cover" | "right" }`): arte propio de la
+marca detrás del texto (también en `story`). En una tarjeta chica, las palabras largas en
+mayúscula no caben a 360 px: el control de calidad lo avisa.
 
 ### `photo` — foto a sangre
-`image`, `kicker`, `title` + `accent`, `sub`, `href`. Talla `half`, `tall`
+`image`, `kicker`, `title` + `accent`, `sub`, `href`, `play` (`true`: marca de video al
+centro, para un reel que vive en Instagram). Talla `half`, `tall`
 (la foto vertical junto a dos chicas), `wide`, `full`, `big`.
 
 ### `video` — reproductor propio
+Talla `full`, `xl`, `wide`, `half`, `tall` o `big`.
 `src` (mp4 local) **o** `youtube` (el id), `poster` (`{ src, label }`;
 con YouTube sin póster se usa la miniatura), `ratio` (`"16:9"`, `"9:16"`,
 `"4:5"`, `"1:1"`), `kicker` («Video · 2:26»), `title` + `accent`.
@@ -175,6 +187,12 @@ Frases **textuales** de la persona: no se escriben por ella.
 | `people` | `{ thumb: {src}, label, note (rol), href }` | Afiliaciones, empresas, aliados. 3 columnas desde 44rem. |
 
 Con tono `0` la lista va sobre la página, con filetes y sin caja (registro editorial).
+
+### `rail` — carrusel horizontal
+Series, episodios, guías, productos. Se sale por la derecha a propósito («hay más, desliza»).
+`kicker`, `count`, `title` + `accent`, `ratio` de las miniaturas (`"4:5"` por defecto,
+`"3:4"`, `"1:1"`, `"16:9"`), `wide` (`true`: miniaturas más anchas, para 16:9) e
+`items[]` `{ image, title, sub, href, play }`. Tono `0` por defecto (va sobre la página).
 
 ### `pills` — botones sueltos
 `label` (nombre del grupo para lectores de pantalla), `cols` (1–3; en

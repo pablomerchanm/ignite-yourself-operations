@@ -1,0 +1,29 @@
+/* Iman Gadzhi · su propia línea: negro casi total, blanco, pizarra; serif con
+   itálica (el monograma IG) y mono de etiqueta (Fragment Mono, como su web). */
+:root{
+  --bg:#000; --fg:#f2f2f2; --acc:#b9c0ca; --deco:transparent;
+
+  --t1-bg:#0d1014; --t1-fg:#f2f2f2; --t1-acc:#b9c0ca; --t1-line:#1c2128;
+  --t2-bg:#f2f2f2; --t2-fg:#000; --t2-acc:#000;
+  --t3-bg:#141a22; --t3-fg:#f2f2f2; --t3-acc:#d9dee5;
+  --t4-bg:#1d2530; --t4-fg:#f2f2f2; --t4-acc:#d9dee5;
+  --t5-bg:#000; --t5-fg:#f2f2f2; --t5-acc:#b9c0ca; --t5-line:#262b31;
+  --t6-bg:#e9e6df; --t6-fg:#000; --t6-acc:#000;
+
+  --bar-bg:#f2f2f2; --bar-fg:#000; --bar-acc:#000;
+
+  --display:"Instrument Serif",Georgia,serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"Fragment Mono",ui-monospace,Menlo,monospace;
+
+  --title-weight:400;
+  --title-track:-.01em;
+  --title-lead:1;
+  --acc-style:italic;
+  --scale:.88;
+  --radius:.25rem;
+  --btn-radius:.25rem;
+  --btn-font:var(--sans);
+  --btn-weight:600;
+}

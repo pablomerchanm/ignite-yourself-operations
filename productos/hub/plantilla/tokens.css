@@ -35,4 +35,7 @@
   --scale:1;              /* tamaño de los títulos grandes (.6–.7 en editorial) */
   --radius:1.1rem;        /* 0–.2rem en editorial */
   --btn-radius:3rem;
+  /* --btn-font / --btn-weight: la letra de botones y píldoras (por defecto, la de los títulos).
+     En un registro serif suele ir mejor la sans: --btn-font:var(--sans); --btn-weight:600; */
+  /* --title-case:uppercase; para marcas que titulan en mayúscula */
 }

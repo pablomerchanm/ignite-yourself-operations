@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en_GB",
+    "title": "Iman Gadzhi — Consulting, Whop, Higgsfield",
+    "description": "Iman Gadzhi: the free 5-day AI Income Challenge, where to start depending on where you are, and the latest from YouTube.",
+    "siteName": "Iman Gadzhi",
+    "themeColor": "#000000",
+    "icon": "img/monograma.jpg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Fragment+Mono&display=swap",
+    "base": "/hub/iman-gadzhi/",
+    "draft": true,
+    "ribbon": "Proposal · Ignite Yourself",
+    "utm": "utm_source=instagram&utm_medium=bio&utm_campaign=aic"
+  },
+  "layout": "feed",
+  "cards": [
+    {
+      "type": "portrait",
+      "id": "iman",
+      "tone": 1,
+      "ratio": "512:269",
+      "image": { "src": "img/mar.jpg", "alt": "Iman Gadzhi facing the sea", "focus": "50% 50%" }
+    },
+    {
+      "type": "intro",
+      "id": "intro",
+      "claim": "I don't hide",
+      "accent": "anything.",
+      "lines": [
+        "Owner · Consulting (Est. 2016)",
+        "Co-owner · Whop",
+        "Investor & advisor · Higgsfield"
+      ]
+    },
+    {
+      "type": "feature",
+      "id": "challenge",
+      "tone": 2,
+      "image": false,
+      "kicker": "Free · 5-day challenge · Nov 7–15",
+      "title": "I Challenge YOU To Build A $373/Day AI Side Hustle",
+      "accent": "In Just 5 Days",
+      "text": "To celebrate my investment in Higgsfield AI, I'm hosting a 5-Day Challenge...",
+      "meta": "With Mark Tilbury",
+      "cta": { "text": "SAVE MY FREE SPOT", "href": "https://event.monetise.com/", "utm": true, "track": "signup_click" }
+    },
+    {
+      "type": "list",
+      "id": "start",
+      "tone": 1,
+      "kicker": "Start here",
+      "title": "Where are you",
+      "accent": "right now?",
+      "items": [
+        { "n": "01", "label": "Starting from zero", "note": "Monetise: “Let My AI System Build You A Profitable Digital Product Business”", "meta": "Monetise", "href": "https://monetise.com", "track": "door_click" },
+        { "n": "02", "label": "Founders at $20K+/mo", "note": "Consulting.com: Quantum, UpLevel and Masterminds.", "meta": "Apply", "href": "https://consulting.com/", "track": "door_click" },
+        { "n": "03", "label": "Press & partnerships", "note": "The contact form on iman-gadzhi.com.", "meta": "Contact", "href": "https://www.iman-gadzhi.com/", "track": "contact_click" }
+      ]
+    },
+    {
+      "type": "rail",
+      "id": "watch",
+      "kicker": "Latest on YouTube",
+      "ratio": "16:9",
+      "wide": true,
+      "items": [
+        { "image": { "src": "https://i.ytimg.com/vi/LqCPwQ1IcA4/hqdefault.jpg", "alt": "" }, "title": "1000+ Hours of Learning Claude In Under 25 Minutes (Beginner to Pro)", "play": true, "href": "https://www.youtube.com/watch?v=LqCPwQ1IcA4" },
+        { "image": { "src": "https://i.ytimg.com/vi/WO-Gl6-6gLE/hqdefault.jpg", "alt": "" }, "title": "What Building a Multi-Billion-Dollar Empire Actually Looks Like", "play": true, "href": "https://www.youtube.com/watch?v=WO-Gl6-6gLE" },
+        { "image": { "src": "https://i.ytimg.com/vi/YZ6OyZKrRh8/hqdefault.jpg", "alt": "" }, "title": "Revealing My $5.4 BILLION Bet...", "play": true, "href": "https://www.youtube.com/watch?v=YZ6OyZKrRh8" },
+        { "image": { "src": "https://i.ytimg.com/vi/wfSFaxHuU7Q/hqdefault.jpg", "alt": "" }, "title": "Watch Me Build a $373/Day Side Hustle in Under 1 Hour (LIVE)", "play": true, "href": "https://www.youtube.com/watch?v=wfSFaxHuU7Q" },
+        { "image": { "src": "https://i.ytimg.com/vi/_FGrUBi7Zno/hqdefault.jpg", "alt": "" }, "title": "You're Not Late (Yet): Learn 98% of Gemini in Under 26 Minutes", "play": true, "href": "https://www.youtube.com/watch?v=_FGrUBi7Zno" },
+        { "image": { "src": "https://i.ytimg.com/vi/w-lkP9XcZfg/hqdefault.jpg", "alt": "" }, "title": "Give Me 28 Minutes, I'll Give You 10,000 Hours of ChatGPT Knowledge", "play": true, "href": "https://www.youtube.com/watch?v=w-lkP9XcZfg" },
+        { "image": { "src": "https://i.ytimg.com/vi/q1g65sjQI-4/hqdefault.jpg", "alt": "" }, "title": "The Best AI Side Hustles To Start In 2026 (No Skills)", "play": true, "href": "https://www.youtube.com/watch?v=q1g65sjQI-4" }
+      ]
+    },
+    {
+      "type": "story",
+      "id": "higgsfield",
+      "tone": 3,
+      "kicker": "Oct 2026 · Investor & advisor, Higgsfield",
+      "title": "I don't invest for returns anymore.",
+      "accent": "I invest to be on the right side of history.",
+      "link": { "text": "Revealing My $5.4 BILLION Bet...", "href": "https://www.youtube.com/watch?v=YZ6OyZKrRh8" }
+    },
+    {
+      "type": "photo",
+      "id": "nepal",
+      "tone": 1,
+      "image": { "src": "img/nepal.jpg", "alt": "Iman Gadzhi at a celebration in Nepal", "focus": "50% 30%" },
+      "kicker": "You Get What You Give",
+      "title": "Schools in Nepal",
+      "href": "https://www.iman-gadzhi.com/"
+    },
+    {
+      "type": "photo",
+      "id": "meals",
+      "tone": 1,
+      "image": { "src": "img/comida.jpg", "alt": "Packing food donations", "focus": "50% 40%" },
+      "kicker": "You Get What You Give",
+      "title": "Meals in South Africa",
+      "href": "https://www.iman-gadzhi.com/"
+    },
+    {
+      "type": "pills",
+      "label": "Elsewhere",
+      "tone": 1,
+      "cols": 2,
+      "items": [
+        { "label": "YouTube", "href": "https://www.youtube.com/@ImanGadzhi" },
+        { "label": "Instagram", "href": "https://www.instagram.com/imangadzhi/" },
+        { "label": "TikTok", "href": "https://www.tiktok.com/@imangadzhi" },
+        { "label": "X", "href": "https://x.com/gadzhiiman" }
+      ]
+    }
+  ],
+  "bar": {
+    "items": [
+      { "label": "Home", "href": "#top", "icon": "up" },
+      { "label": "Start", "href": "#start", "icon": "e" },
+      { "label": "Watch", "href": "#watch", "icon": "play" }
+    ],
+    "cta": { "text": "Save my spot →", "href": "https://event.monetise.com/", "utm": true, "track": "signup_click" }
+  },
+  "footer": { "name": "Iman Gadzhi", "mark": "IG" }
+}

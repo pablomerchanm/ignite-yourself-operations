@@ -24,4 +24,6 @@
   --scale:.62;
   --radius:2px;
   --btn-radius:3rem;
+  --btn-font:var(--sans);
+  --btn-weight:600;
 }
