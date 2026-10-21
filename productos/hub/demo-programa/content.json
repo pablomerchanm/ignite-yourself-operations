@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "lang": "es",
+    "locale": "es_CO",
+    "title": "Lucía Ferrer — Respiración y enfoque",
+    "description": "Programas, libro y podcast de Lucía Ferrer: prácticas cortas de respiración para gente que trabaja con la cabeza.",
+    "siteName": "Lucía Ferrer",
+    "themeColor": "#EFE9DF",
+    "icon": "icon.svg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Fraunces:ital,opsz,wght@1,9..144,400..600&family=Inter+Tight:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap",
+    "draft": true,
+    "ribbon": "Demo · persona ficticia",
+    "utm": "utm_source=instagram&utm_medium=bio&utm_campaign=hub"
+  },
+  "layout": "board",
+  "decor": [
+    { "glyph": "ast", "at": "tr", "spin": true },
+    { "glyph": "diana", "at": "bl" }
+  ],
+  "top": {
+    "wordmark": "Lucía Ferrer",
+    "links": [
+      { "label": "La web", "href": "https://example.com/" },
+      { "label": "Instagram", "href": "https://www.instagram.com/" }
+    ]
+  },
+  "cards": [
+    {
+      "type": "intro",
+      "name": "Lucía Ferrer",
+      "role": "Respiración y enfoque",
+      "href": "https://example.com/sobre-lucia",
+      "claim": "Respira antes",
+      "accent": "de decidir.",
+      "sub": "Prácticas cortas para gente que trabaja con la cabeza."
+    },
+    {
+      "type": "feature",
+      "id": "respira",
+      "size": "xl",
+      "tone": 1,
+      "image": { "src": "", "label": "Retrato horizontal 16:10 · Lucía a la derecha, fondo liso oscuro, aire a la izquierda (+ recorte 4:5)" },
+      "kicker": "Programa · 21 días",
+      "title": "Respira\n21",
+      "accent": ".",
+      "chips": [{ "text": "En vivo", "live": true }, { "text": "Online" }],
+      "sub": "Diez minutos al día para bajar el ruido y volver a pensar claro.",
+      "meta": "3 – 23 de noviembre",
+      "cta": { "text": "Conoce el programa →", "href": "https://example.com/respira-21" },
+      "alt": { "text": "Inscribirme", "href": "https://example.com/checkout/respira-21", "utm": true }
+    },
+    {
+      "type": "photo",
+      "id": "instagram",
+      "size": "tall",
+      "tone": 1,
+      "image": { "src": "", "label": "Retrato vertical 4:5 · Lucía en su día a día" },
+      "kicker": "Instagram",
+      "title": "@luciaferrer",
+      "href": "https://www.instagram.com/"
+    },
+    {
+      "type": "ticker",
+      "tone": 1,
+      "glyph": "star",
+      "items": ["Respira 21", "En vivo y online", "Empieza el 3 de noviembre"]
+    },
+    {
+      "type": "tile",
+      "id": "libro",
+      "tone": 2,
+      "kicker": "Libro",
+      "title": "Pausa",
+      "accent": "el libro",
+      "sticker": { "src": "", "label": "Portada 3:4" },
+      "href": "https://example.com/libro"
+    },
+    {
+      "type": "tile",
+      "id": "audios",
+      "tone": 6,
+      "kicker": "Audios",
+      "title": "Tres minutos",
+      "accent": "para respirar",
+      "glyph": "ast",
+      "href": ""
+    },
+    {
+      "type": "story",
+      "id": "por-que",
+      "size": "wide",
+      "tone": 5,
+      "kicker": "Por qué respirar",
+      "title": "No te falta disciplina",
+      "accent": ".",
+      "lines": ["Te falta aire entre una cosa y la otra."],
+      "close": "Respirar es la pausa",
+      "closeAccent": "que nadie te enseñó a tomar.",
+      "link": { "text": "Mi historia", "href": "https://example.com/historia" }
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "size": "wide",
+      "tone": 1,
+      "poster": { "label": "Portada del video 16:9 · Lucía hablando a cámara" },
+      "kicker": "Video · 1:48",
+      "title": "La respiración 4-7-8",
+      "accent": "en un minuto."
+    },
+    {
+      "type": "list",
+      "id": "podcast",
+      "size": "wide",
+      "tone": 3,
+      "kicker": "Escuchar",
+      "title": "El podcast",
+      "accent": ".",
+      "items": [
+        { "label": "Respirar no es relajarse", "note": "Lo que la respiración hace, y lo que no.", "meta": "24 min", "href": "https://example.com/podcast/12" },
+        { "label": "El cansancio que no se quita durmiendo", "note": "Fatiga mental y pausas cortas.", "meta": "31 min", "href": "https://example.com/podcast/11" },
+        { "label": "Tres minutos antes de una reunión", "note": "Una práctica para llevar.", "meta": "18 min", "href": "https://example.com/podcast/10" }
+      ]
+    },
+    {
+      "type": "feature",
+      "id": "uno-a-uno",
+      "tone": 4,
+      "image": { "src": "", "label": "Retrato horizontal 16:10 · Lucía sonriendo, a la derecha, fondo gris liso (+ recorte 4:5)" },
+      "title": "1:1",
+      "accent": ".",
+      "sub": "Acompañamiento privado, virtual.",
+      "cta": { "text": "Aplicar al acompañamiento →", "href": "https://example.com/dm", "track": "contact_click" }
+    },
+    {
+      "type": "pills",
+      "label": "Canales",
+      "tone": 1,
+      "items": [
+        { "label": "Instagram", "glyph": "star", "href": "https://www.instagram.com/" },
+        { "label": "TikTok", "glyph": "diana", "href": "https://www.tiktok.com/" },
+        { "label": "YouTube", "glyph": "ast", "href": "https://www.youtube.com/" }
+      ]
+    },
+    {
+      "type": "pills",
+      "label": "Contacto",
+      "tone": 3,
+      "items": [{ "label": "¿Una pregunta? Escríbeme por DM", "href": "https://example.com/dm", "track": "contact_click" }]
+    }
+  ],
+  "bar": {
+    "items": [
+      { "label": "Inicio", "href": "#top", "icon": "up" },
+      { "label": "Libro", "href": "#libro", "icon": "bag" },
+      { "label": "DM", "href": "https://example.com/dm", "icon": "chat" }
+    ],
+    "cta": { "text": "Respira 21 →", "href": "#respira" }
+  },
+  "footer": {
+    "name": "Lucía Ferrer",
+    "links": [
+      { "label": "Privacidad", "href": "https://example.com/privacidad" },
+      { "label": "Términos", "href": "https://example.com/terminos" }
+    ]
+  }
+}

@@ -18,6 +18,8 @@ ignite-yourself-operations/
 │       ├── script.js
 │       └── img/              # imágenes (extraídas de base64)
 ├── ignite/                   # la web propia de Ignite Yourself
+├── productos/                # productos de Ignite: ficha + plantilla (fuera de lo publicado)
+│   └── hub/                  # el «linktree sofisticado»: FICHA.md, plantilla y demos
 └── _shared/                  # tokens, fuentes y componentes reutilizables
     ├── tokens.css            # sistema de color + tipografía
     └── motion/               # utilidades de animación/scroll reutilizables
