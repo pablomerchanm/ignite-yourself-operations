@@ -10,7 +10,7 @@
 <link rel="icon" href="/herencia/img/logos/herencia-icon.svg" type="image/svg+xml">
 <link rel="alternate" hreflang="en" href="/herencia/showcases/cacao-of-excellence"><link rel="alternate" hreflang="es" href="/herencia/es/showcases/cacao-of-excellence"><link rel="alternate" hreflang="nl" href="/herencia/nl/showcases/cacao-of-excellence"><link rel="alternate" hreflang="x-default" href="/herencia/showcases/cacao-of-excellence">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Instrument+Sans:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/herencia/site.css?v=0b1ae3ac">
+<link rel="stylesheet" href="/herencia/site.css?v=08a3b3b9">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:url" content="https://igniteyourself.co/herencia/nl/showcases/cacao-of-excellence">
@@ -144,9 +144,10 @@
 </svg>
 </a>
       <nav class="f-nav"><a href="/herencia/nl#about">Over ons</a><a href="/herencia/nl#what">Wat we doen</a><a href="/herencia/nl#showcases">Onze impact</a><a href="/herencia/nl#showcases">Projecten</a><a href="/herencia/nl#team">Team</a><a href="/herencia/nl#contact">Contact</a></nav>
-      <div class="f-info"><p>Herencia VL B.V.<br>Ingeschreven in Nederland</p><p>SDG’s 5 · 8 · 9 · 12 · 15 · 17</p>
+      <div class="f-info"><p>Herencia VL B.V.<br>Ingeschreven in Nederland</p>
         <p><a href="https://www.linkedin.com/company/herencia-value-your-legacy" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="/herencia/brochure/herencia-vl-2026.pdf" download>Brochure (pdf, Engelstalig)</a></p></div>
     </div>
+    <div class="f-sdg"><p>Wij werken met klanten die zich inzetten voor de Agenda 2030. Onze projecten geven voorrang aan SDG’s 5, 8, 9, 12, 15 en 17.</p><img src="/herencia/img/sdgs-hvl-transparente.png" alt="Duurzame Ontwikkelingsdoelen 5, 8, 9, 12, 15 en 17" width="1400" height="180" loading="lazy" decoding="async"></div>
     <div class="f-base"><span>© 2026 Herencia VL</span><nav class="lang in-foot" aria-label="Taal"><a href="/herencia/showcases/cacao-of-excellence" hreflang="en" lang="en">EN</a><a href="/herencia/es/showcases/cacao-of-excellence" hreflang="es" lang="es">ES</a><a href="/herencia/nl/showcases/cacao-of-excellence" hreflang="nl" lang="nl" aria-current="page">NL</a></nav><a href="/herencia/nl/privacy">Privacyverklaring</a></div>
   </div>
 </footer>
@@ -155,7 +156,7 @@
 var mb=b.querySelector('.menu');if(mb){mb.addEventListener('click',function(){var o=b.classList.toggle('open');mb.setAttribute('aria-expanded',o?'true':'false')});b.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('open');mb.setAttribute('aria-expanded','false')})})}
 if(innerWidth<760){document.querySelectorAll('details.svc').forEach(function(d){d.removeAttribute('open')})}
 document.querySelectorAll('[data-pick]').forEach(function(a){a.addEventListener('click',function(){var r=document.querySelector('input[name=coming_with][value='+a.getAttribute('data-pick')+']');if(r)r.checked=true})});
-var rd=document.querySelector('.ready');if(rd){var R=[[0, "Veelbelovend", "Het potentieel is er; de structuur nog niet. Zo beginnen de meeste projecten."], [3, "Op weg", "Er ontbreken nog een paar onderdelen voordat het project kan meedingen naar financiering."], [5, "Klaar om te concurreren", "Tijd om het met de juiste partners op tafel te leggen."]],bx=rd.querySelectorAll('.r-list input');function up(){var n=0;bx.forEach(function(x){if(x.checked)n++});var k=R[0];R.forEach(function(r){if(n>=r[0])k=r});rd.querySelector('.r-n').textContent=n+' / '+bx.length;rd.querySelector('.r-t').textContent=k[1];rd.querySelector('.r-p').textContent=k[2];rd.classList.toggle('lvl2',n>=R[1][0]);rd.classList.toggle('lvl3',n>=R[2][0])}bx.forEach(function(x){x.addEventListener('change',up)})}
+var rd=document.querySelector('.ready');if(rd){var R=[[0, "Veelbelovend", "Het potentieel is er; de structuur nog niet. Zo beginnen de meeste projecten."], [3, "Op weg", "Er ontbreken nog een paar onderdelen voordat het project kan meedingen naar financiering."], [6, "Klaar om te concurreren", "Tijd om het met de juiste partners op tafel te leggen."]],bx=rd.querySelectorAll('.r-list input');function up(){var n=0;bx.forEach(function(x){if(x.checked)n++});var k=R[0];R.forEach(function(r){if(n>=r[0])k=r});rd.querySelector('.r-n').textContent=n+' / '+bx.length;rd.querySelector('.r-t').textContent=k[1];rd.querySelector('.r-p').textContent=k[2];rd.classList.toggle('lvl2',n>=R[1][0]);rd.classList.toggle('lvl3',n>=R[2][0])}bx.forEach(function(x){x.addEventListener('change',up)})}
 var br=document.querySelector('.bridge');if(br){var bs=br.querySelectorAll('.toggle button');function pick(k){br.setAttribute('data-side',k);bs.forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute('data-k')===k?'true':'false')})}bs.forEach(function(x){x.addEventListener('click',function(){pick(x.getAttribute('data-k'))})});pick('project')}
 var ms=document.querySelector('#showcases');if(ms){var cs=ms.querySelectorAll('.filter button.tab'),ts=ms.querySelectorAll('.case[data-tags]');cs.forEach(function(c){c.addEventListener('click',function(){var v=c.getAttribute('data-f');cs.forEach(function(x){x.classList.toggle('on',x===c)});ts.forEach(function(t){t.classList.toggle('off',!!v&&t.getAttribute('data-tags').split('|').indexOf(v)<0)})})})}
 var f=document.querySelector('form.form');if(f){f.addEventListener('submit',function(ev){if(!f.getAttribute('action')){ev.preventDefault();f.querySelector('.note').textContent="Het formulier is nog niet gekoppeld. Neem contact met ons op via LinkedIn."}})}})();
