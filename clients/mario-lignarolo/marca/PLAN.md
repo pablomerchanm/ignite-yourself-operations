@@ -30,6 +30,7 @@ Pablo y Claude co-dirigen el pulido de la marca de Mario: narrativa, storytellin
 | 22 oct 2026 | **«SER» no es un producto.** Es la palabra clave para escribirle por DM de su carrusel fijado del 17 oct 2025. El escalón de uno a uno lleva el nombre que Mario le dé, si existe hoy. | Pablo + Claude |
 | 22 oct 2026 | **Sin estadísticas de Mario por ahora.** La marca se construye desde el criterio del estudio de lo que es una marca personal, con lo público (`01-PUBLICO.md`). | Pablo |
 | 22 oct 2026 | **Modelo de referencia: tomilappi.com** (hecho por Pablo). Ver `02-MODELO.md`. | Pablo |
+| 22 oct 2026 | **Orden de trabajo: primero narrativa, storytelling y secciones; lo visual al final.** Propuesta en `03-NARRATIVA.md`. | Pablo |
 | 22 oct 2026 | **Ángulo de la web: Mario como founder.** La página vende a Mario a título personal, desde la autoridad, y él abarca todas sus marcas y plataformas. No es una landing de Psico-Cibernética. | Pablo |
 
 ## Pendiente con Mario
