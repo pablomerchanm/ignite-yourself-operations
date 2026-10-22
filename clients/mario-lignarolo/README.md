@@ -22,6 +22,8 @@ npm run typecheck
 | Paleta, tipografías, geometría del hero, motion | `app/globals.css` |
 | Fotos | `public/mario/` |
 
+Plan de marca en curso (posicionamiento, voz, narrativa y línea gráfica) y registro de decisiones: `marca/PLAN.md`.
+
 Cada bloque de `content.ts` lleva su estado: **CONFIRMADO**, **HIPÓTESIS** o **CONFIRMAR** (no se publica como hecho sin aprobación de Mario).
 Un enlace con `href: ""` se muestra como pendiente y no navega.
 
