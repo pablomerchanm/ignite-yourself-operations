@@ -2,7 +2,7 @@
 
 Pablo propone tomilappi.com, un sitio hecho por él, como referencia de lo que el estudio considera una marca personal. La idea es construir la de Mario desde ese criterio, sin esperar sus estadísticas. Revisado el 22 oct 2026.
 
-> **Decisión de Pablo (22 oct 2026):** de Tomi se toman los principios, no la forma: nada de coordenadas, índice numerado ni fórmulas suyas. El esqueleto del § 2 quedó reemplazado por `03-NARRATIVA.md` (v2), que sale de lo que Mario necesita.
+> **Decisión de Pablo (22 oct 2026):** de Tomi se toman los principios, no la forma: nada de coordenadas, índice numerado ni fórmulas suyas. El esqueleto del § 2 quedó reemplazado por `03-NARRATIVA.md`.
 
 ## 1. Qué hace que tomilappi.com sea una marca personal
 

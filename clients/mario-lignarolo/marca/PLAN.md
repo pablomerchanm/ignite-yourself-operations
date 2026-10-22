@@ -32,6 +32,7 @@ Pablo y Claude co-dirigen el pulido de la marca de Mario: narrativa, storytellin
 | 22 oct 2026 | **Modelo de referencia: tomilappi.com** (hecho por Pablo). Ver `02-MODELO.md`. | Pablo |
 | 22 oct 2026 | **Orden de trabajo: primero narrativa, storytelling y secciones; lo visual al final.** Propuesta en `03-NARRATIVA.md`. | Pablo |
 | 22 oct 2026 | **De Tomi, principios y no forma.** Nada de coordenadas, índice numerado ni sus fórmulas: la estructura sale de lo que Mario necesita (`03-NARRATIVA.md` v2). | Pablo |
+| 22 oct 2026 | **Se descarta la v2 (frases suyas en primera persona como títulos). Base: la v1, en tercera persona**, sin lo propio de Tomi (`03-NARRATIVA.md` v3). Quedan decididas la voz (tercera persona, él solo en citas) y el orden (la obra antes que la historia). | Pablo |
 | 22 oct 2026 | **Ángulo de la web: Mario como founder.** La página vende a Mario a título personal, desde la autoridad, y él abarca todas sus marcas y plataformas. No es una landing de Psico-Cibernética. | Pablo |
 
 ## Pendiente con Mario
