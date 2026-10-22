@@ -2,6 +2,8 @@
 
 Pablo propone tomilappi.com, un sitio hecho por él, como referencia de lo que el estudio considera una marca personal. La idea es construir la de Mario desde ese criterio, sin esperar sus estadísticas. Revisado el 22 oct 2026.
 
+> **Decisión de Pablo (22 oct 2026):** de Tomi se toman los principios, no la forma: nada de coordenadas, índice numerado ni fórmulas suyas. El esqueleto del § 2 quedó reemplazado por `03-NARRATIVA.md` (v2), que sale de lo que Mario necesita.
+
 ## 1. Qué hace que tomilappi.com sea una marca personal
 
 1. **La persona es la marca, y la portada es su nombre.** «Tomi *Lappi»* va gigante sobre un retrato, con una frase («A heartbreakingly human approach to self-help, the self, life and love»), el lugar («Helsinki | Europe | Worldwide») y el índice de su obra: (01) Courses (02) Mentoring (03) Body of work (04) Words. En la portada no aparece ningún producto.
