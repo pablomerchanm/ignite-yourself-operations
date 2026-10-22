@@ -341,9 +341,10 @@ export const lignarolo = {
   tagline: "Ereditá di Famiglia",
   // [MARIO] textual (carrusel del 17 oct 2025).
   quote: "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido: sentir el placer de crear.",
-  // [ENTREVISTA § 7b] entró a llevar el marketing de la marca. [CONFIRMAR] su cargo;
-  // la cifra de los primeros meses no se publica sin su aprobación.
-  role: "Entró a Lignarolo para llevar su marketing. Ahí aprendió cómo funciona una empresa: crear producto, venderlo y construir una marca.",
+  // [ENTREVISTA § 7b] la marca es de su hermano Giorgio (Pablo, 22 oct) y Mario
+  // entró a llevar el marketing. [CONFIRMAR] su cargo; la cifra de los primeros
+  // meses no se publica sin su aprobación.
+  role: "Lignarolo es la marca de su hermano Giorgio. Mario entró a llevar su marketing y ahí aprendió cómo funciona una empresa: crear producto, venderlo y construir una marca.",
   description: "Zapatos y botas artesanales en cuero italiano, hechos a mano en Bogotá.",
   cta: "Visitar lignarolo.com",
   href: "https://www.lignarolo.com",

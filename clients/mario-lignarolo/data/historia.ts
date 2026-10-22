@@ -107,8 +107,9 @@ export const historia = {
       paras: [
         // [MARIO]
         "Empecé en Lignarolo. Y sentí nuevamente algo que pensé que se había ido: **el placer de crear.** De explorar mi creatividad. De construir sin miedo al juicio. Era como volver a casa después de tanto tiempo.",
-        // [ENTREVISTA] [CONFIRMAR] su rol; sin la cifra de los primeros meses.
-        "Entré a llevar el marketing de la marca. Ahí aprendí cómo funciona una empresa: **crear producto, venderlo, construir una marca.**",
+        // [ENTREVISTA] + Pablo (22 oct): Giorgio es su hermano. [CONFIRMAR] que se nombre
+        // y su rol; sin la cifra de los primeros meses.
+        "Lignarolo era la marca de mi hermano Giorgio, y me invitó a llevar el marketing. Ahí aprendí cómo funciona una empresa: **crear producto, venderlo, construir una marca.**",
       ],
     },
     {
