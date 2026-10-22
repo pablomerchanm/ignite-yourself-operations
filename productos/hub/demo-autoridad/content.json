@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "lang": "es",
+    "locale": "es_CO",
+    "title": "Inés Zuloaga — Gobierno corporativo",
+    "description": "Inés Zuloaga: presidenta de junta y consejera independiente. Prensa, artículos y afiliaciones en un solo lugar.",
+    "siteName": "Inés Zuloaga",
+    "themeColor": "#15181d",
+    "icon": "icon.svg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Inter:wght@400;500&display=swap",
+    "draft": true,
+    "ribbon": "Demo · persona ficticia"
+  },
+  "layout": "board",
+  "cards": [
+    {
+      "type": "portrait",
+      "id": "retrato",
+      "size": "big",
+      "tone": 1,
+      "image": { "src": "", "label": "Retrato vertical 3:4 · fondo oscuro liso, luz lateral, brazos cruzados", "alt": "Inés Zuloaga" }
+    },
+    {
+      "type": "intro",
+      "id": "ines",
+      "size": "wide",
+      "claim": "Inés Zuloaga",
+      "sub": "Juntas que duran más que un ciclo.",
+      "lines": [
+        "Presidenta de junta · empresa familiar de alimentos",
+        "Consejera independiente · sector financiero",
+        "Profesora invitada · gobierno corporativo"
+      ]
+    },
+    {
+      "type": "feature",
+      "id": "nuevo",
+      "size": "wide",
+      "tone": 3,
+      "titleOn": "body",
+      "image": { "src": "", "label": "Foto horizontal 16:10 · hablando en un foro, público de espaldas", "fade": false },
+      "kicker": "— Nuevo",
+      "title": "Una junta no se hereda: se construye",
+      "accent": ".",
+      "text": "Lo que aprendimos al profesionalizar la junta de una empresa familiar de tercera generación.",
+      "cta": { "text": "Leer el artículo", "href": "https://example.com/articulo" },
+      "by": { "text": "Revista de negocios" }
+    },
+    {
+      "type": "list",
+      "id": "prensa",
+      "variant": "press",
+      "tone": 0,
+      "kicker": "Prensa",
+      "count": true,
+      "items": [
+        { "source": "Diario nacional", "meta": "2026", "label": "Empresas familiares: el relevo empieza en la junta", "note": "Por qué la sucesión se decide años antes de que llegue.", "href": "https://example.com/prensa/1" },
+        { "source": "Revista de negocios", "meta": "2026", "label": "«Un consejero independiente no es un invitado»", "note": "Entrevista sobre independencia, conflictos de interés y voto.", "href": "https://example.com/prensa/2" },
+        { "source": "Podcast de la industria", "meta": "2025", "label": "Gobierno corporativo sin jerga", "note": "Cuarenta minutos sobre lo que una junta hace y lo que no.", "href": "https://example.com/prensa/3" },
+        { "source": "Diario regional", "meta": "2024", "label": "Nombrada presidenta de junta", "note": "Asume con un mandato: separar familia, propiedad y gestión.", "href": "https://example.com/prensa/4" }
+      ]
+    },
+    {
+      "type": "list",
+      "id": "afiliaciones",
+      "variant": "people",
+      "tone": 0,
+      "kicker": "Afiliaciones",
+      "count": true,
+      "items": [
+        { "label": "Empresa familiar", "note": "Presidenta de junta", "href": "https://example.com/empresa" },
+        { "label": "Universidad", "note": "Profesora invitada", "href": "https://example.com/universidad" },
+        { "label": "LinkedIn", "href": "https://www.linkedin.com/" }
+      ]
+    }
+  ],
+  "footer": {
+    "name": "Inés Zuloaga",
+    "mark": "IZ"
+  }
+}

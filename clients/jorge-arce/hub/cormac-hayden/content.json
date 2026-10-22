@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en_US",
+    "title": "Cormac Hayden — Founder, Oasis",
+    "description": "Cormac Hayden, founder of Oasis: find what's healthy with independent lab tests. Plus HALOS, the long form on YouTube, and open roles.",
+    "siteName": "Cormac Hayden",
+    "themeColor": "#0a0b0c",
+    "icon": "img/avatar.jpg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;800&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap",
+    "base": "/hub/cormac-hayden/",
+    "draft": true,
+    "ribbon": "Proposal · Ignite Yourself"
+  },
+  "layout": "board",
+  "top": {
+    "wordmark": "Cormac Hayden",
+    "href": "https://cormac.so",
+    "links": [
+      {
+        "label": "cormac.so",
+        "href": "https://cormac.so"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/cormachayden_"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "type": "intro",
+      "id": "cormac",
+      "name": "Cormac Hayden",
+      "role": "Founder, Oasis",
+      "avatar": {
+        "src": "img/avatar.jpg"
+      },
+      "href": "https://cormac.so",
+      "claim": "The only thing between you and success",
+      "accent": "is refusing to stop."
+    },
+    {
+      "type": "feature",
+      "id": "oasis",
+      "size": "big",
+      "tone": 1,
+      "titleOn": "body",
+      "image": {
+        "src": "img/oasis.jpg",
+        "alt": "The Oasis app scanning a pack of gum",
+        "focus": "50% 60%"
+      },
+      "kicker": "Consumer health layer",
+      "title": "Oasis",
+      "accent": ".",
+      "chips": [
+        {
+          "text": "Free"
+        },
+        {
+          "text": "No ads"
+        },
+        {
+          "text": "Lab-tested"
+        }
+      ],
+      "sub": "Find what's healthy.",
+      "text": "Independent lab tests and top ranking waters, filters, supplements, foods and more.",
+      "meta": "★ 4.8 · 13K ratings on the App Store",
+      "cta": {
+        "text": "Get Oasis — free",
+        "href": "https://apps.apple.com/app/id6499478532",
+        "track": "app_click"
+      },
+      "alt": {
+        "text": "Android",
+        "href": "https://play.google.com/store/apps/details?id=com.liveoasis.oasis",
+        "track": "app_click"
+      }
+    },
+    {
+      "type": "photo",
+      "id": "youtube",
+      "size": "tall",
+      "tone": 1,
+      "image": {
+        "src": "img/track.jpg",
+        "alt": "Standing on a blue running track",
+        "focus": "50% 60%"
+      },
+      "kicker": "Long form",
+      "title": "YouTube",
+      "href": "https://www.youtube.com/@cormachayden"
+    },
+    {
+      "type": "tile",
+      "id": "halos",
+      "tone": 3,
+      "kicker": "Tool",
+      "title": "HALOS",
+      "accent": "Your context. Any model.",
+      "href": "https://www.halos.sh/"
+    },
+    {
+      "type": "tile",
+      "id": "email",
+      "tone": 6,
+      "kicker": "Contact · c@cormac.so",
+      "title": "Email",
+      "href": "mailto:c@cormac.so",
+      "track": "contact_click"
+    },
+    {
+      "type": "rail",
+      "id": "watch",
+      "kicker": "Watch",
+      "ratio": "3:4",
+      "items": [
+        {
+          "image": {
+            "src": "img/ai-stack.jpg",
+            "alt": ""
+          },
+          "title": "The AI stack I'd use to build a business",
+          "sub": "Starting from zero?",
+          "play": true,
+          "href": "https://www.instagram.com/cormachdn/"
+        },
+        {
+          "image": {
+            "src": "img/owner-athlete.jpg",
+            "alt": ""
+          },
+          "title": "Signs you are an owner athlete",
+          "sub": "standard operating principles for a new class of high performance founders",
+          "play": true,
+          "href": "https://www.instagram.com/cormachdn/"
+        },
+        {
+          "image": {
+            "src": "img/just-commit.jpg",
+            "alt": ""
+          },
+          "title": "just commit bro",
+          "sub": "2020",
+          "href": "https://www.instagram.com/cormachdn/"
+        },
+        {
+          "image": {
+            "src": "img/desk.jpg",
+            "alt": "A desk facing the ocean at sunset"
+          },
+          "href": "https://www.instagram.com/cormachdn/"
+        },
+        {
+          "image": {
+            "src": "img/ocean.jpg",
+            "alt": "A room over the ocean"
+          },
+          "play": true,
+          "href": "https://www.instagram.com/cormachdn/"
+        }
+      ]
+    },
+    {
+      "type": "story",
+      "id": "discipline",
+      "size": "wide",
+      "tone": 4,
+      "kicker": "just commit bro",
+      "title": "the curse of discipline is everyday looks the same.",
+      "accent": "the curse of comfort is every year looks the same",
+      "art": {
+        "src": "art/commits.svg"
+      }
+    },
+    {
+      "type": "tile",
+      "id": "hiring",
+      "tone": 2,
+      "kicker": "Hiring · LA preferred",
+      "title": "Creative Director",
+      "accent": "/ Videographer",
+      "href": "https://cormac.so/careers/creative-director",
+      "size": "wide"
+    },
+    {
+      "type": "pills",
+      "label": "Elsewhere",
+      "tone": 1,
+      "cols": 3,
+      "items": [
+        {
+          "label": "YouTube",
+          "href": "https://www.youtube.com/@cormachayden"
+        },
+        {
+          "label": "X",
+          "href": "https://x.com/cormachayden_"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/cormachdn/"
+        }
+      ]
+    }
+  ],
+  "bar": {
+    "items": [
+      {
+        "label": "Home",
+        "href": "#top",
+        "icon": "up"
+      },
+      {
+        "label": "Watch",
+        "href": "#watch",
+        "icon": "play"
+      },
+      {
+        "label": "Email",
+        "href": "mailto:c@cormac.so",
+        "icon": "chat"
+      }
+    ],
+    "cta": {
+      "text": "Get Oasis →",
+      "href": "https://apps.apple.com/app/id6499478532",
+      "track": "app_click"
+    }
+  },
+  "footer": {
+    "name": "Cormac Hayden",
+    "links": [
+      {
+        "label": "cormac.so",
+        "href": "https://cormac.so"
+      }
+    ]
+  }
+}

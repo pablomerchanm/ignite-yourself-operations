@@ -1,0 +1,28 @@
+/* Greg LaVecchia · el registro de sus portadas: negro, hueso y oro («$1B», «Generational»),
+   títulos condensados en mayúscula; Bloom entra con su propio cielo azul. */
+:root{
+  --bg:#0d0d0b; --fg:#f4f1ea; --acc:#e3b85b; --deco:transparent;
+
+  --t1-bg:#161613; --t1-fg:#f4f1ea; --t1-acc:#e3b85b; --t1-line:#24231f;
+  --t2-bg:#e3b85b; --t2-fg:#0d0d0b; --t2-acc:#0d0d0b;
+  --t3-bg:#f4f1ea; --t3-fg:#0d0d0b; --t3-acc:#9a6f12;
+  --t4-bg:#8fd3f4; --t4-fg:#0d0d0b; --t4-acc:#0b4a2c;
+  --t5-bg:#1d1c19; --t5-fg:#f4f1ea; --t5-acc:#e3b85b;
+  --t6-bg:#2c2a25; --t6-fg:#f4f1ea; --t6-acc:#e3b85b;
+
+  --bar-bg:#e3b85b; --bar-fg:#0d0d0b; --bar-acc:#0d0d0b;
+
+  --display:"Anton",Impact,"Arial Narrow",sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+
+  --title-weight:400;
+  --title-track:.005em;
+  --title-lead:.95;
+  --title-case:uppercase;
+  --acc-style:normal;
+  --scale:.78;
+  --radius:.5rem;
+  --btn-radius:.5rem;
+}

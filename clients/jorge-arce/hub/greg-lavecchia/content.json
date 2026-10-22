@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "lang": "en",
+    "locale": "en_US",
+    "title": "Greg LaVecchia — Co-founder & CEO, Bloom Nutrition",
+    "description": "Greg LaVecchia: how he built Bloom Nutrition in his 20s, the Generational Run on YouTube, and where to find Bloom.",
+    "siteName": "Greg LaVecchia",
+    "themeColor": "#0d0d0b",
+    "icon": "img/avatar.jpg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap",
+    "base": "/hub/greg-lavecchia/",
+    "draft": true,
+    "ribbon": "Proposal · Ignite Yourself",
+    "utm": "utm_source=instagram&utm_medium=bio&utm_campaign=greglav"
+  },
+  "layout": "board",
+  "top": {
+    "wordmark": "Greg LaV",
+    "links": [
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/@GregLaVecchia"
+      },
+      {
+        "label": "Bloom",
+        "href": "https://bloomnu.com/"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "type": "intro",
+      "id": "greg",
+      "name": "Greg LaVecchia",
+      "role": "Co-founder & CEO, Bloom Nutrition",
+      "avatar": {
+        "src": "img/avatar.jpg"
+      },
+      "href": "https://www.youtube.com/@GregLaVecchia",
+      "claim": "Give people access to rooms",
+      "accent": "they normally wouldn't get into."
+    },
+    {
+      "type": "video",
+      "id": "billion",
+      "size": "xl",
+      "tone": 1,
+      "youtube": "ut2X6SC84bA",
+      "poster": {
+        "src": "https://i.ytimg.com/vi/ut2X6SC84bA/maxresdefault.jpg"
+      },
+      "kicker": "Watch · 10 lessons",
+      "title": "How I Built a $1B Brand",
+      "accent": "in My 20s"
+    },
+    {
+      "type": "tile",
+      "id": "subscribe",
+      "tone": 2,
+      "kicker": "YouTube · Generational Run",
+      "title": "Subscribe",
+      "accent": ".",
+      "href": "https://www.youtube.com/@GregLaVecchia?sub_confirmation=1",
+      "track": "subscribe_click"
+    },
+    {
+      "type": "tile",
+      "id": "email",
+      "tone": 6,
+      "kicker": "Proposal · email list",
+      "title": "The room",
+      "accent": "in your inbox.",
+      "href": ""
+    },
+    {
+      "type": "rail",
+      "id": "generational-run",
+      "kicker": "Generational Run",
+      "count": true,
+      "ratio": "16:9",
+      "wide": true,
+      "items": [
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/mttlkjtoYxI/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "Inside a $1B CEO's Generational Run",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=mttlkjtoYxI"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/nJlv1sidfKE/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "The real inside look of a Generational Run",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=nJlv1sidfKE"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/6OSEqeWG2H4/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "10 Generational Lies You Need to Unlearn",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=6OSEqeWG2H4"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/V-iMQ2ktX7k/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "$1B CEO: 8 rules I wish I knew in my 20s",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=V-iMQ2ktX7k"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/2H4Q2FgP2w4/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "What a $1B CEO Actually Does in a Day",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=2H4Q2FgP2w4"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/ORKBX1r5-zI/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "$1B Brand: How we became #1 on TikTok Shop",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=ORKBX1r5-zI"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/6xO3NP8x9Y0/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "How to Launch a Product Without a Following (What Actually Works)",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=6xO3NP8x9Y0"
+        },
+        {
+          "image": {
+            "src": "https://i.ytimg.com/vi/wrWl294c5VM/hqdefault.jpg",
+            "alt": ""
+          },
+          "title": "If You're a Nobody But You Have Ambition, Watch This",
+          "play": true,
+          "href": "https://www.youtube.com/watch?v=wrWl294c5VM"
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "id": "bloom",
+      "tone": 4,
+      "image": {
+        "src": "img/bloom-wellness.jpg",
+        "alt": "Bloom colostrum and collagen next to an iced coffee",
+        "focus": "60% 70%",
+        "fade": false
+      },
+      "kicker": "Co-founder & CEO",
+      "title": "Bloom",
+      "accent": ".",
+      "sub": "Health and wellness supplements for women.",
+      "meta": "Target · Walmart · Ulta · CVS · Walgreens · Amazon",
+      "cta": {
+        "text": "Shop Bloom",
+        "href": "https://bloomnu.com/",
+        "utm": true,
+        "track": "shop_click"
+      },
+      "alt": {
+        "text": "Find a store",
+        "href": "https://bloomnu.com/pages/store-locator"
+      }
+    },
+    {
+      "type": "list",
+      "id": "recognition",
+      "variant": "press",
+      "size": "wide",
+      "tone": 1,
+      "kicker": "Recognition",
+      "items": [
+        {
+          "source": "Forbes",
+          "meta": "2023",
+          "label": "30 Under 30 · Social Media",
+          "note": "With Mari Llewellyn, as co-founders of Bloom Nutrition.",
+          "href": "https://www.forbes.com/profile/bloom-nutrition/"
+        },
+        {
+          "source": "EY",
+          "meta": "2024",
+          "label": "Entrepreneur Of The Year® · Greater Los Angeles",
+          "note": "Greg LaVecchia and Mari Llewellyn, Bloom Nutrition.",
+          "href": "https://www.ey.com/en_us/newsroom/2024/06/ey-announces-winners-for-the-entrepreneur-of-the-year-2024-greater-los-angeles-award"
+        },
+        {
+          "source": "School of Hard Knocks",
+          "meta": "2026",
+          "label": "He Had a 2.5 GPA… Now He's Got a $1 Billion Brand",
+          "href": "https://podcast.ausha.co/school-of-hard-knocks-podcast/greg-lavecchia-he-had-a-2-5-gpa-now-he-s-got-a-1-billion-brand"
+        }
+      ]
+    },
+    {
+      "type": "story",
+      "id": "building",
+      "size": "wide",
+      "tone": 5,
+      "kicker": "From the channel",
+      "title": "Still learning. Still building.",
+      "accent": "Not even close to being done."
+    },
+    {
+      "type": "pills",
+      "label": "Elsewhere",
+      "tone": 1,
+      "cols": 2,
+      "items": [
+        {
+          "label": "YouTube",
+          "href": "https://www.youtube.com/@GregLaVecchia"
+        },
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/greglav/"
+        },
+        {
+          "label": "TikTok",
+          "href": "https://www.tiktok.com/@greglav"
+        },
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/in/greg-lavecchia/"
+        }
+      ]
+    }
+  ],
+  "bar": {
+    "items": [
+      {
+        "label": "Home",
+        "href": "#top",
+        "icon": "up"
+      },
+      {
+        "label": "Watch",
+        "href": "#generational-run",
+        "icon": "play"
+      },
+      {
+        "label": "Bloom",
+        "href": "#bloom",
+        "icon": "bag"
+      }
+    ],
+    "cta": {
+      "text": "Subscribe →",
+      "href": "https://www.youtube.com/@GregLaVecchia?sub_confirmation=1",
+      "track": "subscribe_click"
+    }
+  },
+  "footer": {
+    "name": "Greg LaVecchia"
+  }
+}

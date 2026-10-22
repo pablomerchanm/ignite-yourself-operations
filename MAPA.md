@@ -3,7 +3,7 @@
 > Este archivo existe por una razón: que nunca haya que preguntarse "¿dónde quedó
 > aquello?". Si creas algo nuevo, añádelo aquí.
 >
-> Última revisión: 4 de octubre de 2026.
+> Última revisión: 21 de octubre de 2026.
 
 ---
 
@@ -103,6 +103,31 @@ en el HTML recordándolo.
 Sus fotos y los logos de prensa salen de su propio repositorio
 (`pablomerchanm/Adriana-Mejia-Cuartas`, rama `web-herencia`, carpeta
 `06-web/sitio/web/img/`) y ya estaban publicados en su web.
+
+### El producto Hub — el «linktree sofisticado»
+
+La mini web del enlace de la bio, como producto de entrada por suscripción.
+Vive fuera de `clients/jorge-arce/` a propósito: la ficha tiene precios
+propuestos y no se publica.
+
+| Dónde | Qué es |
+|---|---|
+| `clients/jorge-arce/hub/index.html` | **La página de venta**, pública en igniteyourself.co/hub (USD 750 + Hub Care USD 49/mes). Enlazada desde la home (sección «Start with the door» y el pie) |
+| `productos/hub/ANALISIS.md` | **Qué tan atractivo es el producto**: mercado con fuentes, techo de precio, segmentos, números, riesgos y la prueba de 3 semanas |
+| `productos/hub/FICHA.md` | **El producto**: qué es, contra quién compite (Linktree, Komi), planes y precios propuestos, opciones de nicho, proceso y decisiones pendientes |
+| `productos/hub/README.md` | **Cómo se hace uno**, paso a paso, y cómo se publica en el dominio del cliente |
+| `productos/hub/content.schema.md` | El contrato de `content.json` (cada campo y sus límites) |
+| `productos/hub/plantilla/` | La plantilla: `hub.css`, `hub.js`, `tokens.css` de partida |
+| `productos/hub/demo-programa/` | Demo bold (creador con programa). Persona ficticia |
+| `productos/hub/demo-autoridad/` | Demo editorial (autoridad). Persona ficticia |
+| `tools/build-hub.mjs` | `content.json` → `index.html` (valida; sin dependencias) |
+| `tools/check-hub.mjs` | Control de calidad en Chromium, con capturas |
+| `productos/hub/casos/` | **La estrategia de cada hub de propuesta**: ICP, el hueco, la acción principal, qué es textual y qué es copy nuestro, qué verificar |
+| `clients/jorge-arce/hub/<slug>/` | **Los hubs de propuesta** para prospectos reales (Eugenia Robledo, Martín Mendoza, Cormac Hayden, Greg LaVecchia, Iman Gadzhi) → igniteyourself.co/hub/<slug>, con `noindex` |
+
+Sale de los hubs hechos a mano: Perdón Práctico (`perdonpractico/links.html`
+en el repo 2), Mario (`clients/mario-lignarolo/public/links/`), el Dr. Arce
+(`clients/jorge-arce/enlaces/arce/`) y Adriana (adrianamejiacuartas.com/links).
 
 ### Clientes y prospectos
 

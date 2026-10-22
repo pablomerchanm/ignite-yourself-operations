@@ -1,0 +1,29 @@
+/* Martín Mendoza · editorial oscuro: madera, cuero y piedra, como sus interiores
+   y las portadas de sus series (serif fina, la segunda línea en itálica). */
+:root{
+  --bg:#17120f; --fg:#efe6d9; --acc:#c99a6b; --deco:transparent;
+
+  --t1-bg:#221a15; --t1-fg:#efe6d9; --t1-acc:#c99a6b; --t1-line:#33281f;
+  --t2-bg:#6b4a33; --t2-fg:#f6ede1; --t2-acc:#f0d3ae;
+  --t3-bg:#efe6d9; --t3-fg:#17120f; --t3-acc:#8a5a36;
+  --t4-bg:#b9ae9f; --t4-fg:#17120f; --t4-acc:#5a3b26;
+  --t5-bg:#2a211b; --t5-fg:#efe6d9; --t5-acc:#c99a6b;
+  --t6-bg:#d8c7b0; --t6-fg:#17120f; --t6-acc:#6b4a33;
+
+  --bar-bg:#efe6d9; --bar-fg:#17120f; --bar-acc:#17120f;
+
+  --display:"Cormorant Garamond",Georgia,serif;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"Inter",system-ui,sans-serif;
+
+  --title-weight:400;
+  --title-track:-.01em;
+  --title-lead:1.02;
+  --acc-style:italic;
+  --scale:.8;
+  --radius:2px;
+  --btn-radius:3rem;
+  --btn-font:var(--sans);
+  --btn-weight:600;
+}

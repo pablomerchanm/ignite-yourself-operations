@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════════════════════════
+   Hub · tokens de marca (lo ÚNICO de diseño que cambia por cliente)
+   El build lo copia a la carpeta del cliente solo si ahí no existe.
+   Las fuentes se cargan desde content.json (meta.fonts) o con @font-face aquí.
+   ═══════════════════════════════════════════════════════════════ */
+:root{
+  /* la página */
+  --bg:#f3efe7;          /* fondo */
+  --fg:#141414;          /* texto sobre el fondo */
+  --acc:#2b4bd8;         /* remate de los títulos sobre el fondo */
+  --deco:#e2dccf;        /* glifos de fondo */
+
+  /* seis tonos de tarjeta: fondo, texto, remate (y filete opcional --tN-line) */
+  --t1-bg:#141414; --t1-fg:#f3efe7; --t1-acc:#9fb1ff;
+  --t2-bg:#2b4bd8; --t2-fg:#f3efe7; --t2-acc:#141414;
+  --t3-bg:#fbf8f2; --t3-fg:#141414; --t3-acc:#2b4bd8;
+  --t4-bg:#d9d2c3; --t4-fg:#141414; --t4-acc:#2b4bd8;
+  --t5-bg:#1f3a2c; --t5-fg:#f3efe7; --t5-acc:#c9e27a;
+  --t6-bg:#e9b9a6; --t6-fg:#141414; --t6-acc:#141414;
+
+  /* la barra inferior del móvil */
+  --bar-bg:#141414; --bar-fg:#f3efe7; --bar-acc:#9fb1ff;
+
+  /* tipografía: display (títulos), serif (subtítulos), sans (texto), mono (etiquetas) */
+  --display:"Space Grotesk",system-ui,sans-serif;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter Tight",system-ui,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+
+  /* el registro: bold (estos valores) o editorial (ver demo-autoridad) */
+  --title-weight:700;     /* 400 para un serif editorial */
+  --title-track:-.055em;  /* -.01em en editorial */
+  --title-lead:.9;        /* 1.05 en editorial */
+  --acc-style:normal;     /* italic: el remate en itálica */
+  --scale:1;              /* tamaño de los títulos grandes (.6–.7 en editorial) */
+  --radius:1.1rem;        /* 0–.2rem en editorial */
+  --btn-radius:3rem;
+  /* --btn-font / --btn-weight: la letra de botones y píldoras (por defecto, la de los títulos).
+     En un registro serif suele ir mejor la sans: --btn-font:var(--sans); --btn-weight:600; */
+  /* --title-case:uppercase; para marcas que titulan en mayúscula */
+}

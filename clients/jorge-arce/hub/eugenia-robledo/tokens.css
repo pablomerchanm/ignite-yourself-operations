@@ -1,0 +1,30 @@
+/* Eugenia Robledo · registro editorial cálido: su ojo es el producto.
+   Paleta sacada de su propio feed: crema, terracota, la baldosa roja,
+   el amarillo del plato, el azul del cuarto y el rosa del muro. */
+:root{
+  --bg:#f3eee6; --fg:#1f1b17; --acc:#b4432f; --deco:transparent;
+
+  --t1-bg:#1f1b17; --t1-fg:#f3eee6; --t1-acc:#e9a07a;
+  --t2-bg:#b4432f; --t2-fg:#fbf6ee; --t2-acc:#f6d9c7;
+  --t3-bg:#fbf8f2; --t3-fg:#1f1b17; --t3-acc:#b4432f; --t3-line:#e4dccf;
+  --t4-bg:#f2c230; --t4-fg:#1f1b17; --t4-acc:#8c2f1f;
+  --t5-bg:#2f5a5a; --t5-fg:#f3eee6; --t5-acc:#f2c9b8;
+  --t6-bg:#e7a3a7; --t6-fg:#1f1b17; --t6-acc:#7a1f2b;
+
+  --bar-bg:#1f1b17; --bar-fg:#f3eee6; --bar-acc:#e9a07a;
+
+  --display:"Instrument Serif",Georgia,serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+
+  --title-weight:400;
+  --title-track:-.015em;
+  --title-lead:1;
+  --acc-style:italic;
+  --scale:.9;
+  --radius:.35rem;
+  --btn-radius:3rem;
+  --btn-font:var(--sans);
+  --btn-weight:600;
+}
