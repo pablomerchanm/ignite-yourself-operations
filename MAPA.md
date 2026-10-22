@@ -112,6 +112,8 @@ propuestos y no se publica.
 
 | Dónde | Qué es |
 |---|---|
+| `clients/jorge-arce/hub/index.html` | **La página de venta**, pública en igniteyourself.co/hub (USD 750 + Hub Care USD 49/mes). Enlazada desde la home (sección «Start with the door» y el pie) |
+| `productos/hub/ANALISIS.md` | **Qué tan atractivo es el producto**: mercado con fuentes, techo de precio, segmentos, números, riesgos y la prueba de 3 semanas |
 | `productos/hub/FICHA.md` | **El producto**: qué es, contra quién compite (Linktree, Komi), planes y precios propuestos, opciones de nicho, proceso y decisiones pendientes |
 | `productos/hub/README.md` | **Cómo se hace uno**, paso a paso, y cómo se publica en el dominio del cliente |
 | `productos/hub/content.schema.md` | El contrato de `content.json` (cada campo y sus límites) |

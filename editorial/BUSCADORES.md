@@ -5,7 +5,9 @@ Cómo está configurado el sitio para que Google, Bing y los asistentes de IA
 
 ## Qué es público
 
-Solo dos cosas: la **home** (`/`, que sirve `igy-mobius/`) y **Insights** (`/insights`).
+Tres cosas: la **home** (`/`, que sirve `igy-mobius/`), **Insights** (`/insights`) y la
+página de **The Authority Hub** (`/hub`, solo la página: los hubs de propuesta que viven
+debajo, `/hub/<slug>`, son privados y llevan `noindex`).
 Todo lo demás vive en el mismo dominio pero es privado o interno: previews de
 clientes, conceptos de plantilla (`/v2`…`/v37-…`), versiones viejas de la home
 (`/igy`, `/igy-v3`, `/igy2`…), documentos y PDF.

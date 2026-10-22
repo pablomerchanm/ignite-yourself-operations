@@ -1,6 +1,12 @@
 # Hub — el «linktree sofisticado» de Ignite · ficha de producto
 
-> **Estado: v0, para decidir.** Esto ordena lo que ya sabemos y propone; no
+> **Decidido el 22 oct 2026 (Pablo):** se llama **The Authority Hub**; cuesta **USD 750
+> una vez + Hub Care opcional de USD 49/mes**, con crédito total si pasa al Authority
+> Platform en 6 meses; la página de venta es **igniteyourself.co/hub** (en inglés, para
+> founders, expertos y profesionales), enlazada desde la home; los casos que se
+> muestran son Perdón Práctico y Adriana Mejía Cuartas. Por qué: **[ANALISIS.md](ANALISIS.md)**.
+>
+> **Estado de lo que sigue: v0.** Esto ordena lo que ya sabemos y propone; no
 > está aprobado. Todo lo marcado **[DECIDIR]** es de Pablo. Los precios son
 > propuesta. Última revisión: 21 de octubre de 2026.
 >
@@ -161,9 +167,9 @@ Hub (USD 39/mes) → Authority Profile (USD 390/año) → Authority Platform (de
 
 ## 11. Decisiones pendientes **[DECIDIR]**
 
-1. **Nombre.** De trabajo: «Hub». Opciones: *Ignite Hub*, *Authority Hub*, *Bio by Ignite*.
+1. ~~**Nombre.**~~ Decidido: **The Authority Hub**.
 2. **Nicho** de la primera ola (§6).
-3. **Planes y precios** (§5).
+3. ~~**Planes y precios** (§5).~~ Decidido: USD 750 una vez + Hub Care USD 49/mes (reemplaza la tabla de §5).
 4. **¿Crédito de Ignite al pie?** La regla del repo es que Ignite no aparece en los assets del cliente; el Ignite Profile gratis sí lleva la marca. Opción: un plan más barato con un crédito discreto.
-5. **Casos públicos:** ¿se pueden mostrar PP, Mario y Adriana en la página de venta? Hace falta permiso de cada uno (lo de Mario sigue en borrador).
+5. ~~**Casos públicos.**~~ Decidido: PP y Adriana, sí; Mario, no (sigue en borrador). Los hubs de propuesta a prospectos no se muestran nunca.
 6. **Cobro:** Whop o Stripe.

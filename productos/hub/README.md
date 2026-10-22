@@ -22,6 +22,9 @@ tools/build-hub.mjs      ← content.json → index.html (valida; sin dependenci
 tools/check-hub.mjs      ← control de calidad en Chromium (+ capturas)
 ```
 
+La página de venta es `clients/jorge-arce/hub/index.html` (igniteyourself.co/hub); el
+análisis de qué tan atractivo es el producto, [ANALISIS.md](ANALISIS.md).
+
 Los hubs de propuesta para prospectos reales (Eugenia Robledo, Martín Mendoza, Cormac Hayden,
 Greg LaVecchia, Iman Gadzhi) viven en `clients/jorge-arce/hub/<slug>/` y su estrategia en
 **[casos/](casos/README.md)**.
