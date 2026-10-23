@@ -522,7 +522,7 @@
     "igy": "A concept by Ignite Yourself, prepared from public sources, speaker biographies and the published record for Dr. Brant’s review. The portraits are provisional art direction, not photographs, and will be replaced with photography he approves. This is not his official website: it has not been reviewed or approved by him, and copy and figures are subject to his validation. Institutional marks are shown for reference only and belong to their owners. Excluded from search engines."
   },
   "proposal": {
-    "active": false,
+    "active": true,
     "href": "/brant/proposal",
     "button": "Your proposal",
     "link": "View your proposal"

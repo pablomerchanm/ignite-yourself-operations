@@ -4,6 +4,8 @@ Fecha: 19 de octubre de 2026. Misma fórmula que la de Priya: una página de pro
 
 **Decisión de Pablo:** que Brant vea primero su página. La propuesta queda lista pero **no se publica** hasta que él muestre interés.
 
+**23 de octubre:** Brant pidió por LinkedIn ver la preview ("So just send the preview"). Se enciende `proposal.active` y la propuesta queda en igniteyourself.co/brant/proposal.
+
 ## El ángulo
 
 Su trayectoria es excepcional, pero hoy está dispersa y no es consistente entre fuentes. Según dónde se mire, tiene entre 120 y 175 patentes:
