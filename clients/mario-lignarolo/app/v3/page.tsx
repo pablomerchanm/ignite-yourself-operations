@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { channels, site } from "@/data/content";
+import type { CSSProperties } from "react";
+import Motion from "@/components/Motion";
+import { site } from "@/data/content";
 import { v3 } from "@/data/v3";
+import Video from "./Video";
 import s from "./v3.module.css";
 
 /**
- * /v3 — iteración de narrativa y diseño («el perfil de revista»).
- * Oculta: no se enlaza desde la web, no entra al sitemap y no se indexa.
- * Contenido en data/v3.ts; estilos aislados en v3.module.css.
+ * /v3 — iteración de la home según marca/BRIEF-MASTER-v1.md.
+ * Oculta: sin enlaces desde la web, fuera del sitemap y `noindex`.
+ * Secuencia: 01 Mario → 02 La tesis → 03 La historia por percepción
+ * → 04 El trabajo (Lignarolo · Hipertrofia del Ser · Psicocibernética)
+ * → 05 Para seguir. Contenido en data/v3.ts; estilos en v3.module.css.
  */
 export const metadata: Metadata = {
   title: v3.meta.title,
@@ -19,36 +24,40 @@ const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
 function Arrow() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.2" className={s.arrow}>
+    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3">
       <path d="M1 8h13M9 3l5 5-5 5" />
     </svg>
   );
 }
 
-/** [CONFIRMAR] con Mario: visible solo mientras el sitio está en borrador. */
-function Tbc({ note }: { note?: string }) {
-  if (!site.draft) return null;
+/** Titular que entra línea a línea (usa el revelado global de <Motion/>). */
+function Lines({ lines, className, as: Tag = "p" }: { lines: React.ReactNode[]; className: string; as?: "h1" | "h2" | "p" }) {
   return (
-    <span className={s.tbc} title="Pendiente de confirmar con Mario">
-      por confirmar{note ? ` · ${note}` : ""}
-    </span>
+    <Tag className={className} data-reveal="lines">
+      {lines.map((l, i) => (
+        <span key={i} className="line" style={{ "--i": i } as CSSProperties}>
+          <span>{l}</span>
+        </span>
+      ))}
+    </Tag>
   );
 }
 
 export default function V3() {
-  const { hero, profile, words, work, method, story, writing, door, footer } = v3;
-  const substack = channels.substack.href.replace(/\/$/, "");
+  const { hero, thesis, story, work, deeper, footer } = v3;
+  const { lignarolo, hipertrofia, psico } = work;
 
   return (
     <div className={s.page}>
       {site.draft && <p className={s.notice}>{v3.notice}</p>}
 
-      <header className={`${s.wrap} ${s.masthead}`}>
-        <a href="#portada" className={s.brand}>
-          Mario Lignarolo
-        </a>
-        <nav aria-label="Secciones">
-          <ul className={s.nav}>
+      {/* 01 · MARIO */}
+      <header className={s.hero} id="mario">
+        <nav className={s.nav} aria-label="Principal">
+          <a href="#mario" className={s.wordmark}>
+            Mario Lignarolo
+          </a>
+          <ul className={s.navList}>
             {v3.nav.map((n) => (
               <li key={n.href}>
                 <a href={n.href}>{n.label}</a>
@@ -56,278 +65,236 @@ export default function V3() {
             ))}
           </ul>
         </nav>
-        <a href={v3.navCta.href} className={`${s.btn} ${s.btnLine} ${s.mastCta}`}>
-          {v3.navCta.label}
-        </a>
-      </header>
-
-      <main>
-        {/* 1 · Portada */}
-        <section id="portada" className={`${s.wrap} ${s.hero}`}>
+        <div className={s.heroPhoto}>
+          <Image src={hero.image.src} alt={hero.image.alt} fill priority sizes="100vw" />
+        </div>
+        <div className={`${s.wrap} ${s.heroBody}`}>
           <div className={s.heroText}>
-            <p className={s.kicker}>{hero.roles}</p>
-            <h1 className={s.heroName}>
-              {hero.name.map((w) => (
-                <span key={w}>{w}</span>
-              ))}
-            </h1>
-            <p className={s.heroDeck}>{hero.deck}</p>
-            <p className={s.heroStand}>{hero.standfirst}</p>
-            <div className={s.heroActions}>
-              <a href={hero.primary.href} className={`${s.btn} ${s.btnSolid}`}>
-                {hero.primary.label}
-              </a>
-              <a href={hero.secondary.href} className={`${s.btn} ${s.btnLine}`}>
-                {hero.secondary.label}
-              </a>
-            </div>
-          </div>
-          <figure className={`${s.photo} ${s.heroPhoto}`} style={{ margin: 0 }}>
-            <Image src={hero.image.src} alt={hero.image.alt} fill priority sizes="(min-width: 880px) 40vw, 100vw" />
-          </figure>
-        </section>
-
-        {/* 2 · Perfil */}
-        <section className={s.section} aria-labelledby="perfil">
-          <div className={`${s.wrap} ${s.profile}`}>
-            <p className={s.kicker} id="perfil">
-              {profile.kicker}
+            <p className={`${s.label} ${s.heroTerritory}`}>{hero.territory}</p>
+            <Lines as="h1" className={`${s.statement} ${s.heroName}`} lines={hero.name} />
+            <p className={`${s.serif} ${s.heroLine}`} data-reveal="up" style={{ "--delay": "0.3s" } as CSSProperties}>
+              {hero.line}
             </p>
-            <div className={s.profileBody}>
-              <p className={s.lead}>{profile.lead}</p>
-              {profile.paras.map((p) => (
-                <p key={p.text} className={s.body}>
-                  {p.text}
-                  {p.tbc && <Tbc />}
-                </p>
-              ))}
-              <p className={s.question}>{profile.question}</p>
-            </div>
-          </div>
-        </section>
-
-        {/* 3 · En sus palabras */}
-        <section className={s.section} aria-label={words.kicker}>
-          <figure className={`${s.wrap} ${s.words}`}>
-            <p className={s.kicker}>{words.kicker}</p>
-            <blockquote className={s.wordsQuote}>
-              {words.quote}»
-              <cite className={s.quoteBy}>— {words.by}</cite>
-            </blockquote>
-          </figure>
-        </section>
-
-        {/* 4 · Obra */}
-        <section id="obra" className={s.section} aria-labelledby="obra-t">
-          <div className={s.wrap}>
-            <div className={s.headRow}>
-              <div>
-                <p className={s.kicker}>{work.kicker}</p>
-                <h2 className={s.h2} id="obra-t">
-                  {work.title}
-                </h2>
-              </div>
-              <p className={s.headIntro}>{work.intro}</p>
-            </div>
-
-            <ul className={s.workList}>
-              {work.items.map((it) => (
-                <li key={it.name} className={s.workItem}>
-                  <div className={s.workName}>
-                    <p className={`${s.kicker} ${s.workRole}`}>{it.role}</p>
-                    <h3 className={s.workTitle}>{it.name}</h3>
-                  </div>
-                  <div className={s.workText}>
-                    <p>
-                      {it.text}
-                      {it.tbcNote && <Tbc note={it.tbcNote} />}
-                    </p>
-                    <a href={it.href} className={s.link} {...ext}>
-                      {it.cta}
-                      <Arrow />
-                    </a>
-                  </div>
-                  {it.image && (
-                    <figure
-                      className={`${s.photo} ${s.workPhoto} ${it.name === "Lignarolo" ? s.workPhotoWide : ""}`}
-                      style={{ margin: 0 }}
-                    >
-                      <Image src={it.image.src} alt={it.image.alt} fill sizes="(min-width: 880px) 22vw, 90vw" />
-                    </figure>
-                  )}
-                </li>
-              ))}
-            </ul>
-
-            <div className={s.asides}>
-              {[work.mentoring, work.invite].map((a) => (
-                <div key={a.label} className={s.aside}>
-                  <p className={s.kicker}>{a.label}</p>
-                  <p className={s.asideText}>
-                    {a.text}
-                    {a.tbcNote && <Tbc note={a.tbcNote} />}
-                  </p>
-                  <a href={a.href} className={s.link} {...ext}>
-                    {a.cta}
-                    <Arrow />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 5 · Método */}
-        <section id="metodo" className={`${s.section} ${s.method}`} aria-labelledby="metodo-t">
-          <div className={`${s.wrap} ${s.methodGrid}`}>
-            <figure className={`${s.photo} ${s.methodPhoto}`} style={{ margin: 0 }}>
-              <Image src={method.image.src} alt={method.image.alt} fill sizes="(min-width: 880px) 30vw, 90vw" />
-            </figure>
-            <div className={s.methodBody}>
-              <p className={s.kicker}>{method.kicker}</p>
-              <h2 className={s.h2} id="metodo-t">
-                {method.title}
-              </h2>
-              <p className={s.methodDeck}>{method.deck}</p>
-              <p className={s.body}>{method.text}</p>
-              <ul className={s.planes}>
-                {method.planes.map((p) => (
-                  <li key={p.name} className={s.plane}>
-                    <h3 className={s.planeName}>{p.name}</h3>
-                    <p>{p.text}</p>
+            <div className={s.heroSignals}>
+              <ul>
+                {hero.signals.map((sig) => (
+                  <li key={sig.href}>
+                    <a href={sig.href}>{sig.label}</a>
                   </li>
                 ))}
               </ul>
-              <blockquote className={s.methodQuote}>
-                «{method.quote}»<cite className={s.quoteBy}>— Mario Lignarolo</cite>
-              </blockquote>
             </div>
           </div>
+        </div>
+      </header>
+
+      <main>
+        {/* 02 · LA TESIS */}
+        <section className={`${s.wrap} ${s.thesis}`} aria-labelledby="tesis">
+          <Lines as="h2" className={`${s.statement} ${s.thesisLine1}`} lines={[thesis.line1]} />
+          <p className={`${s.statement} ${s.thesisLine2}`} id="tesis" data-reveal="up">
+            {thesis.line2.before} <span className={s.accent}>{thesis.line2.accent}</span> {thesis.line2.after}
+          </p>
+          <p className={`${s.body} ${s.thesisNote}`} data-reveal="up">
+            {thesis.note}
+          </p>
+          <ol className={s.model}>
+            {thesis.model.map((m, i) => (
+              <li key={m.n} className={s.modelItem} style={{ "--k": m.k, "--delay": `${i * 0.08}s` } as CSSProperties} data-reveal="up">
+                <p className={s.label}>{m.n}</p>
+                <h3 className={s.modelName}>{m.name}</h3>
+                <p className={s.modelText}>{m.text}</p>
+              </li>
+            ))}
+          </ol>
         </section>
 
-        {/* 6 · Historia */}
-        <section id="historia" className={s.section} aria-labelledby="historia-t">
-          <div className={s.wrap}>
-            <div className={s.headRow}>
-              <div>
-                <p className={s.kicker}>{story.kicker}</p>
-                <h2 className={s.h2} id="historia-t">
-                  {story.title}
-                </h2>
-              </div>
-            </div>
-            <ol className={s.moments}>
-              {story.moments.map((m) => (
-                <li key={m.n} className={s.moment}>
-                  <span className={s.momentN} aria-hidden="true">
-                    {m.n}
-                  </span>
-                  <div className={s.momentMain}>
-                    <h3 className={s.momentTitle}>{m.title}</h3>
-                    <p>
-                      {m.text}
-                      {m.tbc && <Tbc />}
-                    </p>
+        {/* 03 · LA HISTORIA POR PERCEPCIÓN */}
+        <section className={`${s.wrap} ${s.story}`} aria-labelledby="historia">
+          <Lines as="h2" className={`${s.statement} ${s.storyHead}`} lines={[story.headline]} />
+          <span id="historia" />
+          <div className={s.beats}>
+            {story.beats.map((b, i) => (
+              <div key={b.word} className={`${s.grid} ${s.beat} ${s[`beat${i + 1}`]}`}>
+                {b.kind === "image" && (
+                  <figure
+                    className={`${s.photo} ${s.beatPhoto} ${i === 1 ? s.beatPhotoWide : ""}`}
+                    style={{ margin: 0 }}
+                    data-reveal="up"
+                  >
+                    <Image
+                      src={b.image.src}
+                      alt={b.image.alt}
+                      fill
+                      sizes="(min-width: 880px) 50vw, 100vw"
+                      style={{ objectPosition: b.image.position }}
+                    />
+                  </figure>
+                )}
+                <div className={s.beatCopy} data-reveal="up" style={{ "--delay": "0.12s" } as CSSProperties}>
+                  <h3 className={`${s.statement} ${s.beatWord}`}>{b.word}</h3>
+                  <div className={s.beatText}>
+                    {b.quote && (
+                      <blockquote className={s.quote}>
+                        <span>«{b.quote}»</span>
+                        <cite className={s.by}>Mario Lignarolo</cite>
+                      </blockquote>
+                    )}
+                    <p className={s.caption}>{b.caption}</p>
                   </div>
-                  <blockquote className={s.momentQuote}>{m.quote}</blockquote>
-                </li>
-              ))}
-            </ol>
-            <div className={s.more}>
-              <a href={story.more.href} className={s.link}>
-                {story.more.label}
-                <Arrow />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 7 · Escritos */}
-        <section id="escritos" className={s.section} aria-labelledby="escritos-t">
-          <div className={s.wrap}>
-            <div className={s.headRow}>
-              <div>
-                <p className={s.kicker}>{writing.kicker}</p>
-                <h2 className={s.h2} id="escritos-t">
-                  {writing.title}
-                </h2>
-              </div>
-            </div>
-            <ul className={s.posts}>
-              {writing.items.map((p) => (
-                <li key={p.href} className={s.post}>
-                  <a href={p.href} {...ext}>
-                    <div>
-                      <h3 className={s.postTitle}>
-                        {p.title}
-                        {p.note && <span className={s.postNote}>{p.note}</span>}
-                      </h3>
-                      <p className={s.postDek}>{p.dek}</p>
-                    </div>
-                    <span className={s.postGo}>
-                      Leer
-                      <Arrow />
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <div className={s.more}>
-              <a href={writing.all.href} className={s.link} {...ext}>
-                {writing.all.label}
-                <Arrow />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* 8 · Puerta */}
-        <section id="suscribirse" className={`${s.dark} ${s.door}`} aria-label={door.label}>
-          <div className={s.wrap}>
-            <blockquote style={{ margin: 0 }}>
-              <p className={s.mantra}>
-                {door.mantra.map((l) => (
-                  <span key={l}>{l}</span>
-                ))}
-              </p>
-              <cite className={s.quoteBy}>— {door.by}</cite>
-            </blockquote>
-
-            <form action={`${substack}/subscribe`} method="get" target="_blank" className={s.form}>
-              <label htmlFor="v3-email" className={s.formLabel}>
-                {door.label}
-              </label>
-              <div className={s.formFields}>
-                <div className={s.fieldRow}>
-                  <input
-                    id="v3-email"
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    placeholder={door.placeholder}
-                    className={s.input}
-                  />
-                  <button type="submit" className={`${s.btn} ${s.submit}`}>
-                    {door.cta}
-                  </button>
                 </div>
-                <p className={s.formNote}>{door.note}</p>
-                <a href={door.secondary.href} className={`${s.link} ${s.secondary}`} {...ext}>
-                  {door.secondary.label}
-                  <Arrow />
+              </div>
+            ))}
+          </div>
+          <p className={`${s.serif} ${s.storyClose}`} data-reveal="up">
+            {story.close}
+          </p>
+        </section>
+
+        {/* 04 · EL TRABAJO */}
+        <section className={s.work} aria-label={work.label}>
+          <p className={`${s.wrap} ${s.label}`}>{work.label}</p>
+
+          {/* Lignarolo: la foto y el producto mandan */}
+          <article id="lignarolo" className={`${s.wrap} ${s.lg}`}>
+            <figure className={`${s.photo} ${s.lgPhoto}`} style={{ margin: 0 }} data-reveal="up">
+              <Image src={lignarolo.image.src} alt={lignarolo.image.alt} fill sizes="100vw" />
+            </figure>
+            <div className={`${s.grid} ${s.lgRow}`}>
+              <h3 className={`${s.statement} ${s.lgName}`}>{lignarolo.name}</h3>
+              <div className={s.lgMeta}>
+                {lignarolo.meta.map((m) => (
+                  <span key={m} className={s.label}>
+                    {m}
+                  </span>
+                ))}
+              </div>
+              <div className={s.lgCopy} data-reveal="up">
+                <p className={s.body}>{lignarolo.text}</p>
+                <a href={lignarolo.href} className={s.link} {...ext}>
+                  {lignarolo.cta} <Arrow />
                 </a>
               </div>
-            </form>
-          </div>
-        </section>
-      </main>
+              {site.draft && (
+                <div className={s.lgPending} aria-label="Fotos pendientes">
+                  {lignarolo.pending.map((p) => (
+                    <div key={p} className={s.pending}>
+                      Foto pendiente · {p}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </article>
 
-      {/* 9 · Pie */}
-      <footer className={s.dark}>
-        <div className={`${s.wrap} ${s.footer}`}>
-          <div className={s.footerTop}>
-            <span className={s.footerName}>Mario Lignarolo</span>
+          {/* Hipertrofia del Ser: una publicación */}
+          <article id="hipertrofia" className={`${s.wrap} ${s.pub}`}>
+            <div className={`${s.grid} ${s.pubHead}`}>
+              <div data-reveal="up">
+                <p className={s.label}>{hipertrofia.label}</p>
+                <h3 className={s.pubName}>{hipertrofia.name}</h3>
+              </div>
+              <div className={s.pubIntro} data-reveal="up" style={{ "--delay": "0.1s" } as CSSProperties}>
+                <p className={s.body}>{hipertrofia.line}</p>
+                <p className={s.caption}>{hipertrofia.metaphor}</p>
+              </div>
+            </div>
+            <div className={`${s.grid} ${s.pubGrid}`}>
+              <a href={hipertrofia.lead.href} className={s.lead} {...ext} data-reveal="up">
+                <p className={s.label}>{hipertrofia.lead.category}</p>
+                <h4 className={s.leadTitle}>{hipertrofia.lead.title}</h4>
+                <p className={`${s.caption} ${s.leadDek}`}>{hipertrofia.lead.dek}</p>
+                <span className={s.date}>{hipertrofia.lead.date}</span>
+              </a>
+              <ul className={s.posts}>
+                {hipertrofia.more.map((p, i) => (
+                  <li key={p.href}>
+                    <a href={p.href} className={s.postRow} {...ext} data-reveal="up" style={{ "--delay": `${0.1 + i * 0.08}s` } as CSSProperties}>
+                      <p className={s.label}>{p.category}</p>
+                      <h4 className={s.postTitle}>{p.title}</h4>
+                      <p className={`${s.caption} ${s.postDek}`}>{p.dek}</p>
+                      <span className={s.date}>{p.date}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={s.pubLinks}>
+              <a href={hipertrofia.href} className={s.link} {...ext}>
+                {hipertrofia.cta} <Arrow />
+              </a>
+              <a href={hipertrofia.subscribe.href} className={s.link} {...ext}>
+                {hipertrofia.subscribe.label} <Arrow />
+              </a>
+            </div>
+          </article>
+
+          {/* Psicocibernética: atmósfera y video */}
+          <article id="psicocibernetica" className={`${s.dark} ${s.psico}`}>
+            <div className={`${s.wrap} ${s.grid} ${s.psicoGrid}`}>
+              <Video
+                src={psico.video.src}
+                poster={psico.video.poster}
+                duration={psico.video.duration}
+                label={psico.video.label}
+                className={`${s.photo} ${s.psicoVideo}`}
+                buttonClassName={s.playBtn}
+              />
+              <div className={s.psicoCopy} data-reveal="up">
+                <p className={s.label}>{psico.label}</p>
+                <h3 className={`${s.statement} ${s.psicoName}`}>{psico.name}</h3>
+                <p className={s.body}>{psico.line}</p>
+                <p className={s.psicoOrigin}>{psico.origin}</p>
+                <blockquote className={s.quote}>
+                  <span>«{psico.quote}»</span>
+                  <cite className={s.by}>Mario Lignarolo</cite>
+                </blockquote>
+                <a href={psico.href} className={s.link} {...ext}>
+                  {psico.cta} <Arrow />
+                </a>
+                <p className={s.psicoNote}>{psico.note}</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        {/* 05 · PARA SEGUIR */}
+        <section id="contacto" className={`${s.wrap} ${s.deeper}`} aria-labelledby="seguir">
+          <p className={s.label} id="seguir">
+            {deeper.label}
+          </p>
+          <ul className={s.paths}>
+            {deeper.paths.map((p, i) => (
+              <li key={p.verb} className={`${s.grid} ${s.path}`} data-reveal="up" style={{ "--delay": `${i * 0.06}s` } as CSSProperties}>
+                <span className={`${s.statement} ${s.pathVerb}`}>{p.verb}</span>
+                <span className={s.pathWhat}>{p.what}</span>
+                <span className={s.pathLinks}>
+                  {p.links.map((l) => (
+                    <a key={l.href} href={l.href} className={s.link} {...ext}>
+                      {l.label} <Arrow />
+                    </a>
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <div className={`${s.grid} ${s.bioRow}`} data-reveal="up">
+            <p className={`${s.body} ${s.bio}`}>{deeper.bio}</p>
+            <div className={s.contact}>
+              <a href={deeper.contact.href} className={s.link} {...ext}>
+                {deeper.contact.cta} <Arrow />
+              </a>
+              {site.draft && <span className={s.contactPending}>{deeper.contact.pending}</span>}
+            </div>
+          </div>
+
+          <blockquote className={`${s.serif} ${s.closing}`} data-reveal="up" style={{ margin: undefined }}>
+            «{deeper.closing.quote}»<cite className={s.by}>{deeper.closing.by}</cite>
+          </blockquote>
+
+          <footer className={s.footer}>
+            <span className={s.wordmark}>Mario Lignarolo</span>
             <ul className={s.footerLinks}>
               {footer.links.map((c) => (
                 <li key={c.href}>
@@ -337,10 +304,11 @@ export default function V3() {
                 </li>
               ))}
             </ul>
-          </div>
-          <p className={s.legal}>© {new Date().getFullYear()} Mario Lignarolo</p>
-        </div>
-      </footer>
+            <p className={s.legal}>© {new Date().getFullYear()} Mario Lignarolo</p>
+          </footer>
+        </section>
+      </main>
+      <Motion />
     </div>
   );
 }

@@ -33,7 +33,8 @@ Pablo y Claude co-dirigen el pulido de la marca de Mario: narrativa, storytellin
 | 22 oct 2026 | **Orden de trabajo: primero narrativa, storytelling y secciones; lo visual al final.** Propuesta en `03-NARRATIVA.md`. | Pablo |
 | 22 oct 2026 | **De Tomi, principios y no forma.** Nada de coordenadas, índice numerado ni sus fórmulas: la estructura sale de lo que Mario necesita (`03-NARRATIVA.md` v2). | Pablo |
 | 22 oct 2026 | **Se descarta la v2 (frases suyas en primera persona como títulos). Base: la v1, en tercera persona**, sin lo propio de Tomi (`03-NARRATIVA.md` v3). Quedan decididas la voz (tercera persona, él solo en citas) y el orden (la obra antes que la historia). | Pablo |
-| 24 oct 2026 | **Iteración en `/v3`, sin tocar la web actual:** la narrativa v3 con un diseño de prueba, «el perfil de revista» (B/N, serif clásica, un azul tinta). Ruta oculta y no indexada; contenido en `data/v3.ts`. | Pablo |
+| 24 oct 2026 | **`marca/BRIEF-MASTER-v1.md` es la fuente de verdad** (brief de Pablo): posicionamiento, narrativa, voz, arquitectura y dirección visual. Donde `03-NARRATIVA.md` o `02-MODELO.md` lo contradigan (roles, actos, serif en todo), manda el brief. | Pablo |
+| 24 oct 2026 | **Iteración en `/v3`, sin tocar la web actual**, construida según el brief. La primera versión de `/v3` (inventada por el estudio) quedó descartada. Ruta oculta y no indexada; contenido en `data/v3.ts`. | Pablo |
 | 22 oct 2026 | **Ángulo de la web: Mario como founder.** La página vende a Mario a título personal, desde la autoridad, y él abarca todas sus marcas y plataformas. No es una landing de Psico-Cibernética. | Pablo |
 
 ## Pendiente con Mario

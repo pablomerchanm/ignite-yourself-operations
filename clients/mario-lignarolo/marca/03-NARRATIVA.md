@@ -1,5 +1,7 @@
 # Mario Lignarolo — Estructura narrativa (v3)
 
+> **Superado el 24 oct 2026 por `BRIEF-MASTER-v1.md`.** El brief de Pablo fija la narrativa y la arquitectura de la home (sin roles, sin actos ni cronología, titulares que construyen la percepción). Este documento queda como historial.
+
 Fase 1–3 del plan: narrativa, storytelling y secciones. **Lo visual va al final.**
 
 **Historial (22 oct 2026):**

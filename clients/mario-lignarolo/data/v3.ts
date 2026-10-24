@@ -1,199 +1,208 @@
 /**
- * ITERACIÓN v3 — /v3 (oculta, no indexada; la home no cambia).
+ * ITERACIÓN /v3 — la home según `marca/BRIEF-MASTER-v1.md` (Pablo, oct 2026).
+ * Ruta oculta y no indexada; la home actual no cambia.
  *
- * Narrativa: marca/03-NARRATIVA.md (v3): tercera persona; Mario solo en
- * citas atribuidas; la obra antes que la historia; los tres roles como eje.
- * Diseño de prueba: «el perfil de revista» (B/N, serif clásica, un azul tinta).
+ * Reglas del brief que gobiernan este archivo:
+ *  - No decir lo que se puede demostrar: nada de «founder», rótulos ni adjetivos.
+ *  - Los titulares construyen la percepción; el cuerpo solo profundiza.
+ *  - La página presenta a Mario (3.ª persona); Mario presenta sus ideas (citas).
+ *  - Nada inventado: lo que falta va como placeholder marcado, no se rellena.
  *
- * `tbc: true` = [CONFIRMAR] con Mario: en borrador se marca «por confirmar».
- * Decisiones aún abiertas, con la recomendación del estudio puesta para verla:
- * la frase de la portada (opción a), los roles, la acción principal
- * (suscribirse a Hipertrofia del Ser) y el nombre de la mentoría.
+ * [BRIEF] = texto o dato que el brief da como dirección o como confirmado.
+ * [MARIO] = palabras suyas (entrevista o publicaciones).
+ * [PENDIENTE] = falta confirmar o producir; se muestra como placeholder en borrador.
  */
-import { channels, connect, lignarolo, psico, psicoUrl } from "./content";
+import { channels } from "./content";
 
-export type Line = { text: string; tbc?: boolean };
-export type Aside = { label: string; text: string; cta: string; href: string; tbcNote?: string };
+const substack = channels.substack.href.replace(/\/$/, "");
+const dm = "https://ig.me/m/mariolignarolo";
+// [BRIEF] la página actual de Psicocibernética.
+const psicoUrl = "https://psicocibernetica.lovable.app/";
 
 export const v3 = {
   meta: {
-    title: "Mario Lignarolo — Perfil (iteración v3)",
-    description: "Emprendedor, escritor y guía. Psico-Cibernética, Hipertrofia del Ser y Lignarolo.",
+    title: "Mario Lignarolo — Transformación de identidad",
+    description: "Explorando cómo transformar quién eres para expandir lo que eres capaz de construir.",
   },
-  notice: "Iteración v3 · borrador para revisión · no indexada · la web actual no cambia",
+  notice: "Iteración · borrador · no indexada · la web actual no cambia",
 
   nav: [
-    { label: "Obra", href: "#obra" },
-    { label: "Método", href: "#metodo" },
-    { label: "Historia", href: "#historia" },
-    { label: "Escritos", href: "#escritos" },
+    { label: "Lignarolo", href: "#lignarolo" },
+    { label: "Hipertrofia del Ser", href: "#hipertrofia" },
+    { label: "Psicocibernética", href: "#psicocibernetica" },
+    { label: "Contacto", href: "#contacto" },
   ],
-  navCta: { label: "Suscribirse", href: "#suscribirse" },
 
-  /* 1 · Portada */
+  /* 01 · MARIO — portada editorial: persona, territorio, curiosidad. Sin CTA. */
   hero: {
-    roles: "Emprendedor · Escritor · Guía",
     name: ["Mario", "Lignarolo"],
-    // Decisión abierta: frase a (recomendada). b) «Entrenar quién eres como
-    // entrenas el cuerpo.» c) «Para construir más afuera, hay que ser más adentro.»
-    deck: "El trabajo interno detrás de lo que construyes.",
-    standfirst: "Creó Psico-Cibernética, escribe Hipertrofia del Ser y llevó el marketing de Lignarolo, la marca de calzado de su familia.",
-    primary: { label: "Recibir Hipertrofia del Ser", href: "#suscribirse" },
-    secondary: { label: "Ver su obra", href: "#obra" },
-    image: { src: "/mario/hero.jpg", alt: "Mario Lignarolo, retrato en blanco y negro." },
-  },
-
-  /* 2 · Quién es */
-  profile: {
-    kicker: "Perfil",
-    lead: "Mario Lignarolo es emprendedor, escritor y guía. Construye marcas y ayuda a otros a convertirse en alguien capaz de sostener lo que construyen.",
-    paras: [
-      { text: "Hizo todo lo que se suponía: la universidad, un puesto en una multinacional, su propia empresa. Y aun así estaba perdido. De ahí nace todo lo que construye hoy.", tbc: true },
-      { text: "Hoy guía Psico-Cibernética, escribe Hipertrofia del Ser y habla cada día con una comunidad de más de 260 mil personas en Instagram y TikTok.", tbc: true },
-    ] as Line[],
-    question: "¿Quién tienes que ser para sostener lo que quieres construir?",
-  },
-
-  /* 3 · En sus palabras ([MARIO] carrusel fijado del 17 oct 2025, recortado) */
-  words: {
-    kicker: "En sus palabras",
-    quote: "Por mucho tiempo permití que las circunstancias decidieran por mí. No tenía claridad. No tenía dirección. Y el que no sabe para dónde va… ningún bus le sirve.",
-    by: "Mario Lignarolo",
-  },
-
-  /* 4 · Obra */
-  work: {
-    kicker: "Obra",
-    title: "Lo que construye",
-    intro: "Marcas distintas, una misma idea: lograr algo no basta; hay que poder sostenerlo.",
-    items: [
-      {
-        name: "Psico-Cibernética",
-        role: "La creó",
-        text: "Un proceso guiado de respiración consciente y trabajo con el autoconcepto, con su comunidad en Skool.",
-        tbcNote: "40 días u 8 semanas",
-        cta: "Conocer el programa",
-        href: psicoUrl,
-        image: { src: psico.image.src, alt: "Mario, retrato en doble exposición, en blanco y negro." },
-      },
-      {
-        name: "Hipertrofia del Ser",
-        role: "La escribe",
-        text: "Su diario de ideas sobre identidad, cuerpo y expansión. Dos o tres textos por semana, para más de 2.900 lectores.",
-        tbcNote: "cifra",
-        cta: "Leer en Substack",
-        href: channels.substack.href,
-      },
-      {
-        name: "Lignarolo",
-        role: "La hizo crecer",
-        text: "Calzado artesanal en cuero italiano, hecho a mano en Bogotá. Es la marca de su hermano Giorgio: Mario llevó su marketing y ahí aprendió a construir una empresa.",
-        tbcNote: "su rol",
-        cta: "Visitar lignarolo.com",
-        href: lignarolo.href,
-        image: { src: lignarolo.image.src, alt: "Mario sentado, de perfil, con mocasines Lignarolo. Blanco y negro." },
-      },
-      {
-        name: "La comunidad",
-        role: "La construyó",
-        text: "Más de 260 mil personas lo siguen en Instagram y TikTok, donde publica cada día sobre identidad, respiración y fe.",
-        tbcNote: "cifra",
-        cta: "Seguir en Instagram",
-        href: channels.instagram.href,
-      },
+    territory: "Transformación de identidad",
+    // [BRIEF] línea de trabajo preferida, sin reescribir.
+    line: "Explorando cómo transformar quién eres para expandir lo que eres capaz de construir.",
+    // [BRIEF] señales sutiles: partes de su mundo, no botones.
+    signals: [
+      { label: "Psicocibernética", href: "#psicocibernetica" },
+      { label: "Hipertrofia del Ser", href: "#hipertrofia" },
     ],
-    invite: {
-      label: "Para invitarlo",
-      text: "Conferencias · Podcasts · Talleres de respiración · Colaboraciones con marcas",
-      cta: "Escribirle",
-      href: connect.ser.href,
-    } as Aside,
-    mentoring: {
-      label: "Uno a uno",
-      // Decisión abierta: el nombre («SER», «Maestría del Ser» u otro).
-      text: "Mentoría privada para emprendedores que ya lograron cosas y quieren el siguiente nivel.",
-      tbcNote: "nombre por decidir",
-      cta: "Escribirle",
-      href: connect.ser.href,
-    } as Aside,
+    image: { src: "/mario/hero.jpg", alt: "Mario Lignarolo, retrato." },
   },
 
-  /* 5 · Método */
-  method: {
-    kicker: "Método",
-    title: "Hipertrofia del Ser",
-    deck: "El ser también es un músculo.",
-    text: "Se puede crecer el bíceps en un verano. Lo difícil es no volver, después, a los viejos patrones. Para Mario, lograr algo no basta: hay que convertirse en alguien capaz de sostenerlo. Por eso el trabajo pasa por tres planos a la vez.",
-    planes: [
-      { name: "Espiritual", text: "Meditación, observación, reflexión y gratitud." },
-      { name: "Mental", text: "Leer, escribir, crear ideas nuevas y desarrollar las habilidades que faltan." },
-      { name: "Físico", text: "Lo que se presenta al mundo: cómo se actúa, cómo se habla, cómo se viste. Ahí se genera la evidencia." },
+  /* 02 · LA TESIS — tipografía monumental y el modelo como secuencia. */
+  thesis: {
+    // [BRIEF]
+    line1: "Conseguirlo es una cosa.",
+    line2: { before: "Ser capaz de", accent: "sostenerlo", after: "es otra." },
+    // [BRIEF] la lógica, en una nota breve (3.ª persona).
+    note: "Una meta financiera, física o profesional se puede alcanzar. Si la identidad que hay debajo no ha cambiado, los patrones anteriores vuelven.",
+    // [BRIEF] TRABAJO INTERNO + CAPACIDADES + ACCIÓN + EVIDENCIA; la escala crece hacia la evidencia.
+    model: [
+      { n: "01", name: "Trabajo interno", text: "Percepción, autoconcepto, observación, práctica espiritual.", k: 1 },
+      { n: "02", name: "Capacidades", text: "Aprender: ventas, marketing, liderazgo, comunicación, ejecución.", k: 1.15 },
+      { n: "03", name: "Acción", text: "Exponerse, practicar, hacer lo incómodo, actuar distinto en el mundo real.", k: 1.35 },
+      { n: "04", name: "Evidencia", text: "Demostrar, viviéndolo, que se puede operar de otra manera.", k: 1.6 },
     ],
-    quote: "¿En qué tanto caos puedes mantener la calma? Esa es la verdadera hipertrofia del ser.",
-    image: { src: "/mario/entreno-curl.jpg", alt: "Mario entrenando, de espaldas, en blanco y negro." },
   },
 
-  /* 6 · Historia (cima → quiebre → giro → hoy) */
+  /* 03 · LA HISTORIA POR PERCEPCIÓN — titulares, fotos y pies; sin biografía. */
   story: {
-    kicker: "Historia",
-    title: "Cómo llegó hasta aquí",
-    moments: [
+    // [BRIEF] fragmentos de trabajo.
+    headline: "Aprender a construir afuera lo obligó a mirar adentro.",
+    beats: [
       {
-        n: "I",
-        title: "Hacerlo todo bien",
-        text: "El menor de cinco hermanos siguió el camino que se esperaba de él: la universidad, una multinacional y, después, su propia empresa en Medellín.",
-        tbc: true,
-        quote: "Me gradué de algo que no era lo mío.",
+        kind: "image",
+        word: "El cuerpo.",
+        caption: "Entrenamiento, disciplina, exposición. El primer lugar donde el cambio se hizo visible.",
+        image: { src: "/links/img/hipertrofia.jpg", alt: "Mario entrenando, de espaldas, con un disco.", position: "50% 20%" },
       },
       {
-        n: "II",
-        title: "El quiebre",
-        text: "Por fuera, todo avanzaba. Por dentro, no. Cerró el negocio y volvió a empezar desde cero.",
-        quote: "Todos los aspectos de mi vida estaban mal.",
+        kind: "image",
+        word: "Emprender es aprender.",
+        // [MARIO]
+        quote: "Para mí emprender es aprender.",
+        caption: "Marketing, ventas, producto, marca: habilidades que se aprenden construyendo.",
+        image: { src: "/mario/lignarolo.jpg", alt: "Mocasines Lignarolo.", position: "40% 100%" },
       },
       {
-        n: "III",
-        title: "El giro",
-        text: "Invirtió en sí mismo, volvió a crear junto a su hermano en Lignarolo y encontró la respiración consciente. El gimnasio había sido su primer laboratorio: de ahí salió la idea de que el ser también se entrena.",
-        quote: "Nunca lo había sentido en mi vida.",
+        kind: "text",
+        word: "Pero saber qué hacer no siempre significa sentirte capaz de hacerlo.",
+        // [MARIO] entrevista: «Todo es interno».
+        quote: "Todo es interno.",
+        caption: "Insuficiencia, miedo a exponerse, dificultad para cobrar: lo que el conocimiento no resolvía.",
       },
       {
-        n: "IV",
-        title: "Hoy",
-        text: "Juntó lo que había aprendido de marketing, marca personal, respiración y desarrollo personal, y lo convirtió en un camino para otros.",
-        quote: "Yo sé que este proceso a las personas les va a cambiar la vida. ¿Por qué? Porque a mí me cambió la vida.",
+        kind: "image",
+        word: "Identidad.",
+        caption: "Autoconcepto, respiración consciente, trabajo interno.",
+        image: { src: "/mario/psico.jpg", alt: "Mario, retrato en doble exposición.", position: "50% 30%" },
+      },
+    ] as Beat[],
+    // [BRIEF] la narrativa útil, en una línea.
+    close: "Aprendió a construir afuera y descubrió que su capacidad de construir también dependía de en quién era capaz de convertirse por dentro.",
+  },
+
+  /* 04 · EL TRABAJO — tres mundos, tres composiciones. Sin título paraguas. */
+  work: {
+    label: "Trabajo",
+    lignarolo: {
+      name: "Lignarolo",
+      meta: ["Calzado", "Bogotá"],
+      // [BRIEF] confirmado: socio junto a su hermano Giorgio. Sin cargo, sin cifras.
+      text: "Calzado artesanal en cuero italiano, hecho a mano en Bogotá. Mario es socio de la marca junto a su hermano Giorgio.",
+      cta: "lignarolo.com",
+      href: "https://www.lignarolo.com",
+      image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo." },
+      // [PENDIENTE] fotos de producto, taller y proceso.
+      pending: ["Producto", "Taller · proceso"],
+    },
+    hipertrofia: {
+      label: "Publicación",
+      name: "Hipertrofia del Ser",
+      line: "Escritos sobre identidad, cuerpo, emprendimiento y trabajo interno.",
+      // [BRIEF] la metáfora central.
+      metaphor: "La hipertrofia es el crecimiento de un músculo por el trabajo que se le exige. Aquí, aplicada a la persona.",
+      // Curados del archivo real de Substack (título, subtítulo y fecha reales).
+      lead: {
+        category: "Identidad",
+        title: "Lo que estás llamado a construir no va a competir con lo que estás llamado a ser",
+        dek: "La marca personal es tu vehículo para cumplir esa visión.",
+        date: "12 sep 2026",
+        href: `${substack}/p/lo-que-estas-llamado-a-construir`,
+      },
+      more: [
+        {
+          category: "Emprendimiento",
+          title: "Emprender es aprender. No vender.",
+          dek: "Agencia, flow y los cinco motivadores que lo activan.",
+          date: "26 sep 2026",
+          href: `${substack}/p/emprender-es-aprender-no-vender`,
+        },
+        {
+          category: "Trabajo interno",
+          title: "La simplicidad de asumir tu estado",
+          dek: "No puedes cambiar el mundo externo hasta que entiendas tu mundo interno.",
+          date: "10 sep 2026",
+          href: `${substack}/p/la-simplicidad-de-asumir-tu-estado`,
+        },
+        {
+          category: "Cuerpo",
+          title: "No puedes fallar",
+          dek: "Cómo ser asquerosamente disciplinado.",
+          date: "29 sep 2026",
+          href: `${substack}/p/no-puedes-fallar`,
+        },
+      ],
+      cta: "Leer en Substack",
+      href: substack,
+      subscribe: { label: "Suscribirse", href: `${substack}/subscribe` },
+    },
+    psico: {
+      label: "Método · Programa",
+      name: "Psicocibernética",
+      line: "Un proceso guiado de respiración consciente, visualización y trabajo con el autoconcepto.",
+      // [BRIEF] el concepto es de Maltz; esto es la aplicación de Mario. Sin claims científicos.
+      origin: "El término viene de Maxwell Maltz (1960): un sistema que corrige su rumbo a partir de la retroalimentación. Psicocibernética es la aplicación que Mario hace de esa idea, con respiración consciente y práctica diaria.",
+      // [MARIO]
+      quote: "Cualquier cosa que uno asuma como un fracaso, al final termina siendo nada más información.",
+      cta: "Conocer Psicocibernética",
+      href: psicoUrl,
+      note: "Una práctica personal. No sustituye la atención médica ni psicológica.",
+      video: { src: "/mario/psico.mp4", poster: "/mario/psico-poster.jpg", duration: "2:26", label: "Mario presenta Psicocibernética" },
+    },
+  },
+
+  /* 05 · PARA SEGUIR — caminos sin menú de enlaces, y un cierre breve. */
+  deeper: {
+    label: "Para seguir",
+    paths: [
+      { verb: "Leer", what: "Hipertrofia del Ser", links: [{ label: "Substack", href: substack }] },
+      {
+        verb: "Ver",
+        what: "Lo que publica",
+        links: [
+          { label: "YouTube", href: channels.youtube.href },
+          { label: "Instagram", href: channels.instagram.href },
+          { label: "TikTok", href: channels.tiktok.href },
+        ],
+      },
+      { verb: "Practicar", what: "Psicocibernética", links: [{ label: "Conocer el programa", href: psicoUrl }] },
+      {
+        verb: "Conversar",
+        what: "Podcasts, charlas, eventos, colaboraciones",
+        links: [{ label: "Escribir a Mario", href: dm }],
       },
     ],
-    more: { label: "Leer la historia completa", href: "/historia" },
+    // 3.ª persona, solo lo confirmado.
+    bio: "Mario Lignarolo trabaja alrededor de la transformación de identidad. Es socio de Lignarolo junto a su hermano Giorgio, escribe Hipertrofia del Ser y guía Psicocibernética.",
+    contact: { cta: "Escribir a Mario", href: dm, pending: "Correo de contacto pendiente" },
+    // [MARIO] su frase, como la escribe él.
+    closing: { quote: "No se trata de hacer más. Se trata de SER más.", by: "Mario Lignarolo" },
   },
 
-  /* 7 · Escritos (datos reales del archivo de Substack) */
-  writing: {
-    kicker: "Escritos",
-    title: "Lo que escribe",
-    items: [
-      { title: "Emprender es aprender. No vender.", dek: "Agencia, flow y los cinco motivadores que lo activan.", href: "https://mariolignarolo.substack.com/p/emprender-es-aprender-no-vender" },
-      { title: "Vive de tus intereses", dek: "Empieza por lo que no puedes dejar de aprender.", href: "https://mariolignarolo.substack.com/p/vive-de-tus-intereses" },
-      { title: "No puedes fallar", dek: "Cómo ser asquerosamente disciplinado.", href: "https://mariolignarolo.substack.com/p/no-puedes-fallar" },
-      { title: "Lo que estás llamado a construir no va a competir con lo que estás llamado a ser", dek: "La marca personal es tu vehículo para cumplir esa visión.", href: "https://mariolignarolo.substack.com/p/lo-que-estas-llamado-a-construir" },
-      { title: "Cómo ser tan atractivo que la realidad te persiga", dek: "Donde la espiritualidad y la ciencia convergen.", href: "https://mariolignarolo.substack.com/p/como-ser-tan-atractivo-que-la-realidad", note: "Su texto más leído" },
-    ] as { title: string; dek: string; href: string; note?: string }[],
-    all: { label: "Todo en Substack", href: channels.substack.href },
-  },
-
-  /* 8 · Puerta: una acción principal */
-  door: {
-    mantra: ["No se trata de hacer más.", "Se trata de SER más."],
-    by: "Mario Lignarolo",
-    label: "Recibe Hipertrofia del Ser",
-    note: "Gratis. Llega a tu correo y se gestiona en Substack.",
-    placeholder: "tu@correo.com",
-    cta: "Suscribirme",
-    secondary: { label: "¿Listo para el proceso? Conoce Psico-Cibernética", href: psicoUrl },
-  },
-
-  /* 9 · Pie */
   footer: {
-    links: [channels.instagram, channels.tiktok, channels.youtube, channels.substack],
+    links: [channels.instagram, channels.youtube, channels.tiktok, channels.substack, { label: "Lignarolo", href: "https://www.lignarolo.com" }],
   },
 };
+
+export type Beat =
+  | { kind: "image"; word: string; caption: string; quote?: string; image: { src: string; alt: string; position?: string } }
+  | { kind: "text"; word: string; caption: string; quote?: string };
