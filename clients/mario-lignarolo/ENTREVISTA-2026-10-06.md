@@ -79,7 +79,7 @@ Del minuto 15 al 30, en español. Las frases entre comillas son suyas, transcrit
 1. **Antes del desarrollo personal:** al graduarse de la universidad trabajó en **Coca-Cola**; no le gustó, quería emprender y ser su propio jefe. Vivía en **Medellín** y montó una empresa de **dropshipping** con un socio, su mejor amigo de entonces. Aprendió marketing, pero vendía algo que no le gustaba ni le conectaba: «la desconexión de eso es brutal».
 2. **El detonante:** «Todos los aspectos de mi vida estaban mal»; se sentía desconectado y fuera de forma. Una experiencia ceremonial le confirmó «tú estás donde no tienes que estar»: «toda mi identidad se cayó». Cerró el negocio y **volvió a empezar de cero** en casa de su mamá, en Bogotá. «El Mario de ahí estaba demasiado perdido.»
 3. **La primera inversión en sí mismo:** un programa de mentoría de un año con **Javi Rodríguez** (español, al que seguía en Instagram), pagado con dinero que pidió prestado a su familia. Trabajo de identidad y de conexión con Dios. Hace unos tres años. Aun así: «no sabía qué hacer… estaba en esa insuficiencia».
-4. **Lignarolo:** **Giorgio**, que tenía la marca de zapatos desde hacía unos cuatro años «como un hobby», lo invitó a entrar porque Mario sabía de marketing. Con los dos trabajando a fondo, la marca «pasó de cero a 40, 50 millones en los primeros dos meses» y entró un inversor de la familia. Ahí aprendió cómo funciona una empresa, crear producto y marketing.
+4. **Lignarolo:** **Giorgio**, su hermano (lo confirmó Pablo el 22 oct), que tenía la marca de zapatos desde hacía unos cuatro años «como un hobby», lo invitó a entrar porque Mario sabía de marketing. Con los dos trabajando a fondo, la marca «pasó de cero a 40, 50 millones en los primeros dos meses» y entró un inversor de la familia. Ahí aprendió cómo funciona una empresa, crear producto y marketing.
 5. **Marca personal:** su segundo mentor, **Alejandro (Alejo) Jaramillo** (Medellín), le escribió cuando Mario tenía «mil y pico» seguidores y publicaba sobre todo fitness. Le dio claridad en la oferta, el contenido y el precio. Ahí apareció otra vez la insuficiencia: no se sentía coherente cobrando por un proceso, y se desaparecía de las clases. «Todo es interno.»
 6. **La respiración:** **Nacho Muñoz** (español, respiración consciente). Por un anuncio en Instagram compró su programa de respiración (unos 11 días): «nunca lo había sentido en mi vida». Juntó marketing, marca personal, respiración y desarrollo personal: «vamos a empaquetar toda esta vuelta y volverla un producto». Así llegó su **primer cliente**.
 7. **Cierre:** «Tenía que ser como tenía que ser, para que yo me diera el permiso de encontrar las cosas que a mí me gustan… y como consecuencia poder aportar valor a las personas, porque lo viví.» La grabación se corta cuando explica qué puede recomendar a otros y qué no.
@@ -146,7 +146,7 @@ Pablo le mostró el primer borrador de la web y el *linktree* de Ignite Yourself
 1. ~~¿Cuál fue el detonante?~~ **Resuelto en § 7b.** Falta que apruebe qué se cuenta: ¿se menciona Coca-Cola, el dropshipping, volver a empezar de cero? ¿Algo de la experiencia ceremonial?
 2. ~~¿Ciudad actual?~~ **Madrid** (§ 4). Falta saber si se publica.
 3. Respiración: hizo el **máster con Nacho Muñoz y se certificó** (§ 4). Falta el nombre exacto y si se menciona como formación.
-4. ~~Rol en Lignarolo.~~ **En parte resuelto (§ 7b):** entró a hacer el marketing de la marca de Giorgio y la hicieron crecer. Confirmar su cargo, quién es Giorgio y si se publica la cifra de los primeros dos meses.
+4. ~~Rol en Lignarolo.~~ **En parte resuelto (§ 7b):** entró a hacer el marketing de la marca de **su hermano Giorgio** y la hicieron crecer. Falta confirmar su cargo, si se nombra a Giorgio en la web y si se publica la cifra de los primeros dos meses.
 5. Nombre propio para su método en vez de «Psico-Cibernética»: **sí lo ha pensado** (§ 4). Falta decidir si lo trabajamos ahora.
 6. Correo de prensa / colaboraciones.
 7. «8 semanas» (Skool) vs «40 días» (bio, Substack).
@@ -170,3 +170,7 @@ Todo queda marcado como **[CONFIRMAR]** en `data/content.ts` hasta que Mario lo 
 - **Quién es Mario:** el capítulo «Desconectado», entre «Perdido» y «El fondo», con sus palabras: Coca-Cola, el dropshipping y la desconexión. No menciona el producto que vendía ni la ceremonia.
 - **Lignarolo:** su rol, «entró a Lignarolo para llevar su marketing» y lo que aprendió ahí. Sin la cifra de los primeros meses.
 - **Psico-Cibernética:** de dónde nace, de su propio proceso (marketing, marca personal, respiración consciente y desarrollo personal).
+
+## Cambios aplicados con datos de Pablo (22 oct)
+
+- **Giorgio es su hermano.** En «Mi historia» (`/historia`, «Volver a crear»): «Lignarolo era la marca de mi hermano Giorgio, y me invitó a llevar el marketing». Sigue **[CONFIRMAR]**: que Mario apruebe nombrarlo.
