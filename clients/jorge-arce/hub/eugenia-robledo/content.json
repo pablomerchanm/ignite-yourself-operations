@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "lang": "es",
+    "locale": "es_CO",
+    "title": "Eugenia Robledo — Diseñadora",
+    "description": "Eugenia Robledo: diseñadora y cofundadora de Euge Shop y Banana Banana Bread. Su galería, sus proyectos y sus negocios en un solo lugar.",
+    "siteName": "Eugenia Robledo",
+    "themeColor": "#f3eee6",
+    "icon": "img/avatar.jpg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap",
+    "base": "/hub/eugenia-robledo/",
+    "draft": true,
+    "ribbon": "Propuesta · Ignite Yourself"
+  },
+  "layout": "feed",
+  "top": {
+    "wordmark": "Eugenia Robledo",
+    "links": [
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/euurobledo/"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "type": "intro",
+      "id": "eugenia",
+      "name": "@euurobledo",
+      "role": "Instagram",
+      "avatar": {
+        "src": "img/avatar.jpg"
+      },
+      "href": "https://www.instagram.com/euurobledo/",
+      "claim": "Eugenia Robledo",
+      "accent": "diseñadora.",
+      "sub": "Cofundadora de Euge Shop y Banana Banana Bread."
+    },
+    {
+      "type": "rail",
+      "id": "galeria",
+      "kicker": "Galería · VSCO",
+      "count": true,
+      "ratio": "3:4",
+      "items": [
+        {
+          "image": {
+            "src": "img/pasillo.jpg",
+            "alt": "Eugenia en un pasillo de madera con luz cálida"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "image": {
+            "src": "img/muro-rosa.jpg",
+            "alt": "Un muro de concreto contra una pared rosada"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "image": {
+            "src": "img/silla.jpg",
+            "alt": "Una silla de madera sobre baldosa roja"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "image": {
+            "src": "img/cuarto-azul.jpg",
+            "alt": "Un cuarto azul con una lámpara de pared"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "image": {
+            "src": "img/mesa.jpg",
+            "alt": "Una mesa servida con platos de cobre"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "image": {
+            "src": "img/flores.jpg",
+            "alt": "Una mesa con flores y amigas"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "image": {
+            "src": "img/ventana.jpg",
+            "alt": "La ciudad de noche desde una ventana"
+          },
+          "href": "https://vsco.co/euurobledo/gallery"
+        }
+      ]
+    },
+    {
+      "type": "feature",
+      "id": "trabajemos",
+      "tone": 1,
+      "titleOn": "body",
+      "image": {
+        "src": "img/obra.jpg",
+        "alt": "Eugenia mirando una obra en la pared",
+        "focus": "40% 35%",
+        "fade": false
+      },
+      "kicker": "Proyectos y colaboraciones",
+      "title": "Trabajemos juntos",
+      "accent": ".",
+      "text": "Diseño y contenido para marcas y espacios. Cuéntame qué tienes en mente.",
+      "cta": {
+        "text": "Escríbeme",
+        "href": "https://ig.me/m/euurobledo",
+        "track": "contact_click"
+      }
+    },
+    {
+      "type": "feature",
+      "id": "banana-bread",
+      "tone": 4,
+      "titleOn": "body",
+      "image": {
+        "src": "img/banana-bread.jpg",
+        "alt": "Una tajada de banana bread en un plato amarillo",
+        "focus": "60% 40%",
+        "fade": false
+      },
+      "kicker": "Cofundadora",
+      "title": "Banana Banana Bread",
+      "accent": ".",
+      "sub": "Pan de banano en Bogotá.",
+      "meta": "Cl. 90 #11-56 · Bogotá",
+      "cta": {
+        "text": "Ver la tienda",
+        "href": "https://www.bananabananabread.com/"
+      },
+      "alt": {
+        "text": "Cómo llegar",
+        "href": "https://www.google.com/maps/search/?api=1&query=BB+Banana+Bread+Cl.+90+%2311-56+Bogot%C3%A1"
+      }
+    },
+    {
+      "type": "tile",
+      "id": "euge-shop",
+      "tone": 2,
+      "kicker": "Tienda · cofundadora",
+      "title": "Euge",
+      "accent": "Shop",
+      "glyph": "arco",
+      "href": "https://www.instagram.com/euge_shop/"
+    },
+    {
+      "type": "photo",
+      "id": "reels",
+      "tone": 1,
+      "play": true,
+      "image": {
+        "src": "img/ikea-finds.jpg",
+        "alt": "Reel: IKEA finds",
+        "focus": "50% 40%"
+      },
+      "kicker": "Reels",
+      "href": "https://www.instagram.com/euurobledo/reels/"
+    },
+    {
+      "type": "pills",
+      "label": "Canales",
+      "tone": 1,
+      "cols": 3,
+      "items": [
+        {
+          "label": "Instagram",
+          "href": "https://www.instagram.com/euurobledo/"
+        },
+        {
+          "label": "VSCO",
+          "href": "https://vsco.co/euurobledo/gallery"
+        },
+        {
+          "label": "Threads",
+          "href": "https://www.threads.net/@euurobledo"
+        }
+      ]
+    }
+  ],
+  "bar": {
+    "items": [
+      {
+        "label": "Inicio",
+        "href": "#top",
+        "icon": "up"
+      },
+      {
+        "label": "Galería",
+        "href": "#galeria",
+        "icon": "ojo"
+      },
+      {
+        "label": "DM",
+        "href": "https://ig.me/m/euurobledo",
+        "icon": "chat"
+      }
+    ],
+    "cta": {
+      "text": "Trabajemos →",
+      "href": "#trabajemos"
+    }
+  },
+  "footer": {
+    "name": "Eugenia Robledo"
+  }
+}

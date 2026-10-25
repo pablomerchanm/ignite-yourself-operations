@@ -1,0 +1,26 @@
+/* Demo «creador con programa» · registro bold (familia de Perdón Práctico y Mario) */
+:root{
+  --bg:#efe9df; --fg:#121212; --acc:#e8481c; --deco:#e8481c;
+
+  --t1-bg:#121212; --t1-fg:#efe9df; --t1-acc:#ff8f6b;
+  --t2-bg:#e8481c; --t2-fg:#121212; --t2-acc:#fff1e6;
+  --t3-bg:#fbf7f0; --t3-fg:#121212; --t3-acc:#e8481c;
+  --t4-bg:#d8cfbf; --t4-fg:#121212; --t4-acc:#e8481c;
+  --t5-bg:#1f3a2b; --t5-fg:#efe9df; --t5-acc:#c9e27a;
+  --t6-bg:#f2b9a8; --t6-fg:#121212; --t6-acc:#1f3a2b;
+
+  --bar-bg:#121212; --bar-fg:#efe9df; --bar-acc:#ff8f6b;
+
+  --display:"Space Grotesk",system-ui,sans-serif;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Inter Tight",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+
+  --title-weight:700;
+  --title-track:-.055em;
+  --title-lead:.9;
+  --acc-style:normal;
+  --scale:1;
+  --radius:1.1rem;
+  --btn-radius:3rem;
+}

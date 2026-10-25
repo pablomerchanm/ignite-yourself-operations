@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "lang": "es",
+    "locale": "es_CO",
+    "title": "Martín Mendoza — Arquitecto · MM & Co",
+    "description": "Martín Mendoza: arquitectura e interiorismo desde Bogotá. Empieza un proyecto, propón una colaboración o mira sus series.",
+    "siteName": "Martín Mendoza",
+    "themeColor": "#17120f",
+    "icon": "img/avatar.jpg",
+    "fonts": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap",
+    "base": "/hub/martin-mendoza/",
+    "draft": true,
+    "ribbon": "Propuesta · Ignite Yourself"
+  },
+  "layout": "board",
+  "top": {
+    "wordmark": "Martín Mendoza",
+    "links": [{ "label": "Instagram", "href": "https://www.instagram.com/martinmendozaarq/" }]
+  },
+  "cards": [
+    {
+      "type": "intro",
+      "id": "martin",
+      "name": "Martín Mendoza V.",
+      "role": "Arquitecto · MM & Co",
+      "avatar": { "src": "img/avatar.jpg" },
+      "href": "https://www.instagram.com/martinmendozaarq/",
+      "claim": "Arquitectura e interiorismo",
+      "accent": "desde Bogotá.",
+      "lines": [
+        "Estudio MM & Co",
+        "Interiores del restaurante Ideal, con Lorenzo Botero",
+        "Una oficina para Design House Colombia, 2024"
+      ]
+    },
+    {
+      "type": "feature",
+      "id": "proyecto",
+      "size": "wide",
+      "tone": 3,
+      "image": false,
+      "kicker": "Proyectos",
+      "title": "¿Tienes un proyecto?",
+      "text": "Cuéntame qué quieres hacer. El formulario es el primer paso.",
+      "cta": { "text": "Empezar un proyecto", "href": "https://forms.monday.com/forms/f9d275791c4dd6b3635798a1a11c76f7", "track": "lead_click" },
+      "alt": { "text": "Cómo empiezo un proyecto", "href": "https://www.instagram.com/martinmendozaarq/reels/" }
+    },
+    {
+      "type": "feature",
+      "id": "marcas",
+      "size": "wide",
+      "tone": 2,
+      "image": false,
+      "kicker": "Marcas",
+      "title": "Publicidad y colaboraciones",
+      "text": "Para marcas de diseño, materiales, restaurantes y viaje.",
+      "cta": { "text": "Escribir a publicidad", "href": "mailto:Publicidad@mmco.studio", "track": "contact_click" }
+    },
+    {
+      "type": "rail",
+      "id": "series",
+      "kicker": "Series",
+      "count": true,
+      "ratio": "3:4",
+      "items": [
+        { "image": { "src": "img/trust-barcelona.jpg", "alt": "" }, "title": "Trust me on…", "sub": "Un día perfecto en Barcelona", "play": true, "href": "https://www.instagram.com/martinmendozaarq/reels/" },
+        { "image": { "src": "img/verano-122.jpg", "alt": "" }, "title": "Verano 122", "sub": "Restaurantes con diseño", "play": true, "href": "https://www.instagram.com/martinmendozaarq/reels/" },
+        { "image": { "src": "img/mal-cliente.jpg", "alt": "" }, "title": "Cómo no ser un mal cliente", "sub": "Episodio 02", "play": true, "href": "https://www.instagram.com/martinmendozaarq/reels/" },
+        { "image": { "src": "img/porcelanosa.jpg", "alt": "" }, "title": "Visitando la fábrica de Porcelanosa", "play": true, "href": "https://www.instagram.com/martinmendozaarq/reels/" },
+        { "image": { "src": "img/estamos-full.jpg", "alt": "" }, "title": "Aprender a decir «Estamos full.»", "play": true, "href": "https://www.instagram.com/martinmendozaarq/reels/" },
+        { "image": { "src": "img/pintas.jpg", "alt": "" }, "title": "Pintas for the week", "play": true, "href": "https://www.instagram.com/martinmendozaarq/reels/" }
+      ]
+    },
+    {
+      "type": "list",
+      "id": "prensa",
+      "variant": "press",
+      "tone": 0,
+      "kicker": "Prensa",
+      "count": true,
+      "items": [
+        { "source": "Dezeen", "meta": "2024", "label": "Colombian designers transform Bogotá townhouse for furniture exhibition", "note": "Su oficina para Design House Colombia, un homenaje al estudio de su padre.", "href": "https://www.dezeen.com/2024/03/11/nc-diseno-colombian-collectible-design-pieces-bogota-townhouse/" },
+        { "source": "Dezeen", "meta": "2023", "label": "Lorenzo Botero and Martín Mendoza convert Bogotá residence into brick-lined restaurant", "note": "Restaurante Ideal: los interiores son suyos.", "href": "https://www.dezeen.com/2023/08/07/botero-mendoza-bogota-ideal-restaurant/" },
+        { "source": "Yellowtrace", "meta": "2023", "label": "A Shared Vision: IDEAL Restaurant by Lorenzo Botero & Martin Mendoza", "note": "Ladrillo, estuco y una paleta corta de materiales naturales.", "href": "https://www.yellowtrace.com.au/lorenzo-botero-martin-mendoza-ideal-restaurant-bogota/" },
+        { "source": "Spaces of My Dreams", "meta": "2025", "label": "The Dream List No. 30", "note": "Su perfil: restricción, materiales y luz.", "href": "https://spacesofmydreams.substack.com/p/the-dream-list-no-30-martin-mendoza" }
+      ]
+    },
+    {
+      "type": "pills",
+      "label": "Canales",
+      "tone": 1,
+      "cols": 2,
+      "items": [
+        { "label": "Instagram", "href": "https://www.instagram.com/martinmendozaarq/" },
+        { "label": "Threads", "href": "https://www.threads.net/@martinmendozaarq" }
+      ]
+    }
+  ],
+  "bar": {
+    "items": [
+      { "label": "Proyecto", "href": "#proyecto", "icon": "e" },
+      { "label": "Marcas", "href": "#marcas", "icon": "chat" },
+      { "label": "Series", "href": "#series", "icon": "play" }
+    ],
+    "cta": { "text": "Empezar proyecto →", "href": "https://forms.monday.com/forms/f9d275791c4dd6b3635798a1a11c76f7", "track": "lead_click" }
+  },
+  "footer": { "name": "Martín Mendoza V.", "mark": "MM" }
+}

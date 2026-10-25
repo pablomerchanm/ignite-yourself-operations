@@ -1,0 +1,29 @@
+/* Demo «autoridad» · registro editorial (familia del /links de Adriana Mejía Cuartas):
+   serif liviana, remate en itálica, filetes en vez de cajas, prensa con medio y año. */
+:root{
+  --bg:#15181d; --fg:#ede7dc; --acc:#c8a86b; --deco:transparent;
+
+  --t1-bg:#1c2027; --t1-fg:#ede7dc; --t1-acc:#c8a86b;
+  --t2-bg:#c8a86b; --t2-fg:#15181d; --t2-acc:#15181d;
+  --t3-bg:#f4efe6; --t3-fg:#15181d; --t3-acc:#8c6a2e;
+  --t4-bg:#232831; --t4-fg:#ede7dc; --t4-acc:#c8a86b; --t4-line:#343a45;
+  --t5-bg:#15181d; --t5-fg:#ede7dc; --t5-acc:#c8a86b; --t5-line:#343a45;
+  --t6-bg:#ede7dc; --t6-fg:#15181d; --t6-acc:#8c6a2e;
+
+  --bar-bg:#ede7dc; --bar-fg:#15181d; --bar-acc:#15181d;
+
+  --display:"Newsreader",Georgia,serif;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"Inter",system-ui,sans-serif;
+
+  --title-weight:400;
+  --title-track:-.015em;
+  --title-lead:1.06;
+  --acc-style:italic;
+  --scale:.62;
+  --radius:2px;
+  --btn-radius:3rem;
+  --btn-font:var(--sans);
+  --btn-weight:600;
+}

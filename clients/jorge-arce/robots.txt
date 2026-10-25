@@ -35,6 +35,8 @@ User-agent: Bytespider
 User-agent: cohere-ai
 Allow: /$
 Allow: /insights
+Allow: /hub$
+Allow: /hub/assets/
 Allow: /llms.txt
 Allow: /sitemap.xml
 Allow: /igy/assets/

@@ -1,0 +1,28 @@
+/* Cormac Hayden · oscuro de alto rendimiento: negro, blanco y el verde de sus
+   contribuciones («just commit bro»); títulos en mayúscula, como sus portadas. */
+:root{
+  --bg:#0a0b0c; --fg:#f1f1ee; --acc:#3ddc6a; --deco:transparent;
+
+  --t1-bg:#141617; --t1-fg:#f1f1ee; --t1-acc:#3ddc6a; --t1-line:#202325;
+  --t2-bg:#3ddc6a; --t2-fg:#0a0b0c; --t2-acc:#0a0b0c;
+  --t3-bg:#f1f1ee; --t3-fg:#0a0b0c; --t3-acc:#1f9e4a;
+  --t4-bg:#0d1a12; --t4-fg:#f1f1ee; --t4-acc:#3ddc6a; --t4-line:#183022;
+  --t5-bg:#1f4fbf; --t5-fg:#f1f1ee; --t5-acc:#b8f5c9;
+  --t6-bg:#1b1d1f; --t6-fg:#f1f1ee; --t6-acc:#3ddc6a;
+
+  --bar-bg:#f1f1ee; --bar-fg:#0a0b0c; --bar-acc:#0a0b0c;
+
+  --display:"Inter Tight",system-ui,sans-serif;
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"Inter",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+
+  --title-weight:800;
+  --title-track:-.035em;
+  --title-lead:.92;
+  --title-case:uppercase;
+  --acc-style:normal;
+  --scale:.8;
+  --radius:.55rem;
+  --btn-radius:.55rem;
+}
