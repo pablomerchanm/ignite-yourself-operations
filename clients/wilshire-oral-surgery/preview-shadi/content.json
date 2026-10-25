@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "title": "Jonathan R. Shadi, DDS — Oral & Maxillofacial Surgery",
+    "description": "Jonathan R. Shadi, DDS. Born in West LA, trained at UCLA, USC, and UCSF, and operating in the neighborhood he grew up in. Wilshire Oral Surgery.",
+    "lang": "en"
+  },
+  "nav": {
+    "links": [
+      ["The story", "#story"],
+      ["Credentials", "#credentials"],
+      ["Referring", "#referring"],
+      ["Practice", "#practice"]
+    ],
+    "logo": ["Jonathan ", "Shadi"],
+    "cta": { "text": "Request an appointment", "href": "#contact" }
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "image": { "src": "/img/dr-shadi.jpg", "alt": "Dr. Jonathan R. Shadi, DDS", "label": "" },
+      "chip": "Oral & Maxillofacial Surgery · West Los Angeles",
+      "title": "Operating in the neighborhood he grew up in.",
+      "sub": "Jonathan R. Shadi, DDS. Born in West LA. Trained at UCLA, USC, and UCSF. Twelve years in private practice.",
+      "ctas": [
+        ["Request an appointment", "#contact", "solid"],
+        ["Read his story", "#story", "cream"]
+      ],
+      "stats": [
+        ["Twelve <em>years</em>", "In private practice"],
+        ["West <em>LA</em>", "Born and practicing"],
+        ["UCLA · USC · <em>UCSF</em>", "Where he trained"]
+      ]
+    },
+    {
+      "type": "about",
+      "id": "story",
+      "chip": "The story",
+      "title": "Home, by way of <a1>everywhere.</a1>",
+      "sub": "West LA to UCLA, USC, and UCSF — and back to the streets he started on.",
+      "photo": { "src": "/img/dr-shadi.jpg", "alt": "Dr. Jonathan R. Shadi", "label": "" },
+      "paras": [
+        "Jonathan Shadi grew up in West Los Angeles. Today he operates a few miles from where he was raised.",
+        "The path out and back ran through some of California's most demanding programs — a neuroscience degree with College Honors at UCLA, dental school at USC with the John Ingle Research Award, a surgical internship at the VA in Long Beach serving veterans, and an oral and maxillofacial surgery residency at UCSF-Fresno.",
+        "In 2014 he came back to Greater Los Angeles to practice. Twelve years later, the patients his colleagues send him cross the city to sit in his chair."
+      ],
+      "signature": "Jonathan Shadi"
+    },
+    {
+      "type": "timeline",
+      "id": "credentials",
+      "chip": "Credentials",
+      "title": "The training behind <a1>the hands.</a1>",
+      "sub": "Elite programs, one after another — then home to operate.",
+      "nodes": [
+        { "era": "Undergraduate · UCLA", "inst": "University of California, Los Angeles", "detail": "B.S. in Neuroscience, awarded with College Honors." },
+        { "era": "Dental · USC", "inst": "USC School of Dentistry", "detail": "Doctor of Dental Surgery, 2009. Named to the Dean's List and awarded the John Ingle Research Award.", "key": true },
+        { "era": "Internship · 2010", "inst": "VA Hospital, Long Beach", "detail": "Oral & maxillofacial surgery internship, serving veterans." },
+        { "era": "Residency · 2014", "inst": "UCSF-Fresno", "detail": "Residency in oral and maxillofacial surgery." },
+        { "era": "Since 2014", "inst": "Private practice, Greater LA", "detail": "Twelve years in private practice — now at Wilshire Oral Surgery." }
+      ]
+    },
+    {
+      "type": "expertise",
+      "id": "expertise",
+      "chip": "What I do",
+      "title": "Focused where surgery <a1>actually helps.</a1>",
+      "sub": "The procedures Dr. Shadi has built his practice around.",
+      "cta": ["Request an appointment", "#contact"],
+      "cards": [
+        { "t": "Wisdom Teeth & Extractions", "d": "Impacted third molars and the extractions that are better handled surgically." },
+        { "t": "Implants & Bone Grafting", "d": "Single, multiple, and complex implants — with the bone grafting that supports them." },
+        { "t": "IV & General Anesthesia", "d": "Comfortable surgical care under IV and general anesthesia." }
+      ]
+    },
+    {
+      "type": "qband",
+      "id": "trust",
+      "chip": "Patient trust",
+      "image": { "src": "/img/clinic.jpg", "alt": "Wilshire Oral Surgery and Implant Center", "label": "" },
+      "quote": "My dentist sent me to Dr. Shadi, and I drove twenty-three miles for the appointment. It was worth every one.",
+      "attr": "John E. — implant patient, referred by his dentist",
+      "note": "A real patient review from the practice's public pages. One person's experience — not a promise of results."
+    },
+    {
+      "type": "referring",
+      "id": "referring",
+      "chip": "For referring doctors",
+      "title": "The colleague your complex cases <a1>can count on.</a1>",
+      "sub": "Wilshire Oral Surgery is built on referrals. Dr. Shadi — one of the practice's board-certified surgeons — takes on the surgical cases general dentists and orthodontists would rather hand to someone they trust.",
+      "items": [
+        { "t": "Wisdom teeth & surgical extractions", "d": "Impacted third molars and difficult extractions." },
+        { "t": "Single, multiple & complex implants", "d": "From a single implant to complex, multi-tooth reconstruction." },
+        { "t": "Bone grafting", "d": "Rebuilding the bone that lasting implants depend on." },
+        { "t": "IV & general anesthesia", "d": "In-office sedation and general anesthesia for surgical care." }
+      ],
+      "paths": [
+        { "text": "Request an appointment", "href": "https://wilshireoralsurgery.com" },
+        { "text": "Professional contact", "href": "mailto:info@wilshireoralsurgery.com" }
+      ],
+      "form": {
+        "title": "Refer a patient",
+        "sub": "Send the case and the office will follow up. No patient records, insurance, or identifiers — this is an introduction, not intake.",
+        "fields": [
+          { "type": "text", "label": "Referring doctor / practice", "placeholder": "Dr. —, practice name" },
+          { "type": "text", "label": "Your name", "placeholder": "Full name" },
+          { "type": "email", "label": "Email", "placeholder": "you@practice.com" },
+          { "type": "textarea", "label": "Case summary", "placeholder": "Brief, non-identifying description of the case" }
+        ],
+        "submit": "Send referral",
+        "msg": "This is a preview — nothing was sent.",
+        "fine": "Preview only. This form is disabled and collects no information."
+      }
+    },
+    {
+      "type": "practice",
+      "id": "practice",
+      "chip": "The practice",
+      "title": "Dr. Shadi operates at <a1>Wilshire Oral Surgery.</a1>",
+      "logo": { "src": "/img/wilshire-logo.png", "alt": "Wilshire Oral Surgery and Implant Center" },
+      "paras": [
+        "This platform tells the story. The surgery happens at Wilshire Oral Surgery and Implant Center in West Los Angeles — the practice that carries his name.",
+        "The platform feeds the practice. It doesn't compete with it."
+      ],
+      "meta": "<a1>Wilshire Oral Surgery and Implant Center</a1><br>12300 Wilshire Blvd #326, Los Angeles, CA 90025<br>(310) 954-9449 — call or text",
+      "link": { "text": "wilshireoralsurgery.com", "href": "https://wilshireoralsurgery.com" },
+      "image": { "src": "/img/clinic.jpg", "alt": "Wilshire Oral Surgery and Implant Center", "label": "" }
+    },
+    {
+      "type": "closing",
+      "id": "contact",
+      "chip": "Wilshire Oral Surgery and Implant Center",
+      "title": "Care that started <a1>in the neighborhood.</a1>",
+      "sub": "12300 Wilshire Blvd #326, Los Angeles. Consultations by appointment.",
+      "ctas": [
+        ["Request an appointment", "https://wilshireoralsurgery.com", "solid"],
+        ["(310) 954-9449", "tel:+13109549449", "tint"]
+      ],
+      "tel": "Jonathan R. Shadi, DDS · Oral & Maxillofacial Surgery",
+      "footer": {
+        "name": ["Jonathan ", "Shadi"],
+        "about": "Oral & maxillofacial surgeon. Born in West LA, operating in the neighborhood he grew up in.",
+        "cols": [
+          ["Navigate", ["The story", "Credentials", "For referring doctors", "The practice"]],
+          ["Connect", ["Request an appointment", "(310) 954-9449", "West Los Angeles"]],
+          ["Practice", ["Wilshire Oral Surgery", "12300 Wilshire Blvd #326"]]
+        ],
+        "legal": ["Private preview — concept · Prepared by Ignite Yourself", "© 2026 · West Los Angeles, California"]
+      }
+    }
+  ]
+}
