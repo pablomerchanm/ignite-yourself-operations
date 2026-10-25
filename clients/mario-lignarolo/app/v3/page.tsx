@@ -69,22 +69,12 @@ export default function V3() {
           <Image src={hero.image.src} alt={hero.image.alt} fill priority sizes="100vw" />
         </div>
         <div className={`${s.wrap} ${s.heroBody}`}>
-          <div className={s.heroText}>
-            <p className={`${s.label} ${s.heroTerritory}`}>{hero.territory}</p>
-            <Lines as="h1" className={`${s.statement} ${s.heroName}`} lines={hero.name} />
-            <p className={`${s.serif} ${s.heroLine}`} data-reveal="up" style={{ "--delay": "0.3s" } as CSSProperties}>
-              {hero.line}
-            </p>
-            <div className={s.heroSignals}>
-              <ul>
-                {hero.signals.map((sig) => (
-                  <li key={sig.href}>
-                    <a href={sig.href}>{sig.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          {/* La cabecera: una línea en escritorio, dos en móvil. */}
+          <h1 className={s.mark}>
+            <span>{hero.name[0]}</span> <span>{hero.name[1]}</span>
+          </h1>
+          <p className={`${s.label} ${s.heroTerritory}`}>{hero.territory}</p>
+          <p className={`${s.serif} ${s.heroLine}`}>{hero.line}</p>
         </div>
       </header>
 
