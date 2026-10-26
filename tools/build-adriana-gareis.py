@@ -270,4 +270,7 @@ def derive(json_path, title, ogurl, out_dir, active):
 
 derive('/adriana-gareis/home.json', TITLE,
        'https://igniteyourself.co/adriana-gareis', DST, None)
+# analitica y aviso de visitas (tools/tracking.py)
+import tracking
+tracking.inject_tree(DST)
 print('adriana-gareis listo')

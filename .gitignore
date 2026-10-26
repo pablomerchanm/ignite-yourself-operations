@@ -13,3 +13,6 @@ Thumbs.db
 node_modules/
 .vercel/
 .netlify/
+
+# Python
+__pycache__/

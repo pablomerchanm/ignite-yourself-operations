@@ -288,4 +288,7 @@ derive('/freudenthal/thinking.json', 'The Thinking — Dr Robert Freudenthal',
        'https://igniteyourself.co/freudenthal/thinking', DST + '/thinking', 'thinking')
 derive('/freudenthal/record.json', 'The Record — Dr Robert Freudenthal',
        'https://igniteyourself.co/freudenthal/record', DST + '/record', 'record')
+# analitica y aviso de visitas (tools/tracking.py)
+import tracking
+tracking.inject_tree(DST)
 print('freudenthal listo')

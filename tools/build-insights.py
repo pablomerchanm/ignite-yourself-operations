@@ -642,6 +642,9 @@ def main():
     splice(HOME, '<!-- insights:latest:start -->', '<!-- insights:latest:end -->', home_block(live))
     splice(os.path.join(SITE, 'sitemap.xml'), '<!-- insights:start -->', '<!-- insights:end -->', sitemap_block(live))
     splice(os.path.join(SITE, 'llms.txt'), '<!-- insights:start -->', '<!-- insights:end -->', llms_block(live))
+    # analitica (tools/tracking.py)
+    import tracking
+    tracking.inject_tree(OUT, visit=False)
     if errors:
         print('Errores:\n  · ' + '\n  · '.join(errors))
         sys.exit(1)

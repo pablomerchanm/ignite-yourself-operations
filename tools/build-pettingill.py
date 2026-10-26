@@ -1601,4 +1601,7 @@ if P.get('active'):
     shutil.copytree(PROP_SRC, f'{DST}/proposal', dirs_exist_ok=True)
 elif os.path.isdir(f'{DST}/proposal'):
     shutil.rmtree(f'{DST}/proposal')
+# analitica y aviso de visitas (tools/tracking.py)
+import tracking
+tracking.inject_tree(DST)
 print('pettingill listo' + (' · propuesta publicada' if P.get('active') else ''))
