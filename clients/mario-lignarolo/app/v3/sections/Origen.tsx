@@ -1,43 +1,43 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
-import { SectionHead } from "./ui";
+import { Progress, SectionHead, Words } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 02 · TERRITORIO / ORIGEN, en blanco. Título de sección, titular serif,
- * el copy en columna (entrada en negrita media, cuerpo, pregunta final en
- * itálica) y la foto alta sangrando por la derecha.
+ * 02 · TERRITORIO / ORIGEN, en blanco. Título y titular serif; después, el
+ * manifiesto como lectura guiada: todo a un mismo tamaño grande, cada palabra
+ * se enciende al cruzar la línea de lectura, con la foto fija a la derecha y
+ * la barra de progreso (01 / 05) debajo. Al final, un silencio y la pregunta,
+ * sola y centrada.
  */
 export default function Origen() {
   const { origen } = v3;
-  const [lead, ...rest] = origen.paragraphs;
   return (
-    <section className={`${s.wrap} ${s.origen}`} id="origen" aria-labelledby="origen-h">
+    <section className={`${s.wrap} ${s.section}`} id="origen" aria-labelledby="origen-h">
       <SectionHead label={origen.label} />
-      <h2 className={`${s.serifHead} ${s.origenHead}`} id="origen-h" data-reveal="up" style={{ "--delay": "0.08s" } as CSSProperties}>
+      <h2 className={`${s.serifHead} ${s.head}`} id="origen-h" data-reveal="up">
         {origen.headline}
       </h2>
-      <div className={`${s.grid} ${s.origenGrid}`}>
-        <div className={s.origenCopy} data-reveal="up">
-          <p className={s.lead}>{lead}</p>
-          {rest.map((p) => (
-            <p key={p} className={s.body}>
-              {p}
+
+      <div className={`${s.grid} ${s.manifesto}`} data-scrub="0.68">
+        <div className={s.manifestoText}>
+          {origen.paragraphs.map((p) => (
+            <p key={p} className={s.scrubText} data-seg>
+              <Words text={p} />
             </p>
           ))}
-          <p className={s.quiet}>{origen.question}</p>
         </div>
-        <figure className={`${s.photo} ${s.origenPhoto}`} data-reveal="up" style={{ "--delay": "0.12s" } as CSSProperties}>
-          <Image
-            src={origen.image.src}
-            alt={origen.image.alt}
-            fill
-            sizes="(min-width: 880px) 44vw, 100vw"
-            style={{ objectPosition: origen.image.position }}
-          />
-        </figure>
+        <div className={s.manifestoAside}>
+          <figure className={`${s.photo} ${s.manifestoPhoto}`}>
+            <Image src={origen.image.src} alt={origen.image.alt} fill sizes="(min-width: 880px) 30vw, 100vw" style={{ objectPosition: origen.image.position }} />
+          </figure>
+          <Progress total={origen.paragraphs.length} />
+        </div>
       </div>
+
+      <p className={`${s.quietL} ${s.question}`} data-scrub="0.75">
+        <Words text={origen.question} />
+      </p>
     </section>
   );
 }

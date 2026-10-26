@@ -18,11 +18,11 @@ export default function Contacto() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => e.preventDefault();
 
   return (
-    <section className={`${s.wrap} ${s.contact}`} id="contacto" aria-labelledby="contact-h">
+    <section className={`${s.wrap} ${s.section}`} id="contacto" aria-labelledby="contact-h">
       <SectionHead label={c.label} id="contact-h" />
       <div className={`${s.grid} ${s.contactGrid}`}>
         <div className={s.contactFor} data-reveal="up">
-          <p className={s.quiet}>{c.lead}</p>
+          <p className={s.contactLead}>{c.lead}</p>
           <ul className={s.contactPaths}>
             {c.paths.map((p) => (
               <li key={p} className={`${s.statement} ${s.contactPath}`}>

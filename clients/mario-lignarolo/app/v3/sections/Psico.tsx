@@ -1,64 +1,52 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
-import { Arrow, Paragraphs, SectionHead, ext } from "./ui";
+import { Arrow, Paragraphs, Progress, SectionHead, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 03 · PSICOCIBERNÉTICA, en negro puro. El titular en grotesk condensada,
- * el retrato en blanco y negro sangrando por la izquierda, el copy, los
- * cuatro conceptos apilados en grande, el statement final y un enlace.
+ * 03 · PSICOCIBERNÉTICA, en negro. Apertura: título, el titular en
+ * condensada y el copy en la columna de lectura. Después, la escena fija
+ * (escritorio): el retrato a la izquierda y los cuatro conceptos que se
+ * encienden de uno en uno, como una respiración; al final aparecen los
+ * secundarios, el statement y el enlace.
  */
 export default function Psico() {
   const { psico } = v3;
   return (
     <section className={`${s.dark} ${s.psico}`} id="psicocibernetica" aria-labelledby="psico-h">
-      <div className={s.wrap}>
+      <div className={`${s.wrap} ${s.sectionTop}`}>
         <SectionHead label={psico.label} />
-        <h2 className={`${s.statement} ${s.psicoHead}`} id="psico-h" data-reveal="up" style={{ "--delay": "0.08s" } as CSSProperties}>
+        <h2 className={`${s.statement} ${s.displayHead} ${s.psicoHead}`} id="psico-h" data-reveal="up">
           {psico.headline}
         </h2>
+        <div className={`${s.grid} ${s.afterHead}`}>
+          <div className={`${s.read} ${s.stack}`} data-reveal="up">
+            <Paragraphs items={psico.paragraphs} className={s.body} />
+          </div>
+        </div>
+      </div>
 
-        <div className={`${s.grid} ${s.psicoGrid}`}>
-          <figure className={`${s.photo} ${s.psicoPhoto}`} data-reveal="up">
-            <Image
-              src={psico.image.src}
-              alt={psico.image.alt}
-              fill
-              sizes="(min-width: 880px) 44vw, 100vw"
-              style={{ objectPosition: psico.image.position }}
-            />
+      <div className={s.pin} data-pin="3.2">
+        <div className={`${s.wrap} ${s.grid} ${s.stage}`}>
+          <figure className={`${s.photo} ${s.stagePhoto}`}>
+            <Image src={psico.image.src} alt={psico.image.alt} fill sizes="(min-width: 880px) 40vw, 100vw" style={{ objectPosition: psico.image.position }} />
           </figure>
-
-          <div className={s.psicoCopy}>
-            <div className={s.copy} data-reveal="up">
-              <Paragraphs items={psico.paragraphs} className={s.body} />
+          <div className={s.stageCopy}>
+            <Progress total={psico.concepts.length} />
+            <ul className={s.concepts} aria-label="Conceptos">
+              {psico.concepts.map((c) => (
+                <li key={c} className={s.statement} data-step>
+                  {c}
+                </li>
+              ))}
+            </ul>
+            <div className={s.stageAfter} data-after>
+              <p className={s.small}>{psico.secondary.join(" · ")}</p>
+              <p className={s.quiet}>{psico.statement}</p>
+              <a href={psico.href} className={s.link} {...ext}>
+                {psico.cta} <Arrow />
+              </a>
             </div>
-
-            <div>
-              <ul className={s.psicoConcepts} aria-label="Conceptos">
-                {psico.concepts.map((c, i) => (
-                  <li key={c} className={s.statement} data-reveal="up" style={{ "--delay": `${i * 0.07}s` } as CSSProperties}>
-                    {c}
-                  </li>
-                ))}
-              </ul>
-              <p className={`${s.small} ${s.psicoSecondary}`} data-reveal="up">
-                {psico.secondary.map((t, i) => (
-                  <span key={t}>
-                    {i > 0 && <span aria-hidden="true"> · </span>}
-                    {t}
-                  </span>
-                ))}
-              </p>
-            </div>
-
-            <p className={s.quiet} data-reveal="up">
-              {psico.statement}
-            </p>
-            <a href={psico.href} className={s.link} {...ext} data-reveal="up">
-              {psico.cta} <Arrow />
-            </a>
           </div>
         </div>
       </div>

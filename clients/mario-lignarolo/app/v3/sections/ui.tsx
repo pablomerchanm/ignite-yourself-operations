@@ -1,10 +1,11 @@
-import type { CSSProperties } from "react";
 import s from "../v3.module.css";
 
 /** Enlaces externos: pestaña nueva sin filtrar el opener. */
 export const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
-/** Título de sección a la manera de Nike About: caja baja, peso regular, tamaño humano. */
+const pad = (n: number) => String(n).padStart(2, "0");
+
+/** Título de sección: caja baja, peso medio, tamaño humano (Nike About). */
 export function SectionHead({ label, id }: { label: string; id?: string }) {
   return (
     <p className={s.title} id={id} data-reveal="up">
@@ -22,26 +23,47 @@ export function Arrow() {
   );
 }
 
-/** Titular que entra línea a línea (usa el revelado global de <Motion/>). */
-export function Lines({
-  lines,
-  className,
-  as: Tag = "p",
-  id,
-}: {
-  lines: React.ReactNode[];
-  className: string;
-  as?: "h1" | "h2" | "h3" | "p";
-  id?: string;
-}) {
+/**
+ * Texto partido en palabras (.sw) para el scrub de lectura. El copy no
+ * cambia: solo se envuelve cada palabra; los espacios quedan como texto.
+ */
+export function Words({ text }: { text: string }) {
   return (
-    <Tag className={className} id={id} data-reveal="lines">
-      {lines.map((l, i) => (
-        <span key={i} className="line" style={{ "--i": i } as CSSProperties}>
-          <span>{l}</span>
+    <>
+      {text.split(/(\s+)/).map((w, i) =>
+        /^\s+$/.test(w) ? w : w ? (
+          <span key={i} className="sw">
+            {w}
+          </span>
+        ) : null,
+      )}
+    </>
+  );
+}
+
+/** Barra de lectura: línea de progreso, flechas y contador (01 / 05). */
+export function Progress({ total }: { total: number }) {
+  return (
+    <div className={s.progress}>
+      <span className={s.track}>
+        <span className={s.trackFill} data-fill />
+      </span>
+      <div className={s.progressNav}>
+        <button type="button" className={s.arrowBtn} data-prev aria-label="Anterior">
+          <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3">
+            <path d="M15 8H2M7 3 2 8l5 5" />
+          </svg>
+        </button>
+        <button type="button" className={s.arrowBtn} data-next aria-label="Siguiente">
+          <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3">
+            <path d="M1 8h13M9 3l5 5-5 5" />
+          </svg>
+        </button>
+        <span className={s.counter}>
+          <span data-cur>01</span> / {pad(total)}
         </span>
-      ))}
-    </Tag>
+      </div>
+    </div>
   );
 }
 

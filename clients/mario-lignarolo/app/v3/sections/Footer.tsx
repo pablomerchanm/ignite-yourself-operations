@@ -5,7 +5,7 @@ import s from "../v3.module.css";
 /** Pie: el nombre, seis enlaces y el año. Nada más. */
 export default function Footer() {
   return (
-    <footer className={`${s.wrap} ${s.footer}`}>
+    <footer className={`${s.wrap} ${s.dark} ${s.footer}`}>
       <span className={s.wordmark}>Mario Lignarolo</span>
       <ul className={s.footerLinks}>
         {v3.footer.links.map((l) => (

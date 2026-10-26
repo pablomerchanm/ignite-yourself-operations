@@ -4,17 +4,17 @@ import Reels from "./Reels";
 import s from "../v3.module.css";
 
 /**
- * 06 · PERSPECTIVAS. Casi sin copy: la palabra a toda escala y dos
+ * 06 · PERSPECTIVAS. Casi sin copy: la palabra en condensada y dos
  * bloques, el archivo vivo. A) reels, como las «Short Stories» de Nike
- * About: piezas verticales con título serif; B) conversaciones, como
- * biblioteca sobre casi negro.
+ * About: verticales con título serif; B) conversaciones, como biblioteca
+ * sobre negro.
  */
 export default function Perspectivas() {
   const { perspectivas: p } = v3;
   return (
-    <section className={s.persp} id="perspectivas" aria-labelledby="persp-h">
-      <div className={s.wrap}>
-        <h2 className={`${s.statement} ${s.perspTitle}`} id="persp-h" data-reveal="up">
+    <section id="perspectivas" aria-labelledby="persp-h">
+      <div className={`${s.wrap} ${s.perspHead}`}>
+        <h2 className={`${s.statement} ${s.displayHead}`} id="persp-h" data-reveal="up">
           {p.title}
         </h2>
       </div>

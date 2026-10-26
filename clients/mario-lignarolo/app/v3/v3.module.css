@@ -3,63 +3,84 @@
    Referencia visual principal: Nike About (about.nike.com).
 
    SISTEMA
-   · Color: blanco y negro. Negro protagonista (hero, Psicocibernética,
-     Hipertrofia del Ser, Conversaciones, pie) y blanco cálido entre medias.
-     Sin azul ni acentos de color: el color lo ponen las fotos.
-   · Tres voces tipográficas, cada una con un solo trabajo:
-       display  Archivo condensada extra-negra, caja alta → statements
-       sans     Inter Tight → títulos de sección (caja baja, regular),
-                navegación, títulos de tarjeta, cuerpo y metadatos
-       serif    Instrument → wordmark, titulares serif y la voz baja
-   · Escala tipográfica cerrada (tokens --t-*) y tres distancias
-     (tokens --s-*). Nada se dimensiona fuera de ellas.
-   · Sin filetes ni rótulos diminutos: el aire ordena. Imagen dura, sin
-     radios ni sombras. Fotografía con tono de película y un grano leve.
-   · Módulo aislado: no toca globals.css ni la home.
+   Color   Blanco y negro. El negro manda (hero, Psicocibernética, Hipertrofia
+           del Ser, Conversaciones, pie); el blanco cálido da los respiros.
+           Sin acentos de color: el color lo ponen las fotos.
+
+   Tipos   Tres voces, cada una con un solo trabajo:
+             display  Archivo condensada → statements en caja alta
+             sans     Geist              → títulos de sección, interfaz, cuerpo
+             serif    Newsreader         → la voz de Mario (titulares, itálica)
+
+   Escala  Ocho pasos, razón ≈ 1,3. Cada paso tiene un uso y nada se sale:
+             hero     statement de portada            ≈ 94 px
+             display  titulares de los mundos         ≈ 80 px
+             serif-l  titulares en voz de Mario       ≈ 56 px
+             h2       lectura guiada · itálica        ≈ 44 px
+             lead     entradas, títulos de video      ≈ 28 px
+             h3       títulos de sección y tarjeta    ≈ 23 px
+             body     párrafos                          17 px
+             small    metadatos                         13 px
+
+   Retícula 12 columnas. Toda sección abre igual: título → titular → contenido.
+           El copy vive siempre en la columna de lectura (7–11): titular
+           pesado a la izquierda, lectura ligera desplazada a la derecha.
+           La simetría se reserva para los silencios (la pregunta, la
+           suscripción).
+
+   Ritmo   section (entre secciones) · block (entre bloques) · title (del
+           título al titular) · stack (entre párrafos).
+
+   Movimiento  Scrollytelling en tres momentos (Scrolly.tsx): el manifiesto
+           de Origen, los conceptos de Psicocibernética (escena fija) y el
+           titular de Hipertrofia. Sin JS o con movimiento reducido, todo
+           visible y quieto.
    ════════════════════════════════════════════════════════════ */
 
 .page {
-  /* color */
   --paper: #f5f4f0;
   --ink: #111214;
   --black: #0e0f12;
   --black-2: #0a0b0d;
   --charcoal: #2b2e34;
   --stone: #6f7177;
-  --rule-strong: rgba(17, 18, 20, 0.6);
+  --rule: rgba(17, 18, 20, 0.14);
+  --rule-strong: rgba(17, 18, 20, 0.55);
   --on-dark: #f2f0eb;
-  --on-dark-soft: #9b9ea6;
+  --on-dark-body: #d6d4ce;
+  --on-dark-soft: #96999f;
   --rule-dark: rgba(242, 240, 235, 0.16);
+  --rule-dark-strong: rgba(242, 240, 235, 0.42);
 
-  /* escala tipográfica */
-  --t-display: clamp(3rem, 0.6rem + 9.4vw, 11rem); /* statements de apertura */
-  --t-display-s: clamp(2rem, 0.9rem + 4vw, 5rem); /* conceptos, contacto */
-  --t-serif: clamp(2rem, 1.2rem + 3vw, 4.25rem); /* titulares serif */
-  --t-serif-s: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem); /* la voz baja, en itálica */
-  --t-title: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); /* título de sección */
-  --t-card: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem); /* títulos de tarjeta */
-  --t-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem); /* párrafo de entrada */
+  --t-hero: min(10.4svh, 7.4vw);
+  --t-display: clamp(2.75rem, 1.1rem + 4.4vw, 5.75rem);
+  --t-serif-l: clamp(2.125rem, 1.25rem + 2.4vw, 3.75rem);
+  --t-h2: clamp(1.625rem, 1.05rem + 1.9vw, 2.75rem);
+  --t-lead: clamp(1.3125rem, 1.1rem + 0.75vw, 1.75rem);
+  --t-h3: clamp(1.1875rem, 1.05rem + 0.45vw, 1.4375rem);
   --t-body: 1.0625rem;
-  --t-small: 0.875rem;
+  --t-ui: 0.9375rem;
+  --t-small: 0.8125rem;
 
-  /* distancias */
-  --s-section: clamp(4rem, 3rem + 5vw, 8rem); /* respiro de cada sección */
-  --s-title: clamp(1.5rem, 1rem + 2vw, 3rem); /* del título al contenido */
-  --s-block: clamp(2.5rem, 2rem + 3vw, 5rem); /* entre bloques */
+  --s-section: clamp(5rem, 3.5rem + 6vw, 10rem);
+  --s-block: clamp(2.5rem, 1.75rem + 3vw, 5rem);
+  --s-title: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --s-stack: 1.1rem;
   --gutter: clamp(1.25rem, 0.5rem + 3.2vw, 4.5rem);
   --gap: clamp(1rem, 0.5rem + 1.5vw, 2rem);
 
-  --sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
-  --serif: var(--font-instrument), "Times New Roman", serif;
-  --display: var(--font-archivo), "Arial Narrow", Impact, sans-serif;
+  --sans: var(--font-v3-sans), ui-sans-serif, system-ui, sans-serif;
+  --serif: var(--font-v3-serif), Georgia, serif;
+  --display: var(--font-archivo), "Arial Narrow", sans-serif;
 
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-weight: 400;
   font-size: var(--t-body);
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.55;
   overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
 }
 .page ::selection {
   background: var(--ink);
@@ -73,19 +94,18 @@
 .page img {
   filter: saturate(0.72) contrast(1.05) sepia(0.06);
 }
-/* Grano fijo, muy leve, sobre toda la página. */
 .grain {
   position: fixed;
   inset: 0;
   z-index: 40;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.28;
   mix-blend-mode: soft-light;
   background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 200px 200px;
 }
 
-/* ── Piezas ─────────────────────────────────────────────── */
+/* ── Retícula y ritmo ───────────────────────────────────── */
 .wrap {
   padding-inline: var(--gutter);
 }
@@ -97,49 +117,105 @@
 .grid > * {
   min-width: 0;
 }
-/* Título de sección: caja baja, peso regular, tamaño humano. */
+.section {
+  padding-block: var(--s-section);
+}
+.sectionTop {
+  padding-top: var(--s-section);
+}
+.head,
+.displayHead {
+  margin-top: var(--s-title);
+}
+.sectionTop > .displayHead:first-child {
+  margin-top: 0;
+}
+.afterHead {
+  margin-top: var(--s-block);
+}
+/* la columna de lectura: siempre la misma */
+.read {
+  grid-column: 7 / span 5;
+}
+.stack {
+  display: grid;
+  gap: var(--s-stack);
+  justify-items: start;
+}
+.stack .link {
+  margin-top: 0.6rem;
+}
+
+/* ── Voces tipográficas ─────────────────────────────────── */
+/* título de sección */
 .title {
   margin: 0;
-  font-size: var(--t-title);
-  font-weight: 450;
+  font-size: var(--t-h3);
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.015em;
 }
-/* La voz alta: grotesk condensada extra-negra, caja alta. */
+/* la voz alta: condensada, caja alta. El interlineado deja sitio a las tildes. */
 .statement {
   margin: 0;
   font-family: var(--display);
-  font-weight: 850;
-  font-stretch: 70%;
-  font-variation-settings: "wdth" 70;
-  line-height: 0.86;
-  letter-spacing: 0;
+  font-weight: 800;
+  font-stretch: 66%;
+  font-variation-settings: "wdth" 66;
+  line-height: 0.94;
+  letter-spacing: -0.005em;
   text-transform: uppercase;
 }
-/* Titular serif y la voz baja en itálica. */
-.serifHead {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: var(--t-serif);
-  line-height: 1.02;
-  letter-spacing: -0.015em;
+.displayHead {
+  font-size: var(--t-display);
+  max-width: 11em;
   text-wrap: balance;
 }
-.quiet {
+/* el titular grande respeta el ritmo título → titular (gana a .statement) */
+.statement.displayHead {
+  margin-top: var(--s-title);
+}
+.sectionTop > .statement.displayHead:first-child,
+.perspHead > .statement.displayHead:first-child {
+  margin-top: 0;
+}
+.displayHead .line {
+  display: block;
+}
+/* la voz de Mario */
+.serifHead {
+  margin-bottom: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--t-serif-l);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 15em;
+  text-wrap: balance;
+}
+.quiet,
+.quietL {
   margin: 0;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
-  font-size: var(--t-serif-s);
-  line-height: 1.12;
   text-wrap: balance;
+}
+.quiet {
+  font-size: var(--t-h2);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+.quietL {
+  font-size: var(--t-serif-l);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
 }
 .lead {
   margin: 0;
   font-size: var(--t-lead);
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.22;
   letter-spacing: -0.02em;
 }
 .body {
@@ -147,31 +223,29 @@
   font-size: var(--t-body);
   line-height: 1.6;
   color: var(--charcoal);
+  max-width: 36em;
 }
-/* Metadatos: gris, caja baja, sin interletrado. */
 .small {
+  display: block;
   margin: 0;
   font-size: var(--t-small);
-  font-weight: 400;
   line-height: 1.4;
   color: var(--stone);
+  font-variant-numeric: tabular-nums;
 }
 .dek {
   display: block;
-  margin: 0.5rem 0 0;
-  font-size: var(--t-body);
-  line-height: 1.5;
+  font-size: var(--t-ui);
+  line-height: 1.45;
   color: var(--stone);
-  max-width: 30em;
 }
 .link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4em;
-  font-size: var(--t-body);
+  gap: 0.45em;
+  font-size: var(--t-ui);
   font-weight: 500;
   line-height: 1.3;
-  letter-spacing: -0.005em;
 }
 .link svg {
   width: 0.7em;
@@ -186,6 +260,8 @@
 .link:hover svg {
   transform: translate(0.12em, -0.12em);
 }
+
+/* ── Piezas ─────────────────────────────────────────────── */
 .photo {
   position: relative;
   display: block;
@@ -199,42 +275,37 @@
 .pending {
   display: flex;
   align-items: flex-end;
-  padding: 0.75rem;
+  padding: 0.6rem;
   border: 1px dashed var(--rule-strong);
-  font-size: var(--t-small);
+  font-size: 0.6875rem;
   line-height: 1.3;
   color: var(--stone);
 }
-/* Texto sobre negro */
 .dark {
   background: var(--ink);
   color: var(--on-dark);
+}
+.dark .body {
+  color: var(--on-dark-body);
 }
 .dark .small,
 .dark .dek {
   color: var(--on-dark-soft);
 }
-.dark .body {
-  color: var(--on-dark);
-}
 .dark .photo {
   background: #1a1b1e;
 }
-
-/* Copy de sección: columna de lectura con su enlace */
-.copy {
-  display: grid;
-  gap: 1.1rem;
-  justify-items: start;
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
-.copy .body {
-  max-width: 34em;
-}
-.copy .link {
-  margin-top: 0.5rem;
-}
-
-/* ── Aviso de borrador ─────────────────────────────────── */
 .notice {
   position: fixed;
   right: 0;
@@ -248,7 +319,85 @@
   white-space: nowrap;
 }
 
-/* ── Navegación, sobre la portada ──────────────────────── */
+/* ── Lectura guiada (scrub) y barra de progreso ─────────── */
+:global(html.v3-motion) .page [data-scrub] :global(.sw) {
+  opacity: 0.16;
+}
+.page :global(.sw) {
+  will-change: opacity;
+}
+.progress {
+  display: grid;
+  gap: 0.9rem;
+  width: 100%;
+}
+:global(html:not(.v3-motion)) .progress {
+  display: none;
+}
+.track {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: var(--rule);
+}
+.trackFill {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progressNav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.arrowBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.arrowBtn svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+.arrowBtn:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.counter {
+  margin-left: auto;
+  font-size: var(--t-small);
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+.dark .track {
+  background: var(--rule-dark);
+}
+.dark .arrowBtn {
+  border-color: var(--rule-dark-strong);
+}
+.dark .arrowBtn:hover {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.dark .counter {
+  color: var(--on-dark-soft);
+}
+
+/* ── Navegación ─────────────────────────────────────────── */
 .nav {
   position: absolute;
   inset: 0 0 auto 0;
@@ -263,9 +412,9 @@
 .wordmark {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   line-height: 1;
-  letter-spacing: 0;
+  letter-spacing: -0.01em;
 }
 .navList {
   display: flex;
@@ -275,38 +424,22 @@
   list-style: none;
 }
 .navList a {
-  font-size: 0.9375rem;
+  font-size: var(--t-ui);
   font-weight: 450;
-  letter-spacing: -0.005em;
   opacity: 0.72;
   transition: opacity 0.2s ease;
 }
 .navList a:hover {
   opacity: 1;
 }
-@media (max-width: 880px) {
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    padding-block: 1.25rem;
-  }
-  .navList li:not(:last-child) {
-    display: none;
-  }
-}
 
-/* ── 01 · Hero (Nike About / Mission) ───────────────────────
-   Campo casi negro. Arriba, el territorio como rótulo; el statement en
-   siete líneas de grotesk condensada ocupa la altura; abajo, la firma en
-   serif. El retrato vive en el 66 % derecho, fundido en el negro por la
-   izquierda, con la cara en el tercio derecho: el texto se monta sobre la
-   parte oscura de la foto y nunca sobre la cara. */
+/* ── 01 · Hero ──────────────────────────────────────────── */
 .hero {
   position: relative;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  padding: calc(4.5rem + 2vh) var(--gutter) clamp(1.5rem, 1rem + 2vh, 2.5rem);
+  padding: calc(4.5rem + 2svh) var(--gutter) clamp(1.5rem, 1rem + 2svh, 2.5rem);
   background: var(--black);
   color: var(--on-dark);
 }
@@ -358,22 +491,22 @@
   position: relative;
   z-index: 2;
   margin: 0;
-  font-size: var(--t-title);
-  font-weight: 450;
+  font-size: var(--t-h3);
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.015em;
 }
 .heroStatement {
   position: relative;
   z-index: 2;
-  margin: clamp(0.75rem, 1.5vh, 1.5rem) 0 0;
+  margin: var(--s-title) 0 0;
   font-family: var(--display);
-  font-weight: 850;
-  font-stretch: 70%;
-  font-variation-settings: "wdth" 70;
-  font-size: min(11.6vh, 8.4vw); /* la única medida fuera de la escala: la manda la altura */
-  line-height: 0.86;
-  letter-spacing: 0;
+  font-weight: 800;
+  font-stretch: 66%;
+  font-variation-settings: "wdth" 66;
+  font-size: var(--t-hero);
+  line-height: 0.94;
+  letter-spacing: -0.005em;
   text-transform: uppercase;
 }
 .heroStatement span {
@@ -386,9 +519,9 @@
   padding-top: 1.5rem;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: var(--t-title);
+  font-size: var(--t-h3);
   line-height: 1;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -405,188 +538,110 @@
     animation-delay: calc(0.2s + var(--i, 0) * 0.07s);
   }
 }
-@media (max-width: 880px) {
-  .hero {
-    min-height: 0;
-    padding-top: 5.5rem;
-    padding-bottom: 0;
-  }
-  .heroPhoto {
-    position: relative;
-    inset: auto;
-    order: 10;
-    aspect-ratio: 4 / 5;
-    margin: 2rem calc(-1 * var(--gutter)) 0;
-  }
-  .heroPhoto img {
-    object-position: 46% 18%;
-    transform: none;
-    animation: none;
-  }
-  .heroPhoto::after {
-    background: linear-gradient(to bottom, var(--black) 0%, rgba(14, 15, 18, 0) 18%);
-  }
-  .heroStatement {
-    font-size: min(3.4rem, 13.5vw);
-  }
-  .heroName {
-    margin-top: 1.75rem;
-    padding-top: 0;
-  }
-  .heroName span {
-    display: block;
-  }
-}
 
-/* ── 02 · Territorio / Origen (blanco) ─────────────────────
-   Título de sección, titular serif, copy en columna, la pregunta final en
-   itálica; la foto, alta, sangra por la derecha. */
-.origen {
-  padding-block: var(--s-section);
-}
-.origenHead {
-  margin-top: var(--s-title);
-  max-width: 14em;
-}
-.origenGrid {
+/* ── 02 · Origen (blanco) ──────────────────────────────── */
+.manifesto {
   margin-top: var(--s-block);
   align-items: start;
-  row-gap: var(--s-block);
 }
-.origenCopy {
-  grid-column: 1 / span 6;
+.manifestoText {
+  grid-column: 1 / span 7;
+}
+.scrubText {
+  margin: 0;
+  max-width: 19em;
+  font-size: var(--t-h2);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+}
+.scrubText + .scrubText {
+  margin-top: 0.85em;
+}
+.manifestoAside {
+  grid-column: 9 / -1;
+  position: sticky;
+  top: 12svh;
   display: grid;
   gap: 1.25rem;
 }
-.origenCopy .lead {
-  max-width: 22em;
-}
-.origenCopy .body {
-  max-width: 34em;
-}
-.origenCopy .quiet {
-  margin-top: 1rem;
-  max-width: 16em;
-}
-.origenPhoto {
-  grid-column: 8 / -1;
+.manifestoPhoto {
   margin-right: calc(-1 * var(--gutter));
   aspect-ratio: 3 / 4;
+  max-height: 64svh;
 }
-@media (max-width: 880px) {
-  .origenCopy,
-  .origenPhoto {
-    grid-column: 1 / -1;
-  }
-  .origenPhoto {
-    order: -1;
-    margin-inline: calc(-1 * var(--gutter));
-    aspect-ratio: 4 / 5;
-  }
+/* el silencio: la pregunta, sola y centrada */
+.question {
+  max-width: 15em;
+  margin: var(--s-section) auto 0;
+  text-align: center;
 }
 
-/* ── 03 · Psicocibernética (negro) ─────────────────────────
-   Un mundo propio en negro puro: el titular en condensada, el retrato en
-   blanco y negro sangrando por la izquierda, los conceptos apilados. */
+/* ── 03 · Psicocibernética (negro) ─────────────────────── */
 .psico {
-  padding-block: var(--s-section);
   background: var(--black-2);
-  color: var(--on-dark);
 }
 .psicoHead {
-  margin-top: var(--s-title);
-  font-size: var(--t-display);
-  max-width: 8.2em;
+  max-width: 9.5em;
 }
-.psicoGrid {
-  margin-top: var(--s-block);
-  align-items: start;
+.stage {
+  align-items: center;
   row-gap: var(--s-block);
+  padding-block: var(--s-block) var(--s-section);
 }
-.psicoPhoto {
+.pin[data-pinned] .stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding-block: 0;
+  align-content: center;
+}
+.stagePhoto {
   grid-column: 1 / span 5;
   margin-left: calc(-1 * var(--gutter));
   aspect-ratio: 3 / 4;
-  background: #1a1b1e;
+  max-height: 80svh;
 }
-.psicoPhoto img {
+.stagePhoto img {
   filter: grayscale(1) contrast(1.1) brightness(0.92);
 }
-.psicoCopy {
-  grid-column: 7 / span 6;
+.stageCopy {
+  grid-column: 7 / -1;
   display: grid;
-  gap: var(--s-block);
+  gap: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
   justify-items: start;
 }
-.psicoCopy .body {
-  color: var(--on-dark);
+.stageCopy .progress {
+  max-width: 22rem;
 }
-.psicoConcepts {
+.concepts {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.psicoConcepts li {
-  font-size: var(--t-display-s);
-  line-height: 0.9;
+.concepts li {
+  font-size: min(var(--t-display), 8.4svh);
+  transition: opacity 0.45s ease;
 }
-.psicoSecondary {
-  margin: 1rem 0 0;
-  color: var(--on-dark-soft);
+:global(html.v3-motion) .pin[data-pinned] [data-step] {
+  opacity: 0.16;
 }
-.psicoCopy .quiet {
-  max-width: 17em;
+:global(html.v3-motion) .pin[data-pinned] [data-after] {
+  opacity: 0;
 }
-@media (max-width: 880px) {
-  .psicoPhoto,
-  .psicoCopy {
-    grid-column: 1 / -1;
-  }
-  .psicoPhoto {
-    margin-inline: calc(-1 * var(--gutter));
-    aspect-ratio: 4 / 5;
-  }
-}
-
-/* ── 04 · Hipertrofia del Ser (casi negro) ────────────────
-   Como el bloque de entrevistas de Nike About: título, el titular a toda
-   escala (el cuerpo en condensada, el ser en serif), el copy y una
-   retícula de tres columnas con las portadas reales de Substack. La
-   tarjeta central lleva la imagen más alta y escalona la fila. */
-.pub {
-  padding-block: var(--s-section);
-}
-.pubHead {
-  margin: var(--s-title) 0 0;
-  font-size: var(--t-display);
-  line-height: 0.86;
-}
-.pubHead .line {
-  display: block;
-}
-.pubHeadB {
-  display: block;
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.015em;
-  padding-left: 0.06em;
-}
-.pubIntro {
-  margin-top: var(--s-block);
-}
-.pubText {
-  grid-column: 5 / span 6;
+.stageAfter {
   display: grid;
-  gap: 1.1rem;
+  gap: 1rem;
   justify-items: start;
 }
-.pubText .body {
-  max-width: 34em;
+.stageAfter .quiet {
+  max-width: 17em;
 }
-.pubText .link {
-  margin-top: 0.5rem;
+.pin:not([data-pinned]) .progress {
+  display: none;
 }
+
+/* ── 04 · Hipertrofia del Ser (negro) ──────────────────── */
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -596,11 +651,12 @@
   list-style: none;
 }
 .cardLink {
-  display: block;
+  display: grid;
+  gap: 0.45rem;
 }
-/* las seis portadas, al mismo tamaño */
 .cardPhoto {
   aspect-ratio: 16 / 9;
+  margin-bottom: 0.8rem;
 }
 .cardPhoto img {
   transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
@@ -608,16 +664,12 @@
 .cardLink:hover .cardPhoto img {
   transform: scale(1.03);
 }
-.cardBody {
-  display: block;
-  margin-top: 1.25rem;
-}
 .cardTitle {
-  margin: 0.4rem 0 0;
-  font-size: var(--t-card);
+  margin: 0;
+  font-size: var(--t-h3);
   font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 .cardLink:hover .cardTitle {
@@ -625,62 +677,59 @@
   text-underline-offset: 0.15em;
   text-decoration-thickness: 1px;
 }
-/* Suscripción: centrada, logo, nombre, formulario en una línea y aviso legal. */
+/* suscripción: pequeña, centrada, en silencio */
 .subscribe {
   display: grid;
   justify-items: center;
-  gap: 0.75rem;
-  max-width: 36rem;
+  gap: 0.5rem;
+  max-width: 28rem;
   margin: var(--s-section) auto 0;
   text-align: center;
 }
 .subHead {
-  max-width: 12em;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-lead);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 .subPub {
-  display: grid;
-  justify-items: center;
-  gap: 0.35rem;
-  margin-top: var(--s-title);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  text-align: left;
 }
-.subLogo {
+.subPub img.subLogo {
   display: block;
-  width: 3.5rem;
-  height: 3.5rem;
-  overflow: hidden;
-  background: #1a1b1e;
-}
-.subLogo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 36px;
+  height: 36px;
   filter: none;
 }
 .subName {
-  margin: 0.35rem 0 0;
-  font-size: var(--t-card);
+  display: block;
+  font-size: var(--t-ui);
   font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.3;
 }
 .subForm {
   display: flex;
   width: 100%;
-  max-width: 28rem;
+  max-width: 25rem;
   margin-top: 1rem;
 }
 .subForm input {
   flex: 1;
   min-width: 0;
-  padding: 0.85rem 1rem;
-  border: 1px solid var(--rule-dark);
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--rule-dark-strong);
   border-right: 0;
   border-radius: 0;
   background: transparent;
   color: var(--on-dark);
   font: inherit;
-  font-size: var(--t-body);
+  font-size: var(--t-ui);
   outline: none;
 }
 .subForm input::placeholder {
@@ -690,24 +739,24 @@
   border-color: var(--on-dark);
 }
 .subForm button {
-  padding: 0.85rem 1.25rem;
+  height: 2.75rem;
+  padding: 0 1.1rem;
   border: 1px solid var(--on-dark);
   border-radius: 0;
   background: var(--on-dark);
   color: var(--ink);
   font: inherit;
-  font-size: var(--t-body);
+  font-size: var(--t-ui);
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 .subForm button:hover {
   background: #fff;
 }
 .subLegal {
-  margin: 0;
-  max-width: 28rem;
-  font-size: 0.75rem;
+  margin: 0.25rem 0 0;
+  max-width: 25rem;
+  font-size: 0.6875rem;
   line-height: 1.5;
   color: var(--on-dark-soft);
 }
@@ -715,66 +764,8 @@
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
-}
-@media (max-width: 880px) {
-  .pubText {
-    grid-column: 1 / -1;
-  }
-  .cards {
-    grid-template-columns: 1fr;
-  }
-  .subForm {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .subForm input {
-    border-right: 1px solid var(--rule-dark);
-  }
-}
 
-/* ── 05 · Emprendimiento / Lignarolo (blanco) ──────────────
-   Menos peso: titular serif a escala media y el copy en primera persona.
-   Lignarolo como una página de campaña: foto panorámica, texto sobre el vacío. */
-.emp {
-  padding-block: var(--s-section);
-}
-.empGrid {
-  margin-top: var(--s-title);
-  align-items: start;
-  row-gap: var(--s-block);
-}
-.empHeadCol {
-  grid-column: 1 / span 7;
-}
-.empHead {
-  max-width: 13em;
-}
-.empCopy {
-  grid-column: 8 / span 5;
-  display: grid;
-  gap: 1rem;
-  padding-top: 0.35rem;
-}
-.empCopy .body {
-  max-width: 30em;
-}
-.empFields {
-  margin: 0.25rem 0;
-  font-size: var(--t-lead);
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-}
+/* ── 05 · Emprendimiento / Lignarolo (blanco) ──────────── */
 .lg {
   margin-top: var(--s-block);
 }
@@ -794,66 +785,35 @@
   bottom: clamp(1.25rem, 1rem + 1.5vw, 2.5rem);
   z-index: 1;
   display: grid;
-  gap: 1.1rem;
+  gap: 1rem;
   justify-items: start;
   max-width: 24rem;
 }
 .lgPending {
-  margin: 0.75rem 0 0 auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.75rem;
   max-width: 34rem;
+  margin: 0.75rem 0 0 auto;
 }
 .lgPending .pending {
   aspect-ratio: 4 / 5;
-  padding: 0.5rem;
-  font-size: 0.6875rem;
-}
-@media (max-width: 880px) {
-  .empHeadCol,
-  .empCopy {
-    grid-column: 1 / -1;
-  }
-  .lgPhoto {
-    margin-inline: calc(-1 * var(--gutter));
-    aspect-ratio: 4 / 3;
-  }
-  .lgPhoto img {
-    object-position: 62% 100%;
-  }
-  .lgOver {
-    position: static;
-    margin-top: 1.25rem;
-    max-width: none;
-  }
-  .lgPending {
-    margin-top: 1.5rem;
-    max-width: none;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
-/* ── 06 · Perspectivas ─────────────────────────────────────
-   La palabra a toda escala (blanco); reels como «Short Stories»; las
-   conversaciones como biblioteca sobre casi negro. */
-.persp {
-  padding-top: var(--s-section);
-}
-.perspTitle {
-  font-size: var(--t-display);
-  line-height: 0.82;
+/* ── 06 · Perspectivas ──────────────────────────────────── */
+/* llega tras otra sección en blanco: un solo respiro entre ambas, no dos */
+.perspHead {
+  padding-top: 0;
 }
 .reels {
-  margin-top: var(--s-block);
-  padding-bottom: var(--s-section);
+  padding-block: var(--s-block) var(--s-section);
 }
 .reelsHead {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem 2rem;
-  padding-bottom: var(--s-title);
+  padding-bottom: 1.5rem;
 }
 .reelsTools {
   display: flex;
@@ -871,8 +831,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   padding: 0;
   border: 1px solid var(--rule-strong);
   background: transparent;
@@ -884,8 +844,8 @@
   margin-left: -1px;
 }
 .ctl svg {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 0.85rem;
+  height: 0.85rem;
 }
 .ctl:hover {
   background: var(--ink);
@@ -907,7 +867,7 @@
   display: none;
 }
 .reel {
-  flex: 0 0 clamp(200px, 21vw, 300px);
+  flex: 0 0 clamp(200px, 20vw, 290px);
   scroll-snap-align: start;
 }
 .reelLink {
@@ -925,10 +885,10 @@
 }
 .reelTitle {
   display: block;
-  margin: 1rem 0 0.35rem;
+  margin: 0.9rem 0 0.35rem;
   font-family: var(--serif);
-  font-size: var(--t-card);
-  line-height: 1.12;
+  font-size: var(--t-h3);
+  line-height: 1.15;
   letter-spacing: -0.01em;
   text-wrap: pretty;
 }
@@ -937,16 +897,7 @@
   text-underline-offset: 0.12em;
   text-decoration-thickness: 1px;
 }
-@media (max-width: 880px) {
-  .reelsHead {
-    flex-wrap: wrap;
-  }
-  .reel {
-    flex-basis: min(68vw, 300px);
-  }
-}
-
-/* Conversaciones: una principal grande y el listado */
+/* conversaciones */
 .talks {
   padding-block: var(--s-section);
 }
@@ -956,7 +907,7 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem 2rem;
-  padding-bottom: var(--s-title);
+  padding-bottom: 1.5rem;
 }
 .talksGrid {
   align-items: start;
@@ -973,7 +924,6 @@
 }
 .talkPoster {
   object-fit: cover;
-  filter: saturate(0.7) contrast(1.05);
 }
 .talkFrame {
   position: absolute;
@@ -997,11 +947,11 @@
   text-align: left;
 }
 .talkPlay svg {
+  box-sizing: border-box;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0.65rem;
   border: 1px solid rgba(242, 240, 235, 0.6);
-  box-sizing: border-box;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .talkPlay:hover svg {
@@ -1016,14 +966,14 @@
 .talkCaption {
   display: grid;
   gap: 0.4rem;
-  margin-top: 1.25rem;
   max-width: 34rem;
+  margin-top: 1.25rem;
 }
 .talkTitle {
   margin: 0;
-  font-size: var(--t-card);
+  font-size: var(--t-lead);
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
@@ -1056,41 +1006,33 @@
 .talkRowIndex {
   padding-top: 0.2rem;
   font-size: var(--t-small);
+  font-variant-numeric: tabular-nums;
 }
 .talkRowTitle {
   font-size: var(--t-body);
   font-weight: 500;
   line-height: 1.3;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
 }
 .talkRowMeta {
   font-size: var(--t-small);
 }
-@media (max-width: 880px) {
-  .talkMain,
-  .talkList {
-    grid-column: 1 / -1;
-  }
-  .talkScreen {
-    margin-inline: calc(-1 * var(--gutter));
-  }
-}
 
-/* ── 07 · Contacto (blanco) ────────────────────────────────
-   Utilitario y tipográfico: a quién, en grande; el formulario, en líneas. */
-.contact {
-  padding-block: var(--s-section);
-}
+/* ── 07 · Contacto (blanco) ────────────────────────────── */
 .contactGrid {
-  margin-top: var(--s-title);
+  margin-top: var(--s-block);
   align-items: start;
   row-gap: var(--s-block);
 }
 .contactFor {
   grid-column: 1 / span 6;
 }
-.contactFor .quiet {
-  margin-bottom: 0.4rem;
+.contactLead {
+  margin: 0 0 0.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: var(--t-lead);
+  line-height: 1;
 }
 .contactPaths {
   margin: 0;
@@ -1098,14 +1040,12 @@
   list-style: none;
 }
 .contactPath {
-  font-size: var(--t-display-s);
-  line-height: 0.9;
+  font-size: var(--t-display);
 }
 .form {
-  grid-column: 7 / span 6;
+  grid-column: 7 / -1;
   display: grid;
   gap: 1.75rem;
-  padding-top: 0.5rem;
 }
 .formRow {
   display: grid;
@@ -1132,17 +1072,17 @@
   outline: none;
 }
 .field textarea {
-  resize: vertical;
   min-height: 6rem;
+  resize: vertical;
 }
 .field select {
   appearance: none;
   -webkit-appearance: none;
+  padding-right: 1.5rem;
   background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
   background-position: calc(100% - 10px) 55%, calc(100% - 5px) 55%;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
-  padding-right: 1.5rem;
 }
 .field input:focus,
 .field select:focus,
@@ -1155,7 +1095,6 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem 2rem;
-  margin-top: 0.5rem;
 }
 .submit {
   padding: 0;
@@ -1166,31 +1105,21 @@
   cursor: pointer;
 }
 .pendingNote {
-  font-size: 0.6875rem;
-  color: var(--stone);
   padding: 0.3em 0.6em;
   border: 1px dashed var(--rule-strong);
-}
-@media (max-width: 880px) {
-  .contactFor,
-  .form {
-    grid-column: 1 / -1;
-  }
-  .formRow {
-    grid-template-columns: 1fr;
-  }
+  font-size: 0.6875rem;
+  color: var(--stone);
 }
 
-/* ── Pie: negro, la firma y seis enlaces ───────────────── */
+/* ── Pie (negro) ────────────────────────────────────────── */
 .footer {
-  background: var(--black);
-  color: var(--on-dark);
-  padding-block: 2.5rem 2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem 2rem;
+  padding-block: 2.5rem 2rem;
+  background: var(--black);
 }
 .footerLinks {
   display: flex;
@@ -1201,8 +1130,7 @@
   list-style: none;
 }
 .footerLinks a {
-  font-size: 0.9375rem;
-  font-weight: 450;
+  font-size: var(--t-ui);
   color: var(--on-dark-soft);
   transition: color 0.2s ease;
 }
@@ -1210,10 +1138,123 @@
   color: var(--on-dark);
 }
 .legal {
-  margin: 0.5rem 0 0;
   width: 100%;
+  margin: 0.5rem 0 0;
   font-size: var(--t-small);
   color: var(--on-dark-soft);
+}
+
+/* ── Móvil ──────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .page {
+    --t-hero: min(3.25rem, 12.4vw);
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.25rem;
+  }
+  .navList li:not(:last-child) {
+    display: none;
+  }
+  .read,
+  .manifestoText,
+  .manifestoAside,
+  .stagePhoto,
+  .stageCopy,
+  .talkMain,
+  .talkList,
+  .contactFor,
+  .form {
+    grid-column: 1 / -1;
+  }
+  /* hero: texto sobre negro y la foto debajo */
+  .hero {
+    min-height: 0;
+    padding-top: 5.5rem;
+    padding-bottom: 0;
+  }
+  .heroPhoto {
+    position: relative;
+    inset: auto;
+    order: 10;
+    aspect-ratio: 4 / 5;
+    margin: 2rem calc(-1 * var(--gutter)) 0;
+  }
+  .heroPhoto img {
+    object-position: 46% 18%;
+    transform: none;
+    animation: none;
+  }
+  .heroPhoto::after {
+    background: linear-gradient(to bottom, var(--black) 0%, rgba(14, 15, 18, 0) 18%);
+  }
+  .heroName {
+    margin-top: 1.75rem;
+    padding-top: 0;
+  }
+  /* origen: la foto arriba, sin fijar; sin barra */
+  .manifestoAside {
+    position: static;
+    order: -1;
+    margin-bottom: var(--s-block);
+  }
+  .manifestoPhoto {
+    margin-inline: calc(-1 * var(--gutter));
+    max-height: none;
+    aspect-ratio: 4 / 5;
+  }
+  .manifestoAside .progress {
+    display: none;
+  }
+  .question {
+    margin-top: var(--s-block);
+  }
+  .stagePhoto {
+    margin-inline: calc(-1 * var(--gutter));
+    max-height: none;
+    aspect-ratio: 4 / 5;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .subForm {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .subForm input {
+    flex: 0 0 auto;
+    border-right: 1px solid var(--rule-dark-strong);
+  }
+  .lgPhoto {
+    margin-inline: calc(-1 * var(--gutter));
+    aspect-ratio: 4 / 3;
+  }
+  .lgPhoto img {
+    object-position: 62% 100%;
+  }
+  .lgOver {
+    position: static;
+    max-width: none;
+    margin-top: 1.25rem;
+  }
+  .lgPending {
+    max-width: none;
+    margin-top: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reelsHead {
+    flex-wrap: wrap;
+  }
+  .reel {
+    flex-basis: min(68vw, 290px);
+  }
+  .talkScreen {
+    margin-inline: calc(-1 * var(--gutter));
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1221,10 +1262,12 @@
   .cardPhoto img,
   .reelCover img,
   .ctl,
+  .arrowBtn,
   .talkRow,
   .talkPlay svg,
   .navList a,
-  .footerLinks a {
+  .footerLinks a,
+  .concepts li {
     transition: none;
   }
 }
