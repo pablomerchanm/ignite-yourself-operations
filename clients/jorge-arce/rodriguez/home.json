@@ -22,6 +22,10 @@
       "h": "/rodriguez/record"
     },
     {
+      "t": "The firm",
+      "h": "/rodriguez#firm"
+    },
+    {
       "t": "Enquiry",
       "h": "/rodriguez#inquiry"
     }
@@ -46,29 +50,60 @@
           "h": "#inquiry",
           "primary": true
         }
-      ]
+      ],
+      "firm": {
+        "k": "Founder and Principal",
+        "logo": "/rodriguez/assets/ra-lockup-white.png",
+        "alt": "Rodriguez & Associates Advisory Group",
+        "h": "#firm"
+      }
     },
     {
-      "type": "brief",
-      "id": "in-brief",
-      "label": "In brief",
-      "items": [
+      "type": "practice",
+      "id": "firm",
+      "label": "The firm",
+      "title": "Rodriguez & Associates <t>Advisory Group.</t>",
+      "lede": "The firm Rick founded in downtown Los Angeles in 1992 and leads today. The advisory, workout and expert work on this site is delivered through it.",
+      "company": {
+        "logo": "/rodriguez/assets/ra-lockup-white.png",
+        "name": "Rodriguez & Associates Advisory Group",
+        "role": "Founder and Principal · since 1992",
+        "desc": "Founded to resolve complex debtor-creditor transactions secured by real estate, stock and partnership interests. Today also capital procurement, real estate brokerage, site acquisition and litigation support, with Emily Rodriguez, Partner.",
+        "meta": [
+          "333 S. Grand Avenue, Suite 1790",
+          "Los Angeles, California 90071",
+          "(213) 617-1163 · rick@rodriguezadvisory.com"
+        ],
+        "href": "https://www.rodriguezadvisory.com/",
+        "link": "Visit rodriguezadvisory.com"
+      },
+      "social": [
         {
-          "k": "Inside the bank.",
-          "t": "Security Pacific National Bank, 1979 to 1992, from assistant branch manager to Senior Vice President.",
-          "d": "Credit policy for a $6 billion real estate portfolio, with personal approval authority of $15 million."
-        },
-        {
-          "k": "An independent practice since 1992.",
-          "t": "Founder and Principal of Rodriguez & Associates Advisory Group, Los Angeles.",
-          "d": "Loan workouts and restructuring, capital procurement, brokerage and litigation support."
-        },
-        {
-          "k": "Before judges, juries and arbitrators.",
-          "t": "Jury and bench trials, arbitration, mediation, deposition and declaration.",
-          "d": "For plaintiffs, defendants, debtors and creditors, in a relatively equal mix, per the firm."
+          "t": "Discuss a firm engagement",
+          "h": "#inquiry",
+          "path": "firm"
         }
-      ]
+      ],
+      "svcLabel": "What the firm does",
+      "services": [
+        "Loan restructuring and workouts",
+        "Expert witness testimony and litigation support",
+        "Capital and asset recovery",
+        "Management turnaround",
+        "Debt and equity procurement",
+        "Real estate brokerage and finance",
+        "Corporate finance",
+        "Banking matters and forensic analysis",
+        "Negotiations with financial institutions",
+        "Chapter 11 reorganization plans",
+        "Receiverships",
+        "Other advisory services"
+      ],
+      "marks": {
+        "label": "Who the firm serves",
+        "note": "Law firms · Financial institutions · Real estate developers and investors · Government organizations and non-profits"
+      },
+      "no": "01"
     },
     {
       "type": "nums",
@@ -93,6 +128,28 @@
         "t": "Prior testimony",
         "h": "/rodriguez/testimony"
       }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "In brief",
+      "items": [
+        {
+          "k": "Inside the bank.",
+          "t": "Security Pacific National Bank, 1979 to 1992, from assistant branch manager to Senior Vice President.",
+          "d": "Credit policy for a $6 billion real estate portfolio, with personal approval authority of $15 million."
+        },
+        {
+          "k": "An independent practice since 1992.",
+          "t": "Founder and Principal of Rodriguez & Associates Advisory Group, Los Angeles.",
+          "d": "Loan workouts and restructuring, capital procurement, brokerage and litigation support."
+        },
+        {
+          "k": "Before judges, juries and arbitrators.",
+          "t": "Jury and bench trials, arbitration, mediation, deposition and declaration.",
+          "d": "For plaintiffs, defendants, debtors and creditors, in a relatively equal mix, per the firm."
+        }
+      ]
     },
     {
       "type": "quote",
@@ -183,20 +240,6 @@
           "h": "/rodriguez/practice"
         }
       ]
-    },
-    {
-      "type": "stmt",
-      "id": "s-firm",
-      "label": "Rodriguez & Associates",
-      "ink": true,
-      "quote": "Founder and Principal <t>since 1992.</t>",
-      "sub": "Loan workouts, capital procurement, real estate brokerage and litigation support, from downtown Los Angeles, with Emily Rodriguez, Partner.",
-      "logo": "/rodriguez/assets/ra-logo-white.png",
-      "more": {
-        "t": "Visit rodriguezadvisory.com",
-        "h": "https://www.rodriguezadvisory.com/"
-      },
-      "compact": true
     },
     {
       "type": "inquiry",
@@ -364,7 +407,7 @@
       "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
       "firm": {
         "href": "https://www.rodriguezadvisory.com/",
-        "src": "/rodriguez/assets/ra-logo-white.png",
+        "src": "/rodriguez/assets/ra-lockup-white.png",
         "alt": "Rodriguez & Associates Advisory Group",
         "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
         "link": "Visit rodriguezadvisory.com",
@@ -372,7 +415,7 @@
       },
       "fine": "Private preview · Not indexed",
       "base": "Rick Rodriguez · Los Angeles, California",
-      "no": "01"
+      "no": "02"
     }
   ]
 }

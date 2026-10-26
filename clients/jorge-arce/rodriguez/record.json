@@ -22,6 +22,10 @@
       "h": "/rodriguez/record"
     },
     {
+      "t": "The firm",
+      "h": "/rodriguez#firm"
+    },
+    {
       "t": "Enquiry",
       "h": "/rodriguez#inquiry"
     }
@@ -407,7 +411,7 @@
       "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
       "firm": {
         "href": "https://www.rodriguezadvisory.com/",
-        "src": "/rodriguez/assets/ra-logo-white.png",
+        "src": "/rodriguez/assets/ra-lockup-white.png",
         "alt": "Rodriguez & Associates Advisory Group",
         "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
         "link": "Visit rodriguezadvisory.com",

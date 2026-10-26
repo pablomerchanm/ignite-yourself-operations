@@ -53,6 +53,18 @@ Los abogados no lo elogian solo por lo que sabe. Lo elogian porque hace que un j
 - **Documentos:** el listado público se queda en 2015 y el CV en diciembre de 2016. Para un abogado que hace due diligence, esa es la primera impresión.
 - **El cargo de 1990–1992:** el CV dice "SVP, Division Administrator, Real Estate Special Assets". La bio dice "Senior Vice President in charge of the Restructuring Group". Usamos el del CV, con la nota.
 
+## La firma, al frente (pedido de Pablo, 26 de octubre)
+
+- **Logo real de Rodriguez & Associates:** el sello azul marino con la "r" crema. Es el icono de su web, tomado de static.wixstatic.com: `assets/ra-mark.jpg`.
+- **Lockup horizontal** (`assets/ra-lockup-white.png`): el sello más "RODRIGUEZ & ASSOCIATES / ADVISORY GROUP" en Editors Note. Es una composición nuestra para el preview, porque la web de la firma escribe el nombre en texto.
+- **Hero:** "Founder and Principal" con el lockup bajo el botón. Lleva a `#firm`.
+- **Ficha de la firma** (`#firm`), la segunda sección de la home, en lugar de la pantalla de una frase que había más abajo. Tiene:
+  - el logo con aire, la descripción, la dirección de Grand Avenue, teléfono y correo;
+  - los 12 servicios de su web y a quién sirve;
+  - "Discuss a firm engagement", que abre el formulario en la vía de la firma, y "Visit rodriguezadvisory.com".
+- **Navegación:** "The firm" en la barra y en las pestañas de móvil.
+- **Pie:** el mismo lockup.
+
 ## Pendiente de verificar o autorizar
 
 - **Laudo arbitral de 2023**, *Epicenter Loss Recovery v. Burford Capital and Ganymede Investments*, del 24 de abril de 2023. Lo cita la investigación previa en Jus Mundi, pero desde aquí la fuente dio 403 y la búsqueda no lo encontró. **No está en el preview.**

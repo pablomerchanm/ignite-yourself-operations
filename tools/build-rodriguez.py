@@ -35,6 +35,11 @@ base = base.replace('/* ---------- hero: calibrado a la fotografia de Mark -----
 base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al centro y la rampa',
                     '/* (heredado del concepto con fotografia; sin imagen no aplica)')
 
+# -------- la firma en el hero: "Founder and Principal" con el logo de Rodriguez & Associates
+base = sub1(r"(\(\(s\.actions\|\|\[\]\)\.length\?'<div class=\"hacts wr\">'.*?'</div>':''\)\+)",
+            lambda m: m.group(1) + """(s.firm?'<a class="hfirm wr" href="'+esc(s.firm.h)+'"><span class="hfk">'+esc(s.firm.k)+'</span>'+
+    '<img src="'+esc(s.firm.logo)+'" alt="'+esc(s.firm.alt||'')+'"></a>':'')+""", base, flags=re.S, tag='hero-firm')
+
 # ------------------------------------------------------- 3. cabeza del documento
 TITLE = 'Rick Rodriguez — Banking &amp; Real Estate Finance Expert Witness'
 DESC = ('Rick Rodriguez: banking and real estate finance expert witness. '
@@ -1430,6 +1435,18 @@ html.no-motion .scarr{display:none}
   @keyframes dotp{0%{box-shadow:0 0 0 0 rgba(181,131,63,.55)}70%{box-shadow:0 0 0 9px rgba(181,131,63,0)}100%{box-shadow:0 0 0 0 rgba(181,131,63,0)}}
 }
 
+/* ---------- Rodriguez & Associates en el hero: firma con logo ---------- */
+.hfirm{display:inline-flex;align-items:center;gap:clamp(18px,2vw,28px);margin-top:clamp(34px,5vh,56px);
+  padding-top:clamp(20px,3vh,28px);border-top:1px solid rgba(255,255,255,.2);color:#fff;transition:opacity .3s}
+.hfirm:hover{opacity:.82}
+.hfirm .hfk{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.62);max-width:11ch;line-height:1.6}
+.hfirm img{display:block;width:clamp(230px,19vw,300px);height:auto}
+@media(max-width:860px){.hfirm{gap:16px;margin-top:30px}.hfirm img{width:min(62vw,240px)}}
+/* la ficha de la firma: el logo con aire, sin placa estrecha */
+#firm .prlogo{padding:clamp(26px,3vw,40px) clamp(28px,3.4vw,48px)}
+#firm .prlogo img{width:clamp(260px,24vw,340px);max-width:100%}
+#firm .prnote{max-width:none;font-size:14px;line-height:1.7;color:var(--ink)}
+
 /* ---------- Rodriguez: el nombre largo y la placa en movil ---------- */
 #site .pf-name{white-space:normal}
 @media(max-width:860px){
@@ -1443,17 +1460,20 @@ NAV = [
     {"t": "Practice",      "h": "/rodriguez/practice"},
     {"t": "Testimony",     "h": "/rodriguez/testimony"},
     {"t": "CV",            "h": "/rodriguez/record"},
+    {"t": "The firm",      "h": "/rodriguez#firm"},
     {"t": "Enquiry",       "h": "/rodriguez#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
            + ''.join(f'<a href="{n["h"]}">{n["t"]}</a>' for n in NAV) + '</nav>')
 TNAV = [("Practice",      "/rodriguez/practice",  "practice"),
         ("Testimony",     "/rodriguez/testimony", "testimony"),
-        ("CV",            "/rodriguez/record",    "record")]
+        ("CV",            "/rodriguez/record",    "record"),
+        ("The firm",      "/rodriguez#firm",      "firm")]
 TABS = [("Overview",  "/rodriguez",           "home"),
         ("Practice",  "/rodriguez/practice",  "practice"),
         ("Testimony", "/rodriguez/testimony", "testimony"),
-        ("CV",        "/rodriguez/record",    "record")]
+        ("CV",        "/rodriguez/record",    "record"),
+        ("Firm",      "/rodriguez#firm",      "firm")]
 
 def topbar_html(active):
     ON = ' class="on"'
@@ -1537,8 +1557,8 @@ T_CV = 'CV — Rick Rodriguez'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('in-brief'), deep('numbers'), deep('quote'), deep('s-question'),
-         deep('s-bank'), deep('for-counsel'), deep('s-firm'), inq()]),
+        [deep('hero'), deep('firm'), deep('numbers'), deep('in-brief'), deep('quote'), deep('s-question'),
+         deep('s-bank'), deep('for-counsel'), inq()]),
     'practice': page(T_PR,
         'Lending standards, workouts and restructuring, Chapter 11 and real estate finance, and the industries behind them.',
         [deep('practice-open'), deep('routes'), deep('sectors'), deep('support'), deep('disclosure'),
