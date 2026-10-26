@@ -1,0 +1,406 @@
+{
+  "meta": {
+    "title": "Testimony — Enrique “Rick” Rodriguez, Jr.",
+    "description": "Jury and bench trials, arbitration, deposition and declaration, for plaintiffs, defendants, debtors and creditors."
+  },
+  "logo": "ENRIQUE “RICK” RODRIGUEZ, JR.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/rodriguez"
+    },
+    {
+      "t": "Practice",
+      "h": "/rodriguez/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/rodriguez/testimony"
+    },
+    {
+      "t": "CV",
+      "h": "/rodriguez/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/rodriguez#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "/rodriguez#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "testimony-open",
+      "label": "Testimony",
+      "align": "right",
+      "quote": "Juries, judges <t>and arbitrators.</t>",
+      "sub": "Jury and bench trials, arbitration and mediation, by deposition and declaration, for plaintiffs, defendants, debtors and creditors.",
+      "opener": true
+    },
+    {
+      "type": "tally",
+      "id": "listing",
+      "label": "Prior testimony",
+      "title": "36 testimonies <t>from 2008 to 2015.</t>",
+      "lede": "The listing the firm publishes, counted by Ignite Yourself. An updated listing would bring it to today.",
+      "doc": {
+        "t": "The listing (PDF, 2015)",
+        "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_37798f44c0e84f84acc806670bed5068.pdf"
+      },
+      "stats": [
+        {
+          "n": "19",
+          "k": "Depositions",
+          "d": "Deposition only, 2008 to 2015"
+        },
+        {
+          "n": "9",
+          "k": "In court or at a hearing",
+          "d": "Courtroom, trial and arbitration hearing testimony"
+        },
+        {
+          "n": "8",
+          "k": "Reports and declarations",
+          "d": "Written opinions, five of them in bankruptcy court"
+        },
+        {
+          "n": "10",
+          "k": "Federal courts",
+          "d": "Six in U.S. Bankruptcy Court, four in U.S. District Court"
+        }
+      ],
+      "series": [
+        {
+          "k": "dep",
+          "t": "Depositions",
+          "c": "#3B64A0"
+        },
+        {
+          "k": "crt",
+          "t": "Court and hearings",
+          "c": "#B5833F"
+        },
+        {
+          "k": "doc",
+          "t": "Reports and declarations",
+          "c": "#8C8A84"
+        }
+      ],
+      "years": [
+        {
+          "y": "2008",
+          "dep": 1,
+          "crt": 1,
+          "doc": 0
+        },
+        {
+          "y": "2009",
+          "dep": 1,
+          "crt": 2,
+          "doc": 0
+        },
+        {
+          "y": "2010",
+          "dep": 4,
+          "crt": 1,
+          "doc": 0
+        },
+        {
+          "y": "2011",
+          "dep": 2,
+          "crt": 1,
+          "doc": 3
+        },
+        {
+          "y": "2012",
+          "dep": 5,
+          "crt": 1,
+          "doc": 1
+        },
+        {
+          "y": "2013",
+          "dep": 2,
+          "crt": 2,
+          "doc": 4
+        },
+        {
+          "y": "2014",
+          "dep": 3,
+          "crt": 0,
+          "doc": 0
+        },
+        {
+          "y": "2015",
+          "dep": 1,
+          "crt": 1,
+          "doc": 0
+        }
+      ],
+      "beyond": {
+        "k": "Beyond California",
+        "items": [
+          "Arizona",
+          "Montana",
+          "Nevada"
+        ]
+      },
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "bankruptcy",
+      "tint": true,
+      "label": "Bankruptcy court",
+      "title": "Chapter 11, <t>at bench trial.</t>",
+      "lede": "Plan feasibility, cram-down interest rates and the factors requisite for confirmation, by declaration and at bench trial.",
+      "groups": [
+        {
+          "label": "Representative engagements, from the 2016 CV",
+          "wide": true,
+          "names": [
+            "Allen Matkins Leck Gamble & Mallory — for debtors and for creditors, on market rates of interest and feasibility, by declaration and at bench trial",
+            "Orrick, Herrington & Sutcliffe — for a secured creditor, opposing the cram-down of a $30.7 million acquisition and development loan on a 640-lot former brownfield site",
+            "Stutman Treister & Glatt — for debtors, on market rates of interest and feasibility, including $10 million secured by automobile dealerships",
+            "Gumport Reitman & Montgomery — retained by the U.S. Trustee, on equitable subordination, at bench trial",
+            "Sheppard, Mullin, Richter & Hampton — for a creditor, on lender liability, damages and valuation in a $30 million apartment project",
+            "Winston & Strawn — for counsel to the trustee, on commercial credit underwriting standards"
+          ]
+        }
+      ],
+      "fn": "Per the firm: in every bankruptcy matter where he has testified, the plan was confirmed or the matter settled in favor of his client. Reported by the firm, not independently verified.",
+      "no": "02"
+    },
+    {
+      "type": "letters",
+      "id": "voices",
+      "label": "Counsel and clients",
+      "title": "In their <t>words.</t>",
+      "lede": "Letters published by Rodriguez & Associates, shown as the firm publishes them.",
+      "items": [
+        {
+          "q": "“In talking with jurors after trial, several commented that your testimony on the subject of commercial lending standards was particularly helpful to them in understanding the case. The case presented complex issues. Yet, according to several jurors, you presented the material in a way that made it easier for them to understand.”",
+          "who": "Roger Behle",
+          "org": "Foley, Bezek, Behle & Curtis"
+        },
+        {
+          "q": "“We retained Rick as an expert on construction financing in a significant arbitration in 2009. He delivered powerful and concise opinions. He also turned his cross-examination into points in our favor.”",
+          "who": "Stuart Widman",
+          "org": "Miller Shackman & Beem"
+        },
+        {
+          "q": "“We have looked to Rick’s deep knowledge of commercial banking for more than a decade. Whether acting as an expert or consultant, he is responsive, practical and best of all, exercises excellent judgment.”",
+          "who": "Laura Kennedy",
+          "org": "Cohen Kennedy Dowd & Quigley"
+        },
+        {
+          "q": "“Rick Rodriguez combines an impressive background in commercial banking with common sense and a wonderful communications style, making him highly effective in conveying his opinions as a testifying witness to jurors and judges.”",
+          "who": "Thomas J. Shroyer",
+          "org": "Moss & Barnett"
+        },
+        {
+          "q": "“Mr. Rodriguez is extremely knowledgeable, experienced and well-qualified to consult with and testify concerning banking policies and procedures. For anyone having need for a banking expert consultant or witness, I endorse Mr. Rodriguez without hesitation.”",
+          "who": "W. Leslie Sully Jr.",
+          "org": "Leavitt, Sully & Rivers"
+        },
+        {
+          "q": "“We also plainly owe a great measure of our success on the banks’ claims to your testimony in helping to educate the jury to the fundamental weaknesses of the bank’s position.”",
+          "who": "David Wagner",
+          "org": "Associate General Counsel, KPMG"
+        }
+      ],
+      "src": "As published on rodriguezadvisory.com",
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "CV",
+      "d": "Security Pacific, the firm, teaching and public work since 1973.",
+      "h": "/rodriguez/record",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/rodriguez#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "rick@rodriguezadvisory.com",
+        "phone": "(213) 617-1163",
+        "city": "Los Angeles, California"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A banking, lending or real estate finance dispute",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or forum"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "bankruptcy",
+            "t": "A Chapter 11 matter — feasibility or cram-down rate",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Debtor or creditor"
+              },
+              {
+                "n": "Court and case number, if public"
+              },
+              {
+                "n": "Hearing date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Workouts, capital or brokerage — Rodriguez & Associates",
+            "btn": "Send to the firm",
+            "note": "Routed to Rodriguez & Associates. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or prior testimony",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Rodriguez.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "/rodriguez#inquiry"
+      },
+      "social": [
+        {
+          "t": "rodriguezadvisory.com",
+          "h": "https://www.rodriguezadvisory.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/rodriguez/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Rodriguez’s review. The portrait comes from the firm’s website and stands in until photography he approves. This is not an official website: it has not been reviewed or approved by Mr. Rodriguez, and it is not indexed or distributed."
+      },
+      "kick": "Banking & Real Estate Finance · Expert Witness",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "firm": {
+        "href": "https://www.rodriguezadvisory.com/",
+        "src": "/rodriguez/assets/ra-logo-white.png",
+        "alt": "Rodriguez & Associates Advisory Group",
+        "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
+        "link": "Visit rodriguezadvisory.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Enrique “Rick” Rodriguez, Jr. · Los Angeles, California",
+      "noform": true,
+      "no": "04"
+    }
+  ]
+}

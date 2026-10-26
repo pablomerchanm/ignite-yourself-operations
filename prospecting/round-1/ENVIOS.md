@@ -24,3 +24,4 @@
 | Wilshire — Dr Shadi | correo | — | preview construido, sin desplegar ni enviar |
 | Dr Robert Freudenthal | correo | — | preview construido, sin desplegar ni enviar |
 | Bernard "Biff" Pettingill | correo | 2026-10-12 | respondió "Yes" a ver un preview; preview privado construido en /pettingill, sin enviar (ver prospecting/pettingill/ITERACION-1.md) |
+| Enrique "Rick" Rodriguez, Jr. | correo | — | respondió el 2026-10-26 que quiere ver el preview; preview privado construido en /rodriguez, sin enviar (ver prospecting/rodriguez/INVESTIGACION.md) |

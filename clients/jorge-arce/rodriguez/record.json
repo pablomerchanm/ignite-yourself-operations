@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "title": "CV — Enrique “Rick” Rodriguez, Jr.",
+    "description": "Twenty years in banking, Rodriguez & Associates since 1992, teaching at USC and UCLA Extension, and public work."
+  },
+  "logo": "ENRIQUE “RICK” RODRIGUEZ, JR.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/rodriguez"
+    },
+    {
+      "t": "Practice",
+      "h": "/rodriguez/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/rodriguez/testimony"
+    },
+    {
+      "t": "CV",
+      "h": "/rodriguez/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/rodriguez#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "/rodriguez#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "record-open",
+      "label": "CV",
+      "quote": "Since 1973, <t>in banking and finance.</t>",
+      "sub": "Security Pacific, the firm, a de novo bank, teaching at USC and UCLA Extension, and public work for Los Angeles schools.",
+      "opener": true
+    },
+    {
+      "type": "timeline",
+      "id": "record-years",
+      "tint": true,
+      "label": "The record, on one line",
+      "title": "From a branch in 1973 <t>to the practice.</t>",
+      "from": 1973,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1973,
+          "t": "Consumer finance"
+        },
+        {
+          "y": 1979,
+          "t": "Security Pacific"
+        },
+        {
+          "y": 1992,
+          "t": "Rodriguez & Associates",
+          "brass": true
+        },
+        {
+          "y": 2006,
+          "t": "Banco BuenaVentura"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1973,
+          "b": 1979,
+          "t": "UCB, Bay Area Financial, Liberty Loan"
+        },
+        {
+          "a": 1979,
+          "b": 1992,
+          "t": "Security Pacific"
+        },
+        {
+          "a": 1992,
+          "b": 2026,
+          "t": "Rodriguez & Associates, 1992 to date",
+          "brass": true
+        },
+        {
+          "a": 2000,
+          "b": 2002,
+          "t": "LAUSD"
+        },
+        {
+          "a": 2006,
+          "b": 2008,
+          "t": "Banco BuenaVentura"
+        }
+      ],
+      "rlabel": "Positions and the practice",
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "record-bank",
+      "label": "Banking",
+      "title": "Security Pacific, <t>1979 to 1992.</t>",
+      "lede": "From branch operations to the restructuring of classified loans. Security Pacific was acquired by Bank of America in 1992.",
+      "groups": [
+        {
+          "label": "Security Pacific National Bank",
+          "wide": true,
+          "names": [
+            "Senior Vice President, Division Administrator, Real Estate Special Assets — 1990–1992. A classified loan portfolio of about $1.6 billion in commitments, across ten relationships",
+            "First Vice President, Regional Manager, Real Estate Industries Group — 1987–1990. A loan portfolio of $1 billion in outstanding commitments",
+            "First Vice President, Deputy Administrator and Credit Officer, Real Estate Industries Group — 1986–1987. Credit policy for a $6 billion real estate portfolio across California, with personal approval authority of $15 million",
+            "Vice President, Regional Manager, Real Estate Industries Group, Riverside — 1984–1986. Opened the regional office; a construction loan portfolio grown to $700 million",
+            "Vice President, World Corporate Group — 1983–1984. A corporate loan portfolio of $500 million in commitments",
+            "Vice President, Real Estate Special Assets — 1980–1983. Restructure and collection of $50 million in classified real estate loans",
+            "Assistant Vice President, Credit Review — 1980. Field audits of loan portfolios across the United States",
+            "Assistant Branch Manager — 1979–1980. Branch operations, deposit accounts and consumer loans"
+          ]
+        },
+        {
+          "label": "Before Security Pacific",
+          "wide": true,
+          "names": [
+            "UCB, Bay Area Financial and Liberty Loan — 1973–1979. Branch manager, credit manager, loan underwriter and collection officer"
+          ]
+        },
+        {
+          "label": "A de novo bank",
+          "wide": true,
+          "names": [
+            "Banco BuenaVentura, Oxnard — 2006–2008. De novo President and Chief Credit Officer, approved by California’s Department of Financial Institutions and the FDIC, with a business plan to bring the unbanked into the banking system"
+          ]
+        }
+      ],
+      "fn": "From the CV of December 2016. The firm’s biography describes the 1990–1992 role as Senior Vice President in charge of the Restructuring Group.",
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "record-firm",
+      "tint": true,
+      "label": "Rodriguez & Associates",
+      "title": "An advisory practice <t>since 1992.</t>",
+      "lede": "Founded to resolve complex debtor-creditor transactions secured by real estate, stock and partnership interests; today also brokerage, capital procurement, site acquisition and litigation support.",
+      "groups": [
+        {
+          "label": "Public and community work",
+          "wide": true,
+          "names": [
+            "Los Angeles Unified School District — 2000–2002. Consulting Senior Facilities Executive for three of eleven mini-districts; sites designated for 33 schools, 38% of the District’s 2002 new building program",
+            "Pro bono — since 2009. Negotiating with lenders on behalf of homeowners at risk of foreclosure, and testimony in cases against predatory lenders and foreclosure rescue scams"
+          ]
+        },
+        {
+          "label": "Representative clients, from the 2016 CV",
+          "wide": true,
+          "names": [
+            "Real estate: Maguire Thomas Partners, Kilroy Industries, The Carson Companies, Peninsula Beverly Hills",
+            "Financial institutions: Bank of America, ING Bank, Bankers Trust Securities, East West Bank, Far East National Bank"
+          ]
+        }
+      ],
+      "fn": "The firm’s totals differ by source: matters in excess of $4.5 billion for over 300 clients on its website, more than $9 billion for hundreds of clients in the 2016 CV. Left out until he confirms them.",
+      "no": "03"
+    },
+    {
+      "type": "exp",
+      "id": "record-teaching",
+      "label": "Teaching",
+      "title": "USC, UCLA Extension <t>and the bar.</t>",
+      "groups": [
+        {
+          "label": "Courses and lectures",
+          "wide": true,
+          "names": [
+            "Instructor, Real Estate Finance and Development for Minority Candidates, “Real Estate Finance & Workouts” — University of Southern California, 1993–2006",
+            "Guest speaker, “Real Estate Asset Management and Workouts,” Finance & Business Economics 570 — USC Graduate School of Business Administration, 1992–2006",
+            "Guest speaker, “Real Estate Finance and Investment” — USC Marshall School of Business, 1998–1999",
+            "Instructor and guest speaker, “Real Estate Loan Originations and Workouts” and “Workouts and Bankruptcies” — UCLA Extension, 1992–1994",
+            "Instructor, Executive Program, “Real Estate Finance & Workouts” — USC Graduate School of Business Administration, 1992–1993",
+            "Instructor, “The Banker’s Business” — CB Commercial, Chicago, 1993",
+            "Speaker, “Defending Your Banking and Lending Practices” — Orange County Bar Association, Banking and Lending Section, 2014"
+          ]
+        },
+        {
+          "label": "Also spoken at",
+          "names": [
+            "Wharton Business Alumni Association",
+            "Claremont Colleges",
+            "Debt Restructure Roundtable",
+            "ICSC",
+            "Chicago Title"
+          ]
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "exp",
+      "id": "record-orgs",
+      "tint": true,
+      "label": "Affiliations",
+      "title": "Languages, education <t>and affiliations.</t>",
+      "groups": [
+        {
+          "label": "Education and languages",
+          "wide": true,
+          "names": [
+            "Attended the School of Business, University of Mexico City, per the CV",
+            "Fluent in written and spoken Spanish"
+          ]
+        },
+        {
+          "label": "Affiliations of the firm",
+          "wide": true,
+          "names": [
+            "Latino Business Chamber of Greater Los Angeles",
+            "USC Lusk Center for Real Estate, Family and Friends",
+            "USC Marshall School of Business Alumni Association"
+          ]
+        },
+        {
+          "label": "Licensing",
+          "wide": true,
+          "names": [
+            "California real estate broker, per the firm’s biography. Current status to be confirmed"
+          ]
+        }
+      ],
+      "no": "05"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Discuss a <t>matter</t>",
+      "d": "Banking, lending, Chapter 11 or real estate finance.",
+      "h": "/rodriguez#inquiry",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/rodriguez#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "rick@rodriguezadvisory.com",
+        "phone": "(213) 617-1163",
+        "city": "Los Angeles, California"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A banking, lending or real estate finance dispute",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or forum"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "bankruptcy",
+            "t": "A Chapter 11 matter — feasibility or cram-down rate",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Debtor or creditor"
+              },
+              {
+                "n": "Court and case number, if public"
+              },
+              {
+                "n": "Hearing date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Workouts, capital or brokerage — Rodriguez & Associates",
+            "btn": "Send to the firm",
+            "note": "Routed to Rodriguez & Associates. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or prior testimony",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Rodriguez.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "/rodriguez#inquiry"
+      },
+      "social": [
+        {
+          "t": "rodriguezadvisory.com",
+          "h": "https://www.rodriguezadvisory.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/rodriguez/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Rodriguez’s review. The portrait comes from the firm’s website and stands in until photography he approves. This is not an official website: it has not been reviewed or approved by Mr. Rodriguez, and it is not indexed or distributed."
+      },
+      "kick": "Banking & Real Estate Finance · Expert Witness",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "firm": {
+        "href": "https://www.rodriguezadvisory.com/",
+        "src": "/rodriguez/assets/ra-logo-white.png",
+        "alt": "Rodriguez & Associates Advisory Group",
+        "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
+        "link": "Visit rodriguezadvisory.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Enrique “Rick” Rodriguez, Jr. · Los Angeles, California",
+      "noform": true,
+      "no": "06"
+    }
+  ]
+}

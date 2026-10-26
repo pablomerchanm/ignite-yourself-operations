@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "title": "Practice — Enrique “Rick” Rodriguez, Jr.",
+    "description": "Lending standards, workouts and restructuring, Chapter 11 and real estate finance, and the industries behind them."
+  },
+  "logo": "ENRIQUE “RICK” RODRIGUEZ, JR.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/rodriguez"
+    },
+    {
+      "t": "Practice",
+      "h": "/rodriguez/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/rodriguez/testimony"
+    },
+    {
+      "t": "CV",
+      "h": "/rodriguez/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/rodriguez#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "/rodriguez#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Practice",
+      "quote": "The standards of lending, <t>applied to the dispute.</t>",
+      "sub": "Commercial lending, workouts and restructuring, Chapter 11 and real estate finance.",
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Areas of practice",
+      "title": "Four areas <t>of banking and finance.</t>",
+      "lede": "Opinions on how lenders and borrowers are expected to act, and whether they did.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Lending standards",
+          "title": "Did the lender act as a prudent lender would?",
+          "desc": "Standard and prudent banking practice in underwriting, credit approval, loan administration, disbursement and collection, the questions at the center of lender liability claims.",
+          "items": [
+            "Underwriting and credit approval",
+            "Loan administration and collection",
+            "Lender liability",
+            "Regulatory compliance"
+          ],
+          "cta": {
+            "t": "Discuss a lending matter",
+            "h": "/rodriguez#inquiry",
+            "path": "matter"
+          },
+          "icon": "bank"
+        },
+        {
+          "label": "Workouts and restructuring",
+          "title": "Was the workout handled to standard?",
+          "desc": "Loan workouts, restructures and the collection of classified loans, the work he led in Security Pacific’s special assets group.",
+          "items": [
+            "Loan workouts",
+            "Debt restructuring",
+            "Guarantor obligations",
+            "Wrongful foreclosure"
+          ],
+          "cta": {
+            "t": "Discuss a workout matter",
+            "h": "/rodriguez#inquiry",
+            "path": "matter"
+          },
+          "icon": "workout"
+        },
+        {
+          "label": "Chapter 11",
+          "title": "Is the plan feasible, and at what rate?",
+          "desc": "Plan feasibility and the fair and equitable rate of interest on secured claims in a cram-down, by declaration and at bench trial.",
+          "items": [
+            "Plan feasibility",
+            "Cram-down interest rates",
+            "Secured claims",
+            "Equitable subordination"
+          ],
+          "cta": {
+            "t": "Discuss a Chapter 11 matter",
+            "h": "/rodriguez#inquiry",
+            "path": "bankruptcy"
+          },
+          "icon": "court"
+        },
+        {
+          "label": "Real estate finance",
+          "title": "Was the financing structured to market?",
+          "desc": "Construction, acquisition and development loans, letters of credit, trust deeds and joint venture financing.",
+          "items": [
+            "Construction lending",
+            "Acquisition and development loans",
+            "Letters of credit",
+            "Joint ventures"
+          ],
+          "cta": {
+            "t": "Discuss a real estate finance matter",
+            "h": "/rodriguez#inquiry",
+            "path": "matter"
+          },
+          "icon": "build"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "sectors",
+      "label": "Industries",
+      "title": "Financing standards, <t>across industries.</t>",
+      "lede": "Sectors in which he has testified on the financing arrangements and standards in use, as listed by the firm.",
+      "groups": [
+        {
+          "label": "Civil litigation",
+          "names": [
+            "Asset based finance",
+            "Aviation",
+            "Equipment and rental storage",
+            "Franchising",
+            "Machinery rental",
+            "Manufacturing of aerospace parts",
+            "Manufacturing of clothing",
+            "Perfume distribution and retail",
+            "Real estate",
+            "Restaurants",
+            "Technology",
+            "Telecom and communications"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "support",
+      "tint": true,
+      "label": "Litigation support",
+      "title": "Beyond the testimony, <t>through the case.</t>",
+      "lede": "Where testimony is not required, or alongside it, through Rodriguez & Associates.",
+      "groups": [
+        {
+          "label": "Support for counsel",
+          "wide": true,
+          "names": [
+            "Discovery and production requests",
+            "Deposition preparation",
+            "Financial charts, timelines and demonstrative trial exhibits",
+            "Feasibility analysis and reorganization plans",
+            "Evaluation and settlement of financial institution bond claims",
+            "Loan workouts and lender liability"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "counsel",
+      "id": "disclosure",
+      "light": true,
+      "label": "For the file",
+      "title": "The expert disclosure, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · December 2016",
+          "t": "Curriculum vitae",
+          "d": "Banking career, law firm engagements, bankruptcy matters and teaching.",
+          "a": "Download the CV",
+          "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_c2b4ed727b324f78ae59f5d9c33f7cde.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "PDF · 2008 – 2015",
+          "t": "Prior testimony",
+          "d": "The listing published by the firm, with courts and case numbers.",
+          "a": "Open the listing",
+          "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_37798f44c0e84f84acc806670bed5068.pdf"
+        },
+        {
+          "icon": "quote",
+          "tag": "Counsel and clients",
+          "t": "Endorsements",
+          "d": "Letters from trial lawyers, general counsel and bankers.",
+          "a": "Read them",
+          "h": "/rodriguez/testimony#voices"
+        }
+      ]
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Testimony",
+      "d": "Trials, arbitrations and bankruptcy court, 2008 to 2015.",
+      "h": "/rodriguez/testimony",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/rodriguez#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "rick@rodriguezadvisory.com",
+        "phone": "(213) 617-1163",
+        "city": "Los Angeles, California"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A banking, lending or real estate finance dispute",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or forum"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "bankruptcy",
+            "t": "A Chapter 11 matter — feasibility or cram-down rate",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Debtor or creditor"
+              },
+              {
+                "n": "Court and case number, if public"
+              },
+              {
+                "n": "Hearing date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Workouts, capital or brokerage — Rodriguez & Associates",
+            "btn": "Send to the firm",
+            "note": "Routed to Rodriguez & Associates. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or prior testimony",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Rodriguez.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "/rodriguez#inquiry"
+      },
+      "social": [
+        {
+          "t": "rodriguezadvisory.com",
+          "h": "https://www.rodriguezadvisory.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/rodriguez/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Rodriguez’s review. The portrait comes from the firm’s website and stands in until photography he approves. This is not an official website: it has not been reviewed or approved by Mr. Rodriguez, and it is not indexed or distributed."
+      },
+      "kick": "Banking & Real Estate Finance · Expert Witness",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "firm": {
+        "href": "https://www.rodriguezadvisory.com/",
+        "src": "/rodriguez/assets/ra-logo-white.png",
+        "alt": "Rodriguez & Associates Advisory Group",
+        "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
+        "link": "Visit rodriguezadvisory.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Enrique “Rick” Rodriguez, Jr. · Los Angeles, California",
+      "noform": true,
+      "no": "04"
+    }
+  ]
+}
