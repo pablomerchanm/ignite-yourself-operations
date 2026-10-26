@@ -418,3 +418,23 @@ Comentario del usuario: el final de la página tenía demasiada información jun
 **Ajuste 21c.** Los botones principales ("Discuss a matter" en el hero y en el pie) eran demasiado grandes: pasan de 12 px con tracking .24em y 16×38 px de relleno a 11 px, .16em y 13×26 px (10.5 px y 13×22 px en móvil).
 
 **Ajuste 20c — hero móvil sin tapar el rostro.** El texto ya no va encima de la foto: la foto ocupa lo que sobra de la primera pantalla (como mínimo el 46 %) y se funde en tinta por abajo; el nombre, la frase y el botón van debajo, sobre tinta, montados 30 px sobre el degradado para que no se lea como una banda. Verificado en 375×667, 390×844 y 430×932: la barbilla queda siempre por encima del texto.
+
+---
+
+# Iteración 5: Pettingill Analytics al frente (26 de octubre de 2026)
+
+**Pedido de Pablo:** darle más importancia a la firma, igual que en el preview de Rick Rodriguez.
+
+**Qué cambió**
+- **Hero:** "Founder and President" con el logo de Pettingill Analytics bajo el botón. Lleva a `#firm`.
+- **Ficha de la firma** (`#firm`), la segunda sección de la home:
+  - el logo en placa con aire;
+  - la descripción;
+  - la dirección de Palm Beach Gardens, el teléfono y el correo de la firma;
+  - los ocho servicios de pettingillanalytics.com/services;
+  - a quién sirve: abogados, consultorios médicos, juntas, empresas de software, startups y agencias de gobierno, "in more than 40 states, per the firm";
+  - "Discuss a firm engagement", que abre la vía de la firma en el formulario, y "Visit pettingillanalytics.com".
+- **Navegación:** "The firm" en la barra y en las pestañas de móvil.
+- **Pantalla con la foto del equipo** (`s-firm`): se queda más abajo, como cierre visual.
+- **Móvil:** el hero deja aire abajo para que el botón fijo "Your proposal" no tape el logo.
+- **Fuentes:** pettingillanalytics.com (home, services, contact, clients), revisadas el 26 de octubre de 2026.

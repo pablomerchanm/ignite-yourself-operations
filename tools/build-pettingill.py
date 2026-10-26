@@ -35,6 +35,11 @@ base = base.replace('/* ---------- hero: calibrado a la fotografia de Mark -----
 base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al centro y la rampa',
                     '/* (heredado del concepto con fotografia; sin imagen no aplica)')
 
+# -------- la firma en el hero: "Founder and President" con el logo de Pettingill Analytics
+base = sub1(r"(\(\(s\.actions\|\|\[\]\)\.length\?'<div class=\"hacts wr\">'.*?'</div>':''\)\+)",
+            lambda m: m.group(1) + """(s.firm?'<a class="hfirm wr" href="'+esc(s.firm.h)+'"><span class="hfk">'+esc(s.firm.k)+'</span>'+
+    '<img src="'+esc(s.firm.logo)+'" alt="'+esc(s.firm.alt||'')+'"></a>':'')+""", base, flags=re.S, tag='hero-firm')
+
 # ------------------------------------------------------- 3. cabeza del documento
 TITLE = 'Bernard “Biff” Pettingill, Ph.D. — Forensic Economist &amp; Expert Witness'
 DESC = ('Bernard F. Pettingill, Jr., Ph.D.: forensic economist and expert witness since 1985. '
@@ -1404,6 +1409,18 @@ html.no-motion .scarr{display:none}
   .fgs-st .dot{animation:dotp 3.4s ease-out infinite}
   @keyframes dotp{0%{box-shadow:0 0 0 0 rgba(181,131,63,.55)}70%{box-shadow:0 0 0 9px rgba(181,131,63,0)}100%{box-shadow:0 0 0 0 rgba(181,131,63,0)}}
 }
+
+/* ---------- Pettingill Analytics en el hero: firma con logo ---------- */
+.hfirm{display:inline-flex;align-items:center;gap:clamp(18px,2vw,28px);margin-top:clamp(34px,5vh,56px);
+  padding-top:clamp(20px,3vh,28px);border-top:1px solid rgba(255,255,255,.2);color:#fff;transition:opacity .3s}
+.hfirm:hover{opacity:.82}
+.hfirm .hfk{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.62);max-width:11ch;line-height:1.6}
+.hfirm img{display:block;width:clamp(220px,18vw,280px);height:auto}
+@media(max-width:860px){.hfirm{gap:16px;margin-top:30px}.hfirm img{width:min(58vw,220px)}}
+/* la ficha de la firma: el logo con aire, sin placa estrecha */
+#firm .prlogo{padding:clamp(26px,3vw,40px) clamp(28px,3.4vw,48px)}
+#firm .prlogo img{width:clamp(260px,24vw,340px);max-width:100%}
+#firm .prnote{max-width:none;font-size:14px;line-height:1.7;color:var(--ink)}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
@@ -1413,6 +1430,7 @@ NAV = [
     {"t": "Testimony",     "h": "/pettingill/testimony"},
     {"t": "Publications",  "h": "/pettingill/research"},
     {"t": "CV",            "h": "/pettingill/record"},
+    {"t": "The firm",      "h": "/pettingill#firm"},
     {"t": "Enquiry",       "h": "/pettingill#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
@@ -1420,12 +1438,14 @@ NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
 TNAV = [("Practice",      "/pettingill/practice",  "practice"),
         ("Testimony",     "/pettingill/testimony", "testimony"),
         ("Publications",  "/pettingill/research",  "research"),
-        ("CV",            "/pettingill/record",    "record")]
+        ("CV",            "/pettingill/record",    "record"),
+        ("The firm",      "/pettingill#firm",      "firm")]
 TABS = [("Overview",  "/pettingill",           "home"),
         ("Practice",  "/pettingill/practice",  "practice"),
         ("Testimony", "/pettingill/testimony", "testimony"),
         ("Publications", "/pettingill/research", "research"),
-        ("CV",        "/pettingill/record",    "record")]
+        ("CV",        "/pettingill/record",    "record"),
+        ("Firm",      "/pettingill#firm",      "firm")]
 
 def topbar_html(active):
     ON = ' class="on"'
@@ -1459,7 +1479,9 @@ PROP_CSS = """<style>
 @media(prefers-reduced-motion:reduce){.igyprop{animation:none}}
 @media(max-width:860px){
   .igyprop{right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);height:44px;font-size:13px;padding-right:15px}
-  .igyprop-i{width:32px;height:32px}}
+  .igyprop-i{width:32px;height:32px}
+  /* con la firma bajo el boton: aire abajo para que el boton fijo no tape el logo */
+  .hasprop .hero.photo{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 80px)}}
 </style>"""
 if P.get('active'):
     S['inquiry']['igy']['prop'] = {'t': P['link'], 'h': P['href']}
@@ -1510,7 +1532,7 @@ T_CV = 'CV — Bernard F. Pettingill, Jr., Ph.D.'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('in-brief'), deep('numbers'), deep('quote'), deep('s-question'),
+        [deep('hero'), deep('firm'), deep('in-brief'), deep('numbers'), deep('quote'), deep('s-question'),
          deep('s-research'), deep('for-counsel'), deep('s-firm'), inq()]),
     'practice': page(T_PR,
         'Future care, lost earnings, wrongful death and household services, and how to start a case.',
