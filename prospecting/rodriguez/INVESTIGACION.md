@@ -62,16 +62,14 @@ Los abogados no lo elogian solo por lo que sabe. Lo elogian porque hace que un j
 
 ## Fotos
 
-- **Ahora:** el retrato de la web de la firma (400×600, blanco y negro) va **en placa** en el hero (`"plate": true`). Las pantallas de una frase van sobre tinta, sin imagen.
-- **Pablo mandó dos fotos construidas:**
-  - un retrato con corbatín verde, mirando a la izquierda, con luz cenital: es el **hero a sangre**;
-  - Rick escribiendo en un escritorio con lámpara: para una pantalla de una frase, por ejemplo `s-bank` o `record-open`.
-- **Para ponerlas:**
-  1. Guardarlas en `assets/hero.jpg`, `assets/hero-mobile.jpg` y `assets/desk.jpg`.
-  2. En el hero, quitar `"plate"`.
-  3. Añadir `img` a la pantalla elegida.
-  4. Correr el build y el prerender.
-- **Son imágenes construidas:** requieren su autorización antes de cualquier publicación real.
+- **Hero:** el retrato de Pablo, con corbatín verde, mirando a la izquierda y con luz cenital. Va a sangre.
+  - `assets/hero.jpg`: 1672×941.
+  - `assets/hero-mobile.jpg`: recorte 3:4 sobre el rostro.
+- **Pantalla de Security Pacific** (`s-bank`, en la home): Rick escribiendo en el escritorio con lámpara (`assets/desk.jpg`). El texto va a la derecha.
+- **El resto de pantallas** de una frase va sobre tinta.
+- **Tarjeta social** (`assets/og.jpg`): regenerada con el hero nuevo.
+- **Retrato de la web de la firma:** ya no se usa y se retiró.
+- **Son imágenes construidas:** requieren su autorización antes de cualquier publicación real. Así lo dice la nota de Ignite al pie.
 
 ## Lo que no se hizo a propósito
 

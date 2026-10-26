@@ -3,8 +3,8 @@
 # con la calibracion de Freudenthal, el listado testimonial contado por ano (tally)
 # y una pieza propia:
 #   letters — las cartas de abogados y clientes que publica su firma (la plantilla ya tiene 'voices')
-# Mientras Pablo no mande las fotos, el hero usa el retrato de la web de la firma
-# en placa, y las pantallas de una frase van sobre tinta, sin imagen.
+# Fotos de Pablo: el retrato con corbatin en el hero (a sangre, recorte 3:4 en movil)
+# y el escritorio en la pantalla de Security Pacific; las demas pantallas van sobre tinta.
 # Todo el texto vive en rodriguez/content.json; este script solo reparte y deriva.
 import json, re, os, copy, shutil
 
