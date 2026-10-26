@@ -1695,21 +1695,21 @@ html.no-motion .scarr{display:none}
 #firm .prlogo img{width:clamp(260px,24vw,340px);max-width:100%}
 #firm .prnote{max-width:none;font-size:14px;line-height:1.7;color:var(--ink)}
 
-/* ---------- hero en movil: el ancho entero, el nombre manda, la firma con aire ----------
-   El nombre ocupa el ancho y pisa la parte baja de la foto (el traje, en sombra), asi la cara
-   queda limpia y la primera pantalla rinde mas. Boton a lo ancho; la firma en dos pisos:
-   el cargo en una linea y el logo grande debajo. */
+/* ---------- hero en movil: la cara entera, el nombre debajo, la firma con aire ----------
+   La foto se encuadra por el ancho para que la cara quede completa y limpia: la sombra solo
+   entra sobre el traje y el nombre pisa apenas ese borde. Sin boton suelto: la accion ya vive
+   en la barra de arriba. La firma en dos pisos: el cargo en una linea y el logo grande debajo. */
 @media(max-width:860px){
-  .hero.photo .ph{min-height:46svh}
-  .hfirm img{width:min(68vw,270px)}
-  .hero.photo .ph::after{background:linear-gradient(180deg,rgba(20,22,26,.42) 0%,rgba(20,22,26,0) 18%,
-    rgba(20,22,26,0) 50%,rgba(20,22,26,.72) 74%,#14161A 96%)}
-  .hero.photo .inr{margin-top:-8svh;position:relative;z-index:2;padding-right:clamp(20px,5vw,80px)}
-  #site .hero .hname{font-size:clamp(56px,17vw,84px)!important;line-height:.9!important;max-width:none!important;letter-spacing:-.022em}
-  .hero .hsub{margin-top:12px;max-width:none;font-size:clamp(20px,5.6vw,24px);line-height:1.28}
-  .hero .hacts{margin-top:20px}
-  .hero .hacts .hcta{display:flex;justify-content:center;width:100%;padding-top:16px;padding-bottom:16px}
-  .hfirm{display:flex;flex-direction:column;align-items:flex-start;gap:11px;width:100%;margin-top:20px;padding-top:16px}
+  .hero.photo .ph{flex:1 0 auto;min-height:min(94vw,64svh)}
+  .hero.photo .ph img{object-position:50% 12%}
+  .hero.photo .ph::after{background:linear-gradient(180deg,rgba(20,22,26,.42) 0%,rgba(20,22,26,0) 16%,
+    rgba(20,22,26,0) 82%,rgba(20,22,26,.7) 93%,#14161A 100%)}
+  .hero.photo .inr{margin-top:-20px;position:relative;z-index:2;padding-right:clamp(20px,5vw,80px)}
+  #site .hero .hname{font-size:clamp(54px,16vw,80px)!important;line-height:.9!important;max-width:none!important;letter-spacing:-.022em}
+  .hero .hsub{margin-top:12px;max-width:none;font-size:clamp(19px,5.3vw,23px);line-height:1.28}
+  .hero .hacts{display:none}
+  .hfirm img{width:min(66vw,260px)}
+  .hfirm{display:flex;flex-direction:column;align-items:flex-start;gap:11px;width:100%;margin-top:24px;padding-top:18px}
   .hfirm .hfk{max-width:none;font-size:10.5px;letter-spacing:.22em;line-height:1}
 }
 </style>
