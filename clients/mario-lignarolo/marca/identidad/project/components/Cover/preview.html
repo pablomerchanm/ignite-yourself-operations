@@ -1,0 +1,45 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mario Lignarolo</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--fondo); color: var(--tinta); font-family: var(--font-sans); overflow: hidden; }
+  .cover { position: relative; height: 288px; overflow: hidden; }
+  .art { position: absolute; top: 0; left: 480px; width: 480px; height: 288px; overflow: hidden; }
+  .art svg { display: block; width: 480px; height: 288px; }
+  .slab { fill: var(--tinta); }
+  .graf { fill: var(--grafito); }
+  .pied { fill: var(--piedra); }
+  .glyph { fill: var(--fondo); font-family: var(--font-poster); font-weight: 800; font-size: 420px; }
+  .words { position: absolute; left: var(--space-6); bottom: var(--space-6); max-width: 440px; }
+  .name { margin: 0; font-size: 84px; line-height: 0.95; font-weight: 700; letter-spacing: -0.045em; color: var(--tinta); }
+  .tag { margin: var(--space-3) 0 0 2px; font-size: 14px; line-height: 20px; color: var(--tinta-suave); }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 480 288" width="480" height="288">
+      <!--
+        blocks      tinta 256×256 bleeding off the top (the protagonist: hueso on negro, negro on hueso) · grafito 176×160 bleeding off the right · piedra 64×32 once (the muted text tone) — ≈34% of 960×288
+        arrangement one tall slab with two satellites, bottoms on one line space-6 above the edge, space-4 gutter
+        pattern     one oversized glyph: the poster face (Archivo Condensed 800) "M", cut out of the slab in fondo and clipped by it — the brand speaks through its condensed capitals
+        scales      sides in spacing steps (256 = 4×space-8, 176 = 11×space-4, 160 = space-11, 64 = space-8, 32 = space-6); gutter space-4; corners radius recto
+      -->
+      <defs><clipPath id="slab"><rect x="32" y="0" width="256" height="256"/></clipPath></defs>
+      <rect class="slab" x="32" y="0" width="256" height="256"/>
+      <text class="glyph" x="20" y="330" clip-path="url(#slab)">M</text>
+      <rect class="graf" x="304" y="96" width="176" height="160"/>
+      <rect class="pied" x="304" y="48" width="64" height="32"/>
+    </svg>
+  </div>
+  <div class="words">
+    <p class="name">Mario<br>Lignarolo</p>
+    <p class="tag">Imponente, elevada y clara.</p>
+  </div>
+</div>
+</body>
+</html>

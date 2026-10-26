@@ -1,0 +1,34 @@
+<!-- @dsCard group="Marca" height=420 width=1200 subtitle="El logotipo de Mario, en negro y en hueso" -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Logo</title>
+<style>
+  html, body { margin: 0; }
+  body { background: var(--fondo); }
+  .lg { display: grid; grid-template-columns: 1fr 1fr; }
+  .lg-panel { display: grid; place-items: center; min-height: 300px; padding: var(--space-8); position: relative; }
+  .lg-zona { position: relative; padding: 23px; outline: 1px dashed var(--linea-fuerte); }
+  .lg-zona img { height: 46px; width: auto; }
+  .lg-x { position: absolute; top: 0; left: 0; width: 23px; height: 23px; display: grid; place-items: center; }
+  .lg-tam { grid-column: 1 / -1; display: flex; align-items: flex-end; gap: var(--space-8); padding: var(--space-6) var(--space-8); border-top: 1px solid var(--linea); }
+  .lg-tam figure { margin: 0; display: grid; gap: var(--space-3); }
+</style>
+</head>
+<body>
+<div class="ml lg">
+  <div class="lg-panel ml" data-theme="oscuro">
+    <div class="lg-zona"><span class="lg-x label-s ml-dato">x</span><img src="/_blob/9c4ad65710f809bb2206caf526032390" alt="Mario Lignarolo"></div>
+  </div>
+  <div class="lg-panel ml" data-theme="claro">
+    <div class="lg-zona"><span class="lg-x label-s ml-dato">x</span><img src="/_blob/768829326196e0dca4c1b27f47133802" alt="Mario Lignarolo"></div>
+  </div>
+  <div class="lg-tam ml" data-theme="oscuro">
+    <figure><img src="/_blob/9c4ad65710f809bb2206caf526032390" alt="" style="height:44px;width:auto"><figcaption class="label ml-dato">Cabecera de revista</figcaption></figure>
+    <figure><img src="/_blob/9c4ad65710f809bb2206caf526032390" alt="" style="height:22px;width:auto"><figcaption class="label ml-dato">Menú · 22 px de alto</figcaption></figure>
+    <figure><img src="/_blob/9c4ad65710f809bb2206caf526032390" alt="" style="height:14px;width:auto"><figcaption class="label ml-dato">Mínimo · 14 px</figcaption></figure>
+  </div>
+</div>
+</body>
+</html>

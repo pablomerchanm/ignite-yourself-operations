@@ -1,0 +1,28 @@
+<!-- @dsCard group="Navegación" height=380 width=1280 subtitle="Logo, menú centrado y contacto, sobre la portada" -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cabecera</title>
+<style>
+  html, body { margin: 0; }
+  body { background: var(--fondo); }
+  .cb { position: relative; height: 360px; overflow: hidden; }
+  .cb > img { position: absolute; inset: 0 0 0 34%; width: 66%; height: 100%; object-fit: cover; object-position: 30% 22%; }
+  .cb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to right, var(--negro) 34%, transparent 62%); }
+  .cb .ml-cabecera { position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+<div class="ml cb" data-theme="oscuro">
+  <img src="/_blob/533ed2c0093c0808ccb22fa9bd389db9" alt="">
+  <header class="ml-cabecera ml-pagina">
+    <img class="ml-cabecera-logo" src="/_blob/9c4ad65710f809bb2206caf526032390" alt="Mario Lignarolo">
+    <nav aria-label="Principal"><ul class="ui">
+      <li><a href="#">Psicocibernética</a></li><li><a href="#">Hipertrofia del Ser</a></li><li><a href="#">Perspectivas</a></li>
+    </ul></nav>
+    <a class="ml-boton ui" href="#"><span>Contacto</span><span class="ml-caja"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+  </header>
+</div>
+</body>
+</html>

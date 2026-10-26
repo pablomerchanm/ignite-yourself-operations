@@ -1,0 +1,28 @@
+<!-- @dsCard group="Texto" height=560 width=1280 subtitle="Cómo abre cada sección: etiqueta, titular, entrada" -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Apertura</title>
+<style>
+  html, body { margin: 0; }
+  body { background: var(--fondo); }
+  .ap { padding: var(--space-9) var(--margen); row-gap: var(--space-8); }
+  .ap .seccion { padding-top: 0.5em; }
+  .ap .ml-titular { grid-column: 4 / -1; }
+  .ap .ml-lectura { display: grid; gap: var(--space-4); justify-items: start; }
+  .ap .ml-lectura .ml-boton { margin-top: var(--space-4); }
+</style>
+</head>
+<body>
+<section class="ml ml-reticula ap" data-theme="oscuro">
+  <p class="seccion ml-seccion ml-indice">Psicocibernética</p>
+  <h2 class="display ml-titular">Trabajar sobre la imagen que tienes de ti.</h2>
+  <div class="ml-lectura">
+    <p class="lead">Psicocibernética es una de las formas en las que exploro el cambio de identidad desde la práctica.</p>
+    <p class="body ml-suave">Combina autoconcepto, respiración consciente, hipnomeditación e imaginación para trabajar sobre la relación entre lo que crees de ti, cómo te sientes y la forma en que actúas en el mundo.</p>
+    <a class="ml-boton ui" href="#"><span>Explorar Psicocibernética</span><span class="ml-caja"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></a>
+  </div>
+</section>
+</body>
+</html>

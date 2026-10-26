@@ -1,0 +1,516 @@
+/* Mario Lignarolo — piezas de la marca.
+   Se carga después de tokens.css: todo color, medida y tipo sale de los
+   tokens (las clases de tipo .poster, .display, .voz… vienen de ahí).
+   Prefijo ml-. Cada bloque abre con .ml, que pinta su fondo y su tinta
+   según el tema del ancestro más cercano con data-theme. */
+
+.ml {
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.ml *,
+.ml *::before,
+.ml *::after {
+  box-sizing: border-box;
+}
+.ml img {
+  display: block;
+  max-width: 100%;
+}
+.ml :focus-visible {
+  outline: 2px solid var(--foco);
+  outline-offset: 3px;
+}
+.ml-pagina {
+  padding-inline: var(--margen);
+}
+.ml-uc {
+  text-transform: uppercase;
+}
+.ml-suave {
+  color: var(--tinta-suave);
+}
+.ml-sin-margen,
+.ml h1,
+.ml h2,
+.ml h3,
+.ml p {
+  margin: 0;
+}
+
+/* ── Retícula: 12 columnas; índice (1–3) y contenido (4–12) ───── */
+.ml-reticula {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--medianil);
+}
+.ml-reticula > * {
+  min-width: 0;
+}
+.ml-indice {
+  grid-column: 1 / span 3;
+}
+.ml-contenido {
+  grid-column: 4 / -1;
+}
+.ml-lectura {
+  grid-column: 7 / span 5;
+}
+
+/* ── Etiqueta de sección: un punto y el nombre ─────────────── */
+.ml-seccion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.ml-seccion::before {
+  content: "";
+  flex: none;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: var(--circulo);
+  background: currentColor;
+}
+/* el dato en mono: fechas, contadores, índices */
+.ml-dato {
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* ── Póster: la voz alta, siempre en versal ────────────────── */
+.ml-poster {
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.ml-poster .ml-linea {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.12em;
+  margin-top: -0.12em;
+}
+.ml-poster .ml-linea > span {
+  display: block;
+}
+/* póster cruzado: dos mitades y una foto pequeña entre ellas (Monolog) */
+.ml-cruce {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18em;
+  white-space: nowrap;
+}
+.ml-cruce-foto {
+  flex: none;
+  width: 0.92em;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--recto);
+}
+.ml-cruce-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* nota al pie en serif, debajo de un póster (Nike: «*If you have a body…») */
+.ml-nota {
+  margin-top: var(--space-5);
+  max-width: 22em;
+}
+
+/* ── Titular: la voz clara ──────────────────────────────────── */
+.ml-titular {
+  max-width: 12em;
+  text-wrap: balance;
+}
+
+/* ── Manifiesto: párrafos que se encienden con el scroll ────── */
+.ml-manifiesto-texto {
+  display: grid;
+  gap: 0.55em;
+  max-width: 21em;
+}
+.ml-manifiesto-texto .ml-off {
+  opacity: var(--apagado);
+}
+.ml-progreso {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 240px;
+}
+.ml-pista {
+  position: relative;
+  height: 1px;
+  background: var(--linea);
+}
+.ml-pista > span {
+  position: absolute;
+  inset: -0.5px auto -0.5px 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform-origin: left;
+}
+.ml-progreso-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.ml-flecha {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform var(--rapido) var(--curva);
+}
+.ml-flecha svg {
+  width: 16px;
+  height: 16px;
+}
+.ml-flecha[data-dir="prev"]:hover {
+  transform: translateX(-3px);
+}
+.ml-flecha[data-dir="next"]:hover {
+  transform: translateX(3px);
+}
+.ml-progreso-nav .ml-dato {
+  margin-left: auto;
+}
+
+/* ── Botón: etiqueta y caja de flecha (Monolog) ─────────────── */
+.ml-boton {
+  display: inline-flex;
+  align-items: stretch;
+  padding: 3px;
+  border: 0;
+  border-radius: var(--fino);
+  background: var(--relleno);
+  color: var(--sobre-relleno);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--rapido) var(--curva);
+}
+.ml-boton > span {
+  display: flex;
+  align-items: center;
+  padding: 9px 12px 9px 11px;
+}
+.ml-boton .ml-caja {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  padding: 0;
+  border-radius: var(--fino);
+  background: var(--sobre-relleno);
+  color: var(--relleno);
+}
+.ml-boton .ml-caja svg {
+  width: 14px;
+  height: 14px;
+}
+.ml-boton:hover {
+  transform: translateY(-2px);
+}
+.ml-boton--fantasma {
+  background: transparent;
+  color: var(--tinta);
+  box-shadow: inset 0 0 0 1px var(--linea-fuerte);
+}
+.ml-boton--fantasma .ml-caja {
+  background: var(--relleno);
+  color: var(--sobre-relleno);
+}
+.ml-enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  text-decoration-color: var(--linea-fuerte);
+  transition: text-decoration-color var(--rapido) ease;
+}
+.ml-enlace:hover {
+  text-decoration-color: currentColor;
+}
+.ml-enlace svg {
+  width: 0.8em;
+  height: 0.8em;
+  transition: transform var(--rapido) var(--curva);
+}
+.ml-enlace:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ── Cabecera: logo, menú centrado, contacto ────────────────── */
+.ml-cabecera {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-6);
+  padding-block: var(--space-5);
+}
+.ml-cabecera-logo {
+  height: 20px;
+  width: auto;
+}
+.ml-cabecera ul {
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ml-cabecera ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.86;
+  transition: opacity var(--rapido) ease;
+}
+.ml-cabecera ul a:hover {
+  opacity: 1;
+}
+.ml-cabecera .ml-boton {
+  justify-self: end;
+}
+
+/* ── Banner: foto a sangre y una frase de Mario ─────────────── */
+.ml-banner {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  container-type: inline-size;
+  background: var(--negro);
+  color: var(--hueso);
+}
+.ml-banner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ml-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 85% at 50% 42%, transparent 40%, var(--velo) 100%),
+    linear-gradient(to bottom, transparent 30%, var(--velo) 100%);
+}
+.ml-banner-frase {
+  position: absolute;
+  z-index: 1;
+  inset-inline: 0;
+  top: var(--y, 45%);
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: calc(var(--x, 50%) - var(--w, 36%) / 2) var(--w, 36%) 1fr;
+  align-items: center;
+  font-size: 6.9cqw;
+  text-shadow: 0 0 0.6em rgba(11, 11, 10, 0.28);
+}
+.ml-banner-frase > :first-child {
+  grid-column: 1;
+  justify-self: end;
+  padding-left: 4cqw;
+  text-align: right;
+}
+.ml-banner-frase > :last-child {
+  grid-column: 3;
+  justify-self: start;
+  padding-right: 4cqw;
+}
+.ml-banner-frase > * {
+  font-size: inherit;
+}
+
+/* ── Entradas: la retícula de publicación (Nike, «Athlete Interviews») */
+.ml-entradas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8) var(--medianil);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ml-entrada {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  color: inherit;
+  text-decoration: none;
+}
+.ml-entrada figure {
+  margin: 0 0 var(--space-3);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--fondo-alto);
+}
+.ml-entrada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--curva);
+}
+.ml-entrada:hover img {
+  transform: scale(1.03);
+}
+.ml-entrada:hover h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+.ml-entrada p {
+  color: var(--tinta-suave);
+}
+
+/* ── Filas: listas con filetes (conversaciones, menú del pie) ── */
+.ml-filas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--linea);
+}
+.ml-fila {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 7fr) minmax(0, 2fr) auto;
+  align-items: baseline;
+  gap: var(--medianil);
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--linea);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    padding var(--rapido) var(--curva),
+    background-color var(--rapido) ease;
+}
+.ml-fila:hover {
+  padding-left: var(--space-4);
+}
+.ml-fila svg {
+  width: 16px;
+  height: 16px;
+  align-self: center;
+}
+
+/* ── Suscripción: pequeña, centrada, en silencio ────────────── */
+.ml-suscripcion {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  max-width: 26rem;
+  margin-inline: auto;
+  text-align: center;
+}
+.ml-suscripcion form {
+  display: flex;
+  gap: var(--space-2);
+  width: 100%;
+  margin-top: var(--space-3);
+}
+.ml-campo {
+  flex: 1;
+  min-width: 0;
+  height: 44px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--linea-fuerte);
+  border-radius: var(--fino);
+  background: transparent;
+  color: var(--tinta);
+  font: inherit;
+}
+.ml-campo::placeholder {
+  color: var(--tinta-suave);
+}
+.ml-campo:focus {
+  border-color: var(--tinta);
+  outline: none;
+}
+
+/* ── Pie: menú grande, columnas mono y la firma ─────────────── */
+.ml-pie {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--medianil);
+  row-gap: var(--space-8);
+  padding-block: var(--space-9) var(--space-5);
+}
+.ml-pie-menu {
+  grid-column: 1 / span 7;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ml-pie-menu a {
+  display: block;
+  padding-block: 0.12em 0.16em;
+  border-bottom: 1px solid var(--linea);
+  color: inherit;
+  text-decoration: none;
+  transition: padding var(--rapido) var(--curva);
+}
+.ml-pie-menu a:hover {
+  padding-left: 0.4em;
+}
+.ml-pie-col {
+  grid-column: 9 / -1;
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+.ml-pie-col ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ml-pie-col a {
+  color: inherit;
+  text-decoration: none;
+}
+.ml-pie-firma {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+}
+.ml-pie-barra {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--linea);
+}
+
+/* ── Textura: grano de película fijo ────────────────────────── */
+.ml-grano {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: var(--grano);
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ml-boton,
+  .ml-flecha,
+  .ml-enlace svg,
+  .ml-entrada img,
+  .ml-fila,
+  .ml-pie-menu a {
+    transition: none;
+  }
+}
