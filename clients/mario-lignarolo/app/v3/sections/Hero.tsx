@@ -5,13 +5,13 @@ import Logo from "../Logo";
 import s from "../v3.module.css";
 
 /**
- * 01 · HERO. Portada de revista sobre negro: el logo como cabecera, el
- * territorio y el statement en siete líneas; el retrato a la derecha.
+ * 01 · HERO. Sobre negro: arriba, el logo y el menú en una misma línea;
+ * abajo, apoyados en el borde, el territorio y el statement en siete
+ * líneas; entre ambos, aire. El retrato a la derecha.
  *
- * Una sola medida manda (--s, el cuerpo del statement), calculada desde el
- * alto de la pantalla para que todo quepa justo en ella. El logo mide lo
- * mismo que la línea más larga del statement (5,97 × --s), así nombre y
- * mensaje forman un bloque de un mismo ancho.
+ * Proporción: una sola medida manda (--s, el cuerpo del statement,
+ * calculado desde el alto de pantalla). La línea más larga del statement
+ * mide 5,97 --s y el logo es φ² veces menor (2,28 --s): firma, no titular.
  *
  * Movimiento: el retrato entra desde negro y se asienta; el logo se revela
  * con un barrido; cada línea sube desde detrás de su máscara, en cadena.
@@ -25,20 +25,22 @@ export default function Hero() {
         <Image src={hero.image.src} alt={hero.image.alt} fill priority unoptimized sizes="66vw" />
       </div>
 
-      <nav className={s.nav} aria-label="Principal">
-        <ul className={s.navList}>
-          {nav.map((n) => (
-            <li key={n.href}>
-              <a href={n.href}>{n.label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <div className={s.heroCopy} data-parallax="-0.08">
+      <div className={s.heroTop}>
         <h1 className={s.heroMark}>
           <Logo className={s.heroLogo} />
         </h1>
+        <nav className={s.nav} aria-label="Principal">
+          <ul className={s.navList}>
+            {nav.map((n) => (
+              <li key={n.href}>
+                <a href={n.href}>{n.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+      <div className={s.heroCopy} data-parallax="-0.08">
         <p className={s.heroTerritory}>{hero.territory}</p>
         <p className={s.heroStatement}>
           {hero.statement.map((line, i) => (

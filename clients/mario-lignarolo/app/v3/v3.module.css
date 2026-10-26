@@ -388,12 +388,8 @@
   color: var(--on-dark-soft);
 }
 
-/* ── Navegación: solo enlaces, arriba a la derecha (el logo es la cabecera) */
+/* ── Navegación: en la línea del logo, a la derecha ──────── */
 .nav {
-  position: absolute;
-  top: var(--hero-pad-top);
-  right: var(--gutter);
-  z-index: 3;
   color: var(--on-dark);
 }
 .navList {
@@ -414,12 +410,11 @@
 }
 
 /* ── 01 · Hero ──────────────────────────────────────────────
-   Portada de revista. Una sola medida manda: --s, el cuerpo del statement,
-   calculado desde el alto de la pantalla para que todo quepa en ella:
-     arriba 28 px · logo 1,14 s · 0,34 s · territorio 27 px · 0,16 s ·
-     statement 7 × 0,94 s · abajo 40 px   →   95 px + 8,22 s = 100svh
-   El logo mide lo mismo que la línea más larga del statement («CÓMO
-   CAMBIAR» = 5,97 s): nombre y mensaje forman un bloque de un solo ancho.
+   Una sola medida manda: --s, el cuerpo del statement, calculado desde el
+   alto de la pantalla. Arriba, la línea del logo y el menú; abajo, apoyado
+   a 40 px del borde, el territorio y el statement; entre ambos, aire.
+   La línea más larga del statement («CÓMO CAMBIAR») mide 5,97 s y el logo
+   es φ² veces menor (2,28 s): el statement habla, el logo firma.
    El retrato ocupa el 66 % derecho, fundido en el negro por la izquierda. */
 .hero {
   --hero-pad-top: 28px;
@@ -428,10 +423,20 @@
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
   padding: var(--hero-pad-top) var(--gutter) 40px;
   overflow: hidden;
   background: var(--black);
   color: var(--on-dark);
+}
+.heroTop {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 .heroPhoto {
   position: absolute;
@@ -470,13 +475,13 @@
 }
 .heroLogo {
   display: block;
-  width: 100%;
+  width: calc(var(--s) * 2.28);
   height: auto;
   aspect-ratio: 2994 / 570;
   color: var(--on-dark);
 }
 .heroTerritory {
-  margin: calc(var(--s) * 0.34) 0 0;
+  margin: 0;
   font-size: var(--t-h3);
   font-weight: 450;
   line-height: 1.2;
@@ -1300,14 +1305,21 @@
   .form {
     grid-column: 1 / -1;
   }
-  /* hero: la misma regla (logo = línea más larga), texto sobre negro y la
-     foto debajo, a todo el ancho */
+  /* hero: la línea del logo arriba, el statement debajo y la foto al final,
+     a todo el ancho. El logo, algo mayor en proporción para que se lea. */
   .hero {
     --hero-pad-top: 1.25rem;
     --s: min(3.4rem, 13.4vw);
+    justify-content: flex-start;
+    gap: 0;
     min-height: 0;
-    padding-top: 4.25rem;
     padding-bottom: 0;
+  }
+  .heroLogo {
+    width: calc(var(--s) * 2.9);
+  }
+  .heroCopy {
+    margin-top: 3.25rem;
   }
   .heroPhoto {
     position: relative;
