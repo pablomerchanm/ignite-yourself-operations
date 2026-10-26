@@ -39,5 +39,6 @@ Solo negro `#0E0F12` y blanco cálido `#F2F0EB`. Cada SVG tiene un único rellen
 Lo usa `/v3`:
 
 - El componente está en `app/v3/HdsSymbol.tsx`.
-- La cabecera es texto vivo.
-- En la sección, los anillos crecen con el scroll.
+- La cabecera horizontal abre la sección, en el lugar del título, y es texto vivo.
+- Sus anillos crecen con el scroll.
+- Las portadas de las entradas mantienen su color.

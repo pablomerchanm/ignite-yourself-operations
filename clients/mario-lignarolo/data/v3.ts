@@ -96,8 +96,8 @@ export const v3 = {
   hipertrofia: {
     label: "Hipertrofia del Ser",
     // [PROPUESTA] cabecera de la publicación (pedida por Pablo, 26 oct): el nombre
-    // en dos voces —HIPERTROFIA en versal espaciada, «del Ser» en itálica— bajo
-    // su símbolo (app/v3/HdsSymbol.tsx; originales en marca/hipertrofia/).
+    // en dos voces —HIPERTROFIA en versal espaciada, «del Ser» en itálica— junto
+    // a su símbolo (app/v3/HdsSymbol.tsx; originales en marca/hipertrofia/).
     masthead: ["Hipertrofia", "del Ser"],
     headline: ["El cuerpo se entrena.", "El ser también."],
     paragraphs: [

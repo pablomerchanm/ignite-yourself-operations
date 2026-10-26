@@ -7,26 +7,22 @@ import s from "../v3.module.css";
 
 /**
  * 04 · HIPERTROFIA DEL SER, en negro: una publicación con identidad propia.
- * Abre como la portada de una revista —su símbolo, que crece con el scroll,
- * y su cabecera—; después, el titular en condensada («El ser también.» se
- * enciende con el scroll) y el copy en la columna de lectura. Seis entradas
- * reales de Substack, todas al mismo tamaño, con títulos en serif y portadas
- * en blanco y negro (el color vuelve al pasar el ratón); al cierre, una
- * suscripción discreta con el símbolo.
+ * Abre con su cabecera (el símbolo, que crece con el scroll, y el nombre)
+ * en el lugar del título de sección; después, el titular en condensada
+ * («El ser también.» se enciende con el scroll) y el copy en la columna de
+ * lectura. Seis entradas reales de Substack, todas al mismo tamaño y con
+ * títulos en serif; al cierre, una suscripción discreta con el símbolo.
  */
 export default function Hipertrofia() {
   const { hipertrofia: h } = v3;
   return (
     <section className={`${s.dark} ${s.pub}`} id="hipertrofia" aria-labelledby="pub-h">
       <div className={`${s.wrap} ${s.section}`}>
-        <div className={s.hdsCover}>
+        <div className={s.hdsMasthead} data-reveal="up">
           <HdsSymbol grow className={s.hdsSymbol} />
-          <p className={s.hdsMast} data-reveal="up">
+          <p className={s.hdsMast}>
             <span className={s.hdsMastName}>{h.masthead[0]}</span>{" "}
             <span className={s.hdsMastDel}>{h.masthead[1]}</span>
-          </p>
-          <p className={s.hdsBy} data-reveal="up" style={{ "--delay": "0.15s" } as CSSProperties}>
-            {h.subscribe.by}
           </p>
         </div>
         <h2 className={`${s.statement} ${s.displayHead}`} id="pub-h" data-scrub="0.82">
