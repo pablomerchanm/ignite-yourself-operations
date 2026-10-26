@@ -598,12 +598,9 @@
 .cardLink {
   display: block;
 }
+/* las seis portadas, al mismo tamaño */
 .cardPhoto {
   aspect-ratio: 16 / 9;
-}
-/* la tarjeta central de cada fila, más alta: el escalón de la referencia */
-.card:nth-child(3n + 2) .cardPhoto {
-  aspect-ratio: 4 / 3;
 }
 .cardPhoto img {
   transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
@@ -735,9 +732,6 @@
   }
   .cards {
     grid-template-columns: 1fr;
-  }
-  .card:nth-child(3n + 2) .cardPhoto {
-    aspect-ratio: 16 / 9;
   }
   .subForm {
     flex-direction: column;

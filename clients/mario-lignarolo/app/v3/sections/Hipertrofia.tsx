@@ -8,8 +8,8 @@ import s from "../v3.module.css";
  * 04 · HIPERTROFIA DEL SER, sobre casi negro, como el bloque de
  * entrevistas de Nike About: título de sección, el titular a toda escala
  * (el cuerpo en condensada, el ser en serif), el copy y una retícula de
- * tres columnas con las entradas reales de Substack y sus portadas; la
- * tarjeta central lleva la imagen más alta y escalona la fila.
+ * tres columnas con las entradas reales de Substack y sus portadas, todas
+ * al mismo tamaño.
  */
 export default function Hipertrofia() {
   const { hipertrofia: h } = v3;
