@@ -56,6 +56,13 @@ export default function Scrolly() {
       last: 1,
       nav: navOf(el),
     }));
+    /* Paralaje (solo escritorio): [data-parallax="0.2"] se desplaza esa
+       fracción del scroll mientras su sección está en pantalla. */
+    const plx = Array.from(document.querySelectorAll<HTMLElement>("[data-parallax]")).map((el) => ({
+      el,
+      f: parseFloat(el.dataset.parallax || "0") || 0,
+      root: (el.closest("header, section") as HTMLElement) || el,
+    }));
     const pins: Pin[] = Array.from(document.querySelectorAll<HTMLElement>("[data-pin]")).map((el) => ({
       el,
       factor: parseFloat(el.dataset.pin || "3") || 3,
@@ -106,6 +113,16 @@ export default function Scrolly() {
       if (!dirty) return;
       dirty = false;
       const sy = window.scrollY;
+
+      for (const p of plx) {
+        if (!desktop.matches) {
+          if (p.el.style.transform) p.el.style.transform = "";
+          continue;
+        }
+        const r = p.root.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) continue;
+        p.el.style.transform = `translate3d(0, ${(-r.top * p.f).toFixed(1)}px, 0)`;
+      }
 
       for (const g of groups) {
         const y = sy + vh * g.line;

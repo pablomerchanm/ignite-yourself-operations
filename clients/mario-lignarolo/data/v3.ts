@@ -47,7 +47,9 @@ export const v3 = {
     name: ["Mario", "Lignarolo"],
     territory: "Transformación de identidad",
     statement: ["Explorando", "cómo cambiar", "quién eres", "transforma", "lo que eres", "capaz de", "construir"],
-    image: { src: "/mario/hero.jpg", alt: "Mario Lignarolo, retrato." },
+    // Etalonado sobre el original (hero.jpg): negros profundos, piel natural,
+    // el verde del fondo contenido. Se sirve tal cual (sin recomprimir).
+    image: { src: "/mario/hero-v3.jpg", alt: "Mario Lignarolo, retrato." },
   },
 
   /* 02 · TERRITORIO / ORIGEN — [SPEC] */

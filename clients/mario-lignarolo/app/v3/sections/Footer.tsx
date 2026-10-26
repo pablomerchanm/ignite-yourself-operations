@@ -1,12 +1,13 @@
 import { v3 } from "@/data/v3";
+import Logo from "../Logo";
 import { ext } from "./ui";
 import s from "../v3.module.css";
 
-/** Pie: el nombre, seis enlaces y el año. Nada más. */
+/** Pie: el logo, seis enlaces y el año. Nada más. */
 export default function Footer() {
   return (
     <footer className={`${s.wrap} ${s.dark} ${s.footer}`}>
-      <span className={s.wordmark}>Mario Lignarolo</span>
+      <Logo className={s.footerLogo} />
       <ul className={s.footerLinks}>
         {v3.footer.links.map((l) => (
           <li key={l.href}>
