@@ -66,7 +66,9 @@ Los abogados no lo elogian solo por lo que sabe. Lo elogian porque hace que un j
   - `assets/hero.jpg`: 1672×941.
   - `assets/hero-mobile.jpg`: recorte 3:4 sobre el rostro.
 - **Pantalla de Security Pacific** (`s-bank`, en la home): Rick escribiendo en el escritorio con lámpara (`assets/desk.jpg`). El texto va a la derecha.
-- **El resto de pantallas** de una frase va sobre tinta.
+- **Pantalla "Four areas"** (`s-question`, en la home): reunión con abogados al atardecer (`assets/counsel.jpg`).
+- **Apertura de Testimony:** la balanza de latón sobre libros (`assets/balance.jpg`). Es la misma imagen del preview de Pettingill, y el texto va a la derecha.
+- **Las aperturas de Practice y CV** siguen sobre tinta.
 - **Tarjeta social** (`assets/og.jpg`): regenerada con el hero nuevo.
 - **Retrato de la web de la firma:** ya no se usa y se retiró.
 - **Son imágenes construidas:** requieren su autorización antes de cualquier publicación real. Así lo dice la nota de Ignite al pie.

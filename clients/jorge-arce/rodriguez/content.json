@@ -93,6 +93,11 @@
       "more": {
         "t": "The practice",
         "h": "/rodriguez/practice"
+      },
+      "img": {
+        "src": "/rodriguez/assets/counsel.jpg",
+        "alt": "A working session with counsel at dusk",
+        "pos": "56% 42%"
       }
     },
     {
@@ -368,6 +373,11 @@
       "align": "right",
       "quote": "Juries, judges <t>and arbitrators.</t>",
       "sub": "Jury and bench trials, arbitration and mediation, by deposition and declaration, for plaintiffs, defendants, debtors and creditors.",
+      "img": {
+        "src": "/rodriguez/assets/balance.jpg",
+        "alt": "A brass balance on a stack of books, in window light",
+        "pos": "0% 62%"
+      },
       "opener": true
     },
     {
