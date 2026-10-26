@@ -2276,4 +2276,7 @@ derive('/vishwanathan/track.json', T_TE, URL + '/track', DST + '/track', 'track'
 derive('/vishwanathan/ideas.json', T_ID, URL + '/ideas', DST + '/ideas', 'ideas')
 derive('/vishwanathan/voice.json', T_PU, URL + '/voice', DST + '/voice', 'voice')
 derive('/vishwanathan/practice.json', T_PR, URL + '/practice', DST + '/practice', 'practice')
+# analitica y aviso de visitas (tools/tracking.py)
+import tracking
+tracking.inject_tree(DST)
 print('vishwanathan listo')

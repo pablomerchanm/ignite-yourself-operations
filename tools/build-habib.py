@@ -531,4 +531,7 @@ for path, anchor in [('practice', 'research'), ('track', 'chronology'), ('voice'
 for old in ('home.json', 'track.json', 'voice.json', 'practice.json'):
     if os.path.exists(f'{DST}/{old}'):
         os.remove(f'{DST}/{old}')
+# analitica y aviso de visitas (tools/tracking.py)
+import tracking
+tracking.inject_tree(DST)
 print('habib listo')

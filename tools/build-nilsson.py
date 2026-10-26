@@ -2448,4 +2448,7 @@ derive('/nilsson/home.json', TITLE, URL, DST, None)
 derive('/nilsson/track.json', T_TE, URL + '/track', DST + '/track', 'track')
 derive('/nilsson/voice.json', T_PU, URL + '/voice', DST + '/voice', 'voice')
 derive('/nilsson/practice.json', T_PR, URL + '/practice', DST + '/practice', 'practice')
+# analitica y aviso de visitas (tools/tracking.py)
+import tracking
+tracking.inject_tree(DST)
 print('nilsson listo')
