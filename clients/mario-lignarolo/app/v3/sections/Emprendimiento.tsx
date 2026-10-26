@@ -2,23 +2,25 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import { site } from "@/data/content";
 import { v3 } from "@/data/v3";
-import { Arrow, Paragraphs, ext } from "./ui";
+import { Arrow, Paragraphs, SectionHead, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
  * 05 · EMPRENDIMIENTO / LIGNAROLO. Menos peso que los dos mundos
- * anteriores: fondo cálido, titular serif a escala media, el copy en
- * primera persona y, como evidencia, la fotografía de Lignarolo con
- * un solo enlace. Las fotos de producto y taller quedan como pendientes.
+ * anteriores: banda cálida, titular serif a escala media, el copy en
+ * primera persona. Lignarolo como una página de campaña: la foto
+ * panorámica con la figura a la derecha y el texto sobre el vacío.
  */
 export default function Emprendimiento() {
   const { emprendimiento: e } = v3;
   const { lignarolo: lg } = e;
   return (
     <section className={s.emp} id="emprendimiento" aria-labelledby="emp-h">
+      <div className={s.wrap}>
+        <SectionHead label={e.label} />
+      </div>
       <div className={`${s.wrap} ${s.grid} ${s.empGrid}`}>
         <div className={s.empHeadCol} data-reveal="up">
-          <p className={s.label}>{e.label}</p>
           <h2 className={s.empHead} id="emp-h">
             {e.headline}
           </h2>
@@ -31,26 +33,26 @@ export default function Emprendimiento() {
       </div>
 
       <article className={`${s.wrap} ${s.lg}`} id="lignarolo" aria-label={lg.name}>
-        <figure className={`${s.photo} ${s.lgPhoto}`} data-reveal="up">
-          <Image src={lg.image.src} alt={lg.image.alt} fill sizes="100vw" style={{ objectPosition: lg.image.position }} />
-        </figure>
-        <div className={`${s.grid} ${s.lgRow}`}>
-          <div className={s.lgText} data-reveal="up">
+        <div className={s.lgFrame}>
+          <figure className={`${s.photo} ${s.lgPhoto}`} data-reveal="up">
+            <Image src={lg.image.src} alt={lg.image.alt} fill sizes="100vw" />
+          </figure>
+          <div className={s.lgOver} data-reveal="up" style={{ "--delay": "0.15s" } as CSSProperties}>
             <p className={s.lgLine}>{lg.text}</p>
             <a href={lg.href} className={s.link} {...ext}>
               {lg.cta} <Arrow />
             </a>
           </div>
-          {site.draft && (
-            <div className={s.lgPending} aria-label="Fotografía pendiente">
-              {lg.pending.map((p) => (
-                <div key={p} className={s.pending}>
-                  Foto pendiente · {p}
-                </div>
-              ))}
-            </div>
-          )}
         </div>
+        {site.draft && (
+          <div className={s.lgPending} aria-label="Fotografía pendiente">
+            {lg.pending.map((p) => (
+              <div key={p} className={s.pending}>
+                Foto pendiente · {p}
+              </div>
+            ))}
+          </div>
+        )}
       </article>
     </section>
   );

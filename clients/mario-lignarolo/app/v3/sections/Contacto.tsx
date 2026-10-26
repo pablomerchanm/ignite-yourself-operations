@@ -3,7 +3,7 @@
 import type { FormEvent } from "react";
 import { site } from "@/data/content";
 import { v3 } from "@/data/v3";
-import { Arrow } from "./ui";
+import { Arrow, SectionHead } from "./ui";
 import s from "../v3.module.css";
 
 /**
@@ -19,11 +19,9 @@ export default function Contacto() {
 
   return (
     <section className={`${s.wrap} ${s.contact}`} id="contacto" aria-labelledby="contact-h">
+      <SectionHead label={c.label} id="contact-h" />
       <div className={`${s.grid} ${s.contactGrid}`}>
         <div className={s.contactFor} data-reveal="up">
-          <p className={s.label} id="contact-h">
-            {c.label}
-          </p>
           <p className={s.contactLead}>{c.lead}</p>
           <ul className={s.contactPaths}>
             {c.paths.map((p) => (
@@ -37,20 +35,20 @@ export default function Contacto() {
         <form className={s.form} onSubmit={onSubmit} data-reveal="up" noValidate>
           <div className={s.formRow}>
             <div className={s.field}>
-              <label className={s.label} htmlFor="c-name">
+              <label className={s.small} htmlFor="c-name">
                 {c.form.name}
               </label>
               <input id="c-name" name="name" type="text" autoComplete="name" />
             </div>
             <div className={s.field}>
-              <label className={s.label} htmlFor="c-email">
+              <label className={s.small} htmlFor="c-email">
                 {c.form.email}
               </label>
               <input id="c-email" name="email" type="email" autoComplete="email" />
             </div>
           </div>
           <div className={s.field}>
-            <label className={s.label} htmlFor="c-reason">
+            <label className={s.small} htmlFor="c-reason">
               {c.form.reason}
             </label>
             <select id="c-reason" name="reason" defaultValue="">
@@ -65,7 +63,7 @@ export default function Contacto() {
             </select>
           </div>
           <div className={s.field}>
-            <label className={s.label} htmlFor="c-message">
+            <label className={s.small} htmlFor="c-message">
               {c.form.message}
             </label>
             <textarea id="c-message" name="message" rows={4} />

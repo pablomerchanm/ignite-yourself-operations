@@ -1,21 +1,20 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
+import { SectionHead } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 02 · TERRITORIO / ORIGEN. Cambio de ritmo tras la portada: papel, aire,
- * un titular serif y el copy en una columna; una foto alta a la derecha
- * (el cuerpo, la primera transformación visible). Sin biografía.
+ * 02 · TERRITORIO / ORIGEN. Papel, aire y una sola voz: título de sección
+ * en caja baja, titular serif, el copy en columna y la pregunta final en
+ * itálica grande. La foto, alta, sangra por la derecha.
  */
 export default function Origen() {
   const { origen } = v3;
   const [lead, ...rest] = origen.paragraphs;
   return (
     <section className={`${s.wrap} ${s.origen}`} id="origen" aria-labelledby="origen-h">
-      <p className={s.label} data-reveal="up">
-        {origen.label}
-      </p>
+      <SectionHead label={origen.label} />
       <h2 className={s.origenHead} id="origen-h" data-reveal="up" style={{ "--delay": "0.08s" } as CSSProperties}>
         {origen.headline}
       </h2>
@@ -34,7 +33,7 @@ export default function Origen() {
             src={origen.image.src}
             alt={origen.image.alt}
             fill
-            sizes="(min-width: 880px) 34vw, 100vw"
+            sizes="(min-width: 880px) 44vw, 100vw"
             style={{ objectPosition: origen.image.position }}
           />
         </figure>

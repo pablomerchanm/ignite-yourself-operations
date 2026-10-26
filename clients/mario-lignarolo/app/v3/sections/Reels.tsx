@@ -25,7 +25,7 @@ export default function Reels({ label, items, all }: { label: string; items: Ree
   return (
     <div className={s.reels}>
       <div className={`${s.wrap} ${s.reelsHead}`}>
-        <p className={s.label}>{label}</p>
+        <p className={s.title}>{label}</p>
         <div className={s.reelsTools}>
           <a href={all.href} className={s.link} {...ext}>
             {all.label} <Arrow />
@@ -53,7 +53,7 @@ export default function Reels({ label, items, all }: { label: string; items: Ree
                 <Image src={r.src} alt="" fill sizes="(min-width: 880px) 22vw, 70vw" priority={i < 2} />
               </span>
               <span className={s.reelTitle}>{r.title}</span>
-              <span className={s.reelMeta}>
+              <span className={s.small}>
                 {r.duration} · {r.date}
               </span>
             </a>
