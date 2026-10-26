@@ -1452,6 +1452,24 @@ html.no-motion .scarr{display:none}
 @media(max-width:860px){
   .hero.plate .ph{width:min(calc(100% - 36px),340px)}
   #site .pf-name{font-size:clamp(36px,10vw,48px);max-width:none}}
+
+/* ---------- hero en movil: el ancho entero, el nombre manda, la firma con aire ----------
+   El nombre ocupa el ancho y pisa la parte baja de la foto (el traje, en sombra), asi la cara
+   queda limpia y la primera pantalla rinde mas. Boton a lo ancho; la firma en dos pisos:
+   el cargo en una linea y el logo grande debajo. */
+@media(max-width:860px){
+  .hero.photo .ph{min-height:46svh}
+  .hfirm img{width:min(68vw,270px)}
+  .hero.photo .ph::after{background:linear-gradient(180deg,rgba(20,22,26,.42) 0%,rgba(20,22,26,0) 18%,
+    rgba(20,22,26,0) 50%,rgba(20,22,26,.72) 74%,#14161A 96%)}
+  .hero.photo .inr{margin-top:-8svh;position:relative;z-index:2;padding-right:clamp(20px,5vw,80px)}
+  #site .hero .hname{font-size:clamp(56px,17vw,84px)!important;line-height:.9!important;max-width:none!important;letter-spacing:-.022em}
+  .hero .hsub{margin-top:12px;max-width:none;font-size:clamp(20px,5.6vw,24px);line-height:1.28}
+  .hero .hacts{margin-top:20px}
+  .hero .hacts .hcta{display:flex;justify-content:center;width:100%;padding-top:16px;padding-bottom:16px}
+  .hfirm{display:flex;flex-direction:column;align-items:flex-start;gap:11px;width:100%;margin-top:20px;padding-top:16px}
+  .hfirm .hfk{max-width:none;font-size:10.5px;letter-spacing:.22em;line-height:1}
+}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
