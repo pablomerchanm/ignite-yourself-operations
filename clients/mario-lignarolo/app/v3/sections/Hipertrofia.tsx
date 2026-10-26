@@ -46,7 +46,7 @@ export default function Hipertrofia() {
           </div>
         </div>
 
-        <ul className={s.cards}>
+        <ul className={s.cards} aria-label="Entradas">
           {h.pieces.map((p, i) => (
             <li key={p.href} className={s.card}>
               <a href={p.href} className={s.cardLink} {...ext} data-reveal="up" style={{ "--delay": `${(i % 3) * 0.08}s` } as CSSProperties}>
@@ -64,6 +64,37 @@ export default function Hipertrofia() {
             </li>
           ))}
         </ul>
+
+        {/* Suscripción: el gesto del widget de Substack, en nuestro sistema. Sin JavaScript. */}
+        <div className={s.subscribe} data-reveal="up">
+          <p className={s.small}>{h.subscribe.label}</p>
+          <p className={`${s.serifHead} ${s.subHead}`}>{h.subscribe.headline}</p>
+          <div className={s.subPub}>
+            <span className={s.subLogo}>
+              <Image src={h.subscribe.logo} alt="" width={56} height={56} />
+            </span>
+            <p className={s.subName}>{h.subscribe.name}</p>
+            <p className={s.small}>{h.subscribe.by}</p>
+          </div>
+          <form className={s.subForm} action={h.subscribe.action} method="post" target="_blank" rel="noopener">
+            <label className={s.srOnly} htmlFor="sub-email">
+              Correo electrónico
+            </label>
+            <input id="sub-email" name="email" type="email" required autoComplete="email" placeholder={h.subscribe.placeholder} />
+            <button type="submit">{h.subscribe.button}</button>
+          </form>
+          <p className={s.subLegal}>
+            {h.subscribe.legal.map((part, i) =>
+              typeof part === "string" ? (
+                <span key={i}>{part}</span>
+              ) : (
+                <a key={i} href={part.href} {...ext}>
+                  {part.label}
+                </a>
+              ),
+            )}
+          </p>
+        </div>
       </div>
     </section>
   );

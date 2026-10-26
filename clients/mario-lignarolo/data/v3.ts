@@ -22,6 +22,7 @@ const lignaroloUrl = "https://www.lignarolo.com";
 export type Reel = { code: string; title: string; duration: string; date: string; src: string };
 export type Piece = { title: string; dek: string; date: string; minutes: number; href: string; image: { src: string; alt: string } };
 export type Talk = { title: string; youtubeId: string; duration?: string };
+export type LegalPart = string | { label: string; href: string };
 
 /** [REAL] minutos de lectura a partir del conteo de palabras del archivo público (~220 ppm). */
 const minutes = (words: number) => Math.max(1, Math.round(words / 220));
@@ -101,6 +102,31 @@ export const v3 = {
       { title: "La simplicidad de asumir tu estado", dek: "No puedes cambiar el mundo externo hasta que entiendas tu mundo interno.", date: "10 sep 2026", minutes: minutes(1427), href: post("la-simplicidad-de-asumir-tu-estado"), image: { src: "/mario/substack/la-simplicidad-de-asumir-tu-estado.jpg", alt: "" } },
       { title: "Vive de tus intereses.", dek: "Empieza por lo que no puedes dejar de aprender.", date: "1 oct 2026", minutes: minutes(1668), href: post("vive-de-tus-intereses"), image: { src: "/mario/substack/vive-de-tus-intereses.jpg", alt: "" } },
     ] as Piece[],
+    // Módulo de suscripción (referencia: el widget de Substack), construido en el sistema.
+    // El formulario envía al flujo sin JavaScript de Substack; la confirmación llega por correo.
+    subscribe: {
+      label: "Suscríbete en Substack",
+      // [PROPUESTA] la única línea nueva de este módulo; pendiente de Pablo.
+      headline: "Cada entrada, en tu correo.",
+      // [REAL] nombre, autor y logo de la publicación en Substack.
+      name: "Hipertrofia del Ser",
+      by: "Por Mario Lignarolo",
+      logo: "/mario/substack/logo.png",
+      action: `${substack}/api/v1/free?nojs=true`,
+      // [REAL] textos del propio widget de Substack en español.
+      placeholder: "Escribe tu correo electrónico...",
+      button: "Suscribirse",
+      legal: [
+        "Al suscribirte aceptas los ",
+        { label: "Términos de uso", href: "https://substack.com/tos" },
+        " de Substack, su ",
+        { label: "Política de privacidad", href: "https://substack.com/privacy" },
+        " y su ",
+        { label: "Aviso de recopilación de información", href: "https://substack.com/ccpa#personal-data-collected" },
+        ".",
+      ] as LegalPart[],
+      // [PENDIENTE] Substack muestra en su widget «Over 3,000 subscribers»; no se publica sin el OK de Mario.
+    },
   },
 
   /* 05 · EMPRENDIMIENTO / LIGNAROLO — [SPEC] aprobada temporalmente. Menor peso. */
