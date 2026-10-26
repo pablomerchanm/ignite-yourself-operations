@@ -61,6 +61,8 @@ export default function Scrolly() {
     const plx = Array.from(document.querySelectorAll<HTMLElement>("[data-parallax]")).map((el) => ({
       el,
       f: parseFloat(el.dataset.parallax || "0") || 0,
+      // [data-zoom="0.07"]: se acerca de 1,07 a 1 mientras cruza la pantalla
+      z: parseFloat(el.dataset.zoom || "0") || 0,
       root: (el.closest("header, section") as HTMLElement) || el,
     }));
     const pins: Pin[] = Array.from(document.querySelectorAll<HTMLElement>("[data-pin]")).map((el) => ({
@@ -121,7 +123,9 @@ export default function Scrolly() {
         }
         const r = p.root.getBoundingClientRect();
         if (r.bottom < 0 || r.top > vh) continue;
-        p.el.style.transform = `translate3d(0, ${(-r.top * p.f).toFixed(1)}px, 0)`;
+        const pass = clamp((vh - r.top) / (vh + r.height), 0, 1);
+        const zoom = p.z ? ` scale(${(1 + p.z * (1 - pass)).toFixed(4)})` : "";
+        p.el.style.transform = `translate3d(0, ${(-r.top * p.f).toFixed(1)}px, 0)${zoom}`;
       }
 
       for (const g of groups) {

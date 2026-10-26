@@ -12,9 +12,11 @@
              sans     Geist              → títulos de sección, interfaz, cuerpo
              serif    Newsreader         → la voz de Mario (titulares, itálica)
 
-   Escala  Ocho pasos, razón ≈ 1,3. Cada paso tiene un uso y nada se sale:
+   Escala  Nueve pasos, razón ≈ 1,3. Cada paso tiene un uso y nada se sale:
              hero     statement de portada: --s, se calcula desde el alto
                       de pantalla (≈ 98 px a 1440 × 900; ver 01 · Hero)
+             poster   frase corta de un banner     ≈ 99 px (en vw,
+                      como la foto: ver Banners)
              display  titulares de los mundos         ≈ 80 px
              serif-l  titulares en voz de Mario       ≈ 56 px
              h2       lectura guiada · itálica        ≈ 44 px
@@ -34,8 +36,9 @@
 
    Movimiento  Scrollytelling en tres momentos (Scrolly.tsx): el manifiesto
            de Origen, los conceptos de Psicocibernética (escena fija) y el
-           titular de Hipertrofia. Sin JS o con movimiento reducido, todo
-           visible y quieto.
+           titular de Hipertrofia. Entre secciones, tres banners con una
+           frase de Mario (foto con paralaje, frase que sube de su máscara).
+           Sin JS o con movimiento reducido, todo visible y quieto.
    ════════════════════════════════════════════════════════════ */
 
 .page {
@@ -1249,6 +1252,101 @@
   color: var(--stone);
 }
 
+/* ── Banners (entre secciones) ─────────────────────────────
+   Una foto a sangre y una frase de Mario en serif, al modo de Nike. La
+   sección es 16:9 y la foto 16:10, así que la foto cabe siempre entera a lo
+   ancho y le sobra un 6 % arriba y abajo para el paralaje: las posiciones
+   de la frase (--x, --w, --y, en % de la foto) caen sobre la figura en
+   cualquier pantalla apaisada. Por eso la frase también se mide en vw:
+   a 1440 coincide con poster, display y serif-l, y crece con la foto. */
+.banner {
+  position: relative;
+  height: min(100svh, 56.25vw);
+  overflow: hidden;
+  background: var(--black);
+  color: var(--on-dark);
+}
+.bannerMedia {
+  position: absolute;
+  inset: -6% 0;
+  will-change: transform;
+}
+/* fotos etalonadas en el archivo: sin filtros encima */
+.bannerMedia img {
+  object-fit: cover;
+  filter: none;
+}
+.bannerMob {
+  display: none;
+}
+/* para la frase clara: el suelo y los bordes, más oscuros */
+.bannerMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 85% at 50% 42%, rgba(10, 11, 13, 0) 40%, rgba(10, 11, 13, 0.42) 100%),
+    linear-gradient(to bottom, rgba(10, 11, 13, 0) 30%, rgba(10, 11, 13, 0.4) 100%);
+}
+.bannerInk {
+  color: var(--ink);
+}
+.bannerInk .bannerMedia::after {
+  content: none;
+}
+.bannerPhrase {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.bannerPoster {
+  font-size: 6.9vw;
+}
+.bannerDisplay {
+  font-size: 5.6vw;
+}
+.bannerSerif {
+  font-size: 3.6vw;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+.banner:not(.bannerInk) .bannerPhrase {
+  text-shadow: 0 0 0.6em rgba(10, 11, 13, 0.28);
+}
+/* split: a cada lado del hueco de la figura, pegadas a ella */
+.bannerSplit .bannerPhrase {
+  inset-inline: 0;
+  top: var(--y);
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: calc(var(--x) - var(--w) / 2) var(--w) 1fr;
+  align-items: center;
+}
+.bannerSplit .bannerPhrase > :first-child {
+  grid-column: 1;
+  justify-self: end;
+  padding-left: var(--gutter);
+  text-align: right;
+  text-wrap: balance;
+}
+.bannerSplit .bannerPhrase > :last-child {
+  grid-column: 3;
+  justify-self: start;
+  padding-right: var(--gutter);
+  text-wrap: balance;
+}
+/* corner: un bloque en el claro */
+.bannerCorner .bannerPhrase {
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  text-wrap: balance;
+}
+
 /* ── Pie (negro) ────────────────────────────────────────── */
 .footer {
   display: flex;
@@ -1417,6 +1515,54 @@
   }
   .formRow {
     grid-template-columns: 1fr;
+  }
+  /* banners: la foto vertical y la frase debajo, sobre el fundido a negro */
+  .banner,
+  .bannerInk {
+    height: auto;
+    padding-bottom: var(--s-block);
+    color: var(--on-dark);
+  }
+  .bannerMedia {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .bannerDesk {
+    display: none;
+  }
+  .bannerMob {
+    display: block;
+  }
+  .bannerMedia::after,
+  .bannerInk .bannerMedia::after {
+    content: "";
+    background: linear-gradient(to top, var(--black) 0%, rgba(14, 15, 18, 0.7) 16%, rgba(14, 15, 18, 0) 42%);
+  }
+  .bannerSplit .bannerPhrase,
+  .bannerCorner .bannerPhrase {
+    position: relative;
+    inset: auto;
+    width: auto;
+    transform: none;
+    display: block;
+    margin-top: -0.9em;
+    padding-inline: var(--gutter);
+  }
+  .bannerSplit .bannerPhrase > :first-child,
+  .bannerSplit .bannerPhrase > :last-child {
+    justify-self: start;
+    padding: 0;
+    text-align: left;
+  }
+  .bannerPoster {
+    font-size: min(4.25rem, 17vw);
+  }
+  .bannerDisplay {
+    font-size: min(3rem, 11.5vw);
+  }
+  .bannerSerif {
+    font-size: min(2.125rem, 8.4vw);
   }
 }
 

@@ -4,6 +4,7 @@ import { site } from "@/data/content";
 import { v3 } from "@/data/v3";
 import { archivo, geist, newsreader } from "./fonts";
 import Scrolly from "./Scrolly";
+import Banner from "./sections/Banner";
 import Contacto from "./sections/Contacto";
 import Emprendimiento from "./sections/Emprendimiento";
 import Footer from "./sections/Footer";
@@ -37,10 +38,13 @@ export default function V3() {
       <Hero />
       <main>
         <Origen />
+        <Banner id="interno" />
         <Psico />
+        <Banner id="musculo" />
         <Hipertrofia />
         <Emprendimiento />
         <Perspectivas />
+        <Banner id="ser" />
         <Contacto />
       </main>
       <Footer />

@@ -23,6 +23,14 @@ export type Reel = { code: string; title: string; duration: string; date: string
 export type Piece = { title: string; dek: string; date: string; minutes: number; href: string; image: { src: string; alt: string } };
 export type Talk = { title: string; youtubeId: string; duration?: string };
 export type LegalPart = string | { label: string; href: string };
+export type Banner = {
+  phrase: string[];
+  layout: "split" | "corner";
+  tone: "light" | "dark";
+  size: "poster" | "display" | "serif";
+  at: { x: number; w: number; y: number };
+  image: { desktop: string; mobile: string; alt: string };
+};
 
 /** [REAL] minutos de lectura a partir del conteo de palabras del archivo público (~220 ppm). */
 const minutes = (words: number) => Math.max(1, Math.round(words / 220));
@@ -186,6 +194,46 @@ export const v3 = {
       all: { label: "Todas las conversaciones", href: channels.youtube.href },
     },
   },
+
+  /* BANNERS — pedidos por Pablo (26 oct): a sangre, foto de actitud atlética y
+     una frase de Mario, al modo de los banners de Nike. Solo frases suyas,
+     literales, con su fuente. Fotos de sus carruseles de Instagram (2160 px),
+     recortadas por encima del texto de diseño y retocadas donde lo tapaba.
+     layout «split»: la frase partida a ambos lados de la figura (at.x = centro
+     de la figura, at.w = hueco que deja, at.y = altura de la frase).
+     layout «corner»: un bloque en el claro de la foto (at.x = borde izquierdo,
+     at.w = ancho, at.y = arriba). Todo en % de la foto de escritorio.
+     phrase: en split, una parte a cada lado; en corner, una parte por línea.
+     tone: color de la frase. size: poster / display / serif. */
+  banners: {
+    interno: {
+      // [MARIO] entrevista del 6 oct 2026 (ENTREVISTA-2026-10-06.md, § marca personal).
+      phrase: ["Todo es", "interno."],
+      layout: "split",
+      tone: "light",
+      size: "poster",
+      at: { x: 50.5, w: 41, y: 40 },
+      image: { desktop: "/mario/banners/interno-escritorio.jpg", mobile: "/mario/banners/interno-movil.jpg", alt: "Mario con los ojos cerrados, bajo una luz roja." },
+    },
+    musculo: {
+      // [MARIO] subtítulo de «Ya eres», Hipertrofia del Ser (Substack, 6 sep 2026).
+      phrase: ["El músculo más atractivo", "que puedes desarrollar", "no está en tu cuerpo."],
+      layout: "corner",
+      tone: "dark",
+      size: "serif",
+      at: { x: 58, w: 39, y: 29 },
+      image: { desktop: "/mario/banners/musculo-escritorio.jpg", mobile: "/mario/banners/musculo-movil.jpg", alt: "Mario sin camiseta, con gorra, mirando a un lado." },
+    },
+    ser: {
+      // [MARIO] su carrusel fijado de Instagram (DP49jAVCZcW): «…no se trata de hacer más. Se trata de SER más.»
+      phrase: ["No se trata de hacer más.", "Se trata de SER más."],
+      layout: "split",
+      tone: "light",
+      size: "display",
+      at: { x: 52, w: 28, y: 50 },
+      image: { desktop: "/mario/banners/ser-escritorio.jpg", mobile: "/mario/banners/ser-movil.jpg", alt: "Mario cruzando una calle al atardecer." },
+    },
+  } satisfies Record<string, Banner>,
 
   /* 07 · CONTACTO — [SPEC] placeholder utilitario. Sin frases emocionales. */
   contacto: {
