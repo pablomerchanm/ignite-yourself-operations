@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "title": "Enrique “Rick” Rodriguez, Jr. — Banking & Real Estate Finance Expert Witness",
+    "description": "Enrique “Rick” Rodriguez, Jr.: banking and real estate finance expert witness. Security Pacific Bank, 1979 to 1992; founder of Rodriguez & Associates Advisory Group, Los Angeles, since 1992."
+  },
+  "logo": "ENRIQUE “RICK” RODRIGUEZ, JR.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/rodriguez"
+    },
+    {
+      "t": "Practice",
+      "h": "/rodriguez/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/rodriguez/testimony"
+    },
+    {
+      "t": "CV",
+      "h": "/rodriguez/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/rodriguez#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "img": {
+        "src": "/rodriguez/assets/hero.jpg",
+        "mobile": "/rodriguez/assets/hero-mobile.jpg",
+        "alt": "Enrique “Rick” Rodriguez, Jr."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "In brief",
+      "items": [
+        {
+          "k": "Inside the bank.",
+          "t": "Security Pacific National Bank, 1979 to 1992, from assistant branch manager to Senior Vice President.",
+          "d": "Credit policy for a $6 billion real estate portfolio, with personal approval authority of $15 million."
+        },
+        {
+          "k": "An independent practice since 1992.",
+          "t": "Founder and Principal of Rodriguez & Associates Advisory Group, Los Angeles.",
+          "d": "Loan workouts and restructuring, capital procurement, brokerage and litigation support."
+        },
+        {
+          "k": "Before judges, juries and arbitrators.",
+          "t": "Jury and bench trials, arbitration, mediation, deposition and declaration.",
+          "d": "For plaintiffs, defendants, debtors and creditors, in a relatively equal mix, per the firm."
+        }
+      ]
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "The record",
+      "items": [
+        {
+          "n": "21",
+          "k": "Years in banking, from branch manager to bank president"
+        },
+        {
+          "n": "108",
+          "k": "Law firms named on his CV, in civil and bankruptcy matters"
+        },
+        {
+          "n": "$6<sup>B</sup>",
+          "k": "Real estate portfolio under his credit policy at Security Pacific, 1986–1987"
+        }
+      ],
+      "more": {
+        "t": "Prior testimony",
+        "h": "/rodriguez/testimony"
+      }
+    },
+    {
+      "type": "quote",
+      "id": "quote",
+      "lead": "“Rick connects with jurors in a way few experts can. He has a wealth of banking experience and yet is an ‘everyman’ that jurors listen to with rapt attention.",
+      "q": "Jurors believe him because he is forthright and honest, and accept his analysis because they trust him.”",
+      "who": "Cappello & Noël LLP, as published by Rodriguez & Associates"
+    },
+    {
+      "type": "stmt",
+      "id": "s-question",
+      "label": "The practice",
+      "quote": "Four areas <t>of banking and finance.</t>",
+      "keys": [
+        "Lending standards",
+        "Workouts and restructuring",
+        "Chapter 11",
+        "Real estate finance"
+      ],
+      "more": {
+        "t": "The practice",
+        "h": "/rodriguez/practice"
+      },
+      "img": {
+        "src": "/rodriguez/assets/counsel.jpg",
+        "alt": "A working session with counsel at dusk",
+        "pos": "56% 42%"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-bank",
+      "label": "Security Pacific",
+      "align": "right",
+      "quote": "From the branch <t>to special assets.</t>",
+      "sub": "Security Pacific National Bank, 1979 to 1992: credit review, corporate and real estate lending, and the restructuring of classified loans, up to Senior Vice President.",
+      "keys": [
+        "Credit review",
+        "Real estate lending",
+        "Special assets"
+      ],
+      "more": {
+        "t": "The record",
+        "h": "/rodriguez/record"
+      },
+      "img": {
+        "src": "/rodriguez/assets/desk.jpg",
+        "alt": "Writing at a desk by lamplight",
+        "pos": "22% 45%"
+      }
+    },
+    {
+      "type": "counsel",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "What counsel needs, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · December 2016",
+          "t": "Curriculum vitae",
+          "d": "Banking career, law firm engagements, bankruptcy matters and teaching.",
+          "a": "Download the CV",
+          "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_c2b4ed727b324f78ae59f5d9c33f7cde.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Listing · 2008 – 2015",
+          "t": "Prior testimony",
+          "d": "Depositions, trials, arbitrations and declarations, by year and court.",
+          "a": "View the listing",
+          "h": "/rodriguez/testimony#listing"
+        },
+        {
+          "icon": "quote",
+          "tag": "Counsel and clients",
+          "t": "Endorsements",
+          "d": "What trial lawyers, general counsel and bankers have written about his work.",
+          "a": "Read them",
+          "h": "/rodriguez/testimony#voices"
+        },
+        {
+          "icon": "bank",
+          "tag": "Four areas",
+          "t": "The practice",
+          "d": "Lending standards, workouts, Chapter 11 and real estate finance.",
+          "a": "See the practice",
+          "h": "/rodriguez/practice"
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "s-firm",
+      "label": "Rodriguez & Associates",
+      "ink": true,
+      "quote": "Founder and Principal <t>since 1992.</t>",
+      "sub": "Loan workouts, capital procurement, real estate brokerage and litigation support, from downtown Los Angeles, with Emily Rodriguez, Partner.",
+      "logo": "/rodriguez/assets/ra-logo-white.png",
+      "more": {
+        "t": "Visit rodriguezadvisory.com",
+        "h": "https://www.rodriguezadvisory.com/"
+      },
+      "compact": true
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "rick@rodriguezadvisory.com",
+        "phone": "(213) 617-1163",
+        "city": "Los Angeles, California"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A banking, lending or real estate finance dispute",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or forum"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "bankruptcy",
+            "t": "A Chapter 11 matter — feasibility or cram-down rate",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Debtor or creditor"
+              },
+              {
+                "n": "Court and case number, if public"
+              },
+              {
+                "n": "Hearing date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Workouts, capital or brokerage — Rodriguez & Associates",
+            "btn": "Send to the firm",
+            "note": "Routed to Rodriguez & Associates. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or prior testimony",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Rodriguez.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "social": [
+        {
+          "t": "rodriguezadvisory.com",
+          "h": "https://www.rodriguezadvisory.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/rodriguez/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Rodriguez’s review. Photography is illustrative art direction, to be replaced by photography he approves. This is not an official website: it has not been reviewed or approved by Mr. Rodriguez, and it is not indexed or distributed."
+      },
+      "kick": "Banking & Real Estate Finance · Expert Witness",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "firm": {
+        "href": "https://www.rodriguezadvisory.com/",
+        "src": "/rodriguez/assets/ra-logo-white.png",
+        "alt": "Rodriguez & Associates Advisory Group",
+        "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
+        "link": "Visit rodriguezadvisory.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Enrique “Rick” Rodriguez, Jr. · Los Angeles, California",
+      "no": "01"
+    }
+  ]
+}

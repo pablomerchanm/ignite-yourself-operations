@@ -1,0 +1,930 @@
+{
+  "meta": {
+    "title": "Enrique “Rick” Rodriguez, Jr. — Banking & Real Estate Finance Expert Witness",
+    "description": "Enrique “Rick” Rodriguez, Jr.: banking and real estate finance expert witness, Los Angeles."
+  },
+  "logo": "ENRIQUE “RICK” RODRIGUEZ, JR.",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/rodriguez"
+    },
+    {
+      "t": "Practice",
+      "h": "/rodriguez/practice"
+    },
+    {
+      "t": "Testimony",
+      "h": "/rodriguez/testimony"
+    },
+    {
+      "t": "CV",
+      "h": "/rodriguez/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "img": {
+        "src": "/rodriguez/assets/hero.jpg",
+        "mobile": "/rodriguez/assets/hero-mobile.jpg",
+        "alt": "Enrique “Rick” Rodriguez, Jr."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "The record",
+      "items": [
+        {
+          "n": "21",
+          "k": "Years in banking, from branch manager to bank president"
+        },
+        {
+          "n": "108",
+          "k": "Law firms named on his CV, in civil and bankruptcy matters"
+        },
+        {
+          "n": "$6<sup>B</sup>",
+          "k": "Real estate portfolio under his credit policy at Security Pacific, 1986–1987"
+        }
+      ],
+      "more": {
+        "t": "Prior testimony",
+        "h": "/rodriguez/testimony"
+      }
+    },
+    {
+      "type": "quote",
+      "id": "quote",
+      "lead": "“Rick connects with jurors in a way few experts can. He has a wealth of banking experience and yet is an ‘everyman’ that jurors listen to with rapt attention.",
+      "q": "Jurors believe him because he is forthright and honest, and accept his analysis because they trust him.”",
+      "who": "Cappello & Noël LLP, as published by Rodriguez & Associates"
+    },
+    {
+      "type": "stmt",
+      "id": "s-question",
+      "label": "The practice",
+      "quote": "Four areas <t>of banking and finance.</t>",
+      "keys": [
+        "Lending standards",
+        "Workouts and restructuring",
+        "Chapter 11",
+        "Real estate finance"
+      ],
+      "more": {
+        "t": "The practice",
+        "h": "/rodriguez/practice"
+      },
+      "img": {
+        "src": "/rodriguez/assets/counsel.jpg",
+        "alt": "A working session with counsel at dusk",
+        "pos": "56% 42%"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-bank",
+      "label": "Security Pacific",
+      "align": "right",
+      "quote": "From the branch <t>to special assets.</t>",
+      "sub": "Security Pacific National Bank, 1979 to 1992: credit review, corporate and real estate lending, and the restructuring of classified loans, up to Senior Vice President.",
+      "keys": [
+        "Credit review",
+        "Real estate lending",
+        "Special assets"
+      ],
+      "more": {
+        "t": "The record",
+        "h": "/rodriguez/record"
+      },
+      "img": {
+        "src": "/rodriguez/assets/desk.jpg",
+        "alt": "Writing at a desk by lamplight",
+        "pos": "22% 45%"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "In brief",
+      "items": [
+        {
+          "k": "Inside the bank.",
+          "t": "Security Pacific National Bank, 1979 to 1992, from assistant branch manager to Senior Vice President.",
+          "d": "Credit policy for a $6 billion real estate portfolio, with personal approval authority of $15 million."
+        },
+        {
+          "k": "An independent practice since 1992.",
+          "t": "Founder and Principal of Rodriguez & Associates Advisory Group, Los Angeles.",
+          "d": "Loan workouts and restructuring, capital procurement, brokerage and litigation support."
+        },
+        {
+          "k": "Before judges, juries and arbitrators.",
+          "t": "Jury and bench trials, arbitration, mediation, deposition and declaration.",
+          "d": "For plaintiffs, defendants, debtors and creditors, in a relatively equal mix, per the firm."
+        }
+      ]
+    },
+    {
+      "type": "counsel",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "What counsel needs, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · December 2016",
+          "t": "Curriculum vitae",
+          "d": "Banking career, law firm engagements, bankruptcy matters and teaching.",
+          "a": "Download the CV",
+          "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_c2b4ed727b324f78ae59f5d9c33f7cde.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Listing · 2008 – 2015",
+          "t": "Prior testimony",
+          "d": "Depositions, trials, arbitrations and declarations, by year and court.",
+          "a": "View the listing",
+          "h": "/rodriguez/testimony#listing"
+        },
+        {
+          "icon": "quote",
+          "tag": "Counsel and clients",
+          "t": "Endorsements",
+          "d": "What trial lawyers, general counsel and bankers have written about his work.",
+          "a": "Read them",
+          "h": "/rodriguez/testimony#voices"
+        },
+        {
+          "icon": "bank",
+          "tag": "Four areas",
+          "t": "The practice",
+          "d": "Lending standards, workouts, Chapter 11 and real estate finance.",
+          "a": "See the practice",
+          "h": "/rodriguez/practice"
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "s-firm",
+      "label": "Rodriguez & Associates",
+      "ink": true,
+      "quote": "Founder and Principal <t>since 1992.</t>",
+      "sub": "Loan workouts, capital procurement, real estate brokerage and litigation support, from downtown Los Angeles, with Emily Rodriguez, Partner.",
+      "logo": "/rodriguez/assets/ra-logo-white.png",
+      "more": {
+        "t": "Visit rodriguezadvisory.com",
+        "h": "https://www.rodriguezadvisory.com/"
+      },
+      "compact": true
+    },
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Practice",
+      "quote": "The standards of lending, <t>applied to the dispute.</t>",
+      "sub": "Commercial lending, workouts and restructuring, Chapter 11 and real estate finance.",
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Areas of practice",
+      "title": "Four areas <t>of banking and finance.</t>",
+      "lede": "Opinions on how lenders and borrowers are expected to act, and whether they did.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Lending standards",
+          "title": "Did the lender act as a prudent lender would?",
+          "desc": "Standard and prudent banking practice in underwriting, credit approval, loan administration, disbursement and collection, the questions at the center of lender liability claims.",
+          "items": [
+            "Underwriting and credit approval",
+            "Loan administration and collection",
+            "Lender liability",
+            "Regulatory compliance"
+          ],
+          "cta": {
+            "t": "Discuss a lending matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "bank"
+        },
+        {
+          "label": "Workouts and restructuring",
+          "title": "Was the workout handled to standard?",
+          "desc": "Loan workouts, restructures and the collection of classified loans, the work he led in Security Pacific’s special assets group.",
+          "items": [
+            "Loan workouts",
+            "Debt restructuring",
+            "Guarantor obligations",
+            "Wrongful foreclosure"
+          ],
+          "cta": {
+            "t": "Discuss a workout matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "workout"
+        },
+        {
+          "label": "Chapter 11",
+          "title": "Is the plan feasible, and at what rate?",
+          "desc": "Plan feasibility and the fair and equitable rate of interest on secured claims in a cram-down, by declaration and at bench trial.",
+          "items": [
+            "Plan feasibility",
+            "Cram-down interest rates",
+            "Secured claims",
+            "Equitable subordination"
+          ],
+          "cta": {
+            "t": "Discuss a Chapter 11 matter",
+            "h": "#inquiry",
+            "path": "bankruptcy"
+          },
+          "icon": "court"
+        },
+        {
+          "label": "Real estate finance",
+          "title": "Was the financing structured to market?",
+          "desc": "Construction, acquisition and development loans, letters of credit, trust deeds and joint venture financing.",
+          "items": [
+            "Construction lending",
+            "Acquisition and development loans",
+            "Letters of credit",
+            "Joint ventures"
+          ],
+          "cta": {
+            "t": "Discuss a real estate finance matter",
+            "h": "#inquiry",
+            "path": "matter"
+          },
+          "icon": "build"
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "sectors",
+      "label": "Industries",
+      "title": "Financing standards, <t>across industries.</t>",
+      "lede": "Sectors in which he has testified on the financing arrangements and standards in use, as listed by the firm.",
+      "groups": [
+        {
+          "label": "Civil litigation",
+          "names": [
+            "Asset based finance",
+            "Aviation",
+            "Equipment and rental storage",
+            "Franchising",
+            "Machinery rental",
+            "Manufacturing of aerospace parts",
+            "Manufacturing of clothing",
+            "Perfume distribution and retail",
+            "Real estate",
+            "Restaurants",
+            "Technology",
+            "Telecom and communications"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "support",
+      "tint": true,
+      "label": "Litigation support",
+      "title": "Beyond the testimony, <t>through the case.</t>",
+      "lede": "Where testimony is not required, or alongside it, through Rodriguez & Associates.",
+      "groups": [
+        {
+          "label": "Support for counsel",
+          "wide": true,
+          "names": [
+            "Discovery and production requests",
+            "Deposition preparation",
+            "Financial charts, timelines and demonstrative trial exhibits",
+            "Feasibility analysis and reorganization plans",
+            "Evaluation and settlement of financial institution bond claims",
+            "Loan workouts and lender liability"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "counsel",
+      "id": "disclosure",
+      "light": true,
+      "label": "For the file",
+      "title": "The expert disclosure, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · December 2016",
+          "t": "Curriculum vitae",
+          "d": "Banking career, law firm engagements, bankruptcy matters and teaching.",
+          "a": "Download the CV",
+          "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_c2b4ed727b324f78ae59f5d9c33f7cde.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "PDF · 2008 – 2015",
+          "t": "Prior testimony",
+          "d": "The listing published by the firm, with courts and case numbers.",
+          "a": "Open the listing",
+          "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_37798f44c0e84f84acc806670bed5068.pdf"
+        },
+        {
+          "icon": "quote",
+          "tag": "Counsel and clients",
+          "t": "Endorsements",
+          "d": "Letters from trial lawyers, general counsel and bankers.",
+          "a": "Read them",
+          "h": "/rodriguez/testimony#voices"
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "testimony-open",
+      "label": "Testimony",
+      "align": "right",
+      "quote": "Juries, judges <t>and arbitrators.</t>",
+      "sub": "Jury and bench trials, arbitration and mediation, by deposition and declaration, for plaintiffs, defendants, debtors and creditors.",
+      "img": {
+        "src": "/rodriguez/assets/balance.jpg",
+        "alt": "A brass balance on a stack of books, in window light",
+        "pos": "0% 62%"
+      },
+      "opener": true
+    },
+    {
+      "type": "tally",
+      "id": "listing",
+      "label": "Prior testimony",
+      "title": "36 testimonies <t>from 2008 to 2015.</t>",
+      "lede": "The listing the firm publishes, counted by Ignite Yourself. An updated listing would bring it to today.",
+      "doc": {
+        "t": "The listing (PDF, 2015)",
+        "h": "https://www.rodriguezadvisory.com/_files/ugd/2016f9_37798f44c0e84f84acc806670bed5068.pdf"
+      },
+      "stats": [
+        {
+          "n": "19",
+          "k": "Depositions",
+          "d": "Deposition only, 2008 to 2015"
+        },
+        {
+          "n": "9",
+          "k": "In court or at a hearing",
+          "d": "Courtroom, trial and arbitration hearing testimony"
+        },
+        {
+          "n": "8",
+          "k": "Reports and declarations",
+          "d": "Written opinions, five of them in bankruptcy court"
+        },
+        {
+          "n": "10",
+          "k": "Federal courts",
+          "d": "Six in U.S. Bankruptcy Court, four in U.S. District Court"
+        }
+      ],
+      "series": [
+        {
+          "k": "dep",
+          "t": "Depositions",
+          "c": "#3B64A0"
+        },
+        {
+          "k": "crt",
+          "t": "Court and hearings",
+          "c": "#B5833F"
+        },
+        {
+          "k": "doc",
+          "t": "Reports and declarations",
+          "c": "#8C8A84"
+        }
+      ],
+      "years": [
+        {
+          "y": "2008",
+          "dep": 1,
+          "crt": 1,
+          "doc": 0
+        },
+        {
+          "y": "2009",
+          "dep": 1,
+          "crt": 2,
+          "doc": 0
+        },
+        {
+          "y": "2010",
+          "dep": 4,
+          "crt": 1,
+          "doc": 0
+        },
+        {
+          "y": "2011",
+          "dep": 2,
+          "crt": 1,
+          "doc": 3
+        },
+        {
+          "y": "2012",
+          "dep": 5,
+          "crt": 1,
+          "doc": 1
+        },
+        {
+          "y": "2013",
+          "dep": 2,
+          "crt": 2,
+          "doc": 4
+        },
+        {
+          "y": "2014",
+          "dep": 3,
+          "crt": 0,
+          "doc": 0
+        },
+        {
+          "y": "2015",
+          "dep": 1,
+          "crt": 1,
+          "doc": 0
+        }
+      ],
+      "beyond": {
+        "k": "Beyond California",
+        "items": [
+          "Arizona",
+          "Montana",
+          "Nevada"
+        ]
+      }
+    },
+    {
+      "type": "exp",
+      "id": "bankruptcy",
+      "tint": true,
+      "label": "Bankruptcy court",
+      "title": "Chapter 11, <t>at bench trial.</t>",
+      "lede": "Plan feasibility, cram-down interest rates and the factors requisite for confirmation, by declaration and at bench trial.",
+      "groups": [
+        {
+          "label": "Representative engagements, from the 2016 CV",
+          "wide": true,
+          "names": [
+            "Allen Matkins Leck Gamble & Mallory — for debtors and for creditors, on market rates of interest and feasibility, by declaration and at bench trial",
+            "Orrick, Herrington & Sutcliffe — for a secured creditor, opposing the cram-down of a $30.7 million acquisition and development loan on a 640-lot former brownfield site",
+            "Stutman Treister & Glatt — for debtors, on market rates of interest and feasibility, including $10 million secured by automobile dealerships",
+            "Gumport Reitman & Montgomery — retained by the U.S. Trustee, on equitable subordination, at bench trial",
+            "Sheppard, Mullin, Richter & Hampton — for a creditor, on lender liability, damages and valuation in a $30 million apartment project",
+            "Winston & Strawn — for counsel to the trustee, on commercial credit underwriting standards"
+          ]
+        }
+      ],
+      "fn": "Per the firm: in every bankruptcy matter where he has testified, the plan was confirmed or the matter settled in favor of his client. Reported by the firm, not independently verified."
+    },
+    {
+      "type": "letters",
+      "id": "voices",
+      "label": "Counsel and clients",
+      "title": "In their <t>words.</t>",
+      "lede": "Letters published by Rodriguez & Associates, shown as the firm publishes them.",
+      "items": [
+        {
+          "q": "“In talking with jurors after trial, several commented that your testimony on the subject of commercial lending standards was particularly helpful to them in understanding the case. The case presented complex issues. Yet, according to several jurors, you presented the material in a way that made it easier for them to understand.”",
+          "who": "Roger Behle",
+          "org": "Foley, Bezek, Behle & Curtis"
+        },
+        {
+          "q": "“We retained Rick as an expert on construction financing in a significant arbitration in 2009. He delivered powerful and concise opinions. He also turned his cross-examination into points in our favor.”",
+          "who": "Stuart Widman",
+          "org": "Miller Shackman & Beem"
+        },
+        {
+          "q": "“We have looked to Rick’s deep knowledge of commercial banking for more than a decade. Whether acting as an expert or consultant, he is responsive, practical and best of all, exercises excellent judgment.”",
+          "who": "Laura Kennedy",
+          "org": "Cohen Kennedy Dowd & Quigley"
+        },
+        {
+          "q": "“Rick Rodriguez combines an impressive background in commercial banking with common sense and a wonderful communications style, making him highly effective in conveying his opinions as a testifying witness to jurors and judges.”",
+          "who": "Thomas J. Shroyer",
+          "org": "Moss & Barnett"
+        },
+        {
+          "q": "“Mr. Rodriguez is extremely knowledgeable, experienced and well-qualified to consult with and testify concerning banking policies and procedures. For anyone having need for a banking expert consultant or witness, I endorse Mr. Rodriguez without hesitation.”",
+          "who": "W. Leslie Sully Jr.",
+          "org": "Leavitt, Sully & Rivers"
+        },
+        {
+          "q": "“We also plainly owe a great measure of our success on the banks’ claims to your testimony in helping to educate the jury to the fundamental weaknesses of the bank’s position.”",
+          "who": "David Wagner",
+          "org": "Associate General Counsel, KPMG"
+        }
+      ],
+      "src": "As published on rodriguezadvisory.com"
+    },
+    {
+      "type": "stmt",
+      "id": "record-open",
+      "label": "CV",
+      "quote": "Since 1973, <t>in banking and finance.</t>",
+      "sub": "Security Pacific, the firm, a de novo bank, teaching at USC and UCLA Extension, and public work for Los Angeles schools.",
+      "opener": true
+    },
+    {
+      "type": "timeline",
+      "id": "record-years",
+      "tint": true,
+      "label": "The record, on one line",
+      "title": "From a branch in 1973 <t>to the practice.</t>",
+      "from": 1973,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1973,
+          "t": "Consumer finance"
+        },
+        {
+          "y": 1979,
+          "t": "Security Pacific"
+        },
+        {
+          "y": 1992,
+          "t": "Rodriguez & Associates",
+          "brass": true
+        },
+        {
+          "y": 2006,
+          "t": "Banco BuenaVentura"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1973,
+          "b": 1979,
+          "t": "UCB, Bay Area Financial, Liberty Loan"
+        },
+        {
+          "a": 1979,
+          "b": 1992,
+          "t": "Security Pacific"
+        },
+        {
+          "a": 1992,
+          "b": 2026,
+          "t": "Rodriguez & Associates, 1992 to date",
+          "brass": true
+        },
+        {
+          "a": 2000,
+          "b": 2002,
+          "t": "LAUSD"
+        },
+        {
+          "a": 2006,
+          "b": 2008,
+          "t": "Banco BuenaVentura"
+        }
+      ],
+      "rlabel": "Positions and the practice"
+    },
+    {
+      "type": "exp",
+      "id": "record-bank",
+      "label": "Banking",
+      "title": "Security Pacific, <t>1979 to 1992.</t>",
+      "lede": "From branch operations to the restructuring of classified loans. Security Pacific was acquired by Bank of America in 1992.",
+      "groups": [
+        {
+          "label": "Security Pacific National Bank",
+          "wide": true,
+          "names": [
+            "Senior Vice President, Division Administrator, Real Estate Special Assets — 1990–1992. A classified loan portfolio of about $1.6 billion in commitments, across ten relationships",
+            "First Vice President, Regional Manager, Real Estate Industries Group — 1987–1990. A loan portfolio of $1 billion in outstanding commitments",
+            "First Vice President, Deputy Administrator and Credit Officer, Real Estate Industries Group — 1986–1987. Credit policy for a $6 billion real estate portfolio across California, with personal approval authority of $15 million",
+            "Vice President, Regional Manager, Real Estate Industries Group, Riverside — 1984–1986. Opened the regional office; a construction loan portfolio grown to $700 million",
+            "Vice President, World Corporate Group — 1983–1984. A corporate loan portfolio of $500 million in commitments",
+            "Vice President, Real Estate Special Assets — 1980–1983. Restructure and collection of $50 million in classified real estate loans",
+            "Assistant Vice President, Credit Review — 1980. Field audits of loan portfolios across the United States",
+            "Assistant Branch Manager — 1979–1980. Branch operations, deposit accounts and consumer loans"
+          ]
+        },
+        {
+          "label": "Before Security Pacific",
+          "wide": true,
+          "names": [
+            "UCB, Bay Area Financial and Liberty Loan — 1973–1979. Branch manager, credit manager, loan underwriter and collection officer"
+          ]
+        },
+        {
+          "label": "A de novo bank",
+          "wide": true,
+          "names": [
+            "Banco BuenaVentura, Oxnard — 2006–2008. De novo President and Chief Credit Officer, approved by California’s Department of Financial Institutions and the FDIC, with a business plan to bring the unbanked into the banking system"
+          ]
+        }
+      ],
+      "fn": "From the CV of December 2016. The firm’s biography describes the 1990–1992 role as Senior Vice President in charge of the Restructuring Group."
+    },
+    {
+      "type": "exp",
+      "id": "record-firm",
+      "tint": true,
+      "label": "Rodriguez & Associates",
+      "title": "An advisory practice <t>since 1992.</t>",
+      "lede": "Founded to resolve complex debtor-creditor transactions secured by real estate, stock and partnership interests; today also brokerage, capital procurement, site acquisition and litigation support.",
+      "groups": [
+        {
+          "label": "Public and community work",
+          "wide": true,
+          "names": [
+            "Los Angeles Unified School District — 2000–2002. Consulting Senior Facilities Executive for three of eleven mini-districts; sites designated for 33 schools, 38% of the District’s 2002 new building program",
+            "Pro bono — since 2009. Negotiating with lenders on behalf of homeowners at risk of foreclosure, and testimony in cases against predatory lenders and foreclosure rescue scams"
+          ]
+        },
+        {
+          "label": "Representative clients, from the 2016 CV",
+          "wide": true,
+          "names": [
+            "Real estate: Maguire Thomas Partners, Kilroy Industries, The Carson Companies, Peninsula Beverly Hills",
+            "Financial institutions: Bank of America, ING Bank, Bankers Trust Securities, East West Bank, Far East National Bank"
+          ]
+        }
+      ],
+      "fn": "The firm’s totals differ by source: matters in excess of $4.5 billion for over 300 clients on its website, more than $9 billion for hundreds of clients in the 2016 CV. Left out until he confirms them."
+    },
+    {
+      "type": "exp",
+      "id": "record-teaching",
+      "label": "Teaching",
+      "title": "USC, UCLA Extension <t>and the bar.</t>",
+      "groups": [
+        {
+          "label": "Courses and lectures",
+          "wide": true,
+          "names": [
+            "Instructor, Real Estate Finance and Development for Minority Candidates, “Real Estate Finance & Workouts” — University of Southern California, 1993–2006",
+            "Guest speaker, “Real Estate Asset Management and Workouts,” Finance & Business Economics 570 — USC Graduate School of Business Administration, 1992–2006",
+            "Guest speaker, “Real Estate Finance and Investment” — USC Marshall School of Business, 1998–1999",
+            "Instructor and guest speaker, “Real Estate Loan Originations and Workouts” and “Workouts and Bankruptcies” — UCLA Extension, 1992–1994",
+            "Instructor, Executive Program, “Real Estate Finance & Workouts” — USC Graduate School of Business Administration, 1992–1993",
+            "Instructor, “The Banker’s Business” — CB Commercial, Chicago, 1993",
+            "Speaker, “Defending Your Banking and Lending Practices” — Orange County Bar Association, Banking and Lending Section, 2014"
+          ]
+        },
+        {
+          "label": "Also spoken at",
+          "names": [
+            "Wharton Business Alumni Association",
+            "Claremont Colleges",
+            "Debt Restructure Roundtable",
+            "ICSC",
+            "Chicago Title"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-orgs",
+      "tint": true,
+      "label": "Affiliations",
+      "title": "Languages, education <t>and affiliations.</t>",
+      "groups": [
+        {
+          "label": "Education and languages",
+          "wide": true,
+          "names": [
+            "Attended the School of Business, University of Mexico City, per the CV",
+            "Fluent in written and spoken Spanish"
+          ]
+        },
+        {
+          "label": "Affiliations of the firm",
+          "wide": true,
+          "names": [
+            "Latino Business Chamber of Greater Los Angeles",
+            "USC Lusk Center for Real Estate, Family and Friends",
+            "USC Marshall School of Business Alumni Association"
+          ]
+        },
+        {
+          "label": "Licensing",
+          "wide": true,
+          "names": [
+            "California real estate broker, per the firm’s biography. Current status to be confirmed"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "rick@rodriguezadvisory.com",
+        "phone": "(213) 617-1163",
+        "city": "Los Angeles, California"
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "matter",
+            "t": "A banking, lending or real estate finance dispute",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Type of claim"
+              },
+              {
+                "n": "Court or forum"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "bankruptcy",
+            "t": "A Chapter 11 matter — feasibility or cram-down rate",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Debtor or creditor"
+              },
+              {
+                "n": "Court and case number, if public"
+              },
+              {
+                "n": "Hearing date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firm",
+            "t": "Workouts, capital or brokerage — Rodriguez & Associates",
+            "btn": "Send to the firm",
+            "note": "Routed to Rodriguez & Associates. Please do not include confidential information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Service of interest"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or prior testimony",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Rodriguez.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "social": [
+        {
+          "t": "rodriguezadvisory.com",
+          "h": "https://www.rodriguezadvisory.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/rodriguez/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Rodriguez’s review. Photography is illustrative art direction, to be replaced by photography he approves. This is not an official website: it has not been reviewed or approved by Mr. Rodriguez, and it is not indexed or distributed."
+      },
+      "kick": "Banking & Real Estate Finance · Expert Witness",
+      "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
+      "firm": {
+        "href": "https://www.rodriguezadvisory.com/",
+        "src": "/rodriguez/assets/ra-logo-white.png",
+        "alt": "Rodriguez & Associates Advisory Group",
+        "lede": "Founder and Principal since 1992. Workouts, capital procurement, brokerage and litigation support, through the firm.",
+        "link": "Visit rodriguezadvisory.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Enrique “Rick” Rodriguez, Jr. · Los Angeles, California"
+    }
+  ],
+  "proposal": {
+    "active": false,
+    "href": "/rodriguez/proposal",
+    "button": "Your proposal",
+    "link": "View your proposal"
+  }
+}
