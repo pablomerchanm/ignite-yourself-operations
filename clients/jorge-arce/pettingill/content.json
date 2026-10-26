@@ -59,16 +59,16 @@
       "label": "Testimony",
       "items": [
         {
-          "n": "1,500<sup>+</sup>",
-          "k": "Cases with deposition or trial testimony"
+          "n": "6,750",
+          "k": "Cases reviewed"
         },
         {
-          "n": "550<sup>+</sup>",
+          "n": "637",
           "k": "Trials"
         },
         {
-          "n": "29",
-          "k": "States, plus the U.S. Virgin Islands"
+          "n": "39",
+          "k": "States and territories, including the U.S. Virgin Islands"
         }
       ],
       "more": {
@@ -441,8 +441,8 @@
         "alt": "A brass balance on a stack of books, in window light",
         "pos": "0% 62%"
       },
-      "quote": "More than 1,500 cases. <t>Deposition and trial.</t>",
-      "sub": "Personal injury, wrongful death and medical malpractice, in 29 states, the U.S. Virgin Islands and federal court.",
+      "quote": "6,750 cases. <t>637 trials.</t>",
+      "sub": "Personal injury, wrongful death and medical malpractice, in 39 states and territories, including the U.S. Virgin Islands, and in federal court.",
       "opener": true
     },
     {
@@ -956,6 +956,7 @@
       "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
+        "cell": "(561) 346-7828",
         "phone": "(561) 622-0330",
         "city": "Palm Beach Gardens, Florida"
       },
@@ -1132,5 +1133,11 @@
       "fine": "Private preview · Not indexed",
       "base": "Bernard F. Pettingill, Jr. · Ph.D. Economics · MPH · MBA"
     }
-  ]
+  ],
+  "proposal": {
+    "active": true,
+    "href": "/pettingill/proposal",
+    "button": "Your proposal",
+    "link": "View your proposal"
+  }
 }
