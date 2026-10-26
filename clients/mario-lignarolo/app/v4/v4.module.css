@@ -1,0 +1,1901 @@
+/* ════════════════════════════════════════════════════════════
+   ITERACIÓN /v4 — /v3 con la identidad gráfica aplicada
+   Fuente: marca/identidad/ (guía de marca: tokens, voces y piezas;
+   el plan, en aplicacion.md). /v3 queda intacta para comparar.
+   Referencias: Nike About (la fuerza) y Monolog (la contención).
+   Imponente, elevada, clara.
+
+   SISTEMA
+   Color   Negro cálido y hueso, nunca negro ni blanco puros. El negro manda
+           (portada, Psicocibernética, Hipertrofia del Ser, banners,
+           Conversaciones, pie); el hueso da los respiros (Origen, Contacto).
+           Sin acentos: el color lo ponen las fotos.
+
+   Tipos   Cuatro voces, cada una con un trabajo:
+             poster  Archivo Condensed  → statements y carteles, en versal
+             sans    Geist              → titulares en negrita, lectura, interfaz
+             serif   Cormorant Garamond → la voz de Mario
+             mono    Geist Mono         → el dato (fechas, duraciones, contadores)
+
+   Escala  (a 1440 px · móvil) Cada paso tiene un uso y nada se sale:
+             hero      statement de portada: --s, desde el alto de pantalla
+             poster    carteles de sección          104 · 52 px
+             display   titulares de sección          84 · 44
+             poster-s  conceptos, carteles          80 · 44
+             voz       titulares en primera persona  72 · 40
+                       (Cormorant mide menos de ojo que la grotesca)
+             statement manifiesto, lectura guiada    44 · 28
+             voz-i     preguntas, silencios          36 · 26
+             voz-s     títulos de entrada            28 · 24
+             lead      entradillas                   26 · 21
+             body      párrafos                      17
+             label     el dato, en mono              12
+
+   Retícula 12 columnas, medianil 24 px, margen 40 px (20 en móvil). Toda
+           sección abre igual: la etiqueta con su punto en la columna índice
+           (1–3), el titular desde la 4 y la lectura en la 7–11. La simetría
+           se reserva para los silencios (la pregunta, la suscripción).
+
+   Ritmo   section 160 · block 64 · title 32 · stack 18 (móvil 96 · 48 · 20).
+
+   Movimiento  Una curva. Lectura guiada (manifiesto de Origen, titular de
+           Hipertrofia, territorios), escena fija (conceptos de
+           Psicocibernética), líneas que suben de su máscara (portada,
+           banners), paralaje y asentamiento de fotos, anillos que crecen.
+           Sin JS o con movimiento reducido, todo visible y quieto.
+   ════════════════════════════════════════════════════════════ */
+
+.page {
+  /* paleta de la identidad */
+  --negro: #0b0b0a;
+  --carbon: #161513;
+  --grafito: #2b2926;
+  --piedra: #9a958e;
+  --ceniza: #57524c;
+  --arena: #dcdbd4;
+  --hueso: #ecebe6;
+
+  /* sus papeles en la página (los nombres de /v3, con valores nuevos) */
+  --paper: var(--hueso);
+  --ink: var(--negro);
+  --black: var(--negro);
+  --black-2: var(--negro);
+  --charcoal: var(--ceniza);
+  --stone: var(--ceniza);
+  --rule: rgba(11, 11, 10, 0.16);
+  --rule-strong: rgba(11, 11, 10, 0.5);
+  --on-dark: var(--hueso);
+  --on-dark-body: var(--piedra);
+  --on-dark-soft: var(--piedra);
+  --rule-dark: rgba(236, 235, 230, 0.16);
+  --rule-dark-strong: rgba(236, 235, 230, 0.42);
+  --curva: cubic-bezier(0.16, 0.84, 0.24, 1);
+
+  --t-poster: clamp(3.25rem, 7.2vw, 8rem);
+  --t-display: clamp(2.75rem, 1.82rem + 3.81vw, 6rem);
+  --t-voz: clamp(2.5rem, 1.76rem + 3.05vw, 5rem);
+  --t-poster-s: clamp(2.75rem, 1.1rem + 4.4vw, 5.75rem);
+  --t-statement: clamp(1.75rem, 1.38rem + 1.52vw, 3rem);
+  --t-voz-i: clamp(1.625rem, 1.39rem + 0.95vw, 2.5rem);
+  --t-voz-s: clamp(1.5rem, 1.41rem + 0.38vw, 1.875rem);
+  --t-lead: clamp(1.3125rem, 1.2rem + 0.48vw, 1.75rem);
+  --t-title: 1.25rem;
+  --t-seccion: 1.125rem;
+  --t-body: 1.0625rem;
+  --t-body-s: 0.9375rem;
+  --t-ui: 0.9375rem;
+  --t-small: 0.8125rem;
+  --t-label: 0.75rem;
+
+  --s-section: clamp(6rem, 4.5rem + 6.1vw, 10rem);
+  --s-block: clamp(3rem, 2.6rem + 1.52vw, 4rem);
+  --s-title: clamp(1.25rem, 0.98rem + 1.14vw, 2rem);
+  --s-stack: 1.125rem;
+  --gutter: clamp(1.25rem, 0.45rem + 2.24vw, 3rem);
+  --gap: clamp(1rem, 0.62rem + 1.07vw, 1.5rem);
+
+  --sans: var(--font-v4-sans), ui-sans-serif, system-ui, sans-serif;
+  --serif: var(--font-v4-serif), Garamond, Georgia, serif;
+  --poster: var(--font-v4-poster), "Arial Narrow", sans-serif;
+  --mono: var(--font-v4-mono), ui-monospace, monospace;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-body);
+  font-weight: 400;
+  line-height: 1.55;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+.page ::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+.page a {
+  color: inherit;
+  text-decoration: none;
+}
+.page :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+/* Tono de película: menos saturación, algo más de contraste, un punto cálido. */
+.page img {
+  filter: saturate(0.72) contrast(1.05) sepia(0.06);
+}
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.28;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Retícula y ritmo ───────────────────────────────────── */
+.wrap {
+  padding-inline: var(--gutter);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+}
+.grid > * {
+  min-width: 0;
+}
+.section {
+  padding-block: var(--s-section);
+}
+.sectionTop {
+  padding-top: var(--s-section);
+}
+.head,
+.displayHead {
+  margin-top: var(--s-title);
+}
+.sectionTop > .displayHead:first-child {
+  margin-top: 0;
+}
+.afterHead {
+  margin-top: var(--s-block);
+}
+/* apertura: la etiqueta en la columna índice (1–3) y el titular desde la 4 */
+.opener {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  align-items: start;
+}
+.opener > * {
+  min-width: 0;
+}
+.opener > :first-child {
+  grid-column: 1 / span 3;
+  /* la etiqueta se alinea con la primera línea del titular */
+  padding-top: 0.45em;
+}
+.opener > :nth-child(2) {
+  grid-column: 4 / -1;
+  margin-top: 0;
+}
+/* la columna de lectura: siempre la misma */
+.read {
+  grid-column: 7 / span 5;
+}
+.stack {
+  display: grid;
+  gap: var(--s-stack);
+  justify-items: start;
+}
+.stack .link,
+.stack .btn {
+  margin-top: 0.6rem;
+}
+
+/* ── Voces tipográficas ─────────────────────────────────── */
+/* etiqueta de sección: un punto y el nombre (Monolog, «● Success Stories») */
+.title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  margin: 0;
+  font-size: var(--t-seccion);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.title::before {
+  content: "";
+  flex: none;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translateY(-0.12em);
+}
+/* póster: la voz alta, Archivo condensada en versal. El interlineado deja
+   sitio a las tildes. */
+.statement {
+  margin: 0;
+  font-family: var(--poster);
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+}
+.displayHead {
+  max-width: 11em;
+  text-wrap: balance;
+}
+.statement.displayHead {
+  font-size: var(--t-poster);
+  margin-top: var(--s-title);
+}
+.sectionTop > .statement.displayHead:first-child,
+.perspHead > .statement.displayHead:first-child {
+  margin-top: 0;
+}
+/* titular: la voz clara, Geist negrita en caja de frase (Monolog) */
+.display {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: var(--t-display);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  max-width: 12em;
+  text-wrap: balance;
+}
+.displayHead .line,
+.display .line {
+  display: block;
+}
+/* la voz de Mario: Cormorant Garamond */
+.serifHead {
+  margin-bottom: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: var(--t-voz);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  max-width: 15em;
+  text-wrap: balance;
+}
+.quiet,
+.quietL {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--t-voz-i);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.lead {
+  margin: 0;
+  font-size: var(--t-lead);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.body {
+  margin: 0;
+  font-size: var(--t-body);
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  color: var(--charcoal);
+  max-width: 36em;
+}
+.small {
+  display: block;
+  margin: 0;
+  font-size: var(--t-small);
+  line-height: 1.4;
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+/* el dato: Geist Mono en versal y espaciada. Datos, nunca frases. */
+.dato {
+  display: block;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+.dek {
+  display: block;
+  font-size: var(--t-body-s);
+  line-height: 1.5;
+  color: var(--stone);
+}
+/* enlace: subrayado fino y flecha (salidas secundarias) */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: var(--t-ui);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  text-decoration-color: var(--rule-strong);
+  transition: text-decoration-color 0.35s ease;
+}
+.link svg {
+  width: 0.7em;
+  height: 0.7em;
+  transition: transform 0.35s var(--curva);
+}
+.link:hover {
+  text-decoration-color: currentColor;
+}
+.link:hover svg {
+  transform: translate(0.12em, -0.12em);
+}
+/* botón: la etiqueta y una caja con la flecha en el color contrario (Monolog) */
+.btn {
+  display: inline-flex;
+  align-items: stretch;
+  padding: 3px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  font-size: var(--t-ui);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: transform 0.35s var(--curva);
+}
+.btn > span:first-child {
+  display: flex;
+  align-items: center;
+  padding: 9px 12px 9px 11px;
+  white-space: nowrap;
+}
+.btnBox {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.btnBox svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.35s var(--curva);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:hover .btnBox svg {
+  transform: translate(1px, -1px);
+}
+.btnGhost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--rule-strong);
+}
+.btnGhost .btnBox {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ── Piezas ─────────────────────────────────────────────── */
+.photo {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  background: var(--arena);
+}
+.photo img {
+  object-fit: cover;
+}
+/* tema oscuro: el negro de la marca y el hueso como tinta */
+.dark {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+.dark .body {
+  color: var(--on-dark-body);
+}
+.dark .small,
+.dark .dek,
+.dark .dato {
+  color: var(--on-dark-soft);
+}
+.dark .photo {
+  background: var(--carbon);
+}
+.dark .link {
+  text-decoration-color: var(--rule-dark-strong);
+}
+.dark .link:hover {
+  text-decoration-color: currentColor;
+}
+.dark .btn {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.dark .btnBox {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+.dark .btnGhost {
+  background: transparent;
+  color: var(--on-dark);
+  box-shadow: inset 0 0 0 1px var(--rule-dark-strong);
+}
+.dark .btnGhost .btnBox {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.notice {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  background: var(--ink);
+  color: var(--on-dark-soft);
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ── Lectura guiada (scrub) y barra de progreso ─────────── */
+:global(html.v4-motion) .page [data-scrub] :global(.sw) {
+  opacity: 0.16;
+}
+.page :global(.sw) {
+  will-change: opacity;
+}
+.progress {
+  display: grid;
+  gap: 0.75rem;
+  width: 100%;
+}
+:global(html:not(.v4-motion)) .progress {
+  display: none;
+}
+.track {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: var(--rule);
+}
+.trackFill {
+  position: absolute;
+  top: -0.5px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progressNav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+/* flechas sueltas, sin caja (Monolog): avanzan un poco al pasar */
+.arrowBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: -0.6rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.35s var(--curva);
+}
+.arrowBtn + .arrowBtn {
+  margin-left: 0;
+}
+.arrowBtn svg {
+  width: 1rem;
+  height: 1rem;
+}
+.arrowBtn[data-prev]:hover {
+  transform: translateX(-3px);
+}
+.arrowBtn[data-next]:hover {
+  transform: translateX(3px);
+}
+.counter {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+.dark .track {
+  background: var(--rule-dark);
+}
+.dark .counter {
+  color: var(--on-dark-soft);
+}
+
+/* ── Cabecera: logo, menú centrado y contacto ───────────── */
+.nav {
+  color: var(--on-dark);
+}
+.navList {
+  display: flex;
+  gap: clamp(1.25rem, 2.2vw, 2.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navList a {
+  font-size: var(--t-ui);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  opacity: 0.86;
+  transition: opacity 0.2s ease;
+}
+.navList a:hover {
+  opacity: 1;
+}
+
+/* ── 01 · Hero ──────────────────────────────────────────────
+   Una sola medida manda: --s, el cuerpo del statement, calculado desde el
+   alto de la pantalla. Arriba, la línea del logo y el menú; abajo, apoyado
+   a 40 px del borde, el territorio y el statement; entre ambos, aire.
+   La línea más larga del statement («CÓMO CAMBIAR») mide 5,97 s y el logo
+   es φ² veces menor (2,28 s): el statement habla, el logo firma.
+   El retrato ocupa el 66 % derecho, fundido en el negro por la izquierda. */
+.hero {
+  --hero-pad-top: 28px;
+  --s: min(calc((100svh - 95px) / 8.22), 6.9vw);
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: var(--hero-pad-top) var(--gutter) 40px;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--on-dark);
+}
+/* la línea de arriba: logo a la izquierda, menú centrado, contacto a la derecha */
+.heroTop {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.heroCta {
+  justify-self: end;
+}
+.heroPhoto {
+  position: absolute;
+  inset: 0 0 0 34%;
+  overflow: hidden;
+  will-change: transform;
+}
+/* foto etalonada en el archivo: sin filtros encima */
+.heroPhoto img {
+  object-fit: cover;
+  object-position: 30% 20%;
+  filter: none;
+  transform: scale(1.03);
+  transform-origin: 62% 32%;
+}
+.heroPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, var(--black) 0%, rgba(11, 11, 10, 0.86) 9%, rgba(11, 11, 10, 0.4) 28%, rgba(11, 11, 10, 0) 52%),
+    linear-gradient(to bottom, rgba(11, 11, 10, 0.35) 0%, rgba(11, 11, 10, 0) 18%),
+    linear-gradient(to top, rgba(11, 11, 10, 0.45) 0%, rgba(11, 11, 10, 0) 22%);
+}
+.heroCopy {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--s) * 5.97);
+  will-change: transform;
+}
+.heroMark {
+  margin: 0;
+  line-height: 0;
+}
+.heroLogo {
+  display: block;
+  width: calc(var(--s) * 2.28);
+  height: auto;
+  aspect-ratio: 2994 / 570;
+  color: var(--on-dark);
+}
+/* el territorio, como etiqueta de sección (con su punto) */
+.heroTerritory {
+  color: var(--on-dark);
+}
+.heroStatement {
+  margin: calc(var(--s) * 0.16) 0 0;
+  font-family: var(--poster);
+  font-weight: 800;
+  font-size: var(--s);
+  line-height: 0.94;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* cada línea, en su máscara (con aire arriba para las tildes) */
+.heroLine {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.14em;
+  margin-top: -0.14em;
+}
+.heroLine > span {
+  display: block;
+}
+
+/* La coreografía de entrada (≈ 2 s). Sin movimiento, todo quieto y visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .heroPhoto img {
+    animation: photoIn 2.6s cubic-bezier(0.16, 0.84, 0.24, 1) both;
+  }
+  .heroLogo {
+    animation: wipe 1.5s cubic-bezier(0.77, 0, 0.18, 1) 0.15s both;
+  }
+  .heroLine > span {
+    animation: lineUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: calc(0.55s + var(--i, 0) * 0.075s);
+  }
+  .heroTerritory {
+    animation: fadeIn 1.1s ease 1.05s both;
+  }
+  .nav,
+  .heroCta {
+    animation: fadeIn 1s ease 1.5s both;
+  }
+}
+@keyframes photoIn {
+  from {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+@keyframes wipe {
+  from {
+    clip-path: inset(-10% 100% -30% 0);
+  }
+  to {
+    clip-path: inset(-10% 0 -30% 0);
+  }
+}
+@keyframes lineUp {
+  from {
+    transform: translate3d(0, 110%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.2rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── 02 · Origen (claro: hueso) ────────────────────────── */
+.manifesto {
+  margin-top: var(--s-block);
+  align-items: start;
+}
+.manifestoText {
+  grid-column: 1 / span 7;
+}
+/* el manifiesto, en statement: Geist 600, todo a un tamaño (Monolog) */
+.scrubText {
+  margin: 0;
+  max-width: 21em;
+  font-size: var(--t-statement);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+.scrubText + .scrubText {
+  margin-top: 0.55em;
+}
+.manifestoAside {
+  grid-column: 9 / -1;
+  position: sticky;
+  top: 12svh;
+  display: grid;
+  gap: 1.25rem;
+}
+.manifestoPhoto {
+  margin-right: calc(-1 * var(--gutter));
+  aspect-ratio: 3 / 4;
+  max-height: 64svh;
+}
+/* el silencio: la pregunta, sola y centrada */
+/* la pregunta, en la voz de Mario a tamaño de titular: un silencio que se
+   oye (la itálica pequeña queda para las notas) */
+.question {
+  max-width: 17em;
+  margin: var(--s-section) auto 0;
+  font-size: var(--t-voz);
+  line-height: 1.05;
+  text-align: center;
+}
+
+/* ── 03 · Psicocibernética (oscuro) ────────────────────── */
+.psico {
+  background: var(--black-2);
+}
+.stage {
+  align-items: center;
+  row-gap: var(--s-block);
+  padding-block: var(--s-block) var(--s-section);
+}
+.pin[data-pinned] .stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding-block: 0;
+  align-content: center;
+}
+.stagePhoto {
+  grid-column: 1 / span 5;
+  margin-left: calc(-1 * var(--gutter));
+  aspect-ratio: 3 / 4;
+  max-height: 80svh;
+}
+.stageCopy {
+  grid-column: 7 / -1;
+  display: grid;
+  gap: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+  justify-items: start;
+}
+.stageCopy .progress {
+  max-width: 22rem;
+}
+.concepts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* los conceptos, en póster pequeño */
+.concepts li {
+  font-size: min(var(--t-poster-s), 8.4svh);
+  transition: opacity 0.45s ease;
+}
+:global(html.v4-motion) .pin[data-pinned] [data-step] {
+  opacity: 0.16;
+}
+:global(html.v4-motion) .pin[data-pinned] [data-after] {
+  opacity: 0;
+}
+.stageAfter {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+}
+.stageAfter .quiet {
+  max-width: 17em;
+}
+.stageAfter .btn {
+  margin-top: 0.5rem;
+}
+.pin:not([data-pinned]) .progress {
+  display: none;
+}
+
+/* ── 04 · Hipertrofia del Ser (negro) ────────────────────
+   Una publicación con identidad propia. Símbolo: anillos de crecimiento,
+   tangentes en la base, cada uno φ veces el anterior (HdsSymbol.tsx).
+   Cabecera: el nombre en dos voces, HIPERTROFIA en versal espaciada (el
+   cuerpo, la estructura) y «del Ser» en itálica (lo que crece dentro). */
+
+/* la cabecera, en el lugar de la etiqueta y a tamaño de título: símbolo a
+   la izquierda y el nombre en dos líneas; el símbolo mide lo que el bloque
+   de texto */
+.hdsMasthead {
+  display: flex;
+  align-items: center;
+  gap: 0.42em;
+  font-size: clamp(2rem, 1.2rem + 2.2vw, 3.5rem);
+}
+/* el titular, debajo de la cabecera y desde la columna 4, como en el
+   resto de aperturas */
+.hdsHead {
+  margin-top: var(--s-block);
+}
+.hdsHead > h2 {
+  grid-column: 4 / -1;
+}
+.hdsSymbol {
+  display: block;
+  flex: none;
+  width: 1.62em;
+  height: 1.62em;
+  overflow: visible;
+  color: var(--on-dark);
+}
+.hdsSymbol circle {
+  transform-box: view-box;
+  transform-origin: 50px 98px;
+}
+/* los anillos crecen desde la base, uno tras otro, con el scroll */
+:global(html.v4-motion) .hdsSymbol[data-progress] circle {
+  --x: clamp(0, (var(--p, 1) - var(--d, 0)) / 0.4, 1);
+  transform: scale(calc(var(--x) * (2 - var(--x))));
+}
+.hdsMast {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1;
+}
+.hdsMastName {
+  display: block;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.hdsMastDel {
+  display: block;
+  margin-top: 0.14em;
+  font-size: 0.62em;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-block) var(--gap);
+  margin: var(--s-block) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cardLink {
+  display: grid;
+  gap: 0.45rem;
+}
+.cardPhoto {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 0.8rem;
+}
+.cardPhoto img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.cardLink:hover .cardPhoto img {
+  transform: scale(1.03);
+}
+.cardTitle {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-voz-s);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.cardLink:hover .cardTitle {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+/* suscripción: pequeña, centrada, en silencio */
+.subscribe {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  max-width: 28rem;
+  margin: var(--s-section) auto 0;
+  text-align: center;
+}
+.subHead {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-voz-s);
+  font-weight: 500;
+  line-height: 1.15;
+}
+.subPub {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+.subLogo {
+  display: block;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  color: var(--on-dark);
+}
+.subName {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.subForm {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 26rem;
+  margin-top: 1rem;
+}
+.subForm input {
+  flex: 1;
+  min-width: 0;
+  height: 2.75rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--rule-dark-strong);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--on-dark);
+  font: inherit;
+  font-size: var(--t-ui);
+  outline: none;
+}
+.subForm input::placeholder {
+  color: var(--on-dark-soft);
+}
+.subForm input:focus {
+  border-color: var(--on-dark);
+}
+.subForm .btn {
+  flex: none;
+}
+.subLegal {
+  margin: 0.25rem 0 0;
+  max-width: 25rem;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: var(--on-dark-soft);
+}
+.subLegal a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* ── 05 · Emprendimiento / Lignarolo (gris de estudio) ─────
+   La sección toma la luz de su propia foto. El retrato de campaña ocupa el
+   86 % derecho, a sangre, y se funde por la izquierda y por arriba con un
+   degradado medido sobre el fondo de la foto (gris neutro, de 199 arriba a
+   230 en el suelo, con el horizonte al 80 %). El texto vive en el vacío del
+   estudio, a la izquierda de la figura (que empieza en el 31 % de la foto). */
+.emp {
+  --photo-w: 86vw;
+  --photo-h: calc(var(--photo-w) * 0.5625);
+  --studio-top: rgb(199, 199, 199);
+  --studio-floor: rgb(229, 229, 228);
+  background: var(--studio-floor);
+}
+.empScene {
+  position: relative;
+  min-height: var(--photo-h);
+  padding-block: var(--s-section) var(--s-block);
+  background:
+    linear-gradient(
+        to bottom,
+        rgb(199, 199, 199) 0%,
+        rgb(203, 203, 203) 8%,
+        rgb(207, 207, 207) 25%,
+        rgb(209, 209, 209) 50%,
+        rgb(204, 204, 204) 67%,
+        rgb(208, 208, 208) 76%,
+        rgb(214, 214, 214) 79%,
+        rgb(225, 225, 225) 82%,
+        rgb(232, 232, 232) 86%,
+        rgb(229, 229, 228) 100%
+      )
+      bottom / 100% calc(var(--photo-h) + 2px) no-repeat,
+    linear-gradient(var(--studio-top), var(--studio-top)) top / 100% calc(100% - var(--photo-h) + 2px) no-repeat,
+    var(--studio-floor);
+}
+.empPhoto {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: var(--photo-w);
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  /* se funde por la izquierda, por arriba y, apenas, por abajo (el suelo
+     de la foto sigue en el gris de la sección) */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 16%),
+    linear-gradient(to bottom, transparent 0, #000 8%),
+    linear-gradient(to top, transparent 0, #000 5%);
+  -webkit-mask-composite: source-in, source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 16%),
+    linear-gradient(to bottom, transparent 0, #000 8%),
+    linear-gradient(to top, transparent 0, #000 5%);
+  mask-composite: intersect;
+}
+.empPhoto img {
+  object-fit: cover;
+  filter: none;
+}
+.empText {
+  position: relative;
+  z-index: 1;
+  max-width: calc(100vw - var(--photo-w) + var(--photo-w) * 0.28);
+}
+.empHead {
+  max-width: 11em;
+  margin-top: var(--s-title);
+}
+.empCopy {
+  max-width: 26rem;
+  margin-top: var(--s-block);
+}
+/* el silencio: los cinco territorios, centrados, se encienden uno a uno */
+.empQuiet {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+  padding-block: var(--s-section) var(--s-block);
+  text-align: center;
+}
+/* los territorios, en statement (Geist 600) */
+.empFields {
+  margin: 0;
+  max-width: 22em;
+  font-size: var(--t-statement);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+.empQuiet .body {
+  max-width: 30em;
+}
+/* Lignarolo: la firma y tres detalles, en el orden de la frase */
+.lg {
+  align-items: end;
+  row-gap: var(--s-block);
+  padding-block: var(--s-block) var(--s-section);
+}
+.lgText {
+  grid-column: 1 / span 4;
+  display: grid;
+  gap: 1.1rem;
+  justify-items: start;
+  padding-bottom: 0.25rem;
+}
+.lgMark {
+  margin: 0 0 0.4rem;
+  font-family: var(--serif);
+  font-size: var(--t-voz-i);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.lgText .lead {
+  max-width: 17em;
+}
+.lgDetails {
+  grid-column: 6 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lgDetail {
+  aspect-ratio: 4 / 5;
+  background: var(--arena);
+}
+.lgDetail img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.lgDetails li:hover .lgDetail img {
+  transform: scale(1.03);
+}
+
+/* ── 06 · Perspectivas ──────────────────────────────────── */
+.perspHead {
+  padding-top: var(--s-section);
+}
+.reels {
+  padding-block: var(--s-block) var(--s-section);
+}
+.reelsHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-bottom: 1.5rem;
+}
+.reelsTools {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem 2rem;
+}
+.reelsHead .link,
+.talksHead .link {
+  white-space: nowrap;
+}
+.ctls {
+  display: inline-flex;
+}
+.ctl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.ctl + .ctl {
+  margin-left: 0.375rem;
+}
+.ctl svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+.ctl:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.reelTrack {
+  display: flex;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0 var(--gutter);
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: none;
+}
+.reelTrack::-webkit-scrollbar {
+  display: none;
+}
+.reel {
+  flex: 0 0 clamp(200px, 20vw, 290px);
+  scroll-snap-align: start;
+}
+.reelLink {
+  display: block;
+}
+.reelCover {
+  aspect-ratio: 9 / 16;
+  background: var(--ink);
+}
+.reelCover img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.reelLink:hover .reelCover img {
+  transform: scale(1.03);
+}
+.reelTitle {
+  display: block;
+  margin: 0.9rem 0 0.4rem;
+  font-family: var(--serif);
+  font-size: var(--t-voz-s);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.reelLink:hover .reelTitle {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-thickness: 1px;
+}
+/* conversaciones */
+.talks {
+  padding-block: var(--s-section);
+}
+.talksHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-bottom: 1.5rem;
+}
+.talksGrid {
+  align-items: start;
+  row-gap: var(--s-block);
+}
+.talkMain {
+  grid-column: 1 / span 8;
+}
+.talkScreen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+.talkPoster {
+  object-fit: cover;
+}
+.talkFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.talkPlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 0;
+  background: linear-gradient(to top, rgba(11, 11, 10, 0.75), rgba(11, 11, 10, 0) 40%);
+  color: var(--on-dark);
+  cursor: pointer;
+  text-align: left;
+}
+.talkPlay svg {
+  box-sizing: border-box;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.65rem;
+  border: 1px solid rgba(236, 235, 230, 0.6);
+  border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.talkPlay:hover svg {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.talkPlay span {
+  padding-bottom: 0.85rem;
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.talkCaption {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 34rem;
+  margin-top: 1.25rem;
+}
+.talkTitle {
+  margin: 0;
+  font-size: var(--t-lead);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.talkList {
+  grid-column: 9 / span 4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--rule-dark);
+}
+.talkRow {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr auto;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 0 1.1rem;
+  border: 0;
+  border-top: 1px solid var(--rule-dark);
+  background: transparent;
+  color: var(--on-dark-soft);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.talkRow:hover,
+.talkRow[aria-current="true"] {
+  color: var(--on-dark);
+}
+.talkRowIndex,
+.talkRowMeta {
+  padding-top: 0.25rem;
+  font-family: var(--mono);
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+.talkRowTitle {
+  font-size: var(--t-body);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+.talkRow {
+  transition:
+    color 0.2s ease,
+    padding 0.35s var(--curva);
+}
+.talkRow:hover {
+  padding-left: 0.5rem;
+}
+
+/* ── 07 · Contacto (claro: hueso) ──────────────────────── */
+.contactGrid {
+  margin-top: var(--s-block);
+  align-items: start;
+  row-gap: var(--s-block);
+}
+.contactFor {
+  grid-column: 1 / span 6;
+}
+.contactLead {
+  margin: 0 0 0.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--t-voz-i);
+  line-height: 1;
+}
+.contactPaths {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.contactPath {
+  font-size: var(--t-display);
+}
+.form {
+  grid-column: 7 / -1;
+  display: grid;
+  gap: 1.75rem;
+}
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+.field {
+  display: grid;
+  gap: 0.3rem;
+}
+/* campos con filete y radio fino (identidad: linea-fuerte, fino) */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--t-body);
+  line-height: 1.4;
+  outline: none;
+}
+.field textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.25rem;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 55%, calc(100% - 15px) 55%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+.formFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+.pendingNote {
+  padding: 0.35em 0.6em;
+  border: 1px dashed var(--rule-strong);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  color: var(--stone);
+}
+
+/* ── Banners (entre secciones) ─────────────────────────────
+   Una foto a sangre y una frase de Mario en serif, al modo de Nike. La
+   sección es 16:9 y la foto 16:10, así que la foto cabe siempre entera a lo
+   ancho y le sobra un 6 % arriba y abajo para el paralaje: las posiciones
+   de la frase (--x, --w, --y, en % de la foto) caen sobre la figura en
+   cualquier pantalla apaisada. Por eso la frase también se mide en vw:
+   a 1440 coincide con poster, display y serif-l, y crece con la foto. */
+.banner {
+  position: relative;
+  height: min(100svh, 56.25vw);
+  overflow: hidden;
+  background: var(--black);
+  color: var(--on-dark);
+}
+.bannerMedia {
+  position: absolute;
+  inset: -6% 0;
+  will-change: transform;
+}
+/* fotos etalonadas en el archivo: sin filtros encima */
+.bannerMedia img {
+  object-fit: cover;
+  filter: none;
+}
+.bannerMob {
+  display: none;
+}
+/* para la frase clara: el suelo y los bordes, más oscuros */
+.bannerMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 85% at 50% 42%, rgba(11, 11, 10, 0) 40%, rgba(11, 11, 10, 0.42) 100%),
+    linear-gradient(to bottom, rgba(11, 11, 10, 0) 30%, rgba(11, 11, 10, 0.4) 100%);
+}
+.bannerInk {
+  color: var(--ink);
+}
+.bannerInk .bannerMedia::after {
+  content: none;
+}
+/* la frase, en la voz de Mario (Cormorant 600, que aguanta sobre foto);
+   Cormorant mide menos de ojo, por eso los cuerpos son algo mayores */
+.bannerPhrase {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+.bannerPoster {
+  font-size: 7.7vw;
+}
+.bannerDisplay {
+  font-size: 6.2vw;
+}
+.bannerSerif {
+  font-size: 3.85vw;
+  line-height: 1.04;
+  letter-spacing: -0.005em;
+}
+.banner:not(.bannerInk) .bannerPhrase {
+  text-shadow: 0 0 0.6em rgba(11, 11, 10, 0.28);
+}
+/* split: a cada lado del hueco de la figura, pegadas a ella */
+.bannerSplit .bannerPhrase {
+  inset-inline: 0;
+  top: var(--y);
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: calc(var(--x) - var(--w) / 2) var(--w) 1fr;
+  align-items: center;
+}
+.bannerSplit .bannerPhrase > :first-child {
+  grid-column: 1;
+  justify-self: end;
+  padding-left: var(--gutter);
+  text-align: right;
+  text-wrap: balance;
+}
+.bannerSplit .bannerPhrase > :last-child {
+  grid-column: 3;
+  justify-self: start;
+  padding-right: var(--gutter);
+  text-wrap: balance;
+}
+/* corner: un bloque en el claro */
+.bannerCorner .bannerPhrase {
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  text-wrap: balance;
+}
+
+/* ── Pie (oscuro) ───────────────────────────────────────────
+   Como Monolog: el menú grande con filetes a la izquierda; a la derecha,
+   (Redes) y (Mundos) en mono; la firma de Mario a todo el ancho y una
+   barra final en mono. */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: var(--s-block);
+  padding-block: var(--s-section) 1.25rem;
+  background: var(--black);
+}
+.footer > * {
+  min-width: 0;
+}
+.footMenu {
+  grid-column: 1 / span 7;
+}
+.footMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footMenu a {
+  display: block;
+  padding-block: 0.1em 0.16em;
+  border-bottom: 1px solid var(--rule-dark);
+  font-size: clamp(2.25rem, 1.79rem + 1.9vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  transition: padding 0.35s var(--curva);
+}
+.footMenu a:hover {
+  padding-left: 0.4em;
+}
+.footCols {
+  grid-column: 9 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  align-content: start;
+}
+.footCol {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+}
+.footCol ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footCol a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--t-ui);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  opacity: 0.86;
+  transition: opacity 0.2s ease;
+}
+.footCol a:hover {
+  opacity: 1;
+}
+.footCol svg {
+  width: 0.7em;
+  height: 0.7em;
+}
+.footerLogo {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2994 / 570;
+  color: var(--on-dark);
+}
+.footBar {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-top: calc(var(--s-block) * -0.5);
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule-dark);
+}
+.footBar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.footBar svg {
+  width: 0.9em;
+  height: 0.9em;
+}
+
+/* ── Móvil ──────────────────────────────────────────────── */
+@media (max-width: 880px) {
+  /* cabecera: el logo y el botón de contacto; el menú se queda en el pie */
+  .heroTop {
+    grid-template-columns: 1fr auto;
+  }
+  .nav {
+    display: none;
+  }
+  .hdsHead > h2 {
+    grid-column: 1 / -1;
+  }
+  /* apertura: la etiqueta encima del titular */
+  .opener > :first-child,
+  .opener > :nth-child(2) {
+    grid-column: 1 / -1;
+  }
+  .opener > :first-child {
+    padding-top: 0;
+  }
+  .opener > :nth-child(2) {
+    margin-top: var(--s-title);
+  }
+  .read,
+  .manifestoText,
+  .manifestoAside,
+  .stagePhoto,
+  .stageCopy,
+  .talkMain,
+  .talkList,
+  .contactFor,
+  .form {
+    grid-column: 1 / -1;
+  }
+  /* hero: la línea del logo arriba, el statement debajo y la foto al final,
+     a todo el ancho. El logo, algo mayor en proporción para que se lea. */
+  .hero {
+    --hero-pad-top: 1.25rem;
+    --s: min(3.4rem, 13.4vw);
+    justify-content: flex-start;
+    gap: 0;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .heroLogo {
+    width: calc(var(--s) * 2.9);
+  }
+  .heroCopy {
+    margin-top: 3.25rem;
+  }
+  .heroPhoto {
+    position: relative;
+    inset: auto;
+    order: 10;
+    aspect-ratio: 4 / 5;
+    margin: 2.25rem calc(-1 * var(--gutter)) 0;
+  }
+  .heroPhoto img {
+    object-position: 46% 18%;
+  }
+  .heroPhoto::after {
+    background: linear-gradient(to bottom, var(--black) 0%, rgba(11, 11, 10, 0) 20%);
+  }
+  .heroTerritory {
+    font-size: var(--t-ui);
+  }
+  /* origen: la foto arriba, sin fijar; sin barra */
+  .manifestoAside {
+    position: static;
+    order: -1;
+    margin-bottom: var(--s-block);
+  }
+  .manifestoPhoto {
+    margin-inline: calc(-1 * var(--gutter));
+    max-height: none;
+    aspect-ratio: 4 / 5;
+  }
+  .manifestoAside .progress {
+    display: none;
+  }
+  .question {
+    margin-top: var(--s-block);
+  }
+  .stagePhoto {
+    margin-inline: calc(-1 * var(--gutter));
+    max-height: none;
+    aspect-ratio: 4 / 5;
+  }
+  .hdsMasthead {
+    font-size: min(2rem, 7.6vw);
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .subForm {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .subForm input {
+    flex: 0 0 auto;
+  }
+  .subForm .btn {
+    align-self: center;
+  }
+  /* emprendimiento: el texto arriba y el retrato debajo, a todo el ancho,
+     saliendo del gris de la sección */
+  .empScene {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 0;
+    background: var(--studio-floor);
+  }
+  .empText {
+    max-width: none;
+  }
+  .empCopy {
+    max-width: none;
+  }
+  .empPhoto {
+    position: relative;
+    order: 1;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-top: var(--s-block);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+    mask-composite: intersect;
+  }
+  .empPhoto img {
+    object-position: 80% 100%;
+  }
+  .lgText,
+  .lgDetails {
+    grid-column: 1 / -1;
+  }
+  .lgDetails {
+    gap: 0.5rem;
+  }
+  .reelsHead {
+    flex-wrap: wrap;
+  }
+  .reel {
+    flex-basis: min(68vw, 290px);
+  }
+  .talkScreen {
+    margin-inline: calc(-1 * var(--gutter));
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+  /* banners: la foto vertical y la frase debajo, sobre el fundido a negro */
+  .banner,
+  .bannerInk {
+    height: auto;
+    padding-bottom: var(--s-block);
+    color: var(--on-dark);
+  }
+  .bannerMedia {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .bannerDesk {
+    display: none;
+  }
+  .bannerMob {
+    display: block;
+  }
+  .bannerMedia::after,
+  .bannerInk .bannerMedia::after {
+    content: "";
+    background: linear-gradient(to top, var(--black) 0%, rgba(11, 11, 10, 0.7) 16%, rgba(11, 11, 10, 0) 42%);
+  }
+  .bannerSplit .bannerPhrase,
+  .bannerCorner .bannerPhrase {
+    position: relative;
+    inset: auto;
+    width: auto;
+    transform: none;
+    display: block;
+    margin-top: -0.9em;
+    padding-inline: var(--gutter);
+  }
+  .bannerSplit .bannerPhrase > :first-child,
+  .bannerSplit .bannerPhrase > :last-child {
+    justify-self: start;
+    padding: 0;
+    text-align: left;
+  }
+  .bannerPoster {
+    font-size: min(4.6rem, 18.5vw);
+  }
+  .bannerDisplay {
+    font-size: min(3.3rem, 12.6vw);
+  }
+  .bannerSerif {
+    font-size: min(2.35rem, 9.2vw);
+  }
+  /* pie: el menú y las columnas, uno debajo de otro */
+  .footMenu,
+  .footCols {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link svg,
+  .cardPhoto img,
+  .reelCover img,
+  .ctl,
+  .arrowBtn,
+  .talkRow,
+  .talkPlay svg,
+  .navList a,
+  .footMenu a,
+  .footCol a,
+  .concepts li,
+  .lgDetail img,
+  .link,
+  .btn,
+  .btnBox svg {
+    transition: none;
+  }
+}

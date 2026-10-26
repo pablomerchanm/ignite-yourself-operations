@@ -49,7 +49,7 @@ Tres palabras gobiernan cada decisión: **imponente, elevada, clara.**
   - versal solo en el póster (`poster-*`) y en el dato (`label`);
   - titulares, botones y menú en caja de frase;
   - «LIGNAROLO» va en versal porque así se escribe la marca.
-- **Puntuación:** los titulares que son frase llevan punto final («Trabajar sobre la imagen que tienes de ti.»). Las preguntas van en `voz-italica`, solas y con aire.
+- **Puntuación:** los titulares que son frase llevan punto final («Trabajar sobre la imagen que tienes de ti.»). La pregunta que cierra una sección va en `voz`, en itálica, sola, centrada y con aire.
 
 ## Color
 

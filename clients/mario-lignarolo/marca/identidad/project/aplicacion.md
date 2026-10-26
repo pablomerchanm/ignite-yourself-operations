@@ -28,6 +28,25 @@ Cómo entra esta identidad en `/v3`, sección por sección. Es la propuesta para
 | Contacto | claro | El titular en `display`. Campos con borde `linea-fuerte` y radio `fino`. «Enviar», como botón principal. |
 | Pie | oscuro | El nuevo pie. |
 
+## Aplicado en `/v4` (26 oct 2026)
+
+La identidad está aplicada en `/v4`, una iteración paralela que deja `/v3` intacta. El contenido es el mismo y viene de `data/v3.ts`.
+
+Al aplicarla, la página real obligó a cuatro ajustes. Ya están llevados a esta guía:
+
+- **`voz`:** pasa de 62 a 72 px (móvil 40), porque Cormorant mide menos de ojo que la grotesca.
+- **`poster-s`:** pasa de 56 a 80 px (móvil 44). Los conceptos de la escena fija son protagonistas.
+- **La pregunta que cierra Origen:** va en `voz` itálica, no en `voz-italica`. Pequeña se perdía.
+- **Cabecera de Hipertrofia del Ser:** se queda a tamaño de título en su propia fila, en lugar de encogerse a la columna índice. Debajo, el titular desde la columna 4.
+
+Y tres cosas que se mantienen de `/v3` a propósito:
+
+- **Origen:** conserva la foto fija a la derecha y el progreso bajo la foto. Funciona y no compite con la columna índice.
+- **Emprendimiento:** conserva su gris de estudio medido sobre la foto, que hace de «arena». Cambiarlo rompería el fundido.
+- **Cabecera:** no se fija al bajar. Fijarla obliga a cambiar de tema sobre secciones claras y oscuras, y queda pendiente de decidir.
+
+Cambio visible: el retrato de Psicocibernética vuelve a color (regla de la guía). Es una foto con fondo azul verdoso; si se prefiere en blanco y negro, se decide aquí.
+
 ## Orden de trabajo
 
 Se aplica en este orden, revisando cada paso con Pablo antes del siguiente:
