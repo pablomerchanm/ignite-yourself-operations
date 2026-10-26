@@ -1456,7 +1456,7 @@ html.no-motion .scarr{display:none}
 /* ---------- hero en movil: la cara entera, el nombre debajo, la firma con aire ----------
    La foto se encuadra por el ancho para que la cara quede completa y limpia: la sombra solo
    entra sobre el traje y el nombre pisa apenas ese borde. Sin boton suelto: la accion ya vive
-   en la barra de arriba. La firma en dos pisos: el cargo en una linea y el logo grande debajo. */
+   en la barra de arriba. La firma en dos pisos, discreta: el cargo en una linea y el logo debajo, a escala de firma. */
 @media(max-width:860px){
   .hero.photo .ph{flex:1 0 auto;min-height:min(94vw,64svh)}
   .hero.photo .ph img{object-position:50% 12%}
@@ -1466,9 +1466,9 @@ html.no-motion .scarr{display:none}
   #site .hero .hname{font-size:clamp(54px,16vw,80px)!important;line-height:.9!important;max-width:none!important;letter-spacing:-.022em}
   .hero .hsub{margin-top:12px;max-width:none;font-size:clamp(19px,5.3vw,23px);line-height:1.28}
   .hero .hacts{display:none}
-  .hfirm img{width:min(66vw,260px)}
-  .hfirm{display:flex;flex-direction:column;align-items:flex-start;gap:11px;width:100%;margin-top:24px;padding-top:18px}
-  .hfirm .hfk{max-width:none;font-size:10.5px;letter-spacing:.22em;line-height:1}
+  .hfirm img{width:min(44vw,170px);opacity:.92}
+  .hfirm{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%;margin-top:22px;padding-top:16px}
+  .hfirm .hfk{max-width:none;font-size:10px;letter-spacing:.2em;line-height:1;color:rgba(255,255,255,.55)}
 }
 </style>"""
 
