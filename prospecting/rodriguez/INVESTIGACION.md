@@ -47,6 +47,7 @@ Los abogados no lo elogian solo por lo que sabe. Lo elogian porque hace que un j
 ## Discrepancias (temas para la conversación, no para la página)
 
 - **El nombre:** el menú de su web dice "Rick Rodriguez **II**". La bio y el CV dicen "Enrique 'Rick' Rodriguez, **Jr.**" Usamos Jr.
+  - **Decisión de Pablo (26 de octubre):** en la página va solo **"Rick Rodriguez"**, sin Enrique, II ni Jr.
 - **El total de la firma:** la web dice "in excess of **$4.5 billion** for over 300 clients". El CV de 2016 dice "in excess of **$9 billion** to hundreds of clients". **No lo usamos como cifra.** En el CV de la página se explica que queda fuera hasta que él la confirme.
 - **Fechas viejas:** la bio dice "for the past 17 years" y la home "over 20 years". Las dos cifras son anteriores a 2016.
 - **Documentos:** el listado público se queda en 2015 y el CV en diciembre de 2016. Para un abogado que hace due diligence, esa es la primera impresión.

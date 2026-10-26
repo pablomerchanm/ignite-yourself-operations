@@ -1,4 +1,4 @@
-# Enrique "Rick" Rodriguez, Jr. — Authority Platform, preview privado.
+# Rick Rodriguez — Authority Platform, preview privado.
 # El mismo motor que Pettingill (tools/build-pettingill.py): la plantilla de Mark Cooke
 # con la calibracion de Freudenthal, el listado testimonial contado por ano (tally)
 # y una pieza propia:
@@ -36,8 +36,8 @@ base = base.replace('/* en vertical el recorte es horizontal: Mark se corre al c
                     '/* (heredado del concepto con fotografia; sin imagen no aplica)')
 
 # ------------------------------------------------------- 3. cabeza del documento
-TITLE = 'Enrique “Rick” Rodriguez, Jr. — Banking &amp; Real Estate Finance Expert Witness'
-DESC = ('Enrique “Rick” Rodriguez, Jr.: banking and real estate finance expert witness. '
+TITLE = 'Rick Rodriguez — Banking &amp; Real Estate Finance Expert Witness'
+DESC = ('Rick Rodriguez: banking and real estate finance expert witness. '
         'Security Pacific Bank, 1979 to 1992; founder of Rodriguez & Associates Advisory Group, Los Angeles, since 1992.')
 URL = 'https://igniteyourself.co/rodriguez'
 
@@ -45,7 +45,7 @@ base = sub1(r'<title>[^<]*</title>', f'<title>{TITLE}</title>', base, tag='title
 base = sub1(r'(<meta name="description" content=")[^"]*(">)',
             lambda m: m.group(1) + DESC + m.group(2), base, tag='desc')
 base = sub1(r'(<meta property="og:site_name" content=")[^"]*(">)',
-            lambda m: m.group(1) + 'Enrique “Rick” Rodriguez, Jr.' + m.group(2), base, tag='og-site')
+            lambda m: m.group(1) + 'Rick Rodriguez' + m.group(2), base, tag='og-site')
 base = sub1(r'(<meta property="og:title" content=")[^"]*(">)',
             lambda m: m.group(1) + TITLE + m.group(2), base, tag='og-title')
 base = sub1(r'(<meta property="og:description" content=")[^"]*(">)',
@@ -1531,9 +1531,9 @@ def foot():
 ALT = {"t": "Discuss a matter", "h": "/rodriguez#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
-T_PR = 'Practice — Enrique “Rick” Rodriguez, Jr.'
-T_TE = 'Testimony — Enrique “Rick” Rodriguez, Jr.'
-T_CV = 'CV — Enrique “Rick” Rodriguez, Jr.'
+T_PR = 'Practice — Rick Rodriguez'
+T_TE = 'Testimony — Rick Rodriguez'
+T_CV = 'CV — Rick Rodriguez'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Enrique “Rick” Rodriguez, Jr. — Banking & Real Estate Finance Expert Witness",
-    "description": "Enrique “Rick” Rodriguez, Jr.: banking and real estate finance expert witness, Los Angeles."
+    "title": "Rick Rodriguez — Banking & Real Estate Finance Expert Witness",
+    "description": "Rick Rodriguez: banking and real estate finance expert witness, Los Angeles."
   },
-  "logo": "ENRIQUE “RICK” RODRIGUEZ, JR.",
+  "logo": "RICK RODRIGUEZ",
   "nav": [
     {
       "t": "Overview",
@@ -36,9 +36,9 @@
       "img": {
         "src": "/rodriguez/assets/hero.jpg",
         "mobile": "/rodriguez/assets/hero-mobile.jpg",
-        "alt": "Enrique “Rick” Rodriguez, Jr."
+        "alt": "Rick Rodriguez"
       },
-      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "name": "Rick Rodriguez",
       "sub": "Banking standards, from inside the bank <t>to the witness stand.</t>",
       "actions": [
         {
@@ -888,7 +888,7 @@
         "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Rodriguez.",
         "fine": "Private concept: nothing is sent from this page."
       },
-      "name": "Enrique “Rick” Rodriguez, <t>Jr.</t>",
+      "name": "Rick Rodriguez",
       "fcta": {
         "t": "Discuss a matter",
         "h": "#inquiry"
@@ -918,7 +918,7 @@
         "social": []
       },
       "fine": "Private preview · Not indexed",
-      "base": "Enrique “Rick” Rodriguez, Jr. · Los Angeles, California"
+      "base": "Rick Rodriguez · Los Angeles, California"
     }
   ],
   "proposal": {
