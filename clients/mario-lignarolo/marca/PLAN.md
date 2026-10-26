@@ -36,6 +36,7 @@ Pablo y Claude co-dirigen el pulido de la marca de Mario: narrativa, storytellin
 | 24 oct 2026 | **`marca/BRIEF-MASTER-v1.md` es la fuente de verdad** (brief de Pablo): posicionamiento, narrativa, voz, arquitectura y dirección visual. Donde `03-NARRATIVA.md` o `02-MODELO.md` lo contradigan (roles, actos, serif en todo), manda el brief. | Pablo |
 | 24 oct 2026 | **Iteración en `/v3`, sin tocar la web actual**, construida según el brief. La primera versión de `/v3` (inventada por el estudio) quedó descartada. Ruta oculta y no indexada; contenido en `data/v3.ts`. | Pablo |
 | 22 oct 2026 | **Ángulo de la web: Mario como founder.** La página vende a Mario a título personal, desde la autoridad, y él abarca todas sus marcas y plataformas. No es una landing de Psico-Cibernética. | Pablo |
+| 25 oct 2026 | **`marca/HOMEPAGE-SPEC-v1.md` manda sobre la home** (copy + estructura + diseño, de Pablo). Sustituye la arquitectura de secciones del brief: Hero → Origen → Psicocibernética → Hipertrofia del Ser → Emprendimiento / Lignarolo → Perspectivas (reels + conversaciones) → Contacto. Voz en primera persona. **El copy va tal cual, sin reescribir.** La versión anterior de `/v3` (portada tipo Nike + tesis + historia por percepción) quedó descartada; `/v3` se reconstruye con una sección por componente en `app/v3/sections/`. | Pablo |
 
 ## Pendiente con Mario
 

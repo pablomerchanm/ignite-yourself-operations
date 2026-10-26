@@ -1,208 +1,189 @@
 /**
- * ITERACIÓN /v3 — la home según `marca/BRIEF-MASTER-v1.md` (Pablo, oct 2026).
+ * ITERACIÓN /v3 — la home según `marca/HOMEPAGE-SPEC-v1.md` (Pablo, 25 oct 2026).
  * Ruta oculta y no indexada; la home actual no cambia.
  *
- * Reglas del brief que gobiernan este archivo:
- *  - No decir lo que se puede demostrar: nada de «founder», rótulos ni adjetivos.
- *  - Los titulares construyen la percepción; el cuerpo solo profundiza.
- *  - La página presenta a Mario (3.ª persona); Mario presenta sus ideas (citas).
- *  - Nada inventado: lo que falta va como placeholder marcado, no se rellena.
+ * Reglas del spec que gobiernan este archivo:
+ *  - El copy va tal cual: no se reescribe ni se añade copy de marketing.
+ *  - Sin etiquetas (founder, creator, coach, writer…): se demuestra, no se explica.
+ *  - Nada inventado: lo que falta va como placeholder marcado.
  *
- * [BRIEF] = texto o dato que el brief da como dirección o como confirmado.
- * [MARIO] = palabras suyas (entrevista o publicaciones).
+ * [SPEC] = copy del documento de Pablo, literal.
+ * [REAL] = dato público de Mario (Substack, Instagram, YouTube), sin retocar.
  * [PENDIENTE] = falta confirmar o producir; se muestra como placeholder en borrador.
  */
 import { channels } from "./content";
+import { videos } from "./videos";
 
 const substack = channels.substack.href.replace(/\/$/, "");
-const dm = "https://ig.me/m/mariolignarolo";
-// [BRIEF] la página actual de Psicocibernética.
+// [BRIEF] la página actual de Psicocibernética (pendiente decidir: lovable vs Skool).
 const psicoUrl = "https://psicocibernetica.lovable.app/";
+const lignaroloUrl = "https://www.lignarolo.com";
+
+export type Reel = { code: string; title: string; duration: string; date: string; src: string };
+export type Piece = { title: string; dek: string; date: string; minutes: number; href: string };
+export type Talk = { title: string; youtubeId: string; duration?: string };
+
+/** [REAL] minutos de lectura a partir del conteo de palabras del archivo público (~220 ppm). */
+const minutes = (words: number) => Math.max(1, Math.round(words / 220));
+const post = (slug: string) => `${substack}/p/${slug}`;
 
 export const v3 = {
   meta: {
     title: "Mario Lignarolo — Transformación de identidad",
-    description: "Explorando cómo transformar quién eres para expandir lo que eres capaz de construir.",
+    description: "Explorando cómo cambiar quién eres transforma lo que eres capaz de construir.",
   },
-  notice: "Iteración · borrador · no indexada · la web actual no cambia",
+  notice: "Borrador · iteración /v3 · no indexada",
 
   nav: [
-    { label: "Lignarolo", href: "#lignarolo" },
-    { label: "Hipertrofia del Ser", href: "#hipertrofia" },
     { label: "Psicocibernética", href: "#psicocibernetica" },
+    { label: "Hipertrofia del Ser", href: "#hipertrofia" },
+    { label: "Perspectivas", href: "#perspectivas" },
     { label: "Contacto", href: "#contacto" },
   ],
 
-  /* 01 · MARIO — portada editorial: persona, territorio, curiosidad. Sin CTA. */
+  /* 01 · HERO — [SPEC] nombre, territorio y statement en siete líneas. */
   hero: {
     name: ["Mario", "Lignarolo"],
     territory: "Transformación de identidad",
-    // [BRIEF] línea de trabajo preferida, sin reescribir.
-    line: "Explorando cómo transformar quién eres para expandir lo que eres capaz de construir.",
-    // [BRIEF] señales sutiles: partes de su mundo, no botones.
-    signals: [
-      { label: "Psicocibernética", href: "#psicocibernetica" },
-      { label: "Hipertrofia del Ser", href: "#hipertrofia" },
-    ],
+    statement: ["Explorando", "cómo cambiar", "quién eres", "transforma", "lo que eres", "capaz de", "construir"],
     image: { src: "/mario/hero.jpg", alt: "Mario Lignarolo, retrato." },
   },
 
-  /* 02 · LA TESIS — tipografía monumental y el modelo como secuencia. */
-  thesis: {
-    // [BRIEF]
-    line1: "Conseguirlo es una cosa.",
-    line2: { before: "Ser capaz de", accent: "sostenerlo", after: "es otra." },
-    // [BRIEF] la lógica, en una nota breve (3.ª persona).
-    note: "Una meta financiera, física o profesional se puede alcanzar. Si la identidad que hay debajo no ha cambiado, los patrones anteriores vuelven.",
-    // [BRIEF] TRABAJO INTERNO + CAPACIDADES + ACCIÓN + EVIDENCIA; la escala crece hacia la evidencia.
-    model: [
-      { n: "01", name: "Trabajo interno", text: "Percepción, autoconcepto, observación, práctica espiritual.", k: 1 },
-      { n: "02", name: "Capacidades", text: "Aprender: ventas, marketing, liderazgo, comunicación, ejecución.", k: 1.15 },
-      { n: "03", name: "Acción", text: "Exponerse, practicar, hacer lo incómodo, actuar distinto en el mundo real.", k: 1.35 },
-      { n: "04", name: "Evidencia", text: "Demostrar, viviéndolo, que se puede operar de otra manera.", k: 1.6 },
+  /* 02 · TERRITORIO / ORIGEN — [SPEC] */
+  origen: {
+    label: "Metafísica · Espiritualidad · Consciencia · Autoimagen",
+    headline: "Estoy obsesionado con entender ideas profundas y expresarlas a través de mí.",
+    paragraphs: [
+      "Durante mucho tiempo busqué respuestas afuera.",
+      "Seguí caminos que creía que debía seguir. Perseguí resultados. Emprendí. Transformé mi cuerpo. Intenté encontrar claridad haciendo más, aprendiendo más, construyendo más.",
+      "Hasta que empecé a entender que muchas de las cosas que quería cambiar afuera tenían una raíz mucho más profunda.",
+      "Desde entonces exploro la relación entre quién eres, la imagen que sostienes de ti, cómo actúas y la realidad que terminas construyendo.",
+      "Por eso me interesan la consciencia, la espiritualidad, el cuerpo, el emprendimiento y la acción. No como mundos separados, sino como distintas formas de investigar la misma pregunta:",
     ],
+    question: "¿En quién necesitas convertirte para vivir de una manera diferente?",
+    image: { src: "/mario/entreno-curl.jpg", alt: "Mario entrenando, de espaldas, en penumbra.", position: "50% 20%" },
   },
 
-  /* 03 · LA HISTORIA POR PERCEPCIÓN — titulares, fotos y pies; sin biografía. */
-  story: {
-    // [BRIEF] fragmentos de trabajo.
-    headline: "Aprender a construir afuera lo obligó a mirar adentro.",
-    beats: [
-      {
-        kind: "image",
-        word: "El cuerpo.",
-        caption: "Entrenamiento, disciplina, exposición. El primer lugar donde el cambio se hizo visible.",
-        image: { src: "/links/img/hipertrofia.jpg", alt: "Mario entrenando, de espaldas, con un disco.", position: "50% 20%" },
-      },
-      {
-        kind: "image",
-        word: "Emprender es aprender.",
-        // [MARIO]
-        quote: "Para mí emprender es aprender.",
-        caption: "Marketing, ventas, producto, marca: habilidades que se aprenden construyendo.",
-        image: { src: "/mario/lignarolo.jpg", alt: "Mocasines Lignarolo.", position: "40% 100%" },
-      },
-      {
-        kind: "text",
-        word: "Pero saber qué hacer no siempre significa sentirte capaz de hacerlo.",
-        // [MARIO] entrevista: «Todo es interno».
-        quote: "Todo es interno.",
-        caption: "Insuficiencia, miedo a exponerse, dificultad para cobrar: lo que el conocimiento no resolvía.",
-      },
-      {
-        kind: "image",
-        word: "Identidad.",
-        caption: "Autoconcepto, respiración consciente, trabajo interno.",
-        image: { src: "/mario/psico.jpg", alt: "Mario, retrato en doble exposición.", position: "50% 30%" },
-      },
-    ] as Beat[],
-    // [BRIEF] la narrativa útil, en una línea.
-    close: "Aprendió a construir afuera y descubrió que su capacidad de construir también dependía de en quién era capaz de convertirse por dentro.",
+  /* 03 · PSICOCIBERNÉTICA — [SPEC] puerta a un mundo; no landing. */
+  psico: {
+    label: "Psicocibernética",
+    headline: "Trabajar sobre la imagen que tienes de ti.",
+    paragraphs: [
+      "Psicocibernética es una de las formas en las que exploro el cambio de identidad desde la práctica.",
+      "Combina autoconcepto, respiración consciente, hipnomeditación e imaginación para trabajar sobre la relación entre lo que crees de ti, cómo te sientes y la forma en que actúas en el mundo.",
+      "Es un espacio donde se cruzan psicocibernética, principios herméticos, Ley de Asunción, sombra, propósito y acción.",
+    ],
+    statement: "Lo que se instaló sin tu permiso puede empezar a cambiar con tu participación consciente.",
+    cta: "Explorar Psicocibernética",
+    href: psicoUrl,
+    concepts: ["Autoconcepto", "Respiración", "Hipnomeditación", "Imaginación"],
+    secondary: ["Hermetismo", "Ley de Asunción", "Sombra", "Propósito"],
+    image: { src: "/mario/psico.jpg", alt: "Mario, retrato en doble exposición.", position: "50% 30%" },
   },
 
-  /* 04 · EL TRABAJO — tres mundos, tres composiciones. Sin título paraguas. */
-  work: {
-    label: "Trabajo",
+  /* 04 · HIPERTROFIA DEL SER — [SPEC] copy; [REAL] piezas del archivo público. */
+  hipertrofia: {
+    label: "Hipertrofia del Ser",
+    headline: ["El cuerpo se entrena.", "El ser también."],
+    paragraphs: [
+      "Hipertrofia del Ser es el espacio donde desarrollo ideas sobre autoimagen, consciencia, cuerpo, propósito, emprendimiento y expansión personal.",
+      "Un lugar para pensar cómo crece una persona, no solo por fuera, sino también por dentro.",
+    ],
+    cta: "Leer Hipertrofia del Ser",
+    href: substack,
+    cover: { src: "/links/img/hipertrofia.jpg", alt: "Mario, de espaldas, cargando un disco.", position: "50% 20%" },
+    // Portada: la pieza que mejor abre el territorio. Título, subtítulo y fecha reales.
+    lead: {
+      title: "Lo que estás llamado a construir no va a competir con lo que estás llamado a ser",
+      dek: "La marca personal es tu vehículo para cumplir esa visión",
+      date: "12 sep 2026",
+      minutes: minutes(1530),
+      href: post("lo-que-estas-llamado-a-construir"),
+    } as Piece,
+    // Secundarios, a escalas distintas: el primero grande, el resto en listado.
+    pieces: [
+      { title: "Cómo ser tan atractivo que la realidad te persiga", dek: "Donde la espiritualidad y la ciencia convergen", date: "16 sep 2026", minutes: minutes(2963), href: post("como-ser-tan-atractivo-que-la-realidad") },
+      { title: "Emprender es aprender. No vender.", dek: "Agencia, Flow y los 5 motivadores que lo activan", date: "26 sep 2026", minutes: minutes(2287), href: post("emprender-es-aprender-no-vender") },
+      { title: "No puedes fallar", dek: "Cómo ser asquerosamente disciplinado", date: "29 sep 2026", minutes: minutes(1800), href: post("no-puedes-fallar") },
+      { title: "Vive de tus intereses.", dek: "Empieza por lo que no puedes dejar de aprender.", date: "1 oct 2026", minutes: minutes(1668), href: post("vive-de-tus-intereses") },
+      { title: "Trabaja tu suficiencia", dek: "Lo que miras hacia arriba, te tiene que mirar hacia abajo", date: "18 sep 2026", minutes: minutes(1082), href: post("trabaja-tu-suficiencia") },
+    ] as Piece[],
+  },
+
+  /* 05 · EMPRENDIMIENTO / LIGNAROLO — [SPEC] aprobada temporalmente. Menor peso. */
+  emprendimiento: {
+    label: "Emprendimiento",
+    headline: "Hay ideas que me gusta pensar. Otras necesito construirlas.",
+    paragraphs: [
+      "Para mí, emprender empieza ahí.",
+      "Seguir una curiosidad lo suficiente como para llevarla a la realidad. Ver qué pasa. Equivocarme. Ajustar. Aprender.",
+    ],
+    fields: "Moda. Fitness. Respiración. Escritura. Desarrollo personal.",
+    close: "No siempre sé qué forma van a tomar. Me interesa descubrirlo construyendo.",
     lignarolo: {
       name: "Lignarolo",
-      meta: ["Calzado", "Bogotá"],
-      // [BRIEF] confirmado: socio junto a su hermano Giorgio. Sin cargo, sin cifras.
-      text: "Calzado artesanal en cuero italiano, hecho a mano en Bogotá. Mario es socio de la marca junto a su hermano Giorgio.",
-      cta: "lignarolo.com",
-      href: "https://www.lignarolo.com",
-      image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo." },
-      // [PENDIENTE] fotos de producto, taller y proceso.
-      pending: ["Producto", "Taller · proceso"],
-    },
-    hipertrofia: {
-      label: "Publicación",
-      name: "Hipertrofia del Ser",
-      line: "Escritos sobre identidad, cuerpo, emprendimiento y trabajo interno.",
-      // [BRIEF] la metáfora central.
-      metaphor: "La hipertrofia es el crecimiento de un músculo por el trabajo que se le exige. Aquí, aplicada a la persona.",
-      // Curados del archivo real de Substack (título, subtítulo y fecha reales).
-      lead: {
-        category: "Identidad",
-        title: "Lo que estás llamado a construir no va a competir con lo que estás llamado a ser",
-        dek: "La marca personal es tu vehículo para cumplir esa visión.",
-        date: "12 sep 2026",
-        href: `${substack}/p/lo-que-estas-llamado-a-construir`,
-      },
-      more: [
-        {
-          category: "Emprendimiento",
-          title: "Emprender es aprender. No vender.",
-          dek: "Agencia, flow y los cinco motivadores que lo activan.",
-          date: "26 sep 2026",
-          href: `${substack}/p/emprender-es-aprender-no-vender`,
-        },
-        {
-          category: "Trabajo interno",
-          title: "La simplicidad de asumir tu estado",
-          dek: "No puedes cambiar el mundo externo hasta que entiendas tu mundo interno.",
-          date: "10 sep 2026",
-          href: `${substack}/p/la-simplicidad-de-asumir-tu-estado`,
-        },
-        {
-          category: "Cuerpo",
-          title: "No puedes fallar",
-          dek: "Cómo ser asquerosamente disciplinado.",
-          date: "29 sep 2026",
-          href: `${substack}/p/no-puedes-fallar`,
-        },
-      ],
-      cta: "Leer en Substack",
-      href: substack,
-      subscribe: { label: "Suscribirse", href: `${substack}/subscribe` },
-    },
-    psico: {
-      label: "Método · Programa",
-      name: "Psicocibernética",
-      line: "Un proceso guiado de respiración consciente, visualización y trabajo con el autoconcepto.",
-      // [BRIEF] el concepto es de Maltz; esto es la aplicación de Mario. Sin claims científicos.
-      origin: "El término viene de Maxwell Maltz (1960): un sistema que corrige su rumbo a partir de la retroalimentación. Psicocibernética es la aplicación que Mario hace de esa idea, con respiración consciente y práctica diaria.",
-      // [MARIO]
-      quote: "Cualquier cosa que uno asuma como un fracaso, al final termina siendo nada más información.",
-      cta: "Conocer Psicocibernética",
-      href: psicoUrl,
-      note: "Una práctica personal. No sustituye la atención médica ni psicológica.",
-      video: { src: "/mario/psico.mp4", poster: "/mario/psico-poster.jpg", duration: "2:26", label: "Mario presenta Psicocibernética" },
+      text: "Con LIGNAROLO, esa curiosidad tomó forma en producto, diseño y marca, junto a mi hermano Giorgio.",
+      cta: "LIGNAROLO",
+      href: lignaroloUrl,
+      image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo.", position: "70% 50%" },
+      // [PENDIENTE] fotografía de producto, Mario y Giorgio, fabricación, campañas.
+      pending: ["Producto · detalle", "Mario y Giorgio", "Fabricación", "Campaña"],
     },
   },
 
-  /* 05 · PARA SEGUIR — caminos sin menú de enlaces, y un cierre breve. */
-  deeper: {
-    label: "Para seguir",
-    paths: [
-      { verb: "Leer", what: "Hipertrofia del Ser", links: [{ label: "Substack", href: substack }] },
-      {
-        verb: "Ver",
-        what: "Lo que publica",
-        links: [
-          { label: "YouTube", href: channels.youtube.href },
-          { label: "Instagram", href: channels.instagram.href },
-          { label: "TikTok", href: channels.tiktok.href },
-        ],
-      },
-      { verb: "Practicar", what: "Psicocibernética", links: [{ label: "Conocer el programa", href: psicoUrl }] },
-      {
-        verb: "Conversar",
-        what: "Podcasts, charlas, eventos, colaboraciones",
-        links: [{ label: "Escribir a Mario", href: dm }],
-      },
-    ],
-    // 3.ª persona, solo lo confirmado.
-    bio: "Mario Lignarolo trabaja alrededor de la transformación de identidad. Es socio de Lignarolo junto a su hermano Giorgio, escribe Hipertrofia del Ser y guía Psicocibernética.",
-    contact: { cta: "Escribir a Mario", href: dm, pending: "Correo de contacto pendiente" },
-    // [MARIO] su frase, como la escribe él.
-    closing: { quote: "No se trata de hacer más. Se trata de SER más.", by: "Mario Lignarolo" },
+  /* 06 · PERSPECTIVAS — [SPEC] casi sin copy. [REAL] piezas públicas recientes. */
+  perspectivas: {
+    title: "Perspectivas",
+    reels: {
+      label: "Reels",
+      // Portadas y textos tal como los publicó Mario en Instagram (octubre 2026).
+      items: [
+        { code: "DemZQIDMYzY", title: "El poder de meditar en movimiento", duration: "1:08", date: "17 oct 2026" },
+        { code: "DeejjK5AmLJ", title: "La manifestación es una decisión.", duration: "2:21", date: "14 oct 2026" },
+        { code: "DewmVL-MbVO", title: "El cielo nunca ha tenido un problema de provisión", duration: "1:44", date: "21 oct 2026" },
+        { code: "DesRYxzP3Cr", title: "Toda rosa viene con espinas", duration: "2:38", date: "19 oct 2026" },
+        { code: "DepFK0jslPj", title: "Cualquiera que te diga que mates a tu ego no ha entendido el juego.", duration: "2:04", date: "18 oct 2026" },
+        { code: "DecAQdqMctR", title: "Tu no necesitas tus deseos, tus deseos te necesitan a ti", duration: "2:16", date: "13 oct 2026" },
+        { code: "Deko3fmsHi1", title: "No reces por algo que no estás dispuesto a desarrollar", duration: "1:57", date: "16 oct 2026" },
+        { code: "DefZfaqvJJE", title: "No todos pueden ver lo que tú ves cuando cierras los ojos.", duration: "1:37", date: "14 oct 2026" },
+      ].map((r) => ({ ...r, src: `/mario/reels/${r.code}.jpg` })) as Reel[],
+      all: { label: "Ver más en Instagram", href: channels.instagram.href },
+    },
+    conversaciones: {
+      label: "Conversaciones",
+      // [REAL] videos del canal (título e id). Duración [PENDIENTE] hasta tenerla confirmada.
+      items: videos
+        .filter((v): v is typeof v & { youtubeId: string } => Boolean(v.youtubeId))
+        .map((v) => ({ title: v.title, youtubeId: v.youtubeId, duration: v.duration })) as Talk[],
+      all: { label: "Todas las conversaciones", href: channels.youtube.href },
+    },
+  },
+
+  /* 07 · CONTACTO — [SPEC] placeholder utilitario. Sin frases emocionales. */
+  contacto: {
+    label: "Contacto",
+    lead: "Para:",
+    paths: ["Prensa", "Podcasts", "Charlas", "Colaboraciones"],
+    form: {
+      name: "Nombre",
+      email: "Email",
+      reason: "Motivo",
+      reasons: ["Prensa", "Podcast", "Charla / Evento", "Colaboración", "Trabajo privado", "Otro"],
+      message: "Mensaje",
+      submit: "Enviar",
+    },
+    // [PENDIENTE] destino del formulario (correo o servicio) por definir.
+    pending: "Formulario de muestra · destino pendiente",
   },
 
   footer: {
-    links: [channels.instagram, channels.youtube, channels.tiktok, channels.substack, { label: "Lignarolo", href: "https://www.lignarolo.com" }],
+    links: [
+      channels.instagram,
+      channels.youtube,
+      channels.tiktok,
+      { label: "Hipertrofia del Ser", href: substack },
+      { label: "Psicocibernética", href: psicoUrl },
+      { label: "LIGNAROLO", href: lignaroloUrl },
+    ],
   },
 };
-
-export type Beat =
-  | { kind: "image"; word: string; caption: string; quote?: string; image: { src: string; alt: string; position?: string } }
-  | { kind: "text"; word: string; caption: string; quote?: string };

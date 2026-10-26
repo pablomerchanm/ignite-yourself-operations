@@ -1,9 +1,10 @@
 /* ════════════════════════════════════════════════════════════
-   ITERACIÓN /v3 — según marca/BRIEF-MASTER-v1.md
-   · perfil editorial + publicación: escala, fotografía, aire, bordes duros
-   · sans (Inter Tight) manda; serif itálica solo como acento (≤ 30 %)
-   · color sobrio: blanco cálido, tinta, carbón, piedra; azul noche en
-     Psicocibernética; el azul vivo aparece contadas veces
+   ITERACIÓN /v3 — según marca/HOMEPAGE-SPEC-v1.md
+   · plataforma personal editorial: escala, fotografía, aire, bordes duros
+   · sans (Inter Tight) manda; la serif (Instrument) marca el cambio de voz
+   · paleta: blanco cálido, tinta, carbón, piedra; azul profundo en
+     Psicocibernética; casi negro en Conversaciones
+   · cada universo cambia de fondo, escala y composición
    · módulo aislado: no toca globals.css ni la home
    ════════════════════════════════════════════════════════════ */
 
@@ -16,10 +17,13 @@
   --rule: rgba(18, 20, 23, 0.14);
   --rule-strong: rgba(18, 20, 23, 0.6);
   --navy: #0b1222;
-  --ink-blue: #152040;
+  --deep: #0a1020;
+  --deep-2: #0f1a3c;
+  --near-black: #0d0e10;
   --blue: #2b49cf;
   --on-dark: #ece9e2;
   --on-dark-soft: #9fa3ad;
+  --rule-dark: rgba(236, 233, 226, 0.16);
   --gutter: clamp(1.25rem, 0.5rem + 3.2vw, 4.5rem);
   --sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
   --serif: var(--font-instrument), "Times New Roman", serif;
@@ -71,50 +75,28 @@
   text-transform: uppercase;
   text-wrap: balance;
 }
-.accent {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  text-transform: none;
-  letter-spacing: -0.01em;
-}
-.serif {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.005em;
-}
 .body {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--charcoal);
 }
-.caption {
-  margin: 0;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-  color: var(--stone);
-  max-width: 30rem;
-}
-.quote {
-  margin: 0;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.9rem);
-  line-height: 1.2;
-  max-width: 26em;
-}
-.by {
+.meta {
   display: block;
   margin-top: 0.75rem;
-  font-family: var(--sans);
-  font-style: normal;
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--stone);
+}
+.dek {
+  margin: 0.6rem 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: var(--charcoal);
 }
 .link {
   display: inline-flex;
@@ -133,10 +115,12 @@
   transition: transform 0.25s ease;
 }
 .link:hover svg {
-  transform: translateX(0.2em);
+  transform: translate(0.15em, -0.15em);
 }
 .photo {
   position: relative;
+  display: block;
+  margin: 0;
   overflow: hidden;
   background: var(--paper-2);
 }
@@ -155,12 +139,11 @@
   color: var(--stone);
 }
 .dark {
-  background: var(--navy);
+  background: var(--near-black);
   color: var(--on-dark);
 }
 .dark .label,
-.dark .caption,
-.dark .by {
+.dark .meta {
   color: var(--on-dark-soft);
 }
 .dark .body {
@@ -168,7 +151,6 @@
 }
 
 /* ── Aviso de borrador ─────────────────────────────────── */
-/* Etiqueta fija y pequeña: no empuja la portada ni la recorta. */
 .notice {
   position: fixed;
   right: 0;
@@ -182,6 +164,7 @@
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ── Navegación mínima, sobre la portada ───────────────── */
@@ -230,13 +213,12 @@
   }
 }
 
-/* ── 01 · Portada ──────────────────────────────────────────
-   Referencia: Nike About / The Record. Un solo gesto: el nombre como
-   cabecera serif con interletrado amplio, a todo el ancho, sobre el
-   retrato a pantalla completa. La cara queda entera arriba (ocupa del
-   12 % al 78 % de la altura) y el nombre vive en la franja inferior.
-   En móvil se recompone: panel de foto 4:5 y, debajo, la franja oscura
-   con el nombre en dos líneas. */
+/* ── 01 · Hero ─────────────────────────────────────────────
+   Se mantiene la dirección: retrato a pantalla completa y el nombre como
+   cabecera serif con interletrado amplio en la franja inferior. La cara
+   ocupa el centro (x 30–62 %, y 12–78 %); el statement en siete líneas
+   vive en la zona libre de la izquierda, a media altura, en sans pesada.
+   En móvil: panel de foto 4:5 y, debajo, statement, nombre y territorio. */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -277,25 +259,10 @@
   inset: 0;
   background:
     linear-gradient(to top, rgba(11, 18, 34, 0.94) 0%, rgba(11, 18, 34, 0.72) 16%, rgba(11, 18, 34, 0.28) 36%, rgba(11, 18, 34, 0.06) 52%, rgba(11, 18, 34, 0.22) 100%),
+    linear-gradient(to right, rgba(11, 18, 34, 0.55) 0%, rgba(11, 18, 34, 0.25) 22%, rgba(11, 18, 34, 0) 40%),
     rgba(11, 18, 34, 0.1);
 }
-.heroBody {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  text-align: center;
-  padding-bottom: clamp(1.5rem, 1rem + 1.6vw, 2.5rem);
-}
-/* Entrada propia (no depende del revelado por scroll): el pie de la
-   portada cae en el borde de la primera pantalla y el observador no lo ve. */
-@media (prefers-reduced-motion: no-preference) {
-  .mark,
-  .heroTerritory,
-  .heroLine {
-    animation: rise 1.4s cubic-bezier(0.16, 0.84, 0.24, 1) both;
-    animation-delay: var(--d, 0s);
-  }
-}
+/* Entrada propia (no depende del revelado por scroll). */
 @keyframes rise {
   from {
     opacity: 0;
@@ -306,8 +273,42 @@
     transform: none;
   }
 }
-/* La cabecera: serif en caja alta con interletrado amplio, una línea.
-   106 px de tope, como el wordmark de la referencia. */
+.heroStatement {
+  position: absolute;
+  z-index: 2;
+  left: var(--gutter);
+  top: 50%;
+  transform: translateY(-52%);
+  margin: 0;
+  font-weight: 600;
+  font-size: min(3.4vw, 4rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: var(--on-dark);
+}
+.heroStatement span {
+  display: block;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .heroStatement span {
+    animation: rise 1.2s cubic-bezier(0.16, 0.84, 0.24, 1) both;
+    animation-delay: calc(0.25s + var(--i, 0) * 0.07s);
+  }
+  .mark,
+  .heroTerritory {
+    animation: rise 1.4s cubic-bezier(0.16, 0.84, 0.24, 1) both;
+    animation-delay: var(--d, 0s);
+  }
+}
+.heroBody {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  padding-bottom: clamp(1.5rem, 1rem + 1.6vw, 2.5rem);
+}
+/* La cabecera: serif en caja alta con interletrado amplio, una línea. */
 .mark {
   --d: 0.2s;
   margin: 0;
@@ -329,17 +330,13 @@
   color: var(--on-dark);
   opacity: 0.8;
 }
-.heroLine {
-  --d: 0.7s;
-  margin: 0.6rem auto 0;
-  max-width: 34em;
-  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
-  line-height: 1.3;
-}
 /* Pantallas bajas: la cabecera cede un poco para no tocar la barbilla. */
 @media (min-width: 881px) and (max-height: 760px) {
   .mark {
     font-size: min(6rem, 6.4vw);
+  }
+  .heroStatement {
+    font-size: min(3vw, 3.2rem);
   }
 }
 /* Pantallas muy anchas: la foto se recorta por arriba; se centra la cara. */
@@ -350,7 +347,6 @@
 }
 @media (max-width: 880px) {
   .hero {
-    min-height: 100svh;
     justify-content: flex-start;
   }
   .heroPhoto {
@@ -367,12 +363,18 @@
   .heroPhoto::after {
     background: linear-gradient(to top, rgba(11, 18, 34, 1) 0%, rgba(11, 18, 34, 0.35) 18%, rgba(11, 18, 34, 0) 40%);
   }
+  .heroStatement {
+    position: static;
+    transform: none;
+    padding: 1.5rem var(--gutter) 0;
+    font-size: min(2.6rem, 10.5vw);
+  }
   .heroBody {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-top: 1.5rem;
+    justify-content: flex-end;
+    padding-top: 2.5rem;
     padding-bottom: 2rem;
   }
   .mark {
@@ -385,274 +387,277 @@
   .mark span {
     display: block;
   }
-  .heroLine {
-    max-width: 22em;
+}
+
+/* ── 02 · Territorio / Origen ──────────────────────────────
+   Papel, aire y una sola voz: titular serif, copy en columna, la pregunta
+   final en itálica grande. Una foto alta a la derecha. */
+.origen {
+  padding-block: clamp(5rem, 3.5rem + 7vw, 11rem) clamp(5rem, 3.5rem + 6vw, 10rem);
+}
+.origenHead {
+  margin: 1.25rem 0 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 1.2rem + 4vw, 5.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.012em;
+  max-width: 13.5em;
+  text-wrap: balance;
+}
+.origenGrid {
+  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
+  align-items: start;
+  row-gap: 2.5rem;
+}
+.origenCopy {
+  grid-column: 1 / span 6;
+  display: grid;
+  gap: 1.25rem;
+}
+.origenCopy .body {
+  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+  line-height: 1.55;
+  max-width: 32em;
+}
+.origenLead {
+  margin: 0;
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  max-width: 20em;
+}
+.origenQuestion {
+  margin: 1.25rem 0 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.8rem, 1.2rem + 2.4vw, 3.6rem);
+  line-height: 1.08;
+  max-width: 15em;
+  text-wrap: balance;
+}
+.origenPhoto {
+  grid-column: 8 / span 5;
+  aspect-ratio: 4 / 5;
+}
+@media (max-width: 880px) {
+  .origenCopy,
+  .origenPhoto {
+    grid-column: 1 / -1;
+  }
+  .origenPhoto {
+    order: -1;
+    aspect-ratio: 4 / 5;
   }
 }
 
-/* ── 02 · La tesis ─────────────────────────────────────── */
-.thesis {
-  padding-block: clamp(5rem, 3.5rem + 7vw, 11rem) clamp(4rem, 3rem + 4vw, 7rem);
+/* ── 03 · Psicocibernética ─────────────────────────────────
+   Un mundo propio: azul profundo a sangre, un resplandor que respira,
+   retrato en doble exposición, conceptos en grande. */
+.psico {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(6rem, 4rem + 8vw, 12rem);
+  background: linear-gradient(180deg, var(--deep) 0%, var(--deep-2) 48%, var(--deep) 100%);
+  color: var(--on-dark);
 }
-.thesisLine1 {
-  font-size: clamp(1.9rem, 1.1rem + 3.4vw, 4.6rem);
+.psico::before {
+  content: "";
+  position: absolute;
+  inset: -30% -20%;
+  background: radial-gradient(38% 46% at 34% 50%, rgba(43, 73, 207, 0.34), transparent 70%);
+  pointer-events: none;
 }
-.thesisLine2 {
-  margin-top: 0.1em;
-  font-size: clamp(2.5rem, 1.1rem + 6.2vw, 8.4rem);
+@media (prefers-reduced-motion: no-preference) {
+  .psico::before {
+    animation: breathe 7s ease-in-out infinite alternate;
+  }
 }
-.thesisNote {
-  margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
-  max-width: 34rem;
+@keyframes breathe {
+  from {
+    transform: translate3d(-2%, -1%, 0) scale(0.94);
+    opacity: 0.75;
+  }
+  to {
+    transform: translate3d(2%, 2%, 0) scale(1.1);
+    opacity: 1;
+  }
 }
-.model {
-  margin: clamp(4rem, 3rem + 5vw, 8rem) 0 0;
+.psicoInner {
+  position: relative;
+}
+.psico .label {
+  color: var(--on-dark-soft);
+}
+.psicoHead {
+  margin-top: 1.25rem;
+  font-size: clamp(2.4rem, 1rem + 5.4vw, 7rem);
+  max-width: 9.5em;
+}
+.psicoGrid {
+  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
+  align-items: start;
+  row-gap: 2.5rem;
+}
+.psicoPhoto {
+  grid-column: 1 / span 5;
+  aspect-ratio: 4 / 5;
+  background: var(--deep);
+}
+.psicoPhoto img {
+  filter: saturate(0.55) contrast(1.08) brightness(0.9);
+}
+.psicoPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 16, 32, 0.7), rgba(10, 16, 32, 0) 45%);
+}
+.psicoCopy {
+  grid-column: 7 / span 6;
+  display: grid;
+  gap: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  justify-items: start;
+}
+.psicoText {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 34em;
+}
+.psicoText .body {
+  color: var(--on-dark);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+}
+.psicoConcepts {
+  margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0 clamp(1rem, 0.5rem + 1.5vw, 2rem);
-  align-items: end;
-  border-top: 1px solid var(--rule-strong);
+  width: 100%;
+  border-bottom: 1px solid var(--rule-dark);
 }
-.modelItem {
-  position: relative;
-  padding-top: 1rem;
-  --base: clamp(1.4rem, 0.9rem + 1.6vw, 2.6rem);
+.psicoConcepts li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.5em 0;
+  border-top: 1px solid var(--rule-dark);
+  font-size: clamp(1.6rem, 1rem + 2.6vw, 3.4rem);
 }
-.modelItem:not(:last-child)::after {
-  content: "+";
-  position: absolute;
-  right: -0.45em;
-  bottom: 3.4rem;
-  font-family: var(--serif);
-  font-size: 1.5rem;
-  line-height: 1;
-  color: var(--blue);
+.psicoIndex {
+  flex: 0 0 1.5em;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--on-dark-soft);
 }
-.modelName {
-  margin: 0.6rem 0 0;
-  font-size: calc(var(--base) * var(--k, 1));
+.psicoConcept {
   font-weight: 600;
-  line-height: 0.95;
+  line-height: 1;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
-.modelText {
-  margin: 0.9rem 0 0;
-  min-height: 3.2em;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--stone);
+.psicoSecondary {
+  margin: -0.75rem 0 0;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--on-dark-soft);
+}
+.psicoStatement {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.8rem);
+  line-height: 1.14;
+  max-width: 17em;
+  text-wrap: balance;
 }
 @media (max-width: 880px) {
-  .model {
-    grid-template-columns: 1fr;
-    gap: 0;
-    border-top: 0;
-  }
-  .modelItem {
-    padding: 1.25rem 0 1.5rem;
-    border-top: 1px solid var(--rule-strong);
-  }
-  .modelItem::after {
-    display: none;
-  }
-  .modelText {
-    min-height: 0;
-  }
-}
-
-/* ── 03 · La historia por percepción ───────────────────── */
-.story {
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem) clamp(5rem, 3.5rem + 6vw, 10rem);
-  border-top: 1px solid var(--rule);
-}
-.storyHead {
-  font-size: clamp(1.8rem, 1rem + 3.4vw, 4.8rem);
-  max-width: 16em;
-}
-.beats {
-  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
-}
-.beat {
-  align-items: end;
-  padding-block: clamp(2rem, 1.5rem + 2.5vw, 4.5rem);
-}
-.beatWord {
-  font-size: clamp(2.2rem, 1.2rem + 4vw, 5.6rem);
-}
-.beatText {
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1.25rem;
-}
-.beatPhoto {
-  aspect-ratio: 4 / 5;
-}
-/* el recorte apaisado enseña el producto: los mocasines */
-.beatPhotoWide {
-  aspect-ratio: 16 / 7;
-}
-/* composición alterna: foto alta a la izquierda, palabra a la derecha… */
-.beat1 .beatPhoto {
-  grid-column: 1 / span 5;
-}
-.beat1 .beatCopy {
-  grid-column: 7 / span 6;
-}
-.beat2 .beatCopy {
-  grid-column: 1 / span 5;
-  grid-row: 1;
-}
-.beat2 .beatPhoto {
-  grid-column: 6 / span 7;
-  grid-row: 1;
-}
-.beat3 .beatCopy {
-  grid-column: 2 / span 10;
-}
-.beat3 .beatWord {
-  font-size: clamp(1.8rem, 1rem + 3vw, 4.2rem);
-  max-width: 18em;
-}
-.beat4 .beatCopy {
-  grid-column: 1 / span 6;
-  grid-row: 1;
-}
-.beat4 .beatPhoto {
-  grid-column: 8 / span 5;
-  grid-row: 1;
-}
-.storyClose {
-  margin-top: clamp(3rem, 2rem + 3vw, 5rem);
-  max-width: 30em;
-  font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem);
-  line-height: 1.22;
-}
-@media (max-width: 880px) {
-  .beat {
-    row-gap: 1.5rem;
-  }
-  .beat .beatPhoto,
-  .beat .beatCopy {
-    grid-column: 1 / -1;
-    grid-row: auto;
-  }
-  .beat2 .beatPhoto,
-  .beat4 .beatPhoto {
-    order: -1;
-  }
-  .beatPhoto {
-    aspect-ratio: 4 / 5;
-  }
-  .beatPhotoWide {
-    aspect-ratio: 4 / 3;
-  }
-}
-
-/* ── 04 · El trabajo ───────────────────────────────────── */
-.work {
-  padding-top: clamp(3rem, 2rem + 3vw, 5rem);
-  border-top: 1px solid var(--rule);
-}
-
-/* Lignarolo: foto y producto mandan */
-.lg {
-  padding-block: clamp(1.5rem, 1rem + 2vw, 3rem) clamp(4rem, 3rem + 5vw, 8rem);
-}
-.lgPhoto {
-  aspect-ratio: 16 / 8;
-}
-.lgPhoto img {
-  object-position: 70% 50%;
-}
-.lgRow {
-  align-items: start;
-  margin-top: -0.5em;
-  position: relative;
-  z-index: 1;
-}
-.lgName {
-  grid-column: 1 / span 8;
-  font-size: clamp(3.2rem, 1.2rem + 9vw, 10.5rem);
-}
-.lgMeta {
-  grid-column: 9 / span 4;
-  align-self: end;
-  display: flex;
-  gap: 1.25rem;
-}
-.lgCopy {
-  grid-column: 1 / span 5;
-  margin-top: clamp(1.5rem, 1rem + 2vw, 3rem);
-  display: grid;
-  gap: 1.25rem;
-  justify-items: start;
-}
-.lgPending {
-  grid-column: 8 / span 5;
-  margin-top: clamp(1.5rem, 1rem + 2vw, 3rem);
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-.lgPending .pending {
-  aspect-ratio: 4 / 5;
-}
-@media (max-width: 880px) {
-  .lgPhoto {
-    aspect-ratio: 4 / 3;
-  }
-  .lgName,
-  .lgMeta,
-  .lgCopy,
-  .lgPending {
+  .psicoPhoto,
+  .psicoCopy {
     grid-column: 1 / -1;
   }
-  .lgMeta {
-    margin-top: 0.75rem;
-  }
 }
 
-/* Hipertrofia del Ser: una publicación, no un widget */
+/* ── 04 · Hipertrofia del Ser ──────────────────────────────
+   Una publicación: el titular ocupa la pantalla (el cuerpo en sans,
+   el ser en serif) y debajo una portada con jerarquía desigual. */
 .pub {
-  padding-block: clamp(3.5rem, 2.5rem + 4vw, 7rem);
-  border-top: 1px solid var(--rule-strong);
+  padding-block: clamp(5rem, 3rem + 7vw, 11rem) clamp(5rem, 3.5rem + 6vw, 10rem);
 }
 .pubHead {
-  align-items: end;
-  row-gap: 1.5rem;
+  margin: 0;
+  font-size: clamp(2.6rem, 0.5rem + 9.6vw, 12rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
 }
-.pubHead > div:first-child {
-  grid-column: 1 / span 7;
+.pubHead .line {
+  display: block;
 }
-.pubName {
-  margin: 0.6rem 0 0;
+.pubHeadA {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.pubHeadB {
   font-family: var(--serif);
+  font-style: italic;
   font-weight: 400;
-  font-size: clamp(2.8rem, 1.6rem + 4.6vw, 6.6rem);
-  line-height: 0.95;
   letter-spacing: -0.015em;
+  padding-left: 0.08em;
 }
 .pubIntro {
-  grid-column: 9 / span 4;
+  margin-top: clamp(2.5rem, 2rem + 3vw, 5rem);
+  align-items: start;
+  row-gap: 1rem;
+}
+.pubLabel {
+  grid-column: 1 / span 3;
+  padding-top: 0.35rem;
+}
+.pubText {
+  grid-column: 5 / span 6;
   display: grid;
-  gap: 0.75rem;
+  gap: 1.1rem;
+  justify-items: start;
+}
+.pubText .body {
+  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+  line-height: 1.55;
+}
+.pubText .link {
+  margin-top: 0.5rem;
 }
 .pubGrid {
-  margin-top: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+  margin-top: clamp(3.5rem, 2.5rem + 4vw, 7rem);
+  padding-top: 1.5rem;
   border-top: 1px solid var(--rule-strong);
-  row-gap: 0;
+  row-gap: 2.5rem;
+  align-items: start;
 }
 .lead {
-  grid-column: 1 / span 7;
-  padding: 1.5rem 2rem 2rem 0;
-  border-right: 1px solid var(--rule);
+  grid-column: 1 / span 8;
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: clamp(1rem, 0.5rem + 1.5vw, 2rem);
+  align-items: end;
+}
+.leadPhoto {
+  aspect-ratio: 4 / 5;
+}
+.leadPhoto img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.lead:hover .leadPhoto img {
+  transform: scale(1.03);
+}
+.leadBody {
+  padding-bottom: 0.5rem;
 }
 .leadTitle {
-  margin: 0.9rem 0 0;
-  font-size: clamp(1.9rem, 1.2rem + 2.6vw, 4rem);
+  margin: 0;
+  font-size: clamp(1.7rem, 1.1rem + 2.1vw, 3.1rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -660,220 +665,522 @@
   transition: color 0.2s ease;
 }
 .lead:hover .leadTitle,
-.postRow:hover .postTitle {
+.pieceFirst:hover .pieceFirstTitle,
+.pieceRow:hover .pieceTitle {
   color: var(--blue);
 }
-.leadDek {
-  margin-top: 1rem;
+.pubSide {
+  grid-column: 9 / span 4;
 }
-.posts {
-  grid-column: 8 / span 5;
+.pieceFirst {
+  display: block;
+  padding-bottom: 1.5rem;
+}
+.pieceFirstTitle {
+  margin: 0;
+  font-size: clamp(1.35rem, 1rem + 1.1vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  transition: color 0.2s ease;
+}
+.pieceList {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.postRow {
-  display: block;
-  padding: 1.25rem 0 1.4rem 2rem;
-  border-bottom: 1px solid var(--rule);
+.pieceRow {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 0.75rem;
+  padding: 1rem 0 1.1rem;
+  border-top: 1px solid var(--rule);
 }
-.postTitle {
-  margin: 0.5rem 0 0;
-  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+.pieceIndex {
+  padding-top: 0.2rem;
+  font-size: 0.6875rem;
   font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.16em;
+  color: var(--stone);
+}
+.pieceTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
   transition: color 0.2s ease;
 }
-.postDek {
+.pieceRow .meta {
   margin-top: 0.4rem;
-  font-size: 0.875rem;
 }
-.date {
+@media (max-width: 880px) {
+  .pubLabel,
+  .pubText,
+  .lead,
+  .pubSide {
+    grid-column: 1 / -1;
+  }
+  .lead {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .leadPhoto {
+    aspect-ratio: 4 / 5;
+  }
+  .pubSide {
+    border-top: 1px solid var(--rule-strong);
+    padding-top: 1.5rem;
+  }
+}
+
+/* ── 05 · Emprendimiento / Lignarolo ───────────────────────
+   Menos peso: fondo cálido, titular serif a escala media, y la foto de
+   Lignarolo como evidencia. */
+.emp {
+  background: var(--paper-2);
+  padding-block: clamp(4rem, 3rem + 5vw, 8rem) clamp(4rem, 3rem + 5vw, 8rem);
+}
+.empGrid {
+  align-items: start;
+  row-gap: 2rem;
+}
+.empHeadCol {
+  grid-column: 1 / span 7;
+}
+.empHead {
+  margin: 1rem 0 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 1rem + 3vw, 4.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  max-width: 13em;
+  text-wrap: balance;
+}
+.empCopy {
+  grid-column: 8 / span 5;
+  display: grid;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+.empCopy .body {
+  max-width: 30em;
+}
+.empFields {
+  margin: 0.25rem 0;
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+.lg {
+  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
+}
+.lgPhoto {
+  aspect-ratio: 16 / 7;
+  background: #e4e1da;
+}
+.lgRow {
+  margin-top: 1.5rem;
+  align-items: start;
+  row-gap: 1.5rem;
+}
+.lgText {
+  grid-column: 1 / span 6;
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+}
+.lgLine {
+  margin: 0;
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  max-width: 24em;
+}
+.lgPending {
+  grid-column: 8 / span 5;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.lgPending .pending {
+  aspect-ratio: 4 / 5;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+}
+@media (max-width: 880px) {
+  .empHeadCol,
+  .empCopy,
+  .lgText,
+  .lgPending {
+    grid-column: 1 / -1;
+  }
+  .lgPhoto {
+    aspect-ratio: 4 / 3;
+  }
+  .lgPending {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── 06 · Perspectivas ─────────────────────────────────────
+   Un título a toda escala; reels en carrusel; conversaciones como
+   biblioteca sobre casi negro. */
+.persp {
+  padding-top: clamp(4rem, 3rem + 5vw, 8rem);
+}
+.perspTitle {
+  font-size: min(11.6vw, 13.5rem);
+  line-height: 0.85;
+  letter-spacing: -0.045em;
+}
+.reels {
+  margin-top: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  padding-bottom: clamp(4rem, 3rem + 5vw, 8rem);
+}
+.reelsHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-bottom: 1.25rem;
+}
+.reelsTools {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem 2rem;
+}
+.ctls {
+  display: inline-flex;
+}
+.ctl {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.ctl + .ctl {
+  margin-left: -1px;
+}
+.ctl svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.ctl:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+.reelTrack {
+  display: flex;
+  gap: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+  margin: 0;
+  padding: 0 var(--gutter);
+  list-style: none;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: none;
+}
+.reelTrack::-webkit-scrollbar {
+  display: none;
+}
+.reel {
+  flex: 0 0 clamp(200px, 21vw, 300px);
+  scroll-snap-align: start;
+}
+.reelLink {
   display: block;
-  margin-top: 0.75rem;
+}
+.reelCover {
+  aspect-ratio: 9 / 16;
+  background: var(--ink);
+}
+.reelCover img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.reelLink:hover .reelCover img {
+  transform: scale(1.03);
+}
+.reelTitle {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+.reelMeta {
+  display: block;
+  margin-top: 0.4rem;
   font-size: 0.6875rem;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--stone);
 }
-.pubLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2.5rem;
-  margin-top: 2.5rem;
-}
 @media (max-width: 880px) {
-  .pubHead > div:first-child,
-  .pubIntro,
-  .lead,
-  .posts {
-    grid-column: 1 / -1;
+  .reelsHead {
+    flex-wrap: wrap;
   }
-  .lead {
-    padding: 1.5rem 0 1.75rem;
-    border-right: 0;
-    border-bottom: 1px solid var(--rule-strong);
-  }
-  .postRow {
-    padding-left: 0;
+  .reel {
+    flex-basis: min(68vw, 300px);
   }
 }
 
-/* Psicocibernética: atmósfera, video */
-.psico {
-  position: relative;
-  overflow: hidden;
+/* Conversaciones: una principal grande y el listado */
+.talks {
   padding-block: clamp(4rem, 3rem + 5vw, 8rem);
 }
-.psico::before {
-  content: "";
-  position: absolute;
-  inset: -20%;
-  background: radial-gradient(42% 55% at 30% 50%, rgba(43, 73, 207, 0.32), transparent 70%);
-  pointer-events: none;
+.talksHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-bottom: 1.5rem;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .psico::before {
-    animation: drift 14s ease-in-out infinite alternate;
-  }
+.talksHead .link,
+.reelsHead .link {
+  white-space: nowrap;
 }
-@keyframes drift {
-  from {
-    transform: translate3d(-3%, -2%, 0) scale(1);
-  }
-  to {
-    transform: translate3d(4%, 3%, 0) scale(1.08);
-  }
+.talksGrid {
+  align-items: start;
+  row-gap: 2.5rem;
 }
-.psicoGrid {
+.talkMain {
+  grid-column: 1 / span 8;
+}
+.talkScreen {
   position: relative;
-  align-items: center;
-  row-gap: 2rem;
-}
-.psicoVideo {
-  grid-column: 1 / span 7;
   aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
 }
-.psicoVideo img {
+.talkPoster {
+  object-fit: cover;
   filter: saturate(0.7) contrast(1.05);
 }
-.playBtn {
+.talkFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.talkPlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   display: flex;
   align-items: flex-end;
+  gap: 0.75rem;
   padding: 1.25rem;
   border: 0;
-  background: transparent;
+  background: linear-gradient(to top, rgba(13, 14, 16, 0.75), rgba(13, 14, 16, 0) 40%);
   color: var(--on-dark);
   cursor: pointer;
+  text-align: left;
 }
-.playBtn > span,
-.playBtn > svg {
-  display: inline-flex;
+.talkPlay svg {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.65rem;
+  border: 1px solid rgba(236, 233, 226, 0.6);
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-.playBtn > svg {
-  margin-right: 0.6rem;
-  align-self: flex-end;
-  margin-bottom: 0.9rem;
+.talkPlay:hover svg {
+  background: var(--on-dark);
+  color: var(--near-black);
 }
-.playBtn > span {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid currentColor;
+.talkPlay span {
+  padding-bottom: 0.8rem;
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
-.psicoCopy {
-  grid-column: 8 / span 5;
+.talkCaption {
   display: grid;
-  gap: 1.25rem;
-  justify-items: start;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
 }
-.psicoName {
-  font-size: clamp(1.8rem, 0.6rem + 2.4vw, 3.2rem);
-}
-.psicoOrigin {
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--on-dark-soft);
-}
-.psicoNote {
+.talkIndex {
   font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   color: var(--on-dark-soft);
+}
+.talkTitle {
+  margin: 0;
+  font-size: clamp(1.4rem, 1rem + 1.6vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.talkList {
+  grid-column: 9 / span 4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--rule-dark);
+}
+.talkRow {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr auto;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 0 1.1rem;
+  border: 0;
+  border-top: 1px solid var(--rule-dark);
+  background: transparent;
+  color: var(--on-dark-soft);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.talkRow:hover,
+.talkRow[aria-current="true"] {
+  color: var(--on-dark);
+}
+.talkRowIndex {
+  padding-top: 0.15rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+}
+.talkRow[aria-current="true"] .talkRowIndex {
+  color: var(--blue);
+  filter: brightness(1.6);
+}
+.talkRowTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+.talkRowMeta {
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
 }
 @media (max-width: 880px) {
-  .psicoVideo,
-  .psicoCopy {
+  .talkMain,
+  .talkList {
     grid-column: 1 / -1;
   }
 }
 
-/* ── 05 · Para seguir ──────────────────────────────────── */
-.deeper {
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem) clamp(3rem, 2rem + 3vw, 5rem);
+/* ── 07 · Contacto ─────────────────────────────────────────
+   Utilitario y tipográfico: a quién, en grande; el formulario, en líneas. */
+.contact {
+  padding-block: clamp(5rem, 3rem + 6vw, 9rem);
 }
-.paths {
-  margin: 1.5rem 0 0;
+.contactGrid {
+  align-items: start;
+  row-gap: 3rem;
+}
+.contactFor {
+  grid-column: 1 / span 6;
+}
+.contactLead {
+  margin: 1.25rem 0 0.25rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.8rem);
+  line-height: 1;
+}
+.contactPaths {
+  margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--rule-strong);
 }
-.path {
-  align-items: baseline;
-  padding-block: 1.4rem;
-  border-bottom: 1px solid var(--rule);
+.contactPath {
+  font-size: clamp(2.2rem, 1rem + 4vw, 5.4rem);
+  line-height: 0.95;
 }
-.pathVerb {
-  grid-column: 1 / span 4;
-  font-size: clamp(1.8rem, 1.1rem + 2.6vw, 3.8rem);
+.form {
+  grid-column: 7 / span 6;
+  display: grid;
+  gap: 1.75rem;
+  padding-top: 0.5rem;
 }
-.pathWhat {
-  grid-column: 5 / span 4;
-  font-size: 1rem;
-  color: var(--charcoal);
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
 }
-.pathLinks {
-  grid-column: 9 / span 4;
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.55rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  outline: none;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+  background-position: calc(100% - 10px) 55%, calc(100% - 5px) 55%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 1.5rem;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-bottom-color: var(--ink);
+  box-shadow: 0 1px 0 0 var(--ink);
+}
+.formFoot {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem 2rem;
+  margin-top: 0.5rem;
 }
-@media (max-width: 880px) {
-  .path {
-    row-gap: 0.6rem;
-  }
-  .pathVerb,
-  .pathWhat,
-  .pathLinks {
-    grid-column: 1 / -1;
-  }
-  .pathLinks {
-    justify-content: flex-start;
-    margin-top: 0.25rem;
-  }
+.submit {
+  padding-top: 0;
+  padding-inline: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
 }
-.bioRow {
-  margin-top: clamp(4rem, 3rem + 4vw, 7rem);
-  padding-top: 2rem;
-  border-top: 1px solid var(--rule-strong);
-  row-gap: 1.5rem;
-}
-.bio {
-  grid-column: 1 / span 6;
-  max-width: 32rem;
-}
-.contact {
-  grid-column: 9 / span 4;
-  display: grid;
-  gap: 0.9rem;
-  justify-items: start;
-}
-.contactPending {
+.pendingNote {
   font-size: 0.625rem;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -882,23 +1189,19 @@
   padding: 0.3em 0.6em;
   border: 1px dashed var(--rule-strong);
 }
-.closing {
-  margin-top: clamp(4rem, 3rem + 4vw, 7rem);
-  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.6rem);
-  line-height: 1.15;
-  max-width: 20em;
-}
 @media (max-width: 880px) {
-  .bio,
-  .contact {
+  .contactFor,
+  .form {
     grid-column: 1 / -1;
+  }
+  .formRow {
+    grid-template-columns: 1fr;
   }
 }
 
 /* ── Pie ───────────────────────────────────────────────── */
 .footer {
-  margin-top: clamp(3rem, 2rem + 3vw, 5rem);
-  padding-block: 1.5rem 2rem;
+  padding-block: 1.75rem 2rem;
   border-top: 1px solid var(--rule-strong);
   display: flex;
   flex-wrap: wrap;
@@ -935,7 +1238,13 @@
 @media (prefers-reduced-motion: reduce) {
   .link svg,
   .leadTitle,
-  .postTitle {
+  .pieceFirstTitle,
+  .pieceTitle,
+  .leadPhoto img,
+  .reelCover img,
+  .ctl,
+  .talkRow,
+  .talkPlay svg {
     transition: none;
   }
 }
