@@ -81,16 +81,16 @@
       "label": "Testimony",
       "items": [
         {
-          "n": "1,500<sup>+</sup>",
-          "k": "Cases with deposition or trial testimony"
+          "n": "6,750",
+          "k": "Cases reviewed"
         },
         {
-          "n": "550<sup>+</sup>",
+          "n": "637",
           "k": "Trials"
         },
         {
-          "n": "29",
-          "k": "States, plus the U.S. Virgin Islands"
+          "n": "39",
+          "k": "States and territories, including the U.S. Virgin Islands"
         }
       ],
       "more": {
@@ -214,6 +214,7 @@
       "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
       "contact": {
         "email": "biffpett@gmail.com",
+        "cell": "(561) 346-7828",
         "phone": "(561) 622-0330",
         "city": "Palm Beach Gardens, Florida"
       },
@@ -364,7 +365,11 @@
         "href": "https://igniteyourself.co/",
         "logo": "/pettingill/assets/igy-logo.png",
         "link": "Discover Ignite Yourself",
-        "note": "A private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Dr. Pettingill, and it is not indexed or distributed."
+        "note": "A private concept by Ignite Yourself, prepared from public information for Dr. Pettingill’s review. Photography is illustrative art direction, to be replaced by a commissioned portrait session. This is not an official website: it has not been reviewed or approved by Dr. Pettingill, and it is not indexed or distributed.",
+        "prop": {
+          "t": "View your proposal",
+          "h": "/pettingill/proposal"
+        }
       },
       "kick": "Forensic Economist · Expert Witness",
       "sub": "The economics of injury, loss and future care. <t>Since 1985.</t>",

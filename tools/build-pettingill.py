@@ -6,7 +6,7 @@
 #   tally   — el listado testimonial contado por ano, con tabla accesible
 #   pubs    — publicaciones con autor, revista, identificador y registro externo
 # Todo el texto vive en pettingill/content.json; este script solo reparte y deriva.
-import json, re, os, copy
+import json, re, os, copy, shutil
 
 TPL = '/home/user/ignite-yourself-operations/clients/jorge-arce/mark-cooke/index.html'
 DST = '/home/user/ignite-yourself-operations/clients/jorge-arce/pettingill'
@@ -125,6 +125,7 @@ PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
     '<div class="pf-row wr" data-r1>'+
       '<ul class="pf-contact">'+
         (c.email?'<li><a href="mailto:'+esc(c.email)+'">'+esc(c.email)+'</a></li>':'')+
+        (c.cell?'<li><a href="tel:'+esc(c.cell.replace(/[^0-9+]/g,''))+'">Cell '+esc(c.cell)+'</a></li>':'')+
         (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
         (c.city?'<li>'+esc(c.city)+'</li>':'')+
       '</ul>'+
@@ -145,9 +146,14 @@ PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
     '<div class="igy-id wr"><span class="smallcap">'+esc(s.igy.label)+'</span>'+
       '<a href="'+esc(s.igy.href)+'" target="_blank" rel="noopener"><img src="'+esc(s.igy.logo)+'" alt="Ignite Yourself"></a>'+
       '<a class="igylink" href="'+esc(s.igy.href)+'" target="_blank" rel="noopener">'+esc(s.igy.link)+'</a></div>'+
-    '<p class="igy-note wr">'+esc(s.igy.note)+'</p>'+
+    '<p class="igy-note wr">'+esc(s.igy.note)+
+      (s.igy.prop?' <a class="igyprop-link" href="'+esc(s.igy.prop.h)+'">'+esc(s.igy.prop.t)+' &rarr;</a>':'')+'</p>'+
   '</div></section>':'')}"""
 base = sub1(r"'<footer class=\"kfoot\"><div class=\"wrap\">'\+.*?'</div></footer>'\}", lambda m: PFOOT, base, flags=re.S, tag='pfoot')
+# -------- contacto de la consulta: el celular primero, con enlace
+base = sub1(r"'<div class=\"rmeta\">'\+\[c\.phone,c\.city\]",
+            lambda m: """'<div class="rmeta">'+(c.cell?'<span><a href="tel:'+esc(c.cell.replace(/[^0-9+]/g,''))+'">Cell '+esc(c.cell)+'</a></span>':'')+[c.phone,c.city]""",
+            base, tag='cell')
 SOCJS = """var SOC={
   linkedin:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
   facebook:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
@@ -1432,6 +1438,37 @@ def topbar_html(active):
             f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/pettingill#inquiry"}" style="color:#fff">Discuss a matter</a>'
             f'<nav class="tbot" aria-label="Primary">{tabs}</nav></div>')
 
+# ------------------------------------------------------------- 7b. propuesta
+# Igual que en Brant: con proposal.active en true se publica /pettingill/proposal
+# (desde prospecting/pettingill/propuesta/web), con el boton fijo en todas las paginas
+# y el enlace en la nota de Ignite. En false se quitan la carpeta y los accesos.
+P = full.get('proposal', {})
+PROP_SRC = '/home/user/ignite-yourself-operations/prospecting/pettingill/propuesta/web'
+PROP_CSS = """<style>
+/* propuesta de Ignite: boton fijo y enlace de la nota (solo con proposal.active) */
+.igyprop{position:fixed;right:22px;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:60;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 6px;
+  border-radius:999px;background:#080807;color:#fff;font:600 14px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.005em;text-decoration:none;
+  box-shadow:0 10px 30px rgba(8,8,7,.28),0 0 0 1px rgba(255,255,255,.1) inset;animation:igyprop-in .7s cubic-bezier(.2,.7,.2,1) 1.2s both;transition:background .25s,transform .25s}
+.igyprop:hover{background:#FF6A00;transform:translateY(-2px)}
+.igyprop-i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#FF9A2E 0%,#FF6A00 60%,#C94A04 100%)}
+.igyprop-i img{width:18px;height:auto}
+.igyprop i{font-style:normal;opacity:.8}
+@keyframes igyprop-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.igy-note .igyprop-link{display:inline-block;margin-left:4px;color:#fff;text-decoration:none;border-bottom:1px solid #FF6A00}
+@media print{.igyprop{display:none}}
+@media(prefers-reduced-motion:reduce){.igyprop{animation:none}}
+@media(max-width:860px){
+  .igyprop{right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);height:44px;font-size:13px;padding-right:15px}
+  .igyprop-i{width:32px;height:32px}}
+</style>"""
+if P.get('active'):
+    S['inquiry']['igy']['prop'] = {'t': P['link'], 'h': P['href']}
+    PROP_HTML = (f'<a class="igyprop" href="{P["href"]}">'
+                 '<span class="igyprop-i"><img src="/pettingill/proposal/assets/spark.png" alt=""></span>'
+                 f'<span>{P["button"]}</span><i aria-hidden="true">&rarr;</i></a>')
+    base = sub1(r'<body>', lambda m: '<body class="hasprop">\n' + PROP_HTML, base, tag='prop')
+    base = sub1(r'</head>', lambda m: PROP_CSS + '\n</head>', base, tag='prop-css')
+
 # ---------------------------------------------------------- 8. reparto por pagina
 def deep(k):
     return copy.deepcopy(S[k])
@@ -1480,7 +1517,7 @@ PAGES = {
         [deep('practice-open'), deep('routes'), deep('engage'), deep('disclosure'),
          dict(NX('Next', 'Testimony', 'Depositions and trials since 2017.', '/pettingill/testimony'), alt=ALT), foot()], sub=True),
     'testimony': page(T_TE,
-        'More than 1,500 cases with deposition or trial testimony, in 29 states and the U.S. Virgin Islands.',
+        '6,750 cases reviewed and 637 trials, in 39 states and territories, including the U.S. Virgin Islands.',
         [deep('testimony-open'), deep('listing'),
          dict(NX('Next', 'Publications', 'Papers from 1979 to 2025.', '/pettingill/research'), alt=ALT), foot()], sub=True),
     'research': page(T_PU,
@@ -1520,4 +1557,8 @@ derive('/pettingill/practice.json', T_PR, URL + '/practice', DST + '/practice', 
 derive('/pettingill/testimony.json', T_TE, URL + '/testimony', DST + '/testimony', 'testimony')
 derive('/pettingill/research.json', T_PU, URL + '/research', DST + '/research', 'research')
 derive('/pettingill/record.json', T_CV, URL + '/record', DST + '/record', 'record')
-print('pettingill listo')
+if P.get('active'):
+    shutil.copytree(PROP_SRC, f'{DST}/proposal', dirs_exist_ok=True)
+elif os.path.isdir(f'{DST}/proposal'):
+    shutil.rmtree(f'{DST}/proposal')
+print('pettingill listo' + (' · propuesta publicada' if P.get('active') else ''))
