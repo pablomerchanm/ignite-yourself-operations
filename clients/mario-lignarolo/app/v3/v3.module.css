@@ -681,7 +681,63 @@
   display: none;
 }
 
-/* ── 04 · Hipertrofia del Ser (negro) ──────────────────── */
+/* ── 04 · Hipertrofia del Ser (negro) ────────────────────
+   Una publicación con identidad propia. Símbolo: anillos de crecimiento,
+   tangentes en la base, cada uno φ veces el anterior (HdsSymbol.tsx).
+   Cabecera: el nombre en dos voces, HIPERTROFIA en versal espaciada (el
+   cuerpo, la estructura) y «del Ser» en itálica (lo que crece dentro). */
+.hdsCover {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+.hdsSymbol {
+  display: block;
+  width: min(36svh, 30vw);
+  height: auto;
+  aspect-ratio: 1;
+  overflow: visible;
+  color: var(--on-dark);
+}
+.hdsSymbol circle {
+  transform-box: view-box;
+  transform-origin: 50px 98px;
+}
+/* los anillos crecen desde la base, uno tras otro, con el scroll */
+:global(html.v3-motion) .hdsSymbol[data-progress] circle {
+  --x: clamp(0, (var(--p, 1) - var(--d, 0)) / 0.4, 1);
+  transform: scale(calc(var(--x) * (2 - var(--x))));
+}
+.hdsMast {
+  margin: var(--s-block) 0 0;
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 0.9rem + 4.8vw, 6.75rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.hdsMastName {
+  display: block;
+  /* el espaciado de la última letra, devuelto para que centre */
+  margin-right: -0.14em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.hdsMastDel {
+  display: block;
+  margin-top: 0.14em;
+  font-size: 0.62em;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+.hdsBy {
+  margin: 1.5rem 0 0;
+  font-size: var(--t-ui);
+  color: var(--on-dark-soft);
+}
+.hdsCover + .displayHead {
+  margin-top: var(--s-section);
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -698,17 +754,23 @@
   aspect-ratio: 16 / 9;
   margin-bottom: 0.8rem;
 }
+/* portadas en blanco y negro, como una sola publicación; el color, al pasar */
 .cardPhoto img {
-  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+  filter: grayscale(1) contrast(1.06);
+  transition:
+    transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1),
+    filter 0.6s ease;
 }
 .cardLink:hover .cardPhoto img {
   transform: scale(1.03);
+  filter: none;
 }
 .cardTitle {
   margin: 0;
-  font-size: var(--t-h3);
-  font-weight: 500;
-  line-height: 1.18;
+  font-family: var(--serif);
+  font-size: var(--t-lead);
+  font-weight: 400;
+  line-height: 1.12;
   letter-spacing: -0.015em;
   text-wrap: balance;
 }
@@ -740,16 +802,17 @@
   margin-top: 1rem;
   text-align: left;
 }
-.subPub img.subLogo {
+.subLogo {
   display: block;
+  flex: none;
   width: 36px;
   height: 36px;
-  filter: none;
+  color: var(--on-dark);
 }
 .subName {
   display: block;
-  font-size: var(--t-ui);
-  font-weight: 500;
+  font-family: var(--serif);
+  font-size: var(--t-body);
   line-height: 1.3;
 }
 .subForm {
@@ -1456,6 +1519,12 @@
     margin-inline: calc(-1 * var(--gutter));
     max-height: none;
     aspect-ratio: 4 / 5;
+  }
+  .hdsSymbol {
+    width: min(62vw, 300px);
+  }
+  .hdsMast {
+    font-size: 9.6vw;
   }
   .cards {
     grid-template-columns: 1fr;

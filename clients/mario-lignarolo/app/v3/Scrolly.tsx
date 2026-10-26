@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 /**
  * Motor de scrollytelling de /v3 (método del estudio: skill «scrollytelling»).
- * Vanilla, sin dependencias, un solo bucle rAF. Dos piezas:
+ * Vanilla, sin dependencias, un solo bucle rAF. Tres piezas:
  *
  *  1. [data-scrub="0.7"]  Las palabras (.sw) se encienden cuando cruzan la
  *     línea de lectura (fracción del alto de pantalla). Sin pin: el texto
@@ -15,6 +15,9 @@ import { useEffect } from "react";
  *  2. [data-pin="3"]  La escena se fija (solo en escritorio) durante N
  *     pantallas; los pasos [data-step] se encienden de uno en uno y, al final,
  *     aparece [data-after]. Misma barra de progreso.
+ *
+ *  3. [data-parallax], [data-zoom] y [data-progress]: desplazamiento de
+ *     fotos y una variable --p (0 → 1) para lo que el CSS quiera animar.
  *
  * Con prefers-reduced-motion, o sin JavaScript, todo queda visible y quieto:
  * los estados apagados solo existen bajo html.v3-motion.
@@ -64,6 +67,15 @@ export default function Scrolly() {
       // [data-zoom="0.07"]: se acerca de 1,07 a 1 mientras cruza la pantalla
       z: parseFloat(el.dataset.zoom || "0") || 0,
       root: (el.closest("header, section") as HTMLElement) || el,
+    }));
+    /* Progreso (todas las pantallas): [data-progress="0.7"] recibe --p, de 0
+       cuando su borde superior asoma por abajo a 1 tras recorrer esa fracción
+       de pantalla. Qué hacer con --p lo decide el CSS (los anillos de
+       Hipertrofia del Ser). */
+    const prog = Array.from(document.querySelectorAll<HTMLElement | SVGElement>("[data-progress]")).map((el) => ({
+      el,
+      span: parseFloat(el.dataset.progress || "0.7") || 0.7,
+      p: -1,
     }));
     const pins: Pin[] = Array.from(document.querySelectorAll<HTMLElement>("[data-pin]")).map((el) => ({
       el,
@@ -126,6 +138,15 @@ export default function Scrolly() {
         const pass = clamp((vh - r.top) / (vh + r.height), 0, 1);
         const zoom = p.z ? ` scale(${(1 + p.z * (1 - pass)).toFixed(4)})` : "";
         p.el.style.transform = `translate3d(0, ${(-r.top * p.f).toFixed(1)}px, 0)${zoom}`;
+      }
+
+      for (const g of prog) {
+        const r = g.el.getBoundingClientRect();
+        const p = Math.round(clamp((vh - r.top) / (vh * g.span), 0, 1) * 1000) / 1000;
+        if (p !== g.p) {
+          g.p = p;
+          g.el.style.setProperty("--p", String(p));
+        }
       }
 
       for (const g of groups) {

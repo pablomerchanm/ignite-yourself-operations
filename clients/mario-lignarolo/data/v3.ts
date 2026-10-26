@@ -95,6 +95,10 @@ export const v3 = {
   /* 04 · HIPERTROFIA DEL SER — [SPEC] copy; [REAL] piezas del archivo público. */
   hipertrofia: {
     label: "Hipertrofia del Ser",
+    // [PROPUESTA] cabecera de la publicación (pedida por Pablo, 26 oct): el nombre
+    // en dos voces —HIPERTROFIA en versal espaciada, «del Ser» en itálica— bajo
+    // su símbolo (app/v3/HdsSymbol.tsx; originales en marca/hipertrofia/).
+    masthead: ["Hipertrofia", "del Ser"],
     headline: ["El cuerpo se entrena.", "El ser también."],
     paragraphs: [
       "Hipertrofia del Ser es el espacio donde desarrollo ideas sobre autoimagen, consciencia, cuerpo, propósito, emprendimiento y expansión personal.",
@@ -118,10 +122,11 @@ export const v3 = {
       label: "Suscríbete en Substack",
       // [PROPUESTA] la única línea nueva de este módulo; pendiente de Pablo.
       headline: "Cada entrada, en tu correo.",
-      // [REAL] nombre, autor y logo de la publicación en Substack.
+      // [REAL] nombre y autor de la publicación en Substack. En lugar de su logo
+      // (public/mario/substack/logo.png), el símbolo propuesto: [PROPUESTA] si Mario
+      // lo aprueba, cambiarlo también en Substack.
       name: "Hipertrofia del Ser",
       by: "Por Mario Lignarolo",
-      logo: "/mario/substack/logo.png",
       action: `${substack}/api/v1/free?nojs=true`,
       // [REAL] textos del propio widget de Substack en español.
       placeholder: "Escribe tu correo electrónico...",

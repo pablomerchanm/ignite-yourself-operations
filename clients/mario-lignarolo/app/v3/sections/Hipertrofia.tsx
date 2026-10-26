@@ -1,22 +1,34 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
-import { Arrow, Paragraphs, SectionHead, Words, ext } from "./ui";
+import HdsSymbol from "../HdsSymbol";
+import { Arrow, Paragraphs, Words, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 04 · HIPERTROFIA DEL SER, en negro, como el bloque de entrevistas de
- * Nike About. El titular en condensada: «El cuerpo se entrena.» entra
- * entero y «El ser también.» se enciende con el scroll. El copy en la
- * columna de lectura; seis entradas reales de Substack con sus portadas,
- * todas al mismo tamaño; al cierre, una suscripción discreta.
+ * 04 · HIPERTROFIA DEL SER, en negro: una publicación con identidad propia.
+ * Abre como la portada de una revista —su símbolo, que crece con el scroll,
+ * y su cabecera—; después, el titular en condensada («El ser también.» se
+ * enciende con el scroll) y el copy en la columna de lectura. Seis entradas
+ * reales de Substack, todas al mismo tamaño, con títulos en serif y portadas
+ * en blanco y negro (el color vuelve al pasar el ratón); al cierre, una
+ * suscripción discreta con el símbolo.
  */
 export default function Hipertrofia() {
   const { hipertrofia: h } = v3;
   return (
     <section className={`${s.dark} ${s.pub}`} id="hipertrofia" aria-labelledby="pub-h">
       <div className={`${s.wrap} ${s.section}`}>
-        <SectionHead label={h.label} />
+        <div className={s.hdsCover}>
+          <HdsSymbol grow className={s.hdsSymbol} />
+          <p className={s.hdsMast} data-reveal="up">
+            <span className={s.hdsMastName}>{h.masthead[0]}</span>{" "}
+            <span className={s.hdsMastDel}>{h.masthead[1]}</span>
+          </p>
+          <p className={s.hdsBy} data-reveal="up" style={{ "--delay": "0.15s" } as CSSProperties}>
+            {h.subscribe.by}
+          </p>
+        </div>
         <h2 className={`${s.statement} ${s.displayHead}`} id="pub-h" data-scrub="0.82">
           <span className={s.line}>{h.headline[0]}</span>
           <span className={s.line}>
@@ -55,7 +67,7 @@ export default function Hipertrofia() {
           <p className={s.small}>{h.subscribe.label}</p>
           <p className={s.subHead}>{h.subscribe.headline}</p>
           <div className={s.subPub}>
-            <Image src={h.subscribe.logo} alt="" width={36} height={36} className={s.subLogo} />
+            <HdsSymbol variant="small" className={s.subLogo} />
             <span>
               <span className={s.subName}>{h.subscribe.name}</span>
               <span className={s.small}>{h.subscribe.by}</span>
