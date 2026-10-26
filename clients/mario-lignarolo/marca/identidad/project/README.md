@@ -78,11 +78,12 @@ Cuatro voces, cada una con un trabajo:
 | --- | --- | --- | --- |
 | Póster | Archivo Condensed 800 | `poster-xl`, `poster`, `poster-s` | Statements y carteles, siempre en versal |
 | Titular y texto | Geist 400–700 | `display`, `statement`, `lead`, `title`, `seccion`, `body`, `body-s`, `ui` | Titulares de sección, manifiesto, lectura, interfaz |
-| Voz | Newsreader (tamaño óptico) e itálica | `voz-xl`, `voz`, `voz-italica`, `voz-s` | Las palabras de Mario: banners, titulares íntimos, preguntas, entradas |
+| Voz | Cormorant Garamond 500–600 e itálica | `voz-xl`, `voz`, `voz-italica`, `voz-s` | Las palabras de Mario: banners, titulares íntimos, preguntas, entradas |
 | Dato | Geist Mono 400–500 | `label`, `label-s` | Fechas, duraciones, contadores, índices |
 
 - **Medidas:** los tamaños de los estilos son a 1440 px. Los grandes crecen con el ancho, y cada estilo indica en su nota su tamaño en móvil.
 - **Familias por bloque:** como mucho tres. El póster no comparte bloque con un `display`: o grita la condensada, o habla la grotesca.
+- **Contraste de voces:** Archivo y Geist ponen el peso; Cormorant Garamond pone la elegancia. Por eso la serif nunca va en negrita fuerte: 500 en titulares e itálica, 600 sobre foto y en títulos pequeños.
 - **Tracking:** negativo en titulares (`display` −0,045em, `statement` −0,03em) y positivo solo en el dato (+0,06em).
 - **Medida de lectura:** `body` en la columna de lectura, con un máximo de 36em. El manifiesto, 21em.
 - **Licencias:** las fuentes son libres (SIL OFL). Archivo Condensed es la instancia de Archivo variable con anchura 66.

@@ -15,14 +15,14 @@ Un núcleo macizo (el ser) y cuatro anillos tangentes en la base. Cada anillo mi
 
 El nombre se escribe en dos voces:
 
-- **HIPERTROFIA:** Newsreader 400 en versal, espaciado +14 %. Es la estructura, el cuerpo.
-- ***del Ser*:** Newsreader Itálica 300 al 62 % del cuerpo de la versal. Es lo que crece dentro.
+- **HIPERTROFIA:** Cormorant Garamond 500 en versal, espaciado +14 %. Es la estructura, el cuerpo.
+- ***del Ser*:** Cormorant Garamond Itálica 500 al 62 % del cuerpo de la versal. Es lo que crece dentro.
 
 Hay dos composiciones: `hds-logo-vertical-*` (símbolo encima, centrada) y `hds-logo-horizontal-*` (símbolo a la izquierda). El texto va en contornos, así que no necesitan la fuente.
 
 ## Color
 
-Solo negro `#0E0F12` y blanco cálido `#F2F0EB`. Cada SVG tiene un único relleno.
+Solo negro `#0B0B0A` y hueso `#ECEBE6`, los de la identidad (`marca/identidad/`). Cada SVG tiene un único relleno.
 
 ## Archivos
 

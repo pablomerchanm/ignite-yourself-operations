@@ -1,6 +1,6 @@
 # Voz
 
-La serif (Newsreader) es la voz de Mario. Se usa en tres sitios:
+La serif (Cormorant Garamond) es la voz de Mario. Se usa en tres sitios:
 
 - **`voz`:** titulares en primera persona, más íntimos que `display` (Origen, Emprendimiento).
 - **`voz-italica`:** las preguntas y los silencios. Van centradas, con mucho aire (`space-10`) alrededor.

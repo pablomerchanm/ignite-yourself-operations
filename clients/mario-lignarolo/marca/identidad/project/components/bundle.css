@@ -315,7 +315,7 @@
   display: grid;
   grid-template-columns: calc(var(--x, 50%) - var(--w, 36%) / 2) var(--w, 36%) 1fr;
   align-items: center;
-  font-size: 6.9cqw;
+  font-size: 7.7cqw;
   text-shadow: 0 0 0.6em rgba(11, 11, 10, 0.28);
 }
 .ml-banner-frase > :first-child {

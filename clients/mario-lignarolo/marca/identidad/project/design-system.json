@@ -45,26 +45,26 @@
     },
     "hds-logo-horizontal-blanco.svg": {
      "name": "hds-logo-horizontal-blanco.svg",
-     "blob": "e4587232d0bed61f2ab26ad81990c0ae",
-     "size": 11368,
+     "blob": "1a91df9194c54d42dfcaa7b07436cc6d",
+     "size": 17208,
      "type": "image/svg+xml"
     },
     "hds-logo-horizontal-negro.svg": {
      "name": "hds-logo-horizontal-negro.svg",
-     "blob": "656651b09c6f637a9a04fe72d9c949f0",
-     "size": 11368,
+     "blob": "892082dd17d78d3c8517d481618686d4",
+     "size": 17208,
      "type": "image/svg+xml"
     },
     "hds-logo-vertical-blanco.svg": {
      "name": "hds-logo-vertical-blanco.svg",
-     "blob": "f3e6c2c1afad8d596d9e4895ca6c2c07",
-     "size": 12177,
+     "blob": "98dbae11a49c7809eb56a8768c3c5c4c",
+     "size": 19400,
      "type": "image/svg+xml"
     },
     "hds-logo-vertical-negro.svg": {
      "name": "hds-logo-vertical-negro.svg",
-     "blob": "905c40fe737b8d1cdb009097f4718e93",
-     "size": 12177,
+     "blob": "31d853ea7b06e8927901d7164db23701",
+     "size": 19400,
      "type": "image/svg+xml"
     },
     "hds-simbolo-blanco.svg": {
@@ -195,7 +195,7 @@
  "lastChange": {
   "by": "Pablo",
   "via": "Claude Code",
-  "at": "2026-10-26T17:01:14Z",
-  "note": "Primera versión de la identidad: mezcla de Nike About y Monolog."
+  "at": "2026-10-26T17:13:15Z",
+  "note": "La voz pasa a Cormorant Garamond (elección de Pablo); cabeceras de Hipertrofia del Ser redibujadas con ella."
  }
 }
