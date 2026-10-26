@@ -1,36 +1,54 @@
 /* ════════════════════════════════════════════════════════════
    ITERACIÓN /v3 — según marca/HOMEPAGE-SPEC-v1.md
    Referencia visual principal: Nike About (about.nike.com).
-   · tres voces: grotesk condensada extra-negra (Archivo) para los
-     statements, que ocupan la altura y se montan sobre la imagen;
-     sans neutra (Inter Tight) para títulos de sección en caja baja,
-     navegación, cuerpo y metadatos; serif (Instrument) para los
-     titulares editoriales y lo que Mario dice en voz baja
-   · sin filetes ni rótulos diminutos: el aire ordena; títulos de sección
-     a tamaño humano y peso regular («Our Mission», «Short Stories»)
-   · imagen dura, sin radios ni sombras; grids asimétricos
-   · alternancia de blanco cálido y casi negro; azul profundo solo en
-     Psicocibernética; fotografía con tono de película y un grano leve
-   · módulo aislado: no toca globals.css ni la home
+
+   SISTEMA
+   · Color: blanco y negro. Negro protagonista (hero, Psicocibernética,
+     Hipertrofia del Ser, Conversaciones, pie) y blanco cálido entre medias.
+     Sin azul ni acentos de color: el color lo ponen las fotos.
+   · Tres voces tipográficas, cada una con un solo trabajo:
+       display  Archivo condensada extra-negra, caja alta → statements
+       sans     Inter Tight → títulos de sección (caja baja, regular),
+                navegación, títulos de tarjeta, cuerpo y metadatos
+       serif    Instrument → wordmark, titulares serif y la voz baja
+   · Escala tipográfica cerrada (tokens --t-*) y tres distancias
+     (tokens --s-*). Nada se dimensiona fuera de ellas.
+   · Sin filetes ni rótulos diminutos: el aire ordena. Imagen dura, sin
+     radios ni sombras. Fotografía con tono de película y un grano leve.
+   · Módulo aislado: no toca globals.css ni la home.
    ════════════════════════════════════════════════════════════ */
 
 .page {
+  /* color */
   --paper: #f5f4f0;
-  --paper-2: #ebe9e4;
   --ink: #111214;
+  --black: #0e0f12;
+  --black-2: #0a0b0d;
   --charcoal: #2b2e34;
   --stone: #6f7177;
-  --rule: rgba(17, 18, 20, 0.14);
   --rule-strong: rgba(17, 18, 20, 0.6);
-  --black: #0e0f12;
-  --deep: #0a1020;
-  --deep-2: #0f1a3c;
-  --blue: #2b49cf;
   --on-dark: #f2f0eb;
   --on-dark-soft: #9b9ea6;
   --rule-dark: rgba(242, 240, 235, 0.16);
+
+  /* escala tipográfica */
+  --t-display: clamp(3rem, 0.6rem + 9.4vw, 11rem); /* statements de apertura */
+  --t-display-s: clamp(2rem, 0.9rem + 4vw, 5rem); /* conceptos, contacto */
+  --t-serif: clamp(2rem, 1.2rem + 3vw, 4.25rem); /* titulares serif */
+  --t-serif-s: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem); /* la voz baja, en itálica */
+  --t-title: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); /* título de sección */
+  --t-card: clamp(1.25rem, 1.1rem + 0.7vw, 1.75rem); /* títulos de tarjeta */
+  --t-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem); /* párrafo de entrada */
+  --t-body: 1.0625rem;
+  --t-small: 0.875rem;
+
+  /* distancias */
+  --s-section: clamp(4rem, 3rem + 5vw, 8rem); /* respiro de cada sección */
+  --s-title: clamp(1.5rem, 1rem + 2vw, 3rem); /* del título al contenido */
+  --s-block: clamp(2.5rem, 2rem + 3vw, 5rem); /* entre bloques */
   --gutter: clamp(1.25rem, 0.5rem + 3.2vw, 4.5rem);
   --gap: clamp(1rem, 0.5rem + 1.5vw, 2rem);
+
   --sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
   --serif: var(--font-instrument), "Times New Roman", serif;
   --display: var(--font-archivo), "Arial Narrow", Impact, sans-serif;
@@ -39,6 +57,7 @@
   color: var(--ink);
   font-family: var(--sans);
   font-weight: 400;
+  font-size: var(--t-body);
   line-height: 1.5;
   overflow-x: clip;
 }
@@ -60,7 +79,7 @@
   inset: 0;
   z-index: 40;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.3;
   mix-blend-mode: soft-light;
   background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 200px 200px;
@@ -81,7 +100,7 @@
 /* Título de sección: caja baja, peso regular, tamaño humano. */
 .title {
   margin: 0;
-  font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
+  font-size: var(--t-title);
   font-weight: 450;
   line-height: 1.2;
   letter-spacing: -0.015em;
@@ -97,23 +116,50 @@
   letter-spacing: 0;
   text-transform: uppercase;
 }
+/* Titular serif y la voz baja en itálica. */
+.serifHead {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--t-serif);
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.quiet {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--t-serif-s);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+.lead {
+  margin: 0;
+  font-size: var(--t-lead);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
 .body {
   margin: 0;
-  font-size: 1rem;
+  font-size: var(--t-body);
   line-height: 1.6;
   color: var(--charcoal);
 }
 /* Metadatos: gris, caja baja, sin interletrado. */
 .small {
   margin: 0;
-  font-size: 0.8125rem;
+  font-size: var(--t-small);
   font-weight: 400;
   line-height: 1.4;
   color: var(--stone);
 }
 .dek {
-  margin: 0.75rem 0 0;
-  font-size: 1rem;
+  display: block;
+  margin: 0.5rem 0 0;
+  font-size: var(--t-body);
   line-height: 1.5;
   color: var(--stone);
   max-width: 30em;
@@ -122,7 +168,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
-  font-size: 0.9375rem;
+  font-size: var(--t-body);
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: -0.005em;
@@ -145,7 +191,7 @@
   display: block;
   margin: 0;
   overflow: hidden;
-  background: var(--paper-2);
+  background: #e8e6e1;
 }
 .photo img {
   object-fit: cover;
@@ -155,10 +201,11 @@
   align-items: flex-end;
   padding: 0.75rem;
   border: 1px dashed var(--rule-strong);
-  font-size: 0.6875rem;
+  font-size: var(--t-small);
   line-height: 1.3;
   color: var(--stone);
 }
+/* Texto sobre negro */
 .dark {
   background: var(--ink);
   color: var(--on-dark);
@@ -169,6 +216,22 @@
 }
 .dark .body {
   color: var(--on-dark);
+}
+.dark .photo {
+  background: #1a1b1e;
+}
+
+/* Copy de sección: columna de lectura con su enlace */
+.copy {
+  display: grid;
+  gap: 1.1rem;
+  justify-items: start;
+}
+.copy .body {
+  max-width: 34em;
+}
+.copy .link {
+  margin-top: 0.5rem;
 }
 
 /* ── Aviso de borrador ─────────────────────────────────── */
@@ -197,7 +260,6 @@
   padding: 1.4rem var(--gutter);
   color: var(--on-dark);
 }
-/* La firma, como el «About» de Nike: serif en caja baja. */
 .wordmark {
   font-family: var(--serif);
   font-weight: 400;
@@ -237,8 +299,8 @@
    Campo casi negro. Arriba, el territorio como rótulo; el statement en
    siete líneas de grotesk condensada ocupa la altura; abajo, la firma en
    serif. El retrato vive en el 66 % derecho, fundido en el negro por la
-   izquierda, con la cara en el tercio derecho (x ≈ 54–89 %): el texto se
-   monta sobre la parte oscura de la foto y nunca sobre la cara. */
+   izquierda, con la cara en el tercio derecho: el texto se monta sobre la
+   parte oscura de la foto y nunca sobre la cara. */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -256,7 +318,7 @@
 .heroPhoto img {
   object-fit: cover;
   object-position: 30% 20%;
-  filter: saturate(0.5) brightness(0.9) contrast(1.06) sepia(0.05);
+  filter: saturate(0.4) brightness(0.9) contrast(1.08) sepia(0.05);
   transform: scale(1.04);
   transform-origin: 60% 30%;
 }
@@ -296,9 +358,10 @@
   position: relative;
   z-index: 2;
   margin: 0;
-  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem);
+  font-size: var(--t-title);
   font-weight: 450;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 .heroStatement {
   position: relative;
@@ -308,7 +371,7 @@
   font-weight: 850;
   font-stretch: 70%;
   font-variation-settings: "wdth" 70;
-  font-size: min(11.6vh, 8.4vw);
+  font-size: min(11.6vh, 8.4vw); /* la única medida fuera de la escala: la manda la altura */
   line-height: 0.86;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -323,7 +386,7 @@
   padding-top: 1.5rem;
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(1.25rem, 1rem + 1vw, 2rem);
+  font-size: var(--t-title);
   line-height: 1;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -375,54 +438,35 @@
   }
 }
 
-/* ── 02 · Territorio / Origen ──────────────────────────────
-   Papel y aire. Título de sección, titular serif, copy en columna, la
-   pregunta final en itálica grande; la foto, alta, sangra por la derecha. */
+/* ── 02 · Territorio / Origen (blanco) ─────────────────────
+   Título de sección, titular serif, copy en columna, la pregunta final en
+   itálica; la foto, alta, sangra por la derecha. */
 .origen {
-  padding-block: clamp(4rem, 3rem + 6vw, 9rem) clamp(5rem, 3.5rem + 6vw, 10rem);
+  padding-block: var(--s-section);
 }
 .origenHead {
-  margin: clamp(1.5rem, 1rem + 2vw, 3rem) 0 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(2.3rem, 1.2rem + 4.4vw, 6.2rem);
-  line-height: 1;
-  letter-spacing: -0.015em;
-  max-width: 13.5em;
-  text-wrap: balance;
+  margin-top: var(--s-title);
+  max-width: 14em;
 }
 .origenGrid {
-  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
+  margin-top: var(--s-block);
   align-items: start;
-  row-gap: 2.5rem;
+  row-gap: var(--s-block);
 }
 .origenCopy {
   grid-column: 1 / span 6;
   display: grid;
   gap: 1.25rem;
-  padding-top: 0.5rem;
+}
+.origenCopy .lead {
+  max-width: 22em;
 }
 .origenCopy .body {
-  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
-  line-height: 1.55;
-  max-width: 32em;
+  max-width: 34em;
 }
-.origenLead {
-  margin: 0;
-  font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  max-width: 20em;
-}
-.origenQuestion {
-  margin: 1.5rem 0 0;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.8rem, 1.2rem + 2.4vw, 3.6rem);
-  line-height: 1.06;
-  max-width: 15em;
-  text-wrap: balance;
+.origenCopy .quiet {
+  margin-top: 1rem;
+  max-width: 16em;
 }
 .origenPhoto {
   grid-column: 8 / -1;
@@ -441,82 +485,41 @@
   }
 }
 
-/* ── 03 · Psicocibernética ─────────────────────────────────
-   Un mundo propio: azul profundo a sangre, un resplandor que respira, el
-   titular en condensada, el retrato sangrando por la izquierda y los
-   conceptos apilados en grande. */
+/* ── 03 · Psicocibernética (negro) ─────────────────────────
+   Un mundo propio en negro puro: el titular en condensada, el retrato en
+   blanco y negro sangrando por la izquierda, los conceptos apilados. */
 .psico {
-  position: relative;
-  overflow: hidden;
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem) clamp(6rem, 4rem + 8vw, 12rem);
-  background: linear-gradient(180deg, var(--deep) 0%, var(--deep-2) 48%, var(--deep) 100%);
+  padding-block: var(--s-section);
+  background: var(--black-2);
   color: var(--on-dark);
 }
-.psico::before {
-  content: "";
-  position: absolute;
-  inset: -30% -20%;
-  background: radial-gradient(38% 46% at 34% 50%, rgba(43, 73, 207, 0.34), transparent 70%);
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .psico::before {
-    animation: breathe 7s ease-in-out infinite alternate;
-  }
-}
-@keyframes breathe {
-  from {
-    transform: translate3d(-2%, -1%, 0) scale(0.94);
-    opacity: 0.75;
-  }
-  to {
-    transform: translate3d(2%, 2%, 0) scale(1.1);
-    opacity: 1;
-  }
-}
-.psicoInner {
-  position: relative;
-}
 .psicoHead {
-  margin-top: clamp(1.5rem, 1rem + 2vw, 3rem);
-  font-size: clamp(3rem, 1rem + 7.5vw, 10rem);
+  margin-top: var(--s-title);
+  font-size: var(--t-display);
   max-width: 8.2em;
 }
 .psicoGrid {
-  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
+  margin-top: var(--s-block);
   align-items: start;
-  row-gap: 2.5rem;
+  row-gap: var(--s-block);
 }
 .psicoPhoto {
   grid-column: 1 / span 5;
   margin-left: calc(-1 * var(--gutter));
   aspect-ratio: 3 / 4;
-  background: var(--deep);
+  background: #1a1b1e;
 }
 .psicoPhoto img {
-  filter: saturate(0.55) contrast(1.08) brightness(0.9);
-}
-.psicoPhoto::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(10, 16, 32, 0.7), rgba(10, 16, 32, 0) 45%);
+  filter: grayscale(1) contrast(1.1) brightness(0.92);
 }
 .psicoCopy {
   grid-column: 7 / span 6;
   display: grid;
-  gap: clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  gap: var(--s-block);
   justify-items: start;
-  padding-top: 0.5rem;
 }
-.psicoText {
-  display: grid;
-  gap: 1.1rem;
-  max-width: 34em;
-}
-.psicoText .body {
+.psicoCopy .body {
   color: var(--on-dark);
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
 }
 .psicoConcepts {
   margin: 0;
@@ -524,22 +527,15 @@
   list-style: none;
 }
 .psicoConcepts li {
-  font-size: clamp(2.4rem, 1rem + 4.6vw, 5.6rem);
+  font-size: var(--t-display-s);
   line-height: 0.9;
 }
 .psicoSecondary {
   margin: 1rem 0 0;
-  font-size: 0.9375rem;
   color: var(--on-dark-soft);
 }
-.psicoStatement {
-  margin: 0;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.8rem);
-  line-height: 1.12;
+.psicoCopy .quiet {
   max-width: 17em;
-  text-wrap: balance;
 }
 @media (max-width: 880px) {
   .psicoPhoto,
@@ -552,25 +548,21 @@
   }
 }
 
-/* ── 04 · Hipertrofia del Ser ──────────────────────────────
-   Una publicación: el titular ocupa la pantalla (el cuerpo en condensada,
-   el ser en serif) y debajo una portada al modo del magazine de Nike
-   About: lead con foto apaisada y titular serif; a la derecha, un
-   secundario y el listado. Sin filetes: el aire separa. */
+/* ── 04 · Hipertrofia del Ser (casi negro) ────────────────
+   Como el bloque de entrevistas de Nike About: título, el titular a toda
+   escala (el cuerpo en condensada, el ser en serif), el copy y una
+   retícula de tres columnas con las portadas reales de Substack. La
+   tarjeta central lleva la imagen más alta y escalona la fila. */
 .pub {
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem) clamp(5rem, 3.5rem + 6vw, 10rem);
+  padding-block: var(--s-section);
 }
 .pubHead {
-  margin: clamp(1.5rem, 1rem + 2vw, 3rem) 0 0;
-  font-size: clamp(3rem, 0.5rem + 11vw, 13rem);
+  margin: var(--s-title) 0 0;
+  font-size: var(--t-display);
   line-height: 0.86;
 }
 .pubHead .line {
   display: block;
-}
-.pubHeadA {
-  font-size: inherit;
-  line-height: inherit;
 }
 .pubHeadB {
   display: block;
@@ -581,7 +573,7 @@
   padding-left: 0.06em;
 }
 .pubIntro {
-  margin-top: clamp(2.5rem, 2rem + 3vw, 5rem);
+  margin-top: var(--s-block);
 }
 .pubText {
   grid-column: 5 / span 6;
@@ -590,122 +582,80 @@
   justify-items: start;
 }
 .pubText .body {
-  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
-  line-height: 1.55;
+  max-width: 34em;
 }
 .pubText .link {
   margin-top: 0.5rem;
 }
-.pubGrid {
-  margin-top: clamp(3.5rem, 2.5rem + 4vw, 7rem);
-  row-gap: 3rem;
-  align-items: start;
-}
-.lead {
-  grid-column: 1 / span 8;
-  display: block;
-}
-.leadPhoto {
-  aspect-ratio: 3 / 2;
-}
-.leadPhoto img {
-  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
-}
-.lead:hover .leadPhoto img {
-  transform: scale(1.03);
-}
-.leadBody {
-  margin-top: 1.25rem;
-  max-width: 34rem;
-}
-.leadTitle {
-  margin: 0.5rem 0 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(2rem, 1.2rem + 2.6vw, 3.6rem);
-  line-height: 1.02;
-  letter-spacing: -0.012em;
-  text-wrap: balance;
-}
-.pubSide {
-  grid-column: 9 / span 4;
+.cards {
   display: grid;
-  gap: 2.25rem;
-  align-content: start;
-}
-.pieceFirst {
-  display: block;
-}
-.pieceFirstTitle {
-  margin: 0.4rem 0 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.1rem);
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-  text-wrap: balance;
-}
-.pieceList {
-  display: grid;
-  gap: 1.5rem;
-  margin: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-block) var(--gap);
+  margin: var(--s-block) 0 0;
   padding: 0;
   list-style: none;
 }
-.pieceRow {
+.cardLink {
   display: block;
 }
-.pieceTitle {
-  margin: 0.3rem 0 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: 1.375rem;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+.cardPhoto {
+  aspect-ratio: 16 / 9;
 }
-.lead:hover .leadTitle,
-.pieceFirst:hover .pieceFirstTitle,
-.pieceRow:hover .pieceTitle {
+/* la tarjeta central de cada fila, más alta: el escalón de la referencia */
+.card:nth-child(3n + 2) .cardPhoto {
+  aspect-ratio: 4 / 3;
+}
+.cardPhoto img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.cardLink:hover .cardPhoto img {
+  transform: scale(1.03);
+}
+.cardBody {
+  display: block;
+  margin-top: 1.25rem;
+}
+.cardTitle {
+  margin: 0.4rem 0 0;
+  font-size: var(--t-card);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.cardLink:hover .cardTitle {
   text-decoration: underline;
-  text-underline-offset: 0.12em;
+  text-underline-offset: 0.15em;
   text-decoration-thickness: 1px;
 }
 @media (max-width: 880px) {
-  .pubText,
-  .lead,
-  .pubSide {
+  .pubText {
     grid-column: 1 / -1;
   }
-  .leadPhoto {
-    margin-inline: calc(-1 * var(--gutter));
-    aspect-ratio: 4 / 3;
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card:nth-child(3n + 2) .cardPhoto {
+    aspect-ratio: 16 / 9;
   }
 }
 
-/* ── 05 · Emprendimiento / Lignarolo ───────────────────────
-   Menos peso: banda cálida, titular serif a escala media. Lignarolo como
-   una página de campaña: foto panorámica y el texto sobre el vacío. */
+/* ── 05 · Emprendimiento / Lignarolo (blanco) ──────────────
+   Menos peso: titular serif a escala media y el copy en primera persona.
+   Lignarolo como una página de campaña: foto panorámica, texto sobre el vacío. */
 .emp {
-  background: var(--paper-2);
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem);
+  padding-block: var(--s-section);
 }
 .empGrid {
-  margin-top: clamp(1.5rem, 1rem + 2vw, 3rem);
+  margin-top: var(--s-title);
   align-items: start;
-  row-gap: 2rem;
+  row-gap: var(--s-block);
 }
 .empHeadCol {
   grid-column: 1 / span 7;
 }
 .empHead {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(2rem, 1rem + 3.4vw, 4.6rem);
-  line-height: 1.02;
-  letter-spacing: -0.015em;
   max-width: 13em;
-  text-wrap: balance;
 }
 .empCopy {
   grid-column: 8 / span 5;
@@ -718,13 +668,13 @@
 }
 .empFields {
   margin: 0.25rem 0;
-  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
+  font-size: var(--t-lead);
   font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.015em;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 .lg {
-  margin-top: clamp(3rem, 2rem + 4vw, 6rem);
+  margin-top: var(--s-block);
 }
 .lgFrame {
   position: relative;
@@ -746,13 +696,6 @@
   justify-items: start;
   max-width: 24rem;
 }
-.lgLine {
-  margin: 0;
-  font-size: clamp(1.2rem, 1rem + 0.8vw, 1.75rem);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
 .lgPending {
   margin: 0.75rem 0 0 auto;
   display: grid;
@@ -763,7 +706,7 @@
 .lgPending .pending {
   aspect-ratio: 4 / 5;
   padding: 0.5rem;
-  font-size: 0.625rem;
+  font-size: 0.6875rem;
 }
 @media (max-width: 880px) {
   .empHeadCol,
@@ -790,25 +733,25 @@
 }
 
 /* ── 06 · Perspectivas ─────────────────────────────────────
-   La palabra a toda escala; reels como «Short Stories» (verticales,
-   título serif); conversaciones como biblioteca sobre casi negro. */
+   La palabra a toda escala (blanco); reels como «Short Stories»; las
+   conversaciones como biblioteca sobre casi negro. */
 .persp {
-  padding-top: clamp(4rem, 3rem + 5vw, 8rem);
+  padding-top: var(--s-section);
 }
 .perspTitle {
-  font-size: min(13.5vw, 16rem);
+  font-size: var(--t-display);
   line-height: 0.82;
 }
 .reels {
-  margin-top: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
-  padding-bottom: clamp(4rem, 3rem + 5vw, 8rem);
+  margin-top: var(--s-block);
+  padding-bottom: var(--s-section);
 }
 .reelsHead {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem 2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: var(--s-title);
 }
 .reelsTools {
   display: flex;
@@ -848,7 +791,7 @@
 }
 .reelTrack {
   display: flex;
-  gap: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+  gap: var(--gap);
   margin: 0;
   padding: 0 var(--gutter);
   list-style: none;
@@ -880,9 +823,9 @@
 }
 .reelTitle {
   display: block;
-  margin: 0.9rem 0 0.35rem;
+  margin: 1rem 0 0.35rem;
   font-family: var(--serif);
-  font-size: clamp(1.15rem, 1rem + 0.5vw, 1.4rem);
+  font-size: var(--t-card);
   line-height: 1.12;
   letter-spacing: -0.01em;
   text-wrap: pretty;
@@ -903,7 +846,7 @@
 
 /* Conversaciones: una principal grande y el listado */
 .talks {
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem);
+  padding-block: var(--s-section);
 }
 .talksHead {
   display: flex;
@@ -911,11 +854,11 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 1rem 2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: var(--s-title);
 }
 .talksGrid {
   align-items: start;
-  row-gap: 2.5rem;
+  row-gap: var(--s-block);
 }
 .talkMain {
   grid-column: 1 / span 8;
@@ -965,7 +908,7 @@
 }
 .talkPlay span {
   padding-bottom: 0.8rem;
-  font-size: 0.875rem;
+  font-size: var(--t-small);
   font-weight: 500;
 }
 .talkCaption {
@@ -976,10 +919,10 @@
 }
 .talkTitle {
   margin: 0;
-  font-size: clamp(1.5rem, 1rem + 1.8vw, 2.6rem);
+  font-size: var(--t-card);
   font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
 .talkList {
@@ -1010,16 +953,16 @@
 }
 .talkRowIndex {
   padding-top: 0.2rem;
-  font-size: 0.8125rem;
+  font-size: var(--t-small);
 }
 .talkRowTitle {
-  font-size: 1.0625rem;
+  font-size: var(--t-body);
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.3;
   letter-spacing: -0.015em;
 }
 .talkRowMeta {
-  font-size: 0.8125rem;
+  font-size: var(--t-small);
 }
 @media (max-width: 880px) {
   .talkMain,
@@ -1031,25 +974,21 @@
   }
 }
 
-/* ── 07 · Contacto ─────────────────────────────────────────
+/* ── 07 · Contacto (blanco) ────────────────────────────────
    Utilitario y tipográfico: a quién, en grande; el formulario, en líneas. */
 .contact {
-  padding-block: clamp(4rem, 3rem + 5vw, 8rem) clamp(5rem, 3rem + 6vw, 9rem);
+  padding-block: var(--s-section);
 }
 .contactGrid {
-  margin-top: clamp(1.5rem, 1rem + 2vw, 3rem);
+  margin-top: var(--s-title);
   align-items: start;
-  row-gap: 3rem;
+  row-gap: var(--s-block);
 }
 .contactFor {
   grid-column: 1 / span 6;
 }
-.contactLead {
-  margin: 0 0 0.35rem;
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.8rem);
-  line-height: 1;
+.contactFor .quiet {
+  margin-bottom: 0.4rem;
 }
 .contactPaths {
   margin: 0;
@@ -1057,7 +996,7 @@
   list-style: none;
 }
 .contactPath {
-  font-size: clamp(2.4rem, 1rem + 5vw, 6.4rem);
+  font-size: var(--t-display-s);
   line-height: 0.9;
 }
 .form {
@@ -1086,7 +1025,7 @@
   background: transparent;
   color: var(--ink);
   font: inherit;
-  font-size: 1.05rem;
+  font-size: var(--t-body);
   line-height: 1.4;
   outline: none;
 }
@@ -1140,9 +1079,9 @@
   }
 }
 
-/* ── Pie: casi negro, la firma y seis enlaces ───────────── */
+/* ── Pie: negro, la firma y seis enlaces ───────────────── */
 .footer {
-  background: var(--ink);
+  background: var(--black);
   color: var(--on-dark);
   padding-block: 2.5rem 2rem;
   display: flex;
@@ -1171,13 +1110,13 @@
 .legal {
   margin: 0.5rem 0 0;
   width: 100%;
-  font-size: 0.8125rem;
+  font-size: var(--t-small);
   color: var(--on-dark-soft);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .link svg,
-  .leadPhoto img,
+  .cardPhoto img,
   .reelCover img,
   .ctl,
   .talkRow,

@@ -5,9 +5,9 @@ import { SectionHead } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 02 · TERRITORIO / ORIGEN. Papel, aire y una sola voz: título de sección
- * en caja baja, titular serif, el copy en columna y la pregunta final en
- * itálica grande. La foto, alta, sangra por la derecha.
+ * 02 · TERRITORIO / ORIGEN, en blanco. Título de sección, titular serif,
+ * el copy en columna (entrada en negrita media, cuerpo, pregunta final en
+ * itálica) y la foto alta sangrando por la derecha.
  */
 export default function Origen() {
   const { origen } = v3;
@@ -15,18 +15,18 @@ export default function Origen() {
   return (
     <section className={`${s.wrap} ${s.origen}`} id="origen" aria-labelledby="origen-h">
       <SectionHead label={origen.label} />
-      <h2 className={s.origenHead} id="origen-h" data-reveal="up" style={{ "--delay": "0.08s" } as CSSProperties}>
+      <h2 className={`${s.serifHead} ${s.origenHead}`} id="origen-h" data-reveal="up" style={{ "--delay": "0.08s" } as CSSProperties}>
         {origen.headline}
       </h2>
       <div className={`${s.grid} ${s.origenGrid}`}>
         <div className={s.origenCopy} data-reveal="up">
-          <p className={s.origenLead}>{lead}</p>
+          <p className={s.lead}>{lead}</p>
           {rest.map((p) => (
             <p key={p} className={s.body}>
               {p}
             </p>
           ))}
-          <p className={s.origenQuestion}>{origen.question}</p>
+          <p className={s.quiet}>{origen.question}</p>
         </div>
         <figure className={`${s.photo} ${s.origenPhoto}`} data-reveal="up" style={{ "--delay": "0.12s" } as CSSProperties}>
           <Image

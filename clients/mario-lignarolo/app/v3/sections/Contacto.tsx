@@ -22,7 +22,7 @@ export default function Contacto() {
       <SectionHead label={c.label} id="contact-h" />
       <div className={`${s.grid} ${s.contactGrid}`}>
         <div className={s.contactFor} data-reveal="up">
-          <p className={s.contactLead}>{c.lead}</p>
+          <p className={s.quiet}>{c.lead}</p>
           <ul className={s.contactPaths}>
             {c.paths.map((p) => (
               <li key={p} className={`${s.statement} ${s.contactPath}`}>

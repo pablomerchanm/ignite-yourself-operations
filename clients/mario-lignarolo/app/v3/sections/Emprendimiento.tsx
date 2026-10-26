@@ -6,10 +6,10 @@ import { Arrow, Paragraphs, SectionHead, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 05 · EMPRENDIMIENTO / LIGNAROLO. Menos peso que los dos mundos
- * anteriores: banda cálida, titular serif a escala media, el copy en
- * primera persona. Lignarolo como una página de campaña: la foto
- * panorámica con la figura a la derecha y el texto sobre el vacío.
+ * 05 · EMPRENDIMIENTO / LIGNAROLO, en blanco y con menos peso: titular
+ * serif a escala media y el copy en primera persona. Lignarolo como una
+ * página de campaña: la foto panorámica con la figura a la derecha y el
+ * texto sobre el vacío.
  */
 export default function Emprendimiento() {
   const { emprendimiento: e } = v3;
@@ -21,7 +21,7 @@ export default function Emprendimiento() {
       </div>
       <div className={`${s.wrap} ${s.grid} ${s.empGrid}`}>
         <div className={s.empHeadCol} data-reveal="up">
-          <h2 className={s.empHead} id="emp-h">
+          <h2 className={`${s.serifHead} ${s.empHead}`} id="emp-h">
             {e.headline}
           </h2>
         </div>
@@ -38,7 +38,7 @@ export default function Emprendimiento() {
             <Image src={lg.image.src} alt={lg.image.alt} fill sizes="100vw" />
           </figure>
           <div className={s.lgOver} data-reveal="up" style={{ "--delay": "0.15s" } as CSSProperties}>
-            <p className={s.lgLine}>{lg.text}</p>
+            <p className={s.lead}>{lg.text}</p>
             <a href={lg.href} className={s.link} {...ext}>
               {lg.cta} <Arrow />
             </a>

@@ -5,16 +5,15 @@ import { Arrow, Paragraphs, SectionHead, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 03 · PSICOCIBERNÉTICA. Un mundo aparte: azul profundo a sangre con un
- * resplandor que respira; el titular en grotesk condensada; el retrato
- * en doble exposición sangrando por la izquierda; los cuatro conceptos
- * apilados en grande; el statement final y un solo enlace.
+ * 03 · PSICOCIBERNÉTICA, en negro puro. El titular en grotesk condensada,
+ * el retrato en blanco y negro sangrando por la izquierda, el copy, los
+ * cuatro conceptos apilados en grande, el statement final y un enlace.
  */
 export default function Psico() {
   const { psico } = v3;
   return (
-    <section className={s.psico} id="psicocibernetica" aria-labelledby="psico-h">
-      <div className={`${s.wrap} ${s.psicoInner}`}>
+    <section className={`${s.dark} ${s.psico}`} id="psicocibernetica" aria-labelledby="psico-h">
+      <div className={s.wrap}>
         <SectionHead label={psico.label} />
         <h2 className={`${s.statement} ${s.psicoHead}`} id="psico-h" data-reveal="up" style={{ "--delay": "0.08s" } as CSSProperties}>
           {psico.headline}
@@ -32,7 +31,7 @@ export default function Psico() {
           </figure>
 
           <div className={s.psicoCopy}>
-            <div className={s.psicoText} data-reveal="up">
+            <div className={s.copy} data-reveal="up">
               <Paragraphs items={psico.paragraphs} className={s.body} />
             </div>
 
@@ -44,7 +43,7 @@ export default function Psico() {
                   </li>
                 ))}
               </ul>
-              <p className={s.psicoSecondary} data-reveal="up">
+              <p className={`${s.small} ${s.psicoSecondary}`} data-reveal="up">
                 {psico.secondary.map((t, i) => (
                   <span key={t}>
                     {i > 0 && <span aria-hidden="true"> · </span>}
@@ -54,7 +53,7 @@ export default function Psico() {
               </p>
             </div>
 
-            <p className={s.psicoStatement} data-reveal="up">
+            <p className={s.quiet} data-reveal="up">
               {psico.statement}
             </p>
             <a href={psico.href} className={s.link} {...ext} data-reveal="up">

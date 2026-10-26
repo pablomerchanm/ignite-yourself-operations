@@ -20,7 +20,7 @@ const psicoUrl = "https://psicocibernetica.lovable.app/";
 const lignaroloUrl = "https://www.lignarolo.com";
 
 export type Reel = { code: string; title: string; duration: string; date: string; src: string };
-export type Piece = { title: string; dek: string; date: string; minutes: number; href: string };
+export type Piece = { title: string; dek: string; date: string; minutes: number; href: string; image: { src: string; alt: string } };
 export type Talk = { title: string; youtubeId: string; duration?: string };
 
 /** [REAL] minutos de lectura a partir del conteo de palabras del archivo público (~220 ppm). */
@@ -91,22 +91,15 @@ export const v3 = {
     ],
     cta: "Leer Hipertrofia del Ser",
     href: substack,
-    cover: { src: "/links/img/hipertrofia.jpg", alt: "Mario, de espaldas, cargando un disco.", position: "50% 20%" },
-    // Portada: la pieza que mejor abre el territorio. Título, subtítulo y fecha reales.
-    lead: {
-      title: "Lo que estás llamado a construir no va a competir con lo que estás llamado a ser",
-      dek: "La marca personal es tu vehículo para cumplir esa visión",
-      date: "12 sep 2026",
-      minutes: minutes(1530),
-      href: post("lo-que-estas-llamado-a-construir"),
-    } as Piece,
-    // Secundarios, a escalas distintas: el primero grande, el resto en listado.
+    // Seis entradas reales con la portada que Mario les puso en Substack
+    // (título, subtítulo, fecha y portada tal cual; minutos a partir del conteo de palabras).
     pieces: [
-      { title: "Cómo ser tan atractivo que la realidad te persiga", dek: "Donde la espiritualidad y la ciencia convergen", date: "16 sep 2026", minutes: minutes(2963), href: post("como-ser-tan-atractivo-que-la-realidad") },
-      { title: "Emprender es aprender. No vender.", dek: "Agencia, Flow y los 5 motivadores que lo activan", date: "26 sep 2026", minutes: minutes(2287), href: post("emprender-es-aprender-no-vender") },
-      { title: "No puedes fallar", dek: "Cómo ser asquerosamente disciplinado", date: "29 sep 2026", minutes: minutes(1800), href: post("no-puedes-fallar") },
-      { title: "Vive de tus intereses.", dek: "Empieza por lo que no puedes dejar de aprender.", date: "1 oct 2026", minutes: minutes(1668), href: post("vive-de-tus-intereses") },
-      { title: "Trabaja tu suficiencia", dek: "Lo que miras hacia arriba, te tiene que mirar hacia abajo", date: "18 sep 2026", minutes: minutes(1082), href: post("trabaja-tu-suficiencia") },
+      { title: "Cómo dominar la Ley de Asunción para doblegar la realidad", dek: "el paso a paso definitivo sin misticismo", date: "8 oct 2026", minutes: minutes(1894), href: post("como-dominar-la-ley-de-asuncion-para"), image: { src: "/mario/substack/como-dominar-la-ley-de-asuncion-para.jpg", alt: "" } },
+      { title: "No puedes fallar", dek: "Cómo ser asquerosamente disciplinado", date: "29 sep 2026", minutes: minutes(1800), href: post("no-puedes-fallar"), image: { src: "/mario/substack/no-puedes-fallar.jpg", alt: "" } },
+      { title: "Emprender es aprender. No vender.", dek: "Agencia, Flow y los 5 motivadores que lo activan", date: "26 sep 2026", minutes: minutes(2287), href: post("emprender-es-aprender-no-vender"), image: { src: "/mario/substack/emprender-es-aprender-no-vender.jpg", alt: "" } },
+      { title: "Ya eres", dek: "El músculo más atractivo que puedes desarrollar no está en tu cuerpo.", date: "6 sep 2026", minutes: minutes(2207), href: post("ya-eres"), image: { src: "/mario/substack/ya-eres.jpg", alt: "" } },
+      { title: "La simplicidad de asumir tu estado", dek: "No puedes cambiar el mundo externo hasta que entiendas tu mundo interno.", date: "10 sep 2026", minutes: minutes(1427), href: post("la-simplicidad-de-asumir-tu-estado"), image: { src: "/mario/substack/la-simplicidad-de-asumir-tu-estado.jpg", alt: "" } },
+      { title: "Vive de tus intereses.", dek: "Empieza por lo que no puedes dejar de aprender.", date: "1 oct 2026", minutes: minutes(1668), href: post("vive-de-tus-intereses"), image: { src: "/mario/substack/vive-de-tus-intereses.jpg", alt: "" } },
     ] as Piece[],
   },
 
