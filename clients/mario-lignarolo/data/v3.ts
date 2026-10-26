@@ -139,14 +139,21 @@ export const v3 = {
     ],
     fields: "Moda. Fitness. Respiración. Escritura. Desarrollo personal.",
     close: "No siempre sé qué forma van a tomar. Me interesa descubrirlo construyendo.",
+    // [REAL] retrato de campaña de Lignarolo: Mario, pensando, con mocasines de la marca.
+    image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado de perfil, la mano en el mentón, con mocasines Lignarolo." },
     lignarolo: {
       name: "Lignarolo",
       text: "Con LIGNAROLO, esa curiosidad tomó forma en producto, diseño y marca, junto a mi hermano Giorgio.",
       cta: "LIGNAROLO",
       href: lignaroloUrl,
-      image: { src: "/mario/lignarolo.jpg", alt: "Mario sentado, de perfil, con mocasines Lignarolo.", position: "70% 50%" },
-      // [PENDIENTE] fotografía de producto, Mario y Giorgio, fabricación, campañas.
-      pending: ["Producto · detalle", "Mario y Giorgio", "Fabricación", "Campaña"],
+      // [REAL] detalles de la tienda pública (lignarolo.com), en el orden de la frase:
+      // producto, diseño y marca. [CONFIRMAR] con Mario y Giorgio el uso de estas fotos.
+      details: [
+        { src: "/mario/lignarolo/producto.jpg", alt: "Detalle de una bota Lignarolo en cuero, con picado brogue." },
+        { src: "/mario/lignarolo/diseno.jpg", alt: "Detalle de un mocasín Lignarolo en cuero burdeos." },
+        { src: "/mario/lignarolo/marca.jpg", alt: "Etiqueta Lignarolo cosida en un forro de cuadros." },
+      ],
+      // [PENDIENTE] Mario y Giorgio juntos, fabricación y campaña.
     },
   },
 

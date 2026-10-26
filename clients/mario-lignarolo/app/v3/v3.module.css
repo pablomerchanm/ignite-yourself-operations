@@ -272,15 +272,6 @@
 .photo img {
   object-fit: cover;
 }
-.pending {
-  display: flex;
-  align-items: flex-end;
-  padding: 0.6rem;
-  border: 1px dashed var(--rule-strong);
-  font-size: 0.6875rem;
-  line-height: 1.3;
-  color: var(--stone);
-}
 .dark {
   background: var(--ink);
   color: var(--on-dark);
@@ -765,45 +756,146 @@
   text-underline-offset: 0.15em;
 }
 
-/* ── 05 · Emprendimiento / Lignarolo (blanco) ──────────── */
-.lg {
+/* ── 05 · Emprendimiento / Lignarolo (gris de estudio) ─────
+   La sección toma la luz de su propia foto. El retrato de campaña ocupa el
+   86 % derecho, a sangre, y se funde por la izquierda y por arriba con un
+   degradado medido sobre el fondo de la foto (gris neutro, de 199 arriba a
+   230 en el suelo, con el horizonte al 80 %). El texto vive en el vacío del
+   estudio, a la izquierda de la figura (que empieza en el 31 % de la foto). */
+.emp {
+  --photo-w: 86vw;
+  --photo-h: calc(var(--photo-w) * 0.5625);
+  --studio-top: rgb(199, 199, 199);
+  --studio-floor: rgb(229, 229, 228);
+  background: var(--studio-floor);
+}
+.empScene {
+  position: relative;
+  min-height: var(--photo-h);
+  padding-block: var(--s-section) var(--s-block);
+  background:
+    linear-gradient(
+        to bottom,
+        rgb(199, 199, 199) 0%,
+        rgb(203, 203, 203) 8%,
+        rgb(207, 207, 207) 25%,
+        rgb(209, 209, 209) 50%,
+        rgb(204, 204, 204) 67%,
+        rgb(208, 208, 208) 76%,
+        rgb(214, 214, 214) 79%,
+        rgb(225, 225, 225) 82%,
+        rgb(232, 232, 232) 86%,
+        rgb(229, 229, 228) 100%
+      )
+      bottom / 100% calc(var(--photo-h) + 2px) no-repeat,
+    linear-gradient(var(--studio-top), var(--studio-top)) top / 100% calc(100% - var(--photo-h) + 2px) no-repeat,
+    var(--studio-floor);
+}
+.empPhoto {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: var(--photo-w);
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  /* se funde por la izquierda, por arriba y, apenas, por abajo (el suelo
+     de la foto sigue en el gris de la sección) */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 16%),
+    linear-gradient(to bottom, transparent 0, #000 8%),
+    linear-gradient(to top, transparent 0, #000 5%);
+  -webkit-mask-composite: source-in, source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 16%),
+    linear-gradient(to bottom, transparent 0, #000 8%),
+    linear-gradient(to top, transparent 0, #000 5%);
+  mask-composite: intersect;
+}
+.empPhoto img {
+  object-fit: cover;
+  filter: none;
+}
+.empText {
+  position: relative;
+  z-index: 1;
+  max-width: calc(100vw - var(--photo-w) + var(--photo-w) * 0.28);
+}
+.empHead {
+  max-width: 11em;
+  margin-top: var(--s-title);
+}
+.empCopy {
+  max-width: 26rem;
   margin-top: var(--s-block);
 }
-.lgFrame {
-  position: relative;
-}
-.lgPhoto {
-  aspect-ratio: 21 / 9;
-  background: #e4e1da;
-}
-.lgPhoto img {
-  object-position: 50% 100%;
-}
-.lgOver {
-  position: absolute;
-  left: clamp(1.25rem, 1rem + 1.5vw, 2.5rem);
-  bottom: clamp(1.25rem, 1rem + 1.5vw, 2.5rem);
-  z-index: 1;
+/* el silencio: los cinco territorios, centrados, se encienden uno a uno */
+.empQuiet {
   display: grid;
-  gap: 1rem;
+  justify-items: center;
+  gap: 1.25rem;
+  padding-block: var(--s-section) var(--s-block);
+  text-align: center;
+}
+.empFields {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-h2);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.empQuiet .body {
+  max-width: 30em;
+}
+/* Lignarolo: la firma y tres detalles, en el orden de la frase */
+.lg {
+  align-items: end;
+  row-gap: var(--s-block);
+  padding-block: var(--s-block) var(--s-section);
+}
+.lgText {
+  grid-column: 1 / span 4;
+  display: grid;
+  gap: 1.1rem;
   justify-items: start;
-  max-width: 24rem;
+  padding-bottom: 0.25rem;
 }
-.lgPending {
+.lgMark {
+  margin: 0 0 0.4rem;
+  font-family: var(--serif);
+  font-size: var(--t-h2);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.lgText .lead {
+  max-width: 17em;
+}
+.lgDetails {
+  grid-column: 6 / -1;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-  max-width: 34rem;
-  margin: 0.75rem 0 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.lgPending .pending {
+.lgDetail {
   aspect-ratio: 4 / 5;
+  background: #d9d8d6;
+}
+.lgDetail img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.lgDetails li:hover .lgDetail img {
+  transform: scale(1.03);
 }
 
 /* ── 06 · Perspectivas ──────────────────────────────────── */
-/* llega tras otra sección en blanco: un solo respiro entre ambas, no dos */
 .perspHead {
-  padding-top: 0;
+  padding-top: var(--s-section);
 }
 .reels {
   padding-block: var(--s-block) var(--s-section);
@@ -1226,22 +1318,41 @@
     flex: 0 0 auto;
     border-right: 1px solid var(--rule-dark-strong);
   }
-  .lgPhoto {
-    margin-inline: calc(-1 * var(--gutter));
+  /* emprendimiento: el texto arriba y el retrato debajo, a todo el ancho,
+     saliendo del gris de la sección */
+  .empScene {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 0;
+    background: var(--studio-floor);
+  }
+  .empText {
+    max-width: none;
+  }
+  .empCopy {
+    max-width: none;
+  }
+  .empPhoto {
+    position: relative;
+    order: 1;
+    width: 100%;
     aspect-ratio: 4 / 3;
+    margin-top: var(--s-block);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+    mask-composite: intersect;
   }
-  .lgPhoto img {
-    object-position: 62% 100%;
+  .empPhoto img {
+    object-position: 80% 100%;
   }
-  .lgOver {
-    position: static;
-    max-width: none;
-    margin-top: 1.25rem;
+  .lgText,
+  .lgDetails {
+    grid-column: 1 / -1;
   }
-  .lgPending {
-    max-width: none;
-    margin-top: 1.5rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .lgDetails {
+    gap: 0.5rem;
   }
   .reelsHead {
     flex-wrap: wrap;
@@ -1267,7 +1378,8 @@
   .talkPlay svg,
   .navList a,
   .footerLinks a,
-  .concepts li {
+  .concepts li,
+  .lgDetail img {
     transition: none;
   }
 }
