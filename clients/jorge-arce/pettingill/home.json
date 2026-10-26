@@ -26,6 +26,10 @@
       "h": "/pettingill/record"
     },
     {
+      "t": "The firm",
+      "h": "/pettingill#firm"
+    },
+    {
       "t": "Enquiry",
       "h": "/pettingill#inquiry"
     }
@@ -50,7 +54,56 @@
           "h": "#inquiry",
           "primary": true
         }
-      ]
+      ],
+      "firm": {
+        "k": "Founder and President",
+        "logo": "/pettingill/assets/pa-logo-white.png",
+        "alt": "Pettingill Analytics",
+        "h": "#firm"
+      }
+    },
+    {
+      "type": "practice",
+      "id": "firm",
+      "label": "The firm",
+      "title": "Pettingill <t>Analytics.</t>",
+      "lede": "The firm Dr. Pettingill founded in 1996 and leads as President. Forensic economics first; today also valuations, structured settlements, litigation support and data analytics, with a multi-disciplined team.",
+      "company": {
+        "logo": "/pettingill/assets/pa-logo-white.png",
+        "name": "Pettingill Analytics",
+        "role": "Founder and President · since 1996",
+        "desc": "Built on forensic economic consulting, the firm brings together professionals in economics, valuation, insurance and data analytics for attorneys, medical practices, corporate boards and government agencies.",
+        "meta": [
+          "93 Sandbourne Lane",
+          "Palm Beach Gardens, Florida 33418",
+          "(561) 622-0330 · info@pettanalytics.com"
+        ],
+        "href": "https://www.pettingillanalytics.com/",
+        "link": "Visit pettingillanalytics.com"
+      },
+      "social": [
+        {
+          "t": "Discuss a firm engagement",
+          "h": "#inquiry",
+          "path": "firm"
+        }
+      ],
+      "svcLabel": "What the firm does",
+      "services": [
+        "Forensic economic consulting",
+        "Structured settlement solutions",
+        "Litigation support and jury selection",
+        "Medical practice consulting and valuations",
+        "Independent reviews and business valuations",
+        "Health and life insurance solutions",
+        "Project management and data analytics",
+        "Staffing and executive searches"
+      ],
+      "marks": {
+        "label": "Who the firm serves",
+        "note": "Attorneys · Medical solo and group practices · Corporate boards · IT and software companies · Startups and IPOs · Government agencies · In more than 40 states, per the firm"
+      },
+      "no": "01"
     },
     {
       "type": "brief",
@@ -394,7 +447,7 @@
       },
       "fine": "Private preview · Not indexed",
       "base": "Bernard F. Pettingill, Jr. · Ph.D. Economics · MPH · MBA",
-      "no": "01"
+      "no": "02"
     }
   ]
 }
