@@ -141,3 +141,10 @@ Pablo vio que la home y "The firm" eran lo mismo: el menú llevaba a un ancla de
 **Navegación:**
 - "The firm" en la barra, en las pestañas móviles y en el logo de la firma del hero llevan a /rodriguez/firm.
 - El "Next" de la página CV lleva a la firma.
+
+## La firma en la home, en segundo plano (27 de octubre)
+
+Pedido de Pablo: con la página completa de la firma, la home no debe darle tanto protagonismo.
+- **Fuera de la home:** la banda del skyline, la lista de 12 servicios, "Who the firm serves" y el Disney Hall. Todo eso vive en /rodriguez/firm.
+- **Lo que queda:** una ficha breve. Tiene el logo sobre el azul de la firma (#00305B), "Founder and Principal · since 1992", la descripción, el contacto y tres enlaces: "More about the firm", "Discuss a firm engagement" y rodriguezadvisory.com.
+- **Posición:** la ficha baja al final de la home, antes del contacto. La firma sigue arriba en la firma del hero ("Founder and Principal" con su logo).
