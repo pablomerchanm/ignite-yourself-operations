@@ -891,7 +891,7 @@ body{background:var(--bg)}
    El retrato de la web de la firma mide 400px; a sangre completa se desharia. Como placa
    funciona, y cuando llegue la fotografia de Pablo basta quitar "plate" en el JSON.
    Con la placa la seccion encogia a su contenido: el ancho se fija a la pagina. */
-.hero.plate{width:100%}
+.hero.plate{width:100%;display:flex}   /* .plate (los logos) es inline-block y dejaba una franja bajo el hero */
 .hero.plate .ph{position:absolute;inset:auto clamp(20px,5vw,80px) clamp(72px,11vh,132px) auto;
   width:clamp(240px,24vw,380px);aspect-ratio:3/4;overflow:hidden;z-index:1}
 .hero.plate .ph img{object-position:50% 18%;filter:grayscale(1) contrast(1.1) brightness(.9)}
@@ -1690,6 +1690,7 @@ html.no-motion .scarr{display:none}
 #site .pf-name{white-space:normal}
 @media(max-width:860px){
   .hero.plate .ph{width:min(calc(100% - 36px),340px)}
+  .hero.plate.photo .ph{flex:0 0 auto}   /* la placa no crece con el hero en flex */
   #site .pf-name{font-size:clamp(36px,10vw,48px);max-width:none}}
 
 /* ---------- hero en movil: la cara entera, el nombre debajo, la firma con aire ----------
