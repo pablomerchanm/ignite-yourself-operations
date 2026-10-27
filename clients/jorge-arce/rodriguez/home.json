@@ -23,7 +23,7 @@
     },
     {
       "t": "The firm",
-      "h": "/rodriguez#firm"
+      "h": "/rodriguez/firm"
     },
     {
       "t": "Enquiry",
@@ -60,7 +60,7 @@
         "k": "Founder and Principal",
         "logo": "/rodriguez/assets/ra-lockup-white.png",
         "alt": "Rodriguez & Associates Advisory Group",
-        "h": "#firm"
+        "h": "/rodriguez/firm"
       }
     },
     {
@@ -93,6 +93,10 @@
           "t": "Discuss a firm engagement",
           "h": "#inquiry",
           "path": "firm"
+        },
+        {
+          "t": "More about the firm",
+          "h": "/rodriguez/firm"
         }
       ],
       "svcLabel": "What the firm does",

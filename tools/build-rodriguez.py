@@ -1551,6 +1551,21 @@ html.no-motion .scarr{display:none}
   .stmt.withimg.opener .sph::before{content:'';position:absolute;z-index:1;left:0;right:0;top:0;height:30%;pointer-events:none;
     background:linear-gradient(180deg,rgba(20,22,26,.62) 0%,rgba(20,22,26,0) 100%)}
 }
+
+/* la pagina de la firma: el velo azul de Rodriguez & Associates sobre el skyline de la apertura */
+@media(min-width:861px){
+  #firm-open::before{content:'';position:absolute;z-index:2;top:0;bottom:0;left:0;width:46%;pointer-events:none;
+    background:#2a5d92;mix-blend-mode:multiply}
+  #firm-open .wrap{z-index:3}
+  #firm-open .sph::before{height:34%;background:linear-gradient(180deg,rgba(20,22,26,.78) 0%,rgba(20,22,26,0) 100%)}
+  #firm-work .pathgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+#firm-open .slogo{width:min(100%,380px);height:auto;margin-bottom:clamp(22px,3vh,34px)}
+@media(max-width:860px){
+  #firm-open::before{content:'';position:absolute;z-index:2;inset:0;pointer-events:none;background:#2a5d92;mix-blend-mode:multiply}
+  #firm-open .wrap{z-index:3}
+  #firm-open .slogo{width:min(80vw,320px)}
+}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion
@@ -1559,7 +1574,7 @@ NAV = [
     {"t": "Practice",      "h": "/rodriguez/practice"},
     {"t": "Testimony",     "h": "/rodriguez/testimony"},
     {"t": "CV",            "h": "/rodriguez/record"},
-    {"t": "The firm",      "h": "/rodriguez#firm"},
+    {"t": "The firm",      "h": "/rodriguez/firm"},
     {"t": "Enquiry",       "h": "/rodriguez#inquiry"},
 ]
 NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
@@ -1567,12 +1582,12 @@ NAVHTML = ('<nav class="menupanel" id="nitems" aria-label="Site">'
 TNAV = [("Practice",      "/rodriguez/practice",  "practice"),
         ("Testimony",     "/rodriguez/testimony", "testimony"),
         ("CV",            "/rodriguez/record",    "record"),
-        ("The firm",      "/rodriguez#firm",      "firm")]
+        ("The firm",      "/rodriguez/firm",      "firm")]
 TABS = [("Overview",  "/rodriguez",           "home"),
         ("Practice",  "/rodriguez/practice",  "practice"),
         ("Testimony", "/rodriguez/testimony", "testimony"),
         ("CV",        "/rodriguez/record",    "record"),
-        ("Firm",      "/rodriguez#firm",      "firm")]
+        ("Firm",      "/rodriguez/firm",      "firm")]
 
 def topbar_html(active):
     ON = ' class="on"'
@@ -1623,7 +1638,7 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel', 'strip'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
@@ -1653,6 +1668,7 @@ NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
 T_PR = 'Practice — Rick Rodriguez'
 T_TE = 'Testimony — Rick Rodriguez'
 T_CV = 'CV — Rick Rodriguez'
+T_FI = 'The firm — Rick Rodriguez'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
@@ -1669,7 +1685,11 @@ PAGES = {
     'record': page(T_CV,
         'Twenty years in banking, Rodriguez & Associates since 1992, teaching at USC and UCLA Extension, and public work.',
         [deep('record-open'), deep('record-years'), deep('record-bank'), deep('record-firm'), deep('record-teaching'), deep('record-orgs'),
-         dict(NX('Next', 'Discuss a <t>matter</t>', 'Banking, lending, Chapter 11 or real estate finance.', '/rodriguez#inquiry'), alt=ALT), foot()], sub=True),
+         dict(NX('Next', 'The <t>firm</t>', 'Rodriguez & Associates Advisory Group, founded by Rick in 1992.', '/rodriguez/firm'), alt=ALT), foot()], sub=True),
+    'firm': page(T_FI,
+        'Rodriguez & Associates Advisory Group: the firm Rick founded in Los Angeles in 1992, what it does, whom it serves and who works there.',
+        [deep('firm-open'), deep('firm-rick'), deep('firm-work'), deep('firm-clients'), deep('firm-people'), deep('firm-strip'),
+         NX('Next', 'Discuss a firm <t>engagement</t>', 'Workouts, capital, real estate or a matter for counsel.', '/rodriguez#inquiry'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)
@@ -1698,6 +1718,7 @@ derive('/rodriguez/home.json', TITLE, URL, DST, None)
 derive('/rodriguez/practice.json', T_PR, URL + '/practice', DST + '/practice', 'practice')
 derive('/rodriguez/testimony.json', T_TE, URL + '/testimony', DST + '/testimony', 'testimony')
 derive('/rodriguez/record.json', T_CV, URL + '/record', DST + '/record', 'record')
+derive('/rodriguez/firm.json', T_FI, URL + '/firm', DST + '/firm', 'firm')
 if P.get('active'):
     shutil.copytree(PROP_SRC, f'{DST}/proposal', dirs_exist_ok=True)
 elif os.path.isdir(f'{DST}/proposal'):

@@ -120,3 +120,24 @@ Pedido de Pablo: que la sección de la firma tenga elementos de la propia firma 
 - en el pie, junto al contacto.
 
 Las referencias como fuente siguen apuntando al PDF original en su web.
+
+## Página propia de la firma: /rodriguez/firm (27 de octubre)
+
+Pablo vio que la home y "The firm" eran lo mismo: el menú llevaba a un ancla de la home. Ahora:
+- **La home** sigue siendo el resumen general de Rick, con sus fotos y la sección de la firma. Esa sección enlaza a la página nueva ("More about the firm").
+- **/rodriguez/firm** habla solo de la firma y de la relación de Rick con ella. No tiene fotos de Rick.
+
+**Contenido de /rodriguez/firm** (fuentes: rodriguezadvisory.com y el CV de 2016):
+1. **Apertura:** el skyline con el velo azul de la firma sobre el 46 % izquierdo (en móvil, sobre toda la foto) y su logo. "The firm Rick founded in 1992, and still leads." y el enlace a rodriguezadvisory.com.
+2. **Rick and the firm:**
+   - *Founded by him*: en 1992, tras Security Pacific, donde los dos últimos años supervisó como SVP una cartera clasificada de unos 1.600 millones de dólares.
+   - *Led by him*: la web de la firma le atribuye el trabajo por su nombre.
+   - *His testimony runs through it*: con Emily Rodriguez, Partner.
+3. **Four lines of work, one principal:** los 12 servicios agrupados en cuatro tarjetas (prestamistas y deudores, abogados, desarrolladores e inversores, bancos).
+4. **Who the firm serves:** clientes representativos que publica la firma, los 108 bufetes del conteo propio, LAUSD y el trabajo pro bono.
+5. **The people:** Rick (Founder and Principal) y Emily Rodriguez (Partner), según la página de Emily en la web de la firma.
+6. **Cierre:** el Disney Hall y "Discuss a firm engagement".
+
+**Navegación:**
+- "The firm" en la barra, en las pestañas móviles y en el logo de la firma del hero llevan a /rodriguez/firm.
+- El "Next" de la página CV lleva a la firma.

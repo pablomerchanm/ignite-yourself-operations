@@ -56,7 +56,7 @@
         "k": "Founder and Principal",
         "logo": "/rodriguez/assets/ra-lockup-white.png",
         "alt": "Rodriguez & Associates Advisory Group",
-        "h": "#firm"
+        "h": "/rodriguez/firm"
       }
     },
     {
@@ -89,6 +89,10 @@
           "t": "Discuss a firm engagement",
           "h": "#inquiry",
           "path": "firm"
+        },
+        {
+          "t": "More about the firm",
+          "h": "/rodriguez/firm"
         }
       ],
       "svcLabel": "What the firm does",
@@ -806,6 +810,179 @@
           ]
         }
       ]
+    },
+    {
+      "type": "stmt",
+      "id": "firm-open",
+      "label": "The firm",
+      "logo": "/rodriguez/assets/ra-lockup-white.png",
+      "opener": true,
+      "quote": "The firm Rick founded in 1992, <t>and still leads.</t>",
+      "sub": "Rodriguez & Associates Advisory Group, downtown Los Angeles: workouts and restructuring, capital and real estate, and expert work for counsel.",
+      "more": {
+        "t": "Visit rodriguezadvisory.com",
+        "h": "https://www.rodriguezadvisory.com/"
+      },
+      "img": {
+        "src": "/rodriguez/assets/ra-skyline.jpg",
+        "alt": "Downtown Los Angeles",
+        "pos": "50% 55%"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "firm-rick",
+      "label": "Rick and the firm",
+      "items": [
+        {
+          "k": "Founded by him.",
+          "t": "In 1992, after thirteen years at Security Pacific, the last two as Senior Vice President over a classified real estate portfolio of about $1.6 billion.",
+          "d": "The firm began where that work left off: resolving complex debtor-creditor transactions secured by real estate, stock and partnership interests."
+        },
+        {
+          "k": "Led by him.",
+          "t": "Founder and Principal since 1992. The firm’s own pages credit its work to him by name.",
+          "d": "Workout strategies for lenders, bid pricing for loan and REO pools, and capital raised through his contacts in the mortgage market."
+        },
+        {
+          "k": "His testimony runs through it.",
+          "t": "Expert witness work and litigation support for counsel are engaged through Rodriguez & Associates.",
+          "d": "With Emily Rodriguez, Partner, on discovery analysis, research, trial exhibits, expert reports and declarations."
+        }
+      ]
+    },
+    {
+      "type": "paths",
+      "id": "firm-work",
+      "label": "What the firm does",
+      "nums": true,
+      "title": "Four lines of work, <t>one principal.</t>",
+      "lede": "The firm’s twelve services, grouped by who they serve. As described on its website and in Rick’s 2016 CV.",
+      "cards": [
+        {
+          "label": "For lenders and borrowers",
+          "title": "Workouts and restructuring",
+          "desc": "Workout and debt restructure strategies for single loans or entire portfolios, in judicial and non-judicial settings.",
+          "items": [
+            "Loan restructuring and workouts",
+            "Management turnaround",
+            "Negotiations with financial institutions",
+            "Chapter 11 reorganization plans",
+            "Receiverships"
+          ]
+        },
+        {
+          "label": "For counsel",
+          "title": "Expert witness and litigation support",
+          "desc": "Testimony in banking, finance and real estate, and support through every stage of a case.",
+          "items": [
+            "Expert witness testimony",
+            "Discovery and production requests",
+            "Deposition preparation",
+            "Demonstrative trial exhibits",
+            "“Fair and equitable” cram down rates"
+          ]
+        },
+        {
+          "label": "For developers and investors",
+          "title": "Capital and real estate",
+          "desc": "Capital for acquisitions and refinancing, and the feasibility of new projects.",
+          "items": [
+            "Debt and equity procurement",
+            "Real estate brokerage and finance",
+            "Project feasibility",
+            "Site analysis and acquisition",
+            "Broker’s opinion of value"
+          ]
+        },
+        {
+          "label": "For banks",
+          "title": "Advisory to financial institutions",
+          "desc": "Portfolio and credit work from someone who ran it inside the bank.",
+          "items": [
+            "Portfolio risk and lender liability exposure",
+            "Credit review and loan audits",
+            "Due diligence on real estate and commercial loans",
+            "Bid pricing for loan and REO pools",
+            "Banking matters and forensic analysis"
+          ]
+        }
+      ],
+      "fn": "Corporate finance and other advisory services are also listed by the firm."
+    },
+    {
+      "type": "exp",
+      "id": "firm-clients",
+      "label": "Who the firm serves",
+      "tint": true,
+      "title": "Counsel, lenders, owners <t>and the public sector.</t>",
+      "lede": "Representative clients, as listed by the firm on its website and in the 2016 CV.",
+      "groups": [
+        {
+          "label": "Law firms",
+          "wide": true,
+          "names": [
+            "National firms, and premier firms in California, Arizona, Florida, Minnesota and Georgia",
+            "Civil litigation and Chapter 11 plans of reorganization",
+            "108 law firms named on the 2016 CV, by Ignite’s count"
+          ]
+        },
+        {
+          "label": "Financial institutions",
+          "names": [
+            "Bank of America",
+            "ING Bank",
+            "Bankers Trust Securities Co.",
+            "Far East National Bank",
+            "Jennings & Levy, Co."
+          ]
+        },
+        {
+          "label": "Real estate developers and investors",
+          "names": [
+            "Maguire Thomas Partners",
+            "Kilroy Industries",
+            "Peninsula Beverly Hills",
+            "St. John’s Hospital and Medical Plaza",
+            "The Carson Companies",
+            "Oltmans Investment Company",
+            "Green Dot Educational Project"
+          ]
+        },
+        {
+          "label": "Government and non-profits",
+          "wide": true,
+          "names": [
+            "Los Angeles Unified School District, 2000–2002: Consulting Senior Facilities Executive for three of the District’s eleven mini-districts",
+            "Pro bono since 2009: negotiating with lenders for homeowners at risk of foreclosure, and testimony against predatory lenders"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "brief",
+      "id": "firm-people",
+      "label": "The people",
+      "items": [
+        {
+          "k": "Rick Rodriguez",
+          "t": "Founder and Principal, since 1992.",
+          "d": "Twenty-one years in banking, from branch manager to bank president, per the firm. Expert witness in banking, finance and real estate."
+        },
+        {
+          "k": "Emily Rodriguez",
+          "t": "Partner.",
+          "d": "Litigation support: analysis of discovery documents, market and financial research in commercial lending and real estate finance, and trial exhibits, expert reports and declarations."
+        }
+      ]
+    },
+    {
+      "type": "strip",
+      "id": "firm-strip",
+      "img": {
+        "src": "/rodriguez/assets/ra-hall.jpg",
+        "alt": "Walt Disney Concert Hall, downtown Los Angeles"
+      }
     },
     {
       "type": "inquiry",

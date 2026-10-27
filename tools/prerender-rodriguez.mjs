@@ -5,7 +5,8 @@ const D='/home/user/ignite-yourself-operations/clients/jorge-arce/rodriguez';
 for (const [path,file] of [['/rodriguez/',D+'/index.html'],
                            ['/rodriguez/practice',D+'/practice/index.html'],
                            ['/rodriguez/testimony',D+'/testimony/index.html'],
-                           ['/rodriguez/record',D+'/record/index.html']]) {
+                           ['/rodriguez/record',D+'/record/index.html'],
+                           ['/rodriguez/firm',D+'/firm/index.html']]) {
   const p=await (await b.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'})).newPage();
   await p.goto('http://127.0.0.1:8904'+path,{waitUntil:'networkidle'});
   await p.waitForTimeout(1000);
