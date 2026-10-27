@@ -137,6 +137,7 @@ PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
         (c.cell?'<li><a href="tel:'+esc(c.cell.replace(/[^0-9+]/g,''))+'">Cell '+esc(c.cell)+'</a></li>':'')+
         (c.phone?'<li><a href="tel:'+esc(c.phone.replace(/[^0-9+]/g,''))+'">'+esc(c.phone)+'</a></li>':'')+
         (c.city?'<li>'+esc(c.city)+'</li>':'')+
+        (c.cv?'<li><a href="'+esc(c.cv.h)+'" target="_blank" rel="noopener">'+esc(c.cv.t)+'</a></li>':'')+
       '</ul>'+
       '<ul class="pf-social">'+(s.social||[]).map(function(x){return'<li><a href="'+esc(x.h)+'" target="_blank" rel="noopener" aria-label="'+esc(x.t)+'" title="'+esc(x.t)+'">'+SOC[x.i]+'</a></li>'}).join('')+'</ul>'+
     '</div>'+
@@ -159,6 +160,8 @@ PFOOT = r"""'<footer class="kfoot pf"><div class="wrap">'+
       (s.igy.prop?' <a class="igyprop-link" href="'+esc(s.igy.prop.h)+'">'+esc(s.igy.prop.t)+' &rarr;</a>':'')+'</p>'+
   '</div></section>':'')}"""
 base = sub1(r"'<footer class=\"kfoot\"><div class=\"wrap\">'\+.*?'</div></footer>'\}", lambda m: PFOOT, base, flags=re.S, tag='pfoot')
+base = sub1(r"\(a\.path\?' data-path=\"'\+esc\(a\.path\)\+'\"':''\)\+'>'\+esc\(a\.t\)\+'</a>'\}\)\.join\(''\)\+'</div>':''\)\+",
+            lambda m: m.group(0).replace("(a.path?", "(a.dl?' target=\"_blank\" rel=\"noopener\"':'')+(a.path?", 1), base, tag='hero-dl')
 # -------- contacto de la consulta: el celular primero, con enlace
 base = sub1(r"'<div class=\"rmeta\">'\+\[c\.phone,c\.city\]",
             lambda m: """'<div class="rmeta">'+(c.cell?'<span><a href="tel:'+esc(c.cell.replace(/[^0-9+]/g,''))+'">Cell '+esc(c.cell)+'</a></span>':'')+[c.phone,c.city]""",
@@ -355,6 +358,43 @@ letters:function(s){
     return'<figure class="vit wr"><blockquote>'+esc(v.q)+'</blockquote><figcaption><b>'+esc(v.who)+'</b>'+(v.org?'<span>'+esc(v.org)+'</span>':'')+'</figcaption></figure>'}).join('')+'</div>'+
   (s.src?'<div class="tlsrc wr" data-r1><span class="src">'+esc(s.src)+'</span></div>':'')+
   '</div></section>'},
+firmra:function(s){
+  /* la firma en el lenguaje de la pagina, con eco de Rodriguez & Associates:
+     su skyline en blanco y negro con el velo azul de su web, su logo y el azul en los numeros */
+  var co=s.company||{},b=s.band||{};
+  return'<section class="practice fra" id="'+esc(s.id||'firm')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div></div>'+
+  (b.img?'<div class="fra-band">'+
+    '<img class="fra-bg" src="'+esc(b.img)+'" alt="'+esc(b.alt||'')+'" loading="lazy">'+
+    '<div class="fra-tint" aria-hidden="true"></div>'+
+    '<div class="fra-panel">'+
+      (b.lockup?'<img class="fra-lock" src="'+esc(b.lockup)+'" alt="'+esc(b.lockAlt||'')+'">':'')+
+      (b.since?'<span class="smallcap fra-since">'+esc(b.since)+'</span>':'')+
+    '</div>'+
+    (b.addr?'<span class="smallcap fra-addr">'+esc(b.addr)+'</span>':'')+
+  '</div>':'')+
+  '<div class="wrap"><div class="prlay" data-r1>'+
+    '<div class="prid">'+
+      (co.mark?'<img class="fra-mark" src="'+esc(co.mark)+'" alt="'+esc(co.markAlt||'')+'">':'')+
+      (co.role?'<div class="prrole smallcap">'+esc(co.role)+'</div>':'')+
+      (co.desc?'<p class="prdesc">'+rich(co.desc)+'</p>':'')+
+      '<div class="prmeta">'+(co.meta||[]).map(function(x){return'<span>'+esc(x)+'</span>'}).join('')+'</div>'+
+      '<div class="prlinks">'+
+        (s.social||[]).map(function(x){var ext=/^https?:/.test(x.h);return'<a class="go" href="'+esc(x.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+(x.path?' data-path="'+esc(x.path)+'"':'')+'>'+esc(x.t)+'</a>'}).join('')+
+        (co.href?'<a class="go" href="'+esc(co.href)+'" target="_blank" rel="noopener">'+esc(co.link||'Visit')+'</a>':'')+
+      '</div>'+
+    '</div>'+
+    '<div class="prbody">'+
+      '<div class="lhead"><span class="smallcap">'+esc(s.svcLabel||'Services')+'</span><span class="lcount">'+('0'+(s.services||[]).length).slice(-2)+'</span></div>'+
+      '<div class="lgrid" data-cards>'+(s.services||[]).map(function(x){return'<div class="lcell wr">'+esc(x)+'</div>'}).join('')+'</div>'+
+    '</div>'+
+  '</div>'+
+  (s.marks?'<div class="prmarks wr" data-r1><span class="smallcap">'+esc(s.marks.label)+'</span>'+
+    (s.marks.note?'<span class="prnote">'+esc(s.marks.note)+'</span>':'')+'</div>':'')+
+  '</div>'+
+  (s.strip?'<div class="fra-strip"><img src="'+esc(s.strip.src)+'" alt="'+esc(s.strip.alt||'')+'" loading="lazy"></div>':'')+
+  '</section>'},
 pubs:function(s){
   return'<section class="pubs" id="'+esc(s.id||'pubs')+'"><div class="wrap">'+
   '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
@@ -1443,8 +1483,6 @@ html.no-motion .scarr{display:none}
 .hfirm img{display:block;width:clamp(230px,19vw,300px);height:auto}
 @media(max-width:860px){.hfirm{gap:16px;margin-top:30px}.hfirm img{width:min(62vw,240px)}}
 /* la ficha de la firma: el logo con aire, sin placa estrecha */
-#firm .prlogo{padding:clamp(26px,3vw,40px) clamp(28px,3.4vw,48px)}
-#firm .prlogo img{width:clamp(260px,24vw,340px);max-width:100%}
 #firm .prnote{max-width:none;font-size:14px;line-height:1.7;color:var(--ink)}
 
 /* ---------- Rodriguez: el nombre largo y la placa en movil ---------- */
@@ -1469,6 +1507,43 @@ html.no-motion .scarr{display:none}
   .hfirm img{width:min(44vw,170px);opacity:.92}
   .hfirm{display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:100%;margin-top:22px;padding-top:16px}
   .hfirm .hfk{max-width:none;font-size:10px;letter-spacing:.2em;line-height:1;color:rgba(255,255,255,.55)}
+}
+
+/* ---------- la firma: nuestra pagina, con eco de Rodriguez & Associates ----------
+   Tipografia, paleta y estructura de la pagina. De su web vienen el skyline en blanco y negro
+   con su velo azul (#00305B) y su logo, el azul en los numeros de servicios y el
+   Disney Hall en blanco y negro al cierre. Fotos de rodriguezadvisory.com. */
+#site section.fra{--ra:#00305B;padding-bottom:0}
+.fra-band{position:relative;margin-top:clamp(40px,5.5vh,60px);height:clamp(380px,60vh,580px);overflow:hidden;background:var(--ink)}
+.fra-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%;filter:grayscale(1) contrast(1.04)}
+.fra-tint{position:absolute;top:0;bottom:0;left:0;width:40%;background:#2a5d92;mix-blend-mode:multiply}
+.fra-tint::after{content:'';position:absolute;inset:0;background:rgba(0,48,91,.42)}
+.fra-band::after{content:'';position:absolute;left:0;right:0;bottom:0;height:30%;pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,22,26,0),rgba(20,22,26,.5))}
+.fra-panel{position:absolute;z-index:1;top:0;bottom:0;left:0;width:40%;display:flex;flex-direction:column;justify-content:center;
+  align-items:flex-start;gap:26px;padding:0 clamp(24px,3vw,56px) 0 max(34px,calc((100vw - 1360px)/2 + 34px))}
+.fra-lock{display:block;width:min(100%,420px);height:auto}
+#site .fra-since{color:rgba(255,255,255,.78)}
+#site .fra-addr{position:absolute;z-index:1;right:max(34px,calc((100vw - 1360px)/2 + 34px));bottom:clamp(20px,3.4vh,32px);color:rgba(255,255,255,.86)}
+.fra-mark{display:block;width:64px;height:64px;margin-bottom:22px}
+#firm .lgrid{border-top-color:var(--ra)}
+#firm .lcell::after{color:var(--ra);font-weight:500}
+.fra-strip{margin-top:var(--sec);height:clamp(170px,24vh,280px);overflow:hidden;background:var(--ink)}
+.fra-strip img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 38%;filter:grayscale(1) contrast(1.03)}
+@media(max-width:860px){
+  .fra-band{height:auto;display:flex;flex-direction:column;background:var(--ra)}
+  .fra-bg{position:relative;inset:auto;height:58vw;min-height:220px}
+  .fra-tint,.fra-band::after{display:none}
+  .fra-panel{position:relative;inset:auto;width:auto;gap:18px;padding:34px 18px 0}
+  .fra-lock{width:min(78vw,300px)}
+  #site .fra-addr{position:relative;right:auto;bottom:auto;padding:10px 18px 34px;line-height:1.8;color:rgba(255,255,255,.62)}
+  .fra-mark{width:56px;height:56px}
+}
+/* el CV a la vista: en el hero, junto al boton; en movil queda solo el enlace */
+@media(max-width:860px){
+  .hero .hacts{display:flex;margin-top:16px}
+  .hero .hacts .hcta:not(.alt){display:none}
+  .hero .hacts .hcta.alt{display:inline-block;width:auto;padding:6px 0 5px;font-size:10.5px}
 }
 </style>"""
 
