@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "title": "Cases — Jamie Hart",
+    "description": "Representative marina cases: dock failure, wrongful death and slip-and-fall, for plaintiffs and the defense, nationwide."
+  },
+  "logo": "JAMIE HART",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/hart"
+    },
+    {
+      "t": "Practice",
+      "h": "/hart/practice"
+    },
+    {
+      "t": "Cases",
+      "h": "/hart/cases"
+    },
+    {
+      "t": "CV",
+      "h": "/hart/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/hart#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "/hart#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "cases-open",
+      "label": "Cases",
+      "align": "right",
+      "quote": "Retained by plaintiffs <t>and by the defense.</t>",
+      "sub": "Marina injury, wrongful death and design cases, nationwide, through Hart Marine Consulting since 2016.",
+      "img": {
+        "src": "/hart/assets/las-olas-dusk.jpg",
+        "alt": "Yachts at a Fort Lauderdale marina at dusk",
+        "pos": "30% 60%"
+      },
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "case-list",
+      "label": "Representative cases",
+      "title": "Three cases, <t>coast to coast.</t>",
+      "lede": "The non-confidential engagements listed in his CV of April 2026.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "2025 · San Francisco, California · For the plaintiff",
+          "title": "Dock planking failure",
+          "desc": "Deteriorated dock planking failed at a marina, causing a fall-through and a serious lower leg injury.",
+          "items": [
+            "Accident reconstruction from photographs and video",
+            "Floating dock configuration and substructure",
+            "Causation, maintenance and standard of care",
+            "Expert witness disclosure, Superior Court of California, County of Sacramento"
+          ],
+          "icon": "dock"
+        },
+        {
+          "label": "2025 · Miami-Dade County, Florida · For the defense",
+          "title": "Slip and fall at a condominium marina",
+          "desc": "Retained by defense counsel to evaluate liability for an obstruction-related injury at a condominium marina facility.",
+          "items": [
+            "Liability evaluation",
+            "Site conditions and obstruction"
+          ],
+          "icon": "inspect"
+        },
+        {
+          "label": "2023 · Cleveland, Ohio · For a national law firm",
+          "title": "Wrongful death at a marina",
+          "desc": "Retained by a national law firm to evaluate floating dock construction and marina design.",
+          "items": [
+            "Review of depositions and construction practices",
+            "Comparative analysis of similar marinas",
+            "Findings on design consistency and industry standards"
+          ],
+          "icon": "ring"
+        }
+      ],
+      "fn": "A full list of testimony, with courts and dates, would complete this page.",
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "retained",
+      "tint": true,
+      "label": "Retained by",
+      "title": "Counsel and networks <t>he works with.</t>",
+      "lede": "Geographic scope: nationwide.",
+      "groups": [
+        {
+          "label": "Law firms, per his CV",
+          "names": [
+            "Fowler White Burnett",
+            "Wilson Elser Moskowitz Edelman & Dicker LLP",
+            "Berschler Associates, PC"
+          ]
+        },
+        {
+          "label": "Expert networks",
+          "wide": true,
+          "names": [
+            "Round Table Group (United Expert Holdings), Illinois — 2025 to date",
+            "ForensesGroup, Pasadena, California — 2025 to date"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "CV",
+      "d": "Fort Lauderdale, Lake Park, Dania Beach and St. Petersburg.",
+      "h": "/hart/record",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/hart#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "jchart80@gmail.com",
+        "cell": "(561) 445-0509",
+        "city": "Tavares, Florida",
+        "cv": {
+          "t": "Download CV (PDF)",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        }
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "An expert witness matter: injury, wrongful death or marina design",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Plaintiff or defense"
+              },
+              {
+                "n": "Court or venue"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "consulting",
+            "t": "Marina consulting: operations, RFPs, design or grant funding",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Facility"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or case history",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Hart.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Jamie Hart",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "/hart#inquiry"
+      },
+      "social": [
+        {
+          "t": "hartmarineconsulting.com",
+          "h": "https://hartmarineconsulting.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/hart/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Hart’s review. Photography is from his own website, used provisionally. This is not an official website: it has not been reviewed or approved by Mr. Hart, and it is not indexed or distributed."
+      },
+      "kick": "Marina Operations & Safety · Expert Witness",
+      "sub": "Marina operations and safety, <t>from the dock office to the witness stand.</t>",
+      "firm": {
+        "href": "https://hartmarineconsulting.com/",
+        "src": "/hart/assets/hmc-logo.png",
+        "alt": "Hart Marine Consulting, Inc.",
+        "lede": "Expert witness services and marina consulting, through Hart Marine Consulting, Inc.",
+        "link": "Visit hartmarineconsulting.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Jamie Hart · Tavares, Florida",
+      "noform": true,
+      "no": "03"
+    }
+  ]
+}

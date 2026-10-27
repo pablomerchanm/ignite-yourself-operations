@@ -5,7 +5,7 @@
 ## Qué hay
 
 1. **Vercel Web Analytics:** visitas por página, país, dispositivo y de dónde llegan. Son datos agregados, sin nombres.
-   - Va en los 14 previews y en el sitio de Ignite (home e insights).
+   - Va en los 15 previews y en el sitio de Ignite (home e insights).
    - Se ve en Vercel → proyecto → **Analytics**.
 2. **Aviso por correo:** cuando alguien abre un preview y lo deja a la vista al menos 3 segundos, le llega un correo a Pablo con:
    - la página;
