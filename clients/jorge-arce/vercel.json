@@ -140,6 +140,16 @@
       "permanent": false
     },
     {
+      "source": "/herencia/nl",
+      "destination": "/herencia",
+      "permanent": false
+    },
+    {
+      "source": "/herencia/nl/:path*",
+      "destination": "/herencia/:path*",
+      "permanent": false
+    },
+    {
       "source": "/priya",
       "destination": "/vishwanathan",
       "permanent": false
