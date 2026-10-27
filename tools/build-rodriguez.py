@@ -1545,6 +1545,12 @@ html.no-motion .scarr{display:none}
   .hero .hacts .hcta:not(.alt){display:none}
   .hero .hacts .hcta.alt{display:inline-block;width:auto;padding:6px 0 5px;font-size:10.5px}
 }
+
+/* aperturas con foto: sombra arriba para que el menu se lea sobre ventanas con luz */
+@media(min-width:861px){
+  .stmt.withimg.opener .sph::before{content:'';position:absolute;z-index:1;left:0;right:0;top:0;height:30%;pointer-events:none;
+    background:linear-gradient(180deg,rgba(20,22,26,.62) 0%,rgba(20,22,26,0) 100%)}
+}
 </style>"""
 
 # ------------------------------------------------------------- 7. navegacion

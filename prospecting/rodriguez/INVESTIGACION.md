@@ -81,7 +81,9 @@ Los abogados no lo elogian solo por lo que sabe. Lo elogian porque hace que un j
 - **Pantalla de Security Pacific** (`s-bank`, en la home): Rick escribiendo en el escritorio con lámpara (`assets/desk.jpg`). El texto va a la derecha.
 - **Pantalla "Four areas"** (`s-question`, en la home): reunión con abogados al atardecer (`assets/counsel.jpg`).
 - **Apertura de Testimony:** la balanza de latón sobre libros (`assets/balance.jpg`). Es la misma imagen del preview de Pettingill, y el texto va a la derecha.
-- **Las aperturas de Practice y CV** siguen sobre tinta.
+- **Apertura de CV:** la foto que mandó Pablo el 27 de octubre (`assets/cv-open.jpg`): manos con pluma sobre papeles en una mesa de reuniones, con luz de atardecer. El texto va a la izquierda, sobre la zona oscura.
+- **La apertura de Practice** sigue sobre tinta.
+- **En computador**, las aperturas con foto llevan una sombra arriba para que el menú se lea sobre la luz de la ventana.
 - **Tarjeta social** (`assets/og.jpg`): regenerada con el hero nuevo.
 - **Retrato de la web de la firma:** ya no se usa y se retiró.
 - **Son imágenes construidas:** requieren su autorización antes de cualquier publicación real. Así lo dice la nota de Ignite al pie.
