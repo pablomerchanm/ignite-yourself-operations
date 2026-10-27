@@ -150,6 +150,11 @@
       "permanent": false
     },
     {
+      "source": "/herencia/living-legacy",
+      "destination": "/herencia/building-legacy",
+      "permanent": false
+    },
+    {
       "source": "/priya",
       "destination": "/vishwanathan",
       "permanent": false
