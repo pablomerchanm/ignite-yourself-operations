@@ -49,8 +49,9 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(4px)}
 .bar.open .menu span:first-child{transform:translateY(3.75px) rotate(45deg)}
 .bar.open .menu span:nth-child(2){transform:translateY(-3.75px) rotate(-45deg)}
 .bar nav{gap:10px}
-@media (max-width:759.98px){
-  .bar.open .navlinks{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:76px;bottom:0;background:var(--forest);padding:40px 20px;gap:6px}
+/* menú desplegable en móvil y tableta: por debajo de 1024 px los cuatro enlaces y el selector de idioma no caben en una línea */
+@media (max-width:1023.98px){
+  .bar.open .navlinks{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:76px;bottom:0;background:var(--forest);padding:40px var(--g);gap:6px}
   .bar.open .navlinks a{font-family:var(--serif);font-size:40px;line-height:1.15;color:var(--paper);padding-block:6px;border-bottom:1px solid rgba(244,239,230,.15)}
   .bar.open{transform:none}
 }
@@ -63,11 +64,11 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(4px)}
 .lang.in-hero{position:absolute;top:24px;right:14px;z-index:2;color:var(--paper)}
 .f-base .lang a{border-bottom:0;color:var(--paper)}
 .bar nav.lang{gap:2px;font-size:11.5px}  /* el selector es un nav dentro de la barra: no hereda su espaciado */
-@media (max-width:759.98px){
+@media (max-width:1023.98px){
   .bar.open .navlinks .lang{margin-top:22px}
   .bar.open .navlinks .lang a{font-family:var(--mono);font-size:14px;line-height:1;padding:10px 12px;border:0;color:var(--paper)}
 }
-@media (min-width:760px){.navlinks{align-items:center}}
+@media (min-width:1024px){.navlinks{align-items:center}}
 
 /* portada */
 .hero{display:grid;grid-template-columns:1fr;min-height:calc(100svh - 76px)}
@@ -329,6 +330,14 @@ details.svc summary::-webkit-details-marker{display:none}
 @keyframes marq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:28px}.marquee{mask-image:none;-webkit-mask-image:none}}
 .clients .all{font-size:13.5px;line-height:1.7;color:var(--muted);margin-top:22px;max-width:60em}
+/* un aliado que presenta a Herencia: el vídeo de Farmers Direct bajo los logos */
+.spot{display:grid;gap:clamp(20px,3vw,44px);margin-top:clamp(48px,5.6vw,80px);padding-top:clamp(36px,4vw,56px);border-top:1px solid var(--rule);align-items:center}
+.spot-tx{display:grid;gap:16px;align-content:center}
+.spot-tx .lab{color:var(--orange-ink)}
+.spot-tx blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.6vw,38px);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
+.spot-tx .who{font-size:14.5px;color:var(--muted)}
+.spot-ln{font-size:14.5px;font-weight:500;border-bottom:1px solid currentColor;width:fit-content}
+@media (min-width:760px){.spot{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
 
 /* contacto */
 .contact{background:var(--orange);color:var(--forest);padding-block:var(--sec)}
@@ -421,12 +430,14 @@ details.svc summary::-webkit-details-marker{display:none}
 .legal h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,5vw,72px);line-height:1;margin-bottom:32px}
 .legal p{font-size:17px;line-height:1.7;max-width:36em;margin-bottom:16px}
 
-@media (min-width:760px){
-  :root{--g:40px}
+@media (min-width:1024px){
   .navlinks{display:flex;gap:28px}
   .navlinks .m-only{display:none}
   .menu{display:none}
   .bar nav{gap:28px}
+}
+@media (min-width:760px){
+  :root{--g:40px}
   .hero{grid-template-columns:7fr 5fr}
   .hero .tx{padding:clamp(48px,6vw,96px) clamp(32px,4vw,64px) 0 max(var(--g),calc((100vw - var(--max))/2 + var(--g)))}
   .hero .ph{min-height:auto}
