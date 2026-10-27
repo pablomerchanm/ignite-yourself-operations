@@ -291,6 +291,12 @@ details.svc summary::-webkit-details-marker{display:none}
 /* equipo */
 .team{padding-block:var(--sec);background:var(--paper-2)}
 .team .top{display:grid;gap:20px;margin-bottom:clamp(36px,4vw,64px)}
+.duo{display:grid;gap:var(--g);margin-top:clamp(36px,4vw,56px)}
+.duo figure{display:grid;gap:12px}
+.duo .ph{aspect-ratio:4/3;overflow:hidden;background:var(--paper)}
+.duo .ph img{width:100%;height:100%;object-fit:cover}
+.duo .lab{color:var(--muted)}
+@media (min-width:760px){.duo{grid-template-columns:1fr 1fr}}
 .people{display:grid;grid-template-columns:1fr;gap:clamp(24px,3vw,40px)}
 .person{display:grid;gap:18px;align-content:start}
 .person .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper)}
@@ -350,9 +356,11 @@ details.svc summary::-webkit-details-marker{display:none}
 /* ODS al final: los seis que priorizan sus proyectos */
 .f-sdg{display:grid;gap:18px;align-items:center;padding-block:30px;border-top:1px solid rgba(244,239,230,.18)}
 .f-sdg p{font-size:14.5px;line-height:1.6;color:rgba(244,239,230,.72);max-width:34em;text-wrap:balance}
-.f-sdg img{width:100%;max-width:560px;height:auto;display:block}
-@media (min-width:760px){.f-sdg{grid-template-columns:5fr 7fr;gap:56px}.f-sdg img{justify-self:end}}
-@media (max-width:759.98px){.f-sdg{justify-items:center;text-align:center}}
+.f-sdg-ico{display:flex;align-items:center;gap:clamp(14px,2vw,24px);min-width:0}
+.f-sdg-ico img{width:100%;max-width:560px;height:auto;display:block;min-width:0}
+.f-sdg-ico .gg{width:auto;height:clamp(76px,7vw,100px);max-width:none;flex:none}
+@media (min-width:760px){.f-sdg{grid-template-columns:5fr 7fr;gap:56px}.f-sdg-ico{justify-self:end}}
+@media (max-width:759.98px){.f-sdg{justify-items:center;text-align:center}.f-sdg-ico{flex-direction:column;gap:20px;width:100%}}
 .f-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:22px;border-top:1px solid rgba(244,239,230,.18);font-size:13px;color:rgba(244,239,230,.6)}
 .f-base a{border-bottom:1px solid rgba(244,239,230,.3)}
 
