@@ -49,6 +49,11 @@
           "t": "Discuss a matter",
           "h": "#inquiry",
           "primary": true
+        },
+        {
+          "t": "Download CV",
+          "h": "/rodriguez/assets/Rick-Rodriguez-CV-2016.pdf",
+          "dl": true
         }
       ],
       "firm": {
@@ -59,14 +64,20 @@
       }
     },
     {
-      "type": "practice",
+      "type": "firmra",
       "id": "firm",
       "label": "The firm",
       "title": "Rodriguez & Associates <t>Advisory Group.</t>",
       "lede": "The firm Rick founded in downtown Los Angeles in 1992 and leads today. The advisory, workout and expert work on this site is delivered through it.",
+      "band": {
+        "img": "/rodriguez/assets/ra-skyline.jpg",
+        "alt": "Downtown Los Angeles",
+        "lockup": "/rodriguez/assets/ra-lockup-white.png",
+        "lockAlt": "Rodriguez & Associates Advisory Group",
+        "since": "Founded in 1992 · Downtown Los Angeles",
+        "addr": "333 S. Grand Avenue · Suite 1790 · Los Angeles, California 90071"
+      },
       "company": {
-        "logo": "/rodriguez/assets/ra-lockup-white.png",
-        "name": "Rodriguez & Associates Advisory Group",
         "role": "Founder and Principal · since 1992",
         "desc": "Founded to resolve complex debtor-creditor transactions secured by real estate, stock and partnership interests. Today also capital procurement, real estate brokerage, site acquisition and litigation support, with Emily Rodriguez, Partner.",
         "meta": [
@@ -102,6 +113,10 @@
       "marks": {
         "label": "Who the firm serves",
         "note": "Law firms · Financial institutions · Real estate developers and investors · Government organizations and non-profits"
+      },
+      "strip": {
+        "src": "/rodriguez/assets/ra-hall.jpg",
+        "alt": "Walt Disney Concert Hall, downtown Los Angeles"
       },
       "no": "01"
     },
@@ -250,7 +265,11 @@
       "contact": {
         "email": "rick@rodriguezadvisory.com",
         "phone": "(213) 617-1163",
-        "city": "Los Angeles, California"
+        "city": "Los Angeles, California",
+        "cv": {
+          "t": "Download CV (PDF)",
+          "h": "/rodriguez/assets/Rick-Rodriguez-CV-2016.pdf"
+        }
       },
       "form": {
         "selectLabel": "What would you like to discuss?",

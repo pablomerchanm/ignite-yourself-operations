@@ -41,7 +41,11 @@
       "label": "CV",
       "quote": "Since 1973, <t>in banking and finance.</t>",
       "sub": "Security Pacific, the firm, a de novo bank, teaching at USC and UCLA Extension, and public work for Los Angeles schools.",
-      "opener": true
+      "opener": true,
+      "more": {
+        "t": "Download the full CV · PDF, December 2016",
+        "h": "/rodriguez/assets/Rick-Rodriguez-CV-2016.pdf"
+      }
     },
     {
       "type": "timeline",
@@ -254,7 +258,11 @@
       "contact": {
         "email": "rick@rodriguezadvisory.com",
         "phone": "(213) 617-1163",
-        "city": "Los Angeles, California"
+        "city": "Los Angeles, California",
+        "cv": {
+          "t": "Download CV (PDF)",
+          "h": "/rodriguez/assets/Rick-Rodriguez-CV-2016.pdf"
+        }
       },
       "form": {
         "selectLabel": "What would you like to discuss?",

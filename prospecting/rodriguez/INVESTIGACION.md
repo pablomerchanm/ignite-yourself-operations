@@ -92,3 +92,29 @@ Los abogados no lo elogian solo por lo que sabe. Lo elogian porque hace que un j
 - No hay nombres de clientes de las cartas fuera de la sección de cartas.
 - No se usan fotos encontradas buscando "Rick Rodriguez": hay muchas personas con ese nombre.
 - No hay propuesta todavía. `proposal.active` está en false, con la misma mecánica de Brant y Pettingill para cuando la pida.
+
+## La firma con eco de Rodriguez & Associates, y el CV a la vista (27 de octubre)
+
+Pedido de Pablo: que la sección de la firma tenga elementos de la propia firma (fotos y gráfica), sin perder las tipografías ni el look de la página de Rick.
+
+**Lo que define la web de la firma** (revisada el 27 de octubre):
+- fotos de Los Ángeles en blanco y negro, con un panel azul translúcido sobre la mitad izquierda del hero;
+- azul profundo #00305B en "A message from our founder";
+- el azul del sello, #074870;
+- Futura Light en mayúsculas;
+- una columna celeste en "Our services";
+- mármol detrás de los testimonios.
+
+**Lo que se trajo a la página** (con nuestras tipografías, la paleta hueso y tinta, y el riel "01 The firm"):
+- **Banda del skyline:** downtown LA en blanco y negro con el velo azul sobre el 40 % izquierdo, como su hero. Encima va su logo, "Founded in 1992 · Downtown Los Angeles" y la dirección abajo a la derecha. En móvil, la foto arriba y el panel azul debajo.
+- **Azul de la firma** en la raya y los números de "What the firm does".
+- **Cierre:** el Walt Disney Concert Hall en blanco y negro, otra foto de su web.
+- **Fotos** (`assets/ra-skyline.jpg`, `assets/ra-hall.jpg`): salen de rodriguezadvisory.com, son imágenes de stock que la firma usa en su web, y hay que confirmar la licencia antes de una publicación real.
+- **Descartado tras probarlo:** una versión con Futura (Jost), el mármol y la banda azul "Led by its founder". Se veía como su web y no como la nuestra.
+
+**CV para descargar:** es la copia del CV de diciembre de 2016 que publica la firma (`assets/Rick-Rodriguez-CV-2016.pdf`, 18 páginas). Se aloja en el preview porque la web de la firma a veces pide verificación anti-bots. Aparece en tres sitios:
+- en el hero, junto a "Discuss a matter" (en móvil, como enlace discreto);
+- en la apertura de la página CV ("Download the full CV · PDF, December 2016");
+- en el pie, junto al contacto.
+
+Las referencias como fuente siguen apuntando al PDF original en su web.
