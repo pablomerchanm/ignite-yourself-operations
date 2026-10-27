@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "title": "Jamie Hart — Marina Operations & Safety Expert Witness",
+    "description": "Jamie Hart, C.M.M.: marina operations and safety expert witness. Supervisor of Marine Facilities for the City of Fort Lauderdale, 1985 to 2010; Hart Marine Consulting, Tavares, Florida."
+  },
+  "logo": "JAMIE HART",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/hart"
+    },
+    {
+      "t": "Practice",
+      "h": "/hart/practice"
+    },
+    {
+      "t": "Cases",
+      "h": "/hart/cases"
+    },
+    {
+      "t": "CV",
+      "h": "/hart/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/hart#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "plate": true,
+      "img": {
+        "src": "/hart/assets/hero.jpg",
+        "alt": "Jamie Hart on a dock in Florida"
+      },
+      "kick": "Certified Marina Manager · Expert Witness",
+      "name": "Jamie Hart",
+      "sub": "Marina operations and safety, <t>from the dock office to the witness stand.</t>",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "Download CV",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf",
+          "dl": true
+        }
+      ],
+      "firm": {
+        "k": "Expert witness and consultant",
+        "logo": "/hart/assets/hmc-logo.png",
+        "alt": "Hart Marine Consulting, Inc.",
+        "h": "#firm"
+      }
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "The record",
+      "items": [
+        {
+          "n": "40+",
+          "k": "Years in the marina industry"
+        },
+        {
+          "n": "25",
+          "k": "Years running Fort Lauderdale’s marine facilities, 1985 to 2010"
+        },
+        {
+          "n": "$11<sup>M+</sup>",
+          "k": "In grant funding secured for marina and waterway projects, per his CV"
+        }
+      ],
+      "more": {
+        "t": "Case experience",
+        "h": "/hart/cases"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "In brief",
+      "items": [
+        {
+          "k": "Inside the marina.",
+          "t": "Supervisor of Marine Facilities for the City of Fort Lauderdale for 25 years, then Marina Harbor Director for the Town of Lake Park.",
+          "d": "Operations, staffing, maintenance, safety, code enforcement and revenue, at municipal marinas of 112 and 190 slips."
+        },
+        {
+          "k": "An expert witness since 2016.",
+          "t": "Independent expert and consultant, Hart Marine Consulting, Inc., Tavares, Florida.",
+          "d": "Standard of care, liability exposure and causation in marina injury, wrongful death and design cases, nationwide."
+        },
+        {
+          "k": "For both sides.",
+          "t": "Retained by plaintiff and defense counsel, including Fowler White Burnett and Wilson Elser.",
+          "d": "Case analysis, site inspections, deposition review, expert reports and testimony."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "id": "quote",
+      "lead": "On Jamie Hart, from the late Robert O. Cox, former Fort Lauderdale City Commissioner and Mayor:",
+      "q": "“One of the most qualified professionals in the industry.”",
+      "who": "As quoted on hartmarineconsulting.com"
+    },
+    {
+      "type": "stmt",
+      "id": "s-question",
+      "label": "The practice",
+      "quote": "Was the marina built, kept <t>and run to standard?</t>",
+      "keys": [
+        "Standard of care",
+        "Causation",
+        "Liability exposure",
+        "Industry standards"
+      ],
+      "more": {
+        "t": "The practice",
+        "h": "/hart/practice"
+      },
+      "img": {
+        "src": "/hart/assets/las-olas-dusk.jpg",
+        "alt": "A Fort Lauderdale marina at dusk",
+        "pos": "50% 60%"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-city",
+      "label": "Fort Lauderdale",
+      "align": "right",
+      "quote": "Twenty-five years <t>running a city’s marinas.</t>",
+      "sub": "Supervisor of Marine Facilities, City of Fort Lauderdale, 1985 to 2010: a 190-slip mega-yacht marina, ten moorings and three public boat ramps, and liaison to the Marine Advisory Board.",
+      "keys": [
+        "Operations",
+        "Safety and compliance",
+        "Code enforcement"
+      ],
+      "more": {
+        "t": "The record",
+        "h": "/hart/record"
+      },
+      "img": {
+        "src": "/hart/assets/las-olas-aerial.jpg",
+        "alt": "Aerial view of a marina and anchorage in Fort Lauderdale",
+        "pos": "50% 50%"
+      }
+    },
+    {
+      "type": "counsel",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "What counsel needs, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · April 2026",
+          "t": "Curriculum vitae",
+          "d": "Marina career, expert engagements, certification and affiliations.",
+          "a": "Download the CV",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Representative · 2023 – 2025",
+          "t": "Case experience",
+          "d": "Wrongful death, dock failure and slip-and-fall matters, by year and venue.",
+          "a": "See the cases",
+          "h": "/hart/cases"
+        },
+        {
+          "icon": "dock",
+          "tag": "What he evaluates",
+          "t": "The practice",
+          "d": "Marina operations, docks and waterfront structures, safety programs and compliance.",
+          "a": "See the practice",
+          "h": "/hart/practice"
+        },
+        {
+          "icon": "sign",
+          "tag": "Plaintiff or defense",
+          "t": "Retain Jamie",
+          "d": "Availability and a conflict check, from a brief, non-confidential description.",
+          "a": "Discuss a matter",
+          "h": "#inquiry"
+        }
+      ]
+    },
+    {
+      "type": "firmra",
+      "id": "firm",
+      "label": "The firm",
+      "title": "Hart Marine <t>Consulting.</t>",
+      "lede": "The firm through which Jamie takes expert witness engagements and marina consulting, from Tavares, Florida.",
+      "company": {
+        "logo": "/hart/assets/hmc-logo.png",
+        "name": "Hart Marine Consulting, Inc.",
+        "more": "https://hartmarineconsulting.com/",
+        "role": "Independent expert witness and marine consultant",
+        "desc": "Expert witness services in marina and waterfront litigation, and consulting for municipalities on marina operations, RFPs, design and grant funding.",
+        "meta": [
+          "32751 Lakeshore Drive",
+          "Tavares, Florida 32778",
+          "(561) 445-0509 · jchart80@gmail.com"
+        ],
+        "href": "https://hartmarineconsulting.com/",
+        "link": "Visit hartmarineconsulting.com"
+      },
+      "social": [
+        {
+          "t": "Discuss a consulting engagement",
+          "h": "#inquiry",
+          "path": "consulting"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "jchart80@gmail.com",
+        "cell": "(561) 445-0509",
+        "city": "Tavares, Florida",
+        "cv": {
+          "t": "Download CV (PDF)",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        }
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "An expert witness matter: injury, wrongful death or marina design",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Plaintiff or defense"
+              },
+              {
+                "n": "Court or venue"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "consulting",
+            "t": "Marina consulting: operations, RFPs, design or grant funding",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Facility"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or case history",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Hart.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Jamie Hart",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "social": [
+        {
+          "t": "hartmarineconsulting.com",
+          "h": "https://hartmarineconsulting.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/hart/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Hart’s review. Photography is from his own website, used provisionally. This is not an official website: it has not been reviewed or approved by Mr. Hart, and it is not indexed or distributed."
+      },
+      "kick": "Marina Operations & Safety · Expert Witness",
+      "sub": "Marina operations and safety, <t>from the dock office to the witness stand.</t>",
+      "firm": {
+        "href": "https://hartmarineconsulting.com/",
+        "src": "/hart/assets/hmc-logo.png",
+        "alt": "Hart Marine Consulting, Inc.",
+        "lede": "Expert witness services and marina consulting, through Hart Marine Consulting, Inc.",
+        "link": "Visit hartmarineconsulting.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Jamie Hart · Tavares, Florida",
+      "no": "02"
+    }
+  ]
+}

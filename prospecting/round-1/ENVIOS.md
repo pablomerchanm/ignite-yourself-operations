@@ -25,3 +25,4 @@
 | Dr Robert Freudenthal | correo | — | preview construido, sin desplegar ni enviar |
 | Bernard "Biff" Pettingill | correo | 2026-10-12 | respondió "Yes" a ver un preview; preview privado construido en /pettingill, sin enviar (ver prospecting/pettingill/ITERACION-1.md) |
 | Enrique "Rick" Rodriguez, Jr. | correo | 2026-10-27 | preview enviado (igniteyourself.co/rodriguez) con un GIF en el cuerpo: se escribe el dominio, carga y recorre la página; seguimiento 2026-11-04 (ver prospecting/rodriguez/INVESTIGACION.md) |
+| James C. "Jamie" Hart, C.M.M. | correo | 2026-10-09 | respondió el 27 de octubre ("Are you referring to a meta link?"); preview privado construido en /hart, link por enviar (ver prospecting/hart/INVESTIGACION.md) |

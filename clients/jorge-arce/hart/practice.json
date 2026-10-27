@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "title": "Practice — Jamie Hart",
+    "description": "Marina operations, docks and waterfront structures, safety programs and compliance, in injury, wrongful death and design cases."
+  },
+  "logo": "JAMIE HART",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/hart"
+    },
+    {
+      "t": "Practice",
+      "h": "/hart/practice"
+    },
+    {
+      "t": "Cases",
+      "h": "/hart/cases"
+    },
+    {
+      "t": "CV",
+      "h": "/hart/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "/hart#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "/hart#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Practice",
+      "quote": "The standard of care, <t>at the water’s edge.</t>",
+      "sub": "Marina operations, docks and waterfront structures, safety programs and compliance, in personal injury, wrongful death and design defect cases.",
+      "img": {
+        "src": "/hart/assets/dania-docks.jpg",
+        "alt": "New floating docks at a municipal marina in Dania Beach, Florida",
+        "pos": "50% 55%"
+      },
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "What he evaluates",
+      "title": "Four questions <t>a marina case turns on.</t>",
+      "lede": "Opinions on how a marina is expected to be designed, maintained and run, and whether it was.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Operations",
+          "title": "Was the marina run to standard?",
+          "desc": "Operating procedures, staffing, inspections and maintenance programs, measured against how well-run marinas operate.",
+          "items": [
+            "Operating procedures",
+            "Staffing and training",
+            "Inspection protocols",
+            "Maintenance scheduling"
+          ],
+          "cta": {
+            "t": "Discuss an operations matter",
+            "h": "/hart#inquiry",
+            "path": "counsel"
+          },
+          "icon": "ring"
+        },
+        {
+          "label": "Docks and structures",
+          "title": "Was the dock built and kept safe?",
+          "desc": "Floating dock systems, boat launching facilities, bulkheads, materials, elevations and long-term maintenance.",
+          "items": [
+            "Floating docks",
+            "Planking and substructure",
+            "Bulkheads and seawalls",
+            "Boat ramps and launching"
+          ],
+          "cta": {
+            "t": "Discuss a dock matter",
+            "h": "/hart#inquiry",
+            "path": "counsel"
+          },
+          "icon": "dock"
+        },
+        {
+          "label": "Safety and compliance",
+          "title": "Did it meet the codes and standards?",
+          "desc": "Safety programs and compliance with OSHA standards, FEMA requirements and applicable maritime regulations, as listed on his website.",
+          "items": [
+            "Safety programs",
+            "OSHA and FEMA requirements",
+            "Marine code enforcement",
+            "Industry standards"
+          ],
+          "cta": {
+            "t": "Discuss a compliance matter",
+            "h": "/hart#inquiry",
+            "path": "counsel"
+          },
+          "icon": "check"
+        },
+        {
+          "label": "Causation",
+          "title": "What happened, and why?",
+          "desc": "Accident reconstruction from photographs, video and the configuration of the dock, and opinions on causation and liability exposure.",
+          "items": [
+            "Accident reconstruction",
+            "Causation",
+            "Liability exposure",
+            "Comparison with similar facilities"
+          ],
+          "cta": {
+            "t": "Discuss a causation matter",
+            "h": "/hart#inquiry",
+            "path": "counsel"
+          },
+          "icon": "inspect"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "case-types",
+      "label": "Case types",
+      "title": "Injury, death <t>and design.</t>",
+      "lede": "The matters he is retained on, per his CV and website.",
+      "groups": [
+        {
+          "label": "Retained on",
+          "names": [
+            "Personal injury",
+            "Wrongful death",
+            "Marina design defects",
+            "Accident reconstruction",
+            "Operational negligence",
+            "Slip, trip and fall-through incidents"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "support",
+      "tint": true,
+      "label": "For counsel",
+      "title": "From first review <t>to testimony.</t>",
+      "lede": "How he works on a matter, as described on his website and CV.",
+      "groups": [
+        {
+          "label": "Work on a matter",
+          "wide": true,
+          "names": [
+            "Early case evaluation and liability assessment",
+            "Case analysis and review of documents and depositions",
+            "Site inspections",
+            "Expert reports and disclosures",
+            "Deposition and trial testimony",
+            "Review of vendor agreements, operating procedures and personnel guidelines"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "exp",
+      "id": "consulting",
+      "label": "Beyond litigation",
+      "title": "Consulting <t>for public marinas.</t>",
+      "lede": "The work behind the opinions: advising cities on how their marinas are planned, funded and run.",
+      "groups": [
+        {
+          "label": "Marina consulting",
+          "wide": true,
+          "names": [
+            "RFPs for marina management and redevelopment, City of Dania Beach",
+            "Marina design and renovation planning",
+            "Grant procurement: about $3.6 million for Dania Beach, and federal, state and local funding for St. Petersburg",
+            "Code revisions, vessel regulations and safety standards"
+          ]
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "counsel",
+      "id": "disclosure",
+      "light": true,
+      "label": "For the file",
+      "title": "The expert disclosure, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · April 2026",
+          "t": "Curriculum vitae",
+          "d": "Marina career, expert engagements, certification and affiliations.",
+          "a": "Download the CV",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Representative · 2023 – 2025",
+          "t": "Case experience",
+          "d": "The non-confidential engagements listed in his CV.",
+          "a": "See the cases",
+          "h": "/hart/cases"
+        },
+        {
+          "icon": "sign",
+          "tag": "Plaintiff or defense",
+          "t": "Retain Jamie",
+          "d": "Availability and a conflict check.",
+          "a": "Discuss a matter",
+          "h": "/hart#inquiry"
+        }
+      ]
+    },
+    {
+      "type": "next",
+      "k": "Next",
+      "t": "Cases",
+      "d": "Representative engagements, 2023 to 2025, for plaintiffs and the defense.",
+      "h": "/hart/cases",
+      "alt": {
+        "t": "Discuss a matter",
+        "h": "/hart#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "jchart80@gmail.com",
+        "cell": "(561) 445-0509",
+        "city": "Tavares, Florida",
+        "cv": {
+          "t": "Download CV (PDF)",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        }
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "An expert witness matter: injury, wrongful death or marina design",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Plaintiff or defense"
+              },
+              {
+                "n": "Court or venue"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "consulting",
+            "t": "Marina consulting: operations, RFPs, design or grant funding",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Facility"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or case history",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Hart.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Jamie Hart",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "/hart#inquiry"
+      },
+      "social": [
+        {
+          "t": "hartmarineconsulting.com",
+          "h": "https://hartmarineconsulting.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/hart/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Hart’s review. Photography is from his own website, used provisionally. This is not an official website: it has not been reviewed or approved by Mr. Hart, and it is not indexed or distributed."
+      },
+      "kick": "Marina Operations & Safety · Expert Witness",
+      "sub": "Marina operations and safety, <t>from the dock office to the witness stand.</t>",
+      "firm": {
+        "href": "https://hartmarineconsulting.com/",
+        "src": "/hart/assets/hmc-logo.png",
+        "alt": "Hart Marine Consulting, Inc.",
+        "lede": "Expert witness services and marina consulting, through Hart Marine Consulting, Inc.",
+        "link": "Visit hartmarineconsulting.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Jamie Hart · Tavares, Florida",
+      "noform": true,
+      "no": "05"
+    }
+  ]
+}

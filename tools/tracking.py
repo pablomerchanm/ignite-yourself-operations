@@ -16,7 +16,7 @@ SITE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
 # previews de prospectos: analitica y aviso. El nombre que sale en el correo vive en api/visit.js
 PREVIEWS = ['pettingill', 'rodriguez', 'brant', 'mark-cooke', 'kappelman', 'kappelman-gareis',
             'kappelman-getty', 'freudenthal', 'habib', 'nilsson', 'vishwanathan', 'adriana',
-            'adriana-gareis', 'arce']
+            'adriana-gareis', 'arce', 'hart']
 # el sitio de Ignite: solo analitica
 PAGES = ['igy-mobius', 'insights']
 

@@ -23,6 +23,7 @@ const PEOPLE = {
   adriana: 'Adriana Mejía Cuartas',
   'adriana-gareis': 'Adriana Mejía Cuartas',
   arce: 'Jorge Arce',
+  hart: 'Jamie Hart',
 };
 
 const BOTS = /bot|crawl|spider|slurp|preview|headless|lighthouse|facebookexternalhit|embedly|scanner|python|curl|wget/i;

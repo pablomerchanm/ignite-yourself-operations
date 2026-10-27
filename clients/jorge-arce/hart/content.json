@@ -1,0 +1,813 @@
+{
+  "meta": {
+    "title": "Jamie Hart — Marina Operations & Safety Expert Witness",
+    "description": "Jamie Hart, C.M.M.: marina operations and safety expert witness, Tavares, Florida."
+  },
+  "logo": "JAMIE HART",
+  "nav": [
+    {
+      "t": "Overview",
+      "h": "/hart"
+    },
+    {
+      "t": "Practice",
+      "h": "/hart/practice"
+    },
+    {
+      "t": "Cases",
+      "h": "/hart/cases"
+    },
+    {
+      "t": "CV",
+      "h": "/hart/record"
+    },
+    {
+      "t": "Enquiry",
+      "h": "#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Discuss a matter",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "plate": true,
+      "img": {
+        "src": "/hart/assets/hero.jpg",
+        "alt": "Jamie Hart on a dock in Florida"
+      },
+      "kick": "Certified Marina Manager · Expert Witness",
+      "name": "Jamie Hart",
+      "sub": "Marina operations and safety, <t>from the dock office to the witness stand.</t>",
+      "actions": [
+        {
+          "t": "Discuss a matter",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "Download CV",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf",
+          "dl": true
+        }
+      ],
+      "firm": {
+        "k": "Expert witness and consultant",
+        "logo": "/hart/assets/hmc-logo.png",
+        "alt": "Hart Marine Consulting, Inc.",
+        "h": "#firm"
+      }
+    },
+    {
+      "type": "nums",
+      "id": "numbers",
+      "ink": true,
+      "label": "The record",
+      "items": [
+        {
+          "n": "40+",
+          "k": "Years in the marina industry"
+        },
+        {
+          "n": "25",
+          "k": "Years running Fort Lauderdale’s marine facilities, 1985 to 2010"
+        },
+        {
+          "n": "$11<sup>M+</sup>",
+          "k": "In grant funding secured for marina and waterway projects, per his CV"
+        }
+      ],
+      "more": {
+        "t": "Case experience",
+        "h": "/hart/cases"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "In brief",
+      "items": [
+        {
+          "k": "Inside the marina.",
+          "t": "Supervisor of Marine Facilities for the City of Fort Lauderdale for 25 years, then Marina Harbor Director for the Town of Lake Park.",
+          "d": "Operations, staffing, maintenance, safety, code enforcement and revenue, at municipal marinas of 112 and 190 slips."
+        },
+        {
+          "k": "An expert witness since 2016.",
+          "t": "Independent expert and consultant, Hart Marine Consulting, Inc., Tavares, Florida.",
+          "d": "Standard of care, liability exposure and causation in marina injury, wrongful death and design cases, nationwide."
+        },
+        {
+          "k": "For both sides.",
+          "t": "Retained by plaintiff and defense counsel, including Fowler White Burnett and Wilson Elser.",
+          "d": "Case analysis, site inspections, deposition review, expert reports and testimony."
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "id": "quote",
+      "lead": "On Jamie Hart, from the late Robert O. Cox, former Fort Lauderdale City Commissioner and Mayor:",
+      "q": "“One of the most qualified professionals in the industry.”",
+      "who": "As quoted on hartmarineconsulting.com"
+    },
+    {
+      "type": "stmt",
+      "id": "s-question",
+      "label": "The practice",
+      "quote": "Was the marina built, kept <t>and run to standard?</t>",
+      "keys": [
+        "Standard of care",
+        "Causation",
+        "Liability exposure",
+        "Industry standards"
+      ],
+      "more": {
+        "t": "The practice",
+        "h": "/hart/practice"
+      },
+      "img": {
+        "src": "/hart/assets/las-olas-dusk.jpg",
+        "alt": "A Fort Lauderdale marina at dusk",
+        "pos": "50% 60%"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-city",
+      "label": "Fort Lauderdale",
+      "align": "right",
+      "quote": "Twenty-five years <t>running a city’s marinas.</t>",
+      "sub": "Supervisor of Marine Facilities, City of Fort Lauderdale, 1985 to 2010: a 190-slip mega-yacht marina, ten moorings and three public boat ramps, and liaison to the Marine Advisory Board.",
+      "keys": [
+        "Operations",
+        "Safety and compliance",
+        "Code enforcement"
+      ],
+      "more": {
+        "t": "The record",
+        "h": "/hart/record"
+      },
+      "img": {
+        "src": "/hart/assets/las-olas-aerial.jpg",
+        "alt": "Aerial view of a marina and anchorage in Fort Lauderdale",
+        "pos": "50% 50%"
+      }
+    },
+    {
+      "type": "counsel",
+      "id": "for-counsel",
+      "label": "For counsel",
+      "title": "What counsel needs, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · April 2026",
+          "t": "Curriculum vitae",
+          "d": "Marina career, expert engagements, certification and affiliations.",
+          "a": "Download the CV",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Representative · 2023 – 2025",
+          "t": "Case experience",
+          "d": "Wrongful death, dock failure and slip-and-fall matters, by year and venue.",
+          "a": "See the cases",
+          "h": "/hart/cases"
+        },
+        {
+          "icon": "dock",
+          "tag": "What he evaluates",
+          "t": "The practice",
+          "d": "Marina operations, docks and waterfront structures, safety programs and compliance.",
+          "a": "See the practice",
+          "h": "/hart/practice"
+        },
+        {
+          "icon": "sign",
+          "tag": "Plaintiff or defense",
+          "t": "Retain Jamie",
+          "d": "Availability and a conflict check, from a brief, non-confidential description.",
+          "a": "Discuss a matter",
+          "h": "#inquiry"
+        }
+      ]
+    },
+    {
+      "type": "firmra",
+      "id": "firm",
+      "label": "The firm",
+      "title": "Hart Marine <t>Consulting.</t>",
+      "lede": "The firm through which Jamie takes expert witness engagements and marina consulting, from Tavares, Florida.",
+      "company": {
+        "logo": "/hart/assets/hmc-logo.png",
+        "name": "Hart Marine Consulting, Inc.",
+        "more": "https://hartmarineconsulting.com/",
+        "role": "Independent expert witness and marine consultant",
+        "desc": "Expert witness services in marina and waterfront litigation, and consulting for municipalities on marina operations, RFPs, design and grant funding.",
+        "meta": [
+          "32751 Lakeshore Drive",
+          "Tavares, Florida 32778",
+          "(561) 445-0509 · jchart80@gmail.com"
+        ],
+        "href": "https://hartmarineconsulting.com/",
+        "link": "Visit hartmarineconsulting.com"
+      },
+      "social": [
+        {
+          "t": "Discuss a consulting engagement",
+          "h": "#inquiry",
+          "path": "consulting"
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Practice",
+      "quote": "The standard of care, <t>at the water’s edge.</t>",
+      "sub": "Marina operations, docks and waterfront structures, safety programs and compliance, in personal injury, wrongful death and design defect cases.",
+      "img": {
+        "src": "/hart/assets/dania-docks.jpg",
+        "alt": "New floating docks at a municipal marina in Dania Beach, Florida",
+        "pos": "50% 55%"
+      },
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "What he evaluates",
+      "title": "Four questions <t>a marina case turns on.</t>",
+      "lede": "Opinions on how a marina is expected to be designed, maintained and run, and whether it was.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Operations",
+          "title": "Was the marina run to standard?",
+          "desc": "Operating procedures, staffing, inspections and maintenance programs, measured against how well-run marinas operate.",
+          "items": [
+            "Operating procedures",
+            "Staffing and training",
+            "Inspection protocols",
+            "Maintenance scheduling"
+          ],
+          "cta": {
+            "t": "Discuss an operations matter",
+            "h": "#inquiry",
+            "path": "counsel"
+          },
+          "icon": "ring"
+        },
+        {
+          "label": "Docks and structures",
+          "title": "Was the dock built and kept safe?",
+          "desc": "Floating dock systems, boat launching facilities, bulkheads, materials, elevations and long-term maintenance.",
+          "items": [
+            "Floating docks",
+            "Planking and substructure",
+            "Bulkheads and seawalls",
+            "Boat ramps and launching"
+          ],
+          "cta": {
+            "t": "Discuss a dock matter",
+            "h": "#inquiry",
+            "path": "counsel"
+          },
+          "icon": "dock"
+        },
+        {
+          "label": "Safety and compliance",
+          "title": "Did it meet the codes and standards?",
+          "desc": "Safety programs and compliance with OSHA standards, FEMA requirements and applicable maritime regulations, as listed on his website.",
+          "items": [
+            "Safety programs",
+            "OSHA and FEMA requirements",
+            "Marine code enforcement",
+            "Industry standards"
+          ],
+          "cta": {
+            "t": "Discuss a compliance matter",
+            "h": "#inquiry",
+            "path": "counsel"
+          },
+          "icon": "check"
+        },
+        {
+          "label": "Causation",
+          "title": "What happened, and why?",
+          "desc": "Accident reconstruction from photographs, video and the configuration of the dock, and opinions on causation and liability exposure.",
+          "items": [
+            "Accident reconstruction",
+            "Causation",
+            "Liability exposure",
+            "Comparison with similar facilities"
+          ],
+          "cta": {
+            "t": "Discuss a causation matter",
+            "h": "#inquiry",
+            "path": "counsel"
+          },
+          "icon": "inspect"
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "case-types",
+      "label": "Case types",
+      "title": "Injury, death <t>and design.</t>",
+      "lede": "The matters he is retained on, per his CV and website.",
+      "groups": [
+        {
+          "label": "Retained on",
+          "names": [
+            "Personal injury",
+            "Wrongful death",
+            "Marina design defects",
+            "Accident reconstruction",
+            "Operational negligence",
+            "Slip, trip and fall-through incidents"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "support",
+      "tint": true,
+      "label": "For counsel",
+      "title": "From first review <t>to testimony.</t>",
+      "lede": "How he works on a matter, as described on his website and CV.",
+      "groups": [
+        {
+          "label": "Work on a matter",
+          "wide": true,
+          "names": [
+            "Early case evaluation and liability assessment",
+            "Case analysis and review of documents and depositions",
+            "Site inspections",
+            "Expert reports and disclosures",
+            "Deposition and trial testimony",
+            "Review of vendor agreements, operating procedures and personnel guidelines"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "consulting",
+      "label": "Beyond litigation",
+      "title": "Consulting <t>for public marinas.</t>",
+      "lede": "The work behind the opinions: advising cities on how their marinas are planned, funded and run.",
+      "groups": [
+        {
+          "label": "Marina consulting",
+          "wide": true,
+          "names": [
+            "RFPs for marina management and redevelopment, City of Dania Beach",
+            "Marina design and renovation planning",
+            "Grant procurement: about $3.6 million for Dania Beach, and federal, state and local funding for St. Petersburg",
+            "Code revisions, vessel regulations and safety standards"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "counsel",
+      "id": "disclosure",
+      "light": true,
+      "label": "For the file",
+      "title": "The expert disclosure, <t>in one place.</t>",
+      "items": [
+        {
+          "icon": "cv",
+          "tag": "PDF · April 2026",
+          "t": "Curriculum vitae",
+          "d": "Marina career, expert engagements, certification and affiliations.",
+          "a": "Download the CV",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        },
+        {
+          "icon": "list",
+          "tag": "Representative · 2023 – 2025",
+          "t": "Case experience",
+          "d": "The non-confidential engagements listed in his CV.",
+          "a": "See the cases",
+          "h": "/hart/cases"
+        },
+        {
+          "icon": "sign",
+          "tag": "Plaintiff or defense",
+          "t": "Retain Jamie",
+          "d": "Availability and a conflict check.",
+          "a": "Discuss a matter",
+          "h": "#inquiry"
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "cases-open",
+      "label": "Cases",
+      "align": "right",
+      "quote": "Retained by plaintiffs <t>and by the defense.</t>",
+      "sub": "Marina injury, wrongful death and design cases, nationwide, through Hart Marine Consulting since 2016.",
+      "img": {
+        "src": "/hart/assets/las-olas-dusk.jpg",
+        "alt": "Yachts at a Fort Lauderdale marina at dusk",
+        "pos": "30% 60%"
+      },
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "case-list",
+      "label": "Representative cases",
+      "title": "Three cases, <t>coast to coast.</t>",
+      "lede": "The non-confidential engagements listed in his CV of April 2026.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "2025 · San Francisco, California · For the plaintiff",
+          "title": "Dock planking failure",
+          "desc": "Deteriorated dock planking failed at a marina, causing a fall-through and a serious lower leg injury.",
+          "items": [
+            "Accident reconstruction from photographs and video",
+            "Floating dock configuration and substructure",
+            "Causation, maintenance and standard of care",
+            "Expert witness disclosure, Superior Court of California, County of Sacramento"
+          ],
+          "icon": "dock"
+        },
+        {
+          "label": "2025 · Miami-Dade County, Florida · For the defense",
+          "title": "Slip and fall at a condominium marina",
+          "desc": "Retained by defense counsel to evaluate liability for an obstruction-related injury at a condominium marina facility.",
+          "items": [
+            "Liability evaluation",
+            "Site conditions and obstruction"
+          ],
+          "icon": "inspect"
+        },
+        {
+          "label": "2023 · Cleveland, Ohio · For a national law firm",
+          "title": "Wrongful death at a marina",
+          "desc": "Retained by a national law firm to evaluate floating dock construction and marina design.",
+          "items": [
+            "Review of depositions and construction practices",
+            "Comparative analysis of similar marinas",
+            "Findings on design consistency and industry standards"
+          ],
+          "icon": "ring"
+        }
+      ],
+      "fn": "A full list of testimony, with courts and dates, would complete this page."
+    },
+    {
+      "type": "exp",
+      "id": "retained",
+      "tint": true,
+      "label": "Retained by",
+      "title": "Counsel and networks <t>he works with.</t>",
+      "lede": "Geographic scope: nationwide.",
+      "groups": [
+        {
+          "label": "Law firms, per his CV",
+          "names": [
+            "Fowler White Burnett",
+            "Wilson Elser Moskowitz Edelman & Dicker LLP",
+            "Berschler Associates, PC"
+          ]
+        },
+        {
+          "label": "Expert networks",
+          "wide": true,
+          "names": [
+            "Round Table Group (United Expert Holdings), Illinois — 2025 to date",
+            "ForensesGroup, Pasadena, California — 2025 to date"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "stmt",
+      "id": "record-open",
+      "label": "CV",
+      "quote": "Forty years <t>on the waterfront.</t>",
+      "sub": "Fort Lauderdale, Lake Park, Dania Beach and St. Petersburg, then expert witness work nationwide.",
+      "more": {
+        "t": "Download the full CV · PDF, April 2026",
+        "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+      },
+      "img": {
+        "src": "/hart/assets/dania-aerial.jpg",
+        "alt": "Aerial view of the Dania Beach marina project",
+        "pos": "50% 45%"
+      },
+      "opener": true
+    },
+    {
+      "type": "timeline",
+      "id": "record-years",
+      "tint": true,
+      "label": "The record, on one line",
+      "title": "From Fort Lauderdale <t>to the witness stand.</t>",
+      "from": 1985,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1985,
+          "t": "Fort Lauderdale"
+        },
+        {
+          "y": 1995,
+          "t": "Certified Marina Manager"
+        },
+        {
+          "y": 2012,
+          "t": "Lake Park"
+        },
+        {
+          "y": 2016,
+          "t": "Expert witness",
+          "brass": true
+        }
+      ],
+      "ranges": [
+        {
+          "a": 1985,
+          "b": 2010,
+          "t": "Supervisor of Marine Facilities, Fort Lauderdale"
+        },
+        {
+          "a": 2010,
+          "b": 2026,
+          "t": "Consultant to cities"
+        },
+        {
+          "a": 2016,
+          "b": 2026,
+          "t": "Hart Marine Consulting, expert witness",
+          "brass": true
+        }
+      ],
+      "rlabel": "Positions and the practice"
+    },
+    {
+      "type": "exp",
+      "id": "record-city",
+      "label": "Fort Lauderdale",
+      "title": "Supervisor of Marine Facilities, <t>1985 to 2010.</t>",
+      "lede": "City of Fort Lauderdale, Florida.",
+      "groups": [
+        {
+          "label": "The role",
+          "wide": true,
+          "names": [
+            "A 190-slip mega-yacht marina, 10 moorings and 3 public boat ramps",
+            "All operations: staffing, maintenance, safety, compliance and revenue systems",
+            "Liaison to the Marine Advisory Board, for 25 years",
+            "Marine code enforcement, including violation hearings and compliance actions"
+          ]
+        },
+        {
+          "label": "Key achievements, per his CV",
+          "wide": true,
+          "names": [
+            "Annual revenue from about $150,000 to about $1.4 million",
+            "Operating budget expanded to about $1.6 million",
+            "More than $11.25 million in grant funding for marina and waterway projects",
+            "Planning and development of several municipal marina projects"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-municipal",
+      "tint": true,
+      "label": "Municipal work",
+      "title": "Lake Park, Dania Beach <t>and St. Petersburg.</t>",
+      "groups": [
+        {
+          "label": "Marina Harbor Director, Town of Lake Park — 2012 to 2014",
+          "wide": true,
+          "names": [
+            "Turnaround of an underperforming 112-slip municipal marina, with fuel dock, ship store and boat ramps",
+            "Revenue from about $450,000 to about $700,000",
+            "Capital improvements, including seawall and infrastructure upgrades",
+            "Marine events with more than 2,500 attendees"
+          ]
+        },
+        {
+          "label": "Marine consultant, City of Dania Beach",
+          "wide": true,
+          "names": [
+            "RFPs for marina management and redevelopment",
+            "Marina design and renovation planning",
+            "About $3.6 million in grant funding",
+            "Code revisions, vessel regulations and safety standards"
+          ]
+        },
+        {
+          "label": "Grant specialist, City of St. Petersburg",
+          "wide": true,
+          "names": [
+            "Federal, state and local funding for marina development and expansion, dredging, shoreline and infrastructure improvements, and derelict vessel removal"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "exp",
+      "id": "record-orgs",
+      "label": "Credentials",
+      "title": "Certification, education <t>and affiliations.</t>",
+      "groups": [
+        {
+          "label": "Certification and education",
+          "wide": true,
+          "names": [
+            "Certified Marina Manager (CMM) No. 33, International Marina Institute — 1995",
+            "B.S., Humanities and Social Sciences, minor in Business Administration — Drexel University, 1975",
+            "Graduate coursework toward an M.S. in Athletic Administration — Western Illinois University, 1978"
+          ]
+        },
+        {
+          "label": "Recognition",
+          "wide": true,
+          "names": [
+            "Award of Excellence, Marine Industries Association of South Florida — 2010",
+            "Coordinator, Fort Lauderdale sponsorship and operations, Whitbread Round the World Race — 1990"
+          ]
+        },
+        {
+          "label": "Memberships",
+          "wide": true,
+          "names": [
+            "Association of Marina Industries — 2018 to date",
+            "California Marine Recreation Association — 2025 to date",
+            "International Association of Marine Investigators — 2025 to date",
+            "Fort Lauderdale Mariners Club — 2025 to date",
+            "Marine Industries Association of South Florida — 1987 to 2010"
+          ]
+        }
+      ],
+      "fn": "From his CV of April 2026 and his website."
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Start a conversation",
+      "title": "Start with <t>the question.</t>",
+      "lede": "Choose the nature of the enquiry and give enough non-confidential context for a first response.",
+      "contact": {
+        "email": "jchart80@gmail.com",
+        "cell": "(561) 445-0509",
+        "city": "Tavares, Florida",
+        "cv": {
+          "t": "Download CV (PDF)",
+          "h": "/hart/assets/Jamie-Hart-CV-2026.pdf"
+        }
+      },
+      "form": {
+        "selectLabel": "What would you like to discuss?",
+        "selectPlaceholder": "Select the nature of your enquiry",
+        "paths": [
+          {
+            "v": "counsel",
+            "t": "An expert witness matter: injury, wrongful death or marina design",
+            "btn": "Send enquiry",
+            "note": "Please do not include confidential or privileged case information.",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Plaintiff or defense"
+              },
+              {
+                "n": "Court or venue"
+              },
+              {
+                "n": "Report or trial date, if set"
+              },
+              {
+                "n": "Brief, non-confidential description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "consulting",
+            "t": "Marina consulting: operations, RFPs, design or grant funding",
+            "btn": "Send enquiry",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Organization",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Facility"
+              },
+              {
+                "n": "Brief description",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "records",
+            "t": "CV or case history",
+            "btn": "Request documents",
+            "fields": [
+              {
+                "n": "Name",
+                "r": true
+              },
+              {
+                "n": "Firm",
+                "r": true
+              },
+              {
+                "n": "Email",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Documents needed",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Preview only. This form does not send. On a live site it reaches a channel approved by Mr. Hart.",
+        "fine": "Private concept: nothing is sent from this page."
+      },
+      "name": "Jamie Hart",
+      "fcta": {
+        "t": "Discuss a matter",
+        "h": "#inquiry"
+      },
+      "social": [
+        {
+          "t": "hartmarineconsulting.com",
+          "h": "https://hartmarineconsulting.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "A concept by",
+        "href": "https://igniteyourself.co/",
+        "logo": "/hart/assets/igy-logo.png",
+        "link": "Discover Ignite Yourself",
+        "note": "A private concept by Ignite Yourself, prepared from public information for Mr. Hart’s review. Photography is from his own website, used provisionally. This is not an official website: it has not been reviewed or approved by Mr. Hart, and it is not indexed or distributed."
+      },
+      "kick": "Marina Operations & Safety · Expert Witness",
+      "sub": "Marina operations and safety, <t>from the dock office to the witness stand.</t>",
+      "firm": {
+        "href": "https://hartmarineconsulting.com/",
+        "src": "/hart/assets/hmc-logo.png",
+        "alt": "Hart Marine Consulting, Inc.",
+        "lede": "Expert witness services and marina consulting, through Hart Marine Consulting, Inc.",
+        "link": "Visit hartmarineconsulting.com",
+        "social": []
+      },
+      "fine": "Private preview · Not indexed",
+      "base": "Jamie Hart · Tavares, Florida"
+    }
+  ],
+  "proposal": {
+    "active": false,
+    "href": "/hart/proposal",
+    "button": "Your proposal",
+    "link": "View your proposal"
+  }
+}
