@@ -308,9 +308,26 @@ img{display:block;max-width:100%}
   .flinks{width:100%}
   .fbase{flex-direction:column;gap:8px}
   .igyin{grid-template-columns:1fr;gap:24px}}
+
+/* propuesta de Ignite: boton fijo y enlace de la nota (solo con proposal.active) */
+.igyprop{position:fixed;right:22px;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:60;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 6px;
+  border-radius:999px;background:#080807;color:#fff;font:600 14px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.005em;text-decoration:none;
+  box-shadow:0 10px 30px rgba(8,8,7,.28),0 0 0 1px rgba(255,255,255,.1) inset;animation:igyprop-in .7s cubic-bezier(.2,.7,.2,1) 1.2s both;transition:background .25s,transform .25s}
+.igyprop:hover{background:#FF6A00;transform:translateY(-2px)}
+.igyprop-i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#FF9A2E 0%,#FF6A00 60%,#C94A04 100%)}
+.igyprop-i img{width:18px;height:auto}
+.igyprop i{font-style:normal;opacity:.8}
+@keyframes igyprop-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.igy .igyprop-link{display:inline-block;margin-left:4px;color:#fff;text-decoration:none;border-bottom:1px solid #FF6A00}
+@media print{.igyprop{display:none}}
+@media(prefers-reduced-motion:reduce){.igyprop{animation:none}}
+@media(max-width:860px){
+  .igyprop{right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);height:44px;font-size:13px;padding-right:15px}
+  .igyprop-i{width:32px;height:32px}}
 </style>
 <!-- igy:analytics --><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};window.va('beforeSend',function(e){try{if(localStorage.getItem('igy-me'))return null}catch(_){}return e})</script><script defer src="/_vercel/insights/script.js"></script><script defer src="/igy-visit.js"></script><!-- /igy:analytics --></head>
-<body>
+<body class="hasprop">
+<a class="igyprop" href="/habib/proposal"><span class="igyprop-i"><img src="/habib/proposal/assets/spark.png" alt=""></span><span>Your proposal</span><i aria-hidden="true">&rarr;</i></a>
 <header class="bar" id="bar"><div class="wrap barin"><a class="bname" href="#top">Professor Nagy Habib</a><nav class="blinks" aria-label="Sections"><a href="#notice">Note</a><a href="#chronology">Chronology</a><a href="#research">Research</a><a href="#instruments">Instruments</a><a href="#publications">Publications</a><a href="#press">Press</a><a href="#sources">Sources</a></nav></div></header>
 <main>
 <section class="hero" id="top">
@@ -336,7 +353,7 @@ img{display:block;max-width:100%}
 </div></footer>
 <aside class="igy"><div class="wrap igyin"><div><span class="mlab">A concept by</span>
   <a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/habib/assets/igy-logo.png" alt="Ignite Yourself" width="150"></a></div>
-  <p>A private concept by Ignite Yourself, prepared from public information, Imperial College London and the published record for Professor Habib’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Professor Habib, and it is not indexed or distributed.</p></div></aside>
+  <p>A private concept by Ignite Yourself, prepared from public information, Imperial College London and the published record for Professor Habib’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Professor Habib, and it is not indexed or distributed. <a class="igyprop-link" href="/habib/proposal">View your proposal &rarr;</a></p></div></aside>
 <script>
 document.documentElement.classList.add('js');
 (function(){

@@ -2,7 +2,7 @@
 # Una sola pagina estatica y editorial: el registro, no la historia.
 # Tercera persona, entradas fechadas, fuentes visibles. Sin llamadas a la accion.
 # Todo el texto vive en habib/content.json; este script solo compone el HTML.
-import json, html, os, re
+import json, html, os, re, shutil
 
 DST = '/home/user/ignite-yourself-operations/clients/jorge-arce/habib'
 C = json.load(open(DST + '/content.json', encoding='utf-8'))
@@ -160,6 +160,12 @@ masthead = f'''<section class="mast" id="contents"><div class="wrap grid">
 </div></section>'''
 
 F = C['footer']
+# Igual que en Brant y Pettingill: con proposal.active en true se publica /habib/proposal
+# (desde prospecting/habib/propuesta/web), con el boton fijo y el enlace en la nota de Ignite.
+# En false se quitan la carpeta y los accesos.
+P = C.get('proposal', {})
+PROP_SRC = '/home/user/ignite-yourself-operations/prospecting/habib/propuesta/web'
+prop_link = (f' <a class="igyprop-link" href="{esc(P["href"])}">{esc(P["link"])} &rarr;</a>' if P.get('active') else '')
 links = ''.join(f'<li><a href="{esc(h)}" target="_blank" rel="noopener">{esc(t)} <i aria-hidden="true">↗</i></a></li>' for t, h in F['links'])
 footer = f'''<footer class="foot"><div class="wrap">
   <div class="ftop"><div><p class="fl">{esc(F["line"])}</p><p class="fname">{rich(F["name"])}</p></div>
@@ -168,7 +174,7 @@ footer = f'''<footer class="foot"><div class="wrap">
 </div></footer>
 <aside class="igy"><div class="wrap igyin"><div><span class="mlab">A concept by</span>
   <a href="https://igniteyourself.co/" target="_blank" rel="noopener"><img src="/habib/assets/igy-logo.png" alt="Ignite Yourself" width="150"></a></div>
-  <p>{esc(F["igy"])}</p></div></aside>'''
+  <p>{esc(F["igy"])}{prop_link}</p></div></aside>'''
 
 bar = ('<header class="bar" id="bar"><div class="wrap barin"><a class="bname" href="#top">Professor Nagy Habib</a>'
        '<nav class="blinks" aria-label="Sections">'
@@ -483,6 +489,26 @@ document.documentElement.classList.add('js');
 })();
 '''
 
+PROP_CSS = '''
+/* propuesta de Ignite: boton fijo y enlace de la nota (solo con proposal.active) */
+.igyprop{position:fixed;right:22px;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:60;display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 18px 0 6px;
+  border-radius:999px;background:#080807;color:#fff;font:600 14px/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.005em;text-decoration:none;
+  box-shadow:0 10px 30px rgba(8,8,7,.28),0 0 0 1px rgba(255,255,255,.1) inset;animation:igyprop-in .7s cubic-bezier(.2,.7,.2,1) 1.2s both;transition:background .25s,transform .25s}
+.igyprop:hover{background:#FF6A00;transform:translateY(-2px)}
+.igyprop-i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#FF9A2E 0%,#FF6A00 60%,#C94A04 100%)}
+.igyprop-i img{width:18px;height:auto}
+.igyprop i{font-style:normal;opacity:.8}
+@keyframes igyprop-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.igy .igyprop-link{display:inline-block;margin-left:4px;color:#fff;text-decoration:none;border-bottom:1px solid #FF6A00}
+@media print{.igyprop{display:none}}
+@media(prefers-reduced-motion:reduce){.igyprop{animation:none}}
+@media(max-width:860px){
+  .igyprop{right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 14px);height:44px;font-size:13px;padding-right:15px}
+  .igyprop-i{width:32px;height:32px}}
+'''
+PROP_HTML = (f'<a class="igyprop" href="{esc(P["href"])}"><span class="igyprop-i"><img src="/habib/proposal/assets/spark.png" alt=""></span>'
+             f'<span>{esc(P["button"])}</span><i aria-hidden="true">&rarr;</i></a>\n' if P.get('active') else '')
+
 meta = C['meta']
 page = f'''<!doctype html>
 <html lang="en-GB">
@@ -507,10 +533,10 @@ page = f'''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>{CSS}</style>
+<style>{CSS}{PROP_CSS if P.get('active') else ''}</style>
 </head>
-<body>
-{bar}
+<body{' class="hasprop"' if P.get('active') else ''}>
+{PROP_HTML}{bar}
 <main>
 {body}
 </main>
@@ -531,7 +557,11 @@ for path, anchor in [('practice', 'research'), ('track', 'chronology'), ('voice'
 for old in ('home.json', 'track.json', 'voice.json', 'practice.json'):
     if os.path.exists(f'{DST}/{old}'):
         os.remove(f'{DST}/{old}')
+if P.get('active'):
+    shutil.copytree(PROP_SRC, f'{DST}/proposal', dirs_exist_ok=True)
+elif os.path.isdir(f'{DST}/proposal'):
+    shutil.rmtree(f'{DST}/proposal')
 # analitica y aviso de visitas (tools/tracking.py)
 import tracking
 tracking.inject_tree(DST)
-print('habib listo')
+print('habib listo' + (' · propuesta publicada' if P.get('active') else ''))

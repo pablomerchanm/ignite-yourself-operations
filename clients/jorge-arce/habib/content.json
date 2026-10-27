@@ -766,5 +766,11 @@
     ],
     "fine": "Private preview · Not indexed",
     "igy": "A private concept by Ignite Yourself, prepared from public information, Imperial College London and the published record for Professor Habib’s review. Photography and copy are provisional art direction, created from public material, and will be refined with his input. This is not an official website: it has not been reviewed or approved by Professor Habib, and it is not indexed or distributed."
+  },
+  "proposal": {
+    "active": true,
+    "href": "/habib/proposal",
+    "button": "Your proposal",
+    "link": "View your proposal"
   }
 }

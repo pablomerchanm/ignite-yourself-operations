@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Authority Platform — Proposal for Professor Nagy Habib</title>
+<style>
+@font-face{font-family:'Arimo';font-style:normal;font-weight:400 700;src:url('web/assets/fonts/Arimo-400-normal.woff2') format('woff2');}
+@font-face{font-family:'Arimo';font-style:italic;font-weight:400 700;src:url('web/assets/fonts/Arimo-400-italic.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url('web/assets/fonts/IBMPlexMono-400-normal.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url('web/assets/fonts/IBMPlexMono-500-normal.woff2') format('woff2');}
+</style>
+<style>
+  @page { size: A4; margin: 0; }
+  :root{
+    --ink:#080807; --card:#181715; --ink-2:#393632;
+    --beige:#e8e8e3; --beige-2:#ddddd5;
+    --mute:#938f8a; --mute-2:#6b645c;
+    --orange:#FF6A00; --orange-soft:#FF9A4D;
+    --sans:'Arimo','Helvetica Neue',Helvetica,Arial,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--ink)}
+  body{font-family:var(--sans);color:var(--beige);letter-spacing:-.01em;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;padding:18mm 18mm 16mm}
+  .page:last-child{page-break-after:auto;break-after:auto}
+  .mono{font-family:var(--mono);font-size:7.6pt;letter-spacing:.02em;text-transform:uppercase}
+
+  /* cabecera y pie de las paginas interiores */
+  .top{display:flex;justify-content:space-between;align-items:center}
+  .top img{height:9mm;width:auto}
+  .foot{position:absolute;left:18mm;right:18mm;bottom:11mm;display:flex;justify-content:space-between;color:var(--mute)}
+  .light .foot{color:var(--mute-2)}
+  .kicker{display:flex;align-items:center;gap:3mm;color:var(--mute)}
+  .kicker::before{content:'';width:2mm;height:2mm;border-radius:50%;background:var(--orange)}
+  h2{font-weight:500;font-size:30pt;line-height:1.04;letter-spacing:-.04em;margin-top:7mm;max-width:150mm}
+  p{font-size:10.6pt;line-height:1.55}
+
+  /* ---------- portada ---------- */
+  .cover{padding:0;color:#fff;
+    background:
+      radial-gradient(46% 30% at 50% 22%, rgba(255,214,150,.42) 0%, rgba(255,214,150,0) 70%),
+      radial-gradient(120% 90% at 50% 30%, #FF9A2E 0%, #FF7410 32%, #EE5A06 58%, #B83D04 82%, #6E2303 100%);}
+  .cover .ctop{position:absolute;top:16mm;left:18mm;right:18mm;display:flex;justify-content:space-between;align-items:center}
+  .cover .ctop img{height:10mm}
+  .cover .ctop .mono{color:rgba(255,255,255,.9)}
+  .cover .spark{position:absolute;top:58mm;left:50%;width:15mm;transform:translateX(-50%)}
+  .cover .ctext{position:absolute;top:84mm;left:0;right:0;text-align:center;padding:0 22mm}
+  .cover .ctext .mono{color:#fff;font-weight:500;font-size:8.4pt;letter-spacing:.04em;background:rgba(80,24,2,.22);padding:1.6mm 3.6mm;border-radius:10mm}
+  .cover h1{font-weight:600;font-size:20pt;line-height:1.28;letter-spacing:-.03em;margin-top:6mm}
+  .cover .for{margin-top:9mm;font-size:12pt;line-height:1.5;color:rgba(255,255,255,.92)}
+  .cover .for b{font-weight:600}
+  .cover .mark{position:absolute;left:0;right:0;bottom:30mm;display:flex;justify-content:center}
+  .cover .mark img{width:88mm;height:auto;display:block}
+  .cover .cfoot{position:absolute;left:18mm;right:18mm;bottom:13mm;display:flex;justify-content:space-between;color:rgba(255,255,255,.85)}
+
+  /* ---------- carta ---------- */
+  .letter .body{margin-top:9mm;display:grid;gap:4.2mm;max-width:156mm;color:#d7d6cf}
+  .letter .body p:first-child{color:var(--beige)}
+  .shot{margin-top:9mm;border-radius:3mm;overflow:hidden;border:1px solid rgba(232,232,227,.14)}
+  .shot{height:88mm}
+  .shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+  .cap{margin-top:3.5mm;display:flex;justify-content:space-between;color:var(--mute)}
+
+  /* ---------- lo que abre ---------- */
+  .opens{background:var(--card)}
+  .opens .intro{margin-top:6mm;color:#b9b8b1;max-width:150mm}
+  .opp{margin-top:10mm;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(232,232,227,.14);border:1px solid rgba(232,232,227,.14);border-radius:3mm;overflow:hidden}
+  .opp div{background:var(--card);padding:8mm 7mm 8.5mm}
+  .opp .mono{color:var(--orange-soft)}
+  .opp h3{font-weight:500;font-size:16pt;letter-spacing:-.03em;line-height:1.15;margin-top:3.5mm}
+  .opp p{font-size:9.8pt;line-height:1.55;color:#b9b8b1;margin-top:3mm}
+  .own{margin-top:10mm;font-size:13pt;line-height:1.45;letter-spacing:-.025em;color:var(--beige);max-width:140mm}
+
+  /* ---------- lo que incluye ---------- */
+  .light{background:var(--beige);color:var(--ink)}
+  .light .kicker{color:var(--mute-2)}
+  .grid{margin-top:10mm;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(8,8,7,.85)}
+  .item{padding:6mm 6mm 6.5mm 0;border-bottom:1px solid rgba(8,8,7,.16);display:grid;grid-template-columns:11mm 1fr;align-items:start}
+  .item:nth-child(even){padding-left:6mm;border-left:1px solid rgba(8,8,7,.16)}
+  .item .n{font-family:var(--mono);font-size:8pt;color:var(--orange);padding-top:1.2mm}
+  .item h3{font-weight:600;font-size:12.5pt;letter-spacing:-.025em;line-height:1.25}
+  .item p{font-size:9.6pt;line-height:1.5;color:var(--ink-2);margin-top:1.6mm}
+  .goal{margin-top:12mm;font-size:13pt;line-height:1.45;letter-spacing:-.025em;color:var(--ink);max-width:150mm}
+
+  /* ---------- inversion ---------- */
+  .price{margin-top:10mm;display:grid;grid-template-columns:1.05fr 1fr;gap:8mm;align-items:end;border-bottom:1px solid rgba(232,232,227,.16);padding-bottom:9mm}
+  .price .amt{font-weight:500;font-size:54pt;letter-spacing:-.055em;line-height:.9;color:#fff}
+  .price .amt small{font-size:15pt;letter-spacing:0;margin-right:2mm;color:var(--beige);vertical-align:.95em;font-weight:500}
+  .price .lbl{margin-top:4mm;color:var(--mute)}
+  .price ul{list-style:none;display:grid;gap:2.6mm}
+  .price li{display:flex;gap:3mm;font-size:10.4pt;line-height:1.4;color:#d7d6cf}
+  .price li::before{content:'';flex:0 0 1.6mm;height:1.6mm;margin-top:1.9mm;border-radius:50%;background:var(--orange)}
+  .plan{margin-top:8mm}
+  .plan .row{display:grid;grid-template-columns:12mm 1fr auto;align-items:baseline;padding:4.4mm 0;border-bottom:1px solid rgba(232,232,227,.12)}
+  .plan .row .n{font-family:var(--mono);font-size:8pt;color:var(--orange)}
+  .plan .row .t{font-size:11pt}
+  .plan .row .v{font-weight:500;font-size:14pt;letter-spacing:-.025em;color:#fff}
+  .note{margin-top:4.5mm;color:var(--mute)}
+  .steps{margin-top:10mm;display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+  .steps div{border-top:1px solid rgba(232,232,227,.3);padding-top:3.5mm}
+  .steps .mono{color:var(--orange)}
+  .steps h4{font-weight:600;font-size:10.8pt;margin-top:2.4mm;line-height:1.3}
+  .steps p{font-size:9pt;line-height:1.5;color:#b9b8b1;margin-top:1.6mm}
+  .sign{margin-top:11mm;display:flex;justify-content:space-between;align-items:flex-end}
+  .sign p{font-size:11.5pt;color:var(--beige);max-width:110mm}
+  .sign .who{margin-top:4mm;font-size:10.4pt;color:#d7d6cf;line-height:1.5}
+  .sign .who b{color:#fff;font-weight:600}
+  .sign img{height:15mm}
+</style>
+</head>
+<body>
+
+<!-- 1 · portada -->
+<section class="page cover">
+  <div class="ctop">
+    <img src="web/assets/logo-igy.png" alt="igy">
+    <span class="mono">Proposal · October 2026</span>
+  </div>
+  <img class="spark" src="web/assets/spark.png" alt="">
+  <div class="ctext">
+    <span class="mono">Authority Platform</span>
+    <h1>Four decades of surgery, research and invention,<br>brought together in one record<br>under your own name.</h1>
+    <p class="for">Prepared for <b>Professor Nagy Habib</b></p>
+  </div>
+  <div class="mark"><img src="web/assets/logo-stacked.png" alt="ignite yourself"></div>
+  <div class="cfoot mono"><span>Ignite Yourself</span><span>igniteyourself.co</span></div>
+</section>
+
+<!-- 2 · carta -->
+<section class="page letter">
+  <div class="top"><img src="web/assets/logo-igy.png" alt="igy"><span class="mono" style="color:var(--mute)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">01 — Why now</span></div>
+  <h2>A remarkable record, spread across many places.</h2>
+  <div class="body">
+    <p>Dear Professor Habib, thank you for taking the time to look at the preview. Few surgeons can show a record like yours: living-related liver transplantation in Africa in 1993, radiofrequency liver resection published in 2002, the Habib 4X and EndoHPB instruments that went on to AngioDynamics and Boston Scientific, and first-in-human research from adenovirus gene therapy to small activating RNA. Alongside it, 430 journal articles and companies from EMcision to MiNA Therapeutics.</p>
+    <p>Today, that record is spread across many places, each written for a different reader: Imperial’s profile for academics, the NHS directory for patients, company pages for investors and PubMed for the papers. Some dates don’t match from one source to the next. When a congress organiser, a journalist or a future partner looks you up, that is often the first impression.</p>
+    <p>What we’re proposing is our Authority Platform: a complete, done-for-you website on your own domain, built on the preview you’ve already seen. Nothing in it is fixed. We adjust the photographs, the texts and the narrative angle with you, until it presents your career the way you feel most comfortable with and the way that is most useful to you.</p>
+  </div>
+  <div class="shot"><img src="web/assets/preview.jpg" alt="Professor Nagy Habib preview"></div>
+  <div class="cap mono"><span>Your preview</span><span>igniteyourself.co/habib</span></div>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Professor Nagy Habib</span><span>02</span></div>
+</section>
+
+<!-- 3 · lo que abre -->
+<section class="page opens">
+  <div class="top"><img src="web/assets/logo-igy.png" alt="igy"><span class="mono" style="color:var(--mute)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">02 — What it opens</span></div>
+  <h2>What one authoritative record makes possible.</h2>
+  <p class="intro">It is built for the people who already look for your work, and need to understand it quickly.</p>
+  <div class="opp">
+    <div><span class="mono">Congresses &amp; universities</span><h3>Invitations</h3><p>Organisers weighing a keynote, a named lecture or a visiting professorship see your firsts, lectures and honours in minutes, each linked to its source.</p></div>
+    <div><span class="mono">Co-founders, licensees &amp; investors</span><h3>New ventures</h3><p>How the surgery, the instruments and the companies connect, from EMcision to MiNA, in one place a future partner can read in two minutes.</p></div>
+    <div><span class="mono">Journalists &amp; editors</span><h3>Accurate coverage</h3><p>Dates, firsts, appointments and honours in one consistent record, so whatever is written about you starts from the right facts.</p></div>
+    <div><span class="mono">Clinicians &amp; scientists</span><h3>Research partnerships</h3><p>Colleagues looking to collaborate find your publications, trials and affiliations together, current and complete.</p></div>
+  </div>
+  <p class="own">And one version of your biography, approved by you, to send whenever someone asks for it.</p>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Professor Nagy Habib</span><span>03</span></div>
+</section>
+
+<!-- 4 · lo que incluye -->
+<section class="page light">
+  <div class="top"><img src="web/assets/logo-igy.png" alt="igy" style="filter:brightness(0)"><span class="mono" style="color:var(--mute-2)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">03 — What's included</span></div>
+  <h2>Our team takes care of the entire process.</h2>
+  <div class="grid">
+    <div class="item"><span class="n">01</span><div><h3>Research</h3><p>Organising four decades of surgery, research, instruments and companies, and 430 journal articles, into one clear, sourced record.</p></div></div>
+    <div class="item"><span class="n">02</span><div><h3>Narrative &amp; angle</h3><p>We adjust the texts and the narrative angle to where you feel most comfortable and where it is most strategic for you.</p></div></div>
+    <div class="item"><span class="n">03</span><div><h3>Content</h3><p>Writing every section, from appointments and chronology to research, instruments, honours and publications, with each date confirmed by you.</p></div></div>
+    <div class="item"><span class="n">04</span><div><h3>Images</h3><p>Creation of all the images for the site. The portrait in the preview is provisional: we can work from your own photographs and adjust every image until it feels right to you.</p></div></div>
+    <div class="item"><span class="n">05</span><div><h3>Design &amp; development</h3><p>All the design, fully developed on desktop and mobile, in the register of an academic record.</p></div></div>
+    <div class="item"><span class="n">06</span><div><h3>Live on your domain</h3><p>The whole site working on your own domain, with hosting for the first year.</p></div></div>
+  </div>
+  <p class="goal">Our goal is for you to walk away with a site worthy of the career behind it, and a single place to send anyone who asks what you have done, from a congress organiser to a future co-founder.</p>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Professor Nagy Habib</span><span>04</span></div>
+</section>
+
+<!-- 5 · inversion -->
+<section class="page">
+  <div class="top"><img src="web/assets/logo-igy.png" alt="igy"><span class="mono" style="color:var(--mute)">Authority Platform · Proposal</span></div>
+  <div style="margin-top:16mm"><span class="kicker mono">04 — Investment</span></div>
+  <h2>One complete investment.</h2>
+  <div class="price">
+    <div>
+      <div class="amt"><small>USD</small>3,000</div>
+      <div class="lbl mono">Complete investment</div>
+    </div>
+    <ul>
+      <li>All the design, writing and development of the website</li>
+      <li>Creation of all the images</li>
+      <li>Your own domain and hosting for the first year</li>
+    </ul>
+  </div>
+  <div class="plan">
+    <span class="mono" style="color:var(--mute)">In two payments</span>
+    <div class="row" style="margin-top:2mm"><span class="n">01</span><span class="t">To get started</span><span class="v">USD 1,500</span></div>
+    <div class="row"><span class="n">02</span><span class="t">Once everything is completed and ready to launch</span><span class="v">USD 1,500</span></div>
+    <p class="note mono">No mandatory monthly subscription · Domain and first year of hosting included</p>
+  </div>
+  <div class="steps">
+    <div><span class="mono">Step 01</span><h4>A few questions</h4><p>A short set of questions by email: the dates and details to confirm, the photographs you prefer and what you would most like the site to lead to.</p></div>
+    <div><span class="mono">Step 02</span><h4>Refined together</h4><p>We adjust the photos, the texts and the narrative angle with you, in a couple of rounds.</p></div>
+    <div><span class="mono">Step 03</span><h4>Live and yours</h4><p>Your site goes live under your own domain, ready to share with organisers, partners and the press.</p></div>
+  </div>
+  <div class="sign">
+    <div>
+      <p>We’d be delighted to bring this to life with you, Professor Habib. To get started, simply reply to our message.</p>
+      <p class="who">Warm regards,<br><b>Pablo Merchán</b><br>Ignite Yourself · igniteyourself.co</p>
+    </div>
+    <img src="web/assets/logo-stacked.png" alt="ignite yourself">
+  </div>
+  <div class="foot mono"><span>Ignite Yourself · Proposal for Professor Nagy Habib</span><span>05</span></div>
+</section>
+
+</body>
+</html>
