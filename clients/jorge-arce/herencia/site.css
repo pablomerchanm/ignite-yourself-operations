@@ -342,14 +342,6 @@ details.svc summary::-webkit-details-marker{display:none}
 @keyframes marq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:28px}.marquee{mask-image:none;-webkit-mask-image:none}}
 .clients .all{font-size:13.5px;line-height:1.7;color:var(--muted);margin-top:22px;max-width:60em}
-/* un aliado que presenta a Herencia: el vídeo de Farmers Direct bajo los logos */
-.spot{display:grid;gap:clamp(20px,3vw,44px);margin-top:clamp(48px,5.6vw,80px);padding-top:clamp(36px,4vw,56px);border-top:1px solid var(--rule);align-items:center}
-.spot-tx{display:grid;gap:16px;align-content:center}
-.spot-tx .lab{color:var(--orange-ink)}
-.spot-tx blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(26px,2.6vw,38px);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
-.spot-tx .who{font-size:14.5px;color:var(--muted)}
-.spot-ln{font-size:14.5px;font-weight:500;border-bottom:1px solid currentColor;width:fit-content}
-@media (min-width:760px){.spot{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
 
 /* contacto */
 /* el horizonte claro (sistema «Puente»): cielo arriba, naranja abajo */
