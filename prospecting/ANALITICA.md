@@ -40,6 +40,10 @@
 
 ## Configuración en Vercel (una sola vez)
 
+**Estado:** Web Analytics activado por Pablo el 27 de octubre de 2026, plan Hobby: 50.000 eventos al mes y 30 días de historial.
+- El aviso por correo depende de `RESEND_API_KEY` y `ALERT_TO`.
+- Para comprobarlo, abre un preview en incógnito: debe llegar el correo.
+
 1. **Analytics:** activar **Web Analytics** en la pestaña Analytics del proyecto.
 2. **Correo:**
    - Crear una cuenta en resend.com con el correo donde deben llegar los avisos.
