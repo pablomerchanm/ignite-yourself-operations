@@ -65,14 +65,6 @@
       "label": "The firm",
       "title": "Rodriguez & Associates <t>Advisory Group.</t>",
       "lede": "The firm Rick founded in downtown Los Angeles in 1992 and leads today. The advisory, workout and expert work on this site is delivered through it.",
-      "band": {
-        "img": "/rodriguez/assets/ra-skyline.jpg",
-        "alt": "Downtown Los Angeles",
-        "lockup": "/rodriguez/assets/ra-lockup-white.png",
-        "lockAlt": "Rodriguez & Associates Advisory Group",
-        "since": "Founded in 1992 · Downtown Los Angeles",
-        "addr": "333 S. Grand Avenue · Suite 1790 · Los Angeles, California 90071"
-      },
       "company": {
         "role": "Founder and Principal · since 1992",
         "desc": "Founded to resolve complex debtor-creditor transactions secured by real estate, stock and partnership interests. Today also capital procurement, real estate brokerage, site acquisition and litigation support, with Emily Rodriguez, Partner.",
@@ -82,42 +74,22 @@
           "(213) 617-1163 · rick@rodriguezadvisory.com"
         ],
         "href": "https://www.rodriguezadvisory.com/",
-        "link": "Visit rodriguezadvisory.com"
+        "link": "Visit rodriguezadvisory.com",
+        "logo": "/rodriguez/assets/ra-lockup-white.png",
+        "name": "Rodriguez & Associates Advisory Group",
+        "more": "/rodriguez/firm"
       },
       "social": [
+        {
+          "t": "More about the firm",
+          "h": "/rodriguez/firm"
+        },
         {
           "t": "Discuss a firm engagement",
           "h": "#inquiry",
           "path": "firm"
-        },
-        {
-          "t": "More about the firm",
-          "h": "/rodriguez/firm"
         }
-      ],
-      "svcLabel": "What the firm does",
-      "services": [
-        "Loan restructuring and workouts",
-        "Expert witness testimony and litigation support",
-        "Capital and asset recovery",
-        "Management turnaround",
-        "Debt and equity procurement",
-        "Real estate brokerage and finance",
-        "Corporate finance",
-        "Banking matters and forensic analysis",
-        "Negotiations with financial institutions",
-        "Chapter 11 reorganization plans",
-        "Receiverships",
-        "Other advisory services"
-      ],
-      "marks": {
-        "label": "Who the firm serves",
-        "note": "Law firms · Financial institutions · Real estate developers and investors · Government organizations and non-profits"
-      },
-      "strip": {
-        "src": "/rodriguez/assets/ra-hall.jpg",
-        "alt": "Walt Disney Concert Hall, downtown Los Angeles"
-      }
+      ]
     },
     {
       "type": "nums",
