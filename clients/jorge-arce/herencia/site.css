@@ -334,11 +334,13 @@ details.svc summary::-webkit-details-marker{display:none}
 .clients{overflow:hidden}
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);padding-block:18px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 /* la animación aísla la pista: sin fondo propio, el multiply no funde el fondo blanco de logos como IDH o EFICO */
-.track{background:var(--paper);display:flex;align-items:center;gap:clamp(44px,5vw,80px);width:max-content;padding-right:clamp(44px,5vw,80px);animation:marq 48s linear infinite}
+.track{background:var(--paper);display:flex;align-items:center;gap:clamp(44px,5vw,80px);width:max-content;padding-right:clamp(44px,5vw,80px);animation:marq 62s linear infinite}
 .marquee:hover .track{animation-play-state:paused}
 .track img{height:clamp(46px,3.6vw,56px);width:auto;max-width:200px;object-fit:contain;filter:grayscale(1);mix-blend-mode:multiply;opacity:.85;flex:none}
 /* la Fundación Grupo Social llena toda su caja de letra gruesa: un poco más baja para que pese como las demás */
 .track img[src$="/fundacion-grupo-social.png"]{height:clamp(34px,2.7vw,42px)}
+/* lo mismo con los dos de Ensambles: letra gruesa a todo lo alto */
+.track img[src$="/ensambles.png"],.track img[src$="/ensambles-uk-europe.png"]{height:clamp(36px,2.9vw,44px)}
 @keyframes marq{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto;justify-content:center;row-gap:28px}.marquee{mask-image:none;-webkit-mask-image:none}}
 .clients .all{font-size:13.5px;line-height:1.7;color:var(--muted);margin-top:22px;max-width:60em}
