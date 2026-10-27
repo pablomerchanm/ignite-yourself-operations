@@ -1,6 +1,6 @@
 # Enrique "Rick" Rodriguez, Jr.: Authority Platform, iteración 1
 
-**Estado:** preview privado construido, **sin enviar**. Rick respondió el 26 de octubre de 2026 al seguimiento de Pablo ("Rick, a thought after reading your testimonials"): *"Last time you wrote I thought I replied, letting you know I would like to see it."*
+**Estado:** preview **enviado el 27 de octubre de 2026** (seguimiento el 4 de noviembre). Rick respondió el 26 de octubre de 2026 al seguimiento de Pablo ("Rick, a thought after reading your testimonials"): *"Last time you wrote I thought I replied, letting you know I would like to see it."*
 **Ruta:** `/rodriguez`, con `/practice`, `/testimony` y `/record`. Tiene `noindex` por cabecera en `clients/jorge-arce/vercel.json`.
 **Motor:** el mismo de Pettingill. `tools/build-rodriguez.py` se copió de `build-pettingill.py` y después se corre `tools/prerender-rodriguez.mjs`. Todo el texto vive en `clients/jorge-arce/rodriguez/content.json`.
 **Fuentes revisadas:** el 26 de octubre de 2026, página por página y PDF por PDF, en rodriguezadvisory.com.
@@ -148,3 +148,21 @@ Pedido de Pablo: con la página completa de la firma, la home no debe darle tant
 - **Fuera de la home:** la banda del skyline, la lista de 12 servicios, "Who the firm serves" y el Disney Hall. Todo eso vive en /rodriguez/firm.
 - **Lo que queda:** una ficha breve. Tiene el logo sobre el azul de la firma (#00305B), "Founder and Principal · since 1992", la descripción, el contacto y tres enlaces: "More about the firm", "Discuss a firm engagement" y rodriguezadvisory.com.
 - **Posición:** la ficha baja al final de la home, antes del contacto. La firma sigue arriba en la firma del hero ("Founder and Principal" con su logo).
+
+## Envío (27 de octubre)
+
+**Correo de Pablo:** respuesta en el mismo hilo, con el enlace a igniteyourself.co/rodriguez.
+
+**GIF en el cuerpo:** como muchos prospectos no abren enlaces, el correo lleva un GIF de unos 17 segundos, a 800 px y 1,8 MB, enlazado al preview. Muestra:
+- una pestaña nueva en la que se escribe el dominio;
+- el Enter y la carga;
+- la home con el dominio en la barra;
+- el recorrido de la página.
+
+**Dos versiones del GIF:**
+- `rickrodriguez.com`: ese dominio está registrado desde 2003, con web activa y dueño sin identificar.
+- `rickrodriguezexpert.com`: libre al 27 de octubre, igual que rickrodriguez.co y rickrodriguezbanking.com.
+
+**Pendiente:**
+- confirmar con Rick si rickrodriguez.com es suyo;
+- seguimiento el 4 de noviembre si no responde (6 días hábiles).
