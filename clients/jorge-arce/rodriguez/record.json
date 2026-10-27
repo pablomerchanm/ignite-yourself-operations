@@ -23,7 +23,7 @@
     },
     {
       "t": "The firm",
-      "h": "/rodriguez#firm"
+      "h": "/rodriguez/firm"
     },
     {
       "t": "Enquiry",
@@ -246,9 +246,9 @@
     {
       "type": "next",
       "k": "Next",
-      "t": "Discuss a <t>matter</t>",
-      "d": "Banking, lending, Chapter 11 or real estate finance.",
-      "h": "/rodriguez#inquiry",
+      "t": "The <t>firm</t>",
+      "d": "Rodriguez & Associates Advisory Group, founded by Rick in 1992.",
+      "h": "/rodriguez/firm",
       "alt": {
         "t": "Discuss a matter",
         "h": "/rodriguez#inquiry"
