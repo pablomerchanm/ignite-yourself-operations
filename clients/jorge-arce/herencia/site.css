@@ -1,4 +1,4 @@
-:root{--forest:#123A35;--forest-2:#0C2B27;--orange:#EB7A27;--orange-ink:#B9561A;--sky:#A9D3E8;--maize:#EFCB5E;
+:root{--forest:#123A35;--forest-2:#0C2B27;--orange:#EB7A27;--orange-ink:#B9561A;--sky:#A9D3E8;--maize:#EFCB5E;--peach:#F3A569;
 --paper:#F4EFE6;--paper-2:#EAE3D6;--white:#FFFFFF;--ink:#123A35;--muted:#4F6661;--rule:rgba(18,58,53,.16);
 --g:20px;--max:1320px;--sec:clamp(72px,9vw,136px);
 --serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Instrument Sans",system-ui,-apple-system,sans-serif;
@@ -152,7 +152,11 @@ a:hover .arrow::after,.arrow:hover::after{transform:translateX(4px)}
 .vq blockquote::after{content:"”"}
 
 /* el puente */
-.bridge{background:var(--forest);color:var(--paper);padding-block:var(--sec)}
+.bridge{background:var(--forest);color:var(--paper);padding-block:var(--sec);position:relative;overflow:clip}
+/* el monograma en línea (sistema «Puente»), de fondo y muy suave */
+.bridge::before{content:"";position:absolute;top:clamp(-120px,-6vw,-40px);right:-7%;width:min(1000px,82vw);aspect-ratio:276/258.5;background:url(/herencia/img/logos/herencia-monograma-linea.svg) center/contain no-repeat;opacity:.2;pointer-events:none}
+.bridge .wrap{position:relative}
+@media (min-width:1024px){.bridge::before{top:-10px;right:-6%;width:min(1100px,76vw)}}  /* el tablero, entre la entradilla y las tarjetas */
 .bridge .top{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:clamp(40px,5vw,72px)}
 .bridge .top .lab{color:var(--orange)}
 .bridge .top .lead{color:rgba(244,239,230,.82)}
@@ -294,7 +298,13 @@ details.svc summary::-webkit-details-marker{display:none}
 .about .ph{position:relative;min-height:60svh}
 .about .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* el sello de Herencia, en máscara para darle cualquier color de la paleta */
-.sello{display:block;width:clamp(108px,9.6vw,148px);aspect-ratio:494.44/519.42;background:var(--orange);-webkit-mask:url(/herencia/img/logos/herencia-sello.svg) center/contain no-repeat;mask:url(/herencia/img/logos/herencia-sello.svg) center/contain no-repeat}
+/* sello vivo (sistema «Puente»): el anillo de texto gira despacio; el monograma no se mueve */
+.sello{display:block;position:relative;width:clamp(108px,9.6vw,148px);aspect-ratio:494.44/519.42}
+.sello::before,.sello::after{content:"";position:absolute;inset:0;background:var(--orange)}
+.sello::before{-webkit-mask:url(/herencia/img/logos/herencia-sello-anillo.svg) center/contain no-repeat;mask:url(/herencia/img/logos/herencia-sello-anillo.svg) center/contain no-repeat;transform-origin:50% 49%;animation:sello-gira 48s linear infinite}
+.sello::after{-webkit-mask:url(/herencia/img/logos/herencia-sello-mono.svg) center/contain no-repeat;mask:url(/herencia/img/logos/herencia-sello-mono.svg) center/contain no-repeat}
+@keyframes sello-gira{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sello::before{animation:none}}
 
 /* equipo */
 .team{padding-block:var(--sec);background:var(--paper-2)}
@@ -308,8 +318,10 @@ details.svc summary::-webkit-details-marker{display:none}
 @media (prefers-reduced-motion:reduce){.gal{-webkit-mask-image:none;mask-image:none}.gal-row{overflow-x:auto}.gal-track{animation:none;padding-inline:var(--g)}.gal .dup{display:none}}
 .people{display:grid;grid-template-columns:1fr;gap:clamp(24px,3vw,40px)}
 .person{display:grid;gap:18px;align-content:start}
-.person .ph{aspect-ratio:5/4;overflow:hidden;background:var(--paper)}
-.person .ph img{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:grayscale(1) contrast(1.02)}
+/* retratos dentro de la ventana de una torre (sistema «Puente») */
+.person .ph{position:relative;aspect-ratio:5/4;overflow:hidden;background:var(--sky)}
+.people .person:nth-child(2) .ph{background:var(--maize)}
+.person .ph img{position:absolute;left:17%;top:9%;width:66%;height:91%;border-radius:9999px 9999px 0 0;object-fit:cover;object-position:center 28%;filter:grayscale(1) contrast(1.02)}
 .person h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,2.8vw,40px);line-height:1;letter-spacing:-.02em}
 .person .lab{color:var(--orange-ink)}
 .person p{font-size:15px;line-height:1.6;max-width:36em}
@@ -340,7 +352,8 @@ details.svc summary::-webkit-details-marker{display:none}
 @media (min-width:760px){.spot{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
 
 /* contacto */
-.contact{background:var(--orange);color:var(--forest);padding-block:var(--sec)}
+/* el horizonte claro (sistema «Puente»): cielo arriba, naranja abajo */
+.contact{background:linear-gradient(180deg,var(--sky) 0%,#d9e6e6 24%,var(--paper) 42%,var(--peach) 74%,var(--orange) 100%);color:var(--forest);padding-block:var(--sec)}
 .contact .grid{display:grid;grid-template-columns:1fr;gap:48px}
 .contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(46px,5.6vw,88px);line-height:.95;letter-spacing:-.03em}
 .contact .lead{margin-top:22px}
@@ -382,7 +395,11 @@ details.svc summary::-webkit-details-marker{display:none}
 .f-base a{border-bottom:1px solid rgba(244,239,230,.3)}
 
 /* página de proyecto */
-.phead{display:grid;grid-template-columns:1fr}
+.phead{display:grid;grid-template-columns:1fr;position:relative}
+/* el tablero del puente (sistema «Puente») cierra la cabecera en arco */
+.phead .tablero{position:absolute;left:0;bottom:-1px;width:100%;height:clamp(44px,6.4vw,96px);z-index:2;pointer-events:none;fill:var(--orange)}
+.phead.tb-forest .tablero{fill:var(--forest)}
+.phead .tablero .pie{fill:var(--paper)}
 .phead .blk{padding:clamp(32px,5vw,80px) var(--g);display:flex;flex-direction:column;justify-content:space-between;gap:48px}
 .phead .back{font-size:14.5px;font-weight:500}
 .phead h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,5.6vw,92px);line-height:.95;letter-spacing:-.03em;text-wrap:balance;margin-top:18px}
