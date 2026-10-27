@@ -208,7 +208,7 @@ button.chip{cursor:pointer;transition:background .2s,color .2s}
 .case:hover .c-ph img{transform:scale(1.03)}
 .c-ph .lab{position:absolute;left:12px;bottom:12px;background:var(--paper);color:var(--forest);padding:7px 9px}
 .c-fig{padding:clamp(24px,2.8vw,40px);display:flex;flex-direction:column;justify-content:flex-end;gap:10px;border-top:1px solid currentColor}
-.c-fig b{font-family:var(--serif);font-weight:400;font-size:clamp(52px,4.4vw,78px);white-space:nowrap;line-height:.9;letter-spacing:-.03em}
+.c-fig b{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.4vw,64px);white-space:nowrap;line-height:.9;letter-spacing:-.03em}
 .c-fig p{font-size:14px;line-height:1.45;max-width:20em;opacity:.85}
 .phead .chips{margin-top:22px}
 
@@ -253,12 +253,17 @@ details.svc summary::-webkit-details-marker{display:none}
 .pv{display:grid;grid-template-columns:1fr;gap:18px;padding-top:22px;border-top:1px solid rgba(244,239,230,.22)}
 .pv h3{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--orange);margin-bottom:6px}
 .pv p{font-size:15.5px;line-height:1.55}
-.also{margin-top:clamp(28px,3vw,44px);border-top:1px solid var(--rule);padding-top:22px;display:grid;gap:20px}
-.also-h{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--muted)}
-.also-item{display:grid;gap:8px;max-width:46em}
-.also-item h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.4vw,34px);line-height:1.05}
-.also-item p{font-size:15.5px;line-height:1.55}
-.also-item a{font-size:14.5px;font-weight:500;border-bottom:1px solid currentColor;width:fit-content}
+/* Investment Readiness Strategies: subsección propia, con una ficha por cliente y su logo */
+.also{margin-top:clamp(56px,6.4vw,96px);display:grid;gap:clamp(20px,2.2vw,32px)}
+.also-h{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.6vw,54px);line-height:1;letter-spacing:-.02em;text-wrap:balance;padding-top:clamp(22px,2.6vw,36px);border-top:1px solid var(--rule)}
+.also-item{display:grid;grid-template-columns:1fr;background:var(--white);border:1px solid var(--rule)}
+.also-logo{display:grid;place-items:center;padding:clamp(32px,4vw,56px) clamp(28px,3.4vw,48px);border-bottom:1px solid var(--rule)}
+.also-logo img{width:min(100%,300px);height:auto}
+.also-tx{display:grid;gap:12px;align-content:center;padding:clamp(24px,3vw,44px)}
+.also-tx h4{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3vw,44px);line-height:1;letter-spacing:-.02em}
+.also-tx p{font-size:15.5px;line-height:1.6;max-width:42em}
+.also-tx a{font-weight:500;border-bottom:1px solid currentColor}
+.also-tx .web{font-size:14.5px;width:fit-content;margin-top:4px}
 .ready{background:var(--paper-2);padding-block:var(--sec)}
 .r-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:start}
 .r-grid .lead{margin-top:18px;color:var(--muted)}
@@ -444,7 +449,8 @@ details.svc summary::-webkit-details-marker{display:none}
   .vgrid{grid-template-columns:5fr 7fr;gap:72px}
   .r-grid{grid-template-columns:5fr 7fr;gap:72px}
   .pv{grid-template-columns:1fr 1fr;gap:32px}
-  .also{grid-template-columns:220px 1fr;align-items:start}
+  .also-item{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+  .also-logo{border-bottom:0;border-right:1px solid var(--rule)}
   .vb2 .vgrid{grid-template-columns:7fr 5fr}
   .vband .hv-win{width:100%;max-width:580px;height:auto}
   .hv-grid{grid-template-columns:6fr 5fr;gap:48px;min-height:calc(100svh - 76px - 116px);padding-block:40px}
