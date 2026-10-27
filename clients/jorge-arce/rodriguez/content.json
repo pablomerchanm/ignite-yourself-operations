@@ -614,6 +614,11 @@
       "more": {
         "t": "Download the full CV · PDF, December 2016",
         "h": "/rodriguez/assets/Rick-Rodriguez-CV-2016.pdf"
+      },
+      "img": {
+        "src": "/rodriguez/assets/cv-open.jpg",
+        "alt": "Hands with a pen over papers at a conference table, in evening light",
+        "pos": "38% 50%"
       }
     },
     {
