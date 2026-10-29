@@ -33,6 +33,11 @@
   "sections": [
     {
       "type": "hero",
+      "img": {
+        "src": "/laserna/assets/hero.jpg",
+        "mobile": "/laserna/assets/hero-mobile.jpg",
+        "alt": "María Lucía Laserna Angarita"
+      },
       "name": "María Lucía Laserna <t>Angarita</t>",
       "sub": "Auditoría, litigio y casación laboral para empleadores. <t>Desde 2001.</t>",
       "actions": [
@@ -427,7 +432,7 @@
         "href": "https://igniteyourself.co/",
         "logo": "/laserna/assets/igy-logo.png",
         "link": "Conozca Ignite Yourself",
-        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. Las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
       },
       "kick": "Derecho laboral · Socia, Álvarez Liévano Laserna",
       "sub": "Auditoría, litigio y casación laboral para empleadores. <t>Desde 2001.</t>",
