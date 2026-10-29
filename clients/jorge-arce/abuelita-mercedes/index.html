@@ -111,9 +111,14 @@ body[data-vista="portada"] .barra{display:none}
 .libro .retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
 .libro .retrato svg{position:absolute;inset:-7.5% -9%;width:118%;height:115%;overflow:visible;color:var(--rojo)}
 /* el título: un renglón de versalitas y, debajo, «Mercedes» grande con su firma, que es lo protagonista */
-.libro .titulo{position:absolute;left:4%;right:4%;top:66.5%;text-align:center;color:var(--rojo);display:grid;justify-items:center;gap:0}
-.libro .titulo b{display:block;font:600 calc(var(--w) * .0305)/1.2 var(--serif);letter-spacing:.17em;text-transform:uppercase;white-space:nowrap;margin-right:-.17em}
-.libro .titulo img{width:80%;height:auto;margin-top:3%}
+.libro .titulo{position:absolute;left:4%;right:4%;top:65%;text-align:center;color:var(--rojo);display:grid;justify-items:center;gap:0}
+.libro .titulo b{display:flex;align-items:center;gap:.7em;font:600 calc(var(--w) * .036)/1.2 var(--serif);letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;margin-right:-.22em}
+.libro .titulo b::before,.libro .titulo b::after{content:"";width:calc(var(--w) * .07);height:1.5px;background:currentColor;opacity:.7}
+.libro .titulo b::after{margin-left:-.22em}
+.libro .titulo .sello-nombre{position:relative;display:block;width:82%;margin-top:9%}
+.libro .titulo .sello-nombre img{width:100%;margin:0;display:block}
+.libro .titulo i{position:absolute;left:41%;top:-5%;font:400 calc(var(--w) * .05)/1 var(--titulo);font-style:normal;white-space:nowrap;transform:rotate(-5deg)}
+.libro .titulo img{height:auto}
 .marcapaginas{position:absolute;left:24%;top:98.6%;width:5.5%;height:11%;background:linear-gradient(90deg,#6f7c4d,var(--verde) 40%,#8f9c69);z-index:-1;
   clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);transition:opacity .4s}
 .libro.abierto .marcapaginas{opacity:0}
@@ -349,7 +354,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   // ---------- la tapa ----------
   // los dibujos alrededor del retrato, como en la tapa de un recetario: [dibujo, izquierda %, arriba %, ancho %, giro]
   var ADORNOS = [["tomates", 3, 1.5, 20, -8], ["cafe", 78, 1, 20, 12], ["ajo", 5, 26, 15, -10], ["hierbas", 80, 24, 17, 14], ["cubiertos", 4, 47, 15, 4],
-    ["chocolo", 81, 45, 15, 10], ["olla", 4, 85, 14, -6], ["limon", 82, 84, 14, 8], ["chispa", 16, 20, 5, 0], ["chispa", 86, 62, 5, 20], ["chispa", 30, 93, 4.5, 10], ["corazon-lleno", 68, 93, 5, -12]];
+    ["chocolo", 81, 45, 15, 10], ["olla", 4, 87, 12.5, -6], ["limon", 84, 88, 12, 8], ["chispa", 16, 20, 5, 0], ["chispa", 86, 62, 5, 20], ["chispa", 30, 93, 4.5, 10], ["corazon-lleno", 68, 93, 5, -12]];
   function rulos(w, h, paso, a) {
     // un marco de rulos a mano alrededor del retrato (trocoide que da la vuelta al rectángulo)
     var pts = [], lados = [[0, 0, w, 0], [w, 0, w, h], [w, h, 0, h], [0, h, 0, 0]];
@@ -370,7 +375,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
       '<span class="tapa"><span class="frente">' + ad +
       '<span class="retrato">' + (D.foto ? img(D.foto, D.foto_alt || "Mercedes") : "") +
       marcoRulos() + '</span>' +
-      '<span class="titulo"><b>Cuaderno de recetas de la abuelita</b>' + (D.nota_final.firma_img ? '<img src="' + D.nota_final.firma_img + '" alt="Mercedes">' : '<b>Mercedes</b>') + '</span>' +
+      '<span class="titulo"><b>Cuaderno de recetas</b><span class="sello-nombre"><i>de la abuelita</i>' + (D.nota_final.firma_img ? '<img src="' + D.nota_final.firma_img + '" alt="Mercedes">' : '<b>Mercedes</b>') + '</span></span>' +
       '</span></span></button>' +
       '<p class="toca">Toca el cuaderno para abrirlo</p></section>';
   }
