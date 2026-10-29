@@ -262,7 +262,9 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
 
 /* ---------- sus oraciones ---------- */
 .portadilla{align-items:center;justify-content:center;text-align:center;gap:18px}
-.portadilla .vela-grande{width:clamp(110px,12vw,170px)}
+.portadilla .comunion{position:relative;width:min(56%,260px)}
+.portadilla .comunion .polaroid{width:100%;transform:rotate(-3deg)}
+.portadilla .comunion .vela-chica{position:absolute;right:-26%;bottom:4%;width:28%;transform:rotate(6deg)}
 .portadilla h1{font:400 clamp(34px,3.8vw,52px)/1.5 var(--titulo);margin:0}
 .portadilla h1 i{color:var(--rojo);font-style:normal}
 .portadilla .rosario-chico{width:clamp(70px,7vw,96px);opacity:.85}
@@ -291,9 +293,8 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
 .polaroid::before{content:"";position:absolute;left:50%;top:-11px;width:60px;height:21px;margin-left:-30px;background:rgba(246,240,229,.78);box-shadow:0 1px 2px rgba(42,33,27,.12);transform:rotate(-5deg);z-index:1}
 .polaroid:hover{transform:rotate(0) scale(1.03)!important;z-index:3}
 .pie-mini .polaroid{width:clamp(104px,9.5vw,142px);align-self:flex-end;margin:-110px 0 -6px auto;transform:rotate(5deg)}
-.collage{position:relative;width:min(70%,320px);margin:10px auto 8px;padding:0 0 30px 40px}
+.collage{position:relative;width:min(66%,300px);margin:10px auto 8px}
 .collage .grande{width:100%;transform:rotate(-3deg)}
-.collage .chica{position:absolute;left:-6px;bottom:0;width:38%;transform:rotate(8deg);z-index:2}
 
 /* ---------- celular y tableta: las hojas una debajo de la otra ---------- */
 @media (max-width:900px){
@@ -435,7 +436,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     var izq = hojaLetra("nota", "Su nota", D.letra && D.letra.nota,
       "La nota final, escrita a mano por Mercedes: " + nf.lineas.join(" ") + ". " + nf.firma, nf.imagen, "La última página del cuaderno, con la nota firmada por Mercedes", nf.lineas, nf.firma);
     var der = '<section class="hoja-abierta der cierre" aria-label="El final del cuaderno">' +
-      '<div class="collage">' + polaroid("globos", "grande") + polaroid("comunion", "chica") + '</div>' +
+      '<div class="collage">' + polaroid("globos", "grande") + '</div>' +
       '<h1>' + esc((D.nombre || "Mercedes").split(" ")[0]) + ' <i>' + esc((D.nombre || "").split(" ").slice(1).join(" ")) + '</i></h1>' +
       dib("corazon-lleno", "corazon") +
       '<div class="botones"><a class="boton" href="#indice">Volver al índice</a><a class="boton lleno" href="#portada">Cerrar el cuaderno</a></div></section>';
@@ -504,7 +505,9 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   // ---------- sus oraciones: más despacio, sin dibujos de cocina ----------
   var ICONO_ORA = ["flores", "vela", "rosario", "corazon", "flores", "vela"];
   function oraciones() {
-    var izq = '<section class="hoja-abierta izq portadilla" aria-label="Sus oraciones">' + dib("vela", "vela-grande") +
+    // la portadilla: la cinta de su primera comunión, pegada, con una velita al lado
+    var izq = '<section class="hoja-abierta izq portadilla" aria-label="Sus oraciones">' +
+      '<div class="comunion">' + polaroid("comunion") + dib("vela", "vela-chica") + '</div>' +
       '<h1>Sus <i>oraciones</i></h1>' + dib("rosario", "rosario-chico") + '</section>';
     var der = '<section class="hoja-abierta der lista-oraciones" aria-label="Las oraciones"><ul class="lista">' +
       ORA.map(function (o, i) { return '<li><a href="#oracion-' + o.n + '">' + dib(ICONO_ORA[i % ICONO_ORA.length], "ico") + '<span class="t">' + esc(o.titulo) + '</span></a></li>'; }).join("") +
