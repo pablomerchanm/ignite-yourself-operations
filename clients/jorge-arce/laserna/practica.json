@@ -37,7 +37,13 @@
       "label": "Práctica",
       "quote": "El derecho laboral, <t>del lado de la empresa.</t>",
       "sub": "Consultoría, litigio, negociación colectiva, auditoría laboral y procesos de fiscalización: el trabajo de 25 años, para empleadores.",
-      "opener": true
+      "opener": true,
+      "img": {
+        "src": "/laserna/assets/meeting.jpg",
+        "alt": "María Lucía Laserna en una reunión con clientes, con luz de tarde",
+        "pos": "42% 45%"
+      },
+      "align": "right"
     },
     {
       "type": "paths",
