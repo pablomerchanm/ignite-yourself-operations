@@ -140,26 +140,55 @@ La subida a **Banda 2 en 2027** es la noticia: abre la sección de autoridad.
 - Best Lawyers: Firma del Año en Derecho Laboral 2020 y 2023.
 - Great Place To Work 2025–2026.
 
-## 5. Formación
+## 4b. Trayectoria (LinkedIn, captura del 29 oct)
 
-- Abogada, **Pontificia Universidad Javeriana**.
-- Especialista en Derecho Laboral, **Pontificia Universidad Javeriana**.
-- Especialista en Derecho Probatorio, **Universidad Sergio Arboleda**.
-- **Master's in Labor Relations, Cornell University, ILR School** (EE. UU.).
-  Best Lawyers decía "cursando"; la firma y Chambers lo dan como terminado.
-- **Executive LLM, London School of Economics**, en curso.
+Toda su carrera ha sido en la misma casa: entró en 2001 a la firma de la que
+salió la actual.
+
+| Años | Cargo | Dónde |
+|---|---|---|
+| **2016 – hoy** | **Socia** | Álvarez Liévano Laserna, Bogotá |
+| 2001 – 2015 | Abogada sénior | Álvarez Escandón Liévano (Aesca S.A.), Bogotá |
+
+En los dos cargos lo describe igual:
+
+> Líder del departamento de auditorías. Litigante. Asesora permanente en temas
+> de Derecho Laboral y Seguridad Social. Experta en temas pensionales y
+> recursos extraordinario de casación.
+
+- **Pensiones** aparece aquí como especialidad propia. Las fuentes anteriores
+  no lo decían; encaja con Colpensiones como cliente y con el área de planes de
+  retiro de la firma.
+- Los 25 años se cuentan desde **2001**. En 2026 son 25 justos.
+
+## 5. Formación (fechas de LinkedIn)
+
+| Años | Título | Institución |
+|---|---|---|
+| 1998 – 2002 | Abogada | Pontificia Universidad Javeriana |
+| 2004 – 2006 | Especialista en Derecho Laboral | Pontificia Universidad Javeriana |
+| 2009 – 2010 | Especialista en Derecho Probatorio | Universidad Sergio Arboleda |
+| 2019 – 2021 | **MPS, Industrial and Labor Relations (ILR), NYC** | **Cornell University** |
+| 2022 – dic. 2025 | **Master of Laws (LLM)** | **London School of Economics (LSE)** |
+
+- Según las fechas, el **LLM de la LSE terminó en diciembre de 2025**, aunque su
+  "Acerca de" y la firma todavía dicen "cursando". **[verificar]** si ya se
+  graduó; si es así, en la página va como título.
+- El Cornell es el programa **MPS ILR en Nueva York**.
 - Mención de honor en 2003 por su investigación en derecho laboral colectivo y
   negociación colectiva (Legal 500).
 
-## 6. Docencia
+## 6. Docencia (fechas de LinkedIn)
 
-- **Universidad Javeriana:** profesora del Seminario de Investigación en Derecho
-  Procesal Laboral desde 2016, y profesora asistente del Seminario de
-  Investigación en Derecho Laboral del posgrado desde 2013.
-- **Universidad de los Andes:** profesora de derecho laboral en la
-  Especialización en Derecho de la Empresa desde 2017.
-- **Universidad Sergio Arboleda:** Principios del Derecho Laboral (posgrado),
-  2014–2017.
+| Años | Cátedra | Universidad |
+|---|---|---|
+| **2013 – hoy** | Profesora de cátedra, Derecho Laboral, Facultad de Ciencias Jurídicas (maestría: laboral individual y procesal) | Pontificia Universidad Javeriana |
+| 2018 (jun.–dic.) | Posgrado en Derecho Laboral | Universidad Pontificia Bolivariana, Medellín |
+| 2017 – 2018 | Derecho Laboral en el posgrado de Derecho de la Empresa | Universidad de los Andes |
+| 2014 – 2017 | Posgrado en Derecho Laboral | Universidad Sergio Arboleda |
+
+- Lleva **13 años en la Javeriana**, y en cuatro universidades distintas.
+- Los Andes terminó en 2018. Legal 500 y Chambers lo daban como vigente.
 
 ## 7. Gremios
 
@@ -211,7 +240,9 @@ La subida a **Banda 2 en 2027** es la noticia: abre la sección de autoridad.
 - [ ] Fotos (Pablo las trae).
 - [ ] Logo de ALL Abogados en blanco, en buena resolución.
 - [x] LinkedIn: titular y "Acerca de" (captura del 29 oct).
-- [ ] LinkedIn: fechas de experiencia y publicaciones.
+- [x] LinkedIn: experiencia y educación con fechas (capturas del 29 oct).
+- [ ] LinkedIn: publicaciones y actividad.
+- [ ] ¿Ya se graduó del LLM de la LSE (dic. 2025)?
 - [x] Años de experiencia: 25, según su LinkedIn.
 - [ ] Clientes que se pueden nombrar.
 - [ ] Casos o resultados con cifras que se puedan contar (el de las
