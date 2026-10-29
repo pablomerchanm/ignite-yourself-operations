@@ -4,9 +4,9 @@ Recopilación de fuentes públicas, 29 de octubre de 2026. Es la base de hechos
 para la dirección de marca y el contenido de `/laserna`. Cada dato lleva su
 fuente; lo que no está confirmado se marca **[verificar]**.
 
-LinkedIn (`linkedin.com/in/maria-lucia-laserna-angarita-8257b6194`) bloquea la
-lectura automática. Falta revisar a mano su titular, el "Acerca de" y las fechas
-de experiencia.
+LinkedIn (`linkedin.com/in/maria-lucia-laserna-angarita-8257b6194`): Pablo
+pasó una captura del perfil el 29 oct. Lo que dice está en la sección 1b.
+Faltan las fechas de experiencia y la actividad.
 
 ---
 
@@ -22,10 +22,35 @@ de experiencia.
   *Senior Partner* y *Head of Labour & Employment*.
 - **Lo que dirige:** el Departamento de Auditoría y Fiscalización, y las
   fiscalizaciones de aportes ante la **UGPP**.
-- **Experiencia:** la web de la firma dice "más de 20 años". Chambers dice "17
-  años" en asesoría laboral corporativa y de seguridad social. **[verificar]**
-  cuál usar; probablemente el de la firma, que es más reciente.
+- **Experiencia: 25 años.** Lo dice ella en LinkedIn, así que manda sobre los
+  "más de 20" de la firma y los "17" de Chambers.
 - **Idiomas:** español e inglés.
+
+## 1b. Cómo se presenta ella (LinkedIn, textual)
+
+- **Nombre:** MARIA LUCIA LASERNA ANGARITA (cuenta verificada).
+- **Titular:** "Socia en Álvarez Liévano Laserna".
+- **Ubicación:** Bogotá D.C. Metropolitan Area · 500+ conexiones.
+- **Acerca de:**
+
+  > Abogada Javeriana, especialista en derecho laboral y probatorio, con
+  > maestría en relaciones laborales e industriales de Cornell University y
+  > actualmente cursando un LLM en The London School of Economics.
+  >
+  > Con 25 años de experiencia en consultoría, litigios, negociación
+  > colectiva, auditoría laboral y procesos de fiscalización. Reconocida
+  > individualmente en rankings internacionales, entre ellos Chambers and
+  > Partners (Band 3), Legal 500 y Best Lawyers. Docente en la Maestría de
+  > Derecho Laboral de la Universidad Javeriana, en las áreas de derecho
+  > laboral individual y procesal.
+
+- Ella todavía dice **Band 3**, pero Chambers ya la muestra en **Banda 2**
+  (edición 2027). En la página usamos Banda 2, y conviene avisarle.
+- **Su orden de oficios:** consultoría, litigios, negociación colectiva,
+  auditoría laboral y fiscalización. Es la lista para la sección de práctica.
+- **Foto de perfil:** retrato a media figura sobre fondo negro, blazer oscuro,
+  sonrisa abierta y pelo castaño suelto. Sirve de referencia de tono para las
+  fotos que traiga Pablo: cálida y cercana, no un retrato de bufete serio.
 
 ## 2. Qué hace (la práctica)
 
@@ -185,8 +210,9 @@ La subida a **Banda 2 en 2027** es la noticia: abre la sección de autoridad.
 
 - [ ] Fotos (Pablo las trae).
 - [ ] Logo de ALL Abogados en blanco, en buena resolución.
-- [ ] LinkedIn: titular, "Acerca de", publicaciones y fechas.
-- [ ] Años de experiencia (¿20+ o 17?).
+- [x] LinkedIn: titular y "Acerca de" (captura del 29 oct).
+- [ ] LinkedIn: fechas de experiencia y publicaciones.
+- [x] Años de experiencia: 25, según su LinkedIn.
 - [ ] Clientes que se pueden nombrar.
 - [ ] Casos o resultados con cifras que se puedan contar (el de las
       bonificaciones de 2025, por ejemplo).
