@@ -292,12 +292,28 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
 .polaroid img{display:block;width:100%;height:auto}
 .polaroid::before{content:"";position:absolute;left:50%;top:-11px;width:60px;height:21px;margin-left:-30px;background:rgba(246,240,229,.78);box-shadow:0 1px 2px rgba(42,33,27,.12);transform:rotate(-5deg);z-index:1}
 .polaroid:hover{transform:rotate(0) scale(1.03)!important;z-index:3}
-/* en la dedicatoria, tres fotos suyas en abanico: de mayor con el chal, de joven y, al frente, en la finca con sombrero */
-.abanico{position:relative;flex:none;align-self:flex-end;width:clamp(200px,19vw,280px);height:clamp(150px,13vw,200px);margin:-120px 0 -6px auto}
-.abanico .polaroid{position:absolute;width:52%}
-.abanico .a1{left:0;bottom:6%;transform:rotate(-9deg)}
-.abanico .a2{left:24%;bottom:14%;transform:rotate(3deg);z-index:1}
-.abanico .a3{right:0;bottom:0;width:56%;transform:rotate(7deg);z-index:2}
+/* en la dedicatoria, tres fotos suyas: de mayor con el chal, en la finca con sombrero y de joven.
+   En pantalla ancha van en columna, al margen derecho de la hoja, para no quitarle altura a su letra;
+   en el celular van en fila, debajo de lo que dice. */
+.pie-mini{flex-wrap:wrap}
+.pie-mini .transcrita{flex:1 1 200px;min-width:0}
+.abanico{display:flex;align-items:center}
+.abanico .polaroid{position:relative}
+@media (min-width:901px){
+  .hoja-abierta.izq:has(.abanico){padding-right:calc(clamp(110px,10vw,150px) + clamp(30px,3vw,48px))}
+  .hoja-abierta.izq:has(.abanico) .pie-mini{position:static}
+  .abanico{position:absolute;top:clamp(24px,4vh,44px);bottom:clamp(24px,4vh,44px);right:clamp(16px,2vw,32px);width:clamp(110px,10vw,150px);flex-direction:column;justify-content:space-around}
+  .abanico .polaroid{width:100%}
+  .abanico .a1{transform:rotate(-6deg) translateX(-6%)}
+  .abanico .a3{transform:rotate(4deg) translateX(4%);z-index:1}
+  .abanico .a2{transform:rotate(-3deg)}
+}
+@media (max-width:900px){
+  .abanico{flex:1 0 100%;justify-content:space-evenly;align-items:flex-end;gap:4%;margin-top:10px}
+  .abanico .polaroid{width:27%}
+  .abanico .a3{width:31%}
+  .abanico .a1{transform:rotate(-5deg)}.abanico .a2{transform:rotate(4deg)}.abanico .a3{transform:rotate(-3deg)}
+}
 .lista-oraciones .en-oraciones{width:clamp(130px,12vw,180px);margin:26px 6% 0 auto;transform:rotate(4deg)}
 .polaroid.suelta{position:absolute;right:clamp(14px,3vw,40px);bottom:clamp(18px,4vh,46px);width:clamp(120px,11vw,170px);transform:rotate(5deg);z-index:2}
 .collage{position:relative;width:min(66%,300px);margin:10px auto 8px}
@@ -334,7 +350,6 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
   .pie-mini{gap:14px}
   .pie-mini{flex-wrap:wrap}
   .pie-mini .transcrita{flex:1 1 180px;min-width:0}
-  .abanico{width:min(84%,300px);height:200px;margin:18px auto 4px}
   .pie-mini .transcrita{font-size:15px}
 }
 </style>
@@ -476,7 +491,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     // el cuaderno abierto: a la izquierda la primera página (su dedicatoria), a la derecha el índice
     var d = D.dedicatoria;
     var izq = hojaLetra("dedicatoria", "La dedicatoria", D.letra && D.letra.dedicatoria,
-      "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha, d.imagen, "La página original de la dedicatoria, escrita a mano por Mercedes", d.lineas, d.firma, '<div class="abanico">' + polaroid("suelta-chal-verde", "a1") + polaroid("joven", "a2") + polaroid("suelta-finca", "a3") + '</div>');
+      "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha, d.imagen, "La página original de la dedicatoria, escrita a mano por Mercedes", d.lineas, d.firma, '<div class="abanico">' + polaroid("suelta-chal-verde", "a1") + polaroid("suelta-finca", "a3") + polaroid("joven", "a2") + '</div>');
     var der = '<section class="hoja-abierta der" aria-label="El índice"><header class="cabecera"><h1>Las <i>recetas</i></h1>' + dib("cucharas", "racimo") + '</header>' +
       '<div class="herramientas"><label class="buscar"><span class="sr">Buscar una receta o un ingrediente</span>' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>' +
