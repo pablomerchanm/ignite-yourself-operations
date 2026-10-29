@@ -139,6 +139,24 @@
       }
     },
     {
+      "type": "scrub",
+      "id": "words",
+      "label": "En sus palabras",
+      "pin": 2.6,
+      "paras": [
+        "Mi práctica está en hacer un análisis integral, que cubra todas las variables, y llegar a una conclusión práctica que también considere los riesgos a los que está expuesta la empresa. <t>Para que la decisión se tome con la mejor información.</t>",
+        "La consulta más frecuente es el riesgo de desvincular a un trabajador, sobre todo si puede tener estabilidad laboral reforzada. Siempre hay que verificar cada caso y sus antecedentes, <t>y llegar con la estrategia de defensa ya pensada.</t>",
+        "Lo difícil es darle a la empresa herramientas para ser eficiente y sostenible, garantizando al mismo tiempo los derechos de los trabajadores <t>y, sobre todo, la armonía entre trabajador y empleador.</t>"
+      ],
+      "keys": [
+        "Best Lawyers · Preguntas y respuestas"
+      ],
+      "more": {
+        "t": "Por qué los directorios la reconocen",
+        "h": "/laserna/reconocimientos#best-lawyers"
+      }
+    },
+    {
       "type": "counsel",
       "id": "for-clients",
       "label": "Para la empresa",
@@ -164,7 +182,7 @@
           "icon": "quote",
           "tag": "Chambers · Legal 500 · Best Lawyers",
           "t": "Reconocimientos",
-          "d": "Rankings y lo que clientes y colegas dicen de su trabajo.",
+          "d": "Rankings, su perfil en Best Lawyers y lo que clientes y colegas dicen de su trabajo.",
           "a": "Leerlos",
           "h": "/laserna/reconocimientos"
         },
@@ -303,6 +321,28 @@
       ]
     },
     {
+      "type": "brief",
+      "id": "caso",
+      "label": "Un caso, contado por ella: Mansarovar Energy",
+      "items": [
+        {
+          "k": "El problema.",
+          "t": "Una petrolera pagó dos veces la misma bonificación a sus trabajadores.",
+          "d": "Pidió la devolución, y algunos, en especial los sindicalizados, se negaron a reintegrar el dinero."
+        },
+        {
+          "k": "La regla.",
+          "t": "En Colombia la empresa no puede descontar del salario sin autorización expresa y escrita del trabajador.",
+          "d": "Descontar no era una opción."
+        },
+        {
+          "k": "La salida.",
+          "t": "Compensar obligaciones: cruzar lo que los trabajadores debían con lo que la empresa les debía, con apoyo en la jurisprudencia de la Corte Suprema.",
+          "d": "Sin descontar, y sin demandar a cada trabajador."
+        }
+      ]
+    },
+    {
       "type": "method",
       "id": "metodo",
       "label": "Cómo trabaja una auditoría",
@@ -405,10 +445,44 @@
         },
         {
           "n": "2019",
-          "k": "En The Best Lawyers in Colombia desde ese año. Cinco reconocimientos",
+          "k": "En The Best Lawyers in Colombia desde ese año, en Labor and Employment Law. Cinco reconocimientos",
           "src": "Best Lawyers"
         }
       ]
+    },
+    {
+      "type": "stmt",
+      "id": "chambers",
+      "label": "Chambers & Partners",
+      "quote": "Banda 2, <t>en 2027.</t>",
+      "sub": "Chambers & Partners la rankea hace nueve años en Labour & Employment en Colombia, y en la edición Latin America 2027 la sube a Banda 2. Destaca su cartera de clientes del sector energético.",
+      "keys": [
+        "Labour & Employment",
+        "Colombia",
+        "Latin America 2027"
+      ],
+      "tags": true,
+      "more": {
+        "t": "Su perfil en Chambers",
+        "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "best-lawyers",
+      "label": "Best Lawyers",
+      "quote": "Elegida <t>por sus pares.</t>",
+      "sub": "En The Best Lawyers in Colombia desde 2019, en Labor and Employment Law: cinco reconocimientos, incluida la edición 2026. La selección sale de una encuesta entre abogados de la misma región y la misma área.",
+      "keys": [
+        "Labor and Employment Law",
+        "Bogotá",
+        "2019 – 2026"
+      ],
+      "tags": true,
+      "more": {
+        "t": "Su perfil en Best Lawyers",
+        "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
+      }
     },
     {
       "type": "letters",
@@ -841,8 +915,18 @@
           "i": "linkedin"
         },
         {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
           "t": "allabogados.com",
           "h": "https://allabogados.com/",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
           "i": "globe"
         }
       ],

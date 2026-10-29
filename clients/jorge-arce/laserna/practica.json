@@ -120,6 +120,28 @@
       "no": "01"
     },
     {
+      "type": "brief",
+      "id": "caso",
+      "label": "Un caso, contado por ella: Mansarovar Energy",
+      "items": [
+        {
+          "k": "El problema.",
+          "t": "Una petrolera pagó dos veces la misma bonificación a sus trabajadores.",
+          "d": "Pidió la devolución, y algunos, en especial los sindicalizados, se negaron a reintegrar el dinero."
+        },
+        {
+          "k": "La regla.",
+          "t": "En Colombia la empresa no puede descontar del salario sin autorización expresa y escrita del trabajador.",
+          "d": "Descontar no era una opción."
+        },
+        {
+          "k": "La salida.",
+          "t": "Compensar obligaciones: cruzar lo que los trabajadores debían con lo que la empresa les debía, con apoyo en la jurisprudencia de la Corte Suprema.",
+          "d": "Sin descontar, y sin demandar a cada trabajador."
+        }
+      ]
+    },
+    {
       "type": "method",
       "id": "metodo",
       "label": "Cómo trabaja una auditoría",
@@ -399,8 +421,18 @@
           "i": "linkedin"
         },
         {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
           "t": "allabogados.com",
           "h": "https://allabogados.com/",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
           "i": "globe"
         }
       ],

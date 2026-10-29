@@ -92,6 +92,31 @@ mejor.
 Frase usable de la nota: *"La imparcialidad y objetividad permitirá tomar
 decisiones más acertadas."* (es de la firma, no cita directa de ella).
 
+## 2b. En su voz: preguntas y respuestas de Best Lawyers
+
+Respuestas suyas en el perfil de Best Lawyers (en inglés). En la página van
+traducidas al español en la sección "En sus palabras" (inicio) y en "Un caso"
+(práctica).
+
+- **Su práctica:** un análisis integral, que cubra todas las variables y
+  llegue a una conclusión práctica que también considere los riesgos de la
+  empresa, para tomar la decisión mejor informada.
+- **La consulta más frecuente:** el riesgo de desvincular trabajadores con
+  posible estabilidad laboral reforzada. Hay que verificar cada caso y los
+  antecedentes del trabajador, y llegar con la estrategia de defensa ya pensada.
+- **El caso Mansarovar Energy (lo nombra ella):** la petrolera pagó dos veces
+  la misma bonificación; algunos trabajadores, en especial los sindicalizados,
+  se negaron a devolverla. Como en Colombia no se puede descontar del salario
+  sin autorización escrita, la estrategia fue compensar obligaciones con base
+  en la jurisprudencia de la Corte Suprema, sin demandar a cada trabajador.
+- **Lo difícil:** dar herramientas para empresas eficientes y sostenibles,
+  garantizando los derechos de los trabajadores y la armonía entre las partes.
+- **Por qué laboral:** quería derecho comercial y le gustaba el tributario;
+  escogió el laboral por el trabajo directo con personas y el equilibrio entre
+  los objetivos de la empresa y el bienestar de los trabajadores.
+- **Otros intereses:** viajar, seguir aprendiendo y actualizarse en derecho
+  laboral.
+
 ## 3. Clientes (públicos en Chambers)
 
 Colpensiones, Bancoldex, Mercer, Ashmore Group, REFICAR, Shandong Kerui

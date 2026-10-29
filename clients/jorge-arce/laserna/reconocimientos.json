@@ -57,10 +57,44 @@
         },
         {
           "n": "2019",
-          "k": "En The Best Lawyers in Colombia desde ese año. Cinco reconocimientos",
+          "k": "En The Best Lawyers in Colombia desde ese año, en Labor and Employment Law. Cinco reconocimientos",
           "src": "Best Lawyers"
         }
       ]
+    },
+    {
+      "type": "stmt",
+      "id": "chambers",
+      "label": "Chambers & Partners",
+      "quote": "Banda 2, <t>en 2027.</t>",
+      "sub": "Chambers & Partners la rankea hace nueve años en Labour & Employment en Colombia, y en la edición Latin America 2027 la sube a Banda 2. Destaca su cartera de clientes del sector energético.",
+      "keys": [
+        "Labour & Employment",
+        "Colombia",
+        "Latin America 2027"
+      ],
+      "tags": true,
+      "more": {
+        "t": "Su perfil en Chambers",
+        "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "best-lawyers",
+      "label": "Best Lawyers",
+      "quote": "Elegida <t>por sus pares.</t>",
+      "sub": "En The Best Lawyers in Colombia desde 2019, en Labor and Employment Law: cinco reconocimientos, incluida la edición 2026. La selección sale de una encuesta entre abogados de la misma región y la misma área.",
+      "keys": [
+        "Labor and Employment Law",
+        "Bogotá",
+        "2019 – 2026"
+      ],
+      "tags": true,
+      "more": {
+        "t": "Su perfil en Best Lawyers",
+        "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
+      }
     },
     {
       "type": "letters",
@@ -349,8 +383,18 @@
           "i": "linkedin"
         },
         {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
           "t": "allabogados.com",
           "h": "https://allabogados.com/",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
           "i": "globe"
         }
       ],
