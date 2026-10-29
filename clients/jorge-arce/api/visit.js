@@ -11,6 +11,7 @@
 const PEOPLE = {
   pettingill: 'Bernard Pettingill',
   rodriguez: 'Rick Rodriguez',
+  laserna: 'María Lucía Laserna',
   brant: 'Patrick Brant',
   'mark-cooke': 'Mark Cooke',
   kappelman: 'Leon Kappelman',

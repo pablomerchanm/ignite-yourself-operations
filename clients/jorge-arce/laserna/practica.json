@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "title": "Práctica — María Lucía Laserna",
+    "description": "Auditoría laboral, seguridad social y UGPP, litigio y casación, y relaciones colectivas, para empleadores."
+  },
+  "logo": "MARÍA LUCÍA LASERNA",
+  "nav": [
+    {
+      "t": "Inicio",
+      "h": "/laserna"
+    },
+    {
+      "t": "Práctica",
+      "h": "/laserna/practica"
+    },
+    {
+      "t": "Reconocimientos",
+      "h": "/laserna/reconocimientos"
+    },
+    {
+      "t": "Trayectoria",
+      "h": "/laserna/trayectoria"
+    },
+    {
+      "t": "Contacto",
+      "h": "/laserna#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Consultar un asunto",
+    "h": "/laserna#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Práctica",
+      "quote": "El derecho laboral, <t>del lado de la empresa.</t>",
+      "sub": "Consultoría, litigio, negociación colectiva, auditoría laboral y procesos de fiscalización: el trabajo de 25 años, para empleadores.",
+      "opener": true
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Áreas de práctica",
+      "title": "Cuatro frentes <t>del derecho laboral.</t>",
+      "lede": "Las preguntas que una empresa tiene que poder responder, antes o durante el conflicto.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Auditoría laboral",
+          "title": "¿Dónde está el riesgo, antes de que alguien lo encuentre?",
+          "desc": "Revisión interna y externa del cumplimiento laboral y de seguridad social: contratación, tercerización, jornada, salario, trabajadores extranjeros y estabilidad reforzada. También due diligence en compras, fusiones y adquisiciones.",
+          "items": [
+            "Auditoría laboral preventiva",
+            "Due diligence en fusiones y adquisiciones",
+            "Estabilidad laboral reforzada",
+            "Tercerización y solidaridad"
+          ],
+          "cta": {
+            "t": "Consultar una auditoría",
+            "h": "/laserna#inquiry",
+            "path": "auditoria"
+          },
+          "icon": "check"
+        },
+        {
+          "label": "Seguridad social",
+          "title": "¿Se cotizó lo que se debía?",
+          "desc": "Fiscalizaciones de la UGPP sobre aportes y PILA, inspecciones del Ministerio del Trabajo y asuntos pensionales, del requerimiento a la discusión.",
+          "items": [
+            "Fiscalizaciones de la UGPP",
+            "Aportes y PILA",
+            "Asuntos pensionales",
+            "Inspecciones del Ministerio"
+          ],
+          "cta": {
+            "t": "Consultar una fiscalización",
+            "h": "/laserna#inquiry",
+            "path": "ugpp"
+          },
+          "icon": "doc"
+        },
+        {
+          "label": "Litigio y casación",
+          "title": "¿Cómo se prueba el caso, hasta la Corte?",
+          "desc": "Procesos laborales y el recurso extraordinario de casación ante la Sala de Casación Laboral de la Corte Suprema, con formación en derecho probatorio.",
+          "items": [
+            "Procesos ordinarios laborales",
+            "Recurso extraordinario de casación",
+            "Derecho probatorio",
+            "Recuperación de pagos en exceso"
+          ],
+          "cta": {
+            "t": "Consultar un proceso",
+            "h": "/laserna#inquiry",
+            "path": "litigio"
+          },
+          "icon": "court"
+        },
+        {
+          "label": "Relaciones colectivas",
+          "title": "¿Cómo se negocia y se reorganiza?",
+          "desc": "Negociación colectiva, reestructuraciones y asesoría permanente en derecho individual y colectivo del trabajo.",
+          "items": [
+            "Negociación colectiva",
+            "Reestructuraciones",
+            "Asesoría laboral permanente",
+            "Políticas y reglamentos internos"
+          ],
+          "cta": {
+            "t": "Consultar un asunto colectivo",
+            "h": "/laserna#inquiry",
+            "path": "firma"
+          },
+          "icon": "sign"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "method",
+      "id": "metodo",
+      "label": "Cómo trabaja una auditoría",
+      "title": "Cuatro fases, <t>de la reunión al informe.</t>",
+      "intro": "El método que describe el departamento que ella dirige. El objetivo es encontrar las irregularidades antes que una inspección o una demanda.",
+      "img": {
+        "src": "/laserna/assets/papers.jpg",
+        "alt": "Manos sobre documentos en una mesa de reuniones"
+      },
+      "rows": [
+        {
+          "icon": "list",
+          "t": "Levantamiento de información",
+          "d": "Una reunión inicial y un formulario: planta de personal, tipos de contrato, turnos, conceptos salariales, aprendices, reglamento, estabilidad reforzada, tercerización, nómina, aportes y PILA."
+        },
+        {
+          "icon": "doc",
+          "t": "Información adicional",
+          "d": "Solicitudes puntuales y reuniones de seguimiento, cuando el caso las necesita."
+        },
+        {
+          "icon": "cv",
+          "t": "Informe de auditoría",
+          "d": "Conceptos, recomendaciones, oportunidades de mejora y riesgos, presentados al cliente."
+        },
+        {
+          "icon": "check",
+          "t": "Acompañamiento",
+          "d": "Apoyo en la implementación de las recomendaciones, para cerrar las brechas antes de una sanción."
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "sectors",
+      "label": "Para quién trabaja",
+      "title": "Empleadores <t>de todos los sectores.</t>",
+      "lede": "Los sectores que atiende la firma y los clientes que Chambers & Partners publica en su perfil, con fuerte presencia del sector energético.",
+      "groups": [
+        {
+          "label": "Clientes, según Chambers",
+          "names": [
+            "Colpensiones",
+            "Bancoldex",
+            "Mercer",
+            "Ashmore Group",
+            "REFICAR",
+            "Shandong Kerui Petroleum",
+            "Mansarovar Energy",
+            "CEPSA Colombia",
+            "PRODIEL Colombia",
+            "Proeléctrica",
+            "Genser Power",
+            "Thales Group",
+            "Softline",
+            "Holcim"
+          ]
+        },
+        {
+          "label": "Sectores de la firma",
+          "names": [
+            "Aeronáutica",
+            "Oil & gas",
+            "Minería",
+            "Telecomunicaciones",
+            "Financiero",
+            "Alimentos y bebidas",
+            "Salud",
+            "Manufactura",
+            "Automotriz",
+            "Retail"
+          ]
+        }
+      ],
+      "fn": "Clientes tomados del perfil público de Chambers & Partners. Por confirmar con ella cuáles se pueden nombrar.",
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Siguiente",
+      "t": "Reconocimientos",
+      "d": "Chambers & Partners, The Legal 500 y Best Lawyers.",
+      "h": "/laserna/reconocimientos",
+      "alt": {
+        "t": "Consultar un asunto",
+        "h": "/laserna#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Iniciar una conversación",
+      "title": "Empiece por <t>la pregunta.</t>",
+      "lede": "Elija el tipo de consulta y dé el contexto suficiente, sin información confidencial, para una primera respuesta.",
+      "contact": {
+        "email": "contacto@allabogados.com",
+        "phone": "(601) 417 7716",
+        "city": "Bogotá, Colombia"
+      },
+      "form": {
+        "selectLabel": "¿Sobre qué quiere conversar?",
+        "selectPlaceholder": "Elija el tipo de consulta",
+        "paths": [
+          {
+            "v": "auditoria",
+            "t": "Una auditoría laboral o un due diligence",
+            "btn": "Enviar consulta",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Cargo"
+              },
+              {
+                "n": "Número aproximado de trabajadores"
+              },
+              {
+                "n": "Sector"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "ugpp",
+            "t": "Una fiscalización de la UGPP o una inspección del Ministerio",
+            "btn": "Enviar consulta",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Entidad que adelanta el proceso"
+              },
+              {
+                "n": "Etapa (requerimiento, liquidación, recurso)"
+              },
+              {
+                "n": "Plazo, si lo hay"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "litigio",
+            "t": "Un proceso laboral o un recurso de casación",
+            "btn": "Enviar consulta",
+            "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa o firma",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Instancia o despacho"
+              },
+              {
+                "n": "Próxima fecha, si la hay"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firma",
+            "t": "Otro asunto laboral con la firma",
+            "btn": "Enviar a la firma",
+            "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Tema"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "docencia",
+            "t": "Docencia, conferencias o prensa",
+            "btn": "Enviar invitación",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Institución o medio",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Fecha y formato"
+              },
+              {
+                "n": "Mensaje",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Este formulario es ilustrativo: se configura con María Lucía antes de publicar la página.",
+        "fine": "Vista privada: esta página no envía nada. Escriba a contacto@allabogados.com o llame al (601) 417 7716."
+      },
+      "name": "María Lucía Laserna Angarita",
+      "fcta": {
+        "t": "Consultar un asunto",
+        "h": "/laserna#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/maria-lucia-laserna-angarita-8257b6194/",
+          "i": "linkedin"
+        },
+        {
+          "t": "allabogados.com",
+          "h": "https://allabogados.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "Un concepto de",
+        "href": "https://igniteyourself.co/",
+        "logo": "/laserna/assets/igy-logo.png",
+        "link": "Conozca Ignite Yourself",
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. Las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+      },
+      "kick": "Derecho laboral · Socia, Álvarez Liévano Laserna",
+      "sub": "Auditoría, litigio y casación laboral para empleadores. <t>Desde 2001.</t>",
+      "firm": {
+        "href": "https://allabogados.com/",
+        "src": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "lede": "Socia desde 2016. Derecho laboral para empresas, con su equipo de Auditoría y Fiscalización.",
+        "link": "Visitar allabogados.com",
+        "social": []
+      },
+      "fine": "Vista privada · No indexada",
+      "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
+      "noform": true,
+      "no": "04"
+    }
+  ]
+}

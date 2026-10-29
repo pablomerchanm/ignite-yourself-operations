@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "title": "Reconocimientos — María Lucía Laserna",
+    "description": "Chambers & Partners Banda 2 (2027), Leading Partner en The Legal 500 y Best Lawyers desde 2019."
+  },
+  "logo": "MARÍA LUCÍA LASERNA",
+  "nav": [
+    {
+      "t": "Inicio",
+      "h": "/laserna"
+    },
+    {
+      "t": "Práctica",
+      "h": "/laserna/practica"
+    },
+    {
+      "t": "Reconocimientos",
+      "h": "/laserna/reconocimientos"
+    },
+    {
+      "t": "Trayectoria",
+      "h": "/laserna/trayectoria"
+    },
+    {
+      "t": "Contacto",
+      "h": "/laserna#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Consultar un asunto",
+    "h": "/laserna#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "recog-open",
+      "label": "Reconocimientos",
+      "quote": "Lo que dicen <t>los directorios.</t>",
+      "sub": "Chambers & Partners, The Legal 500 y Best Lawyers la reconocen individualmente en derecho laboral en Colombia.",
+      "opener": true
+    },
+    {
+      "type": "nums",
+      "id": "rankings",
+      "ink": true,
+      "label": "Los rankings",
+      "items": [
+        {
+          "n": "2",
+          "k": "Banda en Chambers & Partners Latin America 2027, Labour & Employment, Colombia",
+          "src": "Chambers & Partners"
+        },
+        {
+          "n": "2026",
+          "k": "Leading Partner en The Legal 500 Latin America",
+          "src": "The Legal 500"
+        },
+        {
+          "n": "2019",
+          "k": "En The Best Lawyers in Colombia desde ese año. Cinco reconocimientos",
+          "src": "Best Lawyers"
+        }
+      ]
+    },
+    {
+      "type": "letters",
+      "id": "voices",
+      "label": "Clientes y mercado",
+      "title": "En sus <t>palabras.</t>",
+      "lede": "Citas textuales de los directorios. Las de Chambers van en su inglés original.",
+      "items": [
+        {
+          "q": "“Sumamente competente y didáctica.”",
+          "who": "Un entrevistado",
+          "org": "Chambers & Partners Latin America 2026"
+        },
+        {
+          "q": "“Una abogada experimentada que cuenta con un equipo de profesionales de primer nivel.”",
+          "who": "Un comentarista del mercado",
+          "org": "Chambers & Partners Latin America 2026"
+        },
+        {
+          "q": "“She demonstrates in-depth knowledge of labour regulations, enabling her to provide precise, strategic advice.”",
+          "who": "Un cliente",
+          "org": "Chambers & Partners"
+        },
+        {
+          "q": "“Her ability to interpret complex regulations and translate them into practical solutions.”",
+          "who": "Un cliente",
+          "org": "Chambers & Partners"
+        },
+        {
+          "q": "“Highly appreciated by clients for her expertise in labour and employment mandates in Colombia.”",
+          "who": "Comentario editorial",
+          "org": "Chambers & Partners"
+        },
+        {
+          "q": "“María Lucía Laserna es cercana, dispuesta a colaborar en temas no solamente legales y conceptuales.”",
+          "who": "Un cliente",
+          "org": "The Legal 500"
+        }
+      ],
+      "src": "Fuentes: perfil de Chambers & Partners, y las notas de la firma sobre Chambers 2026 y The Legal 500",
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "recog-detail",
+      "tint": true,
+      "label": "El detalle",
+      "title": "Directorio por <t>directorio.</t>",
+      "groups": [
+        {
+          "label": "Chambers & Partners",
+          "wide": true,
+          "names": [
+            "Latin America 2027 · Labour & Employment, Colombia · Banda 2",
+            "Latin America 2026 · Labour & Employment, Colombia · Banda 3",
+            "Rankeada nueve años en la guía de Latinoamérica"
+          ]
+        },
+        {
+          "label": "The Legal 500",
+          "wide": true,
+          "names": [
+            "Latin America 2026 · Leading Partner, por las auditorías laborales, el due diligence y el manejo de clientes internacionales",
+            "2021 · Practice Head"
+          ]
+        },
+        {
+          "label": "Best Lawyers",
+          "wide": true,
+          "names": [
+            "The Best Lawyers in Colombia · Labor and Employment Law, desde 2019",
+            "Cinco reconocimientos, incluida la edición 2026"
+          ]
+        },
+        {
+          "label": "La firma",
+          "wide": true,
+          "names": [
+            "Chambers Latin America · Banda 1 en Labour & Employment",
+            "The Legal 500 · Firma Boutique del Año 2025 y Firma del Año en Labour & Employment 2024",
+            "Leaders League · Leading Firm 2024, 2025 y 2026",
+            "Best Lawyers · Firma del Año en Derecho Laboral 2020 y 2023"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "next",
+      "k": "Siguiente",
+      "t": "Trayectoria",
+      "d": "Ejercicio, formación, docencia y gremios, desde 2001.",
+      "h": "/laserna/trayectoria",
+      "alt": {
+        "t": "Consultar un asunto",
+        "h": "/laserna#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Iniciar una conversación",
+      "title": "Empiece por <t>la pregunta.</t>",
+      "lede": "Elija el tipo de consulta y dé el contexto suficiente, sin información confidencial, para una primera respuesta.",
+      "contact": {
+        "email": "contacto@allabogados.com",
+        "phone": "(601) 417 7716",
+        "city": "Bogotá, Colombia"
+      },
+      "form": {
+        "selectLabel": "¿Sobre qué quiere conversar?",
+        "selectPlaceholder": "Elija el tipo de consulta",
+        "paths": [
+          {
+            "v": "auditoria",
+            "t": "Una auditoría laboral o un due diligence",
+            "btn": "Enviar consulta",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Cargo"
+              },
+              {
+                "n": "Número aproximado de trabajadores"
+              },
+              {
+                "n": "Sector"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "ugpp",
+            "t": "Una fiscalización de la UGPP o una inspección del Ministerio",
+            "btn": "Enviar consulta",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Entidad que adelanta el proceso"
+              },
+              {
+                "n": "Etapa (requerimiento, liquidación, recurso)"
+              },
+              {
+                "n": "Plazo, si lo hay"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "litigio",
+            "t": "Un proceso laboral o un recurso de casación",
+            "btn": "Enviar consulta",
+            "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa o firma",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Instancia o despacho"
+              },
+              {
+                "n": "Próxima fecha, si la hay"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firma",
+            "t": "Otro asunto laboral con la firma",
+            "btn": "Enviar a la firma",
+            "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Tema"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "docencia",
+            "t": "Docencia, conferencias o prensa",
+            "btn": "Enviar invitación",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Institución o medio",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Fecha y formato"
+              },
+              {
+                "n": "Mensaje",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Este formulario es ilustrativo: se configura con María Lucía antes de publicar la página.",
+        "fine": "Vista privada: esta página no envía nada. Escriba a contacto@allabogados.com o llame al (601) 417 7716."
+      },
+      "name": "María Lucía Laserna Angarita",
+      "fcta": {
+        "t": "Consultar un asunto",
+        "h": "/laserna#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/maria-lucia-laserna-angarita-8257b6194/",
+          "i": "linkedin"
+        },
+        {
+          "t": "allabogados.com",
+          "h": "https://allabogados.com/",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "Un concepto de",
+        "href": "https://igniteyourself.co/",
+        "logo": "/laserna/assets/igy-logo.png",
+        "link": "Conozca Ignite Yourself",
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. Las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+      },
+      "kick": "Derecho laboral · Socia, Álvarez Liévano Laserna",
+      "sub": "Auditoría, litigio y casación laboral para empleadores. <t>Desde 2001.</t>",
+      "firm": {
+        "href": "https://allabogados.com/",
+        "src": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "lede": "Socia desde 2016. Derecho laboral para empresas, con su equipo de Auditoría y Fiscalización.",
+        "link": "Visitar allabogados.com",
+        "social": []
+      },
+      "fine": "Vista privada · No indexada",
+      "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
+      "noform": true,
+      "no": "03"
+    }
+  ]
+}

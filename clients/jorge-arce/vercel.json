@@ -85,6 +85,31 @@
       "permanent": false
     },
     {
+      "source": "/Laserna",
+      "destination": "/laserna",
+      "permanent": false
+    },
+    {
+      "source": "/maria-lucia-laserna",
+      "destination": "/laserna",
+      "permanent": false
+    },
+    {
+      "source": "/maria-lucia",
+      "destination": "/laserna",
+      "permanent": false
+    },
+    {
+      "source": "/marialucia",
+      "destination": "/laserna",
+      "permanent": false
+    },
+    {
+      "source": "/MariaLucia",
+      "destination": "/laserna",
+      "permanent": false
+    },
+    {
       "source": "/bernard-pettingill",
       "destination": "/pettingill",
       "permanent": false
@@ -198,7 +223,7 @@
   ],
   "headers": [
     {
-      "source": "/:dir(abuelita-mercedes|adriana|adriana-gareis|arce|base|base-jorge|brant|catalogo|enlaces|freudenthal|habib|hart|herencia|igy2|igy-hanza|igy-next|igy-pacifica|igy-v3|kappelman|kappelman-gareis|kappelman-getty|lab|mark-cooke|nilsson|p|pettingill|profiles|rodriguez|refs|templates|vishwanathan|v\\d+(?:-[a-z]+)?)/:path*",
+      "source": "/:dir(abuelita-mercedes|adriana|adriana-gareis|arce|base|base-jorge|brant|catalogo|enlaces|freudenthal|habib|hart|herencia|igy2|igy-hanza|igy-next|igy-pacifica|igy-v3|kappelman|kappelman-gareis|kappelman-getty|lab|laserna|mark-cooke|nilsson|p|pettingill|profiles|rodriguez|refs|templates|vishwanathan|v\\d+(?:-[a-z]+)?)/:path*",
       "headers": [
         {
           "key": "X-Robots-Tag",
