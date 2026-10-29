@@ -55,6 +55,22 @@ img{max-width:100%}
 .etiqueta{font:500 12.5px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);margin:0}
 #app>*{animation:aparecer .5s ease both}
 @keyframes aparecer{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* pasar la página: la hoja que se va gira sobre el lomo; la barra se queda quieta */
+.barra{view-transition-name:barra}
+#app{view-transition-name:hoja}
+.vt #app>*{animation:none}
+::view-transition-group(hoja){animation-duration:.9s}
+::view-transition-image-pair(hoja){isolation:auto;perspective:2200px;perspective-origin:50% 30vh}
+::view-transition-old(hoja){z-index:2;animation:hoja-sale .9s cubic-bezier(.45,.05,.35,1) both;transform-origin:0 50%;mix-blend-mode:normal}
+::view-transition-new(hoja){z-index:1;animation:hoja-entra .9s ease both;mix-blend-mode:normal}
+[data-dir="atras"]::view-transition-old(hoja){animation-name:hoja-sale-atras;transform-origin:100% 50%}
+[data-dir="abrir"]::view-transition-old(hoja){animation:none;opacity:0}
+[data-dir="abrir"]::view-transition-new(hoja){animation:hoja-abre .8s ease both}
+@keyframes hoja-sale{0%{transform:none;filter:none;opacity:1}65%{opacity:1;filter:brightness(.93)}100%{transform:rotateY(-78deg);filter:brightness(.8);opacity:0}}
+@keyframes hoja-sale-atras{0%{transform:none;filter:none;opacity:1}65%{opacity:1;filter:brightness(.93)}100%{transform:rotateY(78deg);filter:brightness(.8);opacity:0}}
+@keyframes hoja-entra{from{filter:brightness(.9)}}
+@keyframes hoja-abre{from{opacity:0;transform:scale(.985)}}
+@media (prefers-reduced-motion:reduce){::view-transition-old(hoja),::view-transition-new(hoja){animation:none!important}}
 
 /* ---------- barra ---------- */
 .barra{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(239,231,218,.93);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid rgba(42,33,27,.08)}
@@ -74,18 +90,17 @@ body[data-vista="portada"] .barra{display:none}
   background-size:38px 38px}
 .escena{min-height:100svh;display:grid;place-items:center;align-content:center;gap:58px;padding-block:max(28px,env(safe-area-inset-top,0px)) 40px;overflow:hidden;position:relative}
 .escena::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 40%,rgba(42,33,27,.16) 100%)}
-.libro{--w:min(84vw,440px,calc((100svh - 150px) * .72));width:var(--w);aspect-ratio:.72;position:relative;border:0;padding:0;background:none;cursor:pointer;perspective:2200px;z-index:1}
+.libro{--w:min(84vw,500px,calc((100svh - 150px) * .72));width:var(--w);aspect-ratio:.72;position:relative;border:0;padding:0;background:none;cursor:pointer;perspective:2200px;z-index:1}
 .libro .hojas{position:absolute;inset:1.2% 0 1.2% 2%;background:var(--papel);border-radius:2px 6px 6px 2px;box-shadow:0 26px 50px -18px rgba(42,33,27,.55),0 3px 0 #e6ddcf,0 6px 0 #d9cfbf;
   background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 23px,var(--renglon) 23px,var(--renglon) 24px);background-position:0 30px}
 .libro .hojas::after{content:"";position:absolute;right:-5px;top:2%;bottom:2%;width:6px;border-radius:0 4px 4px 0;background:repeating-linear-gradient(to bottom,#f6f1e8 0 2px,#ddd3c3 2px 3px)}
-.libro .tapa{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;transition:transform 1.15s cubic-bezier(.55,.06,.25,1)}
-.libro .frente,.libro .dentro{position:absolute;inset:0;border-radius:3px 8px 8px 3px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden}
+/* la tapa gira sobre el lomo hasta quedar de canto (una sola cara: sin 3D anidado, que Safari pinta mal) */
+.libro .tapa{position:absolute;inset:0;transform-origin:0 50%;transition:transform 1.05s cubic-bezier(.6,.02,.4,1),opacity .3s ease .8s}
+.libro .frente{position:absolute;inset:0;border-radius:3px 8px 8px 3px;overflow:hidden}
 .libro .frente{background:var(--crema);--claro:var(--crema);box-shadow:0 30px 60px -22px rgba(42,33,27,.6),0 2px 6px rgba(42,33,27,.18);
   background-image:linear-gradient(90deg,rgba(42,33,27,.16),rgba(42,33,27,.04) 3%,transparent 6%,rgba(255,255,255,.35) 6.4%,transparent 7.4%),
   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .32 0 0 0 0 .22 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23t)'/%3E%3C/svg%3E")}
-.libro .dentro{transform:rotateY(180deg);background:#efe4d2;--claro:#efe4d2}
-.libro .dentro .dib{position:absolute;opacity:.5}
-.libro.abierto .tapa{transform:rotateY(-158deg)}
+.libro.abierto .tapa{transform:rotateY(-90deg);opacity:0}
 .libro .adorno{position:absolute;margin:0}
 .libro .retrato{position:absolute;left:25%;top:11%;width:50%;aspect-ratio:1100/1430}
 .libro .retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
@@ -102,60 +117,48 @@ body[data-vista="portada"] .barra{display:none}
 .escena.saliendo{transition:opacity .55s ease .85s;opacity:0}
 .escena.saliendo .toca{opacity:0}
 
-/* ---------- una página con su letra (la dedicatoria y su nota) ---------- */
-.pagina{position:relative;background:var(--papel);border-radius:3px;box-shadow:0 18px 44px -18px rgba(42,33,27,.4),0 1px 3px var(--sombra);
-  padding:clamp(26px,4.4vw,60px) clamp(22px,5vw,72px) clamp(30px,4vw,56px) clamp(52px,7.5vw,104px);margin-block:28px 40px}
-/* el borde arrancado del cuaderno de espiral */
-.pagina::before{content:"";position:absolute;left:clamp(12px,2.2vw,30px);top:20px;bottom:20px;width:13px;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='34'%3E%3Crect x='1' y='6' width='11' height='17' rx='5.5' fill='%23EFE7DA' stroke='%23d8cdbd'/%3E%3C/svg%3E") repeat-y}
-.cabeza{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;align-items:start;margin-bottom:clamp(18px,3vw,36px)}
-.cabeza p{margin:0;font:400 14px/1.35 var(--sans);color:var(--tinta)}
-.cabeza .grande{font:400 clamp(24px,2.6vw,30px)/1.15 var(--serif);margin-top:12px;grid-column:1/-1;max-width:24ch;text-wrap:balance}
-.cabeza .grande i{color:var(--rojo)}
-.letra{position:relative;width:100%;margin-inline:auto;cursor:default}
-.letra img{position:absolute;height:auto;display:block}
-/* ---------- el cuaderno abierto: dedicatoria | índice ---------- */
+/* ---------- el cuaderno abierto: dos hojas y el lomo en medio (dedicatoria | índice, página | receta, nota | cierre) ---------- */
 .envoltura.ancha{max-width:1440px}
-.abierto{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-block:22px 34px;position:relative;filter:drop-shadow(0 22px 34px rgba(42,33,27,.28))}
+.abierto{--alto:calc(100svh - 58px - 44px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-block:22px;position:relative;filter:drop-shadow(0 22px 34px rgba(42,33,27,.28))}
 .abierto::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:46px;margin-left:-23px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(42,33,27,.10) 40%,rgba(42,33,27,.22) 50%,rgba(42,33,27,.10) 60%,transparent)}
-.hoja-abierta{min-width:0;overflow:hidden;position:relative;background:var(--papel);--claro:var(--papel);height:calc(100svh - 104px);min-height:560px;padding:clamp(20px,2.6vw,38px) clamp(22px,3vw,48px)}
-.hoja-abierta.izq{border-radius:6px 0 0 6px;display:flex;flex-direction:column;padding-left:clamp(40px,5vw,72px)}
-.hoja-abierta.izq::before{content:"";position:absolute;left:clamp(12px,1.6vw,24px);top:18px;bottom:18px;width:13px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='34'%3E%3Crect x='1' y='6' width='11' height='17' rx='5.5' fill='%23EFE7DA' stroke='%23d8cdbd'/%3E%3C/svg%3E") repeat-y}
-.hoja-abierta.der{border-radius:0 6px 6px 0;overflow-y:auto!important;overscroll-behavior:contain;padding-top:6px}
-.hoja-abierta.der .cabecera{padding-block:24px 8px}
-.hoja-abierta.der .cabecera h1{font-size:clamp(40px,4.4vw,60px)}
+.hoja-abierta{min-width:0;overflow:hidden;position:relative;background:var(--papel);--claro:var(--papel);height:var(--alto);min-height:560px;padding:clamp(22px,2.6vw,38px) clamp(24px,3.2vw,52px)}
+.hoja-abierta.izq{border-radius:6px 0 0 6px;display:flex;flex-direction:column;padding-left:clamp(46px,5vw,76px);padding-top:clamp(40px,4.2vw,56px)}
+/* el borde de espiral del cuaderno */
+.hoja-abierta.izq::before{content:"";position:absolute;left:clamp(14px,1.6vw,26px);top:18px;bottom:18px;width:13px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='34'%3E%3Crect x='1' y='6' width='11' height='17' rx='5.5' fill='%23EFE7DA' stroke='%23d8cdbd'/%3E%3C/svg%3E") repeat-y}
+.hoja-abierta.der{border-radius:0 6px 6px 0;overflow-y:auto;overscroll-behavior:contain}
+.hoja-abierta.der .cabecera{padding-block:10px 8px}
+.hoja-abierta.der .cabecera h1{font-size:clamp(42px,4.4vw,60px)}
 .hoja-abierta.der .lista{columns:1}
+.hoja-abierta.der .racimo{width:clamp(74px,7vw,100px);top:4px;right:4px}
+.hoja-abierta.der .herramientas{padding-right:clamp(84px,8vw,112px)}
 .hoja-abierta .indice{padding:0 0 36px 26px;position:relative}
 .hoja-abierta .indice::before{left:6px}
-.hoja-abierta.izq .saltar{bottom:auto;top:12px;right:12px}
-.cabeza-mini{display:flex;justify-content:space-between;gap:12px;font:400 13px/1.3 var(--sans);color:var(--tinta);margin-bottom:10px}
-.cabeza-mini p{margin:0}
-.hoja-abierta.izq .letra{flex:1 1 auto;min-height:0;width:auto;max-width:100%;height:100%;margin-inline:auto}
-.pie-mini{display:flex;gap:16px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid rgba(42,33,27,.12)}
-.pie-mini .transcrita{margin:0;font:italic 400 15px/1.45 var(--serif);color:var(--tinta-suave)}
-.original{flex:none;width:86px;border:0;padding:5px 5px 18px;background:#fff;box-shadow:0 6px 14px -6px rgba(42,33,27,.5);transform:rotate(-3deg);cursor:zoom-in;position:relative}
+.letra{position:relative;margin-inline:auto;cursor:default}
+.letra img{position:absolute;height:auto;display:block}
+.hoja-abierta.izq .letra{flex:1 1 auto;min-height:0;width:auto;max-width:100%;height:100%}
+.pie-mini{display:flex;gap:18px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid rgba(42,33,27,.12)}
+.pie-mini .transcrita{margin:0;font:italic 400 16px/1.5 var(--serif);color:var(--tinta-suave);text-wrap:pretty}
+.original{flex:none;width:84px;border:0;padding:5px;background:#fff;box-shadow:0 6px 14px -6px rgba(42,33,27,.5);transform:rotate(-3deg);cursor:zoom-in;position:relative;transition:transform .25s}
+.original:hover{transform:rotate(0) scale(1.04)}
 .original img{display:block;width:100%;height:auto}
-.original span{position:absolute;left:0;right:0;bottom:3px;font:500 9px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-suave)}
-@media (max-width:900px){
-  .abierto{grid-template-columns:1fr;gap:18px;filter:none}
-  .abierto::after{display:none}
-  .hoja-abierta{height:auto;min-height:0;border-radius:4px!important;box-shadow:0 14px 30px -14px rgba(42,33,27,.4)}
-  .hoja-abierta.izq .letra{height:auto;width:100%}
-  .hoja-abierta.izq{padding-top:46px}
-  .hoja-abierta.der{overflow:visible}
-}
 .escribiendo .letra img{animation:escribir var(--dura,1s) cubic-bezier(.5,.1,.4,1) both;animation-delay:var(--desde,0s)}
 @keyframes escribir{from{clip-path:inset(-10% 100% -10% 0)}to{clip-path:inset(-10% -2% -10% 0)}}
-.pie-pagina{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px);margin-top:clamp(26px,4vw,48px);padding-top:18px;border-top:1px solid rgba(42,33,27,.12)}
-.pie-pagina p{margin:0;font:400 14.5px/1.55 var(--sans);color:var(--tinta-suave);max-width:52ch}
-.pie-pagina p+p{margin-top:8px}
-.pie-pagina .transcrita{font:italic 400 17px/1.55 var(--serif);color:var(--tinta)}
-.seguir{display:inline-flex;align-items:center;gap:12px;margin-top:16px;font:500 14px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--papel);background:var(--rojo);border-radius:999px;padding:15px 24px 14px;text-decoration:none;box-shadow:0 8px 18px -6px rgba(165,53,44,.5);transition:transform .2s}
-.seguir:hover{transform:translateY(-2px)}
-.seguir svg{width:22px;height:12px}
-.saltar{position:absolute;right:16px;bottom:14px;font:500 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-suave);background:none;border:0;cursor:pointer;padding:8px;opacity:.8}
-.listo .saltar,.pagina:not(.escribiendo) .saltar{display:none}
-.corazon-pie{position:absolute;width:44px;right:clamp(20px,5vw,70px);top:clamp(20px,3vw,40px);transform:rotate(10deg)}
+.saltar{position:absolute;top:10px;right:14px;font:500 11.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave);background:none;border:0;cursor:pointer;padding:8px;opacity:.85}
+.hoja-abierta:not(.escribiendo) .saltar{display:none}
+.boton{display:inline-flex;align-items:center;gap:10px;font:500 12.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:13px 20px 12px;border:1.5px solid var(--rojo);color:var(--rojo);transition:background .2s,color .2s}
+.boton:hover{background:var(--rojo);color:var(--papel)}
+.boton.lleno{background:var(--rojo);color:var(--papel);box-shadow:0 8px 18px -8px rgba(165,53,44,.6)}
+.boton svg{width:20px;height:11px}
+
+/* el cierre: a la derecha de su nota */
+.cierre{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px}
+.cierre .retrato{position:relative;width:min(46%,230px);aspect-ratio:1100/1430;margin:18px 0 10px}
+.cierre .retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
+.cierre .retrato svg{position:absolute;inset:-7.5% -9%;width:118%;height:115%;overflow:visible;color:var(--rojo)}
+.cierre h1{font:400 clamp(30px,3vw,40px)/1.1 var(--serif);margin:6px 0 0;text-wrap:balance}
+.cierre h1 i{color:var(--rojo)}
+.cierre .botones{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
+.cierre .corazon{width:30px;margin-top:4px}
 
 /* ---------- índice ---------- */
 .cabecera{padding-block:44px 18px;display:grid;gap:8px;position:relative}
@@ -172,7 +175,6 @@ body[data-vista="portada"] .barra{display:none}
 .orden{display:flex;gap:18px}
 .orden button{border:0;background:none;padding:8px 0;font:500 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;color:var(--tinta-suave);border-bottom:2px solid transparent}
 .orden button[aria-pressed="true"]{color:var(--rojo);border-bottom-color:var(--rojo)}
-.hoja{background:var(--papel);box-shadow:0 14px 36px -16px rgba(42,33,27,.35),0 1px 3px var(--sombra);border-radius:3px;position:relative}
 .indice{padding:26px clamp(18px,4vw,56px) 40px clamp(34px,6vw,84px);margin-bottom:56px}
 .indice::before{content:"";position:absolute;top:0;bottom:0;left:clamp(20px,3.6vw,50px);width:1px;background:rgba(165,53,44,.4)}
 .grupo + .grupo{margin-top:34px}
@@ -189,10 +191,14 @@ body[data-vista="portada"] .barra{display:none}
 .vacio{font:italic 400 22px/1.4 var(--serif);color:var(--tinta-suave);margin:14px 0}
 
 /* ---------- receta ---------- */
-.pliego{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);align-items:start;padding-block:28px 28px}
-.paginas{display:grid;gap:26px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 80px)}
+/* la receta abierta: a la izquierda la foto de su página, pegada en la hoja; a la derecha, pasada en limpio */
+.receta-abierta .hoja-abierta{height:auto;min-height:var(--alto);overflow:visible}
+.receta-abierta .izq{justify-content:flex-start}
+.paginas{display:grid;gap:30px;justify-items:center;align-content:start}
+.paginas:has(figure:only-child){position:sticky;top:calc(env(safe-area-inset-top,0px) + 82px)}
 .paginas button{border:0;padding:0;background:none;cursor:zoom-in;display:block;width:100%}
-.paginas figure,.recuerdo{margin:0;background:var(--papel);padding:10px 10px 12px;position:relative;box-shadow:0 14px 30px -12px rgba(42,33,27,.45),0 1px 3px var(--sombra);transform:rotate(-1.2deg);transition:transform .25s}
+.paginas figure,.recuerdo{margin:0;background:#fff;padding:10px 10px 12px;position:relative;box-shadow:0 14px 30px -14px rgba(42,33,27,.5),0 1px 3px var(--sombra);transform:rotate(-1.2deg);transition:transform .25s}
+.paginas figure{width:min(100%,calc((var(--alto) - 120px) * .7))}
 .paginas figure:nth-child(even){transform:rotate(1deg)}
 .paginas figure:hover{transform:rotate(0)}
 /* esquineros de álbum */
@@ -201,10 +207,10 @@ body[data-vista="portada"] .barra{display:none}
   linear-gradient(45deg,#3d322a 0 15px,transparent 15px) bottom left/26px 26px no-repeat,linear-gradient(315deg,#3d322a 0 15px,transparent 15px) bottom right/26px 26px no-repeat;opacity:.86}
 .paginas img{display:block;width:100%;height:auto;background:#e9e7e1;aspect-ratio:3/4.3;object-fit:cover}
 .paginas figcaption{font:500 12px/1.4 var(--sans);letter-spacing:.06em;color:var(--tinta-suave);padding:9px 2px 0;display:flex;justify-content:space-between}
-.ficha{padding:38px clamp(22px,4vw,52px) 44px;--claro:var(--papel)}
-.ficha .sello{position:absolute;top:18px;right:20px;width:clamp(84px,10vw,124px);transform:rotate(7deg)}
-.ficha .donde{margin:0;padding-right:120px}
-.ficha h1{font:400 clamp(40px,4.8vw,60px)/1.04 var(--serif);margin:10px 0 0;text-wrap:balance;padding-right:110px}
+.ficha{--claro:var(--papel)}
+.ficha .sello{position:absolute;top:22px;right:24px;width:clamp(80px,8vw,112px);transform:rotate(7deg)}
+.ficha .donde{margin:8px 0 0;padding-right:120px}
+.ficha h1{font:400 clamp(38px,3.8vw,54px)/1.06 var(--serif);margin:10px 0 0;text-wrap:balance;padding-right:110px}
 .ficha .trazo{display:block;width:min(230px,60%);height:16px;color:var(--rojo);margin:10px 0 22px}
 .ficha h2{font:600 12.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--rojo);margin:28px 0 10px}
 .ingredientes{list-style:none;margin:0;padding:0}
@@ -236,7 +242,7 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
 .literal .pag b{display:block;font:600 12px/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--tinta-suave);margin-bottom:4px}
 .literal ol{list-style:none;margin:0;padding:0;font:italic 400 17px/1.7 var(--serif);color:var(--tinta)}
 .literal .ayuda{font:400 13px/1.5 var(--sans);color:var(--tinta-suave);margin:10px 0 0}
-.pasar{display:flex;justify-content:space-between;gap:12px;padding-block:12px 64px}
+.pasar{display:flex;justify-content:space-between;gap:12px;padding-block:0 56px}
 .pasar a{display:flex;align-items:center;gap:12px;text-decoration:none;max-width:48%;padding:10px 0}
 .pasar a .dib{width:42px;flex:none}
 .pasar a span{display:grid;gap:2px}
@@ -262,25 +268,36 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
 .recuerdo{width:min(300px,80vw);transform:rotate(-2.2deg)}
 .recuerdo:nth-child(even){transform:rotate(2deg);margin-top:26px}
 .recuerdo img{display:block;width:100%;height:auto}
-.recuerdo figcaption{font:italic 400 18px/1.3 var(--serif);color:var(--tinta-suave);text-align:center;padding:10px 4px 0}
 
-/* ---------- móvil ---------- */
+/* ---------- celular y tableta: las hojas una debajo de la otra ---------- */
+@media (max-width:900px){
+  .abierto{grid-template-columns:1fr;gap:18px;filter:none;margin-block:16px 22px}
+  .abierto::after{display:none}
+  .hoja-abierta,.receta-abierta .hoja-abierta{height:auto;min-height:0;border-radius:4px!important;box-shadow:0 14px 30px -14px rgba(42,33,27,.4)}
+  .hoja-abierta.izq{padding-top:48px}
+  .hoja-abierta.izq .letra{height:auto;width:100%}
+  .hoja-abierta.der{overflow:visible}
+  .paginas,.paginas:has(figure:only-child){position:static}
+  .paginas figure{width:100%}
+}
 @media (max-width:820px){
-  .pliego{grid-template-columns:1fr}
-  .paginas{position:static;grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 6px 20px;margin:0 -6px;gap:18px}
+  .receta-abierta .izq{padding:44px 14px 18px 40px}
+  .paginas{grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6px 14px;margin:0 -6px;gap:16px;justify-items:stretch}
   .paginas figure{scroll-snap-align:center;transform:none}
   .paginas figure:nth-child(even){transform:none}
   .paginas:has(figure:only-child){grid-auto-columns:100%}
   .lista{columns:1}
   .barra .marca .marca-texto{display:none}
   .barra .marca img{height:36px}
-  .cabeza{grid-template-columns:1fr 1fr}
-  .cabeza p:first-child{grid-column:1/-1}
-  .pie-pagina{grid-template-columns:1fr}
-  .pagina{margin-inline:-4px;padding-left:44px;padding-right:18px}
-  .pagina::before{left:10px}
-  .cabecera .racimo{width:78px;top:30px}
+  .cabecera .racimo{width:78px;top:22px}
   .cabecera h1{padding-right:70px}
+  .hoja-abierta.der .herramientas{padding-right:0}
+  .hoja-abierta.der .racimo{width:64px;top:8px}
+  .ficha .sello{width:72px;top:18px;right:16px}
+  .ficha .donde{padding-right:84px}
+  .ficha h1{padding-right:0;font-size:38px}
+  .pie-mini{gap:14px}
+  .pie-mini .transcrita{font-size:15px}
 }
 </style>
 </head>
@@ -306,7 +323,6 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   function plano(s) { return String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
   function img(p, alt, perezosa) { return '<img src="' + BASE + 'pag/' + p + '" alt="' + esc(alt) + '"' + (perezosa ? ' loading="lazy"' : "") + ' decoding="async">'; }
   function dib(n, cls, estilo) { return '<svg class="dib ' + (cls || "") + '" viewBox="0 0 100 100" aria-hidden="true"' + (estilo ? ' style="' + estilo + '"' : "") + '><use href="#d-' + n + '"/></svg>'; }
-  var FLECHA = '<svg viewBox="0 0 44 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 13 C14 9 26 15 40 11"/><path d="M31 4 L41 11 L32 19"/></svg>';
   var TRAZO = '<svg class="trazo" viewBox="0 0 230 16" preserveAspectRatio="none" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M3 10 C50 5 110 4 180 7 C200 8 214 9 226 6"/><path d="M40 14 C90 11 140 11 196 12" stroke-width="1.6" opacity=".7"/></svg>';
 
   // El dibujo de cada receta, por lo que la receta lleva; si no, por su tipo.
@@ -341,16 +357,14 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   }
   function portada() {
     var ad = ADORNOS.map(function (a) { return '<span class="adorno" style="left:' + a[1] + '%;top:' + a[2] + '%;width:' + a[3] + '%;transform:rotate(' + a[4] + 'deg)">' + dib(a[0]) + '</span>'; }).join("");
-    var dentro = [["cucharas", 12, 10, 22, -12], ["pocillo", 60, 16, 26, 8], ["torta", 18, 44, 26, 6], ["tomate-arbol", 62, 52, 22, -10], ["frasco", 30, 74, 22, 4], ["corazon", 70, 82, 12, 10]]
-      .map(function (a) { return '<span style="position:absolute;left:' + a[1] + '%;top:' + a[2] + '%;width:' + a[3] + '%;transform:rotate(' + a[4] + 'deg)">' + dib(a[0]) + '</span>'; }).join("");
     return '<section class="escena mantel" aria-label="La tapa del cuaderno">' +
       '<button type="button" class="libro" aria-label="Abrir el cuaderno de recetas">' +
       '<span class="hojas"></span><span class="marcapaginas"></span>' +
       '<span class="tapa"><span class="frente">' + ad +
       '<span class="retrato">' + (D.foto ? img(D.foto, D.foto_alt || "Mercedes") : "") +
-      '<svg viewBox="-6 -6 112 142" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="' + rulos(100, 130, 7.4, 2.6) + '" filter="url(#d-temblor)"/></svg></span>' +
+      marcoRulos() + '</span>' +
       '<span class="titulo"><b>Cuaderno de recetas<br>de la abuelita</b>' + (D.nota_final.firma_img ? '<img src="' + D.nota_final.firma_img + '" alt="Mercedes">' : '<b>Mercedes</b>') + '</span>' +
-      '</span><span class="dentro">' + dentro + '</span></span></button>' +
+      '</span></span></button>' +
       '<p class="toca">Toca el cuaderno para abrirlo</p></section>';
   }
   function abrir(libro) {
@@ -361,36 +375,42 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   }
 
   // ---------- una página con su letra ----------
+  // Su firma más clara (la de su nota final, la misma de la tapa) reemplaza el renglón de la firma, que en las fotos
+  // sale borroso: [pieza que reemplaza, izquierda %, arriba %, ancho %] dentro de cada página.
+  var FIRMA = { dedicatoria: ["dedicatoria-9.png", 40.5, 73.4, 33], nota: ["nota-7.png", 42.5, 76, 44] };
   function letra(info, clave, alt) {
-    if (!info) return "";
-    var escribir = !yaEscrita[clave], t = 0;
+    if (!info) return { html: "", escribir: false, total: 0 };
+    var escribir = !yaEscrita[clave], t = 0, f = D.nota_final.firma_img && FIRMA[clave];
     var piezas = info.piezas.map(function (p, i) {
       var dura = Math.max(.4, 1.05 * p.w / info.ancho), desde = .35 + t; t += dura * .92 + .12;
-      return '<img src="' + BASE + 'pag/tinta/' + p.archivo + '" alt="" style="left:' + (100 * p.x / info.ancho).toFixed(3) + '%;top:' + (100 * p.y / info.alto).toFixed(3) + '%;width:' + (100 * p.w / info.ancho).toFixed(3) + '%;--dura:' + dura.toFixed(2) + 's;--desde:' + desde.toFixed(2) + 's">';
+      var tiempo = '--dura:' + dura.toFixed(2) + 's;--desde:' + desde.toFixed(2) + 's';
+      if (f && p.archivo === f[0]) return '<img src="' + D.nota_final.firma_img + '" alt="" style="left:' + f[1] + '%;top:' + f[2] + '%;width:' + f[3] + '%;' + tiempo + '">';
+      return '<img src="' + BASE + 'pag/tinta/' + p.archivo + '" alt="" style="left:' + (100 * p.x / info.ancho).toFixed(3) + '%;top:' + (100 * p.y / info.alto).toFixed(3) + '%;width:' + (100 * p.w / info.ancho).toFixed(3) + '%;' + tiempo + '">';
     }).join("");
     return { html: '<div class="letra" role="img" aria-label="' + esc(alt) + '" style="aspect-ratio:' + info.ancho + '/' + info.alto + '">' + piezas + '</div>', escribir: escribir, total: t };
   }
-  function dedicatoria() {
-    var d = D.dedicatoria, L = letra(D.letra && D.letra.dedicatoria, "dedicatoria", "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha);
-    return '<div class="envoltura"><article class="pagina' + (L.escribir ? " escribiendo" : "") + '" style="--claro:var(--papel)">' +
-      dib("corazon", "corazon-pie") +
-      '<div class="cabeza"><p>( La primera página )</p><p>' + esc(d.fecha || "") + '</p><p>Para Nana</p>' +
-      '<p class="grande">Cuaderno de Recetas de la abuelita <i>Mercedes</i></p></div>' +
+  // una hoja izquierda con su letra escribiéndose y, al pie, la foto de la página y lo que dice
+  function hojaLetra(clave, etiqueta, info, alt, imagen, altImagen, lineas, firma) {
+    var L = letra(info, clave, alt);
+    return '<article class="hoja-abierta izq' + (L.escribir ? " escribiendo" : "") + '" aria-label="' + esc(etiqueta) + '" data-total="' + L.total.toFixed(2) + '">' +
       L.html +
-      '<div class="pie-pagina"><div><p class="etiqueta">Lo que dice</p><p class="transcrita">«' + esc(d.lineas.join(" ")) + '»<br>— ' + esc(d.firma) + '</p></div>' +
-      '<div><p class="etiqueta">El cuaderno</p><p>Las ' + R.length + ' recetas que la abuelita ' + esc(D.nombre || "Mercedes") + ' escribió a mano, en el orden en que las escribió. Cada una está pasada en limpio, junto a la foto de su página.</p>' +
-      '<a class="seguir" href="#indice">Abrir el recetario ' + FLECHA + '</a></div></div>' +
-      '<button type="button" class="saltar" data-saltar>Ver todo</button></article></div>';
+      '<div class="pie-mini"><button type="button" class="original" data-ver="' + esc(imagen) + '" aria-label="Ver en grande la página original">' + img(imagen, altImagen) + '</button>' +
+      '<p class="transcrita">«' + esc(lineas.join(" ")) + '»<br>— ' + esc(firma) + '</p></div>' +
+      (L.escribir ? '<button type="button" class="saltar" data-saltar>Ver todo</button>' : '') + '</article>';
+  }
+  function marcoRulos() {
+    return '<svg viewBox="-6 -6 112 142" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="' + rulos(100, 130, 7.4, 2.6) + '" filter="url(#d-temblor)"/></svg>';
   }
   function notaFinal() {
-    var nf = D.nota_final, L = letra(D.letra && D.letra.nota, "nota", "La nota final, escrita a mano por Mercedes: " + nf.lineas.join(" ") + ". " + nf.firma);
-    var rec = recuerdos();
-    return '<div class="envoltura"><article class="pagina' + (L.escribir ? " escribiendo" : "") + '">' + dib("corazon-lleno", "corazon-pie") +
-      '<div class="cabeza"><p>( La última página )</p><p>Su nota</p><p>Para Nana</p><p class="grande">Lo último que escribió en el cuaderno</p></div>' + L.html +
-      '<div class="pie-pagina"><div><p class="etiqueta">Lo que dice</p><p class="transcrita">«' + esc(nf.lineas.join(" ")) + '»<br>— ' + esc(nf.firma) + '</p></div>' +
-      '<div><p class="etiqueta">La página</p><figure style="margin:8px 0 0;max-width:200px"><button type="button" data-ver="' + esc(nf.imagen) + '" style="border:0;padding:0;background:none;cursor:zoom-in" aria-label="Ver la última página en grande">' + img(nf.imagen, "La última página del cuaderno, con la nota firmada por Mercedes", true) + '</button></figure></div></div>' +
-      '<button type="button" class="saltar" data-saltar>Ver todo</button></article>' + rec +
-      '<nav class="pasar" aria-label="Pasar la página"><a href="#indice">' + dib("cucharas") + '<span><small>Volver</small><b>Al índice</b></span></a><a href="#portada">' + dib("corazon") + '<span><small>Cerrar</small><b>La tapa</b></span></a></nav></div>';
+    var nf = D.nota_final;
+    var izq = hojaLetra("nota", "Su nota", D.letra && D.letra.nota,
+      "La nota final, escrita a mano por Mercedes: " + nf.lineas.join(" ") + ". " + nf.firma, nf.imagen, "La última página del cuaderno, con la nota firmada por Mercedes", nf.lineas, nf.firma);
+    var der = '<section class="hoja-abierta der cierre" aria-label="El final del cuaderno">' +
+      (D.foto ? '<figure class="retrato">' + img(D.foto, D.foto_alt || "Mercedes") + marcoRulos() + '</figure>' : '') +
+      '<h1>' + esc((D.nombre || "Mercedes").split(" ")[0]) + ' <i>' + esc((D.nombre || "").split(" ").slice(1).join(" ")) + '</i></h1>' +
+      dib("corazon-lleno", "corazon") +
+      '<div class="botones"><a class="boton" href="#indice">Volver al índice</a><a class="boton lleno" href="#portada">Cerrar el cuaderno</a></div></section>';
+    return '<div class="envoltura ancha"><div class="abierto">' + izq + der + '</div></div>';
   }
 
   // ---------- índice ----------
@@ -410,19 +430,15 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     }).join("");
   }
   function recuerdos() {
-    return (D.recuerdos || []).length ? '<section class="recuerdos mantel" aria-label="Recuerdos de Mercedes"><h2>Recuerdos de la abuelita <i>Mercedes</i></h2><div class="fila">' +
-      D.recuerdos.map(function (r) { return '<figure class="recuerdo"><span class="esquinas"></span>' + img(r.imagen, r.alt, true) + (r.pie ? '<figcaption>' + esc(r.pie) + '</figcaption>' : '') + '</figure>'; }).join("") + '</div></section>' : "";
+    return (D.recuerdos || []).length ? '<section class="recuerdos mantel" aria-label="Recuerdos de Mercedes"><h2><i>Recuerdos</i></h2><div class="fila">' +
+      D.recuerdos.map(function (r) { return '<figure class="recuerdo"><span class="esquinas"></span>' + img(r.imagen, r.alt, true) + '</figure>'; }).join("") + '</div></section>' : "";
   }
   function indice() {
     // el cuaderno abierto: a la izquierda la primera página (su dedicatoria), a la derecha el índice
-    var d = D.dedicatoria, L = letra(D.letra && D.letra.dedicatoria, "dedicatoria", "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha);
-    var izq = '<article class="hoja-abierta izq' + (L.escribir ? " escribiendo" : "") + '" aria-label="La dedicatoria">' +
-      '<div class="cabeza-mini"><p>( La primera página )</p><p>' + esc(d.fecha || "") + '</p><p>Para Nana</p></div>' + L.html +
-      '<div class="pie-mini"><button type="button" class="original" data-ver="' + esc(d.imagen) + '" aria-label="Ver la página original de la dedicatoria">' + img(d.imagen, "La página original de la dedicatoria, escrita a mano por Mercedes") + '<span>La página original</span></button>' +
-      '<p class="transcrita">«' + esc(d.lineas.join(" ")) + '»<br>— ' + esc(d.firma) + '</p></div>' +
-      '<button type="button" class="saltar" data-saltar>Ver todo</button></article>';
-    var der = '<section class="hoja-abierta der" aria-label="El índice"><header class="cabecera"><p class="etiqueta">( El índice )</p><h1>Las <i>recetas</i></h1>' +
-      '<p>Las ' + R.length + ' que escribió, en su orden o por tipo.</p>' + dib("cucharas", "racimo") + '</header>' +
+    var d = D.dedicatoria;
+    var izq = hojaLetra("dedicatoria", "La dedicatoria", D.letra && D.letra.dedicatoria,
+      "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha, d.imagen, "La página original de la dedicatoria, escrita a mano por Mercedes", d.lineas, d.firma);
+    var der = '<section class="hoja-abierta der" aria-label="El índice"><header class="cabecera"><h1>Las <i>recetas</i></h1>' + dib("cucharas", "racimo") + '</header>' +
       '<div class="herramientas"><label class="buscar"><span class="sr">Buscar una receta o un ingrediente</span>' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>' +
       '<input id="buscar" type="search" autocomplete="off" placeholder="guayaba, panela, pollo…" value="' + esc(consulta) + '"></label>' +
@@ -435,16 +451,16 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   function receta(r) {
     var i = R.indexOf(r), ant = R[i - 1], sig = R[i + 1];
     var paginas = r.paginas.map(function (p, k) {
-      return '<figure><span class="esquinas"></span><button type="button" data-ver="' + esc(p.archivo) + '" aria-label="Ver la página ' + p.n + ' en grande">' + img(p.archivo, "Página " + p.n + " del cuaderno, escrita a mano por Mercedes", k > 0) + '</button><figcaption><span>Página ' + p.n + '</span><span>Ampliar</span></figcaption></figure>';
+      return '<figure><span class="esquinas"></span><button type="button" data-ver="' + esc(p.archivo) + '" aria-label="Ver la página ' + p.n + ' en grande">' + img(p.archivo, "Página " + p.n + " del cuaderno, escrita a mano por Mercedes", k > 0) + '</button><figcaption><span>pág. ' + p.n + '</span></figcaption></figure>';
     }).join("");
     var ing = r.ingredientes.length ? '<h2>Ingredientes</h2><ul class="ingredientes">' + r.ingredientes.map(function (t, k) {
       return '<li><label><input type="checkbox" id="ing-' + r.n + '-' + k + '"><span>' + esc(t) + '</span></label></li>'; }).join("") + '</ul>' : "";
     var prep = r.preparacion.length ? '<h2>' + (r.ingredientes.length ? "Preparación" : "Cómo se hace") + '</h2><div class="preparacion">' + r.preparacion.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join("") + '</div>' : "";
     var notas = r.notas.length ? '<div class="notas">' + r.notas.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join("") + '</div>' : "";
     var dudas = r.dudas.length ? '<details class="dudas"><summary>Por confirmar (' + r.dudas.length + ')</summary><ul>' + r.dudas.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join("") + '</ul></details>' : "";
-    var donde = "Receta " + r.n + " · " + (r.paginas.length > 1 ? "páginas " + r.paginas[0].n + " a " + r.paginas[r.paginas.length - 1].n : "página " + r.pagina) + " · " + r.tipo;
-    return '<div class="envoltura"><article class="pliego" aria-labelledby="titulo-receta"><div class="paginas">' + paginas + '</div>' +
-      '<div class="hoja ficha">' + dib(ilu(r), "sello") + '<p class="etiqueta donde">' + esc(donde) + '</p>' +
+    var donde = r.tipo;
+    return '<div class="envoltura ancha"><article class="abierto receta-abierta" aria-labelledby="titulo-receta"><div class="hoja-abierta izq"><div class="paginas">' + paginas + '</div></div>' +
+      '<div class="hoja-abierta der ficha">' + dib(ilu(r), "sello") + '<p class="etiqueta donde">' + esc(donde) + '</p>' +
       '<h1 id="titulo-receta">' + esc(r.titulo) + '</h1>' + TRAZO +
       (ing || prep ? '<button type="button" class="cocinar" aria-pressed="' + document.body.classList.contains("cocina") + '">' + dib("olla") + 'Modo cocina</button>' : '') +
       (ing || prep ? ing + prep : '<p class="pendiente">Esta receta todavía no está pasada en limpio. Aquí está tal como ella la escribió: toca la página para verla en grande.</p>') + notas + dudas +
@@ -489,6 +505,32 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     if (vista === "indice") enlazarIndice();
     if (vista === "indice") yaEscrita.dedicatoria = true;
     if (vista === "nota-final") yaEscrita.nota = true;
+    // cuando termina de escribirse, la hoja queda quieta y el «Ver todo» se va
+    var hoja = app.querySelector(".hoja-abierta.escribiendo");
+    if (hoja) setTimeout(function () { hoja.classList.remove("escribiendo"); }, (+hoja.getAttribute("data-total") + 1.4) * 1000);
+  }
+
+  // pasar la página: hacia adelante gira a la izquierda, hacia atrás a la derecha
+  function lugar(h) {
+    var m = /^receta-(\d+)$/.exec(h);
+    return m ? 1 + +m[1] : h === "nota-final" ? 1e4 : h === "indice" || h === "dedicatoria" ? 1 : 0;
+  }
+  var antes = (location.hash || "#portada").slice(1);
+  function cambiar() {
+    var ahora = (location.hash || "#portada").slice(1), a = lugar(antes), b = lugar(ahora); antes = ahora;
+    var quieto = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!document.startViewTransition || quieto || document.querySelector(".visor")) return mostrar();
+    document.documentElement.setAttribute("data-dir", a === 0 && b > 0 ? "abrir" : b < a ? "atras" : "adelante");
+    document.documentElement.classList.add("vt");
+    var vt = document.startViewTransition(function () {
+      mostrar();
+      // la hoja nueva gira ya con la foto de su página cargada (sin esperar más de un momento)
+      var fotos = [].slice.call(app.querySelectorAll(".paginas img, .letra img, .original img")).filter(function (i) { return !i.complete; });
+      return Promise.race([Promise.all(fotos.map(function (i) { return new Promise(function (ok) { i.onload = i.onerror = ok; }); })),
+        new Promise(function (ok) { setTimeout(ok, 700); })]);
+    });
+    // si se pasa otra página antes de que termine, el giro anterior se salta: no es un error
+    [vt.ready, vt.finished, vt.updateCallbackDone].forEach(function (pr) { if (pr) pr.catch(function () {}); });
   }
 
   function enlazarIndice() {
@@ -507,7 +549,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   document.addEventListener("click", function (e) {
     var libro = e.target.closest(".libro");
     if (libro && !libro.classList.contains("abierto")) { abrir(libro); return; }
-    if (e.target.closest("[data-saltar]")) { var p = e.target.closest(".pagina, .hoja-abierta"); p.classList.remove("escribiendo"); return; }
+    if (e.target.closest("[data-saltar]")) { var p = e.target.closest(".hoja-abierta"); p.classList.remove("escribiendo"); return; }
     var ver = e.target.closest("[data-ver]");
     if (ver) { visor(ver.getAttribute("data-ver")); return; }
     var c = e.target.closest(".cocinar");
@@ -526,7 +568,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.6) { var a = document.querySelector(dx > 0 ? ".pasar a:first-child" : ".pasar a:last-child"); if (a) location.hash = a.getAttribute("href"); }
   }, { passive: true });
   document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible" && document.body.classList.contains("cocina")) pedirPantalla(); });
-  window.addEventListener("hashchange", mostrar);
+  window.addEventListener("hashchange", cambiar);
   mostrar();
 })();
 </script>
