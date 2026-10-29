@@ -46,8 +46,8 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background-color:var(--mesa);color:var(--tinta);font:23px/1.45 var(--mano);-webkit-font-smoothing:antialiased;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .18 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+body{margin:0;color:var(--tinta);font:23px/1.45 var(--mano);-webkit-font-smoothing:antialiased;background-color:#F3EBDF;
+  background-image:linear-gradient(90deg,rgba(165,53,44,.1) 50%,transparent 0),linear-gradient(rgba(165,53,44,.1) 50%,transparent 0);background-size:38px 38px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 a{color:inherit}
 button{font:inherit;color:inherit}
@@ -110,9 +110,10 @@ body[data-vista="portada"] .barra{display:none}
 .libro .retrato{position:absolute;left:25%;top:11%;width:50%;aspect-ratio:1100/1430}
 .libro .retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
 .libro .retrato svg{position:absolute;inset:-7.5% -9%;width:118%;height:115%;overflow:visible;color:var(--rojo)}
-.libro .titulo{position:absolute;left:8%;right:8%;top:73.5%;text-align:center;color:var(--rojo);display:grid;justify-items:center;gap:.25em}
-.libro .titulo b{display:block;font:600 calc(var(--w) * .043)/1.15 var(--serif);letter-spacing:.2em;text-transform:uppercase}
-.libro .titulo img{width:52%;height:auto;margin-top:2%}
+/* el título: un renglón de versalitas y, debajo, «Mercedes» grande con su firma, que es lo protagonista */
+.libro .titulo{position:absolute;left:4%;right:4%;top:66.5%;text-align:center;color:var(--rojo);display:grid;justify-items:center;gap:0}
+.libro .titulo b{display:block;font:600 calc(var(--w) * .0305)/1.2 var(--serif);letter-spacing:.17em;text-transform:uppercase;white-space:nowrap;margin-right:-.17em}
+.libro .titulo img{width:80%;height:auto;margin-top:3%}
 .marcapaginas{position:absolute;left:24%;top:98.6%;width:5.5%;height:11%;background:linear-gradient(90deg,#6f7c4d,var(--verde) 40%,#8f9c69);z-index:-1;
   clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);transition:opacity .4s}
 .libro.abierto .marcapaginas{opacity:0}
@@ -141,7 +142,7 @@ body[data-vista="portada"] .barra{display:none}
 .letra{position:relative;margin-inline:auto;cursor:default}
 .letra img{position:absolute;height:auto;display:block}
 .hoja-abierta.izq .letra{flex:1 1 auto;min-height:0;width:auto;max-width:100%;height:100%}
-.pie-mini{display:flex;gap:18px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid rgba(42,33,27,.12)}
+.pie-mini{position:relative;display:flex;gap:18px;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid rgba(42,33,27,.12)}
 .pie-mini .transcrita{margin:0;font:400 19.5px/1.35 var(--mano);color:var(--tinta-suave);text-wrap:pretty}
 .original{flex:none;width:84px;border:0;padding:5px;background:#fff;box-shadow:0 6px 14px -6px rgba(42,33,27,.5);transform:rotate(-3deg);cursor:zoom-in;position:relative;transition:transform .25s}
 .original:hover{transform:rotate(0) scale(1.04)}
@@ -157,9 +158,6 @@ body[data-vista="portada"] .barra{display:none}
 
 /* el cierre: a la derecha de su nota */
 .cierre{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px}
-.cierre .retrato{position:relative;width:min(46%,230px);aspect-ratio:1100/1430;margin:18px 0 10px}
-.cierre .retrato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:2px}
-.cierre .retrato svg{position:absolute;inset:-7.5% -9%;width:118%;height:115%;overflow:visible;color:var(--rojo)}
 .cierre h1{font:400 clamp(24px,2.4vw,32px)/1.6 var(--titulo);margin:6px 0 0;text-wrap:balance}
 .cierre h1 i{color:var(--rojo)}
 .cierre .botones{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:12px}
@@ -168,7 +166,7 @@ body[data-vista="portada"] .barra{display:none}
 /* ---------- índice ---------- */
 .cabecera{padding-block:44px 18px;display:grid;gap:8px;position:relative}
 .cabecera h1{font:400 clamp(34px,4.4vw,58px)/1.5 var(--titulo);margin:0;text-wrap:balance}
-.cabecera h1 i,.cierre h1 i,.recuerdos h2 i{color:var(--rojo);font-style:normal}
+.cabecera h1 i,.cierre h1 i{color:var(--rojo);font-style:normal}
 .cabecera p{margin:0;color:var(--tinta-suave);max-width:58ch;font-size:18px}
 .cabecera .racimo{position:absolute;right:0;top:22px;width:clamp(90px,13vw,150px);transform:rotate(8deg)}
 .herramientas{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;padding-block:6px 22px}
@@ -202,7 +200,7 @@ body[data-vista="portada"] .barra{display:none}
 .paginas{display:grid;gap:30px;justify-items:center;align-content:start}
 .paginas:has(figure:only-child){position:sticky;top:calc(env(safe-area-inset-top,0px) + 82px)}
 .paginas button{border:0;padding:0;background:none;cursor:zoom-in;display:block;width:100%}
-.paginas figure,.recuerdo{margin:0;background:#fff;padding:10px 10px 12px;position:relative;box-shadow:0 14px 30px -14px rgba(42,33,27,.5),0 1px 3px var(--sombra);transform:rotate(-1.2deg);transition:transform .25s}
+.paginas figure{margin:0;background:#fff;padding:10px 10px 12px;position:relative;box-shadow:0 14px 30px -14px rgba(42,33,27,.5),0 1px 3px var(--sombra);transform:rotate(-1.2deg);transition:transform .25s}
 .paginas figure{width:min(100%,calc((var(--alto) - 120px) * .7))}
 .paginas figure:nth-child(even){transform:rotate(1deg)}
 .paginas figure:hover{transform:rotate(0)}
@@ -265,14 +263,15 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
 .visor.cerca .marco{justify-content:flex-start}
 .visor.cerca img{max-width:none;width:200%}
 
-/* ---------- recuerdos ---------- */
-.recuerdos{padding:40px 16px 56px;border-radius:4px;margin-bottom:24px}
-.recuerdos h2{text-align:center;margin:0 0 26px;font:400 clamp(26px,2.8vw,36px)/1.5 var(--titulo);color:var(--tinta)}
-.recuerdos h2 i{color:var(--rojo)}
-.recuerdos .fila{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:clamp(26px,4vw,60px)}
-.recuerdo{width:min(300px,80vw);transform:rotate(-2.2deg)}
-.recuerdo:nth-child(even){transform:rotate(2deg);margin-top:26px}
-.recuerdo img{display:block;width:100%;height:auto}
+/* ---------- sus fotos, pegadas dentro del cuaderno como polaroids ---------- */
+.polaroid{position:relative;display:block;flex:none;border:0;margin:0;background:#fff;padding:7px 7px 22px;box-shadow:0 12px 24px -12px rgba(42,33,27,.6),0 1px 2px rgba(42,33,27,.2);cursor:zoom-in;transition:transform .25s}
+.polaroid img{display:block;width:100%;height:auto}
+.polaroid::before{content:"";position:absolute;left:50%;top:-11px;width:60px;height:21px;margin-left:-30px;background:rgba(246,240,229,.78);box-shadow:0 1px 2px rgba(42,33,27,.12);transform:rotate(-5deg);z-index:1}
+.polaroid:hover{transform:rotate(0) scale(1.03)!important;z-index:3}
+.pie-mini .polaroid{width:clamp(104px,9.5vw,142px);align-self:flex-end;margin:-110px 0 -6px auto;transform:rotate(5deg)}
+.collage{position:relative;width:min(70%,320px);margin:10px auto 8px;padding:0 0 30px 40px}
+.collage .grande{width:100%;transform:rotate(-3deg)}
+.collage .chica{position:absolute;left:-6px;bottom:0;width:38%;transform:rotate(8deg);z-index:2}
 
 /* ---------- celular y tableta: las hojas una debajo de la otra ---------- */
 @media (max-width:900px){
@@ -302,6 +301,9 @@ body.cocina .ingredientes input:checked + span{text-decoration:line-through;text
   .ficha .donde{padding-right:84px}
   .ficha h1{padding-right:0;font-size:26px}
   .pie-mini{gap:14px}
+  .pie-mini{flex-wrap:wrap}
+  .pie-mini .transcrita{flex:1 1 180px;min-width:0}
+  .pie-mini .polaroid{width:132px;margin:14px auto 4px;transform:rotate(4deg)}
   .pie-mini .transcrita{font-size:15px}
 }
 </style>
@@ -347,7 +349,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
   // ---------- la tapa ----------
   // los dibujos alrededor del retrato, como en la tapa de un recetario: [dibujo, izquierda %, arriba %, ancho %, giro]
   var ADORNOS = [["tomates", 3, 1.5, 20, -8], ["cafe", 78, 1, 20, 12], ["ajo", 5, 26, 15, -10], ["hierbas", 80, 24, 17, 14], ["cubiertos", 4, 47, 15, 4],
-    ["chocolo", 81, 45, 15, 10], ["olla", 3, 74, 18, -6], ["limon", 79, 74, 19, 8], ["chispa", 16, 20, 5, 0], ["chispa", 80, 66, 5, 20], ["chispa", 22, 88, 4.5, 10], ["corazon-lleno", 72, 90, 5, -12]];
+    ["chocolo", 81, 45, 15, 10], ["olla", 4, 85, 14, -6], ["limon", 82, 84, 14, 8], ["chispa", 16, 20, 5, 0], ["chispa", 86, 62, 5, 20], ["chispa", 30, 93, 4.5, 10], ["corazon-lleno", 68, 93, 5, -12]];
   function rulos(w, h, paso, a) {
     // un marco de rulos a mano alrededor del retrato (trocoide que da la vuelta al rectángulo)
     var pts = [], lados = [[0, 0, w, 0], [w, 0, w, h], [w, h, 0, h], [0, h, 0, 0]];
@@ -368,7 +370,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
       '<span class="tapa"><span class="frente">' + ad +
       '<span class="retrato">' + (D.foto ? img(D.foto, D.foto_alt || "Mercedes") : "") +
       marcoRulos() + '</span>' +
-      '<span class="titulo"><b>Cuaderno de recetas<br>de la abuelita</b>' + (D.nota_final.firma_img ? '<img src="' + D.nota_final.firma_img + '" alt="Mercedes">' : '<b>Mercedes</b>') + '</span>' +
+      '<span class="titulo"><b>Cuaderno de recetas de la abuelita</b>' + (D.nota_final.firma_img ? '<img src="' + D.nota_final.firma_img + '" alt="Mercedes">' : '<b>Mercedes</b>') + '</span>' +
       '</span></span></button>' +
       '<p class="toca">Toca el cuaderno para abrirlo</p></section>';
   }
@@ -395,12 +397,12 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     return { html: '<div class="letra" role="img" aria-label="' + esc(alt) + '" style="aspect-ratio:' + info.ancho + '/' + info.alto + '">' + piezas + '</div>', escribir: escribir, total: t };
   }
   // una hoja izquierda con su letra escribiéndose y, al pie, la foto de la página y lo que dice
-  function hojaLetra(clave, etiqueta, info, alt, imagen, altImagen, lineas, firma) {
+  function hojaLetra(clave, etiqueta, info, alt, imagen, altImagen, lineas, firma, foto) {
     var L = letra(info, clave, alt);
     return '<article class="hoja-abierta izq' + (L.escribir ? " escribiendo" : "") + '" aria-label="' + esc(etiqueta) + '" data-total="' + L.total.toFixed(2) + '">' +
       L.html +
       '<div class="pie-mini"><button type="button" class="original" data-ver="' + esc(imagen) + '" aria-label="Ver en grande la página original">' + img(imagen, altImagen) + '</button>' +
-      '<p class="transcrita">«' + esc(lineas.join(" ")) + '»<br>— ' + esc(firma) + '</p></div>' +
+      '<p class="transcrita">«' + esc(lineas.join(" ")) + '»<br>— ' + esc(firma) + '</p>' + (foto || "") + '</div>' +
       (L.escribir ? '<button type="button" class="saltar" data-saltar>Ver todo</button>' : '') + '</article>';
   }
   function marcoRulos() {
@@ -411,7 +413,7 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
     var izq = hojaLetra("nota", "Su nota", D.letra && D.letra.nota,
       "La nota final, escrita a mano por Mercedes: " + nf.lineas.join(" ") + ". " + nf.firma, nf.imagen, "La última página del cuaderno, con la nota firmada por Mercedes", nf.lineas, nf.firma);
     var der = '<section class="hoja-abierta der cierre" aria-label="El final del cuaderno">' +
-      (D.foto ? '<figure class="retrato">' + img(D.foto, D.foto_alt || "Mercedes") + marcoRulos() + '</figure>' : '') +
+      '<div class="collage">' + polaroid("globos", "grande") + polaroid("comunion", "chica") + '</div>' +
       '<h1>' + esc((D.nombre || "Mercedes").split(" ")[0]) + ' <i>' + esc((D.nombre || "").split(" ").slice(1).join(" ")) + '</i></h1>' +
       dib("corazon-lleno", "corazon") +
       '<div class="botones"><a class="boton" href="#indice">Volver al índice</a><a class="boton lleno" href="#portada">Cerrar el cuaderno</a></div></section>';
@@ -434,22 +436,23 @@ window.CUADERNO = {"recetas": [{"titulo": "Frijoles con pollo", "titulo_literal"
       return '<section class="grupo"><h2>' + dib(POR_TIPO[t] || "cucharas") + esc(t) + ' <small>' + g.length + '</small></h2><ul class="lista">' + g.map(fila).join("") + '</ul></section>';
     }).join("");
   }
-  function recuerdos() {
-    return (D.recuerdos || []).length ? '<section class="recuerdos mantel" aria-label="Recuerdos de Mercedes"><h2><i>Recuerdos</i></h2><div class="fila">' +
-      D.recuerdos.map(function (r) { return '<figure class="recuerdo"><span class="esquinas"></span>' + img(r.imagen, r.alt, true) + '</figure>'; }).join("") + '</div></section>' : "";
+  // sus fotos, pegadas en las hojas: se busca cada una por su nombre (recuerdo-joven.jpg, recuerdo-globos.jpg…)
+  function polaroid(nombre, cls) {
+    var r = (D.recuerdos || []).filter(function (x) { return x.imagen.indexOf(nombre) >= 0; })[0];
+    return r ? '<button type="button" class="polaroid ' + (cls || "") + '" data-ver="' + esc(r.imagen) + '" aria-label="Ver en grande: ' + esc(r.alt) + '">' + img(r.imagen, r.alt) + '</button>' : "";
   }
   function indice() {
     // el cuaderno abierto: a la izquierda la primera página (su dedicatoria), a la derecha el índice
     var d = D.dedicatoria;
     var izq = hojaLetra("dedicatoria", "La dedicatoria", D.letra && D.letra.dedicatoria,
-      "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha, d.imagen, "La página original de la dedicatoria, escrita a mano por Mercedes", d.lineas, d.firma);
+      "La dedicatoria, escrita a mano por Mercedes: " + d.lineas.join(" ") + ". " + d.firma + ". " + d.fecha, d.imagen, "La página original de la dedicatoria, escrita a mano por Mercedes", d.lineas, d.firma, polaroid("joven"));
     var der = '<section class="hoja-abierta der" aria-label="El índice"><header class="cabecera"><h1>Las <i>recetas</i></h1>' + dib("cucharas", "racimo") + '</header>' +
       '<div class="herramientas"><label class="buscar"><span class="sr">Buscar una receta o un ingrediente</span>' +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>' +
       '<input id="buscar" type="search" autocomplete="off" placeholder="guayaba, panela, pollo…" value="' + esc(consulta) + '"></label>' +
       '<div class="orden" role="group" aria-label="Orden del índice"><button type="button" data-o="cuaderno" aria-pressed="' + !porTipo + '">En su orden</button><button type="button" data-o="tipo" aria-pressed="' + porTipo + '">Por tipo</button></div></div>' +
       '<div class="indice" id="listado">' + listado() + '</div></section>';
-    return '<div class="envoltura ancha"><div class="abierto">' + izq + der + '</div>' + recuerdos() + '</div>';
+    return '<div class="envoltura ancha"><div class="abierto">' + izq + der + '</div></div>';
   }
 
   // ---------- receta ----------
