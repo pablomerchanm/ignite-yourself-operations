@@ -38,8 +38,8 @@ base = sub1(r"(\(\(s\.actions\|\|\[\]\)\.length\?'<div class=\"hacts wr\">'.*?'<
     '<img src="'+esc(s.firm.logo)+'" alt="'+esc(s.firm.alt||'')+'"></a>':'')+""", base, flags=re.S, tag='hero-firm')
 
 # ------------------------------------------------------- 3. cabeza del documento
-TITLE = 'María Lucía Laserna Angarita — Derecho laboral para empresas'
-DESC = ('María Lucía Laserna Angarita, socia de Álvarez Liévano Laserna: derecho laboral para empresas en Bogotá. '
+TITLE = 'María Lucía Laserna Angarita — Abogada laboralista'
+DESC = ('María Lucía Laserna Angarita, abogada laboralista y socia fundadora de Álvarez Liévano Laserna, Bogotá. '
         'Chambers Banda 2 y finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027.')
 URL = 'https://igniteyourself.co/laserna'
 
@@ -1596,9 +1596,9 @@ def topbar_html(active):
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
-            '<a class="u11 smallcap tname" href="/laserna" style="color:#fff">Laserna<span class="tfirm"> · Álvarez Liévano Laserna</span></a>'
+            '<a class="u11 smallcap tname" href="/laserna" style="color:#fff">María Lucía Laserna</a>'
             f'<nav class="tnav" aria-label="Principal">{links}</nav>'
-            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/laserna#inquiry"}" style="color:#fff">Consultar un asunto</a>'
+            f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/laserna#inquiry"}" style="color:#fff">Contacto</a>'
             f'<nav class="tbot" aria-label="Principal">{tabs}</nav></div>')
 
 # -------- textos fijos de la plantilla, en espanol
@@ -1752,17 +1752,17 @@ inq = lambda: deep('inquiry')
 def foot():
     s = deep('inquiry'); s['noform'] = True
     return s
-ALT = {"t": "Consultar un asunto", "h": "/laserna#inquiry"}
+ALT = {"t": "Contactar", "h": "/laserna#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
 T_PR = 'Práctica — María Lucía Laserna'
-T_RE = 'Registro de reconocimientos — María Lucía Laserna'
+T_RE = 'Reconocimientos — María Lucía Laserna'
 T_TR = 'Trayectoria — María Lucía Laserna'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
         [deep('hero'), deep('seals'), deep('in-brief'), deep('words'), deep('quote'), deep('s-practice'),
-         deep('s-audit'), deep('for-clients'), deep('firm'), deep('firm-seals'), deep('partners'), deep('services'), deep('team'), inq()]),
+         deep('s-audit'), deep('for-clients'), deep('firm'), deep('team'), inq()]),
     'practica': page(T_PR,
         'Auditoría laboral, seguridad social y UGPP, litigio y casación, y relaciones colectivas, para empleadores.',
         [deep('practice-open'), deep('routes'), deep('caso'), deep('metodo'), deep('sectors'),
@@ -1770,12 +1770,12 @@ PAGES = {
     'reconocimientos': page(T_RE,
         'Año por año y con su fuente: Chambers Banda 2 (2027), finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027, Best Lawyers desde 2019.',
         [deep('recog-open'), deep('registro'), deep('chambers'), deep('best-lawyers'), deep('voices'), deep('press'),
-         dict(NX('Siguiente', 'Trayectoria', 'Ejercicio, formación, docencia y gremios, desde 2001.', '/laserna/trayectoria'), alt=ALT), foot()], sub=True),
+         dict(NX('Siguiente', 'Trayectoria', 'Experiencia, formación, docencia y gremios.', '/laserna/trayectoria'), alt=ALT), foot()], sub=True),
     'trayectoria': page(T_TR,
         'Abogada sénior en Álvarez Escandón Liévano desde 2001, socia de Álvarez Liévano Laserna desde 2016, Cornell, la LSE y la Javeriana.',
         [deep('record-open'), deep('record-years'), deep('record-practice'), deep('record-education'),
          deep('record-teaching'), deep('record-orgs'),
-         NX('Siguiente', 'Consultar un <t>asunto</t>', 'Auditoría, UGPP, litigio o un asunto colectivo.', '/laserna#inquiry'), foot()], sub=True),
+         NX('Siguiente', 'Contacto', 'Auditoría, UGPP, litigio o relaciones colectivas.', '/laserna#inquiry'), foot()], sub=True),
 }
 
 os.makedirs(DST, exist_ok=True)

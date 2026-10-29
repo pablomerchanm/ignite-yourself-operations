@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "María Lucía Laserna Angarita — Derecho laboral para empresas",
-    "description": "María Lucía Laserna Angarita, socia de Álvarez Liévano Laserna: derecho laboral para empresas en Bogotá. Chambers Banda 2 y finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027."
+    "title": "María Lucía Laserna Angarita — Abogada laboralista",
+    "description": "María Lucía Laserna Angarita, abogada laboralista y socia fundadora de Álvarez Liévano Laserna. Chambers & Partners Banda 2 y finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027."
   },
   "logo": "MARÍA LUCÍA LASERNA",
   "navcta": {
-    "t": "Consultar un asunto",
+    "t": "Contacto",
     "h": "#inquiry"
   },
   "proposal": {
@@ -23,32 +23,32 @@
         "alt": "María Lucía Laserna Angarita"
       },
       "name": "María Lucía Laserna <t>Angarita</t>",
-      "sub": "Derecho laboral para empresas. Ver el riesgo antes; <t>probarlo, si llega.</t>",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
       "actions": [
         {
-          "t": "Consultar un asunto",
+          "t": "Contactar",
           "h": "#inquiry",
           "primary": true
         },
         {
-          "t": "Ver el registro",
-          "h": "/laserna/reconocimientos"
+          "t": "Ver trayectoria",
+          "h": "/laserna/trayectoria"
         }
       ],
       "firm": {
-        "k": "Socia",
+        "k": "Socia fundadora",
         "logo": "/laserna/assets/all-logo-white.png",
         "alt": "Álvarez Liévano Laserna",
         "h": "#firm"
       },
-      "kick": "Socia · Álvarez Liévano Laserna",
-      "note": "Chambers & Partners Banda 2 · Finalista a Abogada Laboral del Año, The Legal 500 Colombia Awards 2027"
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "note": "Chambers & Partners, Banda 2 · Finalista a Abogada Laboral del Año, The Legal 500 Colombia Awards 2027"
     },
     {
       "type": "seals",
       "id": "seals",
       "ink": true,
-      "label": "Reconocida por sus pares y por el mercado",
+      "label": "Reconocimientos",
       "items": [
         {
           "dir": "Chambers & Partners",
@@ -70,35 +70,35 @@
         },
         {
           "dir": "Leaders League",
-          "what": "Firma Leading en derecho laboral, con ella entre sus socios",
+          "what": "Firma Leading en derecho laboral, con María Lucía entre sus socios",
           "yrs": "2027",
           "h": "https://www.leadersleague.com/en/rankings/derecho-laboral-estudio-de-abogados-colombia-2027"
         }
       ],
       "more": {
-        "t": "El registro completo, con cada fuente",
+        "t": "Ver todos los reconocimientos",
         "h": "/laserna/reconocimientos"
       }
     },
     {
       "type": "brief",
       "id": "in-brief",
-      "label": "En breve",
+      "label": "Perfil",
       "items": [
         {
-          "k": "Una misma casa desde 2001.",
-          "t": "Abogada sénior en Álvarez Escandón Liévano de 2001 a 2015; desde 2016, socia de Álvarez Liévano Laserna, la firma que lleva su apellido.",
-          "d": "En las dos etapas, el mismo oficio: auditorías, litigio, seguridad social, pensiones y casación."
+          "k": "Trayectoria.",
+          "t": "Inició su carrera en 2001 en Álvarez Escandón Liévano y en 2016 fue socia fundadora de Álvarez Liévano Laserna.",
+          "d": "Más de 25 años dedicados al derecho laboral y la seguridad social."
         },
         {
-          "k": "Antes y después del conflicto.",
-          "t": "Dirige la auditoría preventiva y la defensa ante la UGPP, y litiga hasta el recurso de casación ante la Corte Suprema.",
-          "d": "Especialista en derecho probatorio: sabe cómo se prueba lo que la auditoría encuentra."
+          "k": "Práctica.",
+          "t": "Dirige el Departamento de Auditoría y Fiscalización de la firma y la defensa de empresas ante la UGPP.",
+          "d": "Litiga hasta el recurso extraordinario de casación ante la Corte Suprema de Justicia."
         },
         {
-          "k": "Formada para explicar.",
-          "t": "Abogada y especialista de la Javeriana, especialista en probatorio de la Sergio Arboleda, Cornell ILR y LLM de la LSE.",
-          "d": "Profesora en la Javeriana desde 2013 y miembro del consejo directivo del Colegio de Abogados del Trabajo."
+          "k": "Formación.",
+          "t": "Abogada de la Pontificia Universidad Javeriana, con maestría en Relaciones Laborales de Cornell University y LLM de The London School of Economics.",
+          "d": "Profesora de la Maestría en Derecho Laboral de la Javeriana desde 2013."
         }
       ]
     },
@@ -107,21 +107,21 @@
       "id": "quote",
       "lead": "“María Lucía Laserna es cercana,",
       "q": "dispuesta a colaborar en temas no solamente legales y conceptuales.”",
-      "who": "Un cliente, en The Legal 500"
+      "who": "Cliente citado por The Legal 500"
     },
     {
       "type": "stmt",
       "id": "s-practice",
-      "label": "La práctica",
-      "quote": "Cuatro frentes <t>del derecho laboral.</t>",
+      "label": "Práctica",
+      "quote": "Derecho laboral <t>y seguridad social.</t>",
       "keys": [
         "Auditoría laboral",
-        "Seguridad social y UGPP",
+        "Fiscalizaciones UGPP",
         "Litigio y casación",
-        "Relaciones colectivas"
+        "Negociación colectiva"
       ],
       "more": {
-        "t": "La práctica",
+        "t": "Ver práctica",
         "h": "/laserna/practica"
       },
       "img": {
@@ -135,15 +135,15 @@
       "id": "s-audit",
       "label": "Auditoría laboral",
       "align": "right",
-      "quote": "El riesgo, <t>visto antes.</t>",
-      "sub": "Una revisión de cómo contrata, paga y cotiza la empresa, antes de que llegue una inspección del Ministerio, una fiscalización de la UGPP o una demanda.",
+      "quote": "Auditoría laboral <t>preventiva.</t>",
+      "sub": "Revisa cómo contrata, paga y cotiza una empresa para identificar riesgos antes de una inspección del Ministerio del Trabajo, una fiscalización de la UGPP o una demanda.",
       "keys": [
         "Contratación",
         "Nómina y aportes",
-        "Estabilidad reforzada"
+        "Estabilidad laboral reforzada"
       ],
       "more": {
-        "t": "Cómo trabaja una auditoría",
+        "t": "Cómo funciona una auditoría",
         "h": "/laserna/practica#metodo"
       },
       "img": {
@@ -155,57 +155,57 @@
     {
       "type": "scrub",
       "id": "words",
-      "label": "En sus palabras",
+      "label": "Su enfoque",
       "pin": 2.6,
       "paras": [
-        "Mi práctica está en hacer un análisis integral, que cubra todas las variables, y llegar a una conclusión práctica que también considere los riesgos a los que está expuesta la empresa. <t>Para que la decisión se tome con la mejor información.</t>",
-        "La consulta más frecuente es el riesgo de desvincular a un trabajador, sobre todo si puede tener estabilidad laboral reforzada. Siempre hay que verificar cada caso y sus antecedentes, <t>y llegar con la estrategia de defensa ya pensada.</t>",
-        "Lo difícil es darle a la empresa herramientas para ser eficiente y sostenible, garantizando al mismo tiempo los derechos de los trabajadores <t>y, sobre todo, la armonía entre trabajador y empleador.</t>"
+        "Su trabajo parte de un análisis integral de cada caso: todas las variables, los riesgos para la empresa <t>y una recomendación práctica para decidir con la mejor información.</t>",
+        "La consulta más frecuente que recibe es la terminación de contratos de trabajadores con estabilidad laboral reforzada. Cada caso se revisa de forma individual, <t>con la estrategia de defensa definida desde el inicio.</t>",
+        "Su objetivo es que las empresas sean eficientes y sostenibles, garantizando los derechos de los trabajadores <t>y la armonía de la relación laboral.</t>"
       ],
       "keys": [
-        "Best Lawyers · Preguntas y respuestas"
+        "Entrevista con Best Lawyers"
       ],
       "more": {
-        "t": "Por qué los directorios la reconocen",
-        "h": "/laserna/reconocimientos#best-lawyers"
+        "t": "Ver reconocimientos",
+        "h": "/laserna/reconocimientos"
       }
     },
     {
       "type": "counsel",
       "id": "for-clients",
-      "label": "Para la empresa",
-      "title": "Lo que necesita, <t>en un solo lugar.</t>",
+      "label": "Conozca más",
+      "title": "Práctica, trayectoria <t>y reconocimientos.</t>",
       "items": [
         {
           "icon": "check",
           "tag": "Cuatro frentes",
-          "t": "La práctica",
-          "d": "Auditoría, seguridad social, litigio y casación, y relaciones colectivas.",
-          "a": "Ver la práctica",
+          "t": "Práctica",
+          "d": "Auditoría, seguridad social, litigio y relaciones colectivas.",
+          "a": "Ver más",
           "h": "/laserna/practica"
         },
         {
           "icon": "list",
           "tag": "Cuatro fases",
-          "t": "El método de auditoría",
-          "d": "De la reunión inicial al acompañamiento en la implementación.",
-          "a": "Ver el método",
+          "t": "Cómo funciona una auditoría",
+          "d": "Las cuatro etapas, de la recolección de información al acompañamiento.",
+          "a": "Ver más",
           "h": "/laserna/practica#metodo"
         },
         {
           "icon": "quote",
           "tag": "Chambers · Legal 500 · Best Lawyers",
           "t": "Reconocimientos",
-          "d": "Rankings, su perfil en Best Lawyers y lo que clientes y colegas dicen de su trabajo.",
-          "a": "Leerlos",
+          "d": "Chambers & Partners, The Legal 500, Best Lawyers y Leaders League, con sus fuentes.",
+          "a": "Ver más",
           "h": "/laserna/reconocimientos"
         },
         {
           "icon": "cv",
           "tag": "Desde 2001",
           "t": "Trayectoria",
-          "d": "Ejercicio, formación, docencia y gremios.",
-          "a": "Ver la trayectoria",
+          "d": "Experiencia, formación, docencia y gremios.",
+          "a": "Ver más",
           "h": "/laserna/trayectoria"
         }
       ]
@@ -213,12 +213,12 @@
     {
       "type": "firmra",
       "id": "firm",
-      "label": "La firma detrás",
-      "title": "Álvarez Liévano <t>Laserna.</t>",
-      "lede": "La firma que fundaron en 2016 los socios de AESCA, con un linaje en derecho laboral que empieza en 1963. María Lucía es una de sus cuatro socios, y su apellido está en el nombre.",
+      "label": "La firma",
+      "title": "Socia fundadora de <t>Álvarez Liévano Laserna.</t>",
+      "lede": "En 2016 fundó, junto con sus socios, Álvarez Liévano Laserna, firma especializada en derecho laboral. Chambers & Partners la ubica en Banda 1 y The Legal 500 la eligió Firma Boutique del Año en 2025 y 2026.",
       "company": {
-        "role": "Socia · desde 2016",
-        "desc": "“Una compañía que defiende compañías.” Cada cliente lo atiende directamente un socio con su equipo. Banda 1 en Labour & Employment en Chambers Latin America, y Firma Boutique del Año 2025 en The Legal 500.",
+        "role": "Socia fundadora · desde 2016",
+        "desc": "Firma dedicada exclusivamente al derecho laboral, con una tradición que se remonta a 1963. Cada cliente es atendido directamente por un socio y su equipo.",
         "meta": [
           "Carrera 7 A # 123-25, piso 9",
           "Bogotá, Colombia",
@@ -232,129 +232,9 @@
       },
       "social": [
         {
-          "t": "Consultar a la firma",
+          "t": "Contactar a la firma",
           "h": "#inquiry",
           "path": "firma"
-        },
-        {
-          "t": "Conocer el equipo",
-          "h": "https://allabogados.com/equipo-areas/"
-        }
-      ]
-    },
-    {
-      "type": "seals",
-      "id": "firm-seals",
-      "tint": true,
-      "label": "La firma, según los mismos directorios",
-      "items": [
-        {
-          "dir": "Chambers & Partners",
-          "what": "Banda 1 en Labour & Employment, Colombia",
-          "yrs": "17 años ranqueada · 2027",
-          "h": "https://chambers.com/department/alvarez-lievano-laserna-sas-labour-employment-latin-america-9:1596:61:1:221784"
-        },
-        {
-          "dir": "The Legal 500",
-          "what": "Tier 1 · Firma Boutique del Año 2025 y 2026",
-          "yrs": "Colombia Awards",
-          "h": "https://www.legal500.com/events/colombia-awards/winners-2026/"
-        },
-        {
-          "dir": "The Legal 500",
-          "what": "Firma Laboral del Año",
-          "yrs": "Colombia Awards 2024",
-          "h": "https://www.legal500.com/events/colombia-awards/winners/"
-        },
-        {
-          "dir": "Best Lawyers",
-          "what": "Firma del Año en derecho laboral",
-          "yrs": "2023",
-          "h": "https://www.bestlawyers.com/article/2023-best-lawyers-in-colombia/4859"
-        }
-      ]
-    },
-    {
-      "type": "partners",
-      "id": "partners",
-      "label": "Los socios",
-      "title": "Cuatro socios, <t>una sola casa.</t>",
-      "lede": "Cada cliente lo atiende directamente un socio con su equipo. Esto es lo que lidera cada uno.",
-      "items": [
-        {
-          "self": true,
-          "role": "Socia",
-          "name": "María Lucía Laserna Angarita",
-          "lead": "Auditoría y Fiscalización, UGPP, relaciones individuales y colectivas, casación.",
-          "rank": "Chambers Banda 2 · Finalista a Abogada Laboral del Año, Legal 500 2027",
-          "h": "/laserna/trayectoria",
-          "t": "Su trayectoria"
-        },
-        {
-          "role": "Socia sénior",
-          "name": "Claudia Liévano Triana",
-          "lead": "Negociación colectiva, reestructuraciones y planes de retiro.",
-          "rank": "Chambers Banda 1 · Best Lawyers Lawyer of the Year 2022 y 2025",
-          "h": "https://chambers.com/lawyer/claudia-lievano-triana-latin-america-9:1109979",
-          "t": "Perfil en Chambers"
-        },
-        {
-          "role": "Socio director",
-          "name": "Felipe Álvarez Echeverri",
-          "lead": "Asesoría general, conflictos colectivos y arbitraje, Ministerio del Trabajo y UGPP.",
-          "rank": "Chambers Banda 2 · Legal 500 Leading Partner",
-          "h": "https://chambers.com/lawyer/felipe-alvarez-latin-america-9:1109980",
-          "t": "Perfil en Chambers"
-        },
-        {
-          "role": "Socio",
-          "name": "Carlos Arturo Barco Alzate",
-          "lead": "Litigios, y Formación y Contenido. Exmagistrado auxiliar de la Sala de Casación Laboral.",
-          "rank": "Legal 500 Next Generation Partner",
-          "h": "https://www.legal500.com/firms/52609-alvarez-lievano-laserna-sas/c-colombia/lawyers/1909993-carlos-arturo-barco-alzate",
-          "t": "Perfil en Legal 500"
-        }
-      ],
-      "fn": "El fundador del linaje, Carlos Álvarez Pereira, ejerce derecho laboral desde 1963: Chambers Senior Statesperson y Legal 500 Hall of Fame."
-    },
-    {
-      "type": "counsel",
-      "id": "services",
-      "light": true,
-      "label": "Servicios de la firma",
-      "title": "Lo que la firma <t>hace por su empresa.</t>",
-      "items": [
-        {
-          "icon": "check",
-          "tag": "Prevención",
-          "t": "Auditoría laboral preventiva",
-          "d": "El departamento que dirige María Lucía.",
-          "a": "Ver el servicio",
-          "h": "https://allabogados.com/auditoria-laboral-preventiva/"
-        },
-        {
-          "icon": "doc",
-          "tag": "Entes de control",
-          "t": "Ministerio del Trabajo y UGPP",
-          "d": "Representación en inspecciones y fiscalizaciones.",
-          "a": "Ver el servicio",
-          "h": "https://allabogados.com/representacion-ante-el-ministerio-de-trabajo-y-otros-entes-de-control/"
-        },
-        {
-          "icon": "court",
-          "tag": "Litigio",
-          "t": "Procesos judiciales",
-          "d": "Atención integral, de la primera instancia a la casación.",
-          "a": "Ver el servicio",
-          "h": "https://allabogados.com/atencion-integral-de-procesos-judiciales/"
-        },
-        {
-          "icon": "sign",
-          "tag": "Relaciones colectivas",
-          "t": "Negociación colectiva",
-          "d": "Pliegos, convenciones y conflictos colectivos.",
-          "a": "Ver el servicio",
-          "h": "https://allabogados.com/negociacion-colectiva/"
         }
       ]
     },
@@ -371,8 +251,8 @@
       "type": "stmt",
       "id": "practice-open",
       "label": "Práctica",
-      "quote": "El derecho laboral, <t>del lado de la empresa.</t>",
-      "sub": "Consultoría, litigio, negociación colectiva, auditoría laboral y procesos de fiscalización: el trabajo de 25 años, para empleadores.",
+      "quote": "Derecho laboral <t>y seguridad social.</t>",
+      "sub": "Asesoría, auditoría, litigio y negociación colectiva para empleadores, con más de 25 años de experiencia.",
       "opener": true,
       "img": {
         "src": "/laserna/assets/meeting.jpg",
@@ -386,13 +266,13 @@
       "id": "routes",
       "nums": true,
       "label": "Áreas de práctica",
-      "title": "Cuatro frentes <t>del derecho laboral.</t>",
-      "lede": "Las preguntas que una empresa tiene que poder responder, antes o durante el conflicto.",
+      "title": "Áreas <t>de práctica.</t>",
+      "lede": "Asesoría preventiva y defensa de empresas ante autoridades y jueces.",
       "cards": [
         {
           "lead": true,
           "label": "Auditoría laboral",
-          "title": "¿Dónde está el riesgo, antes de que alguien lo encuentre?",
+          "title": "Identificar el riesgo laboral antes de una inspección o una demanda.",
           "desc": "Revisión interna y externa del cumplimiento laboral y de seguridad social: contratación, tercerización, jornada, salario, trabajadores extranjeros y estabilidad reforzada. También due diligence en compras, fusiones y adquisiciones.",
           "items": [
             "Auditoría laboral preventiva",
@@ -401,7 +281,7 @@
             "Tercerización y solidaridad"
           ],
           "cta": {
-            "t": "Consultar una auditoría",
+            "t": "Consultar sobre auditoría",
             "h": "#inquiry",
             "path": "auditoria"
           },
@@ -409,8 +289,8 @@
         },
         {
           "label": "Seguridad social",
-          "title": "¿Se cotizó lo que se debía?",
-          "desc": "Fiscalizaciones de la UGPP sobre aportes y PILA, inspecciones del Ministerio del Trabajo y asuntos pensionales, del requerimiento a la discusión.",
+          "title": "Defensa en fiscalizaciones de aportes y asuntos pensionales.",
+          "desc": "Fiscalizaciones de la UGPP sobre aportes y PILA, inspecciones del Ministerio del Trabajo y asuntos pensionales, desde el requerimiento hasta la decisión final.",
           "items": [
             "Fiscalizaciones de la UGPP",
             "Aportes y PILA",
@@ -418,7 +298,7 @@
             "Inspecciones del Ministerio"
           ],
           "cta": {
-            "t": "Consultar una fiscalización",
+            "t": "Consultar sobre UGPP",
             "h": "#inquiry",
             "path": "ugpp"
           },
@@ -426,8 +306,8 @@
         },
         {
           "label": "Litigio y casación",
-          "title": "¿Cómo se prueba el caso, hasta la Corte?",
-          "desc": "Procesos laborales y el recurso extraordinario de casación ante la Sala de Casación Laboral de la Corte Suprema, con formación en derecho probatorio.",
+          "title": "Procesos laborales hasta la Corte Suprema de Justicia.",
+          "desc": "Procesos laborales y el recurso extraordinario de casación ante la Sala de Casación Laboral de la Corte Suprema, con el respaldo de su especialización en derecho probatorio.",
           "items": [
             "Procesos ordinarios laborales",
             "Recurso extraordinario de casación",
@@ -435,7 +315,7 @@
             "Recuperación de pagos en exceso"
           ],
           "cta": {
-            "t": "Consultar un proceso",
+            "t": "Consultar sobre un proceso",
             "h": "#inquiry",
             "path": "litigio"
           },
@@ -443,7 +323,7 @@
         },
         {
           "label": "Relaciones colectivas",
-          "title": "¿Cómo se negocia y se reorganiza?",
+          "title": "Negociación colectiva y reestructuraciones.",
           "desc": "Negociación colectiva, reestructuraciones y asesoría permanente en derecho individual y colectivo del trabajo.",
           "items": [
             "Negociación colectiva",
@@ -452,7 +332,7 @@
             "Políticas y reglamentos internos"
           ],
           "cta": {
-            "t": "Consultar un asunto colectivo",
+            "t": "Consultar sobre relaciones colectivas",
             "h": "#inquiry",
             "path": "firma"
           },
@@ -463,31 +343,28 @@
     {
       "type": "brief",
       "id": "caso",
-      "label": "Un caso, contado por ella: Mansarovar Energy",
+      "label": "Caso destacado: Mansarovar Energy",
       "items": [
         {
-          "k": "El problema.",
-          "t": "Una petrolera pagó dos veces la misma bonificación a sus trabajadores.",
-          "d": "Pidió la devolución, y algunos, en especial los sindicalizados, se negaron a reintegrar el dinero."
+          "k": "El contexto.",
+          "t": "Mansarovar Energy pagó dos veces la misma bonificación a sus trabajadores, y algunos, en su mayoría sindicalizados, se negaron a devolverla."
         },
         {
-          "k": "La regla.",
-          "t": "En Colombia la empresa no puede descontar del salario sin autorización expresa y escrita del trabajador.",
-          "d": "Descontar no era una opción."
+          "k": "El límite legal.",
+          "t": "La ley colombiana no permite descontar del salario sin autorización expresa y escrita del trabajador."
         },
         {
-          "k": "La salida.",
-          "t": "Compensar obligaciones: cruzar lo que los trabajadores debían con lo que la empresa les debía, con apoyo en la jurisprudencia de la Corte Suprema.",
-          "d": "Sin descontar, y sin demandar a cada trabajador."
+          "k": "La estrategia.",
+          "t": "Compensar lo que los trabajadores debían con lo que la empresa les adeudaba, con fundamento en la jurisprudencia de la Corte Suprema de Justicia y sin demandar a cada trabajador."
         }
       ]
     },
     {
       "type": "method",
       "id": "metodo",
-      "label": "Cómo trabaja una auditoría",
-      "title": "Cuatro fases, <t>de la reunión al informe.</t>",
-      "intro": "El método que describe el departamento que ella dirige. El objetivo es encontrar las irregularidades antes que una inspección o una demanda.",
+      "label": "Auditoría laboral",
+      "title": "Cómo funciona <t>una auditoría.</t>",
+      "intro": "El Departamento de Auditoría y Fiscalización que dirige María Lucía trabaja en cuatro etapas.",
       "img": {
         "src": "/laserna/assets/papers.jpg",
         "alt": "Manos sobre documentos en una mesa de reuniones"
@@ -495,13 +372,13 @@
       "rows": [
         {
           "icon": "list",
-          "t": "Levantamiento de información",
+          "t": "Recolección de información",
           "d": "Una reunión inicial y un formulario: planta de personal, tipos de contrato, turnos, conceptos salariales, aprendices, reglamento, estabilidad reforzada, tercerización, nómina, aportes y PILA."
         },
         {
           "icon": "doc",
-          "t": "Información adicional",
-          "d": "Solicitudes puntuales y reuniones de seguimiento, cuando el caso las necesita."
+          "t": "Información complementaria",
+          "d": "Solicitudes puntuales y reuniones de seguimiento, cuando el caso lo requiere."
         },
         {
           "icon": "cv",
@@ -510,17 +387,17 @@
         },
         {
           "icon": "check",
-          "t": "Acompañamiento",
-          "d": "Apoyo en la implementación de las recomendaciones, para cerrar las brechas antes de una sanción."
+          "t": "Acompañamiento en la implementación",
+          "d": "Apoyo en la aplicación de las recomendaciones, para corregir los hallazgos antes de una sanción."
         }
       ]
     },
     {
       "type": "exp",
       "id": "sectors",
-      "label": "Para quién trabaja",
-      "title": "Empleadores <t>de todos los sectores.</t>",
-      "lede": "Los sectores que atiende la firma y los clientes que Chambers & Partners publica en su perfil, con fuerte presencia del sector energético.",
+      "label": "Clientes y sectores",
+      "title": "Clientes <t>y sectores.</t>",
+      "lede": "Algunos de los clientes que Chambers & Partners publica en su perfil, con una presencia importante del sector energético.",
       "groups": [
         {
           "label": "Clientes, según Chambers",
@@ -563,17 +440,17 @@
       "type": "stmt",
       "id": "recog-open",
       "label": "Reconocimientos",
-      "quote": "Lo que dicen <t>los directorios.</t>",
-      "sub": "Chambers & Partners, The Legal 500, Best Lawyers y Leaders League. Cada reconocimiento con su año y el enlace a la fuente, para que cualquiera lo verifique.",
+      "quote": "Reconocimientos <t>y rankings.</t>",
+      "sub": "Chambers & Partners, The Legal 500, Best Lawyers y Leaders League. Cada reconocimiento aparece con su año y el enlace a la fuente.",
       "opener": true
     },
     {
       "type": "ledger",
       "id": "registro",
-      "label": "Registro",
-      "title": "Año por año, <t>con su fuente.</t>",
-      "lede": "Cada reconocimiento con el enlace a la página que lo otorga. Los suyos y los de la firma, de lo más reciente a lo más antiguo.",
-      "keynote": "“Nota de la firma”: el dato solo lo publica allabogados.com.",
+      "label": "Por año",
+      "title": "Reconocimientos <t>por año.</t>",
+      "lede": "Sus reconocimientos individuales, del más reciente al más antiguo, cada uno con el enlace a la página que lo otorga.",
+      "keynote": "“Nota de la firma”: el dato lo publica allabogados.com.",
       "years": [
         {
           "y": "2027",
@@ -597,34 +474,6 @@
               "what": "Leading Partner y Practice Head, edición vigente. Destacan su “pragmatism and efficiency”",
               "h": "https://www.legal500.com/rankings/ranking/c-colombia/labour-and-employment/52609-alvarez-lievano-laserna-sas",
               "firm": false,
-              "rep": false
-            },
-            {
-              "dir": "Chambers & Partners",
-              "what": "Banda 1 · 17 años ranqueada",
-              "h": "https://chambers.com/department/alvarez-lievano-laserna-sas-labour-employment-latin-america-9:1596:61:1:221784",
-              "firm": true,
-              "rep": false
-            },
-            {
-              "dir": "The Legal 500",
-              "what": "Tier 1 en Labour and Employment",
-              "h": "https://www.asuntoslegales.com.co/consumidor/estas-son-las-firmas-de-abogados-que-lideran-en-the-legal-500-latin-america-2027-4513524",
-              "firm": true,
-              "rep": false
-            },
-            {
-              "dir": "The Legal 500 Colombia Awards",
-              "what": "Finalista: Firma Laboral del Año y Firma Boutique del Año",
-              "h": "https://www.legal500.com/events/colombia-awards/shortlist-2027/",
-              "firm": true,
-              "rep": false
-            },
-            {
-              "dir": "Leaders League",
-              "what": "Leading en derecho laboral, con ella entre sus socios",
-              "h": "https://www.leadersleague.com/en/rankings/derecho-laboral-estudio-de-abogados-colombia-2027",
-              "firm": true,
               "rep": false
             }
           ]
@@ -652,56 +501,6 @@
               "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
               "firm": false,
               "rep": false
-            },
-            {
-              "dir": "The Legal 500 Colombia Awards",
-              "what": "Ganadora: Firma Boutique del Año",
-              "h": "https://www.legal500.com/events/colombia-awards/winners-2026/",
-              "firm": true,
-              "rep": false
-            }
-          ]
-        },
-        {
-          "y": "2025",
-          "rows": [
-            {
-              "dir": "The Legal 500 Colombia Awards",
-              "what": "Ganadora: Firma Boutique del Año",
-              "h": "https://www.legal500.com/events/colombia-awards/2025-winners/",
-              "firm": true,
-              "rep": false
-            }
-          ]
-        },
-        {
-          "y": "2024",
-          "rows": [
-            {
-              "dir": "The Legal 500 Colombia Awards",
-              "what": "Ganadora: Firma Laboral del Año",
-              "h": "https://www.legal500.com/events/colombia-awards/winners/",
-              "firm": true,
-              "rep": false
-            }
-          ]
-        },
-        {
-          "y": "2023",
-          "rows": [
-            {
-              "dir": "Best Lawyers",
-              "what": "Firma del Año en derecho laboral, Colombia",
-              "h": "https://www.bestlawyers.com/article/2023-best-lawyers-in-colombia/4859",
-              "firm": true,
-              "rep": false
-            },
-            {
-              "dir": "The Legal 500",
-              "what": "Primer tier en derecho laboral (publicado en octubre de 2022)",
-              "h": "https://www.asuntoslegales.com.co/actualidad/las-mejores-firmas-nacionales-en-el-area-de-laboral-de-acuerdo-con-ranking-de-legal500-3476761",
-              "firm": true,
-              "rep": false
             }
           ]
         },
@@ -714,13 +513,6 @@
               "h": "https://allabogados.com/noticias/reconocimiento-the-legal-500/",
               "firm": false,
               "rep": true
-            },
-            {
-              "dir": "Chambers & Partners",
-              "what": "Banda 1, con cuatro socios ranqueados",
-              "h": "https://allabogados.com/noticias/reconocimientos-2021/",
-              "firm": true,
-              "rep": true
             }
           ]
         },
@@ -729,14 +521,14 @@
           "rows": [
             {
               "dir": "Chambers & Partners",
-              "what": "Primera de nueve ediciones seguidas en el ranking (2019 – 2027)",
+              "what": "Primera de nueve ediciones consecutivas en el ranking (2019 – 2027)",
               "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
               "firm": false,
               "rep": false
             },
             {
               "dir": "Best Lawyers",
-              "what": "Primera edición: reconocida desde 2019, cinco veces hasta 2026",
+              "what": "Primer reconocimiento; cinco en total hasta 2026",
               "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
               "firm": false,
               "rep": false
@@ -744,14 +536,14 @@
           ]
         }
       ],
-      "fn": "Chambers y Best Lawyers no muestran en sus páginas actuales la banda o la edición de cada año anterior; por eso hay años sin detalle individual."
+      "fn": "Chambers y Best Lawyers no publican en sus páginas actuales el detalle de cada edición anterior."
     },
     {
       "type": "stmt",
       "id": "chambers",
       "label": "Chambers & Partners",
-      "quote": "Banda 2, <t>en 2027.</t>",
-      "sub": "Chambers & Partners la rankea hace nueve años en Labour & Employment en Colombia, y en la edición Latin America 2027 la sube a Banda 2. Destaca su cartera de clientes del sector energético.",
+      "quote": "Banda 2 <t>en 2027.</t>",
+      "sub": "Chambers & Partners la ha incluido en su ranking de derecho laboral en Colombia durante nueve años consecutivos, y en la edición Latin America 2027 la ubicó en Banda 2. Destaca su experiencia con clientes del sector energético.",
       "keys": [
         "Labour & Employment",
         "Colombia",
@@ -759,7 +551,7 @@
       ],
       "tags": true,
       "more": {
-        "t": "Su perfil en Chambers",
+        "t": "Ver perfil en Chambers",
         "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
       }
     },
@@ -767,8 +559,8 @@
       "type": "stmt",
       "id": "best-lawyers",
       "label": "Best Lawyers",
-      "quote": "Elegida <t>por sus pares.</t>",
-      "sub": "En The Best Lawyers in Colombia desde 2019, en Labor and Employment Law: cinco reconocimientos, incluida la edición 2026. La selección sale de una encuesta entre abogados de la misma región y la misma área.",
+      "quote": "Elegida <t>por sus colegas.</t>",
+      "sub": "The Best Lawyers in Colombia la reconoce desde 2019 en Labor and Employment Law, con cinco reconocimientos hasta la edición 2026. La selección se hace con encuestas entre abogados de la misma área y ciudad.",
       "keys": [
         "Labor and Employment Law",
         "Bogotá",
@@ -776,16 +568,16 @@
       ],
       "tags": true,
       "more": {
-        "t": "Su perfil en Best Lawyers",
+        "t": "Ver perfil en Best Lawyers",
         "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
       }
     },
     {
       "type": "letters",
       "id": "voices",
-      "label": "Clientes y mercado",
-      "title": "En sus <t>palabras.</t>",
-      "lede": "Citas textuales de los directorios. Las de Chambers van en su inglés original.",
+      "label": "Lo que dicen de ella",
+      "title": "Clientes <t>y colegas.</t>",
+      "lede": "Citas textuales publicadas por los directorios. Las de Chambers se conservan en su idioma original.",
       "items": [
         {
           "q": "“Sumamente competente y didáctica.”",
@@ -824,7 +616,7 @@
       "type": "notes",
       "id": "press",
       "tint": true,
-      "label": "En la conversación",
+      "label": "Publicaciones y eventos",
       "title": "Entrevistas, eventos <t>y docencia.</t>",
       "items": [
         {
@@ -863,8 +655,8 @@
       "type": "stmt",
       "id": "record-open",
       "label": "Trayectoria",
-      "quote": "Desde 2001, <t>en una misma casa.</t>",
-      "sub": "Abogada sénior en Álvarez Escandón Liévano, socia de Álvarez Liévano Laserna, profesora en cuatro universidades y estudios en Cornell y la LSE.",
+      "quote": "Más de 25 años <t>en derecho laboral.</t>",
+      "sub": "Abogada sénior en Álvarez Escandón Liévano, socia fundadora de Álvarez Liévano Laserna, profesora universitaria y egresada de Cornell y la LSE.",
       "opener": true,
       "img": {
         "src": "/laserna/assets/cv-open.jpg",
@@ -876,8 +668,8 @@
       "type": "timeline",
       "id": "record-years",
       "tint": true,
-      "label": "En una línea",
-      "title": "De la Javeriana <t>a la sociedad.</t>",
+      "label": "Línea de tiempo",
+      "title": "De 1998 <t>a hoy.</t>",
       "from": 1998,
       "to": 2026,
       "marks": [
@@ -895,7 +687,7 @@
         },
         {
           "y": 2016,
-          "t": "Socia",
+          "t": "Socia fundadora",
           "brass": true
         },
         {
@@ -916,7 +708,7 @@
         {
           "a": 2016,
           "b": 2026,
-          "t": "Socia, Álvarez Liévano Laserna",
+          "t": "Socia fundadora, Álvarez Liévano Laserna",
           "brass": true
         },
         {
@@ -930,19 +722,19 @@
     {
       "type": "exp",
       "id": "record-practice",
-      "label": "Ejercicio",
-      "title": "Veinticinco años, <t>dos etapas.</t>",
+      "label": "Experiencia",
+      "title": "Experiencia <t>profesional.</t>",
       "groups": [
         {
           "label": "Cargos",
           "wide": true,
           "names": [
-            "Socia · Álvarez Liévano Laserna, Bogotá · 2016 a hoy",
+            "Socia fundadora · Álvarez Liévano Laserna, Bogotá · 2016 a hoy",
             "Abogada sénior · Álvarez Escandón Liévano (Aesca S.A.), Bogotá · 2001 a 2015"
           ]
         },
         {
-          "label": "En los dos cargos",
+          "label": "Funciones",
           "wide": true,
           "names": [
             "Líder del departamento de auditorías",
@@ -958,7 +750,7 @@
       "id": "record-education",
       "tint": true,
       "label": "Formación",
-      "title": "Bogotá, Nueva York <t>y Londres.</t>",
+      "title": "Formación <t>académica.</t>",
       "groups": [
         {
           "label": "Títulos",
@@ -984,7 +776,7 @@
       "type": "exp",
       "id": "record-teaching",
       "label": "Docencia",
-      "title": "Cuatro universidades, <t>trece años.</t>",
+      "title": "Docencia <t>universitaria.</t>",
       "groups": [
         {
           "label": "Cátedras",
@@ -1003,7 +795,7 @@
       "id": "record-orgs",
       "tint": true,
       "label": "Gremios",
-      "title": "En el gremio <t>del derecho laboral.</t>",
+      "title": "Gremios <t>y asociaciones.</t>",
       "groups": [
         {
           "label": "Participación",
@@ -1019,22 +811,22 @@
     {
       "type": "inquiry",
       "id": "inquiry",
-      "label": "Iniciar una conversación",
-      "title": "Empiece por <t>la pregunta.</t>",
-      "lede": "Elija el tipo de consulta y dé el contexto suficiente, sin información confidencial, para una primera respuesta.",
+      "label": "Contacto",
+      "title": "Hablemos de <t>su caso.</t>",
+      "lede": "Seleccione el tipo de consulta y comparta el contexto general, sin información confidencial. El equipo de María Lucía le responderá.",
       "contact": {
         "email": "contacto@allabogados.com",
         "phone": "(601) 417 7716",
         "city": "Bogotá, Colombia"
       },
       "form": {
-        "selectLabel": "¿Sobre qué quiere conversar?",
-        "selectPlaceholder": "Elija el tipo de consulta",
+        "selectLabel": "Tipo de consulta",
+        "selectPlaceholder": "Seleccione una opción",
         "paths": [
           {
             "v": "auditoria",
-            "t": "Una auditoría laboral o un due diligence",
-            "btn": "Enviar consulta",
+            "t": "Auditoría laboral o due diligence",
+            "btn": "Enviar",
             "note": "Por favor no incluya información confidencial.",
             "fields": [
               {
@@ -1068,8 +860,8 @@
           },
           {
             "v": "ugpp",
-            "t": "Una fiscalización de la UGPP o una inspección del Ministerio",
-            "btn": "Enviar consulta",
+            "t": "Fiscalización de la UGPP o inspección del Ministerio del Trabajo",
+            "btn": "Enviar",
             "note": "Por favor no incluya información confidencial.",
             "fields": [
               {
@@ -1103,8 +895,8 @@
           },
           {
             "v": "litigio",
-            "t": "Un proceso laboral o un recurso de casación",
-            "btn": "Enviar consulta",
+            "t": "Proceso laboral o recurso de casación",
+            "btn": "Enviar",
             "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
             "fields": [
               {
@@ -1135,8 +927,8 @@
           },
           {
             "v": "firma",
-            "t": "Otro asunto laboral con la firma",
-            "btn": "Enviar a la firma",
+            "t": "Otra consulta laboral",
+            "btn": "Enviar",
             "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
             "fields": [
               {
@@ -1164,8 +956,8 @@
           },
           {
             "v": "docencia",
-            "t": "Docencia, conferencias o prensa",
-            "btn": "Enviar invitación",
+            "t": "Docencia, conferencias o medios",
+            "btn": "Enviar",
             "fields": [
               {
                 "n": "Nombre",
@@ -1196,7 +988,7 @@
       },
       "name": "María Lucía Laserna Angarita",
       "fcta": {
-        "t": "Consultar un asunto",
+        "t": "Contactar",
         "h": "#inquiry"
       },
       "social": [
@@ -1228,13 +1020,13 @@
         "link": "Conozca Ignite Yourself",
         "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
       },
-      "kick": "Socia · Álvarez Liévano Laserna",
-      "sub": "Derecho laboral para empresas. Ver el riesgo antes; <t>probarlo, si llega.</t>",
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
       "firm": {
         "href": "https://allabogados.com/",
         "src": "/laserna/assets/all-logo-white.png",
         "alt": "Álvarez Liévano Laserna",
-        "lede": "Socia desde 2016. Derecho laboral para empresas, con su equipo de Auditoría y Fiscalización.",
+        "lede": "Socia fundadora de Álvarez Liévano Laserna, firma especializada en derecho laboral.",
         "link": "Visitar allabogados.com",
         "social": []
       },

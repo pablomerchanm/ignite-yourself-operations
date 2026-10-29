@@ -6,22 +6,22 @@ hechos salen de `DOSSIER.md`; aquí va la interpretación.
 
 ---
 
-## 0. El cambio de enfoque
+## 0. El enfoque (corregido por Pablo, 29 oct.)
 
-La primera versión copió la lógica de Pettingill: un perito independiente que
-se vende a sí mismo. María Lucía no es eso. Es **socia de una firma**, y quien
-paga la página es **la firma**. Por eso la página tiene que hacer dos trabajos
-a la vez:
+**María Lucía es la protagonista.** La página es su marca personal
+(*marialucialaserna.com*): su trayectoria, su práctica, sus reconocimientos.
+La firma paga las páginas de sus socios porque cada socio bien posicionado le
+trae negocios; eso es del negocio de Ignite con la firma, no del contenido de
+la página.
 
-1. **Para ella:** dejar escrita su autoridad personal, su trayectoria y su
-   legado, con cada reconocimiento verificable.
-2. **Para Álvarez Liévano Laserna:** ser un canal que lleve confianza y
-   clientes a la firma. Su nombre abre la puerta y la firma entrega el trabajo.
-
-Regla de diseño: **ella es la puerta, la firma es la casa.** Cada sección que
-habla de ella termina mostrando que detrás hay una firma Banda 1.
-
----
+- Álvarez Liévano Laserna aparece de forma estratégica: ella es **socia
+  fundadora**, en el hero, en su perfil, en una sección propia y en el pie.
+- Fuera de la página: los otros socios, los servicios de la firma y la franja
+  de reconocimientos de la firma. El registro muestra solo sus reconocimientos
+  individuales.
+- Lenguaje: español profesional y natural, nombres de sección simples
+  (Perfil, Práctica, Reconocimientos, Trayectoria, Contacto). Sin frases de
+  marca forzadas ni giros que suenen traducidos.
 
 ## 1. Quién es, como marca
 
@@ -36,9 +36,8 @@ habla de ella termina mostrando que detrás hay una firma Banda 1.
 | **Gremio** | Consejo directivo del Colegio de Abogados del Trabajo y comité laboral de la ANDI: está donde se discute la norma. |
 | **Su voz** | "Análisis integral, conclusión práctica." "La armonía entre trabajador y empleador." Cercana, didáctica, pragmática. |
 
-**Idea de marca:** *Ver el riesgo antes. Probarlo, si llega.*
-Une la auditoría (prevención) con la prueba y la casación (defensa). Es la
-frase que ordena toda la narrativa.
+**Lo que la distingue:** la prevención (auditoría) y la defensa (prueba y
+casación). Se cuenta con hechos, no con un eslogan.
 
 **Tono:** cálido y sereno, sin solemnidad de bufete. El retrato sonriente y la
 foto escuchando en la reunión lo confirman: autoridad cercana.
