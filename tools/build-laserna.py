@@ -39,8 +39,8 @@ base = sub1(r"(\(\(s\.actions\|\|\[\]\)\.length\?'<div class=\"hacts wr\">'.*?'<
 
 # ------------------------------------------------------- 3. cabeza del documento
 TITLE = 'María Lucía Laserna Angarita — Derecho laboral para empresas'
-DESC = ('María Lucía Laserna Angarita: abogada laboralista, socia de Álvarez Liévano Laserna en Bogotá. '
-        'Auditoría laboral, seguridad social y UGPP, litigio y casación, desde 2001.')
+DESC = ('María Lucía Laserna Angarita, socia de Álvarez Liévano Laserna: derecho laboral para empresas en Bogotá. '
+        'Chambers Banda 2 y finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027.')
 URL = 'https://igniteyourself.co/laserna'
 
 base = sub1(r'<title>[^<]*</title>', f'<title>{TITLE}</title>', base, tag='title')
@@ -389,6 +389,47 @@ pubs:function(s){
   '</div></section>'},
 """
 base = sub1(r'var partials=\{', lambda m: m.group(0) + PARTIALS, base, tag='partials')
+
+# ---------------------------------------------------- 5c. piezas propias de Laserna
+# seals   — franja de prueba: cada directorio con su distincion, sus anos y el enlace a la fuente
+# ledger  — el registro ano por ano, individual y de la firma, cada fila con su fuente
+# partners — los socios de la firma: la pagina es puerta de ella y canal de la casa
+PARTIALS_LS = r"""
+seals:function(s){
+  return'<section class="seals'+(s.ink?' ink':'')+(s.tint?' tint':'')+'" id="'+esc(s.id||'seals')+'"><div class="wrap">'+
+  (s.label||s.title?'<div class="slhead" data-r2>'+(s.label?'<span class="smallcap wr">'+esc(s.label)+'</span>':'')+(s.title?'<h2 class="d56 wr">'+rich(s.title)+'</h2>':'')+'</div>':'')+
+  '<div class="slgrid" data-cards>'+(s.items||[]).map(function(it){var ext=/^https?:/.test(it.h);
+    return'<a class="sl wr" href="'+esc(it.h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'>'+
+      '<span class="sldir">'+esc(it.dir)+'</span><span class="slwhat">'+rich(it.what)+'</span>'+
+      '<span class="slyrs">'+esc(it.yrs||'')+'</span><span class="slgo">'+esc(it.go||'Ver en la fuente')+(ext?' ↗':' →')+'</span></a>'}).join('')+'</div>'+
+  (s.more?'<div class="pmore wr" data-r1><a href="'+esc(s.more.h)+'">'+esc(s.more.t)+'</a></div>':'')+
+  '</div></section>'},
+ledger:function(s){
+  return'<section class="ldg'+(s.tint?' tint':'')+'" id="'+esc(s.id||'ledger')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d80 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="ldkey wr" data-r1><span class="ldwho i">Individual</span><span class="ldwho f">Firma</span><span class="ldkn">'+esc(s.keynote||'')+'</span></div>'+
+  (s.years||[]).map(function(y){
+    return'<div class="ldy" data-r2><div class="ldyr wr">'+esc(y.y)+'</div><ul class="ldrows">'+(y.rows||[]).map(function(r){
+      return'<li class="wr"><span class="lddir">'+esc(r.dir)+'</span><span class="ldwhat">'+rich(r.what)+'</span>'+
+        '<span class="ldwho '+(r.firm?'f':'i')+'">'+(r.firm?'Firma':'Individual')+'</span>'+
+        (r.h?'<a class="ldsrc'+(r.rep?' rep':'')+'" href="'+esc(r.h)+'" target="_blank" rel="noopener">'+(r.rep?'Nota de la firma':'Fuente')+' ↗</a>':'<span class="ldsrc off">Sin enlace</span>')+
+      '</li>'}).join('')+'</ul></div>'}).join('')+
+  (s.fn?'<div class="efn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
+  '</div></section>'},
+partners:function(s){
+  return'<section class="ptn'+(s.ink?' ink':'')+'" id="'+esc(s.id||'partners')+'"><div class="wrap">'+
+  '<div class="shead rail" data-r2><div class="rlab"><span class="rnum wr">'+esc(s.no||'')+'</span><span class="smallcap wr">'+esc(s.label)+'</span></div>'+
+  '<div><h2 class="d56 wr">'+rich(s.title)+'</h2>'+(s.lede?'<p class="elede wr">'+rich(s.lede)+'</p>':'')+'</div></div>'+
+  '<div class="ptgrid" data-cards>'+(s.items||[]).map(function(p){
+    return'<div class="ptc wr'+(p.self?' self':'')+'"><span class="smallcap ptrole">'+esc(p.role)+'</span><h3>'+esc(p.name)+'</h3>'+
+      '<p class="ptlead">'+rich(p.lead)+'</p><p class="ptrank">'+rich(p.rank)+'</p>'+
+      (p.h?'<a class="ptgo" href="'+esc(p.h)+'"'+(/^https?:/.test(p.h)?' target="_blank" rel="noopener"':'')+'>'+esc(p.t||'Ver perfil')+(/^https?:/.test(p.h)?' ↗':' →')+'</a>':'')+
+    '</div>'}).join('')+'</div>'+
+  (s.fn?'<div class="efn wr smallcap" data-r1>'+esc(s.fn)+'</div>':'')+
+  '</div></section>'},
+"""
+base = sub1(r'var partials=\{', lambda m: m.group(0) + PARTIALS_LS, base, tag='partials-ls')
 
 # El tooltip del grafico: delegacion en document, asi funciona igual sobre el
 # HTML pre-renderizado y sobre el que pinta el fetch.
@@ -1555,7 +1596,7 @@ def topbar_html(active):
     akey = active or 'home'
     tabs = ''.join(f'<a href="{h}"{ON if k == akey else ""}>{t}</a>' for t, h, k in TABS)
     return ('<div class="topbar">'
-            '<a class="u11 smallcap tname" href="/laserna" style="color:#fff">Laserna</a>'
+            '<a class="u11 smallcap tname" href="/laserna" style="color:#fff">Laserna<span class="tfirm"> · Álvarez Liévano Laserna</span></a>'
             f'<nav class="tnav" aria-label="Principal">{links}</nav>'
             f'<a class="u11 smallcap ncta" id="ncta" href="{"#inquiry" if not active else "/laserna#inquiry"}" style="color:#fff">Consultar un asunto</a>'
             f'<nav class="tbot" aria-label="Principal">{tabs}</nav></div>')
@@ -1570,6 +1611,70 @@ CAL = CAL.replace('#site section.fra{--ra:#00305B}', '#site section.fra{--ra:#1B
 assert '--ra:#1B2028' in CAL
 # la franja del equipo con la proporcion de la foto: sin cortar cabezas
 CAL = CAL.replace('</style>', """
+/* ---------- Laserna: franja de prueba (seals) ---------- */
+.seals{padding:var(--sec) 0;background:var(--bg)}
+.seals.ink{background:var(--ink);color:#fff}
+.seals.tint{background:#E4DED2}
+.slhead{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(30px,4.5vh,52px)}
+.seals.ink .slhead .smallcap{color:rgba(255,255,255,.5)}
+.slgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid currentColor}
+.sl{display:flex;flex-direction:column;gap:12px;padding:clamp(26px,3.6vh,40px) clamp(14px,1.6vw,26px) clamp(24px,3vh,34px) 0;
+  border-right:1px solid rgba(127,127,127,.25);color:inherit;text-decoration:none;transition:opacity .25s}
+.sl+.sl{padding-left:clamp(14px,1.6vw,26px)}
+.sl:last-child{border-right:0}
+.sl:hover{opacity:.78}
+.sldir{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.05;letter-spacing:-.01em}
+.slwhat{font-size:clamp(15px,1.15vw,17px);line-height:1.42;max-width:24ch}
+.slyrs{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+.slgo{margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.seals .pmore a{color:inherit;border-color:currentColor}
+@media(max-width:1000px){.slgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sl:nth-child(2){border-right:0}.sl:nth-child(3){padding-left:0}.sl:nth-child(-n+2){border-bottom:1px solid rgba(127,127,127,.25)}}
+@media(max-width:560px){.slgrid{grid-template-columns:1fr}.sl{border-right:0!important;padding-left:0!important;border-bottom:1px solid rgba(127,127,127,.25)}.sl:last-child{border-bottom:0}}
+
+/* ---------- Laserna: el registro ano por ano (ledger) ---------- */
+.ldg{padding:var(--sec) 0}
+.ldg.tint{background:#E4DED2}
+.ldkey{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:clamp(30px,4vh,46px) 0 6px}
+.ldkn{font-size:12px;opacity:.6}
+.ldy{display:grid;grid-template-columns:clamp(84px,11vw,170px) minmax(0,1fr);gap:clamp(16px,2.4vw,40px);
+  border-top:1px solid var(--ink);padding-top:clamp(18px,2.4vh,26px);margin-top:clamp(22px,3vh,34px)}
+.ldyr{font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.6vw,72px);line-height:.9;letter-spacing:-.02em}
+.ldrows{list-style:none;margin:0;padding:0}
+.ldrows li{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr) 7.5em 10.5em;gap:clamp(12px,1.6vw,26px);align-items:baseline;
+  padding:14px 0;border-bottom:1px solid var(--line)}
+.ldrows li:last-child{border-bottom:0}
+.lddir{font-family:var(--serif);font-size:clamp(17px,1.35vw,21px);line-height:1.2}
+.ldwhat{font-size:clamp(14px,1.05vw,16px);line-height:1.45}
+.ldwho{justify-self:start;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:4px 8px 3px;border:1px solid currentColor;white-space:nowrap}
+.ldwho.i{color:var(--brass)}
+.ldwho.f{color:rgba(20,22,26,.55)}
+.ldsrc{justify-self:end;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--ink);border-bottom:1px solid currentColor;padding-bottom:2px}
+.ldsrc.rep{opacity:.6}
+.ldsrc.off{opacity:.4;border:0}
+@media(max-width:860px){.ldy{grid-template-columns:1fr;gap:8px}
+  .ldrows li{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px}
+  .lddir{grid-column:1/-1}.ldwhat{grid-column:1/-1}}
+
+/* ---------- Laserna: los socios (partners) ---------- */
+.ptn{padding:var(--sec) 0}
+.ptn.ink{background:var(--ink);color:#fff}
+.ptn.ink .smallcap,.ptn.ink .rnum{color:rgba(255,255,255,.5)}
+.ptn.ink .elede{color:rgba(255,255,255,.72)}
+.ptgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);margin-top:clamp(36px,5vh,56px)}
+.ptc{display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2.4vw,32px);border:1px solid rgba(127,127,127,.3)}
+.ptc.self{border-color:var(--brass);box-shadow:inset 0 3px 0 var(--brass)}
+.ptc h3{font-family:var(--serif);font-weight:400;font-size:clamp(22px,1.9vw,29px);line-height:1.1;margin:0}
+.ptlead{font-size:14.5px;line-height:1.5;margin:0;opacity:.85}
+.ptrank{font-size:12.5px;line-height:1.5;margin:0;color:var(--brass)}
+.ptgo{margin-top:auto;padding-top:12px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:inherit}
+@media(max-width:1000px){.ptgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.ptgrid{grid-template-columns:1fr}}
+
+/* ---------- Laserna: la firma junto al nombre en la barra ---------- */
+.topbar .tname .tfirm{opacity:.55;letter-spacing:.12em}
+@media(max-width:860px){.topbar .tname .tfirm{display:none}}
+
 /* ---------- Laserna: el equipo de Auditoria y Fiscalizacion, completo ---------- */
 #team .sph{height:auto;aspect-ratio:1480/540;max-height:none}
 #team .sph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
@@ -1613,7 +1718,7 @@ def deep(k):
 def renum(secs):
     n = 1
     for s in secs:
-        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel', 'strip'):
+        if s['type'] in ('hero', 'band', 'nums', 'stmt', 'scrub', 'index', 'next', 'brief', 'quote', 'counsel', 'strip', 'seals'):
             continue
         s['no'] = f'{n:02d}'
         n += 1
@@ -1626,12 +1731,22 @@ def homeward(o):
         return [homeward(x) for x in o]
     return o
 
+UTM = 'utm_source=laserna&utm_medium=authority&utm_campaign=socios'
+def utm(o):
+    if isinstance(o, dict):
+        return {k: utm(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [utm(x) for x in o]
+    if isinstance(o, str) and o.startswith('https://allabogados.com'):
+        return o + ('&' if '?' in o else '?') + UTM
+    return o
+
 def page(title, desc, secs, sub=False):
     nc = dict(full['navcta'])
     if sub:
         secs = homeward(secs); nc['h'] = '/laserna#inquiry'
     return {"meta": {"title": title, "description": desc},
-            "logo": full['logo'], "nav": NAV, "navcta": nc, "sections": renum(secs)}
+            "logo": full['logo'], "nav": NAV, "navcta": nc, "sections": utm(renum(secs))}
 
 inq = lambda: deep('inquiry')
 def foot():
@@ -1641,20 +1756,20 @@ ALT = {"t": "Consultar un asunto", "h": "/laserna#inquiry"}
 
 NX = lambda k, title, d, h: {"type": "next", "k": k, "t": title, "d": d, "h": h}
 T_PR = 'Práctica — María Lucía Laserna'
-T_RE = 'Reconocimientos — María Lucía Laserna'
+T_RE = 'Registro de reconocimientos — María Lucía Laserna'
 T_TR = 'Trayectoria — María Lucía Laserna'
 
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
-        [deep('hero'), deep('numbers'), deep('in-brief'), deep('quote'), deep('s-practice'),
-         deep('s-audit'), deep('words'), deep('for-clients'), deep('firm'), deep('team'), inq()]),
+        [deep('hero'), deep('seals'), deep('in-brief'), deep('words'), deep('quote'), deep('s-practice'),
+         deep('s-audit'), deep('for-clients'), deep('firm'), deep('firm-seals'), deep('partners'), deep('services'), deep('team'), inq()]),
     'practica': page(T_PR,
         'Auditoría laboral, seguridad social y UGPP, litigio y casación, y relaciones colectivas, para empleadores.',
         [deep('practice-open'), deep('routes'), deep('caso'), deep('metodo'), deep('sectors'),
          dict(NX('Siguiente', 'Reconocimientos', 'Chambers & Partners, The Legal 500 y Best Lawyers.', '/laserna/reconocimientos'), alt=ALT), foot()], sub=True),
     'reconocimientos': page(T_RE,
-        'Chambers & Partners Banda 2 (2027), Leading Partner en The Legal 500 y Best Lawyers desde 2019.',
-        [deep('recog-open'), deep('rankings'), deep('chambers'), deep('best-lawyers'), deep('voices'), deep('recog-detail'),
+        'Año por año y con su fuente: Chambers Banda 2 (2027), finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027, Best Lawyers desde 2019.',
+        [deep('recog-open'), deep('registro'), deep('chambers'), deep('best-lawyers'), deep('voices'), deep('press'),
          dict(NX('Siguiente', 'Trayectoria', 'Ejercicio, formación, docencia y gremios, desde 2001.', '/laserna/trayectoria'), alt=ALT), foot()], sub=True),
     'trayectoria': page(T_TR,
         'Abogada sénior en Álvarez Escandón Liévano desde 2001, socia de Álvarez Liévano Laserna desde 2016, Cornell, la LSE y la Javeriana.',

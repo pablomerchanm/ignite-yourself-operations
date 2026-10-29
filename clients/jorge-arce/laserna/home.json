@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "María Lucía Laserna Angarita — Derecho laboral para empresas",
-    "description": "María Lucía Laserna Angarita: abogada laboralista, socia de Álvarez Liévano Laserna en Bogotá. Auditoría laboral, seguridad social y UGPP, litigio y casación, desde 2001."
+    "description": "María Lucía Laserna Angarita, socia de Álvarez Liévano Laserna: derecho laboral para empresas en Bogotá. Chambers Banda 2 y finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027."
   },
   "logo": "MARÍA LUCÍA LASERNA",
   "nav": [
@@ -39,7 +39,7 @@
         "alt": "María Lucía Laserna Angarita"
       },
       "name": "María Lucía Laserna <t>Angarita</t>",
-      "sub": "Auditoría, litigio y casación laboral para empleadores. <t>Desde 2001.</t>",
+      "sub": "Derecho laboral para empresas. Ver el riesgo antes; <t>probarlo, si llega.</t>",
       "actions": [
         {
           "t": "Consultar un asunto",
@@ -47,8 +47,8 @@
           "primary": true
         },
         {
-          "t": "Ver la práctica",
-          "h": "/laserna/practica"
+          "t": "Ver el registro",
+          "h": "/laserna/reconocimientos"
         }
       ],
       "firm": {
@@ -56,29 +56,43 @@
         "logo": "/laserna/assets/all-logo-white.png",
         "alt": "Álvarez Liévano Laserna",
         "h": "#firm"
-      }
+      },
+      "kick": "Socia · Álvarez Liévano Laserna",
+      "note": "Chambers & Partners Banda 2 · Finalista a Abogada Laboral del Año, The Legal 500 Colombia Awards 2027"
     },
     {
-      "type": "nums",
-      "id": "numbers",
+      "type": "seals",
+      "id": "seals",
       "ink": true,
-      "label": "En cifras",
+      "label": "Reconocida por sus pares y por el mercado",
       "items": [
         {
-          "n": "25",
-          "k": "Años en derecho laboral y seguridad social, desde 2001"
+          "dir": "Chambers & Partners",
+          "what": "Banda 2 en Labour & Employment, Colombia",
+          "yrs": "Ranqueada 2019 – 2027",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
         },
         {
-          "n": "9",
-          "k": "Años en el ranking de Chambers & Partners. Banda 2 en la edición 2027"
+          "dir": "The Legal 500",
+          "what": "Finalista: Abogada Laboral del Año, Colombia Awards 2027",
+          "yrs": "Leading Partner",
+          "h": "https://www.legal500.com/events/colombia-awards/shortlist-2027/"
         },
         {
-          "n": "13",
-          "k": "Años como profesora de derecho laboral en la Javeriana, desde 2013"
+          "dir": "Best Lawyers",
+          "what": "Labor and Employment Law, Colombia",
+          "yrs": "2019 – 2026 · cinco reconocimientos",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
+        },
+        {
+          "dir": "Leaders League",
+          "what": "Firma Leading en derecho laboral, con ella entre sus socios",
+          "yrs": "2027",
+          "h": "https://www.leadersleague.com/en/rankings/derecho-laboral-estudio-de-abogados-colombia-2027"
         }
       ],
       "more": {
-        "t": "Los reconocimientos",
+        "t": "El registro completo, con cada fuente",
         "h": "/laserna/reconocimientos"
       }
     },
@@ -88,21 +102,39 @@
       "label": "En breve",
       "items": [
         {
-          "k": "Socia desde 2016.",
-          "t": "Álvarez Liévano Laserna, firma boutique de derecho laboral en Bogotá.",
-          "d": "Dirige el Departamento de Auditoría y Fiscalización y la defensa de empresas ante la UGPP."
+          "k": "Una misma casa desde 2001.",
+          "t": "Abogada sénior en Álvarez Escandón Liévano de 2001 a 2015; desde 2016, socia de Álvarez Liévano Laserna, la firma que lleva su apellido.",
+          "d": "En las dos etapas, el mismo oficio: auditorías, litigio, seguridad social, pensiones y casación."
         },
         {
-          "k": "La misma casa desde 2001.",
-          "t": "Abogada sénior en Álvarez Escandón Liévano de 2001 a 2015; socia de Álvarez Liévano Laserna desde 2016.",
-          "d": "En las dos etapas, el mismo oficio: auditorías, litigio, seguridad social, pensiones y recurso extraordinario de casación."
+          "k": "Antes y después del conflicto.",
+          "t": "Dirige la auditoría preventiva y la defensa ante la UGPP, y litiga hasta el recurso de casación ante la Corte Suprema.",
+          "d": "Especialista en derecho probatorio: sabe cómo se prueba lo que la auditoría encuentra."
         },
         {
-          "k": "Javeriana, Cornell y la LSE.",
-          "t": "Abogada y especialista en derecho laboral de la Javeriana; especialista en derecho probatorio de la Sergio Arboleda.",
-          "d": "MPS en Industrial and Labor Relations de Cornell University y LLM de The London School of Economics."
+          "k": "Formada para explicar.",
+          "t": "Abogada y especialista de la Javeriana, especialista en probatorio de la Sergio Arboleda, Cornell ILR y LLM de la LSE.",
+          "d": "Profesora en la Javeriana desde 2013 y miembro del consejo directivo del Colegio de Abogados del Trabajo."
         }
       ]
+    },
+    {
+      "type": "scrub",
+      "id": "words",
+      "label": "En sus palabras",
+      "pin": 2.6,
+      "paras": [
+        "Mi práctica está en hacer un análisis integral, que cubra todas las variables, y llegar a una conclusión práctica que también considere los riesgos a los que está expuesta la empresa. <t>Para que la decisión se tome con la mejor información.</t>",
+        "La consulta más frecuente es el riesgo de desvincular a un trabajador, sobre todo si puede tener estabilidad laboral reforzada. Siempre hay que verificar cada caso y sus antecedentes, <t>y llegar con la estrategia de defensa ya pensada.</t>",
+        "Lo difícil es darle a la empresa herramientas para ser eficiente y sostenible, garantizando al mismo tiempo los derechos de los trabajadores <t>y, sobre todo, la armonía entre trabajador y empleador.</t>"
+      ],
+      "keys": [
+        "Best Lawyers · Preguntas y respuestas"
+      ],
+      "more": {
+        "t": "Por qué los directorios la reconocen",
+        "h": "/laserna/reconocimientos#best-lawyers"
+      }
     },
     {
       "type": "quote",
@@ -155,24 +187,6 @@
       }
     },
     {
-      "type": "scrub",
-      "id": "words",
-      "label": "En sus palabras",
-      "pin": 2.6,
-      "paras": [
-        "Mi práctica está en hacer un análisis integral, que cubra todas las variables, y llegar a una conclusión práctica que también considere los riesgos a los que está expuesta la empresa. <t>Para que la decisión se tome con la mejor información.</t>",
-        "La consulta más frecuente es el riesgo de desvincular a un trabajador, sobre todo si puede tener estabilidad laboral reforzada. Siempre hay que verificar cada caso y sus antecedentes, <t>y llegar con la estrategia de defensa ya pensada.</t>",
-        "Lo difícil es darle a la empresa herramientas para ser eficiente y sostenible, garantizando al mismo tiempo los derechos de los trabajadores <t>y, sobre todo, la armonía entre trabajador y empleador.</t>"
-      ],
-      "keys": [
-        "Best Lawyers · Preguntas y respuestas"
-      ],
-      "more": {
-        "t": "Por qué los directorios la reconocen",
-        "h": "/laserna/reconocimientos#best-lawyers"
-      }
-    },
-    {
       "type": "counsel",
       "id": "for-clients",
       "label": "Para la empresa",
@@ -215,9 +229,9 @@
     {
       "type": "firmra",
       "id": "firm",
-      "label": "La firma",
+      "label": "La firma detrás",
       "title": "Álvarez Liévano <t>Laserna.</t>",
-      "lede": "Firma boutique dedicada solo al derecho laboral, en Bogotá desde 2016. María Lucía es socia, y su apellido está en el nombre.",
+      "lede": "La firma que fundaron en 2016 los socios de AESCA, con un linaje en derecho laboral que empieza en 1963. María Lucía es una de sus cuatro socios, y su apellido está en el nombre.",
       "company": {
         "role": "Socia · desde 2016",
         "desc": "“Una compañía que defiende compañías.” Cada cliente lo atiende directamente un socio con su equipo. Banda 1 en Labour & Employment en Chambers Latin America, y Firma Boutique del Año 2025 en The Legal 500.",
@@ -226,20 +240,141 @@
           "Bogotá, Colombia",
           "(601) 417 7716 · contacto@allabogados.com"
         ],
-        "href": "https://allabogados.com/",
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
         "link": "Visitar allabogados.com",
         "logo": "/laserna/assets/all-logo-white.png",
         "name": "Álvarez Liévano Laserna",
-        "more": "https://allabogados.com/equipo-areas/"
+        "more": "https://allabogados.com/nosotros/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
       },
       "social": [
         {
           "t": "Consultar a la firma",
           "h": "#inquiry",
           "path": "firma"
+        },
+        {
+          "t": "Conocer el equipo",
+          "h": "https://allabogados.com/equipo-areas/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
         }
       ],
       "no": "01"
+    },
+    {
+      "type": "seals",
+      "id": "firm-seals",
+      "tint": true,
+      "label": "La firma, según los mismos directorios",
+      "items": [
+        {
+          "dir": "Chambers & Partners",
+          "what": "Banda 1 en Labour & Employment, Colombia",
+          "yrs": "17 años ranqueada · 2027",
+          "h": "https://chambers.com/department/alvarez-lievano-laserna-sas-labour-employment-latin-america-9:1596:61:1:221784"
+        },
+        {
+          "dir": "The Legal 500",
+          "what": "Tier 1 · Firma Boutique del Año 2025 y 2026",
+          "yrs": "Colombia Awards",
+          "h": "https://www.legal500.com/events/colombia-awards/winners-2026/"
+        },
+        {
+          "dir": "The Legal 500",
+          "what": "Firma Laboral del Año",
+          "yrs": "Colombia Awards 2024",
+          "h": "https://www.legal500.com/events/colombia-awards/winners/"
+        },
+        {
+          "dir": "Best Lawyers",
+          "what": "Firma del Año en derecho laboral",
+          "yrs": "2023",
+          "h": "https://www.bestlawyers.com/article/2023-best-lawyers-in-colombia/4859"
+        }
+      ]
+    },
+    {
+      "type": "partners",
+      "id": "partners",
+      "label": "Los socios",
+      "title": "Cuatro socios, <t>una sola casa.</t>",
+      "lede": "Cada cliente lo atiende directamente un socio con su equipo. Esto es lo que lidera cada uno.",
+      "items": [
+        {
+          "self": true,
+          "role": "Socia",
+          "name": "María Lucía Laserna Angarita",
+          "lead": "Auditoría y Fiscalización, UGPP, relaciones individuales y colectivas, casación.",
+          "rank": "Chambers Banda 2 · Finalista a Abogada Laboral del Año, Legal 500 2027",
+          "h": "/laserna/trayectoria",
+          "t": "Su trayectoria"
+        },
+        {
+          "role": "Socia sénior",
+          "name": "Claudia Liévano Triana",
+          "lead": "Negociación colectiva, reestructuraciones y planes de retiro.",
+          "rank": "Chambers Banda 1 · Best Lawyers Lawyer of the Year 2022 y 2025",
+          "h": "https://chambers.com/lawyer/claudia-lievano-triana-latin-america-9:1109979",
+          "t": "Perfil en Chambers"
+        },
+        {
+          "role": "Socio director",
+          "name": "Felipe Álvarez Echeverri",
+          "lead": "Asesoría general, conflictos colectivos y arbitraje, Ministerio del Trabajo y UGPP.",
+          "rank": "Chambers Banda 2 · Legal 500 Leading Partner",
+          "h": "https://chambers.com/lawyer/felipe-alvarez-latin-america-9:1109980",
+          "t": "Perfil en Chambers"
+        },
+        {
+          "role": "Socio",
+          "name": "Carlos Arturo Barco Alzate",
+          "lead": "Litigios, y Formación y Contenido. Exmagistrado auxiliar de la Sala de Casación Laboral.",
+          "rank": "Legal 500 Next Generation Partner",
+          "h": "https://www.legal500.com/firms/52609-alvarez-lievano-laserna-sas/c-colombia/lawyers/1909993-carlos-arturo-barco-alzate",
+          "t": "Perfil en Legal 500"
+        }
+      ],
+      "fn": "El fundador del linaje, Carlos Álvarez Pereira, ejerce derecho laboral desde 1963: Chambers Senior Statesperson y Legal 500 Hall of Fame.",
+      "no": "02"
+    },
+    {
+      "type": "counsel",
+      "id": "services",
+      "light": true,
+      "label": "Servicios de la firma",
+      "title": "Lo que la firma <t>hace por su empresa.</t>",
+      "items": [
+        {
+          "icon": "check",
+          "tag": "Prevención",
+          "t": "Auditoría laboral preventiva",
+          "d": "El departamento que dirige María Lucía.",
+          "a": "Ver el servicio",
+          "h": "https://allabogados.com/auditoria-laboral-preventiva/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "icon": "doc",
+          "tag": "Entes de control",
+          "t": "Ministerio del Trabajo y UGPP",
+          "d": "Representación en inspecciones y fiscalizaciones.",
+          "a": "Ver el servicio",
+          "h": "https://allabogados.com/representacion-ante-el-ministerio-de-trabajo-y-otros-entes-de-control/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "icon": "court",
+          "tag": "Litigio",
+          "t": "Procesos judiciales",
+          "d": "Atención integral, de la primera instancia a la casación.",
+          "a": "Ver el servicio",
+          "h": "https://allabogados.com/atencion-integral-de-procesos-judiciales/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "icon": "sign",
+          "tag": "Relaciones colectivas",
+          "t": "Negociación colectiva",
+          "d": "Pliegos, convenciones y conflictos colectivos.",
+          "a": "Ver el servicio",
+          "h": "https://allabogados.com/negociacion-colectiva/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        }
+      ]
     },
     {
       "type": "strip",
@@ -446,7 +581,7 @@
         },
         {
           "t": "allabogados.com",
-          "h": "https://allabogados.com/",
+          "h": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
           "i": "globe"
         },
         {
@@ -462,10 +597,10 @@
         "link": "Conozca Ignite Yourself",
         "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
       },
-      "kick": "Derecho laboral · Socia, Álvarez Liévano Laserna",
-      "sub": "Auditoría, litigio y casación laboral para empleadores. <t>Desde 2001.</t>",
+      "kick": "Socia · Álvarez Liévano Laserna",
+      "sub": "Derecho laboral para empresas. Ver el riesgo antes; <t>probarlo, si llega.</t>",
       "firm": {
-        "href": "https://allabogados.com/",
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
         "src": "/laserna/assets/all-logo-white.png",
         "alt": "Álvarez Liévano Laserna",
         "lede": "Socia desde 2016. Derecho laboral para empresas, con su equipo de Auditoría y Fiscalización.",
@@ -474,7 +609,7 @@
       },
       "fine": "Vista privada · No indexada",
       "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
-      "no": "02"
+      "no": "03"
     }
   ]
 }
