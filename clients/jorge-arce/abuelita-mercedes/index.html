@@ -115,9 +115,10 @@ body[data-vista="portada"] .barra{display:none}
 .libro .titulo b{display:flex;align-items:center;gap:.7em;font:600 calc(var(--w) * .036)/1.2 var(--serif);letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;margin-right:-.22em}
 .libro .titulo b::before,.libro .titulo b::after{content:"";width:calc(var(--w) * .07);height:1.5px;background:currentColor;opacity:.7}
 .libro .titulo b::after{margin-left:-.22em}
-.libro .titulo .sello-nombre{position:relative;display:block;width:82%;margin-top:9%}
+/* la firma y «de la abuelita» comparten la misma inclinación, como escritas de un tirón; las versalitas quedan rectas */
+.libro .titulo .sello-nombre{position:relative;display:block;width:82%;margin-top:11%;transform:rotate(-7deg)}
 .libro .titulo .sello-nombre img{width:100%;margin:0;display:block}
-.libro .titulo i{position:absolute;left:41%;top:-5%;font:400 calc(var(--w) * .05)/1 var(--titulo);font-style:normal;white-space:nowrap;transform:rotate(-5deg)}
+.libro .titulo i{position:absolute;left:37%;top:-2%;font:400 calc(var(--w) * .05)/1 var(--titulo);font-style:normal;white-space:nowrap;transform:rotate(1deg)}
 .libro .titulo img{height:auto}
 .marcapaginas{position:absolute;left:24%;top:98.6%;width:5.5%;height:11%;background:linear-gradient(90deg,#6f7c4d,var(--verde) 40%,#8f9c69);z-index:-1;
   clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);transition:opacity .4s}
