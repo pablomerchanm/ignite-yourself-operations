@@ -25,20 +25,23 @@
              body     párrafos                          17 px
              small    metadatos                         13 px
            Origen va en otra clave: tamaños contenidos y todo en una
-           pantalla. A 1440 × 720: territorios en condensada ≈ 45 px (al
-           ancho de su columna), voz ≈ 29 px (titular), manifiesto ≈ 22 px
-           (lectura guiada) y pregunta ≈ 29 px (itálica). Se miden por el
-           ancho y por el alto de pantalla.
+           pantalla. A 1440 × 720: titular en condensada ≈ 56 px (al ancho
+           de su columna), pregunta en condensada ≈ 34 px, manifiesto
+           ≈ 22 px (lectura guiada) y etiquetas, 13 px en versal
+           espaciada. Se miden por el ancho y por el alto de pantalla.
 
    Código  El equilibrio entre condensada y serif, medido en Nike About
            («WE SERVE ATHLETES*» a 162 px y, debajo, «*If you have a body,
            you are an athlete» en Palatino itálica a 26 px):
-             1. Un golpe por pantalla: una sola pieza en condensada versal,
-                la más grande de su pantalla, interlineado 0,9.
-             2. La condensada nombra: palabras sueltas, nombres de mundos,
-                conceptos, statements cortos. Nunca un párrafo.
-             3. La serif habla: las frases de Mario, en caja de frase; la
-                itálica, para la pregunta o el susurro.
+             1. Un golpe por pantalla: una pieza en condensada versal, la
+                más grande de su pantalla. Como mucho, un segundo golpe
+                menor (≈ 0,6 veces) para el cierre, como la pregunta.
+             2. El golpe es lo que el usuario debe llevarse (el titular, el
+                statement), no lo que más se repite. El tamaño lo decide la
+                importancia: las etiquetas y el contexto van pequeños,
+                aunque sean palabras sueltas. Nunca un párrafo en golpe.
+             3. La serif habla: la lectura de Mario, en caja de frase; la
+                itálica, para el susurro.
              4. La grotesca (Geist) solo hace funcionar: menú, botones,
                 datos.
              5. La voz va pegada al golpe, como el asterisco de Nike.
@@ -83,9 +86,8 @@
   --t-ui: 0.9375rem;
   --t-small: 0.8125rem;
   /* Origen: la voz de Mario, contenida y a la medida de una pantalla */
-  --t-voz: clamp(1.5rem, min(2vw, 4svh), 2.25rem);
   --t-manifiesto: clamp(1.125rem, min(1.55vw, 3.1svh), 1.75rem);
-  --t-pregunta: calc(var(--t-manifiesto) * 1.28);
+  --t-pregunta: clamp(1.5rem, min(2.35vw, 4.7svh), 2.75rem);
 
   --s-section: clamp(5rem, 3.5rem + 6vw, 10rem);
   --s-block: clamp(2.5rem, 1.75rem + 3vw, 5rem);
@@ -548,27 +550,29 @@
   flex-direction: column;
   min-height: 0;
 }
-/* el golpe: los territorios en condensada, uno por línea, al ancho de la
-   columna («ESPIRITUALIDAD», la palabra más larga, la llena) */
+/* las etiquetas: los territorios, pequeños, en versal espaciada */
+.origenTags {
+  margin: 0;
+  font-size: var(--t-small);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.origenTags span {
+  display: block;
+}
+/* el golpe: el titular en condensada, al ancho de su columna (la palabra
+   más larga, «OBSESIONADO» o «EXPRESARLAS», la llena) */
 .origenSide {
   container-type: inline-size;
 }
-.origenTerritories {
-  font-size: 3.1vw;
-  font-size: 14.6cqi;
-  line-height: 0.9;
-}
-.origenTerritories span {
-  display: block;
-}
 .origenHead {
-  margin: 1.6rem 0 0;
-  max-width: 12em;
-  font-size: var(--t-voz);
-  font-weight: 500;
-  line-height: 1.06;
-  letter-spacing: -0.012em;
-  text-wrap: balance;
+  margin-top: 1.25rem;
+  font-size: 3.9vw;
+  font-size: 18cqi;
+  text-wrap: pretty;
 }
 .manifestoText {
   grid-column: 4 / span 5;
@@ -585,14 +589,12 @@
 .scrubText + .scrubText {
   margin-top: 0.7em;
 }
-/* la pregunta cierra la lectura, en itálica y algo mayor */
+/* el cierre: la pregunta, en condensada, se enciende la última. Es el
+   segundo golpe de la pantalla, unas 0,6 veces el titular. */
 .question {
-  max-width: 17em;
-  margin: calc(var(--t-manifiesto) * 1.3) 0 0;
-  font-style: italic;
+  max-width: 16em;
+  margin-top: calc(var(--t-manifiesto) * 1.4);
   font-size: var(--t-pregunta);
-  font-weight: 500;
-  line-height: 1.12;
   text-wrap: balance;
 }
 .manifestoPhoto {
@@ -1475,8 +1477,8 @@
   /* origen: en el flujo, sin fijar ni barra. La etiqueta, el titular, la
      foto a sangre, el manifiesto y la pregunta. */
   .origen {
-    --t-voz: 1.75rem;
     --t-manifiesto: 1.375rem;
+    --t-pregunta: 2rem;
   }
   .origenFrame {
     min-height: 0;

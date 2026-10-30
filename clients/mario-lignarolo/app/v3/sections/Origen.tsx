@@ -5,12 +5,14 @@ import s from "../v3.module.css";
 
 /**
  * 02 · TERRITORIO / ORIGEN, en blanco, en una sola pantalla. El código de
- * Nike About: un golpe en condensada (los cuatro territorios, palabras
- * sueltas) y la voz de Mario en serif (titular, manifiesto y pregunta). En
- * escritorio la escena se fija ([data-pin]) y el scroll enciende el
- * manifiesto palabra a palabra, hasta la pregunta. A la izquierda, los
- * territorios y el titular; en el centro, el manifiesto; a la derecha, la
- * foto a toda altura. En móvil, todo en el flujo.
+ * Nike About: el golpe en condensada es lo que el usuario debe llevarse (el
+ * titular, «Estoy obsesionado…») y, menor, el cierre (la pregunta); los
+ * territorios, etiquetas pequeñas; la lectura de Mario, en serif. En
+ * escritorio la escena se
+ * fija ([data-pin]) y el scroll enciende el manifiesto palabra a palabra,
+ * hasta la pregunta. A la izquierda, las etiquetas y el titular; en el
+ * centro, el manifiesto; a la derecha, la foto a toda altura. En móvil,
+ * todo en el flujo.
  */
 export default function Origen() {
   const { origen } = v3;
@@ -18,12 +20,12 @@ export default function Origen() {
     <section className={s.origen} id="origen" aria-labelledby="origen-h" data-pin="2.8">
       <div className={`${s.wrap} ${s.grid} ${s.origenFrame}`} data-scrub="0.68">
         <div className={s.origenSide}>
-          <p className={`${s.statement} ${s.origenTerritories}`} data-reveal="up">
+          <p className={s.origenTags} data-reveal="up">
             {origen.label.split(" · ").map((t) => (
               <span key={t}>{t}</span>
             ))}
           </p>
-          <h2 className={s.origenHead} id="origen-h" data-reveal="up">
+          <h2 className={`${s.statement} ${s.origenHead}`} id="origen-h" data-reveal="up">
             {origen.headline}
           </h2>
         </div>
@@ -34,7 +36,7 @@ export default function Origen() {
               <Words text={p} />
             </p>
           ))}
-          <p className={s.question}>
+          <p className={`${s.statement} ${s.question}`}>
             <Words text={origen.question} />
           </p>
         </div>
