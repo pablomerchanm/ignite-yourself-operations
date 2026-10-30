@@ -25,17 +25,18 @@
              body     párrafos                          17 px
              small    metadatos                         13 px
            Origen va en otra clave: tamaños contenidos y todo en una
-           pantalla. A 1440 × 720: titular en condensada ≈ 56 px (al ancho
-           de su columna), pregunta en condensada ≈ 34 px, manifiesto
-           ≈ 22 px (lectura guiada) y etiquetas, 13 px en versal
-           espaciada. Se miden por el ancho y por el alto de pantalla.
+           pantalla. A 1440 × 720: titular en condensada ≈ 30 px, pregunta
+           en condensada ≈ 25 px, manifiesto ≈ 22 px (lectura guiada) y
+           etiquetas, 13 px en versal espaciada. Se miden por el ancho y
+           por el alto de pantalla.
 
    Código  El equilibrio entre condensada y serif, medido en Nike About
            («WE SERVE ATHLETES*» a 162 px y, debajo, «*If you have a body,
            you are an athlete» en Palatino itálica a 26 px):
              1. Un golpe por pantalla: una pieza en condensada versal, la
-                más grande de su pantalla. Como mucho, un segundo golpe
-                menor (≈ 0,6 veces) para el cierre, como la pregunta.
+                más importante de su pantalla. Destaca por el peso, no por
+                el tamaño: en Origen, apenas mayor que la lectura. Como
+                mucho, un segundo golpe para el cierre, como la pregunta.
              2. El golpe es lo que el usuario debe llevarse (el titular, el
                 statement), no lo que más se repite. El tamaño lo decide la
                 importancia: las etiquetas y el contexto van pequeños,
@@ -87,7 +88,8 @@
   --t-small: 0.8125rem;
   /* Origen: la voz de Mario, contenida y a la medida de una pantalla */
   --t-manifiesto: clamp(1.125rem, min(1.55vw, 3.1svh), 1.75rem);
-  --t-pregunta: clamp(1.5rem, min(2.35vw, 4.7svh), 2.75rem);
+  --t-golpe: clamp(1.5rem, min(2.1vw, 4.2svh), 2.4rem);
+  --t-pregunta: calc(var(--t-manifiesto) * 1.1);
 
   --s-section: clamp(5rem, 3.5rem + 6vw, 10rem);
   --s-block: clamp(2.5rem, 1.75rem + 3vw, 5rem);
@@ -563,15 +565,12 @@
 .origenTags span {
   display: block;
 }
-/* el golpe: el titular en condensada, al ancho de su columna (la palabra
-   más larga, «OBSESIONADO» o «EXPRESARLAS», la llena) */
-.origenSide {
-  container-type: inline-size;
-}
+/* el golpe: el titular en condensada, en un bloque compacto. Destaca por
+   el peso, no por el tamaño. */
 .origenHead {
-  margin-top: 1.25rem;
-  font-size: 3.9vw;
-  font-size: 18cqi;
+  max-width: 9em;
+  margin-top: 1.5rem;
+  font-size: var(--t-golpe);
   text-wrap: pretty;
 }
 .manifestoText {
@@ -589,10 +588,10 @@
 .scrubText + .scrubText {
   margin-top: 0.7em;
 }
-/* el cierre: la pregunta, en condensada, se enciende la última. Es el
-   segundo golpe de la pantalla, unas 0,6 veces el titular. */
+/* el cierre: la pregunta, en condensada y algo mayor que la lectura; se
+   enciende la última */
 .question {
-  max-width: 16em;
+  max-width: 24em;
   margin-top: calc(var(--t-manifiesto) * 1.4);
   font-size: var(--t-pregunta);
   text-wrap: balance;
@@ -1477,8 +1476,8 @@
   /* origen: en el flujo, sin fijar ni barra. La etiqueta, el titular, la
      foto a sangre, el manifiesto y la pregunta. */
   .origen {
+    --t-golpe: 2rem;
     --t-manifiesto: 1.375rem;
-    --t-pregunta: 2rem;
   }
   .origenFrame {
     min-height: 0;

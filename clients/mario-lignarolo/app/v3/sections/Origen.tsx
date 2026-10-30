@@ -6,11 +6,10 @@ import s from "../v3.module.css";
 /**
  * 02 · TERRITORIO / ORIGEN, en blanco, en una sola pantalla. El código de
  * Nike About: el golpe en condensada es lo que el usuario debe llevarse (el
- * titular, «Estoy obsesionado…») y, menor, el cierre (la pregunta); los
- * territorios, etiquetas pequeñas; la lectura de Mario, en serif. En
- * escritorio la escena se
- * fija ([data-pin]) y el scroll enciende el manifiesto palabra a palabra,
- * hasta la pregunta. A la izquierda, las etiquetas y el titular; en el
+ * titular, «Estoy obsesionado…») y el cierre (la pregunta), en un tamaño
+ * contenido; los territorios, etiquetas pequeñas; la lectura de Mario, en
+ * serif. En escritorio la escena se fija ([data-pin]) y el scroll enciende
+ * el manifiesto palabra a palabra, hasta la pregunta. A la izquierda, las etiquetas y el titular; en el
  * centro, el manifiesto; a la derecha, la foto a toda altura. En móvil,
  * todo en el flujo.
  */
