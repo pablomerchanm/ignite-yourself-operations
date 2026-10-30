@@ -17,9 +17,9 @@ export default function Origen() {
   const { origen } = v3;
   return (
     <section className={s.origen} id="origen" aria-labelledby="origen-h" data-pin="2.8">
-      <div className={`${s.wrap} ${s.grid} ${s.origenFrame}`} data-scrub="0.68">
+      <div className={`${s.wrap} ${s.grid} ${s.screen} ${s.origenFrame}`} data-scrub="0.68">
         <div className={s.origenSide}>
-          <p className={s.origenTags} data-reveal="up">
+          <p className={`${s.tag} ${s.origenTags}`} data-reveal="up">
             {origen.label.split(" · ").map((t) => (
               <span key={t}>{t}</span>
             ))}

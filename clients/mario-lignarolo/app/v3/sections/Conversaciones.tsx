@@ -9,10 +9,10 @@ import s from "../v3.module.css";
 const thumb = (id: string) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
 
 /**
- * 06 B · CONVERSACIONES. Biblioteca de piezas largas sobre casi negro:
- * una principal en grande, con su control de reproducción, y el listado
- * al lado. El video se carga solo al pulsar (sin cookies ni marca de la
- * plataforma hasta entonces).
+ * 06 B · CONVERSACIONES, en una pantalla. Biblioteca de piezas largas
+ * sobre casi negro: una principal, con su control de reproducción, y el
+ * listado al lado, con los títulos en serif. El video se carga solo al
+ * pulsar (sin cookies ni marca de la plataforma hasta entonces).
  */
 export default function Conversaciones({ label, items, all }: { label: string; items: Talk[]; all: { label: string; href: string } }) {
   const [active, setActive] = useState(0);
@@ -26,9 +26,9 @@ export default function Conversaciones({ label, items, all }: { label: string; i
   };
 
   return (
-    <div className={`${s.dark} ${s.talks}`}>
-      <div className={`${s.wrap} ${s.talksHead}`}>
-        <p className={s.title}>{label}</p>
+    <div className={`${s.dark} ${s.screen} ${s.talks}`}>
+      <div className={`${s.wrap} ${s.blockHead}`}>
+        <p className={s.tag}>{label}</p>
         <a href={all.href} className={s.link} {...ext}>
           {all.label} <Arrow />
         </a>
@@ -58,10 +58,7 @@ export default function Conversaciones({ label, items, all }: { label: string; i
             )}
           </div>
           <div className={s.talkCaption}>
-            <p className={s.small}>
-              {String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
-              {cur.duration ? ` · ${cur.duration}` : ""}
-            </p>
+            {cur.duration && <p className={s.small}>{cur.duration}</p>}
             <h3 className={s.talkTitle}>{cur.title}</h3>
           </div>
         </div>
@@ -70,7 +67,6 @@ export default function Conversaciones({ label, items, all }: { label: string; i
           {items.map((t, i) => (
             <li key={t.youtubeId}>
               <button type="button" className={s.talkRow} aria-current={i === active ? "true" : undefined} onClick={() => select(i)}>
-                <span className={s.talkRowIndex}>{String(i + 1).padStart(2, "0")}</span>
                 <span className={s.talkRowTitle}>{t.title}</span>
                 {t.duration && <span className={s.talkRowMeta}>{t.duration}</span>}
               </button>

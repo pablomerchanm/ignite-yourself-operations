@@ -1,56 +1,32 @@
-"use client";
-
 import Image from "next/image";
-import { useRef } from "react";
 import type { Reel } from "@/data/v3";
 import { Arrow, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 06 A · REELS. Carrusel horizontal de piezas verticales, grandes, con
- * desplazamiento nativo (scroll-snap) y dos controles. Cada pieza enlaza
- * a su publicación; la portada y el texto son los de Mario.
+ * 06 A · REELS, en una pantalla. En escritorio ancho, los ocho en una fila,
+ * sin controles: se ven todos. En pantallas medianas y en móvil, una tira
+ * con desplazamiento nativo (scroll-snap). Cada pieza enlaza a su
+ * publicación; la portada y el texto son los de Mario.
  */
-export default function Reels({ label, items, all }: { label: string; items: Reel[]; all: { label: string; href: string } }) {
-  const track = useRef<HTMLUListElement>(null);
-
-  const go = (dir: 1 | -1) => {
-    const el = track.current;
-    if (!el) return;
-    const card = el.querySelector<HTMLElement>("li");
-    const step = card ? card.getBoundingClientRect().width * 2 + 16 : el.clientWidth * 0.8;
-    el.scrollBy({ left: dir * step, behavior: "smooth" });
-  };
-
+export default function Reels({ title, label, items, all }: { title: string; label: string; items: Reel[]; all: { label: string; href: string } }) {
   return (
-    <div className={s.reels}>
-      <div className={`${s.wrap} ${s.reelsHead}`}>
-        <p className={s.title}>{label}</p>
-        <div className={s.reelsTools}>
-          <a href={all.href} className={s.link} {...ext}>
-            {all.label} <Arrow />
-          </a>
-          <span className={s.ctls}>
-            <button type="button" className={s.ctl} onClick={() => go(-1)} aria-label="Anterior">
-              <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3">
-                <path d="M15 8H2M7 3 2 8l5 5" />
-              </svg>
-            </button>
-            <button type="button" className={s.ctl} onClick={() => go(1)} aria-label="Siguiente">
-              <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.3">
-                <path d="M1 8h13M9 3l5 5-5 5" />
-              </svg>
-            </button>
-          </span>
-        </div>
+    <div className={`${s.screen} ${s.reels}`}>
+      <div className={`${s.wrap} ${s.blockHead}`}>
+        <h2 className={s.tag} id="persp-h" data-reveal="up">
+          {title} · {label}
+        </h2>
+        <a href={all.href} className={s.link} {...ext}>
+          {all.label} <Arrow />
+        </a>
       </div>
 
-      <ul className={s.reelTrack} ref={track}>
+      <ul className={s.reelTrack}>
         {items.map((r, i) => (
           <li key={r.code} className={s.reel}>
             <a href={`https://www.instagram.com/reel/${r.code}/`} {...ext} className={s.reelLink}>
               <span className={`${s.photo} ${s.reelCover}`}>
-                <Image src={r.src} alt="" fill sizes="(min-width: 880px) 22vw, 70vw" priority={i < 2} />
+                <Image src={r.src} alt="" fill sizes="(min-width: 1201px) 12vw, (min-width: 881px) 22vw, 62vw" priority={i < 2} />
               </span>
               <span className={s.reelTitle}>{r.title}</span>
               <span className={s.small}>

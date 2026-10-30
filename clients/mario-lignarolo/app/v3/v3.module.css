@@ -8,27 +8,22 @@
            Sin acentos de color: el color lo ponen las fotos.
 
    Tipos   Tres voces, cada una con un solo trabajo:
-             display  Archivo condensada → statements en caja alta
-             sans     Geist              → títulos de sección, interfaz, cuerpo
-             serif    Cormorant Garamond → la voz de Mario (titulares, itálica)
+             display  Archivo condensada → el golpe, en caja alta
+             serif    Cormorant Garamond → la voz de Mario: lectura,
+                                           titulares de piezas, itálica
+             sans     Geist              → interfaz y datos
 
-   Escala  Nueve pasos, razón ≈ 1,3. Cada paso tiene un uso y nada se sale:
-             hero     statement de portada: --s, se calcula desde el alto
-                      de pantalla (≈ 98 px a 1440 × 900; ver 01 · Hero)
-             poster   frase corta de un banner     ≈ 99 px (en vw,
-                      como la foto: ver Banners)
-             display  titulares de los mundos         ≈ 80 px
-             serif-l  titulares en voz de Mario       ≈ 56 px
-             h2       lectura guiada · itálica        ≈ 44 px
-             lead     entradas, títulos de video      ≈ 28 px
-             h3       títulos de sección y tarjeta    ≈ 23 px
-             body     párrafos                          17 px
-             small    metadatos                         13 px
-           Origen va en otra clave: tamaños contenidos y todo en una
-           pantalla. A 1440 × 720: titular en condensada ≈ 30 px, pregunta
-           en condensada ≈ 25 px, manifiesto ≈ 22 px (lectura guiada) y
-           etiquetas, 13 px en versal espaciada. Se miden por el ancho y
-           por el alto de pantalla.
+   Escala  Contenida, para que cada sección quepa en una pantalla. Las
+           medidas van por el ancho y por el alto de pantalla; a 1440 × 720:
+             hero        statement de portada (--s)         ≈ 45 px
+             banner      frase de un banner (en vw, como
+                         la foto: ver Banners)            ≈ 63 / 43 px
+             golpe       el titular de cada pantalla        ≈ 30 px
+             manifiesto  la lectura guiada de Origen        ≈ 22 px
+             lectura     el copy de Mario en serif          ≈ 19 px
+             etiqueta    nombre de sección, en versal
+                         espaciada                            13 px
+             dato        fechas, duraciones, interfaz       12–14 px
 
    Código  El equilibrio entre condensada y serif, medido en Nike About
            («WE SERVE ATHLETES*» a 162 px y, debajo, «*If you have a body,
@@ -47,20 +42,20 @@
                 datos.
              5. La voz va pegada al golpe, como el asterisco de Nike.
 
-   Retícula 12 columnas. Toda sección abre igual: título → titular → contenido.
-           El copy vive siempre en la columna de lectura (7–11): titular
-           pesado a la izquierda, lectura ligera desplazada a la derecha.
-           La simetría se reserva para los silencios (la pregunta, la
-           suscripción).
+   Retícula 12 columnas y una pantalla por sección (como mucho): la
+           etiqueta arriba, el golpe debajo y el contenido repartido en
+           zonas de columnas, con una columna de aire entre ellas. La foto
+           ocupa su zona a toda altura y a sangre. En móvil, todo en el
+           flujo, en una columna.
 
-   Ritmo   section (entre secciones) · block (entre bloques) · title (del
-           título al titular) · stack (entre párrafos).
+   Ritmo   pad-screen (dentro de una pantalla) · section y block (en móvil
+           y entre bloques) · title (de la etiqueta al golpe).
 
-   Movimiento  Scrollytelling en tres momentos (Scrolly.tsx): el manifiesto
-           de Origen, los conceptos de Psicocibernética (escena fija) y el
-           titular de Hipertrofia. Entre secciones, dos banners con una
-           frase de Mario (foto con paralaje, frase que sube de su máscara).
-           Sin JS o con movimiento reducido, todo visible y quieto.
+   Movimiento  Scrollytelling en dos escenas fijas (Scrolly.tsx): el
+           manifiesto de Origen y los conceptos de Psicocibernética. Entre
+           secciones, dos banners con una frase de Mario (foto con paralaje,
+           frase que sube de su máscara). Sin JS o con movimiento reducido,
+           todo visible y quieto.
    ════════════════════════════════════════════════════════════ */
 
 .page {
@@ -78,23 +73,19 @@
   --rule-dark: rgba(242, 240, 235, 0.16);
   --rule-dark-strong: rgba(242, 240, 235, 0.42);
 
-  --t-display: clamp(2.75rem, 1.1rem + 4.4vw, 5.75rem);
-  --t-serif-l: clamp(2.125rem, 1.25rem + 2.4vw, 3.75rem);
-  --t-h2: clamp(1.625rem, 1.05rem + 1.9vw, 2.75rem);
-  --t-lead: clamp(1.3125rem, 1.1rem + 0.75vw, 1.75rem);
-  --t-h3: clamp(1.1875rem, 1.05rem + 0.45vw, 1.4375rem);
   --t-body: 1.0625rem;
-  --t-ui: 0.9375rem;
   --t-small: 0.8125rem;
-  /* Origen: la voz de Mario, contenida y a la medida de una pantalla */
-  --t-manifiesto: clamp(1.125rem, min(1.55vw, 3.1svh), 1.75rem);
+  /* el sistema de Origen, para toda la página: medidas contenidas, por el
+     ancho y por el alto de pantalla, para que cada sección quepa en una */
   --t-golpe: clamp(1.5rem, min(2.1vw, 4.2svh), 2.4rem);
+  --t-manifiesto: clamp(1.125rem, min(1.55vw, 3.1svh), 1.75rem);
+  --t-lectura: clamp(1.0625rem, min(1.35vw, 2.7svh), 1.375rem);
   --t-pregunta: calc(var(--t-manifiesto) * 1.1);
+  --pad-screen: clamp(2.5rem, 8svh, 6rem);
 
   --s-section: clamp(5rem, 3.5rem + 6vw, 10rem);
   --s-block: clamp(2.5rem, 1.75rem + 3vw, 5rem);
   --s-title: clamp(1.25rem, 1rem + 1vw, 2rem);
-  --s-stack: 1.1rem;
   --gutter: clamp(1.25rem, 0.5rem + 3.2vw, 4.5rem);
   --gap: clamp(1rem, 0.5rem + 1.5vw, 2rem);
 
@@ -146,42 +137,34 @@
 .grid > * {
   min-width: 0;
 }
-.section {
-  padding-block: var(--s-section);
+/* una pantalla: cada sección mide como mucho el alto de la pantalla */
+.screen {
+  min-height: 100svh;
+  padding-block: var(--pad-screen);
 }
-.sectionTop {
-  padding-top: var(--s-section);
-}
-.displayHead {
-  margin-top: var(--s-title);
-}
-.sectionTop > .displayHead:first-child {
-  margin-top: 0;
-}
-.afterHead {
-  margin-top: var(--s-block);
-}
-/* la columna de lectura: siempre la misma */
-.read {
-  grid-column: 7 / span 5;
-}
-.stack {
-  display: grid;
-  gap: var(--s-stack);
-  justify-items: start;
-}
-.stack .link {
-  margin-top: 0.6rem;
+/* la cabecera de un bloque: la etiqueta a la izquierda, el enlace a la derecha */
+.blockHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem 2rem;
 }
 
 /* ── Voces tipográficas ─────────────────────────────────── */
-/* título de sección */
-.title {
+/* la etiqueta: nombra la sección, pequeña, en versal espaciada */
+.tag {
   margin: 0;
-  font-size: var(--t-h3);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
+  font-family: var(--serif);
+  font-size: var(--t-small);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.dark .tag {
+  color: var(--on-dark-soft);
 }
 /* la voz alta: condensada, caja alta. El interlineado deja sitio a las tildes. */
 .statement {
@@ -194,76 +177,55 @@
   letter-spacing: -0.005em;
   text-transform: uppercase;
 }
-.displayHead {
-  font-size: var(--t-display);
-  max-width: 11em;
-  text-wrap: balance;
+/* el golpe: lo que el usuario debe llevarse de cada pantalla, en condensada
+   y a una medida contenida. Destaca por el peso, no por el tamaño. */
+.golpe {
+  font-size: var(--t-golpe);
+  text-wrap: pretty;
 }
-/* el titular grande respeta el ritmo título → titular (gana a .statement) */
-.statement.displayHead {
-  margin-top: var(--s-title);
-}
-.sectionTop > .statement.displayHead:first-child,
-.perspHead > .statement.displayHead:first-child {
-  margin-top: 0;
-}
-.displayHead .line {
+.golpe .line {
   display: block;
 }
-/* la voz de Mario */
-.serifHead {
-  margin-bottom: 0;
+/* la lectura: la voz de Mario, en serif */
+.lectura {
+  margin: 0;
+  max-width: 30em;
   font-family: var(--serif);
+  font-size: var(--t-lectura);
   font-weight: 500;
-  font-size: var(--t-serif-l);
-  line-height: 1.04;
-  letter-spacing: -0.02em;
-  max-width: 15em;
-  text-wrap: balance;
+  line-height: 1.32;
+  letter-spacing: -0.003em;
 }
+.lectura + .lectura {
+  margin-top: 0.65em;
+}
+.dark .lectura {
+  color: var(--on-dark-body);
+}
+/* el susurro: la serif en itálica */
 .quiet {
   margin: 0;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 500;
-  font-size: var(--t-h2);
-  line-height: 1.12;
-  letter-spacing: -0.01em;
+  font-size: calc(var(--t-lectura) * 1.25);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
   text-wrap: balance;
-}
-.lead {
-  margin: 0;
-  font-size: var(--t-lead);
-  font-weight: 500;
-  line-height: 1.22;
-  letter-spacing: -0.02em;
-}
-.body {
-  margin: 0;
-  font-size: var(--t-body);
-  line-height: 1.6;
-  color: var(--charcoal);
-  max-width: 36em;
 }
 .small {
   display: block;
   margin: 0;
-  font-size: var(--t-small);
+  font-size: 0.75rem;
   line-height: 1.4;
   color: var(--stone);
   font-variant-numeric: tabular-nums;
-}
-.dek {
-  display: block;
-  font-size: var(--t-ui);
-  line-height: 1.45;
-  color: var(--stone);
 }
 .link {
   display: inline-flex;
   align-items: center;
   gap: 0.45em;
-  font-size: var(--t-ui);
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.3;
 }
@@ -296,11 +258,7 @@
   background: var(--ink);
   color: var(--on-dark);
 }
-.dark .body {
-  color: var(--on-dark-body);
-}
-.dark .small,
-.dark .dek {
+.dark .small {
   color: var(--on-dark-soft);
 }
 .dark .photo {
@@ -349,7 +307,7 @@
   list-style: none;
 }
 .navList a {
-  font-size: var(--t-ui);
+  font-size: 0.875rem;
   font-weight: 450;
   opacity: 0.72;
   transition: opacity 0.2s ease;
@@ -359,15 +317,16 @@
 }
 
 /* ── 01 · Hero ──────────────────────────────────────────────
-   Una sola medida manda: --s, el cuerpo del statement, calculado desde el
-   alto de la pantalla. Arriba, la línea del logo y el menú; abajo, apoyado
-   a 40 px del borde, el territorio y el statement; entre ambos, aire.
-   La línea más larga del statement («CÓMO CAMBIAR») mide 5,97 s y el logo
-   es φ² veces menor (2,28 s): el statement habla, el logo firma.
+   Arriba, la línea del logo y el menú; abajo, apoyado a 40 px del borde,
+   el territorio (una etiqueta) y el statement; entre ambos, aire. El
+   statement es el golpe de la página, en condensada y a una medida
+   contenida: --s, por el ancho y por el alto de pantalla (≈ 45 px a
+   1440 × 720), un poco más que el golpe de las secciones. La línea más
+   larga («CÓMO CAMBIAR») mide 5,97 s. El logo firma, a su propia medida.
    El retrato ocupa el 66 % derecho, fundido en el negro por la izquierda. */
 .hero {
   --hero-pad-top: 28px;
-  --s: min(calc((100svh - 95px) / 8.22), 6.9vw);
+  --s: clamp(2rem, min(3.1vw, 6.2svh), 3.5rem);
   position: relative;
   min-height: 100svh;
   display: flex;
@@ -424,22 +383,17 @@
 }
 .heroLogo {
   display: block;
-  width: calc(var(--s) * 2.28);
+  width: clamp(8rem, 11.5vw, 10.5rem);
   height: auto;
   aspect-ratio: 2994 / 570;
   color: var(--on-dark);
 }
 .heroTerritory {
-  margin: 0;
-  font-size: var(--t-h3);
-  font-weight: 450;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: var(--on-dark);
-  opacity: 0.86;
+  color: var(--on-dark-soft);
+  white-space: nowrap;
 }
 .heroStatement {
-  margin: calc(var(--s) * 0.16) 0 0;
+  margin: 0.9rem 0 0;
   font-family: var(--display);
   font-weight: 800;
   font-stretch: 66%;
@@ -534,12 +488,7 @@
    altura y a sangre. Los tamaños se miden también por el alto de pantalla,
    para que todo quepa. */
 .origen {
-  --o-pad: clamp(2.5rem, 8svh, 6rem);
   font-family: var(--serif);
-}
-.origenFrame {
-  min-height: 100svh;
-  padding-block: var(--o-pad);
 }
 .origen[data-pinned] .origenFrame {
   position: sticky;
@@ -552,16 +501,7 @@
   flex-direction: column;
   min-height: 0;
 }
-/* las etiquetas: los territorios, pequeños, en versal espaciada */
-.origenTags {
-  margin: 0;
-  font-size: var(--t-small);
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--stone);
-}
+/* las etiquetas: los territorios, uno por línea */
 .origenTags span {
   display: block;
 }
@@ -602,83 +542,97 @@
   margin-right: calc(-1 * var(--gutter));
 }
 
-/* ── 03 · Psicocibernética (negro) ─────────────────────── */
+/* ── 03 · Psicocibernética (negro) ─────────────────────────
+   Una pantalla, el reflejo de Origen: el retrato a la izquierda (1–4), a
+   toda altura y a sangre; la etiqueta, el golpe y el copy en el centro
+   (6–8); los cuatro conceptos a la derecha (10–12), que se encienden de uno
+   en uno con la escena fija y, al final, el statement y el enlace. */
 .psico {
   background: var(--black-2);
 }
-.psicoHead {
-  max-width: 9.5em;
-}
-.stage {
-  align-items: center;
-  row-gap: var(--s-block);
-  padding-block: var(--s-block) var(--s-section);
-}
-.pin[data-pinned] .stage {
+.psico[data-pinned] .psicoFrame {
   position: sticky;
   top: 0;
   height: 100svh;
-  padding-block: 0;
-  align-content: center;
 }
-.stagePhoto {
-  grid-column: 1 / span 5;
+.psicoPhoto {
+  grid-column: 1 / span 4;
+  min-height: 0;
   margin-left: calc(-1 * var(--gutter));
-  aspect-ratio: 3 / 4;
-  max-height: 80svh;
 }
-.stagePhoto img {
+.psicoPhoto img {
   filter: grayscale(1) contrast(1.1) brightness(0.92);
 }
-.stageCopy {
-  grid-column: 7 / -1;
-  display: grid;
-  gap: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
-  justify-items: start;
+.psicoIntro {
+  grid-column: 6 / span 3;
+}
+.psicoHead {
+  margin-top: 1.5rem;
+}
+.psicoCopy {
+  margin-top: 1.5rem;
+}
+.psicoStage {
+  grid-column: 10 / -1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 }
 .concepts {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: var(--serif);
+  font-size: calc(var(--t-lectura) * 1.55);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
 }
 .concepts li {
-  font-size: min(var(--t-display), 8.4svh);
   transition: opacity 0.45s ease;
 }
-:global(html.v3-motion) .pin[data-pinned] [data-step] {
+:global(html.v3-motion) .psico[data-pinned] [data-step] {
   opacity: 0.16;
 }
-:global(html.v3-motion) .pin[data-pinned] [data-after] {
+:global(html.v3-motion) .psico[data-pinned] [data-after] {
   opacity: 0;
 }
 .stageAfter {
   display: grid;
   gap: 1rem;
   justify-items: start;
+  margin-top: auto;
 }
 .stageAfter .quiet {
-  max-width: 17em;
+  max-width: 15em;
 }
 
-/* ── 04 · Hipertrofia del Ser (negro) ────────────────────
-   Una publicación con identidad propia. Símbolo: anillos de crecimiento,
-   tangentes en la base, cada uno φ veces el anterior (HdsSymbol.tsx).
-   Cabecera: el nombre en dos voces, HIPERTROFIA en versal espaciada (el
-   cuerpo, la estructura) y «del Ser» en itálica (lo que crece dentro). */
-
-/* la cabecera, donde va el título de sección: símbolo a la izquierda y el
-   nombre en dos líneas; el símbolo mide lo que el bloque de texto */
+/* ── 04 · Hipertrofia del Ser (negro) ──────────────────────
+   Una pantalla, una publicación con identidad propia. Arriba, en tres
+   columnas: la cabecera y el golpe (1–4), el copy (6–8) y la suscripción
+   (10–12). Abajo, las seis entradas en una fila, como un índice.
+   Símbolo: anillos de crecimiento, tangentes en la base, cada uno φ veces
+   el anterior (HdsSymbol.tsx). Cabecera: el nombre en dos voces,
+   HIPERTROFIA en versal espaciada y «del Ser» en itálica. */
+.hdsFrame {
+  grid-template-rows: auto 1fr;
+  row-gap: var(--s-block);
+}
+.hdsLead {
+  grid-column: 1 / span 4;
+}
+/* la cabecera: el símbolo mide lo que el bloque del nombre */
 .hdsMasthead {
   display: flex;
   align-items: center;
-  gap: 0.42em;
-  font-size: clamp(2rem, 1.2rem + 2.2vw, 3.5rem);
+  gap: 0.5em;
+  font-size: 1.375rem;
 }
 .hdsSymbol {
   display: block;
   flex: none;
-  width: 1.62em;
-  height: 1.62em;
+  width: 1.9em;
+  height: 1.9em;
   overflow: visible;
   color: var(--on-dark);
 }
@@ -707,27 +661,99 @@
   margin-top: 0.14em;
   font-size: 0.62em;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.01em;
 }
-.hdsMasthead + .displayHead {
-  margin-top: var(--s-block);
+.hdsHead {
+  margin-top: 1.75rem;
 }
-.cards {
+.hdsIntro {
+  grid-column: 6 / span 3;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--s-block) var(--gap);
-  margin: var(--s-block) 0 0;
+  align-content: start;
+  justify-items: start;
+  gap: 1.25rem;
+}
+.hdsIntro .lectura + .lectura {
+  margin-top: -0.6rem;
+}
+/* suscripción: el gesto del widget de Substack, en una línea */
+.subscribe {
+  grid-column: 10 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 0.9rem;
+}
+.subForm {
+  display: flex;
+  width: 100%;
+}
+.subForm input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  height: 2.5rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--rule-dark-strong);
+  border-right: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--on-dark);
+  font: inherit;
+  font-size: 0.875rem;
+  outline: none;
+}
+.subForm input::placeholder {
+  color: var(--on-dark-soft);
+}
+.subForm input:focus {
+  border-color: var(--on-dark);
+}
+.subForm button {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid var(--on-dark);
+  border-radius: 0;
+  background: var(--on-dark);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.subForm button:hover {
+  background: #fff;
+}
+.subLegal {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: var(--on-dark-soft);
+}
+.subLegal a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+/* las entradas: seis en una fila, al pie de la pantalla */
+.cards {
+  grid-column: 1 / -1;
+  align-self: end;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--gap);
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 .cardLink {
   display: grid;
-  gap: 0.45rem;
+  align-content: start;
+  gap: 0.4rem;
 }
 .cardPhoto {
-  aspect-ratio: 16 / 9;
-  margin-bottom: 0.8rem;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 0.45rem;
 }
 .cardPhoto img {
   transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
@@ -738,10 +764,10 @@
 .cardTitle {
   margin: 0;
   font-family: var(--serif);
-  font-size: var(--t-lead);
+  font-size: calc(var(--t-lectura) * 0.95);
   font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.015em;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
   text-wrap: balance;
 }
 .cardLink:hover .cardTitle {
@@ -749,114 +775,29 @@
   text-underline-offset: 0.15em;
   text-decoration-thickness: 1px;
 }
-/* suscripción: pequeña, centrada, en silencio */
-.subscribe {
-  display: grid;
-  justify-items: center;
-  gap: 0.5rem;
-  max-width: 28rem;
-  margin: var(--s-section) auto 0;
-  text-align: center;
-}
-.subHead {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: var(--t-lead);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-}
-.subPub {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  text-align: left;
-}
-.subLogo {
-  display: block;
-  flex: none;
-  width: 36px;
-  height: 36px;
-  color: var(--on-dark);
-}
-.subName {
-  display: block;
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: var(--t-body);
-  line-height: 1.3;
-}
-.subForm {
-  display: flex;
-  width: 100%;
-  max-width: 25rem;
-  margin-top: 1rem;
-}
-.subForm input {
-  flex: 1;
-  min-width: 0;
-  height: 2.75rem;
-  padding: 0 0.9rem;
-  border: 1px solid var(--rule-dark-strong);
-  border-right: 0;
-  border-radius: 0;
-  background: transparent;
-  color: var(--on-dark);
-  font: inherit;
-  font-size: var(--t-ui);
-  outline: none;
-}
-.subForm input::placeholder {
-  color: var(--on-dark-soft);
-}
-.subForm input:focus {
-  border-color: var(--on-dark);
-}
-.subForm button {
-  height: 2.75rem;
-  padding: 0 1.1rem;
-  border: 1px solid var(--on-dark);
-  border-radius: 0;
-  background: var(--on-dark);
-  color: var(--ink);
-  font: inherit;
-  font-size: var(--t-ui);
-  font-weight: 500;
-  cursor: pointer;
-}
-.subForm button:hover {
-  background: #fff;
-}
-.subLegal {
-  margin: 0.25rem 0 0;
-  max-width: 25rem;
-  font-size: 0.6875rem;
-  line-height: 1.5;
-  color: var(--on-dark-soft);
-}
-.subLegal a {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
 
 /* ── 05 · Emprendimiento / Lignarolo (gris de estudio) ─────
-   La sección toma la luz de su propia foto. El retrato de campaña ocupa el
-   86 % derecho, a sangre, y se funde por la izquierda y por arriba con un
-   degradado medido sobre el fondo de la foto (gris neutro, de 199 arriba a
-   230 en el suelo, con el horizonte al 80 %). El texto vive en el vacío del
-   estudio, a la izquierda de la figura (que empieza en el 31 % de la foto). */
+   Una pantalla, con la luz de su propia foto. El retrato de campaña ocupa
+   el 86 % derecho (o lo que deje el alto de pantalla), a sangre, y se funde
+   por la izquierda y por arriba con un degradado medido sobre el fondo de
+   la foto (gris neutro, de 199 arriba a 230 en el suelo, con el horizonte
+   al 80 %). El texto vive en el vacío del estudio, a la izquierda de la
+   figura (que empieza en el 31 % de la foto): la etiqueta, el golpe, el
+   copy, los territorios como etiqueta, el cierre y, al pie, Lignarolo. */
 .emp {
-  --photo-w: 86vw;
+  --photo-w: min(86vw, 172svh);
   --photo-h: calc(var(--photo-w) * 0.5625);
   --studio-top: rgb(199, 199, 199);
   --studio-floor: rgb(229, 229, 228);
   background: var(--studio-floor);
 }
+.emp .tag {
+  color: var(--charcoal);
+}
 .empScene {
   position: relative;
-  min-height: var(--photo-h);
-  padding-block: var(--s-section) var(--s-block);
+  display: flex;
+  min-height: max(100svh, var(--photo-h));
   background:
     linear-gradient(
         to bottom,
@@ -902,149 +843,65 @@
 .empText {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   max-width: calc(100vw - var(--photo-w) + var(--photo-w) * 0.28);
+  padding-block: var(--pad-screen);
 }
 .empHead {
   max-width: 11em;
-  margin-top: var(--s-title);
+  margin-top: 1.5rem;
 }
 .empCopy {
-  max-width: 26rem;
-  margin-top: var(--s-block);
-}
-/* el silencio: los cinco territorios, centrados, se encienden uno a uno */
-.empQuiet {
-  display: grid;
-  justify-items: center;
-  gap: 1.25rem;
-  padding-block: var(--s-section) var(--s-block);
-  text-align: center;
+  margin-top: 1.5rem;
 }
 .empFields {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: var(--t-h2);
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  text-wrap: balance;
-}
-.empQuiet .body {
   max-width: 30em;
+  margin-top: 1.5rem;
 }
-/* Lignarolo: la firma y tres detalles, en el orden de la frase */
+.empClose {
+  margin-top: 0.6rem;
+}
+/* Lignarolo: la firma de la casa, su frase y el enlace, al pie */
 .lg {
-  align-items: end;
-  row-gap: var(--s-block);
-  padding-block: var(--s-block) var(--s-section);
-}
-.lgText {
-  grid-column: 1 / span 4;
   display: grid;
-  gap: 1.1rem;
   justify-items: start;
-  padding-bottom: 0.25rem;
+  gap: 0.7rem;
+  margin-top: auto;
+  padding-top: var(--s-block);
 }
 .lgMark {
-  margin: 0 0 0.4rem;
+  margin: 0;
   font-family: var(--serif);
-  font-size: var(--t-h2);
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-.lgText .lead {
-  max-width: 17em;
-}
-.lgDetails {
-  grid-column: 6 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--gap);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.lgDetail {
-  aspect-ratio: 4 / 5;
-  background: #d9d8d6;
-}
-.lgDetail img {
-  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
-}
-.lgDetails li:hover .lgDetail img {
-  transform: scale(1.03);
-}
 
-/* ── 06 · Perspectivas ──────────────────────────────────── */
-.perspHead {
-  padding-top: var(--s-section);
-}
+/* ── 06 · Perspectivas ──────────────────────────────────────
+   Dos pantallas. A) Reels: la etiqueta y el enlace arriba; abajo, los ocho
+   en una fila, sin controles (en pantallas medianas y en móvil, una tira
+   con desplazamiento nativo). B) Conversaciones, sobre negro: la principal
+   (1–7) y el listado (9–12), con los títulos en serif. */
 .reels {
-  padding-block: var(--s-block) var(--s-section);
-}
-.reelsHead {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1rem 2rem;
-  padding-bottom: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--s-block);
 }
-.reelsTools {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem 2rem;
-}
-.reelsHead .link,
-.talksHead .link {
+.blockHead .link {
   white-space: nowrap;
 }
-.ctls {
-  display: inline-flex;
-}
-.ctl {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0;
-  border: 1px solid var(--rule-strong);
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.ctl + .ctl {
-  margin-left: -1px;
-}
-.ctl svg {
-  width: 0.85rem;
-  height: 0.85rem;
-}
-.ctl:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
 .reelTrack {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: var(--gap);
   margin: 0;
   padding: 0 var(--gutter);
   list-style: none;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: var(--gutter);
-  scrollbar-width: none;
-}
-.reelTrack::-webkit-scrollbar {
-  display: none;
-}
-.reel {
-  flex: 0 0 clamp(200px, 20vw, 290px);
-  scroll-snap-align: start;
 }
 .reelLink {
   display: block;
@@ -1061,12 +918,12 @@
 }
 .reelTitle {
   display: block;
-  margin: 0.9rem 0 0.35rem;
+  margin: 0.75rem 0 0.3rem;
   font-family: var(--serif);
   font-weight: 600;
-  font-size: var(--t-h3);
+  font-size: calc(var(--t-lectura) * 0.85);
   line-height: 1.15;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
   text-wrap: pretty;
 }
 .reelLink:hover .reelTitle {
@@ -1074,27 +931,40 @@
   text-underline-offset: 0.12em;
   text-decoration-thickness: 1px;
 }
+@media (max-width: 1200px) {
+  .reelTrack {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+  .reelTrack::-webkit-scrollbar {
+    display: none;
+  }
+  .reel {
+    flex: 0 0 clamp(170px, 21vw, 230px);
+    scroll-snap-align: start;
+  }
+}
 /* conversaciones */
 .talks {
-  padding-block: var(--s-section);
-}
-.talksHead {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1rem 2rem;
-  padding-bottom: 1.5rem;
+  flex-direction: column;
+  gap: var(--s-block);
 }
 .talksGrid {
   align-items: start;
   row-gap: var(--s-block);
 }
 .talkMain {
-  grid-column: 1 / span 8;
+  grid-column: 1 / span 7;
 }
+/* el video, a lo ancho de su columna salvo que el alto de pantalla no lo deje */
 .talkScreen {
   position: relative;
+  width: min(100%, calc((100svh - 2 * var(--pad-screen) - 9rem) * 16 / 9));
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #000;
@@ -1125,9 +995,9 @@
 }
 .talkPlay svg {
   box-sizing: border-box;
-  width: 2.75rem;
-  height: 2.75rem;
-  padding: 0.65rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.6rem;
   border: 1px solid rgba(242, 240, 235, 0.6);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -1136,22 +1006,23 @@
   color: var(--ink);
 }
 .talkPlay span {
-  padding-bottom: 0.8rem;
-  font-size: var(--t-small);
+  padding-bottom: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 .talkCaption {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.3rem;
   max-width: 34rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 .talkTitle {
   margin: 0;
-  font-size: var(--t-lead);
+  font-family: var(--serif);
+  font-size: calc(var(--t-lectura) * 1.2);
   font-weight: 500;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
   text-wrap: balance;
 }
 .talkList {
@@ -1163,10 +1034,10 @@
 }
 .talkRow {
   display: grid;
-  grid-template-columns: 2.25rem 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 0.75rem;
   width: 100%;
-  padding: 1rem 0 1.1rem;
+  padding: 0.9rem 0 1rem;
   border: 0;
   border-top: 1px solid var(--rule-dark);
   background: transparent;
@@ -1180,36 +1051,33 @@
 .talkRow[aria-current="true"] {
   color: var(--on-dark);
 }
-.talkRowIndex {
-  padding-top: 0.2rem;
-  font-size: var(--t-small);
-  font-variant-numeric: tabular-nums;
-}
 .talkRowTitle {
-  font-size: var(--t-body);
+  font-family: var(--serif);
+  font-size: var(--t-lectura);
   font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
+  line-height: 1.25;
 }
 .talkRowMeta {
-  font-size: var(--t-small);
+  font-size: 0.75rem;
 }
 
-/* ── 07 · Contacto (blanco) ────────────────────────────── */
-.contactGrid {
-  margin-top: var(--s-block);
+/* ── 07 · Contacto (blanco) ──────────────────────────────────
+   Una pantalla: la etiqueta y a quién va dirigido (el golpe) a la izquierda
+   (1–5); el formulario a la derecha (7–12). */
+.contact {
+  align-content: center;
   align-items: start;
   row-gap: var(--s-block);
 }
 .contactFor {
-  grid-column: 1 / span 6;
+  grid-column: 1 / span 5;
 }
 .contactLead {
-  margin: 0 0 0.5rem;
+  margin: 1.5rem 0 0.5rem;
   font-family: var(--serif);
-  font-weight: 500;
   font-style: italic;
-  font-size: var(--t-lead);
+  font-weight: 500;
+  font-size: var(--t-lectura);
   line-height: 1;
 }
 .contactPaths {
@@ -1217,18 +1085,15 @@
   padding: 0;
   list-style: none;
 }
-.contactPath {
-  font-size: var(--t-display);
-}
 .form {
   grid-column: 7 / -1;
   display: grid;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 .field {
   display: grid;
@@ -1238,19 +1103,19 @@
 .field select,
 .field textarea {
   width: 100%;
-  padding: 0.55rem 0;
+  padding: 0.5rem 0;
   border: 0;
   border-bottom: 1px solid var(--rule-strong);
   border-radius: 0;
   background: transparent;
   color: var(--ink);
   font: inherit;
-  font-size: var(--t-body);
+  font-size: 1rem;
   line-height: 1.4;
   outline: none;
 }
 .field textarea {
-  min-height: 6rem;
+  min-height: 5rem;
   resize: vertical;
 }
 .field select {
@@ -1294,8 +1159,8 @@
    sección es 16:9 y la foto 16:10, así que la foto cabe siempre entera a lo
    ancho y le sobra un 6 % arriba y abajo para el paralaje: las posiciones
    de la frase (--x, --w, --y, en % de la foto) caen sobre la figura en
-   cualquier pantalla apaisada. Por eso la frase también se mide en vw:
-   a 1440 coincide con poster, display y serif-l, y crece con la foto. */
+   cualquier pantalla apaisada. Por eso la frase también se mide en vw,
+   contenida (≈ 63 px y 43 px a 1440), y crece con la foto. */
 .banner {
   position: relative;
   height: min(100svh, 56.25vw);
@@ -1341,13 +1206,13 @@
   letter-spacing: -0.03em;
 }
 .bannerPoster {
-  font-size: 6.9vw;
+  font-size: 5.4vw;
 }
 .bannerDisplay {
-  font-size: 5.6vw;
+  font-size: 4.4vw;
 }
 .bannerSerif {
-  font-size: 3.6vw;
+  font-size: 3vw;
   line-height: 1.04;
   letter-spacing: -0.02em;
 }
@@ -1410,7 +1275,7 @@
   list-style: none;
 }
 .footerLinks a {
-  font-size: var(--t-ui);
+  font-size: 0.875rem;
   color: var(--on-dark-soft);
   transition: color 0.2s ease;
 }
@@ -1429,12 +1294,20 @@
   .navList li:not(:last-child) {
     display: none;
   }
-  .read,
+  /* en móvil, las secciones van en el flujo: una columna, sin fijar */
+  .screen {
+    min-height: 0;
+    padding-block: var(--s-section);
+  }
   .origenSide,
   .manifestoText,
   .manifestoPhoto,
-  .stagePhoto,
-  .stageCopy,
+  .psicoPhoto,
+  .psicoIntro,
+  .psicoStage,
+  .hdsLead,
+  .hdsIntro,
+  .subscribe,
   .talkMain,
   .talkList,
   .contactFor,
@@ -1442,17 +1315,17 @@
     grid-column: 1 / -1;
   }
   /* hero: la línea del logo arriba, el statement debajo y la foto al final,
-     a todo el ancho. El logo, algo mayor en proporción para que se lea. */
+     a todo el ancho */
   .hero {
     --hero-pad-top: 1.25rem;
-    --s: min(3.4rem, 13.4vw);
+    --s: min(2.5rem, 10.2vw);
     justify-content: flex-start;
     gap: 0;
     min-height: 0;
     padding-bottom: 0;
   }
   .heroLogo {
-    width: calc(var(--s) * 2.9);
+    width: 8.5rem;
   }
   .heroCopy {
     margin-top: 3.25rem;
@@ -1470,18 +1343,11 @@
   .heroPhoto::after {
     background: linear-gradient(to bottom, var(--black) 0%, rgba(14, 15, 18, 0) 20%);
   }
-  .heroTerritory {
-    font-size: var(--t-ui);
-  }
-  /* origen: en el flujo, sin fijar ni barra. La etiqueta, el titular, la
-     foto a sangre, el manifiesto y la pregunta. */
+  /* origen: la etiqueta, el titular, la foto a sangre, el manifiesto y la
+     pregunta */
   .origen {
     --t-golpe: 2rem;
     --t-manifiesto: 1.375rem;
-  }
-  .origenFrame {
-    min-height: 0;
-    padding-block: var(--s-section);
   }
   .origenHead {
     margin-top: var(--s-title);
@@ -1493,39 +1359,43 @@
     margin: var(--s-block) calc(-1 * var(--gutter));
     aspect-ratio: 4 / 5;
   }
-  .stagePhoto {
-    margin-inline: calc(-1 * var(--gutter));
-    max-height: none;
+  /* el resto de golpes, a la misma medida que el de Origen */
+  .page {
+    --t-golpe: 2rem;
+    --t-lectura: 1.1875rem;
+  }
+  /* psicocibernética: la etiqueta, el golpe y el copy; el retrato a sangre;
+     los conceptos y el cierre, todos encendidos */
+  .psicoIntro {
+    order: -1;
+  }
+  .psicoPhoto {
+    margin: var(--s-block) calc(-1 * var(--gutter));
     aspect-ratio: 4 / 5;
   }
-  .hdsMasthead {
-    font-size: min(2rem, 7.6vw);
+  .stageAfter {
+    margin-top: var(--s-block);
+  }
+  /* hipertrofia: la cabecera, el copy y la suscripción; las entradas, de
+     dos en dos */
+  .hdsFrame {
+    grid-template-rows: none;
+    row-gap: var(--s-block);
   }
   .cards {
-    grid-template-columns: 1fr;
-  }
-  .subForm {
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-  .subForm input {
-    flex: 0 0 auto;
-    border-right: 1px solid var(--rule-dark-strong);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 2rem;
   }
   /* emprendimiento: el texto arriba y el retrato debajo, a todo el ancho,
      saliendo del gris de la sección */
   .empScene {
-    display: flex;
     flex-direction: column;
     min-height: 0;
-    padding-bottom: 0;
     background: var(--studio-floor);
   }
   .empText {
     max-width: none;
-  }
-  .empCopy {
-    max-width: none;
+    padding-block: var(--s-section) 0;
   }
   .empPhoto {
     position: relative;
@@ -1541,20 +1411,12 @@
   .empPhoto img {
     object-position: 80% 100%;
   }
-  .lgText,
-  .lgDetails {
-    grid-column: 1 / -1;
-  }
-  .lgDetails {
-    gap: 0.5rem;
-  }
-  .reelsHead {
-    flex-wrap: wrap;
-  }
+  /* reels: la tira, con la pieza siguiente asomando */
   .reel {
-    flex-basis: min(68vw, 290px);
+    flex-basis: min(62vw, 260px);
   }
   .talkScreen {
+    width: auto;
     margin-inline: calc(-1 * var(--gutter));
   }
   .formRow {
@@ -1600,13 +1462,13 @@
     text-align: left;
   }
   .bannerPoster {
-    font-size: min(4.25rem, 17vw);
+    font-size: min(3.5rem, 14vw);
   }
   .bannerDisplay {
-    font-size: min(3rem, 11.5vw);
+    font-size: min(2.5rem, 9.8vw);
   }
   .bannerSerif {
-    font-size: min(2.125rem, 8.4vw);
+    font-size: min(1.875rem, 7.4vw);
   }
 }
 
@@ -1614,13 +1476,11 @@
   .link svg,
   .cardPhoto img,
   .reelCover img,
-  .ctl,
   .talkRow,
   .talkPlay svg,
   .navList a,
   .footerLinks a,
-  .concepts li,
-  .lgDetail img {
+  .concepts li {
     transition: none;
   }
 }

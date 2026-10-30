@@ -3,12 +3,15 @@ import s from "../v3.module.css";
 /** Enlaces externos: pestaña nueva sin filtrar el opener. */
 export const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
-/** Título de sección: caja baja, peso medio, tamaño humano (Nike About). */
-export function SectionHead({ label, id }: { label: string; id?: string }) {
+/**
+ * Etiqueta de sección: pequeña, en versal espaciada. Nombra la sección; no
+ * titula (el titular es el golpe en condensada).
+ */
+export function Tag({ label, id, as: As = "p" }: { label: string; id?: string; as?: "p" | "h2" }) {
   return (
-    <p className={s.title} id={id} data-reveal="up">
+    <As className={s.tag} id={id} data-reveal="up">
       {label}
-    </p>
+    </As>
   );
 }
 

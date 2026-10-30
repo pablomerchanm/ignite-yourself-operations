@@ -9,9 +9,9 @@ import s from "../v3.module.css";
  * abajo, apoyados en el borde, el territorio y el statement en siete
  * líneas; entre ambos, aire. El retrato a la derecha.
  *
- * Proporción: una sola medida manda (--s, el cuerpo del statement,
- * calculado desde el alto de pantalla). La línea más larga del statement
- * mide 5,97 --s y el logo es φ² veces menor (2,28 --s): firma, no titular.
+ * Proporción: el statement es el golpe de la página, en condensada y a
+ * una medida contenida (--s, calculada por el ancho y por el alto de
+ * pantalla); el territorio, una etiqueta pequeña; el logo firma.
  *
  * Movimiento: el retrato entra desde negro y se asienta; el logo se revela
  * con un barrido; cada línea sube desde detrás de su máscara, en cadena.
@@ -41,7 +41,7 @@ export default function Hero() {
       </div>
 
       <div className={s.heroCopy} data-parallax="-0.08">
-        <p className={s.heroTerritory}>{hero.territory}</p>
+        <p className={`${s.tag} ${s.heroTerritory}`}>{hero.territory}</p>
         <p className={s.heroStatement}>
           {hero.statement.map((line, i) => (
             <span key={line} className={s.heroLine} style={{ "--i": i } as CSSProperties}>
