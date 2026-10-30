@@ -38,7 +38,6 @@ export default function V3() {
       <Hero />
       <main>
         <Origen />
-        <Banner id="interno" />
         <Psico />
         <Banner id="musculo" />
         <Hipertrofia />
