@@ -313,84 +313,13 @@
   white-space: nowrap;
 }
 
-/* ── Lectura guiada (scrub) y barra de progreso ─────────── */
+/* ── Lectura guiada (scrub) ─────────────────────────────── */
 :global(html.v3-motion) .page [data-scrub] :global(.sw) {
   opacity: 0.16;
 }
 .page :global(.sw) {
   will-change: opacity;
 }
-.progress {
-  display: grid;
-  gap: 0.9rem;
-  width: 100%;
-}
-:global(html:not(.v3-motion)) .progress {
-  display: none;
-}
-.track {
-  position: relative;
-  display: block;
-  height: 1px;
-  background: var(--rule);
-}
-.trackFill {
-  position: absolute;
-  top: -0.5px;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-.progressNav {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.arrowBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0;
-  border: 1px solid var(--rule-strong);
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.arrowBtn svg {
-  width: 0.85rem;
-  height: 0.85rem;
-}
-.arrowBtn:hover {
-  background: var(--ink);
-  color: var(--paper);
-}
-.counter {
-  margin-left: auto;
-  font-size: var(--t-small);
-  color: var(--stone);
-  font-variant-numeric: tabular-nums;
-}
-.dark .track {
-  background: var(--rule-dark);
-}
-.dark .arrowBtn {
-  border-color: var(--rule-dark-strong);
-}
-.dark .arrowBtn:hover {
-  background: var(--on-dark);
-  color: var(--ink);
-}
-.dark .counter {
-  color: var(--on-dark-soft);
-}
-
 /* ── Navegación: en la línea del logo, a la derecha ──────── */
 .nav {
   color: var(--on-dark);
@@ -628,14 +557,6 @@
   letter-spacing: -0.012em;
   text-wrap: balance;
 }
-.origenSide .progress {
-  max-width: 18rem;
-  margin-top: auto;
-  padding-top: 1.5rem;
-}
-.origen .counter {
-  font-variant-numeric: lining-nums tabular-nums;
-}
 .manifestoText {
   grid-column: 4 / span 5;
   min-height: 0;
@@ -701,9 +622,6 @@
   gap: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
   justify-items: start;
 }
-.stageCopy .progress {
-  max-width: 22rem;
-}
 .concepts {
   margin: 0;
   padding: 0;
@@ -726,9 +644,6 @@
 }
 .stageAfter .quiet {
   max-width: 17em;
-}
-.pin:not([data-pinned]) .progress {
-  display: none;
 }
 
 /* ── 04 · Hipertrofia del Ser (negro) ────────────────────
@@ -1563,9 +1478,6 @@
   .origenHead {
     margin-top: var(--s-title);
   }
-  .origenSide .progress {
-    display: none;
-  }
   .manifestoText {
     order: 1;
   }
@@ -1695,7 +1607,6 @@
   .cardPhoto img,
   .reelCover img,
   .ctl,
-  .arrowBtn,
   .talkRow,
   .talkPlay svg,
   .navList a,

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { v3 } from "@/data/v3";
-import { Arrow, Paragraphs, Progress, SectionHead, ext } from "./ui";
+import { Arrow, Paragraphs, SectionHead, ext } from "./ui";
 import s from "../v3.module.css";
 
 /**
@@ -32,7 +32,6 @@ export default function Psico() {
             <Image src={psico.image.src} alt={psico.image.alt} fill sizes="(min-width: 880px) 40vw, 100vw" style={{ objectPosition: psico.image.position }} />
           </figure>
           <div className={s.stageCopy}>
-            <Progress total={psico.concepts.length} />
             <ul className={s.concepts} aria-label="Conceptos">
               {psico.concepts.map((c) => (
                 <li key={c} className={s.statement} data-step>

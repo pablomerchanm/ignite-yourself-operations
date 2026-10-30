@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { v3 } from "@/data/v3";
-import { Progress, Words } from "./ui";
+import { Words } from "./ui";
 import s from "../v3.module.css";
 
 /**
  * 02 · TERRITORIO / ORIGEN, en blanco. La primera lectura, en una sola voz
  * (la serif de Mario) y en una sola pantalla. En escritorio la escena se
  * fija ([data-pin]) y el scroll enciende el manifiesto palabra a palabra,
- * párrafo a párrafo, hasta la pregunta. A la izquierda, los territorios, el
- * titular y la barra de progreso (01 / 05); en el centro, el manifiesto; a
- * la derecha, la foto a toda altura. En móvil, todo en el flujo.
+ * hasta la pregunta. A la izquierda, los territorios y el titular; en el
+ * centro, el manifiesto; a la derecha, la foto a toda altura. En móvil,
+ * todo en el flujo.
  */
 export default function Origen() {
   const { origen } = v3;
@@ -25,12 +25,11 @@ export default function Origen() {
           <h2 className={s.origenHead} id="origen-h" data-reveal="up">
             {origen.headline}
           </h2>
-          <Progress total={origen.paragraphs.length} />
         </div>
 
         <div className={s.manifestoText}>
           {origen.paragraphs.map((p) => (
-            <p key={p} className={s.scrubText} data-seg>
+            <p key={p} className={s.scrubText}>
               <Words text={p} />
             </p>
           ))}
