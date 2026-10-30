@@ -1671,6 +1671,26 @@ CAL = CAL.replace('</style>', """
 @media(max-width:1000px){.ptgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.ptgrid{grid-template-columns:1fr}}
 
+/* ---------- Laserna: hero sobrio. Una sola voz grande (el nombre); lo demas, en voz baja ---------- */
+#site .hero .hkick{font-size:10px;letter-spacing:.24em;color:rgba(255,255,255,.62)}
+#site .hero .hname{font-size:clamp(40px,5.2vw,80px)!important;line-height:1.02!important;max-width:11.5ch!important;letter-spacing:-.018em}
+#site .hero .hsub{font-family:'Instrument Sans',sans-serif!important;font-weight:400;font-size:clamp(15px,1.1vw,17px)!important;line-height:1.65!important;
+  letter-spacing:0;max-width:38ch!important;color:rgba(255,255,255,.72);margin-top:clamp(20px,2.8vh,30px)}
+#site .hero .hnote{font-size:10.5px!important;letter-spacing:.16em;text-transform:uppercase;line-height:1.9!important;
+  color:rgba(255,255,255,.58);max-width:58ch!important;margin-top:clamp(16px,2.2vh,22px)}
+#site .hero .hnote::before{top:.62em}
+#site .hero .hacts{margin-top:clamp(26px,3.6vh,38px)}
+#site .hero .hcta{font-size:10.5px}
+#site .hfirm{margin-top:clamp(28px,4.2vh,44px);padding-top:clamp(16px,2.4vh,22px)}
+#site .hfirm img{width:clamp(120px,8.6vw,146px)}
+#site .hfirm .hfk{font-size:9.5px}
+@media(max-width:860px){
+  #site .hero .hname{font-size:clamp(38px,10.5vw,50px)!important;max-width:none!important}
+  #site .hero .hsub{font-size:15px!important;max-width:none!important;margin-top:14px}
+  #site .hero .hnote{font-size:10px!important}
+  #site .hfirm img{width:min(36vw,140px)}
+}
+
 /* ---------- Laserna: la firma junto al nombre en la barra ---------- */
 .topbar .tname .tfirm{opacity:.55;letter-spacing:.12em}
 @media(max-width:860px){.topbar .tname .tfirm{display:none}}
