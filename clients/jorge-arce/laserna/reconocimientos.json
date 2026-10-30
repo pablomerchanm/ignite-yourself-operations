@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "title": "Reconocimientos — María Lucía Laserna",
+    "description": "Año por año y con su fuente: Chambers Banda 2 (2027), finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027, Best Lawyers desde 2019."
+  },
+  "logo": "MARÍA LUCÍA LASERNA",
+  "nav": [
+    {
+      "t": "Inicio",
+      "h": "/laserna"
+    },
+    {
+      "t": "Práctica",
+      "h": "/laserna/practica"
+    },
+    {
+      "t": "Reconocimientos",
+      "h": "/laserna/reconocimientos"
+    },
+    {
+      "t": "Trayectoria",
+      "h": "/laserna/trayectoria"
+    },
+    {
+      "t": "Contacto",
+      "h": "/laserna#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Contacto",
+    "h": "/laserna#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "recog-open",
+      "label": "Reconocimientos",
+      "quote": "Reconocimientos <t>y rankings.</t>",
+      "sub": "Chambers & Partners, The Legal 500, Best Lawyers y Leaders League. Cada reconocimiento aparece con su año y el enlace a la fuente.",
+      "opener": true
+    },
+    {
+      "type": "ledger",
+      "id": "registro",
+      "label": "Por año",
+      "title": "Reconocimientos <t>por año.</t>",
+      "lede": "Sus reconocimientos individuales, del más reciente al más antiguo, cada uno con el enlace a la página que lo otorga.",
+      "keynote": "“Nota de la firma”: el dato lo publica allabogados.com.",
+      "years": [
+        {
+          "y": "2027",
+          "rows": [
+            {
+              "dir": "The Legal 500 Colombia Awards",
+              "what": "Finalista: Labour and Employment Lawyer of the Year",
+              "h": "https://www.legal500.com/events/colombia-awards/shortlist-2027/",
+              "firm": false,
+              "rep": false
+            },
+            {
+              "dir": "Chambers & Partners",
+              "what": "Banda 2 · Labour & Employment, Colombia · Head of Labour & Employment",
+              "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+              "firm": false,
+              "rep": false
+            },
+            {
+              "dir": "The Legal 500",
+              "what": "Leading Partner y Practice Head, edición vigente. Destacan su “pragmatism and efficiency”",
+              "h": "https://www.legal500.com/rankings/ranking/c-colombia/labour-and-employment/52609-alvarez-lievano-laserna-sas",
+              "firm": false,
+              "rep": false
+            }
+          ]
+        },
+        {
+          "y": "2026",
+          "rows": [
+            {
+              "dir": "Chambers & Partners",
+              "what": "Banda 3 · Labour & Employment, Colombia",
+              "h": "https://allabogados.com/en/noticias/reconocimiento-chambers-partners/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+              "firm": false,
+              "rep": true
+            },
+            {
+              "dir": "The Legal 500",
+              "what": "Leading Partner, por las auditorías laborales, el due diligence y el manejo de clientes internacionales",
+              "h": "https://allabogados.com/en/noticias/legal-500-latinoamerica-2026-alvarez-lievano-laserna/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+              "firm": false,
+              "rep": true
+            },
+            {
+              "dir": "Best Lawyers",
+              "what": "The Best Lawyers in Colombia 2026 · Labor and Employment Law",
+              "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
+              "firm": false,
+              "rep": false
+            }
+          ]
+        },
+        {
+          "y": "2021",
+          "rows": [
+            {
+              "dir": "The Legal 500",
+              "what": "Practice Head",
+              "h": "https://allabogados.com/noticias/reconocimiento-the-legal-500/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+              "firm": false,
+              "rep": true
+            }
+          ]
+        },
+        {
+          "y": "2019",
+          "rows": [
+            {
+              "dir": "Chambers & Partners",
+              "what": "Primera de nueve ediciones consecutivas en el ranking (2019 – 2027)",
+              "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+              "firm": false,
+              "rep": false
+            },
+            {
+              "dir": "Best Lawyers",
+              "what": "Primer reconocimiento; cinco en total hasta 2026",
+              "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
+              "firm": false,
+              "rep": false
+            }
+          ]
+        }
+      ],
+      "fn": "Chambers y Best Lawyers no publican en sus páginas actuales el detalle de cada edición anterior.",
+      "no": "01"
+    },
+    {
+      "type": "stmt",
+      "id": "chambers",
+      "label": "Chambers & Partners",
+      "quote": "Banda 2 <t>en 2027.</t>",
+      "sub": "Chambers & Partners la ha incluido en su ranking de derecho laboral en Colombia durante nueve años consecutivos, y en la edición Latin America 2027 la ubicó en Banda 2. Destaca su experiencia con clientes del sector energético.",
+      "keys": [
+        "Labour & Employment",
+        "Colombia",
+        "Latin America 2027"
+      ],
+      "tags": true,
+      "more": {
+        "t": "Ver perfil en Chambers",
+        "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "best-lawyers",
+      "label": "Best Lawyers",
+      "quote": "Elegida <t>por sus colegas.</t>",
+      "sub": "The Best Lawyers in Colombia la reconoce desde 2019 en Labor and Employment Law, con cinco reconocimientos hasta la edición 2026. La selección se hace con encuestas entre abogados de la misma área y ciudad.",
+      "keys": [
+        "Labor and Employment Law",
+        "Bogotá",
+        "2019 – 2026"
+      ],
+      "tags": true,
+      "more": {
+        "t": "Ver perfil en Best Lawyers",
+        "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
+      }
+    },
+    {
+      "type": "letters",
+      "id": "voices",
+      "label": "Lo que dicen de ella",
+      "title": "Clientes <t>y colegas.</t>",
+      "lede": "Citas textuales publicadas por los directorios. Las de Chambers se conservan en su idioma original.",
+      "items": [
+        {
+          "q": "“Sumamente competente y didáctica.”",
+          "who": "Un entrevistado",
+          "org": "Chambers & Partners Latin America 2026"
+        },
+        {
+          "q": "“Una abogada experimentada que cuenta con un equipo de profesionales de primer nivel.”",
+          "who": "Un comentarista del mercado",
+          "org": "Chambers & Partners Latin America 2026"
+        },
+        {
+          "q": "“She demonstrates in-depth knowledge of labour regulations, enabling her to provide precise, strategic advice.”",
+          "who": "Un cliente",
+          "org": "Chambers & Partners"
+        },
+        {
+          "q": "“Her ability to interpret complex regulations and translate them into practical solutions.”",
+          "who": "Un cliente",
+          "org": "Chambers & Partners"
+        },
+        {
+          "q": "“Highly appreciated by clients for her expertise in labour and employment mandates in Colombia.”",
+          "who": "Comentario editorial",
+          "org": "Chambers & Partners"
+        },
+        {
+          "q": "“María Lucía Laserna es cercana, dispuesta a colaborar en temas no solamente legales y conceptuales.”",
+          "who": "Un cliente",
+          "org": "The Legal 500"
+        }
+      ],
+      "src": "Fuentes: perfil de Chambers & Partners, y las notas de la firma sobre Chambers 2026 y The Legal 500",
+      "no": "02"
+    },
+    {
+      "type": "notes",
+      "id": "press",
+      "tint": true,
+      "label": "Publicaciones y eventos",
+      "title": "Entrevistas, eventos <t>y docencia.</t>",
+      "items": [
+        {
+          "t": "Entrevista: auditoría laboral y asesoría estratégica integral",
+          "k": "Álvarez Liévano Laserna · diciembre de 2022",
+          "h": "https://allabogados.com/noticias/entrevista-maria-lucia-laserna-auditoria-laboral/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "t": "Entendiendo la estrategia más allá de lo jurídico (su maestría en Cornell)",
+          "k": "Álvarez Liévano Laserna · agosto de 2021",
+          "h": "https://allabogados.com/noticias/estrategia-mas-alla-de-lo-juridico/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "t": "AmCham Colombia: el futuro del sistema pensional",
+          "k": "Álvarez Liévano Laserna · agosto de 2025",
+          "h": "https://allabogados.com/noticias/all-abogados-participacion-eventos-juridicos-2025/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "t": "Día del Maestro: los socios que enseñan",
+          "k": "Álvarez Liévano Laserna · mayo de 2023",
+          "h": "https://allabogados.com/noticias/homenaje-dia-del-maestro/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+        },
+        {
+          "t": "Perfil y preguntas y respuestas",
+          "k": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
+        },
+        {
+          "t": "Perfil",
+          "k": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Siguiente",
+      "t": "Trayectoria",
+      "d": "Experiencia, formación, docencia y gremios.",
+      "h": "/laserna/trayectoria",
+      "alt": {
+        "t": "Contactar",
+        "h": "/laserna#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Contacto",
+      "title": "Hablemos de <t>su caso.</t>",
+      "lede": "Seleccione el tipo de consulta y comparta el contexto general, sin información confidencial. El equipo de María Lucía le responderá.",
+      "contact": {
+        "email": "contacto@allabogados.com",
+        "phone": "(601) 417 7716",
+        "city": "Bogotá, Colombia"
+      },
+      "form": {
+        "selectLabel": "Tipo de consulta",
+        "selectPlaceholder": "Seleccione una opción",
+        "paths": [
+          {
+            "v": "auditoria",
+            "t": "Auditoría laboral o due diligence",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Cargo"
+              },
+              {
+                "n": "Número aproximado de trabajadores"
+              },
+              {
+                "n": "Sector"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "ugpp",
+            "t": "Fiscalización de la UGPP o inspección del Ministerio del Trabajo",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Entidad que adelanta el proceso"
+              },
+              {
+                "n": "Etapa (requerimiento, liquidación, recurso)"
+              },
+              {
+                "n": "Plazo, si lo hay"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "litigio",
+            "t": "Proceso laboral o recurso de casación",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa o firma",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Instancia o despacho"
+              },
+              {
+                "n": "Próxima fecha, si la hay"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firma",
+            "t": "Otra consulta laboral",
+            "btn": "Enviar",
+            "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Tema"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "docencia",
+            "t": "Docencia, conferencias o medios",
+            "btn": "Enviar",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Institución o medio",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Fecha y formato"
+              },
+              {
+                "n": "Mensaje",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Este formulario es ilustrativo: se configura con María Lucía antes de publicar la página.",
+        "fine": "Vista privada: esta página no envía nada. Escriba a contacto@allabogados.com o llame al (601) 417 7716."
+      },
+      "name": "María Lucía Laserna Angarita",
+      "fcta": {
+        "t": "Contactar",
+        "h": "/laserna#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/maria-lucia-laserna-angarita-8257b6194/",
+          "i": "linkedin"
+        },
+        {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
+          "t": "allabogados.com",
+          "h": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "Un concepto de",
+        "href": "https://igniteyourself.co/",
+        "logo": "/laserna/assets/igy-logo.png",
+        "link": "Conozca Ignite Yourself",
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+      },
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
+      "firm": {
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+        "src": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "lede": "Socia fundadora de Álvarez Liévano Laserna, firma especializada en derecho laboral.",
+        "link": "Visitar allabogados.com",
+        "social": []
+      },
+      "fine": "Vista privada · No indexada",
+      "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
+      "noform": true,
+      "no": "04"
+    }
+  ]
+}

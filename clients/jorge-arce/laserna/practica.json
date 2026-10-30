@@ -1,0 +1,465 @@
+{
+  "meta": {
+    "title": "Práctica — María Lucía Laserna",
+    "description": "Auditoría laboral, seguridad social y UGPP, litigio y casación, y relaciones colectivas, para empleadores."
+  },
+  "logo": "MARÍA LUCÍA LASERNA",
+  "nav": [
+    {
+      "t": "Inicio",
+      "h": "/laserna"
+    },
+    {
+      "t": "Práctica",
+      "h": "/laserna/practica"
+    },
+    {
+      "t": "Reconocimientos",
+      "h": "/laserna/reconocimientos"
+    },
+    {
+      "t": "Trayectoria",
+      "h": "/laserna/trayectoria"
+    },
+    {
+      "t": "Contacto",
+      "h": "/laserna#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Contacto",
+    "h": "/laserna#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "practice-open",
+      "label": "Práctica",
+      "quote": "Derecho laboral <t>y seguridad social.</t>",
+      "sub": "Asesoría, auditoría, litigio y negociación colectiva para empleadores, con más de 25 años de experiencia.",
+      "opener": true,
+      "img": {
+        "src": "/laserna/assets/meeting.jpg",
+        "alt": "María Lucía Laserna en una reunión con clientes, con luz de tarde",
+        "pos": "42% 45%"
+      },
+      "align": "right"
+    },
+    {
+      "type": "paths",
+      "id": "routes",
+      "nums": true,
+      "label": "Áreas de práctica",
+      "title": "Áreas <t>de práctica.</t>",
+      "lede": "Asesoría preventiva y defensa de empresas ante autoridades y jueces.",
+      "cards": [
+        {
+          "lead": true,
+          "label": "Auditoría laboral",
+          "title": "Identificar el riesgo laboral antes de una inspección o una demanda.",
+          "desc": "Revisión interna y externa del cumplimiento laboral y de seguridad social: contratación, tercerización, jornada, salario, trabajadores extranjeros y estabilidad reforzada. También due diligence en compras, fusiones y adquisiciones.",
+          "items": [
+            "Auditoría laboral preventiva",
+            "Due diligence en fusiones y adquisiciones",
+            "Estabilidad laboral reforzada",
+            "Tercerización y solidaridad"
+          ],
+          "cta": {
+            "t": "Consultar sobre auditoría",
+            "h": "/laserna#inquiry",
+            "path": "auditoria"
+          },
+          "icon": "check"
+        },
+        {
+          "label": "Seguridad social",
+          "title": "Defensa en fiscalizaciones de aportes y asuntos pensionales.",
+          "desc": "Fiscalizaciones de la UGPP sobre aportes y PILA, inspecciones del Ministerio del Trabajo y asuntos pensionales, desde el requerimiento hasta la decisión final.",
+          "items": [
+            "Fiscalizaciones de la UGPP",
+            "Aportes y PILA",
+            "Asuntos pensionales",
+            "Inspecciones del Ministerio"
+          ],
+          "cta": {
+            "t": "Consultar sobre UGPP",
+            "h": "/laserna#inquiry",
+            "path": "ugpp"
+          },
+          "icon": "doc"
+        },
+        {
+          "label": "Litigio y casación",
+          "title": "Procesos laborales hasta la Corte Suprema de Justicia.",
+          "desc": "Procesos laborales y el recurso extraordinario de casación ante la Sala de Casación Laboral de la Corte Suprema, con el respaldo de su especialización en derecho probatorio.",
+          "items": [
+            "Procesos ordinarios laborales",
+            "Recurso extraordinario de casación",
+            "Derecho probatorio",
+            "Recuperación de pagos en exceso"
+          ],
+          "cta": {
+            "t": "Consultar sobre un proceso",
+            "h": "/laserna#inquiry",
+            "path": "litigio"
+          },
+          "icon": "court"
+        },
+        {
+          "label": "Relaciones colectivas",
+          "title": "Negociación colectiva y reestructuraciones.",
+          "desc": "Negociación colectiva, reestructuraciones y asesoría permanente en derecho individual y colectivo del trabajo.",
+          "items": [
+            "Negociación colectiva",
+            "Reestructuraciones",
+            "Asesoría laboral permanente",
+            "Políticas y reglamentos internos"
+          ],
+          "cta": {
+            "t": "Consultar sobre relaciones colectivas",
+            "h": "/laserna#inquiry",
+            "path": "firma"
+          },
+          "icon": "sign"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "brief",
+      "id": "caso",
+      "label": "Caso destacado: Mansarovar Energy",
+      "items": [
+        {
+          "k": "El contexto.",
+          "t": "Mansarovar Energy pagó dos veces la misma bonificación a sus trabajadores, y algunos, en su mayoría sindicalizados, se negaron a devolverla."
+        },
+        {
+          "k": "El límite legal.",
+          "t": "La ley colombiana no permite descontar del salario sin autorización expresa y escrita del trabajador."
+        },
+        {
+          "k": "La estrategia.",
+          "t": "Compensar lo que los trabajadores debían con lo que la empresa les adeudaba, con fundamento en la jurisprudencia de la Corte Suprema de Justicia y sin demandar a cada trabajador."
+        }
+      ]
+    },
+    {
+      "type": "method",
+      "id": "metodo",
+      "label": "Auditoría laboral",
+      "title": "Cómo funciona <t>una auditoría.</t>",
+      "intro": "El Departamento de Auditoría y Fiscalización que dirige María Lucía trabaja en cuatro etapas.",
+      "img": {
+        "src": "/laserna/assets/papers.jpg",
+        "alt": "Manos sobre documentos en una mesa de reuniones"
+      },
+      "rows": [
+        {
+          "icon": "list",
+          "t": "Recolección de información",
+          "d": "Una reunión inicial y un formulario: planta de personal, tipos de contrato, turnos, conceptos salariales, aprendices, reglamento, estabilidad reforzada, tercerización, nómina, aportes y PILA."
+        },
+        {
+          "icon": "doc",
+          "t": "Información complementaria",
+          "d": "Solicitudes puntuales y reuniones de seguimiento, cuando el caso lo requiere."
+        },
+        {
+          "icon": "cv",
+          "t": "Informe de auditoría",
+          "d": "Conceptos, recomendaciones, oportunidades de mejora y riesgos, presentados al cliente."
+        },
+        {
+          "icon": "check",
+          "t": "Acompañamiento en la implementación",
+          "d": "Apoyo en la aplicación de las recomendaciones, para corregir los hallazgos antes de una sanción."
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "sectors",
+      "label": "Clientes y sectores",
+      "title": "Clientes <t>y sectores.</t>",
+      "lede": "Algunos de los clientes que Chambers & Partners publica en su perfil, con una presencia importante del sector energético.",
+      "groups": [
+        {
+          "label": "Clientes, según Chambers",
+          "names": [
+            "Colpensiones",
+            "Bancoldex",
+            "Mercer",
+            "Ashmore Group",
+            "REFICAR",
+            "Shandong Kerui Petroleum",
+            "Mansarovar Energy",
+            "CEPSA Colombia",
+            "PRODIEL Colombia",
+            "Proeléctrica",
+            "Genser Power",
+            "Thales Group",
+            "Softline",
+            "Holcim"
+          ]
+        },
+        {
+          "label": "Sectores de la firma",
+          "names": [
+            "Aeronáutica",
+            "Oil & gas",
+            "Minería",
+            "Telecomunicaciones",
+            "Financiero",
+            "Alimentos y bebidas",
+            "Salud",
+            "Manufactura",
+            "Automotriz",
+            "Retail"
+          ]
+        }
+      ],
+      "fn": "Clientes tomados del perfil público de Chambers & Partners. Por confirmar con ella cuáles se pueden nombrar.",
+      "no": "03"
+    },
+    {
+      "type": "next",
+      "k": "Siguiente",
+      "t": "Reconocimientos",
+      "d": "Chambers & Partners, The Legal 500 y Best Lawyers.",
+      "h": "/laserna/reconocimientos",
+      "alt": {
+        "t": "Contactar",
+        "h": "/laserna#inquiry"
+      }
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Contacto",
+      "title": "Hablemos de <t>su caso.</t>",
+      "lede": "Seleccione el tipo de consulta y comparta el contexto general, sin información confidencial. El equipo de María Lucía le responderá.",
+      "contact": {
+        "email": "contacto@allabogados.com",
+        "phone": "(601) 417 7716",
+        "city": "Bogotá, Colombia"
+      },
+      "form": {
+        "selectLabel": "Tipo de consulta",
+        "selectPlaceholder": "Seleccione una opción",
+        "paths": [
+          {
+            "v": "auditoria",
+            "t": "Auditoría laboral o due diligence",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Cargo"
+              },
+              {
+                "n": "Número aproximado de trabajadores"
+              },
+              {
+                "n": "Sector"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "ugpp",
+            "t": "Fiscalización de la UGPP o inspección del Ministerio del Trabajo",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Entidad que adelanta el proceso"
+              },
+              {
+                "n": "Etapa (requerimiento, liquidación, recurso)"
+              },
+              {
+                "n": "Plazo, si lo hay"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "litigio",
+            "t": "Proceso laboral o recurso de casación",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa o firma",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Instancia o despacho"
+              },
+              {
+                "n": "Próxima fecha, si la hay"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firma",
+            "t": "Otra consulta laboral",
+            "btn": "Enviar",
+            "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Tema"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "docencia",
+            "t": "Docencia, conferencias o medios",
+            "btn": "Enviar",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Institución o medio",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Fecha y formato"
+              },
+              {
+                "n": "Mensaje",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Este formulario es ilustrativo: se configura con María Lucía antes de publicar la página.",
+        "fine": "Vista privada: esta página no envía nada. Escriba a contacto@allabogados.com o llame al (601) 417 7716."
+      },
+      "name": "María Lucía Laserna Angarita",
+      "fcta": {
+        "t": "Contactar",
+        "h": "/laserna#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/maria-lucia-laserna-angarita-8257b6194/",
+          "i": "linkedin"
+        },
+        {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
+          "t": "allabogados.com",
+          "h": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "Un concepto de",
+        "href": "https://igniteyourself.co/",
+        "logo": "/laserna/assets/igy-logo.png",
+        "link": "Conozca Ignite Yourself",
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+      },
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
+      "firm": {
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+        "src": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "lede": "Socia fundadora de Álvarez Liévano Laserna, firma especializada en derecho laboral.",
+        "link": "Visitar allabogados.com",
+        "social": []
+      },
+      "fine": "Vista privada · No indexada",
+      "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
+      "noform": true,
+      "no": "04"
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "title": "Trayectoria — María Lucía Laserna",
+    "description": "Abogada sénior en Álvarez Escandón Liévano desde 2001, socia de Álvarez Liévano Laserna desde 2016, Cornell, la LSE y la Javeriana."
+  },
+  "logo": "MARÍA LUCÍA LASERNA",
+  "nav": [
+    {
+      "t": "Inicio",
+      "h": "/laserna"
+    },
+    {
+      "t": "Práctica",
+      "h": "/laserna/practica"
+    },
+    {
+      "t": "Reconocimientos",
+      "h": "/laserna/reconocimientos"
+    },
+    {
+      "t": "Trayectoria",
+      "h": "/laserna/trayectoria"
+    },
+    {
+      "t": "Contacto",
+      "h": "/laserna#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Contacto",
+    "h": "/laserna#inquiry"
+  },
+  "sections": [
+    {
+      "type": "stmt",
+      "id": "record-open",
+      "label": "Trayectoria",
+      "quote": "Más de 25 años <t>en derecho laboral.</t>",
+      "sub": "Abogada sénior en Álvarez Escandón Liévano, socia fundadora de Álvarez Liévano Laserna, profesora universitaria y egresada de Cornell y la LSE.",
+      "opener": true,
+      "img": {
+        "src": "/laserna/assets/cv-open.jpg",
+        "alt": "Una mano con una pluma sobre documentos, con luz de tarde",
+        "pos": "38% 50%"
+      }
+    },
+    {
+      "type": "timeline",
+      "id": "record-years",
+      "tint": true,
+      "label": "Línea de tiempo",
+      "title": "De 1998 <t>a hoy.</t>",
+      "from": 1998,
+      "to": 2026,
+      "marks": [
+        {
+          "y": 1998,
+          "t": "Derecho, Javeriana"
+        },
+        {
+          "y": 2001,
+          "t": "Álvarez Escandón Liévano"
+        },
+        {
+          "y": 2013,
+          "t": "Profesora, Javeriana"
+        },
+        {
+          "y": 2016,
+          "t": "Socia fundadora",
+          "brass": true
+        },
+        {
+          "y": 2021,
+          "t": "Cornell ILR"
+        },
+        {
+          "y": 2025,
+          "t": "LLM, LSE"
+        }
+      ],
+      "ranges": [
+        {
+          "a": 2001,
+          "b": 2015,
+          "t": "Abogada sénior, Aesca"
+        },
+        {
+          "a": 2016,
+          "b": 2026,
+          "t": "Socia fundadora, Álvarez Liévano Laserna",
+          "brass": true
+        },
+        {
+          "a": 2013,
+          "b": 2026,
+          "t": "Docencia en la Javeriana"
+        }
+      ],
+      "rlabel": "Ejercicio y docencia",
+      "no": "01"
+    },
+    {
+      "type": "exp",
+      "id": "record-practice",
+      "label": "Experiencia",
+      "title": "Experiencia <t>profesional.</t>",
+      "groups": [
+        {
+          "label": "Cargos",
+          "wide": true,
+          "names": [
+            "Socia fundadora · Álvarez Liévano Laserna, Bogotá · 2016 a hoy",
+            "Abogada sénior · Álvarez Escandón Liévano (Aesca S.A.), Bogotá · 2001 a 2015"
+          ]
+        },
+        {
+          "label": "Funciones",
+          "wide": true,
+          "names": [
+            "Líder del departamento de auditorías",
+            "Litigante",
+            "Asesora permanente en derecho laboral y seguridad social",
+            "Experta en temas pensionales y en el recurso extraordinario de casación"
+          ]
+        }
+      ],
+      "no": "02"
+    },
+    {
+      "type": "exp",
+      "id": "record-education",
+      "tint": true,
+      "label": "Formación",
+      "title": "Formación <t>académica.</t>",
+      "groups": [
+        {
+          "label": "Títulos",
+          "wide": true,
+          "names": [
+            "Master of Laws (LLM) · The London School of Economics and Political Science · 2022 a 2025",
+            "MPS, Industrial and Labor Relations · Cornell University, ILR School, Nueva York · 2019 a 2021",
+            "Especialista en Derecho Probatorio · Universidad Sergio Arboleda · 2009 a 2010",
+            "Especialista en Derecho Laboral · Pontificia Universidad Javeriana · 2004 a 2006",
+            "Abogada · Pontificia Universidad Javeriana · 1998 a 2002"
+          ]
+        },
+        {
+          "label": "Distinción",
+          "wide": true,
+          "names": [
+            "Mención de honor por su investigación en derecho laboral colectivo y negociación colectiva · 2003"
+          ]
+        }
+      ],
+      "no": "03"
+    },
+    {
+      "type": "exp",
+      "id": "record-teaching",
+      "label": "Docencia",
+      "title": "Docencia <t>universitaria.</t>",
+      "groups": [
+        {
+          "label": "Cátedras",
+          "wide": true,
+          "names": [
+            "Profesora de cátedra, Derecho Laboral · Pontificia Universidad Javeriana · 2013 a hoy. En la Maestría en Derecho Laboral: derecho laboral individual y procesal",
+            "Posgrado en Derecho Laboral · Universidad Pontificia Bolivariana, Medellín · 2018",
+            "Derecho Laboral en el posgrado de Derecho de la Empresa · Universidad de los Andes · 2017 a 2018",
+            "Posgrado en Derecho Laboral · Universidad Sergio Arboleda · 2014 a 2017"
+          ]
+        }
+      ],
+      "no": "04"
+    },
+    {
+      "type": "exp",
+      "id": "record-orgs",
+      "tint": true,
+      "label": "Gremios",
+      "title": "Gremios <t>y asociaciones.</t>",
+      "groups": [
+        {
+          "label": "Participación",
+          "wide": true,
+          "names": [
+            "Miembro del consejo directivo del Colegio de Abogados del Trabajo",
+            "Secretaria general del Colegio de Abogados del Trabajo, hasta 2019",
+            "Miembro del comité laboral de la ANDI"
+          ]
+        }
+      ],
+      "no": "05"
+    },
+    {
+      "type": "next",
+      "k": "Siguiente",
+      "t": "Contacto",
+      "d": "Auditoría, UGPP, litigio o relaciones colectivas.",
+      "h": "/laserna#inquiry"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Contacto",
+      "title": "Hablemos de <t>su caso.</t>",
+      "lede": "Seleccione el tipo de consulta y comparta el contexto general, sin información confidencial. El equipo de María Lucía le responderá.",
+      "contact": {
+        "email": "contacto@allabogados.com",
+        "phone": "(601) 417 7716",
+        "city": "Bogotá, Colombia"
+      },
+      "form": {
+        "selectLabel": "Tipo de consulta",
+        "selectPlaceholder": "Seleccione una opción",
+        "paths": [
+          {
+            "v": "auditoria",
+            "t": "Auditoría laboral o due diligence",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Cargo"
+              },
+              {
+                "n": "Número aproximado de trabajadores"
+              },
+              {
+                "n": "Sector"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "ugpp",
+            "t": "Fiscalización de la UGPP o inspección del Ministerio del Trabajo",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Entidad que adelanta el proceso"
+              },
+              {
+                "n": "Etapa (requerimiento, liquidación, recurso)"
+              },
+              {
+                "n": "Plazo, si lo hay"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "litigio",
+            "t": "Proceso laboral o recurso de casación",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa o firma",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Instancia o despacho"
+              },
+              {
+                "n": "Próxima fecha, si la hay"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firma",
+            "t": "Otra consulta laboral",
+            "btn": "Enviar",
+            "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Tema"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "docencia",
+            "t": "Docencia, conferencias o medios",
+            "btn": "Enviar",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Institución o medio",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Fecha y formato"
+              },
+              {
+                "n": "Mensaje",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Este formulario es ilustrativo: se configura con María Lucía antes de publicar la página.",
+        "fine": "Vista privada: esta página no envía nada. Escriba a contacto@allabogados.com o llame al (601) 417 7716."
+      },
+      "name": "María Lucía Laserna Angarita",
+      "fcta": {
+        "t": "Contactar",
+        "h": "/laserna#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/maria-lucia-laserna-angarita-8257b6194/",
+          "i": "linkedin"
+        },
+        {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
+          "t": "allabogados.com",
+          "h": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "Un concepto de",
+        "href": "https://igniteyourself.co/",
+        "logo": "/laserna/assets/igy-logo.png",
+        "link": "Conozca Ignite Yourself",
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+      },
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
+      "firm": {
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+        "src": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "lede": "Socia fundadora de Álvarez Liévano Laserna, firma especializada en derecho laboral.",
+        "link": "Visitar allabogados.com",
+        "social": []
+      },
+      "fine": "Vista privada · No indexada",
+      "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
+      "noform": true,
+      "no": "06"
+    }
+  ]
+}

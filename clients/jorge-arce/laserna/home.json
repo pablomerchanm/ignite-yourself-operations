@@ -1,0 +1,485 @@
+{
+  "meta": {
+    "title": "María Lucía Laserna Angarita — Abogada laboralista",
+    "description": "María Lucía Laserna Angarita, abogada laboralista y socia fundadora de Álvarez Liévano Laserna, Bogotá. Chambers Banda 2 y finalista a Abogada Laboral del Año en The Legal 500 Colombia Awards 2027."
+  },
+  "logo": "MARÍA LUCÍA LASERNA",
+  "nav": [
+    {
+      "t": "Inicio",
+      "h": "/laserna"
+    },
+    {
+      "t": "Práctica",
+      "h": "/laserna/practica"
+    },
+    {
+      "t": "Reconocimientos",
+      "h": "/laserna/reconocimientos"
+    },
+    {
+      "t": "Trayectoria",
+      "h": "/laserna/trayectoria"
+    },
+    {
+      "t": "Contacto",
+      "h": "/laserna#inquiry"
+    }
+  ],
+  "navcta": {
+    "t": "Contacto",
+    "h": "#inquiry"
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "img": {
+        "src": "/laserna/assets/hero.jpg",
+        "mobile": "/laserna/assets/hero-mobile.jpg",
+        "alt": "María Lucía Laserna Angarita"
+      },
+      "name": "María Lucía Laserna <t>Angarita</t>",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
+      "actions": [
+        {
+          "t": "Contactar",
+          "h": "#inquiry",
+          "primary": true
+        },
+        {
+          "t": "Ver trayectoria",
+          "h": "/laserna/trayectoria"
+        }
+      ],
+      "firm": {
+        "k": "Socia fundadora",
+        "logo": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "h": "#firm"
+      },
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "note": "Chambers & Partners, Banda 2 · Finalista a Abogada Laboral del Año, Legal 500 Colombia Awards 2027"
+    },
+    {
+      "type": "seals",
+      "id": "seals",
+      "ink": true,
+      "label": "Reconocimientos",
+      "items": [
+        {
+          "dir": "Chambers & Partners",
+          "what": "Banda 2 en Labour & Employment, Colombia",
+          "yrs": "Ranqueada 2019 – 2027",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681"
+        },
+        {
+          "dir": "The Legal 500",
+          "what": "Finalista: Abogada Laboral del Año, Colombia Awards 2027",
+          "yrs": "Leading Partner",
+          "h": "https://www.legal500.com/events/colombia-awards/shortlist-2027/"
+        },
+        {
+          "dir": "Best Lawyers",
+          "what": "Labor and Employment Law, Colombia",
+          "yrs": "2019 – 2026 · cinco reconocimientos",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750"
+        },
+        {
+          "dir": "Leaders League",
+          "what": "Firma Leading en derecho laboral, con María Lucía entre sus socios",
+          "yrs": "2027",
+          "h": "https://www.leadersleague.com/en/rankings/derecho-laboral-estudio-de-abogados-colombia-2027"
+        }
+      ],
+      "more": {
+        "t": "Ver todos los reconocimientos",
+        "h": "/laserna/reconocimientos"
+      }
+    },
+    {
+      "type": "brief",
+      "id": "in-brief",
+      "label": "Perfil",
+      "items": [
+        {
+          "k": "Trayectoria.",
+          "t": "Inició su carrera en 2001 en Álvarez Escandón Liévano y en 2016 fue socia fundadora de Álvarez Liévano Laserna.",
+          "d": "Más de 25 años dedicados al derecho laboral y la seguridad social."
+        },
+        {
+          "k": "Práctica.",
+          "t": "Dirige el Departamento de Auditoría y Fiscalización de la firma y la defensa de empresas ante la UGPP.",
+          "d": "Litiga hasta el recurso extraordinario de casación ante la Corte Suprema de Justicia."
+        },
+        {
+          "k": "Formación.",
+          "t": "Abogada de la Pontificia Universidad Javeriana, con maestría en Relaciones Laborales de Cornell University y LLM de The London School of Economics.",
+          "d": "Profesora de la Maestría en Derecho Laboral de la Javeriana desde 2013."
+        }
+      ]
+    },
+    {
+      "type": "scrub",
+      "id": "words",
+      "label": "Su enfoque",
+      "pin": 2.6,
+      "paras": [
+        "Su trabajo parte de un análisis integral de cada caso: todas las variables, los riesgos para la empresa <t>y una recomendación práctica para decidir con la mejor información.</t>",
+        "La consulta más frecuente que recibe es la terminación de contratos de trabajadores con estabilidad laboral reforzada. Cada caso se revisa de forma individual, <t>con la estrategia de defensa definida desde el inicio.</t>",
+        "Su objetivo es que las empresas sean eficientes y sostenibles, garantizando los derechos de los trabajadores <t>y la armonía de la relación laboral.</t>"
+      ],
+      "keys": [
+        "Entrevista con Best Lawyers"
+      ],
+      "more": {
+        "t": "Ver reconocimientos",
+        "h": "/laserna/reconocimientos"
+      }
+    },
+    {
+      "type": "quote",
+      "id": "quote",
+      "lead": "“María Lucía Laserna es cercana,",
+      "q": "dispuesta a colaborar en temas no solamente legales y conceptuales.”",
+      "who": "Cliente citado por The Legal 500"
+    },
+    {
+      "type": "stmt",
+      "id": "s-practice",
+      "label": "Práctica",
+      "quote": "Derecho laboral <t>y seguridad social.</t>",
+      "keys": [
+        "Auditoría laboral",
+        "Fiscalizaciones UGPP",
+        "Litigio y casación",
+        "Negociación colectiva"
+      ],
+      "more": {
+        "t": "Ver práctica",
+        "h": "/laserna/practica"
+      },
+      "img": {
+        "src": "/laserna/assets/balance.jpg",
+        "alt": "Una balanza de bronce sobre libros, con luz de tarde",
+        "pos": "30% 55%"
+      }
+    },
+    {
+      "type": "stmt",
+      "id": "s-audit",
+      "label": "Auditoría laboral",
+      "align": "right",
+      "quote": "Auditoría laboral <t>preventiva.</t>",
+      "sub": "Revisa cómo contrata, paga y cotiza una empresa para identificar riesgos antes de una inspección del Ministerio del Trabajo, una fiscalización de la UGPP o una demanda.",
+      "keys": [
+        "Contratación",
+        "Nómina y aportes",
+        "Estabilidad laboral reforzada"
+      ],
+      "more": {
+        "t": "Cómo funciona una auditoría",
+        "h": "/laserna/practica#metodo"
+      },
+      "img": {
+        "src": "/laserna/assets/meeting.jpg",
+        "alt": "María Lucía Laserna escucha en una reunión con clientes, con luz de tarde",
+        "pos": "42% 45%"
+      }
+    },
+    {
+      "type": "counsel",
+      "id": "for-clients",
+      "label": "Conozca más",
+      "title": "Práctica, trayectoria <t>y reconocimientos.</t>",
+      "items": [
+        {
+          "icon": "check",
+          "tag": "Cuatro frentes",
+          "t": "Práctica",
+          "d": "Auditoría, seguridad social, litigio y relaciones colectivas.",
+          "a": "Ver más",
+          "h": "/laserna/practica"
+        },
+        {
+          "icon": "list",
+          "tag": "Cuatro fases",
+          "t": "Cómo funciona una auditoría",
+          "d": "Las cuatro etapas, de la recolección de información al acompañamiento.",
+          "a": "Ver más",
+          "h": "/laserna/practica#metodo"
+        },
+        {
+          "icon": "quote",
+          "tag": "Chambers · Legal 500 · Best Lawyers",
+          "t": "Reconocimientos",
+          "d": "Chambers & Partners, The Legal 500, Best Lawyers y Leaders League, con sus fuentes.",
+          "a": "Ver más",
+          "h": "/laserna/reconocimientos"
+        },
+        {
+          "icon": "cv",
+          "tag": "Desde 2001",
+          "t": "Trayectoria",
+          "d": "Experiencia, formación, docencia y gremios.",
+          "a": "Ver más",
+          "h": "/laserna/trayectoria"
+        }
+      ]
+    },
+    {
+      "type": "firmra",
+      "id": "firm",
+      "label": "La firma",
+      "title": "Socia fundadora de <t>Álvarez Liévano Laserna.</t>",
+      "lede": "En 2016 fundó, junto con sus socios, Álvarez Liévano Laserna, firma especializada en derecho laboral. Chambers & Partners la ubica en Banda 1 y The Legal 500 la eligió Firma Boutique del Año en 2025 y 2026.",
+      "company": {
+        "role": "Socia fundadora · desde 2016",
+        "desc": "Firma dedicada exclusivamente al derecho laboral, con una tradición que se remonta a 1963. Cada cliente es atendido directamente por un socio y su equipo.",
+        "meta": [
+          "Carrera 7 A # 123-25, piso 9",
+          "Bogotá, Colombia",
+          "(601) 417 7716 · contacto@allabogados.com"
+        ],
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+        "link": "Visitar allabogados.com",
+        "logo": "/laserna/assets/all-logo-white.png",
+        "name": "Álvarez Liévano Laserna",
+        "more": "https://allabogados.com/nosotros/?utm_source=laserna&utm_medium=authority&utm_campaign=socios"
+      },
+      "social": [
+        {
+          "t": "Contactar a la firma",
+          "h": "#inquiry",
+          "path": "firma"
+        }
+      ],
+      "no": "01"
+    },
+    {
+      "type": "inquiry",
+      "id": "inquiry",
+      "label": "Contacto",
+      "title": "Hablemos de <t>su caso.</t>",
+      "lede": "Seleccione el tipo de consulta y comparta el contexto general, sin información confidencial. El equipo de María Lucía le responderá.",
+      "contact": {
+        "email": "contacto@allabogados.com",
+        "phone": "(601) 417 7716",
+        "city": "Bogotá, Colombia"
+      },
+      "form": {
+        "selectLabel": "Tipo de consulta",
+        "selectPlaceholder": "Seleccione una opción",
+        "paths": [
+          {
+            "v": "auditoria",
+            "t": "Auditoría laboral o due diligence",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Cargo"
+              },
+              {
+                "n": "Número aproximado de trabajadores"
+              },
+              {
+                "n": "Sector"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "ugpp",
+            "t": "Fiscalización de la UGPP o inspección del Ministerio del Trabajo",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Entidad que adelanta el proceso"
+              },
+              {
+                "n": "Etapa (requerimiento, liquidación, recurso)"
+              },
+              {
+                "n": "Plazo, si lo hay"
+              },
+              {
+                "n": "Contexto breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "litigio",
+            "t": "Proceso laboral o recurso de casación",
+            "btn": "Enviar",
+            "note": "Por favor no incluya información confidencial ni sujeta a reserva.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa o firma",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Instancia o despacho"
+              },
+              {
+                "n": "Próxima fecha, si la hay"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "firma",
+            "t": "Otra consulta laboral",
+            "btn": "Enviar",
+            "note": "Se envía a Álvarez Liévano Laserna. Por favor no incluya información confidencial.",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Empresa",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Tema"
+              },
+              {
+                "n": "Descripción breve",
+                "ta": true,
+                "full": true
+              }
+            ]
+          },
+          {
+            "v": "docencia",
+            "t": "Docencia, conferencias o medios",
+            "btn": "Enviar",
+            "fields": [
+              {
+                "n": "Nombre",
+                "r": true
+              },
+              {
+                "n": "Institución o medio",
+                "r": true
+              },
+              {
+                "n": "Correo",
+                "ty": "email",
+                "r": true
+              },
+              {
+                "n": "Fecha y formato"
+              },
+              {
+                "n": "Mensaje",
+                "ta": true,
+                "full": true
+              }
+            ]
+          }
+        ],
+        "preview": "Este formulario es ilustrativo: se configura con María Lucía antes de publicar la página.",
+        "fine": "Vista privada: esta página no envía nada. Escriba a contacto@allabogados.com o llame al (601) 417 7716."
+      },
+      "name": "María Lucía Laserna Angarita",
+      "fcta": {
+        "t": "Contactar",
+        "h": "#inquiry"
+      },
+      "social": [
+        {
+          "t": "LinkedIn",
+          "h": "https://www.linkedin.com/in/maria-lucia-laserna-angarita-8257b6194/",
+          "i": "linkedin"
+        },
+        {
+          "t": "Chambers & Partners",
+          "h": "https://chambers.com/lawyer/maria-lucia-laserna-latin-america-9:1228681",
+          "i": "globe"
+        },
+        {
+          "t": "allabogados.com",
+          "h": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+          "i": "globe"
+        },
+        {
+          "t": "Best Lawyers",
+          "h": "https://www.bestlawyers.com/lawyers/maria-lucia-laserna-angarita/250750",
+          "i": "globe"
+        }
+      ],
+      "igy": {
+        "label": "Un concepto de",
+        "href": "https://igniteyourself.co/",
+        "logo": "/laserna/assets/igy-logo.png",
+        "link": "Conozca Ignite Yourself",
+        "note": "Un concepto privado de Ignite Yourself, preparado con información pública para la revisión de María Lucía Laserna. El retrato es suyo; las fotografías de ambiente son dirección de arte ilustrativa. No es un sitio oficial: no ha sido revisado ni aprobado por ella, y no está indexado ni se distribuye."
+      },
+      "kick": "Abogada laboralista · Socia fundadora de Álvarez Liévano Laserna",
+      "sub": "Más de 25 años asesorando y defendiendo empresas en derecho laboral y seguridad social.",
+      "firm": {
+        "href": "https://allabogados.com/?utm_source=laserna&utm_medium=authority&utm_campaign=socios",
+        "src": "/laserna/assets/all-logo-white.png",
+        "alt": "Álvarez Liévano Laserna",
+        "lede": "Socia fundadora de Álvarez Liévano Laserna, firma especializada en derecho laboral.",
+        "link": "Visitar allabogados.com",
+        "social": []
+      },
+      "fine": "Vista privada · No indexada",
+      "base": "María Lucía Laserna Angarita · Bogotá, Colombia",
+      "no": "02"
+    }
+  ]
+}
