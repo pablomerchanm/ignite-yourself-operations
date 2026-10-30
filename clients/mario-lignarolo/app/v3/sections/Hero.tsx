@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
 import Logo from "../Logo";
@@ -9,7 +9,9 @@ import s from "../v3.module.css";
  * en la retícula (el menú arranca en la columna 7, el eje de la página, y
  * «Contacto» cierra a la derecha, subrayado);
  * abajo, apoyados en el borde, el territorio y el statement en siete
- * líneas; entre ambos, aire. El retrato a la derecha.
+ * líneas; entre ambos, aire. El retrato a la derecha. En móvil, la
+ * portada mide justo una pantalla: el recorte vertical del retrato arriba,
+ * a todo el ancho, y el statement abajo, sobre el negro.
  *
  * Proporción: el statement es el golpe de la página, en condensada y a
  * una medida contenida (--s, calculada por el ancho y por el alto de
@@ -21,12 +23,19 @@ import s from "../v3.module.css";
  */
 export default function Hero() {
   const { hero, nav } = v3;
+  const common = { alt: hero.cover.alt, fill: true, unoptimized: true, sizes: "100vw" };
+  const { props: photo } = getImageProps({ ...common, src: hero.cover.src, loading: "eager", fetchPriority: "high" });
+  const mobileSrc = getImageProps({ ...common, src: hero.cover.mobile }).props.src;
   const links = nav.filter((n) => n.href !== "#contacto");
   const contact = nav.find((n) => n.href === "#contacto");
   return (
     <header className={s.hero} id="mario">
       <div className={s.heroPhoto} data-parallax="0.22">
-        <Image src={hero.cover.src} alt={hero.cover.alt} fill priority unoptimized sizes="66vw" />
+        {/* dirección de arte: en móvil, el recorte vertical */}
+        <picture>
+          <source media="(max-width: 880px)" srcSet={mobileSrc} />
+          <img {...photo} alt={hero.cover.alt} />
+        </picture>
       </div>
 
       <div className={`${s.grid} ${s.heroTop}`}>

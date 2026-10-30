@@ -758,15 +758,16 @@
 
 /* ── 04 · Hipertrofia del Ser (negro) ──────────────────────
    Una pantalla, una publicación con identidad propia, en la retícula
-   editorial de Psicocibernética: arriba, a la izquierda (1–5), la cabecera,
-   el golpe y la suscripción; a la derecha, desde la columna 7, el copy y
-   el enlace. Abajo, las seis entradas en una fila, como un índice.
+   editorial de Psicocibernética: arriba, a la izquierda (1–5), la cabecera
+   y el golpe; a la derecha, desde la columna 7, el copy y el enlace.
+   Debajo, las seis entradas en una fila, como un índice, y al final, tras
+   un filete, la suscripción: la etiqueta en la 1, el formulario en la 7.
    Cabecera: el logo de la propuesta 2 (marca/hipertrofia/v2/), el emblema
    —una figura que se levanta del bloque— y el nombre en Archivo ancha. */
 .hdsFrame {
   /* la altura del emblema: manda en la cabecera y en el eje del copy */
   --hds-em: clamp(3.5rem, 10.5svh, 6rem);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   row-gap: clamp(1.5rem, 5svh, 3rem);
 }
 .hdsLead {
@@ -808,10 +809,9 @@
 .hdsHead {
   margin-top: 1.75rem;
 }
-/* el copy arranca a la altura del golpe: el emblema más su margen */
+/* el copy cuelga de la misma línea que la cabecera */
 .hdsIntro {
   grid-column: 7 / span 5;
-  padding-top: calc(var(--hds-em) + 1.75rem);
   display: grid;
   align-content: start;
   justify-items: start;
@@ -820,15 +820,27 @@
 .hdsIntro .lectura + .lectura {
   margin-top: -0.6rem;
 }
-/* suscripción: el gesto del widget de Substack, en una línea, bajo el
-   golpe */
+/* suscripción: el gesto del widget de Substack, en una línea, al final de
+   la sección, en los dos ejes de la página */
 .subscribe {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  padding-top: clamp(1rem, 3svh, 1.75rem);
+  border-top: 1px solid var(--rule-dark);
+}
+/* la etiqueta, centrada con el campo */
+.subLabel {
+  grid-column: 1 / span 5;
+  line-height: 2.5rem;
+}
+.subBody {
+  grid-column: 7 / span 5;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  align-content: start;
-  gap: 0.9rem;
-  max-width: 26rem;
-  margin-top: 2rem;
+  gap: 0.75rem;
+  max-width: 30rem;
 }
 .subForm {
   display: flex;
@@ -897,6 +909,7 @@
   gap: 0.4rem;
 }
 .cardPhoto {
+  width: 100%;
   aspect-ratio: 3 / 2;
   margin-bottom: 0.45rem;
 }
@@ -1434,15 +1447,28 @@
   color: var(--on-dark-soft);
 }
 
-/* ── Móvil ──────────────────────────────────────────────── */
+/* ── Móvil ──────────────────────────────────────────────────
+   Otro ritmo que en escritorio: las secciones van en el flujo y miden lo
+   que necesiten (solo la portada mide una pantalla), con mucho aire entre
+   ellas y entre sus bloques. Una columna, un margen lateral generoso, los
+   tipos un punto menores y las fotos a sangre. */
 @media (max-width: 880px) {
+  .page {
+    --gutter: 1.5rem;
+    --s-section: 7rem;
+    --s-block: 3.5rem;
+    --s-title: 1.5rem;
+    --t-golpe: 1.75rem;
+    --t-lectura: 1.125rem;
+    --t-manifiesto: 1.3125rem;
+  }
   .navList {
     display: none;
   }
   .nav {
     justify-content: flex-end;
   }
-  /* en móvil, las secciones van en el flujo: una columna, sin fijar */
+  /* las secciones, en el flujo: una columna, sin fijar */
   .screen {
     min-height: 0;
     padding-block: var(--s-section);
@@ -1458,57 +1484,75 @@
   .psicoStage,
   .hdsLead,
   .hdsIntro,
-  .subscribe,
+  .subLabel,
+  .subBody,
   .talkMain,
   .talkList,
   .contactFor,
   .form {
     grid-column: 1 / -1;
   }
-  /* hero: la línea del logo arriba, el statement debajo y la foto al final,
-     a todo el ancho */
+  .lectura {
+    line-height: 1.45;
+  }
+  .lectura + .lectura {
+    margin-top: 0.9em;
+  }
+  /* las fotos a sangre, en 4:5: miden el ancho de la pantalla, así que su
+     alto es 125vw. Medidas explícitas, sin aspect-ratio: en una retícula,
+     Safari las encogía (resolvía el alto antes que el ancho). */
+  .aboutPhoto,
+  .manifestoPhoto,
+  .psicoPhoto {
+    justify-self: stretch;
+    align-self: start;
+    height: 125vw;
+  }
+
+  /* portada: justo una pantalla. El recorte vertical del retrato arriba,
+     a todo el ancho y fundido en el negro; el logo encima; el territorio
+     y el statement abajo. */
   .hero {
     --hero-pad-top: 1.25rem;
-    --s: min(2.5rem, 10.2vw);
-    justify-content: flex-start;
-    gap: 0;
-    min-height: 0;
-    padding-bottom: 0;
+    --s: min(2.125rem, 8.7vw);
+    height: 100svh;
+    padding-bottom: 2.25rem;
   }
   .heroLogo {
     width: 8.5rem;
   }
-  .heroCopy {
-    margin-top: 3.25rem;
-  }
   .heroPhoto {
-    position: relative;
-    inset: auto;
-    order: 10;
-    aspect-ratio: 4 / 5;
-    margin: 2.25rem calc(-1 * var(--gutter)) 0;
+    inset: 0 0 auto;
+    height: min(125vw, 64svh);
   }
   .heroPhoto img {
-    object-position: 40% 30%;
+    object-position: 50% 28%;
   }
   .heroPhoto::after {
-    background: linear-gradient(to bottom, var(--black) 0%, rgba(14, 15, 18, 0) 20%);
+    background:
+      linear-gradient(to bottom, rgba(14, 15, 18, 0.55) 0%, rgba(14, 15, 18, 0) 20%),
+      linear-gradient(to top, var(--black) 0%, rgba(14, 15, 18, 0.55) 20%, rgba(14, 15, 18, 0) 45%);
   }
-  /* about: el párrafo y, debajo, el retrato a sangre */
+
+  /* about: el párrafo, el paso a su historia y, debajo, el retrato */
+  .aboutText {
+    font-size: 1.3125rem;
+    line-height: 1.32;
+  }
+  .aboutLink {
+    margin-top: 2.75rem;
+  }
   .aboutPhoto {
-    aspect-ratio: 4 / 5;
     margin: var(--s-block) calc(-1 * var(--gutter)) calc(-1 * var(--s-section));
   }
   .aboutPhoto::after {
     background: linear-gradient(to bottom, var(--black) 0%, rgba(14, 15, 18, 0) 22%);
   }
-  /* origen: la etiqueta, el titular, la foto a sangre, el manifiesto y la
+
+  /* origen: las etiquetas, el titular, la foto, el manifiesto y la
      pregunta */
-  .origen {
-    --t-golpe: 2rem;
-    --t-manifiesto: 1.375rem;
-  }
   .origenHead {
+    max-width: 10em;
     margin-top: var(--s-title);
   }
   .manifestoText {
@@ -1516,21 +1560,28 @@
   }
   .manifestoPhoto {
     margin: var(--s-block) calc(-1 * var(--gutter));
-    aspect-ratio: 4 / 5;
   }
-  /* el resto de golpes, a la misma medida que el de Origen */
-  .page {
-    --t-golpe: 2rem;
-    --t-lectura: 1.1875rem;
+  .scrubText + .scrubText {
+    margin-top: 1em;
   }
+  .question {
+    margin-top: 2.75rem;
+  }
+
   /* psicocibernética: la etiqueta, el golpe y la voz; el copy y el botón;
-     el retrato a sangre; los conceptos, todos encendidos */
+     el retrato; los conceptos en lista, todos encendidos */
   .psicoFrame {
     grid-template-rows: none;
     row-gap: 0;
   }
+  .psicoVoice {
+    margin-top: 1.5rem;
+  }
   .psicoIntro {
     padding-top: var(--s-block);
+  }
+  .psicoCta {
+    margin-top: 2.25rem;
   }
   .psicoPhoto,
   .psicoStage {
@@ -1538,25 +1589,71 @@
   }
   .psicoPhoto {
     margin: var(--s-block) calc(-1 * var(--gutter));
-    aspect-ratio: 4 / 5;
   }
   .concepts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
     font-size: 1.375rem;
+    border-bottom: 1px solid var(--rule-dark);
   }
-  /* hipertrofia: la cabecera, el copy y la suscripción; las entradas, de
-     dos en dos */
+  .concepts li {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: 0;
+    padding-block: 1rem 1.1rem;
+  }
+  .psicoSecondary {
+    margin-top: 2rem;
+  }
+
+  /* hipertrofia: la cabecera y el golpe; el copy; las entradas en lista,
+     con su miniatura; al final, la suscripción */
   .hdsFrame {
+    --hds-em: 5.5rem;
     grid-template-rows: none;
     row-gap: var(--s-block);
   }
-  /* en una columna no hay golpe al que alinear el copy */
-  .hdsIntro {
-    padding-top: 0;
+  .hdsHead {
+    margin-top: 2.25rem;
   }
   .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule-dark);
   }
+  .cards > li {
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .cardLink {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.4rem 1.125rem;
+    padding-block: 1.25rem;
+  }
+  .cardPhoto {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+  .cardLink > .small,
+  .cardTitle {
+    grid-column: 2;
+  }
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+  .subscribe {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .subLabel {
+    line-height: 1.5;
+  }
+  .subBody {
+    max-width: none;
+  }
+
   /* emprendimiento: el texto arriba y el retrato debajo, a todo el ancho,
      saliendo del gris de la sección */
   .empScene {
@@ -1567,6 +1664,16 @@
   .empText {
     max-width: none;
     padding-block: var(--s-section) 0;
+  }
+  .empHead {
+    margin-top: var(--s-title);
+  }
+  .empCopy,
+  .empFields {
+    margin-top: 2rem;
+  }
+  .empClose {
+    margin-top: 1rem;
   }
   .empPhoto {
     position: relative;
@@ -1582,17 +1689,45 @@
   .empPhoto img {
     object-position: 80% 100%;
   }
-  /* reels: la tira, con la pieza siguiente asomando */
+
+  /* perspectivas: la etiqueta y, debajo, su enlace; los reels en una tira,
+     con la pieza siguiente asomando; la conversación principal a sangre */
+  .blockHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
   .reel {
-    flex-basis: min(62vw, 260px);
+    flex-basis: min(64vw, 260px);
   }
   .talkScreen {
     width: auto;
     margin-inline: calc(-1 * var(--gutter));
   }
+  .talkCaption {
+    margin-top: 1.25rem;
+  }
+  .talkRow {
+    padding: 1.1rem 0 1.2rem;
+  }
+
+  /* contacto: a quién va dirigido y, debajo, el formulario */
+  .contactLead {
+    margin-top: 1.75rem;
+  }
+  .form,
+  .formRow {
+    gap: 2rem;
+  }
   .formRow {
     grid-template-columns: 1fr;
   }
+
+  .footer {
+    padding-block: 3.5rem 2.5rem;
+    gap: 1.75rem 2rem;
+  }
+
   /* banners: la foto vertical y la frase debajo, sobre el fundido a negro */
   .banner,
   .bannerInk {

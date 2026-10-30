@@ -62,7 +62,8 @@ export const v3 = {
     // de Mario con los ojos cerrados bajo la luz roja (la del antiguo banner
     // «Todo es interno.», de su carrusel de Instagram). [CONFIRMAR] con Mario.
     // /v4 conserva `image`.
-    cover: { src: "/mario/banners/interno-escritorio.jpg", alt: "Mario con los ojos cerrados, bajo una luz roja." },
+    // En móvil, el recorte vertical de la misma foto (el del antiguo banner).
+    cover: { src: "/mario/banners/interno-escritorio.jpg", mobile: "/mario/banners/interno-movil.jpg", alt: "Mario con los ojos cerrados, bajo una luz roja." },
   },
 
   /* 01b · QUIÉN ES MARIO — [PROPUESTA] pedido por Pablo (30 oct): un párrafo
