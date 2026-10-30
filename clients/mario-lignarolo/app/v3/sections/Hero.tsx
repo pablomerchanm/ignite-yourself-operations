@@ -5,7 +5,9 @@ import Logo from "../Logo";
 import s from "../v3.module.css";
 
 /**
- * 01 · HERO. Sobre negro: arriba, el logo y el menú en una misma línea;
+ * 01 · HERO. Sobre negro: arriba, el logo y el menú en una misma línea,
+ * en la retícula (el menú arranca en la columna 7, el eje de la página, y
+ * «Contacto» cierra a la derecha, subrayado);
  * abajo, apoyados en el borde, el territorio y el statement en siete
  * líneas; entre ambos, aire. El retrato a la derecha.
  *
@@ -19,24 +21,31 @@ import s from "../v3.module.css";
  */
 export default function Hero() {
   const { hero, nav } = v3;
+  const links = nav.filter((n) => n.href !== "#contacto");
+  const contact = nav.find((n) => n.href === "#contacto");
   return (
     <header className={s.hero} id="mario">
       <div className={s.heroPhoto} data-parallax="0.22">
         <Image src={hero.image.src} alt={hero.image.alt} fill priority unoptimized sizes="66vw" />
       </div>
 
-      <div className={s.heroTop}>
+      <div className={`${s.grid} ${s.heroTop}`}>
         <h1 className={s.heroMark}>
           <Logo className={s.heroLogo} />
         </h1>
         <nav className={s.nav} aria-label="Principal">
           <ul className={s.navList}>
-            {nav.map((n) => (
+            {links.map((n) => (
               <li key={n.href}>
                 <a href={n.href}>{n.label}</a>
               </li>
             ))}
           </ul>
+          {contact && (
+            <a href={contact.href} className={s.navContact}>
+              {contact.label}
+            </a>
+          )}
         </nav>
       </div>
 

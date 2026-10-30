@@ -329,10 +329,7 @@
 .page :global(.sw) {
   will-change: opacity;
 }
-/* ── Navegación: en la línea del logo, a la derecha ──────── */
-.nav {
-  color: var(--on-dark);
-}
+/* ── Navegación: en la línea del logo (ver 01 · Hero) ──────── */
 .navList {
   display: flex;
   gap: clamp(1.25rem, 2.2vw, 2.5rem);
@@ -375,10 +372,29 @@
 .heroTop {
   position: relative;
   z-index: 3;
+  align-items: center;
+}
+.heroMark {
+  grid-column: 1 / span 4;
+  margin: 0;
+  line-height: 0;
+}
+/* el menú en la retícula: los mundos desde la columna 7 (el eje de la
+   página) y «Contacto» al final, subrayado */
+.nav {
+  grid-column: 7 / -1;
   display: flex;
+  color: var(--on-dark);
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+}
+.navContact {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
 }
 .heroPhoto {
   position: absolute;
@@ -410,10 +426,6 @@
   flex-direction: column;
   width: calc(var(--s) * 5.97);
   will-change: transform;
-}
-.heroMark {
-  margin: 0;
-  line-height: 0;
 }
 .heroLogo {
   display: block;
@@ -577,56 +589,86 @@
 }
 
 /* ── 03 · Psicocibernética (negro) ─────────────────────────
-   Una pantalla, el reflejo de Origen: el retrato a la izquierda (1–4), a
-   toda altura y a sangre; la etiqueta, el golpe y el copy en el centro
-   (6–8); los cuatro conceptos a la derecha (10–12), que se encienden de uno
-   en uno con la escena fija y, al final, el statement y el enlace. */
+   Una pantalla en retícula editorial: dos bandas y dos ejes (la columna 1
+   y la 7), con aire desigual entre ellas, sin cajas. Arriba: a la
+   izquierda (1–5), la etiqueta, el golpe y la voz de Mario pegada a él;
+   a la derecha (7–11), el copy y el botón. Abajo: el retrato en una banda
+   ancha (1–6, a sangre por la izquierda) y, desde la 7, los cuatro
+   conceptos con su índice, que se encienden de uno en uno con la escena
+   fija; al final, los secundarios. */
 .psico {
   background: var(--black-2);
+}
+.psicoFrame {
+  grid-template-rows: auto minmax(0, 1fr);
+  row-gap: clamp(2rem, 6svh, 4rem);
 }
 .psico[data-pinned] .psicoFrame {
   position: sticky;
   top: 0;
   height: 100svh;
 }
+.psicoLead {
+  grid-column: 1 / span 5;
+}
+.psicoHead {
+  max-width: 11em;
+  margin-top: 1.5rem;
+}
+.psicoVoice {
+  max-width: 16em;
+  margin-top: 1.25rem;
+  color: var(--on-dark-body);
+}
+.psicoIntro {
+  grid-column: 7 / span 5;
+  padding-top: 2.7rem;
+}
+.psicoCta {
+  margin-top: 1.75rem;
+}
 .psicoPhoto {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 6;
+  grid-row: 2;
   min-height: 0;
   margin-left: calc(-1 * var(--gutter));
 }
 .psicoPhoto img {
   filter: grayscale(1) contrast(1.1) brightness(0.92);
 }
-.psicoIntro {
-  grid-column: 6 / span 3;
-}
-.psicoHead {
-  margin-top: 1.5rem;
-}
-.psicoCopy {
-  margin-top: 1.5rem;
-}
-.psicoCta {
-  margin-top: 2rem;
-}
 .psicoStage {
-  grid-column: 10 / -1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
+  grid-column: 7 / -1;
+  grid-row: 2;
+  align-self: end;
 }
+/* los conceptos: dos por fila, con su índice, en serif */
 .concepts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem var(--gap);
   margin: 0;
   padding: 0;
   list-style: none;
   font-family: var(--serif);
-  font-size: calc(var(--t-lectura) * 1.55);
+  font-size: calc(var(--t-lectura) * 1.4);
   font-weight: 500;
-  line-height: 1.12;
+  line-height: 1.1;
   letter-spacing: -0.01em;
 }
 .concepts li {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule-dark);
   transition: opacity 0.45s ease;
+}
+.conceptIndex {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--on-dark-soft);
+  font-variant-numeric: tabular-nums;
 }
 :global(html.v3-motion) .psico[data-pinned] [data-step] {
   opacity: 0.16;
@@ -634,29 +676,24 @@
 :global(html.v3-motion) .psico[data-pinned] [data-after] {
   opacity: 0;
 }
-.stageAfter {
-  display: grid;
-  gap: 1rem;
-  justify-items: start;
-  margin-top: auto;
-}
-.stageAfter .quiet {
-  max-width: 15em;
+.psicoSecondary {
+  margin-top: 1.5rem;
 }
 
 /* ── 04 · Hipertrofia del Ser (negro) ──────────────────────
-   Una pantalla, una publicación con identidad propia. Arriba, en tres
-   columnas: la cabecera y el golpe (1–4), el copy (6–8) y la suscripción
-   (10–12). Abajo, las seis entradas en una fila, como un índice.
+   Una pantalla, una publicación con identidad propia, en la retícula
+   editorial de Psicocibernética: arriba, a la izquierda (1–5), la cabecera,
+   el golpe y la suscripción; a la derecha, desde la columna 7, el copy y
+   el enlace. Abajo, las seis entradas en una fila, como un índice.
    Símbolo: anillos de crecimiento, tangentes en la base, cada uno φ veces
    el anterior (HdsSymbol.tsx). Cabecera: el nombre en dos voces,
    HIPERTROFIA en versal espaciada y «del Ser» en itálica. */
 .hdsFrame {
   grid-template-rows: auto 1fr;
-  row-gap: var(--s-block);
+  row-gap: clamp(1.5rem, 5svh, 3rem);
 }
 .hdsLead {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 5;
 }
 /* la cabecera: el símbolo mide lo que el bloque del nombre */
 .hdsMasthead {
@@ -705,7 +742,8 @@
   margin-top: 1.75rem;
 }
 .hdsIntro {
-  grid-column: 6 / span 3;
+  grid-column: 7 / span 5;
+  padding-top: var(--hds-intro-top, 4.35rem);
   display: grid;
   align-content: start;
   justify-items: start;
@@ -714,13 +752,15 @@
 .hdsIntro .lectura + .lectura {
   margin-top: -0.6rem;
 }
-/* suscripción: el gesto del widget de Substack, en una línea */
+/* suscripción: el gesto del widget de Substack, en una línea, bajo el
+   golpe */
 .subscribe {
-  grid-column: 10 / -1;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-content: start;
   gap: 0.9rem;
+  max-width: 26rem;
+  margin-top: 2rem;
 }
 .subForm {
   display: flex;
@@ -1328,8 +1368,11 @@
 
 /* ── Móvil ──────────────────────────────────────────────── */
 @media (max-width: 880px) {
-  .navList li:not(:last-child) {
+  .navList {
     display: none;
+  }
+  .nav {
+    justify-content: flex-end;
   }
   /* en móvil, las secciones van en el flujo: una columna, sin fijar */
   .screen {
@@ -1339,6 +1382,7 @@
   .origenSide,
   .manifestoText,
   .manifestoPhoto,
+  .psicoLead,
   .psicoPhoto,
   .psicoIntro,
   .psicoStage,
@@ -1401,17 +1445,25 @@
     --t-golpe: 2rem;
     --t-lectura: 1.1875rem;
   }
-  /* psicocibernética: la etiqueta, el golpe y el copy; el retrato a sangre;
-     los conceptos y el cierre, todos encendidos */
+  /* psicocibernética: la etiqueta, el golpe y la voz; el copy y el botón;
+     el retrato a sangre; los conceptos, todos encendidos */
+  .psicoFrame {
+    grid-template-rows: none;
+    row-gap: 0;
+  }
   .psicoIntro {
-    order: -1;
+    padding-top: var(--s-block);
+  }
+  .psicoPhoto,
+  .psicoStage {
+    grid-row: auto;
   }
   .psicoPhoto {
     margin: var(--s-block) calc(-1 * var(--gutter));
     aspect-ratio: 4 / 5;
   }
-  .stageAfter {
-    margin-top: var(--s-block);
+  .concepts {
+    font-size: 1.375rem;
   }
   /* hipertrofia: la cabecera, el copy y la suscripción; las entradas, de
      dos en dos */
