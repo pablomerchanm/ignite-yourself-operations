@@ -761,65 +761,57 @@
    editorial de Psicocibernética: arriba, a la izquierda (1–5), la cabecera,
    el golpe y la suscripción; a la derecha, desde la columna 7, el copy y
    el enlace. Abajo, las seis entradas en una fila, como un índice.
-   Símbolo: anillos de crecimiento, tangentes en la base, cada uno φ veces
-   el anterior (HdsSymbol.tsx). Cabecera: el nombre en dos voces,
-   HIPERTROFIA en versal espaciada y «del Ser» en itálica. */
+   Cabecera: el logo de la propuesta 2 (marca/hipertrofia/v2/), el emblema
+   —una figura que se levanta del bloque— y el nombre en Archivo ancha. */
 .hdsFrame {
+  /* la altura del emblema: manda en la cabecera y en el eje del copy */
+  --hds-em: clamp(3.5rem, 10.5svh, 6rem);
   grid-template-rows: auto 1fr;
   row-gap: clamp(1.5rem, 5svh, 3rem);
 }
 .hdsLead {
   grid-column: 1 / span 5;
 }
-/* la cabecera: el símbolo mide lo que el bloque del nombre */
+/* la cabecera, en las proporciones del logo horizontal: el nombre mide
+   1/4,7 del emblema y se separa de él 0,15 de su altura */
 .hdsMasthead {
   display: flex;
   align-items: center;
-  gap: 0.5em;
-  font-size: 1.375rem;
+  gap: calc(var(--hds-em) * 0.15);
 }
-.hdsSymbol {
+.hdsEmblem {
   display: block;
   flex: none;
-  width: 1.9em;
-  height: 1.9em;
-  overflow: visible;
+  height: var(--hds-em);
+  width: auto;
+  aspect-ratio: 418 / 763.5;
   color: var(--on-dark);
 }
-.hdsSymbol circle {
-  transform-box: view-box;
-  transform-origin: 50px 98px;
-}
-/* los anillos crecen desde la base, uno tras otro, con el scroll */
-:global(html.v3-motion) .hdsSymbol[data-progress] circle {
-  --x: clamp(0, (var(--p, 1) - var(--d, 0)) / 0.4, 1);
-  transform: scale(calc(var(--x) * (2 - var(--x))));
+/* el emblema sale del bloque con el scroll: aparece de abajo arriba */
+:global(html.v3-motion) .hdsEmblem[data-progress] {
+  clip-path: inset(calc((1 - var(--p, 1)) * 100%) 0 0 0);
 }
 .hdsMast {
   margin: 0;
-  font-family: var(--serif);
-  font-weight: 500;
-  line-height: 1;
-}
-.hdsMastName {
-  display: block;
-  letter-spacing: 0.14em;
+  font-family: var(--display);
+  font-size: calc(var(--hds-em) / 4.7);
+  font-weight: 800;
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  line-height: 0.84;
+  letter-spacing: -0.012em;
   text-transform: uppercase;
 }
-.hdsMastDel {
+.hdsMast .line {
   display: block;
-  margin-top: 0.14em;
-  font-size: 0.62em;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: -0.01em;
 }
 .hdsHead {
   margin-top: 1.75rem;
 }
+/* el copy arranca a la altura del golpe: el emblema más su margen */
 .hdsIntro {
   grid-column: 7 / span 5;
-  padding-top: var(--hds-intro-top, 4.35rem);
+  padding-top: calc(var(--hds-em) + 1.75rem);
   display: grid;
   align-content: start;
   justify-items: start;
@@ -1556,6 +1548,10 @@
   .hdsFrame {
     grid-template-rows: none;
     row-gap: var(--s-block);
+  }
+  /* en una columna no hay golpe al que alinear el copy */
+  .hdsIntro {
+    padding-top: 0;
   }
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,6 +1,12 @@
 # Hipertrofia del Ser · emblema (propuesta 2)
 
-**Estado:** propuesta del estudio (30 oct 2026), pedida por Pablo. Pendiente de Pablo y de Mario. No sustituye todavía a los anillos de la propuesta 1 (`../`) ni está aplicada en la web. Hoja del sistema: `hds-sistema-v2.jpg`.
+**Estado:** propuesta del estudio (30 oct 2026), pedida y elegida por Pablo (la figura principal, no la alternativa). Pendiente de Mario. Hoja del sistema: `hds-sistema-v2.jpg`.
+
+**En la web:** lo usa `/v3`, en la cabecera de la sección Hipertrofia del Ser, en lugar de los anillos de la propuesta 1 (`../`), que siguen en `/v4`.
+
+- **El componente:** `app/v3/HdsEmblem.tsx`, con el trazado en `app/v3/hds-emblem-path.ts`.
+- **El nombre:** es texto vivo, en Archivo ancha 800, en las proporciones del logo horizontal.
+- **Con el scroll:** la figura aparece de abajo arriba, del bloque a la mano. Con movimiento reducido, entera.
 
 ## Concepto: la talla
 

@@ -70,8 +70,8 @@ export default function Scrolly() {
     }));
     /* Progreso (todas las pantallas): [data-progress="0.7"] recibe --p, de 0
        cuando su borde superior asoma por abajo a 1 tras recorrer esa fracción
-       de pantalla. Qué hacer con --p lo decide el CSS (los anillos de
-       Hipertrofia del Ser). */
+       de pantalla. Qué hacer con --p lo decide el CSS (el emblema de
+       Hipertrofia del Ser, que sale del bloque). */
     const prog = Array.from(document.querySelectorAll<HTMLElement | SVGElement>("[data-progress]")).map((el) => ({
       el,
       span: parseFloat(el.dataset.progress || "0.7") || 0.7,

@@ -36,9 +36,9 @@ Solo negro `#0B0B0A` y hueso `#ECEBE6`, los de la identidad (`marca/identidad/`)
 
 ## En la web
 
-Lo usa `/v3`:
+Lo usa `/v4`. Desde el 30 oct 2026, `/v3` usa el emblema de la propuesta 2 (`v2/`).
 
-- El componente está en `app/v3/HdsSymbol.tsx`.
+- El componente está en `app/v4/HdsSymbol.tsx`.
 - La cabecera horizontal abre la sección, en el lugar del título, y es texto vivo.
 - Sus anillos crecen con el scroll.
 - Las portadas de las entradas mantienen su color.

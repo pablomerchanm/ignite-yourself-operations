@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
-import HdsSymbol from "../HdsSymbol";
+import HdsEmblem from "../HdsEmblem";
 import { Arrow, Paragraphs, ext } from "./ui";
 import s from "../v3.module.css";
 
@@ -9,7 +9,8 @@ import s from "../v3.module.css";
  * 04 · HIPERTROFIA DEL SER, en negro, en una sola pantalla: una publicación
  * con identidad propia, en la misma retícula editorial que
  * Psicocibernética (dos bandas, dos ejes). Arriba, a la izquierda (1–5),
- * su cabecera (el símbolo, que crece con el scroll, y el nombre), el golpe
+ * su cabecera (el emblema, que sale del bloque con el scroll, y el nombre
+ * en Archivo ancha, como en el logo), el golpe
  * en condensada y la suscripción; a la derecha, desde la columna 7, el
  * copy en serif con el enlace. Abajo, las seis entradas reales de Substack
  * en una sola fila, como un índice.
@@ -21,10 +22,9 @@ export default function Hipertrofia() {
       <div className={`${s.wrap} ${s.grid} ${s.screen} ${s.hdsFrame}`}>
         <div className={s.hdsLead}>
           <div className={s.hdsMasthead} data-reveal="up">
-            <HdsSymbol variant="small" grow className={s.hdsSymbol} />
+            <HdsEmblem emerge className={s.hdsEmblem} />
             <p className={s.hdsMast}>
-              <span className={s.hdsMastName}>{h.masthead[0]}</span>{" "}
-              <span className={s.hdsMastDel}>{h.masthead[1]}</span>
+              <span className={s.line}>{h.masthead[0]}</span> <span className={s.line}>{h.masthead[1]}</span>
             </p>
           </div>
           <h2 className={`${s.statement} ${s.golpe} ${s.hdsHead}`} id="pub-h" data-reveal="up">
