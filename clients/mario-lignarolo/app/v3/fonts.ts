@@ -8,8 +8,8 @@ import localFont from "next/font/local";
  *           condensada de los statements, al modo de Nike About.
  *  sans     Geist (Vercel / Basement Studio): títulos de sección, interfaz,
  *           cuerpo y metadatos. Neutra, precisa, contemporánea.
- *  serif    Newsreader (Production Type), con tamaño óptico: la voz de Mario
- *           en titulares y en itálica. Culta y legible a cualquier escala.
+ *  serif    Cormorant Garamond (Christian Thalmann), con su itálica: la voz
+ *           de Mario. La misma serif de la identidad (marca/identidad/).
  */
 export const archivo = localFont({
   src: "./fonts/Archivo-Variable-latin.woff2",
@@ -26,10 +26,10 @@ export const geist = localFont({
   display: "swap",
 });
 
-export const newsreader = localFont({
+export const cormorant = localFont({
   src: [
-    { path: "./fonts/Newsreader-Variable-latin.woff2", weight: "200 800", style: "normal" },
-    { path: "./fonts/Newsreader-Italic-Variable-latin.woff2", weight: "200 800", style: "italic" },
+    { path: "./fonts/CormorantGaramond-Variable.woff2", weight: "300 700", style: "normal" },
+    { path: "./fonts/CormorantGaramond-Italic-Variable.woff2", weight: "300 700", style: "italic" },
   ],
   variable: "--font-v3-serif",
   display: "swap",

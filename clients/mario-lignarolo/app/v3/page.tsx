@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Motion from "@/components/Motion";
 import { site } from "@/data/content";
 import { v3 } from "@/data/v3";
-import { archivo, geist, newsreader } from "./fonts";
+import { archivo, cormorant, geist } from "./fonts";
 import Scrolly from "./Scrolly";
 import Banner from "./sections/Banner";
 import Contacto from "./sections/Contacto";
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function V3() {
   return (
-    <div className={`${s.page} ${archivo.variable} ${geist.variable} ${newsreader.variable}`}>
+    <div className={`${s.page} ${archivo.variable} ${geist.variable} ${cormorant.variable}`}>
       {site.draft && <p className={s.notice}>{v3.notice}</p>}
       <div className={s.grain} aria-hidden="true" />
       <Hero />

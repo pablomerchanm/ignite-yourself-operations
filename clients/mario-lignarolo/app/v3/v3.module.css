@@ -10,7 +10,7 @@
    Tipos   Tres voces, cada una con un solo trabajo:
              display  Archivo condensada → statements en caja alta
              sans     Geist              → títulos de sección, interfaz, cuerpo
-             serif    Newsreader         → la voz de Mario (titulares, itálica)
+             serif    Cormorant Garamond → la voz de Mario (titulares, itálica)
 
    Escala  Nueve pasos, razón ≈ 1,3. Cada paso tiene un uso y nada se sale:
              hero     statement de portada: --s, se calcula desde el alto
@@ -24,6 +24,10 @@
              h3       títulos de sección y tarjeta    ≈ 23 px
              body     párrafos                          17 px
              small    metadatos                         13 px
+           Origen, la primera lectura, va en otra clave: una sola voz (la
+           serif) y tamaños contenidos. voz ≈ 46 px (titular), manifiesto
+           ≈ 30 px (lectura guiada), pregunta ≈ 40 px (itálica) y la
+           etiqueta, 13 px en versal espaciada.
 
    Retícula 12 columnas. Toda sección abre igual: título → titular → contenido.
            El copy vive siempre en la columna de lectura (7–11): titular
@@ -64,6 +68,10 @@
   --t-body: 1.0625rem;
   --t-ui: 0.9375rem;
   --t-small: 0.8125rem;
+  /* Origen: la voz de Mario, contenida */
+  --t-voz: clamp(2.125rem, 1.4rem + 1.65vw, 3.125rem);
+  --t-manifiesto: clamp(1.5rem, 1.2rem + 0.75vw, 1.9375rem);
+  --t-pregunta: clamp(1.875rem, 1.35rem + 1.3vw, 2.75rem);
 
   --s-section: clamp(5rem, 3.5rem + 6vw, 10rem);
   --s-block: clamp(2.5rem, 1.75rem + 3vw, 5rem);
@@ -126,7 +134,6 @@
 .sectionTop {
   padding-top: var(--s-section);
 }
-.head,
 .displayHead {
   margin-top: var(--s-title);
 }
@@ -189,30 +196,22 @@
 .serifHead {
   margin-bottom: 0;
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--t-serif-l);
   line-height: 1.04;
   letter-spacing: -0.02em;
   max-width: 15em;
   text-wrap: balance;
 }
-.quiet,
-.quietL {
+.quiet {
   margin: 0;
   font-family: var(--serif);
   font-style: italic;
-  font-weight: 400;
-  text-wrap: balance;
-}
-.quiet {
+  font-weight: 500;
   font-size: var(--t-h2);
   line-height: 1.12;
   letter-spacing: -0.01em;
-}
-.quietL {
-  font-size: var(--t-serif-l);
-  line-height: 1.06;
-  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 .lead {
   margin: 0;
@@ -579,42 +578,113 @@
   }
 }
 
-/* ── 02 · Origen (blanco) ──────────────────────────────── */
+/* ── 02 · Origen (blanco) ──────────────────────────────────
+   La primera lectura de la página, en otra clave: una sola voz (la serif
+   de Mario) y tamaños contenidos. Retícula de publicación: la etiqueta en
+   la columna índice (1–3); el titular y el manifiesto desde la 4; la foto,
+   pequeña y fija, en la 10–12, a sangre por la derecha. Al final, el
+   silencio y la pregunta, sola y centrada. */
+.origen {
+  font-family: var(--serif);
+}
+.origenTop {
+  align-items: start;
+}
+/* etiqueta: versal espaciada, alineada con la primera línea del titular;
+   en la columna índice, un territorio por línea */
+.indexLabel {
+  grid-column: 1 / span 3;
+  margin: 0;
+  padding-top: 0.95em;
+  font-size: var(--t-small);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.indexLabel span {
+  display: block;
+}
+.origenHead {
+  grid-column: 4 / span 6;
+  margin: 0;
+  max-width: 14em;
+  font-size: var(--t-voz);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
 .manifesto {
-  margin-top: var(--s-block);
+  margin-top: clamp(4rem, 2.5rem + 4.5vw, 8rem);
   align-items: start;
 }
 .manifestoText {
-  grid-column: 1 / span 7;
+  grid-column: 4 / span 6;
 }
 .scrubText {
   margin: 0;
-  max-width: 19em;
-  font-size: var(--t-h2);
+  max-width: 20em;
+  font-size: var(--t-manifiesto);
   font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.022em;
+  line-height: 1.24;
+  letter-spacing: -0.004em;
 }
 .scrubText + .scrubText {
   margin-top: 0.85em;
 }
 .manifestoAside {
-  grid-column: 9 / -1;
+  grid-column: 10 / -1;
   position: sticky;
-  top: 12svh;
+  top: 16svh;
   display: grid;
   gap: 1.25rem;
 }
 .manifestoPhoto {
   margin-right: calc(-1 * var(--gutter));
-  aspect-ratio: 3 / 4;
-  max-height: 64svh;
+  aspect-ratio: 4 / 5;
+  max-height: 62svh;
+}
+.origen .counter {
+  font-variant-numeric: lining-nums tabular-nums;
 }
 /* el silencio: la pregunta, sola y centrada */
 .question {
-  max-width: 15em;
+  max-width: 17em;
   margin: var(--s-section) auto 0;
+  font-style: italic;
+  font-size: var(--t-pregunta);
+  font-weight: 500;
+  line-height: 1.1;
   text-align: center;
+  text-wrap: balance;
+}
+/* pantallas medianas: la etiqueta sube sobre el titular y el texto ocupa
+   la mitad izquierda, para que la foto no quede diminuta */
+@media (max-width: 1100px) {
+  .indexLabel,
+  .origenHead {
+    grid-column: 1 / -1;
+  }
+  .indexLabel {
+    padding-top: 0;
+  }
+  .indexLabel span {
+    display: inline;
+  }
+  .indexLabel span + span::before {
+    content: " · ";
+  }
+  .origenHead {
+    margin-top: var(--s-title);
+  }
+  .manifestoText {
+    grid-column: 1 / span 7;
+  }
+  .manifestoAside {
+    grid-column: 9 / -1;
+  }
 }
 
 /* ── 03 · Psicocibernética (negro) ─────────────────────── */
@@ -715,7 +785,7 @@
 .hdsMast {
   margin: 0;
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
 }
 .hdsMastName {
@@ -760,7 +830,7 @@
   margin: 0;
   font-family: var(--serif);
   font-size: var(--t-lead);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.015em;
   text-wrap: balance;
@@ -782,6 +852,7 @@
 .subHead {
   margin: 0;
   font-family: var(--serif);
+  font-weight: 500;
   font-size: var(--t-lead);
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -803,6 +874,7 @@
 .subName {
   display: block;
   font-family: var(--serif);
+  font-weight: 600;
   font-size: var(--t-body);
   line-height: 1.3;
 }
@@ -943,7 +1015,7 @@
   margin: 0;
   font-family: var(--serif);
   font-size: var(--t-h2);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.015em;
   text-wrap: balance;
@@ -968,7 +1040,7 @@
   margin: 0 0 0.4rem;
   font-family: var(--serif);
   font-size: var(--t-h2);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1082,6 +1154,7 @@
   display: block;
   margin: 0.9rem 0 0.35rem;
   font-family: var(--serif);
+  font-weight: 600;
   font-size: var(--t-h3);
   line-height: 1.15;
   letter-spacing: -0.01em;
@@ -1225,6 +1298,7 @@
 .contactLead {
   margin: 0 0 0.5rem;
   font-family: var(--serif);
+  font-weight: 500;
   font-style: italic;
   font-size: var(--t-lead);
   line-height: 1;
