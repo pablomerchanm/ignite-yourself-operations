@@ -58,29 +58,30 @@ export const v3 = {
     // Etalonado sobre el original (hero.jpg): negros profundos, piel natural,
     // el verde del fondo contenido. Se sirve tal cual (sin recomprimir).
     image: { src: "/mario/hero-v3.jpg", alt: "Mario Lignarolo, retrato." },
+    // /v3 (30 oct, Pablo): el retrato pasa al «about» y la portada toma la foto
+    // de Mario con los ojos cerrados bajo la luz roja (la del antiguo banner
+    // «Todo es interno.», de su carrusel de Instagram). [CONFIRMAR] con Mario.
+    // /v4 conserva `image`.
+    cover: { src: "/mario/banners/interno-escritorio.jpg", alt: "Mario con los ojos cerrados, bajo una luz roja." },
   },
 
   /* 01b · QUIÉN ES MARIO — [PROPUESTA] pedido por Pablo (30 oct): un párrafo
-     breve entre la portada y Origen, al modo de los «about» editoriales, que
-     lleve a su historia completa (/historia). Solo hechos ya publicados o
-     confirmados, cada uno con su fuente; pendiente del OK de Pablo y Mario.
-     Nombra sus obras, no títulos genéricos («Founder», «Creator»…), para
-     respetar el principio del spec: demostrar, no explicar.
+     breve entre la portada y Origen, al modo de los «about» editoriales, con
+     su retrato, que lleve a su historia completa (/historia). Pendiente del
+     OK de Pablo y Mario. Tono editorial y de observación, en tercera
+     persona; nombra sus obras, no títulos genéricos («demostrar, no
+     explicar»). Solo hechos con fuente:
        · autor de Hipertrofia del Ser: su publicación en Substack [REAL].
        · creador de Psicocibernética: «Por qué creé Psico-Cibernética»
          (/historia, [ENTREVISTA]).
-       · explorador del ser: la expresión de Pablo (30 oct).
-       · autoimagen, consciencia y cuerpo: palabras del copy de Hipertrofia
-         del Ser [SPEC].
-       · 40 días de respiración consciente y trabajo con el autoconcepto: el
-         encuadre público del programa [CONFIRMADO] (data/content.ts).
-       · LIGNAROLO junto a su hermano Giorgio: copy de Emprendimiento [SPEC].
-       · «Todo nació de su propio proceso»: data/content.ts («Nació de su
-         propio proceso», [ENTREVISTA § 7b]).
-     `**así**` marca lo que se enciende en blanco: sus obras. */
+       · el cuerpo, la respiración y la identidad: entrena (Origen: «Transformé
+         mi cuerpo» [SPEC]), está certificado en respiración consciente
+         (/historia, [ENTREVISTA]) y explora «el cambio de identidad» [SPEC].
+       · «una misma pregunta»: la que cierra Origen, justo debajo [SPEC].
+     `**así**` marca lo que se enciende en blanco. */
   about: {
     label: "Mario Lignarolo",
-    text: "Mario Lignarolo, autor de **Hipertrofia del Ser**, creador de **Psicocibernética** y **explorador del ser**. Escribe sobre autoimagen, consciencia y cuerpo, guía **40 días de respiración consciente** y trabajo con el autoconcepto, y construye **LIGNAROLO** junto a su hermano Giorgio. Todo nació de su propio proceso.",
+    text: "Mario Lignarolo, autor de **Hipertrofia del Ser** y creador de **Psicocibernética**, trabaja donde se encuentran **el cuerpo, la respiración y la identidad**. Escribe, respira y entrena alrededor de una misma pregunta.",
     link: { label: "La historia de Mario", href: "/historia" },
   },
 

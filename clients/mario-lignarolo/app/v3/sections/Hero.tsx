@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <header className={s.hero} id="mario">
       <div className={s.heroPhoto} data-parallax="0.22">
-        <Image src={hero.image.src} alt={hero.image.alt} fill priority unoptimized sizes="66vw" />
+        <Image src={hero.cover.src} alt={hero.cover.alt} fill priority unoptimized sizes="66vw" />
       </div>
 
       <div className={`${s.grid} ${s.heroTop}`}>
