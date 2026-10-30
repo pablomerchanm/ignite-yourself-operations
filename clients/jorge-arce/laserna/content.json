@@ -239,15 +239,6 @@
       ]
     },
     {
-      "type": "strip",
-      "id": "team",
-      "img": {
-        "src": "/laserna/assets/team.jpg",
-        "alt": "María Lucía Laserna con su equipo de Álvarez Liévano Laserna"
-      },
-      "pos": "50% 40%"
-    },
-    {
       "type": "stmt",
       "id": "practice-open",
       "label": "Práctica",

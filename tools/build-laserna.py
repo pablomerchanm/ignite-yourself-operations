@@ -1609,96 +1609,6 @@ base = base.replace("'Could not load content ('", "'No se pudo cargar el conteni
 # la ficha de la firma: el gris tinta de ALL en lugar del azul de Rodriguez & Associates
 CAL = CAL.replace('#site section.fra{--ra:#00305B}', '#site section.fra{--ra:#1B2028}')
 assert '--ra:#1B2028' in CAL
-# la franja del equipo con la proporcion de la foto: sin cortar cabezas
-CAL = CAL.replace('</style>', """
-/* ---------- Laserna: franja de prueba (seals) ---------- */
-.seals{padding:var(--sec) 0;background:var(--bg)}
-.seals.ink{background:var(--ink);color:#fff}
-.seals.tint{background:#E4DED2}
-.slhead{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(30px,4.5vh,52px)}
-.seals.ink .slhead .smallcap{color:rgba(255,255,255,.5)}
-.slgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid currentColor}
-.sl{display:flex;flex-direction:column;gap:12px;padding:clamp(26px,3.6vh,40px) clamp(14px,1.6vw,26px) clamp(24px,3vh,34px) 0;
-  border-right:1px solid rgba(127,127,127,.25);color:inherit;text-decoration:none;transition:opacity .25s}
-.sl+.sl{padding-left:clamp(14px,1.6vw,26px)}
-.sl:last-child{border-right:0}
-.sl:hover{opacity:.78}
-.sldir{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.05;letter-spacing:-.01em}
-.slwhat{font-size:clamp(15px,1.15vw,17px);line-height:1.42;max-width:24ch}
-.slyrs{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
-.slgo{margin-top:auto;padding-top:14px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
-.seals .pmore a{color:inherit;border-color:currentColor}
-@media(max-width:1000px){.slgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .sl:nth-child(2){border-right:0}.sl:nth-child(3){padding-left:0}.sl:nth-child(-n+2){border-bottom:1px solid rgba(127,127,127,.25)}}
-@media(max-width:560px){.slgrid{grid-template-columns:1fr}.sl{border-right:0!important;padding-left:0!important;border-bottom:1px solid rgba(127,127,127,.25)}.sl:last-child{border-bottom:0}}
-
-/* ---------- Laserna: el registro ano por ano (ledger) ---------- */
-.ldg{padding:var(--sec) 0}
-.ldg.tint{background:#E4DED2}
-.ldkey{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:clamp(30px,4vh,46px) 0 6px}
-.ldkn{font-size:12px;opacity:.6}
-.ldy{display:grid;grid-template-columns:clamp(84px,11vw,170px) minmax(0,1fr);gap:clamp(16px,2.4vw,40px);
-  border-top:1px solid var(--ink);padding-top:clamp(18px,2.4vh,26px);margin-top:clamp(22px,3vh,34px)}
-.ldyr{font-family:var(--serif);font-weight:300;font-size:clamp(40px,4.6vw,72px);line-height:.9;letter-spacing:-.02em}
-.ldrows{list-style:none;margin:0;padding:0}
-.ldrows li{display:grid;grid-template-columns:minmax(0,15em) minmax(0,1fr) 7.5em 10.5em;gap:clamp(12px,1.6vw,26px);align-items:baseline;
-  padding:14px 0;border-bottom:1px solid var(--line)}
-.ldrows li:last-child{border-bottom:0}
-.lddir{font-family:var(--serif);font-size:clamp(17px,1.35vw,21px);line-height:1.2}
-.ldwhat{font-size:clamp(14px,1.05vw,16px);line-height:1.45}
-.ldwho{justify-self:start;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:4px 8px 3px;border:1px solid currentColor;white-space:nowrap}
-.ldwho.i{color:var(--brass)}
-.ldwho.f{color:rgba(20,22,26,.55)}
-.ldsrc{justify-self:end;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--ink);border-bottom:1px solid currentColor;padding-bottom:2px}
-.ldsrc.rep{opacity:.6}
-.ldsrc.off{opacity:.4;border:0}
-@media(max-width:860px){.ldy{grid-template-columns:1fr;gap:8px}
-  .ldrows li{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px}
-  .lddir{grid-column:1/-1}.ldwhat{grid-column:1/-1}}
-
-/* ---------- Laserna: los socios (partners) ---------- */
-.ptn{padding:var(--sec) 0}
-.ptn.ink{background:var(--ink);color:#fff}
-.ptn.ink .smallcap,.ptn.ink .rnum{color:rgba(255,255,255,.5)}
-.ptn.ink .elede{color:rgba(255,255,255,.72)}
-.ptgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);margin-top:clamp(36px,5vh,56px)}
-.ptc{display:flex;flex-direction:column;gap:12px;padding:clamp(22px,2.4vw,32px);border:1px solid rgba(127,127,127,.3)}
-.ptc.self{border-color:var(--brass);box-shadow:inset 0 3px 0 var(--brass)}
-.ptc h3{font-family:var(--serif);font-weight:400;font-size:clamp(22px,1.9vw,29px);line-height:1.1;margin:0}
-.ptlead{font-size:14.5px;line-height:1.5;margin:0;opacity:.85}
-.ptrank{font-size:12.5px;line-height:1.5;margin:0;color:var(--brass)}
-.ptgo{margin-top:auto;padding-top:12px;font-size:10.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:inherit}
-@media(max-width:1000px){.ptgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.ptgrid{grid-template-columns:1fr}}
-
-/* ---------- Laserna: hero sobrio. Una sola voz grande (el nombre); lo demas, en voz baja ---------- */
-#site .hero .hkick{font-size:10px;letter-spacing:.24em;color:rgba(255,255,255,.62)}
-#site .hero .hname{font-size:clamp(40px,5.2vw,80px)!important;line-height:1.02!important;max-width:11.5ch!important;letter-spacing:-.018em}
-#site .hero .hsub{font-family:'Instrument Sans',sans-serif!important;font-weight:400;font-size:clamp(15px,1.1vw,17px)!important;line-height:1.65!important;
-  letter-spacing:0;max-width:38ch!important;color:rgba(255,255,255,.72);margin-top:clamp(20px,2.8vh,30px)}
-#site .hero .hnote{font-size:10.5px!important;letter-spacing:.16em;text-transform:uppercase;line-height:1.9!important;
-  color:rgba(255,255,255,.58);max-width:58ch!important;margin-top:clamp(16px,2.2vh,22px)}
-#site .hero .hnote::before{top:.62em}
-#site .hero .hacts{margin-top:clamp(26px,3.6vh,38px)}
-#site .hero .hcta{font-size:10.5px}
-#site .hfirm{margin-top:clamp(28px,4.2vh,44px);padding-top:clamp(16px,2.4vh,22px)}
-#site .hfirm img{width:clamp(120px,8.6vw,146px)}
-#site .hfirm .hfk{font-size:9.5px}
-@media(max-width:860px){
-  #site .hero .hname{font-size:clamp(38px,10.5vw,50px)!important;max-width:none!important}
-  #site .hero .hsub{font-size:15px!important;max-width:none!important;margin-top:14px}
-  #site .hero .hnote{font-size:10px!important}
-  #site .hfirm img{width:min(36vw,140px)}
-}
-
-/* ---------- Laserna: la firma junto al nombre en la barra ---------- */
-.topbar .tname .tfirm{opacity:.55;letter-spacing:.12em}
-@media(max-width:860px){.topbar .tname .tfirm{display:none}}
-
-/* ---------- Laserna: el equipo de Auditoria y Fiscalizacion, completo ---------- */
-#team .sph{height:auto;aspect-ratio:1480/540;max-height:none}
-#team .sph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-</style>""", 1)
 
 # ------------------------------------------------------------- 7b. propuesta
 # Igual que en Brant: con proposal.active en true se publica /laserna/proposal
@@ -1782,7 +1692,7 @@ T_TR = 'Trayectoria — María Lucía Laserna'
 PAGES = {
     'home': page(TITLE.replace('&amp;', '&'), DESC,
         [deep('hero'), deep('seals'), deep('in-brief'), deep('words'), deep('quote'), deep('s-practice'),
-         deep('s-audit'), deep('for-clients'), deep('firm'), deep('team'), inq()]),
+         deep('s-audit'), deep('for-clients'), deep('firm'), inq()]),
     'practica': page(T_PR,
         'Auditoría laboral, seguridad social y UGPP, litigio y casación, y relaciones colectivas, para empleadores.',
         [deep('practice-open'), deep('routes'), deep('caso'), deep('metodo'), deep('sectors'),
