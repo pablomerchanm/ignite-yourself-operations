@@ -242,6 +242,40 @@
 .link:hover svg {
   transform: translate(0.12em, -0.12em);
 }
+/* el botón: lleno, sobrio, con la flecha ↗. Sobre negro, hueso; sobre
+   claro, negro. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.35rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.005em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn svg {
+  width: 0.75em;
+  height: 0.75em;
+  transition: transform 0.25s ease;
+}
+.btn:hover svg {
+  transform: translate(0.12em, -0.12em);
+}
+.dark .btn {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.dark .btn:hover {
+  background: #fff;
+}
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
 
 /* ── Piezas ─────────────────────────────────────────────── */
 .photo {
@@ -571,6 +605,9 @@
 }
 .psicoCopy {
   margin-top: 1.5rem;
+}
+.psicoCta {
+  margin-top: 2rem;
 }
 .psicoStage {
   grid-column: 10 / -1;
@@ -1474,6 +1511,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .link svg,
+  .btn,
+  .btn svg,
   .cardPhoto img,
   .reelCover img,
   .talkRow,

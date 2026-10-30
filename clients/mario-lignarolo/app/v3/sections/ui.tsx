@@ -15,6 +15,19 @@ export function Tag({ label, id, as: As = "p" }: { label: string; id?: string; a
   );
 }
 
+/**
+ * Botón: el paso principal de una sección, cuando lleva a otro mundo (sale
+ * de la web). Lleno, con la flecha ↗; uno por pantalla como mucho.
+ */
+export function Btn({ href, children }: { href: string; children: string }) {
+  return (
+    <a href={href} className={s.btn} {...ext}>
+      <span>{children}</span>
+      <Arrow />
+    </a>
+  );
+}
+
 /** Flecha ↗ de los CTA: un trazo, sin relleno. */
 export function Arrow() {
   return (

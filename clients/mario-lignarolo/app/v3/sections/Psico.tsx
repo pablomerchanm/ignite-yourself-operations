@@ -1,15 +1,16 @@
 import Image from "next/image";
 import { v3 } from "@/data/v3";
-import { Arrow, Paragraphs, Tag, ext } from "./ui";
+import { Btn, Paragraphs, Tag } from "./ui";
 import s from "../v3.module.css";
 
 /**
  * 03 · PSICOCIBERNÉTICA, en negro, en una sola pantalla: el reflejo de
  * Origen. A la izquierda, el retrato a toda altura; en el centro, la
- * etiqueta, el golpe en condensada y el copy en serif; a la derecha, los
- * cuatro conceptos. En escritorio la escena se fija ([data-pin]) y los
- * conceptos se encienden de uno en uno, como una respiración; al final
- * aparecen los secundarios, el statement y el enlace. En móvil, en el flujo.
+ * etiqueta, el golpe en condensada, el copy en serif y el botón, siempre a
+ * la vista; a la derecha, los cuatro conceptos. En escritorio la escena se
+ * fija ([data-pin]) y los conceptos se encienden de uno en uno, como una
+ * respiración; al final aparecen los secundarios y el statement. En móvil,
+ * en el flujo.
  */
 export default function Psico() {
   const { psico } = v3;
@@ -28,6 +29,9 @@ export default function Psico() {
           <div className={s.psicoCopy} data-reveal="up">
             <Paragraphs items={psico.paragraphs} className={s.lectura} />
           </div>
+          <div className={s.psicoCta} data-reveal="up">
+            <Btn href={psico.href}>{psico.cta}</Btn>
+          </div>
         </div>
 
         <div className={s.psicoStage}>
@@ -41,9 +45,6 @@ export default function Psico() {
           <div className={s.stageAfter} data-after>
             <p className={s.tag}>{psico.secondary.join(" · ")}</p>
             <p className={s.quiet}>{psico.statement}</p>
-            <a href={psico.href} className={s.link} {...ext}>
-              {psico.cta} <Arrow />
-            </a>
           </div>
         </div>
       </div>
