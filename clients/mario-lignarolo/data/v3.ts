@@ -60,6 +60,30 @@ export const v3 = {
     image: { src: "/mario/hero-v3.jpg", alt: "Mario Lignarolo, retrato." },
   },
 
+  /* 01b · QUIÉN ES MARIO — [PROPUESTA] pedido por Pablo (30 oct): un párrafo
+     breve entre la portada y Origen, al modo de los «about» editoriales, que
+     lleve a su historia completa (/historia). Solo hechos ya publicados o
+     confirmados, cada uno con su fuente; pendiente del OK de Pablo y Mario.
+     Nombra sus obras, no títulos genéricos («Founder», «Creator»…), para
+     respetar el principio del spec: demostrar, no explicar.
+       · autor de Hipertrofia del Ser: su publicación en Substack [REAL].
+       · creador de Psicocibernética: «Por qué creé Psico-Cibernética»
+         (/historia, [ENTREVISTA]).
+       · explorador del ser: la expresión de Pablo (30 oct).
+       · autoimagen, consciencia y cuerpo: palabras del copy de Hipertrofia
+         del Ser [SPEC].
+       · 40 días de respiración consciente y trabajo con el autoconcepto: el
+         encuadre público del programa [CONFIRMADO] (data/content.ts).
+       · LIGNAROLO junto a su hermano Giorgio: copy de Emprendimiento [SPEC].
+       · «Todo nació de su propio proceso»: data/content.ts («Nació de su
+         propio proceso», [ENTREVISTA § 7b]).
+     `**así**` marca lo que se enciende en blanco: sus obras. */
+  about: {
+    label: "Mario Lignarolo",
+    text: "Mario Lignarolo, autor de **Hipertrofia del Ser**, creador de **Psicocibernética** y **explorador del ser**. Escribe sobre autoimagen, consciencia y cuerpo, guía **40 días de respiración consciente** y trabajo con el autoconcepto, y construye **LIGNAROLO** junto a su hermano Giorgio. Todo nació de su propio proceso.",
+    link: { label: "La historia de Mario", href: "/historia" },
+  },
+
   /* 02 · TERRITORIO / ORIGEN — [SPEC] */
   origen: {
     label: "Metafísica · Espiritualidad · Consciencia · Autoimagen",

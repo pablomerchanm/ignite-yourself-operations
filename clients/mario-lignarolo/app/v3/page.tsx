@@ -4,6 +4,7 @@ import { site } from "@/data/content";
 import { v3 } from "@/data/v3";
 import { archivo, cormorant, geist } from "./fonts";
 import Scrolly from "./Scrolly";
+import About from "./sections/About";
 import Banner from "./sections/Banner";
 import Contacto from "./sections/Contacto";
 import Emprendimiento from "./sections/Emprendimiento";
@@ -37,6 +38,7 @@ export default function V3() {
       <div className={s.grain} aria-hidden="true" />
       <Hero />
       <main>
+        <About />
         <Origen />
         <Psico />
         <Banner id="musculo" />
