@@ -4,47 +4,45 @@ import { Progress, Words } from "./ui";
 import s from "../v3.module.css";
 
 /**
- * 02 · TERRITORIO / ORIGEN, en blanco. La primera lectura, en una sola voz:
- * la serif de Mario a tamaños contenidos. La etiqueta en la columna índice
- * y, desde la columna 4, el titular y el manifiesto como lectura guiada:
- * cada palabra se enciende al cruzar la línea de lectura, con la foto fija
- * a la derecha y la barra de progreso (01 / 05) debajo. Al final, un
- * silencio y la pregunta, sola y centrada.
+ * 02 · TERRITORIO / ORIGEN, en blanco. La primera lectura, en una sola voz
+ * (la serif de Mario) y en una sola pantalla. En escritorio la escena se
+ * fija ([data-pin]) y el scroll enciende el manifiesto palabra a palabra,
+ * párrafo a párrafo, hasta la pregunta. A la izquierda, los territorios, el
+ * titular y la barra de progreso (01 / 05); en el centro, el manifiesto; a
+ * la derecha, la foto a toda altura. En móvil, todo en el flujo.
  */
 export default function Origen() {
   const { origen } = v3;
   return (
-    <section className={`${s.wrap} ${s.section} ${s.origen}`} id="origen" aria-labelledby="origen-h">
-      <div className={`${s.grid} ${s.origenTop}`}>
-        <p className={s.indexLabel} data-reveal="up">
-          {origen.label.split(" · ").map((t) => (
-            <span key={t}>{t}</span>
-          ))}
-        </p>
-        <h2 className={s.origenHead} id="origen-h" data-reveal="up">
-          {origen.headline}
-        </h2>
-      </div>
+    <section className={s.origen} id="origen" aria-labelledby="origen-h" data-pin="2.8">
+      <div className={`${s.wrap} ${s.grid} ${s.origenFrame}`} data-scrub="0.68">
+        <div className={s.origenSide}>
+          <p className={s.indexLabel} data-reveal="up">
+            {origen.label.split(" · ").map((t) => (
+              <span key={t}>{t}</span>
+            ))}
+          </p>
+          <h2 className={s.origenHead} id="origen-h" data-reveal="up">
+            {origen.headline}
+          </h2>
+          <Progress total={origen.paragraphs.length} />
+        </div>
 
-      <div className={`${s.grid} ${s.manifesto}`} data-scrub="0.68">
         <div className={s.manifestoText}>
           {origen.paragraphs.map((p) => (
             <p key={p} className={s.scrubText} data-seg>
               <Words text={p} />
             </p>
           ))}
+          <p className={s.question}>
+            <Words text={origen.question} />
+          </p>
         </div>
-        <div className={s.manifestoAside}>
-          <figure className={`${s.photo} ${s.manifestoPhoto}`}>
-            <Image src={origen.image.src} alt={origen.image.alt} fill sizes="(min-width: 1101px) 26vw, (min-width: 881px) 36vw, 100vw" style={{ objectPosition: origen.image.position }} />
-          </figure>
-          <Progress total={origen.paragraphs.length} />
-        </div>
-      </div>
 
-      <p className={s.question} data-scrub="0.75">
-        <Words text={origen.question} />
-      </p>
+        <figure className={`${s.photo} ${s.manifestoPhoto}`}>
+          <Image src={origen.image.src} alt={origen.image.alt} fill sizes="(min-width: 881px) 28vw, 100vw" style={{ objectPosition: origen.image.position }} />
+        </figure>
+      </div>
     </section>
   );
 }

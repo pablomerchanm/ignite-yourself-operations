@@ -14,7 +14,9 @@ import { useEffect } from "react";
  *
  *  2. [data-pin="3"]  La escena se fija (solo en escritorio) durante N
  *     pantallas; los pasos [data-step] se encienden de uno en uno y, al final,
- *     aparece [data-after]. Misma barra de progreso.
+ *     aparece [data-after]. Misma barra de progreso. Si la escena fija
+ *     contiene un [data-scrub] (Origen), no hay pasos: el avance del pin
+ *     enciende sus palabras, línea a línea, sin que el texto se mueva.
  *
  *  3. [data-parallax], [data-zoom] y [data-progress]: desplazamiento de
  *     fotos y una variable --p (0 → 1) para lo que el CSS quiera animar.
@@ -22,14 +24,30 @@ import { useEffect } from "react";
  * Con prefers-reduced-motion, o sin JavaScript, todo queda visible y quieto:
  * los estados apagados solo existen bajo html.v3-motion.
  */
-type Word = { el: HTMLElement; key: number; o: number };
+type Word = { el: HTMLElement; key: number; rel: number; o: number };
 type Nav = { fill: HTMLElement | null; cur: HTMLElement | null; prev: HTMLElement | null; next: HTMLElement | null };
-type Group = { el: HTMLElement; line: number; words: Word[]; segs: HTMLElement[]; segTops: number[]; first: number; last: number; nav: Nav };
 type Pin = { el: HTMLElement; factor: number; steps: HTMLElement[]; after: HTMLElement | null; nav: Nav; idx: number };
+/* key/segTops/first/last: posiciones en la página (lectura con el scroll);
+   rel/segRel/firstRel/lastRel: posiciones dentro del grupo (escena fija). */
+type Group = {
+  el: HTMLElement;
+  line: number;
+  words: Word[];
+  segs: HTMLElement[];
+  segTops: number[];
+  segRel: number[];
+  first: number;
+  last: number;
+  firstRel: number;
+  lastRel: number;
+  nav: Nav;
+  pin: Pin | null;
+};
 
 const DIM = 0.16;
 const RAMP = 110; // px de scroll que tarda una palabra en encenderse
 const PHASE = 0.8; // parte del pin dedicada a los pasos; el resto, al cierre
+const SCRUB_END = 0.92; // parte del pin que enciende un texto fijo; el resto, quieto y encendido
 const pad = (n: number) => String(n).padStart(2, "0");
 const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
 const navOf = (root: HTMLElement): Nav => ({
@@ -49,15 +67,28 @@ export default function Scrolly() {
     let raf = 0;
     let dirty = true;
 
+    const pins: Pin[] = Array.from(document.querySelectorAll<HTMLElement>("[data-pin]")).map((el) => ({
+      el,
+      factor: parseFloat(el.dataset.pin || "3") || 3,
+      steps: Array.from(el.querySelectorAll<HTMLElement>("[data-step]")),
+      after: el.querySelector("[data-after]"),
+      nav: navOf(el),
+      idx: -1,
+    }));
+
     const groups: Group[] = Array.from(document.querySelectorAll<HTMLElement>("[data-scrub]")).map((el) => ({
       el,
       line: parseFloat(el.dataset.scrub || "0.7") || 0.7,
-      words: Array.from(el.querySelectorAll<HTMLElement>(".sw")).map((w) => ({ el: w, key: 0, o: -1 })),
+      words: Array.from(el.querySelectorAll<HTMLElement>(".sw")).map((w) => ({ el: w, key: 0, rel: 0, o: -1 })),
       segs: Array.from(el.querySelectorAll<HTMLElement>("[data-seg]")),
       segTops: [],
+      segRel: [],
       first: 0,
       last: 1,
+      firstRel: 0,
+      lastRel: 1,
       nav: navOf(el),
+      pin: pins.find((p) => p.el.contains(el)) || null,
     }));
     /* Paralaje (solo escritorio): [data-parallax="0.2"] se desplaza esa
        fracción del scroll mientras su sección está en pantalla. */
@@ -77,15 +108,6 @@ export default function Scrolly() {
       span: parseFloat(el.dataset.progress || "0.7") || 0.7,
       p: -1,
     }));
-    const pins: Pin[] = Array.from(document.querySelectorAll<HTMLElement>("[data-pin]")).map((el) => ({
-      el,
-      factor: parseFloat(el.dataset.pin || "3") || 3,
-      steps: Array.from(el.querySelectorAll<HTMLElement>("[data-step]")),
-      after: el.querySelector("[data-after]"),
-      nav: navOf(el),
-      idx: -1,
-    }));
-
     /* Medidas: la clave de cada palabra es su altura en la página más su
        posición en la línea, así una línea se enciende de izquierda a derecha. */
     const measure = () => {
@@ -103,15 +125,20 @@ export default function Scrolly() {
         }
       }
       for (const g of groups) {
+        const top = g.el.getBoundingClientRect().top;
         for (const w of g.words) {
           const r = w.el.getBoundingClientRect();
           const box = (w.el.parentElement as HTMLElement).getBoundingClientRect();
           const frac = box.width ? (r.left - box.left) / box.width : 0;
-          w.key = r.top + sy + frac * r.height;
+          w.rel = r.top - top + frac * r.height;
+          w.key = w.rel + top + sy;
         }
-        g.segTops = g.segs.map((s) => s.getBoundingClientRect().top + sy);
+        g.segRel = g.segs.map((s) => s.getBoundingClientRect().top - top);
+        g.segTops = g.segRel.map((t) => t + top + sy);
         g.first = g.words.length ? g.words[0].key : 0;
         g.last = g.words.length ? g.words[g.words.length - 1].key : 1;
+        g.firstRel = g.words.length ? g.words[0].rel : 0;
+        g.lastRel = g.words.length ? g.words[g.words.length - 1].rel : 1;
       }
       dirty = true;
     };
@@ -120,6 +147,15 @@ export default function Scrolly() {
       const r = p.el.getBoundingClientRect();
       const total = r.height - vh;
       return total > 0 ? clamp(-r.top / total, 0, 1) : 1;
+    };
+    const pinnedScrub = (g: Group) => !!g.pin?.el.dataset.pinned;
+    /* Línea de lectura de un grupo: en la página si el texto corre con el
+       scroll; dentro del grupo si la escena está fija, donde el avance del
+       pin la lleva de la primera palabra a la última. */
+    const readingLine = (g: Group) => {
+      if (!pinnedScrub(g)) return window.scrollY + vh * g.line;
+      const t = clamp(pinProgress(g.pin as Pin) / SCRUB_END, 0, 1);
+      return g.firstRel + t * (g.lastRel - g.firstRel + RAMP);
     };
 
     const frame = () => {
@@ -150,24 +186,28 @@ export default function Scrolly() {
       }
 
       for (const g of groups) {
-        const y = sy + vh * g.line;
+        const rel = pinnedScrub(g);
+        const y = readingLine(g);
+        const first = rel ? g.firstRel : g.first;
+        const last = rel ? g.lastRel : g.last;
         for (const w of g.words) {
-          const o = Math.round(clamp(DIM + ((y - w.key) / RAMP) * (1 - DIM), DIM, 1) * 100) / 100;
+          const o = Math.round(clamp(DIM + ((y - (rel ? w.rel : w.key)) / RAMP) * (1 - DIM), DIM, 1) * 100) / 100;
           if (o !== w.o) {
             w.o = o;
             w.el.style.opacity = String(o);
           }
         }
-        if (g.nav.fill) g.nav.fill.style.transform = `scaleX(${clamp((y - g.first) / (g.last - g.first || 1), 0, 1)})`;
+        if (g.nav.fill) g.nav.fill.style.transform = `scaleX(${clamp((y - first) / (last - first || 1), 0, 1)})`;
         if (g.nav.cur) {
           let k = 0;
-          g.segTops.forEach((t, i) => (y >= t ? (k = i) : 0));
+          (rel ? g.segRel : g.segTops).forEach((t, i) => (y >= t ? (k = i) : 0));
           g.nav.cur.textContent = pad(k + 1);
         }
       }
 
       for (const p of pins) {
-        if (!p.el.dataset.pinned) continue;
+        // una escena fija sin pasos solo sostiene su texto (ver readingLine)
+        if (!p.el.dataset.pinned || !p.steps.length) continue;
         const pr = pinProgress(p);
         const n = p.steps.length;
         const inSteps = pr < PHASE;
@@ -194,19 +234,28 @@ export default function Scrolly() {
     for (const g of groups) {
       if (!g.segs.length) continue;
       const current = () => {
-        const y = window.scrollY + vh * g.line;
+        const y = readingLine(g);
         let k = 0;
-        g.segTops.forEach((t, i) => (y >= t ? (k = i) : 0));
+        (pinnedScrub(g) ? g.segRel : g.segTops).forEach((t, i) => (y >= t ? (k = i) : 0));
         return k;
       };
       const go = (k: number) => {
-        const t = g.segTops[clamp(k, 0, g.segTops.length - 1)];
-        window.scrollTo({ top: t - vh * g.line + 4, behavior: "smooth" });
+        const i = clamp(k, 0, g.segs.length - 1);
+        if (pinnedScrub(g)) {
+          // el punto del pin en que la línea de lectura llega a ese párrafo
+          const pin = g.pin as Pin;
+          const t = (g.segRel[i] + 4 - g.firstRel) / (g.lastRel - g.firstRel + RAMP);
+          const top = pin.el.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: top + clamp(t, 0, 1) * SCRUB_END * (pin.el.offsetHeight - vh), behavior: "smooth" });
+          return;
+        }
+        window.scrollTo({ top: g.segTops[i] - vh * g.line + 4, behavior: "smooth" });
       };
       on(g.nav.prev, () => go(current() - 1));
       on(g.nav.next, () => go(current() + 1));
     }
     for (const p of pins) {
+      if (!p.steps.length) continue;
       const go = (k: number) => {
         const n = p.steps.length;
         const target = ((clamp(k, 0, n - 1) + 0.5) / n) * PHASE;
