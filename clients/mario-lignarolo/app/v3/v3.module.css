@@ -348,26 +348,42 @@
 }
 
 /* ── 01 · Hero ──────────────────────────────────────────────
-   Arriba, la línea del logo y el menú; abajo, apoyado a 40 px del borde,
-   el territorio (una etiqueta) y el statement; entre ambos, aire. El
-   statement es el golpe de la página, en condensada y a una medida
-   contenida: --s, por el ancho y por el alto de pantalla (≈ 45 px a
-   1440 × 720), un poco más que el golpe de las secciones. La línea más
-   larga («CÓMO CAMBIAR») mide 5,97 s. El logo firma, a su propia medida.
-   El retrato ocupa el 66 % derecho, fundido en el negro por la izquierda. */
+   En movimiento, al modo de Nike «The Record». Arriba, la línea del logo
+   y el menú; abajo, a 40 px del borde, el territorio y el statement (el
+   golpe de la página, en condensada: --s, por el ancho y por el alto de
+   pantalla; la línea más larga, «CÓMO CAMBIAR», mide 5,97 s).
+   En el centro, el recorte: el vídeo va a sangre en .heroStage y una
+   ventana (clip-path) lo recorta. Sus márgenes, --wt/--wr/--wb/--wl, se
+   cierran con --pp, el avance de la escena fija (Scrolly.tsx): al bajar,
+   el recorte se abre hasta llenar la pantalla y un velo deja leer el
+   statement. Antes del vídeo, la ráfaga de fotos (.heroSweep) se apila
+   en el sitio del recorte. */
 .hero {
   --hero-pad-top: 28px;
   --s: clamp(2rem, min(3.1vw, 6.2svh), 3.5rem);
+  /* la ventana del recorte, centrada */
+  --wt: 13%;
+  --wr: 25%;
+  --wb: 15%;
+  --wl: 25%;
+  --open: calc(1 - var(--pp, 0));
   position: relative;
-  min-height: 100svh;
+  background: var(--black);
+  color: var(--on-dark);
+}
+.heroFrame {
+  position: relative;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
   padding: var(--hero-pad-top) var(--gutter) 40px;
   overflow: hidden;
-  background: var(--black);
-  color: var(--on-dark);
+}
+.hero[data-pinned] .heroFrame {
+  position: sticky;
+  top: 0;
 }
 .heroTop {
   position: relative;
@@ -396,36 +412,84 @@
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3em;
 }
-.heroPhoto {
+/* el recorte: el vídeo a sangre, recortado por la ventana */
+.heroStage {
   position: absolute;
-  inset: 0 0 0 34%;
-  overflow: hidden;
-  will-change: transform;
+  inset: 0;
+  z-index: 2;
+  clip-path: inset(calc(var(--wt) * var(--open)) calc(var(--wr) * var(--open)) calc(var(--wb) * var(--open)) calc(var(--wl) * var(--open)));
 }
-/* foto etalonada en el archivo: sin filtros encima */
-.heroPhoto img {
+.heroReveal {
+  position: absolute;
+  inset: 0;
+}
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: 38% 30%;
-  filter: none;
-  transform: scale(1.03);
-  transform-origin: 45% 35%;
+  object-position: 50% 40%;
+  filter: saturate(0.82) contrast(1.05) sepia(0.06);
 }
-.heroPhoto::after {
+/* el velo: aparece al abrirse el recorte, para leer el statement y el menú */
+.heroReveal::after {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
+  opacity: var(--pp, 0);
   background:
-    linear-gradient(to right, var(--black) 0%, rgba(14, 15, 18, 0.86) 9%, rgba(14, 15, 18, 0.4) 28%, rgba(14, 15, 18, 0) 52%),
-    linear-gradient(to bottom, rgba(14, 15, 18, 0.35) 0%, rgba(14, 15, 18, 0) 18%),
-    linear-gradient(to top, rgba(14, 15, 18, 0.45) 0%, rgba(14, 15, 18, 0) 22%);
+    linear-gradient(to right, rgba(14, 15, 18, 0.88) 0%, rgba(14, 15, 18, 0.5) 30%, rgba(14, 15, 18, 0) 62%),
+    linear-gradient(to bottom, rgba(14, 15, 18, 0.55) 0%, rgba(14, 15, 18, 0) 18%),
+    linear-gradient(to top, rgba(14, 15, 18, 0.6) 0%, rgba(14, 15, 18, 0) 28%);
+}
+/* pausa: discreta, en la esquina del recorte */
+.heroPause {
+  position: absolute;
+  z-index: 1;
+  right: calc(var(--wr) * var(--open) + 14px);
+  bottom: calc(var(--wb) * var(--open) + 12px);
+  padding: 0.4rem 0;
+  border: 0;
+  background: none;
+  color: var(--on-dark);
+  font: inherit;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.heroPause:hover,
+.heroPause:focus-visible {
+  opacity: 1;
+}
+/* la ráfaga: cada foto con su proporción y su sitio dentro de la ventana */
+.heroSweep {
+  position: absolute;
+  z-index: 1;
+  inset: var(--wt) var(--wr) var(--wb) var(--wl);
+  pointer-events: none;
+}
+.sweepItem {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  aspect-ratio: var(--ar);
+  opacity: 0;
+}
+.sweepItem img {
+  object-fit: cover;
 }
 .heroCopy {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   width: calc(var(--s) * 5.97);
-  will-change: transform;
 }
 .heroLogo {
   display: block;
@@ -461,10 +525,21 @@
   display: block;
 }
 
-/* La coreografía de entrada (≈ 2 s). Sin movimiento, todo quieto y visible. */
+/* La coreografía de entrada (≈ 3 s): la ráfaga (seis fotos, 0,3 s entre
+   una y otra), el recorte que se abre desde el centro con el vídeo, las
+   fotos que se van, y el logo, las líneas y el menú. Sin movimiento, sin
+   ráfaga: el recorte y el statement, quietos. */
 @media (prefers-reduced-motion: no-preference) {
-  .heroPhoto img {
-    animation: photoIn 2.6s cubic-bezier(0.16, 0.84, 0.24, 1) both;
+  .sweepItem {
+    animation:
+      sweepIn 0.55s cubic-bezier(0.16, 0.84, 0.24, 1) var(--d) both,
+      fadeOut 0.5s ease 2.75s forwards;
+  }
+  .heroReveal {
+    animation: openUp 0.9s cubic-bezier(0.77, 0, 0.18, 1) 2s backwards;
+  }
+  .heroPause {
+    animation: fadeIn 0.8s ease 3s both;
   }
   .heroLogo {
     animation: wipe 1.5s cubic-bezier(0.77, 0, 0.18, 1) 0.15s both;
@@ -480,14 +555,32 @@
     animation: fadeIn 1s ease 1.5s both;
   }
 }
-@keyframes photoIn {
+@media (prefers-reduced-motion: reduce) {
+  .sweepItem {
+    display: none;
+  }
+}
+@keyframes sweepIn {
   from {
     opacity: 0;
-    transform: scale(1.12);
+    transform: scale(1.08);
   }
   to {
     opacity: 1;
-    transform: scale(1.03);
+    transform: none;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes openUp {
+  from {
+    clip-path: inset(50% 50% 50% 50%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
 @keyframes wipe {
@@ -1509,29 +1602,52 @@
     height: 125vw;
   }
 
-  /* portada: justo una pantalla. El recorte vertical del retrato arriba,
-     a todo el ancho y fundido en el negro; el logo encima; el territorio
-     y el statement abajo. */
+  /* portada: justo una pantalla. Arriba, el recorte a todo el ancho (la
+     versión vertical del vídeo, fundida en el negro) con la ráfaga; el
+     logo encima; el territorio y el statement abajo. Sin escena fija. */
   .hero {
     --hero-pad-top: 1.25rem;
     --s: min(2.125rem, 8.7vw);
-    height: 100svh;
+    --wt: 0%;
+    --wr: 0%;
+    --wb: 0%;
+    --wl: 0%;
+    --stage-h: min(125vw, 64svh);
+  }
+  .heroFrame {
     padding-bottom: 2.25rem;
   }
   .heroLogo {
     width: 8.5rem;
   }
-  .heroPhoto {
+  .heroStage {
     inset: 0 0 auto;
-    height: min(125vw, 64svh);
+    height: var(--stage-h);
   }
-  .heroPhoto img {
-    object-position: 50% 28%;
+  /* la ráfaga, bajo la línea del logo */
+  .heroSweep {
+    inset: 4.5rem var(--gutter) auto;
+    height: calc(var(--stage-h) - 6rem);
   }
-  .heroPhoto::after {
+  .heroStage {
+    clip-path: none;
+  }
+  .heroVideo {
+    object-position: 50% 30%;
+  }
+  .heroReveal::after {
+    opacity: 1;
     background:
       linear-gradient(to bottom, rgba(14, 15, 18, 0.55) 0%, rgba(14, 15, 18, 0) 20%),
       linear-gradient(to top, var(--black) 0%, rgba(14, 15, 18, 0.55) 20%, rgba(14, 15, 18, 0) 45%);
+  }
+  .heroPause {
+    right: var(--gutter);
+    bottom: 1rem;
+  }
+  /* la ráfaga, algo mayor en el recorte vertical */
+  .sweepItem {
+    width: calc(var(--w) * 1.2);
   }
 
   /* about: el párrafo, el paso a su historia y, debajo, el retrato */

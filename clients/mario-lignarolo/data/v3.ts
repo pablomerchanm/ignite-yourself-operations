@@ -64,6 +64,21 @@ export const v3 = {
     // /v4 conserva `image`.
     // En móvil, el recorte vertical de la misma foto (el del antiguo banner).
     cover: { src: "/mario/banners/interno-escritorio.jpg", mobile: "/mario/banners/interno-movil.jpg", alt: "Mario con los ojos cerrados, bajo una luz roja." },
+    // /v3 (31 oct, Pablo): la portada en movimiento, al modo de Nike «The
+    // Record». Primero, una ráfaga de fotos reales de Mario; luego, en un
+    // recorte, la toma de la biblioteca de su vídeo de Psicocibernética
+    // (public/mario/psico.mp4, 0:24–0:40), sin sonido y en bucle. En
+    // escritorio, el recorte se abre a toda la pantalla con el scroll.
+    video: { desktop: "/mario/hero/psico-loop.mp4", mobile: "/mario/hero/psico-loop-vertical.mp4", poster: "/mario/hero/psico-poster.jpg" },
+    // la ráfaga: cada foto, su proporción y su sitio dentro del recorte (en %)
+    sweep: [
+      { src: "/mario/reels/DemZQIDMYzY.jpg", ar: "9 / 16", at: { x: 4, y: 8, w: 21 } },
+      { src: "/mario/entreno-curl.jpg", ar: "4 / 5", at: { x: 64, y: 2, w: 27 } },
+      { src: "/mario/banners/interno-movil.jpg", ar: "4 / 5", at: { x: 30, y: 20, w: 29 } },
+      { src: "/mario/reels/DeejjK5AmLJ.jpg", ar: "9 / 16", at: { x: 76, y: 30, w: 19 } },
+      { src: "/mario/lignarolo.jpg", ar: "16 / 9", at: { x: 2, y: 54, w: 46 } },
+      { src: "/mario/hero-v3.jpg", ar: "16 / 9", at: { x: 20, y: 16, w: 58 } },
+    ],
   },
 
   /* 01b · QUIÉN ES MARIO — [PROPUESTA] pedido por Pablo (30 oct): un párrafo

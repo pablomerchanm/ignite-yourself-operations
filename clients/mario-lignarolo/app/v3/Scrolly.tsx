@@ -14,7 +14,8 @@ import { useEffect } from "react";
  *     pantallas; los pasos [data-step] se encienden de uno en uno y, al final,
  *     aparece [data-after]. Si la escena fija contiene un [data-scrub]
  *     (Origen), no hay pasos: el avance del pin enciende sus palabras, línea
- *     a línea, sin que el texto se mueva.
+ *     a línea, sin que el texto se mueva. Toda escena fija recibe --pp
+ *     (0 → 1), su avance, para lo que el CSS quiera animar (la portada).
  *
  *  3. [data-parallax], [data-zoom] y [data-progress]: desplazamiento de
  *     fotos y una variable --p (0 → 1) para lo que el CSS quiera animar.
@@ -88,6 +89,7 @@ export default function Scrolly() {
           p.el.dataset.pinned = "1";
         } else {
           p.el.style.height = "";
+          p.el.style.removeProperty("--pp");
           delete p.el.dataset.pinned;
           p.steps.forEach((s) => (s.style.opacity = ""));
           if (p.after) p.after.style.opacity = "";
@@ -162,9 +164,13 @@ export default function Scrolly() {
       }
 
       for (const p of pins) {
-        // una escena fija sin pasos solo sostiene su texto (ver readingLine)
-        if (!p.el.dataset.pinned || !p.steps.length) continue;
+        if (!p.el.dataset.pinned) continue;
         const pr = pinProgress(p);
+        // el avance de la escena, para el CSS (la portada abre su recorte)
+        const pp = String(Math.round(pr * 1000) / 1000);
+        if (p.el.style.getPropertyValue("--pp") !== pp) p.el.style.setProperty("--pp", pp);
+        // una escena fija sin pasos solo sostiene su texto (ver readingLine)
+        if (!p.steps.length) continue;
         const n = p.steps.length;
         const inSteps = pr < PHASE;
         const idx = inSteps ? Math.min(n - 1, Math.floor((pr / PHASE) * n)) : n - 1;
