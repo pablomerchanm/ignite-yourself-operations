@@ -1,0 +1,1920 @@
+/* ════════════════════════════════════════════════════════════
+   ITERACIÓN /v3 — según marca/HOMEPAGE-SPEC-v1.md
+   Referencia visual principal: Nike About (about.nike.com).
+
+   SISTEMA
+   Color   Blanco y negro. El negro manda (hero, Psicocibernética, Hipertrofia
+           del Ser, Conversaciones, pie); el blanco cálido da los respiros.
+           Sin acentos de color: el color lo ponen las fotos.
+
+   Tipos   Tres voces, cada una con un solo trabajo:
+             display  Archivo condensada → el golpe, en caja alta
+             serif    Cormorant Garamond → la voz de Mario: lectura,
+                                           titulares de piezas, itálica
+             sans     Geist              → interfaz y datos
+
+   Escala  Contenida, para que cada sección quepa en una pantalla. Las
+           medidas van por el ancho y por el alto de pantalla; a 1440 × 720:
+             hero        statement de portada (--s)         ≈ 45 px
+             banner      frase de un banner (en vw, como
+                         la foto: ver Banners)            ≈ 63 / 43 px
+             golpe       el titular de cada pantalla        ≈ 30 px
+             manifiesto  la lectura guiada de Origen        ≈ 22 px
+             lectura     el copy de Mario en serif          ≈ 19 px
+             etiqueta    nombre de sección, en versal
+                         espaciada                            13 px
+             dato        fechas, duraciones, interfaz       12–14 px
+
+   Código  El equilibrio entre condensada y serif, medido en Nike About
+           («WE SERVE ATHLETES*» a 162 px y, debajo, «*If you have a body,
+           you are an athlete» en Palatino itálica a 26 px):
+             1. Un golpe por pantalla: una pieza en condensada versal, la
+                más importante de su pantalla. Destaca por el peso, no por
+                el tamaño: en Origen, apenas mayor que la lectura. Como
+                mucho, un segundo golpe para el cierre, como la pregunta.
+             2. El golpe es lo que el usuario debe llevarse (el titular, el
+                statement), no lo que más se repite. El tamaño lo decide la
+                importancia: las etiquetas y el contexto van pequeños,
+                aunque sean palabras sueltas. Nunca un párrafo en golpe.
+             3. La serif habla: la lectura de Mario, en caja de frase; la
+                itálica, para el susurro.
+             4. La grotesca (Geist) solo hace funcionar: menú, botones,
+                datos.
+             5. La voz va pegada al golpe, como el asterisco de Nike.
+
+   Retícula 12 columnas y una pantalla por sección (como mucho): la
+           etiqueta arriba, el golpe debajo y el contenido repartido en
+           zonas de columnas, con una columna de aire entre ellas. La foto
+           ocupa su zona a toda altura y a sangre. En móvil, todo en el
+           flujo, en una columna.
+
+   Ritmo   pad-screen (dentro de una pantalla) · section y block (en móvil
+           y entre bloques) · title (de la etiqueta al golpe).
+
+   Movimiento  Scrollytelling en dos escenas fijas (Scrolly.tsx): el
+           manifiesto de Origen y los conceptos de Psicocibernética. Entre
+           secciones, dos banners con una frase de Mario (foto con paralaje,
+           frase que sube de su máscara). Sin JS o con movimiento reducido,
+           todo visible y quieto.
+   ════════════════════════════════════════════════════════════ */
+
+.page {
+  --paper: #f5f4f0;
+  --ink: #111214;
+  --black: #0e0f12;
+  --black-2: #0a0b0d;
+  --charcoal: #2b2e34;
+  --stone: #6f7177;
+  --rule: rgba(17, 18, 20, 0.14);
+  --rule-strong: rgba(17, 18, 20, 0.55);
+  --on-dark: #f2f0eb;
+  --on-dark-body: #d6d4ce;
+  --on-dark-soft: #96999f;
+  --rule-dark: rgba(242, 240, 235, 0.16);
+  --rule-dark-strong: rgba(242, 240, 235, 0.42);
+
+  --t-body: 1.0625rem;
+  --t-small: 0.8125rem;
+  /* el sistema de Origen, para toda la página: medidas contenidas, por el
+     ancho y por el alto de pantalla, para que cada sección quepa en una */
+  --t-golpe: clamp(1.5rem, min(2.1vw, 4.2svh), 2.4rem);
+  --t-manifiesto: clamp(1.125rem, min(1.55vw, 3.1svh), 1.75rem);
+  --t-lectura: clamp(1.0625rem, min(1.35vw, 2.7svh), 1.375rem);
+  --t-pregunta: calc(var(--t-manifiesto) * 1.1);
+  --pad-screen: clamp(2.5rem, 8svh, 6rem);
+
+  --s-section: clamp(5rem, 3.5rem + 6vw, 10rem);
+  --s-block: clamp(2.5rem, 1.75rem + 3vw, 5rem);
+  --s-title: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --gutter: clamp(1.25rem, 0.5rem + 3.2vw, 4.5rem);
+  --gap: clamp(1rem, 0.5rem + 1.5vw, 2rem);
+
+  --sans: var(--font-v3-sans), ui-sans-serif, system-ui, sans-serif;
+  --serif: var(--font-v3-serif), Georgia, serif;
+  --display: var(--font-archivo), "Arial Narrow", sans-serif;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-body);
+  font-weight: 400;
+  line-height: 1.55;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+.page ::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+.page a {
+  color: inherit;
+  text-decoration: none;
+}
+/* Tono de película: menos saturación, algo más de contraste, un punto cálido. */
+.page img {
+  filter: saturate(0.72) contrast(1.05) sepia(0.06);
+}
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.28;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ── Retícula y ritmo ───────────────────────────────────── */
+.wrap {
+  padding-inline: var(--gutter);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+}
+.grid > * {
+  min-width: 0;
+}
+/* una pantalla: cada sección mide como mucho el alto de la pantalla */
+.screen {
+  min-height: 100svh;
+  padding-block: var(--pad-screen);
+}
+/* la cabecera de un bloque: la etiqueta a la izquierda, el enlace a la derecha */
+.blockHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+/* ── Voces tipográficas ─────────────────────────────────── */
+/* la etiqueta: nombra la sección, pequeña, en versal espaciada */
+.tag {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-small);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+.dark .tag {
+  color: var(--on-dark-soft);
+}
+/* la voz alta: condensada, caja alta. El interlineado deja sitio a las tildes. */
+.statement {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 66%;
+  font-variation-settings: "wdth" 66;
+  line-height: 0.94;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+}
+/* el golpe: lo que el usuario debe llevarse de cada pantalla, en condensada
+   y a una medida contenida. Destaca por el peso, no por el tamaño. */
+.golpe {
+  font-size: var(--t-golpe);
+  text-wrap: pretty;
+}
+.golpe .line {
+  display: block;
+}
+/* la lectura: la voz de Mario, en serif */
+.lectura {
+  margin: 0;
+  max-width: 30em;
+  font-family: var(--serif);
+  font-size: var(--t-lectura);
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -0.003em;
+}
+.lectura + .lectura {
+  margin-top: 0.65em;
+}
+.dark .lectura {
+  color: var(--on-dark-body);
+}
+/* el susurro: la serif en itálica */
+.quiet {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: calc(var(--t-lectura) * 1.25);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.small {
+  display: block;
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.link svg {
+  width: 0.7em;
+  height: 0.7em;
+  transition: transform 0.25s ease;
+}
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 1px;
+}
+.link:hover svg {
+  transform: translate(0.12em, -0.12em);
+}
+/* el botón: lleno, sobrio, con la flecha ↗. Sobre negro, hueso; sobre
+   claro, negro. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1.35rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.005em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn svg {
+  width: 0.75em;
+  height: 0.75em;
+  transition: transform 0.25s ease;
+}
+.btn:hover svg {
+  transform: translate(0.12em, -0.12em);
+}
+.dark .btn {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.dark .btn:hover {
+  background: #fff;
+}
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* ── Piezas ─────────────────────────────────────────────── */
+.photo {
+  position: relative;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  background: #e8e6e1;
+}
+.photo img {
+  object-fit: cover;
+}
+.dark {
+  background: var(--ink);
+  color: var(--on-dark);
+}
+.dark .small {
+  color: var(--on-dark-soft);
+}
+.dark .photo {
+  background: #1a1b1e;
+}
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.notice {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  background: var(--ink);
+  color: var(--on-dark-soft);
+  font-size: 0.6875rem;
+  white-space: nowrap;
+}
+
+/* ── Lectura guiada (scrub) ─────────────────────────────── */
+:global(html.v3-motion) .page [data-scrub] :global(.sw) {
+  opacity: 0.16;
+}
+.page :global(.sw) {
+  will-change: opacity;
+}
+/* ── Navegación: en la línea del logo (ver 01 · Hero) ──────── */
+.navList {
+  display: flex;
+  gap: clamp(1.25rem, 2.2vw, 2.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.navList a {
+  font-size: 0.875rem;
+  font-weight: 450;
+  opacity: 0.72;
+  transition: opacity 0.2s ease;
+}
+.navList a:hover {
+  opacity: 1;
+}
+
+/* ── 01 · Hero ──────────────────────────────────────────────
+   En movimiento, al modo de Nike «The Record». Arriba, la línea del logo
+   y el menú; abajo, a 40 px del borde, el territorio y el statement (el
+   golpe de la página, en condensada: --s, por el ancho y por el alto de
+   pantalla; la línea más larga, «CÓMO CAMBIAR», mide 5,97 s).
+   En el centro, el recorte: el vídeo va a sangre en .heroStage y una
+   ventana (clip-path) lo recorta. Sus márgenes, --wt/--wr/--wb/--wl, se
+   cierran con --pp, el avance de la escena fija (Scrolly.tsx): al bajar,
+   el recorte se abre hasta llenar la pantalla y un velo deja leer el
+   statement. Antes del vídeo, la ráfaga de fotos (.heroSweep) se apila
+   en el sitio del recorte. */
+.hero {
+  --hero-pad-top: 28px;
+  --s: clamp(2rem, min(3.1vw, 6.2svh), 3.5rem);
+  /* la ventana del recorte, centrada */
+  --wt: 13%;
+  --wr: 25%;
+  --wb: 15%;
+  --wl: 25%;
+  --open: calc(1 - var(--pp, 0));
+  position: relative;
+  background: var(--black);
+  color: var(--on-dark);
+}
+.heroFrame {
+  position: relative;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: var(--hero-pad-top) var(--gutter) 40px;
+  overflow: hidden;
+}
+.hero[data-pinned] .heroFrame {
+  position: sticky;
+  top: 0;
+}
+.heroTop {
+  position: relative;
+  z-index: 3;
+  align-items: center;
+}
+.heroMark {
+  grid-column: 1 / span 4;
+  margin: 0;
+  line-height: 0;
+}
+/* el menú en la retícula: los mundos desde la columna 7 (el eje de la
+   página) y «Contacto» al final, subrayado */
+.nav {
+  grid-column: 7 / -1;
+  display: flex;
+  color: var(--on-dark);
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.navContact {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+/* el recorte: el vídeo a sangre, recortado por la ventana */
+.heroStage {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  clip-path: inset(calc(var(--wt) * var(--open)) calc(var(--wr) * var(--open)) calc(var(--wb) * var(--open)) calc(var(--wl) * var(--open)));
+}
+.heroReveal {
+  position: absolute;
+  inset: 0;
+}
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+  filter: saturate(0.82) contrast(1.05) sepia(0.06);
+}
+/* el velo: aparece al abrirse el recorte, para leer el statement y el menú */
+.heroReveal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--pp, 0);
+  background:
+    linear-gradient(to right, rgba(14, 15, 18, 0.88) 0%, rgba(14, 15, 18, 0.5) 30%, rgba(14, 15, 18, 0) 62%),
+    linear-gradient(to bottom, rgba(14, 15, 18, 0.55) 0%, rgba(14, 15, 18, 0) 18%),
+    linear-gradient(to top, rgba(14, 15, 18, 0.6) 0%, rgba(14, 15, 18, 0) 28%);
+}
+/* pausa: discreta, en la esquina del recorte */
+.heroPause {
+  position: absolute;
+  z-index: 1;
+  right: calc(var(--wr) * var(--open) + 14px);
+  bottom: calc(var(--wb) * var(--open) + 12px);
+  padding: 0.4rem 0;
+  border: 0;
+  background: none;
+  color: var(--on-dark);
+  font: inherit;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.heroPause:hover,
+.heroPause:focus-visible {
+  opacity: 1;
+}
+/* la ráfaga: sus reels, como pantallas en vertical, cada uno en su sitio
+   dentro de la ventana */
+.heroSweep {
+  position: absolute;
+  z-index: 1;
+  inset: var(--wt) var(--wr) var(--wb) var(--wl);
+  pointer-events: none;
+}
+.sweepItem {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #1a1b1e;
+  box-shadow: 0 0 0 1px rgba(242, 240, 235, 0.1), 0 24px 60px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+}
+.sweepItem video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heroCopy {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--s) * 5.97);
+}
+.heroLogo {
+  display: block;
+  width: clamp(8rem, 11.5vw, 10.5rem);
+  height: auto;
+  aspect-ratio: 2994 / 570;
+  color: var(--on-dark);
+}
+.heroTerritory {
+  color: var(--on-dark-soft);
+  white-space: nowrap;
+}
+.heroStatement {
+  margin: 0.9rem 0 0;
+  font-family: var(--display);
+  font-weight: 800;
+  font-stretch: 66%;
+  font-variation-settings: "wdth" 66;
+  font-size: var(--s);
+  line-height: 0.94;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+/* cada línea, en su máscara (con aire arriba para las tildes) */
+.heroLine {
+  display: block;
+  overflow: hidden;
+  padding-top: 0.14em;
+  margin-top: -0.14em;
+}
+.heroLine > span {
+  display: block;
+}
+
+/* La coreografía de entrada (≈ 4 s): la ráfaga (seis reels, 0,42 s entre
+   uno y otro), el recorte que se abre desde el centro con el vídeo, los
+   reels que se van, y el logo, las líneas y el menú. Sin movimiento, sin
+   ráfaga: el recorte y el statement, quietos. */
+@media (prefers-reduced-motion: no-preference) {
+  .sweepItem {
+    animation:
+      sweepIn 0.6s cubic-bezier(0.16, 0.84, 0.24, 1) var(--d) both,
+      fadeOut 0.5s ease 3.6s forwards;
+  }
+  .heroReveal {
+    animation: openUp 0.9s cubic-bezier(0.77, 0, 0.18, 1) 2.85s backwards;
+  }
+  .heroPause {
+    animation: fadeIn 0.8s ease 3.8s both;
+  }
+  .heroLogo {
+    animation: wipe 1.5s cubic-bezier(0.77, 0, 0.18, 1) 0.15s both;
+  }
+  .heroLine > span {
+    animation: lineUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: calc(0.55s + var(--i, 0) * 0.075s);
+  }
+  .heroTerritory {
+    animation: fadeIn 1.1s ease 1.05s both;
+  }
+  .nav {
+    animation: fadeIn 1s ease 1.5s both;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sweepItem {
+    display: none;
+  }
+}
+@keyframes sweepIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6%, 0) scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes openUp {
+  from {
+    clip-path: inset(50% 50% 50% 50%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes wipe {
+  from {
+    clip-path: inset(-10% 100% -30% 0);
+  }
+  to {
+    clip-path: inset(-10% 0 -30% 0);
+  }
+}
+@keyframes lineUp {
+  from {
+    transform: translate3d(0, 110%, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.2rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── 01b · Quién es Mario (negro) ──────────────────────────
+   Una pantalla, al modo de los «about» editoriales: a la izquierda (1–5),
+   arriba, el párrafo en serif, en gris, con sus obras encendidas en
+   blanco, y abajo, apoyado en el borde, el paso a su historia (la tensión
+   entre los dos extremos, no un bloque centrado); a la derecha (7–12), su
+   retrato a toda altura y a sangre. */
+.about {
+  background: var(--black);
+}
+.aboutBody {
+  grid-column: 1 / span 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.aboutText {
+  margin: 0;
+  max-width: 21em;
+  font-family: var(--serif);
+  font-size: clamp(1.375rem, min(1.85vw, 3.7svh), 2rem);
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: -0.006em;
+  color: var(--on-dark-soft);
+  font-variant-numeric: lining-nums;
+  text-wrap: pretty;
+}
+.aboutText strong {
+  font-weight: 500;
+  color: var(--on-dark);
+}
+/* el paso: en versal espaciada, con la flecha → (navega dentro de la web) */
+.aboutLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--on-dark);
+}
+@media (min-width: 881px) {
+  .aboutLink {
+    margin-top: 0;
+  }
+}
+.aboutLink svg {
+  width: 1.1em;
+  height: 1.1em;
+  transition: transform 0.25s ease;
+}
+.aboutLink:hover svg {
+  transform: translateX(0.25em);
+}
+/* el retrato: de la cara al hombro, en la zona derecha a toda altura */
+.aboutPhoto {
+  grid-column: 7 / -1;
+  align-self: stretch;
+  margin: calc(-1 * var(--pad-screen)) calc(-1 * var(--gutter)) calc(-1 * var(--pad-screen)) 0;
+}
+.aboutPhoto img {
+  object-fit: cover;
+  object-position: 62% 30%;
+  filter: none;
+}
+.aboutPhoto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--black) 0%, rgba(14, 15, 18, 0.55) 14%, rgba(14, 15, 18, 0) 36%);
+}
+
+/* ── 02 · Origen (blanco) ──────────────────────────────────
+   La primera lectura, en una sola voz (la serif de Mario) y en una sola
+   pantalla. En escritorio la escena se fija y el scroll enciende el
+   manifiesto palabra a palabra, hasta la pregunta. Tres zonas: a la
+   izquierda (1–3), los territorios, el titular y el progreso; en el centro
+   (4–8), el manifiesto y la pregunta; a la derecha (10–12), la foto a toda
+   altura y a sangre. Los tamaños se miden también por el alto de pantalla,
+   para que todo quepa. */
+.origen {
+  font-family: var(--serif);
+}
+.origen[data-pinned] .origenFrame {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+}
+.origenSide {
+  grid-column: 1 / span 3;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+/* las etiquetas: los territorios, uno por línea */
+.origenTags span {
+  display: block;
+}
+/* el golpe: el titular en condensada, en un bloque compacto. Destaca por
+   el peso, no por el tamaño. */
+.origenHead {
+  max-width: 9em;
+  margin-top: 1.5rem;
+  font-size: var(--t-golpe);
+  text-wrap: pretty;
+}
+.manifestoText {
+  grid-column: 4 / span 5;
+  min-height: 0;
+}
+.scrubText {
+  margin: 0;
+  max-width: 26em;
+  font-size: var(--t-manifiesto);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.004em;
+}
+.scrubText + .scrubText {
+  margin-top: 0.7em;
+}
+/* el cierre: la pregunta, en condensada y algo mayor que la lectura; se
+   enciende la última */
+.question {
+  max-width: 24em;
+  margin-top: calc(var(--t-manifiesto) * 1.4);
+  font-size: var(--t-pregunta);
+  text-wrap: balance;
+}
+.manifestoPhoto {
+  grid-column: 10 / -1;
+  min-height: 0;
+  margin-right: calc(-1 * var(--gutter));
+}
+
+/* ── 03 · Psicocibernética (negro) ─────────────────────────
+   Una pantalla en retícula editorial: dos bandas y dos ejes (la columna 1
+   y la 7), con aire desigual entre ellas, sin cajas. Arriba: a la
+   izquierda (1–5), la etiqueta, el golpe y la voz de Mario pegada a él;
+   a la derecha (7–11), el copy y el botón. Abajo: el retrato en una banda
+   ancha (1–6, a sangre por la izquierda) y, desde la 7, los cuatro
+   conceptos con su índice, que se encienden de uno en uno con la escena
+   fija; al final, los secundarios. */
+.psico {
+  background: var(--black-2);
+}
+.psicoFrame {
+  grid-template-rows: auto minmax(0, 1fr);
+  row-gap: clamp(2rem, 6svh, 4rem);
+}
+.psico[data-pinned] .psicoFrame {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+}
+.psicoLead {
+  grid-column: 1 / span 5;
+}
+.psicoHead {
+  max-width: 11em;
+  margin-top: 1.5rem;
+}
+.psicoVoice {
+  max-width: 16em;
+  margin-top: 1.25rem;
+  color: var(--on-dark-body);
+}
+.psicoIntro {
+  grid-column: 7 / span 5;
+  padding-top: 2.7rem;
+}
+.psicoCta {
+  margin-top: 1.75rem;
+}
+.psicoPhoto {
+  grid-column: 1 / span 6;
+  grid-row: 2;
+  min-height: 0;
+  margin-left: calc(-1 * var(--gutter));
+}
+.psicoPhoto img {
+  filter: grayscale(1) contrast(1.1) brightness(0.92);
+}
+.psicoStage {
+  grid-column: 7 / -1;
+  grid-row: 2;
+  align-self: end;
+}
+/* los conceptos: dos por fila, con su índice, en serif */
+.concepts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--serif);
+  font-size: calc(var(--t-lectura) * 1.4);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.concepts li {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule-dark);
+  transition: opacity 0.45s ease;
+}
+.conceptIndex {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--on-dark-soft);
+  font-variant-numeric: tabular-nums;
+}
+:global(html.v3-motion) .psico[data-pinned] [data-step] {
+  opacity: 0.16;
+}
+:global(html.v3-motion) .psico[data-pinned] [data-after] {
+  opacity: 0;
+}
+.psicoSecondary {
+  margin-top: 1.5rem;
+}
+
+/* ── 04 · Hipertrofia del Ser (negro) ──────────────────────
+   Una pantalla, una publicación con identidad propia, en la retícula
+   editorial de Psicocibernética: arriba, a la izquierda (1–5), la cabecera
+   y el golpe; a la derecha, desde la columna 7, el copy y el enlace.
+   Debajo, las seis entradas en una fila, como un índice, y al final, tras
+   un filete, la suscripción: la etiqueta en la 1, el formulario en la 7.
+   Cabecera: el logo de la propuesta 2 (marca/hipertrofia/v2/), el emblema
+   —una figura que se levanta del bloque— y el nombre en Archivo ancha. */
+.hdsFrame {
+  /* la altura del emblema: manda en la cabecera y en el eje del copy */
+  --hds-em: clamp(3.5rem, 10.5svh, 6rem);
+  grid-template-rows: auto 1fr auto;
+  row-gap: clamp(1.5rem, 5svh, 3rem);
+}
+.hdsLead {
+  grid-column: 1 / span 5;
+}
+/* la cabecera, en las proporciones del logo horizontal: el nombre mide
+   1/4,7 del emblema y se separa de él 0,15 de su altura */
+.hdsMasthead {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--hds-em) * 0.15);
+}
+.hdsEmblem {
+  display: block;
+  flex: none;
+  height: var(--hds-em);
+  width: auto;
+  aspect-ratio: 418 / 763.5;
+  color: var(--on-dark);
+}
+/* el emblema sale del bloque con el scroll: aparece de abajo arriba */
+:global(html.v3-motion) .hdsEmblem[data-progress] {
+  clip-path: inset(calc((1 - var(--p, 1)) * 100%) 0 0 0);
+}
+.hdsMast {
+  margin: 0;
+  font-family: var(--display);
+  font-size: calc(var(--hds-em) / 4.7);
+  font-weight: 800;
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  line-height: 0.84;
+  letter-spacing: -0.012em;
+  text-transform: uppercase;
+}
+.hdsMast .line {
+  display: block;
+}
+.hdsHead {
+  margin-top: 1.75rem;
+}
+/* el copy cuelga de la misma línea que la cabecera */
+.hdsIntro {
+  grid-column: 7 / span 5;
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 1.25rem;
+}
+.hdsIntro .lectura + .lectura {
+  margin-top: -0.6rem;
+}
+/* suscripción: el gesto del widget de Substack, en una línea, al final de
+   la sección, en los dos ejes de la página */
+.subscribe {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  padding-top: clamp(1rem, 3svh, 1.75rem);
+  border-top: 1px solid var(--rule-dark);
+}
+/* la etiqueta, centrada con el campo */
+.subLabel {
+  grid-column: 1 / span 5;
+  line-height: 2.5rem;
+}
+.subBody {
+  grid-column: 7 / span 5;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  max-width: 30rem;
+}
+.subForm {
+  display: flex;
+  width: 100%;
+}
+.subForm input {
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  height: 2.5rem;
+  padding: 0 0.8rem;
+  border: 1px solid var(--rule-dark-strong);
+  border-right: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--on-dark);
+  font: inherit;
+  font-size: 0.875rem;
+  outline: none;
+}
+.subForm input::placeholder {
+  color: var(--on-dark-soft);
+}
+.subForm input:focus {
+  border-color: var(--on-dark);
+}
+.subForm button {
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid var(--on-dark);
+  border-radius: 0;
+  background: var(--on-dark);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.subForm button:hover {
+  background: #fff;
+}
+.subLegal {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: var(--on-dark-soft);
+}
+.subLegal a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+/* las entradas: seis en una fila, al pie de la pantalla */
+.cards {
+  grid-column: 1 / -1;
+  align-self: end;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cardLink {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+}
+.cardPhoto {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 0.45rem;
+}
+.cardPhoto img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.cardLink:hover .cardPhoto img {
+  transform: scale(1.03);
+}
+.cardTitle {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: calc(var(--t-lectura) * 0.95);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.cardLink:hover .cardTitle {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+/* ── 05 · Emprendimiento / Lignarolo (gris de estudio) ─────
+   Una pantalla, con la luz de su propia foto. El retrato de campaña ocupa
+   el 86 % derecho (o lo que deje el alto de pantalla), a sangre, y se funde
+   por la izquierda y por arriba con un degradado medido sobre el fondo de
+   la foto (gris neutro, de 199 arriba a 230 en el suelo, con el horizonte
+   al 80 %). El texto vive en el vacío del estudio, a la izquierda de la
+   figura (que empieza en el 31 % de la foto): la etiqueta, el golpe, el
+   copy, los territorios como etiqueta, el cierre y, al pie, Lignarolo. */
+.emp {
+  --photo-w: min(86vw, 172svh);
+  --photo-h: calc(var(--photo-w) * 0.5625);
+  --studio-top: rgb(199, 199, 199);
+  --studio-floor: rgb(229, 229, 228);
+  background: var(--studio-floor);
+}
+.emp .tag {
+  color: var(--charcoal);
+}
+.empScene {
+  position: relative;
+  display: flex;
+  min-height: max(100svh, var(--photo-h));
+  background:
+    linear-gradient(
+        to bottom,
+        rgb(199, 199, 199) 0%,
+        rgb(203, 203, 203) 8%,
+        rgb(207, 207, 207) 25%,
+        rgb(209, 209, 209) 50%,
+        rgb(204, 204, 204) 67%,
+        rgb(208, 208, 208) 76%,
+        rgb(214, 214, 214) 79%,
+        rgb(225, 225, 225) 82%,
+        rgb(232, 232, 232) 86%,
+        rgb(229, 229, 228) 100%
+      )
+      bottom / 100% calc(var(--photo-h) + 2px) no-repeat,
+    linear-gradient(var(--studio-top), var(--studio-top)) top / 100% calc(100% - var(--photo-h) + 2px) no-repeat,
+    var(--studio-floor);
+}
+.empPhoto {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: var(--photo-w);
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  /* se funde por la izquierda, por arriba y, apenas, por abajo (el suelo
+     de la foto sigue en el gris de la sección) */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 16%),
+    linear-gradient(to bottom, transparent 0, #000 8%),
+    linear-gradient(to top, transparent 0, #000 5%);
+  -webkit-mask-composite: source-in, source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 16%),
+    linear-gradient(to bottom, transparent 0, #000 8%),
+    linear-gradient(to top, transparent 0, #000 5%);
+  mask-composite: intersect;
+}
+.empPhoto img {
+  object-fit: cover;
+  filter: none;
+}
+.empText {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: calc(100vw - var(--photo-w) + var(--photo-w) * 0.28);
+  padding-block: var(--pad-screen);
+}
+.empHead {
+  max-width: 11em;
+  margin-top: 1.5rem;
+}
+.empCopy {
+  margin-top: 1.5rem;
+}
+.empFields {
+  max-width: 30em;
+  margin-top: 1.5rem;
+}
+.empClose {
+  margin-top: 0.6rem;
+}
+/* Lignarolo: la firma de la casa, su frase y el enlace, al pie */
+.lg {
+  display: grid;
+  justify-items: start;
+  gap: 0.7rem;
+  margin-top: auto;
+  padding-top: var(--s-block);
+}
+.lgMark {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ── 06 · Perspectivas ──────────────────────────────────────
+   Dos pantallas. A) Reels: la etiqueta y el enlace arriba; abajo, los ocho
+   en una fila, sin controles (en pantallas medianas y en móvil, una tira
+   con desplazamiento nativo). B) Conversaciones, sobre negro: la principal
+   (1–7) y el listado (9–12), con los títulos en serif. */
+.reels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--s-block);
+}
+.blockHead .link {
+  white-space: nowrap;
+}
+.reelTrack {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: var(--gap);
+  margin: 0;
+  padding: 0 var(--gutter);
+  list-style: none;
+}
+.reelLink {
+  display: block;
+}
+.reelCover {
+  aspect-ratio: 9 / 16;
+  background: var(--ink);
+}
+.reelCover img {
+  transition: transform 0.9s cubic-bezier(0.16, 0.84, 0.24, 1);
+}
+.reelLink:hover .reelCover img {
+  transform: scale(1.03);
+}
+.reelTitle {
+  display: block;
+  margin: 0.75rem 0 0.3rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: calc(var(--t-lectura) * 0.85);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: pretty;
+}
+.reelLink:hover .reelTitle {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+  text-decoration-thickness: 1px;
+}
+@media (max-width: 1200px) {
+  .reelTrack {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+  .reelTrack::-webkit-scrollbar {
+    display: none;
+  }
+  .reel {
+    flex: 0 0 clamp(170px, 21vw, 230px);
+    scroll-snap-align: start;
+  }
+}
+/* conversaciones */
+.talks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-block);
+}
+.talksGrid {
+  align-items: start;
+  row-gap: var(--s-block);
+}
+.talkMain {
+  grid-column: 1 / span 7;
+}
+/* el video, a lo ancho de su columna salvo que el alto de pantalla no lo deje */
+.talkScreen {
+  position: relative;
+  width: min(100%, calc((100svh - 2 * var(--pad-screen) - 9rem) * 16 / 9));
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+.talkPoster {
+  object-fit: cover;
+}
+.talkFrame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.talkPlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 0;
+  background: linear-gradient(to top, rgba(13, 14, 16, 0.75), rgba(13, 14, 16, 0) 40%);
+  color: var(--on-dark);
+  cursor: pointer;
+  text-align: left;
+}
+.talkPlay svg {
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.6rem;
+  border: 1px solid rgba(242, 240, 235, 0.6);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.talkPlay:hover svg {
+  background: var(--on-dark);
+  color: var(--ink);
+}
+.talkPlay span {
+  padding-bottom: 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.talkCaption {
+  display: grid;
+  gap: 0.3rem;
+  max-width: 34rem;
+  margin-top: 1rem;
+}
+.talkTitle {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: calc(var(--t-lectura) * 1.2);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+.talkList {
+  grid-column: 9 / span 4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--rule-dark);
+}
+.talkRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.9rem 0 1rem;
+  border: 0;
+  border-top: 1px solid var(--rule-dark);
+  background: transparent;
+  color: var(--on-dark-soft);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.talkRow:hover,
+.talkRow[aria-current="true"] {
+  color: var(--on-dark);
+}
+.talkRowTitle {
+  font-family: var(--serif);
+  font-size: var(--t-lectura);
+  font-weight: 500;
+  line-height: 1.25;
+}
+.talkRowMeta {
+  font-size: 0.75rem;
+}
+
+/* ── 07 · Contacto (blanco) ──────────────────────────────────
+   Una pantalla: la etiqueta y a quién va dirigido (el golpe) a la izquierda
+   (1–5); el formulario a la derecha (7–12). */
+.contact {
+  align-content: center;
+  align-items: start;
+  row-gap: var(--s-block);
+}
+.contactFor {
+  grid-column: 1 / span 5;
+}
+.contactLead {
+  margin: 1.5rem 0 0.5rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--t-lectura);
+  line-height: 1;
+}
+.contactPaths {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.form {
+  grid-column: 7 / -1;
+  display: grid;
+  gap: 1.5rem;
+}
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.field {
+  display: grid;
+  gap: 0.3rem;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--rule-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
+  outline: none;
+}
+.field textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 1.5rem;
+  background-image: linear-gradient(45deg, transparent 50%, var(--ink) 50%), linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+  background-position: calc(100% - 10px) 55%, calc(100% - 5px) 55%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-bottom-color: var(--ink);
+  box-shadow: 0 1px 0 0 var(--ink);
+}
+.formFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+.submit {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+.pendingNote {
+  padding: 0.3em 0.6em;
+  border: 1px dashed var(--rule-strong);
+  font-size: 0.6875rem;
+  color: var(--stone);
+}
+
+/* ── Banners (entre secciones) ─────────────────────────────
+   Una foto a sangre y una frase de Mario en serif, al modo de Nike. La
+   sección es 16:9 y la foto 16:10, así que la foto cabe siempre entera a lo
+   ancho y le sobra un 6 % arriba y abajo para el paralaje: las posiciones
+   de la frase (--x, --w, --y, en % de la foto) caen sobre la figura en
+   cualquier pantalla apaisada. Por eso la frase también se mide en vw,
+   contenida (≈ 63 px y 43 px a 1440), y crece con la foto. */
+.banner {
+  position: relative;
+  height: min(100svh, 56.25vw);
+  overflow: hidden;
+  background: var(--black);
+  color: var(--on-dark);
+}
+.bannerMedia {
+  position: absolute;
+  inset: -6% 0;
+  will-change: transform;
+}
+/* fotos etalonadas en el archivo: sin filtros encima */
+.bannerMedia img {
+  object-fit: cover;
+  filter: none;
+}
+.bannerMob {
+  display: none;
+}
+/* para la frase clara: el suelo y los bordes, más oscuros */
+.bannerMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 85% at 50% 42%, rgba(10, 11, 13, 0) 40%, rgba(10, 11, 13, 0.42) 100%),
+    linear-gradient(to bottom, rgba(10, 11, 13, 0) 30%, rgba(10, 11, 13, 0.4) 100%);
+}
+.bannerInk {
+  color: var(--ink);
+}
+.bannerInk .bannerMedia::after {
+  content: none;
+}
+.bannerPhrase {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.bannerPoster {
+  font-size: 5.4vw;
+}
+.bannerDisplay {
+  font-size: 4.4vw;
+}
+.bannerSerif {
+  font-size: 3vw;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+.banner:not(.bannerInk) .bannerPhrase {
+  text-shadow: 0 0 0.6em rgba(10, 11, 13, 0.28);
+}
+/* split: a cada lado del hueco de la figura, pegadas a ella */
+.bannerSplit .bannerPhrase {
+  inset-inline: 0;
+  top: var(--y);
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: calc(var(--x) - var(--w) / 2) var(--w) 1fr;
+  align-items: center;
+}
+.bannerSplit .bannerPhrase > :first-child {
+  grid-column: 1;
+  justify-self: end;
+  padding-left: var(--gutter);
+  text-align: right;
+  text-wrap: balance;
+}
+.bannerSplit .bannerPhrase > :last-child {
+  grid-column: 3;
+  justify-self: start;
+  padding-right: var(--gutter);
+  text-wrap: balance;
+}
+/* corner: un bloque en el claro */
+.bannerCorner .bannerPhrase {
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  text-wrap: balance;
+}
+
+/* ── Pie (negro) ────────────────────────────────────────── */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+  padding-block: 2.5rem 2rem;
+  background: var(--black);
+}
+.footerLogo {
+  display: block;
+  width: auto;
+  height: 1.375rem;
+  aspect-ratio: 2994 / 570;
+  color: var(--on-dark);
+}
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footerLinks a {
+  font-size: 0.875rem;
+  color: var(--on-dark-soft);
+  transition: color 0.2s ease;
+}
+.footerLinks a:hover {
+  color: var(--on-dark);
+}
+.legal {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  font-size: var(--t-small);
+  color: var(--on-dark-soft);
+}
+
+/* ── Móvil ──────────────────────────────────────────────────
+   Otro ritmo que en escritorio: las secciones van en el flujo y miden lo
+   que necesiten (solo la portada mide una pantalla), con mucho aire entre
+   ellas y entre sus bloques. Una columna, un margen lateral generoso, los
+   tipos un punto menores y las fotos a sangre. */
+@media (max-width: 880px) {
+  .page {
+    --gutter: 1.5rem;
+    --s-section: 7rem;
+    --s-block: 3.5rem;
+    --s-title: 1.5rem;
+    --t-golpe: 1.75rem;
+    --t-lectura: 1.125rem;
+    --t-manifiesto: 1.3125rem;
+  }
+  .navList {
+    display: none;
+  }
+  .nav {
+    justify-content: flex-end;
+  }
+  /* las secciones, en el flujo: una columna, sin fijar */
+  .screen {
+    min-height: 0;
+    padding-block: var(--s-section);
+  }
+  .aboutBody,
+  .aboutPhoto,
+  .origenSide,
+  .manifestoText,
+  .manifestoPhoto,
+  .psicoLead,
+  .psicoPhoto,
+  .psicoIntro,
+  .psicoStage,
+  .hdsLead,
+  .hdsIntro,
+  .subLabel,
+  .subBody,
+  .talkMain,
+  .talkList,
+  .contactFor,
+  .form {
+    grid-column: 1 / -1;
+  }
+  .lectura {
+    line-height: 1.45;
+  }
+  .lectura + .lectura {
+    margin-top: 0.9em;
+  }
+  /* las fotos a sangre, en 4:5: miden el ancho de la pantalla, así que su
+     alto es 125vw. Medidas explícitas, sin aspect-ratio: en una retícula,
+     Safari las encogía (resolvía el alto antes que el ancho). */
+  .aboutPhoto,
+  .manifestoPhoto,
+  .psicoPhoto {
+    justify-self: stretch;
+    align-self: start;
+    height: 125vw;
+  }
+
+  /* portada: justo una pantalla. Arriba, el recorte a todo el ancho (la
+     versión vertical del vídeo, fundida en el negro) con la ráfaga; el
+     logo encima; el territorio y el statement abajo. Sin escena fija. */
+  .hero {
+    --hero-pad-top: 1.25rem;
+    --s: min(2.125rem, 8.7vw);
+    --wt: 0%;
+    --wr: 0%;
+    --wb: 0%;
+    --wl: 0%;
+    --stage-h: min(125vw, 64svh);
+  }
+  .heroFrame {
+    padding-bottom: 2.25rem;
+  }
+  .heroLogo {
+    width: 8.5rem;
+  }
+  .heroStage {
+    inset: 0 0 auto;
+    height: var(--stage-h);
+  }
+  /* la ráfaga, bajo la línea del logo */
+  .heroSweep {
+    inset: 4.5rem var(--gutter) auto;
+    height: calc(var(--stage-h) - 6rem);
+  }
+  .heroStage {
+    clip-path: none;
+  }
+  .heroVideo {
+    object-position: 50% 30%;
+  }
+  .heroReveal::after {
+    opacity: 1;
+    background:
+      linear-gradient(to bottom, rgba(14, 15, 18, 0.55) 0%, rgba(14, 15, 18, 0) 20%),
+      linear-gradient(to top, var(--black) 0%, rgba(14, 15, 18, 0.55) 20%, rgba(14, 15, 18, 0) 45%);
+  }
+  .heroPause {
+    right: var(--gutter);
+    bottom: 1rem;
+  }
+  /* la ráfaga, algo mayor en el recorte vertical */
+  .sweepItem {
+    width: calc(var(--w) * 1.15);
+    border-radius: 8px;
+  }
+
+  /* about: el párrafo, el paso a su historia y, debajo, el retrato */
+  .aboutText {
+    font-size: 1.3125rem;
+    line-height: 1.32;
+  }
+  .aboutLink {
+    margin-top: 2.75rem;
+  }
+  .aboutPhoto {
+    margin: var(--s-block) calc(-1 * var(--gutter)) calc(-1 * var(--s-section));
+  }
+  .aboutPhoto::after {
+    background: linear-gradient(to bottom, var(--black) 0%, rgba(14, 15, 18, 0) 22%);
+  }
+
+  /* origen: las etiquetas, el titular, la foto, el manifiesto y la
+     pregunta */
+  .origenHead {
+    max-width: 10em;
+    margin-top: var(--s-title);
+  }
+  .manifestoText {
+    order: 1;
+  }
+  .manifestoPhoto {
+    margin: var(--s-block) calc(-1 * var(--gutter));
+  }
+  .scrubText + .scrubText {
+    margin-top: 1em;
+  }
+  .question {
+    margin-top: 2.75rem;
+  }
+
+  /* psicocibernética: la etiqueta, el golpe y la voz; el copy y el botón;
+     el retrato; los conceptos en lista, todos encendidos */
+  .psicoFrame {
+    grid-template-rows: none;
+    row-gap: 0;
+  }
+  .psicoVoice {
+    margin-top: 1.5rem;
+  }
+  .psicoIntro {
+    padding-top: var(--s-block);
+  }
+  .psicoCta {
+    margin-top: 2.25rem;
+  }
+  .psicoPhoto,
+  .psicoStage {
+    grid-row: auto;
+  }
+  .psicoPhoto {
+    margin: var(--s-block) calc(-1 * var(--gutter));
+  }
+  .concepts {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    font-size: 1.375rem;
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .concepts li {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: 0;
+    padding-block: 1rem 1.1rem;
+  }
+  .psicoSecondary {
+    margin-top: 2rem;
+  }
+
+  /* hipertrofia: la cabecera y el golpe; el copy; las entradas en lista,
+     con su miniatura; al final, la suscripción */
+  .hdsFrame {
+    --hds-em: 5.5rem;
+    grid-template-rows: none;
+    row-gap: var(--s-block);
+  }
+  .hdsHead {
+    margin-top: 2.25rem;
+  }
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule-dark);
+  }
+  .cards > li {
+    border-bottom: 1px solid var(--rule-dark);
+  }
+  .cardLink {
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: 0.4rem 1.125rem;
+    padding-block: 1.25rem;
+  }
+  .cardPhoto {
+    grid-row: 1 / span 2;
+    margin: 0;
+  }
+  .cardLink > .small,
+  .cardTitle {
+    grid-column: 2;
+  }
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+  .subscribe {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .subLabel {
+    line-height: 1.5;
+  }
+  .subBody {
+    max-width: none;
+  }
+
+  /* emprendimiento: el texto arriba y el retrato debajo, a todo el ancho,
+     saliendo del gris de la sección */
+  .empScene {
+    flex-direction: column;
+    min-height: 0;
+    background: var(--studio-floor);
+  }
+  .empText {
+    max-width: none;
+    padding-block: var(--s-section) 0;
+  }
+  .empHead {
+    margin-top: var(--s-title);
+  }
+  .empCopy,
+  .empFields {
+    margin-top: 2rem;
+  }
+  .empClose {
+    margin-top: 1rem;
+  }
+  .empPhoto {
+    position: relative;
+    order: 1;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-top: var(--s-block);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, transparent 0, #000 22%), linear-gradient(to top, transparent 0, #000 8%);
+    mask-composite: intersect;
+  }
+  .empPhoto img {
+    object-position: 80% 100%;
+  }
+
+  /* perspectivas: la etiqueta y, debajo, su enlace; los reels en una tira,
+     con la pieza siguiente asomando; la conversación principal a sangre */
+  .blockHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .reel {
+    flex-basis: min(64vw, 260px);
+  }
+  .talkScreen {
+    width: auto;
+    margin-inline: calc(-1 * var(--gutter));
+  }
+  .talkCaption {
+    margin-top: 1.25rem;
+  }
+  .talkRow {
+    padding: 1.1rem 0 1.2rem;
+  }
+
+  /* contacto: a quién va dirigido y, debajo, el formulario */
+  .contactLead {
+    margin-top: 1.75rem;
+  }
+  .form,
+  .formRow {
+    gap: 2rem;
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding-block: 3.5rem 2.5rem;
+    gap: 1.75rem 2rem;
+  }
+
+  /* banners: la foto vertical y la frase debajo, sobre el fundido a negro */
+  .banner,
+  .bannerInk {
+    height: auto;
+    padding-bottom: var(--s-block);
+    color: var(--on-dark);
+  }
+  .bannerMedia {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 4 / 5;
+  }
+  .bannerDesk {
+    display: none;
+  }
+  .bannerMob {
+    display: block;
+  }
+  .bannerMedia::after,
+  .bannerInk .bannerMedia::after {
+    content: "";
+    background: linear-gradient(to top, var(--black) 0%, rgba(14, 15, 18, 0.7) 16%, rgba(14, 15, 18, 0) 42%);
+  }
+  .bannerSplit .bannerPhrase,
+  .bannerCorner .bannerPhrase {
+    position: relative;
+    inset: auto;
+    width: auto;
+    transform: none;
+    display: block;
+    margin-top: -0.9em;
+    padding-inline: var(--gutter);
+  }
+  .bannerSplit .bannerPhrase > :first-child,
+  .bannerSplit .bannerPhrase > :last-child {
+    justify-self: start;
+    padding: 0;
+    text-align: left;
+  }
+  .bannerPoster {
+    font-size: min(3.5rem, 14vw);
+  }
+  .bannerDisplay {
+    font-size: min(2.5rem, 9.8vw);
+  }
+  .bannerSerif {
+    font-size: min(1.875rem, 7.4vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link svg,
+  .aboutLink svg,
+  .btn,
+  .btn svg,
+  .cardPhoto img,
+  .reelCover img,
+  .talkRow,
+  .talkPlay svg,
+  .navList a,
+  .footerLinks a,
+  .concepts li {
+    transition: none;
+  }
+}

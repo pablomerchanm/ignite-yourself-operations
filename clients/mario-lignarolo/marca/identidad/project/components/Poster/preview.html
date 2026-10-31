@@ -1,0 +1,43 @@
+<!-- @dsCard group="Texto" height=940 width=1280 subtitle="La voz alta: Archivo condensada, en versal" -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Póster</title>
+<style>
+  html, body { margin: 0; }
+  body { background: var(--fondo); }
+  .ps-a { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); column-gap: var(--medianil); padding: var(--space-8) var(--margen) var(--space-8); }
+  .ps-a .seccion { grid-column: 1 / span 3; align-self: start; padding-top: 0.6em; }
+  .ps-a .ml-poster { grid-column: 4 / -1; }
+  .ps-b { padding: var(--space-9) var(--margen); border-top: 1px solid var(--linea); }
+  .ps-b .ml-cruce { font-size: 104px; }
+  .ps-c { height: 230px; overflow: hidden; display: flex; align-items: flex-end; border-top: 1px solid var(--linea); }
+  .ps-c .ml-poster { margin-bottom: -0.16em; padding-inline: var(--margen); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="ml">
+  <div class="ps-a">
+    <p class="seccion ml-seccion">Transformación de identidad</p>
+    <h1 class="poster ml-poster">
+      <span class="ml-linea"><span>Explorando</span></span>
+      <span class="ml-linea"><span>cómo cambiar</span></span>
+      <span class="ml-linea"><span>quién eres</span></span>
+      <span class="ml-linea"><span>transforma</span></span>
+      <span class="ml-linea"><span>lo que eres</span></span>
+      <span class="ml-linea"><span>capaz de</span></span>
+      <span class="ml-linea"><span>construir</span></span>
+    </h1>
+  </div>
+  <div class="ps-b">
+    <p class="poster ml-poster ml-cruce" aria-label="El cuerpo se entrena.">
+      <span>El cuerpo</span>
+      <span class="ml-cruce-foto"><img src="/_blob/eb55c99b5b3e21499ba1e92110416bad" alt=""></span>
+      <span>se entrena.</span>
+    </p>
+  </div>
+  <div class="ps-c"><p class="poster-xl ml-poster" style="font-size:236px">Transforma</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- @dsCard group="Texto" height=620 width=1280 subtitle="Lectura guiada: las palabras se encienden con el scroll" -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manifiesto</title>
+<style>
+  html, body { margin: 0; }
+  body { background: var(--fondo); }
+  .mf { padding: var(--space-9) var(--margen); }
+  .mf .ml-indice { display: grid; align-content: start; gap: var(--space-6); }
+</style>
+</head>
+<body>
+<section class="ml ml-reticula mf" data-theme="oscuro">
+  <div class="ml-indice">
+    <p class="seccion ml-seccion">Origen</p>
+    <div class="ml-progreso">
+      <div class="ml-pista"><span style="transform:scaleX(.32)"></span></div>
+      <div class="ml-progreso-nav">
+        <button class="ml-flecha" data-dir="prev" aria-label="Párrafo anterior"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg></button>
+        <button class="ml-flecha" data-dir="next" aria-label="Párrafo siguiente"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></button>
+        <span class="label-s ml-dato">(02/05)</span>
+      </div>
+    </div>
+  </div>
+  <div class="ml-contenido ml-manifiesto-texto statement">
+    <p>Durante mucho tiempo busqué respuestas afuera.</p>
+    <p>Seguí caminos que creía que debía seguir. Perseguí resultados. <span class="ml-off">Emprendí.</span> <span class="ml-off">Transformé</span> <span class="ml-off">mi</span> <span class="ml-off">cuerpo.</span> <span class="ml-off">Intenté</span> <span class="ml-off">encontrar</span> <span class="ml-off">claridad</span> <span class="ml-off">haciendo</span> <span class="ml-off">más,</span> <span class="ml-off">aprendiendo</span> <span class="ml-off">más,</span> <span class="ml-off">construyendo</span> <span class="ml-off">más.</span></p>
+    <p><span class="ml-off">Hasta que empecé a entender que muchas de las cosas que quería cambiar afuera tenían una raíz mucho más profunda.</span></p>
+  </div>
+</section>
+</body>
+</html>

@@ -15,8 +15,10 @@ const instrument = localFont({
 
 const interTight = localFont({
   src: [
-    { path: "./fonts/InterTight-Variable.woff2", weight: "200 600", style: "normal" },
-    { path: "./fonts/InterTight-Italic-Variable.woff2", weight: "200 600", style: "italic" },
+    // El archivo variable cubre 100–900; declarar el rango completo permite
+    // los pesos de titular (700–800) sin cambiar nada en la web actual.
+    { path: "./fonts/InterTight-Variable.woff2", weight: "100 900", style: "normal" },
+    { path: "./fonts/InterTight-Italic-Variable.woff2", weight: "100 900", style: "italic" },
   ],
   variable: "--font-inter-tight",
   display: "swap",

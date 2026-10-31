@@ -1,0 +1,201 @@
+{
+ "v": 3,
+ "layout": "files",
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-26T17:01:14Z"
+ },
+ "title": "Mario Lignarolo",
+ "namespace": "MarioLignarolo",
+ "libraries": [],
+ "sections": {},
+ "groups": [
+  "Logos",
+  "Fotografia",
+  "Portadas"
+ ],
+ "assetGroups": {
+  "Logos": {
+   "name": "Logos",
+   "tile": "l",
+   "order": [
+    "mario-lignarolo-blanco.svg",
+    "mario-lignarolo-negro.svg",
+    "hds-logo-horizontal-blanco.svg",
+    "hds-logo-horizontal-negro.svg",
+    "hds-logo-vertical-blanco.svg",
+    "hds-logo-vertical-negro.svg",
+    "hds-simbolo-blanco.svg",
+    "hds-simbolo-negro.svg",
+    "hds-simbolo-pequeno-blanco.svg",
+    "hds-simbolo-pequeno-negro.svg"
+   ],
+   "files": {
+    "mario-lignarolo-blanco.svg": {
+     "name": "mario-lignarolo-blanco.svg",
+     "blob": "9c4ad65710f809bb2206caf526032390",
+     "size": 45946,
+     "type": "image/svg+xml"
+    },
+    "mario-lignarolo-negro.svg": {
+     "name": "mario-lignarolo-negro.svg",
+     "blob": "768829326196e0dca4c1b27f47133802",
+     "size": 45946,
+     "type": "image/svg+xml"
+    },
+    "hds-logo-horizontal-blanco.svg": {
+     "name": "hds-logo-horizontal-blanco.svg",
+     "blob": "1a91df9194c54d42dfcaa7b07436cc6d",
+     "size": 17208,
+     "type": "image/svg+xml"
+    },
+    "hds-logo-horizontal-negro.svg": {
+     "name": "hds-logo-horizontal-negro.svg",
+     "blob": "892082dd17d78d3c8517d481618686d4",
+     "size": 17208,
+     "type": "image/svg+xml"
+    },
+    "hds-logo-vertical-blanco.svg": {
+     "name": "hds-logo-vertical-blanco.svg",
+     "blob": "98dbae11a49c7809eb56a8768c3c5c4c",
+     "size": 19400,
+     "type": "image/svg+xml"
+    },
+    "hds-logo-vertical-negro.svg": {
+     "name": "hds-logo-vertical-negro.svg",
+     "blob": "31d853ea7b06e8927901d7164db23701",
+     "size": 19400,
+     "type": "image/svg+xml"
+    },
+    "hds-simbolo-blanco.svg": {
+     "name": "hds-simbolo-blanco.svg",
+     "blob": "b167dce5931ec94691eef93af45449f2",
+     "size": 1051,
+     "type": "image/svg+xml"
+    },
+    "hds-simbolo-negro.svg": {
+     "name": "hds-simbolo-negro.svg",
+     "blob": "bb6cfaeaaa156018647f844c2a2b9fd7",
+     "size": 1051,
+     "type": "image/svg+xml"
+    },
+    "hds-simbolo-pequeno-blanco.svg": {
+     "name": "hds-simbolo-pequeno-blanco.svg",
+     "blob": "0bb4eef1677706c7d6d4487505879a1f",
+     "size": 854,
+     "type": "image/svg+xml"
+    },
+    "hds-simbolo-pequeno-negro.svg": {
+     "name": "hds-simbolo-pequeno-negro.svg",
+     "blob": "1b62b95876a58b39d240bbaa6353d8d2",
+     "size": 854,
+     "type": "image/svg+xml"
+    }
+   }
+  },
+  "Fotografia": {
+   "name": "Fotografia",
+   "tile": "l",
+   "order": [
+    "retrato-portada.jpg",
+    "interno.jpg",
+    "musculo.jpg",
+    "calle.jpg",
+    "entreno.jpg",
+    "banco.jpg",
+    "psicocibernetica.jpg",
+    "lignarolo.jpg"
+   ],
+   "files": {
+    "retrato-portada.jpg": {
+     "name": "retrato-portada.jpg",
+     "blob": "533ed2c0093c0808ccb22fa9bd389db9",
+     "size": 195881,
+     "type": "image/jpeg"
+    },
+    "interno.jpg": {
+     "name": "interno.jpg",
+     "blob": "f280500da989950888ba1b6f277a9344",
+     "size": 70397,
+     "type": "image/jpeg"
+    },
+    "musculo.jpg": {
+     "name": "musculo.jpg",
+     "blob": "05fb466e251361b3053e166a9bb1cb1e",
+     "size": 109898,
+     "type": "image/jpeg"
+    },
+    "calle.jpg": {
+     "name": "calle.jpg",
+     "blob": "eb9a1528de5dcf59cdf2031b638e8ec3",
+     "size": 263276,
+     "type": "image/jpeg"
+    },
+    "entreno.jpg": {
+     "name": "entreno.jpg",
+     "blob": "eb55c99b5b3e21499ba1e92110416bad",
+     "size": 192036,
+     "type": "image/jpeg"
+    },
+    "banco.jpg": {
+     "name": "banco.jpg",
+     "blob": "a112d2e6dc7f27a7f5e6d1dfbee7c714",
+     "size": 163355,
+     "type": "image/jpeg"
+    },
+    "psicocibernetica.jpg": {
+     "name": "psicocibernetica.jpg",
+     "blob": "d0bdf470d48c1c0ec2722ce358a93c4b",
+     "size": 138478,
+     "type": "image/jpeg"
+    },
+    "lignarolo.jpg": {
+     "name": "lignarolo.jpg",
+     "blob": "a89e873a0e961ee59927f22e92ad2455",
+     "size": 83975,
+     "type": "image/jpeg"
+    }
+   }
+  },
+  "Portadas": {
+   "name": "Portadas",
+   "tile": "m",
+   "order": [
+    "ya-eres.jpg",
+    "no-puedes-fallar.jpg",
+    "emprender-es-aprender-no-vender.jpg"
+   ],
+   "files": {
+    "ya-eres.jpg": {
+     "name": "ya-eres.jpg",
+     "blob": "9e4e9dd49894f440ca0140be1aa4b353",
+     "size": 39513,
+     "type": "image/jpeg"
+    },
+    "no-puedes-fallar.jpg": {
+     "name": "no-puedes-fallar.jpg",
+     "blob": "9b32e114ea8041982e0ab78e3517bd63",
+     "size": 154660,
+     "type": "image/jpeg"
+    },
+    "emprender-es-aprender-no-vender.jpg": {
+     "name": "emprender-es-aprender-no-vender.jpg",
+     "blob": "00e507a1f40bd129f569a4db4e2d8df7",
+     "size": 48690,
+     "type": "image/jpeg"
+    }
+   }
+  }
+ },
+ "blobs": {},
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "lastChange": {
+  "by": "Pablo",
+  "via": "Claude Code",
+  "at": "2026-10-26T17:29:48Z",
+  "note": "Ajustes tras aplicar la identidad en /v4: voz a 72 px, poster-s a 80 px, la pregunta en voz itálica."
+ }
+}
