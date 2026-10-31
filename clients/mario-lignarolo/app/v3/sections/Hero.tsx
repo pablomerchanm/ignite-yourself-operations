@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { CSSProperties } from "react";
 import { v3 } from "@/data/v3";
 import Logo from "../Logo";
+import HeroSweep from "./HeroSweep";
 import HeroVideo from "./HeroVideo";
 import s from "../v3.module.css";
 
@@ -11,8 +11,9 @@ import s from "../v3.module.css";
  * 7 y «Contacto» cierra a la derecha); abajo a la izquierda, el territorio
  * y el statement en siete líneas.
  *
- * En el centro, un recorte. Al entrar, una ráfaga de fotos reales de Mario
- * se apila en él, cada una de su tamaño; luego el recorte se abre desde el
+ * En el centro, un recorte. Al entrar, una ráfaga de sus reels (Mario
+ * hablando bajo sus tres imágenes, en vertical y sin sonido) se apila en
+ * él, uno tras otro; luego el recorte se abre desde el
  * centro y queda el vídeo de Psicocibernética (la toma de la biblioteca),
  * sin sonido y en bucle. En escritorio la portada se fija ([data-pin]) y,
  * con el scroll, el recorte se abre hasta llenar la pantalla (--pp,
@@ -30,18 +31,8 @@ export default function Hero() {
   return (
     <header className={s.hero} id="mario" data-pin="1.8">
       <div className={s.heroFrame}>
-        {/* la ráfaga: fotos que se apilan en el recorte antes del vídeo */}
-        <div className={s.heroSweep} aria-hidden="true">
-          {hero.sweep.map((p, i) => (
-            <span
-              key={p.src}
-              className={`${s.photo} ${s.sweepItem}`}
-              style={{ "--x": `${p.at.x}%`, "--y": `${p.at.y}%`, "--w": `${p.at.w}%`, "--ar": p.ar, "--d": `${0.15 + i * 0.3}s` } as CSSProperties}
-            >
-              <Image src={p.src} alt="" fill loading="eager" sizes="(min-width: 881px) 30vw, 60vw" />
-            </span>
-          ))}
-        </div>
+        {/* la ráfaga: sus reels, que se apilan en el recorte antes del vídeo */}
+        <HeroSweep items={hero.reels.items} base={hero.reels.base} className={s.heroSweep} itemClassName={s.sweepItem} />
 
         {/* el recorte: el vídeo a sangre, recortado por una ventana que se
             abre con el scroll */}

@@ -70,15 +70,21 @@ export const v3 = {
     // (public/mario/psico.mp4, 0:24–0:40), sin sonido y en bucle. En
     // escritorio, el recorte se abre a toda la pantalla con el scroll.
     video: { desktop: "/mario/hero/psico-loop.mp4", mobile: "/mario/hero/psico-loop-vertical.mp4", poster: "/mario/hero/psico-poster.jpg" },
-    // la ráfaga: cada foto, su proporción y su sitio dentro del recorte (en %)
-    sweep: [
-      { src: "/mario/reels/DemZQIDMYzY.jpg", ar: "9 / 16", at: { x: 4, y: 8, w: 21 } },
-      { src: "/mario/entreno-curl.jpg", ar: "4 / 5", at: { x: 64, y: 2, w: 27 } },
-      { src: "/mario/banners/interno-movil.jpg", ar: "4 / 5", at: { x: 30, y: 20, w: 29 } },
-      { src: "/mario/reels/DeejjK5AmLJ.jpg", ar: "9 / 16", at: { x: 76, y: 30, w: 19 } },
-      { src: "/mario/lignarolo.jpg", ar: "16 / 9", at: { x: 2, y: 54, w: 46 } },
-      { src: "/mario/hero-v3.jpg", ar: "16 / 9", at: { x: 20, y: 16, w: 58 } },
-    ],
+    // la ráfaga (31 oct, Pablo): sus reels icónicos (Mario hablando bajo las
+    // tres imágenes), no fotos. De su TikTok @mariolignarolo, 3,5 s de cada
+    // uno, sin sonido, en public/mario/hero/reels/<id>.{webm,mp4,jpg}. Su
+    // sitio dentro del recorte, en %.
+    reels: {
+      base: "/mario/hero/reels",
+      items: [
+        { id: "7694684651528424724", at: { x: 0, y: 24, w: 24 } }, // «tus oraciones…»
+        { id: "7693554092018388244", at: { x: 74, y: 12, w: 25 } }, // «…responsabilidades»
+        { id: "7691346161747119380", at: { x: 18, y: 30, w: 26 } }, // «la gravedad opera en ti»
+        { id: "7696637576609877269", at: { x: 52, y: 16, w: 27 } }, // «claridad absoluta…»
+        { id: "7699124861184036148", at: { x: 80, y: 34, w: 21 } }, // «el cielo nunca ha tenido un problema de provisión»
+        { id: "7692074097655729429", at: { x: 34, y: 14, w: 31 } }, // «la vida es mucho mejor…»
+      ],
+    },
   },
 
   /* 01b · QUIÉN ES MARIO — [PROPUESTA] pedido por Pablo (30 oct): un párrafo
